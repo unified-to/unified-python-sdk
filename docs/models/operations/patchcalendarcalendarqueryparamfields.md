@@ -11,6 +11,5 @@
 | `NAME`        | name          |
 | `DESCRIPTION` | description   |
 | `TIMEZONE`    | timezone      |
-| `PRIMARY`     | primary       |
 | `IS_PRIMARY`  | is_primary    |
 | `RAW`         | raw           |

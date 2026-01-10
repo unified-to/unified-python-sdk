@@ -35,7 +35,7 @@ class ListPaymentPaymentsRequestTypedDict(TypedDict):
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListPaymentPaymentsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     invoice_id: NotRequired[str]
     r"""The invoice ID to filter by (reference to AccountingInvoice)"""
     limit: NotRequired[float]
@@ -66,7 +66,7 @@ class ListPaymentPaymentsRequest(BaseModel):
         Optional[List[ListPaymentPaymentsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     invoice_id: Annotated[
         Optional[str],

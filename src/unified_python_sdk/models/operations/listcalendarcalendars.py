@@ -21,7 +21,6 @@ class ListCalendarCalendarsQueryParamFields(str, Enum):
     NAME = "name"
     DESCRIPTION = "description"
     TIMEZONE = "timezone"
-    PRIMARY = "primary"
     IS_PRIMARY = "is_primary"
     RAW = "raw"
 
@@ -30,7 +29,7 @@ class ListCalendarCalendarsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[ListCalendarCalendarsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -53,7 +52,7 @@ class ListCalendarCalendarsRequest(BaseModel):
         Optional[List[ListCalendarCalendarsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

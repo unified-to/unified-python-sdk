@@ -36,7 +36,7 @@ class ListLmsStudentsRequestTypedDict(TypedDict):
     course_id: NotRequired[str]
     r"""The course ID to filter by (reference to Course)"""
     fields: NotRequired[List[ListLmsStudentsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -71,7 +71,7 @@ class ListLmsStudentsRequest(BaseModel):
         Optional[List[ListLmsStudentsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

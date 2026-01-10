@@ -42,7 +42,7 @@ class ListAtsApplicationsRequestTypedDict(TypedDict):
     company_id: NotRequired[str]
     r"""The company ID to filter by (reference to AtsCompany)"""
     fields: NotRequired[List[ListAtsApplicationsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     job_id: NotRequired[str]
     r"""The job ID to filter by"""
     limit: NotRequired[float]
@@ -79,7 +79,7 @@ class ListAtsApplicationsRequest(BaseModel):
         Optional[List[ListAtsApplicationsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     job_id: Annotated[
         Optional[str],

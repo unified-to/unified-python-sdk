@@ -46,7 +46,7 @@ class ListCommerceReviewsRequestTypedDict(TypedDict):
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListCommerceReviewsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     item_id: NotRequired[str]
     r"""The item ID to filter by (reference to CommerceItem)"""
     limit: NotRequired[float]
@@ -77,7 +77,7 @@ class ListCommerceReviewsRequest(BaseModel):
         Optional[List[ListCommerceReviewsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     item_id: Annotated[
         Optional[str],

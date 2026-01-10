@@ -36,7 +36,7 @@ class ListPaymentLinksRequestTypedDict(TypedDict):
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListPaymentLinksQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -67,7 +67,7 @@ class ListPaymentLinksRequest(BaseModel):
         Optional[List[ListPaymentLinksQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

@@ -44,7 +44,7 @@ class ListCrmContactsRequestTypedDict(TypedDict):
     deal_id: NotRequired[str]
     r"""The deal ID to filter by (reference to CrmDeal)"""
     fields: NotRequired[List[ListCrmContactsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -81,7 +81,7 @@ class ListCrmContactsRequest(BaseModel):
         Optional[List[ListCrmContactsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

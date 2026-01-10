@@ -40,7 +40,7 @@ class ListHrisTimeshiftsRequestTypedDict(TypedDict):
     end_lt: NotRequired[str]
     r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListHrisTimeshiftsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     location_id: NotRequired[str]
     r"""The location ID to filter by (reference to HrisLocation)"""
@@ -81,7 +81,7 @@ class ListHrisTimeshiftsRequest(BaseModel):
         Optional[List[ListHrisTimeshiftsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

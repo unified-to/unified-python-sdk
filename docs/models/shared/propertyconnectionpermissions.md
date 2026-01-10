@@ -52,6 +52,8 @@
 | `PAYMENT_SUBSCRIPTION_WRITE`     | payment_subscription_write       |
 | `COMMERCE_ITEM_READ`             | commerce_item_read               |
 | `COMMERCE_ITEM_WRITE`            | commerce_item_write              |
+| `COMMERCE_ITEMVARIANT_READ`      | commerce_itemvariant_read        |
+| `COMMERCE_ITEMVARIANT_WRITE`     | commerce_itemvariant_write       |
 | `COMMERCE_COLLECTION_READ`       | commerce_collection_read         |
 | `COMMERCE_COLLECTION_WRITE`      | commerce_collection_write        |
 | `COMMERCE_INVENTORY_READ`        | commerce_inventory_read          |

@@ -31,7 +31,7 @@ class ListCommerceSaleschannelsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[ListCommerceSaleschannelsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -54,7 +54,7 @@ class ListCommerceSaleschannelsRequest(BaseModel):
         Optional[List[ListCommerceSaleschannelsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

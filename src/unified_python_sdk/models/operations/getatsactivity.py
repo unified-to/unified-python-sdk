@@ -42,7 +42,7 @@ class GetAtsActivityRequestTypedDict(TypedDict):
     id: str
     r"""ID of the Activity"""
     fields: NotRequired[List[GetAtsActivityQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
@@ -62,7 +62,7 @@ class GetAtsActivityRequest(BaseModel):
         Optional[List[GetAtsActivityQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     raw: Annotated[
         Optional[str],

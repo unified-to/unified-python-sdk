@@ -94,10 +94,8 @@ class CommerceMetadataTypedDict(TypedDict):
     format_: NotRequired[CommerceMetadataFormat]
     id: NotRequired[str]
     is_required: NotRequired[bool]
-    key: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    type: NotRequired[str]
     value: NotRequired[CommerceMetadataValueTypedDict]
 
 
@@ -114,13 +112,9 @@ class CommerceMetadata(BaseModel):
 
     is_required: Optional[bool] = None
 
-    key: Optional[str] = None
-
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
-
-    type: Optional[str] = None
 
     value: Optional[CommerceMetadataValue] = None
 

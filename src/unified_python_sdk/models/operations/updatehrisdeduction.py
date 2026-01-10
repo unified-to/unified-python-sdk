@@ -40,7 +40,7 @@ class UpdateHrisDeductionRequestTypedDict(TypedDict):
     id: str
     r"""ID of the Deduction"""
     fields: NotRequired[List[UpdateHrisDeductionQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
@@ -66,7 +66,7 @@ class UpdateHrisDeductionRequest(BaseModel):
         Optional[List[UpdateHrisDeductionQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     raw: Annotated[
         Optional[str],

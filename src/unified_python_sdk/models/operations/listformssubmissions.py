@@ -29,7 +29,7 @@ class ListFormsSubmissionsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[ListFormsSubmissionsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     form_id: NotRequired[str]
     r"""The form ID to filter by"""
     limit: NotRequired[float]
@@ -54,7 +54,7 @@ class ListFormsSubmissionsRequest(BaseModel):
         Optional[List[ListFormsSubmissionsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     form_id: Annotated[
         Optional[str],

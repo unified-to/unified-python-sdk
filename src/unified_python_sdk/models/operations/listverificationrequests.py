@@ -50,7 +50,7 @@ class ListVerificationRequestsRequestTypedDict(TypedDict):
     candidate_id: NotRequired[str]
     r"""The candidate ID to filter by"""
     fields: NotRequired[List[ListVerificationRequestsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -81,7 +81,7 @@ class ListVerificationRequestsRequest(BaseModel):
         Optional[List[ListVerificationRequestsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

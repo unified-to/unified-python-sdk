@@ -40,7 +40,7 @@ class ListTicketingTicketsRequestTypedDict(TypedDict):
     customer_id: NotRequired[str]
     r"""The customer ID to filter by"""
     fields: NotRequired[List[ListTicketingTicketsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -71,7 +71,7 @@ class ListTicketingTicketsRequest(BaseModel):
         Optional[List[ListTicketingTicketsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

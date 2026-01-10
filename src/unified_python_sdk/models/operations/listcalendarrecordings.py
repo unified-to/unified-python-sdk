@@ -37,7 +37,7 @@ class ListCalendarRecordingsRequestTypedDict(TypedDict):
     event_id: NotRequired[str]
     r"""The event ID to filter by (reference to CalendarEvent)"""
     fields: NotRequired[List[ListCalendarRecordingsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -74,7 +74,7 @@ class ListCalendarRecordingsRequest(BaseModel):
         Optional[List[ListCalendarRecordingsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

@@ -45,7 +45,7 @@ class ListCrmEventsRequestTypedDict(TypedDict):
     deal_id: NotRequired[str]
     r"""The deal ID to filter by (reference to CrmDeal)"""
     fields: NotRequired[List[ListCrmEventsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     lead_id: NotRequired[str]
     r"""The CRM lead ID to filter by (reference to CrmLead)"""
     limit: NotRequired[float]
@@ -91,7 +91,7 @@ class ListCrmEventsRequest(BaseModel):
         Optional[List[ListCrmEventsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     lead_id: Annotated[
         Optional[str],

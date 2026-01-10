@@ -28,7 +28,6 @@ class ListAccountingAccountsQueryParamFields(str, Enum):
     CURRENCY = "currency"
     CUSTOMER_DEFINED_CODE = "customer_defined_code"
     IS_PAYABLE = "is_payable"
-    PARENT_ACCOUNT_ID = "parent_account_id"
     SECTION = "section"
     SUBSECTION = "subsection"
     GROUP = "group"
@@ -41,7 +40,7 @@ class ListAccountingAccountsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[ListAccountingAccountsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -66,7 +65,7 @@ class ListAccountingAccountsRequest(BaseModel):
         Optional[List[ListAccountingAccountsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

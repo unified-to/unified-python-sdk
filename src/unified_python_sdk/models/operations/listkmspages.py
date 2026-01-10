@@ -21,7 +21,6 @@ class ListKmsPagesQueryParamFields(str, Enum):
     TITLE = "title"
     TYPE = "type"
     SPACE_ID = "space_id"
-    PARENT_PAGE_ID = "parent_page_id"
     PARENT_ID = "parent_id"
     IS_ACTIVE = "is_active"
     USER_ID = "user_id"
@@ -36,7 +35,7 @@ class ListKmsPagesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[ListKmsPagesQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -63,7 +62,7 @@ class ListKmsPagesRequest(BaseModel):
         Optional[List[ListKmsPagesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

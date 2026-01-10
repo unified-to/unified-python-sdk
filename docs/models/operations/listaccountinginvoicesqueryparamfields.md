@@ -29,7 +29,6 @@
 | `STATUS`                    | status                      |
 | `URL`                       | url                         |
 | `PAYMENT_COLLECTION_METHOD` | payment_collection_method   |
-| `INVOICE_AT`                | invoice_at                  |
 | `TYPE`                      | type                        |
 | `ATTACHMENTS`               | attachments                 |
 | `SEND`                      | send                        |

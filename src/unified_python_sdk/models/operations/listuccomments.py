@@ -30,7 +30,7 @@ class ListUcCommentsRequestTypedDict(TypedDict):
     call_id: NotRequired[str]
     r"""The call ID to filter by"""
     fields: NotRequired[List[ListUcCommentsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -61,7 +61,7 @@ class ListUcCommentsRequest(BaseModel):
         Optional[List[ListUcCommentsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

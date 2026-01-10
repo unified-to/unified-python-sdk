@@ -31,6 +31,7 @@ class CommerceItemTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     slug: NotRequired[str]
     tags: NotRequired[List[str]]
+    taxrate_id: NotRequired[str]
     type: NotRequired[str]
     updated_at: NotRequired[datetime]
     variants: NotRequired[List[CommerceItemVariantTypedDict]]
@@ -74,6 +75,8 @@ class CommerceItem(BaseModel):
     slug: Optional[str] = None
 
     tags: Optional[List[str]] = None
+
+    taxrate_id: Optional[str] = None
 
     type: Optional[str] = None
 

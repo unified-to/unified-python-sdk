@@ -34,7 +34,7 @@ class ListUcCallsRequestTypedDict(TypedDict):
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to UcContact)"""
     fields: NotRequired[List[ListUcCallsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -65,7 +65,7 @@ class ListUcCallsRequest(BaseModel):
         Optional[List[ListUcCallsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

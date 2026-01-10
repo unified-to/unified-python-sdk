@@ -29,7 +29,6 @@ class KmsPageTypedDict(TypedDict):
     is_active: NotRequired[bool]
     metadata: NotRequired[List[KmsPageMetadataTypedDict]]
     parent_id: NotRequired[str]
-    parent_page_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     space_id: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -55,8 +54,6 @@ class KmsPage(BaseModel):
     metadata: Optional[List[KmsPageMetadata]] = None
 
     parent_id: Optional[str] = None
-
-    parent_page_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 

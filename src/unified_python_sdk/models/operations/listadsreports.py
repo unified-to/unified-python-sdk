@@ -32,7 +32,7 @@ class ListAdsReportsRequestTypedDict(TypedDict):
     campaign_id: NotRequired[str]
     r"""The campaign ID to filter by"""
     fields: NotRequired[List[ListAdsReportsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -64,7 +64,7 @@ class ListAdsReportsRequest(BaseModel):
         Optional[List[ListAdsReportsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

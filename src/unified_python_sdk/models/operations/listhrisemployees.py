@@ -63,7 +63,7 @@ class ListHrisEmployeesRequestTypedDict(TypedDict):
     company_id: NotRequired[str]
     r"""The company ID to filter by (reference to HrisCompany)"""
     fields: NotRequired[List[ListHrisEmployeesQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -92,7 +92,7 @@ class ListHrisEmployeesRequest(BaseModel):
         Optional[List[ListHrisEmployeesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

@@ -34,7 +34,7 @@ class UpdateRepoOrganizationRequestTypedDict(TypedDict):
     id: str
     r"""ID of the Organization"""
     fields: NotRequired[List[UpdateRepoOrganizationQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
@@ -59,7 +59,7 @@ class UpdateRepoOrganizationRequest(BaseModel):
         Optional[List[UpdateRepoOrganizationQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     raw: Annotated[
         Optional[str],

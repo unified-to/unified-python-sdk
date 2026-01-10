@@ -31,7 +31,7 @@ class ListMartechMembersRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[ListMartechMembersQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     list_id: NotRequired[str]
     r"""The list ID to filter by"""
@@ -56,7 +56,7 @@ class ListMartechMembersRequest(BaseModel):
         Optional[List[ListMartechMembersQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

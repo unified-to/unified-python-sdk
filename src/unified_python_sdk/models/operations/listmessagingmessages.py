@@ -53,7 +53,7 @@ class ListMessagingMessagesRequestTypedDict(TypedDict):
     expand: NotRequired[bool]
     r"""Whether to flatten grouped or recurring items into individual entries."""
     fields: NotRequired[List[ListMessagingMessagesQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -103,7 +103,7 @@ class ListMessagingMessagesRequest(BaseModel):
         Optional[List[ListMessagingMessagesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

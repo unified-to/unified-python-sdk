@@ -51,7 +51,7 @@ class ListAccountingCreditmemoesRequestTypedDict(TypedDict):
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListAccountingCreditmemoesQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -82,7 +82,7 @@ class ListAccountingCreditmemoesRequest(BaseModel):
         Optional[List[ListAccountingCreditmemoesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

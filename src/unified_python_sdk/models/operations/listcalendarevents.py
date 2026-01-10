@@ -51,7 +51,7 @@ class ListCalendarEventsRequestTypedDict(TypedDict):
     expand: NotRequired[bool]
     r"""Whether to flatten grouped or recurring items into individual entries."""
     fields: NotRequired[List[ListCalendarEventsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -94,7 +94,7 @@ class ListCalendarEventsRequest(BaseModel):
         Optional[List[ListCalendarEventsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

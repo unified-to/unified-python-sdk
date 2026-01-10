@@ -16,7 +16,6 @@
 | `CURRENCY`              | currency                |
 | `CUSTOMER_DEFINED_CODE` | customer_defined_code   |
 | `IS_PAYABLE`            | is_payable              |
-| `PARENT_ACCOUNT_ID`     | parent_account_id       |
 | `SECTION`               | section                 |
 | `SUBSECTION`            | subsection              |
 | `GROUP`                 | group                   |

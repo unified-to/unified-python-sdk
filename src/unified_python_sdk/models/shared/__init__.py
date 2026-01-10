@@ -280,6 +280,12 @@ if TYPE_CHECKING:
         SizeUnit,
         WeightUnit,
     )
+    from .commerceitemvariant1 import (
+        CommerceItemvariant1,
+        CommerceItemvariant1TypedDict,
+        CommerceItemvariantSizeUnit,
+        CommerceItemvariantWeightUnit,
+    )
     from .commercelocation import CommerceLocation, CommerceLocationTypedDict
     from .commercemetadata import (
         CommerceMetadata,
@@ -1291,6 +1297,10 @@ __all__ = [
     "CommerceItemTypedDict",
     "CommerceItemVariant",
     "CommerceItemVariantTypedDict",
+    "CommerceItemvariant1",
+    "CommerceItemvariant1TypedDict",
+    "CommerceItemvariantSizeUnit",
+    "CommerceItemvariantWeightUnit",
     "CommerceLocation",
     "CommerceLocationTypedDict",
     "CommerceMetadata",
@@ -2240,6 +2250,10 @@ _dynamic_imports: dict[str, str] = {
     "CommerceItemVariantTypedDict": ".commerceitemvariant",
     "SizeUnit": ".commerceitemvariant",
     "WeightUnit": ".commerceitemvariant",
+    "CommerceItemvariant1": ".commerceitemvariant1",
+    "CommerceItemvariant1TypedDict": ".commerceitemvariant1",
+    "CommerceItemvariantSizeUnit": ".commerceitemvariant1",
+    "CommerceItemvariantWeightUnit": ".commerceitemvariant1",
     "CommerceLocation": ".commercelocation",
     "CommerceLocationTypedDict": ".commercelocation",
     "CommerceMetadata": ".commercemetadata",

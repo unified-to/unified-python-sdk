@@ -41,7 +41,7 @@ class ListAccountingBalancesheetsRequestTypedDict(TypedDict):
     end_lt: NotRequired[str]
     r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListAccountingBalancesheetsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -84,7 +84,7 @@ class ListAccountingBalancesheetsRequest(BaseModel):
         Optional[List[ListAccountingBalancesheetsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

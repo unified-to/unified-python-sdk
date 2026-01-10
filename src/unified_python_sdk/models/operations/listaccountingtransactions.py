@@ -24,7 +24,6 @@ class ListAccountingTransactionsQueryParamFields(str, Enum):
     TOTAL_AMOUNT = "total_amount"
     TAX_AMOUNT = "tax_amount"
     ACCOUNT_ID = "account_id"
-    CONTACT_ID = "contact_id"
     REFERENCE = "reference"
     SUB_TOTAL_AMOUNT = "sub_total_amount"
     SPLIT_ACCOUNT_ID = "split_account_id"
@@ -44,7 +43,7 @@ class ListAccountingTransactionsRequestTypedDict(TypedDict):
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListAccountingTransactionsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -73,7 +72,7 @@ class ListAccountingTransactionsRequest(BaseModel):
         Optional[List[ListAccountingTransactionsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

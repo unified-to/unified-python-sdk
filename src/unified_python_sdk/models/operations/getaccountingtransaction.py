@@ -24,7 +24,6 @@ class GetAccountingTransactionQueryParamFields(str, Enum):
     TOTAL_AMOUNT = "total_amount"
     TAX_AMOUNT = "tax_amount"
     ACCOUNT_ID = "account_id"
-    CONTACT_ID = "contact_id"
     REFERENCE = "reference"
     SUB_TOTAL_AMOUNT = "sub_total_amount"
     SPLIT_ACCOUNT_ID = "split_account_id"
@@ -44,7 +43,7 @@ class GetAccountingTransactionRequestTypedDict(TypedDict):
     id: str
     r"""ID of the Transaction"""
     fields: NotRequired[List[GetAccountingTransactionQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
@@ -64,7 +63,7 @@ class GetAccountingTransactionRequest(BaseModel):
         Optional[List[GetAccountingTransactionQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     raw: Annotated[
         Optional[str],

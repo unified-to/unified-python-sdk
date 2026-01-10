@@ -37,7 +37,7 @@ class ListAtsScorecardsRequestTypedDict(TypedDict):
     candidate_id: NotRequired[str]
     r"""The candidate ID to filter by"""
     fields: NotRequired[List[ListAtsScorecardsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     interview_id: NotRequired[str]
     r"""The interview ID to filter by"""
     job_id: NotRequired[str]
@@ -76,7 +76,7 @@ class ListAtsScorecardsRequest(BaseModel):
         Optional[List[ListAtsScorecardsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     interview_id: Annotated[
         Optional[str],

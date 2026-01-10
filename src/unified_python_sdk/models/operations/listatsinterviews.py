@@ -36,7 +36,7 @@ class ListAtsInterviewsRequestTypedDict(TypedDict):
     application_id: NotRequired[str]
     r"""The application ID to filter by"""
     fields: NotRequired[List[ListAtsInterviewsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -65,7 +65,7 @@ class ListAtsInterviewsRequest(BaseModel):
         Optional[List[ListAtsInterviewsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

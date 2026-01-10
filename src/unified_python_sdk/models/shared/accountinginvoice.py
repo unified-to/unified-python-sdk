@@ -47,7 +47,6 @@ class AccountingInvoiceTypedDict(TypedDict):
     discount_amount: NotRequired[float]
     due_at: NotRequired[datetime]
     id: NotRequired[str]
-    invoice_at: NotRequired[datetime]
     invoice_number: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     notes: NotRequired[str]
@@ -87,8 +86,6 @@ class AccountingInvoice(BaseModel):
     due_at: Optional[datetime] = None
 
     id: Optional[str] = None
-
-    invoice_at: Optional[datetime] = None
 
     invoice_number: Optional[str] = None
 

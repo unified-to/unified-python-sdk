@@ -17,7 +17,6 @@ from unified_python_sdk.types import BaseModel
 
 class AccountingTransactionTypedDict(TypedDict):
     account_id: NotRequired[str]
-    contact_id: NotRequired[str]
     contacts: NotRequired[List[AccountingTransactionContactTypedDict]]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
@@ -39,8 +38,6 @@ class AccountingTransactionTypedDict(TypedDict):
 
 class AccountingTransaction(BaseModel):
     account_id: Optional[str] = None
-
-    contact_id: Optional[str] = None
 
     contacts: Optional[List[AccountingTransactionContact]] = None
 

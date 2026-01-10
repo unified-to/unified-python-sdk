@@ -97,10 +97,8 @@ class KmsPageMetadataTypedDict(TypedDict):
     extra_data: NotRequired[KmsPageMetadataExtraDataTypedDict]
     format_: NotRequired[KmsPageMetadataFormat]
     id: NotRequired[str]
-    key: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    type: NotRequired[str]
     value: NotRequired[KmsPageMetadataValueTypedDict]
 
 
@@ -113,13 +111,9 @@ class KmsPageMetadata(BaseModel):
 
     id: Optional[str] = None
 
-    key: Optional[str] = None
-
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
-
-    type: Optional[str] = None
 
     value: Optional[KmsPageMetadataValue] = None
 

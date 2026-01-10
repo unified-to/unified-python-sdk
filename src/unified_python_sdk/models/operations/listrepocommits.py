@@ -31,7 +31,7 @@ class ListRepoCommitsRequestTypedDict(TypedDict):
     branch_id: NotRequired[str]
     r"""The repo branch ID to filter by (reference to RepoBranch)"""
     fields: NotRequired[List[ListRepoCommitsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -62,7 +62,7 @@ class ListRepoCommitsRequest(BaseModel):
         Optional[List[ListRepoCommitsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

@@ -89,10 +89,8 @@ class CrmMetadataTypedDict(TypedDict):
     extra_data: NotRequired[CrmMetadataExtraDataTypedDict]
     format_: NotRequired[CrmMetadataFormat]
     id: NotRequired[str]
-    key: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    type: NotRequired[str]
     value: NotRequired[CrmMetadataValueTypedDict]
 
 
@@ -105,13 +103,9 @@ class CrmMetadata(BaseModel):
 
     id: Optional[str] = None
 
-    key: Optional[str] = None
-
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
-
-    type: Optional[str] = None
 
     value: Optional[CrmMetadataValue] = None
 

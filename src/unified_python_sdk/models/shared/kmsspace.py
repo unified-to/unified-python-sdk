@@ -15,7 +15,6 @@ class KmsSpaceTypedDict(TypedDict):
     is_active: NotRequired[bool]
     parent_id: NotRequired[str]
     parent_page_id: NotRequired[str]
-    parent_space_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -35,8 +34,6 @@ class KmsSpace(BaseModel):
     parent_id: Optional[str] = None
 
     parent_page_id: Optional[str] = None
-
-    parent_space_id: Optional[str] = "sp"
 
     raw: Optional[Dict[str, Any]] = None
 

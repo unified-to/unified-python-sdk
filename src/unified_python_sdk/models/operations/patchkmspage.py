@@ -22,7 +22,6 @@ class PatchKmsPageQueryParamFields(str, Enum):
     TITLE = "title"
     TYPE = "type"
     SPACE_ID = "space_id"
-    PARENT_PAGE_ID = "parent_page_id"
     PARENT_ID = "parent_id"
     IS_ACTIVE = "is_active"
     USER_ID = "user_id"
@@ -40,7 +39,7 @@ class PatchKmsPageRequestTypedDict(TypedDict):
     id: str
     r"""ID of the Page"""
     fields: NotRequired[List[PatchKmsPageQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
@@ -65,7 +64,7 @@ class PatchKmsPageRequest(BaseModel):
         Optional[List[PatchKmsPageQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     raw: Annotated[
         Optional[str],

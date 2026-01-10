@@ -22,6 +22,7 @@ class ListCommerceItemsQueryParamFields(str, Enum):
     PUBLIC_NAME = "public_name"
     SLUG = "slug"
     DESCRIPTION = "description"
+    TAXRATE_ID = "taxrate_id"
     GLOBAL_CODE = "global_code"
     PUBLIC_DESCRIPTION = "public_description"
     IS_ACTIVE = "is_active"
@@ -44,7 +45,7 @@ class ListCommerceItemsRequestTypedDict(TypedDict):
     collection_id: NotRequired[str]
     r"""The collection ID to filter by (reference to CommerceCollection)"""
     fields: NotRequired[List[ListCommerceItemsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -73,7 +74,7 @@ class ListCommerceItemsRequest(BaseModel):
         Optional[List[ListCommerceItemsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

@@ -49,7 +49,7 @@ class ListAtsJobsRequestTypedDict(TypedDict):
     company_id: NotRequired[str]
     r"""The company ID to filter by (reference to AtsCompany)"""
     fields: NotRequired[List[ListAtsJobsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -82,7 +82,7 @@ class ListAtsJobsRequest(BaseModel):
         Optional[List[ListAtsJobsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

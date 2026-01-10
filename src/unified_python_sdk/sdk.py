@@ -74,6 +74,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.invoice import Invoice
     from unified_python_sdk.issue import Issue
     from unified_python_sdk.item import Item
+    from unified_python_sdk.itemvariant import Itemvariant
     from unified_python_sdk.job import Job
     from unified_python_sdk.journal import Journal
     from unified_python_sdk.kms import Kms
@@ -184,6 +185,7 @@ class UnifiedTo(BaseSDK):
     collection: "Collection"
     inventory: "Inventory"
     item: "Item"
+    itemvariant: "Itemvariant"
     location: "Location"
     review: "Review"
     saleschannel: "Saleschannel"
@@ -306,6 +308,7 @@ class UnifiedTo(BaseSDK):
         "collection": ("unified_python_sdk.collection", "Collection"),
         "inventory": ("unified_python_sdk.inventory", "Inventory"),
         "item": ("unified_python_sdk.item", "Item"),
+        "itemvariant": ("unified_python_sdk.itemvariant", "Itemvariant"),
         "location": ("unified_python_sdk.location", "Location"),
         "review": ("unified_python_sdk.review", "Review"),
         "saleschannel": ("unified_python_sdk.saleschannel", "Saleschannel"),

@@ -38,7 +38,7 @@ class ListHrisPayslipsRequestTypedDict(TypedDict):
     company_id: NotRequired[str]
     r"""The company ID to filter by (reference to HrisCompany)"""
     fields: NotRequired[List[ListHrisPayslipsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -69,7 +69,7 @@ class ListHrisPayslipsRequest(BaseModel):
         Optional[List[ListHrisPayslipsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],

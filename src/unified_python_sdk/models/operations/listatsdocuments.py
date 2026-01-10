@@ -37,7 +37,7 @@ class ListAtsDocumentsRequestTypedDict(TypedDict):
     candidate_id: NotRequired[str]
     r"""The candidate ID to filter by"""
     fields: NotRequired[List[ListAtsDocumentsQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     job_id: NotRequired[str]
     r"""The job ID to filter by"""
     limit: NotRequired[float]
@@ -76,7 +76,7 @@ class ListAtsDocumentsRequest(BaseModel):
         Optional[List[ListAtsDocumentsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     job_id: Annotated[
         Optional[str],

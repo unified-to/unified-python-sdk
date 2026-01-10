@@ -41,7 +41,6 @@ class ListAccountingInvoicesQueryParamFields(str, Enum):
     STATUS = "status"
     URL = "url"
     PAYMENT_COLLECTION_METHOD = "payment_collection_method"
-    INVOICE_AT = "invoice_at"
     TYPE = "type"
     ATTACHMENTS = "attachments"
     SEND = "send"
@@ -54,7 +53,7 @@ class ListAccountingInvoicesRequestTypedDict(TypedDict):
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListAccountingInvoicesQueryParamFields]]
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -86,7 +85,7 @@ class ListAccountingInvoicesRequest(BaseModel):
         Optional[List[ListAccountingInvoicesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Comma-delimited fields to return"""
+    r"""Fields to return"""
 
     limit: Annotated[
         Optional[float],
