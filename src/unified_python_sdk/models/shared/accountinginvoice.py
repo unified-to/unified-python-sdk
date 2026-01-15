@@ -5,12 +5,12 @@ from .accountingattachment import AccountingAttachment, AccountingAttachmentType
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
 from datetime import datetime
 from enum import Enum
-from pydantic import field_serializer
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingInvoicePaymentCollectionMethod(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -151,3 +151,50 @@ class AccountingInvoice(BaseModel):
             except ValueError:
                 return value
         return value
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "attachments",
+                "balance_amount",
+                "cancelled_at",
+                "contact_id",
+                "created_at",
+                "currency",
+                "discount_amount",
+                "due_at",
+                "id",
+                "invoice_number",
+                "lineitems",
+                "notes",
+                "paid_amount",
+                "paid_at",
+                "payment_collection_method",
+                "posted_at",
+                "raw",
+                "reference",
+                "refund_amount",
+                "refund_reason",
+                "refunded_at",
+                "send",
+                "status",
+                "tax_amount",
+                "total_amount",
+                "type",
+                "updated_at",
+                "url",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

@@ -15,12 +15,12 @@ from .property_atscandidate_address import (
 )
 from datetime import datetime
 from enum import Enum
-from pydantic import field_serializer
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class Origin(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -124,3 +124,48 @@ class AtsCandidate(BaseModel):
             except ValueError:
                 return value
         return value
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "address",
+                "company_id",
+                "company_name",
+                "created_at",
+                "date_of_birth",
+                "education",
+                "emails",
+                "experiences",
+                "external_identifier",
+                "first_name",
+                "id",
+                "image_url",
+                "last_name",
+                "link_urls",
+                "metadata",
+                "name",
+                "origin",
+                "raw",
+                "skills",
+                "sources",
+                "tags",
+                "telephones",
+                "title",
+                "updated_at",
+                "user_id",
+                "web_url",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

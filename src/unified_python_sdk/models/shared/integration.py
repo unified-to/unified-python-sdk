@@ -4,9 +4,10 @@ from __future__ import annotations
 from .integrationsupport import IntegrationSupport, IntegrationSupportTypedDict
 from .property_integration_categories import PropertyIntegrationCategories
 from datetime import datetime
+from pydantic import model_serializer
 from typing import Any, Dict, List, Optional, Union
 from typing_extensions import NotRequired, TypeAliasType, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class Integration1TypedDict(TypedDict):
@@ -217,3 +218,46 @@ class Integration(BaseModel):
     updated_at: Optional[str] = None
 
     web_url: Optional[str] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "active_healthy_connections",
+                "api",
+                "api_docs_url",
+                "beta",
+                "color",
+                "created_at",
+                "description",
+                "fa_icon",
+                "featured",
+                "in_progress",
+                "is_active",
+                "logo_url",
+                "partnership",
+                "popularity",
+                "rate_limit_description",
+                "saml",
+                "sandbox",
+                "support",
+                "tested_at",
+                "text_color",
+                "token_instructions",
+                "token_names",
+                "updated_at",
+                "web_url",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

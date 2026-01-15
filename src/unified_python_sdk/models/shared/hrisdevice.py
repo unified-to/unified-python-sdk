@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from datetime import datetime
+from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class HrisDeviceTypedDict(TypedDict):
@@ -72,3 +73,41 @@ class HrisDevice(BaseModel):
     r"""users who have this device"""
 
     version: Optional[str] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "admin_user_ids",
+                "asset_tag",
+                "created_at",
+                "has_antivirus",
+                "has_firewall",
+                "has_hd_encrypted",
+                "has_password_manager",
+                "has_screenlock",
+                "id",
+                "is_missing",
+                "location_id",
+                "manufacturer",
+                "model",
+                "os",
+                "os_version",
+                "raw",
+                "updated_at",
+                "user_ids",
+                "version",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

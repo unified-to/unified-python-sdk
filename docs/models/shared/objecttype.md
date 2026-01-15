@@ -30,12 +30,12 @@
 | `PAYMENT_REFUND`           | payment_refund             |
 | `PAYMENT_SUBSCRIPTION`     | payment_subscription       |
 | `COMMERCE_ITEM`            | commerce_item              |
-| `COMMERCE_ITEMVARIANT`     | commerce_itemvariant       |
 | `COMMERCE_COLLECTION`      | commerce_collection        |
 | `COMMERCE_INVENTORY`       | commerce_inventory         |
 | `COMMERCE_LOCATION`        | commerce_location          |
 | `COMMERCE_REVIEW`          | commerce_review            |
 | `COMMERCE_SALESCHANNEL`    | commerce_saleschannel      |
+| `COMMERCE_ITEMVARIANT`     | commerce_itemvariant       |
 | `VERIFICATION_PACKAGE`     | verification_package       |
 | `VERIFICATION_REQUEST`     | verification_request       |
 | `ATS_ACTIVITY`             | ats_activity               |
@@ -114,3 +114,8 @@
 | `ADS_GROUP`                | ads_group                  |
 | `FORMS_FORM`               | forms_form                 |
 | `FORMS_SUBMISSION`         | forms_submission           |
+| `SHIPPING_CARRIER`         | shipping_carrier           |
+| `SHIPPING_RATE`            | shipping_rate              |
+| `SHIPPING_SHIPMENT`        | shipping_shipment          |
+| `SHIPPING_LABEL`           | shipping_label             |
+| `SHIPPING_TRACKING`        | shipping_tracking          |

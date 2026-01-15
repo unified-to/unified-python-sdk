@@ -12,12 +12,12 @@ from .property_accountingorder_shipping_address import (
 )
 from datetime import datetime
 from enum import Enum
-from pydantic import field_serializer
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingOrderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -100,3 +100,36 @@ class AccountingOrder(BaseModel):
             except ValueError:
                 return value
         return value
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "account_id",
+                "billing_address",
+                "contact_id",
+                "created_at",
+                "currency",
+                "id",
+                "lineitems",
+                "posted_at",
+                "raw",
+                "shipping_address",
+                "status",
+                "total_amount",
+                "type",
+                "updated_at",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

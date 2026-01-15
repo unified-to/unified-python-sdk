@@ -7,9 +7,10 @@ from .calendarrecordingtranscript import (
     CalendarRecordingTranscriptTypedDict,
 )
 from datetime import datetime
+from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CalendarRecordingMediaTypedDict(TypedDict):
@@ -36,3 +37,29 @@ class CalendarRecordingMedia(BaseModel):
     transcript_download_url: Optional[str] = None
 
     transcripts: Optional[List[CalendarRecordingTranscript]] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "attendees",
+                "end_at",
+                "language",
+                "recording_download_url",
+                "start_at",
+                "transcript_download_url",
+                "transcripts",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

@@ -6,9 +6,10 @@ from .accountingtrialbalancesubitem import (
     AccountingTrialbalanceSubItemTypedDict,
 )
 from datetime import datetime
+from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingTrialbalanceTypedDict(TypedDict):
@@ -47,3 +48,33 @@ class AccountingTrialbalance(BaseModel):
     total_debit_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "created_at",
+                "currency",
+                "end_at",
+                "id",
+                "name",
+                "raw",
+                "start_at",
+                "sub_items",
+                "total_credit_amount",
+                "total_debit_amount",
+                "updated_at",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

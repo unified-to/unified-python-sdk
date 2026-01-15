@@ -52,8 +52,6 @@
 | `PAYMENT_SUBSCRIPTION_WRITE`     | payment_subscription_write       |
 | `COMMERCE_ITEM_READ`             | commerce_item_read               |
 | `COMMERCE_ITEM_WRITE`            | commerce_item_write              |
-| `COMMERCE_ITEMVARIANT_READ`      | commerce_itemvariant_read        |
-| `COMMERCE_ITEMVARIANT_WRITE`     | commerce_itemvariant_write       |
 | `COMMERCE_COLLECTION_READ`       | commerce_collection_read         |
 | `COMMERCE_COLLECTION_WRITE`      | commerce_collection_write        |
 | `COMMERCE_INVENTORY_READ`        | commerce_inventory_read          |
@@ -64,6 +62,8 @@
 | `COMMERCE_REVIEW_WRITE`          | commerce_review_write            |
 | `COMMERCE_SALESCHANNEL_READ`     | commerce_saleschannel_read       |
 | `COMMERCE_SALESCHANNEL_WRITE`    | commerce_saleschannel_write      |
+| `COMMERCE_ITEMVARIANT_READ`      | commerce_itemvariant_read        |
+| `COMMERCE_ITEMVARIANT_WRITE`     | commerce_itemvariant_write       |
 | `VERIFICATION_PACKAGE_READ`      | verification_package_read        |
 | `VERIFICATION_REQUEST_READ`      | verification_request_read        |
 | `VERIFICATION_REQUEST_WRITE`     | verification_request_write       |
@@ -208,3 +208,10 @@
 | `FORMS_FORM_WRITE`               | forms_form_write                 |
 | `FORMS_SUBMISSION_READ`          | forms_submission_read            |
 | `FORMS_SUBMISSION_WRITE`         | forms_submission_write           |
+| `SHIPPING_SHIPMENT_READ`         | shipping_shipment_read           |
+| `SHIPPING_SHIPMENT_WRITE`        | shipping_shipment_write          |
+| `SHIPPING_LABEL_READ`            | shipping_label_read              |
+| `SHIPPING_LABEL_WRITE`           | shipping_label_write             |
+| `SHIPPING_TRACKING_READ`         | shipping_tracking_read           |
+| `SHIPPING_RATE_READ`             | shipping_rate_read               |
+| `SHIPPING_CARRIER_READ`          | shipping_carrier_read            |

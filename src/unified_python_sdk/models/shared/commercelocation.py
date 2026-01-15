@@ -6,9 +6,10 @@ from .property_commercelocation_address import (
     PropertyCommerceLocationAddressTypedDict,
 )
 from datetime import datetime
+from pydantic import model_serializer
 from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CommerceLocationTypedDict(TypedDict):
@@ -47,3 +48,32 @@ class CommerceLocation(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "address",
+                "created_at",
+                "currency",
+                "description",
+                "id",
+                "is_active",
+                "language_locale",
+                "parent_id",
+                "raw",
+                "updated_at",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

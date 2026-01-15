@@ -35,6 +35,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.call import Call
     from unified_python_sdk.campaign import Campaign
     from unified_python_sdk.candidate import Candidate
+    from unified_python_sdk.carrier import Carrier
     from unified_python_sdk.cashflow import Cashflow
     from unified_python_sdk.category import Category
     from unified_python_sdk.change import Change
@@ -78,6 +79,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.job import Job
     from unified_python_sdk.journal import Journal
     from unified_python_sdk.kms import Kms
+    from unified_python_sdk.label import Label
     from unified_python_sdk.lead import Lead
     from unified_python_sdk.link import Link
     from unified_python_sdk.list import ListT
@@ -106,6 +108,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.prompt import Prompt
     from unified_python_sdk.pullrequest import Pullrequest
     from unified_python_sdk.purchaseorder import Purchaseorder
+    from unified_python_sdk.rate import Rate
     from unified_python_sdk.recording import Recording
     from unified_python_sdk.refund import Refund
     from unified_python_sdk.repo import Repo
@@ -117,6 +120,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.salesorder import Salesorder
     from unified_python_sdk.scim import Scim
     from unified_python_sdk.scorecard import Scorecard
+    from unified_python_sdk.shipment import Shipment
+    from unified_python_sdk.shipping import Shipping
     from unified_python_sdk.space import Space
     from unified_python_sdk.storage import Storage
     from unified_python_sdk.student import Student
@@ -128,6 +133,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.ticketing import Ticketing
     from unified_python_sdk.timeoff import Timeoff
     from unified_python_sdk.timeshift import Timeshift
+    from unified_python_sdk.tracking import Tracking
     from unified_python_sdk.transaction import Transaction
     from unified_python_sdk.trialbalance import Trialbalance
     from unified_python_sdk.uc import Uc
@@ -238,6 +244,12 @@ class UnifiedTo(BaseSDK):
     repository: "Repository"
     scim: "Scim"
     user: "User"
+    shipping: "Shipping"
+    carrier: "Carrier"
+    label: "Label"
+    rate: "Rate"
+    shipment: "Shipment"
+    tracking: "Tracking"
     storage: "Storage"
     file: "File"
     task: "Task"
@@ -361,6 +373,12 @@ class UnifiedTo(BaseSDK):
         "repository": ("unified_python_sdk.repository", "Repository"),
         "scim": ("unified_python_sdk.scim", "Scim"),
         "user": ("unified_python_sdk.user", "User"),
+        "shipping": ("unified_python_sdk.shipping", "Shipping"),
+        "carrier": ("unified_python_sdk.carrier", "Carrier"),
+        "label": ("unified_python_sdk.label", "Label"),
+        "rate": ("unified_python_sdk.rate", "Rate"),
+        "shipment": ("unified_python_sdk.shipment", "Shipment"),
+        "tracking": ("unified_python_sdk.tracking", "Tracking"),
         "storage": ("unified_python_sdk.storage", "Storage"),
         "file": ("unified_python_sdk.file", "File"),
         "task": ("unified_python_sdk.task", "Task"),

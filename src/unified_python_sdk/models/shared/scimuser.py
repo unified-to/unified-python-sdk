@@ -25,9 +25,10 @@ from .scimphoto import ScimPhoto, ScimPhotoTypedDict
 from .scimrole import ScimRole, ScimRoleTypedDict
 from .scimusergroups import ScimUserGroups, ScimUserGroupsTypedDict
 import pydantic
+from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ScimUserTypedDict(TypedDict):
@@ -148,3 +149,50 @@ class ScimUser(BaseModel):
     x509_certificates: Annotated[
         Optional[List[ScimRole]], pydantic.Field(alias="x509Certificates")
     ] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "active",
+                "addresses",
+                "displayName",
+                "emails",
+                "entitlements",
+                "externalId",
+                "groups",
+                "id",
+                "ims",
+                "locale",
+                "meta",
+                "name",
+                "nickName",
+                "password",
+                "phoneNumbers",
+                "photos",
+                "preferredLanguage",
+                "profileUrl",
+                "roles",
+                "schemas",
+                "timezone",
+                "title",
+                "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+                "urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User",
+                "urn:ietf:params:scim:schemas:extension:peakon:2.0:User",
+                "userName",
+                "userType",
+                "x509Certificates",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

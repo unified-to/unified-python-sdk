@@ -6,12 +6,12 @@ from .property_integrationsupport_webhook_events import (
     PropertyIntegrationSupportWebhookEventsTypedDict,
 )
 from enum import Enum
-from pydantic import field_serializer
+from pydantic import field_serializer, model_serializer
 from typing import Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class FromWebhook(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -69,6 +69,12 @@ class ListCampaignID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListCandidateID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -200,6 +206,12 @@ class ListJobID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListLabelID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListLeadID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -237,6 +249,12 @@ class ListOffset(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListOrder(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListOrderID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -315,6 +333,12 @@ class ListRootID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListSaleschannelID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListShipmentID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -410,6 +434,12 @@ class NativeWebhookCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class NativeWebhookCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class NativeWebhookChannelID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -434,6 +464,18 @@ class NativeWebhookFormID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class NativeWebhookLabelID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class NativeWebhookOrderID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class NativeWebhookParentID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -441,6 +483,12 @@ class NativeWebhookParentID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class NativeWebhookProjectID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class NativeWebhookShipmentID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -519,6 +567,12 @@ class VirtualWebhookCampaignID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookCandidateID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -614,6 +668,12 @@ class VirtualWebhookJobID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookLabelID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookLeadID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -633,6 +693,12 @@ class VirtualWebhookListID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookLocationID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookOrderID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -675,6 +741,12 @@ class VirtualWebhookRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookSaleschannelID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookShipmentID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -746,6 +818,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_call_id: NotRequired[ListCallID]
     list_campaign_id: NotRequired[ListCampaignID]
     list_candidate_id: NotRequired[ListCandidateID]
+    list_carrier_id: NotRequired[ListCarrierID]
     list_category_id: NotRequired[ListCategoryID]
     list_channel_id: NotRequired[ListChannelID]
     list_class_id: NotRequired[ListClassID]
@@ -767,6 +840,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_item_id: NotRequired[ListItemID]
     list_item_variant_id: NotRequired[ListItemVariantID]
     list_job_id: NotRequired[ListJobID]
+    list_label_id: NotRequired[ListLabelID]
     list_lead_id: NotRequired[ListLeadID]
     list_limit: NotRequired[ListLimit]
     list_link_id: NotRequired[ListLinkID]
@@ -774,6 +848,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_location_id: NotRequired[ListLocationID]
     list_offset: NotRequired[ListOffset]
     list_order: NotRequired[ListOrder]
+    list_order_id: NotRequired[ListOrderID]
     list_org_id: NotRequired[ListOrgID]
     list_package_id: NotRequired[ListPackageID]
     list_page_id: NotRequired[ListPageID]
@@ -787,6 +862,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_repo_id: NotRequired[ListRepoID]
     list_root_id: NotRequired[ListRootID]
     list_saleschannel_id: NotRequired[ListSaleschannelID]
+    list_shipment_id: NotRequired[ListShipmentID]
     list_sort_by_created_at: NotRequired[ListSortByCreatedAt]
     list_sort_by_name: NotRequired[ListSortByName]
     list_sort_by_updated_at: NotRequired[ListSortByUpdatedAt]
@@ -803,12 +879,16 @@ class IntegrationSupportTypedDict(TypedDict):
     list_user_mentioned_id: NotRequired[ListUserMentionedID]
     methods: NotRequired[Dict[str, bool]]
     native_webhook_calendar_id: NotRequired[NativeWebhookCalendarID]
+    native_webhook_carrier_id: NotRequired[NativeWebhookCarrierID]
     native_webhook_channel_id: NotRequired[NativeWebhookChannelID]
     native_webhook_company_id: NotRequired[NativeWebhookCompanyID]
     native_webhook_event_id: NotRequired[NativeWebhookEventID]
     native_webhook_form_id: NotRequired[NativeWebhookFormID]
+    native_webhook_label_id: NotRequired[NativeWebhookLabelID]
+    native_webhook_order_id: NotRequired[NativeWebhookOrderID]
     native_webhook_parent_id: NotRequired[NativeWebhookParentID]
     native_webhook_project_id: NotRequired[NativeWebhookProjectID]
+    native_webhook_shipment_id: NotRequired[NativeWebhookShipmentID]
     native_webhook_task_id: NotRequired[NativeWebhookTaskID]
     outbound_fields: NotRequired[Dict[str, str]]
     raw_objects: NotRequired[List[str]]
@@ -826,6 +906,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_call_id: NotRequired[VirtualWebhookCallID]
     virtual_webhook_campaign_id: NotRequired[VirtualWebhookCampaignID]
     virtual_webhook_candidate_id: NotRequired[VirtualWebhookCandidateID]
+    virtual_webhook_carrier_id: NotRequired[VirtualWebhookCarrierID]
     virtual_webhook_channel_id: NotRequired[VirtualWebhookChannelID]
     virtual_webhook_collection_id: NotRequired[VirtualWebhookCollectionID]
     virtual_webhook_company_id: NotRequired[VirtualWebhookCompanyID]
@@ -841,10 +922,12 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_item_id: NotRequired[VirtualWebhookItemID]
     virtual_webhook_item_variant_id: NotRequired[VirtualWebhookItemVariantID]
     virtual_webhook_job_id: NotRequired[VirtualWebhookJobID]
+    virtual_webhook_label_id: NotRequired[VirtualWebhookLabelID]
     virtual_webhook_lead_id: NotRequired[VirtualWebhookLeadID]
     virtual_webhook_limit: NotRequired[VirtualWebhookLimit]
     virtual_webhook_list_id: NotRequired[VirtualWebhookListID]
     virtual_webhook_location_id: NotRequired[VirtualWebhookLocationID]
+    virtual_webhook_order_id: NotRequired[VirtualWebhookOrderID]
     virtual_webhook_org_id: NotRequired[VirtualWebhookOrgID]
     virtual_webhook_page_id: NotRequired[VirtualWebhookPageID]
     virtual_webhook_parent_id: NotRequired[VirtualWebhookParentID]
@@ -852,6 +935,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_project_id: NotRequired[VirtualWebhookProjectID]
     virtual_webhook_repo_id: NotRequired[VirtualWebhookRepoID]
     virtual_webhook_saleschannel_id: NotRequired[VirtualWebhookSaleschannelID]
+    virtual_webhook_shipment_id: NotRequired[VirtualWebhookShipmentID]
     virtual_webhook_space_id: NotRequired[VirtualWebhookSpaceID]
     virtual_webhook_start_gte: NotRequired[VirtualWebhookStartGte]
     virtual_webhook_status: NotRequired[VirtualWebhookStatus]
@@ -886,6 +970,8 @@ class IntegrationSupport(BaseModel):
     list_campaign_id: Optional[ListCampaignID] = None
 
     list_candidate_id: Optional[ListCandidateID] = None
+
+    list_carrier_id: Optional[ListCarrierID] = None
 
     list_category_id: Optional[ListCategoryID] = None
 
@@ -929,6 +1015,8 @@ class IntegrationSupport(BaseModel):
 
     list_job_id: Optional[ListJobID] = None
 
+    list_label_id: Optional[ListLabelID] = None
+
     list_lead_id: Optional[ListLeadID] = None
 
     list_limit: Optional[ListLimit] = None
@@ -942,6 +1030,8 @@ class IntegrationSupport(BaseModel):
     list_offset: Optional[ListOffset] = None
 
     list_order: Optional[ListOrder] = None
+
+    list_order_id: Optional[ListOrderID] = None
 
     list_org_id: Optional[ListOrgID] = None
 
@@ -968,6 +1058,8 @@ class IntegrationSupport(BaseModel):
     list_root_id: Optional[ListRootID] = None
 
     list_saleschannel_id: Optional[ListSaleschannelID] = None
+
+    list_shipment_id: Optional[ListShipmentID] = None
 
     list_sort_by_created_at: Optional[ListSortByCreatedAt] = None
 
@@ -1001,6 +1093,8 @@ class IntegrationSupport(BaseModel):
 
     native_webhook_calendar_id: Optional[NativeWebhookCalendarID] = None
 
+    native_webhook_carrier_id: Optional[NativeWebhookCarrierID] = None
+
     native_webhook_channel_id: Optional[NativeWebhookChannelID] = None
 
     native_webhook_company_id: Optional[NativeWebhookCompanyID] = None
@@ -1009,9 +1103,15 @@ class IntegrationSupport(BaseModel):
 
     native_webhook_form_id: Optional[NativeWebhookFormID] = None
 
+    native_webhook_label_id: Optional[NativeWebhookLabelID] = None
+
+    native_webhook_order_id: Optional[NativeWebhookOrderID] = None
+
     native_webhook_parent_id: Optional[NativeWebhookParentID] = None
 
     native_webhook_project_id: Optional[NativeWebhookProjectID] = None
+
+    native_webhook_shipment_id: Optional[NativeWebhookShipmentID] = None
 
     native_webhook_task_id: Optional[NativeWebhookTaskID] = None
 
@@ -1046,6 +1146,8 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_candidate_id: Optional[VirtualWebhookCandidateID] = None
 
+    virtual_webhook_carrier_id: Optional[VirtualWebhookCarrierID] = None
+
     virtual_webhook_channel_id: Optional[VirtualWebhookChannelID] = None
 
     virtual_webhook_collection_id: Optional[VirtualWebhookCollectionID] = None
@@ -1076,6 +1178,8 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_job_id: Optional[VirtualWebhookJobID] = None
 
+    virtual_webhook_label_id: Optional[VirtualWebhookLabelID] = None
+
     virtual_webhook_lead_id: Optional[VirtualWebhookLeadID] = None
 
     virtual_webhook_limit: Optional[VirtualWebhookLimit] = None
@@ -1083,6 +1187,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_list_id: Optional[VirtualWebhookListID] = None
 
     virtual_webhook_location_id: Optional[VirtualWebhookLocationID] = None
+
+    virtual_webhook_order_id: Optional[VirtualWebhookOrderID] = None
 
     virtual_webhook_org_id: Optional[VirtualWebhookOrgID] = None
 
@@ -1097,6 +1203,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_repo_id: Optional[VirtualWebhookRepoID] = None
 
     virtual_webhook_saleschannel_id: Optional[VirtualWebhookSaleschannelID] = None
+
+    virtual_webhook_shipment_id: Optional[VirtualWebhookShipmentID] = None
 
     virtual_webhook_space_id: Optional[VirtualWebhookSpaceID] = None
 
@@ -1204,6 +1312,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListCandidateID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_carrier_id")
+    def serialize_list_carrier_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListCarrierID(value)
             except ValueError:
                 return value
         return value
@@ -1397,6 +1514,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_label_id")
+    def serialize_list_label_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListLabelID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_lead_id")
     def serialize_list_lead_id(self, value):
         if isinstance(value, str):
@@ -1456,6 +1582,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListOrder(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_order_id")
+    def serialize_list_order_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListOrderID(value)
             except ValueError:
                 return value
         return value
@@ -1573,6 +1708,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListSaleschannelID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_shipment_id")
+    def serialize_list_shipment_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListShipmentID(value)
             except ValueError:
                 return value
         return value
@@ -1712,6 +1856,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("native_webhook_carrier_id")
+    def serialize_native_webhook_carrier_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookCarrierID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("native_webhook_channel_id")
     def serialize_native_webhook_channel_id(self, value):
         if isinstance(value, str):
@@ -1748,6 +1901,24 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("native_webhook_label_id")
+    def serialize_native_webhook_label_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookLabelID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("native_webhook_order_id")
+    def serialize_native_webhook_order_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookOrderID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("native_webhook_parent_id")
     def serialize_native_webhook_parent_id(self, value):
         if isinstance(value, str):
@@ -1762,6 +1933,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.NativeWebhookProjectID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("native_webhook_shipment_id")
+    def serialize_native_webhook_shipment_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookShipmentID(value)
             except ValueError:
                 return value
         return value
@@ -1879,6 +2059,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookCandidateID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_carrier_id")
+    def serialize_virtual_webhook_carrier_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookCarrierID(value)
             except ValueError:
                 return value
         return value
@@ -2018,6 +2207,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_label_id")
+    def serialize_virtual_webhook_label_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookLabelID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_lead_id")
     def serialize_virtual_webhook_lead_id(self, value):
         if isinstance(value, str):
@@ -2050,6 +2248,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookLocationID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_order_id")
+    def serialize_virtual_webhook_order_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookOrderID(value)
             except ValueError:
                 return value
         return value
@@ -2113,6 +2320,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookSaleschannelID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_shipment_id")
+    def serialize_virtual_webhook_shipment_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookShipmentID(value)
             except ValueError:
                 return value
         return value
@@ -2197,3 +2413,160 @@ class IntegrationSupport(BaseModel):
             except ValueError:
                 return value
         return value
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "from_webhook",
+                "inbound_fields",
+                "list_account_id",
+                "list_ad_id",
+                "list_application_id",
+                "list_benefit_id",
+                "list_branch_id",
+                "list_calendar_id",
+                "list_call_id",
+                "list_campaign_id",
+                "list_candidate_id",
+                "list_carrier_id",
+                "list_category_id",
+                "list_channel_id",
+                "list_class_id",
+                "list_collection_id",
+                "list_company_id",
+                "list_contact_id",
+                "list_course_id",
+                "list_customer_id",
+                "list_deal_id",
+                "list_document_id",
+                "list_end_lt",
+                "list_event_id",
+                "list_expand",
+                "list_form_id",
+                "list_group_id",
+                "list_instructor_id",
+                "list_interview_id",
+                "list_invoice_id",
+                "list_item_id",
+                "list_item_variant_id",
+                "list_job_id",
+                "list_label_id",
+                "list_lead_id",
+                "list_limit",
+                "list_link_id",
+                "list_list_id",
+                "list_location_id",
+                "list_offset",
+                "list_order",
+                "list_order_id",
+                "list_org_id",
+                "list_package_id",
+                "list_page_id",
+                "list_parent_id",
+                "list_payment_id",
+                "list_payslip_id",
+                "list_pipeline_id",
+                "list_project_id",
+                "list_query",
+                "list_raw_fields",
+                "list_repo_id",
+                "list_root_id",
+                "list_saleschannel_id",
+                "list_shipment_id",
+                "list_sort_by_created_at",
+                "list_sort_by_name",
+                "list_sort_by_updated_at",
+                "list_space_id",
+                "list_start_gte",
+                "list_status",
+                "list_student_id",
+                "list_task_id",
+                "list_teacher_id",
+                "list_ticket_id",
+                "list_type",
+                "list_updated_gte",
+                "list_user_id",
+                "list_user_mentioned_id",
+                "methods",
+                "native_webhook_calendar_id",
+                "native_webhook_carrier_id",
+                "native_webhook_channel_id",
+                "native_webhook_company_id",
+                "native_webhook_event_id",
+                "native_webhook_form_id",
+                "native_webhook_label_id",
+                "native_webhook_order_id",
+                "native_webhook_parent_id",
+                "native_webhook_project_id",
+                "native_webhook_shipment_id",
+                "native_webhook_task_id",
+                "outbound_fields",
+                "raw_objects",
+                "search_domain",
+                "search_email",
+                "search_linkedinurl",
+                "search_name",
+                "search_twitter",
+                "slow_fields",
+                "virtual_webhook_ad_id",
+                "virtual_webhook_application_id",
+                "virtual_webhook_branch_id",
+                "virtual_webhook_calendar_id",
+                "virtual_webhook_call_id",
+                "virtual_webhook_campaign_id",
+                "virtual_webhook_candidate_id",
+                "virtual_webhook_carrier_id",
+                "virtual_webhook_channel_id",
+                "virtual_webhook_collection_id",
+                "virtual_webhook_company_id",
+                "virtual_webhook_contact_id",
+                "virtual_webhook_customer_id",
+                "virtual_webhook_deal_id",
+                "virtual_webhook_end_lt",
+                "virtual_webhook_event_id",
+                "virtual_webhook_expand",
+                "virtual_webhook_fields",
+                "virtual_webhook_form_id",
+                "virtual_webhook_group_id",
+                "virtual_webhook_item_id",
+                "virtual_webhook_item_variant_id",
+                "virtual_webhook_job_id",
+                "virtual_webhook_label_id",
+                "virtual_webhook_lead_id",
+                "virtual_webhook_limit",
+                "virtual_webhook_list_id",
+                "virtual_webhook_location_id",
+                "virtual_webhook_order_id",
+                "virtual_webhook_org_id",
+                "virtual_webhook_page_id",
+                "virtual_webhook_parent_id",
+                "virtual_webhook_pipeline_id",
+                "virtual_webhook_project_id",
+                "virtual_webhook_repo_id",
+                "virtual_webhook_saleschannel_id",
+                "virtual_webhook_shipment_id",
+                "virtual_webhook_space_id",
+                "virtual_webhook_start_gte",
+                "virtual_webhook_status",
+                "virtual_webhook_task_id",
+                "virtual_webhook_ticket_id",
+                "virtual_webhook_type",
+                "virtual_webhook_updated_gte",
+                "virtual_webhook_user_id",
+                "virtual_webhook_user_mentioned_id",
+                "webhook_events",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

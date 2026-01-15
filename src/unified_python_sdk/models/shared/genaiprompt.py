@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from .genaicontent import GenaiContent, GenaiContentTypedDict
+from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class GenaiPromptTypedDict(TypedDict):
@@ -37,3 +38,31 @@ class GenaiPrompt(BaseModel):
     temperature: Optional[float] = None
 
     tokens_used: Optional[float] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "max_tokens",
+                "mcp_deferred_tools",
+                "mcp_url",
+                "messages",
+                "model_id",
+                "raw",
+                "responses",
+                "temperature",
+                "tokens_used",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

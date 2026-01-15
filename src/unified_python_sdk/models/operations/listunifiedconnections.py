@@ -3,10 +3,11 @@
 from __future__ import annotations
 from enum import Enum
 import httpx
+from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.models.shared import connection as shared_connection
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import FieldMetadata, QueryParamMetadata
 
 
@@ -36,6 +37,7 @@ class Categories(str, Enum):
     VERIFICATION = "verification"
     ADS = "ads"
     FORMS = "forms"
+    SHIPPING = "shipping"
 
 
 class ListUnifiedConnectionsRequestTypedDict(TypedDict):
@@ -96,6 +98,33 @@ class ListUnifiedConnectionsRequest(BaseModel):
     ] = None
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "categories",
+                "env",
+                "external_xref",
+                "limit",
+                "offset",
+                "order",
+                "sort",
+                "updated_gte",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m
+
 
 class ListUnifiedConnectionsResponseTypedDict(TypedDict):
     content_type: str
@@ -120,3 +149,19 @@ class ListUnifiedConnectionsResponse(BaseModel):
 
     connections: Optional[List[shared_connection.Connection]] = None
     r"""Successful"""
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(["Connections"])
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

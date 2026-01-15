@@ -31,3 +31,4 @@ class PropertyIntegrationCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     VERIFICATION = "verification"
     ADS = "ads"
     FORMS = "forms"
+    SHIPPING = "shipping"

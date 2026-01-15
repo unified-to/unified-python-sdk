@@ -11,9 +11,10 @@ from .property_messagingevent_message_author_member import (
     PropertyMessagingEventMessageAuthorMemberTypedDict,
 )
 from datetime import datetime
+from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PropertyMessagingEventMessageTypedDict(TypedDict):
@@ -101,3 +102,48 @@ class PropertyMessagingEventMessage(BaseModel):
     updated_at: Optional[datetime] = None
 
     web_url: Optional[str] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "attachments",
+                "author_member",
+                "buttons",
+                "channel_id",
+                "channel_ids",
+                "channels",
+                "created_at",
+                "destination_members",
+                "has_children",
+                "hidden_members",
+                "id",
+                "is_unread",
+                "mentioned_members",
+                "message",
+                "message_html",
+                "message_markdown",
+                "message_thread_identifier",
+                "parent_id",
+                "parent_message_id",
+                "raw",
+                "reactions",
+                "reference",
+                "root_message_id",
+                "subject",
+                "updated_at",
+                "web_url",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

@@ -7,9 +7,10 @@ from .property_enrichcompany_address import (
     PropertyEnrichCompanyAddressTypedDict,
 )
 from datetime import datetime
+from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class EnrichCompanyTypedDict(TypedDict):
@@ -104,3 +105,49 @@ class EnrichCompany(BaseModel):
     yelp_url: Optional[str] = None
 
     youtube_url: Optional[str] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "address",
+                "alexa_rank",
+                "created_at",
+                "crunchbase_url",
+                "description",
+                "domain",
+                "employees",
+                "exchange",
+                "facebook_url",
+                "id",
+                "industry",
+                "instagram_url",
+                "linkedin_url",
+                "logo_url",
+                "naics_code",
+                "name",
+                "raw",
+                "revenue",
+                "sic_code",
+                "stock",
+                "telephones",
+                "twitter_handle",
+                "twitter_url",
+                "updated_at",
+                "year_founded",
+                "yelp_url",
+                "youtube_url",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

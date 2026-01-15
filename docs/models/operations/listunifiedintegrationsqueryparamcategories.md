@@ -30,3 +30,4 @@
 | `VERIFICATION` | verification   |
 | `ADS`          | ads            |
 | `FORMS`        | forms          |
+| `SHIPPING`     | shipping       |

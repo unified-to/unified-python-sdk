@@ -267,9 +267,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.messaging.patch_messaging_event(request={
-        "messaging_event": {
-            "type": shared.MessagingEventType.CHANNEL_JOINED,
-        },
+        "messaging_event": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -412,9 +410,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.messaging.update_messaging_event(request={
-        "messaging_event": {
-            "type": shared.MessagingEventType.CHANNEL_JOINED,
-        },
+        "messaging_event": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -5,9 +5,10 @@ from .accountingcashflowitem import (
     AccountingCashflowItem,
     AccountingCashflowItemTypedDict,
 )
+from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingCashflowSectionTypedDict(TypedDict):
@@ -22,3 +23,19 @@ class AccountingCashflowSection(BaseModel):
     section_name: Optional[str] = None
 
     total_amount: Optional[float] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(["items", "section_name", "total_amount"])
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

@@ -19,12 +19,12 @@ from .property_messagingevent_user import (
 )
 from datetime import datetime
 from enum import Enum
-from pydantic import field_serializer
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class MessagingEventType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -43,19 +43,18 @@ class MessagingEventType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class MessagingEventTypedDict(TypedDict):
-    type: MessagingEventType
     button: NotRequired[PropertyMessagingEventButtonTypedDict]
     channel: NotRequired[PropertyMessagingEventChannelTypedDict]
     created_at: NotRequired[datetime]
     id: NotRequired[str]
+    is_replacing_original: NotRequired[bool]
     message: NotRequired[PropertyMessagingEventMessageTypedDict]
     raw: NotRequired[Dict[str, Any]]
+    type: NotRequired[MessagingEventType]
     user: NotRequired[PropertyMessagingEventUserTypedDict]
 
 
 class MessagingEvent(BaseModel):
-    type: MessagingEventType
-
     button: Optional[PropertyMessagingEventButton] = None
 
     channel: Optional[PropertyMessagingEventChannel] = None
@@ -64,9 +63,13 @@ class MessagingEvent(BaseModel):
 
     id: Optional[str] = None
 
+    is_replacing_original: Optional[bool] = None
+
     message: Optional[PropertyMessagingEventMessage] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    type: Optional[MessagingEventType] = None
 
     user: Optional[PropertyMessagingEventUser] = None
 
@@ -78,3 +81,31 @@ class MessagingEvent(BaseModel):
             except ValueError:
                 return value
         return value
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "button",
+                "channel",
+                "created_at",
+                "id",
+                "is_replacing_original",
+                "message",
+                "raw",
+                "type",
+                "user",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

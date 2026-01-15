@@ -3,10 +3,11 @@
 from __future__ import annotations
 from enum import Enum
 import httpx
+from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.models.shared import accountingreport as shared_accountingreport
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
     PathParamMetadata,
@@ -118,6 +119,36 @@ class ListAccountingReportsRequest(BaseModel):
     ] = None
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "end_lt",
+                "fields",
+                "limit",
+                "offset",
+                "order",
+                "query",
+                "raw",
+                "sort",
+                "start_gte",
+                "type",
+                "updated_gte",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m
+
 
 class ListAccountingReportsResponseTypedDict(TypedDict):
     content_type: str
@@ -144,3 +175,19 @@ class ListAccountingReportsResponse(BaseModel):
 
     accounting_reports: Optional[List[shared_accountingreport.AccountingReport]] = None
     r"""Successful"""
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(["AccountingReports"])
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

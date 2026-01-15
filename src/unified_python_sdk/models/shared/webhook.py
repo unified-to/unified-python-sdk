@@ -3,12 +3,12 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from pydantic import field_serializer
+from pydantic import field_serializer, model_serializer
 from typing import Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class DbType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -52,12 +52,12 @@ class ObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     PAYMENT_REFUND = "payment_refund"
     PAYMENT_SUBSCRIPTION = "payment_subscription"
     COMMERCE_ITEM = "commerce_item"
-    COMMERCE_ITEMVARIANT = "commerce_itemvariant"
     COMMERCE_COLLECTION = "commerce_collection"
     COMMERCE_INVENTORY = "commerce_inventory"
     COMMERCE_LOCATION = "commerce_location"
     COMMERCE_REVIEW = "commerce_review"
     COMMERCE_SALESCHANNEL = "commerce_saleschannel"
+    COMMERCE_ITEMVARIANT = "commerce_itemvariant"
     VERIFICATION_PACKAGE = "verification_package"
     VERIFICATION_REQUEST = "verification_request"
     ATS_ACTIVITY = "ats_activity"
@@ -136,6 +136,11 @@ class ObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     ADS_GROUP = "ads_group"
     FORMS_FORM = "forms_form"
     FORMS_SUBMISSION = "forms_submission"
+    SHIPPING_CARRIER = "shipping_carrier"
+    SHIPPING_RATE = "shipping_rate"
+    SHIPPING_SHIPMENT = "shipping_shipment"
+    SHIPPING_LABEL = "shipping_label"
+    SHIPPING_TRACKING = "shipping_tracking"
 
 
 class WebhookType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -257,3 +262,42 @@ class Webhook(BaseModel):
             except ValueError:
                 return value
         return value
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "checked_at",
+                "created_at",
+                "db_name_prefix",
+                "db_schema",
+                "db_type",
+                "db_url",
+                "environment",
+                "fields",
+                "filters",
+                "hook_url",
+                "id",
+                "integration_type",
+                "interval",
+                "is_healthy",
+                "is_paused",
+                "page_max_limit",
+                "runs",
+                "updated_at",
+                "webhook_type",
+                "workspace_id",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

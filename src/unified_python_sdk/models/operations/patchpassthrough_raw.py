@@ -3,9 +3,10 @@
 from __future__ import annotations
 import httpx
 import io
+from pydantic import model_serializer
 from typing import Any, Dict, IO, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
     PathParamMetadata,
@@ -43,6 +44,22 @@ class PatchPassthroughRawRequest(BaseModel):
         Optional[Dict[str, Any]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(["RequestBody", "query"])
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m
 
 
 class PatchPassthroughRawResponseTypedDict(TypedDict):
@@ -91,3 +108,27 @@ class PatchPassthroughRawResponse(BaseModel):
 
     default_text_plain_res: Optional[str] = None
     r"""Successful"""
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "default_*/*_response-stream",
+                "default_application/json_any",
+                "default_application/xml_res",
+                "default_text/csv_res",
+                "default_text/plain_res",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

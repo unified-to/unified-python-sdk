@@ -3,10 +3,11 @@
 from __future__ import annotations
 from enum import Enum
 import httpx
+from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.models.shared import adsad as shared_adsad
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
     PathParamMetadata,
@@ -125,6 +126,36 @@ class ListAdsAdsRequest(BaseModel):
     ] = None
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "campaign_id",
+                "fields",
+                "group_id",
+                "limit",
+                "offset",
+                "order",
+                "org_id",
+                "query",
+                "raw",
+                "sort",
+                "updated_gte",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m
+
 
 class ListAdsAdsResponseTypedDict(TypedDict):
     content_type: str
@@ -149,3 +180,19 @@ class ListAdsAdsResponse(BaseModel):
 
     ads_ads: Optional[List[shared_adsad.AdsAd]] = None
     r"""Successful"""
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(["AdsAds"])
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 import httpx
+from pydantic import model_serializer
 from typing import Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.models.shared import enrichperson as shared_enrichperson
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
     PathParamMetadata,
@@ -64,6 +65,24 @@ class ListEnrichPeopleRequest(BaseModel):
     ] = None
     r"""The twitter handle of the person to search"""
 
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            ["company_name", "email", "linkedin_url", "name", "twitter"]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m
+
 
 class ListEnrichPeopleResponseTypedDict(TypedDict):
     content_type: str
@@ -88,3 +107,19 @@ class ListEnrichPeopleResponse(BaseModel):
 
     enrich_person: Optional[shared_enrichperson.EnrichPerson] = None
     r"""Successful"""
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(["EnrichPerson"])
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

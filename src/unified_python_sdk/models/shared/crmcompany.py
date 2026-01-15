@@ -9,9 +9,10 @@ from .property_crmcompany_address import (
     PropertyCrmCompanyAddressTypedDict,
 )
 from datetime import datetime
+from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CrmCompanyTypedDict(TypedDict):
@@ -90,3 +91,43 @@ class CrmCompany(BaseModel):
     user_id: Optional[str] = None
 
     websites: Optional[List[str]] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "address",
+                "contact_ids",
+                "created_at",
+                "deal_ids",
+                "description",
+                "domains",
+                "emails",
+                "employees",
+                "id",
+                "industry",
+                "is_active",
+                "link_urls",
+                "metadata",
+                "name",
+                "raw",
+                "tags",
+                "telephones",
+                "timezone",
+                "updated_at",
+                "user_id",
+                "websites",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

@@ -8,9 +8,10 @@ from .property_connection_auth import (
 from .property_connection_categories import PropertyConnectionCategories
 from .property_connection_permissions import PropertyConnectionPermissions
 from datetime import datetime
+from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ConnectionTypedDict(TypedDict):
@@ -69,3 +70,34 @@ class Connection(BaseModel):
     updated_at: Optional[datetime] = None
 
     workspace_id: Optional[str] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "auth",
+                "auth_aws_arn",
+                "created_at",
+                "environment",
+                "external_xref",
+                "id",
+                "integration_name",
+                "is_paused",
+                "last_healthy_at",
+                "last_unhealthy_at",
+                "updated_at",
+                "workspace_id",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

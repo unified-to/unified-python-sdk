@@ -3,12 +3,12 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from pydantic import field_serializer
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class TicketingTicketStatus(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -79,3 +79,39 @@ class TicketingTicket(BaseModel):
             except ValueError:
                 return value
         return value
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "category",
+                "category_id",
+                "closed_at",
+                "created_at",
+                "customer_id",
+                "description",
+                "id",
+                "priority",
+                "raw",
+                "source",
+                "source_ref",
+                "status",
+                "subject",
+                "tags",
+                "updated_at",
+                "url",
+                "user_id",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m

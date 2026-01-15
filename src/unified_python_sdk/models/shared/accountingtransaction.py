@@ -10,9 +10,10 @@ from .accountingtransactionlineitem import (
     AccountingTransactionLineItemTypedDict,
 )
 from datetime import datetime
+from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
-from unified_python_sdk.types import BaseModel
+from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingTransactionTypedDict(TypedDict):
@@ -72,3 +73,40 @@ class AccountingTransaction(BaseModel):
     type: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+
+    @model_serializer(mode="wrap")
+    def serialize_model(self, handler):
+        optional_fields = set(
+            [
+                "account_id",
+                "contacts",
+                "created_at",
+                "currency",
+                "customer_message",
+                "id",
+                "lineitems",
+                "memo",
+                "payment_method",
+                "payment_terms",
+                "raw",
+                "reference",
+                "split_account_id",
+                "sub_total_amount",
+                "tax_amount",
+                "total_amount",
+                "type",
+                "updated_at",
+            ]
+        )
+        serialized = handler(self)
+        m = {}
+
+        for n, f in type(self).model_fields.items():
+            k = f.alias or n
+            val = serialized.get(k)
+
+            if val != UNSET_SENTINEL:
+                if val is not None or k not in optional_fields:
+                    m[k] = val
+
+        return m
