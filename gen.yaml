@@ -11,6 +11,7 @@ generation:
     requestResponseComponentNamesFeb2024: false
     securityFeb2025: false
     sharedErrorComponentsApr2025: false
+    sharedNestedComponentsJan2026: false
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
@@ -26,7 +27,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.56.16
+  version: 0.56.17
   additionalDependencies:
     dev: {}
     main: {}
@@ -74,3 +75,4 @@ python:
   responseFormat: envelope
   sseFlatResponse: false
   templateVersion: v2
+  useAsyncHooks: false

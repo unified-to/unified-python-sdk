@@ -8,6 +8,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PropertyMessagingMessageAuthorMemberTypedDict(TypedDict):
+    r"""for email systems, this field represents the From value"""
+
     email: NotRequired[str]
     image_url: NotRequired[str]
     name: NotRequired[str]
@@ -15,6 +17,8 @@ class PropertyMessagingMessageAuthorMemberTypedDict(TypedDict):
 
 
 class PropertyMessagingMessageAuthorMember(BaseModel):
+    r"""for email systems, this field represents the From value"""
+
     email: Optional[str] = None
 
     image_url: Optional[str] = None

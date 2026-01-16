@@ -20,6 +20,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class MessagingMessageTypedDict(TypedDict):
     attachments: NotRequired[List[MessagingAttachmentTypedDict]]
     author_member: NotRequired[PropertyMessagingMessageAuthorMemberTypedDict]
+    r"""for email systems, this field represents the From value"""
     buttons: NotRequired[List[MessagingButtonTypedDict]]
     channel_id: NotRequired[str]
     channel_ids: NotRequired[List[str]]
@@ -28,11 +29,14 @@ class MessagingMessageTypedDict(TypedDict):
     r"""Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted."""
     created_at: NotRequired[datetime]
     destination_members: NotRequired[List[MessagingMemberTypedDict]]
+    r"""for email systems, this field represents the To value"""
     has_children: NotRequired[bool]
     hidden_members: NotRequired[List[MessagingMemberTypedDict]]
+    r"""for email systems, this field represents the BCC value"""
     id: NotRequired[str]
     is_unread: NotRequired[bool]
     mentioned_members: NotRequired[List[MessagingMemberTypedDict]]
+    r"""for email systems, this field represents the CC value"""
     message: NotRequired[str]
     message_html: NotRequired[str]
     message_markdown: NotRequired[str]
@@ -52,6 +56,7 @@ class MessagingMessage(BaseModel):
     attachments: Optional[List[MessagingAttachment]] = None
 
     author_member: Optional[PropertyMessagingMessageAuthorMember] = None
+    r"""for email systems, this field represents the From value"""
 
     buttons: Optional[List[MessagingButton]] = None
 
@@ -66,16 +71,19 @@ class MessagingMessage(BaseModel):
     created_at: Optional[datetime] = None
 
     destination_members: Optional[List[MessagingMember]] = None
+    r"""for email systems, this field represents the To value"""
 
     has_children: Optional[bool] = None
 
     hidden_members: Optional[List[MessagingMember]] = None
+    r"""for email systems, this field represents the BCC value"""
 
     id: Optional[str] = None
 
     is_unread: Optional[bool] = None
 
     mentioned_members: Optional[List[MessagingMember]] = None
+    r"""for email systems, this field represents the CC value"""
 
     message: Optional[str] = None
 

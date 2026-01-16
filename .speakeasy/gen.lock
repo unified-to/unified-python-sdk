@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: fc328f365075899265a9857aed41aa46
+  docChecksum: 091d7b9c5c8337ec015b0663ff6edb22
   docVersion: "1.0"
-  speakeasyVersion: 1.685.2
-  generationVersion: 2.795.6
-  releaseVersion: 0.56.16
-  configChecksum: 53e4863e8c9b58ba7edd3b420a32b80a
+  speakeasyVersion: 1.686.0
+  generationVersion: 2.796.1
+  releaseVersion: 0.56.17
+  configChecksum: 4a8434e363662c6de375b5abebdb666e
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: fc89340b-72a9-44c0-aed2-dcd89ad35e24
-  pristine_commit_hash: 296f184639fb53f9b4a7b0249d3a93fde3f88caf
-  pristine_tree_hash: c0b8394c0ee96efcd94da311ec3ae7f03170618a
+  generation_id: c9c9e752-e6ff-42f6-80a9-d63d4b055d41
+  pristine_commit_hash: 44f51b60bff39f28283e4eed78a394cf8b08c69c
+  pristine_tree_hash: 7308332589e412dff40df87842ea08e44582bca3
 features:
   python:
     acceptHeaders: 3.0.0
@@ -32,7 +32,7 @@ features:
     openEnums: 1.0.2
     responseFormat: 1.0.1
     retries: 3.0.3
-    sdkHooks: 1.2.0
+    sdkHooks: 1.2.1
     unions: 3.1.2
     uploadStreams: 1.0.0
 trackedFiles:
@@ -4506,8 +4506,8 @@ trackedFiles:
     pristine_git_object: 919fe3b9a0d0993cad0e9f908df81ab1bed75008
   docs/models/operations/patchmessagingeventqueryparamfields.md:
     id: 94ec5e20392a
-    last_write_checksum: sha1:9c8ba6d52d09e2809dd25d0ec274cc685a540fa5
-    pristine_git_object: 68bd0e71aa3b7d6245338ef1288b0ff559db2504
+    last_write_checksum: sha1:ba98dec0bf857fa55117d2cd17d52481f9255322
+    pristine_git_object: 857e8fefb1149cece3c0ff44e18be2491ca446e9
   docs/models/operations/patchmessagingeventrequest.md:
     id: 5ddb58cb16ce
     last_write_checksum: sha1:1190e4bec02cb885e2923544754656ec595e9aea
@@ -6278,8 +6278,8 @@ trackedFiles:
     pristine_git_object: 7c910ec4e72fb5bb4fc6eb34d8615c94597aadf2
   docs/models/operations/updatemessagingeventqueryparamfields.md:
     id: fea28d6cb840
-    last_write_checksum: sha1:db813800ec0213cdf5662f9a9a3e29bf47a57ef9
-    pristine_git_object: 475b73b160069f9681cd8bee5632f7250063a6b2
+    last_write_checksum: sha1:1f34f991536cacb0dd0c0fb668455adb68c7db47
+    pristine_git_object: 0ccbfa7051106b6449a6dda723e7e5dae5a6b9de
   docs/models/operations/updatemessagingeventrequest.md:
     id: 8a9a106bb285
     last_write_checksum: sha1:2a8768adac9c2110d8b2c591e5fe820e7220dc7d
@@ -8042,8 +8042,8 @@ trackedFiles:
     pristine_git_object: f1a3af089b9b9977db8ea9a2fba919c7c2c8c57d
   docs/models/shared/messagingmessage.md:
     id: 3592b43c9620
-    last_write_checksum: sha1:4aa5ba40d3180548819abec2957013dc75212ffe
-    pristine_git_object: 9801dec73a8945d003fe8181c18605f058acf78c
+    last_write_checksum: sha1:9e709b23a7c3b89a5ba246274818994d5d56bf69
+    pristine_git_object: c4a83afefc44f720dcc1cb5fa268c865705bd6fc
   docs/models/shared/messagingreaction.md:
     id: c928bc0d2536
     last_write_checksum: sha1:14af6405dde872e42c46aca99fa23a6418f1de97
@@ -8462,20 +8462,20 @@ trackedFiles:
     pristine_git_object: 6d009cbc012df8442fd42527f3c12cefce94c85e
   docs/models/shared/propertymessagingeventmessage.md:
     id: 9f2535695009
-    last_write_checksum: sha1:20018644adfd2acbc39b243934fefeb86d2d9e56
-    pristine_git_object: fb15f08ac5d43093ce34f43cfa92a55fd0d62748
+    last_write_checksum: sha1:584de9417ce4faadad5419500a01b437179b4d68
+    pristine_git_object: 08bcac676a880da8c44dbfe68af1868b8606d0be
   docs/models/shared/propertymessagingeventmessageauthormember.md:
     id: fb67a87ee1d9
-    last_write_checksum: sha1:48d21ff7f195607ed9dbb751717086345898b8a6
-    pristine_git_object: 8be76199833e7bd37ae547802cf76bc79ddd3816
+    last_write_checksum: sha1:aa9b8c659b2aae9f6177074a1fc30622522c9ea6
+    pristine_git_object: 43aaf13d393972f77a108ae85bd47115b54dfcf7
   docs/models/shared/propertymessagingeventuser.md:
     id: a89be58493e4
     last_write_checksum: sha1:807d42a705d6dd263d277099b12a95b171f92a0f
     pristine_git_object: c843737cc273a02467062ca51629a5db16fa66ad
   docs/models/shared/propertymessagingmessageauthormember.md:
     id: 2f84a29fc16a
-    last_write_checksum: sha1:87c7957c77f60a0dd1fbe34a02b406c0d789d9ed
-    pristine_git_object: 793caa266799459d222966be231c92932db8954b
+    last_write_checksum: sha1:6260f7f0374337ed628cd955e0c6829286b9200d
+    pristine_git_object: 517e0ab91c8252ab8ace223c6c2bc98c553a30ee
   docs/models/shared/propertymessagingreactionmember.md:
     id: c9bdbc74014a
     last_write_checksum: sha1:09f465a79604d8c5b4d0aa9662ad8dfd45a65055
@@ -9734,8 +9734,8 @@ trackedFiles:
     pristine_git_object: c06f7a9e68006b8409a910f7eb334096ba16d2cb
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:23f8b78c3402e649e221c374fb530ccfc429c8f2
-    pristine_git_object: 6b4c0f36aad31e415a6796166b635d1e6a052b58
+    last_write_checksum: sha1:7022441b78e3375c7e4af7c3c9610224cd45fc09
+    pristine_git_object: f06476ff42dde4beeb2eda72edba110114bb765b
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -9762,8 +9762,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:fc1b0dd6d4bbf9c236c942c076fdb7807b600423
-    pristine_git_object: 14ab650b0eef875d4cb27fa08be9267d6bd733c1
+    last_write_checksum: sha1:f68e951de192efa01fec448b781318aae6a6f6c4
+    pristine_git_object: eca98a4843e064ba60067ed6e91b212ee26ccf61
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -9810,8 +9810,8 @@ trackedFiles:
     pristine_git_object: 69e5efe3c49239b098a34d0de82608092e3a0d7f
   src/unified_python_sdk/basesdk.py:
     id: 0d81fa52aaa0
-    last_write_checksum: sha1:21edcb1ee8bd00e2bcd283ff0150c3ab850abbd3
-    pristine_git_object: 18584d89f2cd6489ca433410a808aa72e16b044e
+    last_write_checksum: sha1:4f0a7961bb431f692337974197e650be1702515e
+    pristine_git_object: ec95cbba63e67664dae7be163f9105ee2422de78
   src/unified_python_sdk/benefit.py:
     id: a26ca0f6e3a0
     last_write_checksum: sha1:854cba143ca35c9db8c5db81acfc90ce56bd1e86
@@ -11630,8 +11630,8 @@ trackedFiles:
     pristine_git_object: 83d23416e0bf36ee0db34542120e80399c8d718c
   src/unified_python_sdk/models/operations/patchmessagingevent.py:
     id: c4552b88f825
-    last_write_checksum: sha1:f7d2d1e668b90fad4e96a2fb6170772ac84d3149
-    pristine_git_object: 5c9b619929d2cb0401c474af81c3c6acb5f6ac07
+    last_write_checksum: sha1:f6126259bf5d4c9353471b38a95122a7839ddd7e
+    pristine_git_object: d7682f0880a97202011bda5a31a0a381266529f4
   src/unified_python_sdk/models/operations/patchmessagingmessage.py:
     id: 421deccf52bc
     last_write_checksum: sha1:8319993a0c5a244dcdbf42298a8415df393980c6
@@ -12346,8 +12346,8 @@ trackedFiles:
     pristine_git_object: 3f88e691de7b28381a81eb5f44daf92514f9ddae
   src/unified_python_sdk/models/operations/updatemessagingevent.py:
     id: 9eddcc028d1b
-    last_write_checksum: sha1:7ce3bc420ef9c96d1539def616367bc3b7917178
-    pristine_git_object: f9e7beff5d67531c558a48f18488514ac6acc976
+    last_write_checksum: sha1:f8aeeb5c9bbf33367a075f21947f5b3295e3fe68
+    pristine_git_object: 61e37dc22335e39bb9d9075433184dfd651a01d8
   src/unified_python_sdk/models/operations/updatemessagingmessage.py:
     id: 2a9679199e62
     last_write_checksum: sha1:2ac33a59d747bee9cde6fce9b4b8ffb24acd0d27
@@ -13102,8 +13102,8 @@ trackedFiles:
     pristine_git_object: 991c265d70fac77e7b88432f8480255511dc8d9d
   src/unified_python_sdk/models/shared/messagingmessage.py:
     id: f8fed8574a10
-    last_write_checksum: sha1:26d37212de1b19ef798711c4ce26d488537ad62f
-    pristine_git_object: fba50aa70b532c4a9463330be45b0cc2be83fc9f
+    last_write_checksum: sha1:52aec77b337ef2a8668a5ddc17814c7e93d480f9
+    pristine_git_object: bca3d618c2e0f5c9d6d0d887e6ae42b2a107d01f
   src/unified_python_sdk/models/shared/messagingreaction.py:
     id: 863c4f6f4066
     last_write_checksum: sha1:dd202230d0f3f6771309c7c8b4d4f01d965a92fd
@@ -13378,20 +13378,20 @@ trackedFiles:
     pristine_git_object: b0bc1f0bd14e12fc79cc7af7f5f23b9a0a643712
   src/unified_python_sdk/models/shared/property_messagingevent_message.py:
     id: de5232b522fe
-    last_write_checksum: sha1:d984a87c04410ea26ccc5b05ab9eb6ede35886ee
-    pristine_git_object: fdec6aa0d3b7106e5ff89048d73185e749e5fa40
+    last_write_checksum: sha1:8b2884231bb27e2b60eb57f5cb8774afc484768a
+    pristine_git_object: 36038a53d62f5d3ea63143cff026f2cc3d97a68b
   src/unified_python_sdk/models/shared/property_messagingevent_message_author_member.py:
     id: de049e6476b3
-    last_write_checksum: sha1:c41203e4d0d78e85ecb4ac743d9b4c7bb0f7d7c9
-    pristine_git_object: f5d773bf7fbae9829a571be41863f1a2d3930263
+    last_write_checksum: sha1:c5ae80a4068903ab3a166b63efbc6489de5d0920
+    pristine_git_object: c95c2ba42f7d3c9d7840d75de8869145fda03100
   src/unified_python_sdk/models/shared/property_messagingevent_user.py:
     id: d3f5bc5e36b3
     last_write_checksum: sha1:ed7e3beab2267ce4324f79443de8752e699d571d
     pristine_git_object: a0df4c4991de93186a3811c43e84fc9f708d7ac1
   src/unified_python_sdk/models/shared/property_messagingmessage_author_member.py:
     id: a6fa5742c9ca
-    last_write_checksum: sha1:d72f3f9f1aeaf7a353959fbf8ae8a24c25335e15
-    pristine_git_object: 8d6f30b90e6de6625495406f13a0363cb743566c
+    last_write_checksum: sha1:b446ada934f6065f9eaa9480447eeab268e3cf69
+    pristine_git_object: 8eeeb328234d6b7cc12ead8485b6d484d0668b02
   src/unified_python_sdk/models/shared/property_messagingreaction_member.py:
     id: dd73d61307e0
     last_write_checksum: sha1:306c683ae5d1b150508bdbd0d5fe2964a627a40b
@@ -13914,8 +13914,8 @@ trackedFiles:
     pristine_git_object: 285def52ca435b51e6b42976ec268a53d895292f
   src/unified_python_sdk/utils/__init__.py:
     id: 143f1037e996
-    last_write_checksum: sha1:887f56a717845fab7445cc368d2a17d850c3565a
-    pristine_git_object: 05f26ade57efb8c54a774fbcb939fb1a7dc655ce
+    last_write_checksum: sha1:398211d49b762a067ec6d10197a4b11dfd258ff5
+    pristine_git_object: c906e1e0192e9017fc13851eb23fc0c2753429c8
   src/unified_python_sdk/utils/annotations.py:
     id: 532ac27467c4
     last_write_checksum: sha1:a4824ad65f730303e4e1e3ec1febf87b4eb46dbc
@@ -19356,7 +19356,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.shipping.create_shipping_label()`: **Added**\n* `unified_to.shipping.create_shipping_rate()`: **Added**\n* `unified_to.shipping.create_shipping_shipment()`: **Added**\n* `unified_to.shipping.create_shipping_tracking()`: **Added**\n* `unified_to.shipping.get_shipping_carrier()`: **Added**\n* `unified_to.shipping.get_shipping_label()`: **Added**\n* `unified_to.shipping.get_shipping_rate()`: **Added**\n* `unified_to.shipping.get_shipping_shipment()`: **Added**\n* `unified_to.shipping.get_shipping_tracking()`: **Added**\n* `unified_to.shipping.list_shipping_carriers()`: **Added**\n* `unified_to.shipping.list_shipping_labels()`: **Added**\n* `unified_to.shipping.list_shipping_shipments()`: **Added**\n* `unified_to.shipping.list_shipping_trackings()`: **Added**\n* `unified_to.shipping.patch_shipping_shipment()`: **Added**\n* `unified_to.shipping.remove_shipping_label()`: **Added**\n* `unified_to.shipping.remove_shipping_shipment()`: **Added**\n* `unified_to.shipping.update_shipping_shipment()`: **Added**\n* `unified_to.carrier.get_shipping_carrier()`: **Added**\n* `unified_to.carrier.list_shipping_carriers()`: **Added**\n* `unified_to.label.create_shipping_label()`: **Added**\n* `unified_to.label.get_shipping_label()`: **Added**\n* `unified_to.label.list_shipping_labels()`: **Added**\n* `unified_to.label.remove_shipping_label()`: **Added**\n* `unified_to.rate.create_shipping_rate()`: **Added**\n* `unified_to.rate.get_shipping_rate()`: **Added**\n* `unified_to.shipment.create_shipping_shipment()`: **Added**\n* `unified_to.shipment.get_shipping_shipment()`: **Added**\n* `unified_to.shipment.list_shipping_shipments()`: **Added**\n* `unified_to.shipment.patch_shipping_shipment()`: **Added**\n* `unified_to.shipment.remove_shipping_shipment()`: **Added**\n* `unified_to.shipment.update_shipping_shipment()`: **Added**\n* `unified_to.tracking.create_shipping_tracking()`: **Added**\n* `unified_to.tracking.get_shipping_tracking()`: **Added**\n* `unified_to.tracking.list_shipping_trackings()`: **Added**\n* `unified_to.event.patch_messaging_event()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.event.update_messaging_event()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.messaging.patch_messaging_event()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.messaging.update_messaging_event()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.list_unified_connections()`: \n  *  `request.categories` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[].support.{}` **Changed**\n* `unified_to.unified.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[].support.{}` **Changed**\n* `unified_to.connection.list_unified_connections()`: \n  *  `request.categories` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[].support.{}` **Changed**\n* `unified_to.integration.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[].support.{}` **Changed**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.event.patch_messaging_event()`: \n  *  `request.fields` **Changed**\n* `unified_to.event.update_messaging_event()`: \n  *  `request.fields` **Changed**\n* `unified_to.messaging.patch_messaging_event()`: \n  *  `request.fields` **Changed**\n* `unified_to.messaging.update_messaging_event()`: \n  *  `request.fields` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

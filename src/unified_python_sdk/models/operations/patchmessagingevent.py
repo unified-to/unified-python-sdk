@@ -24,8 +24,8 @@ class PatchMessagingEventQueryParamFields(str, Enum):
     MESSAGE = "message"
     BUTTON = "button"
     USER = "user"
-    IS_REPLACING_ORIGINAL = "is_replacing_original"
     RAW = "raw"
+    IS_REPLACING_ORIGINAL = "is_replacing_original"
 
 
 class PatchMessagingEventRequestTypedDict(TypedDict):
