@@ -37,8 +37,16 @@ class ListAccountingExpensesQueryParamFields(str, Enum):
 class ListAccountingExpensesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    category_id: NotRequired[str]
+    r"""The category ID to filter by (reference to AccountingCategory)"""
+    contact_id: NotRequired[str]
+    r"""The contact ID to filter by (reference to AccountingContact)"""
+    end_lt: NotRequired[str]
+    r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListAccountingExpensesQueryParamFields]]
     r"""Fields to return"""
+    group_id: NotRequired[str]
+    r"""The group ID to filter by (reference to HrisGroup)"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -47,6 +55,8 @@ class ListAccountingExpensesRequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
+    start_gte: NotRequired[str]
+    r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
@@ -59,11 +69,35 @@ class ListAccountingExpensesRequest(BaseModel):
     ]
     r"""ID of the connection"""
 
+    category_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The category ID to filter by (reference to AccountingCategory)"""
+
+    contact_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The contact ID to filter by (reference to AccountingContact)"""
+
+    end_lt: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     fields: Annotated[
         Optional[List[ListAccountingExpensesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    group_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The group ID to filter by (reference to HrisGroup)"""
 
     limit: Annotated[
         Optional[float],
@@ -97,6 +131,12 @@ class ListAccountingExpensesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    start_gte: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     updated_gte: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -113,13 +153,18 @@ class ListAccountingExpensesRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "category_id",
+                "contact_id",
+                "end_lt",
                 "fields",
+                "group_id",
                 "limit",
                 "offset",
                 "order",
                 "query",
                 "raw",
                 "sort",
+                "start_gte",
                 "updated_gte",
                 "user_id",
             ]

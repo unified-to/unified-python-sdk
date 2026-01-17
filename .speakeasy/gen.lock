@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 091d7b9c5c8337ec015b0663ff6edb22
+  docChecksum: efb9a6c3665234f4ced6bdd175a6f17e
   docVersion: "1.0"
-  speakeasyVersion: 1.686.0
+  speakeasyVersion: 1.687.1
   generationVersion: 2.796.1
-  releaseVersion: 0.56.17
-  configChecksum: 4a8434e363662c6de375b5abebdb666e
+  releaseVersion: 0.56.18
+  configChecksum: 76a3889da410db6fd5f1d80a313d6ba6
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: c9c9e752-e6ff-42f6-80a9-d63d4b055d41
-  pristine_commit_hash: 44f51b60bff39f28283e4eed78a394cf8b08c69c
-  pristine_tree_hash: 7308332589e412dff40df87842ea08e44582bca3
+  generation_id: 8ed80992-17f2-419d-babe-6c8d9e828f47
+  pristine_commit_hash: 323a863d345958807536a8bb03cf3f7d97038abf
+  pristine_tree_hash: e151ef6817ea3d3f540b0afe027343603b55bc5a
 features:
   python:
     acceptHeaders: 3.0.0
@@ -2530,8 +2530,8 @@ trackedFiles:
     pristine_git_object: 5b707557647a785514c0004505cd9cadfc6fab1a
   docs/models/operations/listaccountingexpensesrequest.md:
     id: 5586a834e1c6
-    last_write_checksum: sha1:6a68b3f8ea026a5541a4657af42d95ef0738b376
-    pristine_git_object: b0e1474f66f8da3ba70424a6e64994a223173b8c
+    last_write_checksum: sha1:0531a089a40254a5f7324c28f04cc4c4073fe488
+    pristine_git_object: 42fae9adb34e4ac953ae2942a7daf381eb00d1a1
   docs/models/operations/listaccountingexpensesresponse.md:
     id: 3b3e7dac7715
     last_write_checksum: sha1:b7b0117079fbd6b6a384615a90a514f62752fcba
@@ -2698,8 +2698,8 @@ trackedFiles:
     pristine_git_object: 034d5407f5c0d9860b07a80ba9ad6ddaab914b34
   docs/models/operations/listadsgroupsrequest.md:
     id: 27d141d44daa
-    last_write_checksum: sha1:5cd6ee57b3fd91c63dd69b57848449a620942a03
-    pristine_git_object: 42048fbfd20e0fe76053c87e2807dc2db6f329d4
+    last_write_checksum: sha1:46f7ee4539083f38b050d016f67db3f210057f71
+    pristine_git_object: 0ada5b33f8804f407633d8282fce7536f2501616
   docs/models/operations/listadsgroupsresponse.md:
     id: 870c6ce13aa5
     last_write_checksum: sha1:e8a716f9dc8d06910ad3114b42c91c4015ab060a
@@ -9734,8 +9734,8 @@ trackedFiles:
     pristine_git_object: c06f7a9e68006b8409a910f7eb334096ba16d2cb
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:7022441b78e3375c7e4af7c3c9610224cd45fc09
-    pristine_git_object: f06476ff42dde4beeb2eda72edba110114bb765b
+    last_write_checksum: sha1:46705428ce7ad761b81cc656f681f1316b8dc567
+    pristine_git_object: 36a1105b7718082f0cc936d441b2657c1eae3c6e
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -9762,8 +9762,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:f68e951de192efa01fec448b781318aae6a6f6c4
-    pristine_git_object: eca98a4843e064ba60067ed6e91b212ee26ccf61
+    last_write_checksum: sha1:f3a954f1bbcd0b5e514defea71d54aefa49e118b
+    pristine_git_object: cdaf2c46969fd035a417e64051dc849f15df9319
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -10954,8 +10954,8 @@ trackedFiles:
     pristine_git_object: a3f4fd6c8f149f27286d1da5a336e35c3178f774
   src/unified_python_sdk/models/operations/listaccountingexpenses.py:
     id: 3e6a3a038f1a
-    last_write_checksum: sha1:3f8f8b12e085b93f63d62a7858a94cb03785a77c
-    pristine_git_object: f18368f381e427a09e5dd6fd458f4ea9560b7b6f
+    last_write_checksum: sha1:79bec0703af2ddfe439463ec23579e36b5ba2c32
+    pristine_git_object: bae43d2de67e38c73e992bbd55617e0d9c1244a3
   src/unified_python_sdk/models/operations/listaccountinginvoices.py:
     id: 531605b7ecbc
     last_write_checksum: sha1:52f5528ffd9eccfd10976970ca81d6b2170f4824
@@ -11010,8 +11010,8 @@ trackedFiles:
     pristine_git_object: ac54e045014844386a81a046c90cf88471c1e4ee
   src/unified_python_sdk/models/operations/listadsgroups.py:
     id: ab895dffa351
-    last_write_checksum: sha1:f1229da8c0c74a826d26818df02ce1c15446ff0c
-    pristine_git_object: 5e7968215fa5b21aa1b65338207e5fee5444a742
+    last_write_checksum: sha1:430490802fddfd366551e39c14746d89cd68b1cb
+    pristine_git_object: 47b87163cf6bdf4d440f46ba41a899440610626e
   src/unified_python_sdk/models/operations/listadsorganizations.py:
     id: c59ead7df06a
     last_write_checksum: sha1:8879dc22b67ede3a7eb415fee25c15c510469f5e
@@ -19356,7 +19356,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.event.patch_messaging_event()`: \n  *  `request.fields` **Changed**\n* `unified_to.event.update_messaging_event()`: \n  *  `request.fields` **Changed**\n* `unified_to.messaging.patch_messaging_event()`: \n  *  `request.fields` **Changed**\n* `unified_to.messaging.update_messaging_event()`: \n  *  `request.fields` **Changed**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.accounting.list_accounting_expenses()`:  `request` **Changed**\n* `unified_to.expense.list_accounting_expenses()`:  `request` **Changed**\n* `unified_to.ads.list_ads_groups()`: \n  *  `request.parent_id` **Added**\n* `unified_to.group.list_ads_groups()`: \n  *  `request.parent_id` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

@@ -44,6 +44,8 @@ class ListAdsGroupsRequestTypedDict(TypedDict):
     order: NotRequired[str]
     org_id: NotRequired[str]
     r"""The org ID to filter by (reference to AdsOrganization)"""
+    parent_id: NotRequired[str]
+    r"""The parent ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -92,6 +94,12 @@ class ListAdsGroupsRequest(BaseModel):
     ] = None
     r"""The org ID to filter by (reference to AdsOrganization)"""
 
+    parent_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The parent ID to filter by"""
+
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -125,6 +133,7 @@ class ListAdsGroupsRequest(BaseModel):
                 "offset",
                 "order",
                 "org_id",
+                "parent_id",
                 "query",
                 "raw",
                 "sort",
