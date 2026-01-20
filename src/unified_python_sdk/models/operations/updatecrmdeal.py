@@ -29,6 +29,7 @@ class UpdateCrmDealQueryParamFields(str, Enum):
     STAGE_ID = "stage_id"
     PIPELINE = "pipeline"
     PIPELINE_ID = "pipeline_id"
+    STAGES = "stages"
     SOURCE = "source"
     PROBABILITY = "probability"
     TAGS = "tags"
@@ -39,6 +40,7 @@ class UpdateCrmDealQueryParamFields(str, Enum):
     COMPANY_IDS = "company_ids"
     METADATA = "metadata"
     RAW = "raw"
+    PIPELINES = "pipelines"
 
 
 class UpdateCrmDealRequestTypedDict(TypedDict):

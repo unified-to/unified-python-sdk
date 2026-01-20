@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .crmmetadata import CrmMetadata, CrmMetadataTypedDict
+from .crmreference import CrmReference, CrmReferenceTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -25,11 +26,13 @@ class CrmDealTypedDict(TypedDict):
     name: NotRequired[str]
     pipeline: NotRequired[str]
     pipeline_id: NotRequired[str]
+    pipelines: NotRequired[List[CrmReferenceTypedDict]]
     probability: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
     source: NotRequired[str]
     stage: NotRequired[str]
     stage_id: NotRequired[str]
+    stages: NotRequired[List[CrmReferenceTypedDict]]
     tags: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -65,6 +68,8 @@ class CrmDeal(BaseModel):
 
     pipeline_id: Optional[str] = None
 
+    pipelines: Optional[List[CrmReference]] = None
+
     probability: Optional[float] = None
 
     raw: Optional[Dict[str, Any]] = None
@@ -74,6 +79,8 @@ class CrmDeal(BaseModel):
     stage: Optional[str] = None
 
     stage_id: Optional[str] = None
+
+    stages: Optional[List[CrmReference]] = None
 
     tags: Optional[List[str]] = None
 
@@ -100,11 +107,13 @@ class CrmDeal(BaseModel):
                 "name",
                 "pipeline",
                 "pipeline_id",
+                "pipelines",
                 "probability",
                 "raw",
                 "source",
                 "stage",
                 "stage_id",
+                "stages",
                 "tags",
                 "updated_at",
                 "user_id",

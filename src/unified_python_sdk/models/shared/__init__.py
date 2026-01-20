@@ -350,6 +350,7 @@ if TYPE_CHECKING:
         CrmMetadataValueTypedDict,
     )
     from .crmpipeline import CrmPipeline, CrmPipelineTypedDict
+    from .crmreference import CrmReference, CrmReferenceTypedDict
     from .crmstage import CrmStage, CrmStageTypedDict
     from .crmtelephone import CrmTelephone, CrmTelephoneType, CrmTelephoneTypedDict
     from .enrichcompany import EnrichCompany, EnrichCompanyTypedDict
@@ -1459,6 +1460,8 @@ __all__ = [
     "CrmMetadataValueTypedDict",
     "CrmPipeline",
     "CrmPipelineTypedDict",
+    "CrmReference",
+    "CrmReferenceTypedDict",
     "CrmStage",
     "CrmStageTypedDict",
     "CrmTelephone",
@@ -2470,6 +2473,8 @@ _dynamic_imports: dict[str, str] = {
     "CrmMetadataValueTypedDict": ".crmmetadata",
     "CrmPipeline": ".crmpipeline",
     "CrmPipelineTypedDict": ".crmpipeline",
+    "CrmReference": ".crmreference",
+    "CrmReferenceTypedDict": ".crmreference",
     "CrmStage": ".crmstage",
     "CrmStageTypedDict": ".crmstage",
     "CrmTelephone": ".crmtelephone",
