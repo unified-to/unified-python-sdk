@@ -46,6 +46,8 @@ class VerificationPackageTypedDict(TypedDict):
     tags: NotRequired[List[str]]
     r"""Category (Verification, Validation, Background Check)"""
     updated_at: NotRequired[datetime]
+    valid_regions: NotRequired[List[str]]
+    r"""{country}-{stateprovince/territory} or just {country} 2-digit ISO codes"""
 
 
 class VerificationPackage(BaseModel):
@@ -88,6 +90,9 @@ class VerificationPackage(BaseModel):
 
     updated_at: Optional[datetime] = None
 
+    valid_regions: Optional[List[str]] = None
+    r"""{country}-{stateprovince/territory} or just {country} 2-digit ISO codes"""
+
     @field_serializer("type")
     def serialize_type(self, value):
         if isinstance(value, str):
@@ -116,6 +121,7 @@ class VerificationPackage(BaseModel):
                 "raw",
                 "tags",
                 "updated_at",
+                "valid_regions",
             ]
         )
         serialized = handler(self)

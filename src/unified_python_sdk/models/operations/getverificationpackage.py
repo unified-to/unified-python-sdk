@@ -35,6 +35,7 @@ class GetVerificationPackageQueryParamFields(str, Enum):
     CURRENCY = "currency"
     MAX_SCORE = "max_score"
     INFO_URL = "info_url"
+    VALID_REGIONS = "valid_regions"
     RAW = "raw"
 
 
