@@ -34,6 +34,7 @@ class APICallTypedDict(TypedDict):
     ip_address: NotRequired[str]
     is_billable: NotRequired[bool]
     size: NotRequired[float]
+    user_agent: NotRequired[str]
     webhook_id: NotRequired[str]
     workspace_id: NotRequired[str]
 
@@ -69,6 +70,8 @@ class APICall(BaseModel):
 
     size: Optional[float] = None
 
+    user_agent: Optional[str] = None
+
     webhook_id: Optional[str] = None
 
     workspace_id: Optional[str] = None
@@ -95,6 +98,7 @@ class APICall(BaseModel):
                 "ip_address",
                 "is_billable",
                 "size",
+                "user_agent",
                 "webhook_id",
                 "workspace_id",
             ]

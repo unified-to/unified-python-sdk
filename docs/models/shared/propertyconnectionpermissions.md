@@ -204,6 +204,10 @@
 | `ADS_REPORT_READ`                | ads_report_read                  |
 | `ADS_ORGANIZATION_READ`          | ads_organization_read            |
 | `ADS_ORGANIZATION_WRITE`         | ads_organization_write           |
+| `ADS_CREATIVE_READ`              | ads_creative_read                |
+| `ADS_CREATIVE_WRITE`             | ads_creative_write               |
+| `ADS_INSERTIONORDER_READ`        | ads_insertionorder_read          |
+| `ADS_INSERTIONORDER_WRITE`       | ads_insertionorder_write         |
 | `FORMS_FORM_READ`                | forms_form_read                  |
 | `FORMS_FORM_WRITE`               | forms_form_write                 |
 | `FORMS_SUBMISSION_READ`          | forms_submission_read            |

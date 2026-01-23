@@ -296,28 +296,40 @@ asyncio.run(main())
 
 * [create_ads_ad](docs/sdks/ads/README.md#create_ads_ad) - Create an ad
 * [create_ads_campaign](docs/sdks/ads/README.md#create_ads_campaign) - Create a campaign
+* [create_ads_creative](docs/sdks/ads/README.md#create_ads_creative) - Create a creative
 * [create_ads_group](docs/sdks/ads/README.md#create_ads_group) - Create a group
+* [create_ads_insertionorder](docs/sdks/ads/README.md#create_ads_insertionorder) - Create an insertionorder
 * [create_ads_organization](docs/sdks/ads/README.md#create_ads_organization) - Create an organization
 * [get_ads_ad](docs/sdks/ads/README.md#get_ads_ad) - Retrieve an ad
 * [get_ads_campaign](docs/sdks/ads/README.md#get_ads_campaign) - Retrieve a campaign
+* [get_ads_creative](docs/sdks/ads/README.md#get_ads_creative) - Retrieve a creative
 * [get_ads_group](docs/sdks/ads/README.md#get_ads_group) - Retrieve a group
+* [get_ads_insertionorder](docs/sdks/ads/README.md#get_ads_insertionorder) - Retrieve an insertionorder
 * [get_ads_organization](docs/sdks/ads/README.md#get_ads_organization) - Retrieve an organization
 * [list_ads_ads](docs/sdks/ads/README.md#list_ads_ads) - List all ads
 * [list_ads_campaigns](docs/sdks/ads/README.md#list_ads_campaigns) - List all campaigns
+* [list_ads_creatives](docs/sdks/ads/README.md#list_ads_creatives) - List all creatives
 * [list_ads_groups](docs/sdks/ads/README.md#list_ads_groups) - List all groups
+* [list_ads_insertionorders](docs/sdks/ads/README.md#list_ads_insertionorders) - List all insertionorders
 * [list_ads_organizations](docs/sdks/ads/README.md#list_ads_organizations) - List all organizations
 * [list_ads_reports](docs/sdks/ads/README.md#list_ads_reports) - List all reports
 * [patch_ads_ad](docs/sdks/ads/README.md#patch_ads_ad) - Update an ad
 * [patch_ads_campaign](docs/sdks/ads/README.md#patch_ads_campaign) - Update a campaign
+* [patch_ads_creative](docs/sdks/ads/README.md#patch_ads_creative) - Update a creative
 * [patch_ads_group](docs/sdks/ads/README.md#patch_ads_group) - Update a group
+* [patch_ads_insertionorder](docs/sdks/ads/README.md#patch_ads_insertionorder) - Update an insertionorder
 * [patch_ads_organization](docs/sdks/ads/README.md#patch_ads_organization) - Update an organization
 * [remove_ads_ad](docs/sdks/ads/README.md#remove_ads_ad) - Remove an ad
 * [remove_ads_campaign](docs/sdks/ads/README.md#remove_ads_campaign) - Remove a campaign
+* [remove_ads_creative](docs/sdks/ads/README.md#remove_ads_creative) - Remove a creative
 * [remove_ads_group](docs/sdks/ads/README.md#remove_ads_group) - Remove a group
+* [remove_ads_insertionorder](docs/sdks/ads/README.md#remove_ads_insertionorder) - Remove an insertionorder
 * [remove_ads_organization](docs/sdks/ads/README.md#remove_ads_organization) - Remove an organization
 * [update_ads_ad](docs/sdks/ads/README.md#update_ads_ad) - Update an ad
 * [update_ads_campaign](docs/sdks/ads/README.md#update_ads_campaign) - Update a campaign
+* [update_ads_creative](docs/sdks/ads/README.md#update_ads_creative) - Update a creative
 * [update_ads_group](docs/sdks/ads/README.md#update_ads_group) - Update a group
+* [update_ads_insertionorder](docs/sdks/ads/README.md#update_ads_insertionorder) - Update an insertionorder
 * [update_ads_organization](docs/sdks/ads/README.md#update_ads_organization) - Update an organization
 
 ### [Apicall](docs/sdks/apicall/README.md)
@@ -667,6 +679,15 @@ asyncio.run(main())
 * [remove_lms_course](docs/sdks/course/README.md#remove_lms_course) - Remove a course
 * [update_lms_course](docs/sdks/course/README.md#update_lms_course) - Update a course
 
+### [Creative](docs/sdks/creative/README.md)
+
+* [create_ads_creative](docs/sdks/creative/README.md#create_ads_creative) - Create a creative
+* [get_ads_creative](docs/sdks/creative/README.md#get_ads_creative) - Retrieve a creative
+* [list_ads_creatives](docs/sdks/creative/README.md#list_ads_creatives) - List all creatives
+* [patch_ads_creative](docs/sdks/creative/README.md#patch_ads_creative) - Update a creative
+* [remove_ads_creative](docs/sdks/creative/README.md#remove_ads_creative) - Remove a creative
+* [update_ads_creative](docs/sdks/creative/README.md#update_ads_creative) - Update a creative
+
 ### [Creditmemo](docs/sdks/creditmemo/README.md)
 
 * [create_accounting_creditmemo](docs/sdks/creditmemo/README.md#create_accounting_creditmemo) - Create a creditmemo
@@ -921,6 +942,15 @@ asyncio.run(main())
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
 * [update_hris_timeshift](docs/sdks/hris/README.md#update_hris_timeshift) - Update a timeshift
+
+### [Insertionorder](docs/sdks/insertionorder/README.md)
+
+* [create_ads_insertionorder](docs/sdks/insertionorder/README.md#create_ads_insertionorder) - Create an insertionorder
+* [get_ads_insertionorder](docs/sdks/insertionorder/README.md#get_ads_insertionorder) - Retrieve an insertionorder
+* [list_ads_insertionorders](docs/sdks/insertionorder/README.md#list_ads_insertionorders) - List all insertionorders
+* [patch_ads_insertionorder](docs/sdks/insertionorder/README.md#patch_ads_insertionorder) - Update an insertionorder
+* [remove_ads_insertionorder](docs/sdks/insertionorder/README.md#remove_ads_insertionorder) - Remove an insertionorder
+* [update_ads_insertionorder](docs/sdks/insertionorder/README.md#update_ads_insertionorder) - Update an insertionorder
 
 ### [Instructor](docs/sdks/instructor/README.md)
 

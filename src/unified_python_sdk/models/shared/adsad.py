@@ -8,7 +8,7 @@ from .property_adsad_targeting import (
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -27,12 +27,22 @@ class AdType(str, Enum, metaclass=utils.OpenEnumMeta):
     SOCIAL = "SOCIAL"
 
 
+class AdsAdStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    UNSPECIFIED = "UNSPECIFIED"
+    ACTIVE = "ACTIVE"
+    PAUSED = "PAUSED"
+    ARCHIVED = "ARCHIVED"
+    DRAFT = "DRAFT"
+    SCHEDULED_FOR_DELETION = "SCHEDULED_FOR_DELETION"
+
+
 class AdsAdTypedDict(TypedDict):
     ad_copy: NotRequired[str]
     ad_type: NotRequired[AdType]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
     creative_asset_url: NotRequired[str]
+    creative_ids: NotRequired[List[str]]
     cta: NotRequired[str]
     description: NotRequired[str]
     final_url: NotRequired[str]
@@ -40,9 +50,11 @@ class AdsAdTypedDict(TypedDict):
     headline: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    item_id: NotRequired[str]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    status: NotRequired[AdsAdStatus]
     targeting: NotRequired[PropertyAdsAdTargetingTypedDict]
     updated_at: NotRequired[datetime]
 
@@ -58,6 +70,8 @@ class AdsAd(BaseModel):
 
     creative_asset_url: Optional[str] = None
 
+    creative_ids: Optional[List[str]] = None
+
     cta: Optional[str] = None
 
     description: Optional[str] = None
@@ -72,11 +86,15 @@ class AdsAd(BaseModel):
 
     is_active: Optional[bool] = None
 
+    item_id: Optional[str] = None
+
     name: Optional[str] = None
 
     organization_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    status: Optional[AdsAdStatus] = None
 
     targeting: Optional[PropertyAdsAdTargeting] = None
 
@@ -91,6 +109,15 @@ class AdsAd(BaseModel):
                 return value
         return value
 
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AdsAdStatus(value)
+            except ValueError:
+                return value
+        return value
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
@@ -100,6 +127,7 @@ class AdsAd(BaseModel):
                 "campaign_id",
                 "created_at",
                 "creative_asset_url",
+                "creative_ids",
                 "cta",
                 "description",
                 "final_url",
@@ -107,9 +135,11 @@ class AdsAd(BaseModel):
                 "headline",
                 "id",
                 "is_active",
+                "item_id",
                 "name",
                 "organization_id",
                 "raw",
+                "status",
                 "targeting",
                 "updated_at",
             ]

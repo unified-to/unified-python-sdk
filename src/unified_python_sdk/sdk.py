@@ -49,6 +49,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.connection import Connection
     from unified_python_sdk.contact import Contact
     from unified_python_sdk.course import Course
+    from unified_python_sdk.creative import Creative
     from unified_python_sdk.creditmemo import Creditmemo
     from unified_python_sdk.crm import Crm
     from unified_python_sdk.customer import Customer
@@ -68,6 +69,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.genai import Genai
     from unified_python_sdk.group import Group
     from unified_python_sdk.hris import Hris
+    from unified_python_sdk.insertionorder import Insertionorder
     from unified_python_sdk.instructor import Instructor
     from unified_python_sdk.integration import Integration
     from unified_python_sdk.interview import Interview
@@ -171,7 +173,9 @@ class UnifiedTo(BaseSDK):
     ads: "Ads"
     ad: "Ad"
     campaign: "Campaign"
+    creative: "Creative"
     group: "Group"
+    insertionorder: "Insertionorder"
     ats: "Ats"
     activity: "Activity"
     application: "Application"
@@ -297,7 +301,9 @@ class UnifiedTo(BaseSDK):
         "ads": ("unified_python_sdk.ads", "Ads"),
         "ad": ("unified_python_sdk.ad", "Ad"),
         "campaign": ("unified_python_sdk.campaign", "Campaign"),
+        "creative": ("unified_python_sdk.creative", "Creative"),
         "group": ("unified_python_sdk.group", "Group"),
+        "insertionorder": ("unified_python_sdk.insertionorder", "Insertionorder"),
         "ats": ("unified_python_sdk.ats", "Ats"),
         "activity": ("unified_python_sdk.activity", "Activity"),
         "application": ("unified_python_sdk.application", "Application"),
