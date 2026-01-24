@@ -24,6 +24,9 @@ class ConnectionTypedDict(TypedDict):
     auth: NotRequired[PropertyConnectionAuthTypedDict]
     r"""An authentication object that represents a specific authorized user's connection to an integration."""
     auth_aws_arn: NotRequired[str]
+    auth_azure_keyvault_id: NotRequired[str]
+    auth_gcp_secret_name: NotRequired[str]
+    auth_hashi_vault_path: NotRequired[str]
     created_at: NotRequired[datetime]
     environment: NotRequired[str]
     external_xref: NotRequired[str]
@@ -51,6 +54,12 @@ class Connection(BaseModel):
 
     auth_aws_arn: Optional[str] = None
 
+    auth_azure_keyvault_id: Optional[str] = None
+
+    auth_gcp_secret_name: Optional[str] = None
+
+    auth_hashi_vault_path: Optional[str] = None
+
     created_at: Optional[datetime] = None
 
     environment: Optional[str] = "Production"
@@ -77,6 +86,9 @@ class Connection(BaseModel):
             [
                 "auth",
                 "auth_aws_arn",
+                "auth_azure_keyvault_id",
+                "auth_gcp_secret_name",
+                "auth_hashi_vault_path",
                 "created_at",
                 "environment",
                 "external_xref",

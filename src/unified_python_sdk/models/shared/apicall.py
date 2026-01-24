@@ -27,6 +27,7 @@ class APICallTypedDict(TypedDict):
     type: APICallType
     connection_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    endapi_response_time: NotRequired[float]
     environment: NotRequired[str]
     error: NotRequired[str]
     external_xref: NotRequired[str]
@@ -34,6 +35,7 @@ class APICallTypedDict(TypedDict):
     ip_address: NotRequired[str]
     is_billable: NotRequired[bool]
     size: NotRequired[float]
+    unified_response_time: NotRequired[float]
     user_agent: NotRequired[str]
     webhook_id: NotRequired[str]
     workspace_id: NotRequired[str]
@@ -56,6 +58,8 @@ class APICall(BaseModel):
 
     created_at: Optional[datetime] = None
 
+    endapi_response_time: Optional[float] = None
+
     environment: Optional[str] = "Production"
 
     error: Optional[str] = None
@@ -69,6 +73,8 @@ class APICall(BaseModel):
     is_billable: Optional[bool] = None
 
     size: Optional[float] = None
+
+    unified_response_time: Optional[float] = None
 
     user_agent: Optional[str] = None
 
@@ -91,6 +97,7 @@ class APICall(BaseModel):
             [
                 "connection_id",
                 "created_at",
+                "endapi_response_time",
                 "environment",
                 "error",
                 "external_xref",
@@ -98,6 +105,7 @@ class APICall(BaseModel):
                 "ip_address",
                 "is_billable",
                 "size",
+                "unified_response_time",
                 "user_agent",
                 "webhook_id",
                 "workspace_id",

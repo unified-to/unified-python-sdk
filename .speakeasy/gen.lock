@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: e791a4d4f6acb4af6f7a5261e1dded55
+  docChecksum: 85c371a0fa4d94ec3af46b9fe331307f
   docVersion: "1.0"
-  speakeasyVersion: 1.696.0
+  speakeasyVersion: 1.697.5
   generationVersion: 2.799.0
-  releaseVersion: 0.56.21
-  configChecksum: 784e3ed5b5ae9de5c5f69dee65eef6a1
+  releaseVersion: 0.56.22
+  configChecksum: 0f54d5c356d3bba15dedb05330e3c29b
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 4484ee24-84f7-4892-b44f-32d9243028a6
-  pristine_commit_hash: 23c6c4b1618be74d3c3e1cdd31bf0ef3d95c766a
-  pristine_tree_hash: cfb5021176020de50e073b9411a4658f79c72c5f
+  generation_id: dadc51b7-61ff-49ee-8095-7da01b7624b9
+  pristine_commit_hash: e78efae8a1146b83e65cd4144a6c35a0a06cb69f
+  pristine_tree_hash: 6600da53b6d5af45b1e31cd3038276ba4873d257
 features:
   python:
     acceptHeaders: 3.0.0
@@ -7042,8 +7042,8 @@ trackedFiles:
     pristine_git_object: 134efcdce148e83fb3ba078fcc6aeb8d46f8d627
   docs/models/shared/apicall.md:
     id: 4de7aa41c7c3
-    last_write_checksum: sha1:a46c15e96debebfb576ec42ed0156edcec60fda7
-    pristine_git_object: 0475673a7686c44ae271b9582dfab7455fd6717d
+    last_write_checksum: sha1:832823e874312eec4a166310f51fa87cf981457a
+    pristine_git_object: 02557a05fce933f1426bcc541e1af063b796b7ef
   docs/models/shared/apicalltype.md:
     id: 21f10c8f5291
     last_write_checksum: sha1:1ebd0868d99608b828e33f5a1d27bb359c25f57b
@@ -7378,8 +7378,8 @@ trackedFiles:
     pristine_git_object: f1d5f6a20c52b13300c7dbd2a0f4bf3ebebc8bd7
   docs/models/shared/connection.md:
     id: 906ff4b2d85c
-    last_write_checksum: sha1:035e98f1d687ab8ffec50265ed63a27908c99772
-    pristine_git_object: 81436284d4008ee48e0a7d8355fa26f196a9adcb
+    last_write_checksum: sha1:c0638f71bb2d0a3a2201defa5715fa0cd7d150dd
+    pristine_git_object: e1adc04e52cff95fc86deaf8cdd77a4905e81bfd
   docs/models/shared/contentstype.md:
     id: 805032d356f5
     last_write_checksum: sha1:818527f9d05137ba513060fb6c1b47414c4393a9
@@ -10090,8 +10090,8 @@ trackedFiles:
     pristine_git_object: c06f7a9e68006b8409a910f7eb334096ba16d2cb
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:e8fb9deae394a281340c8cc65a3ce54d7a261f20
-    pristine_git_object: 2ee0ba2f9f9dc046f3084959c4c23cd98298ad98
+    last_write_checksum: sha1:fae8ecbd65c7c1e3f6f8441e0a214c4ca2ea4de1
+    pristine_git_object: 0bea90dc992afd1bb3eb5b0ce87eeba385533639
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -10118,8 +10118,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:07718404db3502c37acd6be61a5ac2515e39f588
-    pristine_git_object: 696c3264b1df5d15f900cf59cfc9a09669cee650
+    last_write_checksum: sha1:1f8bbcad0f8ac7b5ffb1b64daf84bce964cf34e1
+    pristine_git_object: fa867d932aee797736a3102ad803a1a96c254a97
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -13070,8 +13070,8 @@ trackedFiles:
     pristine_git_object: 819472c92776b8a8b2cb364c9ba7a98c1dee5664
   src/unified_python_sdk/models/shared/apicall.py:
     id: 28eb16c7aef1
-    last_write_checksum: sha1:1aee2c5c9471eabb9f3f2de0ff28b5769c7a3071
-    pristine_git_object: 945b1bbd13740333e0c35bac9ac7f54b82f188d5
+    last_write_checksum: sha1:560bdb070bdb6428dac58d6dbf512f29e16c660a
+    pristine_git_object: 5e5873e7470580bb71ab4f16ea6cfb3f56ddc074
   src/unified_python_sdk/models/shared/atsactivity.py:
     id: 48e99e14fff9
     last_write_checksum: sha1:c321d328e0f1c74ad2ef00e306cab02c452aaa30
@@ -13266,8 +13266,8 @@ trackedFiles:
     pristine_git_object: f245800890683ec69c5bb7ef7db98b4af1f9f1c6
   src/unified_python_sdk/models/shared/connection.py:
     id: 222fe6e1836b
-    last_write_checksum: sha1:96a19216f60f19ca6408aa5a350d9eeca71713b6
-    pristine_git_object: 1cb98beca12b4fe8915a6fa31b14bd5ffd79a837
+    last_write_checksum: sha1:f801ac95e82316559293be70ea1c66ff748557f4
+    pristine_git_object: 4c67faf86512f8789868f2930d5a790f28a95367
   src/unified_python_sdk/models/shared/crmcompany.py:
     id: 466d23cc748f
     last_write_checksum: sha1:0745d0f260c4df23a23f9df8c6c6de963c42b499
@@ -19942,7 +19942,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.ads.create_ads_creative()`: **Added**\n* `unified_to.ads.create_ads_insertionorder()`: **Added**\n* `unified_to.ads.get_ads_creative()`: **Added**\n* `unified_to.ads.get_ads_insertionorder()`: **Added**\n* `unified_to.ads.list_ads_creatives()`: **Added**\n* `unified_to.ads.list_ads_insertionorders()`: **Added**\n* `unified_to.ads.patch_ads_creative()`: **Added**\n* `unified_to.ads.patch_ads_insertionorder()`: **Added**\n* `unified_to.ads.remove_ads_creative()`: **Added**\n* `unified_to.ads.remove_ads_insertionorder()`: **Added**\n* `unified_to.ads.update_ads_creative()`: **Added**\n* `unified_to.ads.update_ads_insertionorder()`: **Added**\n* `unified_to.creative.create_ads_creative()`: **Added**\n* `unified_to.creative.get_ads_creative()`: **Added**\n* `unified_to.creative.list_ads_creatives()`: **Added**\n* `unified_to.creative.patch_ads_creative()`: **Added**\n* `unified_to.creative.remove_ads_creative()`: **Added**\n* `unified_to.creative.update_ads_creative()`: **Added**\n* `unified_to.insertionorder.create_ads_insertionorder()`: **Added**\n* `unified_to.insertionorder.get_ads_insertionorder()`: **Added**\n* `unified_to.insertionorder.list_ads_insertionorders()`: **Added**\n* `unified_to.insertionorder.patch_ads_insertionorder()`: **Added**\n* `unified_to.insertionorder.remove_ads_insertionorder()`: **Added**\n* `unified_to.insertionorder.update_ads_insertionorder()`: **Added**\n* `unified_to.report.list_ads_reports()`:  `response.[].metrics.[]` **Changed**\n* `unified_to.ads.create_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.create_ads_campaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.create_ads_group()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.get_ads_ad()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.get_ads_campaign()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.get_ads_group()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.list_ads_ads()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.ads.list_ads_campaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.ads.list_ads_groups()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.ads.list_ads_reports()`:  `response.[].metrics.[]` **Changed**\n* `unified_to.ads.patch_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.patch_ads_campaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.patch_ads_group()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.update_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.update_ads_campaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.update_ads_group()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ad.create_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ad.get_ads_ad()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.ad.list_ads_ads()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.ad.patch_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ad.update_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.campaign.create_ads_campaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.campaign.get_ads_campaign()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.campaign.list_ads_campaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.campaign.patch_ads_campaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.campaign.update_ads_campaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.group.create_ads_group()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.group.get_ads_group()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.group.list_ads_groups()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.group.patch_ads_group()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.group.update_ads_group()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.get_unified_apicall()`:  `response.user_agent` **Added**\n* `unified_to.unified.list_unified_apicalls()`:  `response.[].user_agent` **Added**\n* `unified_to.apicall.get_unified_apicall()`:  `response.user_agent` **Added**\n* `unified_to.apicall.list_unified_apicalls()`:  `response.[].user_agent` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.unified.create_unified_connection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.get_unified_apicall()`:  `response` **Changed**\n* `unified_to.unified.get_unified_connection()`:  `response` **Changed**\n* `unified_to.unified.list_unified_apicalls()`:  `response.[]` **Changed**\n* `unified_to.unified.list_unified_connections()`:  `response.[]` **Changed**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.apicall.get_unified_apicall()`:  `response` **Changed**\n* `unified_to.apicall.list_unified_apicalls()`:  `response.[]` **Changed**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.connection.get_unified_connection()`:  `response` **Changed**\n* `unified_to.connection.list_unified_connections()`:  `response.[]` **Changed**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
