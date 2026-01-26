@@ -6,40 +6,51 @@ import httpx
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import shippingrate as shared_shippingrate
+from unified_python_sdk.models.shared import shippinglabel as shared_shippinglabel
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
     PathParamMetadata,
     QueryParamMetadata,
+    RequestMetadata,
 )
 
 
-class GetShippingRateQueryParamFields(str, Enum):
-    SHIPMENT_ID = "shipment_id"
-    CURRENCY = "currency"
-    FROM_ADDRESS = "from_address"
-    TO_ADDRESS = "to_address"
-    PACKAGES = "packages"
-    SHIP_BY_AT = "ship_by_at"
-    CARRIER_ID = "carrier_id"
+class UpdateShippingLabelQueryParamFields(str, Enum):
     ID = "id"
-    RATES = "rates"
+    CREATED_AT = "created_at"
+    UPDATED_AT = "updated_at"
+    SHIPMENT_ID = "shipment_id"
+    TRACKING_NUMBER = "tracking_number"
+    LABEL_URL = "label_url"
+    LABEL_FORMAT = "label_format"
+    STATUS = "status"
+    IS_VOIDED = "is_voided"
+    LABEL_COST = "label_cost"
+    LABEL_COST_CURRENCY = "label_cost_currency"
+    RATE_ID = "rate_id"
+    SERVICE_CODE = "service_code"
     RAW = "raw"
 
 
-class GetShippingRateRequestTypedDict(TypedDict):
+class UpdateShippingLabelRequestTypedDict(TypedDict):
+    shipping_label: shared_shippinglabel.ShippingLabelTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
-    r"""ID of the Rate"""
-    fields: NotRequired[List[GetShippingRateQueryParamFields]]
+    r"""ID of the Label"""
+    fields: NotRequired[List[UpdateShippingLabelQueryParamFields]]
     r"""Fields to return"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
 
-class GetShippingRateRequest(BaseModel):
+class UpdateShippingLabelRequest(BaseModel):
+    shipping_label: Annotated[
+        shared_shippinglabel.ShippingLabel,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -48,10 +59,10 @@ class GetShippingRateRequest(BaseModel):
     id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
-    r"""ID of the Rate"""
+    r"""ID of the Label"""
 
     fields: Annotated[
-        Optional[List[GetShippingRateQueryParamFields]],
+        Optional[List[UpdateShippingLabelQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
@@ -79,18 +90,18 @@ class GetShippingRateRequest(BaseModel):
         return m
 
 
-class GetShippingRateResponseTypedDict(TypedDict):
+class UpdateShippingLabelResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    shipping_rate: NotRequired[shared_shippingrate.ShippingRateTypedDict]
+    shipping_label: NotRequired[shared_shippinglabel.ShippingLabelTypedDict]
     r"""Successful"""
 
 
-class GetShippingRateResponse(BaseModel):
+class UpdateShippingLabelResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -100,12 +111,12 @@ class GetShippingRateResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    shipping_rate: Optional[shared_shippingrate.ShippingRate] = None
+    shipping_label: Optional[shared_shippinglabel.ShippingLabel] = None
     r"""Successful"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["ShippingRate"])
+        optional_fields = set(["ShippingLabel"])
         serialized = handler(self)
         m = {}
 

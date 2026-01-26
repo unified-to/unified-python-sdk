@@ -1061,7 +1061,9 @@ asyncio.run(main())
 * [create_shipping_label](docs/sdks/label/README.md#create_shipping_label) - Create a label
 * [get_shipping_label](docs/sdks/label/README.md#get_shipping_label) - Retrieve a label
 * [list_shipping_labels](docs/sdks/label/README.md#list_shipping_labels) - List all labels
+* [patch_shipping_label](docs/sdks/label/README.md#patch_shipping_label) - Update a label
 * [remove_shipping_label](docs/sdks/label/README.md#remove_shipping_label) - Remove a label
+* [update_shipping_label](docs/sdks/label/README.md#update_shipping_label) - Update a label
 
 ### [Lead](docs/sdks/lead/README.md)
 
@@ -1349,7 +1351,6 @@ asyncio.run(main())
 ### [Rate](docs/sdks/rate/README.md)
 
 * [create_shipping_rate](docs/sdks/rate/README.md#create_shipping_rate) - Create a rate
-* [get_shipping_rate](docs/sdks/rate/README.md#get_shipping_rate) - Retrieve a rate
 
 ### [Recording](docs/sdks/recording/README.md)
 
@@ -1489,19 +1490,18 @@ asyncio.run(main())
 * [create_shipping_label](docs/sdks/shipping/README.md#create_shipping_label) - Create a label
 * [create_shipping_rate](docs/sdks/shipping/README.md#create_shipping_rate) - Create a rate
 * [create_shipping_shipment](docs/sdks/shipping/README.md#create_shipping_shipment) - Create a shipment
-* [create_shipping_tracking](docs/sdks/shipping/README.md#create_shipping_tracking) - Create a tracking
 * [get_shipping_carrier](docs/sdks/shipping/README.md#get_shipping_carrier) - Retrieve a carrier
 * [get_shipping_label](docs/sdks/shipping/README.md#get_shipping_label) - Retrieve a label
-* [get_shipping_rate](docs/sdks/shipping/README.md#get_shipping_rate) - Retrieve a rate
 * [get_shipping_shipment](docs/sdks/shipping/README.md#get_shipping_shipment) - Retrieve a shipment
 * [get_shipping_tracking](docs/sdks/shipping/README.md#get_shipping_tracking) - Retrieve a tracking
 * [list_shipping_carriers](docs/sdks/shipping/README.md#list_shipping_carriers) - List all carriers
 * [list_shipping_labels](docs/sdks/shipping/README.md#list_shipping_labels) - List all labels
 * [list_shipping_shipments](docs/sdks/shipping/README.md#list_shipping_shipments) - List all shipments
-* [list_shipping_trackings](docs/sdks/shipping/README.md#list_shipping_trackings) - List all trackings
+* [patch_shipping_label](docs/sdks/shipping/README.md#patch_shipping_label) - Update a label
 * [patch_shipping_shipment](docs/sdks/shipping/README.md#patch_shipping_shipment) - Update a shipment
 * [remove_shipping_label](docs/sdks/shipping/README.md#remove_shipping_label) - Remove a label
 * [remove_shipping_shipment](docs/sdks/shipping/README.md#remove_shipping_shipment) - Remove a shipment
+* [update_shipping_label](docs/sdks/shipping/README.md#update_shipping_label) - Update a label
 * [update_shipping_shipment](docs/sdks/shipping/README.md#update_shipping_shipment) - Update a shipment
 
 ### [Space](docs/sdks/space/README.md)
@@ -1629,9 +1629,7 @@ asyncio.run(main())
 
 ### [Tracking](docs/sdks/tracking/README.md)
 
-* [create_shipping_tracking](docs/sdks/tracking/README.md#create_shipping_tracking) - Create a tracking
 * [get_shipping_tracking](docs/sdks/tracking/README.md#get_shipping_tracking) - Retrieve a tracking
-* [list_shipping_trackings](docs/sdks/tracking/README.md#list_shipping_trackings) - List all trackings
 
 ### [Transaction](docs/sdks/transaction/README.md)
 

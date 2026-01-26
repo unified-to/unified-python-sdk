@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 85c371a0fa4d94ec3af46b9fe331307f
+  docChecksum: 409dad276455ac494bf49828ee2c63da
   docVersion: "1.0"
   speakeasyVersion: 1.697.5
   generationVersion: 2.799.0
-  releaseVersion: 0.56.22
-  configChecksum: 0f54d5c356d3bba15dedb05330e3c29b
+  releaseVersion: 0.56.23
+  configChecksum: ea1f03bfff6ff33284e9d6d52e2ef343
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: dadc51b7-61ff-49ee-8095-7da01b7624b9
-  pristine_commit_hash: e78efae8a1146b83e65cd4144a6c35a0a06cb69f
-  pristine_tree_hash: 6600da53b6d5af45b1e31cd3038276ba4873d257
+  generation_id: a855d263-2319-4833-abfa-d1fe6b184e9f
+  pristine_commit_hash: b06da8a8531b5d2d12bb7b5fc21b6c4a9d3bdb1b
+  pristine_tree_hash: ab0aeed073050848d3c16d9d530fa5deed9f8165
 features:
   python:
     acceptHeaders: 3.0.0
@@ -992,18 +992,6 @@ trackedFiles:
     id: 34151093d34a
     last_write_checksum: sha1:485dc46dc6160b603745f72faa881b13fad556c2
     pristine_git_object: 22ffb7a109c0df5a08b9eb33f8cee3c5a025df0a
-  docs/models/operations/createshippingtrackingqueryparamfields.md:
-    id: 385f74849984
-    last_write_checksum: sha1:e2ecc240693f1255dc88f8d83e81d5294774b491
-    pristine_git_object: d668b16586c8e47bef7175e209e79f21f6df678d
-  docs/models/operations/createshippingtrackingrequest.md:
-    id: 2441e26c76de
-    last_write_checksum: sha1:b655feb681a75e9a2fa8b7139865123e6ccd3256
-    pristine_git_object: 5b480ca527a92c88491e1ce0007e5b55dbf0ccd6
-  docs/models/operations/createshippingtrackingresponse.md:
-    id: 36cd481db9c4
-    last_write_checksum: sha1:cb592fd0b106e9ca57506fdc4964b78dfb177ef4
-    pristine_git_object: 7c095c9ae389b83461e67090dcb8c8f4754a7349
   docs/models/operations/createstoragefilequeryparamfields.md:
     id: 8a00f081be88
     last_write_checksum: sha1:7e64022cc2ea13078cd532ffcf7d6aea6f65ad2d
@@ -2224,18 +2212,6 @@ trackedFiles:
     id: 3c79c581eaae
     last_write_checksum: sha1:4839e8a0c02cf51e1d92cf99131e93673ce4a73f
     pristine_git_object: e7794dbc2502e4db6f9863782c0f66f9b37737c6
-  docs/models/operations/getshippingratequeryparamfields.md:
-    id: f989a0d73bb0
-    last_write_checksum: sha1:56bbc80c5d9e38853c2a1dbf29a44cc767c15338
-    pristine_git_object: ba05f3446f4932ebe765b3957da9cbcc98ae605f
-  docs/models/operations/getshippingraterequest.md:
-    id: 4b1f566f1116
-    last_write_checksum: sha1:7610e2d750280264cee997d4f7725bc1e3c99203
-    pristine_git_object: 768deb0622a851bcec7ccb4318faed4d311cf6e1
-  docs/models/operations/getshippingrateresponse.md:
-    id: 6df44a315d06
-    last_write_checksum: sha1:0bd319310d228ded8934220621ba8ac0c9fefce8
-    pristine_git_object: 1641ecb258ff2e2f2702fc869949862e9f0206ab
   docs/models/operations/getshippingshipmentqueryparamfields.md:
     id: 20c396780edb
     last_write_checksum: sha1:a62898831468c04179f1a7afdb1aea2f4f0f36d6
@@ -3620,18 +3596,6 @@ trackedFiles:
     id: 3b307d32bcd9
     last_write_checksum: sha1:9541978e1c98f8047e2395d31a71d4bd157f2563
     pristine_git_object: 3a4d25a1d344989c3ccccdfce3ce227399c71dcc
-  docs/models/operations/listshippingtrackingsqueryparamfields.md:
-    id: c96f167b8485
-    last_write_checksum: sha1:33a3f2a4015062be97d6c403b3a8246cf15ec1eb
-    pristine_git_object: bf01dc3cf2e66c82191e600cb69a709f39052101
-  docs/models/operations/listshippingtrackingsrequest.md:
-    id: d791ab13210c
-    last_write_checksum: sha1:0379937e90b905d8903b0d36c23c1db6beb9955f
-    pristine_git_object: e6738e9eb0db251c1ce9d22021e9a8fbd808acad
-  docs/models/operations/listshippingtrackingsresponse.md:
-    id: 9dd8b7879b93
-    last_write_checksum: sha1:58e9ed85f72b8bbbb36e5e16ddb9fd264cb694c4
-    pristine_git_object: 04823c95afc71aec78fb43f335b2f90ab0baf27e
   docs/models/operations/liststoragefilesqueryparamfields.md:
     id: 2015a8900f58
     last_write_checksum: sha1:b0768f6339c55a0ab4c013e6e436fe9097608075
@@ -4764,6 +4728,18 @@ trackedFiles:
     id: 17334f98e94f
     last_write_checksum: sha1:75b465d9fa5ee0e82c7d4fb46a375fec9a45d231
     pristine_git_object: 8d6a0df9a5670373209c2ec42b7b43cee9db5f67
+  docs/models/operations/patchshippinglabelqueryparamfields.md:
+    id: 9430f4e3e6e3
+    last_write_checksum: sha1:cbf44fa2eaae3e7a4bea73a92c883a196c1a7c0b
+    pristine_git_object: 525f60eb98963ec25c332dbca4f0fc536ee77209
+  docs/models/operations/patchshippinglabelrequest.md:
+    id: c4320cd796ad
+    last_write_checksum: sha1:69dae8e270e6c2bdc792894b93de935d32b0318d
+    pristine_git_object: 3aa6e4fe4cabd701ecc86d85b7c9cf947b97fcc2
+  docs/models/operations/patchshippinglabelresponse.md:
+    id: 9769de61f24e
+    last_write_checksum: sha1:b9923573e7466ddd5dce5abd7d1d734f3230c422
+    pristine_git_object: 6fdffb0af8dc17ec6dbd913b765b0ea5bd36b66d
   docs/models/operations/patchshippingshipmentqueryparamfields.md:
     id: dfa9b245b23a
     last_write_checksum: sha1:c7a7905dcea1cab942fd6d46402a6f618f98e50a
@@ -6576,6 +6552,18 @@ trackedFiles:
     id: 8e9a998301a6
     last_write_checksum: sha1:636f61d2c7b72d774f7276d9d0fd188cfde1822e
     pristine_git_object: 4418fecb9836594c4c2a37853a4d89a63357e637
+  docs/models/operations/updateshippinglabelqueryparamfields.md:
+    id: 74fcc05bb3ff
+    last_write_checksum: sha1:1522e606d998fe49003e1d70ce7c857d34cf894b
+    pristine_git_object: 9a6ec51674531b570de14fcd2574cb9353e80aac
+  docs/models/operations/updateshippinglabelrequest.md:
+    id: 7c3be3cf55a4
+    last_write_checksum: sha1:199320c3b9aeb37e288f5c6ad8e982b562300b65
+    pristine_git_object: c1574cd6ed1277971722472f7b7c0b0e5eb4e913
+  docs/models/operations/updateshippinglabelresponse.md:
+    id: 1cc068ef449f
+    last_write_checksum: sha1:f86ebb82152f782a6f8c5ac2ee90eb8283ebaf25
+    pristine_git_object: d37071b10aa15722fad66517638d172bb0bd7c35
   docs/models/operations/updateshippingshipmentqueryparamfields.md:
     id: d9e1d8b7998a
     last_write_checksum: sha1:69ba0a2dbb4dc01e5a8c36103abfe2f4cbec1b87
@@ -9830,8 +9818,8 @@ trackedFiles:
     pristine_git_object: b9df4f88c8a44d17d7a76995316705c96db5ace7
   docs/sdks/label/README.md:
     id: 066306770d08
-    last_write_checksum: sha1:287a9c2f03d7c69a57e500d211a1dcc4119fc567
-    pristine_git_object: 819f90424006e400516a8b03317b05c1ddd87796
+    last_write_checksum: sha1:8442fcaaa4db7182e4ab9be615f2a2d0b610bfcb
+    pristine_git_object: d8dfec36a41511cdde6bb7b5261100c25cdccd60
   docs/sdks/lead/README.md:
     id: cd27770a8fda
     last_write_checksum: sha1:5f3501ac2cfe5bafe99596b55e709af2239fc9b6
@@ -9946,8 +9934,8 @@ trackedFiles:
     pristine_git_object: d91978a49f89b7cbd8173c5ee4c5021608ae15c2
   docs/sdks/rate/README.md:
     id: 72a0bfd7895c
-    last_write_checksum: sha1:0578ba45b7a94c2ce46e3286fc788ab251342193
-    pristine_git_object: 7921478128c57e3ccdbdce9fa9c1b25e5a603ac2
+    last_write_checksum: sha1:7444544b57ed04d45a91b27c6f699c067eddf51e
+    pristine_git_object: b453c499fb2cd36a6a16af03772a66592860ff17
   docs/sdks/recording/README.md:
     id: 3a51a1d7f8a5
     last_write_checksum: sha1:74035367f3e9ec999c01415bb23359ab0e54641b
@@ -9998,8 +9986,8 @@ trackedFiles:
     pristine_git_object: e3d551d20eee6b3509bb0ccf9ea6862857d16205
   docs/sdks/shipping/README.md:
     id: 0417d63f28fb
-    last_write_checksum: sha1:7191e1696eaab8a5fa1bbb43b6433e70da460698
-    pristine_git_object: a9cfb322b4b8941d525a991e11bbc25f3c4b5f4e
+    last_write_checksum: sha1:f287b65d8b161c8aed5381e0253b16929946edf0
+    pristine_git_object: 5c5ef72cc55a82424972e440f950227c50c6a24b
   docs/sdks/space/README.md:
     id: b3ce86241634
     last_write_checksum: sha1:8dfcc59c4890ab2cacf2dec5828fed6c942629f0
@@ -10046,8 +10034,8 @@ trackedFiles:
     pristine_git_object: d1ee886477c9f5810d51ba34a789bac6740dcca8
   docs/sdks/tracking/README.md:
     id: dea00ca28a69
-    last_write_checksum: sha1:147ba90e91ab060691a84657eca3ad1a5135e7d4
-    pristine_git_object: 184d91a48c4d333e89129457f969d3dfb298436a
+    last_write_checksum: sha1:a8d4c886579f29bed2daeb0cb4869d2f2bc1d203
+    pristine_git_object: e83968a5d61c55014b3e094352916582c96ef627
   docs/sdks/transaction/README.md:
     id: aabe9a10cc76
     last_write_checksum: sha1:3b3a1d5aea3fd2de13753851db60482b83d16836
@@ -10090,8 +10078,8 @@ trackedFiles:
     pristine_git_object: c06f7a9e68006b8409a910f7eb334096ba16d2cb
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:fae8ecbd65c7c1e3f6f8441e0a214c4ca2ea4de1
-    pristine_git_object: 0bea90dc992afd1bb3eb5b0ce87eeba385533639
+    last_write_checksum: sha1:b1f864e8117f05c7015df8571dd778585dddc3ee
+    pristine_git_object: eb318be6c2863e585a207a67f84ce59efaab084e
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -10118,8 +10106,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:1f8bbcad0f8ac7b5ffb1b64daf84bce964cf34e1
-    pristine_git_object: fa867d932aee797736a3102ad803a1a96c254a97
+    last_write_checksum: sha1:44db1abc4aa03d49ad891119f02a26c45ba592b4
+    pristine_git_object: ffc7e087b87fdb0602d97a85cb951433e4c4884a
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -10390,8 +10378,8 @@ trackedFiles:
     pristine_git_object: 42d74b9d5baa91b0a1c9f367ecaccda3af22398d
   src/unified_python_sdk/label.py:
     id: b60b9e3a0e09
-    last_write_checksum: sha1:ffe69b05e19d27977766e3f95598a0bc0641caed
-    pristine_git_object: b32e9e3b41d28f67d330bdd0209047cbb5ad4378
+    last_write_checksum: sha1:33d8c3b35f0224f8760a1c9cdbf4c3991113652b
+    pristine_git_object: 7a6f2be07ce0bf554b20eb1ae00a7e057f9c53f6
   src/unified_python_sdk/lead.py:
     id: 6a3c64aad882
     last_write_checksum: sha1:7d461ae1509149cbf4447886bbff7a3756dd358b
@@ -10466,8 +10454,8 @@ trackedFiles:
     pristine_git_object: 01a716a03809ab4f4d1f089ae11e04e8392ba5e8
   src/unified_python_sdk/models/operations/__init__.py:
     id: 486383712deb
-    last_write_checksum: sha1:53213a48571c179cb97460c81b474c6fc0eb8844
-    pristine_git_object: 80234a667fed40d92ba4613590b26eb32d27a5d1
+    last_write_checksum: sha1:f8127ddc2f9d81687ef628fb9a319caf6945b515
+    pristine_git_object: 123ec15327c7015104042d447fcdf53f345b3cbd
   src/unified_python_sdk/models/operations/createaccountingaccount.py:
     id: 52d116750aa5
     last_write_checksum: sha1:f2f405f350e4889dc299180215316bb245df0e77
@@ -10788,10 +10776,6 @@ trackedFiles:
     id: c347f69ca1c1
     last_write_checksum: sha1:f6a5ca719d8ff87a4e8eb0726cacfa42aae28bc4
     pristine_git_object: 90ccc34081671853145ee0c5bf00808cac06ed5a
-  src/unified_python_sdk/models/operations/createshippingtracking.py:
-    id: eba3c7d60028
-    last_write_checksum: sha1:ff103f084bd55d03bfed1b7001969abaaf60c011
-    pristine_git_object: 78ffe45c47d856490d7b0cd7d2c7a3811067ab60
   src/unified_python_sdk/models/operations/createstoragefile.py:
     id: f760adb52de2
     last_write_checksum: sha1:41f1061e02388e4a7bfc3138137aa75f738cf51c
@@ -11208,10 +11192,6 @@ trackedFiles:
     id: 7e1e07c2feb0
     last_write_checksum: sha1:244fc7f7c185e33650051a7cae3515153e6f414b
     pristine_git_object: fae32064b8808184c8bf76237fee4a7034287777
-  src/unified_python_sdk/models/operations/getshippingrate.py:
-    id: 8a309dc5a9b4
-    last_write_checksum: sha1:89ce503429c120a1242894b63f6e0a96c1b35979
-    pristine_git_object: 7e993aec1be30a7b7210f3c414ef8934716059b8
   src/unified_python_sdk/models/operations/getshippingshipment.py:
     id: f56497ab6d90
     last_write_checksum: sha1:a37a5362d0a914763aa2c06c3fb20656c7c5859f
@@ -11688,10 +11668,6 @@ trackedFiles:
     id: 62a5f41ebbc6
     last_write_checksum: sha1:dabe68cf5b0af14831cb36e64597d805d6c2d9ce
     pristine_git_object: 3161fab4aeb39d4ac86b5b33869bc784ef21439e
-  src/unified_python_sdk/models/operations/listshippingtrackings.py:
-    id: fea03be99003
-    last_write_checksum: sha1:cef6dca6f91758be15768d875a8b5cc82bd844b1
-    pristine_git_object: 2193dcb5c51aa0bf74c110f6ec95cce9b541fe3c
   src/unified_python_sdk/models/operations/liststoragefiles.py:
     id: 1cbd651f20c8
     last_write_checksum: sha1:f4fad0dd9cb2ccc8c39c808a788f7844fd6c84ad
@@ -12084,6 +12060,10 @@ trackedFiles:
     id: 0577ef7dd6b3
     last_write_checksum: sha1:5a69c0ac9ae84e6609d8b5112e34f0b281ed564b
     pristine_git_object: ea7cd410cc914b8a1c2f391bf7d3f7ba9e820a67
+  src/unified_python_sdk/models/operations/patchshippinglabel.py:
+    id: ea4e15713086
+    last_write_checksum: sha1:b42104affa534659d2566e5703b0ebd017f33b4b
+    pristine_git_object: 10e4409ae76c2669831d7ade2727c5f9941cde92
   src/unified_python_sdk/models/operations/patchshippingshipment.py:
     id: 653fedb67983
     last_write_checksum: sha1:5623c4915ea014be6550049722abf864f53c7481
@@ -12816,6 +12796,10 @@ trackedFiles:
     id: 84890b81f586
     last_write_checksum: sha1:f7404872c54cbba7016875e284b57b9091ada43d
     pristine_git_object: 51d55f7ed14b006ab08be9d3cf9d2fec73e58909
+  src/unified_python_sdk/models/operations/updateshippinglabel.py:
+    id: 85510e72c251
+    last_write_checksum: sha1:81086deb4d5ba965afd54922c66c3a4d6d13c175
+    pristine_git_object: 706cf9f0ec1e06175f40619ea19c23140dafb3e4
   src/unified_python_sdk/models/operations/updateshippingshipment.py:
     id: c09f4af0522b
     last_write_checksum: sha1:cc371d0578d9ad5b790f788166f61c7dd5339298
@@ -14250,8 +14234,8 @@ trackedFiles:
     pristine_git_object: 3e38f1a929f7d6b1d6de74604aa87e3d8f010544
   src/unified_python_sdk/rate.py:
     id: e082401a07c8
-    last_write_checksum: sha1:67b17f9b420426fb1cd2d5649f54fd598638cbbe
-    pristine_git_object: f8e4cd6161ceed525e664b6314a4a4ad11988420
+    last_write_checksum: sha1:693ff170a557f632a77d8a2a91a2a5ea121191e7
+    pristine_git_object: f7538b77c2db08945df0c12fe9bd3cfbc2ae107a
   src/unified_python_sdk/recording.py:
     id: 34388e849ef3
     last_write_checksum: sha1:ff382a54366424fc0aa4215f270e9387467beb33
@@ -14310,8 +14294,8 @@ trackedFiles:
     pristine_git_object: 3c601b50b587461e9bfbc4c70050a501c770b818
   src/unified_python_sdk/shipping.py:
     id: 26d853a533f3
-    last_write_checksum: sha1:2291c73c7bfa96d00f575852b5db4f70f89f4464
-    pristine_git_object: 6b13716f91d523aa6980f68e23332315acfe39b5
+    last_write_checksum: sha1:004ac0c2ab7ab437f5cfeb56092e3326be6358fd
+    pristine_git_object: a14b11b373a90bbcbd7c5c14442f5d61595076b3
   src/unified_python_sdk/space.py:
     id: 340abe955caf
     last_write_checksum: sha1:3dfb0fedfdbf69fa438891a3c0f0ecbc8e8cdbe6
@@ -14358,8 +14342,8 @@ trackedFiles:
     pristine_git_object: e95a0a2a33c888453bf00f22206f6b3b0c9f9f2e
   src/unified_python_sdk/tracking.py:
     id: 748db438f4f7
-    last_write_checksum: sha1:4e6dfeda9b428a2614c30dc70f79da15e4bb7e9b
-    pristine_git_object: 6c8e20a839c389cfed0585a71dedd007b0a8f0b2
+    last_write_checksum: sha1:d3b93efbdafc1fd4d40f0dbd9d1ab94385825275
+    pristine_git_object: d29593701746e762570aa8b481fe264ffd4b19b7
   src/unified_python_sdk/transaction.py:
     id: a92e008b1ade
     last_write_checksum: sha1:6fd29e08333e9d78a68380c097ad5bfe3017c4de
@@ -19940,9 +19924,42 @@ examples:
       responses:
         "200":
           application/json: {}
+  patchShippingLabel:
+    speakeasy-default-patch-shipping-label:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateShippingLabel:
+    speakeasy-default-update-shipping-label:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.unified.create_unified_connection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.get_unified_apicall()`:  `response` **Changed**\n* `unified_to.unified.get_unified_connection()`:  `response` **Changed**\n* `unified_to.unified.list_unified_apicalls()`:  `response.[]` **Changed**\n* `unified_to.unified.list_unified_connections()`:  `response.[]` **Changed**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.apicall.get_unified_apicall()`:  `response` **Changed**\n* `unified_to.apicall.list_unified_apicalls()`:  `response.[]` **Changed**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.connection.get_unified_connection()`:  `response` **Changed**\n* `unified_to.connection.list_unified_connections()`:  `response.[]` **Changed**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: |
+  ## Python SDK Changes:
+  * `unified_to.shipping.patch_shipping_label()`: **Added**
+  * `unified_to.shipping.update_shipping_label()`: **Added**
+  * `unified_to.label.patch_shipping_label()`: **Added**
+  * `unified_to.label.update_shipping_label()`: **Added**
+  * `unified_to.shipping.create_shipping_tracking()`: **Deleted** **Breaking** :warning:
+  * `unified_to.shipping.get_shipping_rate()`: **Deleted** **Breaking** :warning:
+  * `unified_to.shipping.list_shipping_trackings()`: **Deleted** **Breaking** :warning:
+  * `unified_to.rate.get_shipping_rate()`: **Deleted** **Breaking** :warning:
+  * `unified_to.tracking.create_shipping_tracking()`: **Deleted** **Breaking** :warning:
+  * `unified_to.tracking.list_shipping_trackings()`: **Deleted** **Breaking** :warning:
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
