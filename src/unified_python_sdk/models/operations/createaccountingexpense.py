@@ -23,6 +23,7 @@ class CreateAccountingExpenseQueryParamFields(str, Enum):
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
     USER_ID = "user_id"
+    CONTACT_ID = "contact_id"
     NAME = "name"
     TOTAL_AMOUNT = "total_amount"
     CURRENCY = "currency"

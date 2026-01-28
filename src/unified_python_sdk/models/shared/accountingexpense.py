@@ -12,6 +12,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AccountingExpenseTypedDict(TypedDict):
     approved_at: NotRequired[datetime]
     approver_user_id: NotRequired[str]
+    contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     id: NotRequired[str]
@@ -30,6 +31,8 @@ class AccountingExpense(BaseModel):
     approved_at: Optional[datetime] = None
 
     approver_user_id: Optional[str] = None
+
+    contact_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
@@ -61,6 +64,7 @@ class AccountingExpense(BaseModel):
             [
                 "approved_at",
                 "approver_user_id",
+                "contact_id",
                 "created_at",
                 "currency",
                 "id",

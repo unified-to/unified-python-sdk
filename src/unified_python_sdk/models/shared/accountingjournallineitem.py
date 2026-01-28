@@ -11,6 +11,8 @@ class AccountingJournalLineitemTypedDict(TypedDict):
     account_id: NotRequired[str]
     category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
+    credit_amount: NotRequired[float]
+    debit_amount: NotRequired[float]
     description: NotRequired[str]
     group_id: NotRequired[str]
     id: NotRequired[str]
@@ -27,6 +29,10 @@ class AccountingJournalLineitem(BaseModel):
     category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
+
+    credit_amount: Optional[float] = None
+
+    debit_amount: Optional[float] = None
 
     description: Optional[str] = None
 
@@ -51,6 +57,8 @@ class AccountingJournalLineitem(BaseModel):
                 "account_id",
                 "category_ids",
                 "contact_id",
+                "credit_amount",
+                "debit_amount",
                 "description",
                 "group_id",
                 "id",
