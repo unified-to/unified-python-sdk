@@ -18,6 +18,7 @@ class PropertyCalendarEventOrganizerStatus(str, Enum, metaclass=utils.OpenEnumMe
 
 class PropertyCalendarEventOrganizerTypedDict(TypedDict):
     email: NotRequired[str]
+    is_cohost: NotRequired[bool]
     name: NotRequired[str]
     required: NotRequired[bool]
     status: NotRequired[PropertyCalendarEventOrganizerStatus]
@@ -26,6 +27,8 @@ class PropertyCalendarEventOrganizerTypedDict(TypedDict):
 
 class PropertyCalendarEventOrganizer(BaseModel):
     email: Optional[str] = None
+
+    is_cohost: Optional[bool] = None
 
     name: Optional[str] = None
 
@@ -46,7 +49,9 @@ class PropertyCalendarEventOrganizer(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["email", "name", "required", "status", "user_id"])
+        optional_fields = set(
+            ["email", "is_cohost", "name", "required", "status", "user_id"]
+        )
         serialized = handler(self)
         m = {}
 

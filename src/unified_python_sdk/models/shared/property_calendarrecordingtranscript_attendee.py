@@ -20,6 +20,7 @@ class PropertyCalendarRecordingTranscriptAttendeeStatus(
 
 class PropertyCalendarRecordingTranscriptAttendeeTypedDict(TypedDict):
     email: NotRequired[str]
+    is_cohost: NotRequired[bool]
     name: NotRequired[str]
     required: NotRequired[bool]
     status: NotRequired[PropertyCalendarRecordingTranscriptAttendeeStatus]
@@ -28,6 +29,8 @@ class PropertyCalendarRecordingTranscriptAttendeeTypedDict(TypedDict):
 
 class PropertyCalendarRecordingTranscriptAttendee(BaseModel):
     email: Optional[str] = None
+
+    is_cohost: Optional[bool] = None
 
     name: Optional[str] = None
 
@@ -48,7 +51,9 @@ class PropertyCalendarRecordingTranscriptAttendee(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["email", "name", "required", "status", "user_id"])
+        optional_fields = set(
+            ["email", "is_cohost", "name", "required", "status", "user_id"]
+        )
         serialized = handler(self)
         m = {}
 

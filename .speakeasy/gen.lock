@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 842cdb22961f557bcd41a4dc4569932b
+  docChecksum: 92ddc604425066fbaa39dfc01dd91097
   docVersion: "1.0"
-  speakeasyVersion: 1.700.1
-  generationVersion: 2.801.0
-  releaseVersion: 0.56.24
-  configChecksum: 2c7e2661bcd906b539def07453cbe234
+  speakeasyVersion: 1.700.2
+  generationVersion: 2.801.2
+  releaseVersion: 0.56.25
+  configChecksum: 4470b93aab3819dce839f37d7ef0ca33
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: e6e9419b-0ba0-4b93-98a9-55d7d81612cb
-  pristine_commit_hash: 4cb1c6565d786a0b779f3d3fc84475b267f96fea
-  pristine_tree_hash: 997c11708d44ae28956f9c09892de415de081e44
+  generation_id: 7eef1a14-4aad-4e4f-84fd-109d0f5b0a27
+  pristine_commit_hash: 1a5aa1fc1f2d7dbf4d631163a19faf8a972cea87
+  pristine_tree_hash: 5d0bcff856cf117808e4f0068a53924dad96c9e8
 features:
   python:
     acceptHeaders: 3.0.0
@@ -7206,8 +7206,8 @@ trackedFiles:
     pristine_git_object: 4d561e259a181797c752f27b14eeb2f043dcc451
   docs/models/shared/calendarattendee.md:
     id: c5e371e0818b
-    last_write_checksum: sha1:62c88cbbf279ea5f71295df96ba2023354ac5906
-    pristine_git_object: 6da823c050de596ff8a3ca0daf602d0a4f71ca61
+    last_write_checksum: sha1:b559fdbfcde9d0acbf6a9730f4954019be72bdef
+    pristine_git_object: 61b7cbfcaff1bd1da3ea14e4105a8b02c12d515e
   docs/models/shared/calendarattendeestatus.md:
     id: 77c82eb72646
     last_write_checksum: sha1:0e7c1982105dd7e3cf80eb47a11af925770f2973
@@ -8630,8 +8630,8 @@ trackedFiles:
     pristine_git_object: 20fa82e50c6af76bf0b41da13526761782f44013
   docs/models/shared/propertycalendareventorganizer.md:
     id: 81deb4b2c5e4
-    last_write_checksum: sha1:911bb0ca083f87ddbdf454944f1c8498fbae46d7
-    pristine_git_object: 03c1a5a677154a08bdf9f22d0b4457f8d6f16542
+    last_write_checksum: sha1:8a428dfe81bbb088620569226a65fd8e42b80138
+    pristine_git_object: f1bc0bbf1d6461fb95024bbad7347057f41c73bb
   docs/models/shared/propertycalendareventorganizerstatus.md:
     id: a157bc18285f
     last_write_checksum: sha1:9a796336a1e5c6ffb726519838551c549f88a58e
@@ -8642,8 +8642,8 @@ trackedFiles:
     pristine_git_object: a946c8ca51208b79a981c80358cbccd2c25947be
   docs/models/shared/propertycalendarrecordingtranscriptattendee.md:
     id: 2b4d56ccde92
-    last_write_checksum: sha1:c6ae410b3fb33e130206ac7f18652de41e5e1ba5
-    pristine_git_object: d25dfc152e3a1f3225fffd2fd508a044ff4e038d
+    last_write_checksum: sha1:77aceb07f568116fe14561cef531b4e13b4c7e74
+    pristine_git_object: 9a07b3c4387a08e66ffeb1fc960b778ad24253b0
   docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md:
     id: 6a6b15b2aa97
     last_write_checksum: sha1:ac3d646adb42af91d7edfbd1e8d1019742af2e95
@@ -10078,8 +10078,8 @@ trackedFiles:
     pristine_git_object: c06f7a9e68006b8409a910f7eb334096ba16d2cb
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:00c09c11fe18ded5ccd003631652c266a592f28c
-    pristine_git_object: 17a810eb3919ab4cd39becf7ffbbbf9d1e2ee0fd
+    last_write_checksum: sha1:562971bd84a9dcbb83b2b83192aca244b1728d70
+    pristine_git_object: f522b2536632363e9c11c3c86910155996c7aca1
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -10106,8 +10106,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:82db1367d43a0b423e08fa4710a8052fbf4bd8e1
-    pristine_git_object: f3623264865db762613060d05e842f7fc808a9c3
+    last_write_checksum: sha1:603647b9f86cccb6adbc3961c4ccc814c79c580b
+    pristine_git_object: bff1f516f3249b192a294ac3640f82f262aea6ac
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -13154,8 +13154,8 @@ trackedFiles:
     pristine_git_object: 02226c10942513bbb93f7445a64a72bd8b19d6b5
   src/unified_python_sdk/models/shared/calendarattendee.py:
     id: e01cb7f0eeab
-    last_write_checksum: sha1:8a07c7d578c4647becbd202392f8ae738c44425d
-    pristine_git_object: e432ffc03f889b63a72c5db2904830ae64b5fba6
+    last_write_checksum: sha1:c1a8256e85e48b99b69dfb14c4b6a6887b93412f
+    pristine_git_object: 6e66142423394f4249707142907864c5ff8618e8
   src/unified_python_sdk/models/shared/calendarbusy.py:
     id: ba0dd0792cfc
     last_write_checksum: sha1:601b39ee52706aaa1c150c38116cf6936aba5805
@@ -13702,16 +13702,16 @@ trackedFiles:
     pristine_git_object: 261dee38bcde91393ce1a3cebd933718f3dc1649
   src/unified_python_sdk/models/shared/property_calendarevent_organizer.py:
     id: a6cb113e0597
-    last_write_checksum: sha1:ed51cbe4af9ba7c170f262585cb3e06aeb002dac
-    pristine_git_object: 9d7d2c017826075a36b9ea4a8ef102f4b865b1e5
+    last_write_checksum: sha1:8cc22fdf3b32e881d2d3e798b4924a30d06cc639
+    pristine_git_object: 7de6631fc7183690c57f9e6858ef7b060b24e1b7
   src/unified_python_sdk/models/shared/property_calendareventrecurrence_on_days.py:
     id: 66c781f05945
     last_write_checksum: sha1:d012a602463b05b5aaa2e983c2821c7e274cfb55
     pristine_git_object: b236c51995397adf6bc7757d643e58fa27753643
   src/unified_python_sdk/models/shared/property_calendarrecordingtranscript_attendee.py:
     id: df99fa7a990b
-    last_write_checksum: sha1:91df9c59105555fb694744d2371a0c88dd80882b
-    pristine_git_object: 3b927d2ba89fec86c534deadfe82c7c2cd3547cd
+    last_write_checksum: sha1:30d3d757fa4995a3554ba85a081947c04fc59013
+    pristine_git_object: bd9d7acd812eebcd89f17d274e463634f6ec14a2
   src/unified_python_sdk/models/shared/property_commercelocation_address.py:
     id: 5e70003584cb
     last_write_checksum: sha1:cf9b963e67228ec2844d5fc4ea7514dbc26bee6e
@@ -19948,7 +19948,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.accounting.create_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response.contact_id` **Added**\n* `unified_to.accounting.create_accounting_journal()`: \n  *  `request.accounting_journal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified_to.accounting.get_accounting_expense()`: \n  *  `request.fields` **Changed**\n  *  `response.contact_id` **Added**\n* `unified_to.accounting.get_accounting_journal()`:  `response.lineitems[]` **Changed**\n* `unified_to.accounting.list_accounting_expenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[].contact_id` **Added**\n* `unified_to.accounting.list_accounting_journals()`:  `response.[].lineitems[]` **Changed**\n* `unified_to.accounting.patch_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response.contact_id` **Added**\n* `unified_to.accounting.patch_accounting_journal()`: \n  *  `request.accounting_journal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified_to.accounting.update_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response.contact_id` **Added**\n* `unified_to.accounting.update_accounting_journal()`: \n  *  `request.accounting_journal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified_to.expense.create_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response.contact_id` **Added**\n* `unified_to.expense.get_accounting_expense()`: \n  *  `request.fields` **Changed**\n  *  `response.contact_id` **Added**\n* `unified_to.expense.list_accounting_expenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[].contact_id` **Added**\n* `unified_to.expense.patch_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response.contact_id` **Added**\n* `unified_to.expense.update_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response.contact_id` **Added**\n* `unified_to.journal.create_accounting_journal()`: \n  *  `request.accounting_journal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified_to.journal.get_accounting_journal()`:  `response.lineitems[]` **Changed**\n* `unified_to.journal.list_accounting_journals()`:  `response.[].lineitems[]` **Changed**\n* `unified_to.journal.patch_accounting_journal()`: \n  *  `request.accounting_journal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified_to.journal.update_accounting_journal()`: \n  *  `request.accounting_journal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.calendar.create_calendar_event()`: \n  *  `request.calendar_event` **Changed**\n  *  `response` **Changed**\n* `unified_to.calendar.get_calendar_event()`:  `response` **Changed**\n* `unified_to.calendar.get_calendar_recording()`:  `response.media[]` **Changed**\n* `unified_to.calendar.list_calendar_events()`:  `response.[]` **Changed**\n* `unified_to.calendar.list_calendar_recordings()`:  `response.[].media[]` **Changed**\n* `unified_to.calendar.patch_calendar_event()`: \n  *  `request.calendar_event` **Changed**\n  *  `response` **Changed**\n* `unified_to.calendar.update_calendar_event()`: \n  *  `request.calendar_event` **Changed**\n  *  `response` **Changed**\n* `unified_to.event.create_calendar_event()`: \n  *  `request.calendar_event` **Changed**\n  *  `response` **Changed**\n* `unified_to.event.get_calendar_event()`:  `response` **Changed**\n* `unified_to.event.list_calendar_events()`:  `response.[]` **Changed**\n* `unified_to.event.patch_calendar_event()`: \n  *  `request.calendar_event` **Changed**\n  *  `response` **Changed**\n* `unified_to.event.update_calendar_event()`: \n  *  `request.calendar_event` **Changed**\n  *  `response` **Changed**\n* `unified_to.recording.get_calendar_recording()`:  `response.media[]` **Changed**\n* `unified_to.recording.list_calendar_recordings()`:  `response.[].media[]` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

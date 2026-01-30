@@ -18,6 +18,7 @@ class CalendarAttendeeStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CalendarAttendeeTypedDict(TypedDict):
     email: NotRequired[str]
+    is_cohost: NotRequired[bool]
     name: NotRequired[str]
     required: NotRequired[bool]
     status: NotRequired[CalendarAttendeeStatus]
@@ -26,6 +27,8 @@ class CalendarAttendeeTypedDict(TypedDict):
 
 class CalendarAttendee(BaseModel):
     email: Optional[str] = None
+
+    is_cohost: Optional[bool] = None
 
     name: Optional[str] = None
 
@@ -46,7 +49,9 @@ class CalendarAttendee(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["email", "name", "required", "status", "user_id"])
+        optional_fields = set(
+            ["email", "is_cohost", "name", "required", "status", "user_id"]
+        )
         serialized = handler(self)
         m = {}
 
