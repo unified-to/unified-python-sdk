@@ -193,6 +193,8 @@
 | `CALENDAR_LINK_WRITE`            | calendar_link_write              |
 | `CALENDAR_RECORDING_READ`        | calendar_recording_read          |
 | `CALENDAR_RECORDING_WRITE`       | calendar_recording_write         |
+| `CALENDAR_WEBINAR_READ`          | calendar_webinar_read            |
+| `CALENDAR_WEBINAR_WRITE`         | calendar_webinar_write           |
 | `ENRICH_PERSON_READ`             | enrich_person_read               |
 | `ENRICH_COMPANY_READ`            | enrich_company_read              |
 | `ADS_AD_READ`                    | ads_ad_read                      |

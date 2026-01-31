@@ -291,6 +291,21 @@ if TYPE_CHECKING:
         CalendarRecordingTranscript,
         CalendarRecordingTranscriptTypedDict,
     )
+    from .calendarwebinar import (
+        CalendarWebinar,
+        CalendarWebinarStatus,
+        CalendarWebinarTypedDict,
+    )
+    from .calendarwebinarpanelist import (
+        CalendarWebinarPanelist,
+        CalendarWebinarPanelistStatus,
+        CalendarWebinarPanelistTypedDict,
+    )
+    from .calendarwebinarregistrant import (
+        CalendarWebinarRegistrant,
+        CalendarWebinarRegistrantTypedDict,
+        RegistrationStatus,
+    )
     from .commercecollection import (
         CommerceCollection,
         CommerceCollectionType,
@@ -899,6 +914,11 @@ if TYPE_CHECKING:
         PropertyCalendarRecordingTranscriptAttendeeStatus,
         PropertyCalendarRecordingTranscriptAttendeeTypedDict,
     )
+    from .property_calendarwebinar_organizer import (
+        PropertyCalendarWebinarOrganizer,
+        PropertyCalendarWebinarOrganizerStatus,
+        PropertyCalendarWebinarOrganizerTypedDict,
+    )
     from .property_commercelocation_address import (
         PropertyCommerceLocationAddress,
         PropertyCommerceLocationAddressTypedDict,
@@ -1490,6 +1510,14 @@ __all__ = [
     "CalendarRecordingTranscript",
     "CalendarRecordingTranscriptTypedDict",
     "CalendarRecordingTypedDict",
+    "CalendarWebinar",
+    "CalendarWebinarPanelist",
+    "CalendarWebinarPanelistStatus",
+    "CalendarWebinarPanelistTypedDict",
+    "CalendarWebinarRegistrant",
+    "CalendarWebinarRegistrantTypedDict",
+    "CalendarWebinarStatus",
+    "CalendarWebinarTypedDict",
     "CommerceCollection",
     "CommerceCollectionType",
     "CommerceCollectionTypedDict",
@@ -2003,6 +2031,9 @@ __all__ = [
     "PropertyCalendarRecordingTranscriptAttendee",
     "PropertyCalendarRecordingTranscriptAttendeeStatus",
     "PropertyCalendarRecordingTranscriptAttendeeTypedDict",
+    "PropertyCalendarWebinarOrganizer",
+    "PropertyCalendarWebinarOrganizerStatus",
+    "PropertyCalendarWebinarOrganizerTypedDict",
     "PropertyCommerceLocationAddress",
     "PropertyCommerceLocationAddressTypedDict",
     "PropertyConnectionAuth",
@@ -2114,6 +2145,7 @@ __all__ = [
     "PropertyUcCallTelephoneType",
     "PropertyUcCallTelephoneTypedDict",
     "Recommendation",
+    "RegistrationStatus",
     "RepoBranch",
     "RepoBranchTypedDict",
     "RepoCommit",
@@ -2575,6 +2607,15 @@ _dynamic_imports: dict[str, str] = {
     "CalendarRecordingMediaTypedDict": ".calendarrecordingmedia",
     "CalendarRecordingTranscript": ".calendarrecordingtranscript",
     "CalendarRecordingTranscriptTypedDict": ".calendarrecordingtranscript",
+    "CalendarWebinar": ".calendarwebinar",
+    "CalendarWebinarStatus": ".calendarwebinar",
+    "CalendarWebinarTypedDict": ".calendarwebinar",
+    "CalendarWebinarPanelist": ".calendarwebinarpanelist",
+    "CalendarWebinarPanelistStatus": ".calendarwebinarpanelist",
+    "CalendarWebinarPanelistTypedDict": ".calendarwebinarpanelist",
+    "CalendarWebinarRegistrant": ".calendarwebinarregistrant",
+    "CalendarWebinarRegistrantTypedDict": ".calendarwebinarregistrant",
+    "RegistrationStatus": ".calendarwebinarregistrant",
     "CommerceCollection": ".commercecollection",
     "CommerceCollectionType": ".commercecollection",
     "CommerceCollectionTypedDict": ".commercecollection",
@@ -3125,6 +3166,9 @@ _dynamic_imports: dict[str, str] = {
     "PropertyCalendarRecordingTranscriptAttendee": ".property_calendarrecordingtranscript_attendee",
     "PropertyCalendarRecordingTranscriptAttendeeStatus": ".property_calendarrecordingtranscript_attendee",
     "PropertyCalendarRecordingTranscriptAttendeeTypedDict": ".property_calendarrecordingtranscript_attendee",
+    "PropertyCalendarWebinarOrganizer": ".property_calendarwebinar_organizer",
+    "PropertyCalendarWebinarOrganizerStatus": ".property_calendarwebinar_organizer",
+    "PropertyCalendarWebinarOrganizerTypedDict": ".property_calendarwebinar_organizer",
     "PropertyCommerceLocationAddress": ".property_commercelocation_address",
     "PropertyCommerceLocationAddressTypedDict": ".property_commercelocation_address",
     "PropertyConnectionAuth": ".property_connection_auth",

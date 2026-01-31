@@ -143,6 +143,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.user import User
     from unified_python_sdk.verification import Verification
     from unified_python_sdk.webhook import Webhook
+    from unified_python_sdk.webinar import Webinar
 
 
 class UnifiedTo(BaseSDK):
@@ -191,6 +192,7 @@ class UnifiedTo(BaseSDK):
     event: "Event"
     link: "Link"
     recording: "Recording"
+    webinar: "Webinar"
     commerce: "Commerce"
     collection: "Collection"
     inventory: "Inventory"
@@ -322,6 +324,7 @@ class UnifiedTo(BaseSDK):
         "event": ("unified_python_sdk.event", "Event"),
         "link": ("unified_python_sdk.link", "Link"),
         "recording": ("unified_python_sdk.recording", "Recording"),
+        "webinar": ("unified_python_sdk.webinar", "Webinar"),
         "commerce": ("unified_python_sdk.commerce", "Commerce"),
         "collection": ("unified_python_sdk.collection", "Collection"),
         "inventory": ("unified_python_sdk.inventory", "Inventory"),

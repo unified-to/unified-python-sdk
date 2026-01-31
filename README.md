@@ -448,24 +448,30 @@ asyncio.run(main())
 * [create_calendar_calendar](docs/sdks/calendar/README.md#create_calendar_calendar) - Create a calendar
 * [create_calendar_event](docs/sdks/calendar/README.md#create_calendar_event) - Create an event
 * [create_calendar_link](docs/sdks/calendar/README.md#create_calendar_link) - Create a link
+* [create_calendar_webinar](docs/sdks/calendar/README.md#create_calendar_webinar) - Create a webinar
 * [get_calendar_calendar](docs/sdks/calendar/README.md#get_calendar_calendar) - Retrieve a calendar
 * [get_calendar_event](docs/sdks/calendar/README.md#get_calendar_event) - Retrieve an event
 * [get_calendar_link](docs/sdks/calendar/README.md#get_calendar_link) - Retrieve a link
 * [get_calendar_recording](docs/sdks/calendar/README.md#get_calendar_recording) - Retrieve a recording
+* [get_calendar_webinar](docs/sdks/calendar/README.md#get_calendar_webinar) - Retrieve a webinar
 * [list_calendar_busies](docs/sdks/calendar/README.md#list_calendar_busies) - List all busies
 * [list_calendar_calendars](docs/sdks/calendar/README.md#list_calendar_calendars) - List all calendars
 * [list_calendar_events](docs/sdks/calendar/README.md#list_calendar_events) - List all events
 * [list_calendar_links](docs/sdks/calendar/README.md#list_calendar_links) - List all links
 * [list_calendar_recordings](docs/sdks/calendar/README.md#list_calendar_recordings) - List all recordings
+* [list_calendar_webinars](docs/sdks/calendar/README.md#list_calendar_webinars) - List all webinars
 * [patch_calendar_calendar](docs/sdks/calendar/README.md#patch_calendar_calendar) - Update a calendar
 * [patch_calendar_event](docs/sdks/calendar/README.md#patch_calendar_event) - Update an event
 * [patch_calendar_link](docs/sdks/calendar/README.md#patch_calendar_link) - Update a link
+* [patch_calendar_webinar](docs/sdks/calendar/README.md#patch_calendar_webinar) - Update a webinar
 * [remove_calendar_calendar](docs/sdks/calendar/README.md#remove_calendar_calendar) - Remove a calendar
 * [remove_calendar_event](docs/sdks/calendar/README.md#remove_calendar_event) - Remove an event
 * [remove_calendar_link](docs/sdks/calendar/README.md#remove_calendar_link) - Remove a link
+* [remove_calendar_webinar](docs/sdks/calendar/README.md#remove_calendar_webinar) - Remove a webinar
 * [update_calendar_calendar](docs/sdks/calendar/README.md#update_calendar_calendar) - Update a calendar
 * [update_calendar_event](docs/sdks/calendar/README.md#update_calendar_event) - Update an event
 * [update_calendar_link](docs/sdks/calendar/README.md#update_calendar_link) - Update a link
+* [update_calendar_webinar](docs/sdks/calendar/README.md#update_calendar_webinar) - Update a webinar
 
 ### [Call](docs/sdks/call/README.md)
 
@@ -1725,6 +1731,15 @@ asyncio.run(main())
 * [remove_unified_webhook](docs/sdks/webhook/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_webhook](docs/sdks/webhook/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/webhook/README.md#update_unified_webhook_trigger) - Trigger webhook
+
+### [Webinar](docs/sdks/webinar/README.md)
+
+* [create_calendar_webinar](docs/sdks/webinar/README.md#create_calendar_webinar) - Create a webinar
+* [get_calendar_webinar](docs/sdks/webinar/README.md#get_calendar_webinar) - Retrieve a webinar
+* [list_calendar_webinars](docs/sdks/webinar/README.md#list_calendar_webinars) - List all webinars
+* [patch_calendar_webinar](docs/sdks/webinar/README.md#patch_calendar_webinar) - Update a webinar
+* [remove_calendar_webinar](docs/sdks/webinar/README.md#remove_calendar_webinar) - Remove a webinar
+* [update_calendar_webinar](docs/sdks/webinar/README.md#update_calendar_webinar) - Update a webinar
 
 </details>
 <!-- End Available Resources and Operations [operations] -->

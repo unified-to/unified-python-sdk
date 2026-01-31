@@ -1,0 +1,12 @@
+# CalendarWebinarRegistrant
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `email`                                                                          | *Optional[str]*                                                                  | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `name`                                                                           | *Optional[str]*                                                                  | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `registered_at`                                                                  | [date](https://docs.python.org/3/library/datetime.html#date-objects)             | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `registration_reference`                                                         | *Optional[str]*                                                                  | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `registration_status`                                                            | [Optional[shared.RegistrationStatus]](../../models/shared/registrationstatus.md) | :heavy_minus_sign:                                                               | N/A                                                                              |

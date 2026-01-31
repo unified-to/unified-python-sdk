@@ -107,6 +107,7 @@
 | `CALENDAR_BUSY`            | calendar_busy              |
 | `CALENDAR_LINK`            | calendar_link              |
 | `CALENDAR_RECORDING`       | calendar_recording         |
+| `CALENDAR_WEBINAR`         | calendar_webinar           |
 | `ADS_ORGANIZATION`         | ads_organization           |
 | `ADS_AD`                   | ads_ad                     |
 | `ADS_CAMPAIGN`             | ads_campaign               |
