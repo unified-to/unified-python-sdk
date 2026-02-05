@@ -1,26 +1,26 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: f1a8d59500c94e46966b2cfaf9ce5506
+  docChecksum: 920d3864f2302ad5f3efefc595c4d0d8
   docVersion: "1.0"
-  speakeasyVersion: 1.700.2
-  generationVersion: 2.801.2
-  releaseVersion: 0.56.26
-  configChecksum: 8fbc6d59b77c24d4353efa3661771736
+  speakeasyVersion: 1.704.0
+  generationVersion: 2.806.4
+  releaseVersion: 0.57.0
+  configChecksum: d196afa35891298d5e24d34055a639c3
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: e3e69c22-4862-4ae2-b0dd-f4ae77a89985
-  pristine_commit_hash: 7c3c5ec86186309431a114d820a25e6f9035d37b
-  pristine_tree_hash: 49d2eee8a8bf3bc4051b5429f5246d04fd5dff5a
+  generation_id: 5cd07e85-345b-4e2d-a2a0-3f5f2696a609
+  pristine_commit_hash: 90721aa6611e204ce5af9ca82cbdb62dd413b2b9
+  pristine_tree_hash: b6b9f170faffad49e413d0098f25a04597caf289
 features:
   python:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
-    constsAndDefaults: 1.0.5
-    core: 5.23.18
+    constsAndDefaults: 1.0.6
+    core: 6.0.2
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -30,7 +30,7 @@ features:
     globalServerURLs: 3.2.0
     inputOutputModels: 3.0.0
     openEnums: 1.0.3
-    responseFormat: 1.0.1
+    responseFormat: 1.1.0
     retries: 3.0.3
     sdkHooks: 1.2.1
     unions: 3.1.2
@@ -110,8 +110,8 @@ trackedFiles:
     pristine_git_object: c663a5fbf18b38ef396ee463299eac33cffd2ca7
   docs/models/operations/createaccountingexpensequeryparamfields.md:
     id: 1442fd65511b
-    last_write_checksum: sha1:53bf20eb22000b576dcd80639426bac3687421dc
-    pristine_git_object: a824be26e64df1a03fc26975a473f45ba9c56f2e
+    last_write_checksum: sha1:6d92df06234770907ceb467dbaa9c9fe981d7b72
+    pristine_git_object: d4771a3a7606dd979f4eeb9b089ca1101b6e8725
   docs/models/operations/createaccountingexpenserequest.md:
     id: 5321e1cdf17a
     last_write_checksum: sha1:35a7e631e55d955cde6d3b467731f16031a7d6fb
@@ -1250,8 +1250,8 @@ trackedFiles:
     pristine_git_object: 4c9ba77eaf2a9c7e0ccfeadc3ecb4f3ab6a8e0d9
   docs/models/operations/getaccountingexpensequeryparamfields.md:
     id: 48a0a7a8e19d
-    last_write_checksum: sha1:1da4939a9ccaac4787578ae6ed16b319f57adff2
-    pristine_git_object: 1811619909b4bf105b5cf2ff352ff49566210668
+    last_write_checksum: sha1:90765b9717027a932c7a40e3a265e6529424f5f1
+    pristine_git_object: e2bb321d5e3ceb9073a166b88ad7ee2229f35bd2
   docs/models/operations/getaccountingexpenserequest.md:
     id: 0d10ae05c482
     last_write_checksum: sha1:abce72023cd27eab4bbd4d15003db575c180dc21
@@ -2574,8 +2574,8 @@ trackedFiles:
     pristine_git_object: ff4704ca8497c8f9c9eac8cc328bfc6e07c92f35
   docs/models/operations/listaccountingexpensesqueryparamfields.md:
     id: 9b19bb52f42b
-    last_write_checksum: sha1:08f0c8e45005562c007e54cedbce545037c164ef
-    pristine_git_object: 822cf482b0043b3e017bf1a1c4be2e8618a59ffe
+    last_write_checksum: sha1:0ff9ef36dfd38f6638417a38b11565da687f5a39
+    pristine_git_object: a034a2fe4390e0a947730a08133aba833c83924c
   docs/models/operations/listaccountingexpensesrequest.md:
     id: 5586a834e1c6
     last_write_checksum: sha1:0531a089a40254a5f7324c28f04cc4c4073fe488
@@ -3930,8 +3930,8 @@ trackedFiles:
     pristine_git_object: 7a775f3024a71f9a1aa5519fc96b5678d45b0e0d
   docs/models/operations/patchaccountingexpensequeryparamfields.md:
     id: 7810f7cb34c7
-    last_write_checksum: sha1:ae82067c9147c6dfd99325c6f52c846688994ce9
-    pristine_git_object: 0a521c2706e15088d7d28c97476ace4fe16d12d3
+    last_write_checksum: sha1:491d2a81fc495ed2fb5c351aa2c4d47419bf1a5d
+    pristine_git_object: 4931845d593650a61177a40c5786ec31d39896d2
   docs/models/operations/patchaccountingexpenserequest.md:
     id: dbca0b752cf0
     last_write_checksum: sha1:b3fdca8a4891c439e69b4171ed53786c463e0f99
@@ -5774,8 +5774,8 @@ trackedFiles:
     pristine_git_object: 987c0cecd4ee32b1e25349308ca6d75480607f2c
   docs/models/operations/updateaccountingexpensequeryparamfields.md:
     id: f233989008e6
-    last_write_checksum: sha1:e1c72c2e17634ffc511acbc869cd94fe35e92954
-    pristine_git_object: d10e9aaad531953dc1b3d6d08d99563c71ccfa62
+    last_write_checksum: sha1:87abc59a841ab866ca2162ff390bdcac1eebfd69
+    pristine_git_object: 553b4acb350df6c76301397a6d2dac54f820e52d
   docs/models/operations/updateaccountingexpenserequest.md:
     id: f42ccbd90e9d
     last_write_checksum: sha1:fda8bd99fbf201415d2ede484ed737fb6890843e
@@ -6890,8 +6890,8 @@ trackedFiles:
     pristine_git_object: b9e494ce0e9bb6f96f3c5d0a90f797a81a12bf8a
   docs/models/shared/accountingexpense.md:
     id: 7c323a6faf7a
-    last_write_checksum: sha1:53cd48c8020f1fa7983bcab33d4d54e72dc980b4
-    pristine_git_object: 9cd6d7ff13c7d237a51a90c56e04c7f2d1289f70
+    last_write_checksum: sha1:436238153761305c5be801704b70d611b5185374
+    pristine_git_object: 60936b8980eaf143d70e31fa7245312c03764579
   docs/models/shared/accountinginvoice.md:
     id: 421e85cb43da
     last_write_checksum: sha1:276dc4649d1a82c1faa8d0d19f92fa36906f30bb
@@ -10178,12 +10178,12 @@ trackedFiles:
     pristine_git_object: 3e38f1a929f7d6b1d6de74604aa87e3d8f010544
   pylintrc:
     id: 7ce8b9f946e6
-    last_write_checksum: sha1:64154cba1374afe148cd162bc10e50b1f9426eea
-    pristine_git_object: c06f7a9e68006b8409a910f7eb334096ba16d2cb
+    last_write_checksum: sha1:2bde13f895fe580480539e572e66b4a6971795b2
+    pristine_git_object: a5af5d5dbc6d0933f4fb1e5b464731695e2e6736
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:4ce6b5c456b11b3428c7ee9fa0ec1dfd9c8b7470
-    pristine_git_object: e0737550df472330d7e95e86056e38021d7ab5f2
+    last_write_checksum: sha1:5772fb0b3292674e3d3bc1d4e692c84fdbafb9ec
+    pristine_git_object: 6fecbbbcd828697d4d949d96150756f8cdd89c33
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -10210,8 +10210,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:d978179b0d39dcb6a36909ba4397f42c44a04e52
-    pristine_git_object: c3ec407cfb1880feb5d3e1327c0e2dc767abff25
+    last_write_checksum: sha1:e9eca9923a589d155ab616c35a521e893abe5eee
+    pristine_git_object: 7cc46fc1cf0df1ef0aa7738815a67fbdca7f9621
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -10582,8 +10582,8 @@ trackedFiles:
     pristine_git_object: b487ee50de02d16f0199bea98b1fb7489ecdfd1c
   src/unified_python_sdk/models/operations/createaccountingexpense.py:
     id: 2e3152f2e0e8
-    last_write_checksum: sha1:5725edb17e3035e0abe234d571025770b3151c82
-    pristine_git_object: 6932c37e13eccc33e040011588afc1f3449a1b05
+    last_write_checksum: sha1:cd11f196f2eee16821738b7997e3dd023437f55a
+    pristine_git_object: 4e89c6e4cd7d44673bbcd0cf654080a83be512fd
   src/unified_python_sdk/models/operations/createaccountinginvoice.py:
     id: 3e3da3e1ea00
     last_write_checksum: sha1:dacd30480dbe204b4ad64e7a7fffcf83454be302
@@ -10974,8 +10974,8 @@ trackedFiles:
     pristine_git_object: a090024f1d6f43ab020c5f8b4577343722ab3f67
   src/unified_python_sdk/models/operations/getaccountingexpense.py:
     id: 4f6c26c86fdd
-    last_write_checksum: sha1:6cead78de6efea11298d053b8b8e6ff679265b64
-    pristine_git_object: bd9f25bd63bd4932800d2bb3db1efce739b8a27c
+    last_write_checksum: sha1:3e7bcaccafd42be7c1be10fb177ecd9e67832f42
+    pristine_git_object: d4aae81a40f1b037a562c1e224e7809cd58a3abb
   src/unified_python_sdk/models/operations/getaccountinginvoice.py:
     id: 22f37c6a27f0
     last_write_checksum: sha1:bb5c2ae172b2924513455533fb31c9035bed91db
@@ -11426,8 +11426,8 @@ trackedFiles:
     pristine_git_object: a3f4fd6c8f149f27286d1da5a336e35c3178f774
   src/unified_python_sdk/models/operations/listaccountingexpenses.py:
     id: 3e6a3a038f1a
-    last_write_checksum: sha1:f5c7a1961c0040636f96172e2a934d399201d8e7
-    pristine_git_object: ffe9a6fe1e09b1c83c794fcb8372401bb34c6c09
+    last_write_checksum: sha1:9411136d32f78020079c121ee9a743c52bffde26
+    pristine_git_object: 7e80d0fab28cc51e53cc3251e7cbb31601075821
   src/unified_python_sdk/models/operations/listaccountinginvoices.py:
     id: 531605b7ecbc
     last_write_checksum: sha1:52f5528ffd9eccfd10976970ca81d6b2170f4824
@@ -11894,8 +11894,8 @@ trackedFiles:
     pristine_git_object: 8c011526a3998b07d2e500b41305e0bc6ca19fbe
   src/unified_python_sdk/models/operations/patchaccountingexpense.py:
     id: aecc5d39ad6b
-    last_write_checksum: sha1:ac0fd645d41afa6ab69a5ebb7f862be012319f2d
-    pristine_git_object: d9bdba6d81d024d63637e8b503f986d3914b7d2a
+    last_write_checksum: sha1:0fa0512b76daffa7a91500a96a23d93de0a147a3
+    pristine_git_object: 2ae99652898127bfedd4ab1f708a1915bc654204
   src/unified_python_sdk/models/operations/patchaccountinginvoice.py:
     id: ba6bf9fb2193
     last_write_checksum: sha1:c91320fd4d6a680fe893b9834478b6655f5f902d
@@ -12638,8 +12638,8 @@ trackedFiles:
     pristine_git_object: a71928d1668df027c4453c0eae012d98cb6e0318
   src/unified_python_sdk/models/operations/updateaccountingexpense.py:
     id: f7c9d0c1ae9c
-    last_write_checksum: sha1:482d1b6afe408cd389d214a5cfea7c92e7674643
-    pristine_git_object: f82762c9cb53227d8060848dfb3ac808b68255d8
+    last_write_checksum: sha1:5bd558fb5881ecd31756b9a578b31c743cb2a8c9
+    pristine_git_object: e7234264e192b5a00d2287526a28cf01e4cdf67e
   src/unified_python_sdk/models/operations/updateaccountinginvoice.py:
     id: c326b498864f
     last_write_checksum: sha1:24d745542ecf4d6c57e4f0a9645634bbbd745985
@@ -13054,8 +13054,8 @@ trackedFiles:
     pristine_git_object: 8c45513fd39f6c10244548c4b558904a12280cf1
   src/unified_python_sdk/models/shared/accountingexpense.py:
     id: 3074847a8938
-    last_write_checksum: sha1:e4517fdee23fbb637d4041349285be2da19cb20a
-    pristine_git_object: 612e901a44f66ae7b27037242e4e64840d151bc9
+    last_write_checksum: sha1:af8881a2058d7f53196b4d076e5703b5be8d429d
+    pristine_git_object: 70dc6a5b2236381a2811cd1f174579a4f29b2760
   src/unified_python_sdk/models/shared/accountinginvoice.py:
     id: fc02113ad4e1
     last_write_checksum: sha1:266ed66e7346bfc7ba53bf01a3a93667fe12165a
@@ -14518,8 +14518,8 @@ trackedFiles:
     pristine_git_object: 285def52ca435b51e6b42976ec268a53d895292f
   src/unified_python_sdk/utils/__init__.py:
     id: 143f1037e996
-    last_write_checksum: sha1:398211d49b762a067ec6d10197a4b11dfd258ff5
-    pristine_git_object: c906e1e0192e9017fc13851eb23fc0c2753429c8
+    last_write_checksum: sha1:a1f6ae620fb6a3ccc30e99b427e49a0c8be463af
+    pristine_git_object: 15394a08a7e30033d319e44dd5734664ddb587e5
   src/unified_python_sdk/utils/annotations.py:
     id: 532ac27467c4
     last_write_checksum: sha1:a4824ad65f730303e4e1e3ec1febf87b4eb46dbc
@@ -20151,7 +20151,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.calendar.create_calendar_webinar()`: **Added**\n* `unified_to.calendar.get_calendar_webinar()`: **Added**\n* `unified_to.calendar.list_calendar_webinars()`: **Added**\n* `unified_to.calendar.patch_calendar_webinar()`: **Added**\n* `unified_to.calendar.remove_calendar_webinar()`: **Added**\n* `unified_to.calendar.update_calendar_webinar()`: **Added**\n* `unified_to.webinar.create_calendar_webinar()`: **Added**\n* `unified_to.webinar.get_calendar_webinar()`: **Added**\n* `unified_to.webinar.list_calendar_webinars()`: **Added**\n* `unified_to.webinar.patch_calendar_webinar()`: **Added**\n* `unified_to.webinar.remove_calendar_webinar()`: **Added**\n* `unified_to.webinar.update_calendar_webinar()`: **Added**\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.object_type.enum(calendar_webinar)` **Added**\n  *  `response.object_type.enum(calendar_webinar)` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.permissions[]` **Changed**\n* `unified_to.unified.get_unified_webhook()`:  `response.object_type.enum(calendar_webinar)` **Added**\n* `unified_to.unified.list_unified_connections()`:  `response.[].permissions[]` **Changed**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].object_type.enum(calendar_webinar)` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.object_type.enum(calendar_webinar)` **Added**\n  *  `response.object_type.enum(calendar_webinar)` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.object_type.enum(calendar_webinar)` **Added**\n  *  `response.object_type.enum(calendar_webinar)` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.connection.get_unified_connection()`:  `response.permissions[]` **Changed**\n* `unified_to.connection.list_unified_connections()`:  `response.[].permissions[]` **Changed**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.object_type.enum(calendar_webinar)` **Added**\n  *  `response.object_type.enum(calendar_webinar)` **Added**\n* `unified_to.webhook.get_unified_webhook()`:  `response.object_type.enum(calendar_webinar)` **Added**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].object_type.enum(calendar_webinar)` **Added**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.object_type.enum(calendar_webinar)` **Added**\n  *  `response.object_type.enum(calendar_webinar)` **Added**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.object_type.enum(calendar_webinar)` **Added**\n  *  `response.object_type.enum(calendar_webinar)` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.accounting.create_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.accounting.get_accounting_expense()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.accounting.list_accounting_expenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.accounting.patch_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.accounting.update_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.expense.create_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.expense.get_accounting_expense()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.expense.list_accounting_expenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.expense.patch_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.expense.update_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

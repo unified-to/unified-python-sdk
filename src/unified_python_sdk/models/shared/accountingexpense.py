@@ -10,6 +10,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingExpenseTypedDict(TypedDict):
+    account_id: NotRequired[str]
     approved_at: NotRequired[datetime]
     approver_user_id: NotRequired[str]
     contact_id: NotRequired[str]
@@ -18,6 +19,8 @@ class AccountingExpenseTypedDict(TypedDict):
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     name: NotRequired[str]
+    payment_method: NotRequired[str]
+    posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     reimbursed_amount: NotRequired[float]
     reimbursed_at: NotRequired[datetime]
@@ -28,6 +31,8 @@ class AccountingExpenseTypedDict(TypedDict):
 
 
 class AccountingExpense(BaseModel):
+    account_id: Optional[str] = None
+
     approved_at: Optional[datetime] = None
 
     approver_user_id: Optional[str] = None
@@ -43,6 +48,10 @@ class AccountingExpense(BaseModel):
     lineitems: Optional[List[AccountingLineitem]] = None
 
     name: Optional[str] = None
+
+    payment_method: Optional[str] = None
+
+    posted_at: Optional[datetime] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -62,6 +71,7 @@ class AccountingExpense(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "account_id",
                 "approved_at",
                 "approver_user_id",
                 "contact_id",
@@ -70,6 +80,8 @@ class AccountingExpense(BaseModel):
                 "id",
                 "lineitems",
                 "name",
+                "payment_method",
+                "posted_at",
                 "raw",
                 "reimbursed_amount",
                 "reimbursed_at",

@@ -19,6 +19,7 @@ generation:
   schemas:
     allOfMergeStrategy: shallowMerge
   requestBodyFieldName: ""
+  versioningStrategy: automatic
   persistentEdits: {}
   tests:
     generateTests: true
@@ -27,7 +28,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.56.26
+  version: 0.57.0
   additionalDependencies:
     dev: {}
     main: {}
