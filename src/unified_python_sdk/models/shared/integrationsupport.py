@@ -242,6 +242,12 @@ class ListLocationID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListMemberID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListOffset(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -698,6 +704,12 @@ class VirtualWebhookLocationID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookMemberID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookOrderID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -846,6 +858,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_link_id: NotRequired[ListLinkID]
     list_list_id: NotRequired[ListListID]
     list_location_id: NotRequired[ListLocationID]
+    list_member_id: NotRequired[ListMemberID]
     list_offset: NotRequired[ListOffset]
     list_order: NotRequired[ListOrder]
     list_order_id: NotRequired[ListOrderID]
@@ -927,6 +940,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_limit: NotRequired[VirtualWebhookLimit]
     virtual_webhook_list_id: NotRequired[VirtualWebhookListID]
     virtual_webhook_location_id: NotRequired[VirtualWebhookLocationID]
+    virtual_webhook_member_id: NotRequired[VirtualWebhookMemberID]
     virtual_webhook_order_id: NotRequired[VirtualWebhookOrderID]
     virtual_webhook_org_id: NotRequired[VirtualWebhookOrgID]
     virtual_webhook_page_id: NotRequired[VirtualWebhookPageID]
@@ -1026,6 +1040,8 @@ class IntegrationSupport(BaseModel):
     list_list_id: Optional[ListListID] = None
 
     list_location_id: Optional[ListLocationID] = None
+
+    list_member_id: Optional[ListMemberID] = None
 
     list_offset: Optional[ListOffset] = None
 
@@ -1187,6 +1203,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_list_id: Optional[VirtualWebhookListID] = None
 
     virtual_webhook_location_id: Optional[VirtualWebhookLocationID] = None
+
+    virtual_webhook_member_id: Optional[VirtualWebhookMemberID] = None
 
     virtual_webhook_order_id: Optional[VirtualWebhookOrderID] = None
 
@@ -1564,6 +1582,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListLocationID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_member_id")
+    def serialize_list_member_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListMemberID(value)
             except ValueError:
                 return value
         return value
@@ -2252,6 +2279,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_member_id")
+    def serialize_virtual_webhook_member_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookMemberID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_order_id")
     def serialize_virtual_webhook_order_id(self, value):
         if isinstance(value, str):
@@ -2457,6 +2493,7 @@ class IntegrationSupport(BaseModel):
                 "list_link_id",
                 "list_list_id",
                 "list_location_id",
+                "list_member_id",
                 "list_offset",
                 "list_order",
                 "list_order_id",
@@ -2537,6 +2574,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_limit",
                 "virtual_webhook_list_id",
                 "virtual_webhook_location_id",
+                "virtual_webhook_member_id",
                 "virtual_webhook_order_id",
                 "virtual_webhook_org_id",
                 "virtual_webhook_page_id",

@@ -558,6 +558,7 @@ if TYPE_CHECKING:
         ListLinkID,
         ListListID,
         ListLocationID,
+        ListMemberID,
         ListOffset,
         ListOrder,
         ListOrderID,
@@ -634,6 +635,7 @@ if TYPE_CHECKING:
         VirtualWebhookLimit,
         VirtualWebhookListID,
         VirtualWebhookLocationID,
+        VirtualWebhookMemberID,
         VirtualWebhookOrderID,
         VirtualWebhookOrgID,
         VirtualWebhookPageID,
@@ -681,6 +683,11 @@ if TYPE_CHECKING:
     from .lmsmedia import LmsMedia, LmsMediaType, LmsMediaTypedDict
     from .lmsstudent import LmsStudent, LmsStudentTypedDict
     from .lmstelephone import LmsTelephone, LmsTelephoneType, LmsTelephoneTypedDict
+    from .marketingcampaign import (
+        MarketingCampaign,
+        MarketingCampaignStatus,
+        MarketingCampaignTypedDict,
+    )
     from .marketingemail import (
         MarketingEmail,
         MarketingEmailType,
@@ -688,6 +695,8 @@ if TYPE_CHECKING:
     )
     from .marketinglist import MarketingList, MarketingListTypedDict
     from .marketingmember import MarketingMember, MarketingMemberTypedDict
+    from .marketingreport import MarketingReport, MarketingReportTypedDict
+    from .marketingreportlink import MarketingReportLink, MarketingReportLinkTypedDict
     from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDict
     from .messagingbutton import MessagingButton, MessagingButtonTypedDict
     from .messagingchannel import MessagingChannel, MessagingChannelTypedDict
@@ -1809,6 +1818,7 @@ __all__ = [
     "ListLinkID",
     "ListListID",
     "ListLocationID",
+    "ListMemberID",
     "ListOffset",
     "ListOrder",
     "ListOrderID",
@@ -1857,6 +1867,9 @@ __all__ = [
     "LmsTelephoneType",
     "LmsTelephoneTypedDict",
     "MaritalStatus",
+    "MarketingCampaign",
+    "MarketingCampaignStatus",
+    "MarketingCampaignTypedDict",
     "MarketingEmail",
     "MarketingEmailType",
     "MarketingEmailTypedDict",
@@ -1864,6 +1877,10 @@ __all__ = [
     "MarketingListTypedDict",
     "MarketingMember",
     "MarketingMemberTypedDict",
+    "MarketingReport",
+    "MarketingReportLink",
+    "MarketingReportLinkTypedDict",
+    "MarketingReportTypedDict",
     "MessagingAttachment",
     "MessagingAttachmentTypedDict",
     "MessagingButton",
@@ -2349,6 +2366,7 @@ __all__ = [
     "VirtualWebhookLimit",
     "VirtualWebhookListID",
     "VirtualWebhookLocationID",
+    "VirtualWebhookMemberID",
     "VirtualWebhookOrderID",
     "VirtualWebhookOrgID",
     "VirtualWebhookPageID",
@@ -2876,6 +2894,7 @@ _dynamic_imports: dict[str, str] = {
     "ListLinkID": ".integrationsupport",
     "ListListID": ".integrationsupport",
     "ListLocationID": ".integrationsupport",
+    "ListMemberID": ".integrationsupport",
     "ListOffset": ".integrationsupport",
     "ListOrder": ".integrationsupport",
     "ListOrderID": ".integrationsupport",
@@ -2952,6 +2971,7 @@ _dynamic_imports: dict[str, str] = {
     "VirtualWebhookLimit": ".integrationsupport",
     "VirtualWebhookListID": ".integrationsupport",
     "VirtualWebhookLocationID": ".integrationsupport",
+    "VirtualWebhookMemberID": ".integrationsupport",
     "VirtualWebhookOrderID": ".integrationsupport",
     "VirtualWebhookOrgID": ".integrationsupport",
     "VirtualWebhookPageID": ".integrationsupport",
@@ -3013,6 +3033,9 @@ _dynamic_imports: dict[str, str] = {
     "LmsTelephone": ".lmstelephone",
     "LmsTelephoneType": ".lmstelephone",
     "LmsTelephoneTypedDict": ".lmstelephone",
+    "MarketingCampaign": ".marketingcampaign",
+    "MarketingCampaignStatus": ".marketingcampaign",
+    "MarketingCampaignTypedDict": ".marketingcampaign",
     "MarketingEmail": ".marketingemail",
     "MarketingEmailType": ".marketingemail",
     "MarketingEmailTypedDict": ".marketingemail",
@@ -3020,6 +3043,10 @@ _dynamic_imports: dict[str, str] = {
     "MarketingListTypedDict": ".marketinglist",
     "MarketingMember": ".marketingmember",
     "MarketingMemberTypedDict": ".marketingmember",
+    "MarketingReport": ".marketingreport",
+    "MarketingReportTypedDict": ".marketingreport",
+    "MarketingReportLink": ".marketingreportlink",
+    "MarketingReportLinkTypedDict": ".marketingreportlink",
     "MessagingAttachment": ".messagingattachment",
     "MessagingAttachmentTypedDict": ".messagingattachment",
     "MessagingButton": ".messagingbutton",

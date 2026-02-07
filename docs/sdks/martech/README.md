@@ -4,18 +4,72 @@
 
 ### Available Operations
 
+* [create_martech_campaign](#create_martech_campaign) - Create a campaign
 * [create_martech_list](#create_martech_list) - Create a list
 * [create_martech_member](#create_martech_member) - Create a member
+* [get_martech_campaign](#get_martech_campaign) - Retrieve a campaign
 * [get_martech_list](#get_martech_list) - Retrieve a list
 * [get_martech_member](#get_martech_member) - Retrieve a member
+* [list_martech_campaigns](#list_martech_campaigns) - List all campaigns
 * [list_martech_lists](#list_martech_lists) - List all lists
 * [list_martech_members](#list_martech_members) - List all members
+* [list_martech_reports](#list_martech_reports) - List all reports
+* [patch_martech_campaign](#patch_martech_campaign) - Update a campaign
 * [patch_martech_list](#patch_martech_list) - Update a list
 * [patch_martech_member](#patch_martech_member) - Update a member
+* [remove_martech_campaign](#remove_martech_campaign) - Remove a campaign
 * [remove_martech_list](#remove_martech_list) - Remove a list
 * [remove_martech_member](#remove_martech_member) - Remove a member
+* [update_martech_campaign](#update_martech_campaign) - Update a campaign
 * [update_martech_list](#update_martech_list) - Update a list
 * [update_martech_member](#update_martech_member) - Update a member
+
+## create_martech_campaign
+
+Create a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.martech.create_martech_campaign(request={
+        "marketing_campaign": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.marketing_campaign is not None
+
+    # Handle response
+    print(res.marketing_campaign)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.CreateMartechCampaignRequest](../../models/operations/createmartechcampaignrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.CreateMartechCampaignResponse](../../models/operations/createmartechcampaignresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_martech_list
 
@@ -104,6 +158,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateMartechMemberResponse](../../models/operations/createmartechmemberresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_martech_campaign
+
+Retrieve a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getMartechCampaign" method="get" path="/martech/{connection_id}/campaign/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.martech.get_martech_campaign(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.marketing_campaign is not None
+
+    # Handle response
+    print(res.marketing_campaign)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GetMartechCampaignRequest](../../models/operations/getmartechcampaignrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.GetMartechCampaignResponse](../../models/operations/getmartechcampaignresponse.md)**
 
 ### Errors
 
@@ -205,6 +306,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_martech_campaigns
+
+List all campaigns
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listMartechCampaigns" method="get" path="/martech/{connection_id}/campaign" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.martech.list_martech_campaigns(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.marketing_campaigns is not None
+
+    # Handle response
+    print(res.marketing_campaigns)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.ListMartechCampaignsRequest](../../models/operations/listmartechcampaignsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.ListMartechCampaignsResponse](../../models/operations/listmartechcampaignsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_martech_lists
 
 List all lists
@@ -290,6 +437,100 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListMartechMembersResponse](../../models/operations/listmartechmembersresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_martech_reports
+
+List all reports
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listMartechReports" method="get" path="/martech/{connection_id}/report" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.martech.list_martech_reports(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.marketing_reports is not None
+
+    # Handle response
+    print(res.marketing_reports)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListMartechReportsRequest](../../models/operations/listmartechreportsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListMartechReportsResponse](../../models/operations/listmartechreportsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_martech_campaign
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.martech.patch_martech_campaign(request={
+        "marketing_campaign": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.marketing_campaign is not None
+
+    # Handle response
+    print(res.marketing_campaign)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.PatchMartechCampaignRequest](../../models/operations/patchmartechcampaignrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.PatchMartechCampaignResponse](../../models/operations/patchmartechcampaignresponse.md)**
 
 ### Errors
 
@@ -393,6 +634,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_martech_campaign
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeMartechCampaign" method="delete" path="/martech/{connection_id}/campaign/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.martech.remove_martech_campaign(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.RemoveMartechCampaignRequest](../../models/operations/removemartechcampaignrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.RemoveMartechCampaignResponse](../../models/operations/removemartechcampaignresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_martech_list
 
 Remove a list
@@ -480,6 +768,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveMartechMemberResponse](../../models/operations/removemartechmemberresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_martech_campaign
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.martech.update_martech_campaign(request={
+        "marketing_campaign": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.marketing_campaign is not None
+
+    # Handle response
+    print(res.marketing_campaign)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.UpdateMartechCampaignRequest](../../models/operations/updatemartechcampaignrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.UpdateMartechCampaignResponse](../../models/operations/updatemartechcampaignresponse.md)**
 
 ### Errors
 

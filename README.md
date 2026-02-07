@@ -481,11 +481,17 @@ asyncio.run(main())
 ### [Campaign](docs/sdks/campaign/README.md)
 
 * [create_ads_campaign](docs/sdks/campaign/README.md#create_ads_campaign) - Create a campaign
+* [create_martech_campaign](docs/sdks/campaign/README.md#create_martech_campaign) - Create a campaign
 * [get_ads_campaign](docs/sdks/campaign/README.md#get_ads_campaign) - Retrieve a campaign
+* [get_martech_campaign](docs/sdks/campaign/README.md#get_martech_campaign) - Retrieve a campaign
 * [list_ads_campaigns](docs/sdks/campaign/README.md#list_ads_campaigns) - List all campaigns
+* [list_martech_campaigns](docs/sdks/campaign/README.md#list_martech_campaigns) - List all campaigns
 * [patch_ads_campaign](docs/sdks/campaign/README.md#patch_ads_campaign) - Update a campaign
+* [patch_martech_campaign](docs/sdks/campaign/README.md#patch_martech_campaign) - Update a campaign
 * [remove_ads_campaign](docs/sdks/campaign/README.md#remove_ads_campaign) - Remove a campaign
+* [remove_martech_campaign](docs/sdks/campaign/README.md#remove_martech_campaign) - Remove a campaign
 * [update_ads_campaign](docs/sdks/campaign/README.md#update_ads_campaign) - Update a campaign
+* [update_martech_campaign](docs/sdks/campaign/README.md#update_martech_campaign) - Update a campaign
 
 ### [Candidate](docs/sdks/candidate/README.md)
 
@@ -1152,16 +1158,23 @@ asyncio.run(main())
 
 ### [Martech](docs/sdks/martech/README.md)
 
+* [create_martech_campaign](docs/sdks/martech/README.md#create_martech_campaign) - Create a campaign
 * [create_martech_list](docs/sdks/martech/README.md#create_martech_list) - Create a list
 * [create_martech_member](docs/sdks/martech/README.md#create_martech_member) - Create a member
+* [get_martech_campaign](docs/sdks/martech/README.md#get_martech_campaign) - Retrieve a campaign
 * [get_martech_list](docs/sdks/martech/README.md#get_martech_list) - Retrieve a list
 * [get_martech_member](docs/sdks/martech/README.md#get_martech_member) - Retrieve a member
+* [list_martech_campaigns](docs/sdks/martech/README.md#list_martech_campaigns) - List all campaigns
 * [list_martech_lists](docs/sdks/martech/README.md#list_martech_lists) - List all lists
 * [list_martech_members](docs/sdks/martech/README.md#list_martech_members) - List all members
+* [list_martech_reports](docs/sdks/martech/README.md#list_martech_reports) - List all reports
+* [patch_martech_campaign](docs/sdks/martech/README.md#patch_martech_campaign) - Update a campaign
 * [patch_martech_list](docs/sdks/martech/README.md#patch_martech_list) - Update a list
 * [patch_martech_member](docs/sdks/martech/README.md#patch_martech_member) - Update a member
+* [remove_martech_campaign](docs/sdks/martech/README.md#remove_martech_campaign) - Remove a campaign
 * [remove_martech_list](docs/sdks/martech/README.md#remove_martech_list) - Remove a list
 * [remove_martech_member](docs/sdks/martech/README.md#remove_martech_member) - Remove a member
+* [update_martech_campaign](docs/sdks/martech/README.md#update_martech_campaign) - Update a campaign
 * [update_martech_list](docs/sdks/martech/README.md#update_martech_list) - Update a list
 * [update_martech_member](docs/sdks/martech/README.md#update_martech_member) - Update a member
 
@@ -1412,6 +1425,7 @@ asyncio.run(main())
 * [get_accounting_report](docs/sdks/report/README.md#get_accounting_report) - Retrieve a report
 * [list_accounting_reports](docs/sdks/report/README.md#list_accounting_reports) - List all reports
 * [list_ads_reports](docs/sdks/report/README.md#list_ads_reports) - List all reports
+* [list_martech_reports](docs/sdks/report/README.md#list_martech_reports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
 
