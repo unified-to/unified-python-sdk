@@ -24,6 +24,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.apicall import Apicall
     from unified_python_sdk.application import Application
     from unified_python_sdk.applicationstatus import Applicationstatus
+    from unified_python_sdk.assessment import Assessment
     from unified_python_sdk.ats import Ats
     from unified_python_sdk.auth import Auth
     from unified_python_sdk.balancesheet import Balancesheet
@@ -177,6 +178,8 @@ class UnifiedTo(BaseSDK):
     creative: "Creative"
     group: "Group"
     insertionorder: "Insertionorder"
+    assessment: "Assessment"
+    package: "Package"
     ats: "Ats"
     activity: "Activity"
     application: "Application"
@@ -277,7 +280,6 @@ class UnifiedTo(BaseSDK):
     issue: "Issue"
     webhook: "Webhook"
     verification: "Verification"
-    package: "Package"
     request: "Request"
     _sub_sdk_map = {
         "accounting": ("unified_python_sdk.accounting", "Accounting"),
@@ -306,6 +308,8 @@ class UnifiedTo(BaseSDK):
         "creative": ("unified_python_sdk.creative", "Creative"),
         "group": ("unified_python_sdk.group", "Group"),
         "insertionorder": ("unified_python_sdk.insertionorder", "Insertionorder"),
+        "assessment": ("unified_python_sdk.assessment", "Assessment"),
+        "package": ("unified_python_sdk.package", "Package"),
         "ats": ("unified_python_sdk.ats", "Ats"),
         "activity": ("unified_python_sdk.activity", "Activity"),
         "application": ("unified_python_sdk.application", "Application"),
@@ -409,7 +413,6 @@ class UnifiedTo(BaseSDK):
         "issue": ("unified_python_sdk.issue", "Issue"),
         "webhook": ("unified_python_sdk.webhook", "Webhook"),
         "verification": ("unified_python_sdk.verification", "Verification"),
-        "package": ("unified_python_sdk.package", "Package"),
         "request": ("unified_python_sdk.request", "Request"),
     }
 

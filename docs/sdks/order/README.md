@@ -8,8 +8,10 @@
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
 * [list_accounting_orders](#list_accounting_orders) - List all orders
 * [patch_accounting_order](#patch_accounting_order) - Update an order
+* [patch_assessment_order](#patch_assessment_order) - Update an order
 * [remove_accounting_order](#remove_accounting_order) - Remove an order
 * [update_accounting_order](#update_accounting_order) - Update an order
+* [update_assessment_order](#update_assessment_order) - Update an order
 
 ## create_accounting_order
 
@@ -199,6 +201,57 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_assessment_order
+
+Update an order
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.order.patch_assessment_order(request={
+        "assessment_order": {
+            "connection_id": "<id>",
+            "workspace_id": "<id>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.assessment_order is not None
+
+    # Handle response
+    print(res.assessment_order)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.PatchAssessmentOrderRequest](../../models/operations/patchassessmentorderrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.PatchAssessmentOrderResponse](../../models/operations/patchassessmentorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_accounting_order
 
 Remove an order
@@ -287,6 +340,57 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateAccountingOrderResponse](../../models/operations/updateaccountingorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_assessment_order
+
+Update an order
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.order.update_assessment_order(request={
+        "assessment_order": {
+            "connection_id": "<id>",
+            "workspace_id": "<id>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.assessment_order is not None
+
+    # Handle response
+    print(res.assessment_order)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.UpdateAssessmentOrderRequest](../../models/operations/updateassessmentorderrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.UpdateAssessmentOrderResponse](../../models/operations/updateassessmentorderresponse.md)**
 
 ### Errors
 

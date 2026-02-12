@@ -193,6 +193,42 @@ if TYPE_CHECKING:
         AdsReportMetricsTypedDict,
     )
     from .apicall import APICall, APICallType, APICallTypedDict
+    from .assessmentaddress import AssessmentAddress, AssessmentAddressTypedDict
+    from .assessmentattribute import (
+        AssessmentAttribute,
+        AssessmentAttributeStatus,
+        AssessmentAttributeType,
+        AssessmentAttributeTypedDict,
+    )
+    from .assessmentorder import (
+        AssessmentOrder,
+        AssessmentOrderStatus,
+        AssessmentOrderTypedDict,
+        ProfileGender,
+        ResponseStatus,
+    )
+    from .assessmentpackage import (
+        AssessmentPackage,
+        AssessmentPackageType,
+        AssessmentPackageTypedDict,
+    )
+    from .assessmentpackageregion import (
+        AssessmentPackageRegion,
+        AssessmentPackageRegionTypedDict,
+    )
+    from .assessmentparameter import (
+        AssessmentParameter,
+        AssessmentParameterType,
+        AssessmentParameterTypedDict,
+    )
+    from .assessmentparameterinput import (
+        AssessmentParameterInput,
+        AssessmentParameterInputTypedDict,
+    )
+    from .assessmentresponsedetail import (
+        AssessmentResponseDetail,
+        AssessmentResponseDetailTypedDict,
+    )
     from .atsactivity import AtsActivity, AtsActivityType, AtsActivityTypedDict
     from .atsaddress import AtsAddress, AtsAddressTypedDict
     from .atsapplication import (
@@ -597,6 +633,7 @@ if TYPE_CHECKING:
         NativeWebhookEventID,
         NativeWebhookFormID,
         NativeWebhookLabelID,
+        NativeWebhookMemberID,
         NativeWebhookOrderID,
         NativeWebhookParentID,
         NativeWebhookProjectID,
@@ -1287,9 +1324,9 @@ if TYPE_CHECKING:
         VerificationParameterInputTypedDict,
     )
     from .verificationrequest import (
-        ProfileGender,
-        ResponseStatus,
         VerificationRequest,
+        VerificationRequestProfileGender,
+        VerificationRequestResponseStatus,
         VerificationRequestTypedDict,
     )
     from .verificationresponsedetail import (
@@ -1428,6 +1465,27 @@ __all__ = [
     "AdsReportMetricsType",
     "AdsReportMetricsTypedDict",
     "AdsReportTypedDict",
+    "AssessmentAddress",
+    "AssessmentAddressTypedDict",
+    "AssessmentAttribute",
+    "AssessmentAttributeStatus",
+    "AssessmentAttributeType",
+    "AssessmentAttributeTypedDict",
+    "AssessmentOrder",
+    "AssessmentOrderStatus",
+    "AssessmentOrderTypedDict",
+    "AssessmentPackage",
+    "AssessmentPackageRegion",
+    "AssessmentPackageRegionTypedDict",
+    "AssessmentPackageType",
+    "AssessmentPackageTypedDict",
+    "AssessmentParameter",
+    "AssessmentParameterInput",
+    "AssessmentParameterInputTypedDict",
+    "AssessmentParameterType",
+    "AssessmentParameterTypedDict",
+    "AssessmentResponseDetail",
+    "AssessmentResponseDetailTypedDict",
     "AtsActivity",
     "AtsActivityType",
     "AtsActivityTypedDict",
@@ -1908,6 +1966,7 @@ __all__ = [
     "NativeWebhookEventID",
     "NativeWebhookFormID",
     "NativeWebhookLabelID",
+    "NativeWebhookMemberID",
     "NativeWebhookOrderID",
     "NativeWebhookParentID",
     "NativeWebhookProjectID",
@@ -2333,6 +2392,8 @@ __all__ = [
     "VerificationParameterType",
     "VerificationParameterTypedDict",
     "VerificationRequest",
+    "VerificationRequestProfileGender",
+    "VerificationRequestResponseStatus",
     "VerificationRequestTypedDict",
     "VerificationResponseDetail",
     "VerificationResponseDetailTypedDict",
@@ -2523,6 +2584,29 @@ _dynamic_imports: dict[str, str] = {
     "APICall": ".apicall",
     "APICallType": ".apicall",
     "APICallTypedDict": ".apicall",
+    "AssessmentAddress": ".assessmentaddress",
+    "AssessmentAddressTypedDict": ".assessmentaddress",
+    "AssessmentAttribute": ".assessmentattribute",
+    "AssessmentAttributeStatus": ".assessmentattribute",
+    "AssessmentAttributeType": ".assessmentattribute",
+    "AssessmentAttributeTypedDict": ".assessmentattribute",
+    "AssessmentOrder": ".assessmentorder",
+    "AssessmentOrderStatus": ".assessmentorder",
+    "AssessmentOrderTypedDict": ".assessmentorder",
+    "ProfileGender": ".assessmentorder",
+    "ResponseStatus": ".assessmentorder",
+    "AssessmentPackage": ".assessmentpackage",
+    "AssessmentPackageType": ".assessmentpackage",
+    "AssessmentPackageTypedDict": ".assessmentpackage",
+    "AssessmentPackageRegion": ".assessmentpackageregion",
+    "AssessmentPackageRegionTypedDict": ".assessmentpackageregion",
+    "AssessmentParameter": ".assessmentparameter",
+    "AssessmentParameterType": ".assessmentparameter",
+    "AssessmentParameterTypedDict": ".assessmentparameter",
+    "AssessmentParameterInput": ".assessmentparameterinput",
+    "AssessmentParameterInputTypedDict": ".assessmentparameterinput",
+    "AssessmentResponseDetail": ".assessmentresponsedetail",
+    "AssessmentResponseDetailTypedDict": ".assessmentresponsedetail",
     "AtsActivity": ".atsactivity",
     "AtsActivityType": ".atsactivity",
     "AtsActivityTypedDict": ".atsactivity",
@@ -2933,6 +3017,7 @@ _dynamic_imports: dict[str, str] = {
     "NativeWebhookEventID": ".integrationsupport",
     "NativeWebhookFormID": ".integrationsupport",
     "NativeWebhookLabelID": ".integrationsupport",
+    "NativeWebhookMemberID": ".integrationsupport",
     "NativeWebhookOrderID": ".integrationsupport",
     "NativeWebhookParentID": ".integrationsupport",
     "NativeWebhookProjectID": ".integrationsupport",
@@ -3464,9 +3549,9 @@ _dynamic_imports: dict[str, str] = {
     "VerificationParameterTypedDict": ".verificationparameter",
     "VerificationParameterInput": ".verificationparameterinput",
     "VerificationParameterInputTypedDict": ".verificationparameterinput",
-    "ProfileGender": ".verificationrequest",
-    "ResponseStatus": ".verificationrequest",
     "VerificationRequest": ".verificationrequest",
+    "VerificationRequestProfileGender": ".verificationrequest",
+    "VerificationRequestResponseStatus": ".verificationrequest",
     "VerificationRequestTypedDict": ".verificationrequest",
     "VerificationResponseDetail": ".verificationresponsedetail",
     "VerificationResponseDetailTypedDict": ".verificationresponsedetail",

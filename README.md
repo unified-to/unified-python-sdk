@@ -350,6 +350,17 @@ asyncio.run(main())
 
 * [list_ats_applicationstatuses](docs/sdks/applicationstatus/README.md#list_ats_applicationstatuses) - List all applicationstatuses
 
+### [Assessment](docs/sdks/assessment/README.md)
+
+* [create_assessment_package](docs/sdks/assessment/README.md#create_assessment_package) - Create an assessment package
+* [get_assessment_package](docs/sdks/assessment/README.md#get_assessment_package) - Get an assessment package
+* [list_assessment_packages](docs/sdks/assessment/README.md#list_assessment_packages) - List assessment packages
+* [patch_assessment_order](docs/sdks/assessment/README.md#patch_assessment_order) - Update an order
+* [patch_assessment_package](docs/sdks/assessment/README.md#patch_assessment_package) - Update an assessment package
+* [remove_assessment_package](docs/sdks/assessment/README.md#remove_assessment_package) - Delete an assessment package
+* [update_assessment_order](docs/sdks/assessment/README.md#update_assessment_order) - Update an order
+* [update_assessment_package](docs/sdks/assessment/README.md#update_assessment_package) - Update an assessment package
+
 ### [Ats](docs/sdks/ats/README.md)
 
 * [create_ats_activity](docs/sdks/ats/README.md#create_ats_activity) - Create an activity
@@ -1238,8 +1249,10 @@ asyncio.run(main())
 * [get_accounting_order](docs/sdks/order/README.md#get_accounting_order) - Retrieve an order
 * [list_accounting_orders](docs/sdks/order/README.md#list_accounting_orders) - List all orders
 * [patch_accounting_order](docs/sdks/order/README.md#patch_accounting_order) - Update an order
+* [patch_assessment_order](docs/sdks/order/README.md#patch_assessment_order) - Update an order
 * [remove_accounting_order](docs/sdks/order/README.md#remove_accounting_order) - Remove an order
 * [update_accounting_order](docs/sdks/order/README.md#update_accounting_order) - Update an order
+* [update_assessment_order](docs/sdks/order/README.md#update_assessment_order) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
 
@@ -1260,8 +1273,14 @@ asyncio.run(main())
 
 ### [Package](docs/sdks/package/README.md)
 
+* [create_assessment_package](docs/sdks/package/README.md#create_assessment_package) - Create an assessment package
+* [get_assessment_package](docs/sdks/package/README.md#get_assessment_package) - Get an assessment package
 * [get_verification_package](docs/sdks/package/README.md#get_verification_package) - Retrieve a package
+* [list_assessment_packages](docs/sdks/package/README.md#list_assessment_packages) - List assessment packages
 * [list_verification_packages](docs/sdks/package/README.md#list_verification_packages) - List all packages
+* [patch_assessment_package](docs/sdks/package/README.md#patch_assessment_package) - Update an assessment package
+* [remove_assessment_package](docs/sdks/package/README.md#remove_assessment_package) - Delete an assessment package
+* [update_assessment_package](docs/sdks/package/README.md#update_assessment_package) - Update an assessment package
 
 ### [Page](docs/sdks/page/README.md)
 

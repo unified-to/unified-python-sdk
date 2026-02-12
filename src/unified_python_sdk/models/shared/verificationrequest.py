@@ -20,7 +20,7 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class ProfileGender(str, Enum, metaclass=utils.OpenEnumMeta):
+class VerificationRequestProfileGender(str, Enum, metaclass=utils.OpenEnumMeta):
     MALE = "MALE"
     FEMALE = "FEMALE"
     INTERSEX = "INTERSEX"
@@ -28,7 +28,7 @@ class ProfileGender(str, Enum, metaclass=utils.OpenEnumMeta):
     NON_BINARY = "NON_BINARY"
 
 
-class ResponseStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+class VerificationRequestResponseStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     COMPLETED = "COMPLETED"
     FAILED = "FAILED"
     PASSED = "PASSED"
@@ -44,7 +44,7 @@ class VerificationRequestTypedDict(TypedDict):
     profile_addresses: NotRequired[List[VerificationAddressTypedDict]]
     profile_date_of_birth: NotRequired[str]
     profile_emails: NotRequired[List[str]]
-    profile_gender: NotRequired[ProfileGender]
+    profile_gender: NotRequired[VerificationRequestProfileGender]
     profile_ip_address: NotRequired[str]
     profile_name: NotRequired[str]
     profile_national_identifier: NotRequired[str]
@@ -59,7 +59,7 @@ class VerificationRequestTypedDict(TypedDict):
     response_redirect_url: NotRequired[str]
     response_score: NotRequired[float]
     response_source: NotRequired[str]
-    response_status: NotRequired[ResponseStatus]
+    response_status: NotRequired[VerificationRequestResponseStatus]
     target_url: NotRequired[str]
     updated_at: NotRequired[datetime]
 
@@ -81,7 +81,7 @@ class VerificationRequest(BaseModel):
 
     profile_emails: Optional[List[str]] = None
 
-    profile_gender: Optional[ProfileGender] = None
+    profile_gender: Optional[VerificationRequestProfileGender] = None
 
     profile_ip_address: Optional[str] = None
 
@@ -110,7 +110,7 @@ class VerificationRequest(BaseModel):
 
     response_source: Optional[str] = None
 
-    response_status: Optional[ResponseStatus] = None
+    response_status: Optional[VerificationRequestResponseStatus] = None
 
     target_url: Optional[str] = None
 
@@ -120,7 +120,7 @@ class VerificationRequest(BaseModel):
     def serialize_profile_gender(self, value):
         if isinstance(value, str):
             try:
-                return shared.ProfileGender(value)
+                return shared.VerificationRequestProfileGender(value)
             except ValueError:
                 return value
         return value
@@ -129,7 +129,7 @@ class VerificationRequest(BaseModel):
     def serialize_response_status(self, value):
         if isinstance(value, str):
             try:
-                return shared.ResponseStatus(value)
+                return shared.VerificationRequestResponseStatus(value)
             except ValueError:
                 return value
         return value

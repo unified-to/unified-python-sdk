@@ -67,6 +67,9 @@
 | `VERIFICATION_PACKAGE_READ`      | verification_package_read        |
 | `VERIFICATION_REQUEST_READ`      | verification_request_read        |
 | `VERIFICATION_REQUEST_WRITE`     | verification_request_write       |
+| `ASSESSMENT_PACKAGE_READ`        | assessment_package_read          |
+| `ASSESSMENT_PACKAGE_WRITE`       | assessment_package_write         |
+| `ASSESSMENT_ORDER_WRITE`         | assessment_order_write           |
 | `ATS_ACTIVITY_READ`              | ats_activity_read                |
 | `ATS_ACTIVITY_WRITE`             | ats_activity_write               |
 | `ATS_APPLICATION_READ`           | ats_application_read             |
@@ -96,12 +99,12 @@
 | `CRM_LEAD_WRITE`                 | crm_lead_write                   |
 | `CRM_PIPELINE_READ`              | crm_pipeline_read                |
 | `CRM_PIPELINE_WRITE`             | crm_pipeline_write               |
-| `MARTECH_CAMPAIGN_READ`          | martech_campaign_read            |
-| `MARTECH_CAMPAIGN_WRITE`         | martech_campaign_write           |
 | `MARTECH_LIST_READ`              | martech_list_read                |
 | `MARTECH_LIST_WRITE`             | martech_list_write               |
 | `MARTECH_MEMBER_READ`            | martech_member_read              |
 | `MARTECH_MEMBER_WRITE`           | martech_member_write             |
+| `MARTECH_CAMPAIGN_READ`          | martech_campaign_read            |
+| `MARTECH_CAMPAIGN_WRITE`         | martech_campaign_write           |
 | `MARTECH_REPORT_READ`            | martech_report_read              |
 | `MARTECH_REPORT_WRITE`           | martech_report_write             |
 | `TICKETING_CUSTOMER_READ`        | ticketing_customer_read          |
