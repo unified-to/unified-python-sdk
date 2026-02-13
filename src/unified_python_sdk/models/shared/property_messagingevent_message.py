@@ -42,7 +42,6 @@ class PropertyMessagingEventMessageTypedDict(TypedDict):
     message_markdown: NotRequired[str]
     message_thread_identifier: NotRequired[str]
     parent_id: NotRequired[str]
-    parent_message_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reactions: NotRequired[List[MessagingReactionTypedDict]]
     reference: NotRequired[str]
@@ -95,8 +94,6 @@ class PropertyMessagingEventMessage(BaseModel):
 
     parent_id: Optional[str] = None
 
-    parent_message_id: Optional[str] = None
-
     raw: Optional[Dict[str, Any]] = None
 
     reactions: Optional[List[MessagingReaction]] = None
@@ -133,7 +130,6 @@ class PropertyMessagingEventMessage(BaseModel):
                 "message_markdown",
                 "message_thread_identifier",
                 "parent_id",
-                "parent_message_id",
                 "raw",
                 "reactions",
                 "reference",

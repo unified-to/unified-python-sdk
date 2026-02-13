@@ -12,6 +12,11 @@ if TYPE_CHECKING:
         Status,
         Type,
     )
+    from .accountingaccounttaxonomy import (
+        AccountingAccountTaxonomy,
+        AccountingAccountTaxonomyType,
+        AccountingAccountTaxonomyTypedDict,
+    )
     from .accountingassociatedcontact import (
         AccountingAssociatedContact,
         AccountingAssociatedContactTypedDict,
@@ -1350,6 +1355,9 @@ __all__ = [
     "APICallTypedDict",
     "APITypedDict",
     "AccountingAccount",
+    "AccountingAccountTaxonomy",
+    "AccountingAccountTaxonomyType",
+    "AccountingAccountTaxonomyTypedDict",
     "AccountingAccountTypedDict",
     "AccountingAssociatedContact",
     "AccountingAssociatedContactTypedDict",
@@ -2459,6 +2467,9 @@ _dynamic_imports: dict[str, str] = {
     "AccountingAccountTypedDict": ".accountingaccount",
     "Status": ".accountingaccount",
     "Type": ".accountingaccount",
+    "AccountingAccountTaxonomy": ".accountingaccounttaxonomy",
+    "AccountingAccountTaxonomyType": ".accountingaccounttaxonomy",
+    "AccountingAccountTaxonomyTypedDict": ".accountingaccounttaxonomy",
     "AccountingAssociatedContact": ".accountingassociatedcontact",
     "AccountingAssociatedContactTypedDict": ".accountingassociatedcontact",
     "AccountingAttachment": ".accountingattachment",

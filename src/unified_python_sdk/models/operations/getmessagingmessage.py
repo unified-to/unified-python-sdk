@@ -23,7 +23,6 @@ class GetMessagingMessageQueryParamFields(str, Enum):
     CHANNEL_IDS = "channel_ids"
     CHANNELS = "channels"
     PARENT_ID = "parent_id"
-    PARENT_MESSAGE_ID = "parent_message_id"
     ROOT_MESSAGE_ID = "root_message_id"
     MESSAGE_THREAD_IDENTIFIER = "message_thread_identifier"
     AUTHOR_MEMBER = "author_member"

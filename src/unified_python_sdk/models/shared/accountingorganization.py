@@ -13,14 +13,15 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingOrganizationTypedDict(TypedDict):
-    name: str
     address: NotRequired[PropertyAccountingOrganizationAddressTypedDict]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     fiscal_year_end_month: NotRequired[float]
     id: NotRequired[str]
     legal_name: NotRequired[str]
+    name: NotRequired[str]
     organization_code: NotRequired[str]
+    parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     tax_number: NotRequired[str]
     timezone: NotRequired[str]
@@ -29,8 +30,6 @@ class AccountingOrganizationTypedDict(TypedDict):
 
 
 class AccountingOrganization(BaseModel):
-    name: str
-
     address: Optional[PropertyAccountingOrganizationAddress] = None
 
     created_at: Optional[datetime] = None
@@ -43,7 +42,11 @@ class AccountingOrganization(BaseModel):
 
     legal_name: Optional[str] = None
 
+    name: Optional[str] = None
+
     organization_code: Optional[str] = None
+
+    parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -65,7 +68,9 @@ class AccountingOrganization(BaseModel):
                 "fiscal_year_end_month",
                 "id",
                 "legal_name",
+                "name",
                 "organization_code",
+                "parent_id",
                 "raw",
                 "tax_number",
                 "timezone",

@@ -17,6 +17,7 @@ class AccountingJournalLineitemTypedDict(TypedDict):
     group_id: NotRequired[str]
     id: NotRequired[str]
     invoice_id: NotRequired[str]
+    organization_id: NotRequired[str]
     payment_id: NotRequired[str]
     project_id: NotRequired[str]
     tax_amount: NotRequired[float]
@@ -42,6 +43,8 @@ class AccountingJournalLineitem(BaseModel):
 
     invoice_id: Optional[str] = None
 
+    organization_id: Optional[str] = None
+
     payment_id: Optional[str] = None
 
     project_id: Optional[str] = None
@@ -63,6 +66,7 @@ class AccountingJournalLineitem(BaseModel):
                 "group_id",
                 "id",
                 "invoice_id",
+                "organization_id",
                 "payment_id",
                 "project_id",
                 "tax_amount",

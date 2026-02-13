@@ -35,6 +35,7 @@ class PatchAccountingAccountQueryParamFields(str, Enum):
     GROUP = "group"
     SUBGROUP = "subgroup"
     PARENT_ID = "parent_id"
+    TAXONOMY = "taxonomy"
     RAW = "raw"
 
 

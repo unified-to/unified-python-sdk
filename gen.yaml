@@ -28,7 +28,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.57.2
+  version: 0.57.3
   additionalDependencies:
     dev: {}
     main: {}
@@ -51,6 +51,7 @@ python:
   flattenRequests: false
   flatteningOrder: parameters-first
   forwardCompatibleEnumsByDefault: false
+  forwardCompatibleUnionsByDefault: "false"
   imports:
     option: openapi
     paths:

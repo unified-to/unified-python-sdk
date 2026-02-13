@@ -15,6 +15,7 @@
 | `TAX_NUMBER`            | tax_number              |
 | `TIMEZONE`              | timezone                |
 | `WEBSITE`               | website                 |
+| `PARENT_ID`             | parent_id               |
 | `FISCAL_YEAR_END_MONTH` | fiscal_year_end_month   |
 | `ORGANIZATION_CODE`     | organization_code       |
 | `RAW`                   | raw                     |
