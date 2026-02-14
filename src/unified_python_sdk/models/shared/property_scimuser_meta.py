@@ -63,3 +63,9 @@ class PropertyScimUserMeta(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    PropertyScimUserMeta.model_rebuild()
+except NameError:
+    pass

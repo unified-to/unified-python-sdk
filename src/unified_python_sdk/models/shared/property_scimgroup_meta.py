@@ -63,3 +63,9 @@ class PropertyScimGroupMeta(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    PropertyScimGroupMeta.model_rebuild()
+except NameError:
+    pass

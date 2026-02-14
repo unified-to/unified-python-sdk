@@ -78,3 +78,9 @@ class ScimAddress(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    ScimAddress.model_rebuild()
+except NameError:
+    pass

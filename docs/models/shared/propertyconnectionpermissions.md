@@ -179,6 +179,12 @@
 | `LMS_STUDENT_WRITE`              | lms_student_write                |
 | `LMS_INSTRUCTOR_READ`            | lms_instructor_read              |
 | `LMS_INSTRUCTOR_WRITE`           | lms_instructor_write             |
+| `LMS_CONTENT_READ`               | lms_content_read                 |
+| `LMS_CONTENT_WRITE`              | lms_content_write                |
+| `LMS_COLLECTION_READ`            | lms_collection_read              |
+| `LMS_COLLECTION_WRITE`           | lms_collection_write             |
+| `LMS_ACTIVITY_READ`              | lms_activity_read                |
+| `LMS_ACTIVITY_WRITE`             | lms_activity_write               |
 | `REPO_ORGANIZATION_READ`         | repo_organization_read           |
 | `REPO_ORGANIZATION_WRITE`        | repo_organization_write          |
 | `REPO_REPOSITORY_READ`           | repo_repository_read             |

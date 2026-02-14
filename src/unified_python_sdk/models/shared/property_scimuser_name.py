@@ -58,3 +58,9 @@ class PropertyScimUserName(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    PropertyScimUserName.model_rebuild()
+except NameError:
+    pass

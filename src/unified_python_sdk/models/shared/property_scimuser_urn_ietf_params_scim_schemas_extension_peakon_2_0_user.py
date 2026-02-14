@@ -68,3 +68,9 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User.model_rebuild()
+except NameError:
+    pass

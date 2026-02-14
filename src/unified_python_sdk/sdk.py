@@ -49,6 +49,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.company import Company
     from unified_python_sdk.connection import Connection
     from unified_python_sdk.contact import Contact
+    from unified_python_sdk.content import Content
     from unified_python_sdk.course import Course
     from unified_python_sdk.creative import Creative
     from unified_python_sdk.creditmemo import Creditmemo
@@ -231,6 +232,7 @@ class UnifiedTo(BaseSDK):
     space: "Space"
     lms: "Lms"
     class_: "Class"
+    content: "Content"
     course: "Course"
     instructor: "Instructor"
     student: "Student"
@@ -364,6 +366,7 @@ class UnifiedTo(BaseSDK):
         "space": ("unified_python_sdk.space", "Space"),
         "lms": ("unified_python_sdk.lms", "Lms"),
         "class_": ("unified_python_sdk.class_", "Class"),
+        "content": ("unified_python_sdk.content", "Content"),
         "course": ("unified_python_sdk.course", "Course"),
         "instructor": ("unified_python_sdk.instructor", "Instructor"),
         "student": ("unified_python_sdk.student", "Student"),

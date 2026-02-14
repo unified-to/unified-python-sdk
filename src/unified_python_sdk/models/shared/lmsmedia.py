@@ -16,11 +16,15 @@ class LmsMediaType(str, Enum, metaclass=utils.OpenEnumMeta):
     VIDEO = "VIDEO"
     WEB = "WEB"
     DOCUMENT = "DOCUMENT"
+    TEXT = "TEXT"
+    HTML = "HTML"
+    MARKDOWN = "MARKDOWN"
     OTHER = "OTHER"
 
 
 class LmsMediaTypedDict(TypedDict):
     url: str
+    content: NotRequired[str]
     description: NotRequired[str]
     name: NotRequired[str]
     thumbnail_url: NotRequired[str]
@@ -29,6 +33,8 @@ class LmsMediaTypedDict(TypedDict):
 
 class LmsMedia(BaseModel):
     url: str
+
+    content: Optional[str] = None
 
     description: Optional[str] = None
 
@@ -49,7 +55,9 @@ class LmsMedia(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["description", "name", "thumbnail_url", "type"])
+        optional_fields = set(
+            ["content", "description", "name", "thumbnail_url", "type"]
+        )
         serialized = handler(self)
         m = {}
 

@@ -54,3 +54,9 @@ class PropertyCrmEventMarketingEmail(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    PropertyCrmEventMarketingEmail.model_rebuild()
+except NameError:
+    pass

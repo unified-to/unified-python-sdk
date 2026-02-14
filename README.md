@@ -277,11 +277,17 @@ asyncio.run(main())
 ### [Activity](docs/sdks/activity/README.md)
 
 * [create_ats_activity](docs/sdks/activity/README.md#create_ats_activity) - Create an activity
+* [create_lms_activity](docs/sdks/activity/README.md#create_lms_activity) - Create an activity
 * [get_ats_activity](docs/sdks/activity/README.md#get_ats_activity) - Retrieve an activity
+* [get_lms_activity](docs/sdks/activity/README.md#get_lms_activity) - Retrieve an activity
 * [list_ats_activities](docs/sdks/activity/README.md#list_ats_activities) - List all activities
+* [list_lms_activities](docs/sdks/activity/README.md#list_lms_activities) - List all activities
 * [patch_ats_activity](docs/sdks/activity/README.md#patch_ats_activity) - Update an activity
+* [patch_lms_activity](docs/sdks/activity/README.md#patch_lms_activity) - Update an activity
 * [remove_ats_activity](docs/sdks/activity/README.md#remove_ats_activity) - Remove an activity
+* [remove_lms_activity](docs/sdks/activity/README.md#remove_lms_activity) - Remove an activity
 * [update_ats_activity](docs/sdks/activity/README.md#update_ats_activity) - Update an activity
+* [update_lms_activity](docs/sdks/activity/README.md#update_lms_activity) - Update an activity
 
 ### [Ad](docs/sdks/ad/README.md)
 
@@ -560,11 +566,17 @@ asyncio.run(main())
 ### [Collection](docs/sdks/collection/README.md)
 
 * [create_commerce_collection](docs/sdks/collection/README.md#create_commerce_collection) - Create a collection
+* [create_lms_collection](docs/sdks/collection/README.md#create_lms_collection) - Create a collection
 * [get_commerce_collection](docs/sdks/collection/README.md#get_commerce_collection) - Retrieve a collection
+* [get_lms_collection](docs/sdks/collection/README.md#get_lms_collection) - Retrieve a collection
 * [list_commerce_collections](docs/sdks/collection/README.md#list_commerce_collections) - List all collections
+* [list_lms_collections](docs/sdks/collection/README.md#list_lms_collections) - List all collections
 * [patch_commerce_collection](docs/sdks/collection/README.md#patch_commerce_collection) - Update a collection
+* [patch_lms_collection](docs/sdks/collection/README.md#patch_lms_collection) - Update a collection
 * [remove_commerce_collection](docs/sdks/collection/README.md#remove_commerce_collection) - Remove a collection
+* [remove_lms_collection](docs/sdks/collection/README.md#remove_lms_collection) - Remove a collection
 * [update_commerce_collection](docs/sdks/collection/README.md#update_commerce_collection) - Update a collection
+* [update_lms_collection](docs/sdks/collection/README.md#update_lms_collection) - Update a collection
 
 ### [Comment](docs/sdks/comment/README.md)
 
@@ -692,6 +704,15 @@ asyncio.run(main())
 * [update_accounting_contact](docs/sdks/contact/README.md#update_accounting_contact) - Update a contact
 * [update_crm_contact](docs/sdks/contact/README.md#update_crm_contact) - Update a contact
 * [update_uc_contact](docs/sdks/contact/README.md#update_uc_contact) - Update a contact
+
+### [Content](docs/sdks/content/README.md)
+
+* [create_lms_content](docs/sdks/content/README.md#create_lms_content) - Create a content
+* [get_lms_content](docs/sdks/content/README.md#get_lms_content) - Retrieve a content
+* [list_lms_contents](docs/sdks/content/README.md#list_lms_contents) - List all contents
+* [patch_lms_content](docs/sdks/content/README.md#patch_lms_content) - Update a content
+* [remove_lms_content](docs/sdks/content/README.md#remove_lms_content) - Remove a content
+* [update_lms_content](docs/sdks/content/README.md#update_lms_content) - Update a content
 
 ### [Course](docs/sdks/course/README.md)
 
@@ -1123,27 +1144,45 @@ asyncio.run(main())
 
 ### [Lms](docs/sdks/lms/README.md)
 
+* [create_lms_activity](docs/sdks/lms/README.md#create_lms_activity) - Create an activity
 * [create_lms_class](docs/sdks/lms/README.md#create_lms_class) - Create a class
+* [create_lms_collection](docs/sdks/lms/README.md#create_lms_collection) - Create a collection
+* [create_lms_content](docs/sdks/lms/README.md#create_lms_content) - Create a content
 * [create_lms_course](docs/sdks/lms/README.md#create_lms_course) - Create a course
 * [create_lms_instructor](docs/sdks/lms/README.md#create_lms_instructor) - Create an instructor
 * [create_lms_student](docs/sdks/lms/README.md#create_lms_student) - Create a student
+* [get_lms_activity](docs/sdks/lms/README.md#get_lms_activity) - Retrieve an activity
 * [get_lms_class](docs/sdks/lms/README.md#get_lms_class) - Retrieve a class
+* [get_lms_collection](docs/sdks/lms/README.md#get_lms_collection) - Retrieve a collection
+* [get_lms_content](docs/sdks/lms/README.md#get_lms_content) - Retrieve a content
 * [get_lms_course](docs/sdks/lms/README.md#get_lms_course) - Retrieve a course
 * [get_lms_instructor](docs/sdks/lms/README.md#get_lms_instructor) - Retrieve an instructor
 * [get_lms_student](docs/sdks/lms/README.md#get_lms_student) - Retrieve a student
+* [list_lms_activities](docs/sdks/lms/README.md#list_lms_activities) - List all activities
 * [list_lms_classes](docs/sdks/lms/README.md#list_lms_classes) - List all classes
+* [list_lms_collections](docs/sdks/lms/README.md#list_lms_collections) - List all collections
+* [list_lms_contents](docs/sdks/lms/README.md#list_lms_contents) - List all contents
 * [list_lms_courses](docs/sdks/lms/README.md#list_lms_courses) - List all courses
 * [list_lms_instructors](docs/sdks/lms/README.md#list_lms_instructors) - List all instructors
 * [list_lms_students](docs/sdks/lms/README.md#list_lms_students) - List all students
+* [patch_lms_activity](docs/sdks/lms/README.md#patch_lms_activity) - Update an activity
 * [patch_lms_class](docs/sdks/lms/README.md#patch_lms_class) - Update a class
+* [patch_lms_collection](docs/sdks/lms/README.md#patch_lms_collection) - Update a collection
+* [patch_lms_content](docs/sdks/lms/README.md#patch_lms_content) - Update a content
 * [patch_lms_course](docs/sdks/lms/README.md#patch_lms_course) - Update a course
 * [patch_lms_instructor](docs/sdks/lms/README.md#patch_lms_instructor) - Update an instructor
 * [patch_lms_student](docs/sdks/lms/README.md#patch_lms_student) - Update a student
+* [remove_lms_activity](docs/sdks/lms/README.md#remove_lms_activity) - Remove an activity
 * [remove_lms_class](docs/sdks/lms/README.md#remove_lms_class) - Remove a class
+* [remove_lms_collection](docs/sdks/lms/README.md#remove_lms_collection) - Remove a collection
+* [remove_lms_content](docs/sdks/lms/README.md#remove_lms_content) - Remove a content
 * [remove_lms_course](docs/sdks/lms/README.md#remove_lms_course) - Remove a course
 * [remove_lms_instructor](docs/sdks/lms/README.md#remove_lms_instructor) - Remove an instructor
 * [remove_lms_student](docs/sdks/lms/README.md#remove_lms_student) - Remove a student
+* [update_lms_activity](docs/sdks/lms/README.md#update_lms_activity) - Update an activity
 * [update_lms_class](docs/sdks/lms/README.md#update_lms_class) - Update a class
+* [update_lms_collection](docs/sdks/lms/README.md#update_lms_collection) - Update a collection
+* [update_lms_content](docs/sdks/lms/README.md#update_lms_content) - Update a content
 * [update_lms_course](docs/sdks/lms/README.md#update_lms_course) - Update a course
 * [update_lms_instructor](docs/sdks/lms/README.md#update_lms_instructor) - Update an instructor
 * [update_lms_student](docs/sdks/lms/README.md#update_lms_student) - Update a student

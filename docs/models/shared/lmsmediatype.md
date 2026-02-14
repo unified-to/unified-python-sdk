@@ -10,4 +10,7 @@
 | `VIDEO`    | VIDEO      |
 | `WEB`      | WEB        |
 | `DOCUMENT` | DOCUMENT   |
+| `TEXT`     | TEXT       |
+| `HTML`     | HTML       |
+| `MARKDOWN` | MARKDOWN   |
 | `OTHER`    | OTHER      |

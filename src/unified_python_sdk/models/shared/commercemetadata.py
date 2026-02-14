@@ -153,3 +153,9 @@ class CommerceMetadata(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    CommerceMetadata.model_rebuild()
+except NameError:
+    pass

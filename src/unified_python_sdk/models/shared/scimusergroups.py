@@ -56,3 +56,9 @@ class ScimUserGroups(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    ScimUserGroups.model_rebuild()
+except NameError:
+    pass

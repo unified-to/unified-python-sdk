@@ -60,3 +60,9 @@ class ScimGroup(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    ScimGroup.model_rebuild()
+except NameError:
+    pass

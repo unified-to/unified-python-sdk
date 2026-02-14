@@ -126,3 +126,9 @@ class AtsMetadata(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    AtsMetadata.model_rebuild()
+except NameError:
+    pass

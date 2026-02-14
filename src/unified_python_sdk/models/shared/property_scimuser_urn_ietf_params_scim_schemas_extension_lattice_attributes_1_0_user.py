@@ -147,3 +147,9 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User(
                     m[k] = val
 
         return m
+
+
+try:
+    PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User.model_rebuild()
+except NameError:
+    pass

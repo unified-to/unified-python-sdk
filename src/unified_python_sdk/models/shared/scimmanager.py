@@ -63,3 +63,9 @@ class ScimManager(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    ScimManager.model_rebuild()
+except NameError:
+    pass

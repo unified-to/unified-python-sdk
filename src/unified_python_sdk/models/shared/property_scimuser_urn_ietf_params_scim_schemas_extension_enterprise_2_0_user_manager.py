@@ -75,3 +75,9 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager(
                     m[k] = val
 
         return m
+
+
+try:
+    PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager.model_rebuild()
+except NameError:
+    pass

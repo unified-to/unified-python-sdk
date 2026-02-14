@@ -5,11 +5,17 @@
 ### Available Operations
 
 * [create_commerce_collection](#create_commerce_collection) - Create a collection
+* [create_lms_collection](#create_lms_collection) - Create a collection
 * [get_commerce_collection](#get_commerce_collection) - Retrieve a collection
+* [get_lms_collection](#get_lms_collection) - Retrieve a collection
 * [list_commerce_collections](#list_commerce_collections) - List all collections
+* [list_lms_collections](#list_lms_collections) - List all collections
 * [patch_commerce_collection](#patch_commerce_collection) - Update a collection
+* [patch_lms_collection](#patch_lms_collection) - Update a collection
 * [remove_commerce_collection](#remove_commerce_collection) - Remove a collection
+* [remove_lms_collection](#remove_lms_collection) - Remove a collection
 * [update_commerce_collection](#update_commerce_collection) - Update a collection
+* [update_lms_collection](#update_lms_collection) - Update a collection
 
 ## create_commerce_collection
 
@@ -53,6 +59,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateCommerceCollectionResponse](../../models/operations/createcommercecollectionresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_lms_collection
+
+Create a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.collection.create_lms_collection(request={
+        "lms_collection": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.lms_collection is not None
+
+    # Handle response
+    print(res.lms_collection)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateLmsCollectionRequest](../../models/operations/createlmscollectionrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.CreateLmsCollectionResponse](../../models/operations/createlmscollectionresponse.md)**
 
 ### Errors
 
@@ -107,6 +160,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_lms_collection
+
+Retrieve a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getLmsCollection" method="get" path="/lms/{connection_id}/collection/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.collection.get_lms_collection(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_collection is not None
+
+    # Handle response
+    print(res.lms_collection)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetLmsCollectionRequest](../../models/operations/getlmscollectionrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetLmsCollectionResponse](../../models/operations/getlmscollectionresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_commerce_collections
 
 List all collections
@@ -146,6 +246,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListCommerceCollectionsResponse](../../models/operations/listcommercecollectionsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_lms_collections
+
+List all collections
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listLmsCollections" method="get" path="/lms/{connection_id}/collection" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.collection.list_lms_collections(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.lms_collections is not None
+
+    # Handle response
+    print(res.lms_collections)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListLmsCollectionsRequest](../../models/operations/listlmscollectionsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListLmsCollectionsResponse](../../models/operations/listlmscollectionsresponse.md)**
 
 ### Errors
 
@@ -203,6 +349,54 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_lms_collection
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.collection.patch_lms_collection(request={
+        "lms_collection": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_collection is not None
+
+    # Handle response
+    print(res.lms_collection)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchLmsCollectionRequest](../../models/operations/patchlmscollectionrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.PatchLmsCollectionResponse](../../models/operations/patchlmscollectionresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_commerce_collection
 
 Remove a collection
@@ -243,6 +437,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveCommerceCollectionResponse](../../models/operations/removecommercecollectionresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_lms_collection
+
+Remove a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeLmsCollection" method="delete" path="/lms/{connection_id}/collection/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.collection.remove_lms_collection(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveLmsCollectionRequest](../../models/operations/removelmscollectionrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemoveLmsCollectionResponse](../../models/operations/removelmscollectionresponse.md)**
 
 ### Errors
 
@@ -293,6 +534,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateCommerceCollectionResponse](../../models/operations/updatecommercecollectionresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_lms_collection
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.collection.update_lms_collection(request={
+        "lms_collection": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_collection is not None
+
+    # Handle response
+    print(res.lms_collection)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.UpdateLmsCollectionRequest](../../models/operations/updatelmscollectionrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.UpdateLmsCollectionResponse](../../models/operations/updatelmscollectionresponse.md)**
 
 ### Errors
 

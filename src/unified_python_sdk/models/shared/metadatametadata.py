@@ -103,3 +103,9 @@ class MetadataMetadata(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    MetadataMetadata.model_rebuild()
+except NameError:
+    pass

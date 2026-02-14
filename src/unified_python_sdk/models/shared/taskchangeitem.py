@@ -36,3 +36,9 @@ class TaskChangeItem(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    TaskChangeItem.model_rebuild()
+except NameError:
+    pass

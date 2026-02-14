@@ -196,3 +196,9 @@ class ScimUser(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    ScimUser.model_rebuild()
+except NameError:
+    pass

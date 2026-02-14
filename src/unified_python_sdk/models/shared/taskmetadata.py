@@ -142,3 +142,9 @@ class TaskMetadata(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    TaskMetadata.model_rebuild()
+except NameError:
+    pass

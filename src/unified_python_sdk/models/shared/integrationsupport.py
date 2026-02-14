@@ -116,6 +116,12 @@ class ListContactID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListContentID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListCourseID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -458,6 +464,12 @@ class NativeWebhookCompanyID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class NativeWebhookCourseID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class NativeWebhookEventID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -501,6 +513,12 @@ class NativeWebhookProjectID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class NativeWebhookShipmentID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class NativeWebhookStudentID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -609,6 +627,12 @@ class VirtualWebhookCompanyID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookContactID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookCourseID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -788,6 +812,12 @@ class VirtualWebhookStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookStudentID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookTaskID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -843,6 +873,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_collection_id: NotRequired[ListCollectionID]
     list_company_id: NotRequired[ListCompanyID]
     list_contact_id: NotRequired[ListContactID]
+    list_content_id: NotRequired[ListContentID]
     list_course_id: NotRequired[ListCourseID]
     list_customer_id: NotRequired[ListCustomerID]
     list_deal_id: NotRequired[ListDealID]
@@ -901,6 +932,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_carrier_id: NotRequired[NativeWebhookCarrierID]
     native_webhook_channel_id: NotRequired[NativeWebhookChannelID]
     native_webhook_company_id: NotRequired[NativeWebhookCompanyID]
+    native_webhook_course_id: NotRequired[NativeWebhookCourseID]
     native_webhook_event_id: NotRequired[NativeWebhookEventID]
     native_webhook_form_id: NotRequired[NativeWebhookFormID]
     native_webhook_label_id: NotRequired[NativeWebhookLabelID]
@@ -909,6 +941,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_parent_id: NotRequired[NativeWebhookParentID]
     native_webhook_project_id: NotRequired[NativeWebhookProjectID]
     native_webhook_shipment_id: NotRequired[NativeWebhookShipmentID]
+    native_webhook_student_id: NotRequired[NativeWebhookStudentID]
     native_webhook_task_id: NotRequired[NativeWebhookTaskID]
     outbound_fields: NotRequired[Dict[str, str]]
     raw_objects: NotRequired[List[str]]
@@ -931,6 +964,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_collection_id: NotRequired[VirtualWebhookCollectionID]
     virtual_webhook_company_id: NotRequired[VirtualWebhookCompanyID]
     virtual_webhook_contact_id: NotRequired[VirtualWebhookContactID]
+    virtual_webhook_course_id: NotRequired[VirtualWebhookCourseID]
     virtual_webhook_customer_id: NotRequired[VirtualWebhookCustomerID]
     virtual_webhook_deal_id: NotRequired[VirtualWebhookDealID]
     virtual_webhook_end_lt: NotRequired[VirtualWebhookEndLt]
@@ -960,6 +994,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_space_id: NotRequired[VirtualWebhookSpaceID]
     virtual_webhook_start_gte: NotRequired[VirtualWebhookStartGte]
     virtual_webhook_status: NotRequired[VirtualWebhookStatus]
+    virtual_webhook_student_id: NotRequired[VirtualWebhookStudentID]
     virtual_webhook_task_id: NotRequired[VirtualWebhookTaskID]
     virtual_webhook_ticket_id: NotRequired[VirtualWebhookTicketID]
     virtual_webhook_type: NotRequired[VirtualWebhookType]
@@ -1005,6 +1040,8 @@ class IntegrationSupport(BaseModel):
     list_company_id: Optional[ListCompanyID] = None
 
     list_contact_id: Optional[ListContactID] = None
+
+    list_content_id: Optional[ListContentID] = None
 
     list_course_id: Optional[ListCourseID] = None
 
@@ -1122,6 +1159,8 @@ class IntegrationSupport(BaseModel):
 
     native_webhook_company_id: Optional[NativeWebhookCompanyID] = None
 
+    native_webhook_course_id: Optional[NativeWebhookCourseID] = None
+
     native_webhook_event_id: Optional[NativeWebhookEventID] = None
 
     native_webhook_form_id: Optional[NativeWebhookFormID] = None
@@ -1137,6 +1176,8 @@ class IntegrationSupport(BaseModel):
     native_webhook_project_id: Optional[NativeWebhookProjectID] = None
 
     native_webhook_shipment_id: Optional[NativeWebhookShipmentID] = None
+
+    native_webhook_student_id: Optional[NativeWebhookStudentID] = None
 
     native_webhook_task_id: Optional[NativeWebhookTaskID] = None
 
@@ -1180,6 +1221,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_company_id: Optional[VirtualWebhookCompanyID] = None
 
     virtual_webhook_contact_id: Optional[VirtualWebhookContactID] = None
+
+    virtual_webhook_course_id: Optional[VirtualWebhookCourseID] = None
 
     virtual_webhook_customer_id: Optional[VirtualWebhookCustomerID] = None
 
@@ -1238,6 +1281,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_start_gte: Optional[VirtualWebhookStartGte] = None
 
     virtual_webhook_status: Optional[VirtualWebhookStatus] = None
+
+    virtual_webhook_student_id: Optional[VirtualWebhookStudentID] = None
 
     virtual_webhook_task_id: Optional[VirtualWebhookTaskID] = None
 
@@ -1402,6 +1447,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListContactID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_content_id")
+    def serialize_list_content_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListContentID(value)
             except ValueError:
                 return value
         return value
@@ -1919,6 +1973,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("native_webhook_course_id")
+    def serialize_native_webhook_course_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookCourseID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("native_webhook_event_id")
     def serialize_native_webhook_event_id(self, value):
         if isinstance(value, str):
@@ -1987,6 +2050,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.NativeWebhookShipmentID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("native_webhook_student_id")
+    def serialize_native_webhook_student_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookStudentID(value)
             except ValueError:
                 return value
         return value
@@ -2149,6 +2221,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookContactID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_course_id")
+    def serialize_virtual_webhook_course_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookCourseID(value)
             except ValueError:
                 return value
         return value
@@ -2414,6 +2495,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_student_id")
+    def serialize_virtual_webhook_student_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookStudentID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_task_id")
     def serialize_virtual_webhook_task_id(self, value):
         if isinstance(value, str):
@@ -2490,6 +2580,7 @@ class IntegrationSupport(BaseModel):
                 "list_collection_id",
                 "list_company_id",
                 "list_contact_id",
+                "list_content_id",
                 "list_course_id",
                 "list_customer_id",
                 "list_deal_id",
@@ -2548,6 +2639,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_carrier_id",
                 "native_webhook_channel_id",
                 "native_webhook_company_id",
+                "native_webhook_course_id",
                 "native_webhook_event_id",
                 "native_webhook_form_id",
                 "native_webhook_label_id",
@@ -2556,6 +2648,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_parent_id",
                 "native_webhook_project_id",
                 "native_webhook_shipment_id",
+                "native_webhook_student_id",
                 "native_webhook_task_id",
                 "outbound_fields",
                 "raw_objects",
@@ -2577,6 +2670,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_collection_id",
                 "virtual_webhook_company_id",
                 "virtual_webhook_contact_id",
+                "virtual_webhook_course_id",
                 "virtual_webhook_customer_id",
                 "virtual_webhook_deal_id",
                 "virtual_webhook_end_lt",
@@ -2606,6 +2700,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_space_id",
                 "virtual_webhook_start_gte",
                 "virtual_webhook_status",
+                "virtual_webhook_student_id",
                 "virtual_webhook_task_id",
                 "virtual_webhook_ticket_id",
                 "virtual_webhook_type",
