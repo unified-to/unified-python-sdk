@@ -9,19 +9,17 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class TaskCommentTypedDict(TypedDict):
-    task_id: str
     text: str
     created_at: NotRequired[datetime]
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    task_id: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
     user_name: NotRequired[str]
 
 
 class TaskComment(BaseModel):
-    task_id: str
-
     text: str
 
     created_at: Optional[datetime] = None
@@ -29,6 +27,8 @@ class TaskComment(BaseModel):
     id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    task_id: Optional[str] = None
 
     updated_at: Optional[datetime] = None
 
@@ -39,7 +39,7 @@ class TaskComment(BaseModel):
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
-            ["created_at", "id", "raw", "updated_at", "user_id", "user_name"]
+            ["created_at", "id", "raw", "task_id", "updated_at", "user_id", "user_name"]
         )
         serialized = handler(self)
         m = {}

@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: bba5d3ebf913171b03ce2be8b22a3947
+  docChecksum: d121c23b689164804bad4c9617517509
   docVersion: "1.0"
-  speakeasyVersion: 1.716.0
-  generationVersion: 2.823.1
-  releaseVersion: 0.57.4
-  configChecksum: 776da59e32b20fd19b5402a51d2e926d
+  speakeasyVersion: 1.719.0
+  generationVersion: 2.824.1
+  releaseVersion: 0.57.5
+  configChecksum: 785cc774d6146a0b3c7dada81384d902
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: d26a4d37-4a3e-4fec-b42a-77c35e6bc2b9
-  pristine_commit_hash: dc9b02f32b2b2a5710bc0b2fe4b9db04a6e1bb1c
-  pristine_tree_hash: 30ef68699c8b0d93936e8dbcbd464b74c9a0f92d
+  generation_id: e7246a96-dfae-4fa6-b807-9e1d556b9242
+  pristine_commit_hash: fb4ec9249a92c9deadcbdb763675e2462ba3fd10
+  pristine_tree_hash: c2764f7dc24d64c47553ea11d7cf2db3519358b9
 features:
   python:
     acceptHeaders: 3.0.0
@@ -2906,8 +2906,8 @@ trackedFiles:
     pristine_git_object: 38f7ca5c2e403a17e206e349d264b415dcaf7a41
   docs/models/operations/listadsreportsrequest.md:
     id: 9c8d67f73409
-    last_write_checksum: sha1:7ede14b0445ee1c95a0a119fb63838d1594777e4
-    pristine_git_object: bbbdb96b6f68bdd44cafbaf553939afe2f85c71e
+    last_write_checksum: sha1:770ff047af9279e26fb78fda845ab26c5864ca6c
+    pristine_git_object: 9341501bf8d958f10599584bdd71faa91d51fa73
   docs/models/operations/listadsreportsresponse.md:
     id: 2c37c257106b
     last_write_checksum: sha1:4af63351df6fd7ddb90d6f464887fa3c16c7fd16
@@ -9734,8 +9734,8 @@ trackedFiles:
     pristine_git_object: d84079ab1efe1d70856805d38d038b4ccaef82a0
   docs/models/shared/taskcomment.md:
     id: 0903705ca7b8
-    last_write_checksum: sha1:27802b4446ffdef45c654071fe738647f8c1f04f
-    pristine_git_object: f09b4e079e61e679ba5f38c4a9982a74e601e26e
+    last_write_checksum: sha1:55c773f41cf3c92206cb615c55c6faec28d2fb0c
+    pristine_git_object: 039924224af9a8ca86261c0f955bdb5e1bf3429c
   docs/models/shared/taskmetadata.md:
     id: 626a176447a2
     last_write_checksum: sha1:665028802f5e3e5ab1a14e727c76d17fde9427f3
@@ -10254,8 +10254,8 @@ trackedFiles:
     pristine_git_object: 641778baa45d9cb45d4e16aa1772533687677b19
   docs/sdks/comment/README.md:
     id: e4246f80d976
-    last_write_checksum: sha1:7d7d04e06f6bacc2b5ba4d072f7906cc7afb3f3e
-    pristine_git_object: 1d3098536d91822a80ad5ead0ce18e0b3cfa667f
+    last_write_checksum: sha1:5bf89525e1cc9ea194a2b62e11f7741baa281860
+    pristine_git_object: d8ff23ec0f36f5adf33bae754da90642ea0f5104
   docs/sdks/commerce/README.md:
     id: ec0eedee4bc3
     last_write_checksum: sha1:f41b7d2d6c91024922c1a1ef109b077ce92c5d76
@@ -10606,8 +10606,8 @@ trackedFiles:
     pristine_git_object: c87c6a090b044ec3a159bb44add6c5fdbfd28dfd
   docs/sdks/task/README.md:
     id: ae2d0d96ea1f
-    last_write_checksum: sha1:515bcded8339e1742e998829d9b7415b21de2e75
-    pristine_git_object: 4c5e3436c02bd9d170f75e47623a5126d161b977
+    last_write_checksum: sha1:3506857aff1194f526e392b66530ea6c1f838b64
+    pristine_git_object: 604e82ccfa2e9249aa44d38f587d363d33b2dd7c
   docs/sdks/taxrate/README.md:
     id: 626e6511cf80
     last_write_checksum: sha1:18cf7e7c9fcc90306ed1da6e175cee5faab4b85d
@@ -10678,8 +10678,8 @@ trackedFiles:
     pristine_git_object: a5af5d5dbc6d0933f4fb1e5b464731695e2e6736
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:6c920d98e3ec9de61db55aeae62ddc2cd34d1e6a
-    pristine_git_object: a20108e6f42ea9f469435e01a824f911bf5ae319
+    last_write_checksum: sha1:0b24eda60476187da37f65b070df4af06741ae50
+    pristine_git_object: ed496d40cf611588261900f3ce67fe969f02b1a8
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -10706,8 +10706,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:c089408de753e4f34e8eb12cc24ca46cdf560f33
-    pristine_git_object: 5191e0c9a4378640f74ad4f4ea003ade92434861
+    last_write_checksum: sha1:fab9c69dbf163d9484d6fe10120246b474633699
+    pristine_git_object: 979b476846b9d61dc4e4674ced4f96bfc7541f9f
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -12042,8 +12042,8 @@ trackedFiles:
     pristine_git_object: 30f6a6c03b2436e986b7ecb89a5286a1571f3931
   src/unified_python_sdk/models/operations/listadsreports.py:
     id: a919159e8d1d
-    last_write_checksum: sha1:1e6452087cc3d24259f79f35adb6873424e38a5a
-    pristine_git_object: 371fcf34ac818833dc409694bbd2fe412865ea00
+    last_write_checksum: sha1:7bd56895e62cbc1ea72361c6afa90210c3e3d63f
+    pristine_git_object: b6544fbe1c93dc3d7ab8ea563321267ea31bf71d
   src/unified_python_sdk/models/operations/listassessmentpackages.py:
     id: 809ef939df03
     last_write_checksum: sha1:46fe8335450a452a0b861319431dfb4084da9b3d
@@ -14906,8 +14906,8 @@ trackedFiles:
     pristine_git_object: 109e83dac883aad7df5327a117abe1caf60bc9a5
   src/unified_python_sdk/models/shared/taskcomment.py:
     id: 800da05c821e
-    last_write_checksum: sha1:39d79d62c2c38dd4f609c95bcdc1d31763033bf2
-    pristine_git_object: 0946d5ac6cbd784474c226fcfbb45611fcb87f5f
+    last_write_checksum: sha1:22e9a29e2793a702831401ce363ebfeecde260e0
+    pristine_git_object: 8d1b183d73c2d23a913fe4bf099007727b77bf4d
   src/unified_python_sdk/models/shared/taskmetadata.py:
     id: 2a0d16578dad
     last_write_checksum: sha1:2d512e4a6efccac4ad958ac7405a110a7b60e974
@@ -17710,10 +17710,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   createUcComment:
     speakeasy-default-create-uc-comment:
       parameters:
@@ -17732,7 +17732,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   getUcComment:
     speakeasy-default-get-uc-comment:
       parameters:
@@ -17765,10 +17765,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   patchUcComment:
     speakeasy-default-patch-uc-comment:
       parameters:
@@ -17799,10 +17799,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   updateUcComment:
     speakeasy-default-update-uc-comment:
       parameters:
@@ -21156,7 +21156,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.activity.create_lms_activity()`: **Added**\n* `unified_to.activity.get_lms_activity()`: **Added**\n* `unified_to.activity.list_lms_activities()`: **Added**\n* `unified_to.activity.patch_lms_activity()`: **Added**\n* `unified_to.activity.remove_lms_activity()`: **Added**\n* `unified_to.activity.update_lms_activity()`: **Added**\n* `unified_to.collection.create_lms_collection()`: **Added**\n* `unified_to.collection.get_lms_collection()`: **Added**\n* `unified_to.collection.list_lms_collections()`: **Added**\n* `unified_to.collection.patch_lms_collection()`: **Added**\n* `unified_to.collection.remove_lms_collection()`: **Added**\n* `unified_to.collection.update_lms_collection()`: **Added**\n* `unified_to.lms.create_lms_activity()`: **Added**\n* `unified_to.lms.create_lms_collection()`: **Added**\n* `unified_to.lms.create_lms_content()`: **Added**\n* `unified_to.lms.get_lms_activity()`: **Added**\n* `unified_to.lms.get_lms_collection()`: **Added**\n* `unified_to.lms.get_lms_content()`: **Added**\n* `unified_to.lms.list_lms_activities()`: **Added**\n* `unified_to.lms.list_lms_collections()`: **Added**\n* `unified_to.lms.list_lms_contents()`: **Added**\n* `unified_to.lms.patch_lms_activity()`: **Added**\n* `unified_to.lms.patch_lms_collection()`: **Added**\n* `unified_to.lms.patch_lms_content()`: **Added**\n* `unified_to.lms.remove_lms_activity()`: **Added**\n* `unified_to.lms.remove_lms_collection()`: **Added**\n* `unified_to.lms.remove_lms_content()`: **Added**\n* `unified_to.lms.update_lms_activity()`: **Added**\n* `unified_to.lms.update_lms_collection()`: **Added**\n* `unified_to.lms.update_lms_content()`: **Added**\n* `unified_to.content.create_lms_content()`: **Added**\n* `unified_to.content.get_lms_content()`: **Added**\n* `unified_to.content.list_lms_contents()`: **Added**\n* `unified_to.content.patch_lms_content()`: **Added**\n* `unified_to.content.remove_lms_content()`: **Added**\n* `unified_to.content.update_lms_content()`: **Added**\n* `unified_to.lms.create_lms_class()`: \n  *  `request.lms_class.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.lms.create_lms_course()`: \n  *  `request.lms_course.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.lms.get_lms_class()`:  `response.media[]` **Changed**\n* `unified_to.lms.get_lms_course()`:  `response.media[]` **Changed**\n* `unified_to.lms.list_lms_classes()`:  `response.[].media[]` **Changed**\n* `unified_to.lms.list_lms_courses()`:  `response.[].media[]` **Changed**\n* `unified_to.lms.patch_lms_class()`: \n  *  `request.lms_class.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.lms.patch_lms_course()`: \n  *  `request.lms_course.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.lms.update_lms_class()`: \n  *  `request.lms_class.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.lms.update_lms_course()`: \n  *  `request.lms_course.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.class.create_lms_class()`: \n  *  `request.lms_class.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.class.get_lms_class()`:  `response.media[]` **Changed**\n* `unified_to.class.list_lms_classes()`:  `response.[].media[]` **Changed**\n* `unified_to.class.patch_lms_class()`: \n  *  `request.lms_class.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.class.update_lms_class()`: \n  *  `request.lms_class.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.course.create_lms_course()`: \n  *  `request.lms_course.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.course.get_lms_course()`:  `response.media[]` **Changed**\n* `unified_to.course.list_lms_courses()`:  `response.[].media[]` **Changed**\n* `unified_to.course.patch_lms_course()`: \n  *  `request.lms_course.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.course.update_lms_course()`: \n  *  `request.lms_course.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.unified.get_unified_connection()`:  `response.permissions[]` **Changed**\n* `unified_to.unified.get_unified_webhook()`:  `response.object_type` **Changed**\n* `unified_to.unified.list_unified_connections()`:  `response.[].permissions[]` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.unified.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].object_type` **Changed**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.connection.get_unified_connection()`:  `response.permissions[]` **Changed**\n* `unified_to.connection.list_unified_connections()`:  `response.[].permissions[]` **Changed**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.integration.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.webhook.get_unified_webhook()`:  `response.object_type` **Changed**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].object_type` **Changed**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.report.list_ads_reports()`:  `request` **Changed**\n* `unified_to.ads.list_ads_reports()`:  `request` **Changed**\n* `unified_to.comment.create_task_comment()`: \n  *  `request.task_comment.task_id` **Changed**\n  *  `response.task_id` **Changed**\n* `unified_to.comment.get_task_comment()`:  `response.task_id` **Changed**\n* `unified_to.comment.list_task_comments()`:  `response.[].task_id` **Changed**\n* `unified_to.comment.patch_task_comment()`: \n  *  `request.task_comment.task_id` **Changed**\n  *  `response.task_id` **Changed**\n* `unified_to.comment.update_task_comment()`: \n  *  `request.task_comment.task_id` **Changed**\n  *  `response.task_id` **Changed**\n* `unified_to.task.create_task_comment()`: \n  *  `request.task_comment.task_id` **Changed**\n  *  `response.task_id` **Changed**\n* `unified_to.task.get_task_comment()`:  `response.task_id` **Changed**\n* `unified_to.task.list_task_comments()`:  `response.[].task_id` **Changed**\n* `unified_to.task.patch_task_comment()`: \n  *  `request.task_comment.task_id` **Changed**\n  *  `response.task_id` **Changed**\n* `unified_to.task.update_task_comment()`: \n  *  `request.task_comment.task_id` **Changed**\n  *  `response.task_id` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

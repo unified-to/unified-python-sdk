@@ -30,10 +30,16 @@ class ListAdsReportsQueryParamFields(str, Enum):
 class ListAdsReportsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    ad_id: NotRequired[str]
+    r"""The ad ID to filter by"""
     campaign_id: NotRequired[str]
     r"""The campaign ID to filter by"""
+    end_lt: NotRequired[str]
+    r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListAdsReportsQueryParamFields]]
     r"""Fields to return"""
+    group_id: NotRequired[str]
+    r"""The group ID to filter by (reference to HrisGroup)"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -44,6 +50,8 @@ class ListAdsReportsRequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
+    start_gte: NotRequired[str]
+    r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     type: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -55,17 +63,35 @@ class ListAdsReportsRequest(BaseModel):
     ]
     r"""ID of the connection"""
 
+    ad_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The ad ID to filter by"""
+
     campaign_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""The campaign ID to filter by"""
 
+    end_lt: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     fields: Annotated[
         Optional[List[ListAdsReportsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    group_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The group ID to filter by (reference to HrisGroup)"""
 
     limit: Annotated[
         Optional[float],
@@ -105,6 +131,12 @@ class ListAdsReportsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    start_gte: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     type: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -120,8 +152,11 @@ class ListAdsReportsRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "ad_id",
                 "campaign_id",
+                "end_lt",
                 "fields",
+                "group_id",
                 "limit",
                 "offset",
                 "order",
@@ -129,6 +164,7 @@ class ListAdsReportsRequest(BaseModel):
                 "query",
                 "raw",
                 "sort",
+                "start_gte",
                 "type",
                 "updated_gte",
             ]
