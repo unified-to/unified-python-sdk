@@ -48,6 +48,7 @@ class HrisDeductionTypedDict(TypedDict):
     frequency: NotRequired[HrisDeductionFrequency]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    notes: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     type: NotRequired[HrisDeductionType]
@@ -75,6 +76,8 @@ class HrisDeduction(BaseModel):
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    notes: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -126,6 +129,7 @@ class HrisDeduction(BaseModel):
                 "frequency",
                 "id",
                 "is_active",
+                "notes",
                 "raw",
                 "start_at",
                 "type",

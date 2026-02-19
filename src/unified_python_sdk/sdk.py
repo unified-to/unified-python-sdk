@@ -28,6 +28,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.ats import Ats
     from unified_python_sdk.auth import Auth
     from unified_python_sdk.balancesheet import Balancesheet
+    from unified_python_sdk.bankaccount import Bankaccount
     from unified_python_sdk.benefit import Benefit
     from unified_python_sdk.bill import Bill
     from unified_python_sdk.branch import Branch
@@ -219,6 +220,7 @@ class UnifiedTo(BaseSDK):
     model: "Model"
     prompt: "Prompt"
     hris: "Hris"
+    bankaccount: "Bankaccount"
     benefit: "Benefit"
     deduction: "Deduction"
     device: "Device"
@@ -353,6 +355,7 @@ class UnifiedTo(BaseSDK):
         "model": ("unified_python_sdk.model", "Model"),
         "prompt": ("unified_python_sdk.prompt", "Prompt"),
         "hris": ("unified_python_sdk.hris", "Hris"),
+        "bankaccount": ("unified_python_sdk.bankaccount", "Bankaccount"),
         "benefit": ("unified_python_sdk.benefit", "Benefit"),
         "deduction": ("unified_python_sdk.deduction", "Deduction"),
         "device": ("unified_python_sdk.device", "Device"),

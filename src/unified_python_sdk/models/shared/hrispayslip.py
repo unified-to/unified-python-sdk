@@ -28,7 +28,7 @@ class HrisPayslipTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     deduction: NotRequired[PropertyHrisPayslipDeductionTypedDict]
-    r"""// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
+    r"""The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
     details: NotRequired[List[HrisPayslipDetailTypedDict]]
     end_at: NotRequired[datetime]
     gross_amount: NotRequired[float]
@@ -51,7 +51,7 @@ class HrisPayslip(BaseModel):
     currency: Optional[str] = None
 
     deduction: Optional[PropertyHrisPayslipDeduction] = None
-    r"""// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
+    r"""The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
 
     details: Optional[List[HrisPayslipDetail]] = None
 

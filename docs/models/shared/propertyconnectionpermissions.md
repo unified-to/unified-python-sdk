@@ -135,6 +135,8 @@
 | `HRIS_DEDUCTION_WRITE`           | hris_deduction_write             |
 | `HRIS_BENEFIT_READ`              | hris_benefit_read                |
 | `HRIS_BENEFIT_WRITE`             | hris_benefit_write               |
+| `HRIS_BANKACCOUNT_READ`          | hris_bankaccount_read            |
+| `HRIS_BANKACCOUNT_WRITE`         | hris_bankaccount_write           |
 | `UC_CALL_READ`                   | uc_call_read                     |
 | `UC_CONTACT_READ`                | uc_contact_read                  |
 | `UC_CONTACT_WRITE`               | uc_contact_write                 |

@@ -39,7 +39,7 @@ class PropertyHrisPayslipDeductionType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class PropertyHrisPayslipDeductionTypedDict(TypedDict):
-    r"""// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
+    r"""The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
 
     amount: NotRequired[float]
     benefit_id: NotRequired[str]
@@ -50,6 +50,7 @@ class PropertyHrisPayslipDeductionTypedDict(TypedDict):
     frequency: NotRequired[PropertyHrisPayslipDeductionFrequency]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    notes: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     type: NotRequired[PropertyHrisPayslipDeductionType]
@@ -58,7 +59,7 @@ class PropertyHrisPayslipDeductionTypedDict(TypedDict):
 
 
 class PropertyHrisPayslipDeduction(BaseModel):
-    r"""// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
+    r"""The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
 
     amount: Optional[float] = None
 
@@ -77,6 +78,8 @@ class PropertyHrisPayslipDeduction(BaseModel):
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    notes: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -128,6 +131,7 @@ class PropertyHrisPayslipDeduction(BaseModel):
                 "frequency",
                 "id",
                 "is_active",
+                "notes",
                 "raw",
                 "start_at",
                 "type",

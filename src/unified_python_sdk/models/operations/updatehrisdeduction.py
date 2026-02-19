@@ -30,6 +30,7 @@ class UpdateHrisDeductionQueryParamFields(str, Enum):
     START_AT = "start_at"
     END_AT = "end_at"
     IS_ACTIVE = "is_active"
+    NOTES = "notes"
     RAW = "raw"
 
 

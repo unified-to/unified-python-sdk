@@ -28,7 +28,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.57.5
+  version: 0.57.6
   additionalDependencies:
     dev: {}
     main: {}
@@ -46,6 +46,8 @@ python:
   enableCustomCodeRegions: false
   enumFormat: enum
   fixFlags:
+    asyncPaginationSep2025: false
+    conflictResistantModelImportsFeb2026: false
     responseRequiredSep2024: false
   flattenGlobalSecurity: false
   flattenRequests: false

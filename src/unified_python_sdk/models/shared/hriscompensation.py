@@ -33,6 +33,7 @@ class HrisCompensationTypedDict(TypedDict):
     currency: NotRequired[str]
     frequency: NotRequired[HrisCompensationFrequency]
     group_id: NotRequired[str]
+    notes: NotRequired[str]
     type: NotRequired[HrisCompensationType]
 
 
@@ -44,6 +45,8 @@ class HrisCompensation(BaseModel):
     frequency: Optional[HrisCompensationFrequency] = None
 
     group_id: Optional[str] = None
+
+    notes: Optional[str] = None
 
     type: Optional[HrisCompensationType] = None
 
@@ -67,7 +70,9 @@ class HrisCompensation(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["amount", "currency", "frequency", "group_id", "type"])
+        optional_fields = set(
+            ["amount", "currency", "frequency", "group_id", "notes", "type"]
+        )
         serialized = handler(self)
         m = {}
 
