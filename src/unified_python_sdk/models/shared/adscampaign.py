@@ -49,6 +49,7 @@ class AdsCampaignTypedDict(TypedDict):
     budget_amount: NotRequired[float]
     budget_period: NotRequired[BudgetPeriod]
     created_at: NotRequired[datetime]
+    currency: NotRequired[str]
     end_at: NotRequired[datetime]
     frequency_cap: NotRequired[PropertyAdsCampaignFrequencyCapTypedDict]
     goal: NotRequired[Goal]
@@ -71,6 +72,8 @@ class AdsCampaign(BaseModel):
     budget_period: Optional[BudgetPeriod] = None
 
     created_at: Optional[datetime] = None
+
+    currency: Optional[str] = None
 
     end_at: Optional[datetime] = None
 
@@ -134,6 +137,7 @@ class AdsCampaign(BaseModel):
                 "budget_amount",
                 "budget_period",
                 "created_at",
+                "currency",
                 "end_at",
                 "frequency_cap",
                 "goal",

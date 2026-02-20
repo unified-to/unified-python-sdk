@@ -51,6 +51,7 @@ class PropertyAdsReportMetricsCampaignTypedDict(TypedDict):
     budget_amount: NotRequired[float]
     budget_period: NotRequired[PropertyAdsReportMetricsCampaignBudgetPeriod]
     created_at: NotRequired[datetime]
+    currency: NotRequired[str]
     end_at: NotRequired[datetime]
     frequency_cap: NotRequired[PropertyAdsReportMetricsCampaignFrequencyCapTypedDict]
     goal: NotRequired[PropertyAdsReportMetricsCampaignGoal]
@@ -73,6 +74,8 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
     budget_period: Optional[PropertyAdsReportMetricsCampaignBudgetPeriod] = None
 
     created_at: Optional[datetime] = None
+
+    currency: Optional[str] = None
 
     end_at: Optional[datetime] = None
 
@@ -136,6 +139,7 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
                 "budget_amount",
                 "budget_period",
                 "created_at",
+                "currency",
                 "end_at",
                 "frequency_cap",
                 "goal",

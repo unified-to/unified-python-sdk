@@ -530,6 +530,12 @@ class NativeWebhookTaskID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class NativeWebhookType(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class SearchDomain(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -943,6 +949,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_shipment_id: NotRequired[NativeWebhookShipmentID]
     native_webhook_student_id: NotRequired[NativeWebhookStudentID]
     native_webhook_task_id: NotRequired[NativeWebhookTaskID]
+    native_webhook_type: NotRequired[NativeWebhookType]
     outbound_fields: NotRequired[Dict[str, str]]
     raw_objects: NotRequired[List[str]]
     r"""objects that we map from in the integration"""
@@ -1180,6 +1187,8 @@ class IntegrationSupport(BaseModel):
     native_webhook_student_id: Optional[NativeWebhookStudentID] = None
 
     native_webhook_task_id: Optional[NativeWebhookTaskID] = None
+
+    native_webhook_type: Optional[NativeWebhookType] = None
 
     outbound_fields: Optional[Dict[str, str]] = None
 
@@ -2072,6 +2081,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("native_webhook_type")
+    def serialize_native_webhook_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookType(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("search_domain")
     def serialize_search_domain(self, value):
         if isinstance(value, str):
@@ -2650,6 +2668,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_shipment_id",
                 "native_webhook_student_id",
                 "native_webhook_task_id",
+                "native_webhook_type",
                 "outbound_fields",
                 "raw_objects",
                 "search_domain",

@@ -16,6 +16,7 @@
 | `STATUS`                 | status                   |
 | `TARGETING`              | targeting                |
 | `BID_AMOUNT`             | bid_amount               |
+| `CURRENCY`               | currency                 |
 | `BID_STRATEGY`           | bid_strategy             |
 | `BUDGET_AMOUNT`          | budget_amount            |
 | `BUDGET_PERIOD`          | budget_period            |

@@ -75,6 +75,7 @@ class AdsGroupTypedDict(TypedDict):
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
     creative_ids: NotRequired[List[str]]
+    currency: NotRequired[str]
     end_at: NotRequired[datetime]
     frequency_cap: NotRequired[PropertyAdsGroupFrequencyCapTypedDict]
     has_eu_political_ads: NotRequired[bool]
@@ -114,6 +115,8 @@ class AdsGroup(BaseModel):
     created_at: Optional[datetime] = None
 
     creative_ids: Optional[List[str]] = None
+
+    currency: Optional[str] = None
 
     end_at: Optional[datetime] = None
 
@@ -206,6 +209,7 @@ class AdsGroup(BaseModel):
                 "campaign_id",
                 "created_at",
                 "creative_ids",
+                "currency",
                 "end_at",
                 "frequency_cap",
                 "has_eu_political_ads",
