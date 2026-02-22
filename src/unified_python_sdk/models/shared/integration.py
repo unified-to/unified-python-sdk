@@ -142,6 +142,7 @@ class IntegrationTypedDict(TypedDict):
     featured: NotRequired[bool]
     in_progress: NotRequired[bool]
     is_active: NotRequired[bool]
+    is_hidden: NotRequired[bool]
     logo_url: NotRequired[str]
     partnership: NotRequired[PartnershipTypedDict]
     popularity: NotRequired[float]
@@ -191,6 +192,8 @@ class Integration(BaseModel):
 
     is_active: Optional[bool] = None
 
+    is_hidden: Optional[bool] = None
+
     logo_url: Optional[str] = None
 
     partnership: Optional[Partnership] = None
@@ -234,6 +237,7 @@ class Integration(BaseModel):
                 "featured",
                 "in_progress",
                 "is_active",
+                "is_hidden",
                 "logo_url",
                 "partnership",
                 "popularity",
