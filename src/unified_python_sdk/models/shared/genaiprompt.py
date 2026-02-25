@@ -10,6 +10,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class GenaiPromptTypedDict(TypedDict):
     max_tokens: NotRequired[float]
+    mcp_authorization_token: NotRequired[str]
     mcp_deferred_tools: NotRequired[List[str]]
     mcp_url: NotRequired[str]
     messages: NotRequired[List[GenaiContentTypedDict]]
@@ -22,6 +23,8 @@ class GenaiPromptTypedDict(TypedDict):
 
 class GenaiPrompt(BaseModel):
     max_tokens: Optional[float] = None
+
+    mcp_authorization_token: Optional[str] = None
 
     mcp_deferred_tools: Optional[List[str]] = None
 
@@ -44,6 +47,7 @@ class GenaiPrompt(BaseModel):
         optional_fields = set(
             [
                 "max_tokens",
+                "mcp_authorization_token",
                 "mcp_deferred_tools",
                 "mcp_url",
                 "messages",

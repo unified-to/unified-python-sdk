@@ -15,4 +15,5 @@
 | `TAXRATE_ID`  | taxrate_id    |
 | `DESCRIPTION` | description   |
 | `POSTED_AT`   | posted_at     |
+| `SOURCE`      | source        |
 | `RAW`         | raw           |

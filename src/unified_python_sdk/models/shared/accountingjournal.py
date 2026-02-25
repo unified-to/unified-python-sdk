@@ -22,6 +22,7 @@ class AccountingJournalTypedDict(TypedDict):
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
+    source: NotRequired[str]
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -45,6 +46,8 @@ class AccountingJournal(BaseModel):
 
     reference: Optional[str] = None
 
+    source: Optional[str] = None
+
     tax_amount: Optional[float] = None
 
     taxrate_id: Optional[str] = None
@@ -63,6 +66,7 @@ class AccountingJournal(BaseModel):
                 "posted_at",
                 "raw",
                 "reference",
+                "source",
                 "tax_amount",
                 "taxrate_id",
                 "updated_at",
