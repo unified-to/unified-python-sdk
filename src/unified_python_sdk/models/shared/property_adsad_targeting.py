@@ -10,10 +10,14 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class PropertyAdsAdTargetingTypedDict(TypedDict):
     age_ranges: NotRequired[List[str]]
     audiences: NotRequired[List[str]]
+    behaviors: NotRequired[List[str]]
     companies: NotRequired[List[str]]
     company_sizes: NotRequired[List[str]]
+    custom_audiences: NotRequired[List[str]]
     degrees: NotRequired[List[str]]
     devices: NotRequired[List[str]]
+    excluded_audiences: NotRequired[List[str]]
+    excluded_locations: NotRequired[List[str]]
     genders: NotRequired[List[str]]
     industries: NotRequired[List[str]]
     interests: NotRequired[List[str]]
@@ -33,13 +37,21 @@ class PropertyAdsAdTargeting(BaseModel):
 
     audiences: Optional[List[str]] = None
 
+    behaviors: Optional[List[str]] = None
+
     companies: Optional[List[str]] = None
 
     company_sizes: Optional[List[str]] = None
 
+    custom_audiences: Optional[List[str]] = None
+
     degrees: Optional[List[str]] = None
 
     devices: Optional[List[str]] = None
+
+    excluded_audiences: Optional[List[str]] = None
+
+    excluded_locations: Optional[List[str]] = None
 
     genders: Optional[List[str]] = None
 
@@ -71,10 +83,14 @@ class PropertyAdsAdTargeting(BaseModel):
             [
                 "age_ranges",
                 "audiences",
+                "behaviors",
                 "companies",
                 "company_sizes",
+                "custom_audiences",
                 "degrees",
                 "devices",
+                "excluded_audiences",
+                "excluded_locations",
                 "genders",
                 "industries",
                 "interests",

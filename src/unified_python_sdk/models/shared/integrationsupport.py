@@ -44,6 +44,12 @@ class ListBenefitID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListBillID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -578,6 +584,12 @@ class VirtualWebhookApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookBillID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -692,6 +704,12 @@ class VirtualWebhookGroupID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookInvoiceID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookItemID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -723,6 +741,12 @@ class VirtualWebhookLeadID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookLimit(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookLinkID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -867,6 +891,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_ad_id: NotRequired[ListAdID]
     list_application_id: NotRequired[ListApplicationID]
     list_benefit_id: NotRequired[ListBenefitID]
+    list_bill_id: NotRequired[ListBillID]
     list_branch_id: NotRequired[ListBranchID]
     list_calendar_id: NotRequired[ListCalendarID]
     list_call_id: NotRequired[ListCallID]
@@ -961,6 +986,8 @@ class IntegrationSupportTypedDict(TypedDict):
     slow_fields: NotRequired[List[str]]
     virtual_webhook_ad_id: NotRequired[VirtualWebhookAdID]
     virtual_webhook_application_id: NotRequired[VirtualWebhookApplicationID]
+    virtual_webhook_benefit_id: NotRequired[str]
+    virtual_webhook_bill_id: NotRequired[VirtualWebhookBillID]
     virtual_webhook_branch_id: NotRequired[VirtualWebhookBranchID]
     virtual_webhook_calendar_id: NotRequired[VirtualWebhookCalendarID]
     virtual_webhook_call_id: NotRequired[VirtualWebhookCallID]
@@ -980,12 +1007,14 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_fields: NotRequired[VirtualWebhookFields]
     virtual_webhook_form_id: NotRequired[VirtualWebhookFormID]
     virtual_webhook_group_id: NotRequired[VirtualWebhookGroupID]
+    virtual_webhook_invoice_id: NotRequired[VirtualWebhookInvoiceID]
     virtual_webhook_item_id: NotRequired[VirtualWebhookItemID]
     virtual_webhook_item_variant_id: NotRequired[VirtualWebhookItemVariantID]
     virtual_webhook_job_id: NotRequired[VirtualWebhookJobID]
     virtual_webhook_label_id: NotRequired[VirtualWebhookLabelID]
     virtual_webhook_lead_id: NotRequired[VirtualWebhookLeadID]
     virtual_webhook_limit: NotRequired[VirtualWebhookLimit]
+    virtual_webhook_link_id: NotRequired[VirtualWebhookLinkID]
     virtual_webhook_list_id: NotRequired[VirtualWebhookListID]
     virtual_webhook_location_id: NotRequired[VirtualWebhookLocationID]
     virtual_webhook_member_id: NotRequired[VirtualWebhookMemberID]
@@ -1023,6 +1052,8 @@ class IntegrationSupport(BaseModel):
     list_application_id: Optional[ListApplicationID] = None
 
     list_benefit_id: Optional[ListBenefitID] = None
+
+    list_bill_id: Optional[ListBillID] = None
 
     list_branch_id: Optional[ListBranchID] = None
 
@@ -1211,6 +1242,10 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_application_id: Optional[VirtualWebhookApplicationID] = None
 
+    virtual_webhook_benefit_id: Optional[str] = None
+
+    virtual_webhook_bill_id: Optional[VirtualWebhookBillID] = None
+
     virtual_webhook_branch_id: Optional[VirtualWebhookBranchID] = None
 
     virtual_webhook_calendar_id: Optional[VirtualWebhookCalendarID] = None
@@ -1249,6 +1284,8 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_group_id: Optional[VirtualWebhookGroupID] = None
 
+    virtual_webhook_invoice_id: Optional[VirtualWebhookInvoiceID] = None
+
     virtual_webhook_item_id: Optional[VirtualWebhookItemID] = None
 
     virtual_webhook_item_variant_id: Optional[VirtualWebhookItemVariantID] = None
@@ -1260,6 +1297,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_lead_id: Optional[VirtualWebhookLeadID] = None
 
     virtual_webhook_limit: Optional[VirtualWebhookLimit] = None
+
+    virtual_webhook_link_id: Optional[VirtualWebhookLinkID] = None
 
     virtual_webhook_list_id: Optional[VirtualWebhookListID] = None
 
@@ -1348,6 +1387,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListBenefitID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_bill_id")
+    def serialize_list_bill_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListBillID(value)
             except ValueError:
                 return value
         return value
@@ -2153,6 +2201,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_bill_id")
+    def serialize_virtual_webhook_bill_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookBillID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_branch_id")
     def serialize_virtual_webhook_branch_id(self, value):
         if isinstance(value, str):
@@ -2324,6 +2381,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_invoice_id")
+    def serialize_virtual_webhook_invoice_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookInvoiceID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_item_id")
     def serialize_virtual_webhook_item_id(self, value):
         if isinstance(value, str):
@@ -2374,6 +2440,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookLimit(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_link_id")
+    def serialize_virtual_webhook_link_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookLinkID(value)
             except ValueError:
                 return value
         return value
@@ -2586,6 +2661,7 @@ class IntegrationSupport(BaseModel):
                 "list_ad_id",
                 "list_application_id",
                 "list_benefit_id",
+                "list_bill_id",
                 "list_branch_id",
                 "list_calendar_id",
                 "list_call_id",
@@ -2679,6 +2755,8 @@ class IntegrationSupport(BaseModel):
                 "slow_fields",
                 "virtual_webhook_ad_id",
                 "virtual_webhook_application_id",
+                "virtual_webhook_benefit_id",
+                "virtual_webhook_bill_id",
                 "virtual_webhook_branch_id",
                 "virtual_webhook_calendar_id",
                 "virtual_webhook_call_id",
@@ -2698,12 +2776,14 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_fields",
                 "virtual_webhook_form_id",
                 "virtual_webhook_group_id",
+                "virtual_webhook_invoice_id",
                 "virtual_webhook_item_id",
                 "virtual_webhook_item_variant_id",
                 "virtual_webhook_job_id",
                 "virtual_webhook_label_id",
                 "virtual_webhook_lead_id",
                 "virtual_webhook_limit",
+                "virtual_webhook_link_id",
                 "virtual_webhook_list_id",
                 "virtual_webhook_location_id",
                 "virtual_webhook_member_id",

@@ -59,6 +59,7 @@ class PropertyAdsInsertionorderBidStrategyTypedDict(TypedDict):
         PropertyAdsInsertionorderBidStrategyPerformanceGoalType
     ]
     raise_bid_for_deals: NotRequired[bool]
+    target_roas: NotRequired[float]
     youtube_and_partners_type: NotRequired[
         PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType
     ]
@@ -83,6 +84,8 @@ class PropertyAdsInsertionorderBidStrategy(BaseModel):
     ] = None
 
     raise_bid_for_deals: Optional[bool] = None
+
+    target_roas: Optional[float] = None
 
     youtube_and_partners_type: Optional[
         PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType
@@ -133,6 +136,7 @@ class PropertyAdsInsertionorderBidStrategy(BaseModel):
                 "performance_goal_amount",
                 "performance_goal_type",
                 "raise_bid_for_deals",
+                "target_roas",
                 "youtube_and_partners_type",
                 "youtube_and_partners_value",
             ]

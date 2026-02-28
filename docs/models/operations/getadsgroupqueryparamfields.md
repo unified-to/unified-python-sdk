@@ -16,7 +16,6 @@
 | `STATUS`                 | status                   |
 | `TARGETING`              | targeting                |
 | `BID_AMOUNT`             | bid_amount               |
-| `CURRENCY`               | currency                 |
 | `BID_STRATEGY`           | bid_strategy             |
 | `BUDGET_AMOUNT`          | budget_amount            |
 | `BUDGET_PERIOD`          | budget_period            |
@@ -30,5 +29,11 @@
 | `PACING`                 | pacing                   |
 | `FREQUENCY_CAP`          | frequency_cap            |
 | `CREATIVE_IDS`           | creative_ids             |
-| `IS_ACTIVE`              | is_active                |
+| `OPTIMIZATION_GOAL`      | optimization_goal        |
+| `BILLING_EVENT`          | billing_event            |
+| `DAILY_SPEND_CAP`        | daily_spend_cap          |
+| `LIFETIME_SPEND_CAP`     | lifetime_spend_cap       |
+| `AD_GROUP_TYPE`          | ad_group_type            |
+| `CURRENCY`               | currency                 |
+| `METADATA`               | metadata                 |
 | `RAW`                    | raw                      |

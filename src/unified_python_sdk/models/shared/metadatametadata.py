@@ -34,6 +34,7 @@ class MetadataMetadataTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     format_: NotRequired[MetadataMetadataFormat]
     id: NotRequired[str]
+    is_required: NotRequired[bool]
     objects: NotRequired[Dict[str, Any]]
     options: NotRequired[List[str]]
     original_format: NotRequired[str]
@@ -54,6 +55,8 @@ class MetadataMetadata(BaseModel):
     ] = None
 
     id: Optional[str] = None
+
+    is_required: Optional[bool] = None
 
     objects: Optional[Dict[str, Any]] = None
 
@@ -83,6 +86,7 @@ class MetadataMetadata(BaseModel):
                 "created_at",
                 "format",
                 "id",
+                "is_required",
                 "objects",
                 "options",
                 "original_format",

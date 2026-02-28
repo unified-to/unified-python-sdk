@@ -10,7 +10,9 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class PerformanceGoalType(str, Enum, metaclass=utils.OpenEnumMeta):
+class PropertyAdsGroupBidStrategyPerformanceGoalType(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
     UNSPECIFIED = "UNSPECIFIED"
     CPA = "CPA"
     CPC = "CPC"
@@ -29,7 +31,9 @@ class PropertyAdsGroupBidStrategyType(str, Enum, metaclass=utils.OpenEnumMeta):
     YOUTUBE_AND_PARTNERS = "YOUTUBE_AND_PARTNERS"
 
 
-class YoutubeAndPartnersType(str, Enum, metaclass=utils.OpenEnumMeta):
+class PropertyAdsGroupBidStrategyYoutubeAndPartnersType(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
     UNSPECIFIED = "UNSPECIFIED"
     MANUAL_CPV = "MANUAL_CPV"
     MANUAL_CPM = "MANUAL_CPM"
@@ -51,9 +55,12 @@ class PropertyAdsGroupBidStrategyTypedDict(TypedDict):
     fixed_bid_amount: NotRequired[float]
     max_average_cpm_bid_amount: NotRequired[float]
     performance_goal_amount: NotRequired[float]
-    performance_goal_type: NotRequired[PerformanceGoalType]
+    performance_goal_type: NotRequired[PropertyAdsGroupBidStrategyPerformanceGoalType]
     raise_bid_for_deals: NotRequired[bool]
-    youtube_and_partners_type: NotRequired[YoutubeAndPartnersType]
+    target_roas: NotRequired[float]
+    youtube_and_partners_type: NotRequired[
+        PropertyAdsGroupBidStrategyYoutubeAndPartnersType
+    ]
     youtube_and_partners_value: NotRequired[str]
 
 
@@ -70,11 +77,17 @@ class PropertyAdsGroupBidStrategy(BaseModel):
 
     performance_goal_amount: Optional[float] = None
 
-    performance_goal_type: Optional[PerformanceGoalType] = None
+    performance_goal_type: Optional[PropertyAdsGroupBidStrategyPerformanceGoalType] = (
+        None
+    )
 
     raise_bid_for_deals: Optional[bool] = None
 
-    youtube_and_partners_type: Optional[YoutubeAndPartnersType] = None
+    target_roas: Optional[float] = None
+
+    youtube_and_partners_type: Optional[
+        PropertyAdsGroupBidStrategyYoutubeAndPartnersType
+    ] = None
 
     youtube_and_partners_value: Optional[str] = None
 
@@ -82,7 +95,7 @@ class PropertyAdsGroupBidStrategy(BaseModel):
     def serialize_performance_goal_type(self, value):
         if isinstance(value, str):
             try:
-                return shared.PerformanceGoalType(value)
+                return shared.PropertyAdsGroupBidStrategyPerformanceGoalType(value)
             except ValueError:
                 return value
         return value
@@ -100,7 +113,7 @@ class PropertyAdsGroupBidStrategy(BaseModel):
     def serialize_youtube_and_partners_type(self, value):
         if isinstance(value, str):
             try:
-                return shared.YoutubeAndPartnersType(value)
+                return shared.PropertyAdsGroupBidStrategyYoutubeAndPartnersType(value)
             except ValueError:
                 return value
         return value
@@ -115,6 +128,7 @@ class PropertyAdsGroupBidStrategy(BaseModel):
                 "performance_goal_amount",
                 "performance_goal_type",
                 "raise_bid_for_deals",
+                "target_roas",
                 "youtube_and_partners_type",
                 "youtube_and_partners_value",
             ]

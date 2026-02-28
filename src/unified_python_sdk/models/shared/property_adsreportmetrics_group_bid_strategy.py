@@ -61,6 +61,7 @@ class PropertyAdsReportMetricsGroupBidStrategyTypedDict(TypedDict):
         PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType
     ]
     raise_bid_for_deals: NotRequired[bool]
+    target_roas: NotRequired[float]
     youtube_and_partners_type: NotRequired[
         PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType
     ]
@@ -85,6 +86,8 @@ class PropertyAdsReportMetricsGroupBidStrategy(BaseModel):
     ] = None
 
     raise_bid_for_deals: Optional[bool] = None
+
+    target_roas: Optional[float] = None
 
     youtube_and_partners_type: Optional[
         PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType
@@ -135,6 +138,7 @@ class PropertyAdsReportMetricsGroupBidStrategy(BaseModel):
                 "performance_goal_amount",
                 "performance_goal_type",
                 "raise_bid_for_deals",
+                "target_roas",
                 "youtube_and_partners_type",
                 "youtube_and_partners_value",
             ]

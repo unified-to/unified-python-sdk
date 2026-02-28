@@ -2,14 +2,23 @@
 
 from __future__ import annotations
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class PaymentPaymentType(str, Enum, metaclass=utils.OpenEnumMeta):
+    INVOICE = "INVOICE"
+    BILL = "BILL"
 
 
 class PaymentPaymentTypedDict(TypedDict):
     account_id: NotRequired[str]
+    bill_id: NotRequired[str]
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
@@ -20,11 +29,14 @@ class PaymentPaymentTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     total_amount: NotRequired[float]
+    type: NotRequired[PaymentPaymentType]
     updated_at: NotRequired[datetime]
 
 
 class PaymentPayment(BaseModel):
     account_id: Optional[str] = None
+
+    bill_id: Optional[str] = None
 
     contact_id: Optional[str] = None
 
@@ -46,13 +58,25 @@ class PaymentPayment(BaseModel):
 
     total_amount: Optional[float] = None
 
+    type: Optional[PaymentPaymentType] = None
+
     updated_at: Optional[datetime] = None
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PaymentPaymentType(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
             [
                 "account_id",
+                "bill_id",
                 "contact_id",
                 "created_at",
                 "currency",
@@ -63,6 +87,7 @@ class PaymentPayment(BaseModel):
                 "raw",
                 "reference",
                 "total_amount",
+                "type",
                 "updated_at",
             ]
         )

@@ -27,9 +27,9 @@ value: float = /* values here */
 value: bool = /* values here */
 ```
 
-### `List[shared.Five]`
+### `List[shared.AtsMetadata5]`
 
 ```python
-value: List[shared.Five] = /* values here */
+value: List[shared.AtsMetadata5] = /* values here */
 ```
 

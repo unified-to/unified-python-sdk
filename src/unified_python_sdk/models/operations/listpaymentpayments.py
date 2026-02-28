@@ -21,10 +21,12 @@ class ListPaymentPaymentsQueryParamFields(str, Enum):
     UPDATED_AT = "updated_at"
     TOTAL_AMOUNT = "total_amount"
     CONTACT_ID = "contact_id"
+    TYPE = "type"
     PAYMENT_METHOD = "payment_method"
     CURRENCY = "currency"
     NOTES = "notes"
     INVOICE_ID = "invoice_id"
+    BILL_ID = "bill_id"
     ACCOUNT_ID = "account_id"
     REFERENCE = "reference"
     RAW = "raw"
@@ -33,6 +35,8 @@ class ListPaymentPaymentsQueryParamFields(str, Enum):
 class ListPaymentPaymentsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    bill_id: NotRequired[str]
+    r"""The bill ID to filter by"""
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListPaymentPaymentsQueryParamFields]]
@@ -40,6 +44,8 @@ class ListPaymentPaymentsRequestTypedDict(TypedDict):
     invoice_id: NotRequired[str]
     r"""The invoice ID to filter by (reference to AccountingInvoice)"""
     limit: NotRequired[float]
+    link_id: NotRequired[str]
+    r"""The link ID to filter by"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
@@ -47,6 +53,8 @@ class ListPaymentPaymentsRequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
+    type: NotRequired[str]
+    r"""The type to filter by"""
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -56,6 +64,12 @@ class ListPaymentPaymentsRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    bill_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The bill ID to filter by"""
 
     contact_id: Annotated[
         Optional[str],
@@ -79,6 +93,12 @@ class ListPaymentPaymentsRequest(BaseModel):
         Optional[float],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    link_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The link ID to filter by"""
 
     offset: Annotated[
         Optional[float],
@@ -107,6 +127,12 @@ class ListPaymentPaymentsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    type: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The type to filter by"""
+
     updated_gte: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -117,15 +143,18 @@ class ListPaymentPaymentsRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "bill_id",
                 "contact_id",
                 "fields",
                 "invoice_id",
                 "limit",
+                "link_id",
                 "offset",
                 "order",
                 "query",
                 "raw",
                 "sort",
+                "type",
                 "updated_gte",
             ]
         )

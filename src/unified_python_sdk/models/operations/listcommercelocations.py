@@ -38,7 +38,7 @@ class ListCommerceLocationsRequestTypedDict(TypedDict):
     offset: NotRequired[float]
     order: NotRequired[str]
     org_id: NotRequired[str]
-    r"""The org ID to filter by"""
+    r"""The org ID to filter by (reference to AccountingOrganization)"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -79,7 +79,7 @@ class ListCommerceLocationsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""The org ID to filter by"""
+    r"""The org ID to filter by (reference to AccountingOrganization)"""
 
     query: Annotated[
         Optional[str],
