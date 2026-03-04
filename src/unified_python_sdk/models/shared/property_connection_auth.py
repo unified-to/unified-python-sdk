@@ -14,6 +14,7 @@ class PropertyConnectionAuthTypedDict(TypedDict):
     access_token: NotRequired[str]
     api_url: NotRequired[str]
     app_id: NotRequired[str]
+    audience: NotRequired[str]
     authorize_url: NotRequired[str]
     client_id: NotRequired[str]
     client_secret: NotRequired[str]
@@ -47,6 +48,8 @@ class PropertyConnectionAuth(BaseModel):
     api_url: Optional[str] = None
 
     app_id: Optional[str] = None
+
+    audience: Optional[str] = None
 
     authorize_url: Optional[str] = None
 
@@ -100,6 +103,7 @@ class PropertyConnectionAuth(BaseModel):
                 "access_token",
                 "api_url",
                 "app_id",
+                "audience",
                 "authorize_url",
                 "client_id",
                 "client_secret",

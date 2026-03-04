@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: c49ff261f475ff6eee95b4805bd5de3f
+  docChecksum: d0897cf78de3efc63587534d3e4d713b
   docVersion: "1.0"
-  speakeasyVersion: 1.734.1
-  generationVersion: 2.845.12
-  releaseVersion: 0.57.11
-  configChecksum: df65f6aec86c408aa1556a9210d9eabd
+  speakeasyVersion: 1.739.2
+  generationVersion: 2.846.4
+  releaseVersion: 0.57.12
+  configChecksum: 4ae8105a28ed1309d94d4931d9e8ed0a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 66a5bf0d-1bd5-4d79-9eb7-92121f0ac26d
-  pristine_commit_hash: a95bc403670b58da47fe341350b826f7ab7d9134
-  pristine_tree_hash: ba747441c0db7613c1e43f6429e7b5b4affffbc1
+  generation_id: 4db5b297-4d3f-420f-b078-51c31e1909c6
+  pristine_commit_hash: b7effced9e0d6014aa597245492e06668f9c828c
+  pristine_tree_hash: bbac1a3926c6fa849a79d11f4af45edb77903f10
 features:
   python:
     acceptHeaders: 3.0.0
@@ -9362,8 +9362,8 @@ trackedFiles:
     pristine_git_object: 4dba0a103183568342f600c5cb36094dbb53c235
   docs/models/shared/propertyconnectionauth.md:
     id: 5aa773fd5253
-    last_write_checksum: sha1:bc0a7a2e442c0bbfdeeaf9bde51c5d1e7bf38d53
-    pristine_git_object: b19179d0a7a0da4800685cb718d7574de91bf9c1
+    last_write_checksum: sha1:bcbd69f0f1f6eb2c3fd4747ea16d91c409f5f5da
+    pristine_git_object: 204a337c804dc4c34a6a037174308c4227798cb6
   docs/models/shared/propertyconnectioncategories.md:
     id: 3f96b382eaea
     last_write_checksum: sha1:6128380a777b07819daa929582dbd5a97dd4ccad
@@ -10838,8 +10838,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:18909fab447435612857b3f967e8020ee5fd1f43
-    pristine_git_object: ce3a893edfdf1b50f741b3466f54d7c1f61eb797
+    last_write_checksum: sha1:0ec17dacd3218469ad52d909544a1227413f0cb9
+    pristine_git_object: 3fc84831092769e0fe35a19d2616bd963edcee25
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -10866,8 +10866,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:9b234357564e351e80b66c04cc1ae00b872f945a
-    pristine_git_object: 3f18785dbd3f07aa38f6a9255a14bf9c9c4658ae
+    last_write_checksum: sha1:55323eaaa3e5e8b3fdfd17305ead1f09797e98af
+    pristine_git_object: c62c48e8db2545bf3d554373305287c75cc7bb64
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -14766,8 +14766,8 @@ trackedFiles:
     pristine_git_object: f86f31f3592e9838810e54b6db8e5935c7c4cb25
   src/unified_python_sdk/models/shared/property_connection_auth.py:
     id: d1d288eb2ea5
-    last_write_checksum: sha1:8a880bc5afb54102114432e531b95a3feb79b9de
-    pristine_git_object: 6acd38173ec24385d0ed3d658d3d90e388da719d
+    last_write_checksum: sha1:e299158100dc338d3e66269ed0db6422f0371b23
+    pristine_git_object: b87b6b348af6a353c993c300cdd08428f5eaf601
   src/unified_python_sdk/models/shared/property_connection_categories.py:
     id: 5879d747c68d
     last_write_checksum: sha1:e6df0c1289ccdd69a7cea31d30d50205f4c6762d
@@ -21419,7 +21419,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.ads.update_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.group.update_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.create_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.group.patch_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.create_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.group.list_ads_groups()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.group.get_ads_group()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.get_ads_campaign()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.group.create_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.get_ads_group()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.update_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.patch_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_campaigns()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.list_ads_campaigns()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_groups()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.report.list_ads_reports()`:  `response.[].metrics[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_reports()`:  `response.[].metrics[]` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.get_ads_campaign()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.patch_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.create_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.patch_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.update_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_insertionorders()`:  `response.[].bid_strategy.target_roas` **Added**\n* `unified_to.ads.get_ads_ad()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.update_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.patch_ads_insertionorder()`: \n  *  `request.ads_insertionorder.bid_strategy.target_roas` **Added**\n  *  `response.bid_strategy.target_roas` **Added**\n* `unified_to.ads.update_ads_insertionorder()`: \n  *  `request.ads_insertionorder.bid_strategy.target_roas` **Added**\n  *  `response.bid_strategy.target_roas` **Added**\n* `unified_to.ad.create_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ad.get_ads_ad()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.ad.list_ads_ads()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.ad.patch_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ad.update_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.patch_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.patch_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.list_ads_creatives()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.ads.list_ads_ads()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.ads.get_ads_insertionorder()`:  `response.bid_strategy.target_roas` **Added**\n* `unified_to.creative.create_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.creative.get_ads_creative()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.creative.list_ads_creatives()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.creative.patch_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.creative.update_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.get_ads_creative()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.update_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.create_ads_insertionorder()`: \n  *  `request.ads_insertionorder.bid_strategy.target_roas` **Added**\n  *  `response.bid_strategy.target_roas` **Added**\n* `unified_to.ads.create_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.create_ads_ad()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.insertionorder.create_ads_insertionorder()`: \n  *  `request.ads_insertionorder.bid_strategy.target_roas` **Added**\n  *  `response.bid_strategy.target_roas` **Added**\n* `unified_to.insertionorder.get_ads_insertionorder()`:  `response.bid_strategy.target_roas` **Added**\n* `unified_to.insertionorder.list_ads_insertionorders()`:  `response.[].bid_strategy.target_roas` **Added**\n* `unified_to.insertionorder.patch_ads_insertionorder()`: \n  *  `request.ads_insertionorder.bid_strategy.target_roas` **Added**\n  *  `response.bid_strategy.target_roas` **Added**\n* `unified_to.insertionorder.update_ads_insertionorder()`: \n  *  `request.ads_insertionorder.bid_strategy.target_roas` **Added**\n  *  `response.bid_strategy.target_roas` **Added**\n* `unified_to.metadata.create_metadata_metadata()`: \n  *  `request` **Changed**\n  *  `response.is_required` **Added**\n* `unified_to.metadata.get_metadata_metadata()`: \n  *  `request.fields` **Changed**\n  *  `response.is_required` **Added**\n* `unified_to.metadata.list_metadata_metadatas()`: \n  *  `request.fields` **Changed**\n  *  `response.[].is_required` **Added**\n* `unified_to.metadata.patch_metadata_metadata()`: \n  *  `request` **Changed**\n  *  `response.is_required` **Added**\n* `unified_to.metadata.update_metadata_metadata()`: \n  *  `request` **Changed**\n  *  `response.is_required` **Added**\n* `unified_to.payment.create_payment_payment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.payment.get_payment_payment()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.payment.list_payment_payments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.payment.patch_payment_payment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.payment.update_payment_payment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.unified.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.integration.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.auth.audience` **Added**\n  *  `response.auth.audience` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.auth.audience` **Added**\n* `unified_to.unified.list_unified_connections()`:  `response.[].auth.audience` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.auth.audience` **Added**\n  *  `response.auth.audience` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.auth.audience` **Added**\n  *  `response.auth.audience` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.auth.audience` **Added**\n  *  `response.auth.audience` **Added**\n* `unified_to.connection.get_unified_connection()`:  `response.auth.audience` **Added**\n* `unified_to.connection.list_unified_connections()`:  `response.[].auth.audience` **Added**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.auth.audience` **Added**\n  *  `response.auth.audience` **Added**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.auth.audience` **Added**\n  *  `response.auth.audience` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
