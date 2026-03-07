@@ -1,5 +1,15 @@
 # TaskMetadataFormat
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import TaskMetadataFormat
+
+value = TaskMetadataFormat.TEXT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

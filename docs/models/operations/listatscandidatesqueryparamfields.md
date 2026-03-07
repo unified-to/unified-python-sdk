@@ -1,5 +1,13 @@
 # ListAtsCandidatesQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListAtsCandidatesQueryParamFields
+
+value = ListAtsCandidatesQueryParamFields.ID
+```
+
 
 ## Values
 

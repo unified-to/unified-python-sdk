@@ -1,5 +1,13 @@
 # PatchCrmLeadQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCrmLeadQueryParamFields
+
+value = PatchCrmLeadQueryParamFields.ID
+```
+
 
 ## Values
 

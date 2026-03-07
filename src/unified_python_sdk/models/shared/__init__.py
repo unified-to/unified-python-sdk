@@ -764,7 +764,11 @@ if TYPE_CHECKING:
         MarketingEmailTypedDict,
     )
     from .marketinglist import MarketingList, MarketingListTypedDict
-    from .marketingmember import MarketingMember, MarketingMemberTypedDict
+    from .marketingmember import (
+        MarketingMember,
+        MarketingMemberStatus,
+        MarketingMemberTypedDict,
+    )
     from .marketingreport import MarketingReport, MarketingReportTypedDict
     from .marketingreportlink import MarketingReportLink, MarketingReportLinkTypedDict
     from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDict
@@ -2011,6 +2015,7 @@ __all__ = [
     "MarketingList",
     "MarketingListTypedDict",
     "MarketingMember",
+    "MarketingMemberStatus",
     "MarketingMemberTypedDict",
     "MarketingReport",
     "MarketingReportLink",
@@ -3257,6 +3262,7 @@ _dynamic_imports: dict[str, str] = {
     "MarketingList": ".marketinglist",
     "MarketingListTypedDict": ".marketinglist",
     "MarketingMember": ".marketingmember",
+    "MarketingMemberStatus": ".marketingmember",
     "MarketingMemberTypedDict": ".marketingmember",
     "MarketingReport": ".marketingreport",
     "MarketingReportTypedDict": ".marketingreport",

@@ -1,5 +1,13 @@
 # GetPaymentLinkQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetPaymentLinkQueryParamFields
+
+value = GetPaymentLinkQueryParamFields.ID
+```
+
 
 ## Values
 

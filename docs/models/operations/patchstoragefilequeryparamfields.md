@@ -1,5 +1,13 @@
 # PatchStorageFileQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchStorageFileQueryParamFields
+
+value = PatchStorageFileQueryParamFields.ID
+```
+
 
 ## Values
 

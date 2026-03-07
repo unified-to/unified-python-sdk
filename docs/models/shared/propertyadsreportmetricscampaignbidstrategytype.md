@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsCampaignBidStrategyType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsCampaignBidStrategyType
+
+value = PropertyAdsReportMetricsCampaignBidStrategyType.FIXED_BID
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

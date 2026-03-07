@@ -1,5 +1,13 @@
 # CreateCrmContactQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateCrmContactQueryParamFields
+
+value = CreateCrmContactQueryParamFields.ID
+```
+
 
 ## Values
 

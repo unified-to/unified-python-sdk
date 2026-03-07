@@ -1,5 +1,15 @@
 # HrisGroupType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HrisGroupType
+
+value = HrisGroupType.TEAM
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

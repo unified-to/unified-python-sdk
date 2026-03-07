@@ -1,5 +1,15 @@
 # AtsDocumentType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AtsDocumentType
+
+value = AtsDocumentType.RESUME
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

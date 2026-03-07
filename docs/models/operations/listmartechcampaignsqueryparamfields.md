@@ -1,5 +1,13 @@
 # ListMartechCampaignsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListMartechCampaignsQueryParamFields
+
+value = ListMartechCampaignsQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchVerificationRequestQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchVerificationRequestQueryParamFields
+
+value = PatchVerificationRequestQueryParamFields.ID
+```
+
 
 ## Values
 

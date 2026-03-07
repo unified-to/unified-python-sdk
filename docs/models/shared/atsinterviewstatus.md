@@ -1,5 +1,15 @@
 # AtsInterviewStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AtsInterviewStatus
+
+value = AtsInterviewStatus.SCHEDULED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # PropertyIntegrationCategories
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyIntegrationCategories
+
+value = PropertyIntegrationCategories.PASSTHROUGH
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

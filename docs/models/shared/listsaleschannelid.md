@@ -1,5 +1,15 @@
 # ListSaleschannelID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListSaleschannelID
+
+value = ListSaleschannelID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

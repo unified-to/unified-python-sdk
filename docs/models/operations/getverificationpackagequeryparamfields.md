@@ -1,5 +1,13 @@
 # GetVerificationPackageQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetVerificationPackageQueryParamFields
+
+value = GetVerificationPackageQueryParamFields.ID
+```
+
 
 ## Values
 

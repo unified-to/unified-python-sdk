@@ -1,5 +1,13 @@
 # UpdateCrmLeadQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateCrmLeadQueryParamFields
+
+value = UpdateCrmLeadQueryParamFields.ID
+```
+
 
 ## Values
 

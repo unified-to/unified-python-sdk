@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsGroupBudgetAllocationType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsGroupBudgetAllocationType
+
+value = PropertyAdsReportMetricsGroupBudgetAllocationType.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # CoverageLevel
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import CoverageLevel
+
+value = CoverageLevel.EMPLOYEE_ONLY
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

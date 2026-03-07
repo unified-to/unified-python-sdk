@@ -1,5 +1,13 @@
 # CreateCommerceItemQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateCommerceItemQueryParamFields
+
+value = CreateCommerceItemQueryParamFields.ID
+```
+
 
 ## Values
 

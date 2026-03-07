@@ -1,5 +1,13 @@
 # GetAtsApplicationQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAtsApplicationQueryParamFields
+
+value = GetAtsApplicationQueryParamFields.ID
+```
+
 
 ## Values
 

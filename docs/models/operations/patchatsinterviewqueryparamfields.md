@@ -1,5 +1,13 @@
 # PatchAtsInterviewQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAtsInterviewQueryParamFields
+
+value = PatchAtsInterviewQueryParamFields.ID
+```
+
 
 ## Values
 

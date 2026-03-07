@@ -1,5 +1,15 @@
 # ListJobID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListJobID
+
+value = ListJobID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

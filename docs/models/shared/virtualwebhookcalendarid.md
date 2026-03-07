@@ -1,5 +1,15 @@
 # VirtualWebhookCalendarID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import VirtualWebhookCalendarID
+
+value = VirtualWebhookCalendarID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchCommerceSaleschannelQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCommerceSaleschannelQueryParamFields
+
+value = PatchCommerceSaleschannelQueryParamFields.ID
+```
+
 
 ## Values
 

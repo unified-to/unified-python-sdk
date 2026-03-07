@@ -1,5 +1,13 @@
 # GetTicketingNoteQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetTicketingNoteQueryParamFields
+
+value = GetTicketingNoteQueryParamFields.ID
+```
+
 
 ## Values
 

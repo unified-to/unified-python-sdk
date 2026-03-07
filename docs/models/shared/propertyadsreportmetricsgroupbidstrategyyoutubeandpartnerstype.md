@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType
+
+value = PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

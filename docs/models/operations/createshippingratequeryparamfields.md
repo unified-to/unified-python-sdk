@@ -1,5 +1,13 @@
 # CreateShippingRateQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateShippingRateQueryParamFields
+
+value = CreateShippingRateQueryParamFields.SHIPMENT_ID
+```
+
 
 ## Values
 

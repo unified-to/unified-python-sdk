@@ -1,5 +1,15 @@
 # HostingSource
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HostingSource
+
+value = HostingSource.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

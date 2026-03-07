@@ -1,5 +1,13 @@
 # UpdateMessagingEventQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateMessagingEventQueryParamFields
+
+value = UpdateMessagingEventQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # UpdateLmsContentQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateLmsContentQueryParamFields
+
+value = UpdateLmsContentQueryParamFields.ID
+```
+
 
 ## Values
 

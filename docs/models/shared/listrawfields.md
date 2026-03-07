@@ -1,5 +1,15 @@
 # ListRawFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListRawFields
+
+value = ListRawFields.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

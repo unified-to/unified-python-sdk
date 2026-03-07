@@ -1,5 +1,13 @@
 # UpdateHrisBankaccountQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateHrisBankaccountQueryParamFields
+
+value = UpdateHrisBankaccountQueryParamFields.ID
+```
+
 
 ## Values
 

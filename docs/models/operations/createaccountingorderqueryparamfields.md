@@ -1,5 +1,13 @@
 # CreateAccountingOrderQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateAccountingOrderQueryParamFields
+
+value = CreateAccountingOrderQueryParamFields.ID
+```
+
 
 ## Values
 

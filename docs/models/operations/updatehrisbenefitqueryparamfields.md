@@ -1,5 +1,13 @@
 # UpdateHrisBenefitQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateHrisBenefitQueryParamFields
+
+value = UpdateHrisBenefitQueryParamFields.ID
+```
+
 
 ## Values
 

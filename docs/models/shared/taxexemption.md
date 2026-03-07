@@ -1,5 +1,15 @@
 # TaxExemption
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import TaxExemption
+
+value = TaxExemption.FEDERAL_GOV
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

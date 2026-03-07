@@ -1,5 +1,13 @@
 # CreateAtsDocumentQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateAtsDocumentQueryParamFields
+
+value = CreateAtsDocumentQueryParamFields.ID
+```
+
 
 ## Values
 

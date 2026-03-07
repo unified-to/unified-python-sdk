@@ -1,5 +1,13 @@
 # CreateHrisTimeshiftQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateHrisTimeshiftQueryParamFields
+
+value = CreateHrisTimeshiftQueryParamFields.ID
+```
+
 
 ## Values
 

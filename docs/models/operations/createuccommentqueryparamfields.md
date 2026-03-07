@@ -1,5 +1,13 @@
 # CreateUcCommentQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateUcCommentQueryParamFields
+
+value = CreateUcCommentQueryParamFields.ID
+```
+
 
 ## Values
 

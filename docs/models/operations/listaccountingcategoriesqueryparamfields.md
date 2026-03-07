@@ -1,5 +1,13 @@
 # ListAccountingCategoriesQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListAccountingCategoriesQueryParamFields
+
+value = ListAccountingCategoriesQueryParamFields.ID
+```
+
 
 ## Values
 

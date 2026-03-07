@@ -1,5 +1,13 @@
 # GetStorageFileQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetStorageFileQueryParamFields
+
+value = GetStorageFileQueryParamFields.ID
+```
+
 
 ## Values
 

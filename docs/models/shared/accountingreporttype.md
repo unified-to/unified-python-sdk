@@ -1,5 +1,15 @@
 # AccountingReportType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AccountingReportType
+
+value = AccountingReportType.TRIAL_BALANCE
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # CrmEventType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import CrmEventType
+
+value = CrmEventType.NOTE
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

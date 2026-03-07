@@ -1,5 +1,13 @@
 # QueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import QueryParamFields
+
+value = QueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # HrisMetadataFormat
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HrisMetadataFormat
+
+value = HrisMetadataFormat.TEXT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # AccountingCreditmemoPaymentCollectionMethod
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AccountingCreditmemoPaymentCollectionMethod
+
+value = AccountingCreditmemoPaymentCollectionMethod.SEND_INVOICE
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsCampaignAdvertisingChannelType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsCampaignAdvertisingChannelType
+
+value = PropertyAdsReportMetricsCampaignAdvertisingChannelType.TEXT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

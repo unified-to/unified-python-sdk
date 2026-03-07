@@ -1,5 +1,13 @@
 # ListHrisBenefitsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListHrisBenefitsQueryParamFields
+
+value = ListHrisBenefitsQueryParamFields.ID
+```
+
 
 ## Values
 

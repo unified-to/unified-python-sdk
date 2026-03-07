@@ -1,5 +1,13 @@
 # ListLmsClassesQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListLmsClassesQueryParamFields
+
+value = ListLmsClassesQueryParamFields.ID
+```
+
 
 ## Values
 

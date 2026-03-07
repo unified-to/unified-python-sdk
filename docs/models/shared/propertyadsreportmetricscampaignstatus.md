@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsCampaignStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsCampaignStatus
+
+value = PropertyAdsReportMetricsCampaignStatus.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

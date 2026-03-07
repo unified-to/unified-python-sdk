@@ -1,5 +1,13 @@
 # PatchRepoBranchQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchRepoBranchQueryParamFields
+
+value = PatchRepoBranchQueryParamFields.ID
+```
+
 
 ## Values
 

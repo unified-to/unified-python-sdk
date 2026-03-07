@@ -1,5 +1,13 @@
 # ListShippingLabelsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListShippingLabelsQueryParamFields
+
+value = ListShippingLabelsQueryParamFields.ID
+```
+
 
 ## Values
 

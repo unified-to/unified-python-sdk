@@ -1,5 +1,13 @@
 # GetLmsActivityQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetLmsActivityQueryParamFields
+
+value = GetLmsActivityQueryParamFields.ID
+```
+
 
 ## Values
 

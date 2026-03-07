@@ -1,5 +1,13 @@
 # UpdateCalendarWebinarQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateCalendarWebinarQueryParamFields
+
+value = UpdateCalendarWebinarQueryParamFields.ID
+```
+
 
 ## Values
 

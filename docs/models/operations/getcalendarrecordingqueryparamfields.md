@@ -1,5 +1,13 @@
 # GetCalendarRecordingQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetCalendarRecordingQueryParamFields
+
+value = GetCalendarRecordingQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # CreateHrisDeductionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateHrisDeductionQueryParamFields
+
+value = CreateHrisDeductionQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # AccountingCreditmemoStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AccountingCreditmemoStatus
+
+value = AccountingCreditmemoStatus.DRAFT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

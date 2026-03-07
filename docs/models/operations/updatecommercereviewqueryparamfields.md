@@ -1,5 +1,13 @@
 # UpdateCommerceReviewQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateCommerceReviewQueryParamFields
+
+value = UpdateCommerceReviewQueryParamFields.ID
+```
+
 
 ## Values
 

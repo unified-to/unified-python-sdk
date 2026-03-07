@@ -1,5 +1,13 @@
 # GetHrisBankaccountQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetHrisBankaccountQueryParamFields
+
+value = GetHrisBankaccountQueryParamFields.ID
+```
+
 
 ## Values
 

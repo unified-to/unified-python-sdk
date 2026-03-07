@@ -3,10 +3,21 @@
 from __future__ import annotations
 from .marketingemail import MarketingEmail, MarketingEmailTypedDict
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class MarketingMemberStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUBSCRIBED = "SUBSCRIBED"
+    UNSUBSCRIBED = "UNSUBSCRIBED"
+    CLEANED = "CLEANED"
+    PENDING = "PENDING"
+    TRANSACTIONAL = "TRANSACTIONAL"
 
 
 class MarketingMemberTypedDict(TypedDict):
@@ -22,6 +33,7 @@ class MarketingMemberTypedDict(TypedDict):
     r"""An array of list IDs associated with this member"""
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    status: NotRequired[MarketingMemberStatus]
     tags: NotRequired[List[str]]
     r"""An array of tags associated with this member"""
     updated_at: NotRequired[datetime]
@@ -48,10 +60,21 @@ class MarketingMember(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
+    status: Optional[MarketingMemberStatus] = None
+
     tags: Optional[List[str]] = None
     r"""An array of tags associated with this member"""
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.MarketingMemberStatus(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -65,6 +88,7 @@ class MarketingMember(BaseModel):
                 "list_ids",
                 "name",
                 "raw",
+                "status",
                 "tags",
                 "updated_at",
             ]
@@ -74,7 +98,7 @@ class MarketingMember(BaseModel):
 
         for n, f in type(self).model_fields.items():
             k = f.alias or n
-            val = serialized.get(k)
+            val = serialized.get(k, serialized.get(n))
 
             if val != UNSET_SENTINEL:
                 if val is not None or k not in optional_fields:

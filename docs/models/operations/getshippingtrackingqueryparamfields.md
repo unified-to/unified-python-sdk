@@ -1,5 +1,13 @@
 # GetShippingTrackingQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetShippingTrackingQueryParamFields
+
+value = GetShippingTrackingQueryParamFields.ID
+```
+
 
 ## Values
 

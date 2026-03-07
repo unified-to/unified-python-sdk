@@ -1,5 +1,13 @@
 # UpdateAdsAdQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateAdsAdQueryParamFields
+
+value = UpdateAdsAdQueryParamFields.ID
+```
+
 
 ## Values
 

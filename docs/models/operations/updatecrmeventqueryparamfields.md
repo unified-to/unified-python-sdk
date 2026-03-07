@@ -1,5 +1,13 @@
 # UpdateCrmEventQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateCrmEventQueryParamFields
+
+value = UpdateCrmEventQueryParamFields.ID
+```
+
 
 ## Values
 

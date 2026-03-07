@@ -1,5 +1,13 @@
 # UpdateShippingShipmentQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateShippingShipmentQueryParamFields
+
+value = UpdateShippingShipmentQueryParamFields.ID
+```
+
 
 ## Values
 

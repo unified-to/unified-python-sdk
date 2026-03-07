@@ -1,5 +1,13 @@
 # CreateAccountingInvoiceQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateAccountingInvoiceQueryParamFields
+
+value = CreateAccountingInvoiceQueryParamFields.ID
+```
+
 
 ## Values
 

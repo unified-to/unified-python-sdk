@@ -1,5 +1,13 @@
 # PatchAccountingTransactionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAccountingTransactionQueryParamFields
+
+value = PatchAccountingTransactionQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # HrisCompensationType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HrisCompensationType
+
+value = HrisCompensationType.SALARY
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

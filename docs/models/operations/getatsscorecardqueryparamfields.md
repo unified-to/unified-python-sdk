@@ -1,5 +1,13 @@
 # GetAtsScorecardQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAtsScorecardQueryParamFields
+
+value = GetAtsScorecardQueryParamFields.ID
+```
+
 
 ## Values
 

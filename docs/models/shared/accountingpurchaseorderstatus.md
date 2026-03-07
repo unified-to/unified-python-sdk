@@ -1,5 +1,15 @@
 # AccountingPurchaseorderStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AccountingPurchaseorderStatus
+
+value = AccountingPurchaseorderStatus.DRAFT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetAccountingTrialbalanceQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAccountingTrialbalanceQueryParamFields
+
+value = GetAccountingTrialbalanceQueryParamFields.ID
+```
+
 
 ## Values
 

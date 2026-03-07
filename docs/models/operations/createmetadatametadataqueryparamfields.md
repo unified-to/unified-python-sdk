@@ -1,5 +1,13 @@
 # CreateMetadataMetadataQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateMetadataMetadataQueryParamFields
+
+value = CreateMetadataMetadataQueryParamFields.ID
+```
+
 
 ## Values
 

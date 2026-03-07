@@ -1,5 +1,15 @@
 # NativeWebhookCarrierID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import NativeWebhookCarrierID
+
+value = NativeWebhookCarrierID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

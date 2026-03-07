@@ -1,5 +1,15 @@
 # VerificationPackageType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import VerificationPackageType
+
+value = VerificationPackageType.IDENTITY_VERIFICATION
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

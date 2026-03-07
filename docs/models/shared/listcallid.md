@@ -1,5 +1,15 @@
 # ListCallID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListCallID
+
+value = ListCallID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

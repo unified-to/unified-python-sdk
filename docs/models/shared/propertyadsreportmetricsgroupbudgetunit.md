@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsGroupBudgetUnit
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsGroupBudgetUnit
+
+value = PropertyAdsReportMetricsGroupBudgetUnit.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

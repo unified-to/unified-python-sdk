@@ -1,5 +1,13 @@
 # GetAccountingContactQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAccountingContactQueryParamFields
+
+value = GetAccountingContactQueryParamFields.ID
+```
+
 
 ## Values
 

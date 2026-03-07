@@ -1,5 +1,15 @@
 # VirtualWebhookPipelineID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import VirtualWebhookPipelineID
+
+value = VirtualWebhookPipelineID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

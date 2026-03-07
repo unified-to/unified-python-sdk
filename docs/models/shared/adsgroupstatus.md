@@ -1,5 +1,15 @@
 # AdsGroupStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AdsGroupStatus
+
+value = AdsGroupStatus.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

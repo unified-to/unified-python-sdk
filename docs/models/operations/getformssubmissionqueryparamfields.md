@@ -1,5 +1,13 @@
 # GetFormsSubmissionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetFormsSubmissionQueryParamFields
+
+value = GetFormsSubmissionQueryParamFields.ID
+```
+
 
 ## Values
 

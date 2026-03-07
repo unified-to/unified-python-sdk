@@ -1,5 +1,13 @@
 # PatchFormsFormQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchFormsFormQueryParamFields
+
+value = PatchFormsFormQueryParamFields.ID
+```
+
 
 ## Values
 

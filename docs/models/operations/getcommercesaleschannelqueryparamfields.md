@@ -1,5 +1,13 @@
 # GetCommerceSaleschannelQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetCommerceSaleschannelQueryParamFields
+
+value = GetCommerceSaleschannelQueryParamFields.ID
+```
+
 
 ## Values
 

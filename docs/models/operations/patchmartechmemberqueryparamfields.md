@@ -1,5 +1,13 @@
 # PatchMartechMemberQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchMartechMemberQueryParamFields
+
+value = PatchMartechMemberQueryParamFields.ID
+```
+
 
 ## Values
 
@@ -14,4 +22,5 @@
 | `EMAILS`     | emails       |
 | `LIST_IDS`   | list_ids     |
 | `TAGS`       | tags         |
+| `STATUS`     | status       |
 | `RAW`        | raw          |

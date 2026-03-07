@@ -1,5 +1,13 @@
 # PatchKmsPageQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchKmsPageQueryParamFields
+
+value = PatchKmsPageQueryParamFields.ID
+```
+
 
 ## Values
 

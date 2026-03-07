@@ -1,5 +1,13 @@
 # UpdateTaskTaskQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateTaskTaskQueryParamFields
+
+value = UpdateTaskTaskQueryParamFields.ID
+```
+
 
 ## Values
 

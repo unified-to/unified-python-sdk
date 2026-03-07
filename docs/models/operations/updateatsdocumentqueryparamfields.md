@@ -1,5 +1,13 @@
 # UpdateAtsDocumentQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateAtsDocumentQueryParamFields
+
+value = UpdateAtsDocumentQueryParamFields.ID
+```
+
 
 ## Values
 

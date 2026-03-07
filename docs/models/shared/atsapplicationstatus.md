@@ -1,5 +1,15 @@
 # AtsApplicationStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AtsApplicationStatus
+
+value = AtsApplicationStatus.NEW
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

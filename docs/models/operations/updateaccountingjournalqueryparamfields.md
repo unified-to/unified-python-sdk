@@ -1,5 +1,13 @@
 # UpdateAccountingJournalQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateAccountingJournalQueryParamFields
+
+value = UpdateAccountingJournalQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # VirtualWebhookLocationID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import VirtualWebhookLocationID
+
+value = VirtualWebhookLocationID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

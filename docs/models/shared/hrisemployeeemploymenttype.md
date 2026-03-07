@@ -1,5 +1,15 @@
 # HrisEmployeeEmploymentType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HrisEmployeeEmploymentType
+
+value = HrisEmployeeEmploymentType.FULL_TIME
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

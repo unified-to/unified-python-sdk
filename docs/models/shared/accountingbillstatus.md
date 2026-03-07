@@ -1,5 +1,15 @@
 # AccountingBillStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AccountingBillStatus
+
+value = AccountingBillStatus.DRAFT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

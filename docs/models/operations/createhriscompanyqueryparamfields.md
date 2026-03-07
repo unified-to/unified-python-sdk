@@ -1,5 +1,13 @@
 # CreateHrisCompanyQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateHrisCompanyQueryParamFields
+
+value = CreateHrisCompanyQueryParamFields.ID
+```
+
 
 ## Values
 

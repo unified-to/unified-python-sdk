@@ -1,5 +1,13 @@
 # PatchAccountingTaxrateQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAccountingTaxrateQueryParamFields
+
+value = PatchAccountingTaxrateQueryParamFields.ID
+```
+
 
 ## Values
 

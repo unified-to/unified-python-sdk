@@ -1,5 +1,15 @@
 # FormFieldType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import FormFieldType
+
+value = FormFieldType.TEXT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

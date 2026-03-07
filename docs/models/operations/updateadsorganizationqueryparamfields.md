@@ -1,5 +1,13 @@
 # UpdateAdsOrganizationQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateAdsOrganizationQueryParamFields
+
+value = UpdateAdsOrganizationQueryParamFields.ID
+```
+
 
 ## Values
 

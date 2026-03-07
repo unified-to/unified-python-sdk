@@ -1,5 +1,15 @@
 # ShippingShipmentStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ShippingShipmentStatus
+
+value = ShippingShipmentStatus.PENDING
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

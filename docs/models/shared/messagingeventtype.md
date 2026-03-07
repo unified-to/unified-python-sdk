@@ -1,5 +1,15 @@
 # MessagingEventType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import MessagingEventType
+
+value = MessagingEventType.MESSAGE_RECEIVED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

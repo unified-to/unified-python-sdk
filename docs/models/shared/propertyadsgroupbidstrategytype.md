@@ -1,5 +1,15 @@
 # PropertyAdsGroupBidStrategyType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsGroupBidStrategyType
+
+value = PropertyAdsGroupBidStrategyType.FIXED_BID
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

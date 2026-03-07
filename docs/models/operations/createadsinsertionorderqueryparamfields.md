@@ -1,5 +1,13 @@
 # CreateAdsInsertionorderQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateAdsInsertionorderQueryParamFields
+
+value = CreateAdsInsertionorderQueryParamFields.ID
+```
+
 
 ## Values
 

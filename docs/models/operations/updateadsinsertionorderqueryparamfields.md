@@ -1,5 +1,13 @@
 # UpdateAdsInsertionorderQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateAdsInsertionorderQueryParamFields
+
+value = UpdateAdsInsertionorderQueryParamFields.ID
+```
+
 
 ## Values
 

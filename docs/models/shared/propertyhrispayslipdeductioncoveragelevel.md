@@ -1,5 +1,15 @@
 # PropertyHrisPayslipDeductionCoverageLevel
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyHrisPayslipDeductionCoverageLevel
+
+value = PropertyHrisPayslipDeductionCoverageLevel.EMPLOYEE_ONLY
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

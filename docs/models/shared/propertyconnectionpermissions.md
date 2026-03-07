@@ -1,5 +1,15 @@
 # PropertyConnectionPermissions
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyConnectionPermissions
+
+value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

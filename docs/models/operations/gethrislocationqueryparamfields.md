@@ -1,5 +1,13 @@
 # GetHrisLocationQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetHrisLocationQueryParamFields
+
+value = GetHrisLocationQueryParamFields.ID
+```
+
 
 ## Values
 

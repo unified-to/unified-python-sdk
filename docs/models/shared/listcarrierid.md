@@ -1,5 +1,15 @@
 # ListCarrierID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListCarrierID
+
+value = ListCarrierID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetAdsCreativeQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAdsCreativeQueryParamFields
+
+value = GetAdsCreativeQueryParamFields.ID
+```
+
 
 ## Values
 

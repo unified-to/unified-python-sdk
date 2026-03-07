@@ -1,5 +1,13 @@
 # UpdatePaymentSubscriptionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdatePaymentSubscriptionQueryParamFields
+
+value = UpdatePaymentSubscriptionQueryParamFields.ID
+```
+
 
 ## Values
 

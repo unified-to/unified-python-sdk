@@ -1,5 +1,15 @@
 # SearchDomain
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import SearchDomain
+
+value = SearchDomain.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

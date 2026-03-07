@@ -1,5 +1,15 @@
 # Tax
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import Tax
+
+value = Tax.PRE_TAX
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

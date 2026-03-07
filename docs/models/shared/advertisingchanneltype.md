@@ -1,5 +1,15 @@
 # AdvertisingChannelType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AdvertisingChannelType
+
+value = AdvertisingChannelType.TEXT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListUcRecordingsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListUcRecordingsQueryParamFields
+
+value = ListUcRecordingsQueryParamFields.ID
+```
+
 
 ## Values
 

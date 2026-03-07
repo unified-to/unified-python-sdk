@@ -1,5 +1,13 @@
 # PatchHrisEmployeeQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchHrisEmployeeQueryParamFields
+
+value = PatchHrisEmployeeQueryParamFields.ID
+```
+
 
 ## Values
 

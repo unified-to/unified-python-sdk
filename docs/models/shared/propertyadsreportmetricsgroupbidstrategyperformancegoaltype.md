@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType
+
+value = PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

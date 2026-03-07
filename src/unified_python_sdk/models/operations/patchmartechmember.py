@@ -26,6 +26,7 @@ class PatchMartechMemberQueryParamFields(str, Enum):
     EMAILS = "emails"
     LIST_IDS = "list_ids"
     TAGS = "tags"
+    STATUS = "status"
     RAW = "raw"
 
 
@@ -79,7 +80,7 @@ class PatchMartechMemberRequest(BaseModel):
 
         for n, f in type(self).model_fields.items():
             k = f.alias or n
-            val = serialized.get(k)
+            val = serialized.get(k, serialized.get(n))
 
             if val != UNSET_SENTINEL:
                 if val is not None or k not in optional_fields:
@@ -120,7 +121,7 @@ class PatchMartechMemberResponse(BaseModel):
 
         for n, f in type(self).model_fields.items():
             k = f.alias or n
-            val = serialized.get(k)
+            val = serialized.get(k, serialized.get(n))
 
             if val != UNSET_SENTINEL:
                 if val is not None or k not in optional_fields:

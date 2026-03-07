@@ -1,5 +1,13 @@
 # QueryParamCategories
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import QueryParamCategories
+
+value = QueryParamCategories.PASSTHROUGH
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListCrmDealsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListCrmDealsQueryParamFields
+
+value = ListCrmDealsQueryParamFields.ID
+```
+
 
 ## Values
 

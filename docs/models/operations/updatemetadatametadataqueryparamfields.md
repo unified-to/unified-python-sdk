@@ -1,5 +1,13 @@
 # UpdateMetadataMetadataQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateMetadataMetadataQueryParamFields
+
+value = UpdateMetadataMetadataQueryParamFields.ID
+```
+
 
 ## Values
 

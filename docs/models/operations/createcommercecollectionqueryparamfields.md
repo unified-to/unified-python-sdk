@@ -1,5 +1,13 @@
 # CreateCommerceCollectionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateCommerceCollectionQueryParamFields
+
+value = CreateCommerceCollectionQueryParamFields.ID
+```
+
 
 ## Values
 

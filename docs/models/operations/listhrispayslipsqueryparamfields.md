@@ -1,5 +1,13 @@
 # ListHrisPayslipsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListHrisPayslipsQueryParamFields
+
+value = ListHrisPayslipsQueryParamFields.ID
+```
+
 
 ## Values
 

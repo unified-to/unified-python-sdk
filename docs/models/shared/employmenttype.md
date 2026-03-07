@@ -1,5 +1,15 @@
 # EmploymentType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import EmploymentType
+
+value = EmploymentType.FULL_TIME
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

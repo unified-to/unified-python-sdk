@@ -1,5 +1,13 @@
 # GetAccountingCategoryQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAccountingCategoryQueryParamFields
+
+value = GetAccountingCategoryQueryParamFields.ID
+```
+
 
 ## Values
 

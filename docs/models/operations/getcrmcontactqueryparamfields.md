@@ -1,5 +1,13 @@
 # GetCrmContactQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetCrmContactQueryParamFields
+
+value = GetCrmContactQueryParamFields.ID
+```
+
 
 ## Values
 

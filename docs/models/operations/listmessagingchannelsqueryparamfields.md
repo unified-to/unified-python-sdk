@@ -1,5 +1,13 @@
 # ListMessagingChannelsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListMessagingChannelsQueryParamFields
+
+value = ListMessagingChannelsQueryParamFields.ID
+```
+
 
 ## Values
 

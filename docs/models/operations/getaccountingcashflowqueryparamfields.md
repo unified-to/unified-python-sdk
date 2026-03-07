@@ -1,5 +1,13 @@
 # GetAccountingCashflowQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAccountingCashflowQueryParamFields
+
+value = GetAccountingCashflowQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # UpdateAccountingTransactionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateAccountingTransactionQueryParamFields
+
+value = UpdateAccountingTransactionQueryParamFields.ID
+```
+
 
 ## Values
 

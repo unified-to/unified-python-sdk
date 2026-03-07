@@ -1,5 +1,13 @@
 # PatchAdsCampaignQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAdsCampaignQueryParamFields
+
+value = PatchAdsCampaignQueryParamFields.ID
+```
+
 
 ## Values
 

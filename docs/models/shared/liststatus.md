@@ -1,5 +1,15 @@
 # ListStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListStatus
+
+value = ListStatus.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

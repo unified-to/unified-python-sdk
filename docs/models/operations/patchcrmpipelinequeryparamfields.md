@@ -1,5 +1,13 @@
 # PatchCrmPipelineQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCrmPipelineQueryParamFields
+
+value = PatchCrmPipelineQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # CreateAccountingExpenseQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateAccountingExpenseQueryParamFields
+
+value = CreateAccountingExpenseQueryParamFields.ID
+```
+
 
 ## Values
 

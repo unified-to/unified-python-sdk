@@ -1,5 +1,13 @@
 # PatchHrisDeviceQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchHrisDeviceQueryParamFields
+
+value = PatchHrisDeviceQueryParamFields.ID
+```
+
 
 ## Values
 

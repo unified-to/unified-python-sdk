@@ -1,5 +1,13 @@
 # PatchCrmEventQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCrmEventQueryParamFields
+
+value = PatchCrmEventQueryParamFields.ID
+```
+
 
 ## Values
 

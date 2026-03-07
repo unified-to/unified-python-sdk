@@ -1,5 +1,13 @@
 # PatchAdsInsertionorderQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAdsInsertionorderQueryParamFields
+
+value = PatchAdsInsertionorderQueryParamFields.ID
+```
+
 
 ## Values
 

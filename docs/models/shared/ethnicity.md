@@ -1,5 +1,15 @@
 # Ethnicity
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import Ethnicity
+
+value = Ethnicity.CAUCASIAN
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

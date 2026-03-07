@@ -1,5 +1,13 @@
 # ListRepoBranchesQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListRepoBranchesQueryParamFields
+
+value = ListRepoBranchesQueryParamFields.ID
+```
+
 
 ## Values
 

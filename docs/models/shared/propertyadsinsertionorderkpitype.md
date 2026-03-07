@@ -1,5 +1,15 @@
 # PropertyAdsInsertionorderKpiType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsInsertionorderKpiType
+
+value = PropertyAdsInsertionorderKpiType.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

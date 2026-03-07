@@ -1,5 +1,15 @@
 # VirtualWebhookItemVariantID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import VirtualWebhookItemVariantID
+
+value = VirtualWebhookItemVariantID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

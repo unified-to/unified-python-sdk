@@ -1,5 +1,13 @@
 # CreateHrisGroupQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateHrisGroupQueryParamFields
+
+value = CreateHrisGroupQueryParamFields.ID
+```
+
 
 ## Values
 

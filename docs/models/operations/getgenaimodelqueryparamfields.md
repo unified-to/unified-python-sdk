@@ -1,5 +1,13 @@
 # GetGenaiModelQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetGenaiModelQueryParamFields
+
+value = GetGenaiModelQueryParamFields.ID
+```
+
 
 ## Values
 

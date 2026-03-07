@@ -1,5 +1,13 @@
 # CreateAdsGroupQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateAdsGroupQueryParamFields
+
+value = CreateAdsGroupQueryParamFields.ID
+```
+
 
 ## Values
 

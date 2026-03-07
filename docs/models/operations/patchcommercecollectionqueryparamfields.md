@@ -1,5 +1,13 @@
 # PatchCommerceCollectionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCommerceCollectionQueryParamFields
+
+value = PatchCommerceCollectionQueryParamFields.ID
+```
+
 
 ## Values
 

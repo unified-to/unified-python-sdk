@@ -1,5 +1,13 @@
 # UpdateHrisTimeshiftQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateHrisTimeshiftQueryParamFields
+
+value = UpdateHrisTimeshiftQueryParamFields.ID
+```
+
 
 ## Values
 

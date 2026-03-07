@@ -1,5 +1,15 @@
 # ListTicketID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListTicketID
+
+value = ListTicketID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

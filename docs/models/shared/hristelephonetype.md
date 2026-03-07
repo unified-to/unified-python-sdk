@@ -1,5 +1,15 @@
 # HrisTelephoneType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HrisTelephoneType
+
+value = HrisTelephoneType.WORK
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

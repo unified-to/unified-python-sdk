@@ -1,5 +1,15 @@
 # ListParentID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListParentID
+
+value = ListParentID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

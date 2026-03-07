@@ -1,5 +1,13 @@
 # GetMessagingChannelQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetMessagingChannelQueryParamFields
+
+value = GetMessagingChannelQueryParamFields.ID
+```
+
 
 ## Values
 

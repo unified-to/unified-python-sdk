@@ -1,5 +1,13 @@
 # CreateMessagingMessageQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateMessagingMessageQueryParamFields
+
+value = CreateMessagingMessageQueryParamFields.ID
+```
+
 
 ## Values
 

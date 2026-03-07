@@ -1,5 +1,15 @@
 # VerificationParameterType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import VerificationParameterType
+
+value = VerificationParameterType.TEXT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

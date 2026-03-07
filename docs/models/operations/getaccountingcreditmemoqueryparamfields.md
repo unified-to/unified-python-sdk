@@ -1,5 +1,13 @@
 # GetAccountingCreditmemoQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAccountingCreditmemoQueryParamFields
+
+value = GetAccountingCreditmemoQueryParamFields.ID
+```
+
 
 ## Values
 

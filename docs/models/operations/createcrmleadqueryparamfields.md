@@ -1,5 +1,13 @@
 # CreateCrmLeadQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateCrmLeadQueryParamFields
+
+value = CreateCrmLeadQueryParamFields.ID
+```
+
 
 ## Values
 

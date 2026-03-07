@@ -1,5 +1,13 @@
 # Categories
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import Categories
+
+value = Categories.PASSTHROUGH
+```
+
 
 ## Values
 

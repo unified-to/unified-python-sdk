@@ -1,5 +1,15 @@
 # AtsGroupType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AtsGroupType
+
+value = AtsGroupType.TEAM
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

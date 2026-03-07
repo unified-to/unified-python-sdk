@@ -1,5 +1,15 @@
 # ListSortByName
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListSortByName
+
+value = ListSortByName.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

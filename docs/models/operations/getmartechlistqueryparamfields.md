@@ -1,5 +1,13 @@
 # GetMartechListQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetMartechListQueryParamFields
+
+value = GetMartechListQueryParamFields.ID
+```
+
 
 ## Values
 

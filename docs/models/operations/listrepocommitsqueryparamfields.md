@@ -1,5 +1,13 @@
 # ListRepoCommitsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListRepoCommitsQueryParamFields
+
+value = ListRepoCommitsQueryParamFields.ID
+```
+
 
 ## Values
 

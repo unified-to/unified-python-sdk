@@ -1,5 +1,15 @@
 # NativeWebhookChannelID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import NativeWebhookChannelID
+
+value = NativeWebhookChannelID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

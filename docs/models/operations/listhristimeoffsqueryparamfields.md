@@ -1,5 +1,13 @@
 # ListHrisTimeoffsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListHrisTimeoffsQueryParamFields
+
+value = ListHrisTimeoffsQueryParamFields.ID
+```
+
 
 ## Values
 

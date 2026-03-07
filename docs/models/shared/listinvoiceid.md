@@ -1,5 +1,15 @@
 # ListInvoiceID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListInvoiceID
+
+value = ListInvoiceID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

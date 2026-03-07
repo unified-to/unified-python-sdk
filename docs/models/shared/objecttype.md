@@ -1,5 +1,15 @@
 # ObjectType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ObjectType
+
+value = ObjectType.ACCOUNTING_ACCOUNT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

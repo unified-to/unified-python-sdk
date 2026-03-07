@@ -1,5 +1,13 @@
 # PatchPaymentLinkQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchPaymentLinkQueryParamFields
+
+value = PatchPaymentLinkQueryParamFields.ID
+```
+
 
 ## Values
 

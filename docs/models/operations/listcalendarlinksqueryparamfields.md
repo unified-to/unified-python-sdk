@@ -1,5 +1,13 @@
 # ListCalendarLinksQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListCalendarLinksQueryParamFields
+
+value = ListCalendarLinksQueryParamFields.ID
+```
+
 
 ## Values
 

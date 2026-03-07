@@ -1,5 +1,15 @@
 # AssessmentAttributeStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AssessmentAttributeStatus
+
+value = AssessmentAttributeStatus.OPEN
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

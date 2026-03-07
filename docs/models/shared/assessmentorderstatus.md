@@ -1,5 +1,15 @@
 # AssessmentOrderStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AssessmentOrderStatus
+
+value = AssessmentOrderStatus.OPEN
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

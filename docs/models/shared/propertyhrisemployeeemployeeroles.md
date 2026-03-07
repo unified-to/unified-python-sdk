@@ -1,5 +1,15 @@
 # PropertyHrisEmployeeEmployeeRoles
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyHrisEmployeeEmployeeRoles
+
+value = PropertyHrisEmployeeEmployeeRoles.ADMIN
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # MarketingEmailType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import MarketingEmailType
+
+value = MarketingEmailType.WORK
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

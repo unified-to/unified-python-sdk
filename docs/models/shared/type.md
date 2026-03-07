@@ -1,5 +1,15 @@
 # Type
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import Type
+
+value = Type.ACCOUNTS_PAYABLE
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

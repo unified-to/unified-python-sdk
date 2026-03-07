@@ -1,5 +1,13 @@
 # PatchAtsCompanyQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAtsCompanyQueryParamFields
+
+value = PatchAtsCompanyQueryParamFields.ID
+```
+
 
 ## Values
 

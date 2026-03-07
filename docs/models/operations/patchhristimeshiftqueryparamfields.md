@@ -1,5 +1,13 @@
 # PatchHrisTimeshiftQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchHrisTimeshiftQueryParamFields
+
+value = PatchHrisTimeshiftQueryParamFields.ID
+```
+
 
 ## Values
 

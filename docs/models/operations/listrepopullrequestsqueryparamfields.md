@@ -1,5 +1,13 @@
 # ListRepoPullrequestsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListRepoPullrequestsQueryParamFields
+
+value = ListRepoPullrequestsQueryParamFields.ID
+```
+
 
 ## Values
 

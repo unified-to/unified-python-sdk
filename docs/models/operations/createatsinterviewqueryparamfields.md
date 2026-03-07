@@ -1,5 +1,13 @@
 # CreateAtsInterviewQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateAtsInterviewQueryParamFields
+
+value = CreateAtsInterviewQueryParamFields.ID
+```
+
 
 ## Values
 

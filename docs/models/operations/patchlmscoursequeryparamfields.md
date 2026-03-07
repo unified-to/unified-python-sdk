@@ -1,5 +1,13 @@
 # PatchLmsCourseQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchLmsCourseQueryParamFields
+
+value = PatchLmsCourseQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchKmsSpaceQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchKmsSpaceQueryParamFields
+
+value = PatchKmsSpaceQueryParamFields.ID
+```
+
 
 ## Values
 

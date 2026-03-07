@@ -1,5 +1,13 @@
 # UpdateAtsInterviewQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateAtsInterviewQueryParamFields
+
+value = UpdateAtsInterviewQueryParamFields.ID
+```
+
 
 ## Values
 

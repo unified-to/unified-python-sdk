@@ -1,5 +1,13 @@
 # CreateStorageFileQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateStorageFileQueryParamFields
+
+value = CreateStorageFileQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # CreateTaskCommentQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateTaskCommentQueryParamFields
+
+value = CreateTaskCommentQueryParamFields.ID
+```
+
 
 ## Values
 

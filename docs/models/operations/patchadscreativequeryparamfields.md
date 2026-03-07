@@ -1,5 +1,13 @@
 # PatchAdsCreativeQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAdsCreativeQueryParamFields
+
+value = PatchAdsCreativeQueryParamFields.ID
+```
+
 
 ## Values
 

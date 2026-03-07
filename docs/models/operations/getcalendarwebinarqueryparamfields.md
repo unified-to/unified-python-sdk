@@ -1,5 +1,13 @@
 # GetCalendarWebinarQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetCalendarWebinarQueryParamFields
+
+value = GetCalendarWebinarQueryParamFields.ID
+```
+
 
 ## Values
 

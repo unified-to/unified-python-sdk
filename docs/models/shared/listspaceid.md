@@ -1,5 +1,15 @@
 # ListSpaceID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListSpaceID
+
+value = ListSpaceID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

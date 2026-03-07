@@ -1,5 +1,13 @@
 # PatchCrmDealQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCrmDealQueryParamFields
+
+value = PatchCrmDealQueryParamFields.ID
+```
+
 
 ## Values
 

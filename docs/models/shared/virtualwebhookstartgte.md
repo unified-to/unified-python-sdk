@@ -1,5 +1,15 @@
 # VirtualWebhookStartGte
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import VirtualWebhookStartGte
+
+value = VirtualWebhookStartGte.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchCalendarLinkQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCalendarLinkQueryParamFields
+
+value = PatchCalendarLinkQueryParamFields.ID
+```
+
 
 ## Values
 

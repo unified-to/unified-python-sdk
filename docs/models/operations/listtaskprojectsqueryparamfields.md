@@ -1,5 +1,13 @@
 # ListTaskProjectsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListTaskProjectsQueryParamFields
+
+value = ListTaskProjectsQueryParamFields.ID
+```
+
 
 ## Values
 

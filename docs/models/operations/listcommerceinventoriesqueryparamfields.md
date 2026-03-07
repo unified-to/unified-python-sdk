@@ -1,5 +1,13 @@
 # ListCommerceInventoriesQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListCommerceInventoriesQueryParamFields
+
+value = ListCommerceInventoriesQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetRepoRepositoryQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetRepoRepositoryQueryParamFields
+
+value = GetRepoRepositoryQueryParamFields.ID
+```
+
 
 ## Values
 

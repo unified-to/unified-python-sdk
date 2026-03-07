@@ -1,5 +1,13 @@
 # PatchAccountingCreditmemoQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAccountingCreditmemoQueryParamFields
+
+value = PatchAccountingCreditmemoQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # UpdateUcContactQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateUcContactQueryParamFields
+
+value = UpdateUcContactQueryParamFields.ID
+```
+
 
 ## Values
 

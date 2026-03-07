@@ -1,5 +1,15 @@
 # ListPayslipID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListPayslipID
+
+value = ListPayslipID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

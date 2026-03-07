@@ -1,5 +1,15 @@
 # PropertyConnectionCategories
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyConnectionCategories
+
+value = PropertyConnectionCategories.PASSTHROUGH
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # ListDealID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListDealID
+
+value = ListDealID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

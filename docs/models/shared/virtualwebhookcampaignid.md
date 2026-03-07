@@ -1,5 +1,15 @@
 # VirtualWebhookCampaignID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import VirtualWebhookCampaignID
+
+value = VirtualWebhookCampaignID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

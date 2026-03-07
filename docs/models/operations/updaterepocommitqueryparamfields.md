@@ -1,5 +1,13 @@
 # UpdateRepoCommitQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateRepoCommitQueryParamFields
+
+value = UpdateRepoCommitQueryParamFields.ID
+```
+
 
 ## Values
 

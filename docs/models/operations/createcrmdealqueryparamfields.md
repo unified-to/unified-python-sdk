@@ -1,5 +1,13 @@
 # CreateCrmDealQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateCrmDealQueryParamFields
+
+value = CreateCrmDealQueryParamFields.ID
+```
+
 
 ## Values
 

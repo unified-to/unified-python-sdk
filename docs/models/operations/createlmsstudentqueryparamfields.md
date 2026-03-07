@@ -1,5 +1,13 @@
 # CreateLmsStudentQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateLmsStudentQueryParamFields
+
+value = CreateLmsStudentQueryParamFields.ID
+```
+
 
 ## Values
 

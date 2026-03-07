@@ -1,5 +1,15 @@
 # HrisDeductionCoverageLevel
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HrisDeductionCoverageLevel
+
+value = HrisDeductionCoverageLevel.EMPLOYEE_ONLY
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

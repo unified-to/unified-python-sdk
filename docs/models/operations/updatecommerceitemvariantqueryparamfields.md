@@ -1,5 +1,13 @@
 # UpdateCommerceItemvariantQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateCommerceItemvariantQueryParamFields
+
+value = UpdateCommerceItemvariantQueryParamFields.ID
+```
+
 
 ## Values
 

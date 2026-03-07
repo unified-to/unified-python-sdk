@@ -1,5 +1,15 @@
 # ScimGroupMemberType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ScimGroupMemberType
+
+value = ScimGroupMemberType.USER
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

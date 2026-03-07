@@ -1,5 +1,13 @@
 # PatchRepoCommitQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchRepoCommitQueryParamFields
+
+value = PatchRepoCommitQueryParamFields.ID
+```
+
 
 ## Values
 

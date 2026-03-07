@@ -1,5 +1,15 @@
 # NativeWebhookOrderID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import NativeWebhookOrderID
+
+value = NativeWebhookOrderID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

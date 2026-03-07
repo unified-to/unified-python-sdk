@@ -1,5 +1,15 @@
 # AdsCreativeStatus
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AdsCreativeStatus
+
+value = AdsCreativeStatus.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # HrisDeductionFrequency
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HrisDeductionFrequency
+
+value = HrisDeductionFrequency.ONE_TIME
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

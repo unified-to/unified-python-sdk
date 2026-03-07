@@ -1,5 +1,13 @@
 # GetLmsCollectionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetLmsCollectionQueryParamFields
+
+value = GetLmsCollectionQueryParamFields.ID
+```
+
 
 ## Values
 

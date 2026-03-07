@@ -1,5 +1,13 @@
 # CreateRepoPullrequestQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateRepoPullrequestQueryParamFields
+
+value = CreateRepoPullrequestQueryParamFields.ID
+```
+
 
 ## Values
 

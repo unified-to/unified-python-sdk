@@ -1,5 +1,15 @@
 # MetadataMetadataFormat
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import MetadataMetadataFormat
+
+value = MetadataMetadataFormat.TEXT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

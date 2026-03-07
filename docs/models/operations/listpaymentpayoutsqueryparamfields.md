@@ -1,5 +1,13 @@
 # ListPaymentPayoutsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListPaymentPayoutsQueryParamFields
+
+value = ListPaymentPayoutsQueryParamFields.ID
+```
+
 
 ## Values
 

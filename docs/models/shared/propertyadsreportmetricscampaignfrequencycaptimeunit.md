@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit
+
+value = PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit.UNSPECIFIED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # PropertyAdsReportMetricsGroupType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsReportMetricsGroupType
+
+value = PropertyAdsReportMetricsGroupType.TEXT
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

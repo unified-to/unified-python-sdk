@@ -1,5 +1,13 @@
 # PatchMessagingEventQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchMessagingEventQueryParamFields
+
+value = PatchMessagingEventQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,15 @@
 # HrisEmailType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import HrisEmailType
+
+value = HrisEmailType.WORK
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

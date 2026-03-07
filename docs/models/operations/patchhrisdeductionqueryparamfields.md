@@ -1,5 +1,13 @@
 # PatchHrisDeductionQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchHrisDeductionQueryParamFields
+
+value = PatchHrisDeductionQueryParamFields.ID
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchCalendarWebinarQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCalendarWebinarQueryParamFields
+
+value = PatchCalendarWebinarQueryParamFields.ID
+```
+
 
 ## Values
 

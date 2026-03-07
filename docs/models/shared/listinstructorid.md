@@ -1,5 +1,15 @@
 # ListInstructorID
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import ListInstructorID
+
+value = ListInstructorID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetAtsActivityQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAtsActivityQueryParamFields
+
+value = GetAtsActivityQueryParamFields.ID
+```
+
 
 ## Values
 

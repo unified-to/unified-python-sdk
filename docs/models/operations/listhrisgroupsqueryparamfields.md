@@ -1,5 +1,13 @@
 # ListHrisGroupsQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListHrisGroupsQueryParamFields
+
+value = ListHrisGroupsQueryParamFields.ID
+```
+
 
 ## Values
 

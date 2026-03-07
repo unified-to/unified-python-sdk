@@ -1,5 +1,13 @@
 # UpdateTicketingCategoryQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateTicketingCategoryQueryParamFields
+
+value = UpdateTicketingCategoryQueryParamFields.ID
+```
+
 
 ## Values
 

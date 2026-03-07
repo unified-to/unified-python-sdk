@@ -1,5 +1,13 @@
 # GetAccountingTaxrateQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetAccountingTaxrateQueryParamFields
+
+value = GetAccountingTaxrateQueryParamFields.ID
+```
+
 
 ## Values
 

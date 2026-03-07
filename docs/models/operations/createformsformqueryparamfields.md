@@ -1,5 +1,13 @@
 # CreateFormsFormQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import CreateFormsFormQueryParamFields
+
+value = CreateFormsFormQueryParamFields.ID
+```
+
 
 ## Values
 

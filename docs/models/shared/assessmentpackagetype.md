@@ -1,5 +1,15 @@
 # AssessmentPackageType
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import AssessmentPackageType
+
+value = AssessmentPackageType.SKILLS_TEST
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
 
 ## Values
 

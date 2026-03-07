@@ -1,5 +1,13 @@
 # PatchTaskProjectQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchTaskProjectQueryParamFields
+
+value = PatchTaskProjectQueryParamFields.ID
+```
+
 
 ## Values
 

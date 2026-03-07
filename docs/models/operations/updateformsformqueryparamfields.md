@@ -1,5 +1,13 @@
 # UpdateFormsFormQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateFormsFormQueryParamFields
+
+value = UpdateFormsFormQueryParamFields.ID
+```
+
 
 ## Values
 

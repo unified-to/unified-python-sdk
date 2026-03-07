@@ -1,5 +1,13 @@
 # PatchCrmContactQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchCrmContactQueryParamFields
+
+value = PatchCrmContactQueryParamFields.ID
+```
+
 
 ## Values
 

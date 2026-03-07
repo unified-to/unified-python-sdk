@@ -1,5 +1,13 @@
 # ListAccountingPurchaseordersQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import ListAccountingPurchaseordersQueryParamFields
+
+value = ListAccountingPurchaseordersQueryParamFields.ID
+```
+
 
 ## Values
 

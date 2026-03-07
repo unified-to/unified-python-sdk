@@ -1,5 +1,13 @@
 # UpdateHrisLocationQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import UpdateHrisLocationQueryParamFields
+
+value = UpdateHrisLocationQueryParamFields.ID
+```
+
 
 ## Values
 

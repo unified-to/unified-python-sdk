@@ -1,5 +1,13 @@
 # PatchAtsScorecardQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import PatchAtsScorecardQueryParamFields
+
+value = PatchAtsScorecardQueryParamFields.ID
+```
+
 
 ## Values
 

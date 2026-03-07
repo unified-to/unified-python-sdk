@@ -1,5 +1,13 @@
 # GetPaymentRefundQueryParamFields
 
+## Example Usage
+
+```python
+from unified_python_sdk.models.operations import GetPaymentRefundQueryParamFields
+
+value = GetPaymentRefundQueryParamFields.ID
+```
+
 
 ## Values
 
