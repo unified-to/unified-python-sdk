@@ -7,8 +7,8 @@ from .property_integrationsupport_webhook_events import (
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing import Any, Dict, List, Optional, Union
+from typing_extensions import NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
@@ -584,6 +584,37 @@ class VirtualWebhookApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class IntegrationSupport1TypedDict(TypedDict):
+    pass
+
+
+class IntegrationSupport1(BaseModel):
+    pass
+
+
+IntegrationSupport5TypedDict = TypeAliasType(
+    "IntegrationSupport5TypedDict",
+    Union[IntegrationSupport1TypedDict, str, float, bool],
+)
+
+
+IntegrationSupport5 = TypeAliasType(
+    "IntegrationSupport5", Union[IntegrationSupport1, str, float, bool]
+)
+
+
+VirtualWebhookBenefitIDTypedDict = TypeAliasType(
+    "VirtualWebhookBenefitIDTypedDict",
+    Union[Dict[str, Any], str, float, bool, List[IntegrationSupport5TypedDict]],
+)
+
+
+VirtualWebhookBenefitID = TypeAliasType(
+    "VirtualWebhookBenefitID",
+    Union[Dict[str, Any], str, float, bool, List[IntegrationSupport5]],
+)
+
+
 class VirtualWebhookBillID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -794,6 +825,37 @@ class VirtualWebhookParentID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class IntegrationSupportSchemas1TypedDict(TypedDict):
+    pass
+
+
+class IntegrationSupportSchemas1(BaseModel):
+    pass
+
+
+IntegrationSupportSchemas5TypedDict = TypeAliasType(
+    "IntegrationSupportSchemas5TypedDict",
+    Union[IntegrationSupportSchemas1TypedDict, str, float, bool],
+)
+
+
+IntegrationSupportSchemas5 = TypeAliasType(
+    "IntegrationSupportSchemas5", Union[IntegrationSupportSchemas1, str, float, bool]
+)
+
+
+VirtualWebhookPaymentIDTypedDict = TypeAliasType(
+    "VirtualWebhookPaymentIDTypedDict",
+    Union[Dict[str, Any], str, float, bool, List[IntegrationSupportSchemas5TypedDict]],
+)
+
+
+VirtualWebhookPaymentID = TypeAliasType(
+    "VirtualWebhookPaymentID",
+    Union[Dict[str, Any], str, float, bool, List[IntegrationSupportSchemas5]],
+)
+
+
 class VirtualWebhookPipelineID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -986,7 +1048,7 @@ class IntegrationSupportTypedDict(TypedDict):
     slow_fields: NotRequired[List[str]]
     virtual_webhook_ad_id: NotRequired[VirtualWebhookAdID]
     virtual_webhook_application_id: NotRequired[VirtualWebhookApplicationID]
-    virtual_webhook_benefit_id: NotRequired[str]
+    virtual_webhook_benefit_id: NotRequired[VirtualWebhookBenefitIDTypedDict]
     virtual_webhook_bill_id: NotRequired[VirtualWebhookBillID]
     virtual_webhook_branch_id: NotRequired[VirtualWebhookBranchID]
     virtual_webhook_calendar_id: NotRequired[VirtualWebhookCalendarID]
@@ -1022,6 +1084,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_org_id: NotRequired[VirtualWebhookOrgID]
     virtual_webhook_page_id: NotRequired[VirtualWebhookPageID]
     virtual_webhook_parent_id: NotRequired[VirtualWebhookParentID]
+    virtual_webhook_payment_id: NotRequired[VirtualWebhookPaymentIDTypedDict]
     virtual_webhook_pipeline_id: NotRequired[VirtualWebhookPipelineID]
     virtual_webhook_project_id: NotRequired[VirtualWebhookProjectID]
     virtual_webhook_repo_id: NotRequired[VirtualWebhookRepoID]
@@ -1242,7 +1305,7 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_application_id: Optional[VirtualWebhookApplicationID] = None
 
-    virtual_webhook_benefit_id: Optional[str] = None
+    virtual_webhook_benefit_id: Optional[VirtualWebhookBenefitID] = None
 
     virtual_webhook_bill_id: Optional[VirtualWebhookBillID] = None
 
@@ -1313,6 +1376,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_page_id: Optional[VirtualWebhookPageID] = None
 
     virtual_webhook_parent_id: Optional[VirtualWebhookParentID] = None
+
+    virtual_webhook_payment_id: Optional[VirtualWebhookPaymentID] = None
 
     virtual_webhook_pipeline_id: Optional[VirtualWebhookPipelineID] = None
 
@@ -2791,6 +2856,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_org_id",
                 "virtual_webhook_page_id",
                 "virtual_webhook_parent_id",
+                "virtual_webhook_payment_id",
                 "virtual_webhook_pipeline_id",
                 "virtual_webhook_project_id",
                 "virtual_webhook_repo_id",
