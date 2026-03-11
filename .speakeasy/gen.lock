@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: fca06522dcf65afa5ed17304efc0ad81
+  docChecksum: 315310e99bbf744b8760ffffe72f4d01
   docVersion: "1.0"
-  speakeasyVersion: 1.750.0
-  generationVersion: 2.856.1
-  releaseVersion: 0.57.14
-  configChecksum: f8c5c27599eaeb446625645ade221204
+  speakeasyVersion: 1.751.0
+  generationVersion: 2.858.2
+  releaseVersion: 0.57.15
+  configChecksum: 55e7970ac99e3fb91b13d7f1be8492de
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 873f5ef9-1bf2-4cb8-b011-915a16cdd34d
-  pristine_commit_hash: f049339efd70d3f80318fbd57fbacf0610d7ae01
-  pristine_tree_hash: 4ee9d8bb041e3669aac501b75cf307aab5b080d7
+  generation_id: 9a14665d-6379-4a3f-bb93-626747a8f57e
+  pristine_commit_hash: 516935e1ad1aa7351a70fa027166af1dd523b7bc
+  pristine_tree_hash: ae9ae563865211f8bc0b4693d7e502a7e333c2a7
 features:
   python:
     acceptHeaders: 3.0.0
@@ -862,8 +862,8 @@ trackedFiles:
     pristine_git_object: 5410b05fd567821c42e46cb865a3ffadb3709cb1
   docs/models/operations/createmartechlistqueryparamfields.md:
     id: 2fa1291d6def
-    last_write_checksum: sha1:fb1c433acbcedb982268a67cdc6a4cb9a6e29756
-    pristine_git_object: c4e103032093d9bf51bcac2612830d43a0afb393
+    last_write_checksum: sha1:beaa85248a253855017332f8a031e367717e06a3
+    pristine_git_object: 442d2e69edf8293ec85abc2cfe49ca92e0ebc1d7
   docs/models/operations/createmartechlistrequest.md:
     id: 2b92bd1d99b6
     last_write_checksum: sha1:90a91166ddf608410ebbec8cecf084ed3b155c9e
@@ -2154,8 +2154,8 @@ trackedFiles:
     pristine_git_object: 02974ceb52cb02ce62eed30f236741a85b301abb
   docs/models/operations/getmartechlistqueryparamfields.md:
     id: 673b8343819c
-    last_write_checksum: sha1:fc774900ffde8ad32a9d8dce2b0fe122eadc5cfd
-    pristine_git_object: 7798bf39ec1c0d77828ef17f8ccbf2e84ea19baf
+    last_write_checksum: sha1:e19cd00e09649f41b7cea646fe5ffe0a4a844ae8
+    pristine_git_object: 443b200071a1368653b12fa7bac95be7d2cb0adc
   docs/models/operations/getmartechlistrequest.md:
     id: b42fc480afb9
     last_write_checksum: sha1:5d63d784eef75e0c154c24b4648514a0eab934e6
@@ -2834,8 +2834,8 @@ trackedFiles:
     pristine_git_object: 1b8a52f5db38d016049e0a849cf0bdc58264f205
   docs/models/operations/listaccountingtransactionsrequest.md:
     id: 0b69c5174bb7
-    last_write_checksum: sha1:1363cc0a16df6f530a940987d2bbb346b4263e20
-    pristine_git_object: 392618fba0a53b4c068597f216bd72d56f7e53f8
+    last_write_checksum: sha1:20659ad5d1583273f5abdafd1b397c92f45b3f47
+    pristine_git_object: 34641bac3df59969df9a09bb7e2d2d09f5a50f35
   docs/models/operations/listaccountingtransactionsresponse.md:
     id: f1f1a8b20e75
     last_write_checksum: sha1:42dbf213ace7bde7acc0c1dda9b88bc74dc0d1ce
@@ -3598,8 +3598,8 @@ trackedFiles:
     pristine_git_object: 2c5fdd1c54b050863796656ab873031a1a768582
   docs/models/operations/listmartechlistsqueryparamfields.md:
     id: e9eb65327c44
-    last_write_checksum: sha1:d3d886e849e49e2bda679bc6b34382167abe8e0a
-    pristine_git_object: d05f58b51665a2664f2fbc1ab393be133faa270f
+    last_write_checksum: sha1:9be28e723341c352ba9934d21579070728b7bd87
+    pristine_git_object: 5e05aa4364c281f2b2bc1ba869ed241bd9d5f7da
   docs/models/operations/listmartechlistsrequest.md:
     id: f62ba3cc4503
     last_write_checksum: sha1:3814704a2ac2a4f1ec23f119bcee9df355e3a659
@@ -3694,8 +3694,8 @@ trackedFiles:
     pristine_git_object: 92f8bda38c4fd25bbbbc5f434e8a014100a97a62
   docs/models/operations/listpaymentpaymentsrequest.md:
     id: 6e2904b89c0c
-    last_write_checksum: sha1:225000deb7c5ce3f4711016680010a712edb32b0
-    pristine_git_object: 454bee5f8ed616e4caab5bc4be60b866751f8be6
+    last_write_checksum: sha1:6a7e00e15db4e1a19b8f0059c7f4b0f374b634ef
+    pristine_git_object: 52cf76b452f0233a3b71a076c17e7afbd3b6255d
   docs/models/operations/listpaymentpaymentsresponse.md:
     id: 2e8ffaf1239d
     last_write_checksum: sha1:e7578619b9758393facd9bd308c2529641fccb8e
@@ -4886,8 +4886,8 @@ trackedFiles:
     pristine_git_object: 353aa070a427d05f8a2d6d6ea326ec841ab6a362
   docs/models/operations/patchmartechlistqueryparamfields.md:
     id: a0387fa42963
-    last_write_checksum: sha1:ee2c350b16a2d9fc68ca0b8557792fa2da0ee721
-    pristine_git_object: 3cb8cb15e6835c793c1c466caa44462eb22a1d96
+    last_write_checksum: sha1:7c42976a0c1dab2a57f071e0ab131bb17f8213e0
+    pristine_git_object: db8b6665ddbc3881cff01679468f602b4ee036dd
   docs/models/operations/patchmartechlistrequest.md:
     id: 850dd6d08165
     last_write_checksum: sha1:7572bb490c4aad82e07f9e52d64df76f09f3e9f7
@@ -6858,8 +6858,8 @@ trackedFiles:
     pristine_git_object: 8569771b0c25e710da3df09b4c6c86a0e7306871
   docs/models/operations/updatemartechlistqueryparamfields.md:
     id: ca21e9d188ae
-    last_write_checksum: sha1:bcc240b192e46b022522fa4c21cd9375e18678a8
-    pristine_git_object: ba2417c57000948cc91ade4be4ad0d6013cd51a9
+    last_write_checksum: sha1:6c813e272291ea0af471a53c17ce59f252e25bbd
+    pristine_git_object: 31068e68168df366b48bb72d7f6d1ad2436fde8b
   docs/models/operations/updatemartechlistrequest.md:
     id: 72b590e17dbb
     last_write_checksum: sha1:2d254738724d37b1d19590b8c9da7e1e847fc4fb
@@ -8850,8 +8850,8 @@ trackedFiles:
     pristine_git_object: 6a6c6e0aab1ab3581bba938424c4c3630a4009d2
   docs/models/shared/marketinglist.md:
     id: 29f2aff9c40c
-    last_write_checksum: sha1:6c8f848d8dc0753fe3a5c95bb9f795b6df2138fe
-    pristine_git_object: b6a33bbadcb13b29c9faf901037656c4af791f92
+    last_write_checksum: sha1:b8d5b1316d77052b8693f65414db313d85c2d6b1
+    pristine_git_object: c5e47bd517734c4822b43168e8921ed54832fb56
   docs/models/shared/marketingmember.md:
     id: 2f552ff40479
     last_write_checksum: sha1:586e36d8f94b2c947ab92d486157b3ddfc2e9355
@@ -9508,6 +9508,10 @@ trackedFiles:
     id: 2b8eb453adae
     last_write_checksum: sha1:e71c126f087fa0d492d18d7fd9199cb1a579ecdd
     pristine_git_object: 6da17794dea32ee52f083b2c553edd38c7e54caf
+  docs/models/shared/propertymarketinglistaddress.md:
+    id: ab19248bd119
+    last_write_checksum: sha1:73af524b18fd7a0b9f4cbf34a5887646e979ec56
+    pristine_git_object: a56cf49abbee7cec08e827f29c24a7a29ca8e5fb
   docs/models/shared/propertymessagingeventbutton.md:
     id: b2b684f40043
     last_write_checksum: sha1:f3f7bef58481372dc2e338a91ec631998177100e
@@ -10866,8 +10870,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:6d7952cf08460a6779008f5342c0015daf56e651
-    pristine_git_object: 30591d822c6d27b7ee9b15e719b60623bcc0f157
+    last_write_checksum: sha1:3cd5d8515506f0e1df6c572b929c8b8049c9c14c
+    pristine_git_object: fc9f7d963b40b0da830b4b56a4338187f8cb067b
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -10894,8 +10898,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:319aa4b279ea16732b2527dd18b63cc4cca21033
-    pristine_git_object: 916805730371a506cb47abd94922294a9f06e8ad
+    last_write_checksum: sha1:f458549b51e958a57469bed06cd5e9d37687763b
+    pristine_git_object: 9680d2d961dde3bbcc82eb9833322b2b869ad3f3
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -11530,8 +11534,8 @@ trackedFiles:
     pristine_git_object: 8db4ccad1b981c394a45cc7204baad257391f264
   src/unified_python_sdk/models/operations/createmartechlist.py:
     id: 88cd9f9b06c1
-    last_write_checksum: sha1:007a39961964ab47c67f7d1c3fca4dc642f92bb1
-    pristine_git_object: e75a7deddd279ab7755b78c1e1f3a381ba24c950
+    last_write_checksum: sha1:ba4b7263e9ddc8d9dea95a2f2f010bf1612a49d9
+    pristine_git_object: cf1e093e1ae7369a5a3fec7ae8cc17dee5a1e668
   src/unified_python_sdk/models/operations/createmartechmember.py:
     id: c41d772df75a
     last_write_checksum: sha1:3c43b3ad6b89a324cd0bf97013e4c25c22874ea7
@@ -11974,8 +11978,8 @@ trackedFiles:
     pristine_git_object: 3db72b0cc798f5a66520b2e4a8f4fcb788723ac7
   src/unified_python_sdk/models/operations/getmartechlist.py:
     id: 6b7465edfb47
-    last_write_checksum: sha1:8d48f41d51564caa25f8c374b88d601724d93665
-    pristine_git_object: 4f8e0dbe90f9982697283a5de6ae24bc9c7a1fc8
+    last_write_checksum: sha1:419f6398b0525cb6d65a1e9096c73295b760ffd8
+    pristine_git_object: df7ae64c10160ea8fd9a39a462cd113215b0c95d
   src/unified_python_sdk/models/operations/getmartechmember.py:
     id: c3d70c0c0f51
     last_write_checksum: sha1:a0cbdda66a77dd5bf0855f3302efac4d4cfa1984
@@ -12210,8 +12214,8 @@ trackedFiles:
     pristine_git_object: 10a73322caf50122fe24182c944bf09159f9090c
   src/unified_python_sdk/models/operations/listaccountingtransactions.py:
     id: 5f8d82cfb4cf
-    last_write_checksum: sha1:73b17ad1381b645e598175c4d2592ae1a496fd12
-    pristine_git_object: 3bf927a6af9746215203e0fd83139c0b91933ffc
+    last_write_checksum: sha1:b75759d5ec6f6ee725c828a305df450810c7c7ea
+    pristine_git_object: 1433288561807da42eea13030fa97bc6a7eabee7
   src/unified_python_sdk/models/operations/listaccountingtrialbalances.py:
     id: "050384488857"
     last_write_checksum: sha1:713c275715ac82630d811d01d1d9bfdf3fbc9781
@@ -12470,8 +12474,8 @@ trackedFiles:
     pristine_git_object: 13c772ea621dd93c4ffa22b484754fb2f5637fa8
   src/unified_python_sdk/models/operations/listmartechlists.py:
     id: 4a3d2a80f673
-    last_write_checksum: sha1:7d5fd985af0d3c6d2544a4fb582776862b91ae30
-    pristine_git_object: 05ed38e3a973c560496bb4f66a4207b2194af553
+    last_write_checksum: sha1:c72f079f9421d746a963a9ffac1052846d468b9d
+    pristine_git_object: dd27593eda5c2940c30ba6c052afc6b4fb69605c
   src/unified_python_sdk/models/operations/listmartechmembers.py:
     id: 4864b31d349b
     last_write_checksum: sha1:03a58626a75ad6dc327239cd96bf18e97cf5a148
@@ -12502,8 +12506,8 @@ trackedFiles:
     pristine_git_object: 1d756082b514982a146c286a7ddb495ff412fb97
   src/unified_python_sdk/models/operations/listpaymentpayments.py:
     id: 5d6476aacc79
-    last_write_checksum: sha1:3f211d6ff74a611df4269ac9995bfe3c0228c227
-    pristine_git_object: 19e8947c73200cc775c1bd56d3eaaacfef5539f1
+    last_write_checksum: sha1:737d2be3f2d306362882ad1cf883f4b348aa9375
+    pristine_git_object: 91dc30257520f3ed170345ba8c4b5e9dfdacd2f5
   src/unified_python_sdk/models/operations/listpaymentpayouts.py:
     id: eb8204823074
     last_write_checksum: sha1:b8009bd4015ffb91d1f2d05fb6f4165ebb8f49e2
@@ -12914,8 +12918,8 @@ trackedFiles:
     pristine_git_object: 29d05d3ed7b1f949abb40c3dd7bd72f83739b966
   src/unified_python_sdk/models/operations/patchmartechlist.py:
     id: 7a6a6f8c5088
-    last_write_checksum: sha1:0cae394cabc7b96b696074c4cfab1a519b3f01cb
-    pristine_git_object: ab60f30340ce79f6973d216cc9762b6b4e4b51d5
+    last_write_checksum: sha1:2ef5bffa584735a0032f6276a04313c7b803f00a
+    pristine_git_object: e50baa91428e80e49afd782caa36fba8ad41e94e
   src/unified_python_sdk/models/operations/patchmartechmember.py:
     id: 8a1073bcdd58
     last_write_checksum: sha1:4e3a9e34539a661f69c622c8feb152f00770a41f
@@ -13710,8 +13714,8 @@ trackedFiles:
     pristine_git_object: 9543e26f2f43d0a27e407cb737d6d5801fc20b2f
   src/unified_python_sdk/models/operations/updatemartechlist.py:
     id: 221f3ce1a1b1
-    last_write_checksum: sha1:a681e0bd2dc4ad24a1bdefcc0511aaacaf6b94d4
-    pristine_git_object: 6e4d98300338f6d20588d15629de1693507935bd
+    last_write_checksum: sha1:83179e354538d5ddd88686bd978ee3590508be0c
+    pristine_git_object: 9ba992e1e2f0d63b810fb727ad2afc524d31b9f9
   src/unified_python_sdk/models/operations/updatemartechmember.py:
     id: fc17472e06bf
     last_write_checksum: sha1:a7df7300377b9ea364abd10a09746d4b1dca77af
@@ -13846,8 +13850,8 @@ trackedFiles:
     pristine_git_object: c928c141900141c4357a16d9c9702d90e8ee8a59
   src/unified_python_sdk/models/shared/__init__.py:
     id: 8825f2c566be
-    last_write_checksum: sha1:24c0e7dbed5b7ba368fd8870c7bb41ab408f3a21
-    pristine_git_object: 9d99c85cb36b6bed68c7f3c1c711b9999952072a
+    last_write_checksum: sha1:aee53505947cf68d18ee3145957ca207f9cd5747
+    pristine_git_object: bbe3f40f044146eead1a9855c69bcfd8e300c8c4
   src/unified_python_sdk/models/shared/accountingaccount.py:
     id: b8ab638302ba
     last_write_checksum: sha1:b789a48af2db8444440c3805a7ecd622ccddd30a
@@ -14542,8 +14546,8 @@ trackedFiles:
     pristine_git_object: 25e246bf2923ae58bad577bd95bcc0c19a2d2ad2
   src/unified_python_sdk/models/shared/marketinglist.py:
     id: 0553f15688ec
-    last_write_checksum: sha1:2a52befae2c9d8ebbf4d3cf9684bea89f48b3f9e
-    pristine_git_object: 1f9aa0c07b5657fa07896f4b4c15771b8d9507a3
+    last_write_checksum: sha1:431078d938013907656856df105b62f1e89eae52
+    pristine_git_object: 1f8522e4fc1db774b825b2583445cbefcef9cf79
   src/unified_python_sdk/models/shared/marketingmember.py:
     id: e414732a103b
     last_write_checksum: sha1:0ebf84608e889ef82a372dfdbe60375c3e28732c
@@ -14904,6 +14908,10 @@ trackedFiles:
     id: f92ca12a66ec
     last_write_checksum: sha1:c9761596e574c4b2a7bc59d41085de29c34fda0c
     pristine_git_object: 4f6dca157180c013ef700a9b434955017a733426
+  src/unified_python_sdk/models/shared/property_marketinglist_address.py:
+    id: f08269cb3140
+    last_write_checksum: sha1:3ac050016cf98f62d67b582cf4ea7011e550058a
+    pristine_git_object: f53c35a6725f0e12bac44713faee7e8c841cc8bd
   src/unified_python_sdk/models/shared/property_messagingevent_button.py:
     id: 5940faaf9659
     last_write_checksum: sha1:d2024e7ee4b2e385e23e7a2b87d3d8a44ac2f250
@@ -21447,12 +21455,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Python SDK Changes:
-  * `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed** (Breaking ⚠️)
-  * `unified_to.unified.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed** (Breaking ⚠️)
-  * `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed** (Breaking ⚠️)
-  * `unified_to.integration.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed** (Breaking ⚠️)
+releaseNotes: "## Python SDK Changes:\n* `unified_to.accounting.list_accounting_transactions()`:  `request` **Changed**\n* `unified_to.transaction.list_accounting_transactions()`:  `request` **Changed**\n* `unified_to.martech.create_martech_list()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.martech.get_martech_list()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.martech.list_martech_lists()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.martech.patch_martech_list()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.martech.update_martech_list()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.list.create_martech_list()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.list.get_martech_list()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.list.list_martech_lists()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.list.patch_martech_list()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.list.update_martech_list()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.payment.list_payment_payments()`:  `request` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

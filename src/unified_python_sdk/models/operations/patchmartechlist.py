@@ -26,6 +26,12 @@ class PatchMartechListQueryParamFields(str, Enum):
     END_AT = "end_at"
     USER_ID = "user_id"
     IS_ACTIVE = "is_active"
+    STATE = "state"
+    FROM_NAME = "from_name"
+    FROM_EMAIL = "from_email"
+    SUBJECT = "subject"
+    LANGUAGE = "language"
+    ADDRESS = "address"
     RAW = "raw"
 
 

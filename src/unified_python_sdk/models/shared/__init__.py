@@ -1139,6 +1139,10 @@ if TYPE_CHECKING:
         PropertyLmsStudentAddress,
         PropertyLmsStudentAddressTypedDict,
     )
+    from .property_marketinglist_address import (
+        PropertyMarketingListAddress,
+        PropertyMarketingListAddressTypedDict,
+    )
     from .property_messagingevent_button import (
         PropertyMessagingEventButton,
         PropertyMessagingEventButtonTypedDict,
@@ -2282,6 +2286,8 @@ __all__ = [
     "PropertyIntegrationSupportWebhookEventsUpdated",
     "PropertyLmsStudentAddress",
     "PropertyLmsStudentAddressTypedDict",
+    "PropertyMarketingListAddress",
+    "PropertyMarketingListAddressTypedDict",
     "PropertyMessagingEventButton",
     "PropertyMessagingEventButtonTypedDict",
     "PropertyMessagingEventChannel",
@@ -3521,6 +3527,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyIntegrationSupportWebhookEventsUpdated": ".property_integrationsupport_webhook_events_updated",
     "PropertyLmsStudentAddress": ".property_lmsstudent_address",
     "PropertyLmsStudentAddressTypedDict": ".property_lmsstudent_address",
+    "PropertyMarketingListAddress": ".property_marketinglist_address",
+    "PropertyMarketingListAddressTypedDict": ".property_marketinglist_address",
     "PropertyMessagingEventButton": ".property_messagingevent_button",
     "PropertyMessagingEventButtonTypedDict": ".property_messagingevent_button",
     "PropertyMessagingEventChannel": ".property_messagingevent_channel",
