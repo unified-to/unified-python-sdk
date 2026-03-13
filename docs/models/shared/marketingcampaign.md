@@ -1,7 +1,5 @@
 # MarketingCampaign
 
-A marketing campaign or email send
-
 
 ## Fields
 
@@ -11,7 +9,7 @@ A marketing campaign or email send
 | `from_email`                                                                               | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `from_name`                                                                                | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `id`                                                                                       | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |
-| `list_ids`                                                                                 | List[*str*]                                                                                | :heavy_minus_sign:                                                                         | Associated list/audience IDs                                                               |
+| `list_ids`                                                                                 | List[*str*]                                                                                | :heavy_minus_sign:                                                                         | Associated listaudience IDs                                                                |
 | `name`                                                                                     | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `preview_text`                                                                             | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 | `raw`                                                                                      | Dict[str, *Any*]                                                                           | :heavy_minus_sign:                                                                         | N/A                                                                                        |

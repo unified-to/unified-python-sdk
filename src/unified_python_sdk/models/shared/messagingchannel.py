@@ -18,7 +18,6 @@ class MessagingChannelTypedDict(TypedDict):
     is_active: NotRequired[bool]
     is_private: NotRequired[bool]
     members: NotRequired[List[MessagingMemberTypedDict]]
-    parent_channel_id: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
@@ -42,8 +41,6 @@ class MessagingChannel(BaseModel):
 
     members: Optional[List[MessagingMember]] = None
 
-    parent_channel_id: Optional[str] = None
-
     parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
@@ -63,7 +60,6 @@ class MessagingChannel(BaseModel):
                 "is_active",
                 "is_private",
                 "members",
-                "parent_channel_id",
                 "parent_id",
                 "raw",
                 "updated_at",

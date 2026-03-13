@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
-from .commerceitemvariant import CommerceItemVariant, CommerceItemVariantTypedDict
+from .commerceitemvariant import CommerceItemvariant, CommerceItemvariantTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from .commercereference import CommerceReference, CommerceReferenceTypedDict
 from datetime import datetime
@@ -35,7 +35,7 @@ class CommerceItemTypedDict(TypedDict):
     taxrate_id: NotRequired[str]
     type: NotRequired[str]
     updated_at: NotRequired[datetime]
-    variants: NotRequired[List[CommerceItemVariantTypedDict]]
+    variants: NotRequired[List[CommerceItemvariantTypedDict]]
     r"""first variant is the default variant"""
     vendor_name: NotRequired[str]
 
@@ -83,7 +83,7 @@ class CommerceItem(BaseModel):
 
     updated_at: Optional[datetime] = None
 
-    variants: Optional[List[CommerceItemVariant]] = None
+    variants: Optional[List[CommerceItemvariant]] = None
     r"""first variant is the default variant"""
 
     vendor_name: Optional[str] = None

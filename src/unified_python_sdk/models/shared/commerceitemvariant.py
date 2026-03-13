@@ -5,10 +5,11 @@ from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
 from .commerceitemoption import CommerceItemOption, CommerceItemOptionTypedDict
 from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
+from .commercereference import CommerceReference, CommerceReferenceTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -27,8 +28,9 @@ class WeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
     LB = "lb"
 
 
-class CommerceItemVariantTypedDict(TypedDict):
+class CommerceItemvariantTypedDict(TypedDict):
     available_at: NotRequired[datetime]
+    created_at: NotRequired[datetime]
     description: NotRequired[str]
     height: NotRequired[float]
     id: NotRequired[str]
@@ -36,6 +38,8 @@ class CommerceItemVariantTypedDict(TypedDict):
     is_active: NotRequired[bool]
     is_featured: NotRequired[bool]
     is_visible: NotRequired[bool]
+    items: NotRequired[List[CommerceReferenceTypedDict]]
+    r"""references CommerceItem"""
     length: NotRequired[float]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
@@ -44,18 +48,22 @@ class CommerceItemVariantTypedDict(TypedDict):
     prices: NotRequired[List[CommerceItemPriceTypedDict]]
     public_description: NotRequired[str]
     public_name: NotRequired[str]
+    raw: NotRequired[Dict[str, Any]]
     requires_shipping: NotRequired[bool]
     size_unit: NotRequired[SizeUnit]
     sku: NotRequired[str]
     tags: NotRequired[List[str]]
     total_stock: NotRequired[float]
+    updated_at: NotRequired[datetime]
     weight: NotRequired[float]
     weight_unit: NotRequired[WeightUnit]
     width: NotRequired[float]
 
 
-class CommerceItemVariant(BaseModel):
+class CommerceItemvariant(BaseModel):
     available_at: Optional[datetime] = None
+
+    created_at: Optional[datetime] = None
 
     description: Optional[str] = None
 
@@ -70,6 +78,9 @@ class CommerceItemVariant(BaseModel):
     is_featured: Optional[bool] = None
 
     is_visible: Optional[bool] = None
+
+    items: Optional[List[CommerceReference]] = None
+    r"""references CommerceItem"""
 
     length: Optional[float] = None
 
@@ -87,6 +98,8 @@ class CommerceItemVariant(BaseModel):
 
     public_name: Optional[str] = None
 
+    raw: Optional[Dict[str, Any]] = None
+
     requires_shipping: Optional[bool] = None
 
     size_unit: Optional[SizeUnit] = None
@@ -96,6 +109,8 @@ class CommerceItemVariant(BaseModel):
     tags: Optional[List[str]] = None
 
     total_stock: Optional[float] = None
+
+    updated_at: Optional[datetime] = None
 
     weight: Optional[float] = None
 
@@ -126,6 +141,7 @@ class CommerceItemVariant(BaseModel):
         optional_fields = set(
             [
                 "available_at",
+                "created_at",
                 "description",
                 "height",
                 "id",
@@ -133,6 +149,7 @@ class CommerceItemVariant(BaseModel):
                 "is_active",
                 "is_featured",
                 "is_visible",
+                "items",
                 "length",
                 "media",
                 "metadata",
@@ -141,11 +158,13 @@ class CommerceItemVariant(BaseModel):
                 "prices",
                 "public_description",
                 "public_name",
+                "raw",
                 "requires_shipping",
                 "size_unit",
                 "sku",
                 "tags",
                 "total_stock",
+                "updated_at",
                 "weight",
                 "weight_unit",
                 "width",

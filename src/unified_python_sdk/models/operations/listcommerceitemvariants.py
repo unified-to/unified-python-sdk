@@ -7,7 +7,7 @@ from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.models.shared import (
-    commerceitemvariant1 as shared_commerceitemvariant1,
+    commerceitemvariant as shared_commerceitemvariant,
 )
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
@@ -22,7 +22,6 @@ class ListCommerceItemvariantsQueryParamFields(str, Enum):
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
     NAME = "name"
-    ITEMS = "items"
     PUBLIC_NAME = "public_name"
     DESCRIPTION = "description"
     PUBLIC_DESCRIPTION = "public_description"
@@ -45,6 +44,7 @@ class ListCommerceItemvariantsQueryParamFields(str, Enum):
     INVENTORY_ID = "inventory_id"
     REQUIRES_SHIPPING = "requires_shipping"
     METADATA = "metadata"
+    ITEMS = "items"
     RAW = "raw"
 
 
@@ -169,7 +169,7 @@ class ListCommerceItemvariantsResponseTypedDict(TypedDict):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
     commerce_itemvariants: NotRequired[
-        List[shared_commerceitemvariant1.CommerceItemvariant1TypedDict]
+        List[shared_commerceitemvariant.CommerceItemvariantTypedDict]
     ]
     r"""Successful"""
 
@@ -185,7 +185,7 @@ class ListCommerceItemvariantsResponse(BaseModel):
     r"""Raw HTTP response; suitable for custom response parsing"""
 
     commerce_itemvariants: Optional[
-        List[shared_commerceitemvariant1.CommerceItemvariant1]
+        List[shared_commerceitemvariant.CommerceItemvariant]
     ] = None
     r"""Successful"""
 

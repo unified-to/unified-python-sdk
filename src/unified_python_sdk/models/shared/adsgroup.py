@@ -74,7 +74,6 @@ class AdsGroupType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AdsGroupTypedDict(TypedDict):
-    ad_group_type: NotRequired[str]
     bid_amount: NotRequired[float]
     bid_strategy: NotRequired[PropertyAdsGroupBidStrategyTypedDict]
     r"""YOUTUBE_AND_PARTNERS"""
@@ -88,13 +87,11 @@ class AdsGroupTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     creative_ids: NotRequired[List[str]]
     currency: NotRequired[str]
-    daily_spend_cap: NotRequired[float]
     end_at: NotRequired[datetime]
     frequency_cap: NotRequired[PropertyAdsGroupFrequencyCapTypedDict]
     has_eu_political_ads: NotRequired[bool]
     id: NotRequired[str]
     insertionorder_id: NotRequired[str]
-    lifetime_spend_cap: NotRequired[float]
     metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
     optimization_goal: NotRequired[str]
@@ -110,8 +107,6 @@ class AdsGroupTypedDict(TypedDict):
 
 
 class AdsGroup(BaseModel):
-    ad_group_type: Optional[str] = None
-
     bid_amount: Optional[float] = None
 
     bid_strategy: Optional[PropertyAdsGroupBidStrategy] = None
@@ -137,8 +132,6 @@ class AdsGroup(BaseModel):
 
     currency: Optional[str] = None
 
-    daily_spend_cap: Optional[float] = None
-
     end_at: Optional[datetime] = None
 
     frequency_cap: Optional[PropertyAdsGroupFrequencyCap] = None
@@ -148,8 +141,6 @@ class AdsGroup(BaseModel):
     id: Optional[str] = None
 
     insertionorder_id: Optional[str] = None
-
-    lifetime_spend_cap: Optional[float] = None
 
     metadata: Optional[List[AdsMetadata]] = None
 
@@ -224,7 +215,6 @@ class AdsGroup(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
-                "ad_group_type",
                 "bid_amount",
                 "bid_strategy",
                 "billing_event",
@@ -237,13 +227,11 @@ class AdsGroup(BaseModel):
                 "created_at",
                 "creative_ids",
                 "currency",
-                "daily_spend_cap",
                 "end_at",
                 "frequency_cap",
                 "has_eu_political_ads",
                 "id",
                 "insertionorder_id",
-                "lifetime_spend_cap",
                 "metadata",
                 "name",
                 "optimization_goal",

@@ -20,6 +20,8 @@ from unified_python_sdk.utils import (
 
 class UpdateMartechCampaignQueryParamFields(str, Enum):
     ID = "id"
+    CREATED_AT = "created_at"
+    UPDATED_AT = "updated_at"
     NAME = "name"
     TYPE = "type"
     STATUS = "status"
@@ -30,14 +32,11 @@ class UpdateMartechCampaignQueryParamFields(str, Enum):
     FROM_EMAIL = "from_email"
     REPLY_TO_EMAIL = "reply_to_email"
     SEND_AT = "send_at"
-    CREATED_AT = "created_at"
-    UPDATED_AT = "updated_at"
     RAW = "raw"
 
 
 class UpdateMartechCampaignRequestTypedDict(TypedDict):
     marketing_campaign: shared_marketingcampaign.MarketingCampaignTypedDict
-    r"""A marketing campaign or email send"""
     connection_id: str
     r"""ID of the connection"""
     id: str
@@ -53,7 +52,6 @@ class UpdateMartechCampaignRequest(BaseModel):
         shared_marketingcampaign.MarketingCampaign,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
-    r"""A marketing campaign or email send"""
 
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))

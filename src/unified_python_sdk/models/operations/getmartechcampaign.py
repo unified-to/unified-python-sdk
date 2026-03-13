@@ -19,6 +19,8 @@ from unified_python_sdk.utils import (
 
 class GetMartechCampaignQueryParamFields(str, Enum):
     ID = "id"
+    CREATED_AT = "created_at"
+    UPDATED_AT = "updated_at"
     NAME = "name"
     TYPE = "type"
     STATUS = "status"
@@ -29,8 +31,6 @@ class GetMartechCampaignQueryParamFields(str, Enum):
     FROM_EMAIL = "from_email"
     REPLY_TO_EMAIL = "reply_to_email"
     SEND_AT = "send_at"
-    CREATED_AT = "created_at"
-    UPDATED_AT = "updated_at"
     RAW = "raw"
 
 

@@ -26,6 +26,7 @@ value = PatchCrmDealQueryParamFields.ID
 | `PIPELINE`    | pipeline      |
 | `PIPELINE_ID` | pipeline_id   |
 | `STAGES`      | stages        |
+| `PIPELINES`   | pipelines     |
 | `SOURCE`      | source        |
 | `PROBABILITY` | probability   |
 | `TAGS`        | tags          |
@@ -36,4 +37,3 @@ value = PatchCrmDealQueryParamFields.ID
 | `COMPANY_IDS` | company_ids   |
 | `METADATA`    | metadata      |
 | `RAW`         | raw           |
-| `PIPELINES`   | pipelines     |

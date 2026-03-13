@@ -56,23 +56,19 @@ class AdsCreativeTypedDict(TypedDict):
     height: NotRequired[float]
     hosting_source: NotRequired[HostingSource]
     id: NotRequired[str]
-    image_hash: NotRequired[str]
     item_id: NotRequired[str]
     link_url: NotRequired[str]
     metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
     organization_id: NotRequired[str]
-    page_identifier: NotRequired[str]
     path1: NotRequired[str]
     path2: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[AdsCreativeStatus]
     third_party_tag: NotRequired[str]
-    thumbnail_url: NotRequired[str]
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
     vast_tag_url: NotRequired[str]
-    video_id: NotRequired[str]
     width: NotRequired[float]
 
 
@@ -104,8 +100,6 @@ class AdsCreative(BaseModel):
 
     id: Optional[str] = None
 
-    image_hash: Optional[str] = None
-
     item_id: Optional[str] = None
 
     link_url: Optional[str] = None
@@ -115,8 +109,6 @@ class AdsCreative(BaseModel):
     name: Optional[str] = None
 
     organization_id: Optional[str] = None
-
-    page_identifier: Optional[str] = None
 
     path1: Optional[str] = None
 
@@ -128,15 +120,11 @@ class AdsCreative(BaseModel):
 
     third_party_tag: Optional[str] = None
 
-    thumbnail_url: Optional[str] = None
-
     title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
 
     vast_tag_url: Optional[str] = None
-
-    video_id: Optional[str] = None
 
     width: Optional[float] = None
 
@@ -184,23 +172,19 @@ class AdsCreative(BaseModel):
                 "height",
                 "hosting_source",
                 "id",
-                "image_hash",
                 "item_id",
                 "link_url",
                 "metadata",
                 "name",
                 "organization_id",
-                "page_identifier",
                 "path1",
                 "path2",
                 "raw",
                 "status",
                 "third_party_tag",
-                "thumbnail_url",
                 "title",
                 "updated_at",
                 "vast_tag_url",
-                "video_id",
                 "width",
             ]
         )

@@ -14,6 +14,8 @@ value = ListMartechCampaignsQueryParamFields.ID
 | Name             | Value            |
 | ---------------- | ---------------- |
 | `ID`             | id               |
+| `CREATED_AT`     | created_at       |
+| `UPDATED_AT`     | updated_at       |
 | `NAME`           | name             |
 | `TYPE`           | type             |
 | `STATUS`         | status           |
@@ -24,6 +26,4 @@ value = ListMartechCampaignsQueryParamFields.ID
 | `FROM_EMAIL`     | from_email       |
 | `REPLY_TO_EMAIL` | reply_to_email   |
 | `SEND_AT`        | send_at          |
-| `CREATED_AT`     | created_at       |
-| `UPDATED_AT`     | updated_at       |
 | `RAW`            | raw              |

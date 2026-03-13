@@ -34,7 +34,6 @@ class CreateHrisBankaccountQueryParamFields(str, Enum):
 
 class CreateHrisBankaccountRequestTypedDict(TypedDict):
     hris_bankaccount: shared_hrisbankaccount.HrisBankaccountTypedDict
-    r"""Employee payroll bank account for direct deposit."""
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[CreateHrisBankaccountQueryParamFields]]
@@ -48,7 +47,6 @@ class CreateHrisBankaccountRequest(BaseModel):
         shared_hrisbankaccount.HrisBankaccount,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
-    r"""Employee payroll bank account for direct deposit."""
 
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))

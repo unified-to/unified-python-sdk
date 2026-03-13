@@ -17,8 +17,6 @@ class AccountType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class HrisBankaccountTypedDict(TypedDict):
-    r"""Employee payroll bank account for direct deposit."""
-
     account_number: NotRequired[str]
     account_number_last4: NotRequired[str]
     account_type: NotRequired[AccountType]
@@ -35,8 +33,6 @@ class HrisBankaccountTypedDict(TypedDict):
 
 
 class HrisBankaccount(BaseModel):
-    r"""Employee payroll bank account for direct deposit."""
-
     account_number: Optional[str] = None
 
     account_number_last4: Optional[str] = None

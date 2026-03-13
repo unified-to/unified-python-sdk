@@ -11,15 +11,10 @@ class PropertyMarketingListAddressTypedDict(TypedDict):
     address1: NotRequired[str]
     address2: NotRequired[str]
     city: NotRequired[str]
-    company: NotRequired[str]
     country: NotRequired[str]
-    from_email: NotRequired[str]
-    from_name: NotRequired[str]
-    language: NotRequired[str]
-    phone: NotRequired[str]
-    state: NotRequired[str]
-    subject: NotRequired[str]
-    zip: NotRequired[str]
+    country_code: NotRequired[str]
+    postal_code: NotRequired[str]
+    region: NotRequired[str]
 
 
 class PropertyMarketingListAddress(BaseModel):
@@ -29,23 +24,13 @@ class PropertyMarketingListAddress(BaseModel):
 
     city: Optional[str] = None
 
-    company: Optional[str] = None
-
     country: Optional[str] = None
 
-    from_email: Optional[str] = None
+    country_code: Optional[str] = None
 
-    from_name: Optional[str] = None
+    postal_code: Optional[str] = None
 
-    language: Optional[str] = None
-
-    phone: Optional[str] = None
-
-    state: Optional[str] = None
-
-    subject: Optional[str] = None
-
-    zip: Optional[str] = None
+    region: Optional[str] = None
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -54,15 +39,10 @@ class PropertyMarketingListAddress(BaseModel):
                 "address1",
                 "address2",
                 "city",
-                "company",
                 "country",
-                "from_email",
-                "from_name",
-                "language",
-                "phone",
-                "state",
-                "subject",
-                "zip",
+                "country_code",
+                "postal_code",
+                "region",
             ]
         )
         serialized = handler(self)

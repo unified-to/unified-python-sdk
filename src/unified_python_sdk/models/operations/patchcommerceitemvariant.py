@@ -7,7 +7,7 @@ from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.models.shared import (
-    commerceitemvariant1 as shared_commerceitemvariant1,
+    commerceitemvariant as shared_commerceitemvariant,
 )
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
@@ -23,7 +23,6 @@ class PatchCommerceItemvariantQueryParamFields(str, Enum):
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
     NAME = "name"
-    ITEMS = "items"
     PUBLIC_NAME = "public_name"
     DESCRIPTION = "description"
     PUBLIC_DESCRIPTION = "public_description"
@@ -46,11 +45,12 @@ class PatchCommerceItemvariantQueryParamFields(str, Enum):
     INVENTORY_ID = "inventory_id"
     REQUIRES_SHIPPING = "requires_shipping"
     METADATA = "metadata"
+    ITEMS = "items"
     RAW = "raw"
 
 
 class PatchCommerceItemvariantRequestTypedDict(TypedDict):
-    commerce_itemvariant: shared_commerceitemvariant1.CommerceItemvariant1TypedDict
+    commerce_itemvariant: shared_commerceitemvariant.CommerceItemvariantTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
@@ -63,7 +63,7 @@ class PatchCommerceItemvariantRequestTypedDict(TypedDict):
 
 class PatchCommerceItemvariantRequest(BaseModel):
     commerce_itemvariant: Annotated[
-        shared_commerceitemvariant1.CommerceItemvariant1,
+        shared_commerceitemvariant.CommerceItemvariant,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
 
@@ -114,7 +114,7 @@ class PatchCommerceItemvariantResponseTypedDict(TypedDict):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
     commerce_itemvariant: NotRequired[
-        shared_commerceitemvariant1.CommerceItemvariant1TypedDict
+        shared_commerceitemvariant.CommerceItemvariantTypedDict
     ]
     r"""Successful"""
 
@@ -129,7 +129,7 @@ class PatchCommerceItemvariantResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    commerce_itemvariant: Optional[shared_commerceitemvariant1.CommerceItemvariant1] = (
+    commerce_itemvariant: Optional[shared_commerceitemvariant.CommerceItemvariant] = (
         None
     )
     r"""Successful"""

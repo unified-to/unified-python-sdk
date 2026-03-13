@@ -29,6 +29,7 @@ class ListCrmDealsQueryParamFields(str, Enum):
     PIPELINE = "pipeline"
     PIPELINE_ID = "pipeline_id"
     STAGES = "stages"
+    PIPELINES = "pipelines"
     SOURCE = "source"
     PROBABILITY = "probability"
     TAGS = "tags"
@@ -39,7 +40,6 @@ class ListCrmDealsQueryParamFields(str, Enum):
     COMPANY_IDS = "company_ids"
     METADATA = "metadata"
     RAW = "raw"
-    PIPELINES = "pipelines"
 
 
 class ListCrmDealsRequestTypedDict(TypedDict):

@@ -31,8 +31,6 @@ class ListAdsCampaignsQueryParamFields(str, Enum):
     GOAL = "goal"
     PLANNED_SPEND_AMOUNT = "planned_spend_amount"
     FREQUENCY_CAP = "frequency_cap"
-    BID_STRATEGY = "bid_strategy"
-    SPECIAL_AD_CATEGORIES = "special_ad_categories"
     ADVERTISING_CHANNEL_TYPE = "advertising_channel_type"
     CAMPAIGN_BUDGET_IDENTIFIER = "campaign_budget_identifier"
     CURRENCY = "currency"

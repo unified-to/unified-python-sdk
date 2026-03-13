@@ -34,7 +34,7 @@ class ListCommerceInventoriesRequestTypedDict(TypedDict):
     fields: NotRequired[List[ListCommerceInventoriesQueryParamFields]]
     r"""Fields to return"""
     item_variant_id: NotRequired[str]
-    r"""The item variant ID to filter by (reference to CommerceItemVariant)"""
+    r"""The item variant ID to filter by (reference to CommerceCommerceItemvariant)"""
     limit: NotRequired[float]
     location_id: NotRequired[str]
     r"""The location ID to filter by (reference to CommerceLocation)"""
@@ -65,7 +65,7 @@ class ListCommerceInventoriesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""The item variant ID to filter by (reference to CommerceItemVariant)"""
+    r"""The item variant ID to filter by (reference to CommerceCommerceItemvariant)"""
 
     limit: Annotated[
         Optional[float],

@@ -646,7 +646,7 @@ class Commerce(BaseSDK):
                 False,
                 False,
                 "json",
-                shared.CommerceItemvariant1,
+                shared.CommerceItemvariant,
             ),
             allow_empty_value=None,
             timeout_ms=timeout_ms,
@@ -676,7 +676,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
-                    Optional[shared.CommerceItemvariant1], http_res
+                    Optional[shared.CommerceItemvariant], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -745,7 +745,7 @@ class Commerce(BaseSDK):
                 False,
                 False,
                 "json",
-                shared.CommerceItemvariant1,
+                shared.CommerceItemvariant,
             ),
             allow_empty_value=None,
             timeout_ms=timeout_ms,
@@ -775,7 +775,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
-                    Optional[shared.CommerceItemvariant1], http_res
+                    Optional[shared.CommerceItemvariant], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1975,7 +1975,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
-                    Optional[shared.CommerceItemvariant1], http_res
+                    Optional[shared.CommerceItemvariant], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2065,7 +2065,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
-                    Optional[shared.CommerceItemvariant1], http_res
+                    Optional[shared.CommerceItemvariant], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3249,7 +3249,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceItemvariantsResponse(
                 commerce_itemvariants=unmarshal_json_response(
-                    Optional[List[shared.CommerceItemvariant1]], http_res
+                    Optional[List[shared.CommerceItemvariant]], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3341,7 +3341,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceItemvariantsResponse(
                 commerce_itemvariants=unmarshal_json_response(
-                    Optional[List[shared.CommerceItemvariant1]], http_res
+                    Optional[List[shared.CommerceItemvariant]], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -4532,7 +4532,7 @@ class Commerce(BaseSDK):
                 False,
                 False,
                 "json",
-                shared.CommerceItemvariant1,
+                shared.CommerceItemvariant,
             ),
             allow_empty_value=None,
             timeout_ms=timeout_ms,
@@ -4562,7 +4562,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
-                    Optional[shared.CommerceItemvariant1], http_res
+                    Optional[shared.CommerceItemvariant], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -4631,7 +4631,7 @@ class Commerce(BaseSDK):
                 False,
                 False,
                 "json",
-                shared.CommerceItemvariant1,
+                shared.CommerceItemvariant,
             ),
             allow_empty_value=None,
             timeout_ms=timeout_ms,
@@ -4661,7 +4661,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
-                    Optional[shared.CommerceItemvariant1], http_res
+                    Optional[shared.CommerceItemvariant], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -7228,7 +7228,7 @@ class Commerce(BaseSDK):
                 False,
                 False,
                 "json",
-                shared.CommerceItemvariant1,
+                shared.CommerceItemvariant,
             ),
             allow_empty_value=None,
             timeout_ms=timeout_ms,
@@ -7258,7 +7258,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
-                    Optional[shared.CommerceItemvariant1], http_res
+                    Optional[shared.CommerceItemvariant], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -7327,7 +7327,7 @@ class Commerce(BaseSDK):
                 False,
                 False,
                 "json",
-                shared.CommerceItemvariant1,
+                shared.CommerceItemvariant,
             ),
             allow_empty_value=None,
             timeout_ms=timeout_ms,
@@ -7357,7 +7357,7 @@ class Commerce(BaseSDK):
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
-                    Optional[shared.CommerceItemvariant1], http_res
+                    Optional[shared.CommerceItemvariant], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

@@ -2,10 +2,6 @@
 
 from __future__ import annotations
 from .adsmetadata import AdsMetadata, AdsMetadataTypedDict
-from .property_adsad_targeting import (
-    PropertyAdsAdTargeting,
-    PropertyAdsAdTargetingTypedDict,
-)
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -51,22 +47,17 @@ class AdsAdTypedDict(TypedDict):
     cta: NotRequired[str]
     description: NotRequired[str]
     display_url: NotRequired[str]
-    end_at: NotRequired[datetime]
     final_url: NotRequired[str]
     group_id: NotRequired[str]
     headline: NotRequired[str]
     id: NotRequired[str]
-    is_active: NotRequired[bool]
-    item_id: NotRequired[str]
     metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     path1: NotRequired[str]
     path2: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    start_at: NotRequired[datetime]
     status: NotRequired[AdsAdStatus]
-    targeting: NotRequired[PropertyAdsAdTargetingTypedDict]
     updated_at: NotRequired[datetime]
 
 
@@ -89,8 +80,6 @@ class AdsAd(BaseModel):
 
     display_url: Optional[str] = None
 
-    end_at: Optional[datetime] = None
-
     final_url: Optional[str] = None
 
     group_id: Optional[str] = None
@@ -98,10 +87,6 @@ class AdsAd(BaseModel):
     headline: Optional[str] = None
 
     id: Optional[str] = None
-
-    is_active: Optional[bool] = None
-
-    item_id: Optional[str] = None
 
     metadata: Optional[List[AdsMetadata]] = None
 
@@ -115,11 +100,7 @@ class AdsAd(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    start_at: Optional[datetime] = None
-
     status: Optional[AdsAdStatus] = None
-
-    targeting: Optional[PropertyAdsAdTargeting] = None
 
     updated_at: Optional[datetime] = None
 
@@ -154,22 +135,17 @@ class AdsAd(BaseModel):
                 "cta",
                 "description",
                 "display_url",
-                "end_at",
                 "final_url",
                 "group_id",
                 "headline",
                 "id",
-                "is_active",
-                "item_id",
                 "metadata",
                 "name",
                 "organization_id",
                 "path1",
                 "path2",
                 "raw",
-                "start_at",
                 "status",
-                "targeting",
                 "updated_at",
             ]
         )

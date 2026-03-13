@@ -1,35 +1,20 @@
 # VirtualWebhookBenefitID
 
-
-## Supported Types
-
-### `Dict[str, Any]`
+## Example Usage
 
 ```python
-value: Dict[str, Any] = /* values here */
+from unified_python_sdk.models.shared import VirtualWebhookBenefitID
+
+value = VirtualWebhookBenefitID.SUPPORTED_REQUIRED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
 ```
 
-### `str`
 
-```python
-value: str = /* values here */
-```
+## Values
 
-### `float`
-
-```python
-value: float = /* values here */
-```
-
-### `bool`
-
-```python
-value: bool = /* values here */
-```
-
-### `List[shared.IntegrationSupport5]`
-
-```python
-value: List[shared.IntegrationSupport5] = /* values here */
-```
-
+| Name                 | Value                |
+| -------------------- | -------------------- |
+| `SUPPORTED_REQUIRED` | supported-required   |
+| `SUPPORTED`          | supported            |
+| `NOT_SUPPORTED`      | not-supported        |

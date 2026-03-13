@@ -23,14 +23,12 @@ class MarketingCampaignStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class MarketingCampaignTypedDict(TypedDict):
-    r"""A marketing campaign or email send"""
-
     created_at: NotRequired[datetime]
     from_email: NotRequired[str]
     from_name: NotRequired[str]
     id: NotRequired[str]
     list_ids: NotRequired[List[str]]
-    r"""Associated list/audience IDs"""
+    r"""Associated listaudience IDs"""
     name: NotRequired[str]
     preview_text: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -43,8 +41,6 @@ class MarketingCampaignTypedDict(TypedDict):
 
 
 class MarketingCampaign(BaseModel):
-    r"""A marketing campaign or email send"""
-
     created_at: Optional[datetime] = None
 
     from_email: Optional[str] = None
@@ -54,7 +50,7 @@ class MarketingCampaign(BaseModel):
     id: Optional[str] = None
 
     list_ids: Optional[List[str]] = None
-    r"""Associated list/audience IDs"""
+    r"""Associated listaudience IDs"""
 
     name: Optional[str] = None
 

@@ -10,8 +10,6 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class MarketingReportTypedDict(TypedDict):
-    r"""Campaign performance report"""
-
     abuse_reports: NotRequired[float]
     campaign_id: NotRequired[str]
     click_rate: NotRequired[float]
@@ -41,8 +39,6 @@ class MarketingReportTypedDict(TypedDict):
 
 
 class MarketingReport(BaseModel):
-    r"""Campaign performance report"""
-
     abuse_reports: Optional[float] = None
 
     campaign_id: Optional[str] = None

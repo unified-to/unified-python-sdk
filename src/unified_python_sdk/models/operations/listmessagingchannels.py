@@ -21,7 +21,6 @@ class ListMessagingChannelsQueryParamFields(str, Enum):
     UPDATED_AT = "updated_at"
     NAME = "name"
     DESCRIPTION = "description"
-    PARENT_CHANNEL_ID = "parent_channel_id"
     PARENT_ID = "parent_id"
     HAS_SUBCHANNELS = "has_subchannels"
     MEMBERS = "members"

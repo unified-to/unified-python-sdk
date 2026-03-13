@@ -26,12 +26,13 @@ class CreateMartechListQueryParamFields(str, Enum):
     END_AT = "end_at"
     USER_ID = "user_id"
     IS_ACTIVE = "is_active"
-    STATE = "state"
-    FROM_NAME = "from_name"
-    FROM_EMAIL = "from_email"
-    SUBJECT = "subject"
-    LANGUAGE = "language"
     ADDRESS = "address"
+    SUBJECT = "subject"
+    SENDER_NAME = "sender_name"
+    SENDER_EMAIL = "sender_email"
+    LANGUAGE = "language"
+    SENDER_COMPANY = "sender_company"
+    SENDER_PHONE = "sender_phone"
     RAW = "raw"
 
 

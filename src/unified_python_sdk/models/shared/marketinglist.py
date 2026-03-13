@@ -19,15 +19,16 @@ class MarketingListTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     end_at: NotRequired[datetime]
-    from_email: NotRequired[str]
-    from_name: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     language: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    sender_company: NotRequired[str]
+    sender_email: NotRequired[str]
+    sender_name: NotRequired[str]
+    sender_phone: NotRequired[str]
     start_at: NotRequired[datetime]
-    state: NotRequired[str]
     subject: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -44,10 +45,6 @@ class MarketingList(BaseModel):
 
     end_at: Optional[datetime] = None
 
-    from_email: Optional[str] = None
-
-    from_name: Optional[str] = None
-
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
@@ -58,9 +55,15 @@ class MarketingList(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    start_at: Optional[datetime] = None
+    sender_company: Optional[str] = None
 
-    state: Optional[str] = None
+    sender_email: Optional[str] = None
+
+    sender_name: Optional[str] = None
+
+    sender_phone: Optional[str] = None
+
+    start_at: Optional[datetime] = None
 
     subject: Optional[str] = None
 
@@ -76,15 +79,16 @@ class MarketingList(BaseModel):
                 "created_at",
                 "description",
                 "end_at",
-                "from_email",
-                "from_name",
                 "id",
                 "is_active",
                 "language",
                 "name",
                 "raw",
+                "sender_company",
+                "sender_email",
+                "sender_name",
+                "sender_phone",
                 "start_at",
-                "state",
                 "subject",
                 "updated_at",
                 "user_id",

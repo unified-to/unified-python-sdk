@@ -27,14 +27,10 @@ value = UpdateAdsCreativeQueryParamFields.ID
 | `WIDTH`                        | width                          |
 | `HEIGHT`                       | height                         |
 | `ASSET_URLS`                   | asset_urls                     |
-| `PAGE_IDENTIFIER`              | page_identifier                |
 | `LINK_URL`                     | link_url                       |
 | `BODY`                         | body                           |
 | `TITLE`                        | title                          |
 | `CTA`                          | cta                            |
-| `THUMBNAIL_URL`                | thumbnail_url                  |
-| `IMAGE_HASH`                   | image_hash                     |
-| `VIDEO_ID`                     | video_id                       |
 | `THIRD_PARTY_TAG`              | third_party_tag                |
 | `VAST_TAG_URL`                 | vast_tag_url                   |
 | `EXTERNAL_CREATIVE_REFERENCE`  | external_creative_reference    |

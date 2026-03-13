@@ -26,6 +26,7 @@ value = CreateCrmDealQueryParamFields.ID
 | `PIPELINE`    | pipeline      |
 | `PIPELINE_ID` | pipeline_id   |
 | `STAGES`      | stages        |
+| `PIPELINES`   | pipelines     |
 | `SOURCE`      | source        |
 | `PROBABILITY` | probability   |
 | `TAGS`        | tags          |
@@ -36,4 +37,3 @@ value = CreateCrmDealQueryParamFields.ID
 | `COMPANY_IDS` | company_ids   |
 | `METADATA`    | metadata      |
 | `RAW`         | raw           |
-| `PIPELINES`   | pipelines     |
