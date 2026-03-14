@@ -51,7 +51,7 @@ class ListAdsCreativesRequestTypedDict(TypedDict):
     fields: NotRequired[List[ListAdsCreativesQueryParamFields]]
     r"""Fields to return"""
     group_id: NotRequired[str]
-    r"""The group ID to filter by (reference to HrisGroup)"""
+    r"""The group ID to filter by (reference to AdsGroup)"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -82,7 +82,7 @@ class ListAdsCreativesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""The group ID to filter by (reference to HrisGroup)"""
+    r"""The group ID to filter by (reference to AdsGroup)"""
 
     limit: Annotated[
         Optional[float],

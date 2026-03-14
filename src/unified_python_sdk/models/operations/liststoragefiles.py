@@ -38,8 +38,11 @@ class ListStorageFilesQueryParamFields(str, Enum):
 class ListStorageFilesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    expand: NotRequired[bool]
+    r"""Whether to flatten grouped or recurring items into individual entries."""
     fields: NotRequired[List[ListStorageFilesQueryParamFields]]
     r"""Fields to return"""
+    fulltext: NotRequired[str]
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -62,11 +65,22 @@ class ListStorageFilesRequest(BaseModel):
     ]
     r"""ID of the connection"""
 
+    expand: Annotated[
+        Optional[bool],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Whether to flatten grouped or recurring items into individual entries."""
+
     fields: Annotated[
         Optional[List[ListStorageFilesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    fulltext: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     limit: Annotated[
         Optional[float],
@@ -122,7 +136,9 @@ class ListStorageFilesRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "expand",
                 "fields",
+                "fulltext",
                 "limit",
                 "offset",
                 "order",
