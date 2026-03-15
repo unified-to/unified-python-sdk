@@ -133,6 +133,8 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `ADS_GROUP`                | ads_group                  |
 | `ADS_CREATIVE`             | ads_creative               |
 | `ADS_INSERTIONORDER`       | ads_insertionorder         |
+| `ADS_TARGET`               | ads_target                 |
+| `ADS_PROMOTED`             | ads_promoted               |
 | `FORMS_FORM`               | forms_form                 |
 | `FORMS_SUBMISSION`         | forms_submission           |
 | `SHIPPING_CARRIER`         | shipping_carrier           |

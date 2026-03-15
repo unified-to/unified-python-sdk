@@ -235,6 +235,8 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `ADS_CREATIVE_WRITE`             | ads_creative_write               |
 | `ADS_INSERTIONORDER_READ`        | ads_insertionorder_read          |
 | `ADS_INSERTIONORDER_WRITE`       | ads_insertionorder_write         |
+| `ADS_TARGET_READ`                | ads_target_read                  |
+| `ADS_PROMOTED_READ`              | ads_promoted_read                |
 | `FORMS_FORM_READ`                | forms_form_read                  |
 | `FORMS_FORM_WRITE`               | forms_form_write                 |
 | `FORMS_SUBMISSION_READ`          | forms_submission_read            |

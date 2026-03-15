@@ -43,6 +43,7 @@ class ListStorageFilesRequestTypedDict(TypedDict):
     fields: NotRequired[List[ListStorageFilesQueryParamFields]]
     r"""Fields to return"""
     fulltext: NotRequired[str]
+    r"""The fulltext to filter by"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -81,6 +82,7 @@ class ListStorageFilesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The fulltext to filter by"""
 
     limit: Annotated[
         Optional[float],

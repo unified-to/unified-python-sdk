@@ -39,7 +39,7 @@ class GetAdsCreativeQueryParamFields(str, Enum):
     EXTERNAL_CREATIVE_REFERENCE = "external_creative_reference"
     EXTERNAL_PLACEMENT_REFERENCE = "external_placement_reference"
     EXTERNAL_AD_REFERENCE = "external_ad_reference"
-    METADATA = "metadata"
+    PROMOTED = "promoted"
     PATH1 = "path1"
     PATH2 = "path2"
     RAW = "raw"

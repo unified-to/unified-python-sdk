@@ -35,6 +35,7 @@ class PatchAdsCampaignQueryParamFields(str, Enum):
     ADVERTISING_CHANNEL_TYPE = "advertising_channel_type"
     CAMPAIGN_BUDGET_IDENTIFIER = "campaign_budget_identifier"
     CURRENCY = "currency"
+    CATEGORY = "category"
     RAW = "raw"
 
 

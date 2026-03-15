@@ -40,5 +40,5 @@ value = PatchAdsGroupQueryParamFields.ID
 | `OPTIMIZATION_GOAL`      | optimization_goal        |
 | `BILLING_EVENT`          | billing_event            |
 | `CURRENCY`               | currency                 |
-| `METADATA`               | metadata                 |
+| `PROMOTED`               | promoted                 |
 | `RAW`                    | raw                      |

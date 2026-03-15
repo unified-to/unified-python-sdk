@@ -110,6 +110,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.pipeline import Pipeline
     from unified_python_sdk.profitloss import Profitloss
     from unified_python_sdk.project import Project
+    from unified_python_sdk.promoted import Promoted
     from unified_python_sdk.prompt import Prompt
     from unified_python_sdk.pullrequest import Pullrequest
     from unified_python_sdk.purchaseorder import Purchaseorder
@@ -132,6 +133,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.student import Student
     from unified_python_sdk.submission import Submission
     from unified_python_sdk.subscription import Subscription
+    from unified_python_sdk.target import Target
     from unified_python_sdk.task import Task
     from unified_python_sdk.taxrate import Taxrate
     from unified_python_sdk.ticket import Ticket
@@ -180,6 +182,8 @@ class UnifiedTo(BaseSDK):
     creative: "Creative"
     group: "Group"
     insertionorder: "Insertionorder"
+    promoted: "Promoted"
+    target: "Target"
     assessment: "Assessment"
     package: "Package"
     ats: "Ats"
@@ -312,6 +316,8 @@ class UnifiedTo(BaseSDK):
         "creative": ("unified_python_sdk.creative", "Creative"),
         "group": ("unified_python_sdk.group", "Group"),
         "insertionorder": ("unified_python_sdk.insertionorder", "Insertionorder"),
+        "promoted": ("unified_python_sdk.promoted", "Promoted"),
+        "target": ("unified_python_sdk.target", "Target"),
         "assessment": ("unified_python_sdk.assessment", "Assessment"),
         "package": ("unified_python_sdk.package", "Package"),
         "ats": ("unified_python_sdk.ats", "Ats"),

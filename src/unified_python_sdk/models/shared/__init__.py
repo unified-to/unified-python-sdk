@@ -164,6 +164,7 @@ if TYPE_CHECKING:
         BudgetPeriod,
         Goal,
     )
+    from .adschedule import AdSchedule, AdScheduleTypedDict, DayOfWeek
     from .adscreative import (
         AdsCreative,
         AdsCreativeStatus,
@@ -177,8 +178,10 @@ if TYPE_CHECKING:
         AdsGroupStatus,
         AdsGroupType,
         AdsGroupTypedDict,
+        BillingEvent,
         BudgetAllocationType,
         BudgetUnit,
+        OptimizationGoal,
     )
     from .adsinsertionorder import (
         AdsInsertionorder,
@@ -190,23 +193,16 @@ if TYPE_CHECKING:
         AdsInsertionorderBudgetSegment,
         AdsInsertionorderBudgetSegmentTypedDict,
     )
-    from .adsmetadata import (
-        AdsMetadata,
-        AdsMetadataTypedDict,
-        Five,
-        FiveTypedDict,
-        One,
-        OneTypedDict,
-        Value,
-        ValueTypedDict,
-    )
+    from .adskeyword import AdsKeyword, AdsKeywordTypedDict, MatchType
     from .adsorganization import AdsOrganization, AdsOrganizationTypedDict
+    from .adspromoted import AdsPromoted, AdsPromotedType, AdsPromotedTypedDict
     from .adsreport import AdsReport, AdsReportTypedDict
     from .adsreportmetrics import (
         AdsReportMetrics,
         AdsReportMetricsType,
         AdsReportMetricsTypedDict,
     )
+    from .adstarget import AdsTarget, AdsTargetType, AdsTargetTypedDict
     from .apicall import APICall, APICallType, APICallTypedDict
     from .assessmentaddress import AssessmentAddress, AssessmentAddressTypedDict
     from .assessmentattribute import (
@@ -293,16 +289,16 @@ if TYPE_CHECKING:
         AtsMetadata1TypedDict,
         AtsMetadata5,
         AtsMetadata5TypedDict,
-        AtsMetadataSchemas1,
-        AtsMetadataSchemas1TypedDict,
-        AtsMetadataSchemas5,
-        AtsMetadataSchemas5TypedDict,
         AtsMetadataTypedDict,
-        AtsMetadataValue,
-        AtsMetadataValueTypedDict,
         ExtraData,
         ExtraDataTypedDict,
+        Five,
+        FiveTypedDict,
         Format,
+        One,
+        OneTypedDict,
+        Value,
+        ValueTypedDict,
     )
     from .atsoffer import AtsOffer, AtsOfferStatus, AtsOfferTypedDict
     from .atsscorecard import AtsScorecard, AtsScorecardTypedDict, Recommendation
@@ -312,6 +308,8 @@ if TYPE_CHECKING:
     )
     from .atsstatus import AtsStatus, AtsStatusStatus, AtsStatusTypedDict
     from .atstelephone import AtsTelephone, AtsTelephoneType, AtsTelephoneTypedDict
+    from .audiencecombination import AudienceCombination, AudienceCombinationTypedDict
+    from .audiencesegment import AudienceSegment, AudienceSegmentTypedDict
     from .calendarattachment import CalendarAttachment, CalendarAttachmentTypedDict
     from .calendarattendee import (
         CalendarAttendee,
@@ -357,6 +355,7 @@ if TYPE_CHECKING:
         CalendarWebinarRegistrantTypedDict,
         RegistrationStatus,
     )
+    from .citytarget import CityTarget, CityTargetTypedDict, RadiusUnit
     from .commercecollection import (
         CommerceCollection,
         CommerceCollectionType,
@@ -750,6 +749,7 @@ if TYPE_CHECKING:
     from .lmsmedia import LmsMedia, LmsMediaType, LmsMediaTypedDict
     from .lmsstudent import LmsStudent, LmsStudentTypedDict
     from .lmstelephone import LmsTelephone, LmsTelephoneType, LmsTelephoneTypedDict
+    from .lookalikeaudience import LookalikeAudience, LookalikeAudienceTypedDict
     from .marketingcampaign import (
         MarketingCampaign,
         MarketingCampaignStatus,
@@ -865,6 +865,63 @@ if TYPE_CHECKING:
         PropertyAdsCampaignTargeting,
         PropertyAdsCampaignTargetingTypedDict,
     )
+    from .property_adscampaign_targeting_audience import (
+        PropertyAdsCampaignTargetingAudience,
+        PropertyAdsCampaignTargetingAudienceTypedDict,
+    )
+    from .property_adscampaign_targeting_brand_safety import (
+        PropertyAdsCampaignTargetingBrandSafety,
+        PropertyAdsCampaignTargetingBrandSafetyTypedDict,
+    )
+    from .property_adscampaign_targeting_brand_safety_publisher_visibility_categories import (
+        PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories,
+    )
+    from .property_adscampaign_targeting_content import (
+        PropertyAdsCampaignTargetingContent,
+        PropertyAdsCampaignTargetingContentTypedDict,
+    )
+    from .property_adscampaign_targeting_content_video import (
+        PropertyAdsCampaignTargetingContentVideo,
+        PropertyAdsCampaignTargetingContentVideoTypedDict,
+    )
+    from .property_adscampaign_targeting_content_video_durations import (
+        PropertyAdsCampaignTargetingContentVideoDurations,
+    )
+    from .property_adscampaign_targeting_content_video_player_sizes import (
+        PropertyAdsCampaignTargetingContentVideoPlayerSizes,
+    )
+    from .property_adscampaign_targeting_content_video_positions import (
+        PropertyAdsCampaignTargetingContentVideoPositions,
+    )
+    from .property_adscampaign_targeting_demographic import (
+        PropertyAdsCampaignTargetingDemographic,
+        PropertyAdsCampaignTargetingDemographicTypedDict,
+    )
+    from .property_adscampaign_targeting_device import (
+        PropertyAdsCampaignTargetingDevice,
+        PropertyAdsCampaignTargetingDeviceTypedDict,
+    )
+    from .property_adscampaign_targeting_geographic import (
+        PresenceType,
+        PropertyAdsCampaignTargetingGeographic,
+        PropertyAdsCampaignTargetingGeographicTypedDict,
+    )
+    from .property_adscampaign_targeting_geographic_location_types import (
+        PropertyAdsCampaignTargetingGeographicLocationTypes,
+    )
+    from .property_adscampaign_targeting_language import (
+        PropertyAdsCampaignTargetingLanguage,
+        PropertyAdsCampaignTargetingLanguageTypedDict,
+    )
+    from .property_adscampaign_targeting_optimization import (
+        Mode,
+        PropertyAdsCampaignTargetingOptimization,
+        PropertyAdsCampaignTargetingOptimizationTypedDict,
+    )
+    from .property_adscampaign_targeting_placement import (
+        PropertyAdsCampaignTargetingPlacement,
+        PropertyAdsCampaignTargetingPlacementTypedDict,
+    )
     from .property_adsgroup_bid_strategy import (
         PerformanceGoalType,
         PropertyAdsGroupBidStrategy,
@@ -885,6 +942,63 @@ if TYPE_CHECKING:
     from .property_adsgroup_targeting import (
         PropertyAdsGroupTargeting,
         PropertyAdsGroupTargetingTypedDict,
+    )
+    from .property_adsgroup_targeting_audience import (
+        PropertyAdsGroupTargetingAudience,
+        PropertyAdsGroupTargetingAudienceTypedDict,
+    )
+    from .property_adsgroup_targeting_brand_safety import (
+        PropertyAdsGroupTargetingBrandSafety,
+        PropertyAdsGroupTargetingBrandSafetyTypedDict,
+    )
+    from .property_adsgroup_targeting_brand_safety_publisher_visibility_categories import (
+        PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories,
+    )
+    from .property_adsgroup_targeting_content import (
+        PropertyAdsGroupTargetingContent,
+        PropertyAdsGroupTargetingContentTypedDict,
+    )
+    from .property_adsgroup_targeting_content_video import (
+        PropertyAdsGroupTargetingContentVideo,
+        PropertyAdsGroupTargetingContentVideoTypedDict,
+    )
+    from .property_adsgroup_targeting_content_video_durations import (
+        PropertyAdsGroupTargetingContentVideoDurations,
+    )
+    from .property_adsgroup_targeting_content_video_player_sizes import (
+        PropertyAdsGroupTargetingContentVideoPlayerSizes,
+    )
+    from .property_adsgroup_targeting_content_video_positions import (
+        PropertyAdsGroupTargetingContentVideoPositions,
+    )
+    from .property_adsgroup_targeting_demographic import (
+        PropertyAdsGroupTargetingDemographic,
+        PropertyAdsGroupTargetingDemographicTypedDict,
+    )
+    from .property_adsgroup_targeting_device import (
+        PropertyAdsGroupTargetingDevice,
+        PropertyAdsGroupTargetingDeviceTypedDict,
+    )
+    from .property_adsgroup_targeting_geographic import (
+        PropertyAdsGroupTargetingGeographic,
+        PropertyAdsGroupTargetingGeographicPresenceType,
+        PropertyAdsGroupTargetingGeographicTypedDict,
+    )
+    from .property_adsgroup_targeting_geographic_location_types import (
+        PropertyAdsGroupTargetingGeographicLocationTypes,
+    )
+    from .property_adsgroup_targeting_language import (
+        PropertyAdsGroupTargetingLanguage,
+        PropertyAdsGroupTargetingLanguageTypedDict,
+    )
+    from .property_adsgroup_targeting_optimization import (
+        PropertyAdsGroupTargetingOptimization,
+        PropertyAdsGroupTargetingOptimizationMode,
+        PropertyAdsGroupTargetingOptimizationTypedDict,
+    )
+    from .property_adsgroup_targeting_placement import (
+        PropertyAdsGroupTargetingPlacement,
+        PropertyAdsGroupTargetingPlacementTypedDict,
     )
     from .property_adsinsertionorder_bid_strategy import (
         PropertyAdsInsertionorderBidStrategy,
@@ -931,11 +1045,70 @@ if TYPE_CHECKING:
         PropertyAdsReportMetricsCampaignTargeting,
         PropertyAdsReportMetricsCampaignTargetingTypedDict,
     )
+    from .property_adsreportmetrics_campaign_targeting_audience import (
+        PropertyAdsReportMetricsCampaignTargetingAudience,
+        PropertyAdsReportMetricsCampaignTargetingAudienceTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_brand_safety import (
+        PropertyAdsReportMetricsCampaignTargetingBrandSafety,
+        PropertyAdsReportMetricsCampaignTargetingBrandSafetyTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_brand_safety_publisher_visibility_categories import (
+        PropertyAdsReportMetricsCampaignTargetingBrandSafetyPublisherVisibilityCategories,
+    )
+    from .property_adsreportmetrics_campaign_targeting_content import (
+        PropertyAdsReportMetricsCampaignTargetingContent,
+        PropertyAdsReportMetricsCampaignTargetingContentTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_content_video import (
+        PropertyAdsReportMetricsCampaignTargetingContentVideo,
+        PropertyAdsReportMetricsCampaignTargetingContentVideoTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_content_video_durations import (
+        PropertyAdsReportMetricsCampaignTargetingContentVideoDurations,
+    )
+    from .property_adsreportmetrics_campaign_targeting_content_video_player_sizes import (
+        PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizes,
+    )
+    from .property_adsreportmetrics_campaign_targeting_content_video_positions import (
+        PropertyAdsReportMetricsCampaignTargetingContentVideoPositions,
+    )
+    from .property_adsreportmetrics_campaign_targeting_demographic import (
+        PropertyAdsReportMetricsCampaignTargetingDemographic,
+        PropertyAdsReportMetricsCampaignTargetingDemographicTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_device import (
+        PropertyAdsReportMetricsCampaignTargetingDevice,
+        PropertyAdsReportMetricsCampaignTargetingDeviceTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_geographic import (
+        PropertyAdsReportMetricsCampaignTargetingGeographic,
+        PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType,
+        PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_geographic_location_types import (
+        PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes,
+    )
+    from .property_adsreportmetrics_campaign_targeting_language import (
+        PropertyAdsReportMetricsCampaignTargetingLanguage,
+        PropertyAdsReportMetricsCampaignTargetingLanguageTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_optimization import (
+        PropertyAdsReportMetricsCampaignTargetingOptimization,
+        PropertyAdsReportMetricsCampaignTargetingOptimizationMode,
+        PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_targeting_placement import (
+        PropertyAdsReportMetricsCampaignTargetingPlacement,
+        PropertyAdsReportMetricsCampaignTargetingPlacementTypedDict,
+    )
     from .property_adsreportmetrics_group import (
         PropertyAdsReportMetricsGroup,
+        PropertyAdsReportMetricsGroupBillingEvent,
         PropertyAdsReportMetricsGroupBudgetAllocationType,
         PropertyAdsReportMetricsGroupBudgetPeriod,
         PropertyAdsReportMetricsGroupBudgetUnit,
+        PropertyAdsReportMetricsGroupOptimizationGoal,
         PropertyAdsReportMetricsGroupStatus,
         PropertyAdsReportMetricsGroupType,
         PropertyAdsReportMetricsGroupTypedDict,
@@ -960,6 +1133,63 @@ if TYPE_CHECKING:
     from .property_adsreportmetrics_group_targeting import (
         PropertyAdsReportMetricsGroupTargeting,
         PropertyAdsReportMetricsGroupTargetingTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_audience import (
+        PropertyAdsReportMetricsGroupTargetingAudience,
+        PropertyAdsReportMetricsGroupTargetingAudienceTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_brand_safety import (
+        PropertyAdsReportMetricsGroupTargetingBrandSafety,
+        PropertyAdsReportMetricsGroupTargetingBrandSafetyTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_brand_safety_publisher_visibility_categories import (
+        PropertyAdsReportMetricsGroupTargetingBrandSafetyPublisherVisibilityCategories,
+    )
+    from .property_adsreportmetrics_group_targeting_content import (
+        PropertyAdsReportMetricsGroupTargetingContent,
+        PropertyAdsReportMetricsGroupTargetingContentTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_content_video import (
+        PropertyAdsReportMetricsGroupTargetingContentVideo,
+        PropertyAdsReportMetricsGroupTargetingContentVideoTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_content_video_durations import (
+        PropertyAdsReportMetricsGroupTargetingContentVideoDurations,
+    )
+    from .property_adsreportmetrics_group_targeting_content_video_player_sizes import (
+        PropertyAdsReportMetricsGroupTargetingContentVideoPlayerSizes,
+    )
+    from .property_adsreportmetrics_group_targeting_content_video_positions import (
+        PropertyAdsReportMetricsGroupTargetingContentVideoPositions,
+    )
+    from .property_adsreportmetrics_group_targeting_demographic import (
+        PropertyAdsReportMetricsGroupTargetingDemographic,
+        PropertyAdsReportMetricsGroupTargetingDemographicTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_device import (
+        PropertyAdsReportMetricsGroupTargetingDevice,
+        PropertyAdsReportMetricsGroupTargetingDeviceTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_geographic import (
+        PropertyAdsReportMetricsGroupTargetingGeographic,
+        PropertyAdsReportMetricsGroupTargetingGeographicPresenceType,
+        PropertyAdsReportMetricsGroupTargetingGeographicTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_geographic_location_types import (
+        PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes,
+    )
+    from .property_adsreportmetrics_group_targeting_language import (
+        PropertyAdsReportMetricsGroupTargetingLanguage,
+        PropertyAdsReportMetricsGroupTargetingLanguageTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_optimization import (
+        PropertyAdsReportMetricsGroupTargetingOptimization,
+        PropertyAdsReportMetricsGroupTargetingOptimizationMode,
+        PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict,
+    )
+    from .property_adsreportmetrics_group_targeting_placement import (
+        PropertyAdsReportMetricsGroupTargetingPlacement,
+        PropertyAdsReportMetricsGroupTargetingPlacementTypedDict,
     )
     from .property_atsactivity_from import (
         PropertyAtsActivityFrom,
@@ -1215,6 +1445,7 @@ if TYPE_CHECKING:
         PropertyUcCallTelephoneType,
         PropertyUcCallTelephoneTypedDict,
     )
+    from .regiontarget import RegionTarget, RegionTargetTypedDict
     from .repobranch import RepoBranch, RepoBranchTypedDict
     from .repocommit import RepoCommit, RepoCommitTypedDict
     from .repoorganization import RepoOrganization, RepoOrganizationTypedDict
@@ -1476,6 +1707,8 @@ __all__ = [
     "AccountingTrialbalanceSubItem",
     "AccountingTrialbalanceSubItemTypedDict",
     "AccountingTrialbalanceTypedDict",
+    "AdSchedule",
+    "AdScheduleTypedDict",
     "AdType",
     "AdsAd",
     "AdsAdStatus",
@@ -1497,15 +1730,21 @@ __all__ = [
     "AdsInsertionorderBudgetUnit",
     "AdsInsertionorderStatus",
     "AdsInsertionorderTypedDict",
-    "AdsMetadata",
-    "AdsMetadataTypedDict",
+    "AdsKeyword",
+    "AdsKeywordTypedDict",
     "AdsOrganization",
     "AdsOrganizationTypedDict",
+    "AdsPromoted",
+    "AdsPromotedType",
+    "AdsPromotedTypedDict",
     "AdsReport",
     "AdsReportMetrics",
     "AdsReportMetricsType",
     "AdsReportMetricsTypedDict",
     "AdsReportTypedDict",
+    "AdsTarget",
+    "AdsTargetType",
+    "AdsTargetTypedDict",
     "AdvertisingChannelType",
     "AssessmentAddress",
     "AssessmentAddressTypedDict",
@@ -1577,13 +1816,7 @@ __all__ = [
     "AtsMetadata1TypedDict",
     "AtsMetadata5",
     "AtsMetadata5TypedDict",
-    "AtsMetadataSchemas1",
-    "AtsMetadataSchemas1TypedDict",
-    "AtsMetadataSchemas5",
-    "AtsMetadataSchemas5TypedDict",
     "AtsMetadataTypedDict",
-    "AtsMetadataValue",
-    "AtsMetadataValueTypedDict",
     "AtsOffer",
     "AtsOfferStatus",
     "AtsOfferTypedDict",
@@ -1597,6 +1830,11 @@ __all__ = [
     "AtsTelephone",
     "AtsTelephoneType",
     "AtsTelephoneTypedDict",
+    "AudienceCombination",
+    "AudienceCombinationTypedDict",
+    "AudienceSegment",
+    "AudienceSegmentTypedDict",
+    "BillingEvent",
     "BudgetAllocationType",
     "BudgetPeriod",
     "BudgetUnit",
@@ -1633,6 +1871,8 @@ __all__ = [
     "CalendarWebinarRegistrantTypedDict",
     "CalendarWebinarStatus",
     "CalendarWebinarTypedDict",
+    "CityTarget",
+    "CityTargetTypedDict",
     "CommerceCollection",
     "CommerceCollectionType",
     "CommerceCollectionTypedDict",
@@ -1726,6 +1966,7 @@ __all__ = [
     "CrmTelephone",
     "CrmTelephoneType",
     "CrmTelephoneTypedDict",
+    "DayOfWeek",
     "DbType",
     "DutiesPaidBy",
     "EmployerContributionType",
@@ -1981,6 +2222,8 @@ __all__ = [
     "LmsTelephone",
     "LmsTelephoneType",
     "LmsTelephoneTypedDict",
+    "LookalikeAudience",
+    "LookalikeAudienceTypedDict",
     "MaritalStatus",
     "MarketingCampaign",
     "MarketingCampaignStatus",
@@ -1997,6 +2240,7 @@ __all__ = [
     "MarketingReportLink",
     "MarketingReportLinkTypedDict",
     "MarketingReportTypedDict",
+    "MatchType",
     "MessagingAttachment",
     "MessagingAttachmentTypedDict",
     "MessagingButton",
@@ -2017,6 +2261,7 @@ __all__ = [
     "MetadataMetadata",
     "MetadataMetadataFormat",
     "MetadataMetadataTypedDict",
+    "Mode",
     "NativeWebhookCalendarID",
     "NativeWebhookCarrierID",
     "NativeWebhookChannelID",
@@ -2038,6 +2283,7 @@ __all__ = [
     "One",
     "OneTypedDict",
     "Operation",
+    "OptimizationGoal",
     "Origin",
     "Partnership",
     "PartnershipTypedDict",
@@ -2061,6 +2307,7 @@ __all__ = [
     "PaymentType",
     "PerformanceGoalType",
     "Period",
+    "PresenceType",
     "Priority",
     "ProfileGender",
     "PropertyAccountingContactBillingAddress",
@@ -2090,6 +2337,31 @@ __all__ = [
     "PropertyAdsCampaignFrequencyCap",
     "PropertyAdsCampaignFrequencyCapTypedDict",
     "PropertyAdsCampaignTargeting",
+    "PropertyAdsCampaignTargetingAudience",
+    "PropertyAdsCampaignTargetingAudienceTypedDict",
+    "PropertyAdsCampaignTargetingBrandSafety",
+    "PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories",
+    "PropertyAdsCampaignTargetingBrandSafetyTypedDict",
+    "PropertyAdsCampaignTargetingContent",
+    "PropertyAdsCampaignTargetingContentTypedDict",
+    "PropertyAdsCampaignTargetingContentVideo",
+    "PropertyAdsCampaignTargetingContentVideoDurations",
+    "PropertyAdsCampaignTargetingContentVideoPlayerSizes",
+    "PropertyAdsCampaignTargetingContentVideoPositions",
+    "PropertyAdsCampaignTargetingContentVideoTypedDict",
+    "PropertyAdsCampaignTargetingDemographic",
+    "PropertyAdsCampaignTargetingDemographicTypedDict",
+    "PropertyAdsCampaignTargetingDevice",
+    "PropertyAdsCampaignTargetingDeviceTypedDict",
+    "PropertyAdsCampaignTargetingGeographic",
+    "PropertyAdsCampaignTargetingGeographicLocationTypes",
+    "PropertyAdsCampaignTargetingGeographicTypedDict",
+    "PropertyAdsCampaignTargetingLanguage",
+    "PropertyAdsCampaignTargetingLanguageTypedDict",
+    "PropertyAdsCampaignTargetingOptimization",
+    "PropertyAdsCampaignTargetingOptimizationTypedDict",
+    "PropertyAdsCampaignTargetingPlacement",
+    "PropertyAdsCampaignTargetingPlacementTypedDict",
     "PropertyAdsCampaignTargetingTypedDict",
     "PropertyAdsGroupBidStrategy",
     "PropertyAdsGroupBidStrategyType",
@@ -2100,6 +2372,33 @@ __all__ = [
     "PropertyAdsGroupPacing",
     "PropertyAdsGroupPacingTypedDict",
     "PropertyAdsGroupTargeting",
+    "PropertyAdsGroupTargetingAudience",
+    "PropertyAdsGroupTargetingAudienceTypedDict",
+    "PropertyAdsGroupTargetingBrandSafety",
+    "PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories",
+    "PropertyAdsGroupTargetingBrandSafetyTypedDict",
+    "PropertyAdsGroupTargetingContent",
+    "PropertyAdsGroupTargetingContentTypedDict",
+    "PropertyAdsGroupTargetingContentVideo",
+    "PropertyAdsGroupTargetingContentVideoDurations",
+    "PropertyAdsGroupTargetingContentVideoPlayerSizes",
+    "PropertyAdsGroupTargetingContentVideoPositions",
+    "PropertyAdsGroupTargetingContentVideoTypedDict",
+    "PropertyAdsGroupTargetingDemographic",
+    "PropertyAdsGroupTargetingDemographicTypedDict",
+    "PropertyAdsGroupTargetingDevice",
+    "PropertyAdsGroupTargetingDeviceTypedDict",
+    "PropertyAdsGroupTargetingGeographic",
+    "PropertyAdsGroupTargetingGeographicLocationTypes",
+    "PropertyAdsGroupTargetingGeographicPresenceType",
+    "PropertyAdsGroupTargetingGeographicTypedDict",
+    "PropertyAdsGroupTargetingLanguage",
+    "PropertyAdsGroupTargetingLanguageTypedDict",
+    "PropertyAdsGroupTargetingOptimization",
+    "PropertyAdsGroupTargetingOptimizationMode",
+    "PropertyAdsGroupTargetingOptimizationTypedDict",
+    "PropertyAdsGroupTargetingPlacement",
+    "PropertyAdsGroupTargetingPlacementTypedDict",
     "PropertyAdsGroupTargetingTypedDict",
     "PropertyAdsInsertionorderBidStrategy",
     "PropertyAdsInsertionorderBidStrategyPerformanceGoalType",
@@ -2128,6 +2427,33 @@ __all__ = [
     "PropertyAdsReportMetricsCampaignGoal",
     "PropertyAdsReportMetricsCampaignStatus",
     "PropertyAdsReportMetricsCampaignTargeting",
+    "PropertyAdsReportMetricsCampaignTargetingAudience",
+    "PropertyAdsReportMetricsCampaignTargetingAudienceTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingBrandSafety",
+    "PropertyAdsReportMetricsCampaignTargetingBrandSafetyPublisherVisibilityCategories",
+    "PropertyAdsReportMetricsCampaignTargetingBrandSafetyTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingContent",
+    "PropertyAdsReportMetricsCampaignTargetingContentTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideo",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideoDurations",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizes",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideoPositions",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideoTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingDemographic",
+    "PropertyAdsReportMetricsCampaignTargetingDemographicTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingDevice",
+    "PropertyAdsReportMetricsCampaignTargetingDeviceTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingGeographic",
+    "PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes",
+    "PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType",
+    "PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingLanguage",
+    "PropertyAdsReportMetricsCampaignTargetingLanguageTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingOptimization",
+    "PropertyAdsReportMetricsCampaignTargetingOptimizationMode",
+    "PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingPlacement",
+    "PropertyAdsReportMetricsCampaignTargetingPlacementTypedDict",
     "PropertyAdsReportMetricsCampaignTargetingTypedDict",
     "PropertyAdsReportMetricsCampaignTypedDict",
     "PropertyAdsReportMetricsGroup",
@@ -2136,17 +2462,46 @@ __all__ = [
     "PropertyAdsReportMetricsGroupBidStrategyType",
     "PropertyAdsReportMetricsGroupBidStrategyTypedDict",
     "PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType",
+    "PropertyAdsReportMetricsGroupBillingEvent",
     "PropertyAdsReportMetricsGroupBudgetAllocationType",
     "PropertyAdsReportMetricsGroupBudgetPeriod",
     "PropertyAdsReportMetricsGroupBudgetUnit",
     "PropertyAdsReportMetricsGroupFrequencyCap",
     "PropertyAdsReportMetricsGroupFrequencyCapTimeUnit",
     "PropertyAdsReportMetricsGroupFrequencyCapTypedDict",
+    "PropertyAdsReportMetricsGroupOptimizationGoal",
     "PropertyAdsReportMetricsGroupPacing",
     "PropertyAdsReportMetricsGroupPacingPeriod",
     "PropertyAdsReportMetricsGroupPacingTypedDict",
     "PropertyAdsReportMetricsGroupStatus",
     "PropertyAdsReportMetricsGroupTargeting",
+    "PropertyAdsReportMetricsGroupTargetingAudience",
+    "PropertyAdsReportMetricsGroupTargetingAudienceTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingBrandSafety",
+    "PropertyAdsReportMetricsGroupTargetingBrandSafetyPublisherVisibilityCategories",
+    "PropertyAdsReportMetricsGroupTargetingBrandSafetyTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingContent",
+    "PropertyAdsReportMetricsGroupTargetingContentTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingContentVideo",
+    "PropertyAdsReportMetricsGroupTargetingContentVideoDurations",
+    "PropertyAdsReportMetricsGroupTargetingContentVideoPlayerSizes",
+    "PropertyAdsReportMetricsGroupTargetingContentVideoPositions",
+    "PropertyAdsReportMetricsGroupTargetingContentVideoTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingDemographic",
+    "PropertyAdsReportMetricsGroupTargetingDemographicTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingDevice",
+    "PropertyAdsReportMetricsGroupTargetingDeviceTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingGeographic",
+    "PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes",
+    "PropertyAdsReportMetricsGroupTargetingGeographicPresenceType",
+    "PropertyAdsReportMetricsGroupTargetingGeographicTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingLanguage",
+    "PropertyAdsReportMetricsGroupTargetingLanguageTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingOptimization",
+    "PropertyAdsReportMetricsGroupTargetingOptimizationMode",
+    "PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingPlacement",
+    "PropertyAdsReportMetricsGroupTargetingPlacementTypedDict",
     "PropertyAdsReportMetricsGroupTargetingTypedDict",
     "PropertyAdsReportMetricsGroupType",
     "PropertyAdsReportMetricsGroupTypedDict",
@@ -2281,7 +2636,10 @@ __all__ = [
     "PropertyUcCallTelephone",
     "PropertyUcCallTelephoneType",
     "PropertyUcCallTelephoneTypedDict",
+    "RadiusUnit",
     "Recommendation",
+    "RegionTarget",
+    "RegionTargetTypedDict",
     "RegistrationStatus",
     "RepoBranch",
     "RepoBranchTypedDict",
@@ -2628,6 +2986,9 @@ _dynamic_imports: dict[str, str] = {
     "AdvertisingChannelType": ".adscampaign",
     "BudgetPeriod": ".adscampaign",
     "Goal": ".adscampaign",
+    "AdSchedule": ".adschedule",
+    "AdScheduleTypedDict": ".adschedule",
+    "DayOfWeek": ".adschedule",
     "AdsCreative": ".adscreative",
     "AdsCreativeStatus": ".adscreative",
     "AdsCreativeTypedDict": ".adscreative",
@@ -2638,29 +2999,32 @@ _dynamic_imports: dict[str, str] = {
     "AdsGroupStatus": ".adsgroup",
     "AdsGroupType": ".adsgroup",
     "AdsGroupTypedDict": ".adsgroup",
+    "BillingEvent": ".adsgroup",
     "BudgetAllocationType": ".adsgroup",
     "BudgetUnit": ".adsgroup",
+    "OptimizationGoal": ".adsgroup",
     "AdsInsertionorder": ".adsinsertionorder",
     "AdsInsertionorderBudgetUnit": ".adsinsertionorder",
     "AdsInsertionorderStatus": ".adsinsertionorder",
     "AdsInsertionorderTypedDict": ".adsinsertionorder",
     "AdsInsertionorderBudgetSegment": ".adsinsertionorderbudgetsegment",
     "AdsInsertionorderBudgetSegmentTypedDict": ".adsinsertionorderbudgetsegment",
-    "AdsMetadata": ".adsmetadata",
-    "AdsMetadataTypedDict": ".adsmetadata",
-    "Five": ".adsmetadata",
-    "FiveTypedDict": ".adsmetadata",
-    "One": ".adsmetadata",
-    "OneTypedDict": ".adsmetadata",
-    "Value": ".adsmetadata",
-    "ValueTypedDict": ".adsmetadata",
+    "AdsKeyword": ".adskeyword",
+    "AdsKeywordTypedDict": ".adskeyword",
+    "MatchType": ".adskeyword",
     "AdsOrganization": ".adsorganization",
     "AdsOrganizationTypedDict": ".adsorganization",
+    "AdsPromoted": ".adspromoted",
+    "AdsPromotedType": ".adspromoted",
+    "AdsPromotedTypedDict": ".adspromoted",
     "AdsReport": ".adsreport",
     "AdsReportTypedDict": ".adsreport",
     "AdsReportMetrics": ".adsreportmetrics",
     "AdsReportMetricsType": ".adsreportmetrics",
     "AdsReportMetricsTypedDict": ".adsreportmetrics",
+    "AdsTarget": ".adstarget",
+    "AdsTargetType": ".adstarget",
+    "AdsTargetTypedDict": ".adstarget",
     "APICall": ".apicall",
     "APICallType": ".apicall",
     "APICallTypedDict": ".apicall",
@@ -2739,16 +3103,16 @@ _dynamic_imports: dict[str, str] = {
     "AtsMetadata1TypedDict": ".atsmetadata",
     "AtsMetadata5": ".atsmetadata",
     "AtsMetadata5TypedDict": ".atsmetadata",
-    "AtsMetadataSchemas1": ".atsmetadata",
-    "AtsMetadataSchemas1TypedDict": ".atsmetadata",
-    "AtsMetadataSchemas5": ".atsmetadata",
-    "AtsMetadataSchemas5TypedDict": ".atsmetadata",
     "AtsMetadataTypedDict": ".atsmetadata",
-    "AtsMetadataValue": ".atsmetadata",
-    "AtsMetadataValueTypedDict": ".atsmetadata",
     "ExtraData": ".atsmetadata",
     "ExtraDataTypedDict": ".atsmetadata",
+    "Five": ".atsmetadata",
+    "FiveTypedDict": ".atsmetadata",
     "Format": ".atsmetadata",
+    "One": ".atsmetadata",
+    "OneTypedDict": ".atsmetadata",
+    "Value": ".atsmetadata",
+    "ValueTypedDict": ".atsmetadata",
     "AtsOffer": ".atsoffer",
     "AtsOfferStatus": ".atsoffer",
     "AtsOfferTypedDict": ".atsoffer",
@@ -2763,6 +3127,10 @@ _dynamic_imports: dict[str, str] = {
     "AtsTelephone": ".atstelephone",
     "AtsTelephoneType": ".atstelephone",
     "AtsTelephoneTypedDict": ".atstelephone",
+    "AudienceCombination": ".audiencecombination",
+    "AudienceCombinationTypedDict": ".audiencecombination",
+    "AudienceSegment": ".audiencesegment",
+    "AudienceSegmentTypedDict": ".audiencesegment",
     "CalendarAttachment": ".calendarattachment",
     "CalendarAttachmentTypedDict": ".calendarattachment",
     "CalendarAttendee": ".calendarattendee",
@@ -2798,6 +3166,9 @@ _dynamic_imports: dict[str, str] = {
     "CalendarWebinarRegistrant": ".calendarwebinarregistrant",
     "CalendarWebinarRegistrantTypedDict": ".calendarwebinarregistrant",
     "RegistrationStatus": ".calendarwebinarregistrant",
+    "CityTarget": ".citytarget",
+    "CityTargetTypedDict": ".citytarget",
+    "RadiusUnit": ".citytarget",
     "CommerceCollection": ".commercecollection",
     "CommerceCollectionType": ".commercecollection",
     "CommerceCollectionTypedDict": ".commercecollection",
@@ -3218,6 +3589,8 @@ _dynamic_imports: dict[str, str] = {
     "LmsTelephone": ".lmstelephone",
     "LmsTelephoneType": ".lmstelephone",
     "LmsTelephoneTypedDict": ".lmstelephone",
+    "LookalikeAudience": ".lookalikeaudience",
+    "LookalikeAudienceTypedDict": ".lookalikeaudience",
     "MarketingCampaign": ".marketingcampaign",
     "MarketingCampaignStatus": ".marketingcampaign",
     "MarketingCampaignTypedDict": ".marketingcampaign",
@@ -3299,6 +3672,33 @@ _dynamic_imports: dict[str, str] = {
     "TimeUnit": ".property_adscampaign_frequency_cap",
     "PropertyAdsCampaignTargeting": ".property_adscampaign_targeting",
     "PropertyAdsCampaignTargetingTypedDict": ".property_adscampaign_targeting",
+    "PropertyAdsCampaignTargetingAudience": ".property_adscampaign_targeting_audience",
+    "PropertyAdsCampaignTargetingAudienceTypedDict": ".property_adscampaign_targeting_audience",
+    "PropertyAdsCampaignTargetingBrandSafety": ".property_adscampaign_targeting_brand_safety",
+    "PropertyAdsCampaignTargetingBrandSafetyTypedDict": ".property_adscampaign_targeting_brand_safety",
+    "PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories": ".property_adscampaign_targeting_brand_safety_publisher_visibility_categories",
+    "PropertyAdsCampaignTargetingContent": ".property_adscampaign_targeting_content",
+    "PropertyAdsCampaignTargetingContentTypedDict": ".property_adscampaign_targeting_content",
+    "PropertyAdsCampaignTargetingContentVideo": ".property_adscampaign_targeting_content_video",
+    "PropertyAdsCampaignTargetingContentVideoTypedDict": ".property_adscampaign_targeting_content_video",
+    "PropertyAdsCampaignTargetingContentVideoDurations": ".property_adscampaign_targeting_content_video_durations",
+    "PropertyAdsCampaignTargetingContentVideoPlayerSizes": ".property_adscampaign_targeting_content_video_player_sizes",
+    "PropertyAdsCampaignTargetingContentVideoPositions": ".property_adscampaign_targeting_content_video_positions",
+    "PropertyAdsCampaignTargetingDemographic": ".property_adscampaign_targeting_demographic",
+    "PropertyAdsCampaignTargetingDemographicTypedDict": ".property_adscampaign_targeting_demographic",
+    "PropertyAdsCampaignTargetingDevice": ".property_adscampaign_targeting_device",
+    "PropertyAdsCampaignTargetingDeviceTypedDict": ".property_adscampaign_targeting_device",
+    "PresenceType": ".property_adscampaign_targeting_geographic",
+    "PropertyAdsCampaignTargetingGeographic": ".property_adscampaign_targeting_geographic",
+    "PropertyAdsCampaignTargetingGeographicTypedDict": ".property_adscampaign_targeting_geographic",
+    "PropertyAdsCampaignTargetingGeographicLocationTypes": ".property_adscampaign_targeting_geographic_location_types",
+    "PropertyAdsCampaignTargetingLanguage": ".property_adscampaign_targeting_language",
+    "PropertyAdsCampaignTargetingLanguageTypedDict": ".property_adscampaign_targeting_language",
+    "Mode": ".property_adscampaign_targeting_optimization",
+    "PropertyAdsCampaignTargetingOptimization": ".property_adscampaign_targeting_optimization",
+    "PropertyAdsCampaignTargetingOptimizationTypedDict": ".property_adscampaign_targeting_optimization",
+    "PropertyAdsCampaignTargetingPlacement": ".property_adscampaign_targeting_placement",
+    "PropertyAdsCampaignTargetingPlacementTypedDict": ".property_adscampaign_targeting_placement",
     "PerformanceGoalType": ".property_adsgroup_bid_strategy",
     "PropertyAdsGroupBidStrategy": ".property_adsgroup_bid_strategy",
     "PropertyAdsGroupBidStrategyType": ".property_adsgroup_bid_strategy",
@@ -3312,6 +3712,33 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsGroupPacingTypedDict": ".property_adsgroup_pacing",
     "PropertyAdsGroupTargeting": ".property_adsgroup_targeting",
     "PropertyAdsGroupTargetingTypedDict": ".property_adsgroup_targeting",
+    "PropertyAdsGroupTargetingAudience": ".property_adsgroup_targeting_audience",
+    "PropertyAdsGroupTargetingAudienceTypedDict": ".property_adsgroup_targeting_audience",
+    "PropertyAdsGroupTargetingBrandSafety": ".property_adsgroup_targeting_brand_safety",
+    "PropertyAdsGroupTargetingBrandSafetyTypedDict": ".property_adsgroup_targeting_brand_safety",
+    "PropertyAdsGroupTargetingBrandSafetyPublisherVisibilityCategories": ".property_adsgroup_targeting_brand_safety_publisher_visibility_categories",
+    "PropertyAdsGroupTargetingContent": ".property_adsgroup_targeting_content",
+    "PropertyAdsGroupTargetingContentTypedDict": ".property_adsgroup_targeting_content",
+    "PropertyAdsGroupTargetingContentVideo": ".property_adsgroup_targeting_content_video",
+    "PropertyAdsGroupTargetingContentVideoTypedDict": ".property_adsgroup_targeting_content_video",
+    "PropertyAdsGroupTargetingContentVideoDurations": ".property_adsgroup_targeting_content_video_durations",
+    "PropertyAdsGroupTargetingContentVideoPlayerSizes": ".property_adsgroup_targeting_content_video_player_sizes",
+    "PropertyAdsGroupTargetingContentVideoPositions": ".property_adsgroup_targeting_content_video_positions",
+    "PropertyAdsGroupTargetingDemographic": ".property_adsgroup_targeting_demographic",
+    "PropertyAdsGroupTargetingDemographicTypedDict": ".property_adsgroup_targeting_demographic",
+    "PropertyAdsGroupTargetingDevice": ".property_adsgroup_targeting_device",
+    "PropertyAdsGroupTargetingDeviceTypedDict": ".property_adsgroup_targeting_device",
+    "PropertyAdsGroupTargetingGeographic": ".property_adsgroup_targeting_geographic",
+    "PropertyAdsGroupTargetingGeographicPresenceType": ".property_adsgroup_targeting_geographic",
+    "PropertyAdsGroupTargetingGeographicTypedDict": ".property_adsgroup_targeting_geographic",
+    "PropertyAdsGroupTargetingGeographicLocationTypes": ".property_adsgroup_targeting_geographic_location_types",
+    "PropertyAdsGroupTargetingLanguage": ".property_adsgroup_targeting_language",
+    "PropertyAdsGroupTargetingLanguageTypedDict": ".property_adsgroup_targeting_language",
+    "PropertyAdsGroupTargetingOptimization": ".property_adsgroup_targeting_optimization",
+    "PropertyAdsGroupTargetingOptimizationMode": ".property_adsgroup_targeting_optimization",
+    "PropertyAdsGroupTargetingOptimizationTypedDict": ".property_adsgroup_targeting_optimization",
+    "PropertyAdsGroupTargetingPlacement": ".property_adsgroup_targeting_placement",
+    "PropertyAdsGroupTargetingPlacementTypedDict": ".property_adsgroup_targeting_placement",
     "PropertyAdsInsertionorderBidStrategy": ".property_adsinsertionorder_bid_strategy",
     "PropertyAdsInsertionorderBidStrategyPerformanceGoalType": ".property_adsinsertionorder_bid_strategy",
     "PropertyAdsInsertionorderBidStrategyType": ".property_adsinsertionorder_bid_strategy",
@@ -3341,10 +3768,39 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsCampaignFrequencyCapTypedDict": ".property_adsreportmetrics_campaign_frequency_cap",
     "PropertyAdsReportMetricsCampaignTargeting": ".property_adsreportmetrics_campaign_targeting",
     "PropertyAdsReportMetricsCampaignTargetingTypedDict": ".property_adsreportmetrics_campaign_targeting",
+    "PropertyAdsReportMetricsCampaignTargetingAudience": ".property_adsreportmetrics_campaign_targeting_audience",
+    "PropertyAdsReportMetricsCampaignTargetingAudienceTypedDict": ".property_adsreportmetrics_campaign_targeting_audience",
+    "PropertyAdsReportMetricsCampaignTargetingBrandSafety": ".property_adsreportmetrics_campaign_targeting_brand_safety",
+    "PropertyAdsReportMetricsCampaignTargetingBrandSafetyTypedDict": ".property_adsreportmetrics_campaign_targeting_brand_safety",
+    "PropertyAdsReportMetricsCampaignTargetingBrandSafetyPublisherVisibilityCategories": ".property_adsreportmetrics_campaign_targeting_brand_safety_publisher_visibility_categories",
+    "PropertyAdsReportMetricsCampaignTargetingContent": ".property_adsreportmetrics_campaign_targeting_content",
+    "PropertyAdsReportMetricsCampaignTargetingContentTypedDict": ".property_adsreportmetrics_campaign_targeting_content",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideo": ".property_adsreportmetrics_campaign_targeting_content_video",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideoTypedDict": ".property_adsreportmetrics_campaign_targeting_content_video",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideoDurations": ".property_adsreportmetrics_campaign_targeting_content_video_durations",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideoPlayerSizes": ".property_adsreportmetrics_campaign_targeting_content_video_player_sizes",
+    "PropertyAdsReportMetricsCampaignTargetingContentVideoPositions": ".property_adsreportmetrics_campaign_targeting_content_video_positions",
+    "PropertyAdsReportMetricsCampaignTargetingDemographic": ".property_adsreportmetrics_campaign_targeting_demographic",
+    "PropertyAdsReportMetricsCampaignTargetingDemographicTypedDict": ".property_adsreportmetrics_campaign_targeting_demographic",
+    "PropertyAdsReportMetricsCampaignTargetingDevice": ".property_adsreportmetrics_campaign_targeting_device",
+    "PropertyAdsReportMetricsCampaignTargetingDeviceTypedDict": ".property_adsreportmetrics_campaign_targeting_device",
+    "PropertyAdsReportMetricsCampaignTargetingGeographic": ".property_adsreportmetrics_campaign_targeting_geographic",
+    "PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType": ".property_adsreportmetrics_campaign_targeting_geographic",
+    "PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict": ".property_adsreportmetrics_campaign_targeting_geographic",
+    "PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes": ".property_adsreportmetrics_campaign_targeting_geographic_location_types",
+    "PropertyAdsReportMetricsCampaignTargetingLanguage": ".property_adsreportmetrics_campaign_targeting_language",
+    "PropertyAdsReportMetricsCampaignTargetingLanguageTypedDict": ".property_adsreportmetrics_campaign_targeting_language",
+    "PropertyAdsReportMetricsCampaignTargetingOptimization": ".property_adsreportmetrics_campaign_targeting_optimization",
+    "PropertyAdsReportMetricsCampaignTargetingOptimizationMode": ".property_adsreportmetrics_campaign_targeting_optimization",
+    "PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict": ".property_adsreportmetrics_campaign_targeting_optimization",
+    "PropertyAdsReportMetricsCampaignTargetingPlacement": ".property_adsreportmetrics_campaign_targeting_placement",
+    "PropertyAdsReportMetricsCampaignTargetingPlacementTypedDict": ".property_adsreportmetrics_campaign_targeting_placement",
     "PropertyAdsReportMetricsGroup": ".property_adsreportmetrics_group",
+    "PropertyAdsReportMetricsGroupBillingEvent": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBudgetAllocationType": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBudgetPeriod": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBudgetUnit": ".property_adsreportmetrics_group",
+    "PropertyAdsReportMetricsGroupOptimizationGoal": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupStatus": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupType": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupTypedDict": ".property_adsreportmetrics_group",
@@ -3361,6 +3817,33 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsGroupPacingTypedDict": ".property_adsreportmetrics_group_pacing",
     "PropertyAdsReportMetricsGroupTargeting": ".property_adsreportmetrics_group_targeting",
     "PropertyAdsReportMetricsGroupTargetingTypedDict": ".property_adsreportmetrics_group_targeting",
+    "PropertyAdsReportMetricsGroupTargetingAudience": ".property_adsreportmetrics_group_targeting_audience",
+    "PropertyAdsReportMetricsGroupTargetingAudienceTypedDict": ".property_adsreportmetrics_group_targeting_audience",
+    "PropertyAdsReportMetricsGroupTargetingBrandSafety": ".property_adsreportmetrics_group_targeting_brand_safety",
+    "PropertyAdsReportMetricsGroupTargetingBrandSafetyTypedDict": ".property_adsreportmetrics_group_targeting_brand_safety",
+    "PropertyAdsReportMetricsGroupTargetingBrandSafetyPublisherVisibilityCategories": ".property_adsreportmetrics_group_targeting_brand_safety_publisher_visibility_categories",
+    "PropertyAdsReportMetricsGroupTargetingContent": ".property_adsreportmetrics_group_targeting_content",
+    "PropertyAdsReportMetricsGroupTargetingContentTypedDict": ".property_adsreportmetrics_group_targeting_content",
+    "PropertyAdsReportMetricsGroupTargetingContentVideo": ".property_adsreportmetrics_group_targeting_content_video",
+    "PropertyAdsReportMetricsGroupTargetingContentVideoTypedDict": ".property_adsreportmetrics_group_targeting_content_video",
+    "PropertyAdsReportMetricsGroupTargetingContentVideoDurations": ".property_adsreportmetrics_group_targeting_content_video_durations",
+    "PropertyAdsReportMetricsGroupTargetingContentVideoPlayerSizes": ".property_adsreportmetrics_group_targeting_content_video_player_sizes",
+    "PropertyAdsReportMetricsGroupTargetingContentVideoPositions": ".property_adsreportmetrics_group_targeting_content_video_positions",
+    "PropertyAdsReportMetricsGroupTargetingDemographic": ".property_adsreportmetrics_group_targeting_demographic",
+    "PropertyAdsReportMetricsGroupTargetingDemographicTypedDict": ".property_adsreportmetrics_group_targeting_demographic",
+    "PropertyAdsReportMetricsGroupTargetingDevice": ".property_adsreportmetrics_group_targeting_device",
+    "PropertyAdsReportMetricsGroupTargetingDeviceTypedDict": ".property_adsreportmetrics_group_targeting_device",
+    "PropertyAdsReportMetricsGroupTargetingGeographic": ".property_adsreportmetrics_group_targeting_geographic",
+    "PropertyAdsReportMetricsGroupTargetingGeographicPresenceType": ".property_adsreportmetrics_group_targeting_geographic",
+    "PropertyAdsReportMetricsGroupTargetingGeographicTypedDict": ".property_adsreportmetrics_group_targeting_geographic",
+    "PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes": ".property_adsreportmetrics_group_targeting_geographic_location_types",
+    "PropertyAdsReportMetricsGroupTargetingLanguage": ".property_adsreportmetrics_group_targeting_language",
+    "PropertyAdsReportMetricsGroupTargetingLanguageTypedDict": ".property_adsreportmetrics_group_targeting_language",
+    "PropertyAdsReportMetricsGroupTargetingOptimization": ".property_adsreportmetrics_group_targeting_optimization",
+    "PropertyAdsReportMetricsGroupTargetingOptimizationMode": ".property_adsreportmetrics_group_targeting_optimization",
+    "PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict": ".property_adsreportmetrics_group_targeting_optimization",
+    "PropertyAdsReportMetricsGroupTargetingPlacement": ".property_adsreportmetrics_group_targeting_placement",
+    "PropertyAdsReportMetricsGroupTargetingPlacementTypedDict": ".property_adsreportmetrics_group_targeting_placement",
     "PropertyAtsActivityFrom": ".property_atsactivity_from",
     "PropertyAtsActivityFromType": ".property_atsactivity_from",
     "PropertyAtsActivityFromTypedDict": ".property_atsactivity_from",
@@ -3501,6 +3984,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyUcCallTelephone": ".property_uccall_telephone",
     "PropertyUcCallTelephoneType": ".property_uccall_telephone",
     "PropertyUcCallTelephoneTypedDict": ".property_uccall_telephone",
+    "RegionTarget": ".regiontarget",
+    "RegionTargetTypedDict": ".regiontarget",
     "RepoBranch": ".repobranch",
     "RepoBranchTypedDict": ".repobranch",
     "RepoCommit": ".repocommit",

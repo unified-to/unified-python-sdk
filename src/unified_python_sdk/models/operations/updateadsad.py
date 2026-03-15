@@ -36,7 +36,7 @@ class UpdateAdsAdQueryParamFields(str, Enum):
     DISPLAY_URL = "display_url"
     PATH1 = "path1"
     PATH2 = "path2"
-    METADATA = "metadata"
+    PROMOTED = "promoted"
     RAW = "raw"
 
 

@@ -318,7 +318,9 @@ asyncio.run(main())
 * [list_ads_groups](docs/sdks/ads/README.md#list_ads_groups) - List all groups
 * [list_ads_insertionorders](docs/sdks/ads/README.md#list_ads_insertionorders) - List all insertionorders
 * [list_ads_organizations](docs/sdks/ads/README.md#list_ads_organizations) - List all organizations
+* [list_ads_promotedes](docs/sdks/ads/README.md#list_ads_promotedes) - List all promotedes
 * [list_ads_reports](docs/sdks/ads/README.md#list_ads_reports) - List all reports
+* [list_ads_targets](docs/sdks/ads/README.md#list_ads_targets) - List all targets
 * [patch_ads_ad](docs/sdks/ads/README.md#patch_ads_ad) - Update an ad
 * [patch_ads_campaign](docs/sdks/ads/README.md#patch_ads_campaign) - Update a campaign
 * [patch_ads_creative](docs/sdks/ads/README.md#patch_ads_creative) - Update a creative
@@ -1418,6 +1420,10 @@ asyncio.run(main())
 * [remove_task_project](docs/sdks/project/README.md#remove_task_project) - Remove a project
 * [update_task_project](docs/sdks/project/README.md#update_task_project) - Update a project
 
+### [Promoted](docs/sdks/promoted/README.md)
+
+* [list_ads_promotedes](docs/sdks/promoted/README.md#list_ads_promotedes) - List all promotedes
+
 ### [Prompt](docs/sdks/prompt/README.md)
 
 * [create_genai_prompt](docs/sdks/prompt/README.md#create_genai_prompt) - Create a prompt
@@ -1637,6 +1643,10 @@ asyncio.run(main())
 * [patch_payment_subscription](docs/sdks/subscription/README.md#patch_payment_subscription) - Update a subscription
 * [remove_payment_subscription](docs/sdks/subscription/README.md#remove_payment_subscription) - Remove a subscription
 * [update_payment_subscription](docs/sdks/subscription/README.md#update_payment_subscription) - Update a subscription
+
+### [Target](docs/sdks/target/README.md)
+
+* [list_ads_targets](docs/sdks/target/README.md#list_ads_targets) - List all targets
 
 ### [Task](docs/sdks/task/README.md)
 

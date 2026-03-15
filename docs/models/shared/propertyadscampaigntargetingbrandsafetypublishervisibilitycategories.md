@@ -1,0 +1,20 @@
+# PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories
+
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories
+
+value = PropertyAdsCampaignTargetingBrandSafetyPublisherVisibilityCategories.LIMITED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
+
+## Values
+
+| Name       | Value      |
+| ---------- | ---------- |
+| `LIMITED`  | limited    |
+| `STANDARD` | standard   |
+| `EXPANDED` | expanded   |
