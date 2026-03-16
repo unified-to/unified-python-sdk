@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 63ab4de5c2de6c20799399d339ad2b41
+  docChecksum: 6eefdfc44825d8c4165b112c6392dc3c
   docVersion: "1.0"
   speakeasyVersion: 1.755.0
   generationVersion: 2.865.2
-  releaseVersion: 0.57.18
-  configChecksum: 0cd71059257801a8ee9ecf3ba1943bba
+  releaseVersion: 0.57.19
+  configChecksum: 967f37141a8b0d70ce837809e120f8ee
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 92467eec-9c55-4787-8f94-296c86387f2f
-  pristine_commit_hash: 17c2bc69a0fa7c45ed48312483f728a720619c1d
-  pristine_tree_hash: 7377cc10991159b84c8be2681aa8ec562f9b096b
+  generation_id: 1b548961-ca3e-4708-97d3-82202421814c
+  pristine_commit_hash: c5aac65a1d1f531b3e6d02eaf8dc97c5d2121818
+  pristine_tree_hash: 674645b1a0112b24573878a0199f12ccd986b537
 features:
   python:
     acceptHeaders: 3.0.0
@@ -2924,18 +2924,18 @@ trackedFiles:
     id: 81588f05b10d
     last_write_checksum: sha1:036a17f3adb98066584ca23b8cff0d1d5687cc7b
     pristine_git_object: 464e0f2e1ac1c6656f1cdbbffea788c36d68bc75
-  docs/models/operations/listadspromotedesqueryparamfields.md:
-    id: f9352f4cb3e5
-    last_write_checksum: sha1:d07cea95cc9bf0c5519e81bb42e59f3869ba221e
-    pristine_git_object: dce0f025524990eee687955a107f23cbfa1ad172
-  docs/models/operations/listadspromotedesrequest.md:
-    id: f86d98629e18
-    last_write_checksum: sha1:b63eae2d01ffecffbe48ed80456161cbb8b4530d
-    pristine_git_object: d6a3cd0fea9f28fbb600857b7a4b2a4f83086398
-  docs/models/operations/listadspromotedesresponse.md:
-    id: 367ee8859038
-    last_write_checksum: sha1:665d2b46478d61e6835255fd519e7eb73355b652
-    pristine_git_object: 73b44827117fc5ae55dc731d6960f5f27325fac0
+  docs/models/operations/listadspromotedsqueryparamfields.md:
+    id: 051d15c44a6b
+    last_write_checksum: sha1:90882156401edd1f4986538eb4f9a07b241e0a5b
+    pristine_git_object: 6347ccc072a88fb1584ed7f1acb964ca48c3d6c9
+  docs/models/operations/listadspromotedsrequest.md:
+    id: 3d6fd3de2c32
+    last_write_checksum: sha1:cb8aa7f027bf2c3c95ba2dd89d5a53313cd49a9b
+    pristine_git_object: fecc4c9320042c0b53b61eec19de157f93bda121
+  docs/models/operations/listadspromotedsresponse.md:
+    id: 0891e5485556
+    last_write_checksum: sha1:d8d8e061bc1d14a1e9518752d91b75d9bb92e6ab
+    pristine_git_object: e6f93caca9bac21682be95cbea87b778357e75cc
   docs/models/operations/listadsreportsqueryparamfields.md:
     id: 4b9f311c9fc9
     last_write_checksum: sha1:f99b875cbc52ee31a0d80c664d4261ba7a3dd746
@@ -10638,8 +10638,8 @@ trackedFiles:
     pristine_git_object: 5acff5080c9a520922ed23d47ca7bda5455fd097
   docs/sdks/ads/README.md:
     id: 29d096aad48a
-    last_write_checksum: sha1:670d77fc0b01840de55299a59855a3be48091124
-    pristine_git_object: 2dca803d91dd2731bee89b74764f7dbc510fe22e
+    last_write_checksum: sha1:648e51460f4e2377c96aec12c0a6c7a98c16c143
+    pristine_git_object: 6760b088d7dc0611d7bbd76ad55c8d9fa4b1c280
   docs/sdks/apicall/README.md:
     id: 69cabc6c43ea
     last_write_checksum: sha1:9c6cd66d8ef8a0a108f9dab3212b8ba62eec40bf
@@ -10998,8 +10998,8 @@ trackedFiles:
     pristine_git_object: 9696e3b373f4915cb7becd3bb52120c025cfd920
   docs/sdks/promoted/README.md:
     id: ac16717d95a8
-    last_write_checksum: sha1:ccbff92198a962fd057793a55f0742e6a35e3d80
-    pristine_git_object: 6e669ea5e67fb53e21c454fc7ddabf87931ad437
+    last_write_checksum: sha1:2f3f4c3b94fa072e2676017b2225352c32e71766
+    pristine_git_object: 6264570cc1de3fea68b9b9a5ed7db8235aa002cc
   docs/sdks/prompt/README.md:
     id: 58101834a0c9
     last_write_checksum: sha1:efdd1eab65beb581ccbc549b19ae422ffc6f366e
@@ -11166,8 +11166,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:102786ccba8306eaea65928cc18e2a7715a400d4
-    pristine_git_object: 162971fe50e4e83d336336f7c1c4b734f66e21b9
+    last_write_checksum: sha1:c5a5c94b505c6b60a0faafb30c0f53b8c4fc0da9
+    pristine_git_object: 9eb575e3fd151ae76fb2b326a07ebb3663f17ac8
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11194,8 +11194,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:88e68a20ec06bdfb0bfd5226ffbcd6d606aa49a6
-    pristine_git_object: f6b1251b0b252d795f7c78af85eb6d6d94500a86
+    last_write_checksum: sha1:b3b39a827487bea664331f41b3b22e2821ce2cf6
+    pristine_git_object: 0cd63965c3817d70bac364f89ea3af6590743fe7
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -11214,8 +11214,8 @@ trackedFiles:
     pristine_git_object: 5be2e5373966763e0e0561bc32d0fd9d447fb256
   src/unified_python_sdk/ads.py:
     id: afd8483212db
-    last_write_checksum: sha1:e4915dc145011ad19027943c0af224a1f199210a
-    pristine_git_object: 1cd26bd6677cc9669a2fee092af0596f0aea7d28
+    last_write_checksum: sha1:05e831c96e4ecef414d5c9f2803536f6221b3c3a
+    pristine_git_object: c2549323f5397f8012ff238a1f85cd3d314cc9fa
   src/unified_python_sdk/apicall.py:
     id: 4d50fc29faab
     last_write_checksum: sha1:5457bddd16b4d06ed81fc0ce8e8ae94c5247d538
@@ -11554,8 +11554,8 @@ trackedFiles:
     pristine_git_object: 01a716a03809ab4f4d1f089ae11e04e8392ba5e8
   src/unified_python_sdk/models/operations/__init__.py:
     id: 486383712deb
-    last_write_checksum: sha1:3cf55fd21aae5cd74010b2409c835df5be2004ba
-    pristine_git_object: 5807e257ffc1f453b3bab44fb0359d015b4e574e
+    last_write_checksum: sha1:d09ca98faec70e64353648c88ee8c3efaffb9234
+    pristine_git_object: 26c9787cbb8ac7980e71dd8103a164f51e5db2d0
   src/unified_python_sdk/models/operations/createaccountingaccount.py:
     id: 52d116750aa5
     last_write_checksum: sha1:c994046a82cbbedd927c3d684832283fde32d444
@@ -12540,10 +12540,10 @@ trackedFiles:
     id: c59ead7df06a
     last_write_checksum: sha1:c5234ea64e68f8c0a23a8d1fb8e10a781e1c0446
     pristine_git_object: c4e6827462a0583115768059bfc7a2eeed4e19f1
-  src/unified_python_sdk/models/operations/listadspromotedes.py:
-    id: 0a9bf2f9daf8
-    last_write_checksum: sha1:4373306d025ad62de7893f7f6f1c4a7e239e101a
-    pristine_git_object: f155acd541ea26f25dfa18236a4e349e089b6c61
+  src/unified_python_sdk/models/operations/listadspromoteds.py:
+    id: cf731c5a7baa
+    last_write_checksum: sha1:f2b1f2fd94f71eabae1555262acc3a2a4e466c6a
+    pristine_git_object: 9e4da3866f0fa40752bdefdcb55fe03a0f16ac34
   src/unified_python_sdk/models/operations/listadsreports.py:
     id: a919159e8d1d
     last_write_checksum: sha1:102e3251417dba604cc5a0ad7253ff9676c974cb
@@ -15858,8 +15858,8 @@ trackedFiles:
     pristine_git_object: 11fa79b5285d819667ef85a2369f8ba18ed6c6eb
   src/unified_python_sdk/promoted.py:
     id: 0c2e39d54758
-    last_write_checksum: sha1:82c07fc665265d1dc935fbe5ef17a84d6a32ac4e
-    pristine_git_object: 714e91959d300166b586a524ead0cbfe31f509d2
+    last_write_checksum: sha1:75769d9e61d7d08673e55c1e4b95cd5e18197bfd
+    pristine_git_object: dff3355dab715e28d8ead1181fa896bcfada75c4
   src/unified_python_sdk/prompt.py:
     id: 4092aab52920
     last_write_checksum: sha1:46f1297d84cfc5b415ad9aec2f867965802a039e
@@ -22033,9 +22033,22 @@ examples:
       responses:
         "200":
           application/json: [{"id": "<id>", "value": "<value>"}]
+  listAdsPromoteds:
+    speakeasy-default-list-ads-promoteds:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "type": "CUSTOM_CONVERSION_ID"}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.report.list_ads_reports()`:  `response.[].metrics[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.create_ads_ad()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.create_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.create_ads_creative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.create_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.get_ads_ad()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.get_ads_campaign()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.get_ads_creative()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.get_ads_group()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_ads()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_campaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_creatives()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_groups()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_reports()`:  `response.[].metrics[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.patch_ads_ad()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.patch_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.patch_ads_creative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.patch_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.update_ads_ad()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.update_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.update_ads_creative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.update_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ad.create_ads_ad()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ad.get_ads_ad()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ad.list_ads_ads()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.ad.patch_ads_ad()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ad.update_ads_ad()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.create_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.get_ads_campaign()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.list_ads_campaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.patch_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.campaign.update_ads_campaign()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.creative.create_ads_creative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.creative.get_ads_creative()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.creative.list_ads_creatives()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.creative.patch_ads_creative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.creative.update_ads_creative()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.group.create_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.group.get_ads_group()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.group.list_ads_groups()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.group.patch_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.group.update_ads_group()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified_to.ads.list_ads_promotedes()`: **Added**\n* `unified_to.ads.list_ads_targets()`: **Added**\n* `unified_to.promoted.list_ads_promotedes()`: **Added**\n* `unified_to.target.list_ads_targets()`: **Added**\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.unified.get_unified_connection()`:  `response.permissions[]` **Changed**\n* `unified_to.unified.get_unified_webhook()`:  `response.object_type` **Changed**\n* `unified_to.unified.list_unified_connections()`:  `response.[].permissions[]` **Changed**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].object_type` **Changed**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.connection.get_unified_connection()`:  `response.permissions[]` **Changed**\n* `unified_to.connection.list_unified_connections()`:  `response.[].permissions[]` **Changed**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.webhook.get_unified_webhook()`:  `response.object_type` **Changed**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].object_type` **Changed**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n"
+releaseNotes: |
+  ## Python SDK Changes:
+  * `unified_to.ads.list_ads_promoteds()`: **Added**
+  * `unified_to.promoted.list_ads_promoteds()`: **Added**
+  * `unified_to.ads.list_ads_promotedes()`: **Removed** (Breaking ⚠️)
+  * `unified_to.promoted.list_ads_promotedes()`: **Removed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

@@ -15,16 +15,16 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListAdsPromotedesQueryParamFields(str, Enum):
+class ListAdsPromotedsQueryParamFields(str, Enum):
     ID = "id"
     NAME = "name"
     TYPE = "type"
 
 
-class ListAdsPromotedesRequestTypedDict(TypedDict):
+class ListAdsPromotedsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
-    fields: NotRequired[List[ListAdsPromotedesQueryParamFields]]
+    fields: NotRequired[List[ListAdsPromotedsQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
@@ -41,14 +41,14 @@ class ListAdsPromotedesRequestTypedDict(TypedDict):
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
-class ListAdsPromotedesRequest(BaseModel):
+class ListAdsPromotedsRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
 
     fields: Annotated[
-        Optional[List[ListAdsPromotedesQueryParamFields]],
+        Optional[List[ListAdsPromotedsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
@@ -132,18 +132,18 @@ class ListAdsPromotedesRequest(BaseModel):
         return m
 
 
-class ListAdsPromotedesResponseTypedDict(TypedDict):
+class ListAdsPromotedsResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    ads_promotedes: NotRequired[List[shared_adspromoted.AdsPromotedTypedDict]]
+    ads_promoteds: NotRequired[List[shared_adspromoted.AdsPromotedTypedDict]]
     r"""Successful"""
 
 
-class ListAdsPromotedesResponse(BaseModel):
+class ListAdsPromotedsResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -153,12 +153,12 @@ class ListAdsPromotedesResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    ads_promotedes: Optional[List[shared_adspromoted.AdsPromoted]] = None
+    ads_promoteds: Optional[List[shared_adspromoted.AdsPromoted]] = None
     r"""Successful"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["AdsPromotedes"])
+        optional_fields = set(["AdsPromoteds"])
         serialized = handler(self)
         m = {}
 

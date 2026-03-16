@@ -10,19 +10,19 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Promoted(BaseSDK):
-    def list_ads_promotedes(
+    def list_ads_promoteds(
         self,
         *,
         request: Union[
-            operations.ListAdsPromotedesRequest,
-            operations.ListAdsPromotedesRequestTypedDict,
+            operations.ListAdsPromotedsRequest,
+            operations.ListAdsPromotedsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsPromotedesResponse:
-        r"""List all promotedes
+    ) -> operations.ListAdsPromotedsResponse:
+        r"""List all promoteds
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -41,8 +41,8 @@ class Promoted(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsPromotedesRequest)
-        request = cast(operations.ListAdsPromotedesRequest, request)
+            request = utils.unmarshal(request, operations.ListAdsPromotedsRequest)
+        request = cast(operations.ListAdsPromotedsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Promoted(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsPromotedes",
+                operation_id="listAdsPromoteds",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -83,8 +83,8 @@ class Promoted(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsPromotedesResponse(
-                ads_promotedes=unmarshal_json_response(
+            return operations.ListAdsPromotedsResponse(
+                ads_promoteds=unmarshal_json_response(
                     Optional[List[shared.AdsPromoted]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -100,19 +100,19 @@ class Promoted(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ads_promotedes_async(
+    async def list_ads_promoteds_async(
         self,
         *,
         request: Union[
-            operations.ListAdsPromotedesRequest,
-            operations.ListAdsPromotedesRequestTypedDict,
+            operations.ListAdsPromotedsRequest,
+            operations.ListAdsPromotedsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsPromotedesResponse:
-        r"""List all promotedes
+    ) -> operations.ListAdsPromotedsResponse:
+        r"""List all promoteds
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -131,8 +131,8 @@ class Promoted(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsPromotedesRequest)
-        request = cast(operations.ListAdsPromotedesRequest, request)
+            request = utils.unmarshal(request, operations.ListAdsPromotedsRequest)
+        request = cast(operations.ListAdsPromotedsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -163,7 +163,7 @@ class Promoted(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsPromotedes",
+                operation_id="listAdsPromoteds",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -173,8 +173,8 @@ class Promoted(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsPromotedesResponse(
-                ads_promotedes=unmarshal_json_response(
+            return operations.ListAdsPromotedsResponse(
+                ads_promoteds=unmarshal_json_response(
                     Optional[List[shared.AdsPromoted]], http_res
                 ),
                 status_code=http_res.status_code,

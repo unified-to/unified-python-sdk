@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [list_ads_promotedes](#list_ads_promotedes) - List all promotedes
+* [list_ads_promoteds](#list_ads_promoteds) - List all promoteds
 
-## list_ads_promotedes
+## list_ads_promoteds
 
-List all promotedes
+List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAdsPromotedes" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="python" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -24,27 +24,27 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.promoted.list_ads_promotedes(request={
+    res = unified_to.promoted.list_ads_promoteds(request={
         "connection_id": "<id>",
     })
 
-    assert res.ads_promotedes is not None
+    assert res.ads_promoteds is not None
 
     # Handle response
-    print(res.ads_promotedes)
+    print(res.ads_promoteds)
 
 ```
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.ListAdsPromotedesRequest](../../models/operations/listadspromotedesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListAdsPromotedsRequest](../../models/operations/listadspromotedsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListAdsPromotedesResponse](../../models/operations/listadspromotedesresponse.md)**
+**[operations.ListAdsPromotedsResponse](../../models/operations/listadspromotedsresponse.md)**
 
 ### Errors
 

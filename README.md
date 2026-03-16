@@ -318,7 +318,7 @@ asyncio.run(main())
 * [list_ads_groups](docs/sdks/ads/README.md#list_ads_groups) - List all groups
 * [list_ads_insertionorders](docs/sdks/ads/README.md#list_ads_insertionorders) - List all insertionorders
 * [list_ads_organizations](docs/sdks/ads/README.md#list_ads_organizations) - List all organizations
-* [list_ads_promotedes](docs/sdks/ads/README.md#list_ads_promotedes) - List all promotedes
+* [list_ads_promoteds](docs/sdks/ads/README.md#list_ads_promoteds) - List all promoteds
 * [list_ads_reports](docs/sdks/ads/README.md#list_ads_reports) - List all reports
 * [list_ads_targets](docs/sdks/ads/README.md#list_ads_targets) - List all targets
 * [patch_ads_ad](docs/sdks/ads/README.md#patch_ads_ad) - Update an ad
@@ -1422,7 +1422,7 @@ asyncio.run(main())
 
 ### [Promoted](docs/sdks/promoted/README.md)
 
-* [list_ads_promotedes](docs/sdks/promoted/README.md#list_ads_promotedes) - List all promotedes
+* [list_ads_promoteds](docs/sdks/promoted/README.md#list_ads_promoteds) - List all promoteds
 
 ### [Prompt](docs/sdks/prompt/README.md)
 
