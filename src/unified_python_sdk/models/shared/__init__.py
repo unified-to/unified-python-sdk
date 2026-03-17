@@ -362,7 +362,7 @@ if TYPE_CHECKING:
         CommerceCollectionTypedDict,
     )
     from .commerceinventory import CommerceInventory, CommerceInventoryTypedDict
-    from .commerceitem import CommerceItem, CommerceItemTypedDict
+    from .commerceitem import CommerceItem, CommerceItemTypedDict, WeightUnit
     from .commerceitemmedia import (
         CommerceItemMedia,
         CommerceItemMediaType,
@@ -373,8 +373,8 @@ if TYPE_CHECKING:
     from .commerceitemvariant import (
         CommerceItemvariant,
         CommerceItemvariantTypedDict,
+        CommerceItemvariantWeightUnit,
         SizeUnit,
-        WeightUnit,
     )
     from .commercelocation import CommerceLocation, CommerceLocationTypedDict
     from .commercemetadata import (
@@ -1889,6 +1889,7 @@ __all__ = [
     "CommerceItemTypedDict",
     "CommerceItemvariant",
     "CommerceItemvariantTypedDict",
+    "CommerceItemvariantWeightUnit",
     "CommerceLocation",
     "CommerceLocationTypedDict",
     "CommerceMetadata",
@@ -3176,6 +3177,7 @@ _dynamic_imports: dict[str, str] = {
     "CommerceInventoryTypedDict": ".commerceinventory",
     "CommerceItem": ".commerceitem",
     "CommerceItemTypedDict": ".commerceitem",
+    "WeightUnit": ".commerceitem",
     "CommerceItemMedia": ".commerceitemmedia",
     "CommerceItemMediaType": ".commerceitemmedia",
     "CommerceItemMediaTypedDict": ".commerceitemmedia",
@@ -3185,8 +3187,8 @@ _dynamic_imports: dict[str, str] = {
     "CommerceItemPriceTypedDict": ".commerceitemprice",
     "CommerceItemvariant": ".commerceitemvariant",
     "CommerceItemvariantTypedDict": ".commerceitemvariant",
+    "CommerceItemvariantWeightUnit": ".commerceitemvariant",
     "SizeUnit": ".commerceitemvariant",
-    "WeightUnit": ".commerceitemvariant",
     "CommerceLocation": ".commercelocation",
     "CommerceLocationTypedDict": ".commercelocation",
     "CommerceMetadata": ".commercemetadata",

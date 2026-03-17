@@ -2,14 +2,25 @@
 
 from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
+from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
 from .commerceitemvariant import CommerceItemvariant, CommerceItemvariantTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from .commercereference import CommerceReference, CommerceReferenceTypedDict
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class WeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
+    G = "g"
+    KG = "kg"
+    OZ = "oz"
+    LB = "lb"
 
 
 class CommerceItemTypedDict(TypedDict):
@@ -22,22 +33,30 @@ class CommerceItemTypedDict(TypedDict):
     description: NotRequired[str]
     global_code: NotRequired[str]
     id: NotRequired[str]
+    inventory_id: NotRequired[str]
     is_active: NotRequired[bool]
+    is_featured: NotRequired[bool]
     is_taxable: NotRequired[bool]
+    is_visible: NotRequired[bool]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
     name: NotRequired[str]
+    prices: NotRequired[List[CommerceItemPriceTypedDict]]
     public_description: NotRequired[str]
     public_name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    requires_shipping: NotRequired[bool]
     slug: NotRequired[str]
     tags: NotRequired[List[str]]
     taxrate_id: NotRequired[str]
+    total_stock: NotRequired[float]
     type: NotRequired[str]
     updated_at: NotRequired[datetime]
     variants: NotRequired[List[CommerceItemvariantTypedDict]]
     r"""first variant is the default variant"""
     vendor_name: NotRequired[str]
+    weight: NotRequired[float]
+    weight_unit: NotRequired[WeightUnit]
 
 
 class CommerceItem(BaseModel):
@@ -57,9 +76,15 @@ class CommerceItem(BaseModel):
 
     id: Optional[str] = None
 
+    inventory_id: Optional[str] = None
+
     is_active: Optional[bool] = None
 
+    is_featured: Optional[bool] = None
+
     is_taxable: Optional[bool] = None
+
+    is_visible: Optional[bool] = None
 
     media: Optional[List[CommerceItemMedia]] = None
 
@@ -67,17 +92,23 @@ class CommerceItem(BaseModel):
 
     name: Optional[str] = None
 
+    prices: Optional[List[CommerceItemPrice]] = None
+
     public_description: Optional[str] = None
 
     public_name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
+    requires_shipping: Optional[bool] = None
+
     slug: Optional[str] = None
 
     tags: Optional[List[str]] = None
 
     taxrate_id: Optional[str] = None
+
+    total_stock: Optional[float] = None
 
     type: Optional[str] = None
 
@@ -87,6 +118,19 @@ class CommerceItem(BaseModel):
     r"""first variant is the default variant"""
 
     vendor_name: Optional[str] = None
+
+    weight: Optional[float] = None
+
+    weight_unit: Optional[WeightUnit] = None
+
+    @field_serializer("weight_unit")
+    def serialize_weight_unit(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.WeightUnit(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -99,21 +143,29 @@ class CommerceItem(BaseModel):
                 "description",
                 "global_code",
                 "id",
+                "inventory_id",
                 "is_active",
+                "is_featured",
                 "is_taxable",
+                "is_visible",
                 "media",
                 "metadata",
                 "name",
+                "prices",
                 "public_description",
                 "public_name",
                 "raw",
+                "requires_shipping",
                 "slug",
                 "tags",
                 "taxrate_id",
+                "total_stock",
                 "type",
                 "updated_at",
                 "variants",
                 "vendor_name",
+                "weight",
+                "weight_unit",
             ]
         )
         serialized = handler(self)

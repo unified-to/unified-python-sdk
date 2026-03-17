@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 6eefdfc44825d8c4165b112c6392dc3c
+  docChecksum: aac12ad0156f27f49fe3971109dbafae
   docVersion: "1.0"
-  speakeasyVersion: 1.755.0
+  speakeasyVersion: 1.755.1
   generationVersion: 2.865.2
-  releaseVersion: 0.57.19
-  configChecksum: 967f37141a8b0d70ce837809e120f8ee
+  releaseVersion: 0.57.20
+  configChecksum: f4379a189aa0578c9031fed39d024910
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 1b548961-ca3e-4708-97d3-82202421814c
-  pristine_commit_hash: c5aac65a1d1f531b3e6d02eaf8dc97c5d2121818
-  pristine_tree_hash: 674645b1a0112b24573878a0199f12ccd986b537
+  generation_id: 649b5bd0-2472-4069-92ef-fe194e8ddaac
+  pristine_commit_hash: f52c7564c39977497f188d8bd12d5afea4869473
+  pristine_tree_hash: c74ce627a880750df85114084a67c406d9054b40
 features:
   python:
     acceptHeaders: 3.0.0
@@ -454,8 +454,8 @@ trackedFiles:
     pristine_git_object: 21a86304db91253054df126eabd4af1c4a6b23dc
   docs/models/operations/createcommerceitemqueryparamfields.md:
     id: fa84d141f765
-    last_write_checksum: sha1:6237aa76cdc138b33fd0776e3605e86fee0947a9
-    pristine_git_object: 0695514e12ab38de8c9a187919dc9568d75f03a1
+    last_write_checksum: sha1:76d0fc208f356f630acefcada24d413f4afe5d78
+    pristine_git_object: 4a131ca3b48adef3074161146d6f70935c262b38
   docs/models/operations/createcommerceitemrequest.md:
     id: ae250956bf29
     last_write_checksum: sha1:6919d2f93fc2a8025c7eb8a3a4f92ed853600d8e
@@ -1722,8 +1722,8 @@ trackedFiles:
     pristine_git_object: b407ea643b9acce38b011de1778eaa7b01cd7060
   docs/models/operations/getcommerceitemqueryparamfields.md:
     id: 069fd6009bee
-    last_write_checksum: sha1:8d4002df99811a0440a9d94f198f7200272b7438
-    pristine_git_object: 279121a2f92f23a22155f72dae45050a42b006bc
+    last_write_checksum: sha1:1c5893b0f9e1d90667c7035bd23ca46d2324fcd3
+    pristine_git_object: 853c05e99c489236e7d1f1fe5470f826c34a89ed
   docs/models/operations/getcommerceitemrequest.md:
     id: 289b924d0f0e
     last_write_checksum: sha1:3c07afd86deedc3017038e0502d2b296f477066b
@@ -3174,8 +3174,8 @@ trackedFiles:
     pristine_git_object: 8e0e58fa7ec449f751448dfa7648acbd506ba3ac
   docs/models/operations/listcommerceitemsqueryparamfields.md:
     id: dfe22a635bca
-    last_write_checksum: sha1:10df07c98d8382fbf1fa7e5ab27f036b7ad1e154
-    pristine_git_object: 680dcb33d0a3224e3ee5d40cb8aa4ba9ebeaf667
+    last_write_checksum: sha1:f5aff650a940a32368e36d107ae1ff746074a1d1
+    pristine_git_object: a76135b3efa1e4c30b218e09f179b5b79cae2cc3
   docs/models/operations/listcommerceitemsrequest.md:
     id: 5acdafdb2ca5
     last_write_checksum: sha1:f79d6dc915ad765f8dd6f2350c44ed4f0b9eac75
@@ -4526,8 +4526,8 @@ trackedFiles:
     pristine_git_object: bda3b7f6d6b7ce96a20bdf0b0c9d3e0427301529
   docs/models/operations/patchcommerceitemqueryparamfields.md:
     id: 75086ffc5ed5
-    last_write_checksum: sha1:ef2665e3c6a17f2816aa998e35afbeaf50737142
-    pristine_git_object: 4040076fa372a7501c64c5d0416cf1178891b38c
+    last_write_checksum: sha1:72b7810a15d4ce3f48fda968d275136b3ad8e6d3
+    pristine_git_object: a0d416d928fbbe74365d73a08b19d99386b8bfc4
   docs/models/operations/patchcommerceitemrequest.md:
     id: 57457a849e41
     last_write_checksum: sha1:330434281a6a9ac04c7a2a9707ec4ca43529e6dc
@@ -6498,8 +6498,8 @@ trackedFiles:
     pristine_git_object: 1f6f6552e48fae2d8240c8d0c934c8e79de76e19
   docs/models/operations/updatecommerceitemqueryparamfields.md:
     id: fae83f885750
-    last_write_checksum: sha1:60b9ba9edb8407423bcf3cfd2abfa787ec8d014a
-    pristine_git_object: 62798656dea71ddd22a85784548523559a2ff580
+    last_write_checksum: sha1:a1214d11dd8322eefce9ee955f73acf308b95929
+    pristine_git_object: c1c1c7941cfd53b1969df7f1d8de72903c4d0db1
   docs/models/operations/updatecommerceitemrequest.md:
     id: 4c06968e8576
     last_write_checksum: sha1:7820b13bb45d16bb773c623e8371eb16a5d7453f
@@ -7914,8 +7914,8 @@ trackedFiles:
     pristine_git_object: 1ed05a3e0b8633488d29a4d74f1bb05b077c3cb7
   docs/models/shared/commerceitem.md:
     id: 95b89af35ff1
-    last_write_checksum: sha1:6cc65e0aed1ed399f7682450192d94a9c3937ff5
-    pristine_git_object: 9a74731bb35dab46208907d492546918c6984e15
+    last_write_checksum: sha1:82d7982a52bebd8160f44cc8d9114733c92cef9b
+    pristine_git_object: 0fc5424a70f759bcecda9711b30e7c531f2451e9
   docs/models/shared/commerceitemmedia.md:
     id: 058bff14f305
     last_write_checksum: sha1:1f7447a365bad69b45cf428ab23e86028772cc22
@@ -7934,8 +7934,12 @@ trackedFiles:
     pristine_git_object: 03f6ad72768b9155c92b40fa508a4a3c7fbe4e93
   docs/models/shared/commerceitemvariant.md:
     id: 91fe933bd8f9
-    last_write_checksum: sha1:b1123135dc6588fc94c5261df7e23cc109805374
-    pristine_git_object: 6873d6d58845017bfcd7f6bde7a100c9e20b84b4
+    last_write_checksum: sha1:0a242c19cfb2fe40c55256c943af80307f84ec3a
+    pristine_git_object: 00f1a0b1145560a8a8a41229ab2dea9e2f13681b
+  docs/models/shared/commerceitemvariantweightunit.md:
+    id: 9cb99de9790c
+    last_write_checksum: sha1:cadac42325f0fc6608aed7a0402686145e4dffc2
+    pristine_git_object: f9b510fbe38a522fbe907edfd1953efcd79a5d56
   docs/models/shared/commercelocation.md:
     id: c2500fc4387e
     last_write_checksum: sha1:210bdc5da0cf914213fe74ee8a3939b5e6f13579
@@ -11166,8 +11170,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:c5a5c94b505c6b60a0faafb30c0f53b8c4fc0da9
-    pristine_git_object: 9eb575e3fd151ae76fb2b326a07ebb3663f17ac8
+    last_write_checksum: sha1:43d05d823afe6ab4f49533cbea874a08387a9a67
+    pristine_git_object: 09598651f45a4ee4801fd38036b44ab9792cdcb1
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11194,8 +11198,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:b3b39a827487bea664331f41b3b22e2821ce2cf6
-    pristine_git_object: 0cd63965c3817d70bac364f89ea3af6590743fe7
+    last_write_checksum: sha1:8ce81ecf465801514a6dfb54d7ae571984e8cf9f
+    pristine_git_object: 695e27f5c9fa2f181a343f20697c34568dc08293
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -11694,8 +11698,8 @@ trackedFiles:
     pristine_git_object: 1abf28420ff23e396d9628cc4e2effae03c73d50
   src/unified_python_sdk/models/operations/createcommerceitem.py:
     id: 1aff54f6df51
-    last_write_checksum: sha1:891a04f7a423343dfd638e9040e81fb769c61e2a
-    pristine_git_object: 86a0cf10480ca4fe740309c644b882360a55e7a4
+    last_write_checksum: sha1:49298517900db02d39dcfdf37b723dd56b00ab73
+    pristine_git_object: 24165ce6503d71c87c8d5bcf7be4879d7d70dfcb
   src/unified_python_sdk/models/operations/createcommerceitemvariant.py:
     id: 3f89c9864c6d
     last_write_checksum: sha1:5393b157600f84eb62347de96a4a3995b74585ed
@@ -12130,8 +12134,8 @@ trackedFiles:
     pristine_git_object: 1c3bd1967a8fbce9f0c28fd7fe4d057eb5dc65e7
   src/unified_python_sdk/models/operations/getcommerceitem.py:
     id: eea5b0a9256a
-    last_write_checksum: sha1:5a2e67a154a9b42fde7d3b55e3b41b1b5e206ba9
-    pristine_git_object: 61466de9bf6f7c3628531447df1b13809d90bede
+    last_write_checksum: sha1:b8a8c5d10908a3c133ebc330b67ea7a2e626c9ef
+    pristine_git_object: 3dcfaed10dacf0b5462ef23b75a331cf09b94ccc
   src/unified_python_sdk/models/operations/getcommerceitemvariant.py:
     id: 145cc53a25fe
     last_write_checksum: sha1:9cfcd99166a9448769f89164bcb213377e54b07e
@@ -12626,8 +12630,8 @@ trackedFiles:
     pristine_git_object: c9f1af920ad8fe321184dad08146af1cce3149cd
   src/unified_python_sdk/models/operations/listcommerceitems.py:
     id: e0412354641e
-    last_write_checksum: sha1:8dd3ed838b43a5af63fd17c59e8a1277a1ce9e0b
-    pristine_git_object: 55b31acee56fe096f393a303b2d60d971572379b
+    last_write_checksum: sha1:854e305ebb3386b4d3ef0e630134cd2edcfa9d4a
+    pristine_git_object: 1c0b2f4835e08fceb0fdcca06c9bd20af2e985d0
   src/unified_python_sdk/models/operations/listcommerceitemvariants.py:
     id: 821287e534dc
     last_write_checksum: sha1:d0f9e678e7ce2398e8d5fd0e1e26ebaed450c3d7
@@ -13094,8 +13098,8 @@ trackedFiles:
     pristine_git_object: 923dda4c6f03c699671dc48bc123560bd14c1d7a
   src/unified_python_sdk/models/operations/patchcommerceitem.py:
     id: fba7eb045933
-    last_write_checksum: sha1:d84f9ce84adb4f0ec5568ce3f27756ebda4c55df
-    pristine_git_object: b46c8de73c7c6084b80cc94644006a360843f355
+    last_write_checksum: sha1:27e13fc0b49d967127aedf985eeadb7b0a57e737
+    pristine_git_object: 5e96f89c8557ae1e97b2a9bd84310a3337e742f3
   src/unified_python_sdk/models/operations/patchcommerceitemvariant.py:
     id: 6a8118513b78
     last_write_checksum: sha1:cd504e40bf476e9e159bd7bf3d5591ba03404050
@@ -13890,8 +13894,8 @@ trackedFiles:
     pristine_git_object: 61f9420ff04257931fcb85290351ca8258ee2290
   src/unified_python_sdk/models/operations/updatecommerceitem.py:
     id: b3c13f33dd7c
-    last_write_checksum: sha1:69ec995692036b3fe6d38a0f65b65e82236f5c7d
-    pristine_git_object: 013d98381f8161be26a0ba37e274ce481dae58dc
+    last_write_checksum: sha1:1f4eeed7a146c2ed392fb72777c2de83a9831a50
+    pristine_git_object: 54396bff10727cf42426498a6bed945a70da1c1b
   src/unified_python_sdk/models/operations/updatecommerceitemvariant.py:
     id: 7de145757c68
     last_write_checksum: sha1:7d6623a6cc142cb606bea96151ddd96171856151
@@ -14154,8 +14158,8 @@ trackedFiles:
     pristine_git_object: c928c141900141c4357a16d9c9702d90e8ee8a59
   src/unified_python_sdk/models/shared/__init__.py:
     id: 8825f2c566be
-    last_write_checksum: sha1:631a113ea9096ffa31731270a5e7c701352b63da
-    pristine_git_object: 370bed40837af21bb0b95af07ddd17b2ab9eb63a
+    last_write_checksum: sha1:c86411072526ee99106213696e8ff5132b6964df
+    pristine_git_object: 513813bac1c10d46f53dd8167e156ccbead4724c
   src/unified_python_sdk/models/shared/accountingaccount.py:
     id: b8ab638302ba
     last_write_checksum: sha1:b789a48af2db8444440c3805a7ecd622ccddd30a
@@ -14566,8 +14570,8 @@ trackedFiles:
     pristine_git_object: aff1e4794610108a3cb75944b6921f4cdde20fdd
   src/unified_python_sdk/models/shared/commerceitem.py:
     id: e91bbae8e18f
-    last_write_checksum: sha1:4f940237425ffb59af4e07e192c03b4cc3191d86
-    pristine_git_object: 9da829981eaf56d72bd5cafc19e28e39910343b4
+    last_write_checksum: sha1:78c6034733fba86f8cfb996ed56166c563edec61
+    pristine_git_object: 7503a0ffcb2a67a5e3d790e5bd7ffed9b5286e1b
   src/unified_python_sdk/models/shared/commerceitemmedia.py:
     id: 91ae4ae20fcd
     last_write_checksum: sha1:f21a05d585c3d4fd9e79537d0ea3596207b3a39e
@@ -14582,8 +14586,8 @@ trackedFiles:
     pristine_git_object: f691f2bc05ff178920eb2192df69b5b986bc3a07
   src/unified_python_sdk/models/shared/commerceitemvariant.py:
     id: 1acdd764a26c
-    last_write_checksum: sha1:34d4e83264e87906109a885cb399085cf11353c6
-    pristine_git_object: e928083b019d4b54f9554eaac213d4bbf3bc8f11
+    last_write_checksum: sha1:9c6be134bb93dd18502441e4d9e069960c026c85
+    pristine_git_object: 5beab80a53dc1b823a7e87c2d97c7a3d0a98758c
   src/unified_python_sdk/models/shared/commercelocation.py:
     id: a5ae0c7ca7a9
     last_write_checksum: sha1:77be7ac7e2a1c147eacbc71fe1405d7bd38c1037
@@ -22043,12 +22047,7 @@ examples:
           application/json: [{"id": "<id>", "type": "CUSTOM_CONVERSION_ID"}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Python SDK Changes:
-  * `unified_to.ads.list_ads_promoteds()`: **Added**
-  * `unified_to.promoted.list_ads_promoteds()`: **Added**
-  * `unified_to.ads.list_ads_promotedes()`: **Removed** (Breaking ⚠️)
-  * `unified_to.promoted.list_ads_promotedes()`: **Removed** (Breaking ⚠️)
+releaseNotes: "## Python SDK Changes:\n* `unified_to.commerce.create_commerce_item()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.commerce.get_commerce_item()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.commerce.list_commerce_items()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.commerce.patch_commerce_item()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.commerce.update_commerce_item()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.item.create_commerce_item()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.item.get_commerce_item()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.item.list_commerce_items()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.item.patch_commerce_item()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.item.update_commerce_item()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

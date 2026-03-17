@@ -21,7 +21,7 @@ class SizeUnit(str, Enum, metaclass=utils.OpenEnumMeta):
     INCH = "inch"
 
 
-class WeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
+class CommerceItemvariantWeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
     G = "g"
     KG = "kg"
     OZ = "oz"
@@ -56,7 +56,7 @@ class CommerceItemvariantTypedDict(TypedDict):
     total_stock: NotRequired[float]
     updated_at: NotRequired[datetime]
     weight: NotRequired[float]
-    weight_unit: NotRequired[WeightUnit]
+    weight_unit: NotRequired[CommerceItemvariantWeightUnit]
     width: NotRequired[float]
 
 
@@ -114,7 +114,7 @@ class CommerceItemvariant(BaseModel):
 
     weight: Optional[float] = None
 
-    weight_unit: Optional[WeightUnit] = None
+    weight_unit: Optional[CommerceItemvariantWeightUnit] = None
 
     width: Optional[float] = None
 
@@ -131,7 +131,7 @@ class CommerceItemvariant(BaseModel):
     def serialize_weight_unit(self, value):
         if isinstance(value, str):
             try:
-                return shared.WeightUnit(value)
+                return shared.CommerceItemvariantWeightUnit(value)
             except ValueError:
                 return value
         return value
