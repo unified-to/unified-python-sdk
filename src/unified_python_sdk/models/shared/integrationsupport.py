@@ -206,6 +206,12 @@ class ListInvoiceID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListIoID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListItemID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -494,6 +500,12 @@ class NativeWebhookFormID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class NativeWebhookIoID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class NativeWebhookLabelID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -722,6 +734,12 @@ class VirtualWebhookInvoiceID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookIoID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookItemID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -936,6 +954,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_instructor_id: NotRequired[ListInstructorID]
     list_interview_id: NotRequired[ListInterviewID]
     list_invoice_id: NotRequired[ListInvoiceID]
+    list_io_id: NotRequired[ListIoID]
     list_item_id: NotRequired[ListItemID]
     list_item_variant_id: NotRequired[ListItemVariantID]
     list_job_id: NotRequired[ListJobID]
@@ -985,6 +1004,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_course_id: NotRequired[NativeWebhookCourseID]
     native_webhook_event_id: NotRequired[NativeWebhookEventID]
     native_webhook_form_id: NotRequired[NativeWebhookFormID]
+    native_webhook_io_id: NotRequired[NativeWebhookIoID]
     native_webhook_label_id: NotRequired[NativeWebhookLabelID]
     native_webhook_member_id: NotRequired[NativeWebhookMemberID]
     native_webhook_order_id: NotRequired[NativeWebhookOrderID]
@@ -1027,6 +1047,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_form_id: NotRequired[VirtualWebhookFormID]
     virtual_webhook_group_id: NotRequired[VirtualWebhookGroupID]
     virtual_webhook_invoice_id: NotRequired[VirtualWebhookInvoiceID]
+    virtual_webhook_io_id: NotRequired[VirtualWebhookIoID]
     virtual_webhook_item_id: NotRequired[VirtualWebhookItemID]
     virtual_webhook_item_variant_id: NotRequired[VirtualWebhookItemVariantID]
     virtual_webhook_job_id: NotRequired[VirtualWebhookJobID]
@@ -1127,6 +1148,8 @@ class IntegrationSupport(BaseModel):
 
     list_invoice_id: Optional[ListInvoiceID] = None
 
+    list_io_id: Optional[ListIoID] = None
+
     list_item_id: Optional[ListItemID] = None
 
     list_item_variant_id: Optional[ListItemVariantID] = None
@@ -1225,6 +1248,8 @@ class IntegrationSupport(BaseModel):
 
     native_webhook_form_id: Optional[NativeWebhookFormID] = None
 
+    native_webhook_io_id: Optional[NativeWebhookIoID] = None
+
     native_webhook_label_id: Optional[NativeWebhookLabelID] = None
 
     native_webhook_member_id: Optional[NativeWebhookMemberID] = None
@@ -1307,6 +1332,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_group_id: Optional[VirtualWebhookGroupID] = None
 
     virtual_webhook_invoice_id: Optional[VirtualWebhookInvoiceID] = None
+
+    virtual_webhook_io_id: Optional[VirtualWebhookIoID] = None
 
     virtual_webhook_item_id: Optional[VirtualWebhookItemID] = None
 
@@ -1654,6 +1681,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListInvoiceID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_io_id")
+    def serialize_list_io_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListIoID(value)
             except ValueError:
                 return value
         return value
@@ -2090,6 +2126,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("native_webhook_io_id")
+    def serialize_native_webhook_io_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookIoID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("native_webhook_label_id")
     def serialize_native_webhook_label_id(self, value):
         if isinstance(value, str):
@@ -2432,6 +2477,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_io_id")
+    def serialize_virtual_webhook_io_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookIoID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_item_id")
     def serialize_virtual_webhook_item_id(self, value):
         if isinstance(value, str):
@@ -2739,6 +2793,7 @@ class IntegrationSupport(BaseModel):
                 "list_instructor_id",
                 "list_interview_id",
                 "list_invoice_id",
+                "list_io_id",
                 "list_item_id",
                 "list_item_variant_id",
                 "list_job_id",
@@ -2788,6 +2843,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_course_id",
                 "native_webhook_event_id",
                 "native_webhook_form_id",
+                "native_webhook_io_id",
                 "native_webhook_label_id",
                 "native_webhook_member_id",
                 "native_webhook_order_id",
@@ -2829,6 +2885,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_form_id",
                 "virtual_webhook_group_id",
                 "virtual_webhook_invoice_id",
+                "virtual_webhook_io_id",
                 "virtual_webhook_item_id",
                 "virtual_webhook_item_variant_id",
                 "virtual_webhook_job_id",

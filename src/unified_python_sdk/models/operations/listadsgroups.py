@@ -54,6 +54,8 @@ class ListAdsGroupsRequestTypedDict(TypedDict):
     r"""The campaign ID to filter by"""
     fields: NotRequired[List[ListAdsGroupsQueryParamFields]]
     r"""Fields to return"""
+    io_id: NotRequired[str]
+    r"""The IO ID to filter by"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -87,6 +89,12 @@ class ListAdsGroupsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    io_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The IO ID to filter by"""
 
     limit: Annotated[
         Optional[float],
@@ -144,6 +152,7 @@ class ListAdsGroupsRequest(BaseModel):
             [
                 "campaign_id",
                 "fields",
+                "io_id",
                 "limit",
                 "offset",
                 "order",

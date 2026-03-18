@@ -60,6 +60,8 @@ class ListCommerceItemvariantsRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    org_id: NotRequired[str]
+    r"""The org ID to filter by (reference to AccountingOrganization)"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -108,6 +110,12 @@ class ListCommerceItemvariantsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    org_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The org ID to filter by (reference to AccountingOrganization)"""
+
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -141,6 +149,7 @@ class ListCommerceItemvariantsRequest(BaseModel):
                 "limit",
                 "offset",
                 "order",
+                "org_id",
                 "query",
                 "raw",
                 "sort",

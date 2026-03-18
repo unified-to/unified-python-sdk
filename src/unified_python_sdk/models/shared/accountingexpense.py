@@ -19,6 +19,7 @@ class AccountingExpenseTypedDict(TypedDict):
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     name: NotRequired[str]
+    organization_id: NotRequired[str]
     payment_method: NotRequired[str]
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
@@ -48,6 +49,8 @@ class AccountingExpense(BaseModel):
     lineitems: Optional[List[AccountingLineitem]] = None
 
     name: Optional[str] = None
+
+    organization_id: Optional[str] = None
 
     payment_method: Optional[str] = None
 
@@ -80,6 +83,7 @@ class AccountingExpense(BaseModel):
                 "id",
                 "lineitems",
                 "name",
+                "organization_id",
                 "payment_method",
                 "posted_at",
                 "raw",

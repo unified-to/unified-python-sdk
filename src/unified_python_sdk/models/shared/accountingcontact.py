@@ -58,6 +58,7 @@ class AccountingContactTypedDict(TypedDict):
     is_supplier: NotRequired[bool]
     last_name: NotRequired[str]
     name: NotRequired[str]
+    organization_id: NotRequired[str]
     payment_methods: NotRequired[List[AccountingContactPaymentMethodTypedDict]]
     portal_url: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -96,6 +97,8 @@ class AccountingContact(BaseModel):
     last_name: Optional[str] = None
 
     name: Optional[str] = None
+
+    organization_id: Optional[str] = None
 
     payment_methods: Optional[List[AccountingContactPaymentMethod]] = None
 
@@ -140,6 +143,7 @@ class AccountingContact(BaseModel):
                 "is_supplier",
                 "last_name",
                 "name",
+                "organization_id",
                 "payment_methods",
                 "portal_url",
                 "raw",
