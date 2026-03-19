@@ -27,6 +27,8 @@ class ListUcCallsQueryParamFields(str, Enum):
     CONTACTS = "contacts"
     IS_PRIVATE = "is_private"
     RAW = "raw"
+    USER_NAME = "user_name"
+    USER_PHONE = "user_phone"
 
 
 class ListUcCallsRequestTypedDict(TypedDict):

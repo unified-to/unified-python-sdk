@@ -23,6 +23,8 @@ class UcRecordingTypedDict(TypedDict):
     start_at: NotRequired[datetime]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
+    user_name: NotRequired[str]
+    user_phone: NotRequired[str]
     web_url: NotRequired[str]
 
 
@@ -53,6 +55,10 @@ class UcRecording(BaseModel):
 
     user_id: Optional[str] = None
 
+    user_name: Optional[str] = None
+
+    user_phone: Optional[str] = None
+
     web_url: Optional[str] = None
 
     @model_serializer(mode="wrap")
@@ -72,6 +78,8 @@ class UcRecording(BaseModel):
                 "start_at",
                 "updated_at",
                 "user_id",
+                "user_name",
+                "user_phone",
                 "web_url",
             ]
         )

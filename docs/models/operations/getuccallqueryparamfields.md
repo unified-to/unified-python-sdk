@@ -24,3 +24,5 @@ value = GetUcCallQueryParamFields.ID
 | `CONTACTS`   | contacts     |
 | `IS_PRIVATE` | is_private   |
 | `RAW`        | raw          |
+| `USER_NAME`  | user_name    |
+| `USER_PHONE` | user_phone   |

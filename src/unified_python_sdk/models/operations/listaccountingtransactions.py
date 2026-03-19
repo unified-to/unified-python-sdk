@@ -41,6 +41,8 @@ class ListAccountingTransactionsQueryParamFields(str, Enum):
 class ListAccountingTransactionsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    account_id: NotRequired[str]
+    r"""The account ID to filter by (reference to AccountingAccount)"""
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
     end_lt: NotRequired[str]
@@ -50,6 +52,8 @@ class ListAccountingTransactionsRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    org_id: NotRequired[str]
+    r"""The org ID to filter by (reference to AccountingOrganization)"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -66,6 +70,12 @@ class ListAccountingTransactionsRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    account_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The account ID to filter by (reference to AccountingAccount)"""
 
     contact_id: Annotated[
         Optional[str],
@@ -100,6 +110,12 @@ class ListAccountingTransactionsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    org_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The org ID to filter by (reference to AccountingOrganization)"""
+
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -133,12 +149,14 @@ class ListAccountingTransactionsRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "account_id",
                 "contact_id",
                 "end_lt",
                 "fields",
                 "limit",
                 "offset",
                 "order",
+                "org_id",
                 "query",
                 "raw",
                 "sort",

@@ -26,6 +26,8 @@ class UcCallTypedDict(TypedDict):
     r"""The telephone number called"""
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
+    user_name: NotRequired[str]
+    user_phone: NotRequired[str]
 
 
 class UcCall(BaseModel):
@@ -52,6 +54,10 @@ class UcCall(BaseModel):
 
     user_id: Optional[str] = None
 
+    user_name: Optional[str] = None
+
+    user_phone: Optional[str] = None
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
@@ -67,6 +73,8 @@ class UcCall(BaseModel):
                 "telephone",
                 "updated_at",
                 "user_id",
+                "user_name",
+                "user_phone",
             ]
         )
         serialized = handler(self)

@@ -30,6 +30,8 @@ class ListUcRecordingsQueryParamFields(str, Enum):
     USER_ID = "user_id"
     MEDIA = "media"
     RAW = "raw"
+    USER_NAME = "user_name"
+    USER_PHONE = "user_phone"
 
 
 class ListUcRecordingsRequestTypedDict(TypedDict):
