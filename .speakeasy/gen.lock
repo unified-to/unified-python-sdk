@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 26101f70e2af8aa59e686638b9225181
+  docChecksum: 65ff6a93530ff3feaa46f9f447f149e7
   docVersion: "1.0"
-  speakeasyVersion: 1.757.1
+  speakeasyVersion: 1.758.0
   generationVersion: 2.866.2
-  releaseVersion: 0.57.22
-  configChecksum: 39f1ca49943e9e2b7fd79d8831b7b6fa
+  releaseVersion: 0.57.23
+  configChecksum: a26cff5ef5d236157968f0a62b6a092a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 1c1378b2-7de9-48fe-81f9-fb8cb3494a2a
-  pristine_commit_hash: cd4380168fd796558384db45ec49287621fcfaa7
-  pristine_tree_hash: 4ec4a3fed4aaae88648dcaf816588836b7bd001e
+  generation_id: 3dab4439-1190-42bf-af83-dda59d4b2a5c
+  pristine_commit_hash: 70266e8ede74ae6a494a06f4f6517e4d8bfb19a9
+  pristine_tree_hash: d5cebf787522ed51aedad4d4d14feb12e69e5c49
 features:
   python:
     acceptHeaders: 3.0.0
@@ -86,8 +86,8 @@ trackedFiles:
     pristine_git_object: c1b1b3ef5fa80e7005a1cc5e8ba36105380b4e4c
   docs/models/operations/createaccountingcontactqueryparamfields.md:
     id: 4212691fc7c7
-    last_write_checksum: sha1:bdb60e0b472fd7b30a9bd6877ef16ff104999962
-    pristine_git_object: bdc0510c1b7a18d030533371ce3fe6f4856bd833
+    last_write_checksum: sha1:5d891335ffd26f1ad8fadaf633799c5a86931088
+    pristine_git_object: 1f450a132cdb84f7fe824fb63073c1aaf5b7b656
   docs/models/operations/createaccountingcontactrequest.md:
     id: fe4574702131
     last_write_checksum: sha1:74c23827262244a6b1e82e720a05856706d4b2cd
@@ -110,8 +110,8 @@ trackedFiles:
     pristine_git_object: c663a5fbf18b38ef396ee463299eac33cffd2ca7
   docs/models/operations/createaccountingexpensequeryparamfields.md:
     id: 1442fd65511b
-    last_write_checksum: sha1:48638bf8173330b8a11b9cae43868c004fb07ae3
-    pristine_git_object: c1af6d9d72b9bbade6f26a9614607ffdeeb51810
+    last_write_checksum: sha1:55949cae670a2e3d992374042f0864dd40dc4e4a
+    pristine_git_object: 6d289e759bc22b5ed2e7483b6c058870ac93a3af
   docs/models/operations/createaccountingexpenserequest.md:
     id: 5321e1cdf17a
     last_write_checksum: sha1:35a7e631e55d955cde6d3b467731f16031a7d6fb
@@ -1234,8 +1234,8 @@ trackedFiles:
     pristine_git_object: 050b1c21c9b6b93e51f52ad2b8d7a34428f0ede3
   docs/models/operations/fields.md:
     id: ed1d9022916e
-    last_write_checksum: sha1:ea21f02d46a676c496874e5b9ac0fb698d418784
-    pristine_git_object: 6247ec202bf84540c9586d0fe4fec0f8a966e477
+    last_write_checksum: sha1:3c137bd347c4fe3fdfddc7168e2a752059eb55f9
+    pristine_git_object: 0791c1aa3e59aafa4d393c2331ead7d3341a3b2d
   docs/models/operations/getaccountingaccountrequest.md:
     id: ef24464e6bb2
     last_write_checksum: sha1:fcb3701b4f11ee467a3c467a6e6ed1d146febee1
@@ -1294,8 +1294,8 @@ trackedFiles:
     pristine_git_object: bd5dbba9339749d1a3c1c32782659f92051b6676
   docs/models/operations/getaccountingcontactqueryparamfields.md:
     id: 7d02f15a57de
-    last_write_checksum: sha1:b22ca29d5e3bc9e6d6d21d1078d3a1b779af3f95
-    pristine_git_object: e938b9b85ad0cd49112a73660b5cebfff1af8fdc
+    last_write_checksum: sha1:3ce0bd11b131d37d90e9a0002006f70834ba9afe
+    pristine_git_object: 8326dd7113c436f4bb44b85c24fd3bc66207b68b
   docs/models/operations/getaccountingcontactrequest.md:
     id: c09152569f12
     last_write_checksum: sha1:c023cb3848bb03c15c450623a709b50086220821
@@ -1318,8 +1318,8 @@ trackedFiles:
     pristine_git_object: 4c9ba77eaf2a9c7e0ccfeadc3ecb4f3ab6a8e0d9
   docs/models/operations/getaccountingexpensequeryparamfields.md:
     id: 48a0a7a8e19d
-    last_write_checksum: sha1:4f09b55c4cf7eec67908829d285ab3568d11c09e
-    pristine_git_object: fb04dfc302b9dadde9382229fa1b6757a3662991
+    last_write_checksum: sha1:9a9d284a67cd0699aedc81dad8fe6e5d70791599
+    pristine_git_object: 9e9dbbac0803654227abed36d68683fe041d9d11
   docs/models/operations/getaccountingexpenserequest.md:
     id: 0d10ae05c482
     last_write_checksum: sha1:abce72023cd27eab4bbd4d15003db575c180dc21
@@ -2626,8 +2626,8 @@ trackedFiles:
     pristine_git_object: fa43d83e025f1f912c3ddbcfae6044c3663d439a
   docs/models/operations/listaccountingaccountsqueryparamfields.md:
     id: 1ccbe0c0275e
-    last_write_checksum: sha1:ed2ffdd7572d93efa93ee4002e3a2efa474b400a
-    pristine_git_object: 764e4d5ea877ea254760c8a10440c6f339e40508
+    last_write_checksum: sha1:1922a6b8acc7ce3b509e9bbbde3dd4c468166a80
+    pristine_git_object: 30f56cf11ad804702cfacaebebab0255b0165f0f
   docs/models/operations/listaccountingaccountsrequest.md:
     id: d09cf16412ef
     last_write_checksum: sha1:e88e6cdee3eb1e6455fdd16009ee057fb844066c
@@ -2686,8 +2686,8 @@ trackedFiles:
     pristine_git_object: 04937ba084468f8bb827711aa5b3a6c6420e98df
   docs/models/operations/listaccountingcontactsqueryparamfields.md:
     id: 9b41c103ae91
-    last_write_checksum: sha1:bf347d805c694cc317949d18ce1d59a139352e4d
-    pristine_git_object: 42b894042604ac2d296f2846c366a9676d1bb784
+    last_write_checksum: sha1:f1d7b588427817e8c61bb36aedf68feb1e211bd2
+    pristine_git_object: fab9cc137997790ff8f517fa4c112bd368c1e1ad
   docs/models/operations/listaccountingcontactsrequest.md:
     id: 6db4a1ec0aad
     last_write_checksum: sha1:414e3c3eec481844055fb462087643b4eb3e88f9
@@ -2710,8 +2710,8 @@ trackedFiles:
     pristine_git_object: ff4704ca8497c8f9c9eac8cc328bfc6e07c92f35
   docs/models/operations/listaccountingexpensesqueryparamfields.md:
     id: 9b19bb52f42b
-    last_write_checksum: sha1:77b848865993f0c329ea6444a19b48180753a02d
-    pristine_git_object: 7357957da9df93b14260175abcb350ff4752fa4d
+    last_write_checksum: sha1:7c442b7ab449902d8019984c940d2c58dd952273
+    pristine_git_object: b91d6291b0b2aae373b0b93ed43b9adf965d8b8f
   docs/models/operations/listaccountingexpensesrequest.md:
     id: 5586a834e1c6
     last_write_checksum: sha1:0f352b1d5314adee6d7e0f34c9188bcccce886ed
@@ -4110,8 +4110,8 @@ trackedFiles:
     pristine_git_object: c27721740f4bbc2ee85b2fb0e60fa823a93fcdcf
   docs/models/operations/patchaccountingaccountqueryparamfields.md:
     id: 4bb9898dec52
-    last_write_checksum: sha1:d251433b3fbc8ceaf1e19ced4a183f507de85d38
-    pristine_git_object: bd0da7075475059bf8ded437e79862246f5bcbdc
+    last_write_checksum: sha1:4bf6ea4ea77d2164e458dd2096472641c1f01f94
+    pristine_git_object: 309a249889f685517ea95684c8440ef7bc3d5e59
   docs/models/operations/patchaccountingaccountrequest.md:
     id: db8ce33465a2
     last_write_checksum: sha1:e73814f83eb3c17e3b02a9d6c735cc5a7c3f3c55
@@ -4146,8 +4146,8 @@ trackedFiles:
     pristine_git_object: 81138d617708ef7ef18611e6e3208f0979d1505f
   docs/models/operations/patchaccountingcontactqueryparamfields.md:
     id: ade3118f6d14
-    last_write_checksum: sha1:4e9c5a99f2833f75a9af26ac2ad22e6ac070b778
-    pristine_git_object: 79c7ae21dc40b8dc1c1928347b25f4cd69a06924
+    last_write_checksum: sha1:cc0c825425522d03bc023fe20f344b9a59a5d3c1
+    pristine_git_object: 1fe7449ce471c054509fe8a4bde31cc763b2d317
   docs/models/operations/patchaccountingcontactrequest.md:
     id: 5c8e9c717f25
     last_write_checksum: sha1:23faf0a79755c42fb08ac602ab9de79d236ab4b9
@@ -4170,8 +4170,8 @@ trackedFiles:
     pristine_git_object: 7a775f3024a71f9a1aa5519fc96b5678d45b0e0d
   docs/models/operations/patchaccountingexpensequeryparamfields.md:
     id: 7810f7cb34c7
-    last_write_checksum: sha1:2749bbf4c6d496c27810d11acf3e6499010c8d68
-    pristine_git_object: f9f5be7a1f2e9d071877aae0f43feaa7eab0d429
+    last_write_checksum: sha1:0661d09a4bd1ab93d8396adfa11d4dccad7c5f16
+    pristine_git_object: 2d6a6e2fe5938b3065155312c518d78b568b7cf5
   docs/models/operations/patchaccountingexpenserequest.md:
     id: dbca0b752cf0
     last_write_checksum: sha1:b3fdca8a4891c439e69b4171ed53786c463e0f99
@@ -5294,8 +5294,8 @@ trackedFiles:
     pristine_git_object: 2a7cd791ea94bca5e6bffbb8c125968c2b981adc
   docs/models/operations/queryparamfields.md:
     id: cc140f15498f
-    last_write_checksum: sha1:cd31bc3ab1c8d17b913c10d02bcc68978b59801f
-    pristine_git_object: a6ce25ea920fb5bf1762a2ac6caff9887638c457
+    last_write_checksum: sha1:f93118c4affc91aface1fc34ebbd61d7d4e13766
+    pristine_git_object: 7dff77e57d68f06d7f940e996b48382fb43fa19e
   docs/models/operations/removeaccountingaccountrequest.md:
     id: dbe8627b4f6b
     last_write_checksum: sha1:6644bebac5e338b1708bd9c282ec73bbea23b818
@@ -6082,8 +6082,8 @@ trackedFiles:
     pristine_git_object: 67f5745234e7aea8d0d8a6e54927aa4237409451
   docs/models/operations/updateaccountingaccountqueryparamfields.md:
     id: 322739a8c587
-    last_write_checksum: sha1:8804851e71bb8ce4820a6d0cf055c0390a09b08d
-    pristine_git_object: c001068a507390e24b609904bc0d1c8790f1d2df
+    last_write_checksum: sha1:897ea7d6c797e5f29307f0002799c02b843c01c3
+    pristine_git_object: 8e0f7067681d1fcdefbb464db0b8839ef32e2630
   docs/models/operations/updateaccountingaccountrequest.md:
     id: a21595a1c902
     last_write_checksum: sha1:735ae638c2489e3b22e42a366478fe1b529e1f26
@@ -6118,8 +6118,8 @@ trackedFiles:
     pristine_git_object: 706f549dae60090ed0516fa426306fc1f9786aaa
   docs/models/operations/updateaccountingcontactqueryparamfields.md:
     id: 5a5964055f2d
-    last_write_checksum: sha1:1c6c584b1bc6a822521318fbd901d8b086ff2a3b
-    pristine_git_object: 42e560bd725c496626528deff03ef19308cde267
+    last_write_checksum: sha1:2624d4b81bf1593cbb2ff14bfc77ff83475aded7
+    pristine_git_object: d940c0e37414932a4b91c188fa5708c08b296691
   docs/models/operations/updateaccountingcontactrequest.md:
     id: c18ef537cbd8
     last_write_checksum: sha1:8517925e443c31651875852527f93fc832dd557b
@@ -6142,8 +6142,8 @@ trackedFiles:
     pristine_git_object: 987c0cecd4ee32b1e25349308ca6d75480607f2c
   docs/models/operations/updateaccountingexpensequeryparamfields.md:
     id: f233989008e6
-    last_write_checksum: sha1:e9b30ec33ca4821d960a0e9dc4b3ba9a430b68d9
-    pristine_git_object: 07aec1da1d82b8aa5a3435182fa43379a925089f
+    last_write_checksum: sha1:59d42e3b75c1c30cb901d3132000d884bbd7748f
+    pristine_git_object: 2280de59457ebd459fdf3fb4957e96b5b0b3ab3c
   docs/models/operations/updateaccountingexpenserequest.md:
     id: f42ccbd90e9d
     last_write_checksum: sha1:fda8bd99fbf201415d2ede484ed737fb6890843e
@@ -7262,8 +7262,8 @@ trackedFiles:
     pristine_git_object: bfd84cb93227c36b79710b19fc8e4e7726f83502
   docs/models/shared/accountingaccount.md:
     id: fd0c3d6b8a26
-    last_write_checksum: sha1:ba4af04a131cad8a1fb0254bfd52857c470434d1
-    pristine_git_object: 4b7af6ac7217f684ae4a6f6fd0261d5ed1d5c47f
+    last_write_checksum: sha1:bd210a95e09b515c65f4e3cb3bcd64fc67d36f8d
+    pristine_git_object: e53e1943c8a82be66315c8f8118b6e0de652c47b
   docs/models/shared/accountingaccounttaxonomy.md:
     id: 657abe48044e
     last_write_checksum: sha1:94e4c18fb6a5a4e4007d6b46d5122c79deb93ee9
@@ -9854,8 +9854,8 @@ trackedFiles:
     pristine_git_object: a8a22ab24a0930fc76980eaca886aa0be4436242
   docs/models/shared/propertyscimuserurnietfparamsscimschemasextensionenterprise20user.md:
     id: 5b089fbf32e3
-    last_write_checksum: sha1:23da964e5f4a8b6e563c6e73a8a2576038e9348f
-    pristine_git_object: b918a1fab228829c3afc61484f8b914fc0576172
+    last_write_checksum: sha1:f427befb6978f497a27e8c4b82ca12856a5aca98
+    pristine_git_object: b6fad0f6e3fa91d309a84df6010396355f2c2ba9
   docs/models/shared/propertyscimuserurnietfparamsscimschemasextensionenterprise20usergender.md:
     id: ec591a8fe387
     last_write_checksum: sha1:972641bec6a96cab12ed3c9bb3e54a5e405d0679
@@ -11178,8 +11178,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:f40ed1b90815926195676baa8bc5e9ab49d85b13
-    pristine_git_object: c8b55c809b54ed1d587eaccf16ab97ac87a444f4
+    last_write_checksum: sha1:292f505bada7ffe1941381e5e2a6fabe08a4c433
+    pristine_git_object: 94944543e963936f5bb1119bed17b80be15def34
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11206,8 +11206,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:21152d6ef809e7d7a4fc46ef96f48dc28af57809
-    pristine_git_object: da463ede27e1ef8402901402875c4d872263c32f
+    last_write_checksum: sha1:70c0f943fd1522702e5707bb371eaddd6f937b07
+    pristine_git_object: 6b20f09194ec9c1646caff855d72ade10893f8df
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -11570,8 +11570,8 @@ trackedFiles:
     pristine_git_object: 26c9787cbb8ac7980e71dd8103a164f51e5db2d0
   src/unified_python_sdk/models/operations/createaccountingaccount.py:
     id: 52d116750aa5
-    last_write_checksum: sha1:c994046a82cbbedd927c3d684832283fde32d444
-    pristine_git_object: a68a24042c583914e3b8861fb47c5f1fc4c7e2f6
+    last_write_checksum: sha1:55e2d95d5c9c88fd60e436b4d2716597da7a1da8
+    pristine_git_object: 5d8297d159606b148363d32b0de4841d63443454
   src/unified_python_sdk/models/operations/createaccountingbill.py:
     id: 75b21b9b5b20
     last_write_checksum: sha1:f7108b7217c0bbc8f9f1fbec28bf4e848ba6fbce
@@ -11582,16 +11582,16 @@ trackedFiles:
     pristine_git_object: 5c24d882e84abf9c4024b1c2085b5371051e91b3
   src/unified_python_sdk/models/operations/createaccountingcontact.py:
     id: 1936bef80267
-    last_write_checksum: sha1:6ac8653343cce4ab0fad06449f5eef77e9a1bdfa
-    pristine_git_object: 58abdd206397edee23364de6671d5babc057494b
+    last_write_checksum: sha1:7951c6371d0e0722078b265ab5bdfbdbd14c3440
+    pristine_git_object: 55188d22f387871e6a5b813d2826bd229631e4e0
   src/unified_python_sdk/models/operations/createaccountingcreditmemo.py:
     id: 102d22a11b58
     last_write_checksum: sha1:14c0a53e1dc0339df3e1e3574513b496e3f055c6
     pristine_git_object: 4b6d4d401210b7e7597590f1b7c3da22deff8fba
   src/unified_python_sdk/models/operations/createaccountingexpense.py:
     id: 2e3152f2e0e8
-    last_write_checksum: sha1:e357fd2bc284d1e6ef3c3d8048ac5afdbf30837e
-    pristine_git_object: 2cf6dd4dccdb1e16c12b408d1cc0fab4c0704bac
+    last_write_checksum: sha1:dbd3f62c9e6a3045113c216025bcef9877aa977c
+    pristine_git_object: bf66fa31cd09deb58ca1e0f5acddb280d231f056
   src/unified_python_sdk/models/operations/createaccountinginvoice.py:
     id: 3e3da3e1ea00
     last_write_checksum: sha1:0509535172f1a65e9732a2540f436b18d4759aae
@@ -11978,8 +11978,8 @@ trackedFiles:
     pristine_git_object: e76fbd673bd8ffff60e157a16bf48980f001f74a
   src/unified_python_sdk/models/operations/getaccountingaccount.py:
     id: d8178ade7a81
-    last_write_checksum: sha1:a25c1bd65b94888a2469aabc32ee970304873661
-    pristine_git_object: ee6cfb7e22af9a6f6806285c1bb4600208221875
+    last_write_checksum: sha1:dd7903e4d9ef753564b7391013b202de217fb88e
+    pristine_git_object: e79be57c073c45facff0809a88ec9c532bd7a712
   src/unified_python_sdk/models/operations/getaccountingbalancesheet.py:
     id: 16646f0f137d
     last_write_checksum: sha1:92fa5ef52f93a524ba95c9f61f1b35a96d19f37b
@@ -11998,16 +11998,16 @@ trackedFiles:
     pristine_git_object: e0014dc2c529f8278f15ecb6cc6a1a353573e6ba
   src/unified_python_sdk/models/operations/getaccountingcontact.py:
     id: 5f2277bc3dfc
-    last_write_checksum: sha1:81200785057102cc2f49592611cd581e128db94c
-    pristine_git_object: af299277ebf7fc66ad97fa8f4168d8fca438932e
+    last_write_checksum: sha1:92707d35bc446222b1c4f9fec5910fc7ca0305a7
+    pristine_git_object: 95adb9e67f6b84c65fd30b0518e66b9d4b3fa5d1
   src/unified_python_sdk/models/operations/getaccountingcreditmemo.py:
     id: fd392ac6c8b0
     last_write_checksum: sha1:0b6eeaedce2dc4317c4f6240ae1c8b7bc3145bfe
     pristine_git_object: a84f473bd71ec9026f987549e35e2ba3a311ef66
   src/unified_python_sdk/models/operations/getaccountingexpense.py:
     id: 4f6c26c86fdd
-    last_write_checksum: sha1:b0cf5a1dd314f8f3492a2b9a63a2c50caff2a841
-    pristine_git_object: 760b651d60484c9ef7942f42885ba1476dcac3af
+    last_write_checksum: sha1:853bdd08c0fd63c1dc6340b8a519115c4edcbe35
+    pristine_git_object: 60c0cb95c4be3c9ef4f4a6afbbd3015f1d2eeb60
   src/unified_python_sdk/models/operations/getaccountinginvoice.py:
     id: 22f37c6a27f0
     last_write_checksum: sha1:95767642451b5fa0284fb7358221cbd49e011fe3
@@ -12454,8 +12454,8 @@ trackedFiles:
     pristine_git_object: 7a6deae5e4b575f1b9a5098789a5451ef1c8ff23
   src/unified_python_sdk/models/operations/listaccountingaccounts.py:
     id: 3d99c3bef47b
-    last_write_checksum: sha1:95ea67309d2058814392e7248131e118432d7270
-    pristine_git_object: baf5b963163d7a7f13ba2d37429befb642606efe
+    last_write_checksum: sha1:f1af5cea1bf8967d77149d62fd994bcff4015290
+    pristine_git_object: 4543e3c97090e5eeb9f728d0501f572317bf4d18
   src/unified_python_sdk/models/operations/listaccountingbalancesheets.py:
     id: ed33a179e41b
     last_write_checksum: sha1:e03de9d16cd05c5438c16f4b8a88398630f5539b
@@ -12474,16 +12474,16 @@ trackedFiles:
     pristine_git_object: 6ad1a75ee7e85da5bc2424d360f36e6029213e6e
   src/unified_python_sdk/models/operations/listaccountingcontacts.py:
     id: 3c3dce406097
-    last_write_checksum: sha1:63d6d225c0371db7afb3519099c45b67b6eacba6
-    pristine_git_object: 053dd142c3a86b39cbb0bea9fa208011b8a245ee
+    last_write_checksum: sha1:c485098ca75fabbcc05ef25d4695906ec6e5234c
+    pristine_git_object: 9e6abc48e119425b147f37c08bb70ad563edd9dc
   src/unified_python_sdk/models/operations/listaccountingcreditmemoes.py:
     id: 7ea720de9580
     last_write_checksum: sha1:12e38e775abd5bf8357ec14bc9d8865a25a92430
     pristine_git_object: e88d449d35c4d13fce9fa7af04a15e768e28f446
   src/unified_python_sdk/models/operations/listaccountingexpenses.py:
     id: 3e6a3a038f1a
-    last_write_checksum: sha1:12cc20d4f0305507987227cc5ee19b7cd22022e7
-    pristine_git_object: ef43194308fd6e2c0a8e6ba3136b8967753fca78
+    last_write_checksum: sha1:794de3ac5a46f100a1ceaebc61a3bb690c8fe9d8
+    pristine_git_object: d3d24bbd91268cef6be236e90d702253158ee065
   src/unified_python_sdk/models/operations/listaccountinginvoices.py:
     id: 531605b7ecbc
     last_write_checksum: sha1:a98d852a2101000e93c080c97bd6a3ccf002280f
@@ -12966,8 +12966,8 @@ trackedFiles:
     pristine_git_object: cc1d872a25fca7ec5c5ac669f9b1a0d2b9537dfb
   src/unified_python_sdk/models/operations/patchaccountingaccount.py:
     id: 12e4a45528ab
-    last_write_checksum: sha1:2fc21d9be51d8092755972efbe0219efd442417e
-    pristine_git_object: 26cea032d7abe36d1cf0a116ecc297b21c32ed27
+    last_write_checksum: sha1:4618d86e72bc05dfad58752b618fa5410bab396d
+    pristine_git_object: ce8371ba5453ea2e2184c989bbfe45bbfc825242
   src/unified_python_sdk/models/operations/patchaccountingbill.py:
     id: 6ac4fb3c0918
     last_write_checksum: sha1:1ce655b3fe528052ecfbf95fea11d2120c69ae92
@@ -12978,16 +12978,16 @@ trackedFiles:
     pristine_git_object: f4707fcf96f0d99dd962d40eab73e1b0337f0885
   src/unified_python_sdk/models/operations/patchaccountingcontact.py:
     id: 65ed206fcb49
-    last_write_checksum: sha1:b6afc7aa2132de507d3aa84099e570f202cb1274
-    pristine_git_object: 0f86926b341bd36950d643dc55c21f46716bd7aa
+    last_write_checksum: sha1:16c1fe36d6044f5c330fcb1a0493a47826f340a5
+    pristine_git_object: ecd2cc1d07b73222d884bfd56d19be19d4fe5e59
   src/unified_python_sdk/models/operations/patchaccountingcreditmemo.py:
     id: 1968dec3652f
     last_write_checksum: sha1:7e51a7ac52c31c8cac59e929a7c21733f5fedee3
     pristine_git_object: e9c4a36c431b3af904fb0f0af85f9468e3396130
   src/unified_python_sdk/models/operations/patchaccountingexpense.py:
     id: aecc5d39ad6b
-    last_write_checksum: sha1:0d24df833ed14fc7d35ff0c45b4d2d618f28f833
-    pristine_git_object: aed06a95b22b3a95a460cff0e85add3714cc7936
+    last_write_checksum: sha1:9574cd2ab5f387f3598c491457707e1adb1b5340
+    pristine_git_object: aff39c9644281fd318285824b2149d850e4eade6
   src/unified_python_sdk/models/operations/patchaccountinginvoice.py:
     id: ba6bf9fb2193
     last_write_checksum: sha1:249aa2679951b00baad9b051ebe708e64bb84d01
@@ -13762,8 +13762,8 @@ trackedFiles:
     pristine_git_object: e44ec28275a6a5bb3ac646b58da77cca1c68b1c2
   src/unified_python_sdk/models/operations/updateaccountingaccount.py:
     id: 8e5d1df64446
-    last_write_checksum: sha1:92e84699edfbbfd74c0eb005659c90971ecede0b
-    pristine_git_object: 6d3eaa84bf2e0c5394491fd9666086ffa69ba8c1
+    last_write_checksum: sha1:478a2d33a90d369141003dac0d5d60277e278eb8
+    pristine_git_object: 5b2caa61a39bc1ca14c4ebe2858f3216b0103cfe
   src/unified_python_sdk/models/operations/updateaccountingbill.py:
     id: 0c3dd8a5dd6d
     last_write_checksum: sha1:3e0ab1cc3cb2145dfe0b2066b106414ddef321e7
@@ -13774,16 +13774,16 @@ trackedFiles:
     pristine_git_object: 5f428f86d5876167b95c96c80462a1f7f3f6580c
   src/unified_python_sdk/models/operations/updateaccountingcontact.py:
     id: 5a1d3c12cbbb
-    last_write_checksum: sha1:57e18fbde7e7a4b8f0ea04107cc937279d546fee
-    pristine_git_object: 42785e6fac9fd57f0a1a17831f0ec2a0e66061a4
+    last_write_checksum: sha1:a5dc83089c2cfcdf7760a31041717bb88762d66c
+    pristine_git_object: c5c10181f4eab9acbefc28b3336832dfa78e9231
   src/unified_python_sdk/models/operations/updateaccountingcreditmemo.py:
     id: dc1954667b74
     last_write_checksum: sha1:e1555a10c4679c42330591a460e29c577b9f629f
     pristine_git_object: 0e738acc46e244e463524adb2f611dd5e3633832
   src/unified_python_sdk/models/operations/updateaccountingexpense.py:
     id: f7c9d0c1ae9c
-    last_write_checksum: sha1:d7a332ce1f33426b97d0ce0901e8a37276ef2233
-    pristine_git_object: 2bd0477563df974011c73bb73f4d512ecf330afe
+    last_write_checksum: sha1:22531bdd1bc63e773b5c0ba8fa4f1ca6f5671226
+    pristine_git_object: 76b405ed5c670fa84e7c3b8b2bbbaac8f1d0c40a
   src/unified_python_sdk/models/operations/updateaccountinginvoice.py:
     id: c326b498864f
     last_write_checksum: sha1:3d2509df23790a6f432ad4a83862c25ae986dc0a
@@ -14170,8 +14170,8 @@ trackedFiles:
     pristine_git_object: d75fb9985e4e5e36df337c0aec7d529bde8fc361
   src/unified_python_sdk/models/shared/accountingaccount.py:
     id: b8ab638302ba
-    last_write_checksum: sha1:b789a48af2db8444440c3805a7ecd622ccddd30a
-    pristine_git_object: 6fd83d90ba93c2cf17a4ef592ee67ed9ff6328bc
+    last_write_checksum: sha1:fd681fb913ad336200985e29333073ebb362c0a2
+    pristine_git_object: c486a3150590c369e99a706f00849508badc6154
   src/unified_python_sdk/models/shared/accountingaccounttaxonomy.py:
     id: fda890df4d44
     last_write_checksum: sha1:a3ed0acb22969d2aed6557572892b76c11f04b77
@@ -15526,8 +15526,8 @@ trackedFiles:
     pristine_git_object: 5f73b297d9704f465636b43dd226041fc6a52a53
   src/unified_python_sdk/models/shared/property_scimuser_urn_ietf_params_scim_schemas_extension_enterprise_2_0_user.py:
     id: 82fb0b1789a1
-    last_write_checksum: sha1:9ebc78b6fcc01c98cf745902e9c75dcc49c77e02
-    pristine_git_object: c1f4409c0647237076cb4324013132ac7d231ff7
+    last_write_checksum: sha1:7458e349719b5bf4e73ccb082e34004845c726f7
+    pristine_git_object: 13ac6b404159cdd7a14e643f9e0697200ff57844
   src/unified_python_sdk/models/shared/property_scimuser_urn_ietf_params_scim_schemas_extension_enterprise_2_0_user_manager.py:
     id: b64b30007b05
     last_write_checksum: sha1:2f127b5648dae319bc921c24b5550304ff297740
@@ -22055,7 +22055,7 @@ examples:
           application/json: [{"id": "<id>", "type": "CUSTOM_CONVERSION_ID"}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_io_id` **Removed** (Breaking ⚠️)\n* `unified_to.integration.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_io_id` **Removed** (Breaking ⚠️)\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_io_id` **Removed** (Breaking ⚠️)\n* `unified_to.unified.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_io_id` **Removed** (Breaking ⚠️)\n* `unified_to.uc.get_uc_call()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.uc.get_uc_recording()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.recording.list_uc_recordings()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.recording.patch_uc_recording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.recording.update_uc_recording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.messaging.patch_messaging_event()`: \n  *  `request.messaging_event.type.enum(channel_renamed)` **Added**\n  *  `response.type.enum(channel_renamed)` **Added**\n* `unified_to.messaging.update_messaging_event()`: \n  *  `request.messaging_event.type.enum(channel_renamed)` **Added**\n  *  `response.type.enum(channel_renamed)` **Added**\n* `unified_to.uc.create_uc_recording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.accounting.list_accounting_transactions()`:  `request` **Changed**\n* `unified_to.recording.get_uc_recording()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.uc.list_uc_calls()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.uc.list_uc_recordings()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.uc.patch_uc_recording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.uc.update_uc_recording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.call.get_uc_call()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.call.list_uc_calls()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.recording.create_uc_recording()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.event.update_messaging_event()`: \n  *  `request.messaging_event.type.enum(channel_renamed)` **Added**\n  *  `response.type.enum(channel_renamed)` **Added**\n* `unified_to.event.patch_messaging_event()`: \n  *  `request.messaging_event.type.enum(channel_renamed)` **Added**\n  *  `response.type.enum(channel_renamed)` **Added**\n* `unified_to.transaction.list_accounting_transactions()`:  `request` **Changed**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.accounting.create_accounting_account()`: \n  *  `request` **Changed**\n  *  `response.organization_id` **Added**\n* `unified_to.accounting.create_accounting_contact()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.create_accounting_expense()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.get_accounting_account()`: \n  *  `request.fields` **Changed**\n  *  `response.organization_id` **Added**\n* `unified_to.accounting.get_accounting_contact()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.get_accounting_expense()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.list_accounting_accounts()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organization_id` **Added**\n* `unified_to.accounting.list_accounting_contacts()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.list_accounting_expenses()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.patch_accounting_account()`: \n  *  `request` **Changed**\n  *  `response.organization_id` **Added**\n* `unified_to.accounting.patch_accounting_contact()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.patch_accounting_expense()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.update_accounting_account()`: \n  *  `request` **Changed**\n  *  `response.organization_id` **Added**\n* `unified_to.accounting.update_accounting_contact()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.update_accounting_expense()`: \n  *  `request.fields` **Changed**\n* `unified_to.account.create_accounting_account()`: \n  *  `request` **Changed**\n  *  `response.organization_id` **Added**\n* `unified_to.account.get_accounting_account()`: \n  *  `request.fields` **Changed**\n  *  `response.organization_id` **Added**\n* `unified_to.account.list_accounting_accounts()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organization_id` **Added**\n* `unified_to.account.patch_accounting_account()`: \n  *  `request` **Changed**\n  *  `response.organization_id` **Added**\n* `unified_to.account.update_accounting_account()`: \n  *  `request` **Changed**\n  *  `response.organization_id` **Added**\n* `unified_to.contact.create_accounting_contact()`: \n  *  `request.fields` **Changed**\n* `unified_to.contact.get_accounting_contact()`: \n  *  `request.fields` **Changed**\n* `unified_to.contact.list_accounting_contacts()`: \n  *  `request.fields` **Changed**\n* `unified_to.contact.patch_accounting_contact()`: \n  *  `request.fields` **Changed**\n* `unified_to.contact.update_accounting_contact()`: \n  *  `request.fields` **Changed**\n* `unified_to.expense.create_accounting_expense()`: \n  *  `request.fields` **Changed**\n* `unified_to.expense.get_accounting_expense()`: \n  *  `request.fields` **Changed**\n* `unified_to.expense.list_accounting_expenses()`: \n  *  `request.fields` **Changed**\n* `unified_to.expense.patch_accounting_expense()`: \n  *  `request.fields` **Changed**\n* `unified_to.expense.update_accounting_expense()`: \n  *  `request.fields` **Changed**\n* `unified_to.scim.create_scim_users()`: \n  *  `request.scim_user.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.scim.get_scim_users()`:  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.scim.list_scim_users()`:  `response.[].urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.scim.patch_scim_users()`: \n  *  `request.scim_user.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.scim.update_scim_users()`: \n  *  `request.scim_user.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.user.create_scim_users()`: \n  *  `request.scim_user.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.user.get_scim_users()`:  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.user.list_scim_users()`:  `response.[].urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.user.patch_scim_users()`: \n  *  `request.scim_user.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n* `unified_to.user.update_scim_users()`: \n  *  `request.scim_user.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n  *  `response.urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.currency` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

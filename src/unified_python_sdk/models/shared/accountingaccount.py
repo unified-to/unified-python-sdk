@@ -45,6 +45,7 @@ class AccountingAccountTypedDict(TypedDict):
     id: NotRequired[str]
     is_payable: NotRequired[bool]
     name: NotRequired[str]
+    organization_id: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     section: NotRequired[str]
@@ -76,6 +77,8 @@ class AccountingAccount(BaseModel):
     is_payable: Optional[bool] = None
 
     name: Optional[str] = None
+
+    organization_id: Optional[str] = None
 
     parent_id: Optional[str] = None
 
@@ -126,6 +129,7 @@ class AccountingAccount(BaseModel):
                 "id",
                 "is_payable",
                 "name",
+                "organization_id",
                 "parent_id",
                 "raw",
                 "section",

@@ -36,8 +36,8 @@ class UpdateAccountingExpenseQueryParamFields(str, Enum):
     APPROVED_AT = "approved_at"
     APPROVER_USER_ID = "approver_user_id"
     LINEITEMS = "lineitems"
-    ORGANIZATION_ID = "organization_id"
     RAW = "raw"
+    ORGANIZATION_ID = "organization_id"
 
 
 class UpdateAccountingExpenseRequestTypedDict(TypedDict):

@@ -40,8 +40,8 @@ class CreateAccountingContactQueryParamFields(str, Enum):
     COMPANY_NAME = "company_name"
     IDENTIFICATION = "identification"
     ASSOCIATED_CONTACTS = "associated_contacts"
-    ORGANIZATION_ID = "organization_id"
     RAW = "raw"
+    ORGANIZATION_ID = "organization_id"
 
 
 class CreateAccountingContactRequestTypedDict(TypedDict):

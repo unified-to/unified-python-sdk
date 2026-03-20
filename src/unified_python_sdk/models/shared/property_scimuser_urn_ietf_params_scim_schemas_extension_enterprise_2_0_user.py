@@ -32,6 +32,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserTypedDict
     additional_managers: NotRequired[List[ScimManagerTypedDict]]
     birthday: NotRequired[datetime]
     cost_center: NotRequired[str]
+    currency: NotRequired[str]
     department: NotRequired[str]
     division: NotRequired[str]
     employee_number: NotRequired[str]
@@ -59,6 +60,8 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(BaseMode
     birthday: Optional[datetime] = None
 
     cost_center: Annotated[Optional[str], pydantic.Field(alias="costCenter")] = None
+
+    currency: Optional[str] = None
 
     department: Optional[str] = None
 
@@ -105,6 +108,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(BaseMode
                 "additionalManagers",
                 "birthday",
                 "costCenter",
+                "currency",
                 "department",
                 "division",
                 "employeeNumber",
