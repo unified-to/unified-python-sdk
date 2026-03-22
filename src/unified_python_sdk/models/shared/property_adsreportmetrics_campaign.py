@@ -78,6 +78,7 @@ class PropertyAdsReportMetricsCampaignTypedDict(TypedDict):
     end_at: NotRequired[datetime]
     frequency_cap: NotRequired[PropertyAdsReportMetricsCampaignFrequencyCapTypedDict]
     goal: NotRequired[PropertyAdsReportMetricsCampaignGoal]
+    has_eu_political_ads: NotRequired[bool]
     id: NotRequired[str]
     name: NotRequired[str]
     organization_id: NotRequired[str]
@@ -112,6 +113,8 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
     frequency_cap: Optional[PropertyAdsReportMetricsCampaignFrequencyCap] = None
 
     goal: Optional[PropertyAdsReportMetricsCampaignGoal] = None
+
+    has_eu_political_ads: Optional[bool] = None
 
     id: Optional[str] = None
 
@@ -185,6 +188,7 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
                 "end_at",
                 "frequency_cap",
                 "goal",
+                "has_eu_political_ads",
                 "id",
                 "name",
                 "organization_id",

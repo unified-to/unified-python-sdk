@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Optional
+from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -31,6 +31,7 @@ class AdsTargetTypedDict(TypedDict):
     id: str
     value: str
     name: NotRequired[str]
+    raw: NotRequired[Dict[str, Any]]
     type: NotRequired[AdsTargetType]
 
 
@@ -42,6 +43,8 @@ class AdsTarget(BaseModel):
     value: str
 
     name: Optional[str] = None
+
+    raw: Optional[Dict[str, Any]] = None
 
     type: Optional[AdsTargetType] = None
 
@@ -56,7 +59,7 @@ class AdsTarget(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["name", "type"])
+        optional_fields = set(["name", "raw", "type"])
         serialized = handler(self)
         m = {}
 

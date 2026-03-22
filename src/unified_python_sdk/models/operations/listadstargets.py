@@ -20,6 +20,7 @@ class ListAdsTargetsQueryParamFields(str, Enum):
     NAME = "name"
     VALUE = "value"
     TYPE = "type"
+    RAW = "raw"
 
 
 class ListAdsTargetsRequestTypedDict(TypedDict):

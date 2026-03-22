@@ -17,3 +17,4 @@ value = ListAdsTargetsQueryParamFields.ID
 | `NAME`  | name    |
 | `VALUE` | value   |
 | `TYPE`  | type    |
+| `RAW`   | raw     |
