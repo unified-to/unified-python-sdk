@@ -374,6 +374,12 @@ class ListShipmentID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListSize(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListSortByCreatedAt(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -495,6 +501,12 @@ class NativeWebhookEventID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class NativeWebhookFormID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class NativeWebhookIoID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -976,6 +988,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_root_id: NotRequired[ListRootID]
     list_saleschannel_id: NotRequired[ListSaleschannelID]
     list_shipment_id: NotRequired[ListShipmentID]
+    list_size: NotRequired[ListSize]
     list_sort_by_created_at: NotRequired[ListSortByCreatedAt]
     list_sort_by_name: NotRequired[ListSortByName]
     list_sort_by_updated_at: NotRequired[ListSortByUpdatedAt]
@@ -998,6 +1011,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_course_id: NotRequired[NativeWebhookCourseID]
     native_webhook_event_id: NotRequired[NativeWebhookEventID]
     native_webhook_form_id: NotRequired[NativeWebhookFormID]
+    native_webhook_io_id: NotRequired[NativeWebhookIoID]
     native_webhook_label_id: NotRequired[NativeWebhookLabelID]
     native_webhook_member_id: NotRequired[NativeWebhookMemberID]
     native_webhook_order_id: NotRequired[NativeWebhookOrderID]
@@ -1197,6 +1211,8 @@ class IntegrationSupport(BaseModel):
 
     list_shipment_id: Optional[ListShipmentID] = None
 
+    list_size: Optional[ListSize] = None
+
     list_sort_by_created_at: Optional[ListSortByCreatedAt] = None
 
     list_sort_by_name: Optional[ListSortByName] = None
@@ -1240,6 +1256,8 @@ class IntegrationSupport(BaseModel):
     native_webhook_event_id: Optional[NativeWebhookEventID] = None
 
     native_webhook_form_id: Optional[NativeWebhookFormID] = None
+
+    native_webhook_io_id: Optional[NativeWebhookIoID] = None
 
     native_webhook_label_id: Optional[NativeWebhookLabelID] = None
 
@@ -1928,6 +1946,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_size")
+    def serialize_list_size(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListSize(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_sort_by_created_at")
     def serialize_list_sort_by_created_at(self, value):
         if isinstance(value, str):
@@ -2113,6 +2140,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.NativeWebhookFormID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("native_webhook_io_id")
+    def serialize_native_webhook_io_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookIoID(value)
             except ValueError:
                 return value
         return value
@@ -2803,6 +2839,7 @@ class IntegrationSupport(BaseModel):
                 "list_root_id",
                 "list_saleschannel_id",
                 "list_shipment_id",
+                "list_size",
                 "list_sort_by_created_at",
                 "list_sort_by_name",
                 "list_sort_by_updated_at",
@@ -2825,6 +2862,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_course_id",
                 "native_webhook_event_id",
                 "native_webhook_form_id",
+                "native_webhook_io_id",
                 "native_webhook_label_id",
                 "native_webhook_member_id",
                 "native_webhook_order_id",

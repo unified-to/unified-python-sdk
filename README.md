@@ -426,6 +426,10 @@ asyncio.run(main())
 * [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Authorize new connection
 * [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
 
+### [Availability](docs/sdks/availability/README.md)
+
+* [list_commerce_availabilities](docs/sdks/availability/README.md#list_commerce_availabilities) - List all availabilities
+
 ### [Balancesheet](docs/sdks/balancesheet/README.md)
 
 * [get_accounting_balancesheet](docs/sdks/balancesheet/README.md#get_accounting_balancesheet) - Retrieve a balancesheet
@@ -617,6 +621,7 @@ asyncio.run(main())
 * [create_commerce_item](docs/sdks/commerce/README.md#create_commerce_item) - Create an item
 * [create_commerce_itemvariant](docs/sdks/commerce/README.md#create_commerce_itemvariant) - Create an itemvariant
 * [create_commerce_location](docs/sdks/commerce/README.md#create_commerce_location) - Create a location
+* [create_commerce_reservation](docs/sdks/commerce/README.md#create_commerce_reservation) - Create a reservation
 * [create_commerce_review](docs/sdks/commerce/README.md#create_commerce_review) - Create a review
 * [create_commerce_saleschannel](docs/sdks/commerce/README.md#create_commerce_saleschannel) - Create a saleschannel
 * [get_commerce_collection](docs/sdks/commerce/README.md#get_commerce_collection) - Retrieve a collection
@@ -624,13 +629,16 @@ asyncio.run(main())
 * [get_commerce_item](docs/sdks/commerce/README.md#get_commerce_item) - Retrieve an item
 * [get_commerce_itemvariant](docs/sdks/commerce/README.md#get_commerce_itemvariant) - Retrieve an itemvariant
 * [get_commerce_location](docs/sdks/commerce/README.md#get_commerce_location) - Retrieve a location
+* [get_commerce_reservation](docs/sdks/commerce/README.md#get_commerce_reservation) - Retrieve a reservation
 * [get_commerce_review](docs/sdks/commerce/README.md#get_commerce_review) - Retrieve a review
 * [get_commerce_saleschannel](docs/sdks/commerce/README.md#get_commerce_saleschannel) - Retrieve a saleschannel
+* [list_commerce_availabilities](docs/sdks/commerce/README.md#list_commerce_availabilities) - List all availabilities
 * [list_commerce_collections](docs/sdks/commerce/README.md#list_commerce_collections) - List all collections
 * [list_commerce_inventories](docs/sdks/commerce/README.md#list_commerce_inventories) - List all inventories
 * [list_commerce_items](docs/sdks/commerce/README.md#list_commerce_items) - List all items
 * [list_commerce_itemvariants](docs/sdks/commerce/README.md#list_commerce_itemvariants) - List all itemvariants
 * [list_commerce_locations](docs/sdks/commerce/README.md#list_commerce_locations) - List all locations
+* [list_commerce_reservations](docs/sdks/commerce/README.md#list_commerce_reservations) - List all reservations
 * [list_commerce_reviews](docs/sdks/commerce/README.md#list_commerce_reviews) - List all reviews
 * [list_commerce_saleschannels](docs/sdks/commerce/README.md#list_commerce_saleschannels) - List all saleschannels
 * [patch_commerce_collection](docs/sdks/commerce/README.md#patch_commerce_collection) - Update a collection
@@ -638,6 +646,7 @@ asyncio.run(main())
 * [patch_commerce_item](docs/sdks/commerce/README.md#patch_commerce_item) - Update an item
 * [patch_commerce_itemvariant](docs/sdks/commerce/README.md#patch_commerce_itemvariant) - Update an itemvariant
 * [patch_commerce_location](docs/sdks/commerce/README.md#patch_commerce_location) - Update a location
+* [patch_commerce_reservation](docs/sdks/commerce/README.md#patch_commerce_reservation) - Update a reservation
 * [patch_commerce_review](docs/sdks/commerce/README.md#patch_commerce_review) - Update a review
 * [patch_commerce_saleschannel](docs/sdks/commerce/README.md#patch_commerce_saleschannel) - Update a saleschannel
 * [remove_commerce_collection](docs/sdks/commerce/README.md#remove_commerce_collection) - Remove a collection
@@ -645,6 +654,7 @@ asyncio.run(main())
 * [remove_commerce_item](docs/sdks/commerce/README.md#remove_commerce_item) - Remove an item
 * [remove_commerce_itemvariant](docs/sdks/commerce/README.md#remove_commerce_itemvariant) - Remove an itemvariant
 * [remove_commerce_location](docs/sdks/commerce/README.md#remove_commerce_location) - Remove a location
+* [remove_commerce_reservation](docs/sdks/commerce/README.md#remove_commerce_reservation) - Remove a reservation
 * [remove_commerce_review](docs/sdks/commerce/README.md#remove_commerce_review) - Remove a review
 * [remove_commerce_saleschannel](docs/sdks/commerce/README.md#remove_commerce_saleschannel) - Remove a saleschannel
 * [update_commerce_collection](docs/sdks/commerce/README.md#update_commerce_collection) - Update a collection
@@ -652,6 +662,7 @@ asyncio.run(main())
 * [update_commerce_item](docs/sdks/commerce/README.md#update_commerce_item) - Update an item
 * [update_commerce_itemvariant](docs/sdks/commerce/README.md#update_commerce_itemvariant) - Update an itemvariant
 * [update_commerce_location](docs/sdks/commerce/README.md#update_commerce_location) - Update a location
+* [update_commerce_reservation](docs/sdks/commerce/README.md#update_commerce_reservation) - Update a reservation
 * [update_commerce_review](docs/sdks/commerce/README.md#update_commerce_review) - Update a review
 * [update_commerce_saleschannel](docs/sdks/commerce/README.md#update_commerce_saleschannel) - Update a saleschannel
 
@@ -1523,6 +1534,15 @@ asyncio.run(main())
 * [patch_verification_request](docs/sdks/request/README.md#patch_verification_request) - Update a request
 * [remove_verification_request](docs/sdks/request/README.md#remove_verification_request) - Remove a request
 * [update_verification_request](docs/sdks/request/README.md#update_verification_request) - Update a request
+
+### [Reservation](docs/sdks/reservation/README.md)
+
+* [create_commerce_reservation](docs/sdks/reservation/README.md#create_commerce_reservation) - Create a reservation
+* [get_commerce_reservation](docs/sdks/reservation/README.md#get_commerce_reservation) - Retrieve a reservation
+* [list_commerce_reservations](docs/sdks/reservation/README.md#list_commerce_reservations) - List all reservations
+* [patch_commerce_reservation](docs/sdks/reservation/README.md#patch_commerce_reservation) - Update a reservation
+* [remove_commerce_reservation](docs/sdks/reservation/README.md#remove_commerce_reservation) - Remove a reservation
+* [update_commerce_reservation](docs/sdks/reservation/README.md#update_commerce_reservation) - Update a reservation
 
 ### [Review](docs/sdks/review/README.md)
 

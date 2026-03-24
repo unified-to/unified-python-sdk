@@ -46,6 +46,8 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `COMMERCE_REVIEW`          | commerce_review            |
 | `COMMERCE_SALESCHANNEL`    | commerce_saleschannel      |
 | `COMMERCE_ITEMVARIANT`     | commerce_itemvariant       |
+| `COMMERCE_RESERVATION`     | commerce_reservation       |
+| `COMMERCE_AVAILABILITY`    | commerce_availability      |
 | `VERIFICATION_PACKAGE`     | verification_package       |
 | `VERIFICATION_REQUEST`     | verification_request       |
 | `ASSESSMENT_PACKAGE`       | assessment_package         |

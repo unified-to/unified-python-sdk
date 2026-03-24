@@ -36,6 +36,7 @@ class CommerceReviewTypedDict(TypedDict):
     is_public: NotRequired[bool]
     is_verified: NotRequired[bool]
     item_variant_id: NotRequired[str]
+    location_id: NotRequired[str]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
     r"""Photosvideos attached to the review"""
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
@@ -45,6 +46,7 @@ class CommerceReviewTypedDict(TypedDict):
     title: NotRequired[str]
     unhelpful_votes: NotRequired[float]
     updated_at: NotRequired[datetime]
+    url: NotRequired[str]
     verified_purchase: NotRequired[bool]
 
 
@@ -77,6 +79,8 @@ class CommerceReview(BaseModel):
 
     item_variant_id: Optional[str] = None
 
+    location_id: Optional[str] = None
+
     media: Optional[List[CommerceItemMedia]] = None
     r"""Photosvideos attached to the review"""
 
@@ -93,6 +97,8 @@ class CommerceReview(BaseModel):
     unhelpful_votes: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+
+    url: Optional[str] = None
 
     verified_purchase: Optional[bool] = None
 
@@ -122,6 +128,7 @@ class CommerceReview(BaseModel):
                 "is_public",
                 "is_verified",
                 "item_variant_id",
+                "location_id",
                 "media",
                 "metadata",
                 "rating",
@@ -130,6 +137,7 @@ class CommerceReview(BaseModel):
                 "title",
                 "unhelpful_votes",
                 "updated_at",
+                "url",
                 "verified_purchase",
             ]
         )

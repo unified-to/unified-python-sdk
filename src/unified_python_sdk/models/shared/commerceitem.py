@@ -31,6 +31,7 @@ class CommerceItemTypedDict(TypedDict):
     r"""points to Collection with id, name, and type fields"""
     created_at: NotRequired[datetime]
     description: NotRequired[str]
+    duration: NotRequired[float]
     global_code: NotRequired[str]
     id: NotRequired[str]
     inventory_id: NotRequired[str]
@@ -38,6 +39,7 @@ class CommerceItemTypedDict(TypedDict):
     is_featured: NotRequired[bool]
     is_taxable: NotRequired[bool]
     is_visible: NotRequired[bool]
+    location_id: NotRequired[str]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
     name: NotRequired[str]
@@ -72,6 +74,8 @@ class CommerceItem(BaseModel):
 
     description: Optional[str] = None
 
+    duration: Optional[float] = None
+
     global_code: Optional[str] = None
 
     id: Optional[str] = None
@@ -85,6 +89,8 @@ class CommerceItem(BaseModel):
     is_taxable: Optional[bool] = None
 
     is_visible: Optional[bool] = None
+
+    location_id: Optional[str] = None
 
     media: Optional[List[CommerceItemMedia]] = None
 
@@ -141,6 +147,7 @@ class CommerceItem(BaseModel):
                 "collections",
                 "created_at",
                 "description",
+                "duration",
                 "global_code",
                 "id",
                 "inventory_id",
@@ -148,6 +155,7 @@ class CommerceItem(BaseModel):
                 "is_featured",
                 "is_taxable",
                 "is_visible",
+                "location_id",
                 "media",
                 "metadata",
                 "name",

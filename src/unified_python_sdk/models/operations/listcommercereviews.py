@@ -21,6 +21,7 @@ class ListCommerceReviewsQueryParamFields(str, Enum):
     UPDATED_AT = "updated_at"
     ITEM_ID = "item_id"
     ITEM_VARIANT_ID = "item_variant_id"
+    LOCATION_ID = "location_id"
     RATING = "rating"
     TITLE = "title"
     CONTENT = "content"
@@ -38,6 +39,7 @@ class ListCommerceReviewsQueryParamFields(str, Enum):
     IS_PUBLIC = "is_public"
     COMMENTS = "comments"
     METADATA = "metadata"
+    URL = "url"
     RAW = "raw"
 
 
@@ -51,6 +53,8 @@ class ListCommerceReviewsRequestTypedDict(TypedDict):
     item_id: NotRequired[str]
     r"""The item ID to filter by (reference to CommerceItem)"""
     limit: NotRequired[float]
+    location_id: NotRequired[str]
+    r"""The location ID to filter by (reference to CommerceLocation)"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
@@ -90,6 +94,12 @@ class ListCommerceReviewsRequest(BaseModel):
         Optional[float],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    location_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The location ID to filter by (reference to CommerceLocation)"""
 
     offset: Annotated[
         Optional[float],
@@ -132,6 +142,7 @@ class ListCommerceReviewsRequest(BaseModel):
                 "fields",
                 "item_id",
                 "limit",
+                "location_id",
                 "offset",
                 "order",
                 "query",

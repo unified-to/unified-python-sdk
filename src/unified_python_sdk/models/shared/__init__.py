@@ -356,6 +356,10 @@ if TYPE_CHECKING:
         RegistrationStatus,
     )
     from .citytarget import CityTarget, CityTargetTypedDict, RadiusUnit
+    from .commerceavailability import (
+        CommerceAvailability,
+        CommerceAvailabilityTypedDict,
+    )
     from .commercecollection import (
         CommerceCollection,
         CommerceCollectionType,
@@ -376,7 +380,11 @@ if TYPE_CHECKING:
         CommerceItemvariantWeightUnit,
         SizeUnit,
     )
-    from .commercelocation import CommerceLocation, CommerceLocationTypedDict
+    from .commercelocation import (
+        CommerceLocation,
+        CommerceLocationTypedDict,
+        LocationType,
+    )
     from .commercemetadata import (
         CommerceMetadata,
         CommerceMetadata1,
@@ -395,6 +403,11 @@ if TYPE_CHECKING:
         CommerceMetadataValueTypedDict,
     )
     from .commercereference import CommerceReference, CommerceReferenceTypedDict
+    from .commercereservation import (
+        CommerceReservation,
+        CommerceReservationStatus,
+        CommerceReservationTypedDict,
+    )
     from .commercereview import (
         CommerceReview,
         CommerceReviewStatus,
@@ -408,6 +421,11 @@ if TYPE_CHECKING:
     from .commercesaleschannel import (
         CommerceSaleschannel,
         CommerceSaleschannelTypedDict,
+    )
+    from .commercetelephone import (
+        CommerceTelephone,
+        CommerceTelephoneType,
+        CommerceTelephoneTypedDict,
     )
     from .connection import Connection, ConnectionTypedDict
     from .crmcompany import CrmCompany, CrmCompanyTypedDict
@@ -625,6 +643,7 @@ if TYPE_CHECKING:
         ListRootID,
         ListSaleschannelID,
         ListShipmentID,
+        ListSize,
         ListSortByCreatedAt,
         ListSortByName,
         ListSortByUpdatedAt,
@@ -646,6 +665,7 @@ if TYPE_CHECKING:
         NativeWebhookCourseID,
         NativeWebhookEventID,
         NativeWebhookFormID,
+        NativeWebhookIoID,
         NativeWebhookLabelID,
         NativeWebhookMemberID,
         NativeWebhookOrderID,
@@ -1875,6 +1895,8 @@ __all__ = [
     "CalendarWebinarTypedDict",
     "CityTarget",
     "CityTargetTypedDict",
+    "CommerceAvailability",
+    "CommerceAvailabilityTypedDict",
     "CommerceCollection",
     "CommerceCollectionType",
     "CommerceCollectionTypedDict",
@@ -1911,6 +1933,9 @@ __all__ = [
     "CommerceMetadataValueTypedDict",
     "CommerceReference",
     "CommerceReferenceTypedDict",
+    "CommerceReservation",
+    "CommerceReservationStatus",
+    "CommerceReservationTypedDict",
     "CommerceReview",
     "CommerceReviewComment",
     "CommerceReviewCommentStatus",
@@ -1919,6 +1944,9 @@ __all__ = [
     "CommerceReviewTypedDict",
     "CommerceSaleschannel",
     "CommerceSaleschannelTypedDict",
+    "CommerceTelephone",
+    "CommerceTelephoneType",
+    "CommerceTelephoneTypedDict",
     "Connection",
     "ConnectionTypedDict",
     "ContentType",
@@ -2188,6 +2216,7 @@ __all__ = [
     "ListRootID",
     "ListSaleschannelID",
     "ListShipmentID",
+    "ListSize",
     "ListSortByCreatedAt",
     "ListSortByName",
     "ListSortByUpdatedAt",
@@ -2226,6 +2255,7 @@ __all__ = [
     "LmsTelephone",
     "LmsTelephoneType",
     "LmsTelephoneTypedDict",
+    "LocationType",
     "LookalikeAudience",
     "LookalikeAudienceTypedDict",
     "MaritalStatus",
@@ -2273,6 +2303,7 @@ __all__ = [
     "NativeWebhookCourseID",
     "NativeWebhookEventID",
     "NativeWebhookFormID",
+    "NativeWebhookIoID",
     "NativeWebhookLabelID",
     "NativeWebhookMemberID",
     "NativeWebhookOrderID",
@@ -3174,6 +3205,8 @@ _dynamic_imports: dict[str, str] = {
     "CityTarget": ".citytarget",
     "CityTargetTypedDict": ".citytarget",
     "RadiusUnit": ".citytarget",
+    "CommerceAvailability": ".commerceavailability",
+    "CommerceAvailabilityTypedDict": ".commerceavailability",
     "CommerceCollection": ".commercecollection",
     "CommerceCollectionType": ".commercecollection",
     "CommerceCollectionTypedDict": ".commercecollection",
@@ -3195,6 +3228,7 @@ _dynamic_imports: dict[str, str] = {
     "SizeUnit": ".commerceitemvariant",
     "CommerceLocation": ".commercelocation",
     "CommerceLocationTypedDict": ".commercelocation",
+    "LocationType": ".commercelocation",
     "CommerceMetadata": ".commercemetadata",
     "CommerceMetadata1": ".commercemetadata",
     "CommerceMetadata1TypedDict": ".commercemetadata",
@@ -3212,6 +3246,9 @@ _dynamic_imports: dict[str, str] = {
     "CommerceMetadataValueTypedDict": ".commercemetadata",
     "CommerceReference": ".commercereference",
     "CommerceReferenceTypedDict": ".commercereference",
+    "CommerceReservation": ".commercereservation",
+    "CommerceReservationStatus": ".commercereservation",
+    "CommerceReservationTypedDict": ".commercereservation",
     "CommerceReview": ".commercereview",
     "CommerceReviewStatus": ".commercereview",
     "CommerceReviewTypedDict": ".commercereview",
@@ -3220,6 +3257,9 @@ _dynamic_imports: dict[str, str] = {
     "CommerceReviewCommentTypedDict": ".commercereviewcomment",
     "CommerceSaleschannel": ".commercesaleschannel",
     "CommerceSaleschannelTypedDict": ".commercesaleschannel",
+    "CommerceTelephone": ".commercetelephone",
+    "CommerceTelephoneType": ".commercetelephone",
+    "CommerceTelephoneTypedDict": ".commercetelephone",
     "Connection": ".connection",
     "ConnectionTypedDict": ".connection",
     "CrmCompany": ".crmcompany",
@@ -3456,6 +3496,7 @@ _dynamic_imports: dict[str, str] = {
     "ListRootID": ".integrationsupport",
     "ListSaleschannelID": ".integrationsupport",
     "ListShipmentID": ".integrationsupport",
+    "ListSize": ".integrationsupport",
     "ListSortByCreatedAt": ".integrationsupport",
     "ListSortByName": ".integrationsupport",
     "ListSortByUpdatedAt": ".integrationsupport",
@@ -3477,6 +3518,7 @@ _dynamic_imports: dict[str, str] = {
     "NativeWebhookCourseID": ".integrationsupport",
     "NativeWebhookEventID": ".integrationsupport",
     "NativeWebhookFormID": ".integrationsupport",
+    "NativeWebhookIoID": ".integrationsupport",
     "NativeWebhookLabelID": ".integrationsupport",
     "NativeWebhookMemberID": ".integrationsupport",
     "NativeWebhookOrderID": ".integrationsupport",

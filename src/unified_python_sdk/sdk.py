@@ -27,6 +27,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.assessment import Assessment
     from unified_python_sdk.ats import Ats
     from unified_python_sdk.auth import Auth
+    from unified_python_sdk.availability import Availability
     from unified_python_sdk.balancesheet import Balancesheet
     from unified_python_sdk.bankaccount import Bankaccount
     from unified_python_sdk.benefit import Benefit
@@ -121,6 +122,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.report import Report
     from unified_python_sdk.repository import Repository
     from unified_python_sdk.request import Request
+    from unified_python_sdk.reservation import Reservation
     from unified_python_sdk.review import Review
     from unified_python_sdk.saleschannel import Saleschannel
     from unified_python_sdk.salesorder import Salesorder
@@ -203,11 +205,13 @@ class UnifiedTo(BaseSDK):
     recording: "Recording"
     webinar: "Webinar"
     commerce: "Commerce"
+    availability: "Availability"
     collection: "Collection"
     inventory: "Inventory"
     item: "Item"
     itemvariant: "Itemvariant"
     location: "Location"
+    reservation: "Reservation"
     review: "Review"
     saleschannel: "Saleschannel"
     crm: "Crm"
@@ -340,11 +344,13 @@ class UnifiedTo(BaseSDK):
         "recording": ("unified_python_sdk.recording", "Recording"),
         "webinar": ("unified_python_sdk.webinar", "Webinar"),
         "commerce": ("unified_python_sdk.commerce", "Commerce"),
+        "availability": ("unified_python_sdk.availability", "Availability"),
         "collection": ("unified_python_sdk.collection", "Collection"),
         "inventory": ("unified_python_sdk.inventory", "Inventory"),
         "item": ("unified_python_sdk.item", "Item"),
         "itemvariant": ("unified_python_sdk.itemvariant", "Itemvariant"),
         "location": ("unified_python_sdk.location", "Location"),
+        "reservation": ("unified_python_sdk.reservation", "Reservation"),
         "review": ("unified_python_sdk.review", "Review"),
         "saleschannel": ("unified_python_sdk.saleschannel", "Saleschannel"),
         "crm": ("unified_python_sdk.crm", "Crm"),
