@@ -3,10 +3,18 @@
 from __future__ import annotations
 from .ucrecordingmedia import UcRecordingMedia, UcRecordingMediaTypedDict
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class UcRecordingType(str, Enum, metaclass=utils.OpenEnumMeta):
+    INBOUND = "INBOUND"
+    OUTBOUND = "OUTBOUND"
 
 
 class UcRecordingTypedDict(TypedDict):
@@ -21,6 +29,7 @@ class UcRecordingTypedDict(TypedDict):
     media: NotRequired[List[UcRecordingMediaTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    type: NotRequired[UcRecordingType]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
     user_name: NotRequired[str]
@@ -51,6 +60,8 @@ class UcRecording(BaseModel):
 
     start_at: Optional[datetime] = None
 
+    type: Optional[UcRecordingType] = None
+
     updated_at: Optional[datetime] = None
 
     user_id: Optional[str] = None
@@ -60,6 +71,15 @@ class UcRecording(BaseModel):
     user_phone: Optional[str] = None
 
     web_url: Optional[str] = None
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.UcRecordingType(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -76,6 +96,7 @@ class UcRecording(BaseModel):
                 "media",
                 "raw",
                 "start_at",
+                "type",
                 "updated_at",
                 "user_id",
                 "user_name",

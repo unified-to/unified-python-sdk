@@ -30,9 +30,10 @@ class CreateUcRecordingQueryParamFields(str, Enum):
     CONTACT_PHONE = "contact_phone"
     USER_ID = "user_id"
     MEDIA = "media"
-    RAW = "raw"
     USER_NAME = "user_name"
     USER_PHONE = "user_phone"
+    TYPE = "type"
+    RAW = "raw"
 
 
 class CreateUcRecordingRequestTypedDict(TypedDict):

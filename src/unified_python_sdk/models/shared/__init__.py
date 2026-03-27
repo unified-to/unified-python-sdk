@@ -1585,11 +1585,11 @@ if TYPE_CHECKING:
         TicketingTicketStatus,
         TicketingTicketTypedDict,
     )
-    from .uccall import UcCall, UcCallTypedDict
+    from .uccall import UcCall, UcCallType, UcCallTypedDict
     from .uccomment import UcComment, UcCommentTypedDict
     from .uccontact import UcContact, UcContactTypedDict
     from .ucemail import UcEmail, UcEmailType, UcEmailTypedDict
-    from .ucrecording import UcRecording, UcRecordingTypedDict
+    from .ucrecording import UcRecording, UcRecordingType, UcRecordingTypedDict
     from .ucrecordingmedia import UcRecordingMedia, UcRecordingMediaTypedDict
     from .ucrecordingtranscript import (
         UcRecordingTranscript,
@@ -2816,6 +2816,7 @@ __all__ = [
     "TimeUnit",
     "Type",
     "UcCall",
+    "UcCallType",
     "UcCallTypedDict",
     "UcComment",
     "UcCommentTypedDict",
@@ -2829,6 +2830,7 @@ __all__ = [
     "UcRecordingMediaTypedDict",
     "UcRecordingTranscript",
     "UcRecordingTranscriptTypedDict",
+    "UcRecordingType",
     "UcRecordingTypedDict",
     "UcTelephone",
     "UcTelephoneType",
@@ -4158,6 +4160,7 @@ _dynamic_imports: dict[str, str] = {
     "TicketingTicketStatus": ".ticketingticket",
     "TicketingTicketTypedDict": ".ticketingticket",
     "UcCall": ".uccall",
+    "UcCallType": ".uccall",
     "UcCallTypedDict": ".uccall",
     "UcComment": ".uccomment",
     "UcCommentTypedDict": ".uccomment",
@@ -4167,6 +4170,7 @@ _dynamic_imports: dict[str, str] = {
     "UcEmailType": ".ucemail",
     "UcEmailTypedDict": ".ucemail",
     "UcRecording": ".ucrecording",
+    "UcRecordingType": ".ucrecording",
     "UcRecordingTypedDict": ".ucrecording",
     "UcRecordingMedia": ".ucrecordingmedia",
     "UcRecordingMediaTypedDict": ".ucrecordingmedia",
