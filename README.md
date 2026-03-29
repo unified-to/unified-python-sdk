@@ -964,6 +964,7 @@ asyncio.run(main())
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
+* [create_hris_timeoff](docs/sdks/hris/README.md#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](docs/sdks/hris/README.md#create_hris_timeshift) - Create a timeshift
 * [get_hris_bankaccount](docs/sdks/hris/README.md#get_hris_bankaccount) - Retrieve a bankaccount
 * [get_hris_benefit](docs/sdks/hris/README.md#get_hris_benefit) - Retrieve a benefit
@@ -995,6 +996,7 @@ asyncio.run(main())
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
+* [patch_hris_timeoff](docs/sdks/hris/README.md#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](docs/sdks/hris/README.md#patch_hris_timeshift) - Update a timeshift
 * [remove_hris_bankaccount](docs/sdks/hris/README.md#remove_hris_bankaccount) - Remove a bankaccount
 * [remove_hris_benefit](docs/sdks/hris/README.md#remove_hris_benefit) - Remove a benefit
@@ -1004,6 +1006,7 @@ asyncio.run(main())
 * [remove_hris_employee](docs/sdks/hris/README.md#remove_hris_employee) - Remove an employee
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
+* [remove_hris_timeoff](docs/sdks/hris/README.md#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](docs/sdks/hris/README.md#remove_hris_timeshift) - Remove a timeshift
 * [update_hris_bankaccount](docs/sdks/hris/README.md#update_hris_bankaccount) - Update a bankaccount
 * [update_hris_benefit](docs/sdks/hris/README.md#update_hris_benefit) - Update a benefit
@@ -1013,6 +1016,7 @@ asyncio.run(main())
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
+* [update_hris_timeoff](docs/sdks/hris/README.md#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](docs/sdks/hris/README.md#update_hris_timeshift) - Update a timeshift
 
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
@@ -1738,8 +1742,12 @@ asyncio.run(main())
 
 ### [Timeoff](docs/sdks/timeoff/README.md)
 
+* [create_hris_timeoff](docs/sdks/timeoff/README.md#create_hris_timeoff) - Create a timeoff
 * [get_hris_timeoff](docs/sdks/timeoff/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_timeoffs](docs/sdks/timeoff/README.md#list_hris_timeoffs) - List all timeoffs
+* [patch_hris_timeoff](docs/sdks/timeoff/README.md#patch_hris_timeoff) - Update a timeoff
+* [remove_hris_timeoff](docs/sdks/timeoff/README.md#remove_hris_timeoff) - Remove a timeoff
+* [update_hris_timeoff](docs/sdks/timeoff/README.md#update_hris_timeoff) - Update a timeoff
 
 ### [Timeshift](docs/sdks/timeshift/README.md)
 
