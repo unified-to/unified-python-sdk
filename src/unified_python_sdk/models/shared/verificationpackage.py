@@ -47,7 +47,7 @@ class VerificationPackageTypedDict(TypedDict):
     r"""Category (Verification, Validation, Background Check)"""
     updated_at: NotRequired[datetime]
     valid_regions: NotRequired[List[str]]
-    r"""{country}-{stateprovince/territory} or just {country} 2-digit ISO codes"""
+    r"""{country}-{state/province/territory} or just {country} 2-digit ISO codes"""
 
 
 class VerificationPackage(BaseModel):
@@ -91,7 +91,7 @@ class VerificationPackage(BaseModel):
     updated_at: Optional[datetime] = None
 
     valid_regions: Optional[List[str]] = None
-    r"""{country}-{stateprovince/territory} or just {country} 2-digit ISO codes"""
+    r"""{country}-{state/province/territory} or just {country} 2-digit ISO codes"""
 
     @field_serializer("type")
     def serialize_type(self, value):

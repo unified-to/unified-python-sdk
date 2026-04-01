@@ -22,5 +22,4 @@ value = LmsMediaType.IMAGE
 | `DOCUMENT` | DOCUMENT   |
 | `TEXT`     | TEXT       |
 | `HTML`     | HTML       |
-| `MARKDOWN` | MARKDOWN   |
 | `OTHER`    | OTHER      |

@@ -19,6 +19,7 @@ class AccountingJournalTypedDict(TypedDict):
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingJournalLineitemTypedDict]]
     r"""new field name"""
+    organization_id: NotRequired[str]
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
@@ -39,6 +40,8 @@ class AccountingJournal(BaseModel):
 
     lineitems: Optional[List[AccountingJournalLineitem]] = None
     r"""new field name"""
+
+    organization_id: Optional[str] = None
 
     posted_at: Optional[datetime] = None
 
@@ -63,6 +66,7 @@ class AccountingJournal(BaseModel):
                 "description",
                 "id",
                 "lineitems",
+                "organization_id",
                 "posted_at",
                 "raw",
                 "reference",

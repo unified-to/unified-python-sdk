@@ -44,6 +44,7 @@ class AccountingBillTypedDict(TypedDict):
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     notes: NotRequired[str]
+    organization_id: NotRequired[str]
     paid_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
     payment_collection_method: NotRequired[PaymentCollectionMethod]
@@ -84,6 +85,8 @@ class AccountingBill(BaseModel):
     lineitems: Optional[List[AccountingLineitem]] = None
 
     notes: Optional[str] = None
+
+    organization_id: Optional[str] = None
 
     paid_amount: Optional[float] = None
 
@@ -147,6 +150,7 @@ class AccountingBill(BaseModel):
                 "id",
                 "lineitems",
                 "notes",
+                "organization_id",
                 "paid_amount",
                 "paid_at",
                 "payment_collection_method",

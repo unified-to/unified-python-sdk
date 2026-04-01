@@ -12,9 +12,11 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class LmsCourseTypedDict(TypedDict):
     name: str
     categories: NotRequired[List[str]]
+    content_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     description: NotRequired[str]
+    duration_minutes: NotRequired[float]
     id: NotRequired[str]
     instructor_ids: NotRequired[List[str]]
     is_active: NotRequired[bool]
@@ -22,7 +24,9 @@ class LmsCourseTypedDict(TypedDict):
     languages: NotRequired[List[str]]
     media: NotRequired[List[LmsMediaTypedDict]]
     price_amount: NotRequired[float]
+    provider_name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    skills: NotRequired[List[str]]
     student_ids: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
 
@@ -32,11 +36,15 @@ class LmsCourse(BaseModel):
 
     categories: Optional[List[str]] = None
 
+    content_ids: Optional[List[str]] = None
+
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
 
     description: Optional[str] = None
+
+    duration_minutes: Optional[float] = None
 
     id: Optional[str] = None
 
@@ -52,7 +60,11 @@ class LmsCourse(BaseModel):
 
     price_amount: Optional[float] = None
 
+    provider_name: Optional[str] = None
+
     raw: Optional[Dict[str, Any]] = None
+
+    skills: Optional[List[str]] = None
 
     student_ids: Optional[List[str]] = None
 
@@ -63,9 +75,11 @@ class LmsCourse(BaseModel):
         optional_fields = set(
             [
                 "categories",
+                "content_ids",
                 "created_at",
                 "currency",
                 "description",
+                "duration_minutes",
                 "id",
                 "instructor_ids",
                 "is_active",
@@ -73,7 +87,9 @@ class LmsCourse(BaseModel):
                 "languages",
                 "media",
                 "price_amount",
+                "provider_name",
                 "raw",
+                "skills",
                 "student_ids",
                 "updated_at",
             ]

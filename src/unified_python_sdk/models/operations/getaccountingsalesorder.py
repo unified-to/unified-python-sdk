@@ -31,6 +31,7 @@ class GetAccountingSalesorderQueryParamFields(str, Enum):
     STATUS = "status"
     LINEITEMS = "lineitems"
     SALES_CHANNEL = "sales_channel"
+    ORGANIZATION_ID = "organization_id"
     RAW = "raw"
 
 

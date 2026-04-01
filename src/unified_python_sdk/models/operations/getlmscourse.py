@@ -30,6 +30,10 @@ class GetLmsCourseQueryParamFields(str, Enum):
     MEDIA = "media"
     INSTRUCTOR_IDS = "instructor_ids"
     STUDENT_IDS = "student_ids"
+    CONTENT_IDS = "content_ids"
+    SKILLS = "skills"
+    DURATION_MINUTES = "duration_minutes"
+    PROVIDER_NAME = "provider_name"
     RAW = "raw"
 
 

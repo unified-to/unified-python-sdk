@@ -35,9 +35,9 @@ class Fields(str, Enum):
     GROUP = "group"
     SUBGROUP = "subgroup"
     PARENT_ID = "parent_id"
-    ORGANIZATION_ID = "organization_id"
     TAXONOMY = "taxonomy"
     RAW = "raw"
+    ORGANIZATION_ID = "organization_id"
 
 
 class CreateAccountingAccountRequestTypedDict(TypedDict):

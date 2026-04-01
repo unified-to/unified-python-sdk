@@ -42,6 +42,7 @@ class UpdateAccountingBillQueryParamFields(str, Enum):
     PAYMENT_COLLECTION_METHOD = "payment_collection_method"
     ATTACHMENTS = "attachments"
     SEND = "send"
+    ORGANIZATION_ID = "organization_id"
     RAW = "raw"
 
 

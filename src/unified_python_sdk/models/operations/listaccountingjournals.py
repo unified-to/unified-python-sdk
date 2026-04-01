@@ -29,12 +29,15 @@ class ListAccountingJournalsQueryParamFields(str, Enum):
     DESCRIPTION = "description"
     POSTED_AT = "posted_at"
     SOURCE = "source"
+    ORGANIZATION_ID = "organization_id"
     RAW = "raw"
 
 
 class ListAccountingJournalsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    account_id: NotRequired[str]
+    r"""The account ID to filter by (reference to AccountingAccount)"""
     fields: NotRequired[List[ListAccountingJournalsQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
@@ -56,6 +59,12 @@ class ListAccountingJournalsRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    account_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The account ID to filter by (reference to AccountingAccount)"""
 
     fields: Annotated[
         Optional[List[ListAccountingJournalsQueryParamFields]],
@@ -111,6 +120,7 @@ class ListAccountingJournalsRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "account_id",
                 "fields",
                 "limit",
                 "offset",

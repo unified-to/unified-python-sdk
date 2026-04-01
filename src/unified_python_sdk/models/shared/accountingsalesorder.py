@@ -40,6 +40,7 @@ class AccountingSalesorderTypedDict(TypedDict):
     currency: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    organization_id: NotRequired[str]
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     sales_channel: NotRequired[str]
@@ -63,6 +64,8 @@ class AccountingSalesorder(BaseModel):
     id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
+
+    organization_id: Optional[str] = None
 
     posted_at: Optional[datetime] = None
 
@@ -98,6 +101,7 @@ class AccountingSalesorder(BaseModel):
                 "currency",
                 "id",
                 "lineitems",
+                "organization_id",
                 "posted_at",
                 "raw",
                 "sales_channel",

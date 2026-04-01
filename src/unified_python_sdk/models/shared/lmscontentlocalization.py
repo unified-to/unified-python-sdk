@@ -2,30 +2,27 @@
 
 from __future__ import annotations
 from pydantic import model_serializer
-from typing import List, Optional
+from typing import Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class LmsContentShapeLocalizationTypedDict(TypedDict):
+class LmsContentLocalizationTypedDict(TypedDict):
     description: NotRequired[str]
     language: NotRequired[str]
     name: NotRequired[str]
-    tags: NotRequired[List[str]]
 
 
-class LmsContentShapeLocalization(BaseModel):
+class LmsContentLocalization(BaseModel):
     description: Optional[str] = None
 
     language: Optional[str] = None
 
     name: Optional[str] = None
 
-    tags: Optional[List[str]] = None
-
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["description", "language", "name", "tags"])
+        optional_fields = set(["description", "language", "name"])
         serialized = handler(self)
         m = {}
 

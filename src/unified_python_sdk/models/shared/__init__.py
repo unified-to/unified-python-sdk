@@ -761,9 +761,9 @@ if TYPE_CHECKING:
     from .lmsclass import LmsClass, LmsClassTypedDict
     from .lmscollection import LmsCollection, LmsCollectionTypedDict
     from .lmscontent import LmsContent, LmsContentTypedDict
-    from .lmscontentshapelocalization import (
-        LmsContentShapeLocalization,
-        LmsContentShapeLocalizationTypedDict,
+    from .lmscontentlocalization import (
+        LmsContentLocalization,
+        LmsContentLocalizationTypedDict,
     )
     from .lmscourse import LmsCourse, LmsCourseTypedDict
     from .lmsemail import LmsEmail, LmsEmailTypedDict
@@ -2238,8 +2238,8 @@ __all__ = [
     "LmsCollection",
     "LmsCollectionTypedDict",
     "LmsContent",
-    "LmsContentShapeLocalization",
-    "LmsContentShapeLocalizationTypedDict",
+    "LmsContentLocalization",
+    "LmsContentLocalizationTypedDict",
     "LmsContentTypedDict",
     "LmsCourse",
     "LmsCourseTypedDict",
@@ -3625,8 +3625,8 @@ _dynamic_imports: dict[str, str] = {
     "LmsCollectionTypedDict": ".lmscollection",
     "LmsContent": ".lmscontent",
     "LmsContentTypedDict": ".lmscontent",
-    "LmsContentShapeLocalization": ".lmscontentshapelocalization",
-    "LmsContentShapeLocalizationTypedDict": ".lmscontentshapelocalization",
+    "LmsContentLocalization": ".lmscontentlocalization",
+    "LmsContentLocalizationTypedDict": ".lmscontentlocalization",
     "LmsCourse": ".lmscourse",
     "LmsCourseTypedDict": ".lmscourse",
     "LmsEmail": ".lmsemail",

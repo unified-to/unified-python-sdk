@@ -31,12 +31,15 @@ class ListAccountingSalesordersQueryParamFields(str, Enum):
     STATUS = "status"
     LINEITEMS = "lineitems"
     SALES_CHANNEL = "sales_channel"
+    ORGANIZATION_ID = "organization_id"
     RAW = "raw"
 
 
 class ListAccountingSalesordersRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    contact_id: NotRequired[str]
+    r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListAccountingSalesordersQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
@@ -58,6 +61,12 @@ class ListAccountingSalesordersRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    contact_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The contact ID to filter by (reference to AccountingContact)"""
 
     fields: Annotated[
         Optional[List[ListAccountingSalesordersQueryParamFields]],
@@ -113,6 +122,7 @@ class ListAccountingSalesordersRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "contact_id",
                 "fields",
                 "limit",
                 "offset",

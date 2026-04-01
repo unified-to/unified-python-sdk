@@ -9,6 +9,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class LmsActivityTypedDict(TypedDict):
+    assigned_grade: NotRequired[str]
     completed_at: NotRequired[datetime]
     content_id: NotRequired[str]
     course_id: NotRequired[str]
@@ -24,6 +25,8 @@ class LmsActivityTypedDict(TypedDict):
 
 
 class LmsActivity(BaseModel):
+    assigned_grade: Optional[str] = None
+
     completed_at: Optional[datetime] = None
 
     content_id: Optional[str] = None
@@ -52,6 +55,7 @@ class LmsActivity(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "assigned_grade",
                 "completed_at",
                 "content_id",
                 "course_id",

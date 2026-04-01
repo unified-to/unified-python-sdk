@@ -18,7 +18,6 @@ class LmsMediaType(str, Enum, metaclass=utils.OpenEnumMeta):
     DOCUMENT = "DOCUMENT"
     TEXT = "TEXT"
     HTML = "HTML"
-    MARKDOWN = "MARKDOWN"
     OTHER = "OTHER"
 
 

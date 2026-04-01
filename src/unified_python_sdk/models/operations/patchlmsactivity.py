@@ -24,6 +24,7 @@ class PatchLmsActivityQueryParamFields(str, Enum):
     COURSE_ID = "course_id"
     STUDENT_ID = "student_id"
     DURATION_MINUTES = "duration_minutes"
+    ASSIGNED_GRADE = "assigned_grade"
     IS_COMPLETED = "is_completed"
     PROGRESS_PERCENTAGE = "progress_percentage"
     STARTED_AT = "started_at"

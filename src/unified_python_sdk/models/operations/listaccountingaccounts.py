@@ -34,9 +34,9 @@ class ListAccountingAccountsQueryParamFields(str, Enum):
     GROUP = "group"
     SUBGROUP = "subgroup"
     PARENT_ID = "parent_id"
-    ORGANIZATION_ID = "organization_id"
     TAXONOMY = "taxonomy"
     RAW = "raw"
+    ORGANIZATION_ID = "organization_id"
 
 
 class ListAccountingAccountsRequestTypedDict(TypedDict):
@@ -54,6 +54,8 @@ class ListAccountingAccountsRequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
+    type: NotRequired[str]
+    r"""The type to filter by"""
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -108,6 +110,12 @@ class ListAccountingAccountsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    type: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The type to filter by"""
+
     updated_gte: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -126,6 +134,7 @@ class ListAccountingAccountsRequest(BaseModel):
                 "query",
                 "raw",
                 "sort",
+                "type",
                 "updated_gte",
             ]
         )
