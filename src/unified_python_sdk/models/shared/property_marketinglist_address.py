@@ -15,6 +15,7 @@ class PropertyMarketingListAddressTypedDict(TypedDict):
     country_code: NotRequired[str]
     postal_code: NotRequired[str]
     region: NotRequired[str]
+    region_code: NotRequired[str]
 
 
 class PropertyMarketingListAddress(BaseModel):
@@ -32,6 +33,8 @@ class PropertyMarketingListAddress(BaseModel):
 
     region: Optional[str] = None
 
+    region_code: Optional[str] = None
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
@@ -43,6 +46,7 @@ class PropertyMarketingListAddress(BaseModel):
                 "country_code",
                 "postal_code",
                 "region",
+                "region_code",
             ]
         )
         serialized = handler(self)
