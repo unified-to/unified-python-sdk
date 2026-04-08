@@ -1,26 +1,26 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 293e8f940db1edc64ea3bee29612e534
+  docChecksum: 5aadf962c09ceec8ee8c741b10920bd7
   docVersion: "1.0"
-  speakeasyVersion: 1.761.0
-  generationVersion: 2.879.1
-  releaseVersion: 0.57.30
-  configChecksum: d4e1fe12f74a27c52de5835ffbf298b0
+  speakeasyVersion: 1.761.1
+  generationVersion: 2.879.6
+  releaseVersion: 0.57.31
+  configChecksum: 2519f88c914aeceed77cc44d06dd2dbd
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 816ed071-3e96-4ed7-a876-eddccba627b5
-  pristine_commit_hash: 4516b3a3f47e39eefb1a4b27c0e1903786270566
-  pristine_tree_hash: 5254225b0e78aeab14233e3b44e77ecd3c7e5bc4
+  generation_id: fd8c593c-11f6-4ca3-9a36-2e2086084e56
+  pristine_commit_hash: 3bab0372b6063193a52146ad1acd91fc0cd54143
+  pristine_tree_hash: 82fb4bfbb75767731fb4b54ef097d0019817e718
 features:
   python:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.7
-    core: 6.0.20
+    core: 6.0.21
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.1
@@ -2606,8 +2606,8 @@ trackedFiles:
     pristine_git_object: bb3b9da24a7b050218e40fea4b4cd31c51df4141
   docs/models/operations/getunifiedintegrationauthrequest.md:
     id: 0edc5e3fca94
-    last_write_checksum: sha1:301ab7219e0f6fc52e5c0fe4022bf89db91dd226
-    pristine_git_object: e9bce41dd6d366b51e4bd527c84046400eaac35a
+    last_write_checksum: sha1:c6bfabd71e2e1e0c46a786ccf12efeee9eaabfbd
+    pristine_git_object: afb860a862edf423cb2aa3df27aab354580e9943
   docs/models/operations/getunifiedintegrationauthresponse.md:
     id: 76131242005a
     last_write_checksum: sha1:e824880c0651c8d585d89a008f381533f2dbf200
@@ -3458,8 +3458,8 @@ trackedFiles:
     pristine_git_object: d3fa344174c24edc0998986fa1528b7357e0577e
   docs/models/operations/listhrisdeductionsrequest.md:
     id: 78030e004c2c
-    last_write_checksum: sha1:b375025f0d39aa3690c851404de2f55cf70457aa
-    pristine_git_object: 00fd76fd5a1593fa158fba1fe1209a9fabccc8b2
+    last_write_checksum: sha1:f1f267405bf48c7eb65888e449a6a6fe954d677d
+    pristine_git_object: d4e9f5e326ec79baa33787cf2ff3b890f0742ec8
   docs/models/operations/listhrisdeductionsresponse.md:
     id: 20d5ea8e8824
     last_write_checksum: sha1:ba2fef28f7cee521db18ac0549e1c498740150cf
@@ -11350,8 +11350,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:9189a493414d19702e925edbae6b539c083073d4
-    pristine_git_object: 38095ef6328367f11b90427cebdc1cbcc81cc7c6
+    last_write_checksum: sha1:b2a3c66d1f06a3d88f36e54b4d1926f5e3698773
+    pristine_git_object: 5483971b90efe4581cd8ef34e2c7abc68d585adb
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11378,8 +11378,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:7899605f077db4bd75bc91481c682e130326c3d4
-    pristine_git_object: c6441d940ee049d3dca51f0815a1d0d0afa78dfb
+    last_write_checksum: sha1:bacc69199e45fb4bfa1e555147f4f63442b8c0dd
+    pristine_git_object: df3947e4bb3c3254d880be2391cb7906b77bdfa4
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -12618,8 +12618,8 @@ trackedFiles:
     pristine_git_object: 1c29a2fafdf1c1cb3d6f16c778d9dd419b2d02e4
   src/unified_python_sdk/models/operations/getunifiedintegrationauth.py:
     id: a8d9c1896587
-    last_write_checksum: sha1:88cd3c465f745f94fb5bc40ee3f257a421463012
-    pristine_git_object: be07a773052942ac8e3e1ccf533e006a17b55f02
+    last_write_checksum: sha1:435e5559f26a7b215b6106b3ef4d251ff8614524
+    pristine_git_object: d2391c6d7155472d8bbba31aba7b5f8f0ad3a2f4
   src/unified_python_sdk/models/operations/getunifiedintegrationlogin.py:
     id: 750f3c77dc88
     last_write_checksum: sha1:fe2114f0cb1e963ac85db3cdf9f5aa3d612d2605
@@ -12910,8 +12910,8 @@ trackedFiles:
     pristine_git_object: 04000ec4443b98a7af86a28dc92b6b1c2d8cbc0a
   src/unified_python_sdk/models/operations/listhrisdeductions.py:
     id: 11b9ebec1ea7
-    last_write_checksum: sha1:34a46947b4f7a613579933cf3bc9527584b3caa0
-    pristine_git_object: 2d4a0b961405b108bc402aa809ac0847c9e4f5c9
+    last_write_checksum: sha1:57d344ea66d1ff3aabe01f7845c7faed890a8d93
+    pristine_git_object: 12c94b7ee786d1638834761ba8f1ce441b75c2db
   src/unified_python_sdk/models/operations/listhrisdevices.py:
     id: 07ec03579c44
     last_write_checksum: sha1:f949dc29a525d56054793ab0f297afc3befcbef9
@@ -16326,8 +16326,8 @@ trackedFiles:
     pristine_git_object: 42d8d78e9981eed7507670014d99588e27ab325a
   src/unified_python_sdk/utils/serializers.py:
     id: e4b955f57162
-    last_write_checksum: sha1:ce1d8d7f500a9ccba0aeca5057cee9c271f4dfd7
-    pristine_git_object: 14321eb479de81d0d9580ec8291e0ff91bf29e57
+    last_write_checksum: sha1:61009f2e4ef6613a1a5af813fe020373dae5a492
+    pristine_git_object: d2149f8b909cb96628db140ac3cddb1b1e981367
   src/unified_python_sdk/utils/unmarshal_json_response.py:
     id: 8c3ec0721f24
     last_write_checksum: sha1:5baab724a499dd85f6e91bad2e0f14139194bac3
@@ -22392,7 +22392,10 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.martech.create_martech_list()`: \n  *  `request.marketing_list.address.region_code` **Added**\n  *  `response.address.region_code` **Added**\n* `unified_to.martech.get_martech_list()`:  `response.address.region_code` **Added**\n* `unified_to.martech.list_martech_lists()`:  `response.[].address.region_code` **Added**\n* `unified_to.martech.patch_martech_list()`: \n  *  `request.marketing_list.address.region_code` **Added**\n  *  `response.address.region_code` **Added**\n* `unified_to.martech.update_martech_list()`: \n  *  `request.marketing_list.address.region_code` **Added**\n  *  `response.address.region_code` **Added**\n* `unified_to.list.create_martech_list()`: \n  *  `request.marketing_list.address.region_code` **Added**\n  *  `response.address.region_code` **Added**\n* `unified_to.list.get_martech_list()`:  `response.address.region_code` **Added**\n* `unified_to.list.list_martech_lists()`:  `response.[].address.region_code` **Added**\n* `unified_to.list.patch_martech_list()`: \n  *  `request.marketing_list.address.region_code` **Added**\n  *  `response.address.region_code` **Added**\n* `unified_to.list.update_martech_list()`: \n  *  `request.marketing_list.address.region_code` **Added**\n  *  `response.address.region_code` **Added**\n"
+releaseNotes: |
+  ## Python SDK Changes:
+  * `unified_to.hris.list_hris_deductions()`:  `request` **Changed**
+  * `unified_to.deduction.list_hris_deductions()`:  `request` **Changed**
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

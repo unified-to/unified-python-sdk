@@ -30,6 +30,7 @@ class GetUnifiedIntegrationAuthRequestTypedDict(TypedDict):
     state: NotRequired[str]
     r"""Extra state to send back to your success URL"""
     subdomain: NotRequired[str]
+    r"""Optional tenant domain or subdomain for integrations that require it to build the authorize, token, or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL."""
     success_redirect: NotRequired[str]
     r"""The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided."""
 
@@ -88,6 +89,7 @@ class GetUnifiedIntegrationAuthRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""Optional tenant domain or subdomain for integrations that require it to build the authorize, token, or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL."""
 
     success_redirect: Annotated[
         Optional[str],
