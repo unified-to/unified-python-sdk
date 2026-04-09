@@ -24,6 +24,7 @@ class PatchAtsJobQueryParamFields(str, Enum):
     DESCRIPTION = "description"
     RECRUITER_IDS = "recruiter_ids"
     HIRING_MANAGER_IDS = "hiring_manager_ids"
+    HIRING_MANAGERS = "hiring_managers"
     STATUS = "status"
     CLOSED_AT = "closed_at"
     ADDRESSES = "addresses"

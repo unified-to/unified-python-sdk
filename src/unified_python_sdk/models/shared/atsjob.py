@@ -8,6 +8,7 @@ from .atsjobopening import AtsJobOpening, AtsJobOpeningTypedDict
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
 from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
+from .atsreference import AtsReference, AtsReferenceTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -50,6 +51,7 @@ class AtsJobTypedDict(TypedDict):
     groups: NotRequired[List[AtsGroupTypedDict]]
     r"""The departments/divisions/teams that this job belongs to"""
     hiring_manager_ids: NotRequired[List[str]]
+    hiring_managers: NotRequired[List[AtsReferenceTypedDict]]
     id: NotRequired[str]
     language_locale: NotRequired[str]
     metadata: NotRequired[List[AtsMetadataTypedDict]]
@@ -90,6 +92,8 @@ class AtsJob(BaseModel):
     r"""The departments/divisions/teams that this job belongs to"""
 
     hiring_manager_ids: Optional[List[str]] = None
+
+    hiring_managers: Optional[List[AtsReference]] = None
 
     id: Optional[str] = None
 
@@ -158,6 +162,7 @@ class AtsJob(BaseModel):
                 "employment_type",
                 "groups",
                 "hiring_manager_ids",
+                "hiring_managers",
                 "id",
                 "language_locale",
                 "metadata",

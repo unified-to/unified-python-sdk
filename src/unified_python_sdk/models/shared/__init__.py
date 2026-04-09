@@ -301,6 +301,7 @@ if TYPE_CHECKING:
         ValueTypedDict,
     )
     from .atsoffer import AtsOffer, AtsOfferStatus, AtsOfferTypedDict
+    from .atsreference import AtsReference, AtsReferenceTypedDict
     from .atsscorecard import AtsScorecard, AtsScorecardTypedDict, Recommendation
     from .atsscorecardquestion import (
         AtsScorecardQuestion,
@@ -1842,6 +1843,8 @@ __all__ = [
     "AtsOffer",
     "AtsOfferStatus",
     "AtsOfferTypedDict",
+    "AtsReference",
+    "AtsReferenceTypedDict",
     "AtsScorecard",
     "AtsScorecardQuestion",
     "AtsScorecardQuestionTypedDict",
@@ -3154,6 +3157,8 @@ _dynamic_imports: dict[str, str] = {
     "AtsOffer": ".atsoffer",
     "AtsOfferStatus": ".atsoffer",
     "AtsOfferTypedDict": ".atsoffer",
+    "AtsReference": ".atsreference",
+    "AtsReferenceTypedDict": ".atsreference",
     "AtsScorecard": ".atsscorecard",
     "AtsScorecardTypedDict": ".atsscorecard",
     "Recommendation": ".atsscorecard",
