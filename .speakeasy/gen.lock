@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 185e3f9bf567bcfb80297100b1c48628
+  docChecksum: 411f51acbf2ce7fbfc478c04772f380d
   docVersion: "1.0"
   speakeasyVersion: 1.761.1
   generationVersion: 2.879.6
-  releaseVersion: 0.57.32
-  configChecksum: e09bf18793f7a83c6655fc4889b18bfb
+  releaseVersion: 0.57.33
+  configChecksum: 59c70a575755bc730a568d1f7ca455bf
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 3ca2c8cd-dac1-411d-8941-7e36f0cbd635
-  pristine_commit_hash: ca52a490220879efa23c7520ebbee5c8a92bd3c0
-  pristine_tree_hash: ebb27e7442a309dfa8172bf5b2f4cee864c496d5
+  generation_id: 618caef2-8d68-4ac9-aac6-efc79a3d7fd5
+  pristine_commit_hash: 70bc6b1579be3e92f0849e9ce6cddcc907921364
+  pristine_tree_hash: f591e0f9d0216ecd9b3207adf173e843cdc7bfd1
 features:
   python:
     acceptHeaders: 3.0.0
@@ -10778,8 +10778,8 @@ trackedFiles:
     pristine_git_object: a6e9185d2372bda462da705a8b84e256d4943878
   docs/models/shared/webhook.md:
     id: 58b80e3aa663
-    last_write_checksum: sha1:ffaca7652fbd6a8e95c6f09086906e8a25fcf338
-    pristine_git_object: 2ff55fbde6553625ee065de8c3591be8224b8ac2
+    last_write_checksum: sha1:1749d681f8a266f827bfab2f3e8c2901a8aac2f8
+    pristine_git_object: a69da369100974b99ab5c1d3e088aa3595cc4971
   docs/models/shared/webhooktype.md:
     id: b729c57cc2ba
     last_write_checksum: sha1:a4e3cda971d103ea299c7916cb9865571956b9e2
@@ -11354,8 +11354,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:8e5bf160e1300580687a8e58d101dc221ad4ad8b
-    pristine_git_object: 764ac527154ee1e3b7db51fbd297ce86a277ba93
+    last_write_checksum: sha1:8fab0544e90b93f9bb94532212991de9894e7329
+    pristine_git_object: 0758de7ba1e828b551af1f8f8517bd9558cda798
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11382,8 +11382,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:5facf1416e5a85c24be10a276eff977304019937
-    pristine_git_object: 19fc41e595f7144327c978d651826c35eb703763
+    last_write_checksum: sha1:0e065be4e64dad32491135c51b19c866abfe48b9
+    pristine_git_object: 993e108eb5c2b64a3a91beb147a1cca02c5db5d0
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -16054,8 +16054,8 @@ trackedFiles:
     pristine_git_object: b2ceb73768cc4954dd20594794568ef550fca4c3
   src/unified_python_sdk/models/shared/webhook.py:
     id: dc66d034e66f
-    last_write_checksum: sha1:b0759fc1f918b84cb00cb80d05407bd0b9c45202
-    pristine_git_object: 28e540120dad34c7709765403284392e81d35575
+    last_write_checksum: sha1:ba48c2bb5427424b28bf9f7e0c8495a5f25c5e6e
+    pristine_git_object: 8a771a067c2e983d35454b81599c1dfc6666b4a3
   src/unified_python_sdk/note.py:
     id: 0896571482f2
     last_write_checksum: sha1:4e1d4e5310fdf850c5a0459fc35971e8374c5758
@@ -22400,7 +22400,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.ats.create_ats_job()`: \n  *  `request` **Changed**\n  *  `response.hiring_managers` **Added**\n* `unified_to.ats.get_ats_job()`: \n  *  `request.fields` **Changed**\n  *  `response.hiring_managers` **Added**\n* `unified_to.ats.list_ats_jobs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].hiring_managers` **Added**\n* `unified_to.ats.patch_ats_job()`: \n  *  `request` **Changed**\n  *  `response.hiring_managers` **Added**\n* `unified_to.ats.update_ats_job()`: \n  *  `request` **Changed**\n  *  `response.hiring_managers` **Added**\n* `unified_to.job.create_ats_job()`: \n  *  `request` **Changed**\n  *  `response.hiring_managers` **Added**\n* `unified_to.job.get_ats_job()`: \n  *  `request.fields` **Changed**\n  *  `response.hiring_managers` **Added**\n* `unified_to.job.list_ats_jobs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].hiring_managers` **Added**\n* `unified_to.job.patch_ats_job()`: \n  *  `request` **Changed**\n  *  `response.hiring_managers` **Added**\n* `unified_to.job.update_ats_job()`: \n  *  `request` **Changed**\n  *  `response.hiring_managers` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.unified.get_unified_webhook()`:  `response.is_beta` **Added**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].is_beta` **Added**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.webhook.get_unified_webhook()`:  `response.is_beta` **Added**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].is_beta` **Added**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

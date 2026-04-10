@@ -182,6 +182,7 @@ class WebhookTypedDict(TypedDict):
     id: NotRequired[str]
     integration_type: NotRequired[str]
     interval: NotRequired[float]
+    is_beta: NotRequired[bool]
     is_healthy: NotRequired[bool]
     is_paused: NotRequired[bool]
     page_max_limit: NotRequired[float]
@@ -226,6 +227,8 @@ class Webhook(BaseModel):
     integration_type: Optional[str] = None
 
     interval: Optional[float] = None
+
+    is_beta: Optional[bool] = None
 
     is_healthy: Optional[bool] = None
 
@@ -295,6 +298,7 @@ class Webhook(BaseModel):
                 "id",
                 "integration_type",
                 "interval",
+                "is_beta",
                 "is_healthy",
                 "is_paused",
                 "page_max_limit",
