@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 411f51acbf2ce7fbfc478c04772f380d
+  docChecksum: d9d06ebf4f927b0b7aaabb635a00340f
   docVersion: "1.0"
-  speakeasyVersion: 1.761.1
-  generationVersion: 2.879.6
-  releaseVersion: 0.57.33
-  configChecksum: 59c70a575755bc730a568d1f7ca455bf
+  speakeasyVersion: 1.761.4
+  generationVersion: 2.879.13
+  releaseVersion: 0.57.34
+  configChecksum: df7362bcd27cc6a296156a972bf37cc1
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 618caef2-8d68-4ac9-aac6-efc79a3d7fd5
-  pristine_commit_hash: 70bc6b1579be3e92f0849e9ce6cddcc907921364
-  pristine_tree_hash: f591e0f9d0216ecd9b3207adf173e843cdc7bfd1
+  generation_id: 48efe4f5-9706-4846-b843-daa86aa03689
+  pristine_commit_hash: a43c80c090dec0e1c40a7796d57ab3f53d6ca1b9
+  pristine_tree_hash: 5dcbcc209c81b95573ba80d9304eb10381ea4410
 features:
   python:
     acceptHeaders: 3.0.0
@@ -8598,8 +8598,8 @@ trackedFiles:
     pristine_git_object: a6315547fe02bef56572e8966e5dd4ac2c1483af
   docs/models/shared/integrationsupport.md:
     id: c0d9decd3d9d
-    last_write_checksum: sha1:435024f6bba4c4bf05bf374f3951e9792ca81272
-    pristine_git_object: dc2dc783e30c8d89e2ef4f39db8fd5dccf1579a3
+    last_write_checksum: sha1:bcfdf0fb0dc3c5023d4d4c6e685b4e2d3a6abfed
+    pristine_git_object: 40cdb9fcd10ea02d1e26bb816317e0ded21faa38
   docs/models/shared/intervalunit.md:
     id: 3522c0790cee
     last_write_checksum: sha1:c48aa5c6eeec13af0afffc29274c37b2552c6778
@@ -9152,6 +9152,10 @@ trackedFiles:
     id: f7888c4d8b05
     last_write_checksum: sha1:85a4bb90d620004cbbc37c673f09f571a9b929a4
     pristine_git_object: e98a45de75fbab1cbe32cdb3d16a5b9a71c614f3
+  docs/models/shared/nativewebhooklistid.md:
+    id: a06bfdfe1901
+    last_write_checksum: sha1:8e6a3a485ffc4a2276d464af852fe2a049151f65
+    pristine_git_object: 61349a0c8c7268723f876b0f916458f8861edf2d
   docs/models/shared/nativewebhookmemberid.md:
     id: 0eb5483a5cef
     last_write_checksum: sha1:21b88813465c5de31c45efbdee5cd212d442d0ee
@@ -11354,8 +11358,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:8fab0544e90b93f9bb94532212991de9894e7329
-    pristine_git_object: 0758de7ba1e828b551af1f8f8517bd9558cda798
+    last_write_checksum: sha1:3179bdb9ebeaebc7ce9e5aa2db3cd2dbb388eec9
+    pristine_git_object: 3b5c2a3174891c270ddae7a77d09605bcfc192d3
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11382,8 +11386,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:0e065be4e64dad32491135c51b19c866abfe48b9
-    pristine_git_object: 993e108eb5c2b64a3a91beb147a1cca02c5db5d0
+    last_write_checksum: sha1:f86891595a4f417fa7983a41f251b565e7df3f85
+    pristine_git_object: b1182ca8a422881cf18caf4cb67b078802139b12
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -14390,8 +14394,8 @@ trackedFiles:
     pristine_git_object: c928c141900141c4357a16d9c9702d90e8ee8a59
   src/unified_python_sdk/models/shared/__init__.py:
     id: 8825f2c566be
-    last_write_checksum: sha1:0a7429c76e202e10d6bd44f353eaf43f22e3cd6f
-    pristine_git_object: 193e05147e68e52d3d6e89580f6b6014142d78ac
+    last_write_checksum: sha1:f5313a7eaff3113f461d3838632040a5e3540a0a
+    pristine_git_object: 5e26e4d7d5bc63985eb882838d4f28ea9859de01
   src/unified_python_sdk/models/shared/accountingaccount.py:
     id: b8ab638302ba
     last_write_checksum: sha1:fd681fb913ad336200985e29333073ebb362c0a2
@@ -15046,8 +15050,8 @@ trackedFiles:
     pristine_git_object: e564125988c2b3c340324fcf4333b29ddca1ba9f
   src/unified_python_sdk/models/shared/integrationsupport.py:
     id: 813d8416e449
-    last_write_checksum: sha1:8bceb4e21d878383c8f70ba0fa7f1909227bab07
-    pristine_git_object: 05e4392a4c544a9d97847042eac863cf73c33289
+    last_write_checksum: sha1:639844214546481fc9df402726d4fcbf0f931502
+    pristine_git_object: ae90fa0714d1703ef3409f6e8d37cc97c6ee7440
   src/unified_python_sdk/models/shared/issue.py:
     id: 5fb54952d878
     last_write_checksum: sha1:b67c1b4b8c452c8046a4a5d767c6812c64dac657
@@ -22400,7 +22404,12 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.unified.get_unified_webhook()`:  `response.is_beta` **Added**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].is_beta` **Added**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.webhook.get_unified_webhook()`:  `response.is_beta` **Added**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].is_beta` **Added**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.is_beta` **Added**\n  *  `response.is_beta` **Added**\n"
+releaseNotes: |
+  ## Python SDK Changes:
+  * `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_list_id` **Added**
+  * `unified_to.unified.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_list_id` **Added**
+  * `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_list_id` **Added**
+  * `unified_to.integration.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_list_id` **Added**
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

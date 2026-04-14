@@ -518,6 +518,12 @@ class NativeWebhookLabelID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class NativeWebhookListID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class NativeWebhookMemberID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1013,6 +1019,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_form_id: NotRequired[NativeWebhookFormID]
     native_webhook_io_id: NotRequired[NativeWebhookIoID]
     native_webhook_label_id: NotRequired[NativeWebhookLabelID]
+    native_webhook_list_id: NotRequired[NativeWebhookListID]
     native_webhook_member_id: NotRequired[NativeWebhookMemberID]
     native_webhook_order_id: NotRequired[NativeWebhookOrderID]
     native_webhook_parent_id: NotRequired[NativeWebhookParentID]
@@ -1260,6 +1267,8 @@ class IntegrationSupport(BaseModel):
     native_webhook_io_id: Optional[NativeWebhookIoID] = None
 
     native_webhook_label_id: Optional[NativeWebhookLabelID] = None
+
+    native_webhook_list_id: Optional[NativeWebhookListID] = None
 
     native_webhook_member_id: Optional[NativeWebhookMemberID] = None
 
@@ -2162,6 +2171,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("native_webhook_list_id")
+    def serialize_native_webhook_list_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookListID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("native_webhook_member_id")
     def serialize_native_webhook_member_id(self, value):
         if isinstance(value, str):
@@ -2864,6 +2882,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_form_id",
                 "native_webhook_io_id",
                 "native_webhook_label_id",
+                "native_webhook_list_id",
                 "native_webhook_member_id",
                 "native_webhook_order_id",
                 "native_webhook_parent_id",
