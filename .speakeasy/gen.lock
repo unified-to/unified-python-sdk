@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: d9d06ebf4f927b0b7aaabb635a00340f
+  docChecksum: 97059ed622bfecd9741a74a3557254e7
   docVersion: "1.0"
-  speakeasyVersion: 1.761.4
+  speakeasyVersion: 1.761.5
   generationVersion: 2.879.13
-  releaseVersion: 0.57.34
-  configChecksum: df7362bcd27cc6a296156a972bf37cc1
+  releaseVersion: 0.57.35
+  configChecksum: a77214ac071dc8ac36fdd15606e96048
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 48efe4f5-9706-4846-b843-daa86aa03689
-  pristine_commit_hash: a43c80c090dec0e1c40a7796d57ab3f53d6ca1b9
-  pristine_tree_hash: 5dcbcc209c81b95573ba80d9304eb10381ea4410
+  generation_id: b42e175c-e409-492a-9827-19c0b532c681
+  pristine_commit_hash: a82b0f3622d879eb44cb7049a084ab40d6e9f92d
+  pristine_tree_hash: a0fb37440a0434a36aea659cf172cc58f2490ea9
 features:
   python:
     acceptHeaders: 3.0.0
@@ -7786,8 +7786,8 @@ trackedFiles:
     pristine_git_object: 78c231f49ff89e8bf938498949133074032342d0
   docs/models/shared/atsapplicationanswer.md:
     id: 7d840696049d
-    last_write_checksum: sha1:00fd58adc619361ab5c8708da2582ce0ba4dcdd1
-    pristine_git_object: 14de9339021a4f47e0667ca850dca2b36c8ee329
+    last_write_checksum: sha1:77631f7d43b5810fd39cffb2f65e110da2d1e116
+    pristine_git_object: e0558dd3d65f78f81e2185c88caa9e474b7c2524
   docs/models/shared/atsapplicationstatus.md:
     id: 396b74a38d1d
     last_write_checksum: sha1:aa18a9d9441dcf12699267cbe92bc063bea5b485
@@ -11358,8 +11358,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:3179bdb9ebeaebc7ce9e5aa2db3cd2dbb388eec9
-    pristine_git_object: 3b5c2a3174891c270ddae7a77d09605bcfc192d3
+    last_write_checksum: sha1:0a0fdb99b4cf679bc6c0c44eec182ff23d565d0e
+    pristine_git_object: 8b4f96d4a8f1dc5778ae7b509b0410920af39a2f
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11386,8 +11386,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:f86891595a4f417fa7983a41f251b565e7df3f85
-    pristine_git_object: b1182ca8a422881cf18caf4cb67b078802139b12
+    last_write_checksum: sha1:a870108a3c205e2dd5a6973af69e4fda61019755
+    pristine_git_object: 3bf262ed706a270bd1db9c1206f7df5faf5836a4
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -14650,8 +14650,8 @@ trackedFiles:
     pristine_git_object: be44e080448ec3b9f1c284f99923e8bf00517245
   src/unified_python_sdk/models/shared/atsapplicationanswer.py:
     id: d0fbe887c022
-    last_write_checksum: sha1:541584ff52f0708637dd843d8da8007aed9e8eee
-    pristine_git_object: 64c9ebd9f3b53104eb5a89ded1b9a9c523a6b580
+    last_write_checksum: sha1:57de367b6cdce52a6913d8f0d471b3267f17d321
+    pristine_git_object: 73319307eeb22bff21ec3685d60d4a466d047fc4
   src/unified_python_sdk/models/shared/atscandidate.py:
     id: 8c26795afb0b
     last_write_checksum: sha1:f4fff0ebd1800f60d2eb05ea728c1c2c09e4001e
@@ -22404,12 +22404,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Python SDK Changes:
-  * `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_list_id` **Added**
-  * `unified_to.unified.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_list_id` **Added**
-  * `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_list_id` **Added**
-  * `unified_to.integration.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>.native_webhook_list_id` **Added**
+releaseNotes: "## Python SDK Changes:\n* `unified_to.ats.create_ats_application()`: \n  *  `request.ats_application.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified_to.ats.get_ats_application()`:  `response.answers[].question` **Added**\n* `unified_to.ats.list_ats_applications()`:  `response.[].answers[].question` **Added**\n* `unified_to.ats.patch_ats_application()`: \n  *  `request.ats_application.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified_to.ats.update_ats_application()`: \n  *  `request.ats_application.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified_to.application.create_ats_application()`: \n  *  `request.ats_application.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified_to.application.get_ats_application()`:  `response.answers[].question` **Added**\n* `unified_to.application.list_ats_applications()`:  `response.[].answers[].question` **Added**\n* `unified_to.application.patch_ats_application()`: \n  *  `request.ats_application.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified_to.application.update_ats_application()`: \n  *  `request.ats_application.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
