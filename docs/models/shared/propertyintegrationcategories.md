@@ -42,3 +42,4 @@ value = PropertyIntegrationCategories.PASSTHROUGH
 | `FORMS`        | forms          |
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
+| `SIGNING`      | signing        |

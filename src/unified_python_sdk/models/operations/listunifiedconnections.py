@@ -39,6 +39,7 @@ class Categories(str, Enum):
     FORMS = "forms"
     SHIPPING = "shipping"
     ASSESSMENT = "assessment"
+    SIGNING = "signing"
 
 
 class ListUnifiedConnectionsRequestTypedDict(TypedDict):

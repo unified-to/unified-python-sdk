@@ -130,6 +130,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.scorecard import Scorecard
     from unified_python_sdk.shipment import Shipment
     from unified_python_sdk.shipping import Shipping
+    from unified_python_sdk.signatory import Signatory
+    from unified_python_sdk.signing import Signing
     from unified_python_sdk.space import Space
     from unified_python_sdk.storage import Storage
     from unified_python_sdk.student import Student
@@ -138,6 +140,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.target import Target
     from unified_python_sdk.task import Task
     from unified_python_sdk.taxrate import Taxrate
+    from unified_python_sdk.template import Template
     from unified_python_sdk.ticket import Ticket
     from unified_python_sdk.ticketing import Ticketing
     from unified_python_sdk.timeoff import Timeoff
@@ -271,6 +274,9 @@ class UnifiedTo(BaseSDK):
     rate: "Rate"
     shipment: "Shipment"
     tracking: "Tracking"
+    signing: "Signing"
+    signatory: "Signatory"
+    template: "Template"
     storage: "Storage"
     file: "File"
     task: "Task"
@@ -410,6 +416,9 @@ class UnifiedTo(BaseSDK):
         "rate": ("unified_python_sdk.rate", "Rate"),
         "shipment": ("unified_python_sdk.shipment", "Shipment"),
         "tracking": ("unified_python_sdk.tracking", "Tracking"),
+        "signing": ("unified_python_sdk.signing", "Signing"),
+        "signatory": ("unified_python_sdk.signatory", "Signatory"),
+        "template": ("unified_python_sdk.template", "Template"),
         "storage": ("unified_python_sdk.storage", "Storage"),
         "file": ("unified_python_sdk.file", "File"),
         "task": ("unified_python_sdk.task", "Task"),

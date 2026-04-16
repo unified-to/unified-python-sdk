@@ -39,6 +39,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     FORMS = "forms"
     SHIPPING = "shipping"
     ASSESSMENT = "assessment"
+    SIGNING = "signing"
 
 
 class ListUnifiedIntegrationsRequestTypedDict(TypedDict):

@@ -252,3 +252,8 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `SHIPPING_TRACKING_READ`         | shipping_tracking_read           |
 | `SHIPPING_RATE_READ`             | shipping_rate_read               |
 | `SHIPPING_CARRIER_READ`          | shipping_carrier_read            |
+| `SIGNING_DOCUMENT_READ`          | signing_document_read            |
+| `SIGNING_DOCUMENT_WRITE`         | signing_document_write           |
+| `SIGNING_SIGNATORY_READ`         | signing_signatory_read           |
+| `SIGNING_SIGNATORY_WRITE`        | signing_signatory_write          |
+| `SIGNING_TEMPLATE_READ`          | signing_template_read            |

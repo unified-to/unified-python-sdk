@@ -434,6 +434,12 @@ class ListTeacherID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListTemplateID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListTicketID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -561,6 +567,12 @@ class NativeWebhookStudentID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class NativeWebhookTaskID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class NativeWebhookTemplateID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -902,6 +914,12 @@ class VirtualWebhookTaskID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookTemplateID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookTicketID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1004,6 +1022,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_student_id: NotRequired[ListStudentID]
     list_task_id: NotRequired[ListTaskID]
     list_teacher_id: NotRequired[ListTeacherID]
+    list_template_id: NotRequired[ListTemplateID]
     list_ticket_id: NotRequired[ListTicketID]
     list_type: NotRequired[ListType]
     list_updated_gte: NotRequired[ListUpdatedGte]
@@ -1027,6 +1046,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_shipment_id: NotRequired[NativeWebhookShipmentID]
     native_webhook_student_id: NotRequired[NativeWebhookStudentID]
     native_webhook_task_id: NotRequired[NativeWebhookTaskID]
+    native_webhook_template_id: NotRequired[NativeWebhookTemplateID]
     native_webhook_type: NotRequired[NativeWebhookType]
     outbound_fields: NotRequired[Dict[str, str]]
     raw_objects: NotRequired[List[str]]
@@ -1087,6 +1107,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_status: NotRequired[VirtualWebhookStatus]
     virtual_webhook_student_id: NotRequired[VirtualWebhookStudentID]
     virtual_webhook_task_id: NotRequired[VirtualWebhookTaskID]
+    virtual_webhook_template_id: NotRequired[VirtualWebhookTemplateID]
     virtual_webhook_ticket_id: NotRequired[VirtualWebhookTicketID]
     virtual_webhook_type: NotRequired[VirtualWebhookType]
     virtual_webhook_updated_gte: NotRequired[VirtualWebhookUpdatedGte]
@@ -1238,6 +1259,8 @@ class IntegrationSupport(BaseModel):
 
     list_teacher_id: Optional[ListTeacherID] = None
 
+    list_template_id: Optional[ListTemplateID] = None
+
     list_ticket_id: Optional[ListTicketID] = None
 
     list_type: Optional[ListType] = None
@@ -1283,6 +1306,8 @@ class IntegrationSupport(BaseModel):
     native_webhook_student_id: Optional[NativeWebhookStudentID] = None
 
     native_webhook_task_id: Optional[NativeWebhookTaskID] = None
+
+    native_webhook_template_id: Optional[NativeWebhookTemplateID] = None
 
     native_webhook_type: Optional[NativeWebhookType] = None
 
@@ -1402,6 +1427,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_student_id: Optional[VirtualWebhookStudentID] = None
 
     virtual_webhook_task_id: Optional[VirtualWebhookTaskID] = None
+
+    virtual_webhook_template_id: Optional[VirtualWebhookTemplateID] = None
 
     virtual_webhook_ticket_id: Optional[VirtualWebhookTicketID] = None
 
@@ -2045,6 +2072,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_template_id")
+    def serialize_list_template_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListTemplateID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_ticket_id")
     def serialize_list_ticket_id(self, value):
         if isinstance(value, str):
@@ -2239,6 +2275,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.NativeWebhookTaskID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("native_webhook_template_id")
+    def serialize_native_webhook_template_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookTemplateID(value)
             except ValueError:
                 return value
         return value
@@ -2747,6 +2792,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_template_id")
+    def serialize_virtual_webhook_template_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookTemplateID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_ticket_id")
     def serialize_virtual_webhook_ticket_id(self, value):
         if isinstance(value, str):
@@ -2867,6 +2921,7 @@ class IntegrationSupport(BaseModel):
                 "list_student_id",
                 "list_task_id",
                 "list_teacher_id",
+                "list_template_id",
                 "list_ticket_id",
                 "list_type",
                 "list_updated_gte",
@@ -2890,6 +2945,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_shipment_id",
                 "native_webhook_student_id",
                 "native_webhook_task_id",
+                "native_webhook_template_id",
                 "native_webhook_type",
                 "outbound_fields",
                 "raw_objects",
@@ -2949,6 +3005,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_status",
                 "virtual_webhook_student_id",
                 "virtual_webhook_task_id",
+                "virtual_webhook_template_id",
                 "virtual_webhook_ticket_id",
                 "virtual_webhook_type",
                 "virtual_webhook_updated_gte",

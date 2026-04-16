@@ -33,3 +33,4 @@ class PropertyConnectionCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     FORMS = "forms"
     SHIPPING = "shipping"
     ASSESSMENT = "assessment"
+    SIGNING = "signing"

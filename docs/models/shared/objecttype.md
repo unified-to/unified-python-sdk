@@ -144,3 +144,6 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `SHIPPING_SHIPMENT`        | shipping_shipment          |
 | `SHIPPING_LABEL`           | shipping_label             |
 | `SHIPPING_TRACKING`        | shipping_tracking          |
+| `SIGNING_DOCUMENT`         | signing_document           |
+| `SIGNING_SIGNATORY`        | signing_signatory          |
+| `SIGNING_TEMPLATE`         | signing_template           |

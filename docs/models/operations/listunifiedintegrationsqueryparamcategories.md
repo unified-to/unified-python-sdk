@@ -40,3 +40,4 @@ value = ListUnifiedIntegrationsQueryParamCategories.PASSTHROUGH
 | `FORMS`        | forms          |
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
+| `SIGNING`      | signing        |
