@@ -30,8 +30,6 @@ class SigningDocumentTypedDict(TypedDict):
     download_url: NotRequired[str]
     expires_at: NotRequired[datetime]
     id: NotRequired[str]
-    metadata: NotRequired[Dict[str, str]]
-    r"""Custom key-value pairs"""
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     sent_at: NotRequired[datetime]
@@ -54,9 +52,6 @@ class SigningDocument(BaseModel):
     expires_at: Optional[datetime] = None
 
     id: Optional[str] = None
-
-    metadata: Optional[Dict[str, str]] = None
-    r"""Custom key-value pairs"""
 
     name: Optional[str] = None
 
@@ -90,7 +85,6 @@ class SigningDocument(BaseModel):
                 "download_url",
                 "expires_at",
                 "id",
-                "metadata",
                 "name",
                 "raw",
                 "sent_at",

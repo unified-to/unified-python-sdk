@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -22,26 +22,29 @@ class LmsMediaType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class LmsMediaTypedDict(TypedDict):
-    url: str
     content: NotRequired[str]
     description: NotRequired[str]
+    languages: NotRequired[List[str]]
     name: NotRequired[str]
     thumbnail_url: NotRequired[str]
     type: NotRequired[LmsMediaType]
+    url: NotRequired[str]
 
 
 class LmsMedia(BaseModel):
-    url: str
-
     content: Optional[str] = None
 
     description: Optional[str] = None
+
+    languages: Optional[List[str]] = None
 
     name: Optional[str] = None
 
     thumbnail_url: Optional[str] = None
 
     type: Optional[LmsMediaType] = None
+
+    url: Optional[str] = None
 
     @field_serializer("type")
     def serialize_type(self, value):
@@ -55,7 +58,15 @@ class LmsMedia(BaseModel):
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
-            ["content", "description", "name", "thumbnail_url", "type"]
+            [
+                "content",
+                "description",
+                "languages",
+                "name",
+                "thumbnail_url",
+                "type",
+                "url",
+            ]
         )
         serialized = handler(self)
         m = {}

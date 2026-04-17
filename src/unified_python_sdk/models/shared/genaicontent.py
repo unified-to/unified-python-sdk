@@ -13,6 +13,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class Role(str, Enum, metaclass=utils.OpenEnumMeta):
     SYSTEM = "SYSTEM"
     USER = "USER"
+    ASSISTANT = "ASSISTANT"
 
 
 class GenaiContentTypedDict(TypedDict):

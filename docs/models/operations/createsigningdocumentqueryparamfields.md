@@ -25,5 +25,4 @@ value = CreateSigningDocumentQueryParamFields.ID
 | `TEMPLATE_ID`  | template_id    |
 | `DOWNLOAD_URL` | download_url   |
 | `CREATOR_ID`   | creator_id     |
-| `METADATA`     | metadata       |
 | `RAW`          | raw            |

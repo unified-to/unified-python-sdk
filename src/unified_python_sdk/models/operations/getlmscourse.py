@@ -29,12 +29,16 @@ class GetLmsCourseQueryParamFields(str, Enum):
     CURRENCY = "currency"
     MEDIA = "media"
     INSTRUCTOR_IDS = "instructor_ids"
+    INSTRUCTORS = "instructors"
     STUDENT_IDS = "student_ids"
+    STUDENTS = "students"
     CONTENT_IDS = "content_ids"
     SKILLS = "skills"
     DURATION_MINUTES = "duration_minutes"
     PROVIDER_NAME = "provider_name"
     RAW = "raw"
+    PUBLISHED_AT = "published_at"
+    TIME_ESTIMATE_MINUTES = "time_estimate_minutes"
 
 
 class GetLmsCourseRequestTypedDict(TypedDict):

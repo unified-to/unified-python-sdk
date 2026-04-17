@@ -13,7 +13,8 @@ value = Role.SYSTEM
 
 ## Values
 
-| Name     | Value    |
-| -------- | -------- |
-| `SYSTEM` | SYSTEM   |
-| `USER`   | USER     |
+| Name        | Value       |
+| ----------- | ----------- |
+| `SYSTEM`    | SYSTEM      |
+| `USER`      | USER        |
+| `ASSISTANT` | ASSISTANT   |
