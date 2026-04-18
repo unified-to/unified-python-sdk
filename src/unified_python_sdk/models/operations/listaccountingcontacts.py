@@ -39,8 +39,8 @@ class ListAccountingContactsQueryParamFields(str, Enum):
     COMPANY_NAME = "company_name"
     IDENTIFICATION = "identification"
     ASSOCIATED_CONTACTS = "associated_contacts"
-    RAW = "raw"
     ORGANIZATION_ID = "organization_id"
+    RAW = "raw"
 
 
 class ListAccountingContactsRequestTypedDict(TypedDict):

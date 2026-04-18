@@ -30,5 +30,5 @@ value = Fields.ID
 | `SUBGROUP`              | subgroup                |
 | `PARENT_ID`             | parent_id               |
 | `TAXONOMY`              | taxonomy                |
-| `RAW`                   | raw                     |
 | `ORGANIZATION_ID`       | organization_id         |
+| `RAW`                   | raw                     |

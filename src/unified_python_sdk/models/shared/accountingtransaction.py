@@ -25,6 +25,7 @@ class AccountingTransactionTypedDict(TypedDict):
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingTransactionLineItemTypedDict]]
     memo: NotRequired[str]
+    organization_id: NotRequired[str]
     payment_method: NotRequired[str]
     payment_terms: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -53,6 +54,8 @@ class AccountingTransaction(BaseModel):
     lineitems: Optional[List[AccountingTransactionLineItem]] = None
 
     memo: Optional[str] = None
+
+    organization_id: Optional[str] = None
 
     payment_method: Optional[str] = None
 
@@ -86,6 +89,7 @@ class AccountingTransaction(BaseModel):
                 "id",
                 "lineitems",
                 "memo",
+                "organization_id",
                 "payment_method",
                 "payment_terms",
                 "raw",

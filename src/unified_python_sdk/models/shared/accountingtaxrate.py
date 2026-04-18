@@ -14,6 +14,7 @@ class AccountingTaxrateTypedDict(TypedDict):
     id: NotRequired[str]
     is_active: NotRequired[bool]
     name: NotRequired[str]
+    organization_id: NotRequired[str]
     rate: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
@@ -30,6 +31,8 @@ class AccountingTaxrate(BaseModel):
 
     name: Optional[str] = None
 
+    organization_id: Optional[str] = None
+
     rate: Optional[float] = None
 
     raw: Optional[Dict[str, Any]] = None
@@ -45,6 +48,7 @@ class AccountingTaxrate(BaseModel):
                 "id",
                 "is_active",
                 "name",
+                "organization_id",
                 "rate",
                 "raw",
                 "updated_at",

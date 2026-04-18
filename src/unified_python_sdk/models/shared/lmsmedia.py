@@ -25,6 +25,7 @@ class LmsMediaTypedDict(TypedDict):
     content: NotRequired[str]
     description: NotRequired[str]
     languages: NotRequired[List[str]]
+    r"""ISO 2-digit language codes"""
     name: NotRequired[str]
     thumbnail_url: NotRequired[str]
     type: NotRequired[LmsMediaType]
@@ -37,6 +38,7 @@ class LmsMedia(BaseModel):
     description: Optional[str] = None
 
     languages: Optional[List[str]] = None
+    r"""ISO 2-digit language codes"""
 
     name: Optional[str] = None
 
