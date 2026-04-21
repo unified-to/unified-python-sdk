@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .storagepermission import StoragePermission, StoragePermissionTypedDict
+from .storagereference import StorageReference, StorageReferenceTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -29,6 +30,7 @@ class StorageFileTypedDict(TypedDict):
     parent_id: NotRequired[str]
     permissions: NotRequired[List[StoragePermissionTypedDict]]
     raw: NotRequired[Dict[str, Any]]
+    references: NotRequired[List[StorageReferenceTypedDict]]
     size: NotRequired[float]
     type: NotRequired[StorageFileType]
     updated_at: NotRequired[datetime]
@@ -59,6 +61,8 @@ class StorageFile(BaseModel):
     permissions: Optional[List[StoragePermission]] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    references: Optional[List[StorageReference]] = None
 
     size: Optional[float] = None
 
@@ -96,6 +100,7 @@ class StorageFile(BaseModel):
                 "parent_id",
                 "permissions",
                 "raw",
+                "references",
                 "size",
                 "type",
                 "updated_at",

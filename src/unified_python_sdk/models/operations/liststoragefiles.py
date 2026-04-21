@@ -32,6 +32,7 @@ class ListStorageFilesQueryParamFields(str, Enum):
     DATA = "data"
     VERSION = "version"
     WEB_URL = "web_url"
+    REFERENCES = "references"
     RAW = "raw"
 
 
@@ -53,6 +54,8 @@ class ListStorageFilesRequestTypedDict(TypedDict):
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
+    reference: NotRequired[str]
+    r"""The referenced entity ID to filter by (e.g. linked accounting record for storage_file)"""
     sort: NotRequired[str]
     type: NotRequired[str]
     r"""The type to filter by"""
@@ -117,6 +120,12 @@ class ListStorageFilesRequest(BaseModel):
     ] = None
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
+    reference: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The referenced entity ID to filter by (e.g. linked accounting record for storage_file)"""
+
     sort: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -147,6 +156,7 @@ class ListStorageFilesRequest(BaseModel):
                 "parent_id",
                 "query",
                 "raw",
+                "reference",
                 "sort",
                 "type",
                 "updated_gte",

@@ -32,6 +32,7 @@ class GetStorageFileQueryParamFields(str, Enum):
     DATA = "data"
     VERSION = "version"
     WEB_URL = "web_url"
+    REFERENCES = "references"
     RAW = "raw"
 
 

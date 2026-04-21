@@ -640,6 +640,7 @@ if TYPE_CHECKING:
         ListProjectID,
         ListQuery,
         ListRawFields,
+        ListReference,
         ListRepoID,
         ListRootID,
         ListSaleschannelID,
@@ -726,6 +727,7 @@ if TYPE_CHECKING:
         VirtualWebhookPaymentID,
         VirtualWebhookPipelineID,
         VirtualWebhookProjectID,
+        VirtualWebhookReference,
         VirtualWebhookRepoID,
         VirtualWebhookSaleschannelID,
         VirtualWebhookShipmentID,
@@ -1562,6 +1564,7 @@ if TYPE_CHECKING:
     from .signingtemplate import SigningTemplate, SigningTemplateTypedDict
     from .storagefile import StorageFile, StorageFileType, StorageFileTypedDict
     from .storagepermission import StoragePermission, StoragePermissionTypedDict
+    from .storagereference import StorageReference, StorageReferenceTypedDict
     from .taskchange import TaskChange, TaskChangeTypedDict
     from .taskchangeitem import TaskChangeItem, TaskChangeItemTypedDict
     from .taskcomment import TaskComment, TaskCommentTypedDict
@@ -2231,6 +2234,7 @@ __all__ = [
     "ListProjectID",
     "ListQuery",
     "ListRawFields",
+    "ListReference",
     "ListRepoID",
     "ListRootID",
     "ListSaleschannelID",
@@ -2800,6 +2804,8 @@ __all__ = [
     "StorageFileTypedDict",
     "StoragePermission",
     "StoragePermissionTypedDict",
+    "StorageReference",
+    "StorageReferenceTypedDict",
     "TaskChange",
     "TaskChangeItem",
     "TaskChangeItemTypedDict",
@@ -2928,6 +2934,7 @@ __all__ = [
     "VirtualWebhookPaymentID",
     "VirtualWebhookPipelineID",
     "VirtualWebhookProjectID",
+    "VirtualWebhookReference",
     "VirtualWebhookRepoID",
     "VirtualWebhookSaleschannelID",
     "VirtualWebhookShipmentID",
@@ -3528,6 +3535,7 @@ _dynamic_imports: dict[str, str] = {
     "ListProjectID": ".integrationsupport",
     "ListQuery": ".integrationsupport",
     "ListRawFields": ".integrationsupport",
+    "ListReference": ".integrationsupport",
     "ListRepoID": ".integrationsupport",
     "ListRootID": ".integrationsupport",
     "ListSaleschannelID": ".integrationsupport",
@@ -3614,6 +3622,7 @@ _dynamic_imports: dict[str, str] = {
     "VirtualWebhookPaymentID": ".integrationsupport",
     "VirtualWebhookPipelineID": ".integrationsupport",
     "VirtualWebhookProjectID": ".integrationsupport",
+    "VirtualWebhookReference": ".integrationsupport",
     "VirtualWebhookRepoID": ".integrationsupport",
     "VirtualWebhookSaleschannelID": ".integrationsupport",
     "VirtualWebhookShipmentID": ".integrationsupport",
@@ -4165,6 +4174,8 @@ _dynamic_imports: dict[str, str] = {
     "StorageFileTypedDict": ".storagefile",
     "StoragePermission": ".storagepermission",
     "StoragePermissionTypedDict": ".storagepermission",
+    "StorageReference": ".storagereference",
+    "StorageReferenceTypedDict": ".storagereference",
     "TaskChange": ".taskchange",
     "TaskChangeTypedDict": ".taskchange",
     "TaskChangeItem": ".taskchangeitem",

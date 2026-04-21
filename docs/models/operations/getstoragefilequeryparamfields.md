@@ -29,4 +29,5 @@ value = GetStorageFileQueryParamFields.ID
 | `DATA`         | data           |
 | `VERSION`      | version        |
 | `WEB_URL`      | web_url        |
+| `REFERENCES`   | references     |
 | `RAW`          | raw            |

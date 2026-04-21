@@ -350,6 +350,12 @@ class ListRawFields(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListReference(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -866,6 +872,12 @@ class VirtualWebhookProjectID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookReference(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1008,6 +1020,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_project_id: NotRequired[ListProjectID]
     list_query: NotRequired[ListQuery]
     list_raw_fields: NotRequired[ListRawFields]
+    list_reference: NotRequired[ListReference]
     list_repo_id: NotRequired[ListRepoID]
     list_root_id: NotRequired[ListRootID]
     list_saleschannel_id: NotRequired[ListSaleschannelID]
@@ -1099,6 +1112,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_payment_id: NotRequired[VirtualWebhookPaymentID]
     virtual_webhook_pipeline_id: NotRequired[VirtualWebhookPipelineID]
     virtual_webhook_project_id: NotRequired[VirtualWebhookProjectID]
+    virtual_webhook_reference: NotRequired[VirtualWebhookReference]
     virtual_webhook_repo_id: NotRequired[VirtualWebhookRepoID]
     virtual_webhook_saleschannel_id: NotRequired[VirtualWebhookSaleschannelID]
     virtual_webhook_shipment_id: NotRequired[VirtualWebhookShipmentID]
@@ -1230,6 +1244,8 @@ class IntegrationSupport(BaseModel):
     list_query: Optional[ListQuery] = None
 
     list_raw_fields: Optional[ListRawFields] = None
+
+    list_reference: Optional[ListReference] = None
 
     list_repo_id: Optional[ListRepoID] = None
 
@@ -1411,6 +1427,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_pipeline_id: Optional[VirtualWebhookPipelineID] = None
 
     virtual_webhook_project_id: Optional[VirtualWebhookProjectID] = None
+
+    virtual_webhook_reference: Optional[VirtualWebhookReference] = None
 
     virtual_webhook_repo_id: Optional[VirtualWebhookRepoID] = None
 
@@ -1942,6 +1960,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListRawFields(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_reference")
+    def serialize_list_reference(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListReference(value)
             except ValueError:
                 return value
         return value
@@ -2720,6 +2747,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_reference")
+    def serialize_virtual_webhook_reference(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookReference(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_repo_id")
     def serialize_virtual_webhook_repo_id(self, value):
         if isinstance(value, str):
@@ -2907,6 +2943,7 @@ class IntegrationSupport(BaseModel):
                 "list_project_id",
                 "list_query",
                 "list_raw_fields",
+                "list_reference",
                 "list_repo_id",
                 "list_root_id",
                 "list_saleschannel_id",
@@ -2997,6 +3034,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_payment_id",
                 "virtual_webhook_pipeline_id",
                 "virtual_webhook_project_id",
+                "virtual_webhook_reference",
                 "virtual_webhook_repo_id",
                 "virtual_webhook_saleschannel_id",
                 "virtual_webhook_shipment_id",

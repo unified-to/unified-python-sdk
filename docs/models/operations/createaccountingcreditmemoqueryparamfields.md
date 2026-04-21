@@ -32,11 +32,11 @@ value = CreateAccountingCreditmemoQueryParamFields.ID
 | `CURRENCY`                  | currency                    |
 | `NOTES`                     | notes                       |
 | `REFUND_REASON`             | refund_reason               |
+| `ORGANIZATION_ID`           | organization_id             |
 | `LINEITEMS`                 | lineitems                   |
 | `STATUS`                    | status                      |
 | `URL`                       | url                         |
 | `PAYMENT_COLLECTION_METHOD` | payment_collection_method   |
 | `ATTACHMENTS`               | attachments                 |
 | `SEND`                      | send                        |
-| `ORGANIZATION_ID`           | organization_id             |
 | `RAW`                       | raw                         |
