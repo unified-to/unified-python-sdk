@@ -54,6 +54,8 @@ class ListAccountingInvoicesRequestTypedDict(TypedDict):
     r"""ID of the connection"""
     contact_id: NotRequired[str]
     r"""The contact ID to filter by (reference to AccountingContact)"""
+    end_lt: NotRequired[str]
+    r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListAccountingInvoicesQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
@@ -66,6 +68,8 @@ class ListAccountingInvoicesRequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
+    start_gte: NotRequired[str]
+    r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     type: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -82,6 +86,12 @@ class ListAccountingInvoicesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""The contact ID to filter by (reference to AccountingContact)"""
+
+    end_lt: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     fields: Annotated[
         Optional[List[ListAccountingInvoicesQueryParamFields]],
@@ -127,6 +137,12 @@ class ListAccountingInvoicesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    start_gte: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     type: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -143,6 +159,7 @@ class ListAccountingInvoicesRequest(BaseModel):
         optional_fields = set(
             [
                 "contact_id",
+                "end_lt",
                 "fields",
                 "limit",
                 "offset",
@@ -151,6 +168,7 @@ class ListAccountingInvoicesRequest(BaseModel):
                 "query",
                 "raw",
                 "sort",
+                "start_gte",
                 "type",
                 "updated_gte",
             ]

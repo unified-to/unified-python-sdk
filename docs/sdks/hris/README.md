@@ -455,6 +455,7 @@ Create a timeoff
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -464,7 +465,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_timeoff(request={
-        "hris_timeoff": {},
+        "hris_timeoff": {
+            "start_at": parse_datetime("2024-09-03T22:31:51.863Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -1963,6 +1966,7 @@ Update a timeoff
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1972,7 +1976,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_timeoff(request={
-        "hris_timeoff": {},
+        "hris_timeoff": {
+            "start_at": parse_datetime("2024-01-26T05:49:44.056Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2920,6 +2926,7 @@ Update a timeoff
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2929,7 +2936,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_timeoff(request={
-        "hris_timeoff": {},
+        "hris_timeoff": {
+            "start_at": parse_datetime("2026-02-26T01:59:20.061Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

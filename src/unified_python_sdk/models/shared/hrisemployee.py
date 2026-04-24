@@ -97,6 +97,8 @@ class HrisEmployeeTypedDict(TypedDict):
     telephones: NotRequired[List[HrisTelephoneTypedDict]]
     terminated_at: NotRequired[datetime]
     termination_reason: NotRequired[str]
+    timeoff_days_total: NotRequired[float]
+    timeoff_days_used: NotRequired[float]
     timezone: NotRequired[str]
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -178,6 +180,10 @@ class HrisEmployee(BaseModel):
     terminated_at: Optional[datetime] = None
 
     termination_reason: Optional[str] = None
+
+    timeoff_days_total: Optional[float] = None
+
+    timeoff_days_used: Optional[float] = None
 
     timezone: Optional[str] = None
 
@@ -262,6 +268,8 @@ class HrisEmployee(BaseModel):
                 "telephones",
                 "terminated_at",
                 "termination_reason",
+                "timeoff_days_total",
+                "timeoff_days_used",
                 "timezone",
                 "title",
                 "updated_at",

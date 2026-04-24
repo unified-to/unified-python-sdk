@@ -52,4 +52,6 @@ value = CreateHrisEmployeeQueryParamFields.ID
 | `STORAGE_QUOTA_AVAILABLE` | storage_quota_available   |
 | `RELATIONSHIPS`           | relationships             |
 | `HAS_MFA`                 | has_mfa                   |
+| `TIMEOFF_DAYS_TOTAL`      | timeoff_days_total        |
+| `TIMEOFF_DAYS_USED`       | timeoff_days_used         |
 | `RAW`                     | raw                       |
