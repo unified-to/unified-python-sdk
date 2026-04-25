@@ -15,15 +15,15 @@ value = AdsTargetType.INTERESTS
 
 | Name         | Value        |
 | ------------ | ------------ |
-| `INTERESTS`  | interests    |
-| `BEHAVIORS`  | behaviors    |
-| `LOCALES`    | locales      |
-| `COUNTRIES`  | countries    |
-| `REGIONS`    | regions      |
-| `CITIES`     | cities       |
-| `ZIPS`       | zips         |
-| `US_DMAS`    | us_dmas      |
-| `TOPICS`     | topics       |
-| `USER_LISTS` | user_lists   |
-| `AGE_RANGES` | age_ranges   |
-| `GENDERS`    | genders      |
+| `INTERESTS`  | INTERESTS    |
+| `BEHAVIORS`  | BEHAVIORS    |
+| `LOCALES`    | LOCALES      |
+| `COUNTRIES`  | COUNTRIES    |
+| `REGIONS`    | REGIONS      |
+| `CITIES`     | CITIES       |
+| `ZIPS`       | ZIPS         |
+| `US_DMAS`    | US_DMAS      |
+| `TOPICS`     | TOPICS       |
+| `USER_LISTS` | USER_LISTS   |
+| `AGE_RANGES` | AGE_RANGES   |
+| `GENDERS`    | GENDERS      |
