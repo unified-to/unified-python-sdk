@@ -15,71 +15,40 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListAdsPromotedsQueryParamFields(str, Enum):
+class GetAdsPromotedQueryParamFields(str, Enum):
     ID = "id"
     NAME = "name"
     TYPE = "type"
     RAW = "raw"
 
 
-class ListAdsPromotedsRequestTypedDict(TypedDict):
+class GetAdsPromotedRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
-    fields: NotRequired[List[ListAdsPromotedsQueryParamFields]]
+    id: str
+    r"""ID of the Promoted"""
+    fields: NotRequired[List[GetAdsPromotedQueryParamFields]]
     r"""Fields to return"""
-    limit: NotRequired[float]
-    offset: NotRequired[float]
-    order: NotRequired[str]
-    org_id: NotRequired[str]
-    r"""The org ID to filter by (reference to AdsOrganization)"""
-    query: NotRequired[str]
-    r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
-    sort: NotRequired[str]
-    type: NotRequired[str]
-    updated_gte: NotRequired[str]
-    r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
-class ListAdsPromotedsRequest(BaseModel):
+class GetAdsPromotedRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
 
+    id: Annotated[
+        str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
+    ]
+    r"""ID of the Promoted"""
+
     fields: Annotated[
-        Optional[List[ListAdsPromotedsQueryParamFields]],
+        Optional[List[GetAdsPromotedQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
-
-    limit: Annotated[
-        Optional[float],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-
-    offset: Annotated[
-        Optional[float],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-
-    order: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-
-    org_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The org ID to filter by (reference to AdsOrganization)"""
-
-    query: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""Query string to search. eg. email address or name"""
 
     raw: Annotated[
         Optional[str],
@@ -87,38 +56,9 @@ class ListAdsPromotedsRequest(BaseModel):
     ] = None
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
-    sort: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-
-    type: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-
-    updated_gte: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
-
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(
-            [
-                "fields",
-                "limit",
-                "offset",
-                "order",
-                "org_id",
-                "query",
-                "raw",
-                "sort",
-                "type",
-                "updated_gte",
-            ]
-        )
+        optional_fields = set(["fields", "raw"])
         serialized = handler(self)
         m = {}
 
@@ -133,18 +73,18 @@ class ListAdsPromotedsRequest(BaseModel):
         return m
 
 
-class ListAdsPromotedsResponseTypedDict(TypedDict):
+class GetAdsPromotedResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    ads_promoteds: NotRequired[List[shared_adspromoted.AdsPromotedTypedDict]]
+    ads_promoted: NotRequired[shared_adspromoted.AdsPromotedTypedDict]
     r"""Successful"""
 
 
-class ListAdsPromotedsResponse(BaseModel):
+class GetAdsPromotedResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -154,12 +94,12 @@ class ListAdsPromotedsResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    ads_promoteds: Optional[List[shared_adspromoted.AdsPromoted]] = None
+    ads_promoted: Optional[shared_adspromoted.AdsPromoted] = None
     r"""Successful"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["AdsPromoteds"])
+        optional_fields = set(["AdsPromoted"])
         serialized = handler(self)
         m = {}
 

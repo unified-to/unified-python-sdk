@@ -11,26 +11,30 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AdsTargetType(str, Enum, metaclass=utils.OpenEnumMeta):
-    INTERESTS = "INTERESTS"
-    BEHAVIORS = "BEHAVIORS"
-    LOCALES = "LOCALES"
-    COUNTRIES = "COUNTRIES"
-    REGIONS = "REGIONS"
-    CITIES = "CITIES"
-    ZIPS = "ZIPS"
-    US_DMAS = "US_DMAS"
-    TOPICS = "TOPICS"
-    USER_LISTS = "USER_LISTS"
-    AGE_RANGES = "AGE_RANGES"
-    GENDERS = "GENDERS"
+    INTEREST = "INTEREST"
+    BEHAVIOR = "BEHAVIOR"
+    LOCALE = "LOCALE"
+    COUNTRY = "COUNTRY"
+    REGION = "REGION"
+    CITY = "CITY"
+    ZIP = "ZIP"
+    US_DMA = "US_DMA"
+    TOPIC = "TOPIC"
+    USER_LIST = "USER_LIST"
+    AGE_RANGE = "AGE_RANGE"
+    GENDER = "GENDER"
+    CARRIER = "CARRIER"
+    DEVICE_MODEL = "DEVICE_MODEL"
+    OS_VERSION = "OS_VERSION"
 
 
 class AdsTargetTypedDict(TypedDict):
     r"""Targeting search result (for ads_target list endpoint)"""
 
     id: str
-    value: str
+    is_active: NotRequired[bool]
     name: NotRequired[str]
+    parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[AdsTargetType]
 
@@ -40,9 +44,11 @@ class AdsTarget(BaseModel):
 
     id: str
 
-    value: str
+    is_active: Optional[bool] = None
 
     name: Optional[str] = None
+
+    parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -59,7 +65,7 @@ class AdsTarget(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["name", "raw", "type"])
+        optional_fields = set(["is_active", "name", "parent_id", "raw", "type"])
         serialized = handler(self)
         m = {}
 

@@ -1,11 +1,11 @@
-# ListAdsTargetsQueryParamFields
+# GetAdsTargetQueryParamFields
 
 ## Example Usage
 
 ```python
-from unified_python_sdk.models.operations import ListAdsTargetsQueryParamFields
+from unified_python_sdk.models.operations import GetAdsTargetQueryParamFields
 
-value = ListAdsTargetsQueryParamFields.ID
+value = GetAdsTargetQueryParamFields.ID
 ```
 
 
