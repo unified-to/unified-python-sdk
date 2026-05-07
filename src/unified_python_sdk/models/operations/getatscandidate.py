@@ -40,6 +40,7 @@ class GetAtsCandidateQueryParamFields(str, Enum):
     EXPERIENCES = "experiences"
     EDUCATION = "education"
     SKILLS = "skills"
+    JOB_IDS = "job_ids"
     METADATA = "metadata"
     RAW = "raw"
 

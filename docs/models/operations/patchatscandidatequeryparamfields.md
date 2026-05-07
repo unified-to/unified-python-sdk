@@ -37,5 +37,6 @@ value = PatchAtsCandidateQueryParamFields.ID
 | `EXPERIENCES`         | experiences           |
 | `EDUCATION`           | education             |
 | `SKILLS`              | skills                |
+| `JOB_IDS`             | job_ids               |
 | `METADATA`            | metadata              |
 | `RAW`                 | raw                   |

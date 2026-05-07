@@ -45,6 +45,7 @@ class AtsCandidateTypedDict(TypedDict):
     first_name: NotRequired[str]
     id: NotRequired[str]
     image_url: NotRequired[str]
+    job_ids: NotRequired[List[str]]
     last_name: NotRequired[str]
     link_urls: NotRequired[List[str]]
     r"""URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)"""
@@ -86,6 +87,8 @@ class AtsCandidate(BaseModel):
     id: Optional[str] = None
 
     image_url: Optional[str] = None
+
+    job_ids: Optional[List[str]] = None
 
     last_name: Optional[str] = None
 
@@ -141,6 +144,7 @@ class AtsCandidate(BaseModel):
                 "first_name",
                 "id",
                 "image_url",
+                "job_ids",
                 "last_name",
                 "link_urls",
                 "metadata",

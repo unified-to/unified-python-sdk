@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 4f04f49fd35700b0721981b97c1208ae
+  docChecksum: 711c26f00585a8f5fdc28cc88a86d795
   docVersion: "1.0"
-  speakeasyVersion: 1.761.9
-  generationVersion: 2.881.4
-  releaseVersion: 0.57.42
-  configChecksum: 9a7442b36a4708885aae196fab229ec7
+  speakeasyVersion: 1.762.0
+  generationVersion: 2.882.0
+  releaseVersion: 0.57.43
+  configChecksum: 3cb3118d1d385aa7bdcf3f9724385855
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 864e2709-1df3-4f84-918a-7e25877170e0
-  pristine_commit_hash: 0a1d81bc2668bc62bb30cd68870cee60483cdc61
-  pristine_tree_hash: 88fb9b84222f737bb56a9defa2cd18e1d5456353
+  generation_id: 41de661d-7ad2-492d-b921-96505f2687cd
+  pristine_commit_hash: ea0189b25c4857c9eedcd079bb786593263990b4
+  pristine_tree_hash: 0691bab5a212859c48523e49c732ae3519e3d5c1
 features:
   python:
     acceptHeaders: 3.0.0
@@ -33,7 +33,7 @@ features:
     responseFormat: 1.1.0
     retries: 3.0.5
     sdkHooks: 1.2.1
-    unions: 3.1.4
+    unions: 3.1.5
     uploadStreams: 1.0.0
 trackedFiles:
   .gitattributes:
@@ -310,8 +310,8 @@ trackedFiles:
     pristine_git_object: 1e4191072ac1b13285bc8b35cbf7f4f28e6bfad1
   docs/models/operations/createatscandidatequeryparamfields.md:
     id: 3bf658e3b59f
-    last_write_checksum: sha1:f432094160771e3b64681cad6fba598088b83214
-    pristine_git_object: 62b6f765c7569376332ce352cc29fea4c110cf15
+    last_write_checksum: sha1:96c5ea2e9b2b3373809359396206096279950aab
+    pristine_git_object: d177c4dd3f3fcb9f779d5ea7f8f0fc51e6b5528a
   docs/models/operations/createatscandidaterequest.md:
     id: 78fc17e7d4ed
     last_write_checksum: sha1:130bd90cdccb6e976a2984d75b5f8848d30e79cb
@@ -1638,8 +1638,8 @@ trackedFiles:
     pristine_git_object: e8ef17901e0029f994ef9435f40657226aa73661
   docs/models/operations/getatscandidatequeryparamfields.md:
     id: 73dedd016f63
-    last_write_checksum: sha1:014d67f12bab3830f1f8910c0a66215f499d9577
-    pristine_git_object: 44d8c18292fb96474dabfd4a57c5e4d81c108d33
+    last_write_checksum: sha1:170115acda7bdb64e7edf16eb823a0b8e727d975
+    pristine_git_object: 38ccd648c67f86c4665024e2bfd2de352513b8a7
   docs/models/operations/getatscandidaterequest.md:
     id: d627b793f5c1
     last_write_checksum: sha1:3139969f26cb48b4927c9ac0230e42804cfdbfc4
@@ -3106,8 +3106,8 @@ trackedFiles:
     pristine_git_object: 1f56d5a1ed22eacd8c1e49b3953e074bc1c75716
   docs/models/operations/listatsapplicationsrequest.md:
     id: a89e8a2df096
-    last_write_checksum: sha1:56ad56fa3aec6dfc0ba5b9f61d82e5337fdfd320
-    pristine_git_object: cea907ec68d8e0114ce70fc87d3bdb0705b4483d
+    last_write_checksum: sha1:7a3dfc4bcd0032eea44b036494fc970128173581
+    pristine_git_object: 6e23f30738c6dea005d26bd8679f0e452aea0385
   docs/models/operations/listatsapplicationsresponse.md:
     id: 3e954af096fc
     last_write_checksum: sha1:fc3da171e0313d119b56d81029c20e9faa9d76eb
@@ -3126,8 +3126,8 @@ trackedFiles:
     pristine_git_object: f86fd6b10313fbffbbc97f2c54bf1ad57a6b6aca
   docs/models/operations/listatscandidatesqueryparamfields.md:
     id: 8fc2f670df37
-    last_write_checksum: sha1:26817640845b1087096965921e1bf47a22e2dbec
-    pristine_git_object: 95ad35909cfdd228d2272fb4c024caef61179e06
+    last_write_checksum: sha1:317da0b95581ced586efc051b416982c28860982
+    pristine_git_object: acc6584a5df31ad999ae0545e84c32c0ab915054
   docs/models/operations/listatscandidatesrequest.md:
     id: fec943ec405c
     last_write_checksum: sha1:c963e47322859579bb53fa2e13920bad128a9078
@@ -4562,8 +4562,8 @@ trackedFiles:
     pristine_git_object: 2eb48fc1cbc515747f1de5e2631f8c6de7eca47b
   docs/models/operations/patchatscandidatequeryparamfields.md:
     id: eebd553fca32
-    last_write_checksum: sha1:8e3e2902ac59001c2f89dccf37d25bcb647fd4d8
-    pristine_git_object: b0e1403704efcc115956f4c7e34e8e844c4fd75a
+    last_write_checksum: sha1:6c1c95a6853a42577aef8a8c1b4ed3799bc2d9ec
+    pristine_git_object: 82e4f14c856ea35a43704e13da5662174777771a
   docs/models/operations/patchatscandidaterequest.md:
     id: c6b176f87731
     last_write_checksum: sha1:7290a946e26a0011c0a20852d6b2f0e3a4c12e58
@@ -6614,8 +6614,8 @@ trackedFiles:
     pristine_git_object: 14a4a60440cc9aa83a00fcbee9c6e53151799803
   docs/models/operations/updateatscandidatequeryparamfields.md:
     id: 210ee89e355b
-    last_write_checksum: sha1:e8686cdfc90cbc763a3852505de481690c110795
-    pristine_git_object: 2c196c70910202548f799eeecce72baa94347345
+    last_write_checksum: sha1:88ee694ddd7a66e9c7968e5a1e57f28c2bd24958
+    pristine_git_object: 9e5f2fee32a1f8f671e0ef2e2805be7fb6ad3225
   docs/models/operations/updateatscandidaterequest.md:
     id: ca15777427ac
     last_write_checksum: sha1:089bbe2bf46cd0bd1aad5d79a14e689133ac534d
@@ -7978,8 +7978,8 @@ trackedFiles:
     pristine_git_object: c96ef0b4ecc466ad055d40be1e2ca460838f5b85
   docs/models/shared/atscandidate.md:
     id: b958057f26fa
-    last_write_checksum: sha1:974d6a567affc0f10b65a9ea0c1cc554bf6cf6ca
-    pristine_git_object: 4d9055187e270ad3799706145ebe61f1bcc587cc
+    last_write_checksum: sha1:d2d878d7630a16d7b9cdc803611a344af1c6d456
+    pristine_git_object: 9d846eabca097c4fb0f9973dd8b4d39b0cbb59cf
   docs/models/shared/atscandidateeducation.md:
     id: 0d646796ef45
     last_write_checksum: sha1:dd1a4e09d3a0498ce31e7cdd1b1ff2986f630713
@@ -11602,8 +11602,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:17e62ec314ba50a54312dadf5e3f93b7ad21d8e9
-    pristine_git_object: 6b84175d2b7e9c8bf43b0909521eb43ada4e55df
+    last_write_checksum: sha1:c03a8b4713c7c2ce405e9641ca2366f0fdb81010
+    pristine_git_object: ff0e0507d2d47e2870fca7a87189130530e0ad29
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11630,8 +11630,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:e107e3416e8a54c1b5892f5d99b216b618400c65
-    pristine_git_object: e5c793203df3338ee0b5e7dac4bfc935f34416c7
+    last_write_checksum: sha1:b4d8b9070bf810b660bce7d649bdddb933d3c80a
+    pristine_git_object: 342e9438e03e2c6e3cddce9afc3145b2580ceea8
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:ed76e5ffc5ac5b86fc44cbb401bb5277456e8c7f
@@ -12086,8 +12086,8 @@ trackedFiles:
     pristine_git_object: 502d3055af7e1e7ec0938bbc29c74851b33bec78
   src/unified_python_sdk/models/operations/createatscandidate.py:
     id: 99977e505442
-    last_write_checksum: sha1:1f559cdf56b031eecd1d0af8daa9ee984484eb08
-    pristine_git_object: 9b5158fe4b4117dc14b8bd92553244c8876f353b
+    last_write_checksum: sha1:23b3e44a3fda41b437b16bb4062fe7179f075a1e
+    pristine_git_object: ff8cd9733ed26f4b992844e5e930c0d6701390d7
   src/unified_python_sdk/models/operations/createatscompany.py:
     id: 5c6d3793924a
     last_write_checksum: sha1:6b850e54fac2ff033e79b79bc18a8e5e2b9bafff
@@ -12542,8 +12542,8 @@ trackedFiles:
     pristine_git_object: 12d6d5fa8fbca96a3aa70952b5a60eda2db219fb
   src/unified_python_sdk/models/operations/getatscandidate.py:
     id: 7ca37c1612cf
-    last_write_checksum: sha1:dc8828f5611aa7dfb22aa4bed8dbf6584a589fd0
-    pristine_git_object: 5af55105be51a404f86d032feabe84e9c4b84811
+    last_write_checksum: sha1:5fee956889711e878009c5b970eaf7d91cb9a336
+    pristine_git_object: 8fc9d7e7f23aa42291bb806cc20e4d5446b86b7c
   src/unified_python_sdk/models/operations/getatscompany.py:
     id: e6888adf2f52
     last_write_checksum: sha1:320654fecd3f0f8f8ff515ca20dddf9d9ce18724
@@ -13042,16 +13042,16 @@ trackedFiles:
     pristine_git_object: 7506ce9112223decfd6c54a4dfb9d2bb9c81b052
   src/unified_python_sdk/models/operations/listatsapplications.py:
     id: 1dca11b3242b
-    last_write_checksum: sha1:d4450632a279f024124fb365194c3011144c76ee
-    pristine_git_object: 76b556f7111c03e640ad5397f59fcfb2236a60cf
+    last_write_checksum: sha1:e7a2cb31a5891c8ae6b6e7adc0e2032511d59037
+    pristine_git_object: f1c646a009dac99c3d4a04fa7dfab792f856c61b
   src/unified_python_sdk/models/operations/listatsapplicationstatuses.py:
     id: 8735cf38afc2
     last_write_checksum: sha1:b7d6f4cbf8bfa4f34627b3dc1dee704ef2bd4a69
     pristine_git_object: 008d2de484e46222f22e3fe4b0b343875080e1e9
   src/unified_python_sdk/models/operations/listatscandidates.py:
     id: 5aa6abef9af9
-    last_write_checksum: sha1:3d19f2db992672fb514fc95bbb07a52c31aad18c
-    pristine_git_object: 8761cf64f82b2ed9d5571c3043a9b042779fde4e
+    last_write_checksum: sha1:f63398ce803c8d6c609cb1cc6dd564d5957633c0
+    pristine_git_object: 854c6a407744edadb0be90b37cf61462e57ba492
   src/unified_python_sdk/models/operations/listatscompanies.py:
     id: 6c40979ace67
     last_write_checksum: sha1:8aef68bfd8fe378ddab687a8622f933efa4f4a7b
@@ -13546,8 +13546,8 @@ trackedFiles:
     pristine_git_object: de437c04235dfa5e1e09c547256cf50c4bec32d2
   src/unified_python_sdk/models/operations/patchatscandidate.py:
     id: 681bf598fe87
-    last_write_checksum: sha1:09104efa214f3403281177c5e05cf8d8b475182f
-    pristine_git_object: 7d492e49f71457ad4a6d5e9bac184c9197762335
+    last_write_checksum: sha1:d16622f350d72ae8bef2cf5806b12c56a408600a
+    pristine_git_object: f81218bc22a3ecd6561bd12286475edbc6ef693e
   src/unified_python_sdk/models/operations/patchatscompany.py:
     id: 0656d9a2694f
     last_write_checksum: sha1:b3214180146acc166a3eb97b29f589552b402611
@@ -14374,8 +14374,8 @@ trackedFiles:
     pristine_git_object: 34e426f616f8fd890ae7b313e41638a121238363
   src/unified_python_sdk/models/operations/updateatscandidate.py:
     id: 3ec52d632b44
-    last_write_checksum: sha1:68411c9245d9a8c1bd50060a9ef710f88fbe11a5
-    pristine_git_object: 0d6aa5bfc878e0c382d24e275d6bdba7f674807f
+    last_write_checksum: sha1:0ead0dd82e346149ffdbdc859798a08e084712de
+    pristine_git_object: 2c70b0b010989ba7ecf302f4913215c6d65fb0a2
   src/unified_python_sdk/models/operations/updateatscompany.py:
     id: 123948f86141
     last_write_checksum: sha1:e98a45a6c3455fcaade489732e3e6486963bf24e
@@ -14962,8 +14962,8 @@ trackedFiles:
     pristine_git_object: 73319307eeb22bff21ec3685d60d4a466d047fc4
   src/unified_python_sdk/models/shared/atscandidate.py:
     id: 8c26795afb0b
-    last_write_checksum: sha1:f4fff0ebd1800f60d2eb05ea728c1c2c09e4001e
-    pristine_git_object: 3f9631b7261e68d0ebbdc3e42d28e074fca62bcc
+    last_write_checksum: sha1:18026390a46c4d7ada41f6af75d0817241f4e668
+    pristine_git_object: 810a4b225c74e884305336fe455a9636f3922fc4
   src/unified_python_sdk/models/shared/atscandidateeducation.py:
     id: 185048fd004b
     last_write_checksum: sha1:681697f8a89d020ece88a0311cfdb381f08708b6
@@ -22885,7 +22885,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.ads.list_ads_targets()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.target.list_ads_targets()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified_to.ads.patch_ads_group()`: \n  *  `request.ads_group.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ads.list_ads_reports()`:  `response.[].metrics[].ad.promoted[].raw` **Added**\n* `unified_to.report.list_ads_reports()`:  `response.[].metrics[].ad.promoted[].raw` **Added**\n* `unified_to.ads.create_ads_ad()`: \n  *  `request.ads_ad.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ads.create_ads_creative()`: \n  *  `request.ads_creative.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ads.create_ads_group()`: \n  *  `request.ads_group.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ads.get_ads_ad()`:  `response.promoted[].raw` **Added**\n* `unified_to.ads.get_ads_creative()`:  `response.promoted[].raw` **Added**\n* `unified_to.ads.get_ads_group()`:  `response.promoted[].raw` **Added**\n* `unified_to.ads.list_ads_ads()`:  `response.[].promoted[].raw` **Added**\n* `unified_to.ads.list_ads_campaigns()`:  `request` **Changed**\n* `unified_to.ads.list_ads_creatives()`:  `response.[].promoted[].raw` **Added**\n* `unified_to.ads.list_ads_groups()`: \n  *  `request` **Changed**\n  *  `response.[].promoted[].raw` **Added**\n* `unified_to.ads.list_ads_promoteds()`: \n  *  `request.fields` **Changed**\n  *  `response.[].raw` **Added**\n* `unified_to.ads.update_ads_ad()`: \n  *  `request.ads_ad.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.promoted.get_ads_promoted()`: **Added**\n* `unified_to.ads.patch_ads_ad()`: \n  *  `request.ads_ad.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ads.patch_ads_creative()`: \n  *  `request.ads_creative.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.target.get_ads_target()`: **Added**\n* `unified_to.ads.get_ads_promoted()`: **Added**\n* `unified_to.ad.patch_ads_ad()`: \n  *  `request.ads_ad.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ads.update_ads_group()`: \n  *  `request.ads_group.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ad.create_ads_ad()`: \n  *  `request.ads_ad.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ad.get_ads_ad()`:  `response.promoted[].raw` **Added**\n* `unified_to.ad.list_ads_ads()`:  `response.[].promoted[].raw` **Added**\n* `unified_to.ads.update_ads_creative()`: \n  *  `request.ads_creative.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.ad.update_ads_ad()`: \n  *  `request.ads_ad.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.campaign.list_ads_campaigns()`:  `request` **Changed**\n* `unified_to.creative.create_ads_creative()`: \n  *  `request.ads_creative.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.creative.get_ads_creative()`:  `response.promoted[].raw` **Added**\n* `unified_to.creative.list_ads_creatives()`:  `response.[].promoted[].raw` **Added**\n* `unified_to.creative.patch_ads_creative()`: \n  *  `request.ads_creative.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.creative.update_ads_creative()`: \n  *  `request.ads_creative.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.group.create_ads_group()`: \n  *  `request.ads_group.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.group.get_ads_group()`:  `response.promoted[].raw` **Added**\n* `unified_to.group.list_ads_groups()`: \n  *  `request` **Changed**\n  *  `response.[].promoted[].raw` **Added**\n* `unified_to.group.patch_ads_group()`: \n  *  `request.ads_group.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.group.update_ads_group()`: \n  *  `request.ads_group.promoted[].raw` **Added**\n  *  `response.promoted[].raw` **Added**\n* `unified_to.promoted.list_ads_promoteds()`: \n  *  `request.fields` **Changed**\n  *  `response.[].raw` **Added**\n* `unified_to.ads.get_ads_target()`: **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.ats.create_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.job_ids` **Added**\n* `unified_to.ats.get_ats_candidate()`: \n  *  `request.fields` **Changed**\n  *  `response.job_ids` **Added**\n* `unified_to.ats.list_ats_applications()`: \n  *  `request.status` **Added**\n* `unified_to.ats.list_ats_candidates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].job_ids` **Added**\n* `unified_to.ats.patch_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.job_ids` **Added**\n* `unified_to.ats.update_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.job_ids` **Added**\n* `unified_to.application.list_ats_applications()`: \n  *  `request.status` **Added**\n* `unified_to.candidate.create_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.job_ids` **Added**\n* `unified_to.candidate.get_ats_candidate()`: \n  *  `request.fields` **Changed**\n  *  `response.job_ids` **Added**\n* `unified_to.candidate.list_ats_candidates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].job_ids` **Added**\n* `unified_to.candidate.patch_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.job_ids` **Added**\n* `unified_to.candidate.update_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.job_ids` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
