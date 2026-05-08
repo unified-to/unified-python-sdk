@@ -551,7 +551,12 @@ if TYPE_CHECKING:
         HrisPayslipDetailTypedDict,
     )
     from .hristelephone import HrisTelephone, HrisTelephoneType, HrisTelephoneTypedDict
-    from .hristimeoff import HrisTimeoff, HrisTimeoffStatus, HrisTimeoffTypedDict
+    from .hristimeoff import (
+        HrisTimeoff,
+        HrisTimeoffStatus,
+        HrisTimeoffType,
+        HrisTimeoffTypedDict,
+    )
     from .hristimeshift import HrisTimeshift, HrisTimeshiftTypedDict
     from .integration import (
         API,
@@ -2128,6 +2133,7 @@ __all__ = [
     "HrisTelephoneTypedDict",
     "HrisTimeoff",
     "HrisTimeoffStatus",
+    "HrisTimeoffType",
     "HrisTimeoffTypedDict",
     "HrisTimeshift",
     "HrisTimeshiftTypedDict",
@@ -3448,6 +3454,7 @@ _dynamic_imports: dict[str, str] = {
     "HrisTelephoneTypedDict": ".hristelephone",
     "HrisTimeoff": ".hristimeoff",
     "HrisTimeoffStatus": ".hristimeoff",
+    "HrisTimeoffType": ".hristimeoff",
     "HrisTimeoffTypedDict": ".hristimeoff",
     "HrisTimeshift": ".hristimeshift",
     "HrisTimeshiftTypedDict": ".hristimeshift",

@@ -25,5 +25,6 @@ value = GetHrisTimeoffQueryParamFields.ID
 | `APPROVER_USER_ID` | approver_user_id   |
 | `APPROVED_AT`      | approved_at        |
 | `COMMENTS`         | comments           |
-| `RAW`              | raw                |
 | `REASON`           | reason             |
+| `TYPE`             | type               |
+| `RAW`              | raw                |

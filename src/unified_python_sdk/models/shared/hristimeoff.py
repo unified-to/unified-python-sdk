@@ -17,6 +17,17 @@ class HrisTimeoffStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     DENIED = "DENIED"
 
 
+class HrisTimeoffType(str, Enum, metaclass=utils.OpenEnumMeta):
+    VACATION = "VACATION"
+    SICK = "SICK"
+    HOLIDAY = "HOLIDAY"
+    BEREAVEMENT = "BEREAVEMENT"
+    PARENTAL = "PARENTAL"
+    UNPAID = "UNPAID"
+    IN_LIEU = "IN_LIEU"
+    OTHER = "OTHER"
+
+
 class HrisTimeoffTypedDict(TypedDict):
     start_at: datetime
     approved_at: NotRequired[datetime]
@@ -30,6 +41,7 @@ class HrisTimeoffTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     reason: NotRequired[str]
     status: NotRequired[HrisTimeoffStatus]
+    type: NotRequired[HrisTimeoffType]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
 
@@ -59,6 +71,8 @@ class HrisTimeoff(BaseModel):
 
     status: Optional[HrisTimeoffStatus] = None
 
+    type: Optional[HrisTimeoffType] = None
+
     updated_at: Optional[datetime] = None
 
     user_id: Optional[str] = None
@@ -68,6 +82,15 @@ class HrisTimeoff(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.HrisTimeoffStatus(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.HrisTimeoffType(value)
             except ValueError:
                 return value
         return value
@@ -87,6 +110,7 @@ class HrisTimeoff(BaseModel):
                 "raw",
                 "reason",
                 "status",
+                "type",
                 "updated_at",
                 "user_id",
             ]
