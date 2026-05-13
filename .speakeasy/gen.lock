@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b92ae9b53e2fd3c68f3300b3a8bec89d
+  docChecksum: 1a8d1590728cad21bdabd6d8e81d61e1
   docVersion: "1.0"
   speakeasyVersion: 1.762.0
   generationVersion: 2.882.0
-  releaseVersion: 0.57.44
-  configChecksum: ffa893cec7433a4b4df6d3b262a5e9c6
+  releaseVersion: 0.57.45
+  configChecksum: 79a66c3d31d2f7e1cc6dedee4f1b230f
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 2748d48c-e44d-4818-b0f9-757a71c3a87a
-  pristine_commit_hash: 116f2462b3015f538e3c93439d863d5aff7612a2
-  pristine_tree_hash: 66382819b15fc94cbc075f703ca95b3289c52496
+  generation_id: 6218a073-2ccc-45c0-b094-4fcadf16049e
+  pristine_commit_hash: 8e4a60579e7919f936537acd0f944561fe427cdc
+  pristine_tree_hash: 2029290052e80a36ceb0d00e97ebe168956332e1
 features:
   python:
     acceptHeaders: 3.0.0
@@ -3154,8 +3154,8 @@ trackedFiles:
     pristine_git_object: 33212822ba0734795b223f46cfc0f1b273689d99
   docs/models/operations/listatsdocumentsrequest.md:
     id: 7d726142cdf0
-    last_write_checksum: sha1:9b9c12d1116e98451fe2fbea2474832c17618bdd
-    pristine_git_object: a7bc81f63f408ffe58e6da42c3b4d34b0f488ca1
+    last_write_checksum: sha1:54312483e48610e61a1e638412f85c662ffeb830
+    pristine_git_object: 8e36997462cdb1ba4b9ffcfc36e5e2f3c5acd03c
   docs/models/operations/listatsdocumentsresponse.md:
     id: 0bc5be4cddc0
     last_write_checksum: sha1:b1f74547214d56719c466c4d81fdd891bc4be848
@@ -11606,8 +11606,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:6d7087b328233c0f51d9471c22a3e6a506367415
-    pristine_git_object: 7cbd3ef203c7a058018a0c325d3d88cf72262e6f
+    last_write_checksum: sha1:2e539b8f8183c694ba3aca59fccbecc56b6f08db
+    pristine_git_object: 8cc5e49302a9bd0bc75ba0a13746ca84d252d73d
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11634,8 +11634,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:47e7c33d54652e071089606fc26178808dd879a1
-    pristine_git_object: f93165e1098e533c405d4c2787f8418cd33700f2
+    last_write_checksum: sha1:b1c14d6bd6ac9c2d6694cf50a82fba3ba7f5f91b
+    pristine_git_object: 97bef8008559c7e66adfd9b46aabaef66fb520d5
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:ed76e5ffc5ac5b86fc44cbb401bb5277456e8c7f
@@ -13062,8 +13062,8 @@ trackedFiles:
     pristine_git_object: ccf3ce698cd60168b4c0922a91313fecd93b1797
   src/unified_python_sdk/models/operations/listatsdocuments.py:
     id: 4d66e3620c5a
-    last_write_checksum: sha1:aac857412bb1f6b5b30b030afed77f66d46f4fff
-    pristine_git_object: d040fecfa4bf417b04369aa6ecb6cea6c9aa8a67
+    last_write_checksum: sha1:246728f39d745ba55a4b60cc02a7b0954fed844a
+    pristine_git_object: ef6ec28b2ea8675182fa374211a074bec892e951
   src/unified_python_sdk/models/operations/listatsinterviews.py:
     id: a625bd673710
     last_write_checksum: sha1:667c2545773e373cab4596f83f64cf53ccb9d5b4
@@ -22889,7 +22889,6 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.hris.create_hris_timeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified_to.hris.get_hris_timeoff()`: \n  *  `request.fields` **Changed**\n  *  `response.type` **Added**\n* `unified_to.hris.list_hris_timeoffs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].type` **Added**\n* `unified_to.hris.patch_hris_timeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified_to.hris.update_hris_timeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified_to.timeoff.create_hris_timeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified_to.timeoff.get_hris_timeoff()`: \n  *  `request.fields` **Changed**\n  *  `response.type` **Added**\n* `unified_to.timeoff.list_hris_timeoffs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].type` **Added**\n* `unified_to.timeoff.patch_hris_timeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified_to.timeoff.update_hris_timeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
