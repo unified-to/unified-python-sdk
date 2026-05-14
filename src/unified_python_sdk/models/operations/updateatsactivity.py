@@ -35,6 +35,7 @@ class UpdateAtsActivityQueryParamFields(str, Enum):
     CC = "cc"
     BCC = "bcc"
     SUB_TYPE = "sub_type"
+    COMPANY_ID = "company_id"
     RAW = "raw"
 
 

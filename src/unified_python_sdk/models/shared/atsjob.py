@@ -71,6 +71,7 @@ class AtsJobTypedDict(TypedDict):
     skills: NotRequired[List[str]]
     status: NotRequired[AtsJobStatus]
     updated_at: NotRequired[datetime]
+    user_id: NotRequired[str]
 
 
 class AtsJob(BaseModel):
@@ -131,6 +132,8 @@ class AtsJob(BaseModel):
 
     updated_at: Optional[datetime] = None
 
+    user_id: Optional[str] = None
+
     @field_serializer("employment_type")
     def serialize_employment_type(self, value):
         if isinstance(value, str):
@@ -180,6 +183,7 @@ class AtsJob(BaseModel):
                 "skills",
                 "status",
                 "updated_at",
+                "user_id",
             ]
         )
         serialized = handler(self)

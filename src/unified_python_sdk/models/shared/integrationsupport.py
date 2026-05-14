@@ -620,6 +620,12 @@ class SearchTwitter(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookAccountID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookAdID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1070,6 +1076,7 @@ class IntegrationSupportTypedDict(TypedDict):
     search_name: NotRequired[SearchName]
     search_twitter: NotRequired[SearchTwitter]
     slow_fields: NotRequired[List[str]]
+    virtual_webhook_account_id: NotRequired[VirtualWebhookAccountID]
     virtual_webhook_ad_id: NotRequired[VirtualWebhookAdID]
     virtual_webhook_application_id: NotRequired[VirtualWebhookApplicationID]
     virtual_webhook_benefit_id: NotRequired[VirtualWebhookBenefitID]
@@ -1343,6 +1350,8 @@ class IntegrationSupport(BaseModel):
     search_twitter: Optional[SearchTwitter] = None
 
     slow_fields: Optional[List[str]] = None
+
+    virtual_webhook_account_id: Optional[VirtualWebhookAccountID] = None
 
     virtual_webhook_ad_id: Optional[VirtualWebhookAdID] = None
 
@@ -2369,6 +2378,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_account_id")
+    def serialize_virtual_webhook_account_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookAccountID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_ad_id")
     def serialize_virtual_webhook_ad_id(self, value):
         if isinstance(value, str):
@@ -2992,6 +3010,7 @@ class IntegrationSupport(BaseModel):
                 "search_name",
                 "search_twitter",
                 "slow_fields",
+                "virtual_webhook_account_id",
                 "virtual_webhook_ad_id",
                 "virtual_webhook_application_id",
                 "virtual_webhook_benefit_id",

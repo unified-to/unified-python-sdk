@@ -6,65 +6,81 @@ import httpx
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import atsactivity as shared_atsactivity
+from unified_python_sdk.models.shared import shippingtracking as shared_shippingtracking
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
     PathParamMetadata,
     QueryParamMetadata,
-    RequestMetadata,
 )
 
 
-class CreateAtsActivityQueryParamFields(str, Enum):
+class ListShippingTrackingsQueryParamFields(str, Enum):
     ID = "id"
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
-    CANDIDATE_ID = "candidate_id"
-    APPLICATION_ID = "application_id"
-    JOB_ID = "job_id"
-    INTERVIEW_ID = "interview_id"
-    DOCUMENT_IDS = "document_ids"
-    TITLE = "title"
-    DESCRIPTION = "description"
-    IS_PRIVATE = "is_private"
-    USER_IDS = "user_ids"
-    TYPE = "type"
-    FROM = "from"
-    TO = "to"
-    CC = "cc"
-    BCC = "bcc"
-    SUB_TYPE = "sub_type"
-    COMPANY_ID = "company_id"
+    SHIPMENT_ID = "shipment_id"
+    TRACKING_NUMBER = "tracking_number"
+    STATUS = "status"
+    EVENTS = "events"
+    ESTIMATED_DELIVERY = "estimated_delivery"
+    ACTUAL_DELIVERY_AT = "actual_delivery_at"
+    STATUS_DESCRIPTION = "status_description"
+    CARRIER_ID = "carrier_id"
+    CARRIER_STATUS_CODE = "carrier_status_code"
+    CARRIER_STATUS_DESCRIPTION = "carrier_status_description"
     RAW = "raw"
 
 
-class CreateAtsActivityRequestTypedDict(TypedDict):
-    ats_activity: shared_atsactivity.AtsActivityTypedDict
+class ListShippingTrackingsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
-    fields: NotRequired[List[CreateAtsActivityQueryParamFields]]
+    fields: NotRequired[List[ListShippingTrackingsQueryParamFields]]
     r"""Fields to return"""
+    limit: NotRequired[float]
+    offset: NotRequired[float]
+    order: NotRequired[str]
+    query: NotRequired[str]
+    r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
+    sort: NotRequired[str]
+    updated_gte: NotRequired[str]
+    r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
-class CreateAtsActivityRequest(BaseModel):
-    ats_activity: Annotated[
-        shared_atsactivity.AtsActivity,
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ]
-
+class ListShippingTrackingsRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
 
     fields: Annotated[
-        Optional[List[CreateAtsActivityQueryParamFields]],
+        Optional[List[ListShippingTrackingsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    limit: Annotated[
+        Optional[float],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    offset: Annotated[
+        Optional[float],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    order: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    query: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Query string to search. eg. email address or name"""
 
     raw: Annotated[
         Optional[str],
@@ -72,9 +88,31 @@ class CreateAtsActivityRequest(BaseModel):
     ] = None
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
+    sort: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    updated_gte: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["fields", "raw"])
+        optional_fields = set(
+            [
+                "fields",
+                "limit",
+                "offset",
+                "order",
+                "query",
+                "raw",
+                "sort",
+                "updated_gte",
+            ]
+        )
         serialized = handler(self)
         m = {}
 
@@ -89,18 +127,20 @@ class CreateAtsActivityRequest(BaseModel):
         return m
 
 
-class CreateAtsActivityResponseTypedDict(TypedDict):
+class ListShippingTrackingsResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    ats_activity: NotRequired[shared_atsactivity.AtsActivityTypedDict]
+    shipping_trackings: NotRequired[
+        List[shared_shippingtracking.ShippingTrackingTypedDict]
+    ]
     r"""Successful"""
 
 
-class CreateAtsActivityResponse(BaseModel):
+class ListShippingTrackingsResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -110,12 +150,12 @@ class CreateAtsActivityResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    ats_activity: Optional[shared_atsactivity.AtsActivity] = None
+    shipping_trackings: Optional[List[shared_shippingtracking.ShippingTracking]] = None
     r"""Successful"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["AtsActivity"])
+        optional_fields = set(["ShippingTrackings"])
         serialized = handler(self)
         m = {}
 

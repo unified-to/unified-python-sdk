@@ -51,6 +51,8 @@ class ListKmsPagesRequestTypedDict(TypedDict):
     r"""The space ID to filter by (reference to KmsSpace)"""
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    user_id: NotRequired[str]
+    r"""The user/employee ID to filter by (reference to HrisEmployee)"""
 
 
 class ListKmsPagesRequest(BaseModel):
@@ -115,6 +117,12 @@ class ListKmsPagesRequest(BaseModel):
     ] = None
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
+    user_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The user/employee ID to filter by (reference to HrisEmployee)"""
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
@@ -129,6 +137,7 @@ class ListKmsPagesRequest(BaseModel):
                 "sort",
                 "space_id",
                 "updated_gte",
+                "user_id",
             ]
         )
         serialized = handler(self)

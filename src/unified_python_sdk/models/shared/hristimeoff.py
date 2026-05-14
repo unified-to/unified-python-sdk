@@ -29,7 +29,6 @@ class HrisTimeoffType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class HrisTimeoffTypedDict(TypedDict):
-    start_at: datetime
     approved_at: NotRequired[datetime]
     approver_user_id: NotRequired[str]
     comments: NotRequired[str]
@@ -40,6 +39,7 @@ class HrisTimeoffTypedDict(TypedDict):
     is_paid: NotRequired[bool]
     raw: NotRequired[Dict[str, Any]]
     reason: NotRequired[str]
+    start_at: NotRequired[datetime]
     status: NotRequired[HrisTimeoffStatus]
     type: NotRequired[HrisTimeoffType]
     updated_at: NotRequired[datetime]
@@ -47,8 +47,6 @@ class HrisTimeoffTypedDict(TypedDict):
 
 
 class HrisTimeoff(BaseModel):
-    start_at: datetime
-
     approved_at: Optional[datetime] = None
 
     approver_user_id: Optional[str] = None
@@ -68,6 +66,8 @@ class HrisTimeoff(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     reason: Optional[str] = None
+
+    start_at: Optional[datetime] = None
 
     status: Optional[HrisTimeoffStatus] = None
 
@@ -109,6 +109,7 @@ class HrisTimeoff(BaseModel):
                 "is_paid",
                 "raw",
                 "reason",
+                "start_at",
                 "status",
                 "type",
                 "updated_at",

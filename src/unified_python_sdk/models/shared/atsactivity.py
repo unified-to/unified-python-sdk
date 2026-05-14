@@ -28,6 +28,7 @@ class AtsActivityTypedDict(TypedDict):
     bcc: NotRequired[List[AtsEmailTypedDict]]
     candidate_id: NotRequired[str]
     cc: NotRequired[List[AtsEmailTypedDict]]
+    company_id: NotRequired[str]
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     document_ids: NotRequired[List[str]]
@@ -55,6 +56,8 @@ class AtsActivity(BaseModel):
     candidate_id: Optional[str] = None
 
     cc: Optional[List[AtsEmail]] = None
+
+    company_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
@@ -107,6 +110,7 @@ class AtsActivity(BaseModel):
                 "bcc",
                 "candidate_id",
                 "cc",
+                "company_id",
                 "created_at",
                 "description",
                 "document_ids",
