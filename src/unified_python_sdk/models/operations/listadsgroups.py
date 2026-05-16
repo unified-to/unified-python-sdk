@@ -72,6 +72,8 @@ class ListAdsGroupsRequestTypedDict(TypedDict):
     sort: NotRequired[str]
     start_gte: NotRequired[str]
     r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    status: NotRequired[str]
+    r"""The status to filter by"""
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -156,6 +158,12 @@ class ListAdsGroupsRequest(BaseModel):
     ] = None
     r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
+    status: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The status to filter by"""
+
     updated_gte: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -179,6 +187,7 @@ class ListAdsGroupsRequest(BaseModel):
                 "raw",
                 "sort",
                 "start_gte",
+                "status",
                 "updated_gte",
             ]
         )

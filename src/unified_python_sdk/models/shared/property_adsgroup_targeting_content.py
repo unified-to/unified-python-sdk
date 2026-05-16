@@ -6,6 +6,7 @@ from .property_adsgroup_targeting_content_video import (
     PropertyAdsGroupTargetingContentVideo,
     PropertyAdsGroupTargetingContentVideoTypedDict,
 )
+from .topictarget import TopicTarget, TopicTargetTypedDict
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
@@ -14,10 +15,10 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class PropertyAdsGroupTargetingContentTypedDict(TypedDict):
     excluded_keywords: NotRequired[List[AdsKeywordTypedDict]]
-    excluded_topics: NotRequired[List[str]]
+    excluded_topics: NotRequired[List[TopicTargetTypedDict]]
     excluded_urls: NotRequired[List[str]]
     keywords: NotRequired[List[AdsKeywordTypedDict]]
-    topics: NotRequired[List[str]]
+    topics: NotRequired[List[TopicTargetTypedDict]]
     urls: NotRequired[List[str]]
     video: NotRequired[PropertyAdsGroupTargetingContentVideoTypedDict]
 
@@ -25,13 +26,13 @@ class PropertyAdsGroupTargetingContentTypedDict(TypedDict):
 class PropertyAdsGroupTargetingContent(BaseModel):
     excluded_keywords: Optional[List[AdsKeyword]] = None
 
-    excluded_topics: Optional[List[str]] = None
+    excluded_topics: Optional[List[TopicTarget]] = None
 
     excluded_urls: Optional[List[str]] = None
 
     keywords: Optional[List[AdsKeyword]] = None
 
-    topics: Optional[List[str]] = None
+    topics: Optional[List[TopicTarget]] = None
 
     urls: Optional[List[str]] = None
 

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .citytarget import CityTarget, CityTargetTypedDict
+from .geotarget import GeoTarget, GeoTargetTypedDict
 from .property_adsreportmetrics_campaign_targeting_geographic_location_types import (
     PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes,
 )
@@ -24,43 +25,43 @@ class PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType(
 
 class PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict(TypedDict):
     cities: NotRequired[List[CityTargetTypedDict]]
-    countries: NotRequired[List[str]]
+    countries: NotRequired[List[GeoTargetTypedDict]]
     excluded_cities: NotRequired[List[CityTargetTypedDict]]
-    excluded_countries: NotRequired[List[str]]
-    excluded_postal_codes: NotRequired[List[str]]
+    excluded_countries: NotRequired[List[GeoTargetTypedDict]]
+    excluded_postal_codes: NotRequired[List[GeoTargetTypedDict]]
     excluded_regions: NotRequired[List[RegionTargetTypedDict]]
-    excluded_us_dmas: NotRequired[List[str]]
+    excluded_us_dmas: NotRequired[List[GeoTargetTypedDict]]
     location_types: NotRequired[
         List[PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes]
     ]
-    postal_codes: NotRequired[List[str]]
+    postal_codes: NotRequired[List[GeoTargetTypedDict]]
     presence_type: NotRequired[
         PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType
     ]
     regions: NotRequired[List[RegionTargetTypedDict]]
-    us_dmas: NotRequired[List[str]]
+    us_dmas: NotRequired[List[GeoTargetTypedDict]]
 
 
 class PropertyAdsReportMetricsCampaignTargetingGeographic(BaseModel):
     cities: Optional[List[CityTarget]] = None
 
-    countries: Optional[List[str]] = None
+    countries: Optional[List[GeoTarget]] = None
 
     excluded_cities: Optional[List[CityTarget]] = None
 
-    excluded_countries: Optional[List[str]] = None
+    excluded_countries: Optional[List[GeoTarget]] = None
 
-    excluded_postal_codes: Optional[List[str]] = None
+    excluded_postal_codes: Optional[List[GeoTarget]] = None
 
     excluded_regions: Optional[List[RegionTarget]] = None
 
-    excluded_us_dmas: Optional[List[str]] = None
+    excluded_us_dmas: Optional[List[GeoTarget]] = None
 
     location_types: Optional[
         List[PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes]
     ] = None
 
-    postal_codes: Optional[List[str]] = None
+    postal_codes: Optional[List[GeoTarget]] = None
 
     presence_type: Optional[
         PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType
@@ -68,7 +69,7 @@ class PropertyAdsReportMetricsCampaignTargetingGeographic(BaseModel):
 
     regions: Optional[List[RegionTarget]] = None
 
-    us_dmas: Optional[List[str]] = None
+    us_dmas: Optional[List[GeoTarget]] = None
 
     @field_serializer("presence_type")
     def serialize_presence_type(self, value):

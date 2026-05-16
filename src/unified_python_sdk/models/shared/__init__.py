@@ -462,6 +462,7 @@ if TYPE_CHECKING:
     from .crmreference import CrmReference, CrmReferenceTypedDict
     from .crmstage import CrmStage, CrmStageTypedDict
     from .crmtelephone import CrmTelephone, CrmTelephoneType, CrmTelephoneTypedDict
+    from .devicetarget import DeviceTarget, DeviceTargetTypedDict
     from .enrichcompany import EnrichCompany, EnrichCompanyTypedDict
     from .enrichemail import EnrichEmail, EnrichEmailType, EnrichEmailTypedDict
     from .enrichperson import EnrichPerson, EnrichPersonTypedDict, Gender
@@ -486,6 +487,7 @@ if TYPE_CHECKING:
     )
     from .genaimodel import GenaiModel, GenaiModelTypedDict
     from .genaiprompt import GenaiPrompt, GenaiPromptTypedDict
+    from .geotarget import GeoTarget, GeoTargetTypedDict
     from .hrisbankaccount import AccountType, HrisBankaccount, HrisBankaccountTypedDict
     from .hrisbenefit import (
         CoverageLevel,
@@ -1611,6 +1613,7 @@ if TYPE_CHECKING:
         TicketingTicketStatus,
         TicketingTicketTypedDict,
     )
+    from .topictarget import TopicTarget, TopicTargetTypedDict
     from .uccall import UcCall, UcCallType, UcCallTypedDict
     from .uccomment import UcComment, UcCommentTypedDict
     from .uccontact import UcContact, UcContactTypedDict
@@ -2027,6 +2030,8 @@ __all__ = [
     "CrmTelephoneTypedDict",
     "DayOfWeek",
     "DbType",
+    "DeviceTarget",
+    "DeviceTargetTypedDict",
     "DutiesPaidBy",
     "EmployerContributionType",
     "EmploymentStatus",
@@ -2073,6 +2078,8 @@ __all__ = [
     "GenaiPrompt",
     "GenaiPromptTypedDict",
     "Gender",
+    "GeoTarget",
+    "GeoTargetTypedDict",
     "Goal",
     "HostingSource",
     "HrisBankaccount",
@@ -2858,6 +2865,8 @@ __all__ = [
     "TicketingTicketStatus",
     "TicketingTicketTypedDict",
     "TimeUnit",
+    "TopicTarget",
+    "TopicTargetTypedDict",
     "Type",
     "UcCall",
     "UcCallType",
@@ -3356,6 +3365,8 @@ _dynamic_imports: dict[str, str] = {
     "CrmTelephone": ".crmtelephone",
     "CrmTelephoneType": ".crmtelephone",
     "CrmTelephoneTypedDict": ".crmtelephone",
+    "DeviceTarget": ".devicetarget",
+    "DeviceTargetTypedDict": ".devicetarget",
     "EnrichCompany": ".enrichcompany",
     "EnrichCompanyTypedDict": ".enrichcompany",
     "EnrichEmail": ".enrichemail",
@@ -3390,6 +3401,8 @@ _dynamic_imports: dict[str, str] = {
     "GenaiModelTypedDict": ".genaimodel",
     "GenaiPrompt": ".genaiprompt",
     "GenaiPromptTypedDict": ".genaiprompt",
+    "GeoTarget": ".geotarget",
+    "GeoTargetTypedDict": ".geotarget",
     "AccountType": ".hrisbankaccount",
     "HrisBankaccount": ".hrisbankaccount",
     "HrisBankaccountTypedDict": ".hrisbankaccount",
@@ -4227,6 +4240,8 @@ _dynamic_imports: dict[str, str] = {
     "TicketingTicket": ".ticketingticket",
     "TicketingTicketStatus": ".ticketingticket",
     "TicketingTicketTypedDict": ".ticketingticket",
+    "TopicTarget": ".topictarget",
+    "TopicTargetTypedDict": ".topictarget",
     "UcCall": ".uccall",
     "UcCallType": ".uccall",
     "UcCallTypedDict": ".uccall",
