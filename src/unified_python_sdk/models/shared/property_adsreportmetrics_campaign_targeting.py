@@ -26,10 +26,6 @@ from .property_adsreportmetrics_campaign_targeting_geographic import (
     PropertyAdsReportMetricsCampaignTargetingGeographic,
     PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict,
 )
-from .property_adsreportmetrics_campaign_targeting_language import (
-    PropertyAdsReportMetricsCampaignTargetingLanguage,
-    PropertyAdsReportMetricsCampaignTargetingLanguageTypedDict,
-)
 from .property_adsreportmetrics_campaign_targeting_optimization import (
     PropertyAdsReportMetricsCampaignTargetingOptimization,
     PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict,
@@ -38,6 +34,7 @@ from .property_adsreportmetrics_campaign_targeting_placement import (
     PropertyAdsReportMetricsCampaignTargetingPlacement,
     PropertyAdsReportMetricsCampaignTargetingPlacementTypedDict,
 )
+from .targetref import TargetRef, TargetRefTypedDict
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
@@ -59,8 +56,7 @@ class PropertyAdsReportMetricsCampaignTargetingTypedDict(TypedDict):
     geographic: NotRequired[
         PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict
     ]
-    language: NotRequired[PropertyAdsReportMetricsCampaignTargetingLanguageTypedDict]
-    r"""Language targeting (Meta"""
+    language: NotRequired[List[TargetRefTypedDict]]
     optimization: NotRequired[
         PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict
     ]
@@ -84,8 +80,7 @@ class PropertyAdsReportMetricsCampaignTargeting(BaseModel):
 
     geographic: Optional[PropertyAdsReportMetricsCampaignTargetingGeographic] = None
 
-    language: Optional[PropertyAdsReportMetricsCampaignTargetingLanguage] = None
-    r"""Language targeting (Meta"""
+    language: Optional[List[TargetRef]] = None
 
     optimization: Optional[PropertyAdsReportMetricsCampaignTargetingOptimization] = None
     r"""Optimization (Meta: targeting_automation; Google: observation vs targeting mode)"""

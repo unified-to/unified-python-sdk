@@ -6,7 +6,7 @@ from .property_adscampaign_targeting_content_video import (
     PropertyAdsCampaignTargetingContentVideo,
     PropertyAdsCampaignTargetingContentVideoTypedDict,
 )
-from .topictarget import TopicTarget, TopicTargetTypedDict
+from .targetref import TargetRef, TargetRefTypedDict
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
@@ -15,10 +15,10 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class PropertyAdsCampaignTargetingContentTypedDict(TypedDict):
     excluded_keywords: NotRequired[List[AdsKeywordTypedDict]]
-    excluded_topics: NotRequired[List[TopicTargetTypedDict]]
+    excluded_topics: NotRequired[List[TargetRefTypedDict]]
     excluded_urls: NotRequired[List[str]]
     keywords: NotRequired[List[AdsKeywordTypedDict]]
-    topics: NotRequired[List[TopicTargetTypedDict]]
+    topics: NotRequired[List[TargetRefTypedDict]]
     urls: NotRequired[List[str]]
     video: NotRequired[PropertyAdsCampaignTargetingContentVideoTypedDict]
 
@@ -26,13 +26,13 @@ class PropertyAdsCampaignTargetingContentTypedDict(TypedDict):
 class PropertyAdsCampaignTargetingContent(BaseModel):
     excluded_keywords: Optional[List[AdsKeyword]] = None
 
-    excluded_topics: Optional[List[TopicTarget]] = None
+    excluded_topics: Optional[List[TargetRef]] = None
 
     excluded_urls: Optional[List[str]] = None
 
     keywords: Optional[List[AdsKeyword]] = None
 
-    topics: Optional[List[TopicTarget]] = None
+    topics: Optional[List[TargetRef]] = None
 
     urls: Optional[List[str]] = None
 

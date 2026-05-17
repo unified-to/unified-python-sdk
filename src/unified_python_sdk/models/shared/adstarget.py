@@ -30,6 +30,8 @@ class AdsTargetTypedDict(TypedDict):
     r"""Targeting search result (for ads_target list endpoint)"""
 
     id: str
+    audience_count_max: NotRequired[float]
+    audience_count_min: NotRequired[float]
     is_active: NotRequired[bool]
     name: NotRequired[str]
     parent_id: NotRequired[str]
@@ -41,6 +43,10 @@ class AdsTarget(BaseModel):
     r"""Targeting search result (for ads_target list endpoint)"""
 
     id: str
+
+    audience_count_max: Optional[float] = None
+
+    audience_count_min: Optional[float] = None
 
     is_active: Optional[bool] = None
 
@@ -63,7 +69,17 @@ class AdsTarget(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["is_active", "name", "parent_id", "raw", "type"])
+        optional_fields = set(
+            [
+                "audience_count_max",
+                "audience_count_min",
+                "is_active",
+                "name",
+                "parent_id",
+                "raw",
+                "type",
+            ]
+        )
         serialized = handler(self)
         m = {}
 

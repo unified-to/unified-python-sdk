@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 from .audiencecombination import AudienceCombination, AudienceCombinationTypedDict
-from .audiencesegment import AudienceSegment, AudienceSegmentTypedDict
 from .lookalikeaudience import LookalikeAudience, LookalikeAudienceTypedDict
+from .targetref import TargetRef, TargetRefTypedDict
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
@@ -11,30 +11,30 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PropertyAdsReportMetricsCampaignTargetingAudienceTypedDict(TypedDict):
-    behaviors: NotRequired[List[AudienceSegmentTypedDict]]
+    behaviors: NotRequired[List[TargetRefTypedDict]]
     combination_spec: NotRequired[List[AudienceCombinationTypedDict]]
-    custom_audiences: NotRequired[List[AudienceSegmentTypedDict]]
-    excluded_behaviors: NotRequired[List[AudienceSegmentTypedDict]]
-    excluded_custom_audiences: NotRequired[List[AudienceSegmentTypedDict]]
-    excluded_interests: NotRequired[List[AudienceSegmentTypedDict]]
-    interests: NotRequired[List[AudienceSegmentTypedDict]]
+    custom_audiences: NotRequired[List[TargetRefTypedDict]]
+    excluded_behaviors: NotRequired[List[TargetRefTypedDict]]
+    excluded_custom_audiences: NotRequired[List[TargetRefTypedDict]]
+    excluded_interests: NotRequired[List[TargetRefTypedDict]]
+    interests: NotRequired[List[TargetRefTypedDict]]
     lookalike_audiences: NotRequired[List[LookalikeAudienceTypedDict]]
 
 
 class PropertyAdsReportMetricsCampaignTargetingAudience(BaseModel):
-    behaviors: Optional[List[AudienceSegment]] = None
+    behaviors: Optional[List[TargetRef]] = None
 
     combination_spec: Optional[List[AudienceCombination]] = None
 
-    custom_audiences: Optional[List[AudienceSegment]] = None
+    custom_audiences: Optional[List[TargetRef]] = None
 
-    excluded_behaviors: Optional[List[AudienceSegment]] = None
+    excluded_behaviors: Optional[List[TargetRef]] = None
 
-    excluded_custom_audiences: Optional[List[AudienceSegment]] = None
+    excluded_custom_audiences: Optional[List[TargetRef]] = None
 
-    excluded_interests: Optional[List[AudienceSegment]] = None
+    excluded_interests: Optional[List[TargetRef]] = None
 
-    interests: Optional[List[AudienceSegment]] = None
+    interests: Optional[List[TargetRef]] = None
 
     lookalike_audiences: Optional[List[LookalikeAudience]] = None
 

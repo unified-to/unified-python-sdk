@@ -310,7 +310,6 @@ if TYPE_CHECKING:
     from .atsstatus import AtsStatus, AtsStatusStatus, AtsStatusTypedDict
     from .atstelephone import AtsTelephone, AtsTelephoneType, AtsTelephoneTypedDict
     from .audiencecombination import AudienceCombination, AudienceCombinationTypedDict
-    from .audiencesegment import AudienceSegment, AudienceSegmentTypedDict
     from .calendarattachment import CalendarAttachment, CalendarAttachmentTypedDict
     from .calendarattendee import (
         CalendarAttendee,
@@ -462,7 +461,6 @@ if TYPE_CHECKING:
     from .crmreference import CrmReference, CrmReferenceTypedDict
     from .crmstage import CrmStage, CrmStageTypedDict
     from .crmtelephone import CrmTelephone, CrmTelephoneType, CrmTelephoneTypedDict
-    from .devicetarget import DeviceTarget, DeviceTargetTypedDict
     from .enrichcompany import EnrichCompany, EnrichCompanyTypedDict
     from .enrichemail import EnrichEmail, EnrichEmailType, EnrichEmailTypedDict
     from .enrichperson import EnrichPerson, EnrichPersonTypedDict, Gender
@@ -487,7 +485,6 @@ if TYPE_CHECKING:
     )
     from .genaimodel import GenaiModel, GenaiModelTypedDict
     from .genaiprompt import GenaiPrompt, GenaiPromptTypedDict
-    from .geotarget import GeoTarget, GeoTargetTypedDict
     from .hrisbankaccount import AccountType, HrisBankaccount, HrisBankaccountTypedDict
     from .hrisbenefit import (
         CoverageLevel,
@@ -946,10 +943,6 @@ if TYPE_CHECKING:
     from .property_adscampaign_targeting_geographic_location_types import (
         PropertyAdsCampaignTargetingGeographicLocationTypes,
     )
-    from .property_adscampaign_targeting_language import (
-        PropertyAdsCampaignTargetingLanguage,
-        PropertyAdsCampaignTargetingLanguageTypedDict,
-    )
     from .property_adscampaign_targeting_optimization import (
         Mode,
         PropertyAdsCampaignTargetingOptimization,
@@ -1023,10 +1016,6 @@ if TYPE_CHECKING:
     )
     from .property_adsgroup_targeting_geographic_location_types import (
         PropertyAdsGroupTargetingGeographicLocationTypes,
-    )
-    from .property_adsgroup_targeting_language import (
-        PropertyAdsGroupTargetingLanguage,
-        PropertyAdsGroupTargetingLanguageTypedDict,
     )
     from .property_adsgroup_targeting_optimization import (
         PropertyAdsGroupTargetingOptimization,
@@ -1126,10 +1115,6 @@ if TYPE_CHECKING:
     from .property_adsreportmetrics_campaign_targeting_geographic_location_types import (
         PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes,
     )
-    from .property_adsreportmetrics_campaign_targeting_language import (
-        PropertyAdsReportMetricsCampaignTargetingLanguage,
-        PropertyAdsReportMetricsCampaignTargetingLanguageTypedDict,
-    )
     from .property_adsreportmetrics_campaign_targeting_optimization import (
         PropertyAdsReportMetricsCampaignTargetingOptimization,
         PropertyAdsReportMetricsCampaignTargetingOptimizationMode,
@@ -1214,10 +1199,6 @@ if TYPE_CHECKING:
     )
     from .property_adsreportmetrics_group_targeting_geographic_location_types import (
         PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes,
-    )
-    from .property_adsreportmetrics_group_targeting_language import (
-        PropertyAdsReportMetricsGroupTargetingLanguage,
-        PropertyAdsReportMetricsGroupTargetingLanguageTypedDict,
     )
     from .property_adsreportmetrics_group_targeting_optimization import (
         PropertyAdsReportMetricsGroupTargetingOptimization,
@@ -1482,7 +1463,6 @@ if TYPE_CHECKING:
         PropertyUcCallTelephoneType,
         PropertyUcCallTelephoneTypedDict,
     )
-    from .regiontarget import RegionTarget, RegionTargetTypedDict
     from .repobranch import RepoBranch, RepoBranchTypedDict
     from .repocommit import RepoCommit, RepoCommitTypedDict
     from .repoorganization import RepoOrganization, RepoOrganizationTypedDict
@@ -1573,6 +1553,7 @@ if TYPE_CHECKING:
     from .storagefile import StorageFile, StorageFileType, StorageFileTypedDict
     from .storagepermission import StoragePermission, StoragePermissionTypedDict
     from .storagereference import StorageReference, StorageReferenceTypedDict
+    from .targetref import TargetRef, TargetRefTypedDict
     from .taskchange import TaskChange, TaskChangeTypedDict
     from .taskchangeitem import TaskChangeItem, TaskChangeItemTypedDict
     from .taskcomment import TaskComment, TaskCommentTypedDict
@@ -1613,7 +1594,6 @@ if TYPE_CHECKING:
         TicketingTicketStatus,
         TicketingTicketTypedDict,
     )
-    from .topictarget import TopicTarget, TopicTargetTypedDict
     from .uccall import UcCall, UcCallType, UcCallTypedDict
     from .uccomment import UcComment, UcCommentTypedDict
     from .uccontact import UcContact, UcContactTypedDict
@@ -1885,8 +1865,6 @@ __all__ = [
     "AtsTelephoneTypedDict",
     "AudienceCombination",
     "AudienceCombinationTypedDict",
-    "AudienceSegment",
-    "AudienceSegmentTypedDict",
     "BillingEvent",
     "BudgetAllocationType",
     "BudgetPeriod",
@@ -2030,8 +2008,6 @@ __all__ = [
     "CrmTelephoneTypedDict",
     "DayOfWeek",
     "DbType",
-    "DeviceTarget",
-    "DeviceTargetTypedDict",
     "DutiesPaidBy",
     "EmployerContributionType",
     "EmploymentStatus",
@@ -2078,8 +2054,6 @@ __all__ = [
     "GenaiPrompt",
     "GenaiPromptTypedDict",
     "Gender",
-    "GeoTarget",
-    "GeoTargetTypedDict",
     "Goal",
     "HostingSource",
     "HrisBankaccount",
@@ -2431,8 +2405,6 @@ __all__ = [
     "PropertyAdsCampaignTargetingGeographic",
     "PropertyAdsCampaignTargetingGeographicLocationTypes",
     "PropertyAdsCampaignTargetingGeographicTypedDict",
-    "PropertyAdsCampaignTargetingLanguage",
-    "PropertyAdsCampaignTargetingLanguageTypedDict",
     "PropertyAdsCampaignTargetingOptimization",
     "PropertyAdsCampaignTargetingOptimizationTypedDict",
     "PropertyAdsCampaignTargetingPlacement",
@@ -2467,8 +2439,6 @@ __all__ = [
     "PropertyAdsGroupTargetingGeographicLocationTypes",
     "PropertyAdsGroupTargetingGeographicPresenceType",
     "PropertyAdsGroupTargetingGeographicTypedDict",
-    "PropertyAdsGroupTargetingLanguage",
-    "PropertyAdsGroupTargetingLanguageTypedDict",
     "PropertyAdsGroupTargetingOptimization",
     "PropertyAdsGroupTargetingOptimizationMode",
     "PropertyAdsGroupTargetingOptimizationTypedDict",
@@ -2522,8 +2492,6 @@ __all__ = [
     "PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes",
     "PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType",
     "PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict",
-    "PropertyAdsReportMetricsCampaignTargetingLanguage",
-    "PropertyAdsReportMetricsCampaignTargetingLanguageTypedDict",
     "PropertyAdsReportMetricsCampaignTargetingOptimization",
     "PropertyAdsReportMetricsCampaignTargetingOptimizationMode",
     "PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict",
@@ -2570,8 +2538,6 @@ __all__ = [
     "PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes",
     "PropertyAdsReportMetricsGroupTargetingGeographicPresenceType",
     "PropertyAdsReportMetricsGroupTargetingGeographicTypedDict",
-    "PropertyAdsReportMetricsGroupTargetingLanguage",
-    "PropertyAdsReportMetricsGroupTargetingLanguageTypedDict",
     "PropertyAdsReportMetricsGroupTargetingOptimization",
     "PropertyAdsReportMetricsGroupTargetingOptimizationMode",
     "PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict",
@@ -2713,8 +2679,6 @@ __all__ = [
     "PropertyUcCallTelephoneTypedDict",
     "RadiusUnit",
     "Recommendation",
-    "RegionTarget",
-    "RegionTargetTypedDict",
     "RegistrationStatus",
     "RepoBranch",
     "RepoBranchTypedDict",
@@ -2820,6 +2784,8 @@ __all__ = [
     "StoragePermissionTypedDict",
     "StorageReference",
     "StorageReferenceTypedDict",
+    "TargetRef",
+    "TargetRefTypedDict",
     "TaskChange",
     "TaskChangeItem",
     "TaskChangeItemTypedDict",
@@ -2865,8 +2831,6 @@ __all__ = [
     "TicketingTicketStatus",
     "TicketingTicketTypedDict",
     "TimeUnit",
-    "TopicTarget",
-    "TopicTargetTypedDict",
     "Type",
     "UcCall",
     "UcCallType",
@@ -3225,8 +3189,6 @@ _dynamic_imports: dict[str, str] = {
     "AtsTelephoneTypedDict": ".atstelephone",
     "AudienceCombination": ".audiencecombination",
     "AudienceCombinationTypedDict": ".audiencecombination",
-    "AudienceSegment": ".audiencesegment",
-    "AudienceSegmentTypedDict": ".audiencesegment",
     "CalendarAttachment": ".calendarattachment",
     "CalendarAttachmentTypedDict": ".calendarattachment",
     "CalendarAttendee": ".calendarattendee",
@@ -3365,8 +3327,6 @@ _dynamic_imports: dict[str, str] = {
     "CrmTelephone": ".crmtelephone",
     "CrmTelephoneType": ".crmtelephone",
     "CrmTelephoneTypedDict": ".crmtelephone",
-    "DeviceTarget": ".devicetarget",
-    "DeviceTargetTypedDict": ".devicetarget",
     "EnrichCompany": ".enrichcompany",
     "EnrichCompanyTypedDict": ".enrichcompany",
     "EnrichEmail": ".enrichemail",
@@ -3401,8 +3361,6 @@ _dynamic_imports: dict[str, str] = {
     "GenaiModelTypedDict": ".genaimodel",
     "GenaiPrompt": ".genaiprompt",
     "GenaiPromptTypedDict": ".genaiprompt",
-    "GeoTarget": ".geotarget",
-    "GeoTargetTypedDict": ".geotarget",
     "AccountType": ".hrisbankaccount",
     "HrisBankaccount": ".hrisbankaccount",
     "HrisBankaccountTypedDict": ".hrisbankaccount",
@@ -3814,8 +3772,6 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsCampaignTargetingGeographic": ".property_adscampaign_targeting_geographic",
     "PropertyAdsCampaignTargetingGeographicTypedDict": ".property_adscampaign_targeting_geographic",
     "PropertyAdsCampaignTargetingGeographicLocationTypes": ".property_adscampaign_targeting_geographic_location_types",
-    "PropertyAdsCampaignTargetingLanguage": ".property_adscampaign_targeting_language",
-    "PropertyAdsCampaignTargetingLanguageTypedDict": ".property_adscampaign_targeting_language",
     "Mode": ".property_adscampaign_targeting_optimization",
     "PropertyAdsCampaignTargetingOptimization": ".property_adscampaign_targeting_optimization",
     "PropertyAdsCampaignTargetingOptimizationTypedDict": ".property_adscampaign_targeting_optimization",
@@ -3854,8 +3810,6 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsGroupTargetingGeographicPresenceType": ".property_adsgroup_targeting_geographic",
     "PropertyAdsGroupTargetingGeographicTypedDict": ".property_adsgroup_targeting_geographic",
     "PropertyAdsGroupTargetingGeographicLocationTypes": ".property_adsgroup_targeting_geographic_location_types",
-    "PropertyAdsGroupTargetingLanguage": ".property_adsgroup_targeting_language",
-    "PropertyAdsGroupTargetingLanguageTypedDict": ".property_adsgroup_targeting_language",
     "PropertyAdsGroupTargetingOptimization": ".property_adsgroup_targeting_optimization",
     "PropertyAdsGroupTargetingOptimizationMode": ".property_adsgroup_targeting_optimization",
     "PropertyAdsGroupTargetingOptimizationTypedDict": ".property_adsgroup_targeting_optimization",
@@ -3910,8 +3864,6 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType": ".property_adsreportmetrics_campaign_targeting_geographic",
     "PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict": ".property_adsreportmetrics_campaign_targeting_geographic",
     "PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes": ".property_adsreportmetrics_campaign_targeting_geographic_location_types",
-    "PropertyAdsReportMetricsCampaignTargetingLanguage": ".property_adsreportmetrics_campaign_targeting_language",
-    "PropertyAdsReportMetricsCampaignTargetingLanguageTypedDict": ".property_adsreportmetrics_campaign_targeting_language",
     "PropertyAdsReportMetricsCampaignTargetingOptimization": ".property_adsreportmetrics_campaign_targeting_optimization",
     "PropertyAdsReportMetricsCampaignTargetingOptimizationMode": ".property_adsreportmetrics_campaign_targeting_optimization",
     "PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict": ".property_adsreportmetrics_campaign_targeting_optimization",
@@ -3959,8 +3911,6 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsGroupTargetingGeographicPresenceType": ".property_adsreportmetrics_group_targeting_geographic",
     "PropertyAdsReportMetricsGroupTargetingGeographicTypedDict": ".property_adsreportmetrics_group_targeting_geographic",
     "PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes": ".property_adsreportmetrics_group_targeting_geographic_location_types",
-    "PropertyAdsReportMetricsGroupTargetingLanguage": ".property_adsreportmetrics_group_targeting_language",
-    "PropertyAdsReportMetricsGroupTargetingLanguageTypedDict": ".property_adsreportmetrics_group_targeting_language",
     "PropertyAdsReportMetricsGroupTargetingOptimization": ".property_adsreportmetrics_group_targeting_optimization",
     "PropertyAdsReportMetricsGroupTargetingOptimizationMode": ".property_adsreportmetrics_group_targeting_optimization",
     "PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict": ".property_adsreportmetrics_group_targeting_optimization",
@@ -4106,8 +4056,6 @@ _dynamic_imports: dict[str, str] = {
     "PropertyUcCallTelephone": ".property_uccall_telephone",
     "PropertyUcCallTelephoneType": ".property_uccall_telephone",
     "PropertyUcCallTelephoneTypedDict": ".property_uccall_telephone",
-    "RegionTarget": ".regiontarget",
-    "RegionTargetTypedDict": ".regiontarget",
     "RepoBranch": ".repobranch",
     "RepoBranchTypedDict": ".repobranch",
     "RepoCommit": ".repocommit",
@@ -4199,6 +4147,8 @@ _dynamic_imports: dict[str, str] = {
     "StoragePermissionTypedDict": ".storagepermission",
     "StorageReference": ".storagereference",
     "StorageReferenceTypedDict": ".storagereference",
+    "TargetRef": ".targetref",
+    "TargetRefTypedDict": ".targetref",
     "TaskChange": ".taskchange",
     "TaskChangeTypedDict": ".taskchange",
     "TaskChangeItem": ".taskchangeitem",
@@ -4240,8 +4190,6 @@ _dynamic_imports: dict[str, str] = {
     "TicketingTicket": ".ticketingticket",
     "TicketingTicketStatus": ".ticketingticket",
     "TicketingTicketTypedDict": ".ticketingticket",
-    "TopicTarget": ".topictarget",
-    "TopicTargetTypedDict": ".topictarget",
     "UcCall": ".uccall",
     "UcCallType": ".uccall",
     "UcCallTypedDict": ".uccall",

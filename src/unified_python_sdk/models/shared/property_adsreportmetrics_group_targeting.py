@@ -26,10 +26,6 @@ from .property_adsreportmetrics_group_targeting_geographic import (
     PropertyAdsReportMetricsGroupTargetingGeographic,
     PropertyAdsReportMetricsGroupTargetingGeographicTypedDict,
 )
-from .property_adsreportmetrics_group_targeting_language import (
-    PropertyAdsReportMetricsGroupTargetingLanguage,
-    PropertyAdsReportMetricsGroupTargetingLanguageTypedDict,
-)
 from .property_adsreportmetrics_group_targeting_optimization import (
     PropertyAdsReportMetricsGroupTargetingOptimization,
     PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict,
@@ -38,6 +34,7 @@ from .property_adsreportmetrics_group_targeting_placement import (
     PropertyAdsReportMetricsGroupTargetingPlacement,
     PropertyAdsReportMetricsGroupTargetingPlacementTypedDict,
 )
+from .targetref import TargetRef, TargetRefTypedDict
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
@@ -55,8 +52,7 @@ class PropertyAdsReportMetricsGroupTargetingTypedDict(TypedDict):
     r"""Demographic targeting (Meta: age_min, age_max, genders)"""
     device: NotRequired[PropertyAdsReportMetricsGroupTargetingDeviceTypedDict]
     geographic: NotRequired[PropertyAdsReportMetricsGroupTargetingGeographicTypedDict]
-    language: NotRequired[PropertyAdsReportMetricsGroupTargetingLanguageTypedDict]
-    r"""Language targeting (Meta"""
+    language: NotRequired[List[TargetRefTypedDict]]
     optimization: NotRequired[
         PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict
     ]
@@ -80,8 +76,7 @@ class PropertyAdsReportMetricsGroupTargeting(BaseModel):
 
     geographic: Optional[PropertyAdsReportMetricsGroupTargetingGeographic] = None
 
-    language: Optional[PropertyAdsReportMetricsGroupTargetingLanguage] = None
-    r"""Language targeting (Meta"""
+    language: Optional[List[TargetRef]] = None
 
     optimization: Optional[PropertyAdsReportMetricsGroupTargetingOptimization] = None
     r"""Optimization (Meta: targeting_automation; Google: observation vs targeting mode)"""
