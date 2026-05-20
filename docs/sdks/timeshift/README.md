@@ -21,7 +21,6 @@ Create a timeshift
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -33,8 +32,6 @@ with UnifiedTo(
     res = unified_to.timeshift.create_hris_timeshift(request={
         "hris_timeshift": {
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2025-10-18T00:03:45.822Z"),
-            "start_at": parse_datetime("2024-06-03T05:33:48.715Z"),
         },
         "connection_id": "<id>",
     })
@@ -166,7 +163,6 @@ Update a timeshift
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -178,8 +174,6 @@ with UnifiedTo(
     res = unified_to.timeshift.patch_hris_timeshift(request={
         "hris_timeshift": {
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2023-11-17T18:53:02.172Z"),
-            "start_at": parse_datetime("2023-01-19T02:48:41.002Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -266,7 +260,6 @@ Update a timeshift
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -278,8 +271,6 @@ with UnifiedTo(
     res = unified_to.timeshift.update_hris_timeshift(request={
         "hris_timeshift": {
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2025-03-03T22:04:09.340Z"),
-            "start_at": parse_datetime("2024-05-30T21:19:58.772Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
