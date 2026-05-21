@@ -28,8 +28,6 @@ class AssessmentPackageType(str, Enum, metaclass=utils.OpenEnumMeta):
 class AssessmentPackageTypedDict(TypedDict):
     r"""Used by assessment providers to SUBMIT packages to ATS systems"""
 
-    id: str
-    name: str
     type: AssessmentPackageType
     aliases: NotRequired[List[str]]
     r"""Alternative namesidentifiers for this package"""
@@ -38,10 +36,12 @@ class AssessmentPackageTypedDict(TypedDict):
     description: NotRequired[str]
     has_redirect_url: NotRequired[bool]
     has_target_url: NotRequired[bool]
+    id: NotRequired[str]
     info_url: NotRequired[str]
     integration_types: NotRequired[List[str]]
     r"""Integration types that support this package"""
     max_score: NotRequired[float]
+    name: NotRequired[str]
     needs_ip_address: NotRequired[bool]
     parameters: NotRequired[List[AssessmentParameterTypedDict]]
     r"""Questionsinputs needed for this assessment (aligned with verification)"""
@@ -55,10 +55,6 @@ class AssessmentPackageTypedDict(TypedDict):
 
 class AssessmentPackage(BaseModel):
     r"""Used by assessment providers to SUBMIT packages to ATS systems"""
-
-    id: str
-
-    name: str
 
     type: AssessmentPackageType
 
@@ -75,12 +71,16 @@ class AssessmentPackage(BaseModel):
 
     has_target_url: Optional[bool] = None
 
+    id: Optional[str] = None
+
     info_url: Optional[str] = None
 
     integration_types: Optional[List[str]] = None
     r"""Integration types that support this package"""
 
     max_score: Optional[float] = None
+
+    name: Optional[str] = None
 
     needs_ip_address: Optional[bool] = None
 
@@ -117,9 +117,11 @@ class AssessmentPackage(BaseModel):
                 "description",
                 "has_redirect_url",
                 "has_target_url",
+                "id",
                 "info_url",
                 "integration_types",
                 "max_score",
+                "name",
                 "needs_ip_address",
                 "parameters",
                 "raw",

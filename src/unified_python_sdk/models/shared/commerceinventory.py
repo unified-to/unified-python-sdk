@@ -9,7 +9,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CommerceInventoryTypedDict(TypedDict):
-    available: float
+    available: NotRequired[float]
     id: NotRequired[str]
     item_id: NotRequired[str]
     item_option_id: NotRequired[str]
@@ -20,7 +20,7 @@ class CommerceInventoryTypedDict(TypedDict):
 
 
 class CommerceInventory(BaseModel):
-    available: float
+    available: Optional[float] = None
 
     id: Optional[str] = None
 
@@ -40,6 +40,7 @@ class CommerceInventory(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "available",
                 "id",
                 "item_id",
                 "item_option_id",

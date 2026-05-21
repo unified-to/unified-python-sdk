@@ -30,9 +30,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.space.create_kms_space(request={
-        "kms_space": {
-            "name": "<value>",
-        },
+        "kms_space": {},
         "connection_id": "<id>",
     })
 
@@ -172,9 +170,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.space.patch_kms_space(request={
-        "kms_space": {
-            "name": "<value>",
-        },
+        "kms_space": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -269,9 +265,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.space.update_kms_space(request={
-        "kms_space": {
-            "name": "<value>",
-        },
+        "kms_space": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

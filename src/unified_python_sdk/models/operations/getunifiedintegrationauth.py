@@ -26,6 +26,8 @@ class GetUnifiedIntegrationAuthRequestTypedDict(TypedDict):
     lang: NotRequired[str]
     r"""Language: en, fr, es, it, pt, zh, hi"""
     redirect: NotRequired[bool]
+    region: NotRequired[str]
+    r"""Optional region index (into the integration api.urls array) selected by the end-user. Set automatically by the auth widget when the workspace integration has prompt_region=true."""
     scopes: NotRequired[List[str]]
     state: NotRequired[str]
     r"""Extra state to send back to your success URL"""
@@ -74,6 +76,12 @@ class GetUnifiedIntegrationAuthRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    region: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Optional region index (into the integration api.urls array) selected by the end-user. Set automatically by the auth widget when the workspace integration has prompt_region=true."""
+
     scopes: Annotated[
         Optional[List[str]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -106,6 +114,7 @@ class GetUnifiedIntegrationAuthRequest(BaseModel):
                 "failure_redirect",
                 "lang",
                 "redirect",
+                "region",
                 "scopes",
                 "state",
                 "subdomain",

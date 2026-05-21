@@ -24,7 +24,7 @@ class KmsCommentType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class KmsCommentTypedDict(TypedDict):
-    content: str
+    content: NotRequired[str]
     content_type: NotRequired[ContentType]
     created_at: NotRequired[datetime]
     id: NotRequired[str]
@@ -37,7 +37,7 @@ class KmsCommentTypedDict(TypedDict):
 
 
 class KmsComment(BaseModel):
-    content: str
+    content: Optional[str] = None
 
     content_type: Optional[ContentType] = None
 
@@ -79,6 +79,7 @@ class KmsComment(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "content",
                 "content_type",
                 "created_at",
                 "id",

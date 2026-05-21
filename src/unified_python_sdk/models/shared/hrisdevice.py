@@ -9,7 +9,6 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class HrisDeviceTypedDict(TypedDict):
-    name: str
     admin_user_ids: NotRequired[List[str]]
     asset_tag: NotRequired[str]
     created_at: NotRequired[datetime]
@@ -23,6 +22,7 @@ class HrisDeviceTypedDict(TypedDict):
     location_id: NotRequired[str]
     manufacturer: NotRequired[str]
     model: NotRequired[str]
+    name: NotRequired[str]
     os: NotRequired[str]
     os_version: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -33,8 +33,6 @@ class HrisDeviceTypedDict(TypedDict):
 
 
 class HrisDevice(BaseModel):
-    name: str
-
     admin_user_ids: Optional[List[str]] = None
 
     asset_tag: Optional[str] = None
@@ -60,6 +58,8 @@ class HrisDevice(BaseModel):
     manufacturer: Optional[str] = None
 
     model: Optional[str] = None
+
+    name: Optional[str] = None
 
     os: Optional[str] = None
 
@@ -91,6 +91,7 @@ class HrisDevice(BaseModel):
                 "location_id",
                 "manufacturer",
                 "model",
+                "name",
                 "os",
                 "os_version",
                 "raw",

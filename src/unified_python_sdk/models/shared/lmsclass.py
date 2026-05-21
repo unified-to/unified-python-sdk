@@ -10,23 +10,21 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class LmsClassTypedDict(TypedDict):
-    course_id: str
-    name: str
+    course_id: NotRequired[str]
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     id: NotRequired[str]
     instructor_ids: NotRequired[List[str]]
     languages: NotRequired[List[str]]
     media: NotRequired[List[LmsMediaTypedDict]]
+    name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     student_ids: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
 
 
 class LmsClass(BaseModel):
-    course_id: str
-
-    name: str
+    course_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
@@ -40,6 +38,8 @@ class LmsClass(BaseModel):
 
     media: Optional[List[LmsMedia]] = None
 
+    name: Optional[str] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     student_ids: Optional[List[str]] = None
@@ -50,12 +50,14 @@ class LmsClass(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "course_id",
                 "created_at",
                 "description",
                 "id",
                 "instructor_ids",
                 "languages",
                 "media",
+                "name",
                 "raw",
                 "student_ids",
                 "updated_at",

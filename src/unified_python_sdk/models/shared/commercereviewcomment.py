@@ -20,11 +20,11 @@ class CommerceReviewCommentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class CommerceReviewCommentTypedDict(TypedDict):
-    content: str
     author_avatar_url: NotRequired[str]
     author_email: NotRequired[str]
     author_location: NotRequired[str]
     author_name: NotRequired[str]
+    content: NotRequired[str]
     created_at: NotRequired[datetime]
     helpful_votes: NotRequired[float]
     id: NotRequired[str]
@@ -38,8 +38,6 @@ class CommerceReviewCommentTypedDict(TypedDict):
 
 
 class CommerceReviewComment(BaseModel):
-    content: str
-
     author_avatar_url: Optional[str] = None
 
     author_email: Optional[str] = None
@@ -47,6 +45,8 @@ class CommerceReviewComment(BaseModel):
     author_location: Optional[str] = None
 
     author_name: Optional[str] = None
+
+    content: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
@@ -85,6 +85,7 @@ class CommerceReviewComment(BaseModel):
                 "author_email",
                 "author_location",
                 "author_name",
+                "content",
                 "created_at",
                 "helpful_votes",
                 "id",

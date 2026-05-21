@@ -26,7 +26,6 @@ class LocationType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class CommerceLocationTypedDict(TypedDict):
-    name: str
     address: NotRequired[PropertyCommerceLocationAddressTypedDict]
     categories: NotRequired[List[str]]
     created_at: NotRequired[datetime]
@@ -40,6 +39,7 @@ class CommerceLocationTypedDict(TypedDict):
     location_type: NotRequired[LocationType]
     longitude: NotRequired[float]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
+    name: NotRequired[str]
     parent_id: NotRequired[str]
     price_level: NotRequired[str]
     rating: NotRequired[float]
@@ -51,8 +51,6 @@ class CommerceLocationTypedDict(TypedDict):
 
 
 class CommerceLocation(BaseModel):
-    name: str
-
     address: Optional[PropertyCommerceLocationAddress] = None
 
     categories: Optional[List[str]] = None
@@ -78,6 +76,8 @@ class CommerceLocation(BaseModel):
     longitude: Optional[float] = None
 
     media: Optional[List[CommerceItemMedia]] = None
+
+    name: Optional[str] = None
 
     parent_id: Optional[str] = None
 
@@ -121,6 +121,7 @@ class CommerceLocation(BaseModel):
                 "location_type",
                 "longitude",
                 "media",
+                "name",
                 "parent_id",
                 "price_level",
                 "rating",

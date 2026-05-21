@@ -9,11 +9,11 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class KmsSpaceTypedDict(TypedDict):
-    name: str
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    name: NotRequired[str]
     parent_id: NotRequired[str]
     parent_page_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -22,8 +22,6 @@ class KmsSpaceTypedDict(TypedDict):
 
 
 class KmsSpace(BaseModel):
-    name: str
-
     created_at: Optional[datetime] = None
 
     description: Optional[str] = None
@@ -31,6 +29,8 @@ class KmsSpace(BaseModel):
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    name: Optional[str] = None
 
     parent_id: Optional[str] = None
 
@@ -50,6 +50,7 @@ class KmsSpace(BaseModel):
                 "description",
                 "id",
                 "is_active",
+                "name",
                 "parent_id",
                 "parent_page_id",
                 "raw",

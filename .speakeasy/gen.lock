@@ -1,30 +1,30 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 389d12ddd497f44c9fc1e4755d3d9af5
+  docChecksum: 1b6af68b3f4db0edf5a26e51c3a17b4f
   docVersion: "1.0"
-  speakeasyVersion: 1.763.2
-  generationVersion: 2.884.4
-  releaseVersion: 0.57.49
-  configChecksum: 1bf9af7a1c1af851ff798d176be83027
+  speakeasyVersion: 1.763.4
+  generationVersion: 2.884.11
+  releaseVersion: 0.57.50
+  configChecksum: 8f6ca02948f0345159935136bc79044f
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: d2bc0ed3-0dca-42ba-95f0-37ed997a9d05
-  pristine_commit_hash: 395c0cea0ee4c6411ad762e484f412fe03150310
-  pristine_tree_hash: ebdd6bd9248d5ae1ceb37e4066338dc640103d73
+  generation_id: 15927846-1b7c-49b6-bd94-0c0990f862a1
+  pristine_commit_hash: a9d728c61ca2547b3c8410d54f7e7eeb084e07d9
+  pristine_tree_hash: 79f22775f07f1ed6a44cf87fb0dbd2652acfe7a8
 features:
   python:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.7
-    core: 6.0.21
+    core: 6.0.22
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.1
-    envVarSecurityUsage: 0.3.2
+    envVarSecurityUsage: 0.3.3
     globalSecurity: 3.0.7
     globalSecurityCallbacks: 1.0.0
     globalServerURLs: 3.2.1
@@ -98,8 +98,8 @@ trackedFiles:
     pristine_git_object: 86c40a08653b9fd63b6738e2340aa9eb4f8b06f0
   docs/models/operations/createaccountingcreditmemoqueryparamfields.md:
     id: 3b8436039b47
-    last_write_checksum: sha1:1b7f983868ea44a7541415fc95107ef4e5a10c89
-    pristine_git_object: 7a76ddc3058d58b3273f3467513f13c62b9b4783
+    last_write_checksum: sha1:6d6c322434fca74e65651933f55942a1701ffa22
+    pristine_git_object: d31986407f557273b66ea8382952cd8e3defce44
   docs/models/operations/createaccountingcreditmemorequest.md:
     id: 41ddee5845af
     last_write_checksum: sha1:82f7aa1fc9fa51ded23fa146e8be579fba9fe9a3
@@ -962,8 +962,8 @@ trackedFiles:
     pristine_git_object: 186efa3199c2a37d41e9da876b38d6b04d5f3140
   docs/models/operations/createpaymentpaymentqueryparamfields.md:
     id: 2f01a81a2944
-    last_write_checksum: sha1:e74f77de99bb7d435020cda2eb978a2e27c5b545
-    pristine_git_object: d1505b19f7a9aae4fb6d6055e2e2b5b4cbaeb5dd
+    last_write_checksum: sha1:64ea07c3e9a917c0346b3ef2ba4c01b2ecf60675
+    pristine_git_object: 2742f7c69c75fd0b8e7a686a2f54ba729f1f17db
   docs/models/operations/createpaymentpaymentrequest.md:
     id: e2ce3c24bbea
     last_write_checksum: sha1:84870810334c117d5f774ea076c41987e2b7b73f
@@ -1354,8 +1354,8 @@ trackedFiles:
     pristine_git_object: 0a8ef7330fa693e378e8eef2df8ff2a6950ad72b
   docs/models/operations/getaccountingcreditmemoqueryparamfields.md:
     id: 340de15616d3
-    last_write_checksum: sha1:ef051c308589643b432d8115e3cb99291e8bbfa5
-    pristine_git_object: 84a7f3b0e02273d4777d814638a917a9d92cce29
+    last_write_checksum: sha1:087b588505a434420101dbc8e99c32a96589cfff
+    pristine_git_object: 5e05f28c82baab2e6dd62d2873e1241f1ef57f38
   docs/models/operations/getaccountingcreditmemorequest.md:
     id: 43951febb774
     last_write_checksum: sha1:4e0ae638b7a0594017d63a7ba43ba18f81e8017e
@@ -2070,8 +2070,8 @@ trackedFiles:
     pristine_git_object: ebdf1cd8c370788d97b97cbced517c110a340d62
   docs/models/operations/gethrispayslipqueryparamfields.md:
     id: 06e1ba1c8df2
-    last_write_checksum: sha1:7cd4c28a07b44da99ec05cf14bd20397f2510377
-    pristine_git_object: 508a92319d4b00bd101d75137d9e3a146599d471
+    last_write_checksum: sha1:610f157e55b3da309222045e4b1af83358967c66
+    pristine_git_object: 7fd426453d95bc8a48d6de076c716835b38549fe
   docs/models/operations/gethrispaysliprequest.md:
     id: 26f0e03cf0b4
     last_write_checksum: sha1:ec1e2cb2238518474fa9e8b7b2617a9e9835b3c0
@@ -2310,8 +2310,8 @@ trackedFiles:
     pristine_git_object: dd479ff92b284a784c7bb8ed8efd278d4847ff4c
   docs/models/operations/getpaymentpaymentqueryparamfields.md:
     id: a3a463b1ff16
-    last_write_checksum: sha1:d04c7784b0e60fe5fbd53ee0d5a6438f91dda147
-    pristine_git_object: 9427a3e43ca2cc9b90742a12957c67604e147550
+    last_write_checksum: sha1:1906c887207db239402a9c48d663a494e6f0c2db
+    pristine_git_object: 39c9bc04fc4909f6fd2a2386493c2dddebaf23d8
   docs/models/operations/getpaymentpaymentrequest.md:
     id: 03e673b7978f
     last_write_checksum: sha1:f98efc6338131e08ce9a6be1169fac3dc7d6f87d
@@ -2690,8 +2690,8 @@ trackedFiles:
     pristine_git_object: bb3b9da24a7b050218e40fea4b4cd31c51df4141
   docs/models/operations/getunifiedintegrationauthrequest.md:
     id: 0edc5e3fca94
-    last_write_checksum: sha1:c6bfabd71e2e1e0c46a786ccf12efeee9eaabfbd
-    pristine_git_object: afb860a862edf423cb2aa3df27aab354580e9943
+    last_write_checksum: sha1:bcf27165b49a8018b5001638615c0b17f277217a
+    pristine_git_object: 2771dab8693af33ed22c4f133531280782ac7210
   docs/models/operations/getunifiedintegrationauthresponse.md:
     id: 76131242005a
     last_write_checksum: sha1:e824880c0651c8d585d89a008f381533f2dbf200
@@ -2818,8 +2818,8 @@ trackedFiles:
     pristine_git_object: a2975d94b5e424f30ad4cdd02081e33383ae6c69
   docs/models/operations/listaccountingcreditmemoesqueryparamfields.md:
     id: 40cdffb702e7
-    last_write_checksum: sha1:822ace61aaf925fadf6d10c19f34765c3b3dbad4
-    pristine_git_object: 0539e141ae5d56abae31272ef61401051963e2e5
+    last_write_checksum: sha1:fe8ed92f211150acb4bac711b1b5eb26ead67c29
+    pristine_git_object: 1cba6a010b9797376a2cc29f30122a31ad14d65b
   docs/models/operations/listaccountingcreditmemoesrequest.md:
     id: f65dd8e20553
     last_write_checksum: sha1:f3e93ef2c80bf459ab4828c172d41952b6bcf909
@@ -3598,8 +3598,8 @@ trackedFiles:
     pristine_git_object: f2b27f0071391c8114ceb3d0b15740b6874087f1
   docs/models/operations/listhrispayslipsqueryparamfields.md:
     id: cc9cb073af22
-    last_write_checksum: sha1:de2a49e63d8fd2cc926bbed3ad3dc99d299da987
-    pristine_git_object: 048d93783397125949489290d3f14ad3dc117744
+    last_write_checksum: sha1:1c9995d45e453e304384d5ddb6687ecfb9c5a776
+    pristine_git_object: 5c0d6f92f1c3b72135c21c44a880ca16030cb987
   docs/models/operations/listhrispayslipsrequest.md:
     id: 28da1daee7c5
     last_write_checksum: sha1:4b4325ea8a1c6159b6bf3f49dd5ef7ec8e4e0027
@@ -3858,8 +3858,8 @@ trackedFiles:
     pristine_git_object: 6ad907206700b503c175f464a756a00a76ab47cd
   docs/models/operations/listpaymentpaymentsqueryparamfields.md:
     id: b6ab4523865e
-    last_write_checksum: sha1:2ca7de552c8f535b6c035ae677261f28c5fec9b4
-    pristine_git_object: 92f8bda38c4fd25bbbbc5f434e8a014100a97a62
+    last_write_checksum: sha1:e4db7d1a2d5db2b8b139f9b9ed66f579c272be02
+    pristine_git_object: ea0fc08e702b9b46d05fa8888ceaef1f4c78a4bb
   docs/models/operations/listpaymentpaymentsrequest.md:
     id: 6e2904b89c0c
     last_write_checksum: sha1:07f4b46feed30beb4a145337edb5031f7ddbec49
@@ -4350,8 +4350,8 @@ trackedFiles:
     pristine_git_object: b637d336f055153a6b9e4db20cd1122ab1906546
   docs/models/operations/patchaccountingcreditmemoqueryparamfields.md:
     id: bdb816c25820
-    last_write_checksum: sha1:a36e1532512ee814913cb5d4bdecac3efdc442c3
-    pristine_git_object: 98f695eaa47fac1823271d164f44fac0b7ab6f38
+    last_write_checksum: sha1:4e3695f2c9ef8b8f30265f0a2614dc244f4b21e6
+    pristine_git_object: 7ff807c0ac615413ec6f577710461ef64ab11ef3
   docs/models/operations/patchaccountingcreditmemorequest.md:
     id: 08f35e2dd209
     last_write_checksum: sha1:5bc75f3e737bc3fc1a2d862e08d376fbc7f256e9
@@ -5214,8 +5214,8 @@ trackedFiles:
     pristine_git_object: d050fc7854b2e305ef83cd5c7bf19a135fbb47d6
   docs/models/operations/patchpaymentpaymentqueryparamfields.md:
     id: 254d033432f6
-    last_write_checksum: sha1:7e2afcdd184f6f3aa273efe60a4b53bcdc3c562f
-    pristine_git_object: f7ea4c854c879a8eb9706862bdcc1835c09f9e0a
+    last_write_checksum: sha1:426071f12d93126515fe76d51a92c605c16d340e
+    pristine_git_object: 5b9101d52a0aa4bef50a9f1a3e77b1c9e0ef9aed
   docs/models/operations/patchpaymentpaymentrequest.md:
     id: ddfe619f286a
     last_write_checksum: sha1:76d77f93b603134155aff3fe55ddecac24826e97
@@ -6402,8 +6402,8 @@ trackedFiles:
     pristine_git_object: 28e06bb38906e09f8e5bca52b43bcc16ad2a2143
   docs/models/operations/updateaccountingcreditmemoqueryparamfields.md:
     id: 39f1548ada4c
-    last_write_checksum: sha1:8a9c8433329d04e22d0ff10bff83a278595cc782
-    pristine_git_object: f6788ac1b77da0aab411392b48a277b597173af4
+    last_write_checksum: sha1:039ab8034ff1876de1ee277ff06f56b6663977b9
+    pristine_git_object: 74e4a82ad702aad8c0e28f34b19bba856f726f20
   docs/models/operations/updateaccountingcreditmemorequest.md:
     id: e0b7749e8e47
     last_write_checksum: sha1:80e19813c05a2d5804e475d462d0cdc4968eba27
@@ -7266,8 +7266,8 @@ trackedFiles:
     pristine_git_object: b3361058fa4879c14fcc815db98fe9bdf15a5e7a
   docs/models/operations/updatepaymentpaymentqueryparamfields.md:
     id: fc605bb9fdd2
-    last_write_checksum: sha1:ff68c18891e4b2d732e7a245736386f3fa2937ba
-    pristine_git_object: 89c8055891bb3ba01fa011dd76c9ae0ab646e404
+    last_write_checksum: sha1:5c4d8720525fdc88e94592123d2475a816b26cae
+    pristine_git_object: 76f1bd698f7510aa1c4f984974c23ade0d212e76
   docs/models/operations/updatepaymentpaymentrequest.md:
     id: e17feda58796
     last_write_checksum: sha1:d51e13a0505770c1863cd41a90c341576b611e5c
@@ -7938,20 +7938,20 @@ trackedFiles:
     pristine_git_object: ce7b85c3eaf65dc30592b037eaac9d494bba241a
   docs/models/shared/assessmentpackage.md:
     id: 2ba4e57da41f
-    last_write_checksum: sha1:cebcdb22ab2c0491a59f07c5fa342d136eb0fb29
-    pristine_git_object: 337a42b054e0f7236e7ea5ccf812cc977f3054fe
+    last_write_checksum: sha1:9ef656de740145626daf02239adc9f0d06a49995
+    pristine_git_object: 652de1f43a396819f21d80b662b5edaca705ad4e
   docs/models/shared/assessmentpackageregion.md:
     id: 470d3af0f886
-    last_write_checksum: sha1:ae7ed29881ae21f16252a4c748ff2d0629093627
-    pristine_git_object: 386502da2adc119066622e3b83af2fc5927f3570
+    last_write_checksum: sha1:2203dba14c89836fd435b2b4ea0a9678aafa0b7b
+    pristine_git_object: bc84056d0e122cf5845767d27eb8ed0009638777
   docs/models/shared/assessmentpackagetype.md:
     id: 8b8c9faf72e8
     last_write_checksum: sha1:ceb2608694d0c6450cb0d055684e37bc6d2fdfe4
     pristine_git_object: 2f5eb2c68171f2699806cbd3331bdd81109cb430
   docs/models/shared/assessmentparameter.md:
     id: ddc1d4eee8bd
-    last_write_checksum: sha1:b9318075ad6e8c11a232ebc30afb563347040384
-    pristine_git_object: 0630c414d4c53237c603f6bb5b35278ec2bdf719
+    last_write_checksum: sha1:bbb24fa32965a2c8b40a95e0f4b8f24f35c5eac9
+    pristine_git_object: 9e67b5d2a752a50a02356f7dcbe00e28f83fc696
   docs/models/shared/assessmentparameterinput.md:
     id: feb0887e6d8a
     last_write_checksum: sha1:b6f8e2a5677896270ed346d35c1d4bb65909711a
@@ -8002,8 +8002,8 @@ trackedFiles:
     pristine_git_object: 1b393393e4e02d4983055994592224f714d393b0
   docs/models/shared/atscompany.md:
     id: 9a3402e8eb96
-    last_write_checksum: sha1:86c43ef07e1912101efd5247939d2ee2534f727c
-    pristine_git_object: 21adb0afebaa51da6664b784fe41d329ab23eb83
+    last_write_checksum: sha1:942fd9f3d8708a84ea8422aef0de9b5399b91c6e
+    pristine_git_object: 6687fdfe07a749f8aa199baa154d13f31e8e8900
   docs/models/shared/atscompensation.md:
     id: 3be67aab2532
     last_write_checksum: sha1:a7b317584ff9cace755e62443462c23f5ff51938
@@ -8158,8 +8158,8 @@ trackedFiles:
     pristine_git_object: 54587b1b6d680488af520a23860ddd767a8bdc77
   docs/models/shared/calendarcalendar.md:
     id: 48545d6b1924
-    last_write_checksum: sha1:43fa3dd96803bd7867a4913521da2c3f6bf74b30
-    pristine_git_object: 6200b60a802d7f806966f398e73b9f885c2f17ae
+    last_write_checksum: sha1:a076956c79addb6aef27a8aff26496d4c88bd012
+    pristine_git_object: 303d68df7431ee1ec0a1b9d97926f42d53c5aa39
   docs/models/shared/calendarconference.md:
     id: c7eed4e6fcef
     last_write_checksum: sha1:ccfedba9e277963c7316ff65a26c4488b6554269
@@ -8234,8 +8234,8 @@ trackedFiles:
     pristine_git_object: 51568ddb44d2ea14190822caf331c361487847fb
   docs/models/shared/commerceinventory.md:
     id: b0d010c60413
-    last_write_checksum: sha1:4ac37cc62f95460f0336341eb3ec9078d3049320
-    pristine_git_object: 1ed05a3e0b8633488d29a4d74f1bb05b077c3cb7
+    last_write_checksum: sha1:b15a825c189559d828cfab3fc9d7a594a3c8e507
+    pristine_git_object: 2aeccfbe28afc1ea9131ac22f9fe8ce75191c378
   docs/models/shared/commerceitem.md:
     id: 95b89af35ff1
     last_write_checksum: sha1:4cd53f50e410cd4def5c937595ca554ac0a3b71c
@@ -8266,8 +8266,8 @@ trackedFiles:
     pristine_git_object: f9b510fbe38a522fbe907edfd1953efcd79a5d56
   docs/models/shared/commercelocation.md:
     id: c2500fc4387e
-    last_write_checksum: sha1:b6989477fca1cccebd8a207ddf54850ab90e7812
-    pristine_git_object: 74895d54933532bf1eebc3808c1a8d222380eb1f
+    last_write_checksum: sha1:003a544ff8e69e46a3eaffb23be6db4a039e246c
+    pristine_git_object: 9e10f828f45693925f9867340fdf2bfdf54d4656
   docs/models/shared/commercemetadata.md:
     id: ac5262cf5639
     last_write_checksum: sha1:c5c948960861ac137e0555d2a34e3a19f20efc16
@@ -8314,12 +8314,12 @@ trackedFiles:
     pristine_git_object: c6dd8d63b55bd080d30997de22603e24810d0256
   docs/models/shared/commercereview.md:
     id: c52a95e52120
-    last_write_checksum: sha1:44f8d7a808fe46f03df24fd02b6b222e85b5bfba
-    pristine_git_object: ce2ac08557c585d853c8dfdb2e47b911b8fb0da5
+    last_write_checksum: sha1:0b5060386c182ea74edf4dba6d62645d17462355
+    pristine_git_object: 4e6819f4b84dfe36c02ccf252f5abb236b2f4a08
   docs/models/shared/commercereviewcomment.md:
     id: df8aa50831e9
-    last_write_checksum: sha1:8c5f1f423235b58f8c32ad8156ea88a92a562b90
-    pristine_git_object: 45dd74d45cd25cbdba34663facb5000359b1cf9c
+    last_write_checksum: sha1:78caba4ee2c779af3a95093665a7ff9067e5838a
+    pristine_git_object: 4e6c6f022aeabdd92526f24def84b5303a468742
   docs/models/shared/commercereviewcommentstatus.md:
     id: 9ab439543ecb
     last_write_checksum: sha1:47df2fd9f274a8ac2443ff13dd052455d8787b30
@@ -8550,8 +8550,8 @@ trackedFiles:
     pristine_git_object: 7a4ea53ad3a991fbf1bd5eeed892c31a72d4345b
   docs/models/shared/formsform.md:
     id: 5ef8c5dbeed0
-    last_write_checksum: sha1:0ecc5b91341cea15a7580d21f2da74a763ab4674
-    pristine_git_object: 6cc6f2a97277ed14b7b286a35c6d73482bf92131
+    last_write_checksum: sha1:dd4d5c0f77465301e1e949f312b565fc543ffbc8
+    pristine_git_object: 6b7cb8e6acaa0a1955daf1cc47f436f4a928d116
   docs/models/shared/formssubmission.md:
     id: 28ac5816e80f
     last_write_checksum: sha1:dc5f0003b070ad73ded376395a391dbca56e9009
@@ -8646,8 +8646,8 @@ trackedFiles:
     pristine_git_object: 1864f09cdc5fd0347d2752a608c535038e84ad5c
   docs/models/shared/hrisdevice.md:
     id: c726a54c0b63
-    last_write_checksum: sha1:494c404b1b2e1fea06de045bff5e30dbf06fca91
-    pristine_git_object: 27695960ffc4aeb376f1fa23921187f4eed1b2d7
+    last_write_checksum: sha1:e7bcd8656fddc74b1e6f13b7f4fe17acc74adfd8
+    pristine_git_object: a08217c0f8b440a2b0a86132e3613fe7c661a959
   docs/models/shared/hrisemail.md:
     id: 4052ff33c7ed
     last_write_checksum: sha1:be51a458f8d6f60b49312e88de575ec8006bcc98
@@ -8722,8 +8722,8 @@ trackedFiles:
     pristine_git_object: 88adbfb34b39018fa7e649a395eaa99180433eea
   docs/models/shared/hrispayslip.md:
     id: cccaf6c5078f
-    last_write_checksum: sha1:eebeebdb9bd72789f68f442d906ada46d6b8fc4a
-    pristine_git_object: 3b22d1a289bb2f74aa3e349f93702fe13668efdc
+    last_write_checksum: sha1:a14e0990acfde5ead3097f1479641f9ccc3f712b
+    pristine_git_object: bdeab003330f967a089dbfc59adafd6af917423d
   docs/models/shared/hrispayslipdetail.md:
     id: 1e0230758a64
     last_write_checksum: sha1:1b76446362fcabdaa6abe9cd096b547561855f79
@@ -8742,8 +8742,8 @@ trackedFiles:
     pristine_git_object: 1187011f1bff9d710f2fed04db5622cb17fd657e
   docs/models/shared/hristimeoff.md:
     id: 2cccb7e03a5a
-    last_write_checksum: sha1:8b94f0d1a52cf2ebeb45a147d4c4de6255603de8
-    pristine_git_object: 0ac6d1f17e3e75af09c43266853c9001859128da
+    last_write_checksum: sha1:8f7a4b87c7c34a9897ee77292cc0ab132c3d99a1
+    pristine_git_object: 766a27ae76c3ddbe81b17e6a6a12e645fdc59431
   docs/models/shared/hristimeoffstatus.md:
     id: 8676287d5b58
     last_write_checksum: sha1:b1d36ccc62539261d138ec1fffad6fc42828a3b2
@@ -8810,16 +8810,16 @@ trackedFiles:
     pristine_git_object: 26beb57dee6b436f032f20f625f34a0c4fd51f7c
   docs/models/shared/kmscomment.md:
     id: 50926db94cee
-    last_write_checksum: sha1:8b1e73d5e852eaa15ecc2d437de413789c53e20c
-    pristine_git_object: 16eeaeb6fd3d2dfdf84f71d62184b4b3253c952e
+    last_write_checksum: sha1:ff3e849d4c7c3d17a56722190529f50797ad86a2
+    pristine_git_object: 80c8fa627a8595de7dea5a2320e73b4f27618d53
   docs/models/shared/kmscommenttype.md:
     id: 7f71a8f25c60
     last_write_checksum: sha1:399a15f98df405da138672de65e441afcf67da8a
     pristine_git_object: 6f4cb4aa0a0e1eda899de6a0d4023961af998658
   docs/models/shared/kmspage.md:
     id: d80ddd715230
-    last_write_checksum: sha1:616cb0b9357f310dabfd0b93b848c88b7d01c5dc
-    pristine_git_object: 4bd579ac56f30d53425a320d6362b619920efdab
+    last_write_checksum: sha1:09af4cbb28691f30727215f27b98ea7bab506acf
+    pristine_git_object: f0e403ff75b46ce2f292e39269b8f2e5c7ff2ed6
   docs/models/shared/kmspagemetadata.md:
     id: 2e57f363beec
     last_write_checksum: sha1:e2dc68692d352f4d302f6f49f1a27ae9d9cc3364
@@ -8858,8 +8858,8 @@ trackedFiles:
     pristine_git_object: b9293c010759ccc2d74bb9e4ac293b6bf643e255
   docs/models/shared/kmsspace.md:
     id: 9e4e067d9f74
-    last_write_checksum: sha1:a951140aba3f8d323f226cf8725786856ecd18b4
-    pristine_git_object: 89450f50f57252920c5cecc7b29ccede1312710c
+    last_write_checksum: sha1:654ab83014d08120ec5a10c00e222275449a426d
+    pristine_git_object: 17c3dc59fcc346fbc339deadb1bb2b9c5e86c202
   docs/models/shared/labelformat.md:
     id: 1eab3d72dbe8
     last_write_checksum: sha1:186cf1afcb6de4b5d60cf03211d4b1da31f172ec
@@ -9174,8 +9174,8 @@ trackedFiles:
     pristine_git_object: 9d25f01998f80146e0c6a8a41bb29e06ebc80aad
   docs/models/shared/lmsclass.md:
     id: af0993cbfd2b
-    last_write_checksum: sha1:2ebfa88f6294d4eef31ff6df6de492b7cd95233a
-    pristine_git_object: 0bf040941f2ab2dd2eddd6a0454004350d420e86
+    last_write_checksum: sha1:0068789a1b978d3653e8172708ad0504302f5ed2
+    pristine_git_object: e05173c601ee0873888ab398ad0e2f9db5bcf20d
   docs/models/shared/lmscollection.md:
     id: 52a997a76730
     last_write_checksum: sha1:1f5064e6f99bee47116c28c94d8d7d032fad44ad
@@ -9190,8 +9190,8 @@ trackedFiles:
     pristine_git_object: f2edbcc1e2afa7be84e479997c2298fd0052eafb
   docs/models/shared/lmscourse.md:
     id: 0d375d448737
-    last_write_checksum: sha1:5569381697388c46c7c71bcdcd1c2f7f6392780a
-    pristine_git_object: 2cd1cf02314cb8d2e87014b3e6c82d91c5f06460
+    last_write_checksum: sha1:f18fc269af00adfbd08baff91ceaa053c4c492e0
+    pristine_git_object: fa955fa8a4f3448efe7b42f60762fd4955299736
   docs/models/shared/lmsemail.md:
     id: d386fe8e693c
     last_write_checksum: sha1:2704f81f7b5a9c1bc98cc074693c921380fc3f05
@@ -9282,8 +9282,8 @@ trackedFiles:
     pristine_git_object: c5b455f721df0bc0e5201c29f7df7de177453027
   docs/models/shared/messagingchannel.md:
     id: 1bb1ef52bde0
-    last_write_checksum: sha1:9374a92484f98fb68756c69cbf6e324356270e00
-    pristine_git_object: 8ac7498c48dccc03243c6213308b10876eca9f32
+    last_write_checksum: sha1:5c09523b50b873351041b5b2f9b4d6b27453a80b
+    pristine_git_object: 9045895e2eaf38ea2b451536a3b5a8a7c2b6efb6
   docs/models/shared/messagingevent.md:
     id: 4da72fb4d6d4
     last_write_checksum: sha1:5f9a864578369d709ada8041ca9218c9a03b06d4
@@ -9438,24 +9438,24 @@ trackedFiles:
     pristine_git_object: 0fd852c8db7c830618a2af1dfdd71f745666abbf
   docs/models/shared/paymentpayment.md:
     id: 783d0ee90069
-    last_write_checksum: sha1:f2cb1d578e85d6664ac09d514b9725cf9921959e
-    pristine_git_object: 2c5ac0776420fbbc2ad61e9d61c2dbff1c31eeb0
+    last_write_checksum: sha1:760315cc006d641e955df637afb52920cf9f83f7
+    pristine_git_object: eacbd65b02dd636cd2f552da8fb378141eee5d6a
   docs/models/shared/paymentpaymenttype.md:
     id: 7f462874d2b7
     last_write_checksum: sha1:579fa252ac84f9f10e731e031f1375eb1cc30dc7
     pristine_git_object: a0719cd097be6660831193cdb4e220d2a74fec8c
   docs/models/shared/paymentpayout.md:
     id: 7bc64c74debc
-    last_write_checksum: sha1:55390b874ef43852db438061bbb1332e4aae8209
-    pristine_git_object: 771c600013b65f45f7fad2ba4bc4262b2c3cc8be
+    last_write_checksum: sha1:aebdde24740b5501bedf12912e46b7e882ad1df8
+    pristine_git_object: bcfe902dc54fd7bbf2ddd2289a6640901b39ce81
   docs/models/shared/paymentpayoutstatus.md:
     id: e8b5441162c2
     last_write_checksum: sha1:aaed0e1819a1e76e0466acfd3d133316c7e6e152
     pristine_git_object: baab36176c8c0971666b11c5b48537b83eb80bf3
   docs/models/shared/paymentrefund.md:
     id: 56b07a97575d
-    last_write_checksum: sha1:edeb6399c52aac0d28576eb4199bc47aa3eb08f9
-    pristine_git_object: 8649d76dbc61e2edf1847abce75c63bd2dcc3bd9
+    last_write_checksum: sha1:c0625c6a0c785cf184d600a4395255368901bb53
+    pristine_git_object: 8749c3e89ba6df3f4e42565dda943585fc192a3f
   docs/models/shared/paymentrefundstatus.md:
     id: 26c2bb0cce1c
     last_write_checksum: sha1:28c0acf1cc14bf86b2931e749e0a9201a5cc0c0c
@@ -10162,8 +10162,8 @@ trackedFiles:
     pristine_git_object: 8d424a27a6caf56f6534683fac585d5a99fe07e4
   docs/models/shared/propertymessagingeventchannel.md:
     id: e5871b0acbcc
-    last_write_checksum: sha1:317148f667ee2372f60f5786356a2b8c742463a5
-    pristine_git_object: 406e1e50e226b17ffd5560a5b7a7e101d0379368
+    last_write_checksum: sha1:c90266af3c0b2a22d5afb1cd8f169e1a58a68b0b
+    pristine_git_object: 716e637779a89c14f03b75be8854733842ef04a4
   docs/models/shared/propertymessagingeventmessage.md:
     id: 9f2535695009
     last_write_checksum: sha1:a8dccfbc8b9c5fa528864243535eb2bc363ca671
@@ -10582,8 +10582,8 @@ trackedFiles:
     pristine_git_object: d84079ab1efe1d70856805d38d038b4ccaef82a0
   docs/models/shared/taskcomment.md:
     id: 0903705ca7b8
-    last_write_checksum: sha1:55c773f41cf3c92206cb615c55c6faec28d2fb0c
-    pristine_git_object: 039924224af9a8ca86261c0f955bdb5e1bf3429c
+    last_write_checksum: sha1:5f6f2854c4796147675888dd96fe4cb311443811
+    pristine_git_object: a33231df8c2e7dd9c3cd9ae6e95c028bab82695a
   docs/models/shared/taskmetadata.md:
     id: 626a176447a2
     last_write_checksum: sha1:665028802f5e3e5ab1a14e727c76d17fde9427f3
@@ -10694,8 +10694,8 @@ trackedFiles:
     pristine_git_object: 68ee3b0d605fdacb6a9328cd80db10026af215cc
   docs/models/shared/uccomment.md:
     id: 832bfe54dadc
-    last_write_checksum: sha1:a4c363bc7a7927c49b7735096b10c77bfde7c0a8
-    pristine_git_object: ee5c648f0214e9f6b5b223905f4da72a72eb262c
+    last_write_checksum: sha1:e76a2f7748a61516a4fad75bdf10b290e5b117bc
+    pristine_git_object: 951da77ed47a119ddf3a20db141c9b2ad366dca5
   docs/models/shared/uccontact.md:
     id: c9c0032565c0
     last_write_checksum: sha1:058be4e7ea36f2cd00babf44927c8dbee319106c
@@ -10742,8 +10742,8 @@ trackedFiles:
     pristine_git_object: 3af246b6aeebe6c4ce77fe0941bd2f15ad6cf3e7
   docs/models/shared/verificationpackage.md:
     id: 4862cd32ad56
-    last_write_checksum: sha1:b4f60c6b2c47136a1e2762057dc41b4d8bc6dfe3
-    pristine_git_object: 921126608cf8384caf991e67941f9c159edc1c82
+    last_write_checksum: sha1:f0b85fc42ecf6f804cc40c698e368c3fcce74ee8
+    pristine_git_object: 8d5215699938d1fe99fafa72afdd1037a2492f5c
   docs/models/shared/verificationpackagetype.md:
     id: bbbe23a4e955
     last_write_checksum: sha1:76dba3dc1bda7666ee094eed60d44435ff645879
@@ -11070,12 +11070,12 @@ trackedFiles:
     pristine_git_object: da2ff9f2f010973911db2c617224c31e1b947b66
   docs/sdks/assessment/README.md:
     id: 54c8061fbed1
-    last_write_checksum: sha1:4d5eb1be462cd8abd825240d3b25828d4ebdebdc
-    pristine_git_object: b55358091a973c1ad74eccb4c23029ce6e5da2bb
+    last_write_checksum: sha1:442eb28e7dbde6e70606c937ce350edf4ae31353
+    pristine_git_object: e8f18614d571f39d0cc6f5541ff45994643bc3c8
   docs/sdks/ats/README.md:
     id: 24fafa267f6c
-    last_write_checksum: sha1:2f2f0c756d80a45fba9325dd9fda92680f00b651
-    pristine_git_object: 75c9313443486ae40f18556d37155f5d5a5a5eb3
+    last_write_checksum: sha1:3a6c35e20edf0ed35997a7a3f0fdbf0713b57c80
+    pristine_git_object: 7d370d5d59445b1bb664dfce8fd766c5e82d85b2
   docs/sdks/auth/README.md:
     id: e9724f17945f
     last_write_checksum: sha1:44f63b3f3c25c1e1e86e16a45464256fdd81884f
@@ -11110,8 +11110,8 @@ trackedFiles:
     pristine_git_object: bf3ba5d70978b16d0aafdde54c386dc1e419e518
   docs/sdks/calendar/README.md:
     id: b85c3af313ad
-    last_write_checksum: sha1:33f6c60f21e67a3df0e497bcb8ebc697dc1f53e8
-    pristine_git_object: daf0294d91809ecd51e74eb2518a637565fa2a73
+    last_write_checksum: sha1:c15ca590adc54ac239e456614b0d6729e00a8c29
+    pristine_git_object: 5bbc0299b8e95a9235b722ba80c7907d033f2252
   docs/sdks/call/README.md:
     id: 63a19d6314f9
     last_write_checksum: sha1:bb4155f833efd23509082304c769e74327f78922
@@ -11146,28 +11146,28 @@ trackedFiles:
     pristine_git_object: 2f608f25d30e60b86f06ad98ab074112cb6018a6
   docs/sdks/class/README.md:
     id: 3d83b7f3788f
-    last_write_checksum: sha1:dc348b123f14f2fde38cc8a8127b0f4679418194
-    pristine_git_object: 64fe9ab47e3f5092083a57c54f6aa68d5846ba8f
+    last_write_checksum: sha1:963a75c63aef6c780c92cab56d099ff9d0c4c4e8
+    pristine_git_object: 19852eb5210bebc05407e2fc99b2912177dda93e
   docs/sdks/collection/README.md:
     id: 8e08642c5af2
     last_write_checksum: sha1:c1bc88838d2d09fae7f4c55eeb1fd61515ddce99
     pristine_git_object: 641778baa45d9cb45d4e16aa1772533687677b19
   docs/sdks/comment/README.md:
     id: e4246f80d976
-    last_write_checksum: sha1:5bf89525e1cc9ea194a2b62e11f7741baa281860
-    pristine_git_object: d8ff23ec0f36f5adf33bae754da90642ea0f5104
+    last_write_checksum: sha1:7f981991da14ded4e055a8c0b464614a452e8bb0
+    pristine_git_object: 36fd39e39745a07be22c8e5363a35e78d90ad098
   docs/sdks/commerce/README.md:
     id: ec0eedee4bc3
-    last_write_checksum: sha1:0138c22f2a84518ff7faef8c5a537e685c45beff
-    pristine_git_object: cb7b9310e3699bedaacd6891acb4b6aec57c3f80
+    last_write_checksum: sha1:8fdb97b7bfc8908f0c9808f3ee84762511851445
+    pristine_git_object: 4a8f40577d333bcfb1b194c893bb3cfef98a5323
   docs/sdks/commit/README.md:
     id: bc22b8348fdb
     last_write_checksum: sha1:5804ee416e4e8f5c5c2f9e7509680c00877d6f5c
     pristine_git_object: f0da52265e846d5fa666bce336755d0c8ca8a7d0
   docs/sdks/company/README.md:
     id: e71077841b8e
-    last_write_checksum: sha1:389f989ce9c2388b73c777738ba9b25d8f0bfea8
-    pristine_git_object: 0cab459b0780451d5d73371843d13f7f8d5c7e5b
+    last_write_checksum: sha1:e9cf82ac053bde6b4ae065092c17335464aa00cc
+    pristine_git_object: 3b9d0e15b42385ee76b767a9d48fd68a87757c25
   docs/sdks/connection/README.md:
     id: f41e4b35daf8
     last_write_checksum: sha1:4e3cbce6236bc584faac39b19a692ccbba179272
@@ -11182,8 +11182,8 @@ trackedFiles:
     pristine_git_object: 567541a9f30fcc96184162a16ed11bbcb5819834
   docs/sdks/course/README.md:
     id: 80cb1721406a
-    last_write_checksum: sha1:aec2666b704d01fffd1b14ae57e5cd5d53453989
-    pristine_git_object: 34acdab6196333a9ce6083d7f4189db69a2c1acf
+    last_write_checksum: sha1:2795b857cfc34e81326966c611d282aba4b8bfe7
+    pristine_git_object: 977ab7cc8c4d9ae099a1b3805aae23531fb17204
   docs/sdks/creative/README.md:
     id: 9e3fda387788
     last_write_checksum: sha1:1f3434977f1becc95db3dc5593f7bdad7583412c
@@ -11210,8 +11210,8 @@ trackedFiles:
     pristine_git_object: 4a097633b683149f2458b6edfe4de12ded853ad7
   docs/sdks/device/README.md:
     id: 433bb454e987
-    last_write_checksum: sha1:d41b8c18f3caebcbe97fb7ab7f3541593956c457
-    pristine_git_object: 2f8dd65c2402d168e09d32d93319583cb739af98
+    last_write_checksum: sha1:49766cff3f6bd1c8a9a250e85179cf69a2584ca2
+    pristine_git_object: d60503c91e61f3a47e83876046a2e58ce9e25ddf
   docs/sdks/document/README.md:
     id: 6a8c24b11248
     last_write_checksum: sha1:5b0f5b2861e4dae4bc3e668245b4fc2f1005acc8
@@ -11246,12 +11246,12 @@ trackedFiles:
     pristine_git_object: 6034110b2097d70aec51949dc3fbdb669d127691
   docs/sdks/form/README.md:
     id: 9378f360c559
-    last_write_checksum: sha1:0ec9c24d9b5ca00ae6eab128189ae1bc227e0a20
-    pristine_git_object: 30cd2d153e992ebc051b90893d91867472d4de1a
+    last_write_checksum: sha1:d29284f77a8368aae5f67e79e3299c090e2d9beb
+    pristine_git_object: 9a1b14a92e7983eafaeec4480fb3e88effbf0a18
   docs/sdks/forms/README.md:
     id: fbba6f47c69c
-    last_write_checksum: sha1:c8c38bc2cd7d906a1a69967a76ea4f240c68a6d3
-    pristine_git_object: d40afbf9d3c0e4cbd061fa012b0fc9e9d8954831
+    last_write_checksum: sha1:ee9d190ab51148c6a72be4683bcdf840db40e7e8
+    pristine_git_object: 4978489dee0544b49fff9f7e2305040c80951eec
   docs/sdks/genai/README.md:
     id: 03644f9125fa
     last_write_checksum: sha1:c42abf567210420bf3bb0fe8bc2214871d3fe882
@@ -11262,8 +11262,8 @@ trackedFiles:
     pristine_git_object: 70088f4f474d8d9bdf6bfb6cbef1cf22d7795401
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:5276bcaa9e0d58c26aed96cc568ea98742f7e9bf
-    pristine_git_object: 1d8346e68fa0c0abf6854893c89c75ea2dcb9fdb
+    last_write_checksum: sha1:c5dea64bde4b8c55db625521816f526705b933c8
+    pristine_git_object: c10cb89dca53f33345d99a2f7f4c2fcd572fb9fd
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
     last_write_checksum: sha1:090b2a72e5ab2bd068c86d688fe3a64a51b01552
@@ -11282,8 +11282,8 @@ trackedFiles:
     pristine_git_object: f8a302f422ab7b1cd3e834a232741fba9dcccf25
   docs/sdks/inventory/README.md:
     id: b54dd8e030f2
-    last_write_checksum: sha1:301a238fda9301be73b03e0938d343c5c8a1c2d0
-    pristine_git_object: 5d58a74aef5cf583ce8f03c6ec27b949ed26f313
+    last_write_checksum: sha1:110e069edd7c87ff835998cbec680c82d0f1f70d
+    pristine_git_object: dd45242296d1256ee5c347ffaf4b6b36249b5e4b
   docs/sdks/invoice/README.md:
     id: 4ba3659502ea
     last_write_checksum: sha1:b8606506f3fe10b7a0a2a4e9756e845c72da6d21
@@ -11310,8 +11310,8 @@ trackedFiles:
     pristine_git_object: e2b911243d86b266db44d7964b2e2388e3da9ae1
   docs/sdks/kms/README.md:
     id: 671e2db6ac3f
-    last_write_checksum: sha1:42a35791bcba39e52eaf396a06b6dbfaab8edefb
-    pristine_git_object: b9df4f88c8a44d17d7a76995316705c96db5ace7
+    last_write_checksum: sha1:8a65e11052a3b47c5196f551dcde81760e4f9b33
+    pristine_git_object: 01761b0b400f4a580e04457136449701566efc9e
   docs/sdks/label/README.md:
     id: 066306770d08
     last_write_checksum: sha1:8442fcaaa4db7182e4ab9be615f2a2d0b610bfcb
@@ -11330,12 +11330,12 @@ trackedFiles:
     pristine_git_object: 3afbf185ea9572637daf292848cb988bdc48666b
   docs/sdks/lms/README.md:
     id: 794550affa22
-    last_write_checksum: sha1:49d06eca9875f2a029f0cfc9fb5525a6c4152f77
-    pristine_git_object: 7e0cd6a3a2bedeaa12329899ac35ad070194f954
+    last_write_checksum: sha1:4392ef44fc80160c51ec8569b1ba2b5eafa1f3bf
+    pristine_git_object: e00d9a8b74953c09801a4879f600aae7d3dbc92f
   docs/sdks/location/README.md:
     id: f174fc17f497
-    last_write_checksum: sha1:845625de19431fb67502d614008f1e3ea446fb4a
-    pristine_git_object: 5d747e552a207d14ea42ef0a01bf2170bd9985ee
+    last_write_checksum: sha1:4a92598b79ab0ae19a2e84e224f7b6232ffbf4e0
+    pristine_git_object: ebda708a1c4499bbd908648e9255486c503cd8b9
   docs/sdks/login/README.md:
     id: 795cc2a6ce04
     last_write_checksum: sha1:6c9b6b290949c168bba9d12984a8121ce0b6a1de
@@ -11378,12 +11378,12 @@ trackedFiles:
     pristine_git_object: 0f85d55eaf954bc987f48a885b85b3d282812d2e
   docs/sdks/package/README.md:
     id: cc285c509d7c
-    last_write_checksum: sha1:5ef95277eda26237e1e3efdfaeb50a7aabf0e127
-    pristine_git_object: 507be77c33f7b5d16b4bd524f91c63c4ccea1820
+    last_write_checksum: sha1:5fe8edae4f0d714e79cd046d2c7040fdd1efd431
+    pristine_git_object: 6f7193cd2f972854bce907d24bff73b4b7cc80b4
   docs/sdks/page/README.md:
     id: 68a2042a2ff7
-    last_write_checksum: sha1:d53dcd962ca1225e71c53660dfc70ced46a04319
-    pristine_git_object: 27754f33bd11cc7f4fb6add365cef6b6d16b3473
+    last_write_checksum: sha1:12beb106931317ebcf6bda1e5bc0510ff23574a6
+    pristine_git_object: 575ebd6f6aad77c34ca091886390301d3007b51f
   docs/sdks/passthrough/README.md:
     id: f02f3e269c40
     last_write_checksum: sha1:fd1f1deb6fa2c821246c584f4ea5648371f0bc6d
@@ -11466,8 +11466,8 @@ trackedFiles:
     pristine_git_object: 18f1311cd5470a2c437f7f3991a54e4b5761ef6f
   docs/sdks/review/README.md:
     id: c8de80641188
-    last_write_checksum: sha1:cd21ac86e71bde449c9a2b46b1b6f8df9cf126ce
-    pristine_git_object: 9eb1cd7e60bd0a12712b610cfd72149c9697039f
+    last_write_checksum: sha1:9874d8d9d3432e0cb4b2738a2dacc589ae993bc5
+    pristine_git_object: f33e29545f7e86d0cbb282b30d577ea88da73889
   docs/sdks/saleschannel/README.md:
     id: bdd5f4139b27
     last_write_checksum: sha1:56c3a7318a5e053cf139ebd416939abfcdd90639
@@ -11502,8 +11502,8 @@ trackedFiles:
     pristine_git_object: 8a188de37aeec1bbb5ae17658041a4c84bfa45d4
   docs/sdks/space/README.md:
     id: b3ce86241634
-    last_write_checksum: sha1:8dfcc59c4890ab2cacf2dec5828fed6c942629f0
-    pristine_git_object: de1456d1438f520e0b5c1fb83f7d62db6cd772ed
+    last_write_checksum: sha1:b398233dafdfd2ec9af2aceff067bdaeeb863191
+    pristine_git_object: f25a5fe3aeeb88d221330f8bd26c26c807d5ef29
   docs/sdks/storage/README.md:
     id: 36ff94e3114a
     last_write_checksum: sha1:e2096fff8039efcd0c719f589149da0d4c017ce2
@@ -11526,8 +11526,8 @@ trackedFiles:
     pristine_git_object: d83ffd224ef1c0b7d5ab656c10fb3f5eddccaab7
   docs/sdks/task/README.md:
     id: ae2d0d96ea1f
-    last_write_checksum: sha1:3506857aff1194f526e392b66530ea6c1f838b64
-    pristine_git_object: 604e82ccfa2e9249aa44d38f587d363d33b2dd7c
+    last_write_checksum: sha1:3b126603a0172152c87d4a1893dff771e02e8981
+    pristine_git_object: e9af0ffdb3385b0499334a30f3a5809c4c091926
   docs/sdks/taxrate/README.md:
     id: 626e6511cf80
     last_write_checksum: sha1:18cf7e7c9fcc90306ed1da6e175cee5faab4b85d
@@ -11546,8 +11546,8 @@ trackedFiles:
     pristine_git_object: 1f1fc6c449843d60c19ddf7c4d6cba08c9de25ec
   docs/sdks/timeoff/README.md:
     id: 5dfa0f033e4a
-    last_write_checksum: sha1:3cb9fcced211b7b4956a31c3ff51b9faf6be0ce2
-    pristine_git_object: 73bf25ed0486f5afb26e860dda5483139df8e8a1
+    last_write_checksum: sha1:b9e0d176e195c634ee3b6e95c87ac64813a440bd
+    pristine_git_object: 36b1bb811b0d75a6e9ba9fd63260d6a9d437187f
   docs/sdks/timeshift/README.md:
     id: f11112fc9233
     last_write_checksum: sha1:ac60fe5082d09b30eef5a45058ac5f1d11ea280f
@@ -11566,8 +11566,8 @@ trackedFiles:
     pristine_git_object: 4708c413b59038046df1f026fa53bcf209534cf9
   docs/sdks/uc/README.md:
     id: 959f5612261b
-    last_write_checksum: sha1:fcdd17e1add018bea9814080715fb9cd220b215b
-    pristine_git_object: f54da0b0f205f74a12b1d557b6e2ca3bc6352fca
+    last_write_checksum: sha1:37a5a66822febaa2891506ef9850cf731a53f39f
+    pristine_git_object: 9e72e0fce49dc16a1cea87978b2fed4a3a4f8524
   docs/sdks/unified/README.md:
     id: e15cc6babd27
     last_write_checksum: sha1:08a87b13582dbb3af46acef4ce9901bcb347d332
@@ -11602,8 +11602,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:d6fec4b588e412631c65a0de54aa2d66654ffe26
-    pristine_git_object: 2854e3e3baf8af3354df524eeef0a3ed596d5d68
+    last_write_checksum: sha1:fd5d8ecf909a8c95a513564f961449363213d7d2
+    pristine_git_object: dca11a8c84ac753b3ec674188efb9d396cd0c6cb
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11630,8 +11630,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:e55488d4255a8b7f3cf1fbbafe57cbbafbed8bd3
-    pristine_git_object: 673d0d98b9f675269ff9153bac7789e530769667
+    last_write_checksum: sha1:f7234fa19db26254cc1a4a5c6ff88bbb8abdc898
+    pristine_git_object: b42cef8935dfd3f6c9bdf121e9721fe0aff53093
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:ed76e5ffc5ac5b86fc44cbb401bb5277456e8c7f
@@ -12014,8 +12014,8 @@ trackedFiles:
     pristine_git_object: 58abdd206397edee23364de6671d5babc057494b
   src/unified_python_sdk/models/operations/createaccountingcreditmemo.py:
     id: 102d22a11b58
-    last_write_checksum: sha1:daa01ad67e3682e352833ff83a96c584cecfcaae
-    pristine_git_object: 8a48c4143e0b95d491c5920e68e7e618e2f76977
+    last_write_checksum: sha1:1ecd632341c99109295cd94b72746b05ee24fc7e
+    pristine_git_object: bf456468f609cbb6f16a7f54f3aedb33c915f2b1
   src/unified_python_sdk/models/operations/createaccountingexpense.py:
     id: 2e3152f2e0e8
     last_write_checksum: sha1:dbd3f62c9e6a3045113c216025bcef9877aa977c
@@ -12306,8 +12306,8 @@ trackedFiles:
     pristine_git_object: 6697809ebe0c7d94589a71ce6f1b556e0cd552d2
   src/unified_python_sdk/models/operations/createpaymentpayment.py:
     id: 264d8ff0aaae
-    last_write_checksum: sha1:85c8e757b6ce45874f5bd605ffe534c6f2f134dc
-    pristine_git_object: 22e86b172e08534b1404f988b6218976ad3319de
+    last_write_checksum: sha1:6d244cea15fc60b7e0ba0e03cf92d130ee345a30
+    pristine_git_object: 480cf2a4e2d3114dc189d52d99adfece39caf9a8
   src/unified_python_sdk/models/operations/createpaymentsubscription.py:
     id: b59ff15f488c
     last_write_checksum: sha1:0cef1a4466234c15cd70efc4c6c35e78c0ca1089
@@ -12446,8 +12446,8 @@ trackedFiles:
     pristine_git_object: af299277ebf7fc66ad97fa8f4168d8fca438932e
   src/unified_python_sdk/models/operations/getaccountingcreditmemo.py:
     id: fd392ac6c8b0
-    last_write_checksum: sha1:c76277e04ab34a8afdf77d7940661fa206820d1d
-    pristine_git_object: cc3b1cc381e06c2e959c1b52b7ea88312fdff127
+    last_write_checksum: sha1:d45125be64aa09f26fe9e13b6e0f6f2b341e24e9
+    pristine_git_object: 51234ea4b4b1f407551604fc2156866a26233504
   src/unified_python_sdk/models/operations/getaccountingexpense.py:
     id: 4f6c26c86fdd
     last_write_checksum: sha1:853bdd08c0fd63c1dc6340b8a519115c4edcbe35
@@ -12686,8 +12686,8 @@ trackedFiles:
     pristine_git_object: 66a313a96e50a7805f16fd8e70884e3726408f95
   src/unified_python_sdk/models/operations/gethrispayslip.py:
     id: b9bbc7e8e149
-    last_write_checksum: sha1:88bfec0d6253b8b55b6c668a8f9ae1ac3f41737c
-    pristine_git_object: 87198278af333ef499931520c0fcb7a852314268
+    last_write_checksum: sha1:fe2b17e2a7c4bfff944c6a34258d5291cc1d0045
+    pristine_git_object: c18ffe29148994b36583463b1b6926dd1b34dd47
   src/unified_python_sdk/models/operations/gethristimeoff.py:
     id: 964e7ed063f3
     last_write_checksum: sha1:5bdb8d034d5153dda30b10c2ac1d921bfcf45f2a
@@ -12766,8 +12766,8 @@ trackedFiles:
     pristine_git_object: 28f953bd46ead3ccbb5eea88852a9d7ab575a28d
   src/unified_python_sdk/models/operations/getpaymentpayment.py:
     id: fc1f70f13ca7
-    last_write_checksum: sha1:c70235a7c6a7dd0c4e038095686b1fff7bf5f485
-    pristine_git_object: f1f055f0ddda9a0d0b7f1c5913f90e33be4e423b
+    last_write_checksum: sha1:b4ce40c1e0b5f5a1061ed32b469022c2db336ce6
+    pristine_git_object: 245efe16a391b2841a223a9b8680450002663327
   src/unified_python_sdk/models/operations/getpaymentpayout.py:
     id: 4b42d8274dd2
     last_write_checksum: sha1:13b689a4225cd8546be99e4d5f450e63b302850e
@@ -12898,8 +12898,8 @@ trackedFiles:
     pristine_git_object: 1c29a2fafdf1c1cb3d6f16c778d9dd419b2d02e4
   src/unified_python_sdk/models/operations/getunifiedintegrationauth.py:
     id: a8d9c1896587
-    last_write_checksum: sha1:435e5559f26a7b215b6106b3ef4d251ff8614524
-    pristine_git_object: d2391c6d7155472d8bbba31aba7b5f8f0ad3a2f4
+    last_write_checksum: sha1:fc89cc0a5e9f84ee007eb4a4fdaaa1772eb49d3d
+    pristine_git_object: 2af9d31e518b16e36aad491e4529d91d87453adc
   src/unified_python_sdk/models/operations/getunifiedintegrationlogin.py:
     id: 750f3c77dc88
     last_write_checksum: sha1:fe2114f0cb1e963ac85db3cdf9f5aa3d612d2605
@@ -12946,8 +12946,8 @@ trackedFiles:
     pristine_git_object: 053dd142c3a86b39cbb0bea9fa208011b8a245ee
   src/unified_python_sdk/models/operations/listaccountingcreditmemoes.py:
     id: 7ea720de9580
-    last_write_checksum: sha1:1b99d6c66aa88182f5d69a8041c02fe6820573aa
-    pristine_git_object: d4aa0360fceca0ce83a5ebb52d024e11569a9a1e
+    last_write_checksum: sha1:af47f27433617f0e7aaeaa218c249fa777c50f11
+    pristine_git_object: efec9fe3dad8a026fd51b5083bc0b8f75a2cb9a7
   src/unified_python_sdk/models/operations/listaccountingexpenses.py:
     id: 3e6a3a038f1a
     last_write_checksum: sha1:794de3ac5a46f100a1ceaebc61a3bb690c8fe9d8
@@ -13210,8 +13210,8 @@ trackedFiles:
     pristine_git_object: 23f2ae3948fe6577a98e2361d60bc8052189284d
   src/unified_python_sdk/models/operations/listhrispayslips.py:
     id: 2f6b4c9ac67c
-    last_write_checksum: sha1:a9267c7953615510c1e3dc06bf4de2f3245c825c
-    pristine_git_object: 06f3b24cb6d48da52522ddf90e9e0ccad3d71dc5
+    last_write_checksum: sha1:c5cd85b6cfca8b21ec4de899d34b0d6c63299df8
+    pristine_git_object: 5e0322791300665f36209676f069ce7f760f95cd
   src/unified_python_sdk/models/operations/listhristimeoffs.py:
     id: 25220808d6fc
     last_write_checksum: sha1:60b341f61a821e5e9b9e8ea770482a4d4814dbfc
@@ -13298,8 +13298,8 @@ trackedFiles:
     pristine_git_object: 1d756082b514982a146c286a7ddb495ff412fb97
   src/unified_python_sdk/models/operations/listpaymentpayments.py:
     id: 5d6476aacc79
-    last_write_checksum: sha1:c2cfc040e250e5f29a13faad59a4919ae7c6f407
-    pristine_git_object: 12911ac4c4d05bfda5f6eefd3bd6ff3000de5ba5
+    last_write_checksum: sha1:b2391ec52ddd7fe0703217970c5fb1ade3bba977
+    pristine_git_object: 2097e1489bed51d12b24f753ebd345634941da39
   src/unified_python_sdk/models/operations/listpaymentpayouts.py:
     id: eb8204823074
     last_write_checksum: sha1:b8009bd4015ffb91d1f2d05fb6f4165ebb8f49e2
@@ -13474,8 +13474,8 @@ trackedFiles:
     pristine_git_object: 0f86926b341bd36950d643dc55c21f46716bd7aa
   src/unified_python_sdk/models/operations/patchaccountingcreditmemo.py:
     id: 1968dec3652f
-    last_write_checksum: sha1:859976580fa4b2bfb9ae65a3a6dd7e185971eb05
-    pristine_git_object: 031a486b882923f1ff75260f88a7dbcc1cf619f8
+    last_write_checksum: sha1:375e52bade5646f23e865533f957b7f66184d4d1
+    pristine_git_object: d6b3eb099d6c8587b6982ca1db11c750605411b5
   src/unified_python_sdk/models/operations/patchaccountingexpense.py:
     id: aecc5d39ad6b
     last_write_checksum: sha1:9574cd2ab5f387f3598c491457707e1adb1b5340
@@ -13766,8 +13766,8 @@ trackedFiles:
     pristine_git_object: 133d79102d95d067ba63463a92b093f7adc2bbc2
   src/unified_python_sdk/models/operations/patchpaymentpayment.py:
     id: 333bbdcb1a9e
-    last_write_checksum: sha1:bbd0822422509a1c4fdc76060cf49c06f05ed9fe
-    pristine_git_object: 1511eceaef3bc8381370eafef0b6af2835df4f13
+    last_write_checksum: sha1:835df677e53279a773d7bfbcfba9dd8b2802d708
+    pristine_git_object: b0e76981ccdc43ad4bb56aef48f7c46ad191eab6
   src/unified_python_sdk/models/operations/patchpaymentsubscription.py:
     id: b404478265d8
     last_write_checksum: sha1:d9b5343018796a0745266b4075147c3cfbbb64bc
@@ -14302,8 +14302,8 @@ trackedFiles:
     pristine_git_object: 42785e6fac9fd57f0a1a17831f0ec2a0e66061a4
   src/unified_python_sdk/models/operations/updateaccountingcreditmemo.py:
     id: dc1954667b74
-    last_write_checksum: sha1:7f41039aece551d319e7101c63116c38046ade44
-    pristine_git_object: 2c9605eeae262ba9e7fb4ce7f8f0ce67b526327e
+    last_write_checksum: sha1:d11045ccea05b91eb376d127fc69738d21d72042
+    pristine_git_object: a19c382cd5e89e27e4322ad15ebcb4a8ef768a12
   src/unified_python_sdk/models/operations/updateaccountingexpense.py:
     id: f7c9d0c1ae9c
     last_write_checksum: sha1:22531bdd1bc63e773b5c0ba8fa4f1ca6f5671226
@@ -14594,8 +14594,8 @@ trackedFiles:
     pristine_git_object: bb5584c7eaae60cb10b2d5f988d4de8dc1c982e0
   src/unified_python_sdk/models/operations/updatepaymentpayment.py:
     id: 66a605ab30de
-    last_write_checksum: sha1:3d3004720632d74a57fcbd79b9634d3037ca2ba1
-    pristine_git_object: 25940915556f8519e7889f5654f2b9fc3b0a970c
+    last_write_checksum: sha1:a63c0c934ae89809bc374aced36d98dfa5201a8e
+    pristine_git_object: 615c0c0d5a6f9dd98f89cdd8ce046b876e644ddd
   src/unified_python_sdk/models/operations/updatepaymentsubscription.py:
     id: 414c66a7772d
     last_write_checksum: sha1:747aa469fb8bfc20d92b111bc22298cab724150d
@@ -14930,16 +14930,16 @@ trackedFiles:
     pristine_git_object: 2a68766b9873474bce16ee84d55410c0105bf480
   src/unified_python_sdk/models/shared/assessmentpackage.py:
     id: 118420ba99ad
-    last_write_checksum: sha1:3731259cd347e42d8253c13f8781cf7b2f66b0fc
-    pristine_git_object: 7c935a9dc45405b4c484c3361948446a91efd289
+    last_write_checksum: sha1:6012232dbe53663f0f05a15fb0b7d4cba6032504
+    pristine_git_object: cb65fcc5237be8d21629798103f32eec3002db92
   src/unified_python_sdk/models/shared/assessmentpackageregion.py:
     id: 57a015c2e1cc
-    last_write_checksum: sha1:1638cc4dceb7b5a960edfc7a5ee0e3afecee9b25
-    pristine_git_object: c81c4dd0e6fac8c2601162919a0d991a03976819
+    last_write_checksum: sha1:8ea1f26fea532bac4028e74e45db71dcc8c4bb53
+    pristine_git_object: 25083883d3252940a7b63d6ce6e58640476e0f3c
   src/unified_python_sdk/models/shared/assessmentparameter.py:
     id: 901b91108b78
-    last_write_checksum: sha1:15aea6bd965d338fe48bda85b05d7b05caae53b8
-    pristine_git_object: bc2f3d60a0e91e730d6f8f95ab141bcd768a7b4b
+    last_write_checksum: sha1:dd35db67e1a010827a55d0d1a28baec6f0749912
+    pristine_git_object: 344f0ae48d7801675403360060b742130e394252
   src/unified_python_sdk/models/shared/assessmentparameterinput.py:
     id: 35c3c46550fa
     last_write_checksum: sha1:7ca04e5d903621cc07e9e513a53dce141e4a8181
@@ -14978,8 +14978,8 @@ trackedFiles:
     pristine_git_object: 89cba477812d93c4a6790db46c8a3bbb9569832f
   src/unified_python_sdk/models/shared/atscompany.py:
     id: 5c84f7d0a453
-    last_write_checksum: sha1:9aeb67be55c0307dbf0e8112952a54299e4da353
-    pristine_git_object: 9c2d7fa110ce690435f8902e999a03f5025fde61
+    last_write_checksum: sha1:a810df0492461c1ee93f7d9986deab4e3bb17a57
+    pristine_git_object: 95285ca9317e93512710f4e896dd2cf5a4c78b1c
   src/unified_python_sdk/models/shared/atscompensation.py:
     id: 333aee859aac
     last_write_checksum: sha1:eeb6ac85a108cf0bbd33116f80e161d6a30fb33c
@@ -15062,8 +15062,8 @@ trackedFiles:
     pristine_git_object: 78675cd6d85d24efc48e83a50237b63b3a8bb0b7
   src/unified_python_sdk/models/shared/calendarcalendar.py:
     id: 2fa8227435f5
-    last_write_checksum: sha1:241d0d1fed73ed7aa0bf200bcb40969edd242bb8
-    pristine_git_object: 810355f6caf9a687beabf2b1a73512e6d773b5ce
+    last_write_checksum: sha1:191b57d14fd04e40e4b3d7dbfb0183e18ff6e4d3
+    pristine_git_object: e864c51d3b79bd4d40131a6815236000dc8ff851
   src/unified_python_sdk/models/shared/calendarconference.py:
     id: c304f6101720
     last_write_checksum: sha1:ca5d06c3afbee1d2f12642e4de59a484b525dc99
@@ -15118,8 +15118,8 @@ trackedFiles:
     pristine_git_object: ffd7c31e7b01bd6e2430f7ca9023969c9f0a977b
   src/unified_python_sdk/models/shared/commerceinventory.py:
     id: 06e5af9fdc6b
-    last_write_checksum: sha1:80838525e61bcd1f6bdf2eec4296d77787ad2df1
-    pristine_git_object: aff1e4794610108a3cb75944b6921f4cdde20fdd
+    last_write_checksum: sha1:b82e07c2bc7b522fd6ef5151860b9b67c4fe49bd
+    pristine_git_object: 72ad4c7ba427dc1dd7bc79efdb9e42f3ee69997e
   src/unified_python_sdk/models/shared/commerceitem.py:
     id: e91bbae8e18f
     last_write_checksum: sha1:01451a0e63eb0764ec1764d30e29a59ed834f0d7
@@ -15142,8 +15142,8 @@ trackedFiles:
     pristine_git_object: 5beab80a53dc1b823a7e87c2d97c7a3d0a98758c
   src/unified_python_sdk/models/shared/commercelocation.py:
     id: a5ae0c7ca7a9
-    last_write_checksum: sha1:41cc9d70844266df5221e79006b9d5ff5445552b
-    pristine_git_object: 7f7db415cb67813c5d1103663169b1a0509c62e7
+    last_write_checksum: sha1:abf07a6662552fc04ecdf5ca9a6da86faffb8bc1
+    pristine_git_object: de1f0b7687c99691c66a0cb82ebcf8e8bbf12a57
   src/unified_python_sdk/models/shared/commercemetadata.py:
     id: 522c1a63ee9f
     last_write_checksum: sha1:0af6b67c986631da5243d2417a7989ef4bf820f7
@@ -15158,12 +15158,12 @@ trackedFiles:
     pristine_git_object: 93c39d3f5c9fc6dd9937b012f40115ed832fe05d
   src/unified_python_sdk/models/shared/commercereview.py:
     id: 6721cb7e302e
-    last_write_checksum: sha1:790528510a636c6fb0ef64ec8fbe0a55c08f14fb
-    pristine_git_object: 93315f3331fe33dac7df4b20e1a5eb1b5c6d85ec
+    last_write_checksum: sha1:d77b4d88241a1764fb5239006baf09ca2b8adb90
+    pristine_git_object: 31b2f588a605ab69f85e569bb267e785d162b4a6
   src/unified_python_sdk/models/shared/commercereviewcomment.py:
     id: 666fa0b334ad
-    last_write_checksum: sha1:066c1318f8366b0e7deaefb92f2b009763043667
-    pristine_git_object: 0673d8f97274276e42ad46df29af781c6586bcb4
+    last_write_checksum: sha1:8af959fb3dc0990203f76d3a962c2a196fecb71b
+    pristine_git_object: df86955bbe0a246b25cb333cd819d041b04677ae
   src/unified_python_sdk/models/shared/commercesaleschannel.py:
     id: ffa220acd47d
     last_write_checksum: sha1:0617cbd53006cf472f3413c71e6d9750ca3aeeef
@@ -15258,8 +15258,8 @@ trackedFiles:
     pristine_git_object: c6f8c05ad526a661df999cb2b9c22ec5fdae7c05
   src/unified_python_sdk/models/shared/formsform.py:
     id: 761a9f49ccd0
-    last_write_checksum: sha1:6a35826a02d1717c839082452ce764aff0ba9cef
-    pristine_git_object: 48665c7d2e086ed7d7a2d8d3b446970537c6710b
+    last_write_checksum: sha1:191e6aa0e435e2d4ebd13459b0b7dabe6a0d91e5
+    pristine_git_object: 24f17833040ffb3e579328dbb01ba58ac7a0d004
   src/unified_python_sdk/models/shared/formssubmission.py:
     id: 22417fa6d2bc
     last_write_checksum: sha1:0e5233b4b9d5317bcc75b884e0ab9f8a6d5160c1
@@ -15306,8 +15306,8 @@ trackedFiles:
     pristine_git_object: f3d15cececfd597c7aa1270027ec60cbdd2b4fcb
   src/unified_python_sdk/models/shared/hrisdevice.py:
     id: 01fe79af231a
-    last_write_checksum: sha1:e0e6a4155f27e39d0287cab5bfd2fe1ea1b17dea
-    pristine_git_object: 9400a3e381e6b12f0a90cacdf40680dfa5b657f6
+    last_write_checksum: sha1:0128c7e28ec2867371204bc006f8f0520ec11226
+    pristine_git_object: 9903b3f8f96e03533b431586952128fcd4ee108c
   src/unified_python_sdk/models/shared/hrisemail.py:
     id: 79b85a9a37fc
     last_write_checksum: sha1:c086638b10692c3a81ff907af839b2e9b7ff9eb4
@@ -15334,8 +15334,8 @@ trackedFiles:
     pristine_git_object: 70eb54fc7ec2a9e337b6f26f68f50f55f0dfd793
   src/unified_python_sdk/models/shared/hrispayslip.py:
     id: 2ee758a43f72
-    last_write_checksum: sha1:01173ec51d1d485dc7993f4572420a6d59dde40b
-    pristine_git_object: 416561487e97ee91eedd4daf82f4c8342794f6a2
+    last_write_checksum: sha1:27b0b5b9cd4139c56b38ebf004324a6fee73298b
+    pristine_git_object: 0996aeb6a95077ee66e256ea983f0a0d71afdba3
   src/unified_python_sdk/models/shared/hrispayslipdetail.py:
     id: ea30cffbbdb3
     last_write_checksum: sha1:31a55f576bf2680b7aadbcab38bc58fff6c3c5f3
@@ -15346,8 +15346,8 @@ trackedFiles:
     pristine_git_object: 7e14394a1649d8916f2eb3b6c4fedb06f83b7946
   src/unified_python_sdk/models/shared/hristimeoff.py:
     id: d4c4ff2854cf
-    last_write_checksum: sha1:bac0258167e74581a0c94f80eab36fe32b6e68e4
-    pristine_git_object: 1e54b2bd82dc0f1435ff40078f88dbda29dc9b21
+    last_write_checksum: sha1:6bf93eccc53e85aacda99cf6bfe6d9ee8962307c
+    pristine_git_object: 8815e57c65ccbba0b5491faff0cf28c4167a9ec0
   src/unified_python_sdk/models/shared/hristimeshift.py:
     id: f67a1cc478a2
     last_write_checksum: sha1:7cfd4ba54caa1576db50175fb6c66e22ad1f0079
@@ -15366,28 +15366,28 @@ trackedFiles:
     pristine_git_object: ef1acb83c86baac1657c1069c01e4bb9e18f2832
   src/unified_python_sdk/models/shared/kmscomment.py:
     id: bbd7e52d61cb
-    last_write_checksum: sha1:114aa56d58beeb2b52fefdad0ee3cc1c017de223
-    pristine_git_object: 37efd15c399de65d8004263143584989d6dd6494
+    last_write_checksum: sha1:1e24f9f1dd2f767ef66381e2f646f6b4d4f2b4eb
+    pristine_git_object: 1ab3c9c2cc1e986f5357b6e7f0dd4f318a1e244d
   src/unified_python_sdk/models/shared/kmspage.py:
     id: 6b3ef3766b82
-    last_write_checksum: sha1:8c59199345a528ee14268efdfc20cfbaed7959ef
-    pristine_git_object: fb3c2cd2473b8917414c2d4d2b3495eb4311a67c
+    last_write_checksum: sha1:6bfeedfa72e773644bb052f32ef0d96f07432617
+    pristine_git_object: ad8591df87fc440062b27e1fbdda1f39932cf799
   src/unified_python_sdk/models/shared/kmspagemetadata.py:
     id: 53ece20dc56b
     last_write_checksum: sha1:b8c7c38b621cc4f26434685fa0b9f1d429439b02
     pristine_git_object: ea12ec47f530f1dbda964d48215b06a6b12ba848
   src/unified_python_sdk/models/shared/kmsspace.py:
     id: 167459e40cb2
-    last_write_checksum: sha1:4a59aeec6ecfc9c8e4ccf2e8e1644c3d6a7fca63
-    pristine_git_object: f8b95070e8fb83b0e38e555c5b4728fd7c1ecee8
+    last_write_checksum: sha1:4a628fa20d5204f51471a1c98116ae3ffda6d240
+    pristine_git_object: e76d8657dc237e28a8c82eb081b9af19d1f26948
   src/unified_python_sdk/models/shared/lmsactivity.py:
     id: f1737d9b2013
     last_write_checksum: sha1:08dfc5f8225429234ee7cf64c84570736aec244a
     pristine_git_object: c883deee36e4448e0c2a708f076ab6b053912b4f
   src/unified_python_sdk/models/shared/lmsclass.py:
     id: 2d2c49cde4b8
-    last_write_checksum: sha1:05be39235bbe5c5715764ee7e1eddb11dca85d0e
-    pristine_git_object: 6eab5dbd49fd49249b6fa40fe4c1139b24c27a17
+    last_write_checksum: sha1:343d1539c5a7a771d61e80704a0c73d281a4dc3e
+    pristine_git_object: 504fa4be794c350e66eddb6b72481b441abfe643
   src/unified_python_sdk/models/shared/lmscollection.py:
     id: f158eb95587d
     last_write_checksum: sha1:630c540c79bfacfcdd1eb76e71792330c2376f62
@@ -15402,8 +15402,8 @@ trackedFiles:
     pristine_git_object: 0ba31a36704216678c255ed9fb09ca64d464ceb2
   src/unified_python_sdk/models/shared/lmscourse.py:
     id: 780a45bfdcf6
-    last_write_checksum: sha1:c4924320548cdb0359b999a45c51fe6bdf4f0052
-    pristine_git_object: 3f4fe05ded8a7d43b320c722ca2dfd30432ec07b
+    last_write_checksum: sha1:97d13d3d23e312cc93deb43bd36d98f1d351555c
+    pristine_git_object: 552a095bf7849203cf2e0da3b6d04e6fc1c871d1
   src/unified_python_sdk/models/shared/lmsemail.py:
     id: c5e3f23954bc
     last_write_checksum: sha1:f4d2d5e3b07289440cac9920e36eeb32a63876ab
@@ -15462,8 +15462,8 @@ trackedFiles:
     pristine_git_object: 46c7860294a2b66dd95ed262aa2411899a5670f3
   src/unified_python_sdk/models/shared/messagingchannel.py:
     id: a6b1b234b690
-    last_write_checksum: sha1:21f83a74a7e873ff54de0058a9cfac9ab323b767
-    pristine_git_object: 4974e74ba9287339b2951f1a3f6d78da2ffb7acc
+    last_write_checksum: sha1:eff6bd26622ef522311d06d609cc87db41ca4b67
+    pristine_git_object: d0e1356c4ff895ec8c89b138ae8e00a8a80b12de
   src/unified_python_sdk/models/shared/messagingevent.py:
     id: 805749a64abb
     last_write_checksum: sha1:0a7954a842c5475377474dd905fe132747b559a7
@@ -15498,16 +15498,16 @@ trackedFiles:
     pristine_git_object: 0fab0229ddbe7d61724af6306561c9f1b3a176ba
   src/unified_python_sdk/models/shared/paymentpayment.py:
     id: aaeb334d4eec
-    last_write_checksum: sha1:6a5c1e5df7b0dd85f05a238ffa5cdb98c3f27170
-    pristine_git_object: d63abf2e991a0ecb99db03c5b5f2385fc133019d
+    last_write_checksum: sha1:256defa6c0143d6eedb707dc5f75e5d9cdc69a68
+    pristine_git_object: 08a60cf59927e07362806adbb64551e7c2251d08
   src/unified_python_sdk/models/shared/paymentpayout.py:
     id: 1c396729f177
-    last_write_checksum: sha1:dd7a5dccc02324cf50ea2a1cb1e8b4bf8c9635b3
-    pristine_git_object: 24ee3a2e88419d32fa1ca88316d947b712ed498a
+    last_write_checksum: sha1:57d59f96bc757e3a6e8242f56a85e77bac6fa59c
+    pristine_git_object: c93be36f33a6ef8b3e2300dbb4e2c26f8ea9b946
   src/unified_python_sdk/models/shared/paymentrefund.py:
     id: 29e802e3f964
-    last_write_checksum: sha1:6276f56950f63deebbc9ea63a216c2e9ef3ca9e0
-    pristine_git_object: 837436936d13893663079cb0043679fc07763f9c
+    last_write_checksum: sha1:92da41e3b0666615e4adf8a472c9e1546de24416
+    pristine_git_object: dd4d92c8f5eace18d504f1332e4a46217cb0d6de
   src/unified_python_sdk/models/shared/paymentsubscription.py:
     id: 5f1217420806
     last_write_checksum: sha1:8b3be195fa9e100874d92900bd37ea86af9fae9a
@@ -16018,8 +16018,8 @@ trackedFiles:
     pristine_git_object: 92c3a74228254bc3662eda4fd43ac644c0a66c67
   src/unified_python_sdk/models/shared/property_messagingevent_channel.py:
     id: b4424a4e8bb5
-    last_write_checksum: sha1:61f87a4a2e51af47e3549af322e822e27257ea4d
-    pristine_git_object: 36bdfcea709d3f300e460d1e4cff91af274f80a0
+    last_write_checksum: sha1:863bffe9728df34f9688bfb02a959f22ba63694a
+    pristine_git_object: cee39be20a51d1a85c022e2110aa38aa398941fb
   src/unified_python_sdk/models/shared/property_messagingevent_message.py:
     id: de5232b522fe
     last_write_checksum: sha1:538e718ed000fd8e05252778d95163a32f7c63c2
@@ -16266,8 +16266,8 @@ trackedFiles:
     pristine_git_object: 5e9440bb063c6173d9c4be90ef84d471920c7ac8
   src/unified_python_sdk/models/shared/taskcomment.py:
     id: 800da05c821e
-    last_write_checksum: sha1:dad5861cf6809cac6013cdc485a61f547b875973
-    pristine_git_object: c481a0654407cc4d40acb58797ecd13804188029
+    last_write_checksum: sha1:53742253737a2358e4225f200ef23b6be6f7300d
+    pristine_git_object: 486a4823c9b2421be4f122e56ef6123f80ad32ed
   src/unified_python_sdk/models/shared/taskmetadata.py:
     id: 2a0d16578dad
     last_write_checksum: sha1:b9423cfadbc0a4323b143dfe2ec2dd34e5f69d2b
@@ -16310,8 +16310,8 @@ trackedFiles:
     pristine_git_object: ff52c40fe70f0f95f749b017e3ec74531cf5a556
   src/unified_python_sdk/models/shared/uccomment.py:
     id: 7ce5545ce7e8
-    last_write_checksum: sha1:43f730ff3ac7a25560dfba6aa9529a89b1b4e1a0
-    pristine_git_object: 43919a52a5c35262a2a5f956eb42bbc1ac8a80df
+    last_write_checksum: sha1:34f80698505f51e9cbe9ff76816823bc46e08800
+    pristine_git_object: 7305de772e24ead2cbe521bd45a82043efcad5b6
   src/unified_python_sdk/models/shared/uccontact.py:
     id: 52cae4a74875
     last_write_checksum: sha1:ace954374757161fedea53704e46e93ed69034c3
@@ -16342,8 +16342,8 @@ trackedFiles:
     pristine_git_object: 9c02e97d6dbc19ef0c399b67f738dfbad3eb5646
   src/unified_python_sdk/models/shared/verificationpackage.py:
     id: 2a606f054316
-    last_write_checksum: sha1:437478f375a37fae8998820eea21c28f7e339e90
-    pristine_git_object: ce4747dc2d7518acb8f73aa671fac432c2adefbd
+    last_write_checksum: sha1:06ec402330c05ccc1673b7beb6da2f031ed1f21e
+    pristine_git_object: 632409df411cf4ba7833fd318269ab6b0c5b5df9
   src/unified_python_sdk/models/shared/verificationparameter.py:
     id: 345e978ac9a2
     last_write_checksum: sha1:d245fbb89c260c25a3000d77c57d3963593a4503
@@ -17374,7 +17374,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getAtsDocument:
     speakeasy-default-get-ats-document:
       parameters:
@@ -17803,10 +17803,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createCalendarEvent:
     speakeasy-default-create-calendar-event:
       parameters:
@@ -17835,7 +17835,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getCalendarEvent:
     speakeasy-default-get-calendar-event:
       parameters:
@@ -17910,10 +17910,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchCalendarEvent:
     speakeasy-default-patch-calendar-event:
       parameters:
@@ -17961,10 +17961,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   updateCalendarEvent:
     speakeasy-default-update-calendar-event:
       parameters:
@@ -18168,10 +18168,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"available": 7463.62}
+        application/json: {}
       responses:
         "200":
-          application/json: {"available": 6187.04}
+          application/json: {}
   createCommerceItem:
     speakeasy-default-create-commerce-item:
       parameters:
@@ -18188,20 +18188,20 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createCommerceReview:
     speakeasy-default-create-commerce-review:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"item_id": "<id>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"item_id": "<id>"}
+          application/json: {}
   getCommerceCollection:
     speakeasy-default-get-commerce-collection:
       parameters:
@@ -18219,7 +18219,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"available": 7122.77}
+          application/json: {}
   getCommerceItem:
     speakeasy-default-get-commerce-item:
       parameters:
@@ -18237,7 +18237,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getCommerceReview:
     speakeasy-default-get-commerce-review:
       parameters:
@@ -18246,7 +18246,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"item_id": "<id>"}
+          application/json: {}
   listCommerceCollections:
     speakeasy-default-list-commerce-collections:
       parameters:
@@ -18305,10 +18305,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"available": 7859.84}
+        application/json: {}
       responses:
         "200":
-          application/json: {"available": 5724.03}
+          application/json: {}
   patchCommerceItem:
     speakeasy-default-patch-commerce-item:
       parameters:
@@ -18327,10 +18327,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchCommerceReview:
     speakeasy-default-patch-commerce-review:
       parameters:
@@ -18338,10 +18338,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"item_id": "<id>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"item_id": "<id>"}
+          application/json: {}
   removeCommerceCollection:
     speakeasy-default-remove-commerce-collection:
       parameters:
@@ -18390,10 +18390,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"available": 4497.29}
+        application/json: {}
       responses:
         "200":
-          application/json: {"available": 2114.08}
+          application/json: {}
   updateCommerceItem:
     speakeasy-default-update-commerce-item:
       parameters:
@@ -18412,10 +18412,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   updateCommerceReview:
     speakeasy-default-update-commerce-review:
       parameters:
@@ -18423,10 +18423,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"item_id": "<id>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"item_id": "<id>"}
+          application/json: {}
   createHrisLocation:
     speakeasy-default-create-hris-location:
       parameters:
@@ -18679,10 +18679,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createHrisEmployee:
     speakeasy-default-create-hris-employee:
       parameters:
@@ -18711,7 +18711,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getHrisEmployee:
     speakeasy-default-get-hris-employee:
       parameters:
@@ -18738,7 +18738,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"raw": {"key": "<value>"}}
+          application/json: {}
   getHrisTimeoff:
     speakeasy-default-get-hris-timeoff:
       parameters:
@@ -18747,7 +18747,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"start_at": "2025-10-20T08:12:47.408Z"}
+          application/json: {"user_id": "<id>"}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -18787,7 +18787,7 @@ examples:
           connection_id: "<id>"
       responses:
         "200":
-          application/json: [{"start_at": "2023-08-30T10:18:36.702Z"}, {"start_at": "2023-08-30T10:18:36.702Z"}]
+          application/json: [{"start_at": "2023-08-30T10:18:36.702Z", "user_id": "<id>"}, {"start_at": "2023-08-30T10:18:36.702Z", "user_id": "<id>"}]
   patchHrisDevice:
     speakeasy-default-patch-hris-device:
       parameters:
@@ -18795,10 +18795,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchHrisEmployee:
     speakeasy-default-patch-hris-employee:
       parameters:
@@ -18846,10 +18846,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   updateHrisEmployee:
     speakeasy-default-update-hris-employee:
       parameters:
@@ -18933,30 +18933,30 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   createKmsPage:
     speakeasy-default-create-kms-page:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"title": "<value>", "type": "TEXT"}
+        application/json: {"type": "TEXT"}
       responses:
         "200":
-          application/json: {"title": "<value>", "type": "TEXT"}
+          application/json: {"type": "TEXT"}
   createKmsSpace:
     speakeasy-default-create-kms-space:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getKmsComment:
     speakeasy-default-get-kms-comment:
       parameters:
@@ -18965,7 +18965,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   getKmsPage:
     speakeasy-default-get-kms-page:
       parameters:
@@ -18974,7 +18974,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"title": "<value>", "type": "HTML"}
+          application/json: {"type": "HTML"}
   getKmsSpace:
     speakeasy-default-get-kms-space:
       parameters:
@@ -18983,7 +18983,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   listKmsComments:
     speakeasy-default-list-kms-comments:
       parameters:
@@ -19015,10 +19015,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   patchKmsPage:
     speakeasy-default-patch-kms-page:
       parameters:
@@ -19026,10 +19026,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"title": "<value>", "type": "OTHER"}
+        application/json: {"type": "OTHER"}
       responses:
         "200":
-          application/json: {"title": "<value>", "type": "MARKDOWN"}
+          application/json: {"type": "MARKDOWN"}
   patchKmsSpace:
     speakeasy-default-patch-kms-space:
       parameters:
@@ -19037,10 +19037,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   removeKmsComment:
     speakeasy-default-remove-kms-comment:
       parameters:
@@ -19066,10 +19066,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   updateKmsPage:
     speakeasy-default-update-kms-page:
       parameters:
@@ -19077,10 +19077,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"title": "<value>", "type": "OTHER"}
+        application/json: {"type": "OTHER"}
       responses:
         "200":
-          application/json: {"title": "<value>", "type": "MARKDOWN"}
+          application/json: {"type": "MARKDOWN"}
   updateKmsSpace:
     speakeasy-default-update-kms-space:
       parameters:
@@ -19088,30 +19088,30 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createTaskComment:
     speakeasy-default-create-task-comment:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"text": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"text": "<value>"}
+          application/json: {}
   createUcComment:
     speakeasy-default-create-uc-comment:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   getTaskComment:
     speakeasy-default-get-task-comment:
       parameters:
@@ -19120,7 +19120,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"text": "<value>"}
+          application/json: {}
   getUcComment:
     speakeasy-default-get-uc-comment:
       parameters:
@@ -19129,7 +19129,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   listTaskComments:
     speakeasy-default-list-task-comments:
       parameters:
@@ -19153,10 +19153,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"text": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"text": "<value>"}
+          application/json: {}
   patchUcComment:
     speakeasy-default-patch-uc-comment:
       parameters:
@@ -19164,10 +19164,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   removeTaskComment:
     speakeasy-default-remove-task-comment:
       parameters:
@@ -19187,10 +19187,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"text": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"text": "<value>"}
+          application/json: {}
   updateUcComment:
     speakeasy-default-update-uc-comment:
       parameters:
@@ -19198,30 +19198,30 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   createLmsClass:
     speakeasy-default-create-lms-class:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"course_id": "<id>", "name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"course_id": "<id>", "name": "<value>"}
+          application/json: {}
   createLmsCourse:
     speakeasy-default-create-lms-course:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createLmsInstructor:
     speakeasy-default-create-lms-instructor:
       parameters:
@@ -19250,7 +19250,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"course_id": "<id>", "name": "<value>"}
+          application/json: {}
   getLmsCourse:
     speakeasy-default-get-lms-course:
       parameters:
@@ -19259,7 +19259,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getLmsInstructor:
     speakeasy-default-get-lms-instructor:
       parameters:
@@ -19317,10 +19317,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"course_id": "<id>", "name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"course_id": "<id>", "name": "<value>"}
+          application/json: {}
   patchLmsCourse:
     speakeasy-default-patch-lms-course:
       parameters:
@@ -19328,10 +19328,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchLmsInstructor:
     speakeasy-default-patch-lms-instructor:
       parameters:
@@ -19385,10 +19385,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"course_id": "<id>", "name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"course_id": "<id>", "name": "<value>"}
+          application/json: {}
   updateLmsCourse:
     speakeasy-default-update-lms-course:
       parameters:
@@ -19396,10 +19396,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   updateLmsInstructor:
     speakeasy-default-update-lms-instructor:
       parameters:
@@ -19550,7 +19550,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getMessagingMessage:
     speakeasy-default-get-messaging-message:
       parameters:
@@ -19797,7 +19797,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"total_amount": 2074.25}
+          application/json: {}
   getPaymentRefund:
     speakeasy-default-get-payment-refund:
       parameters:
@@ -19806,7 +19806,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"payment_id": "<id>", "total_amount": 2321.11}
+          application/json: {}
   getPaymentSubscription:
     speakeasy-default-get-payment-subscription:
       parameters:
@@ -20727,10 +20727,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchAtsCompany:
     speakeasy-default-patch-ats-company:
       parameters:
@@ -20738,10 +20738,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   removeAtsCompany:
     speakeasy-default-remove-ats-company:
       parameters:
@@ -20755,10 +20755,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createAccountingBill:
     speakeasy-default-create-accounting-bill:
       parameters:
@@ -21120,7 +21120,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "EMPLOYMENT_VERIFICATION"}
+          application/json: {"name": "<value>", "type": "EMPLOYMENT_VERIFICATION"}
   getVerificationRequest:
     speakeasy-default-get-verification-request:
       parameters:
@@ -21778,10 +21778,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getFormsForm:
     speakeasy-default-get-forms-form:
       parameters:
@@ -21790,7 +21790,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getFormsSubmission:
     speakeasy-default-get-forms-submission:
       parameters:
@@ -21823,10 +21823,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   removeFormsForm:
     speakeasy-default-remove-forms-form:
       parameters:
@@ -21840,10 +21840,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createCommerceItemvariant:
     speakeasy-default-create-commerce-itemvariant:
       parameters:
@@ -22328,10 +22328,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"id": "<id>", "name": "<value>", "type": "REFERENCE_CHECK"}
+        application/json: {"type": "REFERENCE_CHECK"}
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+          application/json: {"type": "OTHER"}
   getAssessmentPackage:
     speakeasy-default-get-assessment-package:
       parameters:
@@ -22340,7 +22340,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+          application/json: {"type": "OTHER"}
   listAssessmentPackages:
     speakeasy-default-list-assessment-packages:
       parameters:
@@ -22356,10 +22356,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"id": "<id>", "name": "<value>", "type": "BACKGROUND_CHECK"}
+        application/json: {"type": "BACKGROUND_CHECK"}
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "SKILLS_TEST"}
+          application/json: {"type": "SKILLS_TEST"}
   removeAssessmentPackage:
     speakeasy-default-remove-assessment-package:
       parameters:
@@ -22373,10 +22373,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+        application/json: {"type": "OTHER"}
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "BEHAVIORAL_ASSESSMENT"}
+          application/json: {"type": "BEHAVIORAL_ASSESSMENT"}
   createLmsActivity:
     speakeasy-default-create-lms-activity:
       parameters:
@@ -22690,10 +22690,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"start_at": "2024-09-03T22:31:51.863Z"}
+        application/json: {"user_id": "<id>"}
       responses:
         "200":
-          application/json: {"start_at": "2026-06-15T05:46:27.150Z"}
+          application/json: {"user_id": "<id>"}
   patchHrisTimeoff:
     speakeasy-default-patch-hris-timeoff:
       parameters:
@@ -22701,10 +22701,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"start_at": "2024-01-26T05:49:44.056Z"}
+        application/json: {"user_id": "<id>"}
       responses:
         "200":
-          application/json: {"start_at": "2024-11-03T06:01:35.702Z"}
+          application/json: {"user_id": "<id>"}
   removeHrisTimeoff:
     speakeasy-default-remove-hris-timeoff:
       parameters:
@@ -22718,10 +22718,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"start_at": "2026-02-26T01:59:20.061Z"}
+        application/json: {"user_id": "<id>"}
       responses:
         "200":
-          application/json: {"start_at": "2025-05-04T04:02:48.766Z"}
+          application/json: {"user_id": "<id>"}
   createSigningDocument:
     speakeasy-default-create-signing-document:
       parameters:
@@ -22869,7 +22869,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.hris.patch_hris_timeoff()`: \n  *  `request.hris_timeoff.start_at` **Changed** (Breaking ⚠️)\n  *  `response.start_at` **Changed**\n* `unified_to.timeoff.update_hris_timeoff()`: \n  *  `request.hris_timeoff.start_at` **Changed** (Breaking ⚠️)\n  *  `response.start_at` **Changed**\n* `unified_to.timeoff.patch_hris_timeoff()`: \n  *  `request.hris_timeoff.start_at` **Changed** (Breaking ⚠️)\n  *  `response.start_at` **Changed**\n* `unified_to.timeoff.create_hris_timeoff()`: \n  *  `request.hris_timeoff.start_at` **Changed** (Breaking ⚠️)\n  *  `response.start_at` **Changed**\n* `unified_to.hris.update_hris_timeoff()`: \n  *  `request.hris_timeoff.start_at` **Changed** (Breaking ⚠️)\n  *  `response.start_at` **Changed**\n* `unified_to.hris.create_hris_timeoff()`: \n  *  `request.hris_timeoff.start_at` **Changed** (Breaking ⚠️)\n  *  `response.start_at` **Changed**\n* `unified_to.hris.list_hris_timeshifts()`:  `response.[]` **Changed**\n* `unified_to.hris.get_hris_timeoff()`:  `response.start_at` **Changed**\n* `unified_to.hris.list_hris_timeoffs()`:  `response.[].start_at` **Changed**\n* `unified_to.hris.update_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed**\n  *  `response` **Changed**\n* `unified_to.hris.get_hris_timeshift()`:  `response` **Changed**\n* `unified_to.timeoff.get_hris_timeoff()`:  `response.start_at` **Changed**\n* `unified_to.timeoff.list_hris_timeoffs()`:  `response.[].start_at` **Changed**\n* `unified_to.hris.patch_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed**\n  *  `response` **Changed**\n* `unified_to.hris.create_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed**\n  *  `response` **Changed**\n* `unified_to.timeshift.create_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed**\n  *  `response` **Changed**\n* `unified_to.timeshift.get_hris_timeshift()`:  `response` **Changed**\n* `unified_to.timeshift.list_hris_timeshifts()`:  `response.[]` **Changed**\n* `unified_to.timeshift.patch_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed**\n  *  `response` **Changed**\n* `unified_to.timeshift.update_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.hris.create_hris_timeoff()`: \n  *  `request.hris_timeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified_to.timeoff.update_hris_timeoff()`: \n  *  `request.hris_timeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified_to.timeoff.patch_hris_timeoff()`: \n  *  `request.hris_timeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified_to.timeoff.create_hris_timeoff()`: \n  *  `request.hris_timeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified_to.hris.update_hris_timeoff()`: \n  *  `request.hris_timeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified_to.hris.patch_hris_timeoff()`: \n  *  `request.hris_timeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified_to.payslip.list_hris_payslips()`: \n  *  `request.fields` **Changed**\n  *  `response.[].raw` **Changed**\n* `unified_to.commerce.create_commerce_location()`: \n  *  `request.commerce_location.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.creditmemo.patch_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n* `unified_to.creditmemo.update_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n* `unified_to.assessment.create_assessment_package()`: \n  *  `request.assessment_package` **Changed**\n  *  `response` **Changed**\n* `unified_to.assessment.get_assessment_package()`:  `response` **Changed**\n* `unified_to.assessment.list_assessment_packages()`:  `response.[]` **Changed**\n* `unified_to.assessment.patch_assessment_package()`: \n  *  `request.assessment_package` **Changed**\n  *  `response` **Changed**\n* `unified_to.assessment.update_assessment_package()`: \n  *  `request.assessment_package` **Changed**\n  *  `response` **Changed**\n* `unified_to.package.create_assessment_package()`: \n  *  `request.assessment_package` **Changed**\n  *  `response` **Changed**\n* `unified_to.package.get_assessment_package()`:  `response` **Changed**\n* `unified_to.package.get_verification_package()`:  `response.id` **Changed**\n* `unified_to.package.list_assessment_packages()`:  `response.[]` **Changed**\n* `unified_to.package.list_verification_packages()`:  `response.[].id` **Changed**\n* `unified_to.package.patch_assessment_package()`: \n  *  `request.assessment_package` **Changed**\n  *  `response` **Changed**\n* `unified_to.package.update_assessment_package()`: \n  *  `request.assessment_package` **Changed**\n  *  `response` **Changed**\n* `unified_to.ats.create_ats_company()`: \n  *  `request.ats_company.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.ats.get_ats_company()`:  `response.name` **Changed**\n* `unified_to.ats.list_ats_companies()`:  `response.[].name` **Changed**\n* `unified_to.ats.patch_ats_company()`: \n  *  `request.ats_company.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.ats.update_ats_company()`: \n  *  `request.ats_company.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.company.create_ats_company()`: \n  *  `request.ats_company.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.company.get_ats_company()`:  `response.name` **Changed**\n* `unified_to.company.list_ats_companies()`:  `response.[].name` **Changed**\n* `unified_to.company.patch_ats_company()`: \n  *  `request.ats_company.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.company.update_ats_company()`: \n  *  `request.ats_company.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.calendar.create_calendar_calendar()`: \n  *  `request.calendar_calendar.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.calendar.get_calendar_calendar()`:  `response.name` **Changed**\n* `unified_to.calendar.list_calendar_calendars()`:  `response.[].name` **Changed**\n* `unified_to.calendar.patch_calendar_calendar()`: \n  *  `request.calendar_calendar.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.calendar.update_calendar_calendar()`: \n  *  `request.calendar_calendar.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.event.patch_messaging_event()`: \n  *  `request.messaging_event.channel.name` **Changed**\n  *  `response.channel.name` **Changed**\n* `unified_to.event.update_messaging_event()`: \n  *  `request.messaging_event.channel.name` **Changed**\n  *  `response.channel.name` **Changed**\n* `unified_to.commerce.create_commerce_inventory()`: \n  *  `request.commerce_inventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified_to.accounting.list_accounting_creditmemoes()`: \n  *  `request.fields` **Changed**\n* `unified_to.commerce.create_commerce_review()`: \n  *  `request.commerce_review` **Changed**\n  *  `response` **Changed**\n* `unified_to.commerce.get_commerce_inventory()`:  `response.available` **Changed**\n* `unified_to.commerce.get_commerce_location()`:  `response.name` **Changed**\n* `unified_to.commerce.get_commerce_review()`:  `response` **Changed**\n* `unified_to.commerce.list_commerce_inventories()`:  `response.[].available` **Changed**\n* `unified_to.commerce.list_commerce_locations()`:  `response.[].name` **Changed**\n* `unified_to.commerce.list_commerce_reviews()`:  `response.[]` **Changed**\n* `unified_to.commerce.patch_commerce_inventory()`: \n  *  `request.commerce_inventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified_to.commerce.patch_commerce_location()`: \n  *  `request.commerce_location.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.commerce.patch_commerce_review()`: \n  *  `request.commerce_review` **Changed**\n  *  `response` **Changed**\n* `unified_to.commerce.update_commerce_inventory()`: \n  *  `request.commerce_inventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified_to.commerce.update_commerce_location()`: \n  *  `request.commerce_location.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.commerce.update_commerce_review()`: \n  *  `request.commerce_review` **Changed**\n  *  `response` **Changed**\n* `unified_to.inventory.create_commerce_inventory()`: \n  *  `request.commerce_inventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified_to.inventory.get_commerce_inventory()`:  `response.available` **Changed**\n* `unified_to.inventory.list_commerce_inventories()`:  `response.[].available` **Changed**\n* `unified_to.inventory.patch_commerce_inventory()`: \n  *  `request.commerce_inventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified_to.inventory.update_commerce_inventory()`: \n  *  `request.commerce_inventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified_to.location.create_commerce_location()`: \n  *  `request.commerce_location.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.location.get_commerce_location()`:  `response.name` **Changed**\n* `unified_to.location.list_commerce_locations()`:  `response.[].name` **Changed**\n* `unified_to.location.patch_commerce_location()`: \n  *  `request.commerce_location.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.location.update_commerce_location()`: \n  *  `request.commerce_location.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.review.create_commerce_review()`: \n  *  `request.commerce_review` **Changed**\n  *  `response` **Changed**\n* `unified_to.review.get_commerce_review()`:  `response` **Changed**\n* `unified_to.review.list_commerce_reviews()`:  `response.[]` **Changed**\n* `unified_to.review.patch_commerce_review()`: \n  *  `request.commerce_review` **Changed**\n  *  `response` **Changed**\n* `unified_to.review.update_commerce_review()`: \n  *  `request.commerce_review` **Changed**\n  *  `response` **Changed**\n* `unified_to.forms.create_forms_form()`: \n  *  `request.forms_form.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.timeoff.list_hris_timeoffs()`:  `response.[]` **Changed**\n* `unified_to.forms.list_forms_forms()`:  `response.[].name` **Changed**\n* `unified_to.forms.patch_forms_form()`: \n  *  `request.forms_form.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.forms.update_forms_form()`: \n  *  `request.forms_form.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.form.create_forms_form()`: \n  *  `request.forms_form.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.form.get_forms_form()`:  `response.name` **Changed**\n* `unified_to.form.list_forms_forms()`:  `response.[].name` **Changed**\n* `unified_to.form.patch_forms_form()`: \n  *  `request.forms_form.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.accounting.get_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n* `unified_to.hris.create_hris_device()`: \n  *  `request.hris_device.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.creditmemo.get_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n* `unified_to.hris.get_hris_device()`:  `response.name` **Changed**\n* `unified_to.hris.get_hris_payslip()`: \n  *  `request.fields` **Changed**\n  *  `response.raw` **Changed**\n* `unified_to.hris.get_hris_timeoff()`:  `response` **Changed**\n* `unified_to.hris.list_hris_devices()`:  `response.[].name` **Changed**\n* `unified_to.hris.list_hris_payslips()`: \n  *  `request.fields` **Changed**\n  *  `response.[].raw` **Changed**\n* `unified_to.hris.list_hris_timeoffs()`:  `response.[]` **Changed**\n* `unified_to.hris.patch_hris_device()`: \n  *  `request.hris_device.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.creditmemo.create_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n* `unified_to.hris.update_hris_device()`: \n  *  `request.hris_device.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.accounting.update_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n* `unified_to.device.create_hris_device()`: \n  *  `request.hris_device.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.device.get_hris_device()`:  `response.name` **Changed**\n* `unified_to.device.list_hris_devices()`:  `response.[].name` **Changed**\n* `unified_to.device.patch_hris_device()`: \n  *  `request.hris_device.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.device.update_hris_device()`: \n  *  `request.hris_device.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.payslip.get_hris_payslip()`: \n  *  `request.fields` **Changed**\n  *  `response.raw` **Changed**\n* `unified_to.accounting.create_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.patch_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n* `unified_to.timeoff.get_hris_timeoff()`:  `response` **Changed**\n* `unified_to.forms.get_forms_form()`:  `response.name` **Changed**\n* `unified_to.creditmemo.list_accounting_creditmemoes()`: \n  *  `request.fields` **Changed**\n* `unified_to.form.update_forms_form()`: \n  *  `request.forms_form.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.kms.create_kms_comment()`: \n  *  `request.kms_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.kms.create_kms_page()`: \n  *  `request.kms_page.title` **Changed**\n  *  `response.title` **Changed**\n* `unified_to.kms.create_kms_space()`: \n  *  `request.kms_space.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.kms.get_kms_comment()`:  `response.content` **Changed**\n* `unified_to.kms.get_kms_page()`:  `response.title` **Changed**\n* `unified_to.kms.get_kms_space()`:  `response.name` **Changed**\n* `unified_to.kms.list_kms_comments()`:  `response.[].content` **Changed**\n* `unified_to.kms.list_kms_pages()`:  `response.[].title` **Changed**\n* `unified_to.kms.list_kms_spaces()`:  `response.[].name` **Changed**\n* `unified_to.kms.patch_kms_comment()`: \n  *  `request.kms_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.kms.patch_kms_page()`: \n  *  `request.kms_page.title` **Changed**\n  *  `response.title` **Changed**\n* `unified_to.kms.patch_kms_space()`: \n  *  `request.kms_space.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.kms.update_kms_comment()`: \n  *  `request.kms_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.kms.update_kms_page()`: \n  *  `request.kms_page.title` **Changed**\n  *  `response.title` **Changed**\n* `unified_to.kms.update_kms_space()`: \n  *  `request.kms_space.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.comment.create_kms_comment()`: \n  *  `request.kms_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.comment.create_task_comment()`: \n  *  `request.task_comment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified_to.comment.create_uc_comment()`: \n  *  `request.uc_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.comment.get_kms_comment()`:  `response.content` **Changed**\n* `unified_to.comment.get_task_comment()`:  `response.text` **Changed**\n* `unified_to.comment.get_uc_comment()`:  `response.content` **Changed**\n* `unified_to.comment.list_kms_comments()`:  `response.[].content` **Changed**\n* `unified_to.comment.list_task_comments()`:  `response.[].text` **Changed**\n* `unified_to.comment.list_uc_comments()`:  `response.[].content` **Changed**\n* `unified_to.comment.patch_kms_comment()`: \n  *  `request.kms_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.comment.patch_task_comment()`: \n  *  `request.task_comment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified_to.comment.patch_uc_comment()`: \n  *  `request.uc_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.comment.update_kms_comment()`: \n  *  `request.kms_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.comment.update_task_comment()`: \n  *  `request.task_comment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified_to.comment.update_uc_comment()`: \n  *  `request.uc_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.page.create_kms_page()`: \n  *  `request.kms_page.title` **Changed**\n  *  `response.title` **Changed**\n* `unified_to.page.get_kms_page()`:  `response.title` **Changed**\n* `unified_to.page.list_kms_pages()`:  `response.[].title` **Changed**\n* `unified_to.page.patch_kms_page()`: \n  *  `request.kms_page.title` **Changed**\n  *  `response.title` **Changed**\n* `unified_to.page.update_kms_page()`: \n  *  `request.kms_page.title` **Changed**\n  *  `response.title` **Changed**\n* `unified_to.space.create_kms_space()`: \n  *  `request.kms_space.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.space.get_kms_space()`:  `response.name` **Changed**\n* `unified_to.space.list_kms_spaces()`:  `response.[].name` **Changed**\n* `unified_to.space.patch_kms_space()`: \n  *  `request.kms_space.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.space.update_kms_space()`: \n  *  `request.kms_space.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.lms.create_lms_class()`: \n  *  `request.lms_class` **Changed**\n  *  `response` **Changed**\n* `unified_to.lms.create_lms_course()`: \n  *  `request.lms_course.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.lms.get_lms_class()`:  `response` **Changed**\n* `unified_to.lms.get_lms_course()`:  `response.name` **Changed**\n* `unified_to.lms.list_lms_classes()`:  `response.[]` **Changed**\n* `unified_to.lms.list_lms_courses()`:  `response.[].name` **Changed**\n* `unified_to.lms.patch_lms_class()`: \n  *  `request.lms_class` **Changed**\n  *  `response` **Changed**\n* `unified_to.lms.patch_lms_course()`: \n  *  `request.lms_course.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.lms.update_lms_class()`: \n  *  `request.lms_class` **Changed**\n  *  `response` **Changed**\n* `unified_to.lms.update_lms_course()`: \n  *  `request.lms_course.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.class.create_lms_class()`: \n  *  `request.lms_class` **Changed**\n  *  `response` **Changed**\n* `unified_to.class.get_lms_class()`:  `response` **Changed**\n* `unified_to.class.list_lms_classes()`:  `response.[]` **Changed**\n* `unified_to.class.patch_lms_class()`: \n  *  `request.lms_class` **Changed**\n  *  `response` **Changed**\n* `unified_to.class.update_lms_class()`: \n  *  `request.lms_class` **Changed**\n  *  `response` **Changed**\n* `unified_to.course.create_lms_course()`: \n  *  `request.lms_course.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.course.get_lms_course()`:  `response.name` **Changed**\n* `unified_to.course.list_lms_courses()`:  `response.[].name` **Changed**\n* `unified_to.course.patch_lms_course()`: \n  *  `request.lms_course.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.course.update_lms_course()`: \n  *  `request.lms_course.name` **Changed**\n  *  `response.name` **Changed**\n* `unified_to.messaging.get_messaging_channel()`:  `response.name` **Changed**\n* `unified_to.messaging.list_messaging_channels()`:  `response.[].name` **Changed**\n* `unified_to.messaging.patch_messaging_event()`: \n  *  `request.messaging_event.channel.name` **Changed**\n  *  `response.channel.name` **Changed**\n* `unified_to.messaging.update_messaging_event()`: \n  *  `request.messaging_event.channel.name` **Changed**\n  *  `response.channel.name` **Changed**\n* `unified_to.channel.get_messaging_channel()`:  `response.name` **Changed**\n* `unified_to.channel.list_messaging_channels()`:  `response.[].name` **Changed**\n* `unified_to.payment.create_payment_payment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.payment.get_payment_payment()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.payment.get_payment_payout()`:  `response.total_amount` **Changed**\n* `unified_to.payment.get_payment_refund()`:  `response` **Changed**\n* `unified_to.payment.list_payment_payments()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.payment.list_payment_payouts()`:  `response.[].total_amount` **Changed**\n* `unified_to.payment.list_payment_refunds()`:  `response.[]` **Changed**\n* `unified_to.payment.patch_payment_payment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.payment.update_payment_payment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.payout.get_payment_payout()`:  `response.total_amount` **Changed**\n* `unified_to.payout.list_payment_payouts()`:  `response.[].total_amount` **Changed**\n* `unified_to.refund.get_payment_refund()`:  `response` **Changed**\n* `unified_to.refund.list_payment_refunds()`:  `response.[]` **Changed**\n* `unified_to.task.create_task_comment()`: \n  *  `request.task_comment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified_to.task.get_task_comment()`:  `response.text` **Changed**\n* `unified_to.task.list_task_comments()`:  `response.[].text` **Changed**\n* `unified_to.task.patch_task_comment()`: \n  *  `request.task_comment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified_to.task.update_task_comment()`: \n  *  `request.task_comment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified_to.uc.create_uc_comment()`: \n  *  `request.uc_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.uc.get_uc_comment()`:  `response.content` **Changed**\n* `unified_to.uc.list_uc_comments()`:  `response.[].content` **Changed**\n* `unified_to.uc.patch_uc_comment()`: \n  *  `request.uc_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.uc.update_uc_comment()`: \n  *  `request.uc_comment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified_to.unified.get_unified_integration_auth()`: \n  *  `request.region` **Added**\n* `unified_to.integration.get_unified_integration_auth()`: \n  *  `request.region` **Added**\n* `unified_to.auth.get_unified_integration_auth()`: \n  *  `request.region` **Added**\n* `unified_to.verification.get_verification_package()`:  `response.id` **Changed**\n* `unified_to.verification.list_verification_packages()`:  `response.[].id` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

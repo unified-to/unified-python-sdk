@@ -274,9 +274,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_device(request={
-        "hris_device": {
-            "name": "<value>",
-        },
+        "hris_device": {},
         "connection_id": "<id>",
     })
 
@@ -455,7 +453,6 @@ Create a timeoff
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -466,7 +463,7 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeoff(request={
         "hris_timeoff": {
-            "start_at": parse_datetime("2024-09-03T22:31:51.863Z"),
+            "user_id": "<id>",
         },
         "connection_id": "<id>",
     })
@@ -1778,9 +1775,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_device(request={
-        "hris_device": {
-            "name": "<value>",
-        },
+        "hris_device": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1963,7 +1958,6 @@ Update a timeoff
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1974,7 +1968,7 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeoff(request={
         "hris_timeoff": {
-            "start_at": parse_datetime("2024-01-26T05:49:44.056Z"),
+            "user_id": "<id>",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2735,9 +2729,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_device(request={
-        "hris_device": {
-            "name": "<value>",
-        },
+        "hris_device": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2920,7 +2912,6 @@ Update a timeoff
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2931,7 +2922,7 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeoff(request={
         "hris_timeoff": {
-            "start_at": parse_datetime("2026-02-26T01:59:20.061Z"),
+            "user_id": "<id>",
         },
         "connection_id": "<id>",
         "id": "<id>",

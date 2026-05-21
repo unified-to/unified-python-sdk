@@ -30,9 +30,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.review.create_commerce_review(request={
-        "commerce_review": {
-            "item_id": "<id>",
-        },
+        "commerce_review": {},
         "connection_id": "<id>",
     })
 
@@ -172,9 +170,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.review.patch_commerce_review(request={
-        "commerce_review": {
-            "item_id": "<id>",
-        },
+        "commerce_review": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -269,9 +265,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.review.update_commerce_review(request={
-        "commerce_review": {
-            "item_id": "<id>",
-        },
+        "commerce_review": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

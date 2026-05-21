@@ -51,9 +51,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.calendar.create_calendar_calendar(request={
-        "calendar_calendar": {
-            "name": "<value>",
-        },
+        "calendar_calendar": {},
         "connection_id": "<id>",
     })
 
@@ -754,9 +752,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.calendar.patch_calendar_calendar(request={
-        "calendar_calendar": {
-            "name": "<value>",
-        },
+        "calendar_calendar": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1138,9 +1134,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.calendar.update_calendar_calendar(request={
-        "calendar_calendar": {
-            "name": "<value>",
-        },
+        "calendar_calendar": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -30,9 +30,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.course.create_lms_course(request={
-        "lms_course": {
-            "name": "<value>",
-        },
+        "lms_course": {},
         "connection_id": "<id>",
     })
 
@@ -172,9 +170,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.course.patch_lms_course(request={
-        "lms_course": {
-            "name": "<value>",
-        },
+        "lms_course": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -269,9 +265,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.course.update_lms_course(request={
-        "lms_course": {
-            "name": "<value>",
-        },
+        "lms_course": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

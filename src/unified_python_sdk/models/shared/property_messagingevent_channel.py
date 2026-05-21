@@ -10,7 +10,6 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PropertyMessagingEventChannelTypedDict(TypedDict):
-    name: str
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     has_subchannels: NotRequired[bool]
@@ -18,6 +17,7 @@ class PropertyMessagingEventChannelTypedDict(TypedDict):
     is_active: NotRequired[bool]
     is_private: NotRequired[bool]
     members: NotRequired[List[MessagingMemberTypedDict]]
+    name: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
@@ -25,8 +25,6 @@ class PropertyMessagingEventChannelTypedDict(TypedDict):
 
 
 class PropertyMessagingEventChannel(BaseModel):
-    name: str
-
     created_at: Optional[datetime] = None
 
     description: Optional[str] = None
@@ -40,6 +38,8 @@ class PropertyMessagingEventChannel(BaseModel):
     is_private: Optional[bool] = None
 
     members: Optional[List[MessagingMember]] = None
+
+    name: Optional[str] = None
 
     parent_id: Optional[str] = None
 
@@ -60,6 +60,7 @@ class PropertyMessagingEventChannel(BaseModel):
                 "is_active",
                 "is_private",
                 "members",
+                "name",
                 "parent_id",
                 "raw",
                 "updated_at",

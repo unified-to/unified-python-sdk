@@ -14,11 +14,11 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AtsCompanyTypedDict(TypedDict):
-    name: str
     address: NotRequired[PropertyAtsCompanyAddressTypedDict]
     created_at: NotRequired[datetime]
     id: NotRequired[str]
     metadata: NotRequired[List[AtsMetadataTypedDict]]
+    name: NotRequired[str]
     parent_id: NotRequired[str]
     phone: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -28,8 +28,6 @@ class AtsCompanyTypedDict(TypedDict):
 
 
 class AtsCompany(BaseModel):
-    name: str
-
     address: Optional[PropertyAtsCompanyAddress] = None
 
     created_at: Optional[datetime] = None
@@ -37,6 +35,8 @@ class AtsCompany(BaseModel):
     id: Optional[str] = None
 
     metadata: Optional[List[AtsMetadata]] = None
+
+    name: Optional[str] = None
 
     parent_id: Optional[str] = None
 
@@ -58,6 +58,7 @@ class AtsCompany(BaseModel):
                 "created_at",
                 "id",
                 "metadata",
+                "name",
                 "parent_id",
                 "phone",
                 "raw",

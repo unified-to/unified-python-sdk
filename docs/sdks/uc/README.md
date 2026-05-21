@@ -44,9 +44,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.create_uc_comment(request={
-        "uc_comment": {
-            "content": "<value>",
-        },
+        "uc_comment": {},
         "connection_id": "<id>",
     })
 
@@ -559,9 +557,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.patch_uc_comment(request={
-        "uc_comment": {
-            "content": "<value>",
-        },
+        "uc_comment": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -846,9 +842,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.update_uc_comment(request={
-        "uc_comment": {
-            "content": "<value>",
-        },
+        "uc_comment": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

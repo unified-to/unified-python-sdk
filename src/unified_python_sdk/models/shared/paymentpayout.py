@@ -18,19 +18,17 @@ class PaymentPayoutStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class PaymentPayoutTypedDict(TypedDict):
-    total_amount: float
     created_at: NotRequired[str]
     currency: NotRequired[str]
     id: NotRequired[str]
     notes: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[PaymentPayoutStatus]
+    total_amount: NotRequired[float]
     updated_at: NotRequired[str]
 
 
 class PaymentPayout(BaseModel):
-    total_amount: float
-
     created_at: Optional[str] = None
 
     currency: Optional[str] = None
@@ -42,6 +40,8 @@ class PaymentPayout(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     status: Optional[PaymentPayoutStatus] = None
+
+    total_amount: Optional[float] = None
 
     updated_at: Optional[str] = None
 
@@ -57,7 +57,16 @@ class PaymentPayout(BaseModel):
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
-            ["created_at", "currency", "id", "notes", "raw", "status", "updated_at"]
+            [
+                "created_at",
+                "currency",
+                "id",
+                "notes",
+                "raw",
+                "status",
+                "total_amount",
+                "updated_at",
+            ]
         )
         serialized = handler(self)
         m = {}

@@ -12,7 +12,6 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class LmsCourseTypedDict(TypedDict):
-    name: str
     categories: NotRequired[List[str]]
     content_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
@@ -27,6 +26,7 @@ class LmsCourseTypedDict(TypedDict):
     is_private: NotRequired[bool]
     languages: NotRequired[List[str]]
     media: NotRequired[List[LmsMediaTypedDict]]
+    name: NotRequired[str]
     price_amount: NotRequired[float]
     provider_name: NotRequired[str]
     published_at: NotRequired[datetime]
@@ -40,8 +40,6 @@ class LmsCourseTypedDict(TypedDict):
 
 
 class LmsCourse(BaseModel):
-    name: str
-
     categories: Optional[List[str]] = None
 
     content_ids: Optional[List[str]] = None
@@ -68,6 +66,8 @@ class LmsCourse(BaseModel):
     languages: Optional[List[str]] = None
 
     media: Optional[List[LmsMedia]] = None
+
+    name: Optional[str] = None
 
     price_amount: Optional[float] = None
 
@@ -105,6 +105,7 @@ class LmsCourse(BaseModel):
                 "is_private",
                 "languages",
                 "media",
+                "name",
                 "price_amount",
                 "provider_name",
                 "published_at",

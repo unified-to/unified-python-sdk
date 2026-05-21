@@ -19,23 +19,19 @@ class PaymentRefundStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class PaymentRefundTypedDict(TypedDict):
-    payment_id: str
-    total_amount: float
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     id: NotRequired[str]
     notes: NotRequired[str]
+    payment_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     status: NotRequired[PaymentRefundStatus]
+    total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
 
 
 class PaymentRefund(BaseModel):
-    payment_id: str
-
-    total_amount: float
-
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
@@ -44,11 +40,15 @@ class PaymentRefund(BaseModel):
 
     notes: Optional[str] = None
 
+    payment_id: Optional[str] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     reference: Optional[str] = None
 
     status: Optional[PaymentRefundStatus] = None
+
+    total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
 
@@ -69,9 +69,11 @@ class PaymentRefund(BaseModel):
                 "currency",
                 "id",
                 "notes",
+                "payment_id",
                 "raw",
                 "reference",
                 "status",
+                "total_amount",
                 "updated_at",
             ]
         )

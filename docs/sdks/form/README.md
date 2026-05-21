@@ -30,9 +30,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.form.create_forms_form(request={
-        "forms_form": {
-            "name": "<value>",
-        },
+        "forms_form": {},
         "connection_id": "<id>",
     })
 
@@ -172,9 +170,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.form.patch_forms_form(request={
-        "forms_form": {
-            "name": "<value>",
-        },
+        "forms_form": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -269,9 +265,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.form.update_forms_form(request={
-        "forms_form": {
-            "name": "<value>",
-        },
+        "forms_form": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

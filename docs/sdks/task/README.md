@@ -44,9 +44,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.create_task_comment(request={
-        "task_comment": {
-            "text": "<value>",
-        },
+        "task_comment": {},
         "connection_id": "<id>",
     })
 
@@ -559,9 +557,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.patch_task_comment(request={
-        "task_comment": {
-            "text": "<value>",
-        },
+        "task_comment": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -846,9 +842,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.update_task_comment(request={
-        "task_comment": {
-            "text": "<value>",
-        },
+        "task_comment": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

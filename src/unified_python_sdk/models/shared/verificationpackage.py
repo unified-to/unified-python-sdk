@@ -25,7 +25,6 @@ class VerificationPackageType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VerificationPackageTypedDict(TypedDict):
-    id: str
     name: str
     type: VerificationPackageType
     aliases: NotRequired[List[str]]
@@ -37,6 +36,7 @@ class VerificationPackageTypedDict(TypedDict):
     description: NotRequired[str]
     has_redirect_url: NotRequired[bool]
     has_target_url: NotRequired[bool]
+    id: NotRequired[str]
     info_url: NotRequired[str]
     max_score: NotRequired[float]
     needs_ip_address: NotRequired[bool]
@@ -51,8 +51,6 @@ class VerificationPackageTypedDict(TypedDict):
 
 
 class VerificationPackage(BaseModel):
-    id: str
-
     name: str
 
     type: VerificationPackageType
@@ -73,6 +71,8 @@ class VerificationPackage(BaseModel):
     has_redirect_url: Optional[bool] = None
 
     has_target_url: Optional[bool] = None
+
+    id: Optional[str] = None
 
     info_url: Optional[str] = None
 
@@ -114,6 +114,7 @@ class VerificationPackage(BaseModel):
                 "description",
                 "has_redirect_url",
                 "has_target_url",
+                "id",
                 "info_url",
                 "max_score",
                 "needs_ip_address",

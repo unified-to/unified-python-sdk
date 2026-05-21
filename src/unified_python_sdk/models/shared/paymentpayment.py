@@ -24,7 +24,9 @@ class PaymentPaymentTypedDict(TypedDict):
     currency: NotRequired[str]
     id: NotRequired[str]
     invoice_id: NotRequired[str]
+    link_id: NotRequired[str]
     notes: NotRequired[str]
+    organization_id: NotRequired[str]
     payment_method: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
@@ -48,7 +50,11 @@ class PaymentPayment(BaseModel):
 
     invoice_id: Optional[str] = None
 
+    link_id: Optional[str] = None
+
     notes: Optional[str] = None
+
+    organization_id: Optional[str] = None
 
     payment_method: Optional[str] = None
 
@@ -82,7 +88,9 @@ class PaymentPayment(BaseModel):
                 "currency",
                 "id",
                 "invoice_id",
+                "link_id",
                 "notes",
+                "organization_id",
                 "payment_method",
                 "raw",
                 "reference",

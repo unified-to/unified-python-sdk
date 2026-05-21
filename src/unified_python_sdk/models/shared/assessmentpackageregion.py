@@ -8,26 +8,26 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AssessmentPackageRegionTypedDict(TypedDict):
-    cost_amount: float
-    regions: List[str]
-    r"""Countryregion codes where this package is available ({country}-{state} or {country})"""
+    cost_amount: NotRequired[float]
     currency: NotRequired[str]
     processing_time: NotRequired[float]
+    regions: NotRequired[List[str]]
+    r"""Countryregion codes where this package is available ({country}-{state} or {country})"""
 
 
 class AssessmentPackageRegion(BaseModel):
-    cost_amount: float
-
-    regions: List[str]
-    r"""Countryregion codes where this package is available ({country}-{state} or {country})"""
+    cost_amount: Optional[float] = None
 
     currency: Optional[str] = None
 
     processing_time: Optional[float] = None
 
+    regions: Optional[List[str]] = None
+    r"""Countryregion codes where this package is available ({country}-{state} or {country})"""
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["currency", "processing_time"])
+        optional_fields = set(["cost_amount", "currency", "processing_time", "regions"])
         serialized = handler(self)
         m = {}
 

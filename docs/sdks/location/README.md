@@ -36,9 +36,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.create_commerce_location(request={
-        "commerce_location": {
-            "name": "<value>",
-        },
+        "commerce_location": {},
         "connection_id": "<id>",
     })
 
@@ -318,9 +316,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.patch_commerce_location(request={
-        "commerce_location": {
-            "name": "<value>",
-        },
+        "commerce_location": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -510,9 +506,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.update_commerce_location(request={
-        "commerce_location": {
-            "name": "<value>",
-        },
+        "commerce_location": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

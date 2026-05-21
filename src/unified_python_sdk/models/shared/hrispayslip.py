@@ -23,7 +23,6 @@ class PaymentType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class HrisPayslipTypedDict(TypedDict):
-    raw: Dict[str, Any]
     company_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
@@ -36,14 +35,13 @@ class HrisPayslipTypedDict(TypedDict):
     net_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
     payment_type: NotRequired[PaymentType]
+    raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
 
 
 class HrisPayslip(BaseModel):
-    raw: Dict[str, Any]
-
     company_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
@@ -66,6 +64,8 @@ class HrisPayslip(BaseModel):
     paid_at: Optional[datetime] = None
 
     payment_type: Optional[PaymentType] = None
+
+    raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
 
@@ -97,6 +97,7 @@ class HrisPayslip(BaseModel):
                 "net_amount",
                 "paid_at",
                 "payment_type",
+                "raw",
                 "start_at",
                 "updated_at",
                 "user_id",

@@ -30,9 +30,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.device.create_hris_device(request={
-        "hris_device": {
-            "name": "<value>",
-        },
+        "hris_device": {},
         "connection_id": "<id>",
     })
 
@@ -172,9 +170,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.device.patch_hris_device(request={
-        "hris_device": {
-            "name": "<value>",
-        },
+        "hris_device": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -269,9 +265,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.device.update_hris_device(request={
-        "hris_device": {
-            "name": "<value>",
-        },
+        "hris_device": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

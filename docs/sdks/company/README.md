@@ -43,9 +43,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.create_ats_company(request={
-        "ats_company": {
-            "name": "<value>",
-        },
+        "ats_company": {},
         "connection_id": "<id>",
     })
 
@@ -511,9 +509,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.patch_ats_company(request={
-        "ats_company": {
-            "name": "<value>",
-        },
+        "ats_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -798,9 +794,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.update_ats_company(request={
-        "ats_company": {
-            "name": "<value>",
-        },
+        "ats_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

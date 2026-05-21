@@ -8,8 +8,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class UcCommentTypedDict(TypedDict):
-    content: str
     call_id: NotRequired[str]
+    content: NotRequired[str]
     created_at: NotRequired[str]
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -18,9 +18,9 @@ class UcCommentTypedDict(TypedDict):
 
 
 class UcComment(BaseModel):
-    content: str
-
     call_id: Optional[str] = None
+
+    content: Optional[str] = None
 
     created_at: Optional[str] = None
 
@@ -35,7 +35,7 @@ class UcComment(BaseModel):
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
-            ["call_id", "created_at", "id", "raw", "updated_at", "user_id"]
+            ["call_id", "content", "created_at", "id", "raw", "updated_at", "user_id"]
         )
         serialized = handler(self)
         m = {}

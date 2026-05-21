@@ -9,19 +9,17 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CalendarCalendarTypedDict(TypedDict):
-    name: str
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     id: NotRequired[str]
     is_primary: NotRequired[bool]
+    name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
 
 
 class CalendarCalendar(BaseModel):
-    name: str
-
     created_at: Optional[datetime] = None
 
     description: Optional[str] = None
@@ -29,6 +27,8 @@ class CalendarCalendar(BaseModel):
     id: Optional[str] = None
 
     is_primary: Optional[bool] = None
+
+    name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -44,6 +44,7 @@ class CalendarCalendar(BaseModel):
                 "description",
                 "id",
                 "is_primary",
+                "name",
                 "raw",
                 "timezone",
                 "updated_at",

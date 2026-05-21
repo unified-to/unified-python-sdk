@@ -33,8 +33,6 @@ with UnifiedTo(
 
     res = unified_to.assessment.create_assessment_package(request={
         "assessment_package": {
-            "id": "<id>",
-            "name": "<value>",
             "type": shared.AssessmentPackageType.REFERENCE_CHECK,
         },
         "connection_id": "<id>",
@@ -228,8 +226,6 @@ with UnifiedTo(
 
     res = unified_to.assessment.patch_assessment_package(request={
         "assessment_package": {
-            "id": "<id>",
-            "name": "<value>",
             "type": shared.AssessmentPackageType.BACKGROUND_CHECK,
         },
         "connection_id": "<id>",
@@ -378,8 +374,6 @@ with UnifiedTo(
 
     res = unified_to.assessment.update_assessment_package(request={
         "assessment_package": {
-            "id": "<id>",
-            "name": "<value>",
             "type": shared.AssessmentPackageType.OTHER,
         },
         "connection_id": "<id>",

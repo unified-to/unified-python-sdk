@@ -10,7 +10,6 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class FormsFormTypedDict(TypedDict):
-    name: str
     confirmation_message: NotRequired[str]
     confirmation_redirect_url: NotRequired[str]
     created_at: NotRequired[datetime]
@@ -21,6 +20,7 @@ class FormsFormTypedDict(TypedDict):
     has_shuffle_questions: NotRequired[bool]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    name: NotRequired[str]
     published_url: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     response_count: NotRequired[float]
@@ -28,8 +28,6 @@ class FormsFormTypedDict(TypedDict):
 
 
 class FormsForm(BaseModel):
-    name: str
-
     confirmation_message: Optional[str] = None
 
     confirmation_redirect_url: Optional[str] = None
@@ -49,6 +47,8 @@ class FormsForm(BaseModel):
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    name: Optional[str] = None
 
     published_url: Optional[str] = None
 
@@ -72,6 +72,7 @@ class FormsForm(BaseModel):
                 "has_shuffle_questions",
                 "id",
                 "is_active",
+                "name",
                 "published_url",
                 "raw",
                 "response_count",

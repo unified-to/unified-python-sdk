@@ -20,7 +20,6 @@ class KmsPageType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class KmsPageTypedDict(TypedDict):
-    title: str
     type: KmsPageType
     created_at: NotRequired[datetime]
     download_url: NotRequired[str]
@@ -31,14 +30,13 @@ class KmsPageTypedDict(TypedDict):
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     space_id: NotRequired[str]
+    title: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
     web_url: NotRequired[str]
 
 
 class KmsPage(BaseModel):
-    title: str
-
     type: KmsPageType
 
     created_at: Optional[datetime] = None
@@ -58,6 +56,8 @@ class KmsPage(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     space_id: Optional[str] = None
+
+    title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
 
@@ -87,6 +87,7 @@ class KmsPage(BaseModel):
                 "parent_id",
                 "raw",
                 "space_id",
+                "title",
                 "updated_at",
                 "user_id",
                 "web_url",

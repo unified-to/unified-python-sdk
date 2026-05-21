@@ -22,7 +22,6 @@ class CommerceReviewStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class CommerceReviewTypedDict(TypedDict):
-    item_id: str
     author_avatar_url: NotRequired[str]
     author_email: NotRequired[str]
     author_location: NotRequired[str]
@@ -35,6 +34,7 @@ class CommerceReviewTypedDict(TypedDict):
     is_featured: NotRequired[bool]
     is_public: NotRequired[bool]
     is_verified: NotRequired[bool]
+    item_id: NotRequired[str]
     item_variant_id: NotRequired[str]
     location_id: NotRequired[str]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
@@ -51,8 +51,6 @@ class CommerceReviewTypedDict(TypedDict):
 
 
 class CommerceReview(BaseModel):
-    item_id: str
-
     author_avatar_url: Optional[str] = None
 
     author_email: Optional[str] = None
@@ -76,6 +74,8 @@ class CommerceReview(BaseModel):
     is_public: Optional[bool] = None
 
     is_verified: Optional[bool] = None
+
+    item_id: Optional[str] = None
 
     item_variant_id: Optional[str] = None
 
@@ -127,6 +127,7 @@ class CommerceReview(BaseModel):
                 "is_featured",
                 "is_public",
                 "is_verified",
+                "item_id",
                 "item_variant_id",
                 "location_id",
                 "media",

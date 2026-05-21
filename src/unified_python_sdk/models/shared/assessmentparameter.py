@@ -20,11 +20,11 @@ class AssessmentParameterType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AssessmentParameterTypedDict(TypedDict):
-    name: str
     file_types: NotRequired[List[str]]
     r"""Valid file MIME types for FILE type"""
     id: NotRequired[str]
     is_required: NotRequired[bool]
+    name: NotRequired[str]
     options: NotRequired[List[str]]
     r"""Options for MULTIPLE_CHOICE and MULTIPLE_SELECT"""
     public_question: NotRequired[str]
@@ -34,14 +34,14 @@ class AssessmentParameterTypedDict(TypedDict):
 
 
 class AssessmentParameter(BaseModel):
-    name: str
-
     file_types: Optional[List[str]] = None
     r"""Valid file MIME types for FILE type"""
 
     id: Optional[str] = None
 
     is_required: Optional[bool] = None
+
+    name: Optional[str] = None
 
     options: Optional[List[str]] = None
     r"""Options for MULTIPLE_CHOICE and MULTIPLE_SELECT"""
@@ -69,6 +69,7 @@ class AssessmentParameter(BaseModel):
                 "file_types",
                 "id",
                 "is_required",
+                "name",
                 "options",
                 "public_question",
                 "type",
