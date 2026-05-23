@@ -5,7 +5,7 @@ from .atscompensation import AtsCompensation, AtsCompensationTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -27,7 +27,6 @@ class AtsOfferTypedDict(TypedDict):
     creator_user_id: NotRequired[str]
     employee_user_id: NotRequired[str]
     id: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
     rejected_at: NotRequired[datetime]
     sent_at: NotRequired[datetime]
     start_at: NotRequired[datetime]
@@ -48,8 +47,6 @@ class AtsOffer(BaseModel):
     employee_user_id: Optional[str] = None
 
     id: Optional[str] = None
-
-    raw: Optional[Dict[str, Any]] = None
 
     rejected_at: Optional[datetime] = None
 
@@ -80,7 +77,6 @@ class AtsOffer(BaseModel):
                 "creator_user_id",
                 "employee_user_id",
                 "id",
-                "raw",
                 "rejected_at",
                 "sent_at",
                 "start_at",
