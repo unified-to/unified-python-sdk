@@ -147,3 +147,8 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `SIGNING_DOCUMENT`         | signing_document           |
 | `SIGNING_SIGNATORY`        | signing_signatory          |
 | `SIGNING_TEMPLATE`         | signing_template           |
+| `CLUBS_GROUP`              | clubs_group                |
+| `CLUBS_MEMBER`             | clubs_member               |
+| `CLUBS_ACTIVITY`           | clubs_activity             |
+| `CLUBS_LOCATION`           | clubs_location             |
+| `CLUBS_EVENT`              | clubs_event                |

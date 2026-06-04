@@ -85,8 +85,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[CreatePassthroughJsonAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePassthroughJSONResponse:
         r"""Passthrough POST
@@ -239,8 +239,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[CreatePassthroughJsonAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePassthroughJSONResponse:
         r"""Passthrough POST
@@ -393,8 +393,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[CreatePassthroughRawAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePassthroughRawResponse:
         r"""Passthrough POST
@@ -547,8 +547,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[CreatePassthroughRawAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePassthroughRawResponse:
         r"""Passthrough POST
@@ -701,8 +701,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[ListPassthroughsAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPassthroughsResponse:
         r"""Passthrough GET
@@ -848,8 +848,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[ListPassthroughsAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPassthroughsResponse:
         r"""Passthrough GET
@@ -995,8 +995,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[PatchPassthroughJsonAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPassthroughJSONResponse:
         r"""Passthrough PUT
@@ -1149,8 +1149,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[PatchPassthroughJsonAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPassthroughJSONResponse:
         r"""Passthrough PUT
@@ -1303,8 +1303,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[PatchPassthroughRawAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPassthroughRawResponse:
         r"""Passthrough PUT
@@ -1457,8 +1457,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[PatchPassthroughRawAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPassthroughRawResponse:
         r"""Passthrough PUT
@@ -1611,8 +1611,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[RemovePassthroughAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemovePassthroughResponse:
         r"""Passthrough DELETE
@@ -1758,8 +1758,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[RemovePassthroughAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemovePassthroughResponse:
         r"""Passthrough DELETE
@@ -1905,8 +1905,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[UpdatePassthroughJsonAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePassthroughJSONResponse:
         r"""Passthrough PUT
@@ -2059,8 +2059,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[UpdatePassthroughJsonAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePassthroughJSONResponse:
         r"""Passthrough PUT
@@ -2213,8 +2213,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[UpdatePassthroughRawAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePassthroughRawResponse:
         r"""Passthrough PUT
@@ -2367,8 +2367,8 @@ class Passthrough(BaseSDK):
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        timeout_ms: Optional[int] = None,
         accept_header_override: Optional[UpdatePassthroughRawAcceptEnum] = None,
+        timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePassthroughRawResponse:
         r"""Passthrough PUT

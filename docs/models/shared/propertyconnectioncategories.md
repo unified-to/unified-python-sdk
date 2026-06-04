@@ -43,3 +43,4 @@ value = PropertyConnectionCategories.PASSTHROUGH
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
+| `CLUBS`        | clubs          |

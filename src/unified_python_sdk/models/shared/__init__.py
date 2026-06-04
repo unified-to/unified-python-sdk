@@ -356,6 +356,26 @@ if TYPE_CHECKING:
         RegistrationStatus,
     )
     from .citytarget import CityTarget, CityTargetTypedDict, RadiusUnit
+    from .clubsactivity import ClubsActivity, ClubsActivityType, ClubsActivityTypedDict
+    from .clubsevent import (
+        ClubsEvent,
+        ClubsEventStatus,
+        ClubsEventType,
+        ClubsEventTypedDict,
+    )
+    from .clubsgroup import (
+        ClubsGroup,
+        ClubsGroupTypedDict,
+        GroupType,
+        MembershipStatus,
+        SportType,
+    )
+    from .clubslocation import ClubsLocation, ClubsLocationTypedDict
+    from .clubsmember import (
+        ClubsMember,
+        ClubsMemberMembershipStatus,
+        ClubsMemberTypedDict,
+    )
     from .commerceavailability import (
         CommerceAvailability,
         CommerceAvailabilityTypedDict,
@@ -1244,6 +1264,14 @@ if TYPE_CHECKING:
         PropertyCalendarWebinarOrganizerStatus,
         PropertyCalendarWebinarOrganizerTypedDict,
     )
+    from .property_clubsgroup_address import (
+        PropertyClubsGroupAddress,
+        PropertyClubsGroupAddressTypedDict,
+    )
+    from .property_clubslocation_address import (
+        PropertyClubsLocationAddress,
+        PropertyClubsLocationAddressTypedDict,
+    )
     from .property_commercelocation_address import (
         PropertyCommerceLocationAddress,
         PropertyCommerceLocationAddressTypedDict,
@@ -1904,6 +1932,20 @@ __all__ = [
     "CalendarWebinarTypedDict",
     "CityTarget",
     "CityTargetTypedDict",
+    "ClubsActivity",
+    "ClubsActivityType",
+    "ClubsActivityTypedDict",
+    "ClubsEvent",
+    "ClubsEventStatus",
+    "ClubsEventType",
+    "ClubsEventTypedDict",
+    "ClubsGroup",
+    "ClubsGroupTypedDict",
+    "ClubsLocation",
+    "ClubsLocationTypedDict",
+    "ClubsMember",
+    "ClubsMemberMembershipStatus",
+    "ClubsMemberTypedDict",
     "CommerceAvailability",
     "CommerceAvailabilityTypedDict",
     "CommerceCollection",
@@ -2055,6 +2097,7 @@ __all__ = [
     "GenaiPromptTypedDict",
     "Gender",
     "Goal",
+    "GroupType",
     "HostingSource",
     "HrisBankaccount",
     "HrisBankaccountTypedDict",
@@ -2287,6 +2330,7 @@ __all__ = [
     "MarketingReportLinkTypedDict",
     "MarketingReportTypedDict",
     "MatchType",
+    "MembershipStatus",
     "MessagingAttachment",
     "MessagingAttachmentTypedDict",
     "MessagingButton",
@@ -2565,6 +2609,10 @@ __all__ = [
     "PropertyCalendarWebinarOrganizer",
     "PropertyCalendarWebinarOrganizerStatus",
     "PropertyCalendarWebinarOrganizerTypedDict",
+    "PropertyClubsGroupAddress",
+    "PropertyClubsGroupAddressTypedDict",
+    "PropertyClubsLocationAddress",
+    "PropertyClubsLocationAddressTypedDict",
     "PropertyCommerceLocationAddress",
     "PropertyCommerceLocationAddressTypedDict",
     "PropertyConnectionAuth",
@@ -2776,6 +2824,7 @@ __all__ = [
     "SigningTemplate",
     "SigningTemplateTypedDict",
     "SizeUnit",
+    "SportType",
     "Status",
     "StorageFile",
     "StorageFileType",
@@ -3227,6 +3276,23 @@ _dynamic_imports: dict[str, str] = {
     "CityTarget": ".citytarget",
     "CityTargetTypedDict": ".citytarget",
     "RadiusUnit": ".citytarget",
+    "ClubsActivity": ".clubsactivity",
+    "ClubsActivityType": ".clubsactivity",
+    "ClubsActivityTypedDict": ".clubsactivity",
+    "ClubsEvent": ".clubsevent",
+    "ClubsEventStatus": ".clubsevent",
+    "ClubsEventType": ".clubsevent",
+    "ClubsEventTypedDict": ".clubsevent",
+    "ClubsGroup": ".clubsgroup",
+    "ClubsGroupTypedDict": ".clubsgroup",
+    "GroupType": ".clubsgroup",
+    "MembershipStatus": ".clubsgroup",
+    "SportType": ".clubsgroup",
+    "ClubsLocation": ".clubslocation",
+    "ClubsLocationTypedDict": ".clubslocation",
+    "ClubsMember": ".clubsmember",
+    "ClubsMemberMembershipStatus": ".clubsmember",
+    "ClubsMemberTypedDict": ".clubsmember",
     "CommerceAvailability": ".commerceavailability",
     "CommerceAvailabilityTypedDict": ".commerceavailability",
     "CommerceCollection": ".commercecollection",
@@ -3935,6 +4001,10 @@ _dynamic_imports: dict[str, str] = {
     "PropertyCalendarWebinarOrganizer": ".property_calendarwebinar_organizer",
     "PropertyCalendarWebinarOrganizerStatus": ".property_calendarwebinar_organizer",
     "PropertyCalendarWebinarOrganizerTypedDict": ".property_calendarwebinar_organizer",
+    "PropertyClubsGroupAddress": ".property_clubsgroup_address",
+    "PropertyClubsGroupAddressTypedDict": ".property_clubsgroup_address",
+    "PropertyClubsLocationAddress": ".property_clubslocation_address",
+    "PropertyClubsLocationAddressTypedDict": ".property_clubslocation_address",
     "PropertyCommerceLocationAddress": ".property_commercelocation_address",
     "PropertyCommerceLocationAddressTypedDict": ".property_commercelocation_address",
     "PropertyConnectionAuth": ".property_connection_auth",

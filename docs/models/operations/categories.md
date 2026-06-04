@@ -41,3 +41,4 @@ value = Categories.PASSTHROUGH
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
+| `CLUBS`        | clubs          |

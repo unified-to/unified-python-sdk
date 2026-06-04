@@ -41,3 +41,4 @@ value = ListUnifiedIntegrationsQueryParamCategories.PASSTHROUGH
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
+| `CLUBS`        | clubs          |

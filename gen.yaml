@@ -29,7 +29,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.57.51
+  version: 0.58.0
   additionalDependencies:
     dev: {}
     main: {}
@@ -40,6 +40,7 @@ python:
   authors:
     - Unified API Inc.
   baseErrorName: UnifiedToError
+  bodyVariantOverloads: false
   clientServerStatusCodesAsErrors: true
   constFieldCasing: upper
   defaultErrorName: SDKError
@@ -69,8 +70,11 @@ python:
   license: ""
   maxMethodParams: 0
   methodArguments: require-security-and-request
+  methodTimeoutArgument: timeout-ms
+  methodTimeoutUnits: milliseconds
   moduleName: ""
   multipartArrayFormat: legacy
+  optionalDependencies: {}
   outputModelSuffix: output
   packageManager: poetry
   packageName: Unified-python-sdk
@@ -78,6 +82,7 @@ python:
   projectUrls: {}
   pytestFilterWarnings: []
   pytestTimeout: 0
+  rawResponseHelpers: false
   responseFormat: envelope
   sseFlatResponse: false
   templateVersion: v2

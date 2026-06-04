@@ -279,8 +279,10 @@ asyncio.run(main())
 * [create_ats_activity](docs/sdks/activity/README.md#create_ats_activity) - Create an activity
 * [create_lms_activity](docs/sdks/activity/README.md#create_lms_activity) - Create an activity
 * [get_ats_activity](docs/sdks/activity/README.md#get_ats_activity) - Retrieve an activity
+* [get_clubs_activity](docs/sdks/activity/README.md#get_clubs_activity) - Retrieve an activity
 * [get_lms_activity](docs/sdks/activity/README.md#get_lms_activity) - Retrieve an activity
 * [list_ats_activities](docs/sdks/activity/README.md#list_ats_activities) - List all activities
+* [list_clubs_activities](docs/sdks/activity/README.md#list_clubs_activities) - List all activities
 * [list_lms_activities](docs/sdks/activity/README.md#list_lms_activities) - List all activities
 * [patch_ats_activity](docs/sdks/activity/README.md#patch_ats_activity) - Update an activity
 * [patch_lms_activity](docs/sdks/activity/README.md#patch_lms_activity) - Update an activity
@@ -579,6 +581,19 @@ asyncio.run(main())
 * [patch_lms_class](docs/sdks/class/README.md#patch_lms_class) - Update a class
 * [remove_lms_class](docs/sdks/class/README.md#remove_lms_class) - Remove a class
 * [update_lms_class](docs/sdks/class/README.md#update_lms_class) - Update a class
+
+### [Clubs](docs/sdks/clubs/README.md)
+
+* [get_clubs_activity](docs/sdks/clubs/README.md#get_clubs_activity) - Retrieve an activity
+* [get_clubs_event](docs/sdks/clubs/README.md#get_clubs_event) - Retrieve an event
+* [get_clubs_group](docs/sdks/clubs/README.md#get_clubs_group) - Retrieve a group
+* [get_clubs_location](docs/sdks/clubs/README.md#get_clubs_location) - Retrieve a location
+* [get_clubs_member](docs/sdks/clubs/README.md#get_clubs_member) - Retrieve a member
+* [list_clubs_activities](docs/sdks/clubs/README.md#list_clubs_activities) - List all activities
+* [list_clubs_events](docs/sdks/clubs/README.md#list_clubs_events) - List all events
+* [list_clubs_groups](docs/sdks/clubs/README.md#list_clubs_groups) - List all groups
+* [list_clubs_locations](docs/sdks/clubs/README.md#list_clubs_locations) - List all locations
+* [list_clubs_members](docs/sdks/clubs/README.md#list_clubs_members) - List all members
 
 ### [Collection](docs/sdks/collection/README.md)
 
@@ -884,8 +899,10 @@ asyncio.run(main())
 * [create_calendar_event](docs/sdks/event/README.md#create_calendar_event) - Create an event
 * [create_crm_event](docs/sdks/event/README.md#create_crm_event) - Create an event
 * [get_calendar_event](docs/sdks/event/README.md#get_calendar_event) - Retrieve an event
+* [get_clubs_event](docs/sdks/event/README.md#get_clubs_event) - Retrieve an event
 * [get_crm_event](docs/sdks/event/README.md#get_crm_event) - Retrieve an event
 * [list_calendar_events](docs/sdks/event/README.md#list_calendar_events) - List all events
+* [list_clubs_events](docs/sdks/event/README.md#list_clubs_events) - List all events
 * [list_crm_events](docs/sdks/event/README.md#list_crm_events) - List all events
 * [patch_calendar_event](docs/sdks/event/README.md#patch_calendar_event) - Update an event
 * [patch_crm_event](docs/sdks/event/README.md#patch_crm_event) - Update an event
@@ -947,9 +964,11 @@ asyncio.run(main())
 * [create_hris_group](docs/sdks/group/README.md#create_hris_group) - Create a group
 * [create_scim_groups](docs/sdks/group/README.md#create_scim_groups) - Create group
 * [get_ads_group](docs/sdks/group/README.md#get_ads_group) - Retrieve a group
+* [get_clubs_group](docs/sdks/group/README.md#get_clubs_group) - Retrieve a group
 * [get_hris_group](docs/sdks/group/README.md#get_hris_group) - Retrieve a group
 * [get_scim_groups](docs/sdks/group/README.md#get_scim_groups) - Get group
 * [list_ads_groups](docs/sdks/group/README.md#list_ads_groups) - List all groups
+* [list_clubs_groups](docs/sdks/group/README.md#list_clubs_groups) - List all groups
 * [list_hris_groups](docs/sdks/group/README.md#list_hris_groups) - List all groups
 * [list_scim_groups](docs/sdks/group/README.md#list_scim_groups) - List groups
 * [patch_ads_group](docs/sdks/group/README.md#patch_ads_group) - Update a group
@@ -1231,8 +1250,10 @@ asyncio.run(main())
 
 * [create_commerce_location](docs/sdks/location/README.md#create_commerce_location) - Create a location
 * [create_hris_location](docs/sdks/location/README.md#create_hris_location) - Create a location
+* [get_clubs_location](docs/sdks/location/README.md#get_clubs_location) - Retrieve a location
 * [get_commerce_location](docs/sdks/location/README.md#get_commerce_location) - Retrieve a location
 * [get_hris_location](docs/sdks/location/README.md#get_hris_location) - Retrieve a location
+* [list_clubs_locations](docs/sdks/location/README.md#list_clubs_locations) - List all locations
 * [list_commerce_locations](docs/sdks/location/README.md#list_commerce_locations) - List all locations
 * [list_hris_locations](docs/sdks/location/README.md#list_hris_locations) - List all locations
 * [patch_commerce_location](docs/sdks/location/README.md#patch_commerce_location) - Update a location
@@ -1271,7 +1292,9 @@ asyncio.run(main())
 ### [Member](docs/sdks/member/README.md)
 
 * [create_martech_member](docs/sdks/member/README.md#create_martech_member) - Create a member
+* [get_clubs_member](docs/sdks/member/README.md#get_clubs_member) - Retrieve a member
 * [get_martech_member](docs/sdks/member/README.md#get_martech_member) - Retrieve a member
+* [list_clubs_members](docs/sdks/member/README.md#list_clubs_members) - List all members
 * [list_martech_members](docs/sdks/member/README.md#list_martech_members) - List all members
 * [patch_martech_member](docs/sdks/member/README.md#patch_martech_member) - Update a member
 * [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove a member

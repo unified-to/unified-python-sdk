@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_martech_member](#create_martech_member) - Create a member
+* [get_clubs_member](#get_clubs_member) - Retrieve a member
 * [get_martech_member](#get_martech_member) - Retrieve a member
+* [list_clubs_members](#list_clubs_members) - List all members
 * [list_martech_members](#list_martech_members) - List all members
 * [patch_martech_member](#patch_martech_member) - Update a member
 * [remove_martech_member](#remove_martech_member) - Remove a member
@@ -58,6 +60,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_clubs_member
+
+Retrieve a member
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.member.get_clubs_member(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.clubs_member is not None
+
+    # Handle response
+    print(res.clubs_member)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetClubsMemberRequest](../../models/operations/getclubsmemberrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetClubsMemberResponse](../../models/operations/getclubsmemberresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_martech_member
 
 Retrieve a member
@@ -98,6 +147,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetMartechMemberResponse](../../models/operations/getmartechmemberresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_clubs_members
+
+List all members
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.member.list_clubs_members(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.clubs_members is not None
+
+    # Handle response
+    print(res.clubs_members)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListClubsMembersRequest](../../models/operations/listclubsmembersrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.ListClubsMembersResponse](../../models/operations/listclubsmembersresponse.md)**
 
 ### Errors
 

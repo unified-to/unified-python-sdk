@@ -6,8 +6,10 @@
 
 * [create_commerce_location](#create_commerce_location) - Create a location
 * [create_hris_location](#create_hris_location) - Create a location
+* [get_clubs_location](#get_clubs_location) - Retrieve a location
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
 * [get_hris_location](#get_hris_location) - Retrieve a location
+* [list_clubs_locations](#list_clubs_locations) - List all locations
 * [list_commerce_locations](#list_commerce_locations) - List all locations
 * [list_hris_locations](#list_hris_locations) - List all locations
 * [patch_commerce_location](#patch_commerce_location) - Update a location
@@ -111,6 +113,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_clubs_location
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.get_clubs_location(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.clubs_location is not None
+
+    # Handle response
+    print(res.clubs_location)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetClubsLocationRequest](../../models/operations/getclubslocationrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetClubsLocationResponse](../../models/operations/getclubslocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_commerce_location
 
 Retrieve a location
@@ -198,6 +247,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHrisLocationResponse](../../models/operations/gethrislocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_clubs_locations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.list_clubs_locations(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.clubs_locations is not None
+
+    # Handle response
+    print(res.clubs_locations)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListClubsLocationsRequest](../../models/operations/listclubslocationsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListClubsLocationsResponse](../../models/operations/listclubslocationsresponse.md)**
 
 ### Errors
 

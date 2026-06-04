@@ -7,8 +7,10 @@
 * [create_ats_activity](#create_ats_activity) - Create an activity
 * [create_lms_activity](#create_lms_activity) - Create an activity
 * [get_ats_activity](#get_ats_activity) - Retrieve an activity
+* [get_clubs_activity](#get_clubs_activity) - Retrieve an activity
 * [get_lms_activity](#get_lms_activity) - Retrieve an activity
 * [list_ats_activities](#list_ats_activities) - List all activities
+* [list_clubs_activities](#list_clubs_activities) - List all activities
 * [list_lms_activities](#list_lms_activities) - List all activities
 * [patch_ats_activity](#patch_ats_activity) - Update an activity
 * [patch_lms_activity](#patch_lms_activity) - Update an activity
@@ -158,6 +160,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_clubs_activity
+
+Retrieve an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.activity.get_clubs_activity(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.clubs_activity is not None
+
+    # Handle response
+    print(res.clubs_activity)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetClubsActivityRequest](../../models/operations/getclubsactivityrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetClubsActivityResponse](../../models/operations/getclubsactivityresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_lms_activity
 
 Retrieve an activity
@@ -244,6 +293,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAtsActivitiesResponse](../../models/operations/listatsactivitiesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_clubs_activities
+
+List all activities
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.activity.list_clubs_activities(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.clubs_activities is not None
+
+    # Handle response
+    print(res.clubs_activities)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListClubsActivitiesRequest](../../models/operations/listclubsactivitiesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.ListClubsActivitiesResponse](../../models/operations/listclubsactivitiesresponse.md)**
 
 ### Errors
 

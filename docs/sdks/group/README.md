@@ -8,9 +8,11 @@
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_scim_groups](#create_scim_groups) - Create group
 * [get_ads_group](#get_ads_group) - Retrieve a group
+* [get_clubs_group](#get_clubs_group) - Retrieve a group
 * [get_hris_group](#get_hris_group) - Retrieve a group
 * [get_scim_groups](#get_scim_groups) - Get group
 * [list_ads_groups](#list_ads_groups) - List all groups
+* [list_clubs_groups](#list_clubs_groups) - List all groups
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_scim_groups](#list_scim_groups) - List groups
 * [patch_ads_group](#patch_ads_group) - Update a group
@@ -213,6 +215,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_clubs_group
+
+Retrieve a group
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.group.get_clubs_group(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.clubs_group is not None
+
+    # Handle response
+    print(res.clubs_group)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetClubsGroupRequest](../../models/operations/getclubsgrouprequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.GetClubsGroupResponse](../../models/operations/getclubsgroupresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_hris_group
 
 Retrieve a group
@@ -346,6 +395,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAdsGroupsResponse](../../models/operations/listadsgroupsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_clubs_groups
+
+List all groups
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.group.list_clubs_groups(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.clubs_groups is not None
+
+    # Handle response
+    print(res.clubs_groups)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListClubsGroupsRequest](../../models/operations/listclubsgroupsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.ListClubsGroupsResponse](../../models/operations/listclubsgroupsresponse.md)**
 
 ### Errors
 

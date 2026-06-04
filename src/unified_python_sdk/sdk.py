@@ -44,6 +44,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.change import Change
     from unified_python_sdk.channel import Channel
     from unified_python_sdk.class_ import Class
+    from unified_python_sdk.clubs import Clubs
     from unified_python_sdk.collection import Collection
     from unified_python_sdk.comment import Comment
     from unified_python_sdk.commerce import Commerce
@@ -207,13 +208,15 @@ class UnifiedTo(BaseSDK):
     link: "Link"
     recording: "Recording"
     webinar: "Webinar"
+    clubs: "Clubs"
+    location: "Location"
+    member: "Member"
     commerce: "Commerce"
     availability: "Availability"
     collection: "Collection"
     inventory: "Inventory"
     item: "Item"
     itemvariant: "Itemvariant"
-    location: "Location"
     reservation: "Reservation"
     review: "Review"
     saleschannel: "Saleschannel"
@@ -251,7 +254,6 @@ class UnifiedTo(BaseSDK):
     student: "Student"
     martech: "Martech"
     list: "ListT"
-    member: "Member"
     messaging: "Messaging"
     channel: "Channel"
     message: "Message"
@@ -349,13 +351,15 @@ class UnifiedTo(BaseSDK):
         "link": ("unified_python_sdk.link", "Link"),
         "recording": ("unified_python_sdk.recording", "Recording"),
         "webinar": ("unified_python_sdk.webinar", "Webinar"),
+        "clubs": ("unified_python_sdk.clubs", "Clubs"),
+        "location": ("unified_python_sdk.location", "Location"),
+        "member": ("unified_python_sdk.member", "Member"),
         "commerce": ("unified_python_sdk.commerce", "Commerce"),
         "availability": ("unified_python_sdk.availability", "Availability"),
         "collection": ("unified_python_sdk.collection", "Collection"),
         "inventory": ("unified_python_sdk.inventory", "Inventory"),
         "item": ("unified_python_sdk.item", "Item"),
         "itemvariant": ("unified_python_sdk.itemvariant", "Itemvariant"),
-        "location": ("unified_python_sdk.location", "Location"),
         "reservation": ("unified_python_sdk.reservation", "Reservation"),
         "review": ("unified_python_sdk.review", "Review"),
         "saleschannel": ("unified_python_sdk.saleschannel", "Saleschannel"),
@@ -393,7 +397,6 @@ class UnifiedTo(BaseSDK):
         "student": ("unified_python_sdk.student", "Student"),
         "martech": ("unified_python_sdk.martech", "Martech"),
         "list": ("unified_python_sdk.list", "ListT"),
-        "member": ("unified_python_sdk.member", "Member"),
         "messaging": ("unified_python_sdk.messaging", "Messaging"),
         "channel": ("unified_python_sdk.channel", "Channel"),
         "message": ("unified_python_sdk.message", "Message"),

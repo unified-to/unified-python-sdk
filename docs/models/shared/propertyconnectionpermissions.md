@@ -257,3 +257,13 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `SIGNING_SIGNATORY_READ`         | signing_signatory_read           |
 | `SIGNING_SIGNATORY_WRITE`        | signing_signatory_write          |
 | `SIGNING_TEMPLATE_READ`          | signing_template_read            |
+| `CLUBS_GROUP_READ`               | clubs_group_read                 |
+| `CLUBS_GROUP_WRITE`              | clubs_group_write                |
+| `CLUBS_MEMBER_READ`              | clubs_member_read                |
+| `CLUBS_MEMBER_WRITE`             | clubs_member_write               |
+| `CLUBS_ACTIVITY_READ`            | clubs_activity_read              |
+| `CLUBS_ACTIVITY_WRITE`           | clubs_activity_write             |
+| `CLUBS_LOCATION_READ`            | clubs_location_read              |
+| `CLUBS_LOCATION_WRITE`           | clubs_location_write             |
+| `CLUBS_EVENT_READ`               | clubs_event_read                 |
+| `CLUBS_EVENT_WRITE`              | clubs_event_write                |

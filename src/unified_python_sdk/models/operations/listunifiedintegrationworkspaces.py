@@ -44,6 +44,7 @@ class QueryParamCategories(str, Enum):
     SHIPPING = "shipping"
     ASSESSMENT = "assessment"
     SIGNING = "signing"
+    CLUBS = "clubs"
 
 
 class ListUnifiedIntegrationWorkspacesRequestTypedDict(TypedDict):

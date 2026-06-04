@@ -7,8 +7,10 @@
 * [create_calendar_event](#create_calendar_event) - Create an event
 * [create_crm_event](#create_crm_event) - Create an event
 * [get_calendar_event](#get_calendar_event) - Retrieve an event
+* [get_clubs_event](#get_clubs_event) - Retrieve an event
 * [get_crm_event](#get_crm_event) - Retrieve an event
 * [list_calendar_events](#list_calendar_events) - List all events
+* [list_clubs_events](#list_clubs_events) - List all events
 * [list_crm_events](#list_crm_events) - List all events
 * [patch_calendar_event](#patch_calendar_event) - Update an event
 * [patch_crm_event](#patch_crm_event) - Update an event
@@ -160,6 +162,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_clubs_event
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.event.get_clubs_event(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.clubs_event is not None
+
+    # Handle response
+    print(res.clubs_event)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetClubsEventRequest](../../models/operations/getclubseventrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.GetClubsEventResponse](../../models/operations/getclubseventresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_crm_event
 
 Retrieve an event
@@ -246,6 +295,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListCalendarEventsResponse](../../models/operations/listcalendareventsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_clubs_events
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.event.list_clubs_events(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.clubs_events is not None
+
+    # Handle response
+    print(res.clubs_events)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListClubsEventsRequest](../../models/operations/listclubseventsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.ListClubsEventsResponse](../../models/operations/listclubseventsresponse.md)**
 
 ### Errors
 
