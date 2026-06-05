@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 1e1eded8b22781b031016e09bbf41ef9
+  docChecksum: ff73cdfe71796ae093211cf878d62ce8
   docVersion: "1.0"
   speakeasyVersion: 1.770.0
   generationVersion: 2.893.0
-  releaseVersion: 0.58.0
-  configChecksum: 62c7d731f341c8b0a7cf3dc355bdc3c3
+  releaseVersion: 0.58.1
+  configChecksum: 2d6c76cf1e90634bc255c60b52d32fa6
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 8e8d079c-7b99-45bb-a0a1-362dc843d092
-  pristine_commit_hash: a45bd00c68af8cdf4b0f2dd7c10eb2ce67c3afdc
-  pristine_tree_hash: cbb03efc34803ce1fec4018f20745a07d71ae1b5
+  generation_id: 35aefa82-dbb1-47d1-8bdc-f1c41564b3df
+  pristine_commit_hash: f58d1b6f949f27436b67a618f99c22274e0dae5e
+  pristine_tree_hash: cb281d9519f6fdee26ad582721e221dbd2738621
 features:
   python:
     acceptHeaders: 3.0.0
@@ -230,8 +230,8 @@ trackedFiles:
     pristine_git_object: 4a9cc74e256dda5d32f01975d373561b6a0dfe88
   docs/models/operations/createadscreativequeryparamfields.md:
     id: 04122e5023b7
-    last_write_checksum: sha1:d17d5d5ca7b692f285982e18a5e89b6659d34d5d
-    pristine_git_object: 404d55d858242889b5a8d8c09b1ac21cf9c1be8a
+    last_write_checksum: sha1:90e9c6c8dc5b18d643f8df39ddb9c5b9f8858aa2
+    pristine_git_object: 95998fad9dafaa7d4be68db8d3cd4ccb9d05700b
   docs/models/operations/createadscreativerequest.md:
     id: ea765bf4b9d1
     last_write_checksum: sha1:3938349e1522bd23cae4b9eb207220d2b3bf1da6
@@ -1534,8 +1534,8 @@ trackedFiles:
     pristine_git_object: 2ec2d0603ed25fbe319818be3f490a2cfcfca766
   docs/models/operations/getadscreativequeryparamfields.md:
     id: e830d67fbc6b
-    last_write_checksum: sha1:b113dafe8588010150a40b253e339705aee34d1d
-    pristine_git_object: f0ccd4dbd2dc1942ea8364466acbebf86ea0ddbb
+    last_write_checksum: sha1:99537c99d2c7b366b6a772485f4ae1b43e80d08d
+    pristine_git_object: 9c32cfb4cc7650babbe1baf09be519dd81a09114
   docs/models/operations/getadscreativerequest.md:
     id: 92c6121644f1
     last_write_checksum: sha1:7355b037b01f988a7a66744d1716e0896138493c
@@ -3058,8 +3058,8 @@ trackedFiles:
     pristine_git_object: b4216acacb03219376668dfda4e22f6412bca52d
   docs/models/operations/listadscreativesqueryparamfields.md:
     id: a7c077f0f286
-    last_write_checksum: sha1:6872485f269c715c44884c50f895baf7c5a551cb
-    pristine_git_object: 7ce0d100258d760e0307a5c8a19aa912175be267
+    last_write_checksum: sha1:7f66ff19de2c966db9d99a739f7f33a6a4d015e4
+    pristine_git_object: bef508931b6592afa3a8886350194e0a40d54918
   docs/models/operations/listadscreativesrequest.md:
     id: 87466d93e4f4
     last_write_checksum: sha1:7de1bfc16c2f0a8a3d87b348bd47ff76c383a1aa
@@ -4602,8 +4602,8 @@ trackedFiles:
     pristine_git_object: 6e43a8ccbdc4c1a13d74a666eb717f8f8e563426
   docs/models/operations/patchadscreativequeryparamfields.md:
     id: 146b7ad7eb13
-    last_write_checksum: sha1:21c7c2638df9f5cbd2e5c4e070a8fa893ad95580
-    pristine_git_object: 7e9f05e9cd662a085104760646b48a47c59d1660
+    last_write_checksum: sha1:d323cc2ce44fdb7c2b6bc743e8b9b2020dfd78ae
+    pristine_git_object: 55521937d75814f03ddb266d259ff86445593a15
   docs/models/operations/patchadscreativerequest.md:
     id: 55efdc137d34
     last_write_checksum: sha1:85d6dd13af70beab3e55321cffbdff59bc9e30b7
@@ -6654,8 +6654,8 @@ trackedFiles:
     pristine_git_object: b9aaef9e1ee0b661de1c437e9b2f58a1f2a881a4
   docs/models/operations/updateadscreativequeryparamfields.md:
     id: 35ec7b5eaa2e
-    last_write_checksum: sha1:51f001921c68d3272f737a78e3c304fabd7c9d0f
-    pristine_git_object: c4cb86d44b47cdde8c1199093f37f473789a42a1
+    last_write_checksum: sha1:23438eeb707bd73fee3f3510441726d0c31d4fdc
+    pristine_git_object: 51b345498201399a1a5480f9840cfe11d8aca089
   docs/models/operations/updateadscreativerequest.md:
     id: a239f4da8df0
     last_write_checksum: sha1:056ba80d06a445041b040d2b85c2862fac337ee9
@@ -7922,28 +7922,28 @@ trackedFiles:
     pristine_git_object: f19b01e04e857734188113235f80483139c6d2e0
   docs/models/shared/adsadstatus.md:
     id: 454aea8c6bed
-    last_write_checksum: sha1:5326f62c85b85d80bcd6d249893a35235beb3481
-    pristine_git_object: 645f3b4634be9b7961e804c647915fce82a0fcf4
+    last_write_checksum: sha1:fce51fbdd38d000352fe463e89971bea57f7c0f7
+    pristine_git_object: 7880e8115e7f19e47c96f49021fec61c9d2aac3b
   docs/models/shared/adscampaign.md:
     id: e0f0adcc4914
     last_write_checksum: sha1:e53f5a16ebf912b0398a46d7b22d378e7b41b9c4
     pristine_git_object: 17c4dfd4b30ed9551bef81d196fb79f9bb66d0f6
   docs/models/shared/adscampaignstatus.md:
     id: c0935d545b44
-    last_write_checksum: sha1:2bdaf713d6278291fb6b202ab465b727ed605a07
-    pristine_git_object: 9e1e28e243d396c9b90f83908037210a068f01a1
+    last_write_checksum: sha1:97f45ef7b60a3832f6e57648a3ccf3a55a880c94
+    pristine_git_object: 1834f7c24ac3ec73510abdaa5ff8a90e190fe66f
   docs/models/shared/adschedule.md:
     id: 1cc608026f94
     last_write_checksum: sha1:bcc61c49e063b6bf58e4e20e195ce45692bb9359
     pristine_git_object: e89f9e2c7e983d1febe28bf0d567c0971a5318a6
   docs/models/shared/adscreative.md:
     id: 6f4007df1c8a
-    last_write_checksum: sha1:454be99b522e8dcbe9eb860fc459d44133ceed5d
-    pristine_git_object: ff10752fcab484b187e46995743bf6825430aa7c
+    last_write_checksum: sha1:dcaa30a8d26b9e50062da0bdb4b30e1491ee8088
+    pristine_git_object: dedc8a2adc5c6a95f6d8f64b6392b042c7a84f1d
   docs/models/shared/adscreativestatus.md:
     id: cdea5dba2a06
-    last_write_checksum: sha1:523d09aaf03f420e6e9db14e1552f65eb305c0a7
-    pristine_git_object: d83e4157c6d54ee28f5e5974c39d5a2857ddaff6
+    last_write_checksum: sha1:66fb18ca2e57d138acd99856d4b83c3629f89596
+    pristine_git_object: fbe5049efd906fe713ee0bbc4e6b81e32454d4a4
   docs/models/shared/adsgroup.md:
     id: 39f97f5dbf76
     last_write_checksum: sha1:91c8a46bf2330b83693a3bab4e7ed2b9a817ae6b
@@ -7954,8 +7954,8 @@ trackedFiles:
     pristine_git_object: 194ba19287f62c2a284104533cd38d61259b7ec2
   docs/models/shared/adsgroupstatus.md:
     id: 46664f3ba851
-    last_write_checksum: sha1:0bcd372b5cf9ad3899f3776daf29fd86308ffbe4
-    pristine_git_object: 8fb91e443740e35f940bd2568725aded0eefa4a1
+    last_write_checksum: sha1:a1fe4cd845cd828c1b488e47f0d083c971751852
+    pristine_git_object: 11db0252a5e87dfe0970c30f98844c9577378f4e
   docs/models/shared/adsgrouptype.md:
     id: b5b6d15308a0
     last_write_checksum: sha1:c17d18940e7c3e29bede01bae7483c6d8aae1fde
@@ -7974,8 +7974,8 @@ trackedFiles:
     pristine_git_object: ad1b467de0b839c68739a4cea5f4951d65c7dd6e
   docs/models/shared/adsinsertionorderstatus.md:
     id: 52cde6b5e280
-    last_write_checksum: sha1:241ebb969fd953412c98c436cb76e707e4e91d3e
-    pristine_git_object: 1ffb52b5b622988cb417b2e2fbfa62c9044635fe
+    last_write_checksum: sha1:3b227a83d261aafda6c22ef6e947304b85d6602c
+    pristine_git_object: dbb2c8a8c6239930a019f2fa3834da3dd8130fa8
   docs/models/shared/adskeyword.md:
     id: e8d33a9d42bf
     last_write_checksum: sha1:7bd9f514060e55812680c3090994b98658c87e9d
@@ -8518,8 +8518,8 @@ trackedFiles:
     pristine_git_object: 4fd7d4fd92dd9d56421a6b47455563d9bc11dd41
   docs/models/shared/creativetype.md:
     id: 9786b9a5cf74
-    last_write_checksum: sha1:cadc6a110558baf2587efdac0fd859f1f1fe3953
-    pristine_git_object: 53b2b4cca15f7d82adb57a8e1ba6d0c9d92449e1
+    last_write_checksum: sha1:3cc0126d7c1ad2bf034f4baca2af641b1df3c70e
+    pristine_git_object: 721bfa5a6cc1d7e571026b3e5e7eb57a82cff896
   docs/models/shared/crmcompany.md:
     id: c6a8926e0030
     last_write_checksum: sha1:8880eadeee087d8b9984670c929011083c40e1c5
@@ -9906,8 +9906,8 @@ trackedFiles:
     pristine_git_object: 497c1a9ee0f9904abbbe61342c06a0f38a7323b5
   docs/models/shared/propertyadsreportmetricsadstatus.md:
     id: e7a6468ba814
-    last_write_checksum: sha1:314284cb757b39203ea6b9af34940ca2e05c3c94
-    pristine_git_object: c1ec56b25f3552005c8a57dcea5b708f334c9ccc
+    last_write_checksum: sha1:58528467694c87c4420b72e322f56e6b2993831a
+    pristine_git_object: 7e1f6136682907762500c587c0d1740831ba5ec3
   docs/models/shared/propertyadsreportmetricscampaign.md:
     id: 6eebfa6dd765
     last_write_checksum: sha1:becd3d05d8ccc59575284b3b58497504f58a0ed8
@@ -9934,8 +9934,8 @@ trackedFiles:
     pristine_git_object: 03231935e425f160febd3c5482256b41c0201056
   docs/models/shared/propertyadsreportmetricscampaignstatus.md:
     id: 58da937241f9
-    last_write_checksum: sha1:3eca5413719c434c2815e33e4030992232f8526c
-    pristine_git_object: eec87599752fa4f28af89bee8a860e10ca0b5545
+    last_write_checksum: sha1:d3f29418278866478431bc1d309ada0147cf1ec9
+    pristine_git_object: 3f062f2fcc5a54f781b7d4ff1b344613b7f4682d
   docs/models/shared/propertyadsreportmetricscampaigntargeting.md:
     id: 619a2a0a1bf5
     last_write_checksum: sha1:1731ff74a442779438986708e64b72fed5955774
@@ -10062,8 +10062,8 @@ trackedFiles:
     pristine_git_object: 9a8c54a75d05353bd6e4e9383a828d49d99549bf
   docs/models/shared/propertyadsreportmetricsgroupstatus.md:
     id: 51602406ba19
-    last_write_checksum: sha1:683d881444cf7e098dc4df9272294bd810830fc8
-    pristine_git_object: 6208687e4df2ae00b7744562c25d7bcefe4bfe0f
+    last_write_checksum: sha1:1e76db9f038a4762ca5d73fc670442a67b7448f1
+    pristine_git_object: 3230826553627c7487bfa85f7a38a2080224aa79
   docs/models/shared/propertyadsreportmetricsgrouptargeting.md:
     id: 929b130f764f
     last_write_checksum: sha1:f0c50fcdda493c6a925f42cf282d4c64c554d3a0
@@ -11782,8 +11782,8 @@ trackedFiles:
     pristine_git_object: 2d44fdd483ae724e4d5f4c24f79e73aedaa9f0f0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:ea1080585e9c4a730caa6f6abba33450df4f88b5
-    pristine_git_object: be07a100d7c46bb2c10c18cb27677c504e83f130
+    last_write_checksum: sha1:f3cc0b23512631926c039c1d7e7106af3cf620a7
+    pristine_git_object: db34520040641a8b46afe0990369994c41ad9439
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -11810,8 +11810,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:cae2c7f846d80fb3509b6533fdfc8f6a0788dc8c
-    pristine_git_object: b1d40786362f32e0ce2e9da802e2f55d7fb437b5
+    last_write_checksum: sha1:a54ee93ebe486ca4c8d5c60faeb3b4bcdd6634ce
+    pristine_git_object: 02802a2715a6d699bdc9d75d57622a29c25e0cfe
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:ed76e5ffc5ac5b86fc44cbb401bb5277456e8c7f
@@ -12242,8 +12242,8 @@ trackedFiles:
     pristine_git_object: e1fb10340f5508c7a6633bdcb475e97b4872468b
   src/unified_python_sdk/models/operations/createadscreative.py:
     id: 292e076fa56e
-    last_write_checksum: sha1:16e0d1172d4bd0dc4b975b4dffc7d732babc7997
-    pristine_git_object: 0be1b03b5791fe2888f1cd92e1d9bd104610e644
+    last_write_checksum: sha1:e4ed8b674980df4c14c29f1e43fdfc905c4f36cc
+    pristine_git_object: 97b1151a88b28287fe95e7c5046a59c4f5605b59
   src/unified_python_sdk/models/operations/createadsgroup.py:
     id: f89535e61c13
     last_write_checksum: sha1:4846be5ee566dfb47295bd4e983ab06d24ac2568
@@ -12690,8 +12690,8 @@ trackedFiles:
     pristine_git_object: 2360c576c2fbc4afe0b2045c397305037eeed1bc
   src/unified_python_sdk/models/operations/getadscreative.py:
     id: 06bcab63adf9
-    last_write_checksum: sha1:a1e46fa6bbfb9ba6a437e2a8838223deb8c53e6b
-    pristine_git_object: fb20b184ba066bc6c0a9836941cc89899c134547
+    last_write_checksum: sha1:9022b4a97442d940559a23522aa654bc0f78a0c6
+    pristine_git_object: c8dd95cd42c1d5d35ae95aaa327d625beda9b507
   src/unified_python_sdk/models/operations/getadsgroup.py:
     id: f824fe7661fd
     last_write_checksum: sha1:4894ec63bb8cb03c4cde1edf421b8c9db69d9d0b
@@ -13210,8 +13210,8 @@ trackedFiles:
     pristine_git_object: 2f351d73b44817d63daa33b473258f8685f887e8
   src/unified_python_sdk/models/operations/listadscreatives.py:
     id: 019aee88f524
-    last_write_checksum: sha1:cc3eaca4fdb85311d8b08283e6a4fb84c4abf5a8
-    pristine_git_object: 3e84c8c6b128b9b88b9ee5505d243a8a7065f72f
+    last_write_checksum: sha1:0bc577a07a5fdf5c56280e5d5925f45e34ebd5df
+    pristine_git_object: 03e3284b332d667f0e51bfdef8f3fe8a235ad161
   src/unified_python_sdk/models/operations/listadsgroups.py:
     id: ab895dffa351
     last_write_checksum: sha1:48594b0e03ac7310bfbb6a0708257d8f40fdd455
@@ -13742,8 +13742,8 @@ trackedFiles:
     pristine_git_object: 7037507258626f6e80a50a2cab0d8b953a02a4fd
   src/unified_python_sdk/models/operations/patchadscreative.py:
     id: e0294325b107
-    last_write_checksum: sha1:d3f6d3e4019deeb67d00204f158b8dac63df332f
-    pristine_git_object: fe22a0faafadbc0a309dd169d2c5fdfcfb246895
+    last_write_checksum: sha1:91aa210a8c83ce653cba19742c8d5e5415a3bd58
+    pristine_git_object: 3dcd02e77429901b1072289bb18d8c9d06e5c918
   src/unified_python_sdk/models/operations/patchadsgroup.py:
     id: 10ef61a3762f
     last_write_checksum: sha1:e33efa120c12ff29f06787cc2e87b037010a4805
@@ -14570,8 +14570,8 @@ trackedFiles:
     pristine_git_object: 325c38de48613e6aab2531aac9873a9808c7abad
   src/unified_python_sdk/models/operations/updateadscreative.py:
     id: ae282f86580d
-    last_write_checksum: sha1:2819c7e6bdd67aa7eb96c61244c8bca4793bde8e
-    pristine_git_object: c4fe127e583b7ab125d38e67497b90564b806d67
+    last_write_checksum: sha1:fe5f4c5e0b87fc7499d7b7be880159b73c4a16cf
+    pristine_git_object: aa187ef66c83a1f23667c9d615aad768f5620307
   src/unified_python_sdk/models/operations/updateadsgroup.py:
     id: 53aeaa6a1f3e
     last_write_checksum: sha1:c337b620ecd2cbf04e2c70f108f96e97d85e5f60
@@ -15086,28 +15086,28 @@ trackedFiles:
     pristine_git_object: 393d3e1526af4ad024b4ad74817f9a0bf7e8b4f3
   src/unified_python_sdk/models/shared/adsad.py:
     id: 798f84937ee8
-    last_write_checksum: sha1:b7e1f29812e30f20bee905e39010951f39a42f21
-    pristine_git_object: e570661b289b6c79f63e7b8680100abbdf3d23df
+    last_write_checksum: sha1:1d1873e6b1783f30c44a24e88758e4fd5f5d8470
+    pristine_git_object: 80b2933407d4765edba7f0adeda496c982a9b74a
   src/unified_python_sdk/models/shared/adscampaign.py:
     id: d36522d54327
-    last_write_checksum: sha1:404845a9403b3ca9800110ccde71d0f2d5c68279
-    pristine_git_object: 3a2cc11b8068a4244b9bf40d48488d20922a6650
+    last_write_checksum: sha1:a9d0a34856affcf125e57ee04882a641730bca1b
+    pristine_git_object: 09543782f07c65b0a41a1f98c8e1418032036c31
   src/unified_python_sdk/models/shared/adschedule.py:
     id: b13d6fe99c98
     last_write_checksum: sha1:7fab4c8665f25c0f2ff607a2382a0fd02b8d3674
     pristine_git_object: 879fa3b56d4c3fe1ed715747c9d7d2d4e152826b
   src/unified_python_sdk/models/shared/adscreative.py:
     id: d2399d912691
-    last_write_checksum: sha1:8df0e0ae28e7695e1837ed8adb8caa956b267645
-    pristine_git_object: d602af6a1e146f4fd4eec7a40b2d219c0f3df705
+    last_write_checksum: sha1:01480e33a78a25c1a4db0efe7b4092bb1facbe37
+    pristine_git_object: cd24456a60912c73cf81d65fa36a6cf1bc4bb311
   src/unified_python_sdk/models/shared/adsgroup.py:
     id: 4e587fe2fd81
-    last_write_checksum: sha1:980aed0d0c098f4543816b8b83d32041b9ecd2a6
-    pristine_git_object: 6f4c80de1d592c552dca4822c37ed3f73db47e4d
+    last_write_checksum: sha1:5c193c93521bfff0599b30d3c566fe92c9304554
+    pristine_git_object: f78e115ecf725d6e31a42d91f1ee08b3db25f438
   src/unified_python_sdk/models/shared/adsinsertionorder.py:
     id: 57e9d3a846b1
-    last_write_checksum: sha1:bf9c81735a7d056df48e464cfe02e9b5e3319462
-    pristine_git_object: 69d0bc3472ff95f7eed4e6196417bc28445252ef
+    last_write_checksum: sha1:e7c568651948508c9a198c7cfd380ca14a943982
+    pristine_git_object: 27f118fb5e186fcdc718a259f3ae3ed18abd65d9
   src/unified_python_sdk/models/shared/adsinsertionorderbudgetsegment.py:
     id: 948c1ae4bb9f
     last_write_checksum: sha1:c14f5cf5b27939d5dda3e4890205bc8774cc0ad4
@@ -15958,12 +15958,12 @@ trackedFiles:
     pristine_git_object: 688a164ea59a80ef166840790f50355b0e8bb227
   src/unified_python_sdk/models/shared/property_adsreportmetrics_ad.py:
     id: 259f41cfe1b4
-    last_write_checksum: sha1:4b2bf1723650caf9174d9f4b03dcbd045471bf53
-    pristine_git_object: 37a7dcbbafc7e2665a3276728365261f9508fce4
+    last_write_checksum: sha1:6f6cb2a0ef02066a01cb4aceea5f0f724c14eb46
+    pristine_git_object: 04263ebbb2c36d9f40300d1e50d21cebe40031d3
   src/unified_python_sdk/models/shared/property_adsreportmetrics_campaign.py:
     id: 54c9db92478b
-    last_write_checksum: sha1:201264d2a15ec9d1685b9749cd62f259cf50b92a
-    pristine_git_object: 3704887f57631fe5f31b413b17e7062bee02c6b7
+    last_write_checksum: sha1:49b9b1c390e70bdd8eac3f89849df6202b687087
+    pristine_git_object: 227dffe25cf6c870b2d4bec3c468408740c6776b
   src/unified_python_sdk/models/shared/property_adsreportmetrics_campaign_frequency_cap.py:
     id: d0246e15bfea
     last_write_checksum: sha1:d9dc03d4f91ee70c379aa006bb33874ae44677fa
@@ -16030,8 +16030,8 @@ trackedFiles:
     pristine_git_object: 2450a669324998e92ab0114d35feefe20d478e53
   src/unified_python_sdk/models/shared/property_adsreportmetrics_group.py:
     id: 669620c6f797
-    last_write_checksum: sha1:da08adfe3459dd8ba51570590421ac7ecc381284
-    pristine_git_object: ae58bcb05cdead9287cb1d6a00024acb459475c8
+    last_write_checksum: sha1:c249f1fea29e2a8478e3c67aa41f1e9affcd97d4
+    pristine_git_object: 307908b2b9d3fc80304968c704bf36397a398026
   src/unified_python_sdk/models/shared/property_adsreportmetrics_group_bid_strategy.py:
     id: 5dd0e8417d01
     last_write_checksum: sha1:aad47386c24ba49489d5efd45a2a62492fbbf4cf
@@ -23210,7 +23210,7 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.group.get_clubs_group()`: **Added**\n* `unified_to.group.list_clubs_groups()`: **Added**\n* `unified_to.activity.get_clubs_activity()`: **Added**\n* `unified_to.activity.list_clubs_activities()`: **Added**\n* `unified_to.event.get_clubs_event()`: **Added**\n* `unified_to.event.list_clubs_events()`: **Added**\n* `unified_to.clubs.get_clubs_activity()`: **Added**\n* `unified_to.clubs.get_clubs_event()`: **Added**\n* `unified_to.clubs.get_clubs_group()`: **Added**\n* `unified_to.clubs.get_clubs_location()`: **Added**\n* `unified_to.clubs.get_clubs_member()`: **Added**\n* `unified_to.clubs.list_clubs_activities()`: **Added**\n* `unified_to.clubs.list_clubs_events()`: **Added**\n* `unified_to.clubs.list_clubs_groups()`: **Added**\n* `unified_to.clubs.list_clubs_locations()`: **Added**\n* `unified_to.clubs.list_clubs_members()`: **Added**\n* `unified_to.location.get_clubs_location()`: **Added**\n* `unified_to.location.list_clubs_locations()`: **Added**\n* `unified_to.member.get_clubs_member()`: **Added**\n* `unified_to.member.list_clubs_members()`: **Added**\n* `unified_to.unified.create_unified_connection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.unified.get_unified_connection()`:  `response` **Changed**\n* `unified_to.unified.get_unified_webhook()`:  `response.object_type` **Changed**\n* `unified_to.unified.list_unified_connections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(clubs)` **Added**\n* `unified_to.unified.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(clubs)` **Added**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].object_type` **Changed**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.connection.get_unified_connection()`:  `response` **Changed**\n* `unified_to.connection.list_unified_connections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(clubs)` **Added**\n* `unified_to.integration.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(clubs)` **Added**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.webhook.get_unified_webhook()`:  `response.object_type` **Changed**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].object_type` **Changed**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.report.list_ads_reports()`:  `response.[].metrics[]` **Changed**\n* `unified_to.ads.create_ads_ad()`: \n  *  `request.ads_ad.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.create_ads_campaign()`: \n  *  `request.ads_campaign.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.create_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.create_ads_group()`: \n  *  `request.ads_group.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.create_ads_insertionorder()`: \n  *  `request.ads_insertionorder.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.get_ads_ad()`:  `response.status` **Changed**\n* `unified_to.ads.get_ads_campaign()`:  `response.status` **Changed**\n* `unified_to.ads.get_ads_creative()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.get_ads_group()`:  `response.status` **Changed**\n* `unified_to.ads.get_ads_insertionorder()`:  `response.status` **Changed**\n* `unified_to.ads.list_ads_ads()`:  `response.[].status` **Changed**\n* `unified_to.ads.list_ads_campaigns()`:  `response.[].status` **Changed**\n* `unified_to.ads.list_ads_creatives()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.ads.list_ads_groups()`:  `response.[].status` **Changed**\n* `unified_to.ads.list_ads_insertionorders()`:  `response.[].status` **Changed**\n* `unified_to.ads.list_ads_reports()`:  `response.[].metrics[]` **Changed**\n* `unified_to.ads.patch_ads_ad()`: \n  *  `request.ads_ad.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.patch_ads_campaign()`: \n  *  `request.ads_campaign.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.patch_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.patch_ads_group()`: \n  *  `request.ads_group.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.patch_ads_insertionorder()`: \n  *  `request.ads_insertionorder.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.update_ads_ad()`: \n  *  `request.ads_ad.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.update_ads_campaign()`: \n  *  `request.ads_campaign.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.update_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ads.update_ads_group()`: \n  *  `request.ads_group.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ads.update_ads_insertionorder()`: \n  *  `request.ads_insertionorder.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ad.create_ads_ad()`: \n  *  `request.ads_ad.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ad.get_ads_ad()`:  `response.status` **Changed**\n* `unified_to.ad.list_ads_ads()`:  `response.[].status` **Changed**\n* `unified_to.ad.patch_ads_ad()`: \n  *  `request.ads_ad.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.ad.update_ads_ad()`: \n  *  `request.ads_ad.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.campaign.create_ads_campaign()`: \n  *  `request.ads_campaign.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.campaign.get_ads_campaign()`:  `response.status` **Changed**\n* `unified_to.campaign.list_ads_campaigns()`:  `response.[].status` **Changed**\n* `unified_to.campaign.patch_ads_campaign()`: \n  *  `request.ads_campaign.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.campaign.update_ads_campaign()`: \n  *  `request.ads_campaign.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.creative.create_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.creative.get_ads_creative()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.creative.list_ads_creatives()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.creative.patch_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.creative.update_ads_creative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.group.create_ads_group()`: \n  *  `request.ads_group.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.group.get_ads_group()`:  `response.status` **Changed**\n* `unified_to.group.list_ads_groups()`:  `response.[].status` **Changed**\n* `unified_to.group.patch_ads_group()`: \n  *  `request.ads_group.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.group.update_ads_group()`: \n  *  `request.ads_group.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.insertionorder.create_ads_insertionorder()`: \n  *  `request.ads_insertionorder.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.insertionorder.get_ads_insertionorder()`:  `response.status` **Changed**\n* `unified_to.insertionorder.list_ads_insertionorders()`:  `response.[].status` **Changed**\n* `unified_to.insertionorder.patch_ads_insertionorder()`: \n  *  `request.ads_insertionorder.status` **Changed**\n  *  `response.status` **Changed**\n* `unified_to.insertionorder.update_ads_insertionorder()`: \n  *  `request.ads_insertionorder.status` **Changed**\n  *  `response.status` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

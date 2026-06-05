@@ -18,7 +18,9 @@ class CreativeType(str, Enum, metaclass=utils.OpenEnumMeta):
     EXPANDABLE = "EXPANDABLE"
     VIDEO = "VIDEO"
     NATIVE = "NATIVE"
+    IMAGE = "IMAGE"
     AUDIO = "AUDIO"
+    DOCUMENT = "DOCUMENT"
     PUBLISHER_HOSTED = "PUBLISHER_HOSTED"
     ASSET_BASED = "ASSET_BASED"
 
@@ -37,6 +39,8 @@ class AdsCreativeStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     ACTIVE = "ACTIVE"
     PAUSED = "PAUSED"
     ARCHIVED = "ARCHIVED"
+    PROCESSING = "PROCESSING"
+    PROCESSING_FAILED = "PROCESSING_FAILED"
     DRAFT = "DRAFT"
     SCHEDULED_FOR_DELETION = "SCHEDULED_FOR_DELETION"
 
@@ -49,6 +53,7 @@ class AdsCreativeTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     creative_type: NotRequired[CreativeType]
     cta: NotRequired[str]
+    data: NotRequired[str]
     external_ad_reference: NotRequired[str]
     external_creative_reference: NotRequired[str]
     external_placement_reference: NotRequired[str]
@@ -85,6 +90,8 @@ class AdsCreative(BaseModel):
     creative_type: Optional[CreativeType] = None
 
     cta: Optional[str] = None
+
+    data: Optional[str] = None
 
     external_ad_reference: Optional[str] = None
 
@@ -165,6 +172,7 @@ class AdsCreative(BaseModel):
                 "created_at",
                 "creative_type",
                 "cta",
+                "data",
                 "external_ad_reference",
                 "external_creative_reference",
                 "external_placement_reference",
