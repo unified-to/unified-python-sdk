@@ -35,3 +35,4 @@ class PropertyConnectionCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     ASSESSMENT = "assessment"
     SIGNING = "signing"
     CLUBS = "clubs"
+    DATASTORE = "datastore"

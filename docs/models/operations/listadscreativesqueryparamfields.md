@@ -22,7 +22,6 @@ value = ListAdsCreativesQueryParamFields.ID
 | `ITEM_ID`                      | item_id                        |
 | `ORGANIZATION_ID`              | organization_id                |
 | `STATUS`                       | status                         |
-| `DATA`                         | data                           |
 | `CREATIVE_TYPE`                | creative_type                  |
 | `HOSTING_SOURCE`               | hosting_source                 |
 | `WIDTH`                        | width                          |
@@ -40,4 +39,5 @@ value = ListAdsCreativesQueryParamFields.ID
 | `PROMOTED`                     | promoted                       |
 | `PATH1`                        | path1                          |
 | `PATH2`                        | path2                          |
+| `DATA`                         | data                           |
 | `RAW`                          | raw                            |

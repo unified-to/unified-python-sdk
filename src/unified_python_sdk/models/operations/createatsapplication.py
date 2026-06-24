@@ -33,6 +33,7 @@ class CreateAtsApplicationQueryParamFields(str, Enum):
     OFFERS = "offers"
     USER_ID = "user_id"
     METADATA = "metadata"
+    ORIGINAL_SUBSTATUS = "original_substatus"
     RAW = "raw"
 
 

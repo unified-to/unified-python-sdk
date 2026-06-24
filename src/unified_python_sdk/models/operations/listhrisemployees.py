@@ -67,7 +67,11 @@ class ListHrisEmployeesRequestTypedDict(TypedDict):
     r"""The company ID to filter by (reference to HrisCompany)"""
     fields: NotRequired[List[ListHrisEmployeesQueryParamFields]]
     r"""Fields to return"""
+    group_id: NotRequired[str]
+    r"""The group ID to filter by (reference to HrisGroup)"""
     limit: NotRequired[float]
+    location_id: NotRequired[str]
+    r"""The location ID to filter by (reference to HrisLocation)"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
@@ -97,10 +101,22 @@ class ListHrisEmployeesRequest(BaseModel):
     ] = None
     r"""Fields to return"""
 
+    group_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The group ID to filter by (reference to HrisGroup)"""
+
     limit: Annotated[
         Optional[float],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    location_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The location ID to filter by (reference to HrisLocation)"""
 
     offset: Annotated[
         Optional[float],
@@ -141,7 +157,9 @@ class ListHrisEmployeesRequest(BaseModel):
             [
                 "company_id",
                 "fields",
+                "group_id",
                 "limit",
+                "location_id",
                 "offset",
                 "order",
                 "query",

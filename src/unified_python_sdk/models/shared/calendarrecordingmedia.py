@@ -19,6 +19,8 @@ class CalendarRecordingMediaTypedDict(TypedDict):
     language: NotRequired[str]
     recording_download_url: NotRequired[str]
     start_at: NotRequired[datetime]
+    summary: NotRequired[str]
+    summary_download_url: NotRequired[str]
     transcript_download_url: NotRequired[str]
     transcripts: NotRequired[List[CalendarRecordingTranscriptTypedDict]]
 
@@ -34,6 +36,10 @@ class CalendarRecordingMedia(BaseModel):
 
     start_at: Optional[datetime] = None
 
+    summary: Optional[str] = None
+
+    summary_download_url: Optional[str] = None
+
     transcript_download_url: Optional[str] = None
 
     transcripts: Optional[List[CalendarRecordingTranscript]] = None
@@ -47,6 +53,8 @@ class CalendarRecordingMedia(BaseModel):
                 "language",
                 "recording_download_url",
                 "start_at",
+                "summary",
+                "summary_download_url",
                 "transcript_download_url",
                 "transcripts",
             ]

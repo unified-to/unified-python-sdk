@@ -1,0 +1,11 @@
+# DatastoreRelationship
+
+
+## Fields
+
+| Field                                                                                | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `field`                                                                              | *str*                                                                                | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `name`                                                                               | *str*                                                                                | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `table_id`                                                                           | *str*                                                                                | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `type`                                                                               | [shared.DatastoreRelationshipType](../../models/shared/datastorerelationshiptype.md) | :heavy_check_mark:                                                                   | N/A                                                                                  |

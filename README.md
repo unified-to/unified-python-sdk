@@ -828,6 +828,37 @@ asyncio.run(main())
 * [remove_ticketing_customer](docs/sdks/customer/README.md#remove_ticketing_customer) - Remove a customer
 * [update_ticketing_customer](docs/sdks/customer/README.md#update_ticketing_customer) - Update a customer
 
+### [Database](docs/sdks/database/README.md)
+
+* [create_datastore_database](docs/sdks/database/README.md#create_datastore_database) - Create a database
+* [get_datastore_database](docs/sdks/database/README.md#get_datastore_database) - Retrieve a database
+* [list_datastore_databases](docs/sdks/database/README.md#list_datastore_databases) - List all databases
+* [patch_datastore_database](docs/sdks/database/README.md#patch_datastore_database) - Update a database
+* [remove_datastore_database](docs/sdks/database/README.md#remove_datastore_database) - Remove a database
+* [update_datastore_database](docs/sdks/database/README.md#update_datastore_database) - Update a database
+
+### [Datastore](docs/sdks/datastore/README.md)
+
+* [create_datastore_database](docs/sdks/datastore/README.md#create_datastore_database) - Create a database
+* [create_datastore_query](docs/sdks/datastore/README.md#create_datastore_query) - Create a query
+* [create_datastore_record](docs/sdks/datastore/README.md#create_datastore_record) - Create a record
+* [create_datastore_table](docs/sdks/datastore/README.md#create_datastore_table) - Create a table
+* [get_datastore_database](docs/sdks/datastore/README.md#get_datastore_database) - Retrieve a database
+* [get_datastore_record](docs/sdks/datastore/README.md#get_datastore_record) - Retrieve a record
+* [get_datastore_table](docs/sdks/datastore/README.md#get_datastore_table) - Retrieve a table
+* [list_datastore_databases](docs/sdks/datastore/README.md#list_datastore_databases) - List all databases
+* [list_datastore_records](docs/sdks/datastore/README.md#list_datastore_records) - List all records
+* [list_datastore_tables](docs/sdks/datastore/README.md#list_datastore_tables) - List all tables
+* [patch_datastore_database](docs/sdks/datastore/README.md#patch_datastore_database) - Update a database
+* [patch_datastore_record](docs/sdks/datastore/README.md#patch_datastore_record) - Update a record
+* [patch_datastore_table](docs/sdks/datastore/README.md#patch_datastore_table) - Update a table
+* [remove_datastore_database](docs/sdks/datastore/README.md#remove_datastore_database) - Remove a database
+* [remove_datastore_record](docs/sdks/datastore/README.md#remove_datastore_record) - Remove a record
+* [remove_datastore_table](docs/sdks/datastore/README.md#remove_datastore_table) - Remove a table
+* [update_datastore_database](docs/sdks/datastore/README.md#update_datastore_database) - Update a database
+* [update_datastore_record](docs/sdks/datastore/README.md#update_datastore_record) - Update a record
+* [update_datastore_table](docs/sdks/datastore/README.md#update_datastore_table) - Update a table
+
 ### [Deal](docs/sdks/deal/README.md)
 
 * [create_crm_deal](docs/sdks/deal/README.md#create_crm_deal) - Create a deal
@@ -1493,9 +1524,22 @@ asyncio.run(main())
 * [remove_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#remove_accounting_purchaseorder) - Remove a purchaseorder
 * [update_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#update_accounting_purchaseorder) - Update a purchaseorder
 
+### [Query](docs/sdks/query/README.md)
+
+* [create_datastore_query](docs/sdks/query/README.md#create_datastore_query) - Create a query
+
 ### [Rate](docs/sdks/rate/README.md)
 
 * [create_shipping_rate](docs/sdks/rate/README.md#create_shipping_rate) - Create a rate
+
+### [Record](docs/sdks/record/README.md)
+
+* [create_datastore_record](docs/sdks/record/README.md#create_datastore_record) - Create a record
+* [get_datastore_record](docs/sdks/record/README.md#get_datastore_record) - Retrieve a record
+* [list_datastore_records](docs/sdks/record/README.md#list_datastore_records) - List all records
+* [patch_datastore_record](docs/sdks/record/README.md#patch_datastore_record) - Update a record
+* [remove_datastore_record](docs/sdks/record/README.md#remove_datastore_record) - Remove a record
+* [update_datastore_record](docs/sdks/record/README.md#update_datastore_record) - Update a record
 
 ### [Recording](docs/sdks/recording/README.md)
 
@@ -1726,6 +1770,15 @@ asyncio.run(main())
 * [patch_payment_subscription](docs/sdks/subscription/README.md#patch_payment_subscription) - Update a subscription
 * [remove_payment_subscription](docs/sdks/subscription/README.md#remove_payment_subscription) - Remove a subscription
 * [update_payment_subscription](docs/sdks/subscription/README.md#update_payment_subscription) - Update a subscription
+
+### [Table](docs/sdks/table/README.md)
+
+* [create_datastore_table](docs/sdks/table/README.md#create_datastore_table) - Create a table
+* [get_datastore_table](docs/sdks/table/README.md#get_datastore_table) - Retrieve a table
+* [list_datastore_tables](docs/sdks/table/README.md#list_datastore_tables) - List all tables
+* [patch_datastore_table](docs/sdks/table/README.md#patch_datastore_table) - Update a table
+* [remove_datastore_table](docs/sdks/table/README.md#remove_datastore_table) - Remove a table
+* [update_datastore_table](docs/sdks/table/README.md#update_datastore_table) - Update a table
 
 ### [Target](docs/sdks/target/README.md)
 

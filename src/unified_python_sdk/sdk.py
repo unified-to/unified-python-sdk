@@ -58,6 +58,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.creditmemo import Creditmemo
     from unified_python_sdk.crm import Crm
     from unified_python_sdk.customer import Customer
+    from unified_python_sdk.database import Database
+    from unified_python_sdk.datastore import Datastore
     from unified_python_sdk.deal import Deal
     from unified_python_sdk.deduction import Deduction
     from unified_python_sdk.device import Device
@@ -116,7 +118,9 @@ if TYPE_CHECKING:
     from unified_python_sdk.prompt import Prompt
     from unified_python_sdk.pullrequest import Pullrequest
     from unified_python_sdk.purchaseorder import Purchaseorder
+    from unified_python_sdk.query import Query
     from unified_python_sdk.rate import Rate
+    from unified_python_sdk.record import Record
     from unified_python_sdk.recording import Recording
     from unified_python_sdk.refund import Refund
     from unified_python_sdk.repo import Repo
@@ -138,6 +142,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.student import Student
     from unified_python_sdk.submission import Submission
     from unified_python_sdk.subscription import Subscription
+    from unified_python_sdk.table import Table
     from unified_python_sdk.target import Target
     from unified_python_sdk.task import Task
     from unified_python_sdk.taxrate import Taxrate
@@ -224,6 +229,11 @@ class UnifiedTo(BaseSDK):
     deal: "Deal"
     lead: "Lead"
     pipeline: "Pipeline"
+    datastore: "Datastore"
+    database: "Database"
+    query: "Query"
+    record: "Record"
+    table: "Table"
     enrich: "Enrich"
     person: "Person"
     forms: "Forms"
@@ -367,6 +377,11 @@ class UnifiedTo(BaseSDK):
         "deal": ("unified_python_sdk.deal", "Deal"),
         "lead": ("unified_python_sdk.lead", "Lead"),
         "pipeline": ("unified_python_sdk.pipeline", "Pipeline"),
+        "datastore": ("unified_python_sdk.datastore", "Datastore"),
+        "database": ("unified_python_sdk.database", "Database"),
+        "query": ("unified_python_sdk.query", "Query"),
+        "record": ("unified_python_sdk.record", "Record"),
+        "table": ("unified_python_sdk.table", "Table"),
         "enrich": ("unified_python_sdk.enrich", "Enrich"),
         "person": ("unified_python_sdk.person", "Person"),
         "forms": ("unified_python_sdk.forms", "Forms"),

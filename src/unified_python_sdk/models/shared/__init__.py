@@ -70,6 +70,7 @@ if TYPE_CHECKING:
         AccountingEmailTypedDict,
     )
     from .accountingexpense import AccountingExpense, AccountingExpenseTypedDict
+    from .accountingfee import AccountingFee, AccountingFeeType, AccountingFeeTypedDict
     from .accountinginvoice import (
         AccountingInvoice,
         AccountingInvoicePaymentCollectionMethod,
@@ -201,6 +202,8 @@ if TYPE_CHECKING:
         AdsReportMetrics,
         AdsReportMetricsType,
         AdsReportMetricsTypedDict,
+        Value,
+        ValueTypedDict,
     )
     from .adstarget import AdsTarget, AdsTargetType, AdsTargetTypedDict
     from .apicall import APICall, APICallType, APICallTypedDict
@@ -290,6 +293,8 @@ if TYPE_CHECKING:
         AtsMetadata5,
         AtsMetadata5TypedDict,
         AtsMetadataTypedDict,
+        AtsMetadataValue,
+        AtsMetadataValueTypedDict,
         ExtraData,
         ExtraDataTypedDict,
         Five,
@@ -297,8 +302,6 @@ if TYPE_CHECKING:
         Format,
         One,
         OneTypedDict,
-        Value,
-        ValueTypedDict,
     )
     from .atsoffer import AtsOffer, AtsOfferStatus, AtsOfferTypedDict
     from .atsreference import AtsReference, AtsReferenceTypedDict
@@ -481,6 +484,26 @@ if TYPE_CHECKING:
     from .crmreference import CrmReference, CrmReferenceTypedDict
     from .crmstage import CrmStage, CrmStageTypedDict
     from .crmtelephone import CrmTelephone, CrmTelephoneType, CrmTelephoneTypedDict
+    from .datastoredatabase import DatastoreDatabase, DatastoreDatabaseTypedDict
+    from .datastorefield import (
+        DatastoreField,
+        DatastoreFieldType,
+        DatastoreFieldTypedDict,
+    )
+    from .datastorefieldvalue import DatastoreFieldValue, DatastoreFieldValueTypedDict
+    from .datastorefilter import DatastoreFilter, DatastoreFilterTypedDict
+    from .datastorequery import DatastoreQuery, DatastoreQueryTypedDict
+    from .datastorequeryexpand import (
+        DatastoreQueryExpand,
+        DatastoreQueryExpandTypedDict,
+    )
+    from .datastorerecord import DatastoreRecord, DatastoreRecordTypedDict
+    from .datastorerelationship import (
+        DatastoreRelationship,
+        DatastoreRelationshipType,
+        DatastoreRelationshipTypedDict,
+    )
+    from .datastoretable import DatastoreTable, DatastoreTableTypedDict
     from .enrichcompany import EnrichCompany, EnrichCompanyTypedDict
     from .enrichemail import EnrichEmail, EnrichEmailType, EnrichEmailTypedDict
     from .enrichperson import EnrichPerson, EnrichPersonTypedDict, Gender
@@ -571,6 +594,7 @@ if TYPE_CHECKING:
     )
     from .hristelephone import HrisTelephone, HrisTelephoneType, HrisTelephoneTypedDict
     from .hristimeoff import (
+        DurationType,
         HrisTimeoff,
         HrisTimeoffStatus,
         HrisTimeoffType,
@@ -629,6 +653,7 @@ if TYPE_CHECKING:
         ListContentID,
         ListCourseID,
         ListCustomerID,
+        ListDatabaseID,
         ListDealID,
         ListDocumentID,
         ListEndLt,
@@ -677,6 +702,7 @@ if TYPE_CHECKING:
         ListStartGte,
         ListStatus,
         ListStudentID,
+        ListTableID,
         ListTaskID,
         ListTeacherID,
         ListTemplateID,
@@ -690,6 +716,7 @@ if TYPE_CHECKING:
         NativeWebhookChannelID,
         NativeWebhookCompanyID,
         NativeWebhookCourseID,
+        NativeWebhookDatabaseID,
         NativeWebhookEventID,
         NativeWebhookFormID,
         NativeWebhookIoID,
@@ -701,6 +728,7 @@ if TYPE_CHECKING:
         NativeWebhookProjectID,
         NativeWebhookShipmentID,
         NativeWebhookStudentID,
+        NativeWebhookTableID,
         NativeWebhookTaskID,
         NativeWebhookTemplateID,
         NativeWebhookType,
@@ -726,6 +754,7 @@ if TYPE_CHECKING:
         VirtualWebhookContactID,
         VirtualWebhookCourseID,
         VirtualWebhookCustomerID,
+        VirtualWebhookDatabaseID,
         VirtualWebhookDealID,
         VirtualWebhookEndLt,
         VirtualWebhookEventID,
@@ -760,6 +789,7 @@ if TYPE_CHECKING:
         VirtualWebhookStartGte,
         VirtualWebhookStatus,
         VirtualWebhookStudentID,
+        VirtualWebhookTableID,
         VirtualWebhookTaskID,
         VirtualWebhookTemplateID,
         VirtualWebhookTicketID,
@@ -1328,6 +1358,97 @@ if TYPE_CHECKING:
         PropertyCrmLeadAddress,
         PropertyCrmLeadAddressTypedDict,
     )
+    from .property_datastorefield_default_value import (
+        PropertyDatastoreFieldDefaultValue,
+        PropertyDatastoreFieldDefaultValueTypedDict,
+    )
+    from .property_datastorefilter_condition import (
+        PropertyDatastoreFilterCondition,
+        PropertyDatastoreFilterConditionTypedDict,
+    )
+    from .property_datastorefilter_condition_contains import (
+        PropertyDatastoreFilterConditionContains,
+        PropertyDatastoreFilterConditionContainsTypedDict,
+    )
+    from .property_datastorefilter_condition_eq import (
+        PropertyDatastoreFilterConditionEq,
+        PropertyDatastoreFilterConditionEqTypedDict,
+    )
+    from .property_datastorefilter_condition_gt import (
+        PropertyDatastoreFilterConditionGt,
+        PropertyDatastoreFilterConditionGtTypedDict,
+    )
+    from .property_datastorefilter_condition_gte import (
+        PropertyDatastoreFilterConditionGte,
+        PropertyDatastoreFilterConditionGteTypedDict,
+    )
+    from .property_datastorefilter_condition_ilike import (
+        PropertyDatastoreFilterConditionIlike,
+        PropertyDatastoreFilterConditionIlikeTypedDict,
+    )
+    from .property_datastorefilter_condition_like import (
+        PropertyDatastoreFilterConditionLike,
+        PropertyDatastoreFilterConditionLikeTypedDict,
+    )
+    from .property_datastorefilter_condition_lt import (
+        PropertyDatastoreFilterConditionLt,
+        PropertyDatastoreFilterConditionLtTypedDict,
+    )
+    from .property_datastorefilter_condition_lte import (
+        PropertyDatastoreFilterConditionLte,
+        PropertyDatastoreFilterConditionLteTypedDict,
+    )
+    from .property_datastorefilter_condition_neq import (
+        PropertyDatastoreFilterConditionNeq,
+        PropertyDatastoreFilterConditionNeqTypedDict,
+    )
+    from .property_datastorefilter_condition_not_contains import (
+        PropertyDatastoreFilterConditionNotContains,
+        PropertyDatastoreFilterConditionNotContainsTypedDict,
+    )
+    from .property_datastorequery_query import (
+        PropertyDatastoreQueryQuery,
+        PropertyDatastoreQueryQueryTypedDict,
+        SortOrder,
+    )
+    from .property_datastorequery_query_aggregate import (
+        PropertyDatastoreQueryQueryAggregate,
+        PropertyDatastoreQueryQueryAggregateTypedDict,
+    )
+    from .property_datastorequery_query_aggregate_avg import (
+        PropertyDatastoreQueryQueryAggregateAvg,
+        PropertyDatastoreQueryQueryAggregateAvgTypedDict,
+    )
+    from .property_datastorequery_query_aggregate_max import (
+        PropertyDatastoreQueryQueryAggregateMax,
+        PropertyDatastoreQueryQueryAggregateMaxTypedDict,
+    )
+    from .property_datastorequery_query_aggregate_min import (
+        PropertyDatastoreQueryQueryAggregateMin,
+        PropertyDatastoreQueryQueryAggregateMinTypedDict,
+    )
+    from .property_datastorequery_query_aggregate_sum import (
+        PropertyDatastoreQueryQueryAggregateSum,
+        PropertyDatastoreQueryQueryAggregateSumTypedDict,
+    )
+    from .property_datastorequery_query_filter import (
+        PropertyDatastoreQueryQueryFilter,
+        PropertyDatastoreQueryQueryFilterType,
+        PropertyDatastoreQueryQueryFilterTypedDict,
+    )
+    from .property_datastorequery_response import (
+        PropertyDatastoreQueryResponse,
+        PropertyDatastoreQueryResponseTypedDict,
+    )
+    from .property_datastorequery_response_aggregates import (
+        PropertyDatastoreQueryResponseAggregates,
+        PropertyDatastoreQueryResponseAggregatesTypedDict,
+    )
+    from .property_datastorequeryexpand_filter import (
+        PropertyDatastoreQueryExpandFilter,
+        PropertyDatastoreQueryExpandFilterType,
+        PropertyDatastoreQueryExpandFilterTypedDict,
+    )
     from .property_enrichcompany_address import (
         PropertyEnrichCompanyAddress,
         PropertyEnrichCompanyAddressTypedDict,
@@ -1713,6 +1834,9 @@ __all__ = [
     "AccountingEmailTypedDict",
     "AccountingExpense",
     "AccountingExpenseTypedDict",
+    "AccountingFee",
+    "AccountingFeeType",
+    "AccountingFeeTypedDict",
     "AccountingInvoice",
     "AccountingInvoicePaymentCollectionMethod",
     "AccountingInvoiceStatus",
@@ -1876,6 +2000,8 @@ __all__ = [
     "AtsMetadata5",
     "AtsMetadata5TypedDict",
     "AtsMetadataTypedDict",
+    "AtsMetadataValue",
+    "AtsMetadataValueTypedDict",
     "AtsOffer",
     "AtsOfferStatus",
     "AtsOfferTypedDict",
@@ -2048,8 +2174,29 @@ __all__ = [
     "CrmTelephone",
     "CrmTelephoneType",
     "CrmTelephoneTypedDict",
+    "DatastoreDatabase",
+    "DatastoreDatabaseTypedDict",
+    "DatastoreField",
+    "DatastoreFieldType",
+    "DatastoreFieldTypedDict",
+    "DatastoreFieldValue",
+    "DatastoreFieldValueTypedDict",
+    "DatastoreFilter",
+    "DatastoreFilterTypedDict",
+    "DatastoreQuery",
+    "DatastoreQueryExpand",
+    "DatastoreQueryExpandTypedDict",
+    "DatastoreQueryTypedDict",
+    "DatastoreRecord",
+    "DatastoreRecordTypedDict",
+    "DatastoreRelationship",
+    "DatastoreRelationshipType",
+    "DatastoreRelationshipTypedDict",
+    "DatastoreTable",
+    "DatastoreTableTypedDict",
     "DayOfWeek",
     "DbType",
+    "DurationType",
     "DutiesPaidBy",
     "EmployerContributionType",
     "EmploymentStatus",
@@ -2230,6 +2377,7 @@ __all__ = [
     "ListContentID",
     "ListCourseID",
     "ListCustomerID",
+    "ListDatabaseID",
     "ListDealID",
     "ListDocumentID",
     "ListEndLt",
@@ -2278,6 +2426,7 @@ __all__ = [
     "ListStartGte",
     "ListStatus",
     "ListStudentID",
+    "ListTableID",
     "ListTaskID",
     "ListTeacherID",
     "ListTemplateID",
@@ -2357,6 +2506,7 @@ __all__ = [
     "NativeWebhookChannelID",
     "NativeWebhookCompanyID",
     "NativeWebhookCourseID",
+    "NativeWebhookDatabaseID",
     "NativeWebhookEventID",
     "NativeWebhookFormID",
     "NativeWebhookIoID",
@@ -2368,6 +2518,7 @@ __all__ = [
     "NativeWebhookProjectID",
     "NativeWebhookShipmentID",
     "NativeWebhookStudentID",
+    "NativeWebhookTableID",
     "NativeWebhookTaskID",
     "NativeWebhookTemplateID",
     "NativeWebhookType",
@@ -2642,6 +2793,52 @@ __all__ = [
     "PropertyCrmEventTaskTypedDict",
     "PropertyCrmLeadAddress",
     "PropertyCrmLeadAddressTypedDict",
+    "PropertyDatastoreFieldDefaultValue",
+    "PropertyDatastoreFieldDefaultValueTypedDict",
+    "PropertyDatastoreFilterCondition",
+    "PropertyDatastoreFilterConditionContains",
+    "PropertyDatastoreFilterConditionContainsTypedDict",
+    "PropertyDatastoreFilterConditionEq",
+    "PropertyDatastoreFilterConditionEqTypedDict",
+    "PropertyDatastoreFilterConditionGt",
+    "PropertyDatastoreFilterConditionGtTypedDict",
+    "PropertyDatastoreFilterConditionGte",
+    "PropertyDatastoreFilterConditionGteTypedDict",
+    "PropertyDatastoreFilterConditionIlike",
+    "PropertyDatastoreFilterConditionIlikeTypedDict",
+    "PropertyDatastoreFilterConditionLike",
+    "PropertyDatastoreFilterConditionLikeTypedDict",
+    "PropertyDatastoreFilterConditionLt",
+    "PropertyDatastoreFilterConditionLtTypedDict",
+    "PropertyDatastoreFilterConditionLte",
+    "PropertyDatastoreFilterConditionLteTypedDict",
+    "PropertyDatastoreFilterConditionNeq",
+    "PropertyDatastoreFilterConditionNeqTypedDict",
+    "PropertyDatastoreFilterConditionNotContains",
+    "PropertyDatastoreFilterConditionNotContainsTypedDict",
+    "PropertyDatastoreFilterConditionTypedDict",
+    "PropertyDatastoreQueryExpandFilter",
+    "PropertyDatastoreQueryExpandFilterType",
+    "PropertyDatastoreQueryExpandFilterTypedDict",
+    "PropertyDatastoreQueryQuery",
+    "PropertyDatastoreQueryQueryAggregate",
+    "PropertyDatastoreQueryQueryAggregateAvg",
+    "PropertyDatastoreQueryQueryAggregateAvgTypedDict",
+    "PropertyDatastoreQueryQueryAggregateMax",
+    "PropertyDatastoreQueryQueryAggregateMaxTypedDict",
+    "PropertyDatastoreQueryQueryAggregateMin",
+    "PropertyDatastoreQueryQueryAggregateMinTypedDict",
+    "PropertyDatastoreQueryQueryAggregateSum",
+    "PropertyDatastoreQueryQueryAggregateSumTypedDict",
+    "PropertyDatastoreQueryQueryAggregateTypedDict",
+    "PropertyDatastoreQueryQueryFilter",
+    "PropertyDatastoreQueryQueryFilterType",
+    "PropertyDatastoreQueryQueryFilterTypedDict",
+    "PropertyDatastoreQueryQueryTypedDict",
+    "PropertyDatastoreQueryResponse",
+    "PropertyDatastoreQueryResponseAggregates",
+    "PropertyDatastoreQueryResponseAggregatesTypedDict",
+    "PropertyDatastoreQueryResponseTypedDict",
     "PropertyEnrichCompanyAddress",
     "PropertyEnrichCompanyAddressTypedDict",
     "PropertyEnrichPersonAddress",
@@ -2824,6 +3021,7 @@ __all__ = [
     "SigningTemplate",
     "SigningTemplateTypedDict",
     "SizeUnit",
+    "SortOrder",
     "SportType",
     "Status",
     "StorageFile",
@@ -2938,6 +3136,7 @@ __all__ = [
     "VirtualWebhookContactID",
     "VirtualWebhookCourseID",
     "VirtualWebhookCustomerID",
+    "VirtualWebhookDatabaseID",
     "VirtualWebhookDealID",
     "VirtualWebhookEndLt",
     "VirtualWebhookEventID",
@@ -2972,6 +3171,7 @@ __all__ = [
     "VirtualWebhookStartGte",
     "VirtualWebhookStatus",
     "VirtualWebhookStudentID",
+    "VirtualWebhookTableID",
     "VirtualWebhookTaskID",
     "VirtualWebhookTemplateID",
     "VirtualWebhookTicketID",
@@ -3030,6 +3230,9 @@ _dynamic_imports: dict[str, str] = {
     "AccountingEmailTypedDict": ".accountingemail",
     "AccountingExpense": ".accountingexpense",
     "AccountingExpenseTypedDict": ".accountingexpense",
+    "AccountingFee": ".accountingfee",
+    "AccountingFeeType": ".accountingfee",
+    "AccountingFeeTypedDict": ".accountingfee",
     "AccountingInvoice": ".accountinginvoice",
     "AccountingInvoicePaymentCollectionMethod": ".accountinginvoice",
     "AccountingInvoiceStatus": ".accountinginvoice",
@@ -3129,6 +3332,8 @@ _dynamic_imports: dict[str, str] = {
     "AdsReportMetrics": ".adsreportmetrics",
     "AdsReportMetricsType": ".adsreportmetrics",
     "AdsReportMetricsTypedDict": ".adsreportmetrics",
+    "Value": ".adsreportmetrics",
+    "ValueTypedDict": ".adsreportmetrics",
     "AdsTarget": ".adstarget",
     "AdsTargetType": ".adstarget",
     "AdsTargetTypedDict": ".adstarget",
@@ -3211,6 +3416,8 @@ _dynamic_imports: dict[str, str] = {
     "AtsMetadata5": ".atsmetadata",
     "AtsMetadata5TypedDict": ".atsmetadata",
     "AtsMetadataTypedDict": ".atsmetadata",
+    "AtsMetadataValue": ".atsmetadata",
+    "AtsMetadataValueTypedDict": ".atsmetadata",
     "ExtraData": ".atsmetadata",
     "ExtraDataTypedDict": ".atsmetadata",
     "Five": ".atsmetadata",
@@ -3218,8 +3425,6 @@ _dynamic_imports: dict[str, str] = {
     "Format": ".atsmetadata",
     "One": ".atsmetadata",
     "OneTypedDict": ".atsmetadata",
-    "Value": ".atsmetadata",
-    "ValueTypedDict": ".atsmetadata",
     "AtsOffer": ".atsoffer",
     "AtsOfferStatus": ".atsoffer",
     "AtsOfferTypedDict": ".atsoffer",
@@ -3393,6 +3598,26 @@ _dynamic_imports: dict[str, str] = {
     "CrmTelephone": ".crmtelephone",
     "CrmTelephoneType": ".crmtelephone",
     "CrmTelephoneTypedDict": ".crmtelephone",
+    "DatastoreDatabase": ".datastoredatabase",
+    "DatastoreDatabaseTypedDict": ".datastoredatabase",
+    "DatastoreField": ".datastorefield",
+    "DatastoreFieldType": ".datastorefield",
+    "DatastoreFieldTypedDict": ".datastorefield",
+    "DatastoreFieldValue": ".datastorefieldvalue",
+    "DatastoreFieldValueTypedDict": ".datastorefieldvalue",
+    "DatastoreFilter": ".datastorefilter",
+    "DatastoreFilterTypedDict": ".datastorefilter",
+    "DatastoreQuery": ".datastorequery",
+    "DatastoreQueryTypedDict": ".datastorequery",
+    "DatastoreQueryExpand": ".datastorequeryexpand",
+    "DatastoreQueryExpandTypedDict": ".datastorequeryexpand",
+    "DatastoreRecord": ".datastorerecord",
+    "DatastoreRecordTypedDict": ".datastorerecord",
+    "DatastoreRelationship": ".datastorerelationship",
+    "DatastoreRelationshipType": ".datastorerelationship",
+    "DatastoreRelationshipTypedDict": ".datastorerelationship",
+    "DatastoreTable": ".datastoretable",
+    "DatastoreTableTypedDict": ".datastoretable",
     "EnrichCompany": ".enrichcompany",
     "EnrichCompanyTypedDict": ".enrichcompany",
     "EnrichEmail": ".enrichemail",
@@ -3491,6 +3716,7 @@ _dynamic_imports: dict[str, str] = {
     "HrisTelephone": ".hristelephone",
     "HrisTelephoneType": ".hristelephone",
     "HrisTelephoneTypedDict": ".hristelephone",
+    "DurationType": ".hristimeoff",
     "HrisTimeoff": ".hristimeoff",
     "HrisTimeoffStatus": ".hristimeoff",
     "HrisTimeoffType": ".hristimeoff",
@@ -3546,6 +3772,7 @@ _dynamic_imports: dict[str, str] = {
     "ListContentID": ".integrationsupport",
     "ListCourseID": ".integrationsupport",
     "ListCustomerID": ".integrationsupport",
+    "ListDatabaseID": ".integrationsupport",
     "ListDealID": ".integrationsupport",
     "ListDocumentID": ".integrationsupport",
     "ListEndLt": ".integrationsupport",
@@ -3594,6 +3821,7 @@ _dynamic_imports: dict[str, str] = {
     "ListStartGte": ".integrationsupport",
     "ListStatus": ".integrationsupport",
     "ListStudentID": ".integrationsupport",
+    "ListTableID": ".integrationsupport",
     "ListTaskID": ".integrationsupport",
     "ListTeacherID": ".integrationsupport",
     "ListTemplateID": ".integrationsupport",
@@ -3607,6 +3835,7 @@ _dynamic_imports: dict[str, str] = {
     "NativeWebhookChannelID": ".integrationsupport",
     "NativeWebhookCompanyID": ".integrationsupport",
     "NativeWebhookCourseID": ".integrationsupport",
+    "NativeWebhookDatabaseID": ".integrationsupport",
     "NativeWebhookEventID": ".integrationsupport",
     "NativeWebhookFormID": ".integrationsupport",
     "NativeWebhookIoID": ".integrationsupport",
@@ -3618,6 +3847,7 @@ _dynamic_imports: dict[str, str] = {
     "NativeWebhookProjectID": ".integrationsupport",
     "NativeWebhookShipmentID": ".integrationsupport",
     "NativeWebhookStudentID": ".integrationsupport",
+    "NativeWebhookTableID": ".integrationsupport",
     "NativeWebhookTaskID": ".integrationsupport",
     "NativeWebhookTemplateID": ".integrationsupport",
     "NativeWebhookType": ".integrationsupport",
@@ -3643,6 +3873,7 @@ _dynamic_imports: dict[str, str] = {
     "VirtualWebhookContactID": ".integrationsupport",
     "VirtualWebhookCourseID": ".integrationsupport",
     "VirtualWebhookCustomerID": ".integrationsupport",
+    "VirtualWebhookDatabaseID": ".integrationsupport",
     "VirtualWebhookDealID": ".integrationsupport",
     "VirtualWebhookEndLt": ".integrationsupport",
     "VirtualWebhookEventID": ".integrationsupport",
@@ -3677,6 +3908,7 @@ _dynamic_imports: dict[str, str] = {
     "VirtualWebhookStartGte": ".integrationsupport",
     "VirtualWebhookStatus": ".integrationsupport",
     "VirtualWebhookStudentID": ".integrationsupport",
+    "VirtualWebhookTableID": ".integrationsupport",
     "VirtualWebhookTaskID": ".integrationsupport",
     "VirtualWebhookTemplateID": ".integrationsupport",
     "VirtualWebhookTicketID": ".integrationsupport",
@@ -4035,6 +4267,53 @@ _dynamic_imports: dict[str, str] = {
     "PropertyCrmEventTaskTypedDict": ".property_crmevent_task",
     "PropertyCrmLeadAddress": ".property_crmlead_address",
     "PropertyCrmLeadAddressTypedDict": ".property_crmlead_address",
+    "PropertyDatastoreFieldDefaultValue": ".property_datastorefield_default_value",
+    "PropertyDatastoreFieldDefaultValueTypedDict": ".property_datastorefield_default_value",
+    "PropertyDatastoreFilterCondition": ".property_datastorefilter_condition",
+    "PropertyDatastoreFilterConditionTypedDict": ".property_datastorefilter_condition",
+    "PropertyDatastoreFilterConditionContains": ".property_datastorefilter_condition_contains",
+    "PropertyDatastoreFilterConditionContainsTypedDict": ".property_datastorefilter_condition_contains",
+    "PropertyDatastoreFilterConditionEq": ".property_datastorefilter_condition_eq",
+    "PropertyDatastoreFilterConditionEqTypedDict": ".property_datastorefilter_condition_eq",
+    "PropertyDatastoreFilterConditionGt": ".property_datastorefilter_condition_gt",
+    "PropertyDatastoreFilterConditionGtTypedDict": ".property_datastorefilter_condition_gt",
+    "PropertyDatastoreFilterConditionGte": ".property_datastorefilter_condition_gte",
+    "PropertyDatastoreFilterConditionGteTypedDict": ".property_datastorefilter_condition_gte",
+    "PropertyDatastoreFilterConditionIlike": ".property_datastorefilter_condition_ilike",
+    "PropertyDatastoreFilterConditionIlikeTypedDict": ".property_datastorefilter_condition_ilike",
+    "PropertyDatastoreFilterConditionLike": ".property_datastorefilter_condition_like",
+    "PropertyDatastoreFilterConditionLikeTypedDict": ".property_datastorefilter_condition_like",
+    "PropertyDatastoreFilterConditionLt": ".property_datastorefilter_condition_lt",
+    "PropertyDatastoreFilterConditionLtTypedDict": ".property_datastorefilter_condition_lt",
+    "PropertyDatastoreFilterConditionLte": ".property_datastorefilter_condition_lte",
+    "PropertyDatastoreFilterConditionLteTypedDict": ".property_datastorefilter_condition_lte",
+    "PropertyDatastoreFilterConditionNeq": ".property_datastorefilter_condition_neq",
+    "PropertyDatastoreFilterConditionNeqTypedDict": ".property_datastorefilter_condition_neq",
+    "PropertyDatastoreFilterConditionNotContains": ".property_datastorefilter_condition_not_contains",
+    "PropertyDatastoreFilterConditionNotContainsTypedDict": ".property_datastorefilter_condition_not_contains",
+    "PropertyDatastoreQueryQuery": ".property_datastorequery_query",
+    "PropertyDatastoreQueryQueryTypedDict": ".property_datastorequery_query",
+    "SortOrder": ".property_datastorequery_query",
+    "PropertyDatastoreQueryQueryAggregate": ".property_datastorequery_query_aggregate",
+    "PropertyDatastoreQueryQueryAggregateTypedDict": ".property_datastorequery_query_aggregate",
+    "PropertyDatastoreQueryQueryAggregateAvg": ".property_datastorequery_query_aggregate_avg",
+    "PropertyDatastoreQueryQueryAggregateAvgTypedDict": ".property_datastorequery_query_aggregate_avg",
+    "PropertyDatastoreQueryQueryAggregateMax": ".property_datastorequery_query_aggregate_max",
+    "PropertyDatastoreQueryQueryAggregateMaxTypedDict": ".property_datastorequery_query_aggregate_max",
+    "PropertyDatastoreQueryQueryAggregateMin": ".property_datastorequery_query_aggregate_min",
+    "PropertyDatastoreQueryQueryAggregateMinTypedDict": ".property_datastorequery_query_aggregate_min",
+    "PropertyDatastoreQueryQueryAggregateSum": ".property_datastorequery_query_aggregate_sum",
+    "PropertyDatastoreQueryQueryAggregateSumTypedDict": ".property_datastorequery_query_aggregate_sum",
+    "PropertyDatastoreQueryQueryFilter": ".property_datastorequery_query_filter",
+    "PropertyDatastoreQueryQueryFilterType": ".property_datastorequery_query_filter",
+    "PropertyDatastoreQueryQueryFilterTypedDict": ".property_datastorequery_query_filter",
+    "PropertyDatastoreQueryResponse": ".property_datastorequery_response",
+    "PropertyDatastoreQueryResponseTypedDict": ".property_datastorequery_response",
+    "PropertyDatastoreQueryResponseAggregates": ".property_datastorequery_response_aggregates",
+    "PropertyDatastoreQueryResponseAggregatesTypedDict": ".property_datastorequery_response_aggregates",
+    "PropertyDatastoreQueryExpandFilter": ".property_datastorequeryexpand_filter",
+    "PropertyDatastoreQueryExpandFilterType": ".property_datastorequeryexpand_filter",
+    "PropertyDatastoreQueryExpandFilterTypedDict": ".property_datastorequeryexpand_filter",
     "PropertyEnrichCompanyAddress": ".property_enrichcompany_address",
     "PropertyEnrichCompanyAddressTypedDict": ".property_enrichcompany_address",
     "PropertyEnrichPersonAddress": ".property_enrichperson_address",

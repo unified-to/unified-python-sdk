@@ -27,4 +27,5 @@ value = UpdateAccountingSalesorderQueryParamFields.ID
 | `LINEITEMS`        | lineitems          |
 | `SALES_CHANNEL`    | sales_channel      |
 | `ORGANIZATION_ID`  | organization_id    |
+| `FEES`             | fees               |
 | `RAW`              | raw                |

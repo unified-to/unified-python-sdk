@@ -42,3 +42,4 @@ value = Categories.PASSTHROUGH
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
 | `CLUBS`        | clubs          |
+| `DATASTORE`    | datastore      |

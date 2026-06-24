@@ -11,6 +11,11 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class DurationType(str, Enum, metaclass=utils.OpenEnumMeta):
+    HOUR = "HOUR"
+    DAY = "DAY"
+
+
 class HrisTimeoffStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     APPROVED = "APPROVED"
     PENDING = "PENDING"
@@ -35,6 +40,8 @@ class HrisTimeoffTypedDict(TypedDict):
     comments: NotRequired[str]
     company_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    duration: NotRequired[float]
+    duration_type: NotRequired[DurationType]
     end_at: NotRequired[datetime]
     id: NotRequired[str]
     is_paid: NotRequired[bool]
@@ -59,6 +66,10 @@ class HrisTimeoff(BaseModel):
 
     created_at: Optional[datetime] = None
 
+    duration: Optional[float] = None
+
+    duration_type: Optional[DurationType] = None
+
     end_at: Optional[datetime] = None
 
     id: Optional[str] = None
@@ -76,6 +87,15 @@ class HrisTimeoff(BaseModel):
     type: Optional[HrisTimeoffType] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("duration_type")
+    def serialize_duration_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.DurationType(value)
+            except ValueError:
+                return value
+        return value
 
     @field_serializer("status")
     def serialize_status(self, value):
@@ -104,6 +124,8 @@ class HrisTimeoff(BaseModel):
                 "comments",
                 "company_id",
                 "created_at",
+                "duration",
+                "duration_type",
                 "end_at",
                 "id",
                 "is_paid",

@@ -57,10 +57,10 @@ class AdsCampaignStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     ACTIVE = "ACTIVE"
     PAUSED = "PAUSED"
     ARCHIVED = "ARCHIVED"
-    PROCESSING = "PROCESSING"
-    PROCESSING_FAILED = "PROCESSING_FAILED"
     DRAFT = "DRAFT"
     SCHEDULED_FOR_DELETION = "SCHEDULED_FOR_DELETION"
+    PROCESSING = "PROCESSING"
+    PROCESSING_FAILED = "PROCESSING_FAILED"
 
 
 class AdsCampaignTypedDict(TypedDict):

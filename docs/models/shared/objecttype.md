@@ -152,3 +152,7 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `CLUBS_ACTIVITY`           | clubs_activity             |
 | `CLUBS_LOCATION`           | clubs_location             |
 | `CLUBS_EVENT`              | clubs_event                |
+| `DATASTORE_DATABASE`       | datastore_database         |
+| `DATASTORE_TABLE`          | datastore_table            |
+| `DATASTORE_RECORD`         | datastore_record           |
+| `DATASTORE_QUERY`          | datastore_query            |

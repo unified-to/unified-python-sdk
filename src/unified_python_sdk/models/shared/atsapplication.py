@@ -42,6 +42,7 @@ class AtsApplicationTypedDict(TypedDict):
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     offers: NotRequired[List[AtsOfferTypedDict]]
     original_status: NotRequired[str]
+    original_substatus: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     rejected_at: NotRequired[datetime]
     rejected_reason: NotRequired[str]
@@ -71,6 +72,8 @@ class AtsApplication(BaseModel):
     offers: Optional[List[AtsOffer]] = None
 
     original_status: Optional[str] = None
+
+    original_substatus: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -109,6 +112,7 @@ class AtsApplication(BaseModel):
                 "metadata",
                 "offers",
                 "original_status",
+                "original_substatus",
                 "raw",
                 "rejected_at",
                 "rejected_reason",

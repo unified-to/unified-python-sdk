@@ -42,3 +42,4 @@ value = QueryParamCategories.PASSTHROUGH
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
 | `CLUBS`        | clubs          |
+| `DATASTORE`    | datastore      |

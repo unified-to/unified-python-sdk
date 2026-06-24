@@ -35,3 +35,4 @@ class PropertyIntegrationCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     ASSESSMENT = "assessment"
     SIGNING = "signing"
     CLUBS = "clubs"
+    DATASTORE = "datastore"

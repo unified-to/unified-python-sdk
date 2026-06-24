@@ -67,14 +67,14 @@ AtsMetadata5TypedDict = TypeAliasType(
 AtsMetadata5 = TypeAliasType("AtsMetadata5", Union[AtsMetadata1, str, float, bool])
 
 
-ValueTypedDict = TypeAliasType(
-    "ValueTypedDict",
+AtsMetadataValueTypedDict = TypeAliasType(
+    "AtsMetadataValueTypedDict",
     Union[Dict[str, Any], str, float, bool, List[AtsMetadata5TypedDict]],
 )
 
 
-Value = TypeAliasType(
-    "Value", Union[Dict[str, Any], str, float, bool, List[AtsMetadata5]]
+AtsMetadataValue = TypeAliasType(
+    "AtsMetadataValue", Union[Dict[str, Any], str, float, bool, List[AtsMetadata5]]
 )
 
 
@@ -84,7 +84,7 @@ class AtsMetadataTypedDict(TypedDict):
     id: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    value: NotRequired[ValueTypedDict]
+    value: NotRequired[AtsMetadataValueTypedDict]
 
 
 class AtsMetadata(BaseModel):
@@ -98,7 +98,7 @@ class AtsMetadata(BaseModel):
 
     slug: Optional[str] = None
 
-    value: Optional[Value] = None
+    value: Optional[AtsMetadataValue] = None
 
     @field_serializer("format_")
     def serialize_format_(self, value):

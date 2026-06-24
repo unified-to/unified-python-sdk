@@ -19,7 +19,7 @@ class UpdatePassthroughRawRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     path: str
-    request_body: NotRequired[Union[bytes, IO[bytes], io.BufferedReader]]
+    request_body: NotRequired[Union[bytes, IO[bytes], io.IOBase]]
     r"""integration-specific payload"""
     query: NotRequired[Dict[str, Any]]
 
@@ -35,7 +35,7 @@ class UpdatePassthroughRawRequest(BaseModel):
     ]
 
     request_body: Annotated[
-        Optional[Union[bytes, IO[bytes], io.BufferedReader]],
+        Optional[Union[bytes, IO[bytes], io.IOBase]],
         FieldMetadata(request=RequestMetadata(media_type="text/plain")),
     ] = None
     r"""integration-specific payload"""

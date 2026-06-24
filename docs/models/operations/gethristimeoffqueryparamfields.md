@@ -27,4 +27,6 @@ value = GetHrisTimeoffQueryParamFields.ID
 | `COMMENTS`         | comments           |
 | `REASON`           | reason             |
 | `TYPE`             | type               |
+| `DURATION`         | duration           |
+| `DURATION_TYPE`    | duration_type      |
 | `RAW`              | raw                |

@@ -18,6 +18,7 @@ class DbType(str, Enum, metaclass=utils.OpenEnumMeta):
     MSSQL = "mssql"
     MARIADB = "mariadb"
     SUPABASE = "supabase"
+    SNOWFLAKE = "snowflake"
 
 
 class Event(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -164,6 +165,10 @@ class ObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     CLUBS_ACTIVITY = "clubs_activity"
     CLUBS_LOCATION = "clubs_location"
     CLUBS_EVENT = "clubs_event"
+    DATASTORE_DATABASE = "datastore_database"
+    DATASTORE_TABLE = "datastore_table"
+    DATASTORE_RECORD = "datastore_record"
+    DATASTORE_QUERY = "datastore_query"
 
 
 class WebhookType(str, Enum, metaclass=utils.OpenEnumMeta):

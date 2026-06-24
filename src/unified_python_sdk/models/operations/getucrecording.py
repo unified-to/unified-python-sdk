@@ -27,6 +27,7 @@ class GetUcRecordingQueryParamFields(str, Enum):
     CONTACT_ID = "contact_id"
     CONTACT_NAME = "contact_name"
     CONTACT_PHONE = "contact_phone"
+    CONTACTS = "contacts"
     USER_ID = "user_id"
     MEDIA = "media"
     USER_NAME = "user_name"

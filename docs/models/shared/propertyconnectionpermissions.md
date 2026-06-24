@@ -267,3 +267,11 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `CLUBS_LOCATION_WRITE`           | clubs_location_write             |
 | `CLUBS_EVENT_READ`               | clubs_event_read                 |
 | `CLUBS_EVENT_WRITE`              | clubs_event_write                |
+| `DATASTORE_DATABASE_READ`        | datastore_database_read          |
+| `DATASTORE_DATABASE_WRITE`       | datastore_database_write         |
+| `DATASTORE_TABLE_READ`           | datastore_table_read             |
+| `DATASTORE_TABLE_WRITE`          | datastore_table_write            |
+| `DATASTORE_RECORD_READ`          | datastore_record_read            |
+| `DATASTORE_RECORD_WRITE`         | datastore_record_write           |
+| `DATASTORE_QUERY_READ`           | datastore_query_read             |
+| `DATASTORE_QUERY_WRITE`          | datastore_query_write            |

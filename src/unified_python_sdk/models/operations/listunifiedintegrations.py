@@ -41,6 +41,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     ASSESSMENT = "assessment"
     SIGNING = "signing"
     CLUBS = "clubs"
+    DATASTORE = "datastore"
 
 
 class ListUnifiedIntegrationsRequestTypedDict(TypedDict):
