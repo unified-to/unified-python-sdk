@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Refund(BaseSDK):
-    def get_payment_refund(
+    def get_payment_refund2(
         self,
         *,
         request: Union[
-            operations.GetPaymentRefundRequest,
-            operations.GetPaymentRefundRequestTypedDict,
+            operations.GetPaymentRefund2Request,
+            operations.GetPaymentRefund2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentRefundResponse:
+    ) -> operations.GetPaymentRefund2Response:
         r"""Retrieve a refund
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Refund(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentRefundRequest)
-        request = cast(operations.GetPaymentRefundRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentRefund2Request)
+        request = cast(operations.GetPaymentRefund2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Refund(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentRefund",
+                operation_id="getPaymentRefund2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -83,7 +83,7 @@ class Refund(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentRefundResponse(
+            return operations.GetPaymentRefund2Response(
                 payment_refund=unmarshal_json_response(
                     Optional[shared.PaymentRefund], http_res
                 ),
@@ -100,18 +100,18 @@ class Refund(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_refund_async(
+    async def get_payment_refund2_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentRefundRequest,
-            operations.GetPaymentRefundRequestTypedDict,
+            operations.GetPaymentRefund2Request,
+            operations.GetPaymentRefund2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentRefundResponse:
+    ) -> operations.GetPaymentRefund2Response:
         r"""Retrieve a refund
 
         :param request: The request object to send.
@@ -131,8 +131,8 @@ class Refund(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentRefundRequest)
-        request = cast(operations.GetPaymentRefundRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentRefund2Request)
+        request = cast(operations.GetPaymentRefund2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -163,7 +163,7 @@ class Refund(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentRefund",
+                operation_id="getPaymentRefund2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -173,7 +173,7 @@ class Refund(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentRefundResponse(
+            return operations.GetPaymentRefund2Response(
                 payment_refund=unmarshal_json_response(
                     Optional[shared.PaymentRefund], http_res
                 ),
@@ -190,18 +190,18 @@ class Refund(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_refunds(
+    def list_payment_refunds2(
         self,
         *,
         request: Union[
-            operations.ListPaymentRefundsRequest,
-            operations.ListPaymentRefundsRequestTypedDict,
+            operations.ListPaymentRefunds2Request,
+            operations.ListPaymentRefunds2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentRefundsResponse:
+    ) -> operations.ListPaymentRefunds2Response:
         r"""List all refunds
 
         :param request: The request object to send.
@@ -221,8 +221,8 @@ class Refund(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentRefundsRequest)
-        request = cast(operations.ListPaymentRefundsRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentRefunds2Request)
+        request = cast(operations.ListPaymentRefunds2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -253,7 +253,7 @@ class Refund(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentRefunds",
+                operation_id="listPaymentRefunds2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -263,7 +263,7 @@ class Refund(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentRefundsResponse(
+            return operations.ListPaymentRefunds2Response(
                 payment_refunds=unmarshal_json_response(
                     Optional[List[shared.PaymentRefund]], http_res
                 ),
@@ -280,18 +280,18 @@ class Refund(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_refunds_async(
+    async def list_payment_refunds2_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentRefundsRequest,
-            operations.ListPaymentRefundsRequestTypedDict,
+            operations.ListPaymentRefunds2Request,
+            operations.ListPaymentRefunds2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentRefundsResponse:
+    ) -> operations.ListPaymentRefunds2Response:
         r"""List all refunds
 
         :param request: The request object to send.
@@ -311,8 +311,8 @@ class Refund(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentRefundsRequest)
-        request = cast(operations.ListPaymentRefundsRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentRefunds2Request)
+        request = cast(operations.ListPaymentRefunds2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -343,7 +343,7 @@ class Refund(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentRefunds",
+                operation_id="listPaymentRefunds2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -353,7 +353,7 @@ class Refund(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentRefundsResponse(
+            return operations.ListPaymentRefunds2Response(
                 payment_refunds=unmarshal_json_response(
                     Optional[List[shared.PaymentRefund]], http_res
                 ),

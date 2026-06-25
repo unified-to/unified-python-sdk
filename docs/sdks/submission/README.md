@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [get_forms_submission](#get_forms_submission) - Retrieve a submission
-* [list_forms_submissions](#list_forms_submissions) - List all submissions
+* [get_forms_submission2](#get_forms_submission2) - Retrieve a submission
+* [list_forms_submissions2](#list_forms_submissions2) - List all submissions
 
-## get_forms_submission
+## get_forms_submission2
 
 Retrieve a submission
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getFormsSubmission" method="get" path="/forms/{connection_id}/submission/{id}" -->
+<!-- UsageSnippet language="python" operationID="getFormsSubmission2" method="get" path="/forms/{connection_id}/submission/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -25,7 +25,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.submission.get_forms_submission(request={
+    res = unified_to.submission.get_forms_submission2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -39,14 +39,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.GetFormsSubmissionRequest](../../models/operations/getformssubmissionrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetFormsSubmission2Request](../../models/operations/getformssubmission2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetFormsSubmissionResponse](../../models/operations/getformssubmissionresponse.md)**
+**[operations.GetFormsSubmission2Response](../../models/operations/getformssubmission2response.md)**
 
 ### Errors
 
@@ -54,13 +54,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_forms_submissions
+## list_forms_submissions2
 
 List all submissions
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listFormsSubmissions" method="get" path="/forms/{connection_id}/submission" -->
+<!-- UsageSnippet language="python" operationID="listFormsSubmissions2" method="get" path="/forms/{connection_id}/submission" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -72,7 +72,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.submission.list_forms_submissions(request={
+    res = unified_to.submission.list_forms_submissions2(request={
         "connection_id": "<id>",
     })
 
@@ -85,14 +85,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.ListFormsSubmissionsRequest](../../models/operations/listformssubmissionsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListFormsSubmissions2Request](../../models/operations/listformssubmissions2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListFormsSubmissionsResponse](../../models/operations/listformssubmissionsresponse.md)**
+**[operations.ListFormsSubmissions2Response](../../models/operations/listformssubmissions2response.md)**
 
 ### Errors
 

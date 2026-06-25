@@ -10,17 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Call(BaseSDK):
-    def get_uc_call(
+    def get_uc_call2(
         self,
         *,
         request: Union[
-            operations.GetUcCallRequest, operations.GetUcCallRequestTypedDict
+            operations.GetUcCall2Request, operations.GetUcCall2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcCallResponse:
+    ) -> operations.GetUcCall2Response:
         r"""Retrieve a call
 
         :param request: The request object to send.
@@ -40,8 +40,8 @@ class Call(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcCallRequest)
-        request = cast(operations.GetUcCallRequest, request)
+            request = utils.unmarshal(request, operations.GetUcCall2Request)
+        request = cast(operations.GetUcCall2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -72,7 +72,7 @@ class Call(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcCall",
+                operation_id="getUcCall2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -82,7 +82,7 @@ class Call(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcCallResponse(
+            return operations.GetUcCall2Response(
                 uc_call=unmarshal_json_response(Optional[shared.UcCall], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -97,17 +97,17 @@ class Call(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_uc_call_async(
+    async def get_uc_call2_async(
         self,
         *,
         request: Union[
-            operations.GetUcCallRequest, operations.GetUcCallRequestTypedDict
+            operations.GetUcCall2Request, operations.GetUcCall2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcCallResponse:
+    ) -> operations.GetUcCall2Response:
         r"""Retrieve a call
 
         :param request: The request object to send.
@@ -127,8 +127,8 @@ class Call(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcCallRequest)
-        request = cast(operations.GetUcCallRequest, request)
+            request = utils.unmarshal(request, operations.GetUcCall2Request)
+        request = cast(operations.GetUcCall2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -159,7 +159,7 @@ class Call(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcCall",
+                operation_id="getUcCall2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -169,7 +169,7 @@ class Call(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcCallResponse(
+            return operations.GetUcCall2Response(
                 uc_call=unmarshal_json_response(Optional[shared.UcCall], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -184,17 +184,17 @@ class Call(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_uc_calls(
+    def list_uc_calls2(
         self,
         *,
         request: Union[
-            operations.ListUcCallsRequest, operations.ListUcCallsRequestTypedDict
+            operations.ListUcCalls2Request, operations.ListUcCalls2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcCallsResponse:
+    ) -> operations.ListUcCalls2Response:
         r"""List all calls
 
         :param request: The request object to send.
@@ -214,8 +214,8 @@ class Call(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcCallsRequest)
-        request = cast(operations.ListUcCallsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcCalls2Request)
+        request = cast(operations.ListUcCalls2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -246,7 +246,7 @@ class Call(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcCalls",
+                operation_id="listUcCalls2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -256,7 +256,7 @@ class Call(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcCallsResponse(
+            return operations.ListUcCalls2Response(
                 uc_calls=unmarshal_json_response(
                     Optional[List[shared.UcCall]], http_res
                 ),
@@ -273,17 +273,17 @@ class Call(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_uc_calls_async(
+    async def list_uc_calls2_async(
         self,
         *,
         request: Union[
-            operations.ListUcCallsRequest, operations.ListUcCallsRequestTypedDict
+            operations.ListUcCalls2Request, operations.ListUcCalls2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcCallsResponse:
+    ) -> operations.ListUcCalls2Response:
         r"""List all calls
 
         :param request: The request object to send.
@@ -303,8 +303,8 @@ class Call(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcCallsRequest)
-        request = cast(operations.ListUcCallsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcCalls2Request)
+        request = cast(operations.ListUcCalls2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -335,7 +335,7 @@ class Call(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcCalls",
+                operation_id="listUcCalls2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -345,7 +345,7 @@ class Call(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcCallsResponse(
+            return operations.ListUcCalls2Response(
                 uc_calls=unmarshal_json_response(
                     Optional[List[shared.UcCall]], http_res
                 ),

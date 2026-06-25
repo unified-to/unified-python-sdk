@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Activity(BaseSDK):
-    def create_ats_activity(
+    def create_ats_activity2(
         self,
         *,
         request: Union[
-            operations.CreateAtsActivityRequest,
-            operations.CreateAtsActivityRequestTypedDict,
+            operations.CreateAtsActivity2Request,
+            operations.CreateAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsActivityResponse:
+    ) -> operations.CreateAtsActivity2Response:
         r"""Create an activity
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
-        request = cast(operations.CreateAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsActivity2Request)
+        request = cast(operations.CreateAtsActivity2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsActivity",
+                operation_id="createAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsActivityResponse(
+            return operations.CreateAtsActivity2Response(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -103,18 +103,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_activity_async(
+    async def create_ats_activity2_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsActivityRequest,
-            operations.CreateAtsActivityRequestTypedDict,
+            operations.CreateAtsActivity2Request,
+            operations.CreateAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsActivityResponse:
+    ) -> operations.CreateAtsActivity2Response:
         r"""Create an activity
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
-        request = cast(operations.CreateAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsActivity2Request)
+        request = cast(operations.CreateAtsActivity2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsActivity",
+                operation_id="createAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsActivityResponse(
+            return operations.CreateAtsActivity2Response(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -196,18 +196,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_lms_activity(
+    def create_lms_activity2(
         self,
         *,
         request: Union[
-            operations.CreateLmsActivityRequest,
-            operations.CreateLmsActivityRequestTypedDict,
+            operations.CreateLmsActivity2Request,
+            operations.CreateLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateLmsActivityResponse:
+    ) -> operations.CreateLmsActivity2Response:
         r"""Create an activity
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateLmsActivityRequest)
-        request = cast(operations.CreateLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.CreateLmsActivity2Request)
+        request = cast(operations.CreateLmsActivity2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +262,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createLmsActivity",
+                operation_id="createLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +272,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateLmsActivityResponse(
+            return operations.CreateLmsActivity2Response(
                 lms_activity=unmarshal_json_response(
                     Optional[shared.LmsActivity], http_res
                 ),
@@ -289,18 +289,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_lms_activity_async(
+    async def create_lms_activity2_async(
         self,
         *,
         request: Union[
-            operations.CreateLmsActivityRequest,
-            operations.CreateLmsActivityRequestTypedDict,
+            operations.CreateLmsActivity2Request,
+            operations.CreateLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateLmsActivityResponse:
+    ) -> operations.CreateLmsActivity2Response:
         r"""Create an activity
 
         :param request: The request object to send.
@@ -320,8 +320,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateLmsActivityRequest)
-        request = cast(operations.CreateLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.CreateLmsActivity2Request)
+        request = cast(operations.CreateLmsActivity2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +355,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createLmsActivity",
+                operation_id="createLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +365,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateLmsActivityResponse(
+            return operations.CreateLmsActivity2Response(
                 lms_activity=unmarshal_json_response(
                     Optional[shared.LmsActivity], http_res
                 ),
@@ -382,17 +382,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_activity(
+    def get_ats_activity2(
         self,
         *,
         request: Union[
-            operations.GetAtsActivityRequest, operations.GetAtsActivityRequestTypedDict
+            operations.GetAtsActivity2Request,
+            operations.GetAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsActivityResponse:
+    ) -> operations.GetAtsActivity2Response:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -412,8 +413,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsActivityRequest)
-        request = cast(operations.GetAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsActivity2Request)
+        request = cast(operations.GetAtsActivity2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -444,7 +445,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsActivity",
+                operation_id="getAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -454,7 +455,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsActivityResponse(
+            return operations.GetAtsActivity2Response(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -471,17 +472,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_activity_async(
+    async def get_ats_activity2_async(
         self,
         *,
         request: Union[
-            operations.GetAtsActivityRequest, operations.GetAtsActivityRequestTypedDict
+            operations.GetAtsActivity2Request,
+            operations.GetAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsActivityResponse:
+    ) -> operations.GetAtsActivity2Response:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -501,8 +503,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsActivityRequest)
-        request = cast(operations.GetAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsActivity2Request)
+        request = cast(operations.GetAtsActivity2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -533,7 +535,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsActivity",
+                operation_id="getAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -543,7 +545,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsActivityResponse(
+            return operations.GetAtsActivity2Response(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -560,18 +562,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_activity(
+    def get_clubs_activity2(
         self,
         *,
         request: Union[
-            operations.GetClubsActivityRequest,
-            operations.GetClubsActivityRequestTypedDict,
+            operations.GetClubsActivity2Request,
+            operations.GetClubsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsActivityResponse:
+    ) -> operations.GetClubsActivity2Response:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -591,8 +593,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsActivityRequest)
-        request = cast(operations.GetClubsActivityRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsActivity2Request)
+        request = cast(operations.GetClubsActivity2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -623,7 +625,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsActivity",
+                operation_id="getClubsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -633,7 +635,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsActivityResponse(
+            return operations.GetClubsActivity2Response(
                 clubs_activity=unmarshal_json_response(
                     Optional[shared.ClubsActivity], http_res
                 ),
@@ -650,18 +652,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_activity_async(
+    async def get_clubs_activity2_async(
         self,
         *,
         request: Union[
-            operations.GetClubsActivityRequest,
-            operations.GetClubsActivityRequestTypedDict,
+            operations.GetClubsActivity2Request,
+            operations.GetClubsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsActivityResponse:
+    ) -> operations.GetClubsActivity2Response:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -681,8 +683,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsActivityRequest)
-        request = cast(operations.GetClubsActivityRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsActivity2Request)
+        request = cast(operations.GetClubsActivity2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -713,7 +715,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsActivity",
+                operation_id="getClubsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -723,7 +725,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsActivityResponse(
+            return operations.GetClubsActivity2Response(
                 clubs_activity=unmarshal_json_response(
                     Optional[shared.ClubsActivity], http_res
                 ),
@@ -740,17 +742,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_lms_activity(
+    def get_lms_activity2(
         self,
         *,
         request: Union[
-            operations.GetLmsActivityRequest, operations.GetLmsActivityRequestTypedDict
+            operations.GetLmsActivity2Request,
+            operations.GetLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetLmsActivityResponse:
+    ) -> operations.GetLmsActivity2Response:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -770,8 +773,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetLmsActivityRequest)
-        request = cast(operations.GetLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.GetLmsActivity2Request)
+        request = cast(operations.GetLmsActivity2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -802,7 +805,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getLmsActivity",
+                operation_id="getLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -812,7 +815,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetLmsActivityResponse(
+            return operations.GetLmsActivity2Response(
                 lms_activity=unmarshal_json_response(
                     Optional[shared.LmsActivity], http_res
                 ),
@@ -829,17 +832,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_lms_activity_async(
+    async def get_lms_activity2_async(
         self,
         *,
         request: Union[
-            operations.GetLmsActivityRequest, operations.GetLmsActivityRequestTypedDict
+            operations.GetLmsActivity2Request,
+            operations.GetLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetLmsActivityResponse:
+    ) -> operations.GetLmsActivity2Response:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -859,8 +863,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetLmsActivityRequest)
-        request = cast(operations.GetLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.GetLmsActivity2Request)
+        request = cast(operations.GetLmsActivity2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -891,7 +895,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getLmsActivity",
+                operation_id="getLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -901,7 +905,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetLmsActivityResponse(
+            return operations.GetLmsActivity2Response(
                 lms_activity=unmarshal_json_response(
                     Optional[shared.LmsActivity], http_res
                 ),
@@ -918,18 +922,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_activities(
+    def list_ats_activities2(
         self,
         *,
         request: Union[
-            operations.ListAtsActivitiesRequest,
-            operations.ListAtsActivitiesRequestTypedDict,
+            operations.ListAtsActivities2Request,
+            operations.ListAtsActivities2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsActivitiesResponse:
+    ) -> operations.ListAtsActivities2Response:
         r"""List all activities
 
         :param request: The request object to send.
@@ -949,8 +953,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
-        request = cast(operations.ListAtsActivitiesRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsActivities2Request)
+        request = cast(operations.ListAtsActivities2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -981,7 +985,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsActivities",
+                operation_id="listAtsActivities2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -991,7 +995,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsActivitiesResponse(
+            return operations.ListAtsActivities2Response(
                 ats_activities=unmarshal_json_response(
                     Optional[List[shared.AtsActivity]], http_res
                 ),
@@ -1008,18 +1012,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_activities_async(
+    async def list_ats_activities2_async(
         self,
         *,
         request: Union[
-            operations.ListAtsActivitiesRequest,
-            operations.ListAtsActivitiesRequestTypedDict,
+            operations.ListAtsActivities2Request,
+            operations.ListAtsActivities2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsActivitiesResponse:
+    ) -> operations.ListAtsActivities2Response:
         r"""List all activities
 
         :param request: The request object to send.
@@ -1039,8 +1043,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
-        request = cast(operations.ListAtsActivitiesRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsActivities2Request)
+        request = cast(operations.ListAtsActivities2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1071,7 +1075,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsActivities",
+                operation_id="listAtsActivities2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1081,7 +1085,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsActivitiesResponse(
+            return operations.ListAtsActivities2Response(
                 ats_activities=unmarshal_json_response(
                     Optional[List[shared.AtsActivity]], http_res
                 ),
@@ -1098,18 +1102,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_activities(
+    def list_clubs_activities2(
         self,
         *,
         request: Union[
-            operations.ListClubsActivitiesRequest,
-            operations.ListClubsActivitiesRequestTypedDict,
+            operations.ListClubsActivities2Request,
+            operations.ListClubsActivities2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsActivitiesResponse:
+    ) -> operations.ListClubsActivities2Response:
         r"""List all activities
 
         :param request: The request object to send.
@@ -1129,8 +1133,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsActivitiesRequest)
-        request = cast(operations.ListClubsActivitiesRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsActivities2Request)
+        request = cast(operations.ListClubsActivities2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1161,7 +1165,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsActivities",
+                operation_id="listClubsActivities2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1171,7 +1175,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsActivitiesResponse(
+            return operations.ListClubsActivities2Response(
                 clubs_activities=unmarshal_json_response(
                     Optional[List[shared.ClubsActivity]], http_res
                 ),
@@ -1188,18 +1192,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_activities_async(
+    async def list_clubs_activities2_async(
         self,
         *,
         request: Union[
-            operations.ListClubsActivitiesRequest,
-            operations.ListClubsActivitiesRequestTypedDict,
+            operations.ListClubsActivities2Request,
+            operations.ListClubsActivities2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsActivitiesResponse:
+    ) -> operations.ListClubsActivities2Response:
         r"""List all activities
 
         :param request: The request object to send.
@@ -1219,8 +1223,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsActivitiesRequest)
-        request = cast(operations.ListClubsActivitiesRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsActivities2Request)
+        request = cast(operations.ListClubsActivities2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1251,7 +1255,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsActivities",
+                operation_id="listClubsActivities2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1261,7 +1265,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsActivitiesResponse(
+            return operations.ListClubsActivities2Response(
                 clubs_activities=unmarshal_json_response(
                     Optional[List[shared.ClubsActivity]], http_res
                 ),
@@ -1278,18 +1282,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_lms_activities(
+    def list_lms_activities2(
         self,
         *,
         request: Union[
-            operations.ListLmsActivitiesRequest,
-            operations.ListLmsActivitiesRequestTypedDict,
+            operations.ListLmsActivities2Request,
+            operations.ListLmsActivities2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListLmsActivitiesResponse:
+    ) -> operations.ListLmsActivities2Response:
         r"""List all activities
 
         :param request: The request object to send.
@@ -1309,8 +1313,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListLmsActivitiesRequest)
-        request = cast(operations.ListLmsActivitiesRequest, request)
+            request = utils.unmarshal(request, operations.ListLmsActivities2Request)
+        request = cast(operations.ListLmsActivities2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1341,7 +1345,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listLmsActivities",
+                operation_id="listLmsActivities2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1351,7 +1355,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListLmsActivitiesResponse(
+            return operations.ListLmsActivities2Response(
                 lms_activities=unmarshal_json_response(
                     Optional[List[shared.LmsActivity]], http_res
                 ),
@@ -1368,18 +1372,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_lms_activities_async(
+    async def list_lms_activities2_async(
         self,
         *,
         request: Union[
-            operations.ListLmsActivitiesRequest,
-            operations.ListLmsActivitiesRequestTypedDict,
+            operations.ListLmsActivities2Request,
+            operations.ListLmsActivities2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListLmsActivitiesResponse:
+    ) -> operations.ListLmsActivities2Response:
         r"""List all activities
 
         :param request: The request object to send.
@@ -1399,8 +1403,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListLmsActivitiesRequest)
-        request = cast(operations.ListLmsActivitiesRequest, request)
+            request = utils.unmarshal(request, operations.ListLmsActivities2Request)
+        request = cast(operations.ListLmsActivities2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1431,7 +1435,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listLmsActivities",
+                operation_id="listLmsActivities2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1441,7 +1445,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListLmsActivitiesResponse(
+            return operations.ListLmsActivities2Response(
                 lms_activities=unmarshal_json_response(
                     Optional[List[shared.LmsActivity]], http_res
                 ),
@@ -1458,18 +1462,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_activity(
+    def patch_ats_activity2(
         self,
         *,
         request: Union[
-            operations.PatchAtsActivityRequest,
-            operations.PatchAtsActivityRequestTypedDict,
+            operations.PatchAtsActivity2Request,
+            operations.PatchAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsActivityResponse:
+    ) -> operations.PatchAtsActivity2Response:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -1489,8 +1493,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
-        request = cast(operations.PatchAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsActivity2Request)
+        request = cast(operations.PatchAtsActivity2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1524,7 +1528,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsActivity",
+                operation_id="patchAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1534,7 +1538,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsActivityResponse(
+            return operations.PatchAtsActivity2Response(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -1551,18 +1555,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_activity_async(
+    async def patch_ats_activity2_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsActivityRequest,
-            operations.PatchAtsActivityRequestTypedDict,
+            operations.PatchAtsActivity2Request,
+            operations.PatchAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsActivityResponse:
+    ) -> operations.PatchAtsActivity2Response:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -1582,8 +1586,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
-        request = cast(operations.PatchAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsActivity2Request)
+        request = cast(operations.PatchAtsActivity2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1617,7 +1621,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsActivity",
+                operation_id="patchAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1627,7 +1631,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsActivityResponse(
+            return operations.PatchAtsActivity2Response(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -1644,18 +1648,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_lms_activity(
+    def patch_lms_activity2(
         self,
         *,
         request: Union[
-            operations.PatchLmsActivityRequest,
-            operations.PatchLmsActivityRequestTypedDict,
+            operations.PatchLmsActivity2Request,
+            operations.PatchLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchLmsActivityResponse:
+    ) -> operations.PatchLmsActivity2Response:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -1675,8 +1679,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchLmsActivityRequest)
-        request = cast(operations.PatchLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.PatchLmsActivity2Request)
+        request = cast(operations.PatchLmsActivity2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1710,7 +1714,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchLmsActivity",
+                operation_id="patchLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1720,7 +1724,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchLmsActivityResponse(
+            return operations.PatchLmsActivity2Response(
                 lms_activity=unmarshal_json_response(
                     Optional[shared.LmsActivity], http_res
                 ),
@@ -1737,18 +1741,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_lms_activity_async(
+    async def patch_lms_activity2_async(
         self,
         *,
         request: Union[
-            operations.PatchLmsActivityRequest,
-            operations.PatchLmsActivityRequestTypedDict,
+            operations.PatchLmsActivity2Request,
+            operations.PatchLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchLmsActivityResponse:
+    ) -> operations.PatchLmsActivity2Response:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -1768,8 +1772,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchLmsActivityRequest)
-        request = cast(operations.PatchLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.PatchLmsActivity2Request)
+        request = cast(operations.PatchLmsActivity2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1803,7 +1807,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchLmsActivity",
+                operation_id="patchLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1813,7 +1817,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchLmsActivityResponse(
+            return operations.PatchLmsActivity2Response(
                 lms_activity=unmarshal_json_response(
                     Optional[shared.LmsActivity], http_res
                 ),
@@ -1830,18 +1834,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_activity(
+    def remove_ats_activity2(
         self,
         *,
         request: Union[
-            operations.RemoveAtsActivityRequest,
-            operations.RemoveAtsActivityRequestTypedDict,
+            operations.RemoveAtsActivity2Request,
+            operations.RemoveAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsActivityResponse:
+    ) -> operations.RemoveAtsActivity2Response:
         r"""Remove an activity
 
         :param request: The request object to send.
@@ -1861,8 +1865,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
-        request = cast(operations.RemoveAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsActivity2Request)
+        request = cast(operations.RemoveAtsActivity2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1893,7 +1897,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsActivity",
+                operation_id="removeAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1903,7 +1907,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsActivityResponse(
+            return operations.RemoveAtsActivity2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1916,7 +1920,7 @@ class Activity(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsActivityResponse(
+            return operations.RemoveAtsActivity2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1925,18 +1929,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_activity_async(
+    async def remove_ats_activity2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsActivityRequest,
-            operations.RemoveAtsActivityRequestTypedDict,
+            operations.RemoveAtsActivity2Request,
+            operations.RemoveAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsActivityResponse:
+    ) -> operations.RemoveAtsActivity2Response:
         r"""Remove an activity
 
         :param request: The request object to send.
@@ -1956,8 +1960,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
-        request = cast(operations.RemoveAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsActivity2Request)
+        request = cast(operations.RemoveAtsActivity2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1988,7 +1992,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsActivity",
+                operation_id="removeAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1998,7 +2002,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsActivityResponse(
+            return operations.RemoveAtsActivity2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2011,7 +2015,7 @@ class Activity(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsActivityResponse(
+            return operations.RemoveAtsActivity2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2020,18 +2024,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_lms_activity(
+    def remove_lms_activity2(
         self,
         *,
         request: Union[
-            operations.RemoveLmsActivityRequest,
-            operations.RemoveLmsActivityRequestTypedDict,
+            operations.RemoveLmsActivity2Request,
+            operations.RemoveLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveLmsActivityResponse:
+    ) -> operations.RemoveLmsActivity2Response:
         r"""Remove an activity
 
         :param request: The request object to send.
@@ -2051,8 +2055,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveLmsActivityRequest)
-        request = cast(operations.RemoveLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.RemoveLmsActivity2Request)
+        request = cast(operations.RemoveLmsActivity2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2083,7 +2087,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeLmsActivity",
+                operation_id="removeLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2093,7 +2097,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveLmsActivityResponse(
+            return operations.RemoveLmsActivity2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2106,7 +2110,7 @@ class Activity(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveLmsActivityResponse(
+            return operations.RemoveLmsActivity2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2115,18 +2119,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_lms_activity_async(
+    async def remove_lms_activity2_async(
         self,
         *,
         request: Union[
-            operations.RemoveLmsActivityRequest,
-            operations.RemoveLmsActivityRequestTypedDict,
+            operations.RemoveLmsActivity2Request,
+            operations.RemoveLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveLmsActivityResponse:
+    ) -> operations.RemoveLmsActivity2Response:
         r"""Remove an activity
 
         :param request: The request object to send.
@@ -2146,8 +2150,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveLmsActivityRequest)
-        request = cast(operations.RemoveLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.RemoveLmsActivity2Request)
+        request = cast(operations.RemoveLmsActivity2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2178,7 +2182,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeLmsActivity",
+                operation_id="removeLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2188,7 +2192,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveLmsActivityResponse(
+            return operations.RemoveLmsActivity2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2201,7 +2205,7 @@ class Activity(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveLmsActivityResponse(
+            return operations.RemoveLmsActivity2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2210,18 +2214,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_activity(
+    def update_ats_activity2(
         self,
         *,
         request: Union[
-            operations.UpdateAtsActivityRequest,
-            operations.UpdateAtsActivityRequestTypedDict,
+            operations.UpdateAtsActivity2Request,
+            operations.UpdateAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsActivityResponse:
+    ) -> operations.UpdateAtsActivity2Response:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -2241,8 +2245,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
-        request = cast(operations.UpdateAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsActivity2Request)
+        request = cast(operations.UpdateAtsActivity2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2276,7 +2280,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsActivity",
+                operation_id="updateAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2286,7 +2290,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsActivityResponse(
+            return operations.UpdateAtsActivity2Response(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -2303,18 +2307,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_activity_async(
+    async def update_ats_activity2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsActivityRequest,
-            operations.UpdateAtsActivityRequestTypedDict,
+            operations.UpdateAtsActivity2Request,
+            operations.UpdateAtsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsActivityResponse:
+    ) -> operations.UpdateAtsActivity2Response:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -2334,8 +2338,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
-        request = cast(operations.UpdateAtsActivityRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsActivity2Request)
+        request = cast(operations.UpdateAtsActivity2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2369,7 +2373,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsActivity",
+                operation_id="updateAtsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2379,7 +2383,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsActivityResponse(
+            return operations.UpdateAtsActivity2Response(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -2396,18 +2400,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_lms_activity(
+    def update_lms_activity2(
         self,
         *,
         request: Union[
-            operations.UpdateLmsActivityRequest,
-            operations.UpdateLmsActivityRequestTypedDict,
+            operations.UpdateLmsActivity2Request,
+            operations.UpdateLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateLmsActivityResponse:
+    ) -> operations.UpdateLmsActivity2Response:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -2427,8 +2431,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateLmsActivityRequest)
-        request = cast(operations.UpdateLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.UpdateLmsActivity2Request)
+        request = cast(operations.UpdateLmsActivity2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2462,7 +2466,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateLmsActivity",
+                operation_id="updateLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2472,7 +2476,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateLmsActivityResponse(
+            return operations.UpdateLmsActivity2Response(
                 lms_activity=unmarshal_json_response(
                     Optional[shared.LmsActivity], http_res
                 ),
@@ -2489,18 +2493,18 @@ class Activity(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_lms_activity_async(
+    async def update_lms_activity2_async(
         self,
         *,
         request: Union[
-            operations.UpdateLmsActivityRequest,
-            operations.UpdateLmsActivityRequestTypedDict,
+            operations.UpdateLmsActivity2Request,
+            operations.UpdateLmsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateLmsActivityResponse:
+    ) -> operations.UpdateLmsActivity2Response:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -2520,8 +2524,8 @@ class Activity(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateLmsActivityRequest)
-        request = cast(operations.UpdateLmsActivityRequest, request)
+            request = utils.unmarshal(request, operations.UpdateLmsActivity2Request)
+        request = cast(operations.UpdateLmsActivity2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2555,7 +2559,7 @@ class Activity(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateLmsActivity",
+                operation_id="updateLmsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2565,7 +2569,7 @@ class Activity(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateLmsActivityResponse(
+            return operations.UpdateLmsActivity2Response(
                 lms_activity=unmarshal_json_response(
                     Optional[shared.LmsActivity], http_res
                 ),

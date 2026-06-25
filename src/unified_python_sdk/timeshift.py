@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Timeshift(BaseSDK):
-    def create_hris_timeshift(
+    def create_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.CreateHrisTimeshiftRequest,
-            operations.CreateHrisTimeshiftRequestTypedDict,
+            operations.CreateHrisTimeshift2Request,
+            operations.CreateHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisTimeshiftResponse:
+    ) -> operations.CreateHrisTimeshift2Response:
         r"""Create a timeshift
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisTimeshiftRequest)
-        request = cast(operations.CreateHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisTimeshift2Request)
+        request = cast(operations.CreateHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisTimeshift",
+                operation_id="createHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisTimeshiftResponse(
+            return operations.CreateHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -103,18 +103,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_timeshift_async(
+    async def create_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisTimeshiftRequest,
-            operations.CreateHrisTimeshiftRequestTypedDict,
+            operations.CreateHrisTimeshift2Request,
+            operations.CreateHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisTimeshiftResponse:
+    ) -> operations.CreateHrisTimeshift2Response:
         r"""Create a timeshift
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisTimeshiftRequest)
-        request = cast(operations.CreateHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisTimeshift2Request)
+        request = cast(operations.CreateHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisTimeshift",
+                operation_id="createHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisTimeshiftResponse(
+            return operations.CreateHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -196,18 +196,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_timeshift(
+    def get_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.GetHrisTimeshiftRequest,
-            operations.GetHrisTimeshiftRequestTypedDict,
+            operations.GetHrisTimeshift2Request,
+            operations.GetHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisTimeshiftResponse:
+    ) -> operations.GetHrisTimeshift2Response:
         r"""Retrieve a timeshift
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisTimeshiftRequest)
-        request = cast(operations.GetHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisTimeshift2Request)
+        request = cast(operations.GetHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -259,7 +259,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisTimeshift",
+                operation_id="getHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -269,7 +269,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisTimeshiftResponse(
+            return operations.GetHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -286,18 +286,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_timeshift_async(
+    async def get_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisTimeshiftRequest,
-            operations.GetHrisTimeshiftRequestTypedDict,
+            operations.GetHrisTimeshift2Request,
+            operations.GetHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisTimeshiftResponse:
+    ) -> operations.GetHrisTimeshift2Response:
         r"""Retrieve a timeshift
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisTimeshiftRequest)
-        request = cast(operations.GetHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisTimeshift2Request)
+        request = cast(operations.GetHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisTimeshift",
+                operation_id="getHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -359,7 +359,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisTimeshiftResponse(
+            return operations.GetHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -376,18 +376,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_timeshifts(
+    def list_hris_timeshifts2(
         self,
         *,
         request: Union[
-            operations.ListHrisTimeshiftsRequest,
-            operations.ListHrisTimeshiftsRequestTypedDict,
+            operations.ListHrisTimeshifts2Request,
+            operations.ListHrisTimeshifts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisTimeshiftsResponse:
+    ) -> operations.ListHrisTimeshifts2Response:
         r"""List all timeshifts
 
         :param request: The request object to send.
@@ -407,8 +407,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisTimeshiftsRequest)
-        request = cast(operations.ListHrisTimeshiftsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisTimeshifts2Request)
+        request = cast(operations.ListHrisTimeshifts2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -439,7 +439,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisTimeshifts",
+                operation_id="listHrisTimeshifts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -449,7 +449,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisTimeshiftsResponse(
+            return operations.ListHrisTimeshifts2Response(
                 hris_timeshifts=unmarshal_json_response(
                     Optional[List[shared.HrisTimeshift]], http_res
                 ),
@@ -466,18 +466,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_timeshifts_async(
+    async def list_hris_timeshifts2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisTimeshiftsRequest,
-            operations.ListHrisTimeshiftsRequestTypedDict,
+            operations.ListHrisTimeshifts2Request,
+            operations.ListHrisTimeshifts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisTimeshiftsResponse:
+    ) -> operations.ListHrisTimeshifts2Response:
         r"""List all timeshifts
 
         :param request: The request object to send.
@@ -497,8 +497,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisTimeshiftsRequest)
-        request = cast(operations.ListHrisTimeshiftsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisTimeshifts2Request)
+        request = cast(operations.ListHrisTimeshifts2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -529,7 +529,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisTimeshifts",
+                operation_id="listHrisTimeshifts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -539,7 +539,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisTimeshiftsResponse(
+            return operations.ListHrisTimeshifts2Response(
                 hris_timeshifts=unmarshal_json_response(
                     Optional[List[shared.HrisTimeshift]], http_res
                 ),
@@ -556,18 +556,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_timeshift(
+    def patch_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.PatchHrisTimeshiftRequest,
-            operations.PatchHrisTimeshiftRequestTypedDict,
+            operations.PatchHrisTimeshift2Request,
+            operations.PatchHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisTimeshiftResponse:
+    ) -> operations.PatchHrisTimeshift2Response:
         r"""Update a timeshift
 
         :param request: The request object to send.
@@ -587,8 +587,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisTimeshiftRequest)
-        request = cast(operations.PatchHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisTimeshift2Request)
+        request = cast(operations.PatchHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -622,7 +622,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisTimeshift",
+                operation_id="patchHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -632,7 +632,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisTimeshiftResponse(
+            return operations.PatchHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -649,18 +649,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_timeshift_async(
+    async def patch_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisTimeshiftRequest,
-            operations.PatchHrisTimeshiftRequestTypedDict,
+            operations.PatchHrisTimeshift2Request,
+            operations.PatchHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisTimeshiftResponse:
+    ) -> operations.PatchHrisTimeshift2Response:
         r"""Update a timeshift
 
         :param request: The request object to send.
@@ -680,8 +680,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisTimeshiftRequest)
-        request = cast(operations.PatchHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisTimeshift2Request)
+        request = cast(operations.PatchHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -715,7 +715,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisTimeshift",
+                operation_id="patchHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -725,7 +725,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisTimeshiftResponse(
+            return operations.PatchHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -742,18 +742,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_timeshift(
+    def remove_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisTimeshiftRequest,
-            operations.RemoveHrisTimeshiftRequestTypedDict,
+            operations.RemoveHrisTimeshift2Request,
+            operations.RemoveHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisTimeshiftResponse:
+    ) -> operations.RemoveHrisTimeshift2Response:
         r"""Remove a timeshift
 
         :param request: The request object to send.
@@ -773,8 +773,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisTimeshiftRequest)
-        request = cast(operations.RemoveHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisTimeshift2Request)
+        request = cast(operations.RemoveHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -805,7 +805,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisTimeshift",
+                operation_id="removeHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -815,7 +815,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisTimeshiftResponse(
+            return operations.RemoveHrisTimeshift2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -828,7 +828,7 @@ class Timeshift(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisTimeshiftResponse(
+            return operations.RemoveHrisTimeshift2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -837,18 +837,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_timeshift_async(
+    async def remove_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisTimeshiftRequest,
-            operations.RemoveHrisTimeshiftRequestTypedDict,
+            operations.RemoveHrisTimeshift2Request,
+            operations.RemoveHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisTimeshiftResponse:
+    ) -> operations.RemoveHrisTimeshift2Response:
         r"""Remove a timeshift
 
         :param request: The request object to send.
@@ -868,8 +868,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisTimeshiftRequest)
-        request = cast(operations.RemoveHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisTimeshift2Request)
+        request = cast(operations.RemoveHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -900,7 +900,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisTimeshift",
+                operation_id="removeHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -910,7 +910,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisTimeshiftResponse(
+            return operations.RemoveHrisTimeshift2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -923,7 +923,7 @@ class Timeshift(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisTimeshiftResponse(
+            return operations.RemoveHrisTimeshift2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -932,18 +932,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_timeshift(
+    def update_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisTimeshiftRequest,
-            operations.UpdateHrisTimeshiftRequestTypedDict,
+            operations.UpdateHrisTimeshift2Request,
+            operations.UpdateHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisTimeshiftResponse:
+    ) -> operations.UpdateHrisTimeshift2Response:
         r"""Update a timeshift
 
         :param request: The request object to send.
@@ -963,8 +963,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisTimeshiftRequest)
-        request = cast(operations.UpdateHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisTimeshift2Request)
+        request = cast(operations.UpdateHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -998,7 +998,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisTimeshift",
+                operation_id="updateHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1008,7 +1008,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisTimeshiftResponse(
+            return operations.UpdateHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -1025,18 +1025,18 @@ class Timeshift(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_timeshift_async(
+    async def update_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisTimeshiftRequest,
-            operations.UpdateHrisTimeshiftRequestTypedDict,
+            operations.UpdateHrisTimeshift2Request,
+            operations.UpdateHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisTimeshiftResponse:
+    ) -> operations.UpdateHrisTimeshift2Response:
         r"""Update a timeshift
 
         :param request: The request object to send.
@@ -1056,8 +1056,8 @@ class Timeshift(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisTimeshiftRequest)
-        request = cast(operations.UpdateHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisTimeshift2Request)
+        request = cast(operations.UpdateHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1091,7 +1091,7 @@ class Timeshift(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisTimeshift",
+                operation_id="updateHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1101,7 +1101,7 @@ class Timeshift(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisTimeshiftResponse(
+            return operations.UpdateHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),

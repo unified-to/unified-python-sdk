@@ -4,41 +4,41 @@
 
 ### Available Operations
 
-* [create_calendar_calendar](#create_calendar_calendar) - Create a calendar
-* [create_calendar_event](#create_calendar_event) - Create an event
-* [create_calendar_link](#create_calendar_link) - Create a link
-* [create_calendar_webinar](#create_calendar_webinar) - Create a webinar
-* [get_calendar_calendar](#get_calendar_calendar) - Retrieve a calendar
-* [get_calendar_event](#get_calendar_event) - Retrieve an event
-* [get_calendar_link](#get_calendar_link) - Retrieve a link
-* [get_calendar_recording](#get_calendar_recording) - Retrieve a recording
-* [get_calendar_webinar](#get_calendar_webinar) - Retrieve a webinar
-* [list_calendar_busies](#list_calendar_busies) - List all busies
-* [list_calendar_calendars](#list_calendar_calendars) - List all calendars
-* [list_calendar_events](#list_calendar_events) - List all events
-* [list_calendar_links](#list_calendar_links) - List all links
-* [list_calendar_recordings](#list_calendar_recordings) - List all recordings
-* [list_calendar_webinars](#list_calendar_webinars) - List all webinars
-* [patch_calendar_calendar](#patch_calendar_calendar) - Update a calendar
-* [patch_calendar_event](#patch_calendar_event) - Update an event
-* [patch_calendar_link](#patch_calendar_link) - Update a link
-* [patch_calendar_webinar](#patch_calendar_webinar) - Update a webinar
-* [remove_calendar_calendar](#remove_calendar_calendar) - Remove a calendar
-* [remove_calendar_event](#remove_calendar_event) - Remove an event
-* [remove_calendar_link](#remove_calendar_link) - Remove a link
-* [remove_calendar_webinar](#remove_calendar_webinar) - Remove a webinar
-* [update_calendar_calendar](#update_calendar_calendar) - Update a calendar
-* [update_calendar_event](#update_calendar_event) - Update an event
-* [update_calendar_link](#update_calendar_link) - Update a link
-* [update_calendar_webinar](#update_calendar_webinar) - Update a webinar
+* [create_calendar_calendar2](#create_calendar_calendar2) - Create a calendar
+* [create_calendar_event2](#create_calendar_event2) - Create an event
+* [create_calendar_link2](#create_calendar_link2) - Create a link
+* [create_calendar_webinar2](#create_calendar_webinar2) - Create a webinar
+* [get_calendar_calendar2](#get_calendar_calendar2) - Retrieve a calendar
+* [get_calendar_event2](#get_calendar_event2) - Retrieve an event
+* [get_calendar_link2](#get_calendar_link2) - Retrieve a link
+* [get_calendar_recording2](#get_calendar_recording2) - Retrieve a recording
+* [get_calendar_webinar2](#get_calendar_webinar2) - Retrieve a webinar
+* [list_calendar_busies2](#list_calendar_busies2) - List all busies
+* [list_calendar_calendars2](#list_calendar_calendars2) - List all calendars
+* [list_calendar_events2](#list_calendar_events2) - List all events
+* [list_calendar_links2](#list_calendar_links2) - List all links
+* [list_calendar_recordings2](#list_calendar_recordings2) - List all recordings
+* [list_calendar_webinars2](#list_calendar_webinars2) - List all webinars
+* [patch_calendar_calendar2](#patch_calendar_calendar2) - Update a calendar
+* [patch_calendar_event2](#patch_calendar_event2) - Update an event
+* [patch_calendar_link2](#patch_calendar_link2) - Update a link
+* [patch_calendar_webinar2](#patch_calendar_webinar2) - Update a webinar
+* [remove_calendar_calendar2](#remove_calendar_calendar2) - Remove a calendar
+* [remove_calendar_event2](#remove_calendar_event2) - Remove an event
+* [remove_calendar_link2](#remove_calendar_link2) - Remove a link
+* [remove_calendar_webinar2](#remove_calendar_webinar2) - Remove a webinar
+* [update_calendar_calendar2](#update_calendar_calendar2) - Update a calendar
+* [update_calendar_event2](#update_calendar_event2) - Update an event
+* [update_calendar_link2](#update_calendar_link2) - Update a link
+* [update_calendar_webinar2](#update_calendar_webinar2) - Update a webinar
 
-## create_calendar_calendar
+## create_calendar_calendar2
 
 Create a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" -->
+<!-- UsageSnippet language="python" operationID="createCalendarCalendar2" method="post" path="/calendar/{connection_id}/calendar" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -50,7 +50,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.create_calendar_calendar(request={
+    res = unified_to.calendar.create_calendar_calendar2(request={
         "calendar_calendar": {},
         "connection_id": "<id>",
     })
@@ -64,14 +64,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.CreateCalendarCalendarRequest](../../models/operations/createcalendarcalendarrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateCalendarCalendar2Request](../../models/operations/createcalendarcalendar2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.CreateCalendarCalendarResponse](../../models/operations/createcalendarcalendarresponse.md)**
+**[operations.CreateCalendarCalendar2Response](../../models/operations/createcalendarcalendar2response.md)**
 
 ### Errors
 
@@ -79,13 +79,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_calendar_event
+## create_calendar_event2
 
 Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="python" operationID="createCalendarEvent2" method="post" path="/calendar/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -97,7 +97,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.create_calendar_event(request={
+    res = unified_to.calendar.create_calendar_event2(request={
         "calendar_event": {},
         "connection_id": "<id>",
     })
@@ -111,14 +111,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.CreateCalendarEventRequest](../../models/operations/createcalendareventrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreateCalendarEvent2Request](../../models/operations/createcalendarevent2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.CreateCalendarEventResponse](../../models/operations/createcalendareventresponse.md)**
+**[operations.CreateCalendarEvent2Response](../../models/operations/createcalendarevent2response.md)**
 
 ### Errors
 
@@ -126,13 +126,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_calendar_link
+## create_calendar_link2
 
 Create a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
+<!-- UsageSnippet language="python" operationID="createCalendarLink2" method="post" path="/calendar/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -144,9 +144,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.create_calendar_link(request={
+    res = unified_to.calendar.create_calendar_link2(request={
         "calendar_link": {
-            "url": "https://misguided-thongs.info",
+            "url": "https://prestigious-fort.name/",
         },
         "connection_id": "<id>",
     })
@@ -160,14 +160,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.CreateCalendarLinkRequest](../../models/operations/createcalendarlinkrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateCalendarLink2Request](../../models/operations/createcalendarlink2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.CreateCalendarLinkResponse](../../models/operations/createcalendarlinkresponse.md)**
+**[operations.CreateCalendarLink2Response](../../models/operations/createcalendarlink2response.md)**
 
 ### Errors
 
@@ -175,13 +175,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_calendar_webinar
+## create_calendar_webinar2
 
 Create a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="python" operationID="createCalendarWebinar2" method="post" path="/calendar/{connection_id}/webinar" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -193,7 +193,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.create_calendar_webinar(request={
+    res = unified_to.calendar.create_calendar_webinar2(request={
         "calendar_webinar": {},
         "connection_id": "<id>",
     })
@@ -207,14 +207,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.CreateCalendarWebinarRequest](../../models/operations/createcalendarwebinarrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateCalendarWebinar2Request](../../models/operations/createcalendarwebinar2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.CreateCalendarWebinarResponse](../../models/operations/createcalendarwebinarresponse.md)**
+**[operations.CreateCalendarWebinar2Response](../../models/operations/createcalendarwebinar2response.md)**
 
 ### Errors
 
@@ -222,13 +222,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_calendar_calendar
+## get_calendar_calendar2
 
 Retrieve a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCalendarCalendar" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCalendarCalendar2" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -240,7 +240,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.get_calendar_calendar(request={
+    res = unified_to.calendar.get_calendar_calendar2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -254,14 +254,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetCalendarCalendarRequest](../../models/operations/getcalendarcalendarrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetCalendarCalendar2Request](../../models/operations/getcalendarcalendar2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.GetCalendarCalendarResponse](../../models/operations/getcalendarcalendarresponse.md)**
+**[operations.GetCalendarCalendar2Response](../../models/operations/getcalendarcalendar2response.md)**
 
 ### Errors
 
@@ -269,13 +269,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_calendar_event
+## get_calendar_event2
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCalendarEvent2" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -287,7 +287,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.get_calendar_event(request={
+    res = unified_to.calendar.get_calendar_event2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -301,14 +301,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetCalendarEventRequest](../../models/operations/getcalendareventrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetCalendarEvent2Request](../../models/operations/getcalendarevent2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.GetCalendarEventResponse](../../models/operations/getcalendareventresponse.md)**
+**[operations.GetCalendarEvent2Response](../../models/operations/getcalendarevent2response.md)**
 
 ### Errors
 
@@ -316,13 +316,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_calendar_link
+## get_calendar_link2
 
 Retrieve a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCalendarLink2" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -334,7 +334,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.get_calendar_link(request={
+    res = unified_to.calendar.get_calendar_link2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -348,14 +348,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.GetCalendarLinkRequest](../../models/operations/getcalendarlinkrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetCalendarLink2Request](../../models/operations/getcalendarlink2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.GetCalendarLinkResponse](../../models/operations/getcalendarlinkresponse.md)**
+**[operations.GetCalendarLink2Response](../../models/operations/getcalendarlink2response.md)**
 
 ### Errors
 
@@ -363,13 +363,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_calendar_recording
+## get_calendar_recording2
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCalendarRecording2" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -381,7 +381,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.get_calendar_recording(request={
+    res = unified_to.calendar.get_calendar_recording2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -395,14 +395,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetCalendarRecordingRequest](../../models/operations/getcalendarrecordingrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetCalendarRecording2Request](../../models/operations/getcalendarrecording2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.GetCalendarRecordingResponse](../../models/operations/getcalendarrecordingresponse.md)**
+**[operations.GetCalendarRecording2Response](../../models/operations/getcalendarrecording2response.md)**
 
 ### Errors
 
@@ -410,13 +410,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_calendar_webinar
+## get_calendar_webinar2
 
 Retrieve a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCalendarWebinar" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCalendarWebinar2" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -428,7 +428,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.get_calendar_webinar(request={
+    res = unified_to.calendar.get_calendar_webinar2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -442,14 +442,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.GetCalendarWebinarRequest](../../models/operations/getcalendarwebinarrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetCalendarWebinar2Request](../../models/operations/getcalendarwebinar2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetCalendarWebinarResponse](../../models/operations/getcalendarwebinarresponse.md)**
+**[operations.GetCalendarWebinar2Response](../../models/operations/getcalendarwebinar2response.md)**
 
 ### Errors
 
@@ -457,13 +457,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_calendar_busies
+## list_calendar_busies2
 
 List all busies
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
+<!-- UsageSnippet language="python" operationID="listCalendarBusies2" method="get" path="/calendar/{connection_id}/busy" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -475,7 +475,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.list_calendar_busies(request={
+    res = unified_to.calendar.list_calendar_busies2(request={
         "connection_id": "<id>",
     })
 
@@ -488,14 +488,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.ListCalendarBusiesRequest](../../models/operations/listcalendarbusiesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListCalendarBusies2Request](../../models/operations/listcalendarbusies2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.ListCalendarBusiesResponse](../../models/operations/listcalendarbusiesresponse.md)**
+**[operations.ListCalendarBusies2Response](../../models/operations/listcalendarbusies2response.md)**
 
 ### Errors
 
@@ -503,13 +503,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_calendar_calendars
+## list_calendar_calendars2
 
 List all calendars
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCalendarCalendars" method="get" path="/calendar/{connection_id}/calendar" -->
+<!-- UsageSnippet language="python" operationID="listCalendarCalendars2" method="get" path="/calendar/{connection_id}/calendar" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -521,7 +521,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.list_calendar_calendars(request={
+    res = unified_to.calendar.list_calendar_calendars2(request={
         "connection_id": "<id>",
     })
 
@@ -534,14 +534,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.ListCalendarCalendarsRequest](../../models/operations/listcalendarcalendarsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListCalendarCalendars2Request](../../models/operations/listcalendarcalendars2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.ListCalendarCalendarsResponse](../../models/operations/listcalendarcalendarsresponse.md)**
+**[operations.ListCalendarCalendars2Response](../../models/operations/listcalendarcalendars2response.md)**
 
 ### Errors
 
@@ -549,13 +549,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_calendar_events
+## list_calendar_events2
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="python" operationID="listCalendarEvents2" method="get" path="/calendar/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -567,7 +567,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.list_calendar_events(request={
+    res = unified_to.calendar.list_calendar_events2(request={
         "connection_id": "<id>",
     })
 
@@ -580,14 +580,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.ListCalendarEventsRequest](../../models/operations/listcalendareventsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListCalendarEvents2Request](../../models/operations/listcalendarevents2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.ListCalendarEventsResponse](../../models/operations/listcalendareventsresponse.md)**
+**[operations.ListCalendarEvents2Response](../../models/operations/listcalendarevents2response.md)**
 
 ### Errors
 
@@ -595,13 +595,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_calendar_links
+## list_calendar_links2
 
 List all links
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
+<!-- UsageSnippet language="python" operationID="listCalendarLinks2" method="get" path="/calendar/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -613,7 +613,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.list_calendar_links(request={
+    res = unified_to.calendar.list_calendar_links2(request={
         "connection_id": "<id>",
     })
 
@@ -626,14 +626,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.ListCalendarLinksRequest](../../models/operations/listcalendarlinksrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListCalendarLinks2Request](../../models/operations/listcalendarlinks2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.ListCalendarLinksResponse](../../models/operations/listcalendarlinksresponse.md)**
+**[operations.ListCalendarLinks2Response](../../models/operations/listcalendarlinks2response.md)**
 
 ### Errors
 
@@ -641,13 +641,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_calendar_recordings
+## list_calendar_recordings2
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
+<!-- UsageSnippet language="python" operationID="listCalendarRecordings2" method="get" path="/calendar/{connection_id}/recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -659,7 +659,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.list_calendar_recordings(request={
+    res = unified_to.calendar.list_calendar_recordings2(request={
         "connection_id": "<id>",
     })
 
@@ -672,14 +672,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListCalendarRecordingsRequest](../../models/operations/listcalendarrecordingsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListCalendarRecordings2Request](../../models/operations/listcalendarrecordings2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.ListCalendarRecordingsResponse](../../models/operations/listcalendarrecordingsresponse.md)**
+**[operations.ListCalendarRecordings2Response](../../models/operations/listcalendarrecordings2response.md)**
 
 ### Errors
 
@@ -687,13 +687,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_calendar_webinars
+## list_calendar_webinars2
 
 List all webinars
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCalendarWebinars" method="get" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="python" operationID="listCalendarWebinars2" method="get" path="/calendar/{connection_id}/webinar" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -705,7 +705,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.list_calendar_webinars(request={
+    res = unified_to.calendar.list_calendar_webinars2(request={
         "connection_id": "<id>",
     })
 
@@ -718,14 +718,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.ListCalendarWebinarsRequest](../../models/operations/listcalendarwebinarsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListCalendarWebinars2Request](../../models/operations/listcalendarwebinars2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListCalendarWebinarsResponse](../../models/operations/listcalendarwebinarsresponse.md)**
+**[operations.ListCalendarWebinars2Response](../../models/operations/listcalendarwebinars2response.md)**
 
 ### Errors
 
@@ -733,13 +733,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_calendar_calendar
+## patch_calendar_calendar2
 
 Update a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCalendarCalendar2" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -751,7 +751,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.patch_calendar_calendar(request={
+    res = unified_to.calendar.patch_calendar_calendar2(request={
         "calendar_calendar": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -766,14 +766,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.PatchCalendarCalendarRequest](../../models/operations/patchcalendarcalendarrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchCalendarCalendar2Request](../../models/operations/patchcalendarcalendar2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.PatchCalendarCalendarResponse](../../models/operations/patchcalendarcalendarresponse.md)**
+**[operations.PatchCalendarCalendar2Response](../../models/operations/patchcalendarcalendar2response.md)**
 
 ### Errors
 
@@ -781,13 +781,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_calendar_event
+## patch_calendar_event2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCalendarEvent2" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -799,7 +799,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.patch_calendar_event(request={
+    res = unified_to.calendar.patch_calendar_event2(request={
         "calendar_event": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -814,14 +814,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.PatchCalendarEventRequest](../../models/operations/patchcalendareventrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.PatchCalendarEvent2Request](../../models/operations/patchcalendarevent2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.PatchCalendarEventResponse](../../models/operations/patchcalendareventresponse.md)**
+**[operations.PatchCalendarEvent2Response](../../models/operations/patchcalendarevent2response.md)**
 
 ### Errors
 
@@ -829,13 +829,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_calendar_link
+## patch_calendar_link2
 
 Update a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCalendarLink2" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -847,9 +847,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.patch_calendar_link(request={
+    res = unified_to.calendar.patch_calendar_link2(request={
         "calendar_link": {
-            "url": "https://warm-hexagon.name/",
+            "url": "https://probable-accelerator.info",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -864,14 +864,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.PatchCalendarLinkRequest](../../models/operations/patchcalendarlinkrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchCalendarLink2Request](../../models/operations/patchcalendarlink2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.PatchCalendarLinkResponse](../../models/operations/patchcalendarlinkresponse.md)**
+**[operations.PatchCalendarLink2Response](../../models/operations/patchcalendarlink2response.md)**
 
 ### Errors
 
@@ -879,13 +879,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_calendar_webinar
+## patch_calendar_webinar2
 
 Update a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCalendarWebinar2" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -897,7 +897,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.patch_calendar_webinar(request={
+    res = unified_to.calendar.patch_calendar_webinar2(request={
         "calendar_webinar": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -912,14 +912,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.PatchCalendarWebinarRequest](../../models/operations/patchcalendarwebinarrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PatchCalendarWebinar2Request](../../models/operations/patchcalendarwebinar2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.PatchCalendarWebinarResponse](../../models/operations/patchcalendarwebinarresponse.md)**
+**[operations.PatchCalendarWebinar2Response](../../models/operations/patchcalendarwebinar2response.md)**
 
 ### Errors
 
@@ -927,13 +927,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_calendar_calendar
+## remove_calendar_calendar2
 
 Remove a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeCalendarCalendar" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeCalendarCalendar2" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -945,7 +945,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.remove_calendar_calendar(request={
+    res = unified_to.calendar.remove_calendar_calendar2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -959,14 +959,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.RemoveCalendarCalendarRequest](../../models/operations/removecalendarcalendarrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveCalendarCalendar2Request](../../models/operations/removecalendarcalendar2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.RemoveCalendarCalendarResponse](../../models/operations/removecalendarcalendarresponse.md)**
+**[operations.RemoveCalendarCalendar2Response](../../models/operations/removecalendarcalendar2response.md)**
 
 ### Errors
 
@@ -974,13 +974,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_calendar_event
+## remove_calendar_event2
 
 Remove an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeCalendarEvent2" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -992,7 +992,54 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.remove_calendar_event(request={
+    res = unified_to.calendar.remove_calendar_event2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.RemoveCalendarEvent2Request](../../models/operations/removecalendarevent2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.RemoveCalendarEvent2Response](../../models/operations/removecalendarevent2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_calendar_link2
+
+Remove a link
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeCalendarLink2" method="delete" path="/calendar/{connection_id}/link/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.calendar.remove_calendar_link2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1008,12 +1055,12 @@ with UnifiedTo(
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.RemoveCalendarEventRequest](../../models/operations/removecalendareventrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.RemoveCalendarLink2Request](../../models/operations/removecalendarlink2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.RemoveCalendarEventResponse](../../models/operations/removecalendareventresponse.md)**
+**[operations.RemoveCalendarLink2Response](../../models/operations/removecalendarlink2response.md)**
 
 ### Errors
 
@@ -1021,60 +1068,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_calendar_link
-
-Remove a link
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.calendar.remove_calendar_link(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.RemoveCalendarLinkRequest](../../models/operations/removecalendarlinkrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
-
-### Response
-
-**[operations.RemoveCalendarLinkResponse](../../models/operations/removecalendarlinkresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_calendar_webinar
+## remove_calendar_webinar2
 
 Remove a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeCalendarWebinar" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeCalendarWebinar2" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1086,7 +1086,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.remove_calendar_webinar(request={
+    res = unified_to.calendar.remove_calendar_webinar2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1100,14 +1100,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.RemoveCalendarWebinarRequest](../../models/operations/removecalendarwebinarrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.RemoveCalendarWebinar2Request](../../models/operations/removecalendarwebinar2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.RemoveCalendarWebinarResponse](../../models/operations/removecalendarwebinarresponse.md)**
+**[operations.RemoveCalendarWebinar2Response](../../models/operations/removecalendarwebinar2response.md)**
 
 ### Errors
 
@@ -1115,13 +1115,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_calendar_calendar
+## update_calendar_calendar2
 
 Update a calendar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCalendarCalendar2" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1133,7 +1133,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.update_calendar_calendar(request={
+    res = unified_to.calendar.update_calendar_calendar2(request={
         "calendar_calendar": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1148,14 +1148,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.UpdateCalendarCalendarRequest](../../models/operations/updatecalendarcalendarrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateCalendarCalendar2Request](../../models/operations/updatecalendarcalendar2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.UpdateCalendarCalendarResponse](../../models/operations/updatecalendarcalendarresponse.md)**
+**[operations.UpdateCalendarCalendar2Response](../../models/operations/updatecalendarcalendar2response.md)**
 
 ### Errors
 
@@ -1163,13 +1163,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_calendar_event
+## update_calendar_event2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCalendarEvent2" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1181,7 +1181,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.update_calendar_event(request={
+    res = unified_to.calendar.update_calendar_event2(request={
         "calendar_event": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1196,14 +1196,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.UpdateCalendarEventRequest](../../models/operations/updatecalendareventrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.UpdateCalendarEvent2Request](../../models/operations/updatecalendarevent2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.UpdateCalendarEventResponse](../../models/operations/updatecalendareventresponse.md)**
+**[operations.UpdateCalendarEvent2Response](../../models/operations/updatecalendarevent2response.md)**
 
 ### Errors
 
@@ -1211,13 +1211,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_calendar_link
+## update_calendar_link2
 
 Update a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCalendarLink2" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1229,9 +1229,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.update_calendar_link(request={
+    res = unified_to.calendar.update_calendar_link2(request={
         "calendar_link": {
-            "url": "https://partial-hydrocarbon.info",
+            "url": "https://soupy-extension.net/",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1246,14 +1246,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.UpdateCalendarLinkRequest](../../models/operations/updatecalendarlinkrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.UpdateCalendarLink2Request](../../models/operations/updatecalendarlink2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.UpdateCalendarLinkResponse](../../models/operations/updatecalendarlinkresponse.md)**
+**[operations.UpdateCalendarLink2Response](../../models/operations/updatecalendarlink2response.md)**
 
 ### Errors
 
@@ -1261,13 +1261,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_calendar_webinar
+## update_calendar_webinar2
 
 Update a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCalendarWebinar2" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1279,7 +1279,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.calendar.update_calendar_webinar(request={
+    res = unified_to.calendar.update_calendar_webinar2(request={
         "calendar_webinar": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1294,14 +1294,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.UpdateCalendarWebinarRequest](../../models/operations/updatecalendarwebinarrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.UpdateCalendarWebinar2Request](../../models/operations/updatecalendarwebinar2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.UpdateCalendarWebinarResponse](../../models/operations/updatecalendarwebinarresponse.md)**
+**[operations.UpdateCalendarWebinar2Response](../../models/operations/updatecalendarwebinar2response.md)**
 
 ### Errors
 

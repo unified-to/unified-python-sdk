@@ -10,17 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Lead(BaseSDK):
-    def create_crm_lead(
+    def create_crm_lead2(
         self,
         *,
         request: Union[
-            operations.CreateCrmLeadRequest, operations.CreateCrmLeadRequestTypedDict
+            operations.CreateCrmLead2Request, operations.CreateCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmLeadResponse:
+    ) -> operations.CreateCrmLead2Response:
         r"""Create a lead
 
         :param request: The request object to send.
@@ -40,8 +40,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmLeadRequest)
-        request = cast(operations.CreateCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.CreateCrmLead2Request)
+        request = cast(operations.CreateCrmLead2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -75,7 +75,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmLead",
+                operation_id="createCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -85,7 +85,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmLeadResponse(
+            return operations.CreateCrmLead2Response(
                 crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -100,17 +100,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_crm_lead_async(
+    async def create_crm_lead2_async(
         self,
         *,
         request: Union[
-            operations.CreateCrmLeadRequest, operations.CreateCrmLeadRequestTypedDict
+            operations.CreateCrmLead2Request, operations.CreateCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmLeadResponse:
+    ) -> operations.CreateCrmLead2Response:
         r"""Create a lead
 
         :param request: The request object to send.
@@ -130,8 +130,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmLeadRequest)
-        request = cast(operations.CreateCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.CreateCrmLead2Request)
+        request = cast(operations.CreateCrmLead2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -165,7 +165,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmLead",
+                operation_id="createCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -175,7 +175,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmLeadResponse(
+            return operations.CreateCrmLead2Response(
                 crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -190,17 +190,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_crm_lead(
+    def get_crm_lead2(
         self,
         *,
         request: Union[
-            operations.GetCrmLeadRequest, operations.GetCrmLeadRequestTypedDict
+            operations.GetCrmLead2Request, operations.GetCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmLeadResponse:
+    ) -> operations.GetCrmLead2Response:
         r"""Retrieve a lead
 
         :param request: The request object to send.
@@ -220,8 +220,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmLeadRequest)
-        request = cast(operations.GetCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.GetCrmLead2Request)
+        request = cast(operations.GetCrmLead2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -252,7 +252,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmLead",
+                operation_id="getCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -262,7 +262,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmLeadResponse(
+            return operations.GetCrmLead2Response(
                 crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -277,17 +277,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_crm_lead_async(
+    async def get_crm_lead2_async(
         self,
         *,
         request: Union[
-            operations.GetCrmLeadRequest, operations.GetCrmLeadRequestTypedDict
+            operations.GetCrmLead2Request, operations.GetCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmLeadResponse:
+    ) -> operations.GetCrmLead2Response:
         r"""Retrieve a lead
 
         :param request: The request object to send.
@@ -307,8 +307,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmLeadRequest)
-        request = cast(operations.GetCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.GetCrmLead2Request)
+        request = cast(operations.GetCrmLead2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -339,7 +339,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmLead",
+                operation_id="getCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -349,7 +349,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmLeadResponse(
+            return operations.GetCrmLead2Response(
                 crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -364,17 +364,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_crm_leads(
+    def list_crm_leads2(
         self,
         *,
         request: Union[
-            operations.ListCrmLeadsRequest, operations.ListCrmLeadsRequestTypedDict
+            operations.ListCrmLeads2Request, operations.ListCrmLeads2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmLeadsResponse:
+    ) -> operations.ListCrmLeads2Response:
         r"""List all leads
 
         :param request: The request object to send.
@@ -394,8 +394,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmLeadsRequest)
-        request = cast(operations.ListCrmLeadsRequest, request)
+            request = utils.unmarshal(request, operations.ListCrmLeads2Request)
+        request = cast(operations.ListCrmLeads2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -426,7 +426,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmLeads",
+                operation_id="listCrmLeads2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -436,7 +436,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmLeadsResponse(
+            return operations.ListCrmLeads2Response(
                 crm_leads=unmarshal_json_response(
                     Optional[List[shared.CrmLead]], http_res
                 ),
@@ -453,17 +453,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_crm_leads_async(
+    async def list_crm_leads2_async(
         self,
         *,
         request: Union[
-            operations.ListCrmLeadsRequest, operations.ListCrmLeadsRequestTypedDict
+            operations.ListCrmLeads2Request, operations.ListCrmLeads2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmLeadsResponse:
+    ) -> operations.ListCrmLeads2Response:
         r"""List all leads
 
         :param request: The request object to send.
@@ -483,8 +483,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmLeadsRequest)
-        request = cast(operations.ListCrmLeadsRequest, request)
+            request = utils.unmarshal(request, operations.ListCrmLeads2Request)
+        request = cast(operations.ListCrmLeads2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -515,7 +515,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmLeads",
+                operation_id="listCrmLeads2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -525,7 +525,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmLeadsResponse(
+            return operations.ListCrmLeads2Response(
                 crm_leads=unmarshal_json_response(
                     Optional[List[shared.CrmLead]], http_res
                 ),
@@ -542,17 +542,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_crm_lead(
+    def patch_crm_lead2(
         self,
         *,
         request: Union[
-            operations.PatchCrmLeadRequest, operations.PatchCrmLeadRequestTypedDict
+            operations.PatchCrmLead2Request, operations.PatchCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmLeadResponse:
+    ) -> operations.PatchCrmLead2Response:
         r"""Update a lead
 
         :param request: The request object to send.
@@ -572,8 +572,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmLeadRequest)
-        request = cast(operations.PatchCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.PatchCrmLead2Request)
+        request = cast(operations.PatchCrmLead2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -607,7 +607,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmLead",
+                operation_id="patchCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -617,7 +617,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmLeadResponse(
+            return operations.PatchCrmLead2Response(
                 crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -632,17 +632,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_crm_lead_async(
+    async def patch_crm_lead2_async(
         self,
         *,
         request: Union[
-            operations.PatchCrmLeadRequest, operations.PatchCrmLeadRequestTypedDict
+            operations.PatchCrmLead2Request, operations.PatchCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmLeadResponse:
+    ) -> operations.PatchCrmLead2Response:
         r"""Update a lead
 
         :param request: The request object to send.
@@ -662,8 +662,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmLeadRequest)
-        request = cast(operations.PatchCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.PatchCrmLead2Request)
+        request = cast(operations.PatchCrmLead2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -697,7 +697,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmLead",
+                operation_id="patchCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -707,7 +707,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmLeadResponse(
+            return operations.PatchCrmLead2Response(
                 crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -722,17 +722,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_crm_lead(
+    def remove_crm_lead2(
         self,
         *,
         request: Union[
-            operations.RemoveCrmLeadRequest, operations.RemoveCrmLeadRequestTypedDict
+            operations.RemoveCrmLead2Request, operations.RemoveCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmLeadResponse:
+    ) -> operations.RemoveCrmLead2Response:
         r"""Remove a lead
 
         :param request: The request object to send.
@@ -752,8 +752,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmLeadRequest)
-        request = cast(operations.RemoveCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.RemoveCrmLead2Request)
+        request = cast(operations.RemoveCrmLead2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -784,7 +784,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmLead",
+                operation_id="removeCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -794,7 +794,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmLeadResponse(
+            return operations.RemoveCrmLead2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -807,7 +807,7 @@ class Lead(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmLeadResponse(
+            return operations.RemoveCrmLead2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -816,17 +816,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_crm_lead_async(
+    async def remove_crm_lead2_async(
         self,
         *,
         request: Union[
-            operations.RemoveCrmLeadRequest, operations.RemoveCrmLeadRequestTypedDict
+            operations.RemoveCrmLead2Request, operations.RemoveCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmLeadResponse:
+    ) -> operations.RemoveCrmLead2Response:
         r"""Remove a lead
 
         :param request: The request object to send.
@@ -846,8 +846,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmLeadRequest)
-        request = cast(operations.RemoveCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.RemoveCrmLead2Request)
+        request = cast(operations.RemoveCrmLead2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -878,7 +878,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmLead",
+                operation_id="removeCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -888,7 +888,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmLeadResponse(
+            return operations.RemoveCrmLead2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -901,7 +901,7 @@ class Lead(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmLeadResponse(
+            return operations.RemoveCrmLead2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -910,17 +910,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_crm_lead(
+    def update_crm_lead2(
         self,
         *,
         request: Union[
-            operations.UpdateCrmLeadRequest, operations.UpdateCrmLeadRequestTypedDict
+            operations.UpdateCrmLead2Request, operations.UpdateCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmLeadResponse:
+    ) -> operations.UpdateCrmLead2Response:
         r"""Update a lead
 
         :param request: The request object to send.
@@ -940,8 +940,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmLeadRequest)
-        request = cast(operations.UpdateCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.UpdateCrmLead2Request)
+        request = cast(operations.UpdateCrmLead2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -975,7 +975,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmLead",
+                operation_id="updateCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -985,7 +985,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmLeadResponse(
+            return operations.UpdateCrmLead2Response(
                 crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1000,17 +1000,17 @@ class Lead(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_crm_lead_async(
+    async def update_crm_lead2_async(
         self,
         *,
         request: Union[
-            operations.UpdateCrmLeadRequest, operations.UpdateCrmLeadRequestTypedDict
+            operations.UpdateCrmLead2Request, operations.UpdateCrmLead2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmLeadResponse:
+    ) -> operations.UpdateCrmLead2Response:
         r"""Update a lead
 
         :param request: The request object to send.
@@ -1030,8 +1030,8 @@ class Lead(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmLeadRequest)
-        request = cast(operations.UpdateCrmLeadRequest, request)
+            request = utils.unmarshal(request, operations.UpdateCrmLead2Request)
+        request = cast(operations.UpdateCrmLead2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1065,7 +1065,7 @@ class Lead(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmLead",
+                operation_id="updateCrmLead2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1075,7 +1075,7 @@ class Lead(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmLeadResponse(
+            return operations.UpdateCrmLead2Response(
                 crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

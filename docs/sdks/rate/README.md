@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [create_shipping_rate](#create_shipping_rate) - Create a rate
+* [create_shipping_rate2](#create_shipping_rate2) - Create a rate
 
-## create_shipping_rate
+## create_shipping_rate2
 
 Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="python" operationID="createShippingRate2" method="post" path="/shipping/{connection_id}/rate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -24,7 +24,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.rate.create_shipping_rate(request={
+    res = unified_to.rate.create_shipping_rate2(request={
         "shipping_rate": {},
         "connection_id": "<id>",
     })
@@ -38,14 +38,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.CreateShippingRateRequest](../../models/operations/createshippingraterequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateShippingRate2Request](../../models/operations/createshippingrate2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.CreateShippingRateResponse](../../models/operations/createshippingrateresponse.md)**
+**[operations.CreateShippingRate2Response](../../models/operations/createshippingrate2response.md)**
 
 ### Errors
 

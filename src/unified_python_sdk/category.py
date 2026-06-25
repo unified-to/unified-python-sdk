@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Category(BaseSDK):
-    def create_accounting_category(
+    def create_accounting_category2(
         self,
         *,
         request: Union[
-            operations.CreateAccountingCategoryRequest,
-            operations.CreateAccountingCategoryRequestTypedDict,
+            operations.CreateAccountingCategory2Request,
+            operations.CreateAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingCategoryResponse:
+    ) -> operations.CreateAccountingCategory2Response:
         r"""Create a category
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingCategoryRequest
+                request, operations.CreateAccountingCategory2Request
             )
-        request = cast(operations.CreateAccountingCategoryRequest, request)
+        request = cast(operations.CreateAccountingCategory2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingCategory",
+                operation_id="createAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingCategoryResponse(
+            return operations.CreateAccountingCategory2Response(
                 accounting_category=unmarshal_json_response(
                     Optional[shared.AccountingCategory], http_res
                 ),
@@ -109,18 +109,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_category_async(
+    async def create_accounting_category2_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingCategoryRequest,
-            operations.CreateAccountingCategoryRequestTypedDict,
+            operations.CreateAccountingCategory2Request,
+            operations.CreateAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingCategoryResponse:
+    ) -> operations.CreateAccountingCategory2Response:
         r"""Create a category
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingCategoryRequest
+                request, operations.CreateAccountingCategory2Request
             )
-        request = cast(operations.CreateAccountingCategoryRequest, request)
+        request = cast(operations.CreateAccountingCategory2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingCategory",
+                operation_id="createAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingCategoryResponse(
+            return operations.CreateAccountingCategory2Response(
                 accounting_category=unmarshal_json_response(
                     Optional[shared.AccountingCategory], http_res
                 ),
@@ -208,18 +208,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ticketing_category(
+    def create_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.CreateTicketingCategoryRequest,
-            operations.CreateTicketingCategoryRequestTypedDict,
+            operations.CreateTicketingCategory2Request,
+            operations.CreateTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingCategoryResponse:
+    ) -> operations.CreateTicketingCategory2Response:
         r"""Create a category
 
         :param request: The request object to send.
@@ -240,9 +240,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateTicketingCategoryRequest
+                request, operations.CreateTicketingCategory2Request
             )
-        request = cast(operations.CreateTicketingCategoryRequest, request)
+        request = cast(operations.CreateTicketingCategory2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -280,7 +280,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingCategory",
+                operation_id="createTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -290,7 +290,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingCategoryResponse(
+            return operations.CreateTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -307,18 +307,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ticketing_category_async(
+    async def create_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.CreateTicketingCategoryRequest,
-            operations.CreateTicketingCategoryRequestTypedDict,
+            operations.CreateTicketingCategory2Request,
+            operations.CreateTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingCategoryResponse:
+    ) -> operations.CreateTicketingCategory2Response:
         r"""Create a category
 
         :param request: The request object to send.
@@ -339,9 +339,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateTicketingCategoryRequest
+                request, operations.CreateTicketingCategory2Request
             )
-        request = cast(operations.CreateTicketingCategoryRequest, request)
+        request = cast(operations.CreateTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -379,7 +379,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingCategory",
+                operation_id="createTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -389,7 +389,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingCategoryResponse(
+            return operations.CreateTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -406,18 +406,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_category(
+    def get_accounting_category2(
         self,
         *,
         request: Union[
-            operations.GetAccountingCategoryRequest,
-            operations.GetAccountingCategoryRequestTypedDict,
+            operations.GetAccountingCategory2Request,
+            operations.GetAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingCategoryResponse:
+    ) -> operations.GetAccountingCategory2Response:
         r"""Retrieve a category
 
         :param request: The request object to send.
@@ -437,8 +437,8 @@ class Category(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingCategoryRequest)
-        request = cast(operations.GetAccountingCategoryRequest, request)
+            request = utils.unmarshal(request, operations.GetAccountingCategory2Request)
+        request = cast(operations.GetAccountingCategory2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -469,7 +469,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingCategory",
+                operation_id="getAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -479,7 +479,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingCategoryResponse(
+            return operations.GetAccountingCategory2Response(
                 accounting_category=unmarshal_json_response(
                     Optional[shared.AccountingCategory], http_res
                 ),
@@ -496,18 +496,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_category_async(
+    async def get_accounting_category2_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingCategoryRequest,
-            operations.GetAccountingCategoryRequestTypedDict,
+            operations.GetAccountingCategory2Request,
+            operations.GetAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingCategoryResponse:
+    ) -> operations.GetAccountingCategory2Response:
         r"""Retrieve a category
 
         :param request: The request object to send.
@@ -527,8 +527,8 @@ class Category(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingCategoryRequest)
-        request = cast(operations.GetAccountingCategoryRequest, request)
+            request = utils.unmarshal(request, operations.GetAccountingCategory2Request)
+        request = cast(operations.GetAccountingCategory2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -559,7 +559,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingCategory",
+                operation_id="getAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -569,7 +569,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingCategoryResponse(
+            return operations.GetAccountingCategory2Response(
                 accounting_category=unmarshal_json_response(
                     Optional[shared.AccountingCategory], http_res
                 ),
@@ -586,18 +586,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ticketing_category(
+    def get_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.GetTicketingCategoryRequest,
-            operations.GetTicketingCategoryRequestTypedDict,
+            operations.GetTicketingCategory2Request,
+            operations.GetTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingCategoryResponse:
+    ) -> operations.GetTicketingCategory2Response:
         r"""Retrieve a category
 
         :param request: The request object to send.
@@ -617,8 +617,8 @@ class Category(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingCategoryRequest)
-        request = cast(operations.GetTicketingCategoryRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingCategory2Request)
+        request = cast(operations.GetTicketingCategory2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -649,7 +649,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingCategory",
+                operation_id="getTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -659,7 +659,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingCategoryResponse(
+            return operations.GetTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -676,18 +676,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ticketing_category_async(
+    async def get_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.GetTicketingCategoryRequest,
-            operations.GetTicketingCategoryRequestTypedDict,
+            operations.GetTicketingCategory2Request,
+            operations.GetTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingCategoryResponse:
+    ) -> operations.GetTicketingCategory2Response:
         r"""Retrieve a category
 
         :param request: The request object to send.
@@ -707,8 +707,8 @@ class Category(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingCategoryRequest)
-        request = cast(operations.GetTicketingCategoryRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingCategory2Request)
+        request = cast(operations.GetTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -739,7 +739,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingCategory",
+                operation_id="getTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -749,7 +749,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingCategoryResponse(
+            return operations.GetTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -766,18 +766,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_categories(
+    def list_accounting_categories2(
         self,
         *,
         request: Union[
-            operations.ListAccountingCategoriesRequest,
-            operations.ListAccountingCategoriesRequestTypedDict,
+            operations.ListAccountingCategories2Request,
+            operations.ListAccountingCategories2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingCategoriesResponse:
+    ) -> operations.ListAccountingCategories2Response:
         r"""List all categories
 
         :param request: The request object to send.
@@ -798,9 +798,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingCategoriesRequest
+                request, operations.ListAccountingCategories2Request
             )
-        request = cast(operations.ListAccountingCategoriesRequest, request)
+        request = cast(operations.ListAccountingCategories2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -831,7 +831,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingCategories",
+                operation_id="listAccountingCategories2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -841,7 +841,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingCategoriesResponse(
+            return operations.ListAccountingCategories2Response(
                 accounting_categories=unmarshal_json_response(
                     Optional[List[shared.AccountingCategory]], http_res
                 ),
@@ -858,18 +858,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_categories_async(
+    async def list_accounting_categories2_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingCategoriesRequest,
-            operations.ListAccountingCategoriesRequestTypedDict,
+            operations.ListAccountingCategories2Request,
+            operations.ListAccountingCategories2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingCategoriesResponse:
+    ) -> operations.ListAccountingCategories2Response:
         r"""List all categories
 
         :param request: The request object to send.
@@ -890,9 +890,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingCategoriesRequest
+                request, operations.ListAccountingCategories2Request
             )
-        request = cast(operations.ListAccountingCategoriesRequest, request)
+        request = cast(operations.ListAccountingCategories2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -923,7 +923,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingCategories",
+                operation_id="listAccountingCategories2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -933,7 +933,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingCategoriesResponse(
+            return operations.ListAccountingCategories2Response(
                 accounting_categories=unmarshal_json_response(
                     Optional[List[shared.AccountingCategory]], http_res
                 ),
@@ -950,18 +950,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ticketing_categories(
+    def list_ticketing_categories2(
         self,
         *,
         request: Union[
-            operations.ListTicketingCategoriesRequest,
-            operations.ListTicketingCategoriesRequestTypedDict,
+            operations.ListTicketingCategories2Request,
+            operations.ListTicketingCategories2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingCategoriesResponse:
+    ) -> operations.ListTicketingCategories2Response:
         r"""List all categories
 
         :param request: The request object to send.
@@ -982,9 +982,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListTicketingCategoriesRequest
+                request, operations.ListTicketingCategories2Request
             )
-        request = cast(operations.ListTicketingCategoriesRequest, request)
+        request = cast(operations.ListTicketingCategories2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1015,7 +1015,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingCategories",
+                operation_id="listTicketingCategories2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1025,7 +1025,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingCategoriesResponse(
+            return operations.ListTicketingCategories2Response(
                 ticketing_categories=unmarshal_json_response(
                     Optional[List[shared.TicketingCategory]], http_res
                 ),
@@ -1042,18 +1042,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ticketing_categories_async(
+    async def list_ticketing_categories2_async(
         self,
         *,
         request: Union[
-            operations.ListTicketingCategoriesRequest,
-            operations.ListTicketingCategoriesRequestTypedDict,
+            operations.ListTicketingCategories2Request,
+            operations.ListTicketingCategories2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingCategoriesResponse:
+    ) -> operations.ListTicketingCategories2Response:
         r"""List all categories
 
         :param request: The request object to send.
@@ -1074,9 +1074,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListTicketingCategoriesRequest
+                request, operations.ListTicketingCategories2Request
             )
-        request = cast(operations.ListTicketingCategoriesRequest, request)
+        request = cast(operations.ListTicketingCategories2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1107,7 +1107,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingCategories",
+                operation_id="listTicketingCategories2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1117,7 +1117,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingCategoriesResponse(
+            return operations.ListTicketingCategories2Response(
                 ticketing_categories=unmarshal_json_response(
                     Optional[List[shared.TicketingCategory]], http_res
                 ),
@@ -1134,18 +1134,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_category(
+    def patch_accounting_category2(
         self,
         *,
         request: Union[
-            operations.PatchAccountingCategoryRequest,
-            operations.PatchAccountingCategoryRequestTypedDict,
+            operations.PatchAccountingCategory2Request,
+            operations.PatchAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingCategoryResponse:
+    ) -> operations.PatchAccountingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -1166,9 +1166,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchAccountingCategoryRequest
+                request, operations.PatchAccountingCategory2Request
             )
-        request = cast(operations.PatchAccountingCategoryRequest, request)
+        request = cast(operations.PatchAccountingCategory2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1206,7 +1206,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingCategory",
+                operation_id="patchAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1216,7 +1216,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingCategoryResponse(
+            return operations.PatchAccountingCategory2Response(
                 accounting_category=unmarshal_json_response(
                     Optional[shared.AccountingCategory], http_res
                 ),
@@ -1233,18 +1233,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_category_async(
+    async def patch_accounting_category2_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingCategoryRequest,
-            operations.PatchAccountingCategoryRequestTypedDict,
+            operations.PatchAccountingCategory2Request,
+            operations.PatchAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingCategoryResponse:
+    ) -> operations.PatchAccountingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -1265,9 +1265,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchAccountingCategoryRequest
+                request, operations.PatchAccountingCategory2Request
             )
-        request = cast(operations.PatchAccountingCategoryRequest, request)
+        request = cast(operations.PatchAccountingCategory2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1305,7 +1305,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingCategory",
+                operation_id="patchAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1315,7 +1315,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingCategoryResponse(
+            return operations.PatchAccountingCategory2Response(
                 accounting_category=unmarshal_json_response(
                     Optional[shared.AccountingCategory], http_res
                 ),
@@ -1332,18 +1332,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ticketing_category(
+    def patch_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.PatchTicketingCategoryRequest,
-            operations.PatchTicketingCategoryRequestTypedDict,
+            operations.PatchTicketingCategory2Request,
+            operations.PatchTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingCategoryResponse:
+    ) -> operations.PatchTicketingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -1363,8 +1363,10 @@ class Category(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingCategoryRequest)
-        request = cast(operations.PatchTicketingCategoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchTicketingCategory2Request
+            )
+        request = cast(operations.PatchTicketingCategory2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1402,7 +1404,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingCategory",
+                operation_id="patchTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1412,7 +1414,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingCategoryResponse(
+            return operations.PatchTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -1429,18 +1431,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ticketing_category_async(
+    async def patch_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.PatchTicketingCategoryRequest,
-            operations.PatchTicketingCategoryRequestTypedDict,
+            operations.PatchTicketingCategory2Request,
+            operations.PatchTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingCategoryResponse:
+    ) -> operations.PatchTicketingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -1460,8 +1462,10 @@ class Category(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingCategoryRequest)
-        request = cast(operations.PatchTicketingCategoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchTicketingCategory2Request
+            )
+        request = cast(operations.PatchTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1499,7 +1503,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingCategory",
+                operation_id="patchTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1509,7 +1513,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingCategoryResponse(
+            return operations.PatchTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -1526,18 +1530,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_category(
+    def remove_accounting_category2(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingCategoryRequest,
-            operations.RemoveAccountingCategoryRequestTypedDict,
+            operations.RemoveAccountingCategory2Request,
+            operations.RemoveAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingCategoryResponse:
+    ) -> operations.RemoveAccountingCategory2Response:
         r"""Remove a category
 
         :param request: The request object to send.
@@ -1558,9 +1562,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingCategoryRequest
+                request, operations.RemoveAccountingCategory2Request
             )
-        request = cast(operations.RemoveAccountingCategoryRequest, request)
+        request = cast(operations.RemoveAccountingCategory2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1591,7 +1595,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingCategory",
+                operation_id="removeAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1601,7 +1605,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingCategoryResponse(
+            return operations.RemoveAccountingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1614,7 +1618,7 @@ class Category(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingCategoryResponse(
+            return operations.RemoveAccountingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1623,18 +1627,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_category_async(
+    async def remove_accounting_category2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingCategoryRequest,
-            operations.RemoveAccountingCategoryRequestTypedDict,
+            operations.RemoveAccountingCategory2Request,
+            operations.RemoveAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingCategoryResponse:
+    ) -> operations.RemoveAccountingCategory2Response:
         r"""Remove a category
 
         :param request: The request object to send.
@@ -1655,9 +1659,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingCategoryRequest
+                request, operations.RemoveAccountingCategory2Request
             )
-        request = cast(operations.RemoveAccountingCategoryRequest, request)
+        request = cast(operations.RemoveAccountingCategory2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1688,7 +1692,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingCategory",
+                operation_id="removeAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1698,7 +1702,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingCategoryResponse(
+            return operations.RemoveAccountingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1711,7 +1715,7 @@ class Category(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingCategoryResponse(
+            return operations.RemoveAccountingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1720,18 +1724,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ticketing_category(
+    def remove_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingCategoryRequest,
-            operations.RemoveTicketingCategoryRequestTypedDict,
+            operations.RemoveTicketingCategory2Request,
+            operations.RemoveTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingCategoryResponse:
+    ) -> operations.RemoveTicketingCategory2Response:
         r"""Remove a category
 
         :param request: The request object to send.
@@ -1752,9 +1756,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveTicketingCategoryRequest
+                request, operations.RemoveTicketingCategory2Request
             )
-        request = cast(operations.RemoveTicketingCategoryRequest, request)
+        request = cast(operations.RemoveTicketingCategory2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1785,7 +1789,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingCategory",
+                operation_id="removeTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1795,7 +1799,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingCategoryResponse(
+            return operations.RemoveTicketingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1808,7 +1812,7 @@ class Category(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingCategoryResponse(
+            return operations.RemoveTicketingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1817,18 +1821,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ticketing_category_async(
+    async def remove_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingCategoryRequest,
-            operations.RemoveTicketingCategoryRequestTypedDict,
+            operations.RemoveTicketingCategory2Request,
+            operations.RemoveTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingCategoryResponse:
+    ) -> operations.RemoveTicketingCategory2Response:
         r"""Remove a category
 
         :param request: The request object to send.
@@ -1849,9 +1853,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveTicketingCategoryRequest
+                request, operations.RemoveTicketingCategory2Request
             )
-        request = cast(operations.RemoveTicketingCategoryRequest, request)
+        request = cast(operations.RemoveTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1882,7 +1886,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingCategory",
+                operation_id="removeTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1892,7 +1896,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingCategoryResponse(
+            return operations.RemoveTicketingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1905,7 +1909,7 @@ class Category(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingCategoryResponse(
+            return operations.RemoveTicketingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1914,18 +1918,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_category(
+    def update_accounting_category2(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingCategoryRequest,
-            operations.UpdateAccountingCategoryRequestTypedDict,
+            operations.UpdateAccountingCategory2Request,
+            operations.UpdateAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingCategoryResponse:
+    ) -> operations.UpdateAccountingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -1946,9 +1950,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingCategoryRequest
+                request, operations.UpdateAccountingCategory2Request
             )
-        request = cast(operations.UpdateAccountingCategoryRequest, request)
+        request = cast(operations.UpdateAccountingCategory2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1986,7 +1990,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingCategory",
+                operation_id="updateAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1996,7 +2000,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingCategoryResponse(
+            return operations.UpdateAccountingCategory2Response(
                 accounting_category=unmarshal_json_response(
                     Optional[shared.AccountingCategory], http_res
                 ),
@@ -2013,18 +2017,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_category_async(
+    async def update_accounting_category2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingCategoryRequest,
-            operations.UpdateAccountingCategoryRequestTypedDict,
+            operations.UpdateAccountingCategory2Request,
+            operations.UpdateAccountingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingCategoryResponse:
+    ) -> operations.UpdateAccountingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -2045,9 +2049,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingCategoryRequest
+                request, operations.UpdateAccountingCategory2Request
             )
-        request = cast(operations.UpdateAccountingCategoryRequest, request)
+        request = cast(operations.UpdateAccountingCategory2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2085,7 +2089,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingCategory",
+                operation_id="updateAccountingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2095,7 +2099,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingCategoryResponse(
+            return operations.UpdateAccountingCategory2Response(
                 accounting_category=unmarshal_json_response(
                     Optional[shared.AccountingCategory], http_res
                 ),
@@ -2112,18 +2116,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ticketing_category(
+    def update_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingCategoryRequest,
-            operations.UpdateTicketingCategoryRequestTypedDict,
+            operations.UpdateTicketingCategory2Request,
+            operations.UpdateTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingCategoryResponse:
+    ) -> operations.UpdateTicketingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -2144,9 +2148,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateTicketingCategoryRequest
+                request, operations.UpdateTicketingCategory2Request
             )
-        request = cast(operations.UpdateTicketingCategoryRequest, request)
+        request = cast(operations.UpdateTicketingCategory2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2184,7 +2188,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingCategory",
+                operation_id="updateTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2194,7 +2198,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingCategoryResponse(
+            return operations.UpdateTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -2211,18 +2215,18 @@ class Category(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ticketing_category_async(
+    async def update_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingCategoryRequest,
-            operations.UpdateTicketingCategoryRequestTypedDict,
+            operations.UpdateTicketingCategory2Request,
+            operations.UpdateTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingCategoryResponse:
+    ) -> operations.UpdateTicketingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -2243,9 +2247,9 @@ class Category(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateTicketingCategoryRequest
+                request, operations.UpdateTicketingCategory2Request
             )
-        request = cast(operations.UpdateTicketingCategoryRequest, request)
+        request = cast(operations.UpdateTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2283,7 +2287,7 @@ class Category(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingCategory",
+                operation_id="updateTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2293,7 +2297,7 @@ class Category(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingCategoryResponse(
+            return operations.UpdateTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Profitloss(BaseSDK):
-    def get_accounting_profitloss(
+    def get_accounting_profitloss2(
         self,
         *,
         request: Union[
-            operations.GetAccountingProfitlossRequest,
-            operations.GetAccountingProfitlossRequestTypedDict,
+            operations.GetAccountingProfitloss2Request,
+            operations.GetAccountingProfitloss2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingProfitlossResponse:
+    ) -> operations.GetAccountingProfitloss2Response:
         r"""Retrieve a profitloss
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Profitloss(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingProfitlossRequest
+                request, operations.GetAccountingProfitloss2Request
             )
-        request = cast(operations.GetAccountingProfitlossRequest, request)
+        request = cast(operations.GetAccountingProfitloss2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -75,7 +75,7 @@ class Profitloss(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingProfitloss",
+                operation_id="getAccountingProfitloss2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -85,7 +85,7 @@ class Profitloss(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingProfitlossResponse(
+            return operations.GetAccountingProfitloss2Response(
                 accounting_profitloss=unmarshal_json_response(
                     Optional[shared.AccountingProfitloss], http_res
                 ),
@@ -102,18 +102,18 @@ class Profitloss(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_profitloss_async(
+    async def get_accounting_profitloss2_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingProfitlossRequest,
-            operations.GetAccountingProfitlossRequestTypedDict,
+            operations.GetAccountingProfitloss2Request,
+            operations.GetAccountingProfitloss2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingProfitlossResponse:
+    ) -> operations.GetAccountingProfitloss2Response:
         r"""Retrieve a profitloss
 
         :param request: The request object to send.
@@ -134,9 +134,9 @@ class Profitloss(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingProfitlossRequest
+                request, operations.GetAccountingProfitloss2Request
             )
-        request = cast(operations.GetAccountingProfitlossRequest, request)
+        request = cast(operations.GetAccountingProfitloss2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -167,7 +167,7 @@ class Profitloss(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingProfitloss",
+                operation_id="getAccountingProfitloss2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -177,7 +177,7 @@ class Profitloss(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingProfitlossResponse(
+            return operations.GetAccountingProfitloss2Response(
                 accounting_profitloss=unmarshal_json_response(
                     Optional[shared.AccountingProfitloss], http_res
                 ),
@@ -194,18 +194,18 @@ class Profitloss(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_profitlosses(
+    def list_accounting_profitlosses2(
         self,
         *,
         request: Union[
-            operations.ListAccountingProfitlossesRequest,
-            operations.ListAccountingProfitlossesRequestTypedDict,
+            operations.ListAccountingProfitlosses2Request,
+            operations.ListAccountingProfitlosses2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingProfitlossesResponse:
+    ) -> operations.ListAccountingProfitlosses2Response:
         r"""List all profitlosses
 
         :param request: The request object to send.
@@ -226,9 +226,9 @@ class Profitloss(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingProfitlossesRequest
+                request, operations.ListAccountingProfitlosses2Request
             )
-        request = cast(operations.ListAccountingProfitlossesRequest, request)
+        request = cast(operations.ListAccountingProfitlosses2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -259,7 +259,7 @@ class Profitloss(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingProfitlosses",
+                operation_id="listAccountingProfitlosses2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -269,7 +269,7 @@ class Profitloss(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingProfitlossesResponse(
+            return operations.ListAccountingProfitlosses2Response(
                 accounting_profitlosses=unmarshal_json_response(
                     Optional[List[shared.AccountingProfitloss]], http_res
                 ),
@@ -286,18 +286,18 @@ class Profitloss(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_profitlosses_async(
+    async def list_accounting_profitlosses2_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingProfitlossesRequest,
-            operations.ListAccountingProfitlossesRequestTypedDict,
+            operations.ListAccountingProfitlosses2Request,
+            operations.ListAccountingProfitlosses2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingProfitlossesResponse:
+    ) -> operations.ListAccountingProfitlosses2Response:
         r"""List all profitlosses
 
         :param request: The request object to send.
@@ -318,9 +318,9 @@ class Profitloss(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingProfitlossesRequest
+                request, operations.ListAccountingProfitlosses2Request
             )
-        request = cast(operations.ListAccountingProfitlossesRequest, request)
+        request = cast(operations.ListAccountingProfitlosses2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -351,7 +351,7 @@ class Profitloss(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingProfitlosses",
+                operation_id="listAccountingProfitlosses2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -361,7 +361,7 @@ class Profitloss(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingProfitlossesResponse(
+            return operations.ListAccountingProfitlosses2Response(
                 accounting_profitlosses=unmarshal_json_response(
                     Optional[List[shared.AccountingProfitloss]], http_res
                 ),

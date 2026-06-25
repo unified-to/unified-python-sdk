@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Collection(BaseSDK):
-    def create_commerce_collection(
+    def create_commerce_collection2(
         self,
         *,
         request: Union[
-            operations.CreateCommerceCollectionRequest,
-            operations.CreateCommerceCollectionRequestTypedDict,
+            operations.CreateCommerceCollection2Request,
+            operations.CreateCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceCollectionResponse:
+    ) -> operations.CreateCommerceCollection2Response:
         r"""Create a collection
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceCollectionRequest
+                request, operations.CreateCommerceCollection2Request
             )
-        request = cast(operations.CreateCommerceCollectionRequest, request)
+        request = cast(operations.CreateCommerceCollection2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceCollection",
+                operation_id="createCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceCollectionResponse(
+            return operations.CreateCommerceCollection2Response(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -109,18 +109,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_collection_async(
+    async def create_commerce_collection2_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceCollectionRequest,
-            operations.CreateCommerceCollectionRequestTypedDict,
+            operations.CreateCommerceCollection2Request,
+            operations.CreateCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceCollectionResponse:
+    ) -> operations.CreateCommerceCollection2Response:
         r"""Create a collection
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceCollectionRequest
+                request, operations.CreateCommerceCollection2Request
             )
-        request = cast(operations.CreateCommerceCollectionRequest, request)
+        request = cast(operations.CreateCommerceCollection2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceCollection",
+                operation_id="createCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceCollectionResponse(
+            return operations.CreateCommerceCollection2Response(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -208,18 +208,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_lms_collection(
+    def create_lms_collection2(
         self,
         *,
         request: Union[
-            operations.CreateLmsCollectionRequest,
-            operations.CreateLmsCollectionRequestTypedDict,
+            operations.CreateLmsCollection2Request,
+            operations.CreateLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateLmsCollectionResponse:
+    ) -> operations.CreateLmsCollection2Response:
         r"""Create a collection
 
         :param request: The request object to send.
@@ -239,8 +239,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateLmsCollectionRequest)
-        request = cast(operations.CreateLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.CreateLmsCollection2Request)
+        request = cast(operations.CreateLmsCollection2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -274,7 +274,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createLmsCollection",
+                operation_id="createLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -284,7 +284,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateLmsCollectionResponse(
+            return operations.CreateLmsCollection2Response(
                 lms_collection=unmarshal_json_response(
                     Optional[shared.LmsCollection], http_res
                 ),
@@ -301,18 +301,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_lms_collection_async(
+    async def create_lms_collection2_async(
         self,
         *,
         request: Union[
-            operations.CreateLmsCollectionRequest,
-            operations.CreateLmsCollectionRequestTypedDict,
+            operations.CreateLmsCollection2Request,
+            operations.CreateLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateLmsCollectionResponse:
+    ) -> operations.CreateLmsCollection2Response:
         r"""Create a collection
 
         :param request: The request object to send.
@@ -332,8 +332,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateLmsCollectionRequest)
-        request = cast(operations.CreateLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.CreateLmsCollection2Request)
+        request = cast(operations.CreateLmsCollection2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -367,7 +367,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createLmsCollection",
+                operation_id="createLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -377,7 +377,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateLmsCollectionResponse(
+            return operations.CreateLmsCollection2Response(
                 lms_collection=unmarshal_json_response(
                     Optional[shared.LmsCollection], http_res
                 ),
@@ -394,18 +394,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_collection(
+    def get_commerce_collection2(
         self,
         *,
         request: Union[
-            operations.GetCommerceCollectionRequest,
-            operations.GetCommerceCollectionRequestTypedDict,
+            operations.GetCommerceCollection2Request,
+            operations.GetCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceCollectionResponse:
+    ) -> operations.GetCommerceCollection2Response:
         r"""Retrieve a collection
 
         :param request: The request object to send.
@@ -425,8 +425,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceCollectionRequest)
-        request = cast(operations.GetCommerceCollectionRequest, request)
+            request = utils.unmarshal(request, operations.GetCommerceCollection2Request)
+        request = cast(operations.GetCommerceCollection2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -457,7 +457,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceCollection",
+                operation_id="getCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -467,7 +467,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceCollectionResponse(
+            return operations.GetCommerceCollection2Response(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -484,18 +484,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_collection_async(
+    async def get_commerce_collection2_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceCollectionRequest,
-            operations.GetCommerceCollectionRequestTypedDict,
+            operations.GetCommerceCollection2Request,
+            operations.GetCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceCollectionResponse:
+    ) -> operations.GetCommerceCollection2Response:
         r"""Retrieve a collection
 
         :param request: The request object to send.
@@ -515,8 +515,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceCollectionRequest)
-        request = cast(operations.GetCommerceCollectionRequest, request)
+            request = utils.unmarshal(request, operations.GetCommerceCollection2Request)
+        request = cast(operations.GetCommerceCollection2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -547,7 +547,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceCollection",
+                operation_id="getCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -557,7 +557,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceCollectionResponse(
+            return operations.GetCommerceCollection2Response(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -574,18 +574,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_lms_collection(
+    def get_lms_collection2(
         self,
         *,
         request: Union[
-            operations.GetLmsCollectionRequest,
-            operations.GetLmsCollectionRequestTypedDict,
+            operations.GetLmsCollection2Request,
+            operations.GetLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetLmsCollectionResponse:
+    ) -> operations.GetLmsCollection2Response:
         r"""Retrieve a collection
 
         :param request: The request object to send.
@@ -605,8 +605,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetLmsCollectionRequest)
-        request = cast(operations.GetLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.GetLmsCollection2Request)
+        request = cast(operations.GetLmsCollection2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -637,7 +637,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getLmsCollection",
+                operation_id="getLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -647,7 +647,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetLmsCollectionResponse(
+            return operations.GetLmsCollection2Response(
                 lms_collection=unmarshal_json_response(
                     Optional[shared.LmsCollection], http_res
                 ),
@@ -664,18 +664,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_lms_collection_async(
+    async def get_lms_collection2_async(
         self,
         *,
         request: Union[
-            operations.GetLmsCollectionRequest,
-            operations.GetLmsCollectionRequestTypedDict,
+            operations.GetLmsCollection2Request,
+            operations.GetLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetLmsCollectionResponse:
+    ) -> operations.GetLmsCollection2Response:
         r"""Retrieve a collection
 
         :param request: The request object to send.
@@ -695,8 +695,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetLmsCollectionRequest)
-        request = cast(operations.GetLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.GetLmsCollection2Request)
+        request = cast(operations.GetLmsCollection2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -727,7 +727,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getLmsCollection",
+                operation_id="getLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -737,7 +737,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetLmsCollectionResponse(
+            return operations.GetLmsCollection2Response(
                 lms_collection=unmarshal_json_response(
                     Optional[shared.LmsCollection], http_res
                 ),
@@ -754,18 +754,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_collections(
+    def list_commerce_collections2(
         self,
         *,
         request: Union[
-            operations.ListCommerceCollectionsRequest,
-            operations.ListCommerceCollectionsRequestTypedDict,
+            operations.ListCommerceCollections2Request,
+            operations.ListCommerceCollections2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceCollectionsResponse:
+    ) -> operations.ListCommerceCollections2Response:
         r"""List all collections
 
         :param request: The request object to send.
@@ -786,9 +786,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceCollectionsRequest
+                request, operations.ListCommerceCollections2Request
             )
-        request = cast(operations.ListCommerceCollectionsRequest, request)
+        request = cast(operations.ListCommerceCollections2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -819,7 +819,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceCollections",
+                operation_id="listCommerceCollections2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -829,7 +829,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceCollectionsResponse(
+            return operations.ListCommerceCollections2Response(
                 commerce_collections=unmarshal_json_response(
                     Optional[List[shared.CommerceCollection]], http_res
                 ),
@@ -846,18 +846,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_collections_async(
+    async def list_commerce_collections2_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceCollectionsRequest,
-            operations.ListCommerceCollectionsRequestTypedDict,
+            operations.ListCommerceCollections2Request,
+            operations.ListCommerceCollections2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceCollectionsResponse:
+    ) -> operations.ListCommerceCollections2Response:
         r"""List all collections
 
         :param request: The request object to send.
@@ -878,9 +878,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceCollectionsRequest
+                request, operations.ListCommerceCollections2Request
             )
-        request = cast(operations.ListCommerceCollectionsRequest, request)
+        request = cast(operations.ListCommerceCollections2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -911,7 +911,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceCollections",
+                operation_id="listCommerceCollections2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -921,7 +921,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceCollectionsResponse(
+            return operations.ListCommerceCollections2Response(
                 commerce_collections=unmarshal_json_response(
                     Optional[List[shared.CommerceCollection]], http_res
                 ),
@@ -938,18 +938,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_lms_collections(
+    def list_lms_collections2(
         self,
         *,
         request: Union[
-            operations.ListLmsCollectionsRequest,
-            operations.ListLmsCollectionsRequestTypedDict,
+            operations.ListLmsCollections2Request,
+            operations.ListLmsCollections2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListLmsCollectionsResponse:
+    ) -> operations.ListLmsCollections2Response:
         r"""List all collections
 
         :param request: The request object to send.
@@ -969,8 +969,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListLmsCollectionsRequest)
-        request = cast(operations.ListLmsCollectionsRequest, request)
+            request = utils.unmarshal(request, operations.ListLmsCollections2Request)
+        request = cast(operations.ListLmsCollections2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1001,7 +1001,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listLmsCollections",
+                operation_id="listLmsCollections2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1011,7 +1011,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListLmsCollectionsResponse(
+            return operations.ListLmsCollections2Response(
                 lms_collections=unmarshal_json_response(
                     Optional[List[shared.LmsCollection]], http_res
                 ),
@@ -1028,18 +1028,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_lms_collections_async(
+    async def list_lms_collections2_async(
         self,
         *,
         request: Union[
-            operations.ListLmsCollectionsRequest,
-            operations.ListLmsCollectionsRequestTypedDict,
+            operations.ListLmsCollections2Request,
+            operations.ListLmsCollections2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListLmsCollectionsResponse:
+    ) -> operations.ListLmsCollections2Response:
         r"""List all collections
 
         :param request: The request object to send.
@@ -1059,8 +1059,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListLmsCollectionsRequest)
-        request = cast(operations.ListLmsCollectionsRequest, request)
+            request = utils.unmarshal(request, operations.ListLmsCollections2Request)
+        request = cast(operations.ListLmsCollections2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1091,7 +1091,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listLmsCollections",
+                operation_id="listLmsCollections2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1101,7 +1101,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListLmsCollectionsResponse(
+            return operations.ListLmsCollections2Response(
                 lms_collections=unmarshal_json_response(
                     Optional[List[shared.LmsCollection]], http_res
                 ),
@@ -1118,18 +1118,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_collection(
+    def patch_commerce_collection2(
         self,
         *,
         request: Union[
-            operations.PatchCommerceCollectionRequest,
-            operations.PatchCommerceCollectionRequestTypedDict,
+            operations.PatchCommerceCollection2Request,
+            operations.PatchCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceCollectionResponse:
+    ) -> operations.PatchCommerceCollection2Response:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -1150,9 +1150,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceCollectionRequest
+                request, operations.PatchCommerceCollection2Request
             )
-        request = cast(operations.PatchCommerceCollectionRequest, request)
+        request = cast(operations.PatchCommerceCollection2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1190,7 +1190,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceCollection",
+                operation_id="patchCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1200,7 +1200,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceCollectionResponse(
+            return operations.PatchCommerceCollection2Response(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -1217,18 +1217,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_collection_async(
+    async def patch_commerce_collection2_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceCollectionRequest,
-            operations.PatchCommerceCollectionRequestTypedDict,
+            operations.PatchCommerceCollection2Request,
+            operations.PatchCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceCollectionResponse:
+    ) -> operations.PatchCommerceCollection2Response:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -1249,9 +1249,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceCollectionRequest
+                request, operations.PatchCommerceCollection2Request
             )
-        request = cast(operations.PatchCommerceCollectionRequest, request)
+        request = cast(operations.PatchCommerceCollection2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1289,7 +1289,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceCollection",
+                operation_id="patchCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1299,7 +1299,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceCollectionResponse(
+            return operations.PatchCommerceCollection2Response(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -1316,18 +1316,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_lms_collection(
+    def patch_lms_collection2(
         self,
         *,
         request: Union[
-            operations.PatchLmsCollectionRequest,
-            operations.PatchLmsCollectionRequestTypedDict,
+            operations.PatchLmsCollection2Request,
+            operations.PatchLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchLmsCollectionResponse:
+    ) -> operations.PatchLmsCollection2Response:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -1347,8 +1347,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchLmsCollectionRequest)
-        request = cast(operations.PatchLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.PatchLmsCollection2Request)
+        request = cast(operations.PatchLmsCollection2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1382,7 +1382,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchLmsCollection",
+                operation_id="patchLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1392,7 +1392,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchLmsCollectionResponse(
+            return operations.PatchLmsCollection2Response(
                 lms_collection=unmarshal_json_response(
                     Optional[shared.LmsCollection], http_res
                 ),
@@ -1409,18 +1409,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_lms_collection_async(
+    async def patch_lms_collection2_async(
         self,
         *,
         request: Union[
-            operations.PatchLmsCollectionRequest,
-            operations.PatchLmsCollectionRequestTypedDict,
+            operations.PatchLmsCollection2Request,
+            operations.PatchLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchLmsCollectionResponse:
+    ) -> operations.PatchLmsCollection2Response:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -1440,8 +1440,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchLmsCollectionRequest)
-        request = cast(operations.PatchLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.PatchLmsCollection2Request)
+        request = cast(operations.PatchLmsCollection2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1475,7 +1475,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchLmsCollection",
+                operation_id="patchLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1485,7 +1485,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchLmsCollectionResponse(
+            return operations.PatchLmsCollection2Response(
                 lms_collection=unmarshal_json_response(
                     Optional[shared.LmsCollection], http_res
                 ),
@@ -1502,18 +1502,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_collection(
+    def remove_commerce_collection2(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceCollectionRequest,
-            operations.RemoveCommerceCollectionRequestTypedDict,
+            operations.RemoveCommerceCollection2Request,
+            operations.RemoveCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceCollectionResponse:
+    ) -> operations.RemoveCommerceCollection2Response:
         r"""Remove a collection
 
         :param request: The request object to send.
@@ -1534,9 +1534,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceCollectionRequest
+                request, operations.RemoveCommerceCollection2Request
             )
-        request = cast(operations.RemoveCommerceCollectionRequest, request)
+        request = cast(operations.RemoveCommerceCollection2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1567,7 +1567,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceCollection",
+                operation_id="removeCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1577,7 +1577,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceCollectionResponse(
+            return operations.RemoveCommerceCollection2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1590,7 +1590,7 @@ class Collection(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceCollectionResponse(
+            return operations.RemoveCommerceCollection2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1599,18 +1599,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_collection_async(
+    async def remove_commerce_collection2_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceCollectionRequest,
-            operations.RemoveCommerceCollectionRequestTypedDict,
+            operations.RemoveCommerceCollection2Request,
+            operations.RemoveCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceCollectionResponse:
+    ) -> operations.RemoveCommerceCollection2Response:
         r"""Remove a collection
 
         :param request: The request object to send.
@@ -1631,9 +1631,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceCollectionRequest
+                request, operations.RemoveCommerceCollection2Request
             )
-        request = cast(operations.RemoveCommerceCollectionRequest, request)
+        request = cast(operations.RemoveCommerceCollection2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1664,7 +1664,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceCollection",
+                operation_id="removeCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1674,7 +1674,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceCollectionResponse(
+            return operations.RemoveCommerceCollection2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1687,7 +1687,7 @@ class Collection(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceCollectionResponse(
+            return operations.RemoveCommerceCollection2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1696,18 +1696,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_lms_collection(
+    def remove_lms_collection2(
         self,
         *,
         request: Union[
-            operations.RemoveLmsCollectionRequest,
-            operations.RemoveLmsCollectionRequestTypedDict,
+            operations.RemoveLmsCollection2Request,
+            operations.RemoveLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveLmsCollectionResponse:
+    ) -> operations.RemoveLmsCollection2Response:
         r"""Remove a collection
 
         :param request: The request object to send.
@@ -1727,8 +1727,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveLmsCollectionRequest)
-        request = cast(operations.RemoveLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.RemoveLmsCollection2Request)
+        request = cast(operations.RemoveLmsCollection2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1759,7 +1759,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeLmsCollection",
+                operation_id="removeLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1769,7 +1769,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveLmsCollectionResponse(
+            return operations.RemoveLmsCollection2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1782,7 +1782,7 @@ class Collection(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveLmsCollectionResponse(
+            return operations.RemoveLmsCollection2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1791,18 +1791,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_lms_collection_async(
+    async def remove_lms_collection2_async(
         self,
         *,
         request: Union[
-            operations.RemoveLmsCollectionRequest,
-            operations.RemoveLmsCollectionRequestTypedDict,
+            operations.RemoveLmsCollection2Request,
+            operations.RemoveLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveLmsCollectionResponse:
+    ) -> operations.RemoveLmsCollection2Response:
         r"""Remove a collection
 
         :param request: The request object to send.
@@ -1822,8 +1822,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveLmsCollectionRequest)
-        request = cast(operations.RemoveLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.RemoveLmsCollection2Request)
+        request = cast(operations.RemoveLmsCollection2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1854,7 +1854,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeLmsCollection",
+                operation_id="removeLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1864,7 +1864,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveLmsCollectionResponse(
+            return operations.RemoveLmsCollection2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1877,7 +1877,7 @@ class Collection(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveLmsCollectionResponse(
+            return operations.RemoveLmsCollection2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1886,18 +1886,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_collection(
+    def update_commerce_collection2(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceCollectionRequest,
-            operations.UpdateCommerceCollectionRequestTypedDict,
+            operations.UpdateCommerceCollection2Request,
+            operations.UpdateCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceCollectionResponse:
+    ) -> operations.UpdateCommerceCollection2Response:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -1918,9 +1918,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceCollectionRequest
+                request, operations.UpdateCommerceCollection2Request
             )
-        request = cast(operations.UpdateCommerceCollectionRequest, request)
+        request = cast(operations.UpdateCommerceCollection2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1958,7 +1958,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceCollection",
+                operation_id="updateCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1968,7 +1968,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceCollectionResponse(
+            return operations.UpdateCommerceCollection2Response(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -1985,18 +1985,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_collection_async(
+    async def update_commerce_collection2_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceCollectionRequest,
-            operations.UpdateCommerceCollectionRequestTypedDict,
+            operations.UpdateCommerceCollection2Request,
+            operations.UpdateCommerceCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceCollectionResponse:
+    ) -> operations.UpdateCommerceCollection2Response:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -2017,9 +2017,9 @@ class Collection(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceCollectionRequest
+                request, operations.UpdateCommerceCollection2Request
             )
-        request = cast(operations.UpdateCommerceCollectionRequest, request)
+        request = cast(operations.UpdateCommerceCollection2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2057,7 +2057,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceCollection",
+                operation_id="updateCommerceCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2067,7 +2067,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceCollectionResponse(
+            return operations.UpdateCommerceCollection2Response(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -2084,18 +2084,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_lms_collection(
+    def update_lms_collection2(
         self,
         *,
         request: Union[
-            operations.UpdateLmsCollectionRequest,
-            operations.UpdateLmsCollectionRequestTypedDict,
+            operations.UpdateLmsCollection2Request,
+            operations.UpdateLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateLmsCollectionResponse:
+    ) -> operations.UpdateLmsCollection2Response:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -2115,8 +2115,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateLmsCollectionRequest)
-        request = cast(operations.UpdateLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.UpdateLmsCollection2Request)
+        request = cast(operations.UpdateLmsCollection2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2150,7 +2150,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateLmsCollection",
+                operation_id="updateLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2160,7 +2160,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateLmsCollectionResponse(
+            return operations.UpdateLmsCollection2Response(
                 lms_collection=unmarshal_json_response(
                     Optional[shared.LmsCollection], http_res
                 ),
@@ -2177,18 +2177,18 @@ class Collection(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_lms_collection_async(
+    async def update_lms_collection2_async(
         self,
         *,
         request: Union[
-            operations.UpdateLmsCollectionRequest,
-            operations.UpdateLmsCollectionRequestTypedDict,
+            operations.UpdateLmsCollection2Request,
+            operations.UpdateLmsCollection2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateLmsCollectionResponse:
+    ) -> operations.UpdateLmsCollection2Response:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -2208,8 +2208,8 @@ class Collection(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateLmsCollectionRequest)
-        request = cast(operations.UpdateLmsCollectionRequest, request)
+            request = utils.unmarshal(request, operations.UpdateLmsCollection2Request)
+        request = cast(operations.UpdateLmsCollection2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2243,7 +2243,7 @@ class Collection(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateLmsCollection",
+                operation_id="updateLmsCollection2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2253,7 +2253,7 @@ class Collection(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateLmsCollectionResponse(
+            return operations.UpdateLmsCollection2Response(
                 lms_collection=unmarshal_json_response(
                     Optional[shared.LmsCollection], http_res
                 ),

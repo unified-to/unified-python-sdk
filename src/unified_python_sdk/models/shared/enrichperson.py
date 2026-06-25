@@ -21,7 +21,7 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class Gender(str, Enum, metaclass=utils.OpenEnumMeta):
+class EnrichPersonGender(str, Enum, metaclass=utils.OpenEnumMeta):
     MALE = "MALE"
     FEMALE = "FEMALE"
 
@@ -40,7 +40,7 @@ class EnrichPersonTypedDict(TypedDict):
     r"""An array of email addresses for this person"""
     facebook_url: NotRequired[str]
     first_name: NotRequired[str]
-    gender: NotRequired[Gender]
+    gender: NotRequired[EnrichPersonGender]
     github_url: NotRequired[str]
     github_username: NotRequired[str]
     id: NotRequired[str]
@@ -83,7 +83,7 @@ class EnrichPerson(BaseModel):
 
     first_name: Optional[str] = None
 
-    gender: Optional[Gender] = None
+    gender: Optional[EnrichPersonGender] = None
 
     github_url: Optional[str] = None
 
@@ -122,7 +122,7 @@ class EnrichPerson(BaseModel):
     def serialize_gender(self, value):
         if isinstance(value, str):
             try:
-                return shared.Gender(value)
+                return shared.EnrichPersonGender(value)
             except ValueError:
                 return value
         return value

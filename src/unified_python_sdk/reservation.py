@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Reservation(BaseSDK):
-    def create_commerce_reservation(
+    def create_commerce_reservation2(
         self,
         *,
         request: Union[
-            operations.CreateCommerceReservationRequest,
-            operations.CreateCommerceReservationRequestTypedDict,
+            operations.CreateCommerceReservation2Request,
+            operations.CreateCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceReservationResponse:
+    ) -> operations.CreateCommerceReservation2Response:
         r"""Create a reservation
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceReservationRequest
+                request, operations.CreateCommerceReservation2Request
             )
-        request = cast(operations.CreateCommerceReservationRequest, request)
+        request = cast(operations.CreateCommerceReservation2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceReservation",
+                operation_id="createCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceReservationResponse(
+            return operations.CreateCommerceReservation2Response(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -109,18 +109,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_reservation_async(
+    async def create_commerce_reservation2_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceReservationRequest,
-            operations.CreateCommerceReservationRequestTypedDict,
+            operations.CreateCommerceReservation2Request,
+            operations.CreateCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceReservationResponse:
+    ) -> operations.CreateCommerceReservation2Response:
         r"""Create a reservation
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceReservationRequest
+                request, operations.CreateCommerceReservation2Request
             )
-        request = cast(operations.CreateCommerceReservationRequest, request)
+        request = cast(operations.CreateCommerceReservation2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceReservation",
+                operation_id="createCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceReservationResponse(
+            return operations.CreateCommerceReservation2Response(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -208,18 +208,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_reservation(
+    def get_commerce_reservation2(
         self,
         *,
         request: Union[
-            operations.GetCommerceReservationRequest,
-            operations.GetCommerceReservationRequestTypedDict,
+            operations.GetCommerceReservation2Request,
+            operations.GetCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceReservationResponse:
+    ) -> operations.GetCommerceReservation2Response:
         r"""Retrieve a reservation
 
         :param request: The request object to send.
@@ -239,8 +239,10 @@ class Reservation(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceReservationRequest)
-        request = cast(operations.GetCommerceReservationRequest, request)
+            request = utils.unmarshal(
+                request, operations.GetCommerceReservation2Request
+            )
+        request = cast(operations.GetCommerceReservation2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -271,7 +273,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceReservation",
+                operation_id="getCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -281,7 +283,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceReservationResponse(
+            return operations.GetCommerceReservation2Response(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -298,18 +300,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_reservation_async(
+    async def get_commerce_reservation2_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceReservationRequest,
-            operations.GetCommerceReservationRequestTypedDict,
+            operations.GetCommerceReservation2Request,
+            operations.GetCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceReservationResponse:
+    ) -> operations.GetCommerceReservation2Response:
         r"""Retrieve a reservation
 
         :param request: The request object to send.
@@ -329,8 +331,10 @@ class Reservation(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceReservationRequest)
-        request = cast(operations.GetCommerceReservationRequest, request)
+            request = utils.unmarshal(
+                request, operations.GetCommerceReservation2Request
+            )
+        request = cast(operations.GetCommerceReservation2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -361,7 +365,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceReservation",
+                operation_id="getCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -371,7 +375,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceReservationResponse(
+            return operations.GetCommerceReservation2Response(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -388,18 +392,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_reservations(
+    def list_commerce_reservations2(
         self,
         *,
         request: Union[
-            operations.ListCommerceReservationsRequest,
-            operations.ListCommerceReservationsRequestTypedDict,
+            operations.ListCommerceReservations2Request,
+            operations.ListCommerceReservations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceReservationsResponse:
+    ) -> operations.ListCommerceReservations2Response:
         r"""List all reservations
 
         :param request: The request object to send.
@@ -420,9 +424,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceReservationsRequest
+                request, operations.ListCommerceReservations2Request
             )
-        request = cast(operations.ListCommerceReservationsRequest, request)
+        request = cast(operations.ListCommerceReservations2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -453,7 +457,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceReservations",
+                operation_id="listCommerceReservations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -463,7 +467,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceReservationsResponse(
+            return operations.ListCommerceReservations2Response(
                 commerce_reservations=unmarshal_json_response(
                     Optional[List[shared.CommerceReservation]], http_res
                 ),
@@ -480,18 +484,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_reservations_async(
+    async def list_commerce_reservations2_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceReservationsRequest,
-            operations.ListCommerceReservationsRequestTypedDict,
+            operations.ListCommerceReservations2Request,
+            operations.ListCommerceReservations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceReservationsResponse:
+    ) -> operations.ListCommerceReservations2Response:
         r"""List all reservations
 
         :param request: The request object to send.
@@ -512,9 +516,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceReservationsRequest
+                request, operations.ListCommerceReservations2Request
             )
-        request = cast(operations.ListCommerceReservationsRequest, request)
+        request = cast(operations.ListCommerceReservations2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -545,7 +549,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceReservations",
+                operation_id="listCommerceReservations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -555,7 +559,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceReservationsResponse(
+            return operations.ListCommerceReservations2Response(
                 commerce_reservations=unmarshal_json_response(
                     Optional[List[shared.CommerceReservation]], http_res
                 ),
@@ -572,18 +576,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_reservation(
+    def patch_commerce_reservation2(
         self,
         *,
         request: Union[
-            operations.PatchCommerceReservationRequest,
-            operations.PatchCommerceReservationRequestTypedDict,
+            operations.PatchCommerceReservation2Request,
+            operations.PatchCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceReservationResponse:
+    ) -> operations.PatchCommerceReservation2Response:
         r"""Update a reservation
 
         :param request: The request object to send.
@@ -604,9 +608,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceReservationRequest
+                request, operations.PatchCommerceReservation2Request
             )
-        request = cast(operations.PatchCommerceReservationRequest, request)
+        request = cast(operations.PatchCommerceReservation2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -644,7 +648,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceReservation",
+                operation_id="patchCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -654,7 +658,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceReservationResponse(
+            return operations.PatchCommerceReservation2Response(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -671,18 +675,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_reservation_async(
+    async def patch_commerce_reservation2_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceReservationRequest,
-            operations.PatchCommerceReservationRequestTypedDict,
+            operations.PatchCommerceReservation2Request,
+            operations.PatchCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceReservationResponse:
+    ) -> operations.PatchCommerceReservation2Response:
         r"""Update a reservation
 
         :param request: The request object to send.
@@ -703,9 +707,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceReservationRequest
+                request, operations.PatchCommerceReservation2Request
             )
-        request = cast(operations.PatchCommerceReservationRequest, request)
+        request = cast(operations.PatchCommerceReservation2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -743,7 +747,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceReservation",
+                operation_id="patchCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -753,7 +757,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceReservationResponse(
+            return operations.PatchCommerceReservation2Response(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -770,18 +774,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_reservation(
+    def remove_commerce_reservation2(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceReservationRequest,
-            operations.RemoveCommerceReservationRequestTypedDict,
+            operations.RemoveCommerceReservation2Request,
+            operations.RemoveCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceReservationResponse:
+    ) -> operations.RemoveCommerceReservation2Response:
         r"""Remove a reservation
 
         :param request: The request object to send.
@@ -802,9 +806,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceReservationRequest
+                request, operations.RemoveCommerceReservation2Request
             )
-        request = cast(operations.RemoveCommerceReservationRequest, request)
+        request = cast(operations.RemoveCommerceReservation2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -835,7 +839,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceReservation",
+                operation_id="removeCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -845,7 +849,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceReservationResponse(
+            return operations.RemoveCommerceReservation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -858,7 +862,7 @@ class Reservation(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceReservationResponse(
+            return operations.RemoveCommerceReservation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -867,18 +871,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_reservation_async(
+    async def remove_commerce_reservation2_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceReservationRequest,
-            operations.RemoveCommerceReservationRequestTypedDict,
+            operations.RemoveCommerceReservation2Request,
+            operations.RemoveCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceReservationResponse:
+    ) -> operations.RemoveCommerceReservation2Response:
         r"""Remove a reservation
 
         :param request: The request object to send.
@@ -899,9 +903,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceReservationRequest
+                request, operations.RemoveCommerceReservation2Request
             )
-        request = cast(operations.RemoveCommerceReservationRequest, request)
+        request = cast(operations.RemoveCommerceReservation2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -932,7 +936,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceReservation",
+                operation_id="removeCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -942,7 +946,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceReservationResponse(
+            return operations.RemoveCommerceReservation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -955,7 +959,7 @@ class Reservation(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceReservationResponse(
+            return operations.RemoveCommerceReservation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -964,18 +968,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_reservation(
+    def update_commerce_reservation2(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceReservationRequest,
-            operations.UpdateCommerceReservationRequestTypedDict,
+            operations.UpdateCommerceReservation2Request,
+            operations.UpdateCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceReservationResponse:
+    ) -> operations.UpdateCommerceReservation2Response:
         r"""Update a reservation
 
         :param request: The request object to send.
@@ -996,9 +1000,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceReservationRequest
+                request, operations.UpdateCommerceReservation2Request
             )
-        request = cast(operations.UpdateCommerceReservationRequest, request)
+        request = cast(operations.UpdateCommerceReservation2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1036,7 +1040,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceReservation",
+                operation_id="updateCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1046,7 +1050,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceReservationResponse(
+            return operations.UpdateCommerceReservation2Response(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -1063,18 +1067,18 @@ class Reservation(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_reservation_async(
+    async def update_commerce_reservation2_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceReservationRequest,
-            operations.UpdateCommerceReservationRequestTypedDict,
+            operations.UpdateCommerceReservation2Request,
+            operations.UpdateCommerceReservation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceReservationResponse:
+    ) -> operations.UpdateCommerceReservation2Response:
         r"""Update a reservation
 
         :param request: The request object to send.
@@ -1095,9 +1099,9 @@ class Reservation(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceReservationRequest
+                request, operations.UpdateCommerceReservation2Request
             )
-        request = cast(operations.UpdateCommerceReservationRequest, request)
+        request = cast(operations.UpdateCommerceReservation2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1135,7 +1139,7 @@ class Reservation(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceReservation",
+                operation_id="updateCommerceReservation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1145,7 +1149,7 @@ class Reservation(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceReservationResponse(
+            return operations.UpdateCommerceReservation2Response(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),

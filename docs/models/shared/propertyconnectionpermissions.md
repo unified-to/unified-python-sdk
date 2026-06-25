@@ -241,6 +241,14 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `ADS_INSERTIONORDER_WRITE`       | ads_insertionorder_write         |
 | `ADS_TARGET_READ`                | ads_target_read                  |
 | `ADS_PROMOTED_READ`              | ads_promoted_read                |
+| `ANALYTICS_PROPERTY_READ`        | analytics_property_read          |
+| `ANALYTICS_PROPERTY_WRITE`       | analytics_property_write         |
+| `ANALYTICS_EVENT_READ`           | analytics_event_read             |
+| `ANALYTICS_EVENT_WRITE`          | analytics_event_write            |
+| `ANALYTICS_SESSION_READ`         | analytics_session_read           |
+| `ANALYTICS_VISITOR_READ`         | analytics_visitor_read           |
+| `ANALYTICS_VISITOR_WRITE`        | analytics_visitor_write          |
+| `ANALYTICS_REPORT_READ`          | analytics_report_read            |
 | `FORMS_FORM_READ`                | forms_form_read                  |
 | `FORMS_FORM_WRITE`               | forms_form_write                 |
 | `FORMS_SUBMISSION_READ`          | forms_submission_read            |

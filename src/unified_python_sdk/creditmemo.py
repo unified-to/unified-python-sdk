@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Creditmemo(BaseSDK):
-    def create_accounting_creditmemo(
+    def create_accounting_creditmemo2(
         self,
         *,
         request: Union[
-            operations.CreateAccountingCreditmemoRequest,
-            operations.CreateAccountingCreditmemoRequestTypedDict,
+            operations.CreateAccountingCreditmemo2Request,
+            operations.CreateAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingCreditmemoResponse:
+    ) -> operations.CreateAccountingCreditmemo2Response:
         r"""Create a creditmemo
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingCreditmemoRequest
+                request, operations.CreateAccountingCreditmemo2Request
             )
-        request = cast(operations.CreateAccountingCreditmemoRequest, request)
+        request = cast(operations.CreateAccountingCreditmemo2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingCreditmemo",
+                operation_id="createAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingCreditmemoResponse(
+            return operations.CreateAccountingCreditmemo2Response(
                 accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
@@ -109,18 +109,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_creditmemo_async(
+    async def create_accounting_creditmemo2_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingCreditmemoRequest,
-            operations.CreateAccountingCreditmemoRequestTypedDict,
+            operations.CreateAccountingCreditmemo2Request,
+            operations.CreateAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingCreditmemoResponse:
+    ) -> operations.CreateAccountingCreditmemo2Response:
         r"""Create a creditmemo
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingCreditmemoRequest
+                request, operations.CreateAccountingCreditmemo2Request
             )
-        request = cast(operations.CreateAccountingCreditmemoRequest, request)
+        request = cast(operations.CreateAccountingCreditmemo2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingCreditmemo",
+                operation_id="createAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingCreditmemoResponse(
+            return operations.CreateAccountingCreditmemo2Response(
                 accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
@@ -208,18 +208,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_creditmemo(
+    def get_accounting_creditmemo2(
         self,
         *,
         request: Union[
-            operations.GetAccountingCreditmemoRequest,
-            operations.GetAccountingCreditmemoRequestTypedDict,
+            operations.GetAccountingCreditmemo2Request,
+            operations.GetAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingCreditmemoResponse:
+    ) -> operations.GetAccountingCreditmemo2Response:
         r"""Retrieve a creditmemo
 
         :param request: The request object to send.
@@ -240,9 +240,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingCreditmemoRequest
+                request, operations.GetAccountingCreditmemo2Request
             )
-        request = cast(operations.GetAccountingCreditmemoRequest, request)
+        request = cast(operations.GetAccountingCreditmemo2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -273,7 +273,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingCreditmemo",
+                operation_id="getAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -283,7 +283,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingCreditmemoResponse(
+            return operations.GetAccountingCreditmemo2Response(
                 accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
@@ -300,18 +300,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_creditmemo_async(
+    async def get_accounting_creditmemo2_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingCreditmemoRequest,
-            operations.GetAccountingCreditmemoRequestTypedDict,
+            operations.GetAccountingCreditmemo2Request,
+            operations.GetAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingCreditmemoResponse:
+    ) -> operations.GetAccountingCreditmemo2Response:
         r"""Retrieve a creditmemo
 
         :param request: The request object to send.
@@ -332,9 +332,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingCreditmemoRequest
+                request, operations.GetAccountingCreditmemo2Request
             )
-        request = cast(operations.GetAccountingCreditmemoRequest, request)
+        request = cast(operations.GetAccountingCreditmemo2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -365,7 +365,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingCreditmemo",
+                operation_id="getAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -375,7 +375,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingCreditmemoResponse(
+            return operations.GetAccountingCreditmemo2Response(
                 accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
@@ -392,18 +392,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_creditmemoes(
+    def list_accounting_creditmemoes2(
         self,
         *,
         request: Union[
-            operations.ListAccountingCreditmemoesRequest,
-            operations.ListAccountingCreditmemoesRequestTypedDict,
+            operations.ListAccountingCreditmemoes2Request,
+            operations.ListAccountingCreditmemoes2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingCreditmemoesResponse:
+    ) -> operations.ListAccountingCreditmemoes2Response:
         r"""List all creditmemoes
 
         :param request: The request object to send.
@@ -424,9 +424,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingCreditmemoesRequest
+                request, operations.ListAccountingCreditmemoes2Request
             )
-        request = cast(operations.ListAccountingCreditmemoesRequest, request)
+        request = cast(operations.ListAccountingCreditmemoes2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -457,7 +457,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingCreditmemoes",
+                operation_id="listAccountingCreditmemoes2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -467,7 +467,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingCreditmemoesResponse(
+            return operations.ListAccountingCreditmemoes2Response(
                 accounting_creditmemoes=unmarshal_json_response(
                     Optional[List[shared.AccountingCreditmemo]], http_res
                 ),
@@ -484,18 +484,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_creditmemoes_async(
+    async def list_accounting_creditmemoes2_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingCreditmemoesRequest,
-            operations.ListAccountingCreditmemoesRequestTypedDict,
+            operations.ListAccountingCreditmemoes2Request,
+            operations.ListAccountingCreditmemoes2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingCreditmemoesResponse:
+    ) -> operations.ListAccountingCreditmemoes2Response:
         r"""List all creditmemoes
 
         :param request: The request object to send.
@@ -516,9 +516,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingCreditmemoesRequest
+                request, operations.ListAccountingCreditmemoes2Request
             )
-        request = cast(operations.ListAccountingCreditmemoesRequest, request)
+        request = cast(operations.ListAccountingCreditmemoes2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -549,7 +549,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingCreditmemoes",
+                operation_id="listAccountingCreditmemoes2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -559,7 +559,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingCreditmemoesResponse(
+            return operations.ListAccountingCreditmemoes2Response(
                 accounting_creditmemoes=unmarshal_json_response(
                     Optional[List[shared.AccountingCreditmemo]], http_res
                 ),
@@ -576,18 +576,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_creditmemo(
+    def patch_accounting_creditmemo2(
         self,
         *,
         request: Union[
-            operations.PatchAccountingCreditmemoRequest,
-            operations.PatchAccountingCreditmemoRequestTypedDict,
+            operations.PatchAccountingCreditmemo2Request,
+            operations.PatchAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingCreditmemoResponse:
+    ) -> operations.PatchAccountingCreditmemo2Response:
         r"""Update a creditmemo
 
         :param request: The request object to send.
@@ -608,9 +608,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchAccountingCreditmemoRequest
+                request, operations.PatchAccountingCreditmemo2Request
             )
-        request = cast(operations.PatchAccountingCreditmemoRequest, request)
+        request = cast(operations.PatchAccountingCreditmemo2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -648,7 +648,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingCreditmemo",
+                operation_id="patchAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -658,7 +658,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingCreditmemoResponse(
+            return operations.PatchAccountingCreditmemo2Response(
                 accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
@@ -675,18 +675,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_creditmemo_async(
+    async def patch_accounting_creditmemo2_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingCreditmemoRequest,
-            operations.PatchAccountingCreditmemoRequestTypedDict,
+            operations.PatchAccountingCreditmemo2Request,
+            operations.PatchAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingCreditmemoResponse:
+    ) -> operations.PatchAccountingCreditmemo2Response:
         r"""Update a creditmemo
 
         :param request: The request object to send.
@@ -707,9 +707,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchAccountingCreditmemoRequest
+                request, operations.PatchAccountingCreditmemo2Request
             )
-        request = cast(operations.PatchAccountingCreditmemoRequest, request)
+        request = cast(operations.PatchAccountingCreditmemo2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -747,7 +747,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingCreditmemo",
+                operation_id="patchAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -757,7 +757,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingCreditmemoResponse(
+            return operations.PatchAccountingCreditmemo2Response(
                 accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
@@ -774,18 +774,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_creditmemo(
+    def remove_accounting_creditmemo2(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingCreditmemoRequest,
-            operations.RemoveAccountingCreditmemoRequestTypedDict,
+            operations.RemoveAccountingCreditmemo2Request,
+            operations.RemoveAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingCreditmemoResponse:
+    ) -> operations.RemoveAccountingCreditmemo2Response:
         r"""Remove a creditmemo
 
         :param request: The request object to send.
@@ -806,9 +806,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingCreditmemoRequest
+                request, operations.RemoveAccountingCreditmemo2Request
             )
-        request = cast(operations.RemoveAccountingCreditmemoRequest, request)
+        request = cast(operations.RemoveAccountingCreditmemo2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -839,7 +839,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingCreditmemo",
+                operation_id="removeAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -849,7 +849,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingCreditmemoResponse(
+            return operations.RemoveAccountingCreditmemo2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -862,7 +862,7 @@ class Creditmemo(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingCreditmemoResponse(
+            return operations.RemoveAccountingCreditmemo2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -871,18 +871,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_creditmemo_async(
+    async def remove_accounting_creditmemo2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingCreditmemoRequest,
-            operations.RemoveAccountingCreditmemoRequestTypedDict,
+            operations.RemoveAccountingCreditmemo2Request,
+            operations.RemoveAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingCreditmemoResponse:
+    ) -> operations.RemoveAccountingCreditmemo2Response:
         r"""Remove a creditmemo
 
         :param request: The request object to send.
@@ -903,9 +903,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingCreditmemoRequest
+                request, operations.RemoveAccountingCreditmemo2Request
             )
-        request = cast(operations.RemoveAccountingCreditmemoRequest, request)
+        request = cast(operations.RemoveAccountingCreditmemo2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -936,7 +936,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingCreditmemo",
+                operation_id="removeAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -946,7 +946,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingCreditmemoResponse(
+            return operations.RemoveAccountingCreditmemo2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -959,7 +959,7 @@ class Creditmemo(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingCreditmemoResponse(
+            return operations.RemoveAccountingCreditmemo2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -968,18 +968,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_creditmemo(
+    def update_accounting_creditmemo2(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingCreditmemoRequest,
-            operations.UpdateAccountingCreditmemoRequestTypedDict,
+            operations.UpdateAccountingCreditmemo2Request,
+            operations.UpdateAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingCreditmemoResponse:
+    ) -> operations.UpdateAccountingCreditmemo2Response:
         r"""Update a creditmemo
 
         :param request: The request object to send.
@@ -1000,9 +1000,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingCreditmemoRequest
+                request, operations.UpdateAccountingCreditmemo2Request
             )
-        request = cast(operations.UpdateAccountingCreditmemoRequest, request)
+        request = cast(operations.UpdateAccountingCreditmemo2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1040,7 +1040,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingCreditmemo",
+                operation_id="updateAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1050,7 +1050,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingCreditmemoResponse(
+            return operations.UpdateAccountingCreditmemo2Response(
                 accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
@@ -1067,18 +1067,18 @@ class Creditmemo(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_creditmemo_async(
+    async def update_accounting_creditmemo2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingCreditmemoRequest,
-            operations.UpdateAccountingCreditmemoRequestTypedDict,
+            operations.UpdateAccountingCreditmemo2Request,
+            operations.UpdateAccountingCreditmemo2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingCreditmemoResponse:
+    ) -> operations.UpdateAccountingCreditmemo2Response:
         r"""Update a creditmemo
 
         :param request: The request object to send.
@@ -1099,9 +1099,9 @@ class Creditmemo(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingCreditmemoRequest
+                request, operations.UpdateAccountingCreditmemo2Request
             )
-        request = cast(operations.UpdateAccountingCreditmemoRequest, request)
+        request = cast(operations.UpdateAccountingCreditmemo2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1139,7 +1139,7 @@ class Creditmemo(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingCreditmemo",
+                operation_id="updateAccountingCreditmemo2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1149,7 +1149,7 @@ class Creditmemo(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingCreditmemoResponse(
+            return operations.UpdateAccountingCreditmemo2Response(
                 accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),

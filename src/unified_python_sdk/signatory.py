@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Signatory(BaseSDK):
-    def create_signing_signatory(
+    def create_signing_signatory2(
         self,
         *,
         request: Union[
-            operations.CreateSigningSignatoryRequest,
-            operations.CreateSigningSignatoryRequestTypedDict,
+            operations.CreateSigningSignatory2Request,
+            operations.CreateSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateSigningSignatoryResponse:
+    ) -> operations.CreateSigningSignatory2Response:
         r"""Create a signatory
 
         :param request: The request object to send.
@@ -41,8 +41,10 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateSigningSignatoryRequest)
-        request = cast(operations.CreateSigningSignatoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.CreateSigningSignatory2Request
+            )
+        request = cast(operations.CreateSigningSignatory2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +78,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createSigningSignatory",
+                operation_id="createSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +88,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateSigningSignatoryResponse(
+            return operations.CreateSigningSignatory2Response(
                 signing_signatory=unmarshal_json_response(
                     Optional[shared.SigningSignatory], http_res
                 ),
@@ -103,18 +105,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_signing_signatory_async(
+    async def create_signing_signatory2_async(
         self,
         *,
         request: Union[
-            operations.CreateSigningSignatoryRequest,
-            operations.CreateSigningSignatoryRequestTypedDict,
+            operations.CreateSigningSignatory2Request,
+            operations.CreateSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateSigningSignatoryResponse:
+    ) -> operations.CreateSigningSignatory2Response:
         r"""Create a signatory
 
         :param request: The request object to send.
@@ -134,8 +136,10 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateSigningSignatoryRequest)
-        request = cast(operations.CreateSigningSignatoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.CreateSigningSignatory2Request
+            )
+        request = cast(operations.CreateSigningSignatory2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +173,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createSigningSignatory",
+                operation_id="createSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +183,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateSigningSignatoryResponse(
+            return operations.CreateSigningSignatory2Response(
                 signing_signatory=unmarshal_json_response(
                     Optional[shared.SigningSignatory], http_res
                 ),
@@ -196,18 +200,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_signing_signatory(
+    def get_signing_signatory2(
         self,
         *,
         request: Union[
-            operations.GetSigningSignatoryRequest,
-            operations.GetSigningSignatoryRequestTypedDict,
+            operations.GetSigningSignatory2Request,
+            operations.GetSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetSigningSignatoryResponse:
+    ) -> operations.GetSigningSignatory2Response:
         r"""Retrieve a signatory
 
         :param request: The request object to send.
@@ -227,8 +231,8 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetSigningSignatoryRequest)
-        request = cast(operations.GetSigningSignatoryRequest, request)
+            request = utils.unmarshal(request, operations.GetSigningSignatory2Request)
+        request = cast(operations.GetSigningSignatory2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -259,7 +263,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getSigningSignatory",
+                operation_id="getSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -269,7 +273,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetSigningSignatoryResponse(
+            return operations.GetSigningSignatory2Response(
                 signing_signatory=unmarshal_json_response(
                     Optional[shared.SigningSignatory], http_res
                 ),
@@ -286,18 +290,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_signing_signatory_async(
+    async def get_signing_signatory2_async(
         self,
         *,
         request: Union[
-            operations.GetSigningSignatoryRequest,
-            operations.GetSigningSignatoryRequestTypedDict,
+            operations.GetSigningSignatory2Request,
+            operations.GetSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetSigningSignatoryResponse:
+    ) -> operations.GetSigningSignatory2Response:
         r"""Retrieve a signatory
 
         :param request: The request object to send.
@@ -317,8 +321,8 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetSigningSignatoryRequest)
-        request = cast(operations.GetSigningSignatoryRequest, request)
+            request = utils.unmarshal(request, operations.GetSigningSignatory2Request)
+        request = cast(operations.GetSigningSignatory2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +353,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getSigningSignatory",
+                operation_id="getSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -359,7 +363,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetSigningSignatoryResponse(
+            return operations.GetSigningSignatory2Response(
                 signing_signatory=unmarshal_json_response(
                     Optional[shared.SigningSignatory], http_res
                 ),
@@ -376,18 +380,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_signing_signatories(
+    def list_signing_signatories2(
         self,
         *,
         request: Union[
-            operations.ListSigningSignatoriesRequest,
-            operations.ListSigningSignatoriesRequestTypedDict,
+            operations.ListSigningSignatories2Request,
+            operations.ListSigningSignatories2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListSigningSignatoriesResponse:
+    ) -> operations.ListSigningSignatories2Response:
         r"""List all signatories
 
         :param request: The request object to send.
@@ -407,8 +411,10 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListSigningSignatoriesRequest)
-        request = cast(operations.ListSigningSignatoriesRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListSigningSignatories2Request
+            )
+        request = cast(operations.ListSigningSignatories2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -439,7 +445,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listSigningSignatories",
+                operation_id="listSigningSignatories2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -449,7 +455,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListSigningSignatoriesResponse(
+            return operations.ListSigningSignatories2Response(
                 signing_signatories=unmarshal_json_response(
                     Optional[List[shared.SigningSignatory]], http_res
                 ),
@@ -466,18 +472,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_signing_signatories_async(
+    async def list_signing_signatories2_async(
         self,
         *,
         request: Union[
-            operations.ListSigningSignatoriesRequest,
-            operations.ListSigningSignatoriesRequestTypedDict,
+            operations.ListSigningSignatories2Request,
+            operations.ListSigningSignatories2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListSigningSignatoriesResponse:
+    ) -> operations.ListSigningSignatories2Response:
         r"""List all signatories
 
         :param request: The request object to send.
@@ -497,8 +503,10 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListSigningSignatoriesRequest)
-        request = cast(operations.ListSigningSignatoriesRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListSigningSignatories2Request
+            )
+        request = cast(operations.ListSigningSignatories2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -529,7 +537,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listSigningSignatories",
+                operation_id="listSigningSignatories2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -539,7 +547,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListSigningSignatoriesResponse(
+            return operations.ListSigningSignatories2Response(
                 signing_signatories=unmarshal_json_response(
                     Optional[List[shared.SigningSignatory]], http_res
                 ),
@@ -556,18 +564,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_signing_signatory(
+    def patch_signing_signatory2(
         self,
         *,
         request: Union[
-            operations.PatchSigningSignatoryRequest,
-            operations.PatchSigningSignatoryRequestTypedDict,
+            operations.PatchSigningSignatory2Request,
+            operations.PatchSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchSigningSignatoryResponse:
+    ) -> operations.PatchSigningSignatory2Response:
         r"""Update a signatory
 
         :param request: The request object to send.
@@ -587,8 +595,8 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchSigningSignatoryRequest)
-        request = cast(operations.PatchSigningSignatoryRequest, request)
+            request = utils.unmarshal(request, operations.PatchSigningSignatory2Request)
+        request = cast(operations.PatchSigningSignatory2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -622,7 +630,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchSigningSignatory",
+                operation_id="patchSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -632,7 +640,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchSigningSignatoryResponse(
+            return operations.PatchSigningSignatory2Response(
                 signing_signatory=unmarshal_json_response(
                     Optional[shared.SigningSignatory], http_res
                 ),
@@ -649,18 +657,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_signing_signatory_async(
+    async def patch_signing_signatory2_async(
         self,
         *,
         request: Union[
-            operations.PatchSigningSignatoryRequest,
-            operations.PatchSigningSignatoryRequestTypedDict,
+            operations.PatchSigningSignatory2Request,
+            operations.PatchSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchSigningSignatoryResponse:
+    ) -> operations.PatchSigningSignatory2Response:
         r"""Update a signatory
 
         :param request: The request object to send.
@@ -680,8 +688,8 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchSigningSignatoryRequest)
-        request = cast(operations.PatchSigningSignatoryRequest, request)
+            request = utils.unmarshal(request, operations.PatchSigningSignatory2Request)
+        request = cast(operations.PatchSigningSignatory2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -715,7 +723,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchSigningSignatory",
+                operation_id="patchSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -725,7 +733,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchSigningSignatoryResponse(
+            return operations.PatchSigningSignatory2Response(
                 signing_signatory=unmarshal_json_response(
                     Optional[shared.SigningSignatory], http_res
                 ),
@@ -742,18 +750,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_signing_signatory(
+    def remove_signing_signatory2(
         self,
         *,
         request: Union[
-            operations.RemoveSigningSignatoryRequest,
-            operations.RemoveSigningSignatoryRequestTypedDict,
+            operations.RemoveSigningSignatory2Request,
+            operations.RemoveSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveSigningSignatoryResponse:
+    ) -> operations.RemoveSigningSignatory2Response:
         r"""Remove a signatory
 
         :param request: The request object to send.
@@ -773,8 +781,10 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveSigningSignatoryRequest)
-        request = cast(operations.RemoveSigningSignatoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.RemoveSigningSignatory2Request
+            )
+        request = cast(operations.RemoveSigningSignatory2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -805,7 +815,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeSigningSignatory",
+                operation_id="removeSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -815,7 +825,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveSigningSignatoryResponse(
+            return operations.RemoveSigningSignatory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -828,7 +838,7 @@ class Signatory(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveSigningSignatoryResponse(
+            return operations.RemoveSigningSignatory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -837,18 +847,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_signing_signatory_async(
+    async def remove_signing_signatory2_async(
         self,
         *,
         request: Union[
-            operations.RemoveSigningSignatoryRequest,
-            operations.RemoveSigningSignatoryRequestTypedDict,
+            operations.RemoveSigningSignatory2Request,
+            operations.RemoveSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveSigningSignatoryResponse:
+    ) -> operations.RemoveSigningSignatory2Response:
         r"""Remove a signatory
 
         :param request: The request object to send.
@@ -868,8 +878,10 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveSigningSignatoryRequest)
-        request = cast(operations.RemoveSigningSignatoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.RemoveSigningSignatory2Request
+            )
+        request = cast(operations.RemoveSigningSignatory2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -900,7 +912,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeSigningSignatory",
+                operation_id="removeSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -910,7 +922,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveSigningSignatoryResponse(
+            return operations.RemoveSigningSignatory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -923,7 +935,7 @@ class Signatory(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveSigningSignatoryResponse(
+            return operations.RemoveSigningSignatory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -932,18 +944,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_signing_signatory(
+    def update_signing_signatory2(
         self,
         *,
         request: Union[
-            operations.UpdateSigningSignatoryRequest,
-            operations.UpdateSigningSignatoryRequestTypedDict,
+            operations.UpdateSigningSignatory2Request,
+            operations.UpdateSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateSigningSignatoryResponse:
+    ) -> operations.UpdateSigningSignatory2Response:
         r"""Update a signatory
 
         :param request: The request object to send.
@@ -963,8 +975,10 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateSigningSignatoryRequest)
-        request = cast(operations.UpdateSigningSignatoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.UpdateSigningSignatory2Request
+            )
+        request = cast(operations.UpdateSigningSignatory2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -998,7 +1012,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateSigningSignatory",
+                operation_id="updateSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1008,7 +1022,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateSigningSignatoryResponse(
+            return operations.UpdateSigningSignatory2Response(
                 signing_signatory=unmarshal_json_response(
                     Optional[shared.SigningSignatory], http_res
                 ),
@@ -1025,18 +1039,18 @@ class Signatory(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_signing_signatory_async(
+    async def update_signing_signatory2_async(
         self,
         *,
         request: Union[
-            operations.UpdateSigningSignatoryRequest,
-            operations.UpdateSigningSignatoryRequestTypedDict,
+            operations.UpdateSigningSignatory2Request,
+            operations.UpdateSigningSignatory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateSigningSignatoryResponse:
+    ) -> operations.UpdateSigningSignatory2Response:
         r"""Update a signatory
 
         :param request: The request object to send.
@@ -1056,8 +1070,10 @@ class Signatory(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateSigningSignatoryRequest)
-        request = cast(operations.UpdateSigningSignatoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.UpdateSigningSignatory2Request
+            )
+        request = cast(operations.UpdateSigningSignatory2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1091,7 +1107,7 @@ class Signatory(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateSigningSignatory",
+                operation_id="updateSigningSignatory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1101,7 +1117,7 @@ class Signatory(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateSigningSignatoryResponse(
+            return operations.UpdateSigningSignatory2Response(
                 signing_signatory=unmarshal_json_response(
                     Optional[shared.SigningSignatory], http_res
                 ),

@@ -4,32 +4,32 @@
 
 ### Available Operations
 
-* [create_kms_comment](#create_kms_comment) - Create a comment
-* [create_kms_page](#create_kms_page) - Create a page
-* [create_kms_space](#create_kms_space) - Create a space
-* [get_kms_comment](#get_kms_comment) - Retrieve a comment
-* [get_kms_page](#get_kms_page) - Retrieve a page
-* [get_kms_space](#get_kms_space) - Retrieve a space
-* [list_kms_comments](#list_kms_comments) - List all comments
-* [list_kms_pages](#list_kms_pages) - List all pages
-* [list_kms_spaces](#list_kms_spaces) - List all spaces
-* [patch_kms_comment](#patch_kms_comment) - Update a comment
-* [patch_kms_page](#patch_kms_page) - Update a page
-* [patch_kms_space](#patch_kms_space) - Update a space
-* [remove_kms_comment](#remove_kms_comment) - Remove a comment
-* [remove_kms_page](#remove_kms_page) - Remove a page
-* [remove_kms_space](#remove_kms_space) - Remove a space
-* [update_kms_comment](#update_kms_comment) - Update a comment
-* [update_kms_page](#update_kms_page) - Update a page
-* [update_kms_space](#update_kms_space) - Update a space
+* [create_kms_comment2](#create_kms_comment2) - Create a comment
+* [create_kms_page2](#create_kms_page2) - Create a page
+* [create_kms_space2](#create_kms_space2) - Create a space
+* [get_kms_comment2](#get_kms_comment2) - Retrieve a comment
+* [get_kms_page2](#get_kms_page2) - Retrieve a page
+* [get_kms_space2](#get_kms_space2) - Retrieve a space
+* [list_kms_comments2](#list_kms_comments2) - List all comments
+* [list_kms_pages2](#list_kms_pages2) - List all pages
+* [list_kms_spaces2](#list_kms_spaces2) - List all spaces
+* [patch_kms_comment2](#patch_kms_comment2) - Update a comment
+* [patch_kms_page2](#patch_kms_page2) - Update a page
+* [patch_kms_space2](#patch_kms_space2) - Update a space
+* [remove_kms_comment2](#remove_kms_comment2) - Remove a comment
+* [remove_kms_page2](#remove_kms_page2) - Remove a page
+* [remove_kms_space2](#remove_kms_space2) - Remove a space
+* [update_kms_comment2](#update_kms_comment2) - Update a comment
+* [update_kms_page2](#update_kms_page2) - Update a page
+* [update_kms_space2](#update_kms_space2) - Update a space
 
-## create_kms_comment
+## create_kms_comment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="createKmsComment2" method="post" path="/kms/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -41,7 +41,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.create_kms_comment(request={
+    res = unified_to.kms.create_kms_comment2(request={
         "kms_comment": {},
         "connection_id": "<id>",
     })
@@ -55,14 +55,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.CreateKmsCommentRequest](../../models/operations/createkmscommentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateKmsComment2Request](../../models/operations/createkmscomment2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.CreateKmsCommentResponse](../../models/operations/createkmscommentresponse.md)**
+**[operations.CreateKmsComment2Response](../../models/operations/createkmscomment2response.md)**
 
 ### Errors
 
@@ -70,13 +70,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_kms_page
+## create_kms_page2
 
 Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="python" operationID="createKmsPage2" method="post" path="/kms/{connection_id}/page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -88,9 +88,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.create_kms_page(request={
+    res = unified_to.kms.create_kms_page2(request={
         "kms_page": {
-            "type": shared.KmsPageType.TEXT,
+            "type": shared.KmsPageType.OTHER,
         },
         "connection_id": "<id>",
     })
@@ -104,14 +104,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateKmsPageRequest](../../models/operations/createkmspagerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.CreateKmsPage2Request](../../models/operations/createkmspage2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.CreateKmsPageResponse](../../models/operations/createkmspageresponse.md)**
+**[operations.CreateKmsPage2Response](../../models/operations/createkmspage2response.md)**
 
 ### Errors
 
@@ -119,13 +119,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_kms_space
+## create_kms_space2
 
 Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="python" operationID="createKmsSpace2" method="post" path="/kms/{connection_id}/space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -137,7 +137,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.create_kms_space(request={
+    res = unified_to.kms.create_kms_space2(request={
         "kms_space": {},
         "connection_id": "<id>",
     })
@@ -151,14 +151,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.CreateKmsSpaceRequest](../../models/operations/createkmsspacerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateKmsSpace2Request](../../models/operations/createkmsspace2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.CreateKmsSpaceResponse](../../models/operations/createkmsspaceresponse.md)**
+**[operations.CreateKmsSpace2Response](../../models/operations/createkmsspace2response.md)**
 
 ### Errors
 
@@ -166,13 +166,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_kms_comment
+## get_kms_comment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="getKmsComment2" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -184,7 +184,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.get_kms_comment(request={
+    res = unified_to.kms.get_kms_comment2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -198,14 +198,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetKmsCommentRequest](../../models/operations/getkmscommentrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetKmsComment2Request](../../models/operations/getkmscomment2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetKmsCommentResponse](../../models/operations/getkmscommentresponse.md)**
+**[operations.GetKmsComment2Response](../../models/operations/getkmscomment2response.md)**
 
 ### Errors
 
@@ -213,13 +213,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_kms_page
+## get_kms_page2
 
 Retrieve a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="python" operationID="getKmsPage2" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -231,7 +231,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.get_kms_page(request={
+    res = unified_to.kms.get_kms_page2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -245,14 +245,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetKmsPageRequest](../../models/operations/getkmspagerequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `retries`                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)             | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetKmsPage2Request](../../models/operations/getkmspage2request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
 
 ### Response
 
-**[operations.GetKmsPageResponse](../../models/operations/getkmspageresponse.md)**
+**[operations.GetKmsPage2Response](../../models/operations/getkmspage2response.md)**
 
 ### Errors
 
@@ -260,13 +260,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_kms_space
+## get_kms_space2
 
 Retrieve a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="python" operationID="getKmsSpace2" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -278,7 +278,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.get_kms_space(request={
+    res = unified_to.kms.get_kms_space2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -292,14 +292,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.GetKmsSpaceRequest](../../models/operations/getkmsspacerequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetKmsSpace2Request](../../models/operations/getkmsspace2request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
 
 ### Response
 
-**[operations.GetKmsSpaceResponse](../../models/operations/getkmsspaceresponse.md)**
+**[operations.GetKmsSpace2Response](../../models/operations/getkmsspace2response.md)**
 
 ### Errors
 
@@ -307,13 +307,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_kms_comments
+## list_kms_comments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="listKmsComments2" method="get" path="/kms/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -325,7 +325,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.list_kms_comments(request={
+    res = unified_to.kms.list_kms_comments2(request={
         "connection_id": "<id>",
     })
 
@@ -338,14 +338,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListKmsCommentsRequest](../../models/operations/listkmscommentsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListKmsComments2Request](../../models/operations/listkmscomments2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListKmsCommentsResponse](../../models/operations/listkmscommentsresponse.md)**
+**[operations.ListKmsComments2Response](../../models/operations/listkmscomments2response.md)**
 
 ### Errors
 
@@ -353,13 +353,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_kms_pages
+## list_kms_pages2
 
 List all pages
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="python" operationID="listKmsPages2" method="get" path="/kms/{connection_id}/page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -371,7 +371,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.list_kms_pages(request={
+    res = unified_to.kms.list_kms_pages2(request={
         "connection_id": "<id>",
     })
 
@@ -384,14 +384,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListKmsPagesRequest](../../models/operations/listkmspagesrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.ListKmsPages2Request](../../models/operations/listkmspages2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.ListKmsPagesResponse](../../models/operations/listkmspagesresponse.md)**
+**[operations.ListKmsPages2Response](../../models/operations/listkmspages2response.md)**
 
 ### Errors
 
@@ -399,13 +399,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_kms_spaces
+## list_kms_spaces2
 
 List all spaces
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="python" operationID="listKmsSpaces2" method="get" path="/kms/{connection_id}/space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -417,7 +417,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.list_kms_spaces(request={
+    res = unified_to.kms.list_kms_spaces2(request={
         "connection_id": "<id>",
     })
 
@@ -430,14 +430,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.ListKmsSpacesRequest](../../models/operations/listkmsspacesrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListKmsSpaces2Request](../../models/operations/listkmsspaces2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.ListKmsSpacesResponse](../../models/operations/listkmsspacesresponse.md)**
+**[operations.ListKmsSpaces2Response](../../models/operations/listkmsspaces2response.md)**
 
 ### Errors
 
@@ -445,13 +445,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_kms_comment
+## patch_kms_comment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchKmsComment2" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -463,7 +463,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.patch_kms_comment(request={
+    res = unified_to.kms.patch_kms_comment2(request={
         "kms_comment": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -473,6 +473,245 @@ with UnifiedTo(
 
     # Handle response
     print(res.kms_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchKmsComment2Request](../../models/operations/patchkmscomment2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.PatchKmsComment2Response](../../models/operations/patchkmscomment2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_kms_page2
+
+Update a page
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchKmsPage2" method="patch" path="/kms/{connection_id}/page/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.kms.patch_kms_page2(request={
+        "kms_page": {
+            "type": shared.KmsPageType.OTHER,
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.kms_page is not None
+
+    # Handle response
+    print(res.kms_page)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.PatchKmsPage2Request](../../models/operations/patchkmspage2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.PatchKmsPage2Response](../../models/operations/patchkmspage2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_kms_space2
+
+Update a space
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchKmsSpace2" method="patch" path="/kms/{connection_id}/space/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.kms.patch_kms_space2(request={
+        "kms_space": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.kms_space is not None
+
+    # Handle response
+    print(res.kms_space)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchKmsSpace2Request](../../models/operations/patchkmsspace2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.PatchKmsSpace2Response](../../models/operations/patchkmsspace2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_kms_comment2
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeKmsComment2" method="delete" path="/kms/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.kms.remove_kms_comment2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveKmsComment2Request](../../models/operations/removekmscomment2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.RemoveKmsComment2Response](../../models/operations/removekmscomment2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_kms_page2
+
+Remove a page
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeKmsPage2" method="delete" path="/kms/{connection_id}/page/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.kms.remove_kms_page2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.RemoveKmsPage2Request](../../models/operations/removekmspage2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.RemoveKmsPage2Response](../../models/operations/removekmspage2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_kms_space2
+
+Remove a space
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeKmsSpace2" method="delete" path="/kms/{connection_id}/space/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.kms.remove_kms_space2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -480,12 +719,12 @@ with UnifiedTo(
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.PatchKmsCommentRequest](../../models/operations/patchkmscommentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `request`                                                                              | [operations.RemoveKmsSpace2Request](../../models/operations/removekmsspace2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 | `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.PatchKmsCommentResponse](../../models/operations/patchkmscommentresponse.md)**
+**[operations.RemoveKmsSpace2Response](../../models/operations/removekmsspace2response.md)**
 
 ### Errors
 
@@ -493,252 +732,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_kms_page
-
-Update a page
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.kms.patch_kms_page(request={
-        "kms_page": {
-            "type": shared.KmsPageType.OTHER,
-        },
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.kms_page is not None
-
-    # Handle response
-    print(res.kms_page)
-
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchKmsPageRequest](../../models/operations/patchkmspagerequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
-
-### Response
-
-**[operations.PatchKmsPageResponse](../../models/operations/patchkmspageresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## patch_kms_space
-
-Update a space
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.kms.patch_kms_space(request={
-        "kms_space": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.kms_space is not None
-
-    # Handle response
-    print(res.kms_space)
-
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.PatchKmsSpaceRequest](../../models/operations/patchkmsspacerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
-
-### Response
-
-**[operations.PatchKmsSpaceResponse](../../models/operations/patchkmsspaceresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_kms_comment
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.kms.remove_kms_comment(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.RemoveKmsCommentRequest](../../models/operations/removekmscommentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.RemoveKmsCommentResponse](../../models/operations/removekmscommentresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_kms_page
-
-Remove a page
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.kms.remove_kms_page(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveKmsPageRequest](../../models/operations/removekmspagerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
-
-### Response
-
-**[operations.RemoveKmsPageResponse](../../models/operations/removekmspageresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_kms_space
-
-Remove a space
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.kms.remove_kms_space(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.RemoveKmsSpaceRequest](../../models/operations/removekmsspacerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
-
-### Response
-
-**[operations.RemoveKmsSpaceResponse](../../models/operations/removekmsspaceresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_kms_comment
+## update_kms_comment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateKmsComment2" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -750,7 +750,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.update_kms_comment(request={
+    res = unified_to.kms.update_kms_comment2(request={
         "kms_comment": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -765,14 +765,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.UpdateKmsCommentRequest](../../models/operations/updatekmscommentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateKmsComment2Request](../../models/operations/updatekmscomment2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.UpdateKmsCommentResponse](../../models/operations/updatekmscommentresponse.md)**
+**[operations.UpdateKmsComment2Response](../../models/operations/updatekmscomment2response.md)**
 
 ### Errors
 
@@ -780,13 +780,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_kms_page
+## update_kms_page2
 
 Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateKmsPage2" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -798,9 +798,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.update_kms_page(request={
+    res = unified_to.kms.update_kms_page2(request={
         "kms_page": {
-            "type": shared.KmsPageType.OTHER,
+            "type": shared.KmsPageType.MARKDOWN,
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -815,14 +815,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateKmsPageRequest](../../models/operations/updatekmspagerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.UpdateKmsPage2Request](../../models/operations/updatekmspage2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.UpdateKmsPageResponse](../../models/operations/updatekmspageresponse.md)**
+**[operations.UpdateKmsPage2Response](../../models/operations/updatekmspage2response.md)**
 
 ### Errors
 
@@ -830,13 +830,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_kms_space
+## update_kms_space2
 
 Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateKmsSpace2" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -848,7 +848,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.kms.update_kms_space(request={
+    res = unified_to.kms.update_kms_space2(request={
         "kms_space": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -863,14 +863,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.UpdateKmsSpaceRequest](../../models/operations/updatekmsspacerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateKmsSpace2Request](../../models/operations/updatekmsspace2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.UpdateKmsSpaceResponse](../../models/operations/updatekmsspaceresponse.md)**
+**[operations.UpdateKmsSpace2Response](../../models/operations/updatekmsspace2response.md)**
 
 ### Errors
 

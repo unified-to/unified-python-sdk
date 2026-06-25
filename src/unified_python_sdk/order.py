@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Order(BaseSDK):
-    def create_accounting_order(
+    def create_accounting_order2(
         self,
         *,
         request: Union[
-            operations.CreateAccountingOrderRequest,
-            operations.CreateAccountingOrderRequestTypedDict,
+            operations.CreateAccountingOrder2Request,
+            operations.CreateAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingOrderResponse:
+    ) -> operations.CreateAccountingOrder2Response:
         r"""Create an order
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAccountingOrderRequest)
-        request = cast(operations.CreateAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.CreateAccountingOrder2Request)
+        request = cast(operations.CreateAccountingOrder2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingOrder",
+                operation_id="createAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingOrderResponse(
+            return operations.CreateAccountingOrder2Response(
                 accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
@@ -103,18 +103,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_order_async(
+    async def create_accounting_order2_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingOrderRequest,
-            operations.CreateAccountingOrderRequestTypedDict,
+            operations.CreateAccountingOrder2Request,
+            operations.CreateAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingOrderResponse:
+    ) -> operations.CreateAccountingOrder2Response:
         r"""Create an order
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAccountingOrderRequest)
-        request = cast(operations.CreateAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.CreateAccountingOrder2Request)
+        request = cast(operations.CreateAccountingOrder2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingOrder",
+                operation_id="createAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingOrderResponse(
+            return operations.CreateAccountingOrder2Response(
                 accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
@@ -196,18 +196,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_order(
+    def get_accounting_order2(
         self,
         *,
         request: Union[
-            operations.GetAccountingOrderRequest,
-            operations.GetAccountingOrderRequestTypedDict,
+            operations.GetAccountingOrder2Request,
+            operations.GetAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingOrderResponse:
+    ) -> operations.GetAccountingOrder2Response:
         r"""Retrieve an order
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingOrderRequest)
-        request = cast(operations.GetAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.GetAccountingOrder2Request)
+        request = cast(operations.GetAccountingOrder2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -259,7 +259,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingOrder",
+                operation_id="getAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -269,7 +269,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingOrderResponse(
+            return operations.GetAccountingOrder2Response(
                 accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
@@ -286,18 +286,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_order_async(
+    async def get_accounting_order2_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingOrderRequest,
-            operations.GetAccountingOrderRequestTypedDict,
+            operations.GetAccountingOrder2Request,
+            operations.GetAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingOrderResponse:
+    ) -> operations.GetAccountingOrder2Response:
         r"""Retrieve an order
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingOrderRequest)
-        request = cast(operations.GetAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.GetAccountingOrder2Request)
+        request = cast(operations.GetAccountingOrder2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingOrder",
+                operation_id="getAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -359,7 +359,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingOrderResponse(
+            return operations.GetAccountingOrder2Response(
                 accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
@@ -376,18 +376,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_orders(
+    def list_accounting_orders2(
         self,
         *,
         request: Union[
-            operations.ListAccountingOrdersRequest,
-            operations.ListAccountingOrdersRequestTypedDict,
+            operations.ListAccountingOrders2Request,
+            operations.ListAccountingOrders2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingOrdersResponse:
+    ) -> operations.ListAccountingOrders2Response:
         r"""List all orders
 
         :param request: The request object to send.
@@ -407,8 +407,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAccountingOrdersRequest)
-        request = cast(operations.ListAccountingOrdersRequest, request)
+            request = utils.unmarshal(request, operations.ListAccountingOrders2Request)
+        request = cast(operations.ListAccountingOrders2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -439,7 +439,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingOrders",
+                operation_id="listAccountingOrders2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -449,7 +449,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingOrdersResponse(
+            return operations.ListAccountingOrders2Response(
                 accounting_orders=unmarshal_json_response(
                     Optional[List[shared.AccountingOrder]], http_res
                 ),
@@ -466,18 +466,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_orders_async(
+    async def list_accounting_orders2_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingOrdersRequest,
-            operations.ListAccountingOrdersRequestTypedDict,
+            operations.ListAccountingOrders2Request,
+            operations.ListAccountingOrders2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingOrdersResponse:
+    ) -> operations.ListAccountingOrders2Response:
         r"""List all orders
 
         :param request: The request object to send.
@@ -497,8 +497,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAccountingOrdersRequest)
-        request = cast(operations.ListAccountingOrdersRequest, request)
+            request = utils.unmarshal(request, operations.ListAccountingOrders2Request)
+        request = cast(operations.ListAccountingOrders2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -529,7 +529,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingOrders",
+                operation_id="listAccountingOrders2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -539,7 +539,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingOrdersResponse(
+            return operations.ListAccountingOrders2Response(
                 accounting_orders=unmarshal_json_response(
                     Optional[List[shared.AccountingOrder]], http_res
                 ),
@@ -556,18 +556,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_order(
+    def patch_accounting_order2(
         self,
         *,
         request: Union[
-            operations.PatchAccountingOrderRequest,
-            operations.PatchAccountingOrderRequestTypedDict,
+            operations.PatchAccountingOrder2Request,
+            operations.PatchAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingOrderResponse:
+    ) -> operations.PatchAccountingOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -587,8 +587,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAccountingOrderRequest)
-        request = cast(operations.PatchAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.PatchAccountingOrder2Request)
+        request = cast(operations.PatchAccountingOrder2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -622,7 +622,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingOrder",
+                operation_id="patchAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -632,7 +632,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingOrderResponse(
+            return operations.PatchAccountingOrder2Response(
                 accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
@@ -649,18 +649,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_order_async(
+    async def patch_accounting_order2_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingOrderRequest,
-            operations.PatchAccountingOrderRequestTypedDict,
+            operations.PatchAccountingOrder2Request,
+            operations.PatchAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingOrderResponse:
+    ) -> operations.PatchAccountingOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -680,8 +680,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAccountingOrderRequest)
-        request = cast(operations.PatchAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.PatchAccountingOrder2Request)
+        request = cast(operations.PatchAccountingOrder2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -715,7 +715,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingOrder",
+                operation_id="patchAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -725,7 +725,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingOrderResponse(
+            return operations.PatchAccountingOrder2Response(
                 accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
@@ -742,18 +742,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_assessment_order(
+    def patch_assessment_order2(
         self,
         *,
         request: Union[
-            operations.PatchAssessmentOrderRequest,
-            operations.PatchAssessmentOrderRequestTypedDict,
+            operations.PatchAssessmentOrder2Request,
+            operations.PatchAssessmentOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAssessmentOrderResponse:
+    ) -> operations.PatchAssessmentOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -773,8 +773,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAssessmentOrderRequest)
-        request = cast(operations.PatchAssessmentOrderRequest, request)
+            request = utils.unmarshal(request, operations.PatchAssessmentOrder2Request)
+        request = cast(operations.PatchAssessmentOrder2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -808,7 +808,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAssessmentOrder",
+                operation_id="patchAssessmentOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -818,7 +818,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAssessmentOrderResponse(
+            return operations.PatchAssessmentOrder2Response(
                 assessment_order=unmarshal_json_response(
                     Optional[shared.AssessmentOrder], http_res
                 ),
@@ -835,18 +835,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_assessment_order_async(
+    async def patch_assessment_order2_async(
         self,
         *,
         request: Union[
-            operations.PatchAssessmentOrderRequest,
-            operations.PatchAssessmentOrderRequestTypedDict,
+            operations.PatchAssessmentOrder2Request,
+            operations.PatchAssessmentOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAssessmentOrderResponse:
+    ) -> operations.PatchAssessmentOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -866,8 +866,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAssessmentOrderRequest)
-        request = cast(operations.PatchAssessmentOrderRequest, request)
+            request = utils.unmarshal(request, operations.PatchAssessmentOrder2Request)
+        request = cast(operations.PatchAssessmentOrder2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -901,7 +901,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAssessmentOrder",
+                operation_id="patchAssessmentOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -911,7 +911,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAssessmentOrderResponse(
+            return operations.PatchAssessmentOrder2Response(
                 assessment_order=unmarshal_json_response(
                     Optional[shared.AssessmentOrder], http_res
                 ),
@@ -928,18 +928,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_order(
+    def remove_accounting_order2(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingOrderRequest,
-            operations.RemoveAccountingOrderRequestTypedDict,
+            operations.RemoveAccountingOrder2Request,
+            operations.RemoveAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingOrderResponse:
+    ) -> operations.RemoveAccountingOrder2Response:
         r"""Remove an order
 
         :param request: The request object to send.
@@ -959,8 +959,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAccountingOrderRequest)
-        request = cast(operations.RemoveAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAccountingOrder2Request)
+        request = cast(operations.RemoveAccountingOrder2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -991,7 +991,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingOrder",
+                operation_id="removeAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1001,7 +1001,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingOrderResponse(
+            return operations.RemoveAccountingOrder2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1014,7 +1014,7 @@ class Order(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingOrderResponse(
+            return operations.RemoveAccountingOrder2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1023,18 +1023,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_order_async(
+    async def remove_accounting_order2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingOrderRequest,
-            operations.RemoveAccountingOrderRequestTypedDict,
+            operations.RemoveAccountingOrder2Request,
+            operations.RemoveAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingOrderResponse:
+    ) -> operations.RemoveAccountingOrder2Response:
         r"""Remove an order
 
         :param request: The request object to send.
@@ -1054,8 +1054,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAccountingOrderRequest)
-        request = cast(operations.RemoveAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAccountingOrder2Request)
+        request = cast(operations.RemoveAccountingOrder2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1086,7 +1086,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingOrder",
+                operation_id="removeAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1096,7 +1096,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingOrderResponse(
+            return operations.RemoveAccountingOrder2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1109,7 +1109,7 @@ class Order(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingOrderResponse(
+            return operations.RemoveAccountingOrder2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1118,18 +1118,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_order(
+    def update_accounting_order2(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingOrderRequest,
-            operations.UpdateAccountingOrderRequestTypedDict,
+            operations.UpdateAccountingOrder2Request,
+            operations.UpdateAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingOrderResponse:
+    ) -> operations.UpdateAccountingOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -1149,8 +1149,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAccountingOrderRequest)
-        request = cast(operations.UpdateAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAccountingOrder2Request)
+        request = cast(operations.UpdateAccountingOrder2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1184,7 +1184,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingOrder",
+                operation_id="updateAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1194,7 +1194,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingOrderResponse(
+            return operations.UpdateAccountingOrder2Response(
                 accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
@@ -1211,18 +1211,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_order_async(
+    async def update_accounting_order2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingOrderRequest,
-            operations.UpdateAccountingOrderRequestTypedDict,
+            operations.UpdateAccountingOrder2Request,
+            operations.UpdateAccountingOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingOrderResponse:
+    ) -> operations.UpdateAccountingOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -1242,8 +1242,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAccountingOrderRequest)
-        request = cast(operations.UpdateAccountingOrderRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAccountingOrder2Request)
+        request = cast(operations.UpdateAccountingOrder2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1277,7 +1277,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingOrder",
+                operation_id="updateAccountingOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1287,7 +1287,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingOrderResponse(
+            return operations.UpdateAccountingOrder2Response(
                 accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
@@ -1304,18 +1304,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_assessment_order(
+    def update_assessment_order2(
         self,
         *,
         request: Union[
-            operations.UpdateAssessmentOrderRequest,
-            operations.UpdateAssessmentOrderRequestTypedDict,
+            operations.UpdateAssessmentOrder2Request,
+            operations.UpdateAssessmentOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAssessmentOrderResponse:
+    ) -> operations.UpdateAssessmentOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -1335,8 +1335,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAssessmentOrderRequest)
-        request = cast(operations.UpdateAssessmentOrderRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAssessmentOrder2Request)
+        request = cast(operations.UpdateAssessmentOrder2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1370,7 +1370,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAssessmentOrder",
+                operation_id="updateAssessmentOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1380,7 +1380,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAssessmentOrderResponse(
+            return operations.UpdateAssessmentOrder2Response(
                 assessment_order=unmarshal_json_response(
                     Optional[shared.AssessmentOrder], http_res
                 ),
@@ -1397,18 +1397,18 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_assessment_order_async(
+    async def update_assessment_order2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAssessmentOrderRequest,
-            operations.UpdateAssessmentOrderRequestTypedDict,
+            operations.UpdateAssessmentOrder2Request,
+            operations.UpdateAssessmentOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAssessmentOrderResponse:
+    ) -> operations.UpdateAssessmentOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -1428,8 +1428,8 @@ class Order(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAssessmentOrderRequest)
-        request = cast(operations.UpdateAssessmentOrderRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAssessmentOrder2Request)
+        request = cast(operations.UpdateAssessmentOrder2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1463,7 +1463,7 @@ class Order(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAssessmentOrder",
+                operation_id="updateAssessmentOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1473,7 +1473,7 @@ class Order(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAssessmentOrderResponse(
+            return operations.UpdateAssessmentOrder2Response(
                 assessment_order=unmarshal_json_response(
                     Optional[shared.AssessmentOrder], http_res
                 ),

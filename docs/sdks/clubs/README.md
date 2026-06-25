@@ -4,24 +4,24 @@
 
 ### Available Operations
 
-* [get_clubs_activity](#get_clubs_activity) - Retrieve an activity
-* [get_clubs_event](#get_clubs_event) - Retrieve an event
-* [get_clubs_group](#get_clubs_group) - Retrieve a group
-* [get_clubs_location](#get_clubs_location) - Retrieve a location
-* [get_clubs_member](#get_clubs_member) - Retrieve a member
-* [list_clubs_activities](#list_clubs_activities) - List all activities
-* [list_clubs_events](#list_clubs_events) - List all events
-* [list_clubs_groups](#list_clubs_groups) - List all groups
-* [list_clubs_locations](#list_clubs_locations) - List all locations
-* [list_clubs_members](#list_clubs_members) - List all members
+* [get_clubs_activity2](#get_clubs_activity2) - Retrieve an activity
+* [get_clubs_event2](#get_clubs_event2) - Retrieve an event
+* [get_clubs_group2](#get_clubs_group2) - Retrieve a group
+* [get_clubs_location2](#get_clubs_location2) - Retrieve a location
+* [get_clubs_member2](#get_clubs_member2) - Retrieve a member
+* [list_clubs_activities2](#list_clubs_activities2) - List all activities
+* [list_clubs_events2](#list_clubs_events2) - List all events
+* [list_clubs_groups2](#list_clubs_groups2) - List all groups
+* [list_clubs_locations2](#list_clubs_locations2) - List all locations
+* [list_clubs_members2](#list_clubs_members2) - List all members
 
-## get_clubs_activity
+## get_clubs_activity2
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="getClubsActivity2" method="get" path="/clubs/{connection_id}/activity/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -33,7 +33,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.get_clubs_activity(request={
+    res = unified_to.clubs.get_clubs_activity2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -47,14 +47,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetClubsActivityRequest](../../models/operations/getclubsactivityrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetClubsActivity2Request](../../models/operations/getclubsactivity2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.GetClubsActivityResponse](../../models/operations/getclubsactivityresponse.md)**
+**[operations.GetClubsActivity2Response](../../models/operations/getclubsactivity2response.md)**
 
 ### Errors
 
@@ -62,13 +62,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_clubs_event
+## get_clubs_event2
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="getClubsEvent2" method="get" path="/clubs/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -80,7 +80,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.get_clubs_event(request={
+    res = unified_to.clubs.get_clubs_event2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -94,14 +94,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetClubsEventRequest](../../models/operations/getclubseventrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetClubsEvent2Request](../../models/operations/getclubsevent2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetClubsEventResponse](../../models/operations/getclubseventresponse.md)**
+**[operations.GetClubsEvent2Response](../../models/operations/getclubsevent2response.md)**
 
 ### Errors
 
@@ -109,13 +109,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_clubs_group
+## get_clubs_group2
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="getClubsGroup2" method="get" path="/clubs/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -127,7 +127,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.get_clubs_group(request={
+    res = unified_to.clubs.get_clubs_group2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -141,14 +141,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetClubsGroupRequest](../../models/operations/getclubsgrouprequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetClubsGroup2Request](../../models/operations/getclubsgroup2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetClubsGroupResponse](../../models/operations/getclubsgroupresponse.md)**
+**[operations.GetClubsGroup2Response](../../models/operations/getclubsgroup2response.md)**
 
 ### Errors
 
@@ -156,13 +156,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_clubs_location
+## get_clubs_location2
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="getClubsLocation2" method="get" path="/clubs/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -174,7 +174,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.get_clubs_location(request={
+    res = unified_to.clubs.get_clubs_location2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -188,14 +188,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetClubsLocationRequest](../../models/operations/getclubslocationrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetClubsLocation2Request](../../models/operations/getclubslocation2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.GetClubsLocationResponse](../../models/operations/getclubslocationresponse.md)**
+**[operations.GetClubsLocation2Response](../../models/operations/getclubslocation2response.md)**
 
 ### Errors
 
@@ -203,13 +203,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_clubs_member
+## get_clubs_member2
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="python" operationID="getClubsMember2" method="get" path="/clubs/{connection_id}/member/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -221,7 +221,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.get_clubs_member(request={
+    res = unified_to.clubs.get_clubs_member2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -235,14 +235,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetClubsMemberRequest](../../models/operations/getclubsmemberrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetClubsMember2Request](../../models/operations/getclubsmember2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetClubsMemberResponse](../../models/operations/getclubsmemberresponse.md)**
+**[operations.GetClubsMember2Response](../../models/operations/getclubsmember2response.md)**
 
 ### Errors
 
@@ -250,13 +250,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_clubs_activities
+## list_clubs_activities2
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
+<!-- UsageSnippet language="python" operationID="listClubsActivities2" method="get" path="/clubs/{connection_id}/activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -268,7 +268,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.list_clubs_activities(request={
+    res = unified_to.clubs.list_clubs_activities2(request={
         "connection_id": "<id>",
     })
 
@@ -281,14 +281,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.ListClubsActivitiesRequest](../../models/operations/listclubsactivitiesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.ListClubsActivities2Request](../../models/operations/listclubsactivities2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.ListClubsActivitiesResponse](../../models/operations/listclubsactivitiesresponse.md)**
+**[operations.ListClubsActivities2Response](../../models/operations/listclubsactivities2response.md)**
 
 ### Errors
 
@@ -296,13 +296,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_clubs_events
+## list_clubs_events2
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
+<!-- UsageSnippet language="python" operationID="listClubsEvents2" method="get" path="/clubs/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -314,7 +314,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.list_clubs_events(request={
+    res = unified_to.clubs.list_clubs_events2(request={
         "connection_id": "<id>",
     })
 
@@ -327,14 +327,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListClubsEventsRequest](../../models/operations/listclubseventsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListClubsEvents2Request](../../models/operations/listclubsevents2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListClubsEventsResponse](../../models/operations/listclubseventsresponse.md)**
+**[operations.ListClubsEvents2Response](../../models/operations/listclubsevents2response.md)**
 
 ### Errors
 
@@ -342,13 +342,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_clubs_groups
+## list_clubs_groups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="listClubsGroups2" method="get" path="/clubs/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -360,7 +360,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.list_clubs_groups(request={
+    res = unified_to.clubs.list_clubs_groups2(request={
         "connection_id": "<id>",
     })
 
@@ -373,14 +373,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListClubsGroupsRequest](../../models/operations/listclubsgroupsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListClubsGroups2Request](../../models/operations/listclubsgroups2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListClubsGroupsResponse](../../models/operations/listclubsgroupsresponse.md)**
+**[operations.ListClubsGroups2Response](../../models/operations/listclubsgroups2response.md)**
 
 ### Errors
 
@@ -388,13 +388,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_clubs_locations
+## list_clubs_locations2
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="listClubsLocations2" method="get" path="/clubs/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -406,7 +406,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.list_clubs_locations(request={
+    res = unified_to.clubs.list_clubs_locations2(request={
         "connection_id": "<id>",
     })
 
@@ -419,14 +419,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.ListClubsLocationsRequest](../../models/operations/listclubslocationsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListClubsLocations2Request](../../models/operations/listclubslocations2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.ListClubsLocationsResponse](../../models/operations/listclubslocationsresponse.md)**
+**[operations.ListClubsLocations2Response](../../models/operations/listclubslocations2response.md)**
 
 ### Errors
 
@@ -434,13 +434,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_clubs_members
+## list_clubs_members2
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
+<!-- UsageSnippet language="python" operationID="listClubsMembers2" method="get" path="/clubs/{connection_id}/member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -452,7 +452,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.clubs.list_clubs_members(request={
+    res = unified_to.clubs.list_clubs_members2(request={
         "connection_id": "<id>",
     })
 
@@ -465,14 +465,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListClubsMembersRequest](../../models/operations/listclubsmembersrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListClubsMembers2Request](../../models/operations/listclubsmembers2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListClubsMembersResponse](../../models/operations/listclubsmembersresponse.md)**
+**[operations.ListClubsMembers2Response](../../models/operations/listclubsmembers2response.md)**
 
 ### Errors
 

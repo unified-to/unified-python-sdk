@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Transaction(BaseSDK):
-    def create_accounting_transaction(
+    def create_accounting_transaction2(
         self,
         *,
         request: Union[
-            operations.CreateAccountingTransactionRequest,
-            operations.CreateAccountingTransactionRequestTypedDict,
+            operations.CreateAccountingTransaction2Request,
+            operations.CreateAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingTransactionResponse:
+    ) -> operations.CreateAccountingTransaction2Response:
         r"""Create a transaction
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingTransactionRequest
+                request, operations.CreateAccountingTransaction2Request
             )
-        request = cast(operations.CreateAccountingTransactionRequest, request)
+        request = cast(operations.CreateAccountingTransaction2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingTransaction",
+                operation_id="createAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingTransactionResponse(
+            return operations.CreateAccountingTransaction2Response(
                 accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
@@ -109,18 +109,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_transaction_async(
+    async def create_accounting_transaction2_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingTransactionRequest,
-            operations.CreateAccountingTransactionRequestTypedDict,
+            operations.CreateAccountingTransaction2Request,
+            operations.CreateAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingTransactionResponse:
+    ) -> operations.CreateAccountingTransaction2Response:
         r"""Create a transaction
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingTransactionRequest
+                request, operations.CreateAccountingTransaction2Request
             )
-        request = cast(operations.CreateAccountingTransactionRequest, request)
+        request = cast(operations.CreateAccountingTransaction2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingTransaction",
+                operation_id="createAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingTransactionResponse(
+            return operations.CreateAccountingTransaction2Response(
                 accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
@@ -208,18 +208,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_transaction(
+    def get_accounting_transaction2(
         self,
         *,
         request: Union[
-            operations.GetAccountingTransactionRequest,
-            operations.GetAccountingTransactionRequestTypedDict,
+            operations.GetAccountingTransaction2Request,
+            operations.GetAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingTransactionResponse:
+    ) -> operations.GetAccountingTransaction2Response:
         r"""Retrieve a transaction
 
         :param request: The request object to send.
@@ -240,9 +240,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingTransactionRequest
+                request, operations.GetAccountingTransaction2Request
             )
-        request = cast(operations.GetAccountingTransactionRequest, request)
+        request = cast(operations.GetAccountingTransaction2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -273,7 +273,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingTransaction",
+                operation_id="getAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -283,7 +283,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingTransactionResponse(
+            return operations.GetAccountingTransaction2Response(
                 accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
@@ -300,18 +300,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_transaction_async(
+    async def get_accounting_transaction2_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingTransactionRequest,
-            operations.GetAccountingTransactionRequestTypedDict,
+            operations.GetAccountingTransaction2Request,
+            operations.GetAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingTransactionResponse:
+    ) -> operations.GetAccountingTransaction2Response:
         r"""Retrieve a transaction
 
         :param request: The request object to send.
@@ -332,9 +332,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingTransactionRequest
+                request, operations.GetAccountingTransaction2Request
             )
-        request = cast(operations.GetAccountingTransactionRequest, request)
+        request = cast(operations.GetAccountingTransaction2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -365,7 +365,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingTransaction",
+                operation_id="getAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -375,7 +375,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingTransactionResponse(
+            return operations.GetAccountingTransaction2Response(
                 accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
@@ -392,18 +392,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_transactions(
+    def list_accounting_transactions2(
         self,
         *,
         request: Union[
-            operations.ListAccountingTransactionsRequest,
-            operations.ListAccountingTransactionsRequestTypedDict,
+            operations.ListAccountingTransactions2Request,
+            operations.ListAccountingTransactions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingTransactionsResponse:
+    ) -> operations.ListAccountingTransactions2Response:
         r"""List all transactions
 
         :param request: The request object to send.
@@ -424,9 +424,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingTransactionsRequest
+                request, operations.ListAccountingTransactions2Request
             )
-        request = cast(operations.ListAccountingTransactionsRequest, request)
+        request = cast(operations.ListAccountingTransactions2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -457,7 +457,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingTransactions",
+                operation_id="listAccountingTransactions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -467,7 +467,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingTransactionsResponse(
+            return operations.ListAccountingTransactions2Response(
                 accounting_transactions=unmarshal_json_response(
                     Optional[List[shared.AccountingTransaction]], http_res
                 ),
@@ -484,18 +484,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_transactions_async(
+    async def list_accounting_transactions2_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingTransactionsRequest,
-            operations.ListAccountingTransactionsRequestTypedDict,
+            operations.ListAccountingTransactions2Request,
+            operations.ListAccountingTransactions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingTransactionsResponse:
+    ) -> operations.ListAccountingTransactions2Response:
         r"""List all transactions
 
         :param request: The request object to send.
@@ -516,9 +516,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingTransactionsRequest
+                request, operations.ListAccountingTransactions2Request
             )
-        request = cast(operations.ListAccountingTransactionsRequest, request)
+        request = cast(operations.ListAccountingTransactions2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -549,7 +549,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingTransactions",
+                operation_id="listAccountingTransactions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -559,7 +559,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingTransactionsResponse(
+            return operations.ListAccountingTransactions2Response(
                 accounting_transactions=unmarshal_json_response(
                     Optional[List[shared.AccountingTransaction]], http_res
                 ),
@@ -576,18 +576,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_transaction(
+    def patch_accounting_transaction2(
         self,
         *,
         request: Union[
-            operations.PatchAccountingTransactionRequest,
-            operations.PatchAccountingTransactionRequestTypedDict,
+            operations.PatchAccountingTransaction2Request,
+            operations.PatchAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingTransactionResponse:
+    ) -> operations.PatchAccountingTransaction2Response:
         r"""Update a transaction
 
         :param request: The request object to send.
@@ -608,9 +608,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchAccountingTransactionRequest
+                request, operations.PatchAccountingTransaction2Request
             )
-        request = cast(operations.PatchAccountingTransactionRequest, request)
+        request = cast(operations.PatchAccountingTransaction2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -648,7 +648,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingTransaction",
+                operation_id="patchAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -658,7 +658,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingTransactionResponse(
+            return operations.PatchAccountingTransaction2Response(
                 accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
@@ -675,18 +675,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_transaction_async(
+    async def patch_accounting_transaction2_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingTransactionRequest,
-            operations.PatchAccountingTransactionRequestTypedDict,
+            operations.PatchAccountingTransaction2Request,
+            operations.PatchAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingTransactionResponse:
+    ) -> operations.PatchAccountingTransaction2Response:
         r"""Update a transaction
 
         :param request: The request object to send.
@@ -707,9 +707,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchAccountingTransactionRequest
+                request, operations.PatchAccountingTransaction2Request
             )
-        request = cast(operations.PatchAccountingTransactionRequest, request)
+        request = cast(operations.PatchAccountingTransaction2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -747,7 +747,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingTransaction",
+                operation_id="patchAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -757,7 +757,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingTransactionResponse(
+            return operations.PatchAccountingTransaction2Response(
                 accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
@@ -774,18 +774,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_transaction(
+    def remove_accounting_transaction2(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingTransactionRequest,
-            operations.RemoveAccountingTransactionRequestTypedDict,
+            operations.RemoveAccountingTransaction2Request,
+            operations.RemoveAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingTransactionResponse:
+    ) -> operations.RemoveAccountingTransaction2Response:
         r"""Remove a transaction
 
         :param request: The request object to send.
@@ -806,9 +806,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingTransactionRequest
+                request, operations.RemoveAccountingTransaction2Request
             )
-        request = cast(operations.RemoveAccountingTransactionRequest, request)
+        request = cast(operations.RemoveAccountingTransaction2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -839,7 +839,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingTransaction",
+                operation_id="removeAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -849,7 +849,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingTransactionResponse(
+            return operations.RemoveAccountingTransaction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -862,7 +862,7 @@ class Transaction(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingTransactionResponse(
+            return operations.RemoveAccountingTransaction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -871,18 +871,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_transaction_async(
+    async def remove_accounting_transaction2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingTransactionRequest,
-            operations.RemoveAccountingTransactionRequestTypedDict,
+            operations.RemoveAccountingTransaction2Request,
+            operations.RemoveAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingTransactionResponse:
+    ) -> operations.RemoveAccountingTransaction2Response:
         r"""Remove a transaction
 
         :param request: The request object to send.
@@ -903,9 +903,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingTransactionRequest
+                request, operations.RemoveAccountingTransaction2Request
             )
-        request = cast(operations.RemoveAccountingTransactionRequest, request)
+        request = cast(operations.RemoveAccountingTransaction2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -936,7 +936,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingTransaction",
+                operation_id="removeAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -946,7 +946,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingTransactionResponse(
+            return operations.RemoveAccountingTransaction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -959,7 +959,7 @@ class Transaction(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingTransactionResponse(
+            return operations.RemoveAccountingTransaction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -968,18 +968,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_transaction(
+    def update_accounting_transaction2(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingTransactionRequest,
-            operations.UpdateAccountingTransactionRequestTypedDict,
+            operations.UpdateAccountingTransaction2Request,
+            operations.UpdateAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingTransactionResponse:
+    ) -> operations.UpdateAccountingTransaction2Response:
         r"""Update a transaction
 
         :param request: The request object to send.
@@ -1000,9 +1000,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingTransactionRequest
+                request, operations.UpdateAccountingTransaction2Request
             )
-        request = cast(operations.UpdateAccountingTransactionRequest, request)
+        request = cast(operations.UpdateAccountingTransaction2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1040,7 +1040,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingTransaction",
+                operation_id="updateAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1050,7 +1050,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingTransactionResponse(
+            return operations.UpdateAccountingTransaction2Response(
                 accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
@@ -1067,18 +1067,18 @@ class Transaction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_transaction_async(
+    async def update_accounting_transaction2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingTransactionRequest,
-            operations.UpdateAccountingTransactionRequestTypedDict,
+            operations.UpdateAccountingTransaction2Request,
+            operations.UpdateAccountingTransaction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingTransactionResponse:
+    ) -> operations.UpdateAccountingTransaction2Response:
         r"""Update a transaction
 
         :param request: The request object to send.
@@ -1099,9 +1099,9 @@ class Transaction(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingTransactionRequest
+                request, operations.UpdateAccountingTransaction2Request
             )
-        request = cast(operations.UpdateAccountingTransactionRequest, request)
+        request = cast(operations.UpdateAccountingTransaction2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1139,7 +1139,7 @@ class Transaction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingTransaction",
+                operation_id="updateAccountingTransaction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1149,7 +1149,7 @@ class Transaction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingTransactionResponse(
+            return operations.UpdateAccountingTransaction2Response(
                 accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),

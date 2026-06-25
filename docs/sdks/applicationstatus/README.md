@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all applicationstatuses
+* [list_ats_applicationstatuses2](#list_ats_applicationstatuses2) - List all applicationstatuses
 
-## list_ats_applicationstatuses
+## list_ats_applicationstatuses2
 
 List all applicationstatuses
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
+<!-- UsageSnippet language="python" operationID="listAtsApplicationstatuses2" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -24,7 +24,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.applicationstatus.list_ats_applicationstatuses(request={
+    res = unified_to.applicationstatus.list_ats_applicationstatuses2(request={
         "connection_id": "<id>",
     })
 
@@ -37,14 +37,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.ListAtsApplicationstatusesRequest](../../models/operations/listatsapplicationstatusesrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.ListAtsApplicationstatuses2Request](../../models/operations/listatsapplicationstatuses2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `retries`                                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                               | :heavy_minus_sign:                                                                                             | Configuration to override the default retry behavior of the client.                                            |
 
 ### Response
 
-**[operations.ListAtsApplicationstatusesResponse](../../models/operations/listatsapplicationstatusesresponse.md)**
+**[operations.ListAtsApplicationstatuses2Response](../../models/operations/listatsapplicationstatuses2response.md)**
 
 ### Errors
 

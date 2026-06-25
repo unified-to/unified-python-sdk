@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Saleschannel(BaseSDK):
-    def create_commerce_saleschannel(
+    def create_commerce_saleschannel2(
         self,
         *,
         request: Union[
-            operations.CreateCommerceSaleschannelRequest,
-            operations.CreateCommerceSaleschannelRequestTypedDict,
+            operations.CreateCommerceSaleschannel2Request,
+            operations.CreateCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceSaleschannelResponse:
+    ) -> operations.CreateCommerceSaleschannel2Response:
         r"""Create a saleschannel
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceSaleschannelRequest
+                request, operations.CreateCommerceSaleschannel2Request
             )
-        request = cast(operations.CreateCommerceSaleschannelRequest, request)
+        request = cast(operations.CreateCommerceSaleschannel2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceSaleschannel",
+                operation_id="createCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceSaleschannelResponse(
+            return operations.CreateCommerceSaleschannel2Response(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -109,18 +109,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_saleschannel_async(
+    async def create_commerce_saleschannel2_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceSaleschannelRequest,
-            operations.CreateCommerceSaleschannelRequestTypedDict,
+            operations.CreateCommerceSaleschannel2Request,
+            operations.CreateCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceSaleschannelResponse:
+    ) -> operations.CreateCommerceSaleschannel2Response:
         r"""Create a saleschannel
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceSaleschannelRequest
+                request, operations.CreateCommerceSaleschannel2Request
             )
-        request = cast(operations.CreateCommerceSaleschannelRequest, request)
+        request = cast(operations.CreateCommerceSaleschannel2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceSaleschannel",
+                operation_id="createCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceSaleschannelResponse(
+            return operations.CreateCommerceSaleschannel2Response(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -208,18 +208,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_saleschannel(
+    def get_commerce_saleschannel2(
         self,
         *,
         request: Union[
-            operations.GetCommerceSaleschannelRequest,
-            operations.GetCommerceSaleschannelRequestTypedDict,
+            operations.GetCommerceSaleschannel2Request,
+            operations.GetCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceSaleschannelResponse:
+    ) -> operations.GetCommerceSaleschannel2Response:
         r"""Retrieve a saleschannel
 
         :param request: The request object to send.
@@ -240,9 +240,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetCommerceSaleschannelRequest
+                request, operations.GetCommerceSaleschannel2Request
             )
-        request = cast(operations.GetCommerceSaleschannelRequest, request)
+        request = cast(operations.GetCommerceSaleschannel2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -273,7 +273,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceSaleschannel",
+                operation_id="getCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -283,7 +283,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceSaleschannelResponse(
+            return operations.GetCommerceSaleschannel2Response(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -300,18 +300,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_saleschannel_async(
+    async def get_commerce_saleschannel2_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceSaleschannelRequest,
-            operations.GetCommerceSaleschannelRequestTypedDict,
+            operations.GetCommerceSaleschannel2Request,
+            operations.GetCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceSaleschannelResponse:
+    ) -> operations.GetCommerceSaleschannel2Response:
         r"""Retrieve a saleschannel
 
         :param request: The request object to send.
@@ -332,9 +332,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetCommerceSaleschannelRequest
+                request, operations.GetCommerceSaleschannel2Request
             )
-        request = cast(operations.GetCommerceSaleschannelRequest, request)
+        request = cast(operations.GetCommerceSaleschannel2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -365,7 +365,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceSaleschannel",
+                operation_id="getCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -375,7 +375,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceSaleschannelResponse(
+            return operations.GetCommerceSaleschannel2Response(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -392,18 +392,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_saleschannels(
+    def list_commerce_saleschannels2(
         self,
         *,
         request: Union[
-            operations.ListCommerceSaleschannelsRequest,
-            operations.ListCommerceSaleschannelsRequestTypedDict,
+            operations.ListCommerceSaleschannels2Request,
+            operations.ListCommerceSaleschannels2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceSaleschannelsResponse:
+    ) -> operations.ListCommerceSaleschannels2Response:
         r"""List all saleschannels
 
         :param request: The request object to send.
@@ -424,9 +424,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceSaleschannelsRequest
+                request, operations.ListCommerceSaleschannels2Request
             )
-        request = cast(operations.ListCommerceSaleschannelsRequest, request)
+        request = cast(operations.ListCommerceSaleschannels2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -457,7 +457,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceSaleschannels",
+                operation_id="listCommerceSaleschannels2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -467,7 +467,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceSaleschannelsResponse(
+            return operations.ListCommerceSaleschannels2Response(
                 commerce_saleschannels=unmarshal_json_response(
                     Optional[List[shared.CommerceSaleschannel]], http_res
                 ),
@@ -484,18 +484,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_saleschannels_async(
+    async def list_commerce_saleschannels2_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceSaleschannelsRequest,
-            operations.ListCommerceSaleschannelsRequestTypedDict,
+            operations.ListCommerceSaleschannels2Request,
+            operations.ListCommerceSaleschannels2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceSaleschannelsResponse:
+    ) -> operations.ListCommerceSaleschannels2Response:
         r"""List all saleschannels
 
         :param request: The request object to send.
@@ -516,9 +516,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceSaleschannelsRequest
+                request, operations.ListCommerceSaleschannels2Request
             )
-        request = cast(operations.ListCommerceSaleschannelsRequest, request)
+        request = cast(operations.ListCommerceSaleschannels2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -549,7 +549,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceSaleschannels",
+                operation_id="listCommerceSaleschannels2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -559,7 +559,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceSaleschannelsResponse(
+            return operations.ListCommerceSaleschannels2Response(
                 commerce_saleschannels=unmarshal_json_response(
                     Optional[List[shared.CommerceSaleschannel]], http_res
                 ),
@@ -576,18 +576,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_saleschannel(
+    def patch_commerce_saleschannel2(
         self,
         *,
         request: Union[
-            operations.PatchCommerceSaleschannelRequest,
-            operations.PatchCommerceSaleschannelRequestTypedDict,
+            operations.PatchCommerceSaleschannel2Request,
+            operations.PatchCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceSaleschannelResponse:
+    ) -> operations.PatchCommerceSaleschannel2Response:
         r"""Update a saleschannel
 
         :param request: The request object to send.
@@ -608,9 +608,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceSaleschannelRequest
+                request, operations.PatchCommerceSaleschannel2Request
             )
-        request = cast(operations.PatchCommerceSaleschannelRequest, request)
+        request = cast(operations.PatchCommerceSaleschannel2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -648,7 +648,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceSaleschannel",
+                operation_id="patchCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -658,7 +658,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceSaleschannelResponse(
+            return operations.PatchCommerceSaleschannel2Response(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -675,18 +675,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_saleschannel_async(
+    async def patch_commerce_saleschannel2_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceSaleschannelRequest,
-            operations.PatchCommerceSaleschannelRequestTypedDict,
+            operations.PatchCommerceSaleschannel2Request,
+            operations.PatchCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceSaleschannelResponse:
+    ) -> operations.PatchCommerceSaleschannel2Response:
         r"""Update a saleschannel
 
         :param request: The request object to send.
@@ -707,9 +707,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceSaleschannelRequest
+                request, operations.PatchCommerceSaleschannel2Request
             )
-        request = cast(operations.PatchCommerceSaleschannelRequest, request)
+        request = cast(operations.PatchCommerceSaleschannel2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -747,7 +747,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceSaleschannel",
+                operation_id="patchCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -757,7 +757,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceSaleschannelResponse(
+            return operations.PatchCommerceSaleschannel2Response(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -774,18 +774,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_saleschannel(
+    def remove_commerce_saleschannel2(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceSaleschannelRequest,
-            operations.RemoveCommerceSaleschannelRequestTypedDict,
+            operations.RemoveCommerceSaleschannel2Request,
+            operations.RemoveCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceSaleschannelResponse:
+    ) -> operations.RemoveCommerceSaleschannel2Response:
         r"""Remove a saleschannel
 
         :param request: The request object to send.
@@ -806,9 +806,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceSaleschannelRequest
+                request, operations.RemoveCommerceSaleschannel2Request
             )
-        request = cast(operations.RemoveCommerceSaleschannelRequest, request)
+        request = cast(operations.RemoveCommerceSaleschannel2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -839,7 +839,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceSaleschannel",
+                operation_id="removeCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -849,7 +849,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceSaleschannelResponse(
+            return operations.RemoveCommerceSaleschannel2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -862,7 +862,7 @@ class Saleschannel(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceSaleschannelResponse(
+            return operations.RemoveCommerceSaleschannel2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -871,18 +871,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_saleschannel_async(
+    async def remove_commerce_saleschannel2_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceSaleschannelRequest,
-            operations.RemoveCommerceSaleschannelRequestTypedDict,
+            operations.RemoveCommerceSaleschannel2Request,
+            operations.RemoveCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceSaleschannelResponse:
+    ) -> operations.RemoveCommerceSaleschannel2Response:
         r"""Remove a saleschannel
 
         :param request: The request object to send.
@@ -903,9 +903,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceSaleschannelRequest
+                request, operations.RemoveCommerceSaleschannel2Request
             )
-        request = cast(operations.RemoveCommerceSaleschannelRequest, request)
+        request = cast(operations.RemoveCommerceSaleschannel2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -936,7 +936,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceSaleschannel",
+                operation_id="removeCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -946,7 +946,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceSaleschannelResponse(
+            return operations.RemoveCommerceSaleschannel2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -959,7 +959,7 @@ class Saleschannel(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceSaleschannelResponse(
+            return operations.RemoveCommerceSaleschannel2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -968,18 +968,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_saleschannel(
+    def update_commerce_saleschannel2(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceSaleschannelRequest,
-            operations.UpdateCommerceSaleschannelRequestTypedDict,
+            operations.UpdateCommerceSaleschannel2Request,
+            operations.UpdateCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceSaleschannelResponse:
+    ) -> operations.UpdateCommerceSaleschannel2Response:
         r"""Update a saleschannel
 
         :param request: The request object to send.
@@ -1000,9 +1000,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceSaleschannelRequest
+                request, operations.UpdateCommerceSaleschannel2Request
             )
-        request = cast(operations.UpdateCommerceSaleschannelRequest, request)
+        request = cast(operations.UpdateCommerceSaleschannel2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1040,7 +1040,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceSaleschannel",
+                operation_id="updateCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1050,7 +1050,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceSaleschannelResponse(
+            return operations.UpdateCommerceSaleschannel2Response(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -1067,18 +1067,18 @@ class Saleschannel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_saleschannel_async(
+    async def update_commerce_saleschannel2_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceSaleschannelRequest,
-            operations.UpdateCommerceSaleschannelRequestTypedDict,
+            operations.UpdateCommerceSaleschannel2Request,
+            operations.UpdateCommerceSaleschannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceSaleschannelResponse:
+    ) -> operations.UpdateCommerceSaleschannel2Response:
         r"""Update a saleschannel
 
         :param request: The request object to send.
@@ -1099,9 +1099,9 @@ class Saleschannel(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceSaleschannelRequest
+                request, operations.UpdateCommerceSaleschannel2Request
             )
-        request = cast(operations.UpdateCommerceSaleschannelRequest, request)
+        request = cast(operations.UpdateCommerceSaleschannel2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1139,7 +1139,7 @@ class Saleschannel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceSaleschannel",
+                operation_id="updateCommerceSaleschannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1149,7 +1149,7 @@ class Saleschannel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceSaleschannelResponse(
+            return operations.UpdateCommerceSaleschannel2Response(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),

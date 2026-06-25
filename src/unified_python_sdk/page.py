@@ -10,17 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Page(BaseSDK):
-    def create_kms_page(
+    def create_kms_page2(
         self,
         *,
         request: Union[
-            operations.CreateKmsPageRequest, operations.CreateKmsPageRequestTypedDict
+            operations.CreateKmsPage2Request, operations.CreateKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsPageResponse:
+    ) -> operations.CreateKmsPage2Response:
         r"""Create a page
 
         :param request: The request object to send.
@@ -40,8 +40,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsPageRequest)
-        request = cast(operations.CreateKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.CreateKmsPage2Request)
+        request = cast(operations.CreateKmsPage2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -75,7 +75,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsPage",
+                operation_id="createKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -85,7 +85,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsPageResponse(
+            return operations.CreateKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -100,17 +100,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_kms_page_async(
+    async def create_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.CreateKmsPageRequest, operations.CreateKmsPageRequestTypedDict
+            operations.CreateKmsPage2Request, operations.CreateKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsPageResponse:
+    ) -> operations.CreateKmsPage2Response:
         r"""Create a page
 
         :param request: The request object to send.
@@ -130,8 +130,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsPageRequest)
-        request = cast(operations.CreateKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.CreateKmsPage2Request)
+        request = cast(operations.CreateKmsPage2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -165,7 +165,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsPage",
+                operation_id="createKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -175,7 +175,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsPageResponse(
+            return operations.CreateKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -190,17 +190,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_kms_page(
+    def get_kms_page2(
         self,
         *,
         request: Union[
-            operations.GetKmsPageRequest, operations.GetKmsPageRequestTypedDict
+            operations.GetKmsPage2Request, operations.GetKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsPageResponse:
+    ) -> operations.GetKmsPage2Response:
         r"""Retrieve a page
 
         :param request: The request object to send.
@@ -220,8 +220,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsPageRequest)
-        request = cast(operations.GetKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.GetKmsPage2Request)
+        request = cast(operations.GetKmsPage2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -252,7 +252,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsPage",
+                operation_id="getKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -262,7 +262,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsPageResponse(
+            return operations.GetKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -277,17 +277,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_kms_page_async(
+    async def get_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.GetKmsPageRequest, operations.GetKmsPageRequestTypedDict
+            operations.GetKmsPage2Request, operations.GetKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsPageResponse:
+    ) -> operations.GetKmsPage2Response:
         r"""Retrieve a page
 
         :param request: The request object to send.
@@ -307,8 +307,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsPageRequest)
-        request = cast(operations.GetKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.GetKmsPage2Request)
+        request = cast(operations.GetKmsPage2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -339,7 +339,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsPage",
+                operation_id="getKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -349,7 +349,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsPageResponse(
+            return operations.GetKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -364,17 +364,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_kms_pages(
+    def list_kms_pages2(
         self,
         *,
         request: Union[
-            operations.ListKmsPagesRequest, operations.ListKmsPagesRequestTypedDict
+            operations.ListKmsPages2Request, operations.ListKmsPages2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsPagesResponse:
+    ) -> operations.ListKmsPages2Response:
         r"""List all pages
 
         :param request: The request object to send.
@@ -394,8 +394,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsPagesRequest)
-        request = cast(operations.ListKmsPagesRequest, request)
+            request = utils.unmarshal(request, operations.ListKmsPages2Request)
+        request = cast(operations.ListKmsPages2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -426,7 +426,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsPages",
+                operation_id="listKmsPages2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -436,7 +436,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsPagesResponse(
+            return operations.ListKmsPages2Response(
                 kms_pages=unmarshal_json_response(
                     Optional[List[shared.KmsPage]], http_res
                 ),
@@ -453,17 +453,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_kms_pages_async(
+    async def list_kms_pages2_async(
         self,
         *,
         request: Union[
-            operations.ListKmsPagesRequest, operations.ListKmsPagesRequestTypedDict
+            operations.ListKmsPages2Request, operations.ListKmsPages2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsPagesResponse:
+    ) -> operations.ListKmsPages2Response:
         r"""List all pages
 
         :param request: The request object to send.
@@ -483,8 +483,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsPagesRequest)
-        request = cast(operations.ListKmsPagesRequest, request)
+            request = utils.unmarshal(request, operations.ListKmsPages2Request)
+        request = cast(operations.ListKmsPages2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -515,7 +515,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsPages",
+                operation_id="listKmsPages2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -525,7 +525,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsPagesResponse(
+            return operations.ListKmsPages2Response(
                 kms_pages=unmarshal_json_response(
                     Optional[List[shared.KmsPage]], http_res
                 ),
@@ -542,17 +542,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_kms_page(
+    def patch_kms_page2(
         self,
         *,
         request: Union[
-            operations.PatchKmsPageRequest, operations.PatchKmsPageRequestTypedDict
+            operations.PatchKmsPage2Request, operations.PatchKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsPageResponse:
+    ) -> operations.PatchKmsPage2Response:
         r"""Update a page
 
         :param request: The request object to send.
@@ -572,8 +572,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsPageRequest)
-        request = cast(operations.PatchKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.PatchKmsPage2Request)
+        request = cast(operations.PatchKmsPage2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -607,7 +607,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsPage",
+                operation_id="patchKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -617,7 +617,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsPageResponse(
+            return operations.PatchKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -632,17 +632,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_kms_page_async(
+    async def patch_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.PatchKmsPageRequest, operations.PatchKmsPageRequestTypedDict
+            operations.PatchKmsPage2Request, operations.PatchKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsPageResponse:
+    ) -> operations.PatchKmsPage2Response:
         r"""Update a page
 
         :param request: The request object to send.
@@ -662,8 +662,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsPageRequest)
-        request = cast(operations.PatchKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.PatchKmsPage2Request)
+        request = cast(operations.PatchKmsPage2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -697,7 +697,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsPage",
+                operation_id="patchKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -707,7 +707,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsPageResponse(
+            return operations.PatchKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -722,17 +722,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_kms_page(
+    def remove_kms_page2(
         self,
         *,
         request: Union[
-            operations.RemoveKmsPageRequest, operations.RemoveKmsPageRequestTypedDict
+            operations.RemoveKmsPage2Request, operations.RemoveKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsPageResponse:
+    ) -> operations.RemoveKmsPage2Response:
         r"""Remove a page
 
         :param request: The request object to send.
@@ -752,8 +752,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsPageRequest)
-        request = cast(operations.RemoveKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.RemoveKmsPage2Request)
+        request = cast(operations.RemoveKmsPage2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -784,7 +784,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsPage",
+                operation_id="removeKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -794,7 +794,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsPageResponse(
+            return operations.RemoveKmsPage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -807,7 +807,7 @@ class Page(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsPageResponse(
+            return operations.RemoveKmsPage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -816,17 +816,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_kms_page_async(
+    async def remove_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.RemoveKmsPageRequest, operations.RemoveKmsPageRequestTypedDict
+            operations.RemoveKmsPage2Request, operations.RemoveKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsPageResponse:
+    ) -> operations.RemoveKmsPage2Response:
         r"""Remove a page
 
         :param request: The request object to send.
@@ -846,8 +846,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsPageRequest)
-        request = cast(operations.RemoveKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.RemoveKmsPage2Request)
+        request = cast(operations.RemoveKmsPage2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -878,7 +878,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsPage",
+                operation_id="removeKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -888,7 +888,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsPageResponse(
+            return operations.RemoveKmsPage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -901,7 +901,7 @@ class Page(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsPageResponse(
+            return operations.RemoveKmsPage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -910,17 +910,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_kms_page(
+    def update_kms_page2(
         self,
         *,
         request: Union[
-            operations.UpdateKmsPageRequest, operations.UpdateKmsPageRequestTypedDict
+            operations.UpdateKmsPage2Request, operations.UpdateKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsPageResponse:
+    ) -> operations.UpdateKmsPage2Response:
         r"""Update a page
 
         :param request: The request object to send.
@@ -940,8 +940,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsPageRequest)
-        request = cast(operations.UpdateKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.UpdateKmsPage2Request)
+        request = cast(operations.UpdateKmsPage2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -975,7 +975,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsPage",
+                operation_id="updateKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -985,7 +985,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsPageResponse(
+            return operations.UpdateKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1000,17 +1000,17 @@ class Page(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_kms_page_async(
+    async def update_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.UpdateKmsPageRequest, operations.UpdateKmsPageRequestTypedDict
+            operations.UpdateKmsPage2Request, operations.UpdateKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsPageResponse:
+    ) -> operations.UpdateKmsPage2Response:
         r"""Update a page
 
         :param request: The request object to send.
@@ -1030,8 +1030,8 @@ class Page(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsPageRequest)
-        request = cast(operations.UpdateKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.UpdateKmsPage2Request)
+        request = cast(operations.UpdateKmsPage2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1065,7 +1065,7 @@ class Page(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsPage",
+                operation_id="updateKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1075,7 +1075,7 @@ class Page(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsPageResponse(
+            return operations.UpdateKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

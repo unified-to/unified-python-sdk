@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Request(BaseSDK):
-    def create_verification_request(
+    def create_verification_request2(
         self,
         *,
         request: Union[
-            operations.CreateVerificationRequestRequest,
-            operations.CreateVerificationRequestRequestTypedDict,
+            operations.CreateVerificationRequest2Request,
+            operations.CreateVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateVerificationRequestResponse:
+    ) -> operations.CreateVerificationRequest2Response:
         r"""Create a request
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateVerificationRequestRequest
+                request, operations.CreateVerificationRequest2Request
             )
-        request = cast(operations.CreateVerificationRequestRequest, request)
+        request = cast(operations.CreateVerificationRequest2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createVerificationRequest",
+                operation_id="createVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateVerificationRequestResponse(
+            return operations.CreateVerificationRequest2Response(
                 verification_request=unmarshal_json_response(
                     Optional[shared.VerificationRequest], http_res
                 ),
@@ -109,18 +109,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_verification_request_async(
+    async def create_verification_request2_async(
         self,
         *,
         request: Union[
-            operations.CreateVerificationRequestRequest,
-            operations.CreateVerificationRequestRequestTypedDict,
+            operations.CreateVerificationRequest2Request,
+            operations.CreateVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateVerificationRequestResponse:
+    ) -> operations.CreateVerificationRequest2Response:
         r"""Create a request
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateVerificationRequestRequest
+                request, operations.CreateVerificationRequest2Request
             )
-        request = cast(operations.CreateVerificationRequestRequest, request)
+        request = cast(operations.CreateVerificationRequest2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createVerificationRequest",
+                operation_id="createVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateVerificationRequestResponse(
+            return operations.CreateVerificationRequest2Response(
                 verification_request=unmarshal_json_response(
                     Optional[shared.VerificationRequest], http_res
                 ),
@@ -208,18 +208,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_verification_request(
+    def get_verification_request2(
         self,
         *,
         request: Union[
-            operations.GetVerificationRequestRequest,
-            operations.GetVerificationRequestRequestTypedDict,
+            operations.GetVerificationRequest2Request,
+            operations.GetVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetVerificationRequestResponse:
+    ) -> operations.GetVerificationRequest2Response:
         r"""Retrieve a request
 
         :param request: The request object to send.
@@ -239,8 +239,10 @@ class Request(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetVerificationRequestRequest)
-        request = cast(operations.GetVerificationRequestRequest, request)
+            request = utils.unmarshal(
+                request, operations.GetVerificationRequest2Request
+            )
+        request = cast(operations.GetVerificationRequest2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -271,7 +273,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getVerificationRequest",
+                operation_id="getVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -281,7 +283,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetVerificationRequestResponse(
+            return operations.GetVerificationRequest2Response(
                 verification_request=unmarshal_json_response(
                     Optional[shared.VerificationRequest], http_res
                 ),
@@ -298,18 +300,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_verification_request_async(
+    async def get_verification_request2_async(
         self,
         *,
         request: Union[
-            operations.GetVerificationRequestRequest,
-            operations.GetVerificationRequestRequestTypedDict,
+            operations.GetVerificationRequest2Request,
+            operations.GetVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetVerificationRequestResponse:
+    ) -> operations.GetVerificationRequest2Response:
         r"""Retrieve a request
 
         :param request: The request object to send.
@@ -329,8 +331,10 @@ class Request(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetVerificationRequestRequest)
-        request = cast(operations.GetVerificationRequestRequest, request)
+            request = utils.unmarshal(
+                request, operations.GetVerificationRequest2Request
+            )
+        request = cast(operations.GetVerificationRequest2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -361,7 +365,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getVerificationRequest",
+                operation_id="getVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -371,7 +375,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetVerificationRequestResponse(
+            return operations.GetVerificationRequest2Response(
                 verification_request=unmarshal_json_response(
                     Optional[shared.VerificationRequest], http_res
                 ),
@@ -388,18 +392,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_verification_requests(
+    def list_verification_requests2(
         self,
         *,
         request: Union[
-            operations.ListVerificationRequestsRequest,
-            operations.ListVerificationRequestsRequestTypedDict,
+            operations.ListVerificationRequests2Request,
+            operations.ListVerificationRequests2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListVerificationRequestsResponse:
+    ) -> operations.ListVerificationRequests2Response:
         r"""List all requests
 
         :param request: The request object to send.
@@ -420,9 +424,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListVerificationRequestsRequest
+                request, operations.ListVerificationRequests2Request
             )
-        request = cast(operations.ListVerificationRequestsRequest, request)
+        request = cast(operations.ListVerificationRequests2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -453,7 +457,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listVerificationRequests",
+                operation_id="listVerificationRequests2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -463,7 +467,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListVerificationRequestsResponse(
+            return operations.ListVerificationRequests2Response(
                 verification_requests=unmarshal_json_response(
                     Optional[List[shared.VerificationRequest]], http_res
                 ),
@@ -480,18 +484,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_verification_requests_async(
+    async def list_verification_requests2_async(
         self,
         *,
         request: Union[
-            operations.ListVerificationRequestsRequest,
-            operations.ListVerificationRequestsRequestTypedDict,
+            operations.ListVerificationRequests2Request,
+            operations.ListVerificationRequests2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListVerificationRequestsResponse:
+    ) -> operations.ListVerificationRequests2Response:
         r"""List all requests
 
         :param request: The request object to send.
@@ -512,9 +516,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListVerificationRequestsRequest
+                request, operations.ListVerificationRequests2Request
             )
-        request = cast(operations.ListVerificationRequestsRequest, request)
+        request = cast(operations.ListVerificationRequests2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -545,7 +549,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listVerificationRequests",
+                operation_id="listVerificationRequests2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -555,7 +559,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListVerificationRequestsResponse(
+            return operations.ListVerificationRequests2Response(
                 verification_requests=unmarshal_json_response(
                     Optional[List[shared.VerificationRequest]], http_res
                 ),
@@ -572,18 +576,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_verification_request(
+    def patch_verification_request2(
         self,
         *,
         request: Union[
-            operations.PatchVerificationRequestRequest,
-            operations.PatchVerificationRequestRequestTypedDict,
+            operations.PatchVerificationRequest2Request,
+            operations.PatchVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchVerificationRequestResponse:
+    ) -> operations.PatchVerificationRequest2Response:
         r"""Update a request
 
         :param request: The request object to send.
@@ -604,9 +608,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchVerificationRequestRequest
+                request, operations.PatchVerificationRequest2Request
             )
-        request = cast(operations.PatchVerificationRequestRequest, request)
+        request = cast(operations.PatchVerificationRequest2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -644,7 +648,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchVerificationRequest",
+                operation_id="patchVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -654,7 +658,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchVerificationRequestResponse(
+            return operations.PatchVerificationRequest2Response(
                 verification_request=unmarshal_json_response(
                     Optional[shared.VerificationRequest], http_res
                 ),
@@ -671,18 +675,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_verification_request_async(
+    async def patch_verification_request2_async(
         self,
         *,
         request: Union[
-            operations.PatchVerificationRequestRequest,
-            operations.PatchVerificationRequestRequestTypedDict,
+            operations.PatchVerificationRequest2Request,
+            operations.PatchVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchVerificationRequestResponse:
+    ) -> operations.PatchVerificationRequest2Response:
         r"""Update a request
 
         :param request: The request object to send.
@@ -703,9 +707,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchVerificationRequestRequest
+                request, operations.PatchVerificationRequest2Request
             )
-        request = cast(operations.PatchVerificationRequestRequest, request)
+        request = cast(operations.PatchVerificationRequest2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -743,7 +747,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchVerificationRequest",
+                operation_id="patchVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -753,7 +757,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchVerificationRequestResponse(
+            return operations.PatchVerificationRequest2Response(
                 verification_request=unmarshal_json_response(
                     Optional[shared.VerificationRequest], http_res
                 ),
@@ -770,18 +774,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_verification_request(
+    def remove_verification_request2(
         self,
         *,
         request: Union[
-            operations.RemoveVerificationRequestRequest,
-            operations.RemoveVerificationRequestRequestTypedDict,
+            operations.RemoveVerificationRequest2Request,
+            operations.RemoveVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveVerificationRequestResponse:
+    ) -> operations.RemoveVerificationRequest2Response:
         r"""Remove a request
 
         :param request: The request object to send.
@@ -802,9 +806,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveVerificationRequestRequest
+                request, operations.RemoveVerificationRequest2Request
             )
-        request = cast(operations.RemoveVerificationRequestRequest, request)
+        request = cast(operations.RemoveVerificationRequest2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -835,7 +839,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeVerificationRequest",
+                operation_id="removeVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -845,7 +849,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveVerificationRequestResponse(
+            return operations.RemoveVerificationRequest2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -858,7 +862,7 @@ class Request(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveVerificationRequestResponse(
+            return operations.RemoveVerificationRequest2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -867,18 +871,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_verification_request_async(
+    async def remove_verification_request2_async(
         self,
         *,
         request: Union[
-            operations.RemoveVerificationRequestRequest,
-            operations.RemoveVerificationRequestRequestTypedDict,
+            operations.RemoveVerificationRequest2Request,
+            operations.RemoveVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveVerificationRequestResponse:
+    ) -> operations.RemoveVerificationRequest2Response:
         r"""Remove a request
 
         :param request: The request object to send.
@@ -899,9 +903,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveVerificationRequestRequest
+                request, operations.RemoveVerificationRequest2Request
             )
-        request = cast(operations.RemoveVerificationRequestRequest, request)
+        request = cast(operations.RemoveVerificationRequest2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -932,7 +936,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeVerificationRequest",
+                operation_id="removeVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -942,7 +946,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveVerificationRequestResponse(
+            return operations.RemoveVerificationRequest2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -955,7 +959,7 @@ class Request(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveVerificationRequestResponse(
+            return operations.RemoveVerificationRequest2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -964,18 +968,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_verification_request(
+    def update_verification_request2(
         self,
         *,
         request: Union[
-            operations.UpdateVerificationRequestRequest,
-            operations.UpdateVerificationRequestRequestTypedDict,
+            operations.UpdateVerificationRequest2Request,
+            operations.UpdateVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateVerificationRequestResponse:
+    ) -> operations.UpdateVerificationRequest2Response:
         r"""Update a request
 
         :param request: The request object to send.
@@ -996,9 +1000,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateVerificationRequestRequest
+                request, operations.UpdateVerificationRequest2Request
             )
-        request = cast(operations.UpdateVerificationRequestRequest, request)
+        request = cast(operations.UpdateVerificationRequest2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1036,7 +1040,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateVerificationRequest",
+                operation_id="updateVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1046,7 +1050,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateVerificationRequestResponse(
+            return operations.UpdateVerificationRequest2Response(
                 verification_request=unmarshal_json_response(
                     Optional[shared.VerificationRequest], http_res
                 ),
@@ -1063,18 +1067,18 @@ class Request(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_verification_request_async(
+    async def update_verification_request2_async(
         self,
         *,
         request: Union[
-            operations.UpdateVerificationRequestRequest,
-            operations.UpdateVerificationRequestRequestTypedDict,
+            operations.UpdateVerificationRequest2Request,
+            operations.UpdateVerificationRequest2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateVerificationRequestResponse:
+    ) -> operations.UpdateVerificationRequest2Response:
         r"""Update a request
 
         :param request: The request object to send.
@@ -1095,9 +1099,9 @@ class Request(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateVerificationRequestRequest
+                request, operations.UpdateVerificationRequest2Request
             )
-        request = cast(operations.UpdateVerificationRequestRequest, request)
+        request = cast(operations.UpdateVerificationRequest2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1135,7 +1139,7 @@ class Request(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateVerificationRequest",
+                operation_id="updateVerificationRequest2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1145,7 +1149,7 @@ class Request(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateVerificationRequestResponse(
+            return operations.UpdateVerificationRequest2Response(
                 verification_request=unmarshal_json_response(
                     Optional[shared.VerificationRequest], http_res
                 ),

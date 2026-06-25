@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Ticketing(BaseSDK):
-    def create_ticketing_category(
+    def create_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.CreateTicketingCategoryRequest,
-            operations.CreateTicketingCategoryRequestTypedDict,
+            operations.CreateTicketingCategory2Request,
+            operations.CreateTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingCategoryResponse:
+    ) -> operations.CreateTicketingCategory2Response:
         r"""Create a category
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateTicketingCategoryRequest
+                request, operations.CreateTicketingCategory2Request
             )
-        request = cast(operations.CreateTicketingCategoryRequest, request)
+        request = cast(operations.CreateTicketingCategory2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingCategory",
+                operation_id="createTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingCategoryResponse(
+            return operations.CreateTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -109,18 +109,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ticketing_category_async(
+    async def create_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.CreateTicketingCategoryRequest,
-            operations.CreateTicketingCategoryRequestTypedDict,
+            operations.CreateTicketingCategory2Request,
+            operations.CreateTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingCategoryResponse:
+    ) -> operations.CreateTicketingCategory2Response:
         r"""Create a category
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateTicketingCategoryRequest
+                request, operations.CreateTicketingCategory2Request
             )
-        request = cast(operations.CreateTicketingCategoryRequest, request)
+        request = cast(operations.CreateTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingCategory",
+                operation_id="createTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingCategoryResponse(
+            return operations.CreateTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -208,18 +208,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ticketing_customer(
+    def create_ticketing_customer2(
         self,
         *,
         request: Union[
-            operations.CreateTicketingCustomerRequest,
-            operations.CreateTicketingCustomerRequestTypedDict,
+            operations.CreateTicketingCustomer2Request,
+            operations.CreateTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingCustomerResponse:
+    ) -> operations.CreateTicketingCustomer2Response:
         r"""Create a customer
 
         :param request: The request object to send.
@@ -240,9 +240,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateTicketingCustomerRequest
+                request, operations.CreateTicketingCustomer2Request
             )
-        request = cast(operations.CreateTicketingCustomerRequest, request)
+        request = cast(operations.CreateTicketingCustomer2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -280,7 +280,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingCustomer",
+                operation_id="createTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -290,7 +290,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingCustomerResponse(
+            return operations.CreateTicketingCustomer2Response(
                 ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
@@ -307,18 +307,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ticketing_customer_async(
+    async def create_ticketing_customer2_async(
         self,
         *,
         request: Union[
-            operations.CreateTicketingCustomerRequest,
-            operations.CreateTicketingCustomerRequestTypedDict,
+            operations.CreateTicketingCustomer2Request,
+            operations.CreateTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingCustomerResponse:
+    ) -> operations.CreateTicketingCustomer2Response:
         r"""Create a customer
 
         :param request: The request object to send.
@@ -339,9 +339,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateTicketingCustomerRequest
+                request, operations.CreateTicketingCustomer2Request
             )
-        request = cast(operations.CreateTicketingCustomerRequest, request)
+        request = cast(operations.CreateTicketingCustomer2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -379,7 +379,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingCustomer",
+                operation_id="createTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -389,7 +389,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingCustomerResponse(
+            return operations.CreateTicketingCustomer2Response(
                 ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
@@ -406,18 +406,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ticketing_note(
+    def create_ticketing_note2(
         self,
         *,
         request: Union[
-            operations.CreateTicketingNoteRequest,
-            operations.CreateTicketingNoteRequestTypedDict,
+            operations.CreateTicketingNote2Request,
+            operations.CreateTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingNoteResponse:
+    ) -> operations.CreateTicketingNote2Response:
         r"""Create a note
 
         :param request: The request object to send.
@@ -437,8 +437,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTicketingNoteRequest)
-        request = cast(operations.CreateTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.CreateTicketingNote2Request)
+        request = cast(operations.CreateTicketingNote2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -472,7 +472,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingNote",
+                operation_id="createTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -482,7 +482,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingNoteResponse(
+            return operations.CreateTicketingNote2Response(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -499,18 +499,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ticketing_note_async(
+    async def create_ticketing_note2_async(
         self,
         *,
         request: Union[
-            operations.CreateTicketingNoteRequest,
-            operations.CreateTicketingNoteRequestTypedDict,
+            operations.CreateTicketingNote2Request,
+            operations.CreateTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingNoteResponse:
+    ) -> operations.CreateTicketingNote2Response:
         r"""Create a note
 
         :param request: The request object to send.
@@ -530,8 +530,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTicketingNoteRequest)
-        request = cast(operations.CreateTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.CreateTicketingNote2Request)
+        request = cast(operations.CreateTicketingNote2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -565,7 +565,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingNote",
+                operation_id="createTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -575,7 +575,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingNoteResponse(
+            return operations.CreateTicketingNote2Response(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -592,18 +592,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ticketing_ticket(
+    def create_ticketing_ticket2(
         self,
         *,
         request: Union[
-            operations.CreateTicketingTicketRequest,
-            operations.CreateTicketingTicketRequestTypedDict,
+            operations.CreateTicketingTicket2Request,
+            operations.CreateTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingTicketResponse:
+    ) -> operations.CreateTicketingTicket2Response:
         r"""Create a ticket
 
         :param request: The request object to send.
@@ -623,8 +623,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTicketingTicketRequest)
-        request = cast(operations.CreateTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.CreateTicketingTicket2Request)
+        request = cast(operations.CreateTicketingTicket2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -658,7 +658,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingTicket",
+                operation_id="createTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -668,7 +668,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingTicketResponse(
+            return operations.CreateTicketingTicket2Response(
                 ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
@@ -685,18 +685,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ticketing_ticket_async(
+    async def create_ticketing_ticket2_async(
         self,
         *,
         request: Union[
-            operations.CreateTicketingTicketRequest,
-            operations.CreateTicketingTicketRequestTypedDict,
+            operations.CreateTicketingTicket2Request,
+            operations.CreateTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingTicketResponse:
+    ) -> operations.CreateTicketingTicket2Response:
         r"""Create a ticket
 
         :param request: The request object to send.
@@ -716,8 +716,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTicketingTicketRequest)
-        request = cast(operations.CreateTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.CreateTicketingTicket2Request)
+        request = cast(operations.CreateTicketingTicket2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -751,7 +751,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingTicket",
+                operation_id="createTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -761,7 +761,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingTicketResponse(
+            return operations.CreateTicketingTicket2Response(
                 ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
@@ -778,18 +778,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ticketing_category(
+    def get_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.GetTicketingCategoryRequest,
-            operations.GetTicketingCategoryRequestTypedDict,
+            operations.GetTicketingCategory2Request,
+            operations.GetTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingCategoryResponse:
+    ) -> operations.GetTicketingCategory2Response:
         r"""Retrieve a category
 
         :param request: The request object to send.
@@ -809,8 +809,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingCategoryRequest)
-        request = cast(operations.GetTicketingCategoryRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingCategory2Request)
+        request = cast(operations.GetTicketingCategory2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -841,7 +841,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingCategory",
+                operation_id="getTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -851,7 +851,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingCategoryResponse(
+            return operations.GetTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -868,18 +868,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ticketing_category_async(
+    async def get_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.GetTicketingCategoryRequest,
-            operations.GetTicketingCategoryRequestTypedDict,
+            operations.GetTicketingCategory2Request,
+            operations.GetTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingCategoryResponse:
+    ) -> operations.GetTicketingCategory2Response:
         r"""Retrieve a category
 
         :param request: The request object to send.
@@ -899,8 +899,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingCategoryRequest)
-        request = cast(operations.GetTicketingCategoryRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingCategory2Request)
+        request = cast(operations.GetTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -931,7 +931,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingCategory",
+                operation_id="getTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -941,7 +941,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingCategoryResponse(
+            return operations.GetTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -958,18 +958,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ticketing_customer(
+    def get_ticketing_customer2(
         self,
         *,
         request: Union[
-            operations.GetTicketingCustomerRequest,
-            operations.GetTicketingCustomerRequestTypedDict,
+            operations.GetTicketingCustomer2Request,
+            operations.GetTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingCustomerResponse:
+    ) -> operations.GetTicketingCustomer2Response:
         r"""Retrieve a customer
 
         :param request: The request object to send.
@@ -989,8 +989,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingCustomerRequest)
-        request = cast(operations.GetTicketingCustomerRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingCustomer2Request)
+        request = cast(operations.GetTicketingCustomer2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1021,7 +1021,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingCustomer",
+                operation_id="getTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1031,7 +1031,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingCustomerResponse(
+            return operations.GetTicketingCustomer2Response(
                 ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
@@ -1048,18 +1048,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ticketing_customer_async(
+    async def get_ticketing_customer2_async(
         self,
         *,
         request: Union[
-            operations.GetTicketingCustomerRequest,
-            operations.GetTicketingCustomerRequestTypedDict,
+            operations.GetTicketingCustomer2Request,
+            operations.GetTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingCustomerResponse:
+    ) -> operations.GetTicketingCustomer2Response:
         r"""Retrieve a customer
 
         :param request: The request object to send.
@@ -1079,8 +1079,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingCustomerRequest)
-        request = cast(operations.GetTicketingCustomerRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingCustomer2Request)
+        request = cast(operations.GetTicketingCustomer2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1111,7 +1111,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingCustomer",
+                operation_id="getTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1121,7 +1121,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingCustomerResponse(
+            return operations.GetTicketingCustomer2Response(
                 ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
@@ -1138,18 +1138,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ticketing_note(
+    def get_ticketing_note2(
         self,
         *,
         request: Union[
-            operations.GetTicketingNoteRequest,
-            operations.GetTicketingNoteRequestTypedDict,
+            operations.GetTicketingNote2Request,
+            operations.GetTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingNoteResponse:
+    ) -> operations.GetTicketingNote2Response:
         r"""Retrieve a note
 
         :param request: The request object to send.
@@ -1169,8 +1169,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingNoteRequest)
-        request = cast(operations.GetTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingNote2Request)
+        request = cast(operations.GetTicketingNote2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1201,7 +1201,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingNote",
+                operation_id="getTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1211,7 +1211,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingNoteResponse(
+            return operations.GetTicketingNote2Response(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -1228,18 +1228,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ticketing_note_async(
+    async def get_ticketing_note2_async(
         self,
         *,
         request: Union[
-            operations.GetTicketingNoteRequest,
-            operations.GetTicketingNoteRequestTypedDict,
+            operations.GetTicketingNote2Request,
+            operations.GetTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingNoteResponse:
+    ) -> operations.GetTicketingNote2Response:
         r"""Retrieve a note
 
         :param request: The request object to send.
@@ -1259,8 +1259,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingNoteRequest)
-        request = cast(operations.GetTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingNote2Request)
+        request = cast(operations.GetTicketingNote2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1291,7 +1291,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingNote",
+                operation_id="getTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1301,7 +1301,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingNoteResponse(
+            return operations.GetTicketingNote2Response(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -1318,18 +1318,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ticketing_ticket(
+    def get_ticketing_ticket2(
         self,
         *,
         request: Union[
-            operations.GetTicketingTicketRequest,
-            operations.GetTicketingTicketRequestTypedDict,
+            operations.GetTicketingTicket2Request,
+            operations.GetTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingTicketResponse:
+    ) -> operations.GetTicketingTicket2Response:
         r"""Retrieve a ticket
 
         :param request: The request object to send.
@@ -1349,8 +1349,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingTicketRequest)
-        request = cast(operations.GetTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingTicket2Request)
+        request = cast(operations.GetTicketingTicket2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1381,7 +1381,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingTicket",
+                operation_id="getTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1391,7 +1391,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingTicketResponse(
+            return operations.GetTicketingTicket2Response(
                 ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
@@ -1408,18 +1408,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ticketing_ticket_async(
+    async def get_ticketing_ticket2_async(
         self,
         *,
         request: Union[
-            operations.GetTicketingTicketRequest,
-            operations.GetTicketingTicketRequestTypedDict,
+            operations.GetTicketingTicket2Request,
+            operations.GetTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingTicketResponse:
+    ) -> operations.GetTicketingTicket2Response:
         r"""Retrieve a ticket
 
         :param request: The request object to send.
@@ -1439,8 +1439,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingTicketRequest)
-        request = cast(operations.GetTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.GetTicketingTicket2Request)
+        request = cast(operations.GetTicketingTicket2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1471,7 +1471,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingTicket",
+                operation_id="getTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1481,7 +1481,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingTicketResponse(
+            return operations.GetTicketingTicket2Response(
                 ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
@@ -1498,18 +1498,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ticketing_categories(
+    def list_ticketing_categories2(
         self,
         *,
         request: Union[
-            operations.ListTicketingCategoriesRequest,
-            operations.ListTicketingCategoriesRequestTypedDict,
+            operations.ListTicketingCategories2Request,
+            operations.ListTicketingCategories2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingCategoriesResponse:
+    ) -> operations.ListTicketingCategories2Response:
         r"""List all categories
 
         :param request: The request object to send.
@@ -1530,9 +1530,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListTicketingCategoriesRequest
+                request, operations.ListTicketingCategories2Request
             )
-        request = cast(operations.ListTicketingCategoriesRequest, request)
+        request = cast(operations.ListTicketingCategories2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1563,7 +1563,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingCategories",
+                operation_id="listTicketingCategories2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1573,7 +1573,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingCategoriesResponse(
+            return operations.ListTicketingCategories2Response(
                 ticketing_categories=unmarshal_json_response(
                     Optional[List[shared.TicketingCategory]], http_res
                 ),
@@ -1590,18 +1590,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ticketing_categories_async(
+    async def list_ticketing_categories2_async(
         self,
         *,
         request: Union[
-            operations.ListTicketingCategoriesRequest,
-            operations.ListTicketingCategoriesRequestTypedDict,
+            operations.ListTicketingCategories2Request,
+            operations.ListTicketingCategories2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingCategoriesResponse:
+    ) -> operations.ListTicketingCategories2Response:
         r"""List all categories
 
         :param request: The request object to send.
@@ -1622,9 +1622,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListTicketingCategoriesRequest
+                request, operations.ListTicketingCategories2Request
             )
-        request = cast(operations.ListTicketingCategoriesRequest, request)
+        request = cast(operations.ListTicketingCategories2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1655,7 +1655,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingCategories",
+                operation_id="listTicketingCategories2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1665,7 +1665,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingCategoriesResponse(
+            return operations.ListTicketingCategories2Response(
                 ticketing_categories=unmarshal_json_response(
                     Optional[List[shared.TicketingCategory]], http_res
                 ),
@@ -1682,18 +1682,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ticketing_customers(
+    def list_ticketing_customers2(
         self,
         *,
         request: Union[
-            operations.ListTicketingCustomersRequest,
-            operations.ListTicketingCustomersRequestTypedDict,
+            operations.ListTicketingCustomers2Request,
+            operations.ListTicketingCustomers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingCustomersResponse:
+    ) -> operations.ListTicketingCustomers2Response:
         r"""List all customers
 
         :param request: The request object to send.
@@ -1713,8 +1713,10 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTicketingCustomersRequest)
-        request = cast(operations.ListTicketingCustomersRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListTicketingCustomers2Request
+            )
+        request = cast(operations.ListTicketingCustomers2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1745,7 +1747,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingCustomers",
+                operation_id="listTicketingCustomers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1755,7 +1757,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingCustomersResponse(
+            return operations.ListTicketingCustomers2Response(
                 ticketing_customers=unmarshal_json_response(
                     Optional[List[shared.TicketingCustomer]], http_res
                 ),
@@ -1772,18 +1774,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ticketing_customers_async(
+    async def list_ticketing_customers2_async(
         self,
         *,
         request: Union[
-            operations.ListTicketingCustomersRequest,
-            operations.ListTicketingCustomersRequestTypedDict,
+            operations.ListTicketingCustomers2Request,
+            operations.ListTicketingCustomers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingCustomersResponse:
+    ) -> operations.ListTicketingCustomers2Response:
         r"""List all customers
 
         :param request: The request object to send.
@@ -1803,8 +1805,10 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTicketingCustomersRequest)
-        request = cast(operations.ListTicketingCustomersRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListTicketingCustomers2Request
+            )
+        request = cast(operations.ListTicketingCustomers2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1835,7 +1839,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingCustomers",
+                operation_id="listTicketingCustomers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1845,7 +1849,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingCustomersResponse(
+            return operations.ListTicketingCustomers2Response(
                 ticketing_customers=unmarshal_json_response(
                     Optional[List[shared.TicketingCustomer]], http_res
                 ),
@@ -1862,18 +1866,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ticketing_notes(
+    def list_ticketing_notes2(
         self,
         *,
         request: Union[
-            operations.ListTicketingNotesRequest,
-            operations.ListTicketingNotesRequestTypedDict,
+            operations.ListTicketingNotes2Request,
+            operations.ListTicketingNotes2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingNotesResponse:
+    ) -> operations.ListTicketingNotes2Response:
         r"""List all notes
 
         :param request: The request object to send.
@@ -1893,8 +1897,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTicketingNotesRequest)
-        request = cast(operations.ListTicketingNotesRequest, request)
+            request = utils.unmarshal(request, operations.ListTicketingNotes2Request)
+        request = cast(operations.ListTicketingNotes2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1925,7 +1929,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingNotes",
+                operation_id="listTicketingNotes2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1935,7 +1939,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingNotesResponse(
+            return operations.ListTicketingNotes2Response(
                 ticketing_notes=unmarshal_json_response(
                     Optional[List[shared.TicketingNote]], http_res
                 ),
@@ -1952,18 +1956,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ticketing_notes_async(
+    async def list_ticketing_notes2_async(
         self,
         *,
         request: Union[
-            operations.ListTicketingNotesRequest,
-            operations.ListTicketingNotesRequestTypedDict,
+            operations.ListTicketingNotes2Request,
+            operations.ListTicketingNotes2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingNotesResponse:
+    ) -> operations.ListTicketingNotes2Response:
         r"""List all notes
 
         :param request: The request object to send.
@@ -1983,8 +1987,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTicketingNotesRequest)
-        request = cast(operations.ListTicketingNotesRequest, request)
+            request = utils.unmarshal(request, operations.ListTicketingNotes2Request)
+        request = cast(operations.ListTicketingNotes2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2015,7 +2019,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingNotes",
+                operation_id="listTicketingNotes2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2025,7 +2029,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingNotesResponse(
+            return operations.ListTicketingNotes2Response(
                 ticketing_notes=unmarshal_json_response(
                     Optional[List[shared.TicketingNote]], http_res
                 ),
@@ -2042,18 +2046,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ticketing_tickets(
+    def list_ticketing_tickets2(
         self,
         *,
         request: Union[
-            operations.ListTicketingTicketsRequest,
-            operations.ListTicketingTicketsRequestTypedDict,
+            operations.ListTicketingTickets2Request,
+            operations.ListTicketingTickets2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingTicketsResponse:
+    ) -> operations.ListTicketingTickets2Response:
         r"""List all tickets
 
         :param request: The request object to send.
@@ -2073,8 +2077,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTicketingTicketsRequest)
-        request = cast(operations.ListTicketingTicketsRequest, request)
+            request = utils.unmarshal(request, operations.ListTicketingTickets2Request)
+        request = cast(operations.ListTicketingTickets2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -2105,7 +2109,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingTickets",
+                operation_id="listTicketingTickets2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2115,7 +2119,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingTicketsResponse(
+            return operations.ListTicketingTickets2Response(
                 ticketing_tickets=unmarshal_json_response(
                     Optional[List[shared.TicketingTicket]], http_res
                 ),
@@ -2132,18 +2136,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ticketing_tickets_async(
+    async def list_ticketing_tickets2_async(
         self,
         *,
         request: Union[
-            operations.ListTicketingTicketsRequest,
-            operations.ListTicketingTicketsRequestTypedDict,
+            operations.ListTicketingTickets2Request,
+            operations.ListTicketingTickets2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingTicketsResponse:
+    ) -> operations.ListTicketingTickets2Response:
         r"""List all tickets
 
         :param request: The request object to send.
@@ -2163,8 +2167,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTicketingTicketsRequest)
-        request = cast(operations.ListTicketingTicketsRequest, request)
+            request = utils.unmarshal(request, operations.ListTicketingTickets2Request)
+        request = cast(operations.ListTicketingTickets2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2195,7 +2199,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingTickets",
+                operation_id="listTicketingTickets2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2205,7 +2209,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingTicketsResponse(
+            return operations.ListTicketingTickets2Response(
                 ticketing_tickets=unmarshal_json_response(
                     Optional[List[shared.TicketingTicket]], http_res
                 ),
@@ -2222,18 +2226,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ticketing_category(
+    def patch_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.PatchTicketingCategoryRequest,
-            operations.PatchTicketingCategoryRequestTypedDict,
+            operations.PatchTicketingCategory2Request,
+            operations.PatchTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingCategoryResponse:
+    ) -> operations.PatchTicketingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -2253,8 +2257,10 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingCategoryRequest)
-        request = cast(operations.PatchTicketingCategoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchTicketingCategory2Request
+            )
+        request = cast(operations.PatchTicketingCategory2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2292,7 +2298,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingCategory",
+                operation_id="patchTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2302,7 +2308,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingCategoryResponse(
+            return operations.PatchTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -2319,18 +2325,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ticketing_category_async(
+    async def patch_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.PatchTicketingCategoryRequest,
-            operations.PatchTicketingCategoryRequestTypedDict,
+            operations.PatchTicketingCategory2Request,
+            operations.PatchTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingCategoryResponse:
+    ) -> operations.PatchTicketingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -2350,8 +2356,10 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingCategoryRequest)
-        request = cast(operations.PatchTicketingCategoryRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchTicketingCategory2Request
+            )
+        request = cast(operations.PatchTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2389,7 +2397,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingCategory",
+                operation_id="patchTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2399,7 +2407,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingCategoryResponse(
+            return operations.PatchTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -2416,18 +2424,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ticketing_customer(
+    def patch_ticketing_customer2(
         self,
         *,
         request: Union[
-            operations.PatchTicketingCustomerRequest,
-            operations.PatchTicketingCustomerRequestTypedDict,
+            operations.PatchTicketingCustomer2Request,
+            operations.PatchTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingCustomerResponse:
+    ) -> operations.PatchTicketingCustomer2Response:
         r"""Update a customer
 
         :param request: The request object to send.
@@ -2447,8 +2455,10 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingCustomerRequest)
-        request = cast(operations.PatchTicketingCustomerRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchTicketingCustomer2Request
+            )
+        request = cast(operations.PatchTicketingCustomer2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2486,7 +2496,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingCustomer",
+                operation_id="patchTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2496,7 +2506,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingCustomerResponse(
+            return operations.PatchTicketingCustomer2Response(
                 ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
@@ -2513,18 +2523,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ticketing_customer_async(
+    async def patch_ticketing_customer2_async(
         self,
         *,
         request: Union[
-            operations.PatchTicketingCustomerRequest,
-            operations.PatchTicketingCustomerRequestTypedDict,
+            operations.PatchTicketingCustomer2Request,
+            operations.PatchTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingCustomerResponse:
+    ) -> operations.PatchTicketingCustomer2Response:
         r"""Update a customer
 
         :param request: The request object to send.
@@ -2544,8 +2554,10 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingCustomerRequest)
-        request = cast(operations.PatchTicketingCustomerRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchTicketingCustomer2Request
+            )
+        request = cast(operations.PatchTicketingCustomer2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2583,7 +2595,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingCustomer",
+                operation_id="patchTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2593,7 +2605,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingCustomerResponse(
+            return operations.PatchTicketingCustomer2Response(
                 ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
@@ -2610,18 +2622,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ticketing_note(
+    def patch_ticketing_note2(
         self,
         *,
         request: Union[
-            operations.PatchTicketingNoteRequest,
-            operations.PatchTicketingNoteRequestTypedDict,
+            operations.PatchTicketingNote2Request,
+            operations.PatchTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingNoteResponse:
+    ) -> operations.PatchTicketingNote2Response:
         r"""Update a note
 
         :param request: The request object to send.
@@ -2641,8 +2653,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingNoteRequest)
-        request = cast(operations.PatchTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.PatchTicketingNote2Request)
+        request = cast(operations.PatchTicketingNote2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2676,7 +2688,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingNote",
+                operation_id="patchTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2686,7 +2698,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingNoteResponse(
+            return operations.PatchTicketingNote2Response(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -2703,18 +2715,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ticketing_note_async(
+    async def patch_ticketing_note2_async(
         self,
         *,
         request: Union[
-            operations.PatchTicketingNoteRequest,
-            operations.PatchTicketingNoteRequestTypedDict,
+            operations.PatchTicketingNote2Request,
+            operations.PatchTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingNoteResponse:
+    ) -> operations.PatchTicketingNote2Response:
         r"""Update a note
 
         :param request: The request object to send.
@@ -2734,8 +2746,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingNoteRequest)
-        request = cast(operations.PatchTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.PatchTicketingNote2Request)
+        request = cast(operations.PatchTicketingNote2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2769,7 +2781,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingNote",
+                operation_id="patchTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2779,7 +2791,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingNoteResponse(
+            return operations.PatchTicketingNote2Response(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -2796,18 +2808,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ticketing_ticket(
+    def patch_ticketing_ticket2(
         self,
         *,
         request: Union[
-            operations.PatchTicketingTicketRequest,
-            operations.PatchTicketingTicketRequestTypedDict,
+            operations.PatchTicketingTicket2Request,
+            operations.PatchTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingTicketResponse:
+    ) -> operations.PatchTicketingTicket2Response:
         r"""Update a ticket
 
         :param request: The request object to send.
@@ -2827,8 +2839,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingTicketRequest)
-        request = cast(operations.PatchTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.PatchTicketingTicket2Request)
+        request = cast(operations.PatchTicketingTicket2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2862,7 +2874,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingTicket",
+                operation_id="patchTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2872,7 +2884,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingTicketResponse(
+            return operations.PatchTicketingTicket2Response(
                 ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
@@ -2889,18 +2901,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ticketing_ticket_async(
+    async def patch_ticketing_ticket2_async(
         self,
         *,
         request: Union[
-            operations.PatchTicketingTicketRequest,
-            operations.PatchTicketingTicketRequestTypedDict,
+            operations.PatchTicketingTicket2Request,
+            operations.PatchTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingTicketResponse:
+    ) -> operations.PatchTicketingTicket2Response:
         r"""Update a ticket
 
         :param request: The request object to send.
@@ -2920,8 +2932,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingTicketRequest)
-        request = cast(operations.PatchTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.PatchTicketingTicket2Request)
+        request = cast(operations.PatchTicketingTicket2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2955,7 +2967,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingTicket",
+                operation_id="patchTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2965,7 +2977,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingTicketResponse(
+            return operations.PatchTicketingTicket2Response(
                 ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
@@ -2982,18 +2994,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ticketing_category(
+    def remove_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingCategoryRequest,
-            operations.RemoveTicketingCategoryRequestTypedDict,
+            operations.RemoveTicketingCategory2Request,
+            operations.RemoveTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingCategoryResponse:
+    ) -> operations.RemoveTicketingCategory2Response:
         r"""Remove a category
 
         :param request: The request object to send.
@@ -3014,9 +3026,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveTicketingCategoryRequest
+                request, operations.RemoveTicketingCategory2Request
             )
-        request = cast(operations.RemoveTicketingCategoryRequest, request)
+        request = cast(operations.RemoveTicketingCategory2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -3047,7 +3059,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingCategory",
+                operation_id="removeTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3057,7 +3069,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingCategoryResponse(
+            return operations.RemoveTicketingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3070,7 +3082,7 @@ class Ticketing(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingCategoryResponse(
+            return operations.RemoveTicketingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3079,18 +3091,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ticketing_category_async(
+    async def remove_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingCategoryRequest,
-            operations.RemoveTicketingCategoryRequestTypedDict,
+            operations.RemoveTicketingCategory2Request,
+            operations.RemoveTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingCategoryResponse:
+    ) -> operations.RemoveTicketingCategory2Response:
         r"""Remove a category
 
         :param request: The request object to send.
@@ -3111,9 +3123,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveTicketingCategoryRequest
+                request, operations.RemoveTicketingCategory2Request
             )
-        request = cast(operations.RemoveTicketingCategoryRequest, request)
+        request = cast(operations.RemoveTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3144,7 +3156,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingCategory",
+                operation_id="removeTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3154,7 +3166,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingCategoryResponse(
+            return operations.RemoveTicketingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3167,7 +3179,7 @@ class Ticketing(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingCategoryResponse(
+            return operations.RemoveTicketingCategory2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3176,18 +3188,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ticketing_customer(
+    def remove_ticketing_customer2(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingCustomerRequest,
-            operations.RemoveTicketingCustomerRequestTypedDict,
+            operations.RemoveTicketingCustomer2Request,
+            operations.RemoveTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingCustomerResponse:
+    ) -> operations.RemoveTicketingCustomer2Response:
         r"""Remove a customer
 
         :param request: The request object to send.
@@ -3208,9 +3220,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveTicketingCustomerRequest
+                request, operations.RemoveTicketingCustomer2Request
             )
-        request = cast(operations.RemoveTicketingCustomerRequest, request)
+        request = cast(operations.RemoveTicketingCustomer2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -3241,7 +3253,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingCustomer",
+                operation_id="removeTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3251,7 +3263,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingCustomerResponse(
+            return operations.RemoveTicketingCustomer2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3264,7 +3276,7 @@ class Ticketing(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingCustomerResponse(
+            return operations.RemoveTicketingCustomer2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3273,18 +3285,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ticketing_customer_async(
+    async def remove_ticketing_customer2_async(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingCustomerRequest,
-            operations.RemoveTicketingCustomerRequestTypedDict,
+            operations.RemoveTicketingCustomer2Request,
+            operations.RemoveTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingCustomerResponse:
+    ) -> operations.RemoveTicketingCustomer2Response:
         r"""Remove a customer
 
         :param request: The request object to send.
@@ -3305,9 +3317,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveTicketingCustomerRequest
+                request, operations.RemoveTicketingCustomer2Request
             )
-        request = cast(operations.RemoveTicketingCustomerRequest, request)
+        request = cast(operations.RemoveTicketingCustomer2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3338,7 +3350,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingCustomer",
+                operation_id="removeTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3348,7 +3360,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingCustomerResponse(
+            return operations.RemoveTicketingCustomer2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3361,7 +3373,7 @@ class Ticketing(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingCustomerResponse(
+            return operations.RemoveTicketingCustomer2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3370,18 +3382,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ticketing_note(
+    def remove_ticketing_note2(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingNoteRequest,
-            operations.RemoveTicketingNoteRequestTypedDict,
+            operations.RemoveTicketingNote2Request,
+            operations.RemoveTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingNoteResponse:
+    ) -> operations.RemoveTicketingNote2Response:
         r"""Remove a note
 
         :param request: The request object to send.
@@ -3401,8 +3413,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTicketingNoteRequest)
-        request = cast(operations.RemoveTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTicketingNote2Request)
+        request = cast(operations.RemoveTicketingNote2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -3433,7 +3445,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingNote",
+                operation_id="removeTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3443,7 +3455,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingNoteResponse(
+            return operations.RemoveTicketingNote2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3456,7 +3468,7 @@ class Ticketing(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingNoteResponse(
+            return operations.RemoveTicketingNote2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3465,18 +3477,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ticketing_note_async(
+    async def remove_ticketing_note2_async(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingNoteRequest,
-            operations.RemoveTicketingNoteRequestTypedDict,
+            operations.RemoveTicketingNote2Request,
+            operations.RemoveTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingNoteResponse:
+    ) -> operations.RemoveTicketingNote2Response:
         r"""Remove a note
 
         :param request: The request object to send.
@@ -3496,8 +3508,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTicketingNoteRequest)
-        request = cast(operations.RemoveTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTicketingNote2Request)
+        request = cast(operations.RemoveTicketingNote2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3528,7 +3540,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingNote",
+                operation_id="removeTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3538,7 +3550,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingNoteResponse(
+            return operations.RemoveTicketingNote2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3551,7 +3563,7 @@ class Ticketing(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingNoteResponse(
+            return operations.RemoveTicketingNote2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3560,18 +3572,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ticketing_ticket(
+    def remove_ticketing_ticket2(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingTicketRequest,
-            operations.RemoveTicketingTicketRequestTypedDict,
+            operations.RemoveTicketingTicket2Request,
+            operations.RemoveTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingTicketResponse:
+    ) -> operations.RemoveTicketingTicket2Response:
         r"""Remove a ticket
 
         :param request: The request object to send.
@@ -3591,8 +3603,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTicketingTicketRequest)
-        request = cast(operations.RemoveTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTicketingTicket2Request)
+        request = cast(operations.RemoveTicketingTicket2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -3623,7 +3635,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingTicket",
+                operation_id="removeTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3633,7 +3645,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingTicketResponse(
+            return operations.RemoveTicketingTicket2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3646,7 +3658,7 @@ class Ticketing(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingTicketResponse(
+            return operations.RemoveTicketingTicket2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3655,18 +3667,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ticketing_ticket_async(
+    async def remove_ticketing_ticket2_async(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingTicketRequest,
-            operations.RemoveTicketingTicketRequestTypedDict,
+            operations.RemoveTicketingTicket2Request,
+            operations.RemoveTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingTicketResponse:
+    ) -> operations.RemoveTicketingTicket2Response:
         r"""Remove a ticket
 
         :param request: The request object to send.
@@ -3686,8 +3698,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTicketingTicketRequest)
-        request = cast(operations.RemoveTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTicketingTicket2Request)
+        request = cast(operations.RemoveTicketingTicket2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3718,7 +3730,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingTicket",
+                operation_id="removeTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3728,7 +3740,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingTicketResponse(
+            return operations.RemoveTicketingTicket2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3741,7 +3753,7 @@ class Ticketing(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingTicketResponse(
+            return operations.RemoveTicketingTicket2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3750,18 +3762,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ticketing_category(
+    def update_ticketing_category2(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingCategoryRequest,
-            operations.UpdateTicketingCategoryRequestTypedDict,
+            operations.UpdateTicketingCategory2Request,
+            operations.UpdateTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingCategoryResponse:
+    ) -> operations.UpdateTicketingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -3782,9 +3794,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateTicketingCategoryRequest
+                request, operations.UpdateTicketingCategory2Request
             )
-        request = cast(operations.UpdateTicketingCategoryRequest, request)
+        request = cast(operations.UpdateTicketingCategory2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3822,7 +3834,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingCategory",
+                operation_id="updateTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3832,7 +3844,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingCategoryResponse(
+            return operations.UpdateTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -3849,18 +3861,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ticketing_category_async(
+    async def update_ticketing_category2_async(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingCategoryRequest,
-            operations.UpdateTicketingCategoryRequestTypedDict,
+            operations.UpdateTicketingCategory2Request,
+            operations.UpdateTicketingCategory2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingCategoryResponse:
+    ) -> operations.UpdateTicketingCategory2Response:
         r"""Update a category
 
         :param request: The request object to send.
@@ -3881,9 +3893,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateTicketingCategoryRequest
+                request, operations.UpdateTicketingCategory2Request
             )
-        request = cast(operations.UpdateTicketingCategoryRequest, request)
+        request = cast(operations.UpdateTicketingCategory2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3921,7 +3933,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingCategory",
+                operation_id="updateTicketingCategory2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3931,7 +3943,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingCategoryResponse(
+            return operations.UpdateTicketingCategory2Response(
                 ticketing_category=unmarshal_json_response(
                     Optional[shared.TicketingCategory], http_res
                 ),
@@ -3948,18 +3960,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ticketing_customer(
+    def update_ticketing_customer2(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingCustomerRequest,
-            operations.UpdateTicketingCustomerRequestTypedDict,
+            operations.UpdateTicketingCustomer2Request,
+            operations.UpdateTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingCustomerResponse:
+    ) -> operations.UpdateTicketingCustomer2Response:
         r"""Update a customer
 
         :param request: The request object to send.
@@ -3980,9 +3992,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateTicketingCustomerRequest
+                request, operations.UpdateTicketingCustomer2Request
             )
-        request = cast(operations.UpdateTicketingCustomerRequest, request)
+        request = cast(operations.UpdateTicketingCustomer2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -4020,7 +4032,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingCustomer",
+                operation_id="updateTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4030,7 +4042,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingCustomerResponse(
+            return operations.UpdateTicketingCustomer2Response(
                 ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
@@ -4047,18 +4059,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ticketing_customer_async(
+    async def update_ticketing_customer2_async(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingCustomerRequest,
-            operations.UpdateTicketingCustomerRequestTypedDict,
+            operations.UpdateTicketingCustomer2Request,
+            operations.UpdateTicketingCustomer2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingCustomerResponse:
+    ) -> operations.UpdateTicketingCustomer2Response:
         r"""Update a customer
 
         :param request: The request object to send.
@@ -4079,9 +4091,9 @@ class Ticketing(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateTicketingCustomerRequest
+                request, operations.UpdateTicketingCustomer2Request
             )
-        request = cast(operations.UpdateTicketingCustomerRequest, request)
+        request = cast(operations.UpdateTicketingCustomer2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -4119,7 +4131,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingCustomer",
+                operation_id="updateTicketingCustomer2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4129,7 +4141,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingCustomerResponse(
+            return operations.UpdateTicketingCustomer2Response(
                 ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
@@ -4146,18 +4158,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ticketing_note(
+    def update_ticketing_note2(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingNoteRequest,
-            operations.UpdateTicketingNoteRequestTypedDict,
+            operations.UpdateTicketingNote2Request,
+            operations.UpdateTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingNoteResponse:
+    ) -> operations.UpdateTicketingNote2Response:
         r"""Update a note
 
         :param request: The request object to send.
@@ -4177,8 +4189,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTicketingNoteRequest)
-        request = cast(operations.UpdateTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTicketingNote2Request)
+        request = cast(operations.UpdateTicketingNote2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -4212,7 +4224,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingNote",
+                operation_id="updateTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4222,7 +4234,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingNoteResponse(
+            return operations.UpdateTicketingNote2Response(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -4239,18 +4251,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ticketing_note_async(
+    async def update_ticketing_note2_async(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingNoteRequest,
-            operations.UpdateTicketingNoteRequestTypedDict,
+            operations.UpdateTicketingNote2Request,
+            operations.UpdateTicketingNote2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingNoteResponse:
+    ) -> operations.UpdateTicketingNote2Response:
         r"""Update a note
 
         :param request: The request object to send.
@@ -4270,8 +4282,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTicketingNoteRequest)
-        request = cast(operations.UpdateTicketingNoteRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTicketingNote2Request)
+        request = cast(operations.UpdateTicketingNote2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -4305,7 +4317,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingNote",
+                operation_id="updateTicketingNote2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4315,7 +4327,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingNoteResponse(
+            return operations.UpdateTicketingNote2Response(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -4332,18 +4344,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ticketing_ticket(
+    def update_ticketing_ticket2(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingTicketRequest,
-            operations.UpdateTicketingTicketRequestTypedDict,
+            operations.UpdateTicketingTicket2Request,
+            operations.UpdateTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingTicketResponse:
+    ) -> operations.UpdateTicketingTicket2Response:
         r"""Update a ticket
 
         :param request: The request object to send.
@@ -4363,8 +4375,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTicketingTicketRequest)
-        request = cast(operations.UpdateTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTicketingTicket2Request)
+        request = cast(operations.UpdateTicketingTicket2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -4398,7 +4410,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingTicket",
+                operation_id="updateTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4408,7 +4420,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingTicketResponse(
+            return operations.UpdateTicketingTicket2Response(
                 ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
@@ -4425,18 +4437,18 @@ class Ticketing(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ticketing_ticket_async(
+    async def update_ticketing_ticket2_async(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingTicketRequest,
-            operations.UpdateTicketingTicketRequestTypedDict,
+            operations.UpdateTicketingTicket2Request,
+            operations.UpdateTicketingTicket2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingTicketResponse:
+    ) -> operations.UpdateTicketingTicket2Response:
         r"""Update a ticket
 
         :param request: The request object to send.
@@ -4456,8 +4468,8 @@ class Ticketing(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTicketingTicketRequest)
-        request = cast(operations.UpdateTicketingTicketRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTicketingTicket2Request)
+        request = cast(operations.UpdateTicketingTicket2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -4491,7 +4503,7 @@ class Ticketing(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingTicket",
+                operation_id="updateTicketingTicket2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4501,7 +4513,7 @@ class Ticketing(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingTicketResponse(
+            return operations.UpdateTicketingTicket2Response(
                 ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),

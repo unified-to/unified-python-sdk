@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Benefit(BaseSDK):
-    def create_hris_benefit(
+    def create_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.CreateHrisBenefitRequest,
-            operations.CreateHrisBenefitRequestTypedDict,
+            operations.CreateHrisBenefit2Request,
+            operations.CreateHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisBenefitResponse:
+    ) -> operations.CreateHrisBenefit2Response:
         r"""Create a benefit
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisBenefitRequest)
-        request = cast(operations.CreateHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisBenefit2Request)
+        request = cast(operations.CreateHrisBenefit2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisBenefit",
+                operation_id="createHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisBenefitResponse(
+            return operations.CreateHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -103,18 +103,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_benefit_async(
+    async def create_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisBenefitRequest,
-            operations.CreateHrisBenefitRequestTypedDict,
+            operations.CreateHrisBenefit2Request,
+            operations.CreateHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisBenefitResponse:
+    ) -> operations.CreateHrisBenefit2Response:
         r"""Create a benefit
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisBenefitRequest)
-        request = cast(operations.CreateHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisBenefit2Request)
+        request = cast(operations.CreateHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisBenefit",
+                operation_id="createHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisBenefitResponse(
+            return operations.CreateHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -196,17 +196,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_benefit(
+    def get_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.GetHrisBenefitRequest, operations.GetHrisBenefitRequestTypedDict
+            operations.GetHrisBenefit2Request,
+            operations.GetHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisBenefitResponse:
+    ) -> operations.GetHrisBenefit2Response:
         r"""Retrieve a benefit
 
         :param request: The request object to send.
@@ -226,8 +227,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisBenefitRequest)
-        request = cast(operations.GetHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisBenefit2Request)
+        request = cast(operations.GetHrisBenefit2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -258,7 +259,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisBenefit",
+                operation_id="getHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -268,7 +269,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisBenefitResponse(
+            return operations.GetHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -285,17 +286,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_benefit_async(
+    async def get_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisBenefitRequest, operations.GetHrisBenefitRequestTypedDict
+            operations.GetHrisBenefit2Request,
+            operations.GetHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisBenefitResponse:
+    ) -> operations.GetHrisBenefit2Response:
         r"""Retrieve a benefit
 
         :param request: The request object to send.
@@ -315,8 +317,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisBenefitRequest)
-        request = cast(operations.GetHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisBenefit2Request)
+        request = cast(operations.GetHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -347,7 +349,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisBenefit",
+                operation_id="getHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -357,7 +359,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisBenefitResponse(
+            return operations.GetHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -374,18 +376,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_benefits(
+    def list_hris_benefits2(
         self,
         *,
         request: Union[
-            operations.ListHrisBenefitsRequest,
-            operations.ListHrisBenefitsRequestTypedDict,
+            operations.ListHrisBenefits2Request,
+            operations.ListHrisBenefits2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisBenefitsResponse:
+    ) -> operations.ListHrisBenefits2Response:
         r"""List all benefits
 
         :param request: The request object to send.
@@ -405,8 +407,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisBenefitsRequest)
-        request = cast(operations.ListHrisBenefitsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisBenefits2Request)
+        request = cast(operations.ListHrisBenefits2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -437,7 +439,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisBenefits",
+                operation_id="listHrisBenefits2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -447,7 +449,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisBenefitsResponse(
+            return operations.ListHrisBenefits2Response(
                 hris_benefits=unmarshal_json_response(
                     Optional[List[shared.HrisBenefit]], http_res
                 ),
@@ -464,18 +466,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_benefits_async(
+    async def list_hris_benefits2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisBenefitsRequest,
-            operations.ListHrisBenefitsRequestTypedDict,
+            operations.ListHrisBenefits2Request,
+            operations.ListHrisBenefits2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisBenefitsResponse:
+    ) -> operations.ListHrisBenefits2Response:
         r"""List all benefits
 
         :param request: The request object to send.
@@ -495,8 +497,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisBenefitsRequest)
-        request = cast(operations.ListHrisBenefitsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisBenefits2Request)
+        request = cast(operations.ListHrisBenefits2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -527,7 +529,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisBenefits",
+                operation_id="listHrisBenefits2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -537,7 +539,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisBenefitsResponse(
+            return operations.ListHrisBenefits2Response(
                 hris_benefits=unmarshal_json_response(
                     Optional[List[shared.HrisBenefit]], http_res
                 ),
@@ -554,18 +556,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_benefit(
+    def patch_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.PatchHrisBenefitRequest,
-            operations.PatchHrisBenefitRequestTypedDict,
+            operations.PatchHrisBenefit2Request,
+            operations.PatchHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisBenefitResponse:
+    ) -> operations.PatchHrisBenefit2Response:
         r"""Update a benefit
 
         :param request: The request object to send.
@@ -585,8 +587,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisBenefitRequest)
-        request = cast(operations.PatchHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisBenefit2Request)
+        request = cast(operations.PatchHrisBenefit2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -620,7 +622,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisBenefit",
+                operation_id="patchHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -630,7 +632,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisBenefitResponse(
+            return operations.PatchHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -647,18 +649,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_benefit_async(
+    async def patch_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisBenefitRequest,
-            operations.PatchHrisBenefitRequestTypedDict,
+            operations.PatchHrisBenefit2Request,
+            operations.PatchHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisBenefitResponse:
+    ) -> operations.PatchHrisBenefit2Response:
         r"""Update a benefit
 
         :param request: The request object to send.
@@ -678,8 +680,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisBenefitRequest)
-        request = cast(operations.PatchHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisBenefit2Request)
+        request = cast(operations.PatchHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -713,7 +715,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisBenefit",
+                operation_id="patchHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -723,7 +725,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisBenefitResponse(
+            return operations.PatchHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -740,18 +742,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_benefit(
+    def remove_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisBenefitRequest,
-            operations.RemoveHrisBenefitRequestTypedDict,
+            operations.RemoveHrisBenefit2Request,
+            operations.RemoveHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisBenefitResponse:
+    ) -> operations.RemoveHrisBenefit2Response:
         r"""Remove a benefit
 
         :param request: The request object to send.
@@ -771,8 +773,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisBenefitRequest)
-        request = cast(operations.RemoveHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisBenefit2Request)
+        request = cast(operations.RemoveHrisBenefit2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -803,7 +805,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisBenefit",
+                operation_id="removeHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -813,7 +815,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisBenefitResponse(
+            return operations.RemoveHrisBenefit2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -826,7 +828,7 @@ class Benefit(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisBenefitResponse(
+            return operations.RemoveHrisBenefit2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -835,18 +837,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_benefit_async(
+    async def remove_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisBenefitRequest,
-            operations.RemoveHrisBenefitRequestTypedDict,
+            operations.RemoveHrisBenefit2Request,
+            operations.RemoveHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisBenefitResponse:
+    ) -> operations.RemoveHrisBenefit2Response:
         r"""Remove a benefit
 
         :param request: The request object to send.
@@ -866,8 +868,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisBenefitRequest)
-        request = cast(operations.RemoveHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisBenefit2Request)
+        request = cast(operations.RemoveHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -898,7 +900,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisBenefit",
+                operation_id="removeHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -908,7 +910,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisBenefitResponse(
+            return operations.RemoveHrisBenefit2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -921,7 +923,7 @@ class Benefit(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisBenefitResponse(
+            return operations.RemoveHrisBenefit2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -930,18 +932,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_benefit(
+    def update_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisBenefitRequest,
-            operations.UpdateHrisBenefitRequestTypedDict,
+            operations.UpdateHrisBenefit2Request,
+            operations.UpdateHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisBenefitResponse:
+    ) -> operations.UpdateHrisBenefit2Response:
         r"""Update a benefit
 
         :param request: The request object to send.
@@ -961,8 +963,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisBenefitRequest)
-        request = cast(operations.UpdateHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisBenefit2Request)
+        request = cast(operations.UpdateHrisBenefit2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -996,7 +998,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisBenefit",
+                operation_id="updateHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1006,7 +1008,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisBenefitResponse(
+            return operations.UpdateHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -1023,18 +1025,18 @@ class Benefit(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_benefit_async(
+    async def update_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisBenefitRequest,
-            operations.UpdateHrisBenefitRequestTypedDict,
+            operations.UpdateHrisBenefit2Request,
+            operations.UpdateHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisBenefitResponse:
+    ) -> operations.UpdateHrisBenefit2Response:
         r"""Update a benefit
 
         :param request: The request object to send.
@@ -1054,8 +1056,8 @@ class Benefit(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisBenefitRequest)
-        request = cast(operations.UpdateHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisBenefit2Request)
+        request = cast(operations.UpdateHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1089,7 +1091,7 @@ class Benefit(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisBenefit",
+                operation_id="updateHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1099,7 +1101,7 @@ class Benefit(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisBenefitResponse(
+            return operations.UpdateHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),

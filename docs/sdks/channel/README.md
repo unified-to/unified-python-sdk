@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [get_messaging_channel](#get_messaging_channel) - Retrieve a channel
-* [list_messaging_channels](#list_messaging_channels) - List all channels
+* [get_messaging_channel2](#get_messaging_channel2) - Retrieve a channel
+* [list_messaging_channels2](#list_messaging_channels2) - List all channels
 
-## get_messaging_channel
+## get_messaging_channel2
 
 Retrieve a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="python" operationID="getMessagingChannel2" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -25,7 +25,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.channel.get_messaging_channel(request={
+    res = unified_to.channel.get_messaging_channel2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -39,14 +39,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetMessagingChannelRequest](../../models/operations/getmessagingchannelrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetMessagingChannel2Request](../../models/operations/getmessagingchannel2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.GetMessagingChannelResponse](../../models/operations/getmessagingchannelresponse.md)**
+**[operations.GetMessagingChannel2Response](../../models/operations/getmessagingchannel2response.md)**
 
 ### Errors
 
@@ -54,13 +54,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_messaging_channels
+## list_messaging_channels2
 
 List all channels
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="python" operationID="listMessagingChannels2" method="get" path="/messaging/{connection_id}/channel" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -72,7 +72,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.channel.list_messaging_channels(request={
+    res = unified_to.channel.list_messaging_channels2(request={
         "connection_id": "<id>",
     })
 
@@ -85,14 +85,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.ListMessagingChannelsRequest](../../models/operations/listmessagingchannelsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListMessagingChannels2Request](../../models/operations/listmessagingchannels2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.ListMessagingChannelsResponse](../../models/operations/listmessagingchannelsresponse.md)**
+**[operations.ListMessagingChannels2Response](../../models/operations/listmessagingchannels2response.md)**
 
 ### Errors
 

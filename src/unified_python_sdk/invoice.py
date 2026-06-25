@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Invoice(BaseSDK):
-    def create_accounting_invoice(
+    def create_accounting_invoice2(
         self,
         *,
         request: Union[
-            operations.CreateAccountingInvoiceRequest,
-            operations.CreateAccountingInvoiceRequestTypedDict,
+            operations.CreateAccountingInvoice2Request,
+            operations.CreateAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingInvoiceResponse:
+    ) -> operations.CreateAccountingInvoice2Response:
         r"""Create an invoice
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Invoice(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingInvoiceRequest
+                request, operations.CreateAccountingInvoice2Request
             )
-        request = cast(operations.CreateAccountingInvoiceRequest, request)
+        request = cast(operations.CreateAccountingInvoice2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingInvoice",
+                operation_id="createAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingInvoiceResponse(
+            return operations.CreateAccountingInvoice2Response(
                 accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
@@ -109,18 +109,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_invoice_async(
+    async def create_accounting_invoice2_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingInvoiceRequest,
-            operations.CreateAccountingInvoiceRequestTypedDict,
+            operations.CreateAccountingInvoice2Request,
+            operations.CreateAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingInvoiceResponse:
+    ) -> operations.CreateAccountingInvoice2Response:
         r"""Create an invoice
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Invoice(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingInvoiceRequest
+                request, operations.CreateAccountingInvoice2Request
             )
-        request = cast(operations.CreateAccountingInvoiceRequest, request)
+        request = cast(operations.CreateAccountingInvoice2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingInvoice",
+                operation_id="createAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingInvoiceResponse(
+            return operations.CreateAccountingInvoice2Response(
                 accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
@@ -208,18 +208,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_invoice(
+    def get_accounting_invoice2(
         self,
         *,
         request: Union[
-            operations.GetAccountingInvoiceRequest,
-            operations.GetAccountingInvoiceRequestTypedDict,
+            operations.GetAccountingInvoice2Request,
+            operations.GetAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingInvoiceResponse:
+    ) -> operations.GetAccountingInvoice2Response:
         r"""Retrieve an invoice
 
         :param request: The request object to send.
@@ -239,8 +239,8 @@ class Invoice(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingInvoiceRequest)
-        request = cast(operations.GetAccountingInvoiceRequest, request)
+            request = utils.unmarshal(request, operations.GetAccountingInvoice2Request)
+        request = cast(operations.GetAccountingInvoice2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -271,7 +271,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingInvoice",
+                operation_id="getAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -281,7 +281,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingInvoiceResponse(
+            return operations.GetAccountingInvoice2Response(
                 accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
@@ -298,18 +298,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_invoice_async(
+    async def get_accounting_invoice2_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingInvoiceRequest,
-            operations.GetAccountingInvoiceRequestTypedDict,
+            operations.GetAccountingInvoice2Request,
+            operations.GetAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingInvoiceResponse:
+    ) -> operations.GetAccountingInvoice2Response:
         r"""Retrieve an invoice
 
         :param request: The request object to send.
@@ -329,8 +329,8 @@ class Invoice(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingInvoiceRequest)
-        request = cast(operations.GetAccountingInvoiceRequest, request)
+            request = utils.unmarshal(request, operations.GetAccountingInvoice2Request)
+        request = cast(operations.GetAccountingInvoice2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -361,7 +361,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingInvoice",
+                operation_id="getAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -371,7 +371,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingInvoiceResponse(
+            return operations.GetAccountingInvoice2Response(
                 accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
@@ -388,18 +388,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_invoices(
+    def list_accounting_invoices2(
         self,
         *,
         request: Union[
-            operations.ListAccountingInvoicesRequest,
-            operations.ListAccountingInvoicesRequestTypedDict,
+            operations.ListAccountingInvoices2Request,
+            operations.ListAccountingInvoices2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingInvoicesResponse:
+    ) -> operations.ListAccountingInvoices2Response:
         r"""List all invoices
 
         :param request: The request object to send.
@@ -419,8 +419,10 @@ class Invoice(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAccountingInvoicesRequest)
-        request = cast(operations.ListAccountingInvoicesRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListAccountingInvoices2Request
+            )
+        request = cast(operations.ListAccountingInvoices2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -451,7 +453,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingInvoices",
+                operation_id="listAccountingInvoices2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -461,7 +463,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingInvoicesResponse(
+            return operations.ListAccountingInvoices2Response(
                 accounting_invoices=unmarshal_json_response(
                     Optional[List[shared.AccountingInvoice]], http_res
                 ),
@@ -478,18 +480,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_invoices_async(
+    async def list_accounting_invoices2_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingInvoicesRequest,
-            operations.ListAccountingInvoicesRequestTypedDict,
+            operations.ListAccountingInvoices2Request,
+            operations.ListAccountingInvoices2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingInvoicesResponse:
+    ) -> operations.ListAccountingInvoices2Response:
         r"""List all invoices
 
         :param request: The request object to send.
@@ -509,8 +511,10 @@ class Invoice(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAccountingInvoicesRequest)
-        request = cast(operations.ListAccountingInvoicesRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListAccountingInvoices2Request
+            )
+        request = cast(operations.ListAccountingInvoices2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -541,7 +545,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingInvoices",
+                operation_id="listAccountingInvoices2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -551,7 +555,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingInvoicesResponse(
+            return operations.ListAccountingInvoices2Response(
                 accounting_invoices=unmarshal_json_response(
                     Optional[List[shared.AccountingInvoice]], http_res
                 ),
@@ -568,18 +572,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_invoice(
+    def patch_accounting_invoice2(
         self,
         *,
         request: Union[
-            operations.PatchAccountingInvoiceRequest,
-            operations.PatchAccountingInvoiceRequestTypedDict,
+            operations.PatchAccountingInvoice2Request,
+            operations.PatchAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingInvoiceResponse:
+    ) -> operations.PatchAccountingInvoice2Response:
         r"""Update an invoice
 
         :param request: The request object to send.
@@ -599,8 +603,10 @@ class Invoice(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAccountingInvoiceRequest)
-        request = cast(operations.PatchAccountingInvoiceRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchAccountingInvoice2Request
+            )
+        request = cast(operations.PatchAccountingInvoice2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -638,7 +644,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingInvoice",
+                operation_id="patchAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -648,7 +654,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingInvoiceResponse(
+            return operations.PatchAccountingInvoice2Response(
                 accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
@@ -665,18 +671,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_invoice_async(
+    async def patch_accounting_invoice2_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingInvoiceRequest,
-            operations.PatchAccountingInvoiceRequestTypedDict,
+            operations.PatchAccountingInvoice2Request,
+            operations.PatchAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingInvoiceResponse:
+    ) -> operations.PatchAccountingInvoice2Response:
         r"""Update an invoice
 
         :param request: The request object to send.
@@ -696,8 +702,10 @@ class Invoice(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAccountingInvoiceRequest)
-        request = cast(operations.PatchAccountingInvoiceRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchAccountingInvoice2Request
+            )
+        request = cast(operations.PatchAccountingInvoice2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -735,7 +743,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingInvoice",
+                operation_id="patchAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -745,7 +753,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingInvoiceResponse(
+            return operations.PatchAccountingInvoice2Response(
                 accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
@@ -762,18 +770,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_invoice(
+    def remove_accounting_invoice2(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingInvoiceRequest,
-            operations.RemoveAccountingInvoiceRequestTypedDict,
+            operations.RemoveAccountingInvoice2Request,
+            operations.RemoveAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingInvoiceResponse:
+    ) -> operations.RemoveAccountingInvoice2Response:
         r"""Remove an invoice
 
         :param request: The request object to send.
@@ -794,9 +802,9 @@ class Invoice(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingInvoiceRequest
+                request, operations.RemoveAccountingInvoice2Request
             )
-        request = cast(operations.RemoveAccountingInvoiceRequest, request)
+        request = cast(operations.RemoveAccountingInvoice2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -827,7 +835,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingInvoice",
+                operation_id="removeAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -837,7 +845,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingInvoiceResponse(
+            return operations.RemoveAccountingInvoice2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -850,7 +858,7 @@ class Invoice(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingInvoiceResponse(
+            return operations.RemoveAccountingInvoice2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -859,18 +867,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_invoice_async(
+    async def remove_accounting_invoice2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingInvoiceRequest,
-            operations.RemoveAccountingInvoiceRequestTypedDict,
+            operations.RemoveAccountingInvoice2Request,
+            operations.RemoveAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingInvoiceResponse:
+    ) -> operations.RemoveAccountingInvoice2Response:
         r"""Remove an invoice
 
         :param request: The request object to send.
@@ -891,9 +899,9 @@ class Invoice(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingInvoiceRequest
+                request, operations.RemoveAccountingInvoice2Request
             )
-        request = cast(operations.RemoveAccountingInvoiceRequest, request)
+        request = cast(operations.RemoveAccountingInvoice2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -924,7 +932,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingInvoice",
+                operation_id="removeAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -934,7 +942,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingInvoiceResponse(
+            return operations.RemoveAccountingInvoice2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -947,7 +955,7 @@ class Invoice(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingInvoiceResponse(
+            return operations.RemoveAccountingInvoice2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -956,18 +964,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_invoice(
+    def update_accounting_invoice2(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingInvoiceRequest,
-            operations.UpdateAccountingInvoiceRequestTypedDict,
+            operations.UpdateAccountingInvoice2Request,
+            operations.UpdateAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingInvoiceResponse:
+    ) -> operations.UpdateAccountingInvoice2Response:
         r"""Update an invoice
 
         :param request: The request object to send.
@@ -988,9 +996,9 @@ class Invoice(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingInvoiceRequest
+                request, operations.UpdateAccountingInvoice2Request
             )
-        request = cast(operations.UpdateAccountingInvoiceRequest, request)
+        request = cast(operations.UpdateAccountingInvoice2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1028,7 +1036,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingInvoice",
+                operation_id="updateAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1038,7 +1046,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingInvoiceResponse(
+            return operations.UpdateAccountingInvoice2Response(
                 accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
@@ -1055,18 +1063,18 @@ class Invoice(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_invoice_async(
+    async def update_accounting_invoice2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingInvoiceRequest,
-            operations.UpdateAccountingInvoiceRequestTypedDict,
+            operations.UpdateAccountingInvoice2Request,
+            operations.UpdateAccountingInvoice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingInvoiceResponse:
+    ) -> operations.UpdateAccountingInvoice2Response:
         r"""Update an invoice
 
         :param request: The request object to send.
@@ -1087,9 +1095,9 @@ class Invoice(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingInvoiceRequest
+                request, operations.UpdateAccountingInvoice2Request
             )
-        request = cast(operations.UpdateAccountingInvoiceRequest, request)
+        request = cast(operations.UpdateAccountingInvoice2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1127,7 +1135,7 @@ class Invoice(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingInvoice",
+                operation_id="updateAccountingInvoice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1137,7 +1145,7 @@ class Invoice(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingInvoiceResponse(
+            return operations.UpdateAccountingInvoice2Response(
                 accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),

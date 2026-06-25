@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Tracking(BaseSDK):
-    def get_shipping_tracking(
+    def get_shipping_tracking2(
         self,
         *,
         request: Union[
-            operations.GetShippingTrackingRequest,
-            operations.GetShippingTrackingRequestTypedDict,
+            operations.GetShippingTracking2Request,
+            operations.GetShippingTracking2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingTrackingResponse:
+    ) -> operations.GetShippingTracking2Response:
         r"""Retrieve a tracking
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Tracking(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingTrackingRequest)
-        request = cast(operations.GetShippingTrackingRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingTracking2Request)
+        request = cast(operations.GetShippingTracking2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Tracking(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingTracking",
+                operation_id="getShippingTracking2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -83,7 +83,7 @@ class Tracking(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingTrackingResponse(
+            return operations.GetShippingTracking2Response(
                 shipping_tracking=unmarshal_json_response(
                     Optional[shared.ShippingTracking], http_res
                 ),
@@ -100,18 +100,18 @@ class Tracking(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_shipping_tracking_async(
+    async def get_shipping_tracking2_async(
         self,
         *,
         request: Union[
-            operations.GetShippingTrackingRequest,
-            operations.GetShippingTrackingRequestTypedDict,
+            operations.GetShippingTracking2Request,
+            operations.GetShippingTracking2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingTrackingResponse:
+    ) -> operations.GetShippingTracking2Response:
         r"""Retrieve a tracking
 
         :param request: The request object to send.
@@ -131,8 +131,8 @@ class Tracking(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingTrackingRequest)
-        request = cast(operations.GetShippingTrackingRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingTracking2Request)
+        request = cast(operations.GetShippingTracking2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -163,7 +163,7 @@ class Tracking(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingTracking",
+                operation_id="getShippingTracking2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -173,7 +173,7 @@ class Tracking(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingTrackingResponse(
+            return operations.GetShippingTracking2Response(
                 shipping_tracking=unmarshal_json_response(
                     Optional[shared.ShippingTracking], http_res
                 ),
@@ -190,18 +190,18 @@ class Tracking(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_shipping_trackings(
+    def list_shipping_trackings2(
         self,
         *,
         request: Union[
-            operations.ListShippingTrackingsRequest,
-            operations.ListShippingTrackingsRequestTypedDict,
+            operations.ListShippingTrackings2Request,
+            operations.ListShippingTrackings2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingTrackingsResponse:
+    ) -> operations.ListShippingTrackings2Response:
         r"""List all trackings
 
         :param request: The request object to send.
@@ -221,8 +221,8 @@ class Tracking(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingTrackingsRequest)
-        request = cast(operations.ListShippingTrackingsRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingTrackings2Request)
+        request = cast(operations.ListShippingTrackings2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -253,7 +253,7 @@ class Tracking(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingTrackings",
+                operation_id="listShippingTrackings2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -263,7 +263,7 @@ class Tracking(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingTrackingsResponse(
+            return operations.ListShippingTrackings2Response(
                 shipping_trackings=unmarshal_json_response(
                     Optional[List[shared.ShippingTracking]], http_res
                 ),
@@ -280,18 +280,18 @@ class Tracking(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_shipping_trackings_async(
+    async def list_shipping_trackings2_async(
         self,
         *,
         request: Union[
-            operations.ListShippingTrackingsRequest,
-            operations.ListShippingTrackingsRequestTypedDict,
+            operations.ListShippingTrackings2Request,
+            operations.ListShippingTrackings2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingTrackingsResponse:
+    ) -> operations.ListShippingTrackings2Response:
         r"""List all trackings
 
         :param request: The request object to send.
@@ -311,8 +311,8 @@ class Tracking(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingTrackingsRequest)
-        request = cast(operations.ListShippingTrackingsRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingTrackings2Request)
+        request = cast(operations.ListShippingTrackings2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -343,7 +343,7 @@ class Tracking(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingTrackings",
+                operation_id="listShippingTrackings2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -353,7 +353,7 @@ class Tracking(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingTrackingsResponse(
+            return operations.ListShippingTrackings2Response(
                 shipping_trackings=unmarshal_json_response(
                     Optional[List[shared.ShippingTracking]], http_res
                 ),

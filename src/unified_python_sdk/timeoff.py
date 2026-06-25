@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Timeoff(BaseSDK):
-    def create_hris_timeoff(
+    def create_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.CreateHrisTimeoffRequest,
-            operations.CreateHrisTimeoffRequestTypedDict,
+            operations.CreateHrisTimeoff2Request,
+            operations.CreateHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisTimeoffResponse:
+    ) -> operations.CreateHrisTimeoff2Response:
         r"""Create a timeoff
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisTimeoffRequest)
-        request = cast(operations.CreateHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisTimeoff2Request)
+        request = cast(operations.CreateHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisTimeoff",
+                operation_id="createHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisTimeoffResponse(
+            return operations.CreateHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -103,18 +103,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_timeoff_async(
+    async def create_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisTimeoffRequest,
-            operations.CreateHrisTimeoffRequestTypedDict,
+            operations.CreateHrisTimeoff2Request,
+            operations.CreateHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisTimeoffResponse:
+    ) -> operations.CreateHrisTimeoff2Response:
         r"""Create a timeoff
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisTimeoffRequest)
-        request = cast(operations.CreateHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisTimeoff2Request)
+        request = cast(operations.CreateHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisTimeoff",
+                operation_id="createHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisTimeoffResponse(
+            return operations.CreateHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -196,17 +196,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_timeoff(
+    def get_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.GetHrisTimeoffRequest, operations.GetHrisTimeoffRequestTypedDict
+            operations.GetHrisTimeoff2Request,
+            operations.GetHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisTimeoffResponse:
+    ) -> operations.GetHrisTimeoff2Response:
         r"""Retrieve a timeoff
 
         :param request: The request object to send.
@@ -226,8 +227,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisTimeoffRequest)
-        request = cast(operations.GetHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisTimeoff2Request)
+        request = cast(operations.GetHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -258,7 +259,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisTimeoff",
+                operation_id="getHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -268,7 +269,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisTimeoffResponse(
+            return operations.GetHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -285,17 +286,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_timeoff_async(
+    async def get_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisTimeoffRequest, operations.GetHrisTimeoffRequestTypedDict
+            operations.GetHrisTimeoff2Request,
+            operations.GetHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisTimeoffResponse:
+    ) -> operations.GetHrisTimeoff2Response:
         r"""Retrieve a timeoff
 
         :param request: The request object to send.
@@ -315,8 +317,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisTimeoffRequest)
-        request = cast(operations.GetHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisTimeoff2Request)
+        request = cast(operations.GetHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -347,7 +349,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisTimeoff",
+                operation_id="getHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -357,7 +359,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisTimeoffResponse(
+            return operations.GetHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -374,18 +376,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_timeoffs(
+    def list_hris_timeoffs2(
         self,
         *,
         request: Union[
-            operations.ListHrisTimeoffsRequest,
-            operations.ListHrisTimeoffsRequestTypedDict,
+            operations.ListHrisTimeoffs2Request,
+            operations.ListHrisTimeoffs2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisTimeoffsResponse:
+    ) -> operations.ListHrisTimeoffs2Response:
         r"""List all timeoffs
 
         :param request: The request object to send.
@@ -405,8 +407,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisTimeoffsRequest)
-        request = cast(operations.ListHrisTimeoffsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisTimeoffs2Request)
+        request = cast(operations.ListHrisTimeoffs2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -437,7 +439,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisTimeoffs",
+                operation_id="listHrisTimeoffs2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -447,7 +449,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisTimeoffsResponse(
+            return operations.ListHrisTimeoffs2Response(
                 hris_timeoffs=unmarshal_json_response(
                     Optional[List[shared.HrisTimeoff]], http_res
                 ),
@@ -464,18 +466,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_timeoffs_async(
+    async def list_hris_timeoffs2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisTimeoffsRequest,
-            operations.ListHrisTimeoffsRequestTypedDict,
+            operations.ListHrisTimeoffs2Request,
+            operations.ListHrisTimeoffs2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisTimeoffsResponse:
+    ) -> operations.ListHrisTimeoffs2Response:
         r"""List all timeoffs
 
         :param request: The request object to send.
@@ -495,8 +497,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisTimeoffsRequest)
-        request = cast(operations.ListHrisTimeoffsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisTimeoffs2Request)
+        request = cast(operations.ListHrisTimeoffs2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -527,7 +529,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisTimeoffs",
+                operation_id="listHrisTimeoffs2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -537,7 +539,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisTimeoffsResponse(
+            return operations.ListHrisTimeoffs2Response(
                 hris_timeoffs=unmarshal_json_response(
                     Optional[List[shared.HrisTimeoff]], http_res
                 ),
@@ -554,18 +556,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_timeoff(
+    def patch_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.PatchHrisTimeoffRequest,
-            operations.PatchHrisTimeoffRequestTypedDict,
+            operations.PatchHrisTimeoff2Request,
+            operations.PatchHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisTimeoffResponse:
+    ) -> operations.PatchHrisTimeoff2Response:
         r"""Update a timeoff
 
         :param request: The request object to send.
@@ -585,8 +587,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisTimeoffRequest)
-        request = cast(operations.PatchHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisTimeoff2Request)
+        request = cast(operations.PatchHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -620,7 +622,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisTimeoff",
+                operation_id="patchHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -630,7 +632,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisTimeoffResponse(
+            return operations.PatchHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -647,18 +649,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_timeoff_async(
+    async def patch_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisTimeoffRequest,
-            operations.PatchHrisTimeoffRequestTypedDict,
+            operations.PatchHrisTimeoff2Request,
+            operations.PatchHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisTimeoffResponse:
+    ) -> operations.PatchHrisTimeoff2Response:
         r"""Update a timeoff
 
         :param request: The request object to send.
@@ -678,8 +680,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisTimeoffRequest)
-        request = cast(operations.PatchHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisTimeoff2Request)
+        request = cast(operations.PatchHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -713,7 +715,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisTimeoff",
+                operation_id="patchHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -723,7 +725,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisTimeoffResponse(
+            return operations.PatchHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -740,18 +742,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_timeoff(
+    def remove_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisTimeoffRequest,
-            operations.RemoveHrisTimeoffRequestTypedDict,
+            operations.RemoveHrisTimeoff2Request,
+            operations.RemoveHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisTimeoffResponse:
+    ) -> operations.RemoveHrisTimeoff2Response:
         r"""Remove a timeoff
 
         :param request: The request object to send.
@@ -771,8 +773,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisTimeoffRequest)
-        request = cast(operations.RemoveHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisTimeoff2Request)
+        request = cast(operations.RemoveHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -803,7 +805,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisTimeoff",
+                operation_id="removeHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -813,7 +815,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisTimeoffResponse(
+            return operations.RemoveHrisTimeoff2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -826,7 +828,7 @@ class Timeoff(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisTimeoffResponse(
+            return operations.RemoveHrisTimeoff2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -835,18 +837,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_timeoff_async(
+    async def remove_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisTimeoffRequest,
-            operations.RemoveHrisTimeoffRequestTypedDict,
+            operations.RemoveHrisTimeoff2Request,
+            operations.RemoveHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisTimeoffResponse:
+    ) -> operations.RemoveHrisTimeoff2Response:
         r"""Remove a timeoff
 
         :param request: The request object to send.
@@ -866,8 +868,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisTimeoffRequest)
-        request = cast(operations.RemoveHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisTimeoff2Request)
+        request = cast(operations.RemoveHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -898,7 +900,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisTimeoff",
+                operation_id="removeHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -908,7 +910,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisTimeoffResponse(
+            return operations.RemoveHrisTimeoff2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -921,7 +923,7 @@ class Timeoff(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisTimeoffResponse(
+            return operations.RemoveHrisTimeoff2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -930,18 +932,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_timeoff(
+    def update_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisTimeoffRequest,
-            operations.UpdateHrisTimeoffRequestTypedDict,
+            operations.UpdateHrisTimeoff2Request,
+            operations.UpdateHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisTimeoffResponse:
+    ) -> operations.UpdateHrisTimeoff2Response:
         r"""Update a timeoff
 
         :param request: The request object to send.
@@ -961,8 +963,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisTimeoffRequest)
-        request = cast(operations.UpdateHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisTimeoff2Request)
+        request = cast(operations.UpdateHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -996,7 +998,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisTimeoff",
+                operation_id="updateHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1006,7 +1008,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisTimeoffResponse(
+            return operations.UpdateHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -1023,18 +1025,18 @@ class Timeoff(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_timeoff_async(
+    async def update_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisTimeoffRequest,
-            operations.UpdateHrisTimeoffRequestTypedDict,
+            operations.UpdateHrisTimeoff2Request,
+            operations.UpdateHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisTimeoffResponse:
+    ) -> operations.UpdateHrisTimeoff2Response:
         r"""Update a timeoff
 
         :param request: The request object to send.
@@ -1054,8 +1056,8 @@ class Timeoff(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisTimeoffRequest)
-        request = cast(operations.UpdateHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisTimeoff2Request)
+        request = cast(operations.UpdateHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1089,7 +1091,7 @@ class Timeoff(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisTimeoff",
+                operation_id="updateHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1099,7 +1101,7 @@ class Timeoff(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisTimeoffResponse(
+            return operations.UpdateHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),

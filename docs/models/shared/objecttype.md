@@ -137,6 +137,11 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `ADS_INSERTIONORDER`       | ads_insertionorder         |
 | `ADS_TARGET`               | ads_target                 |
 | `ADS_PROMOTED`             | ads_promoted               |
+| `ANALYTICS_PROPERTY`       | analytics_property         |
+| `ANALYTICS_EVENT`          | analytics_event            |
+| `ANALYTICS_SESSION`        | analytics_session          |
+| `ANALYTICS_VISITOR`        | analytics_visitor          |
+| `ANALYTICS_REPORT`         | analytics_report           |
 | `FORMS_FORM`               | forms_form                 |
 | `FORMS_SUBMISSION`         | forms_submission           |
 | `SHIPPING_CARRIER`         | shipping_carrier           |

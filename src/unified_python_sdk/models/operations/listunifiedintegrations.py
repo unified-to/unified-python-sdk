@@ -36,6 +36,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     CALENDAR = "calendar"
     VERIFICATION = "verification"
     ADS = "ads"
+    ANALYTICS = "analytics"
     FORMS = "forms"
     SHIPPING = "shipping"
     ASSESSMENT = "assessment"

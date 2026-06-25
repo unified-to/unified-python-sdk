@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Applicationstatus(BaseSDK):
-    def list_ats_applicationstatuses(
+    def list_ats_applicationstatuses2(
         self,
         *,
         request: Union[
-            operations.ListAtsApplicationstatusesRequest,
-            operations.ListAtsApplicationstatusesRequestTypedDict,
+            operations.ListAtsApplicationstatuses2Request,
+            operations.ListAtsApplicationstatuses2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsApplicationstatusesResponse:
+    ) -> operations.ListAtsApplicationstatuses2Response:
         r"""List all applicationstatuses
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Applicationstatus(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAtsApplicationstatusesRequest
+                request, operations.ListAtsApplicationstatuses2Request
             )
-        request = cast(operations.ListAtsApplicationstatusesRequest, request)
+        request = cast(operations.ListAtsApplicationstatuses2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -75,7 +75,7 @@ class Applicationstatus(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsApplicationstatuses",
+                operation_id="listAtsApplicationstatuses2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -85,7 +85,7 @@ class Applicationstatus(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsApplicationstatusesResponse(
+            return operations.ListAtsApplicationstatuses2Response(
                 ats_statuses=unmarshal_json_response(
                     Optional[List[shared.AtsStatus]], http_res
                 ),
@@ -102,18 +102,18 @@ class Applicationstatus(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_applicationstatuses_async(
+    async def list_ats_applicationstatuses2_async(
         self,
         *,
         request: Union[
-            operations.ListAtsApplicationstatusesRequest,
-            operations.ListAtsApplicationstatusesRequestTypedDict,
+            operations.ListAtsApplicationstatuses2Request,
+            operations.ListAtsApplicationstatuses2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsApplicationstatusesResponse:
+    ) -> operations.ListAtsApplicationstatuses2Response:
         r"""List all applicationstatuses
 
         :param request: The request object to send.
@@ -134,9 +134,9 @@ class Applicationstatus(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAtsApplicationstatusesRequest
+                request, operations.ListAtsApplicationstatuses2Request
             )
-        request = cast(operations.ListAtsApplicationstatusesRequest, request)
+        request = cast(operations.ListAtsApplicationstatuses2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -167,7 +167,7 @@ class Applicationstatus(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsApplicationstatuses",
+                operation_id="listAtsApplicationstatuses2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -177,7 +177,7 @@ class Applicationstatus(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsApplicationstatusesResponse(
+            return operations.ListAtsApplicationstatuses2Response(
                 ats_statuses=unmarshal_json_response(
                     Optional[List[shared.AtsStatus]], http_res
                 ),

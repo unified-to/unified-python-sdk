@@ -4,28 +4,28 @@
 
 ### Available Operations
 
-* [create_ads_organization](#create_ads_organization) - Create an organization
-* [create_repo_organization](#create_repo_organization) - Create an organization
-* [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
-* [get_ads_organization](#get_ads_organization) - Retrieve an organization
-* [get_repo_organization](#get_repo_organization) - Retrieve an organization
-* [list_accounting_organizations](#list_accounting_organizations) - List all organizations
-* [list_ads_organizations](#list_ads_organizations) - List all organizations
-* [list_repo_organizations](#list_repo_organizations) - List all organizations
-* [patch_ads_organization](#patch_ads_organization) - Update an organization
-* [patch_repo_organization](#patch_repo_organization) - Update an organization
-* [remove_ads_organization](#remove_ads_organization) - Remove an organization
-* [remove_repo_organization](#remove_repo_organization) - Remove an organization
-* [update_ads_organization](#update_ads_organization) - Update an organization
-* [update_repo_organization](#update_repo_organization) - Update an organization
+* [create_ads_organization2](#create_ads_organization2) - Create an organization
+* [create_repo_organization2](#create_repo_organization2) - Create an organization
+* [get_accounting_organization2](#get_accounting_organization2) - Retrieve an organization
+* [get_ads_organization2](#get_ads_organization2) - Retrieve an organization
+* [get_repo_organization2](#get_repo_organization2) - Retrieve an organization
+* [list_accounting_organizations2](#list_accounting_organizations2) - List all organizations
+* [list_ads_organizations2](#list_ads_organizations2) - List all organizations
+* [list_repo_organizations2](#list_repo_organizations2) - List all organizations
+* [patch_ads_organization2](#patch_ads_organization2) - Update an organization
+* [patch_repo_organization2](#patch_repo_organization2) - Update an organization
+* [remove_ads_organization2](#remove_ads_organization2) - Remove an organization
+* [remove_repo_organization2](#remove_repo_organization2) - Remove an organization
+* [update_ads_organization2](#update_ads_organization2) - Update an organization
+* [update_repo_organization2](#update_repo_organization2) - Update an organization
 
-## create_ads_organization
+## create_ads_organization2
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="python" operationID="createAdsOrganization2" method="post" path="/ads/{connection_id}/organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -37,7 +37,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.create_ads_organization(request={
+    res = unified_to.organization.create_ads_organization2(request={
         "ads_organization": {},
         "connection_id": "<id>",
     })
@@ -51,14 +51,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.CreateAdsOrganizationRequest](../../models/operations/createadsorganizationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateAdsOrganization2Request](../../models/operations/createadsorganization2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.CreateAdsOrganizationResponse](../../models/operations/createadsorganizationresponse.md)**
+**[operations.CreateAdsOrganization2Response](../../models/operations/createadsorganization2response.md)**
 
 ### Errors
 
@@ -66,13 +66,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_repo_organization
+## create_repo_organization2
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="python" operationID="createRepoOrganization2" method="post" path="/repo/{connection_id}/organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -84,7 +84,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.create_repo_organization(request={
+    res = unified_to.organization.create_repo_organization2(request={
         "repo_organization": {},
         "connection_id": "<id>",
     })
@@ -98,14 +98,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.CreateRepoOrganizationRequest](../../models/operations/createrepoorganizationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateRepoOrganization2Request](../../models/operations/createrepoorganization2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.CreateRepoOrganizationResponse](../../models/operations/createrepoorganizationresponse.md)**
+**[operations.CreateRepoOrganization2Response](../../models/operations/createrepoorganization2response.md)**
 
 ### Errors
 
@@ -113,13 +113,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_accounting_organization
+## get_accounting_organization2
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="getAccountingOrganization2" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -131,7 +131,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.get_accounting_organization(request={
+    res = unified_to.organization.get_accounting_organization2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -145,14 +145,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetAccountingOrganizationRequest](../../models/operations/getaccountingorganizationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.GetAccountingOrganization2Request](../../models/operations/getaccountingorganization2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
 
 ### Response
 
-**[operations.GetAccountingOrganizationResponse](../../models/operations/getaccountingorganizationresponse.md)**
+**[operations.GetAccountingOrganization2Response](../../models/operations/getaccountingorganization2response.md)**
 
 ### Errors
 
@@ -160,13 +160,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_ads_organization
+## get_ads_organization2
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getAdsOrganization" method="get" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="getAdsOrganization2" method="get" path="/ads/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -178,7 +178,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.get_ads_organization(request={
+    res = unified_to.organization.get_ads_organization2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -192,14 +192,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.GetAdsOrganizationRequest](../../models/operations/getadsorganizationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetAdsOrganization2Request](../../models/operations/getadsorganization2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetAdsOrganizationResponse](../../models/operations/getadsorganizationresponse.md)**
+**[operations.GetAdsOrganization2Response](../../models/operations/getadsorganization2response.md)**
 
 ### Errors
 
@@ -207,13 +207,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_repo_organization
+## get_repo_organization2
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="getRepoOrganization2" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -225,7 +225,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.get_repo_organization(request={
+    res = unified_to.organization.get_repo_organization2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -239,14 +239,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetRepoOrganizationRequest](../../models/operations/getrepoorganizationrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetRepoOrganization2Request](../../models/operations/getrepoorganization2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.GetRepoOrganizationResponse](../../models/operations/getrepoorganizationresponse.md)**
+**[operations.GetRepoOrganization2Response](../../models/operations/getrepoorganization2response.md)**
 
 ### Errors
 
@@ -254,13 +254,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_accounting_organizations
+## list_accounting_organizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
+<!-- UsageSnippet language="python" operationID="listAccountingOrganizations2" method="get" path="/accounting/{connection_id}/organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -272,7 +272,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.list_accounting_organizations(request={
+    res = unified_to.organization.list_accounting_organizations2(request={
         "connection_id": "<id>",
     })
 
@@ -285,14 +285,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.ListAccountingOrganizationsRequest](../../models/operations/listaccountingorganizationsrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `retries`                                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                               | :heavy_minus_sign:                                                                                             | Configuration to override the default retry behavior of the client.                                            |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.ListAccountingOrganizations2Request](../../models/operations/listaccountingorganizations2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `retries`                                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                 | :heavy_minus_sign:                                                                                               | Configuration to override the default retry behavior of the client.                                              |
 
 ### Response
 
-**[operations.ListAccountingOrganizationsResponse](../../models/operations/listaccountingorganizationsresponse.md)**
+**[operations.ListAccountingOrganizations2Response](../../models/operations/listaccountingorganizations2response.md)**
 
 ### Errors
 
@@ -300,13 +300,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ads_organizations
+## list_ads_organizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAdsOrganizations" method="get" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="python" operationID="listAdsOrganizations2" method="get" path="/ads/{connection_id}/organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -318,7 +318,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.list_ads_organizations(request={
+    res = unified_to.organization.list_ads_organizations2(request={
         "connection_id": "<id>",
     })
 
@@ -331,14 +331,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.ListAdsOrganizationsRequest](../../models/operations/listadsorganizationsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListAdsOrganizations2Request](../../models/operations/listadsorganizations2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListAdsOrganizationsResponse](../../models/operations/listadsorganizationsresponse.md)**
+**[operations.ListAdsOrganizations2Response](../../models/operations/listadsorganizations2response.md)**
 
 ### Errors
 
@@ -346,13 +346,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_repo_organizations
+## list_repo_organizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="python" operationID="listRepoOrganizations2" method="get" path="/repo/{connection_id}/organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -364,7 +364,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.list_repo_organizations(request={
+    res = unified_to.organization.list_repo_organizations2(request={
         "connection_id": "<id>",
     })
 
@@ -377,204 +377,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.ListRepoOrganizationsRequest](../../models/operations/listrepoorganizationsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
-
-### Response
-
-**[operations.ListRepoOrganizationsResponse](../../models/operations/listrepoorganizationsresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## patch_ads_organization
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.organization.patch_ads_organization(request={
-        "ads_organization": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.ads_organization is not None
-
-    # Handle response
-    print(res.ads_organization)
-
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.PatchAdsOrganizationRequest](../../models/operations/patchadsorganizationrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
-
-### Response
-
-**[operations.PatchAdsOrganizationResponse](../../models/operations/patchadsorganizationresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## patch_repo_organization
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.organization.patch_repo_organization(request={
-        "repo_organization": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.repo_organization is not None
-
-    # Handle response
-    print(res.repo_organization)
-
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.PatchRepoOrganizationRequest](../../models/operations/patchrepoorganizationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
-
-### Response
-
-**[operations.PatchRepoOrganizationResponse](../../models/operations/patchrepoorganizationresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_ads_organization
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeAdsOrganization" method="delete" path="/ads/{connection_id}/organization/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.organization.remove_ads_organization(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.RemoveAdsOrganizationRequest](../../models/operations/removeadsorganizationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
-
-### Response
-
-**[operations.RemoveAdsOrganizationResponse](../../models/operations/removeadsorganizationresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_repo_organization
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.organization.remove_repo_organization(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.RemoveRepoOrganizationRequest](../../models/operations/removerepoorganizationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.ListRepoOrganizations2Request](../../models/operations/listrepoorganizations2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 | `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.RemoveRepoOrganizationResponse](../../models/operations/removerepoorganizationresponse.md)**
+**[operations.ListRepoOrganizations2Response](../../models/operations/listrepoorganizations2response.md)**
 
 ### Errors
 
@@ -582,13 +392,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_ads_organization
+## patch_ads_organization2
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsOrganization2" method="patch" path="/ads/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -600,7 +410,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.update_ads_organization(request={
+    res = unified_to.organization.patch_ads_organization2(request={
         "ads_organization": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -617,12 +427,12 @@ with UnifiedTo(
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.UpdateAdsOrganizationRequest](../../models/operations/updateadsorganizationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `request`                                                                                          | [operations.PatchAdsOrganization2Request](../../models/operations/patchadsorganization2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 | `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.UpdateAdsOrganizationResponse](../../models/operations/updateadsorganizationresponse.md)**
+**[operations.PatchAdsOrganization2Response](../../models/operations/patchadsorganization2response.md)**
 
 ### Errors
 
@@ -630,13 +440,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_repo_organization
+## patch_repo_organization2
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchRepoOrganization2" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -648,7 +458,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.organization.update_repo_organization(request={
+    res = unified_to.organization.patch_repo_organization2(request={
         "repo_organization": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -665,12 +475,202 @@ with UnifiedTo(
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.UpdateRepoOrganizationRequest](../../models/operations/updaterepoorganizationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.PatchRepoOrganization2Request](../../models/operations/patchrepoorganization2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 | `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.UpdateRepoOrganizationResponse](../../models/operations/updaterepoorganizationresponse.md)**
+**[operations.PatchRepoOrganization2Response](../../models/operations/patchrepoorganization2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_ads_organization2
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeAdsOrganization2" method="delete" path="/ads/{connection_id}/organization/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.remove_ads_organization2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.RemoveAdsOrganization2Request](../../models/operations/removeadsorganization2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.RemoveAdsOrganization2Response](../../models/operations/removeadsorganization2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_repo_organization2
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeRepoOrganization2" method="delete" path="/repo/{connection_id}/organization/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.remove_repo_organization2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveRepoOrganization2Request](../../models/operations/removerepoorganization2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.RemoveRepoOrganization2Response](../../models/operations/removerepoorganization2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_ads_organization2
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateAdsOrganization2" method="put" path="/ads/{connection_id}/organization/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.update_ads_organization2(request={
+        "ads_organization": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ads_organization is not None
+
+    # Handle response
+    print(res.ads_organization)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.UpdateAdsOrganization2Request](../../models/operations/updateadsorganization2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.UpdateAdsOrganization2Response](../../models/operations/updateadsorganization2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_repo_organization2
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateRepoOrganization2" method="put" path="/repo/{connection_id}/organization/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.update_repo_organization2(request={
+        "repo_organization": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateRepoOrganization2Request](../../models/operations/updaterepoorganization2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.UpdateRepoOrganization2Response](../../models/operations/updaterepoorganization2response.md)**
 
 ### Errors
 

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Clubs(BaseSDK):
-    def get_clubs_activity(
+    def get_clubs_activity2(
         self,
         *,
         request: Union[
-            operations.GetClubsActivityRequest,
-            operations.GetClubsActivityRequestTypedDict,
+            operations.GetClubsActivity2Request,
+            operations.GetClubsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsActivityResponse:
+    ) -> operations.GetClubsActivity2Response:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsActivityRequest)
-        request = cast(operations.GetClubsActivityRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsActivity2Request)
+        request = cast(operations.GetClubsActivity2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsActivity",
+                operation_id="getClubsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -83,7 +83,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsActivityResponse(
+            return operations.GetClubsActivity2Response(
                 clubs_activity=unmarshal_json_response(
                     Optional[shared.ClubsActivity], http_res
                 ),
@@ -100,18 +100,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_activity_async(
+    async def get_clubs_activity2_async(
         self,
         *,
         request: Union[
-            operations.GetClubsActivityRequest,
-            operations.GetClubsActivityRequestTypedDict,
+            operations.GetClubsActivity2Request,
+            operations.GetClubsActivity2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsActivityResponse:
+    ) -> operations.GetClubsActivity2Response:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -131,8 +131,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsActivityRequest)
-        request = cast(operations.GetClubsActivityRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsActivity2Request)
+        request = cast(operations.GetClubsActivity2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -163,7 +163,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsActivity",
+                operation_id="getClubsActivity2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -173,7 +173,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsActivityResponse(
+            return operations.GetClubsActivity2Response(
                 clubs_activity=unmarshal_json_response(
                     Optional[shared.ClubsActivity], http_res
                 ),
@@ -190,17 +190,17 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_event(
+    def get_clubs_event2(
         self,
         *,
         request: Union[
-            operations.GetClubsEventRequest, operations.GetClubsEventRequestTypedDict
+            operations.GetClubsEvent2Request, operations.GetClubsEvent2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsEventResponse:
+    ) -> operations.GetClubsEvent2Response:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -220,8 +220,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsEventRequest)
-        request = cast(operations.GetClubsEventRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsEvent2Request)
+        request = cast(operations.GetClubsEvent2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -252,7 +252,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsEvent",
+                operation_id="getClubsEvent2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -262,7 +262,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsEventResponse(
+            return operations.GetClubsEvent2Response(
                 clubs_event=unmarshal_json_response(
                     Optional[shared.ClubsEvent], http_res
                 ),
@@ -279,17 +279,17 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_event_async(
+    async def get_clubs_event2_async(
         self,
         *,
         request: Union[
-            operations.GetClubsEventRequest, operations.GetClubsEventRequestTypedDict
+            operations.GetClubsEvent2Request, operations.GetClubsEvent2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsEventResponse:
+    ) -> operations.GetClubsEvent2Response:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -309,8 +309,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsEventRequest)
-        request = cast(operations.GetClubsEventRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsEvent2Request)
+        request = cast(operations.GetClubsEvent2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -341,7 +341,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsEvent",
+                operation_id="getClubsEvent2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -351,7 +351,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsEventResponse(
+            return operations.GetClubsEvent2Response(
                 clubs_event=unmarshal_json_response(
                     Optional[shared.ClubsEvent], http_res
                 ),
@@ -368,17 +368,17 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_group(
+    def get_clubs_group2(
         self,
         *,
         request: Union[
-            operations.GetClubsGroupRequest, operations.GetClubsGroupRequestTypedDict
+            operations.GetClubsGroup2Request, operations.GetClubsGroup2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsGroupResponse:
+    ) -> operations.GetClubsGroup2Response:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -398,8 +398,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsGroupRequest)
-        request = cast(operations.GetClubsGroupRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsGroup2Request)
+        request = cast(operations.GetClubsGroup2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -430,7 +430,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsGroup",
+                operation_id="getClubsGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -440,7 +440,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsGroupResponse(
+            return operations.GetClubsGroup2Response(
                 clubs_group=unmarshal_json_response(
                     Optional[shared.ClubsGroup], http_res
                 ),
@@ -457,17 +457,17 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_group_async(
+    async def get_clubs_group2_async(
         self,
         *,
         request: Union[
-            operations.GetClubsGroupRequest, operations.GetClubsGroupRequestTypedDict
+            operations.GetClubsGroup2Request, operations.GetClubsGroup2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsGroupResponse:
+    ) -> operations.GetClubsGroup2Response:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -487,8 +487,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsGroupRequest)
-        request = cast(operations.GetClubsGroupRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsGroup2Request)
+        request = cast(operations.GetClubsGroup2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -519,7 +519,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsGroup",
+                operation_id="getClubsGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -529,7 +529,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsGroupResponse(
+            return operations.GetClubsGroup2Response(
                 clubs_group=unmarshal_json_response(
                     Optional[shared.ClubsGroup], http_res
                 ),
@@ -546,18 +546,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_location(
+    def get_clubs_location2(
         self,
         *,
         request: Union[
-            operations.GetClubsLocationRequest,
-            operations.GetClubsLocationRequestTypedDict,
+            operations.GetClubsLocation2Request,
+            operations.GetClubsLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsLocationResponse:
+    ) -> operations.GetClubsLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -577,8 +577,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsLocationRequest)
-        request = cast(operations.GetClubsLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsLocation2Request)
+        request = cast(operations.GetClubsLocation2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -609,7 +609,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsLocation",
+                operation_id="getClubsLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -619,7 +619,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsLocationResponse(
+            return operations.GetClubsLocation2Response(
                 clubs_location=unmarshal_json_response(
                     Optional[shared.ClubsLocation], http_res
                 ),
@@ -636,18 +636,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_location_async(
+    async def get_clubs_location2_async(
         self,
         *,
         request: Union[
-            operations.GetClubsLocationRequest,
-            operations.GetClubsLocationRequestTypedDict,
+            operations.GetClubsLocation2Request,
+            operations.GetClubsLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsLocationResponse:
+    ) -> operations.GetClubsLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -667,8 +667,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsLocationRequest)
-        request = cast(operations.GetClubsLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsLocation2Request)
+        request = cast(operations.GetClubsLocation2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -699,7 +699,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsLocation",
+                operation_id="getClubsLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -709,7 +709,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsLocationResponse(
+            return operations.GetClubsLocation2Response(
                 clubs_location=unmarshal_json_response(
                     Optional[shared.ClubsLocation], http_res
                 ),
@@ -726,17 +726,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_member(
+    def get_clubs_member2(
         self,
         *,
         request: Union[
-            operations.GetClubsMemberRequest, operations.GetClubsMemberRequestTypedDict
+            operations.GetClubsMember2Request,
+            operations.GetClubsMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsMemberResponse:
+    ) -> operations.GetClubsMember2Response:
         r"""Retrieve a member
 
         :param request: The request object to send.
@@ -756,8 +757,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsMemberRequest)
-        request = cast(operations.GetClubsMemberRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsMember2Request)
+        request = cast(operations.GetClubsMember2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -788,7 +789,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsMember",
+                operation_id="getClubsMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -798,7 +799,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsMemberResponse(
+            return operations.GetClubsMember2Response(
                 clubs_member=unmarshal_json_response(
                     Optional[shared.ClubsMember], http_res
                 ),
@@ -815,17 +816,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_member_async(
+    async def get_clubs_member2_async(
         self,
         *,
         request: Union[
-            operations.GetClubsMemberRequest, operations.GetClubsMemberRequestTypedDict
+            operations.GetClubsMember2Request,
+            operations.GetClubsMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsMemberResponse:
+    ) -> operations.GetClubsMember2Response:
         r"""Retrieve a member
 
         :param request: The request object to send.
@@ -845,8 +847,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsMemberRequest)
-        request = cast(operations.GetClubsMemberRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsMember2Request)
+        request = cast(operations.GetClubsMember2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -877,7 +879,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsMember",
+                operation_id="getClubsMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -887,7 +889,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsMemberResponse(
+            return operations.GetClubsMember2Response(
                 clubs_member=unmarshal_json_response(
                     Optional[shared.ClubsMember], http_res
                 ),
@@ -904,18 +906,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_activities(
+    def list_clubs_activities2(
         self,
         *,
         request: Union[
-            operations.ListClubsActivitiesRequest,
-            operations.ListClubsActivitiesRequestTypedDict,
+            operations.ListClubsActivities2Request,
+            operations.ListClubsActivities2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsActivitiesResponse:
+    ) -> operations.ListClubsActivities2Response:
         r"""List all activities
 
         :param request: The request object to send.
@@ -935,8 +937,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsActivitiesRequest)
-        request = cast(operations.ListClubsActivitiesRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsActivities2Request)
+        request = cast(operations.ListClubsActivities2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -967,7 +969,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsActivities",
+                operation_id="listClubsActivities2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -977,7 +979,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsActivitiesResponse(
+            return operations.ListClubsActivities2Response(
                 clubs_activities=unmarshal_json_response(
                     Optional[List[shared.ClubsActivity]], http_res
                 ),
@@ -994,18 +996,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_activities_async(
+    async def list_clubs_activities2_async(
         self,
         *,
         request: Union[
-            operations.ListClubsActivitiesRequest,
-            operations.ListClubsActivitiesRequestTypedDict,
+            operations.ListClubsActivities2Request,
+            operations.ListClubsActivities2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsActivitiesResponse:
+    ) -> operations.ListClubsActivities2Response:
         r"""List all activities
 
         :param request: The request object to send.
@@ -1025,8 +1027,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsActivitiesRequest)
-        request = cast(operations.ListClubsActivitiesRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsActivities2Request)
+        request = cast(operations.ListClubsActivities2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1057,7 +1059,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsActivities",
+                operation_id="listClubsActivities2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1067,7 +1069,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsActivitiesResponse(
+            return operations.ListClubsActivities2Response(
                 clubs_activities=unmarshal_json_response(
                     Optional[List[shared.ClubsActivity]], http_res
                 ),
@@ -1084,18 +1086,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_events(
+    def list_clubs_events2(
         self,
         *,
         request: Union[
-            operations.ListClubsEventsRequest,
-            operations.ListClubsEventsRequestTypedDict,
+            operations.ListClubsEvents2Request,
+            operations.ListClubsEvents2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsEventsResponse:
+    ) -> operations.ListClubsEvents2Response:
         r"""List all events
 
         :param request: The request object to send.
@@ -1115,8 +1117,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsEventsRequest)
-        request = cast(operations.ListClubsEventsRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsEvents2Request)
+        request = cast(operations.ListClubsEvents2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1147,7 +1149,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsEvents",
+                operation_id="listClubsEvents2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1157,7 +1159,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsEventsResponse(
+            return operations.ListClubsEvents2Response(
                 clubs_events=unmarshal_json_response(
                     Optional[List[shared.ClubsEvent]], http_res
                 ),
@@ -1174,18 +1176,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_events_async(
+    async def list_clubs_events2_async(
         self,
         *,
         request: Union[
-            operations.ListClubsEventsRequest,
-            operations.ListClubsEventsRequestTypedDict,
+            operations.ListClubsEvents2Request,
+            operations.ListClubsEvents2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsEventsResponse:
+    ) -> operations.ListClubsEvents2Response:
         r"""List all events
 
         :param request: The request object to send.
@@ -1205,8 +1207,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsEventsRequest)
-        request = cast(operations.ListClubsEventsRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsEvents2Request)
+        request = cast(operations.ListClubsEvents2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1237,7 +1239,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsEvents",
+                operation_id="listClubsEvents2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1247,7 +1249,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsEventsResponse(
+            return operations.ListClubsEvents2Response(
                 clubs_events=unmarshal_json_response(
                     Optional[List[shared.ClubsEvent]], http_res
                 ),
@@ -1264,18 +1266,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_groups(
+    def list_clubs_groups2(
         self,
         *,
         request: Union[
-            operations.ListClubsGroupsRequest,
-            operations.ListClubsGroupsRequestTypedDict,
+            operations.ListClubsGroups2Request,
+            operations.ListClubsGroups2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsGroupsResponse:
+    ) -> operations.ListClubsGroups2Response:
         r"""List all groups
 
         :param request: The request object to send.
@@ -1295,8 +1297,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsGroupsRequest)
-        request = cast(operations.ListClubsGroupsRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsGroups2Request)
+        request = cast(operations.ListClubsGroups2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1327,7 +1329,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsGroups",
+                operation_id="listClubsGroups2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1337,7 +1339,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsGroupsResponse(
+            return operations.ListClubsGroups2Response(
                 clubs_groups=unmarshal_json_response(
                     Optional[List[shared.ClubsGroup]], http_res
                 ),
@@ -1354,18 +1356,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_groups_async(
+    async def list_clubs_groups2_async(
         self,
         *,
         request: Union[
-            operations.ListClubsGroupsRequest,
-            operations.ListClubsGroupsRequestTypedDict,
+            operations.ListClubsGroups2Request,
+            operations.ListClubsGroups2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsGroupsResponse:
+    ) -> operations.ListClubsGroups2Response:
         r"""List all groups
 
         :param request: The request object to send.
@@ -1385,8 +1387,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsGroupsRequest)
-        request = cast(operations.ListClubsGroupsRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsGroups2Request)
+        request = cast(operations.ListClubsGroups2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1417,7 +1419,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsGroups",
+                operation_id="listClubsGroups2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1427,7 +1429,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsGroupsResponse(
+            return operations.ListClubsGroups2Response(
                 clubs_groups=unmarshal_json_response(
                     Optional[List[shared.ClubsGroup]], http_res
                 ),
@@ -1444,18 +1446,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_locations(
+    def list_clubs_locations2(
         self,
         *,
         request: Union[
-            operations.ListClubsLocationsRequest,
-            operations.ListClubsLocationsRequestTypedDict,
+            operations.ListClubsLocations2Request,
+            operations.ListClubsLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsLocationsResponse:
+    ) -> operations.ListClubsLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -1475,8 +1477,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsLocationsRequest)
-        request = cast(operations.ListClubsLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsLocations2Request)
+        request = cast(operations.ListClubsLocations2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1507,7 +1509,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsLocations",
+                operation_id="listClubsLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1517,7 +1519,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsLocationsResponse(
+            return operations.ListClubsLocations2Response(
                 clubs_locations=unmarshal_json_response(
                     Optional[List[shared.ClubsLocation]], http_res
                 ),
@@ -1534,18 +1536,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_locations_async(
+    async def list_clubs_locations2_async(
         self,
         *,
         request: Union[
-            operations.ListClubsLocationsRequest,
-            operations.ListClubsLocationsRequestTypedDict,
+            operations.ListClubsLocations2Request,
+            operations.ListClubsLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsLocationsResponse:
+    ) -> operations.ListClubsLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -1565,8 +1567,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsLocationsRequest)
-        request = cast(operations.ListClubsLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsLocations2Request)
+        request = cast(operations.ListClubsLocations2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1597,7 +1599,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsLocations",
+                operation_id="listClubsLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1607,7 +1609,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsLocationsResponse(
+            return operations.ListClubsLocations2Response(
                 clubs_locations=unmarshal_json_response(
                     Optional[List[shared.ClubsLocation]], http_res
                 ),
@@ -1624,18 +1626,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_members(
+    def list_clubs_members2(
         self,
         *,
         request: Union[
-            operations.ListClubsMembersRequest,
-            operations.ListClubsMembersRequestTypedDict,
+            operations.ListClubsMembers2Request,
+            operations.ListClubsMembers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsMembersResponse:
+    ) -> operations.ListClubsMembers2Response:
         r"""List all members
 
         :param request: The request object to send.
@@ -1655,8 +1657,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsMembersRequest)
-        request = cast(operations.ListClubsMembersRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsMembers2Request)
+        request = cast(operations.ListClubsMembers2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1687,7 +1689,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsMembers",
+                operation_id="listClubsMembers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1697,7 +1699,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsMembersResponse(
+            return operations.ListClubsMembers2Response(
                 clubs_members=unmarshal_json_response(
                     Optional[List[shared.ClubsMember]], http_res
                 ),
@@ -1714,18 +1716,18 @@ class Clubs(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_members_async(
+    async def list_clubs_members2_async(
         self,
         *,
         request: Union[
-            operations.ListClubsMembersRequest,
-            operations.ListClubsMembersRequestTypedDict,
+            operations.ListClubsMembers2Request,
+            operations.ListClubsMembers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsMembersResponse:
+    ) -> operations.ListClubsMembers2Response:
         r"""List all members
 
         :param request: The request object to send.
@@ -1745,8 +1747,8 @@ class Clubs(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsMembersRequest)
-        request = cast(operations.ListClubsMembersRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsMembers2Request)
+        request = cast(operations.ListClubsMembers2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1777,7 +1779,7 @@ class Clubs(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsMembers",
+                operation_id="listClubsMembers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1787,7 +1789,7 @@ class Clubs(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsMembersResponse(
+            return operations.ListClubsMembers2Response(
                 clubs_members=unmarshal_json_response(
                     Optional[List[shared.ClubsMember]], http_res
                 ),

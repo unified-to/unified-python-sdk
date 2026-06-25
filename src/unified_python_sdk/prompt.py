@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Prompt(BaseSDK):
-    def create_genai_prompt(
+    def create_genai_prompt2(
         self,
         *,
         request: Union[
-            operations.CreateGenaiPromptRequest,
-            operations.CreateGenaiPromptRequestTypedDict,
+            operations.CreateGenaiPrompt2Request,
+            operations.CreateGenaiPrompt2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateGenaiPromptResponse:
+    ) -> operations.CreateGenaiPrompt2Response:
         r"""Create a prompt
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Prompt(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateGenaiPromptRequest)
-        request = cast(operations.CreateGenaiPromptRequest, request)
+            request = utils.unmarshal(request, operations.CreateGenaiPrompt2Request)
+        request = cast(operations.CreateGenaiPrompt2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Prompt(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createGenaiPrompt",
+                operation_id="createGenaiPrompt2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Prompt(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateGenaiPromptResponse(
+            return operations.CreateGenaiPrompt2Response(
                 genai_prompt=unmarshal_json_response(
                     Optional[shared.GenaiPrompt], http_res
                 ),
@@ -103,18 +103,18 @@ class Prompt(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_genai_prompt_async(
+    async def create_genai_prompt2_async(
         self,
         *,
         request: Union[
-            operations.CreateGenaiPromptRequest,
-            operations.CreateGenaiPromptRequestTypedDict,
+            operations.CreateGenaiPrompt2Request,
+            operations.CreateGenaiPrompt2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateGenaiPromptResponse:
+    ) -> operations.CreateGenaiPrompt2Response:
         r"""Create a prompt
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Prompt(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateGenaiPromptRequest)
-        request = cast(operations.CreateGenaiPromptRequest, request)
+            request = utils.unmarshal(request, operations.CreateGenaiPrompt2Request)
+        request = cast(operations.CreateGenaiPrompt2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Prompt(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createGenaiPrompt",
+                operation_id="createGenaiPrompt2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Prompt(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateGenaiPromptResponse(
+            return operations.CreateGenaiPrompt2Response(
                 genai_prompt=unmarshal_json_response(
                     Optional[shared.GenaiPrompt], http_res
                 ),

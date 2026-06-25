@@ -1,0 +1,9 @@
+# RemoveCrmLead2Request
+
+
+## Fields
+
+| Field                | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *str*                | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *str*                | :heavy_check_mark:   | ID of the Lead       |

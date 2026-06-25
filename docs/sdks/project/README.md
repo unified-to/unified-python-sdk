@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [create_task_project](#create_task_project) - Create a project
-* [get_task_project](#get_task_project) - Retrieve a project
-* [list_task_projects](#list_task_projects) - List all projects
-* [patch_task_project](#patch_task_project) - Update a project
-* [remove_task_project](#remove_task_project) - Remove a project
-* [update_task_project](#update_task_project) - Update a project
+* [create_task_project2](#create_task_project2) - Create a project
+* [get_task_project2](#get_task_project2) - Retrieve a project
+* [list_task_projects2](#list_task_projects2) - List all projects
+* [patch_task_project2](#patch_task_project2) - Update a project
+* [remove_task_project2](#remove_task_project2) - Remove a project
+* [update_task_project2](#update_task_project2) - Update a project
 
-## create_task_project
+## create_task_project2
 
 Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="python" operationID="createTaskProject2" method="post" path="/task/{connection_id}/project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -29,9 +29,150 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.project.create_task_project(request={
+    res = unified_to.project.create_task_project2(request={
         "task_project": {},
         "connection_id": "<id>",
+    })
+
+    assert res.task_project is not None
+
+    # Handle response
+    print(res.task_project)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateTaskProject2Request](../../models/operations/createtaskproject2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.CreateTaskProject2Response](../../models/operations/createtaskproject2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_task_project2
+
+Retrieve a project
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getTaskProject2" method="get" path="/task/{connection_id}/project/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.project.get_task_project2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.task_project is not None
+
+    # Handle response
+    print(res.task_project)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetTaskProject2Request](../../models/operations/gettaskproject2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.GetTaskProject2Response](../../models/operations/gettaskproject2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_task_projects2
+
+List all projects
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listTaskProjects2" method="get" path="/task/{connection_id}/project" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.project.list_task_projects2(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.task_projects is not None
+
+    # Handle response
+    print(res.task_projects)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListTaskProjects2Request](../../models/operations/listtaskprojects2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.ListTaskProjects2Response](../../models/operations/listtaskprojects2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_task_project2
+
+Update a project
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchTaskProject2" method="patch" path="/task/{connection_id}/project/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.project.patch_task_project2(request={
+        "task_project": {},
+        "connection_id": "<id>",
+        "id": "<id>",
     })
 
     assert res.task_project is not None
@@ -45,12 +186,12 @@ with UnifiedTo(
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreateTaskProjectRequest](../../models/operations/createtaskprojectrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `request`                                                                                  | [operations.PatchTaskProject2Request](../../models/operations/patchtaskproject2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 | `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.CreateTaskProjectResponse](../../models/operations/createtaskprojectresponse.md)**
+**[operations.PatchTaskProject2Response](../../models/operations/patchtaskproject2response.md)**
 
 ### Errors
 
@@ -58,154 +199,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_task_project
-
-Retrieve a project
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.project.get_task_project(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.task_project is not None
-
-    # Handle response
-    print(res.task_project)
-
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetTaskProjectRequest](../../models/operations/gettaskprojectrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
-
-### Response
-
-**[operations.GetTaskProjectResponse](../../models/operations/gettaskprojectresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## list_task_projects
-
-List all projects
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.project.list_task_projects(request={
-        "connection_id": "<id>",
-    })
-
-    assert res.task_projects is not None
-
-    # Handle response
-    print(res.task_projects)
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListTaskProjectsRequest](../../models/operations/listtaskprojectsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.ListTaskProjectsResponse](../../models/operations/listtaskprojectsresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## patch_task_project
-
-Update a project
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.project.patch_task_project(request={
-        "task_project": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.task_project is not None
-
-    # Handle response
-    print(res.task_project)
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchTaskProjectRequest](../../models/operations/patchtaskprojectrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.PatchTaskProjectResponse](../../models/operations/patchtaskprojectresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_task_project
+## remove_task_project2
 
 Remove a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTaskProject2" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -217,7 +217,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.project.remove_task_project(request={
+    res = unified_to.project.remove_task_project2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -231,14 +231,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemoveTaskProjectRequest](../../models/operations/removetaskprojectrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveTaskProject2Request](../../models/operations/removetaskproject2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.RemoveTaskProjectResponse](../../models/operations/removetaskprojectresponse.md)**
+**[operations.RemoveTaskProject2Response](../../models/operations/removetaskproject2response.md)**
 
 ### Errors
 
@@ -246,13 +246,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_task_project
+## update_task_project2
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskProject2" method="put" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -264,7 +264,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.project.update_task_project(request={
+    res = unified_to.project.update_task_project2(request={
         "task_project": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -279,14 +279,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdateTaskProjectRequest](../../models/operations/updatetaskprojectrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateTaskProject2Request](../../models/operations/updatetaskproject2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.UpdateTaskProjectResponse](../../models/operations/updatetaskprojectresponse.md)**
+**[operations.UpdateTaskProject2Response](../../models/operations/updatetaskproject2response.md)**
 
 ### Errors
 

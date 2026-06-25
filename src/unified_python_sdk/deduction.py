@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Deduction(BaseSDK):
-    def create_hris_deduction(
+    def create_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.CreateHrisDeductionRequest,
-            operations.CreateHrisDeductionRequestTypedDict,
+            operations.CreateHrisDeduction2Request,
+            operations.CreateHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisDeductionResponse:
+    ) -> operations.CreateHrisDeduction2Response:
         r"""Create a deduction
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisDeductionRequest)
-        request = cast(operations.CreateHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisDeduction2Request)
+        request = cast(operations.CreateHrisDeduction2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisDeduction",
+                operation_id="createHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisDeductionResponse(
+            return operations.CreateHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -103,18 +103,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_deduction_async(
+    async def create_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisDeductionRequest,
-            operations.CreateHrisDeductionRequestTypedDict,
+            operations.CreateHrisDeduction2Request,
+            operations.CreateHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisDeductionResponse:
+    ) -> operations.CreateHrisDeduction2Response:
         r"""Create a deduction
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisDeductionRequest)
-        request = cast(operations.CreateHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisDeduction2Request)
+        request = cast(operations.CreateHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisDeduction",
+                operation_id="createHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisDeductionResponse(
+            return operations.CreateHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -196,18 +196,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_deduction(
+    def get_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.GetHrisDeductionRequest,
-            operations.GetHrisDeductionRequestTypedDict,
+            operations.GetHrisDeduction2Request,
+            operations.GetHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisDeductionResponse:
+    ) -> operations.GetHrisDeduction2Response:
         r"""Retrieve a deduction
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisDeductionRequest)
-        request = cast(operations.GetHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisDeduction2Request)
+        request = cast(operations.GetHrisDeduction2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -259,7 +259,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisDeduction",
+                operation_id="getHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -269,7 +269,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisDeductionResponse(
+            return operations.GetHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -286,18 +286,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_deduction_async(
+    async def get_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisDeductionRequest,
-            operations.GetHrisDeductionRequestTypedDict,
+            operations.GetHrisDeduction2Request,
+            operations.GetHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisDeductionResponse:
+    ) -> operations.GetHrisDeduction2Response:
         r"""Retrieve a deduction
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisDeductionRequest)
-        request = cast(operations.GetHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisDeduction2Request)
+        request = cast(operations.GetHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisDeduction",
+                operation_id="getHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -359,7 +359,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisDeductionResponse(
+            return operations.GetHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -376,18 +376,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_deductions(
+    def list_hris_deductions2(
         self,
         *,
         request: Union[
-            operations.ListHrisDeductionsRequest,
-            operations.ListHrisDeductionsRequestTypedDict,
+            operations.ListHrisDeductions2Request,
+            operations.ListHrisDeductions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisDeductionsResponse:
+    ) -> operations.ListHrisDeductions2Response:
         r"""List all deductions
 
         :param request: The request object to send.
@@ -407,8 +407,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisDeductionsRequest)
-        request = cast(operations.ListHrisDeductionsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisDeductions2Request)
+        request = cast(operations.ListHrisDeductions2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -439,7 +439,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisDeductions",
+                operation_id="listHrisDeductions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -449,7 +449,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisDeductionsResponse(
+            return operations.ListHrisDeductions2Response(
                 hris_deductions=unmarshal_json_response(
                     Optional[List[shared.HrisDeduction]], http_res
                 ),
@@ -466,18 +466,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_deductions_async(
+    async def list_hris_deductions2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisDeductionsRequest,
-            operations.ListHrisDeductionsRequestTypedDict,
+            operations.ListHrisDeductions2Request,
+            operations.ListHrisDeductions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisDeductionsResponse:
+    ) -> operations.ListHrisDeductions2Response:
         r"""List all deductions
 
         :param request: The request object to send.
@@ -497,8 +497,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisDeductionsRequest)
-        request = cast(operations.ListHrisDeductionsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisDeductions2Request)
+        request = cast(operations.ListHrisDeductions2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -529,7 +529,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisDeductions",
+                operation_id="listHrisDeductions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -539,7 +539,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisDeductionsResponse(
+            return operations.ListHrisDeductions2Response(
                 hris_deductions=unmarshal_json_response(
                     Optional[List[shared.HrisDeduction]], http_res
                 ),
@@ -556,18 +556,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_deduction(
+    def patch_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.PatchHrisDeductionRequest,
-            operations.PatchHrisDeductionRequestTypedDict,
+            operations.PatchHrisDeduction2Request,
+            operations.PatchHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisDeductionResponse:
+    ) -> operations.PatchHrisDeduction2Response:
         r"""Update a deduction
 
         :param request: The request object to send.
@@ -587,8 +587,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisDeductionRequest)
-        request = cast(operations.PatchHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisDeduction2Request)
+        request = cast(operations.PatchHrisDeduction2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -622,7 +622,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisDeduction",
+                operation_id="patchHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -632,7 +632,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisDeductionResponse(
+            return operations.PatchHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -649,18 +649,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_deduction_async(
+    async def patch_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisDeductionRequest,
-            operations.PatchHrisDeductionRequestTypedDict,
+            operations.PatchHrisDeduction2Request,
+            operations.PatchHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisDeductionResponse:
+    ) -> operations.PatchHrisDeduction2Response:
         r"""Update a deduction
 
         :param request: The request object to send.
@@ -680,8 +680,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisDeductionRequest)
-        request = cast(operations.PatchHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisDeduction2Request)
+        request = cast(operations.PatchHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -715,7 +715,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisDeduction",
+                operation_id="patchHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -725,7 +725,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisDeductionResponse(
+            return operations.PatchHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -742,18 +742,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_deduction(
+    def remove_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisDeductionRequest,
-            operations.RemoveHrisDeductionRequestTypedDict,
+            operations.RemoveHrisDeduction2Request,
+            operations.RemoveHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisDeductionResponse:
+    ) -> operations.RemoveHrisDeduction2Response:
         r"""Remove a deduction
 
         :param request: The request object to send.
@@ -773,8 +773,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisDeductionRequest)
-        request = cast(operations.RemoveHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisDeduction2Request)
+        request = cast(operations.RemoveHrisDeduction2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -805,7 +805,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisDeduction",
+                operation_id="removeHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -815,7 +815,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisDeductionResponse(
+            return operations.RemoveHrisDeduction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -828,7 +828,7 @@ class Deduction(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisDeductionResponse(
+            return operations.RemoveHrisDeduction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -837,18 +837,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_deduction_async(
+    async def remove_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisDeductionRequest,
-            operations.RemoveHrisDeductionRequestTypedDict,
+            operations.RemoveHrisDeduction2Request,
+            operations.RemoveHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisDeductionResponse:
+    ) -> operations.RemoveHrisDeduction2Response:
         r"""Remove a deduction
 
         :param request: The request object to send.
@@ -868,8 +868,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisDeductionRequest)
-        request = cast(operations.RemoveHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisDeduction2Request)
+        request = cast(operations.RemoveHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -900,7 +900,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisDeduction",
+                operation_id="removeHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -910,7 +910,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisDeductionResponse(
+            return operations.RemoveHrisDeduction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -923,7 +923,7 @@ class Deduction(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisDeductionResponse(
+            return operations.RemoveHrisDeduction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -932,18 +932,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_deduction(
+    def update_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisDeductionRequest,
-            operations.UpdateHrisDeductionRequestTypedDict,
+            operations.UpdateHrisDeduction2Request,
+            operations.UpdateHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisDeductionResponse:
+    ) -> operations.UpdateHrisDeduction2Response:
         r"""Update a deduction
 
         :param request: The request object to send.
@@ -963,8 +963,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisDeductionRequest)
-        request = cast(operations.UpdateHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisDeduction2Request)
+        request = cast(operations.UpdateHrisDeduction2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -998,7 +998,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisDeduction",
+                operation_id="updateHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1008,7 +1008,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisDeductionResponse(
+            return operations.UpdateHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -1025,18 +1025,18 @@ class Deduction(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_deduction_async(
+    async def update_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisDeductionRequest,
-            operations.UpdateHrisDeductionRequestTypedDict,
+            operations.UpdateHrisDeduction2Request,
+            operations.UpdateHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisDeductionResponse:
+    ) -> operations.UpdateHrisDeduction2Response:
         r"""Update a deduction
 
         :param request: The request object to send.
@@ -1056,8 +1056,8 @@ class Deduction(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisDeductionRequest)
-        request = cast(operations.UpdateHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisDeduction2Request)
+        request = cast(operations.UpdateHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1091,7 +1091,7 @@ class Deduction(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisDeduction",
+                operation_id="updateHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1101,7 +1101,7 @@ class Deduction(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisDeductionResponse(
+            return operations.UpdateHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),

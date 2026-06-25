@@ -11,7 +11,7 @@ from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
 from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
-class CreatePassthroughJsonAcceptEnum(str, Enum):
+class CreatePassthrough2JsonAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
@@ -19,7 +19,7 @@ class CreatePassthroughJsonAcceptEnum(str, Enum):
     WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
-class CreatePassthroughRawAcceptEnum(str, Enum):
+class CreatePassthrough2RawAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
@@ -27,7 +27,7 @@ class CreatePassthroughRawAcceptEnum(str, Enum):
     WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
-class ListPassthroughsAcceptEnum(str, Enum):
+class ListPassthroughs2AcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
@@ -35,7 +35,7 @@ class ListPassthroughsAcceptEnum(str, Enum):
     WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
-class PatchPassthroughJsonAcceptEnum(str, Enum):
+class PatchPassthrough2JsonAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
@@ -43,7 +43,7 @@ class PatchPassthroughJsonAcceptEnum(str, Enum):
     WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
-class PatchPassthroughRawAcceptEnum(str, Enum):
+class PatchPassthrough2RawAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
@@ -51,7 +51,7 @@ class PatchPassthroughRawAcceptEnum(str, Enum):
     WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
-class RemovePassthroughAcceptEnum(str, Enum):
+class RemovePassthrough2AcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
@@ -59,7 +59,7 @@ class RemovePassthroughAcceptEnum(str, Enum):
     WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
-class UpdatePassthroughJsonAcceptEnum(str, Enum):
+class UpdatePassthrough2JsonAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
@@ -67,7 +67,7 @@ class UpdatePassthroughJsonAcceptEnum(str, Enum):
     WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
-class UpdatePassthroughRawAcceptEnum(str, Enum):
+class UpdatePassthrough2RawAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
@@ -76,19 +76,19 @@ class UpdatePassthroughRawAcceptEnum(str, Enum):
 
 
 class Passthrough(BaseSDK):
-    def create_passthrough_json(
+    def create_passthrough2_json(
         self,
         *,
         request: Union[
-            operations.CreatePassthroughJSONRequest,
-            operations.CreatePassthroughJSONRequestTypedDict,
+            operations.CreatePassthrough2JSONRequest,
+            operations.CreatePassthrough2JSONRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[CreatePassthroughJsonAcceptEnum] = None,
+        accept_header_override: Optional[CreatePassthrough2JsonAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePassthroughJSONResponse:
+    ) -> operations.CreatePassthrough2JSONResponse:
         r"""Passthrough POST
 
         :param request: The request object to send.
@@ -109,8 +109,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePassthroughJSONRequest)
-        request = cast(operations.CreatePassthroughJSONRequest, request)
+            request = utils.unmarshal(request, operations.CreatePassthrough2JSONRequest)
+        request = cast(operations.CreatePassthrough2JSONRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -150,7 +150,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPassthrough_json",
+                operation_id="createPassthrough2_json",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -161,14 +161,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -182,7 +182,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -193,7 +193,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -202,7 +202,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -211,7 +211,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -219,7 +219,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -230,19 +230,19 @@ class Passthrough(BaseSDK):
         http_res_text = utils.stream_to_text(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    async def create_passthrough_json_async(
+    async def create_passthrough2_json_async(
         self,
         *,
         request: Union[
-            operations.CreatePassthroughJSONRequest,
-            operations.CreatePassthroughJSONRequestTypedDict,
+            operations.CreatePassthrough2JSONRequest,
+            operations.CreatePassthrough2JSONRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[CreatePassthroughJsonAcceptEnum] = None,
+        accept_header_override: Optional[CreatePassthrough2JsonAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePassthroughJSONResponse:
+    ) -> operations.CreatePassthrough2JSONResponse:
         r"""Passthrough POST
 
         :param request: The request object to send.
@@ -263,8 +263,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePassthroughJSONRequest)
-        request = cast(operations.CreatePassthroughJSONRequest, request)
+            request = utils.unmarshal(request, operations.CreatePassthrough2JSONRequest)
+        request = cast(operations.CreatePassthrough2JSONRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -304,7 +304,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPassthrough_json",
+                operation_id="createPassthrough2_json",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -315,14 +315,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -336,7 +336,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -347,7 +347,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -356,7 +356,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -365,7 +365,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -373,7 +373,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.CreatePassthroughJSONResponse(
+            return operations.CreatePassthrough2JSONResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -384,19 +384,19 @@ class Passthrough(BaseSDK):
         http_res_text = await utils.stream_to_text_async(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    def create_passthrough_raw(
+    def create_passthrough2_raw(
         self,
         *,
         request: Union[
-            operations.CreatePassthroughRawRequest,
-            operations.CreatePassthroughRawRequestTypedDict,
+            operations.CreatePassthrough2RawRequest,
+            operations.CreatePassthrough2RawRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[CreatePassthroughRawAcceptEnum] = None,
+        accept_header_override: Optional[CreatePassthrough2RawAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePassthroughRawResponse:
+    ) -> operations.CreatePassthrough2RawResponse:
         r"""Passthrough POST
 
         :param request: The request object to send.
@@ -417,8 +417,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePassthroughRawRequest)
-        request = cast(operations.CreatePassthroughRawRequest, request)
+            request = utils.unmarshal(request, operations.CreatePassthrough2RawRequest)
+        request = cast(operations.CreatePassthrough2RawRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -458,7 +458,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPassthrough_raw",
+                operation_id="createPassthrough2_raw",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -469,14 +469,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -490,7 +490,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -501,7 +501,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -510,7 +510,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -519,7 +519,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -527,7 +527,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -538,19 +538,19 @@ class Passthrough(BaseSDK):
         http_res_text = utils.stream_to_text(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    async def create_passthrough_raw_async(
+    async def create_passthrough2_raw_async(
         self,
         *,
         request: Union[
-            operations.CreatePassthroughRawRequest,
-            operations.CreatePassthroughRawRequestTypedDict,
+            operations.CreatePassthrough2RawRequest,
+            operations.CreatePassthrough2RawRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[CreatePassthroughRawAcceptEnum] = None,
+        accept_header_override: Optional[CreatePassthrough2RawAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePassthroughRawResponse:
+    ) -> operations.CreatePassthrough2RawResponse:
         r"""Passthrough POST
 
         :param request: The request object to send.
@@ -571,8 +571,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePassthroughRawRequest)
-        request = cast(operations.CreatePassthroughRawRequest, request)
+            request = utils.unmarshal(request, operations.CreatePassthrough2RawRequest)
+        request = cast(operations.CreatePassthrough2RawRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -612,7 +612,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPassthrough_raw",
+                operation_id="createPassthrough2_raw",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -623,14 +623,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -644,7 +644,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -655,7 +655,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -664,7 +664,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -673,7 +673,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -681,7 +681,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.CreatePassthroughRawResponse(
+            return operations.CreatePassthrough2RawResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -692,19 +692,19 @@ class Passthrough(BaseSDK):
         http_res_text = await utils.stream_to_text_async(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    def list_passthroughs(
+    def list_passthroughs2(
         self,
         *,
         request: Union[
-            operations.ListPassthroughsRequest,
-            operations.ListPassthroughsRequestTypedDict,
+            operations.ListPassthroughs2Request,
+            operations.ListPassthroughs2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[ListPassthroughsAcceptEnum] = None,
+        accept_header_override: Optional[ListPassthroughs2AcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPassthroughsResponse:
+    ) -> operations.ListPassthroughs2Response:
         r"""Passthrough GET
 
         :param request: The request object to send.
@@ -725,8 +725,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPassthroughsRequest)
-        request = cast(operations.ListPassthroughsRequest, request)
+            request = utils.unmarshal(request, operations.ListPassthroughs2Request)
+        request = cast(operations.ListPassthroughs2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -759,7 +759,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPassthroughs",
+                operation_id="listPassthroughs2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -770,14 +770,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -791,7 +791,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -802,7 +802,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -811,7 +811,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -820,7 +820,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -828,7 +828,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -839,19 +839,19 @@ class Passthrough(BaseSDK):
         http_res_text = utils.stream_to_text(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    async def list_passthroughs_async(
+    async def list_passthroughs2_async(
         self,
         *,
         request: Union[
-            operations.ListPassthroughsRequest,
-            operations.ListPassthroughsRequestTypedDict,
+            operations.ListPassthroughs2Request,
+            operations.ListPassthroughs2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[ListPassthroughsAcceptEnum] = None,
+        accept_header_override: Optional[ListPassthroughs2AcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPassthroughsResponse:
+    ) -> operations.ListPassthroughs2Response:
         r"""Passthrough GET
 
         :param request: The request object to send.
@@ -872,8 +872,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPassthroughsRequest)
-        request = cast(operations.ListPassthroughsRequest, request)
+            request = utils.unmarshal(request, operations.ListPassthroughs2Request)
+        request = cast(operations.ListPassthroughs2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -906,7 +906,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPassthroughs",
+                operation_id="listPassthroughs2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -917,14 +917,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -938,7 +938,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -949,7 +949,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -958,7 +958,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -967,7 +967,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -975,7 +975,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.ListPassthroughsResponse(
+            return operations.ListPassthroughs2Response(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -986,19 +986,19 @@ class Passthrough(BaseSDK):
         http_res_text = await utils.stream_to_text_async(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    def patch_passthrough_json(
+    def patch_passthrough2_json(
         self,
         *,
         request: Union[
-            operations.PatchPassthroughJSONRequest,
-            operations.PatchPassthroughJSONRequestTypedDict,
+            operations.PatchPassthrough2JSONRequest,
+            operations.PatchPassthrough2JSONRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[PatchPassthroughJsonAcceptEnum] = None,
+        accept_header_override: Optional[PatchPassthrough2JsonAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPassthroughJSONResponse:
+    ) -> operations.PatchPassthrough2JSONResponse:
         r"""Passthrough PUT
 
         :param request: The request object to send.
@@ -1019,8 +1019,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPassthroughJSONRequest)
-        request = cast(operations.PatchPassthroughJSONRequest, request)
+            request = utils.unmarshal(request, operations.PatchPassthrough2JSONRequest)
+        request = cast(operations.PatchPassthrough2JSONRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1060,7 +1060,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPassthrough_json",
+                operation_id="patchPassthrough2_json",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1071,14 +1071,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1092,7 +1092,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -1103,7 +1103,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1112,7 +1112,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1121,7 +1121,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1129,7 +1129,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1140,19 +1140,19 @@ class Passthrough(BaseSDK):
         http_res_text = utils.stream_to_text(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    async def patch_passthrough_json_async(
+    async def patch_passthrough2_json_async(
         self,
         *,
         request: Union[
-            operations.PatchPassthroughJSONRequest,
-            operations.PatchPassthroughJSONRequestTypedDict,
+            operations.PatchPassthrough2JSONRequest,
+            operations.PatchPassthrough2JSONRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[PatchPassthroughJsonAcceptEnum] = None,
+        accept_header_override: Optional[PatchPassthrough2JsonAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPassthroughJSONResponse:
+    ) -> operations.PatchPassthrough2JSONResponse:
         r"""Passthrough PUT
 
         :param request: The request object to send.
@@ -1173,8 +1173,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPassthroughJSONRequest)
-        request = cast(operations.PatchPassthroughJSONRequest, request)
+            request = utils.unmarshal(request, operations.PatchPassthrough2JSONRequest)
+        request = cast(operations.PatchPassthrough2JSONRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1214,7 +1214,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPassthrough_json",
+                operation_id="patchPassthrough2_json",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1225,14 +1225,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1246,7 +1246,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -1257,7 +1257,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1266,7 +1266,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1275,7 +1275,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1283,7 +1283,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.PatchPassthroughJSONResponse(
+            return operations.PatchPassthrough2JSONResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1294,19 +1294,19 @@ class Passthrough(BaseSDK):
         http_res_text = await utils.stream_to_text_async(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    def patch_passthrough_raw(
+    def patch_passthrough2_raw(
         self,
         *,
         request: Union[
-            operations.PatchPassthroughRawRequest,
-            operations.PatchPassthroughRawRequestTypedDict,
+            operations.PatchPassthrough2RawRequest,
+            operations.PatchPassthrough2RawRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[PatchPassthroughRawAcceptEnum] = None,
+        accept_header_override: Optional[PatchPassthrough2RawAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPassthroughRawResponse:
+    ) -> operations.PatchPassthrough2RawResponse:
         r"""Passthrough PUT
 
         :param request: The request object to send.
@@ -1327,8 +1327,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPassthroughRawRequest)
-        request = cast(operations.PatchPassthroughRawRequest, request)
+            request = utils.unmarshal(request, operations.PatchPassthrough2RawRequest)
+        request = cast(operations.PatchPassthrough2RawRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1368,7 +1368,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPassthrough_raw",
+                operation_id="patchPassthrough2_raw",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1379,14 +1379,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1400,7 +1400,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -1411,7 +1411,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1420,7 +1420,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1429,7 +1429,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1437,7 +1437,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1448,19 +1448,19 @@ class Passthrough(BaseSDK):
         http_res_text = utils.stream_to_text(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    async def patch_passthrough_raw_async(
+    async def patch_passthrough2_raw_async(
         self,
         *,
         request: Union[
-            operations.PatchPassthroughRawRequest,
-            operations.PatchPassthroughRawRequestTypedDict,
+            operations.PatchPassthrough2RawRequest,
+            operations.PatchPassthrough2RawRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[PatchPassthroughRawAcceptEnum] = None,
+        accept_header_override: Optional[PatchPassthrough2RawAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPassthroughRawResponse:
+    ) -> operations.PatchPassthrough2RawResponse:
         r"""Passthrough PUT
 
         :param request: The request object to send.
@@ -1481,8 +1481,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPassthroughRawRequest)
-        request = cast(operations.PatchPassthroughRawRequest, request)
+            request = utils.unmarshal(request, operations.PatchPassthrough2RawRequest)
+        request = cast(operations.PatchPassthrough2RawRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1522,7 +1522,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPassthrough_raw",
+                operation_id="patchPassthrough2_raw",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1533,14 +1533,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1554,7 +1554,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -1565,7 +1565,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1574,7 +1574,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1583,7 +1583,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1591,7 +1591,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.PatchPassthroughRawResponse(
+            return operations.PatchPassthrough2RawResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1602,19 +1602,19 @@ class Passthrough(BaseSDK):
         http_res_text = await utils.stream_to_text_async(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    def remove_passthrough(
+    def remove_passthrough2(
         self,
         *,
         request: Union[
-            operations.RemovePassthroughRequest,
-            operations.RemovePassthroughRequestTypedDict,
+            operations.RemovePassthrough2Request,
+            operations.RemovePassthrough2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[RemovePassthroughAcceptEnum] = None,
+        accept_header_override: Optional[RemovePassthrough2AcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePassthroughResponse:
+    ) -> operations.RemovePassthrough2Response:
         r"""Passthrough DELETE
 
         :param request: The request object to send.
@@ -1635,8 +1635,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemovePassthroughRequest)
-        request = cast(operations.RemovePassthroughRequest, request)
+            request = utils.unmarshal(request, operations.RemovePassthrough2Request)
+        request = cast(operations.RemovePassthrough2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1669,7 +1669,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePassthrough",
+                operation_id="removePassthrough2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1680,14 +1680,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1701,7 +1701,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -1712,7 +1712,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1721,7 +1721,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1730,7 +1730,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1738,7 +1738,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1749,19 +1749,19 @@ class Passthrough(BaseSDK):
         http_res_text = utils.stream_to_text(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    async def remove_passthrough_async(
+    async def remove_passthrough2_async(
         self,
         *,
         request: Union[
-            operations.RemovePassthroughRequest,
-            operations.RemovePassthroughRequestTypedDict,
+            operations.RemovePassthrough2Request,
+            operations.RemovePassthrough2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[RemovePassthroughAcceptEnum] = None,
+        accept_header_override: Optional[RemovePassthrough2AcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePassthroughResponse:
+    ) -> operations.RemovePassthrough2Response:
         r"""Passthrough DELETE
 
         :param request: The request object to send.
@@ -1782,8 +1782,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemovePassthroughRequest)
-        request = cast(operations.RemovePassthroughRequest, request)
+            request = utils.unmarshal(request, operations.RemovePassthrough2Request)
+        request = cast(operations.RemovePassthrough2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1816,7 +1816,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePassthrough",
+                operation_id="removePassthrough2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1827,14 +1827,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1848,7 +1848,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -1859,7 +1859,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1868,7 +1868,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1877,7 +1877,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1885,7 +1885,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.RemovePassthroughResponse(
+            return operations.RemovePassthrough2Response(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1896,19 +1896,19 @@ class Passthrough(BaseSDK):
         http_res_text = await utils.stream_to_text_async(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    def update_passthrough_json(
+    def update_passthrough2_json(
         self,
         *,
         request: Union[
-            operations.UpdatePassthroughJSONRequest,
-            operations.UpdatePassthroughJSONRequestTypedDict,
+            operations.UpdatePassthrough2JSONRequest,
+            operations.UpdatePassthrough2JSONRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[UpdatePassthroughJsonAcceptEnum] = None,
+        accept_header_override: Optional[UpdatePassthrough2JsonAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePassthroughJSONResponse:
+    ) -> operations.UpdatePassthrough2JSONResponse:
         r"""Passthrough PUT
 
         :param request: The request object to send.
@@ -1929,8 +1929,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePassthroughJSONRequest)
-        request = cast(operations.UpdatePassthroughJSONRequest, request)
+            request = utils.unmarshal(request, operations.UpdatePassthrough2JSONRequest)
+        request = cast(operations.UpdatePassthrough2JSONRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1970,7 +1970,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePassthrough_json",
+                operation_id="updatePassthrough2_json",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1981,14 +1981,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2002,7 +2002,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -2013,7 +2013,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2022,7 +2022,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2031,7 +2031,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2039,7 +2039,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2050,19 +2050,19 @@ class Passthrough(BaseSDK):
         http_res_text = utils.stream_to_text(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    async def update_passthrough_json_async(
+    async def update_passthrough2_json_async(
         self,
         *,
         request: Union[
-            operations.UpdatePassthroughJSONRequest,
-            operations.UpdatePassthroughJSONRequestTypedDict,
+            operations.UpdatePassthrough2JSONRequest,
+            operations.UpdatePassthrough2JSONRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[UpdatePassthroughJsonAcceptEnum] = None,
+        accept_header_override: Optional[UpdatePassthrough2JsonAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePassthroughJSONResponse:
+    ) -> operations.UpdatePassthrough2JSONResponse:
         r"""Passthrough PUT
 
         :param request: The request object to send.
@@ -2083,8 +2083,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePassthroughJSONRequest)
-        request = cast(operations.UpdatePassthroughJSONRequest, request)
+            request = utils.unmarshal(request, operations.UpdatePassthrough2JSONRequest)
+        request = cast(operations.UpdatePassthrough2JSONRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2124,7 +2124,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePassthrough_json",
+                operation_id="updatePassthrough2_json",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2135,14 +2135,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2156,7 +2156,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -2167,7 +2167,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2176,7 +2176,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2185,7 +2185,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2193,7 +2193,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.UpdatePassthroughJSONResponse(
+            return operations.UpdatePassthrough2JSONResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2204,19 +2204,19 @@ class Passthrough(BaseSDK):
         http_res_text = await utils.stream_to_text_async(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    def update_passthrough_raw(
+    def update_passthrough2_raw(
         self,
         *,
         request: Union[
-            operations.UpdatePassthroughRawRequest,
-            operations.UpdatePassthroughRawRequestTypedDict,
+            operations.UpdatePassthrough2RawRequest,
+            operations.UpdatePassthrough2RawRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[UpdatePassthroughRawAcceptEnum] = None,
+        accept_header_override: Optional[UpdatePassthrough2RawAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePassthroughRawResponse:
+    ) -> operations.UpdatePassthrough2RawResponse:
         r"""Passthrough PUT
 
         :param request: The request object to send.
@@ -2237,8 +2237,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePassthroughRawRequest)
-        request = cast(operations.UpdatePassthroughRawRequest, request)
+            request = utils.unmarshal(request, operations.UpdatePassthrough2RawRequest)
+        request = cast(operations.UpdatePassthrough2RawRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -2278,7 +2278,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePassthrough_raw",
+                operation_id="updatePassthrough2_raw",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2289,14 +2289,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2310,7 +2310,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -2321,7 +2321,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2330,7 +2330,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2339,7 +2339,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = utils.stream_to_text(http_res)
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2347,7 +2347,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2358,19 +2358,19 @@ class Passthrough(BaseSDK):
         http_res_text = utils.stream_to_text(http_res)
         raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
-    async def update_passthrough_raw_async(
+    async def update_passthrough2_raw_async(
         self,
         *,
         request: Union[
-            operations.UpdatePassthroughRawRequest,
-            operations.UpdatePassthroughRawRequestTypedDict,
+            operations.UpdatePassthrough2RawRequest,
+            operations.UpdatePassthrough2RawRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
-        accept_header_override: Optional[UpdatePassthroughRawAcceptEnum] = None,
+        accept_header_override: Optional[UpdatePassthrough2RawAcceptEnum] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePassthroughRawResponse:
+    ) -> operations.UpdatePassthrough2RawResponse:
         r"""Passthrough PUT
 
         :param request: The request object to send.
@@ -2391,8 +2391,8 @@ class Passthrough(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePassthroughRawRequest)
-        request = cast(operations.UpdatePassthroughRawRequest, request)
+            request = utils.unmarshal(request, operations.UpdatePassthrough2RawRequest)
+        request = cast(operations.UpdatePassthrough2RawRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2432,7 +2432,7 @@ class Passthrough(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePassthrough_raw",
+                operation_id="updatePassthrough2_raw",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2443,14 +2443,14 @@ class Passthrough(BaseSDK):
         )
 
         if utils.match_response(http_res, ["204", "205"], "*"):
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "304", "*"):
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2464,7 +2464,7 @@ class Passthrough(BaseSDK):
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
@@ -2475,7 +2475,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "application/xml"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_application_xml_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2484,7 +2484,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/csv"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_text_csv_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2493,7 +2493,7 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "default", "text/plain"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_text_plain_res=http_res_text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2501,7 +2501,7 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
         if utils.match_response(http_res, "default", "*/*"):
-            return operations.UpdatePassthroughRawResponse(
+            return operations.UpdatePassthrough2RawResponse(
                 default_wildcard_wildcard_response_stream=http_res,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

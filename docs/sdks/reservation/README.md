@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [create_commerce_reservation](#create_commerce_reservation) - Create a reservation
-* [get_commerce_reservation](#get_commerce_reservation) - Retrieve a reservation
-* [list_commerce_reservations](#list_commerce_reservations) - List all reservations
-* [patch_commerce_reservation](#patch_commerce_reservation) - Update a reservation
-* [remove_commerce_reservation](#remove_commerce_reservation) - Remove a reservation
-* [update_commerce_reservation](#update_commerce_reservation) - Update a reservation
+* [create_commerce_reservation2](#create_commerce_reservation2) - Create a reservation
+* [get_commerce_reservation2](#get_commerce_reservation2) - Retrieve a reservation
+* [list_commerce_reservations2](#list_commerce_reservations2) - List all reservations
+* [patch_commerce_reservation2](#patch_commerce_reservation2) - Update a reservation
+* [remove_commerce_reservation2](#remove_commerce_reservation2) - Remove a reservation
+* [update_commerce_reservation2](#update_commerce_reservation2) - Update a reservation
 
-## create_commerce_reservation
+## create_commerce_reservation2
 
 Create a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="python" operationID="createCommerceReservation2" method="post" path="/commerce/{connection_id}/reservation" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -29,9 +29,150 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.reservation.create_commerce_reservation(request={
+    res = unified_to.reservation.create_commerce_reservation2(request={
         "commerce_reservation": {},
         "connection_id": "<id>",
+    })
+
+    assert res.commerce_reservation is not None
+
+    # Handle response
+    print(res.commerce_reservation)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.CreateCommerceReservation2Request](../../models/operations/createcommercereservation2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
+
+### Response
+
+**[operations.CreateCommerceReservation2Response](../../models/operations/createcommercereservation2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_commerce_reservation2
+
+Retrieve a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getCommerceReservation2" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.reservation.get_commerce_reservation2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.commerce_reservation is not None
+
+    # Handle response
+    print(res.commerce_reservation)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.GetCommerceReservation2Request](../../models/operations/getcommercereservation2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.GetCommerceReservation2Response](../../models/operations/getcommercereservation2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_commerce_reservations2
+
+List all reservations
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listCommerceReservations2" method="get" path="/commerce/{connection_id}/reservation" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.reservation.list_commerce_reservations2(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.commerce_reservations is not None
+
+    # Handle response
+    print(res.commerce_reservations)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.ListCommerceReservations2Request](../../models/operations/listcommercereservations2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+
+### Response
+
+**[operations.ListCommerceReservations2Response](../../models/operations/listcommercereservations2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_commerce_reservation2
+
+Update a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchCommerceReservation2" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.reservation.patch_commerce_reservation2(request={
+        "commerce_reservation": {},
+        "connection_id": "<id>",
+        "id": "<id>",
     })
 
     assert res.commerce_reservation is not None
@@ -45,12 +186,12 @@ with UnifiedTo(
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.CreateCommerceReservationRequest](../../models/operations/createcommercereservationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `request`                                                                                                  | [operations.PatchCommerceReservation2Request](../../models/operations/patchcommercereservation2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 | `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
 
 ### Response
 
-**[operations.CreateCommerceReservationResponse](../../models/operations/createcommercereservationresponse.md)**
+**[operations.PatchCommerceReservation2Response](../../models/operations/patchcommercereservation2response.md)**
 
 ### Errors
 
@@ -58,154 +199,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_commerce_reservation
-
-Retrieve a reservation
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="getCommerceReservation" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.reservation.get_commerce_reservation(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.commerce_reservation is not None
-
-    # Handle response
-    print(res.commerce_reservation)
-
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetCommerceReservationRequest](../../models/operations/getcommercereservationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
-
-### Response
-
-**[operations.GetCommerceReservationResponse](../../models/operations/getcommercereservationresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## list_commerce_reservations
-
-List all reservations
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="listCommerceReservations" method="get" path="/commerce/{connection_id}/reservation" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.reservation.list_commerce_reservations(request={
-        "connection_id": "<id>",
-    })
-
-    assert res.commerce_reservations is not None
-
-    # Handle response
-    print(res.commerce_reservations)
-
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.ListCommerceReservationsRequest](../../models/operations/listcommercereservationsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
-
-### Response
-
-**[operations.ListCommerceReservationsResponse](../../models/operations/listcommercereservationsresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## patch_commerce_reservation
-
-Update a reservation
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.reservation.patch_commerce_reservation(request={
-        "commerce_reservation": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.commerce_reservation is not None
-
-    # Handle response
-    print(res.commerce_reservation)
-
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.PatchCommerceReservationRequest](../../models/operations/patchcommercereservationrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
-
-### Response
-
-**[operations.PatchCommerceReservationResponse](../../models/operations/patchcommercereservationresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_commerce_reservation
+## remove_commerce_reservation2
 
 Remove a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeCommerceReservation" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeCommerceReservation2" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -217,7 +217,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.reservation.remove_commerce_reservation(request={
+    res = unified_to.reservation.remove_commerce_reservation2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -231,14 +231,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.RemoveCommerceReservationRequest](../../models/operations/removecommercereservationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.RemoveCommerceReservation2Request](../../models/operations/removecommercereservation2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
 
 ### Response
 
-**[operations.RemoveCommerceReservationResponse](../../models/operations/removecommercereservationresponse.md)**
+**[operations.RemoveCommerceReservation2Response](../../models/operations/removecommercereservation2response.md)**
 
 ### Errors
 
@@ -246,13 +246,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_commerce_reservation
+## update_commerce_reservation2
 
 Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCommerceReservation2" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -264,7 +264,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.reservation.update_commerce_reservation(request={
+    res = unified_to.reservation.update_commerce_reservation2(request={
         "commerce_reservation": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -279,14 +279,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.UpdateCommerceReservationRequest](../../models/operations/updatecommercereservationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.UpdateCommerceReservation2Request](../../models/operations/updatecommercereservation2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
 
 ### Response
 
-**[operations.UpdateCommerceReservationResponse](../../models/operations/updatecommercereservationresponse.md)**
+**[operations.UpdateCommerceReservation2Response](../../models/operations/updatecommercereservation2response.md)**
 
 ### Errors
 

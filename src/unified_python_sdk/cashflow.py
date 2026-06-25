@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Cashflow(BaseSDK):
-    def get_accounting_cashflow(
+    def get_accounting_cashflow2(
         self,
         *,
         request: Union[
-            operations.GetAccountingCashflowRequest,
-            operations.GetAccountingCashflowRequestTypedDict,
+            operations.GetAccountingCashflow2Request,
+            operations.GetAccountingCashflow2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingCashflowResponse:
+    ) -> operations.GetAccountingCashflow2Response:
         r"""Retrieve a cashflow
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Cashflow(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingCashflowRequest)
-        request = cast(operations.GetAccountingCashflowRequest, request)
+            request = utils.unmarshal(request, operations.GetAccountingCashflow2Request)
+        request = cast(operations.GetAccountingCashflow2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Cashflow(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingCashflow",
+                operation_id="getAccountingCashflow2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -83,7 +83,7 @@ class Cashflow(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingCashflowResponse(
+            return operations.GetAccountingCashflow2Response(
                 accounting_cashflow=unmarshal_json_response(
                     Optional[shared.AccountingCashflow], http_res
                 ),
@@ -100,18 +100,18 @@ class Cashflow(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_cashflow_async(
+    async def get_accounting_cashflow2_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingCashflowRequest,
-            operations.GetAccountingCashflowRequestTypedDict,
+            operations.GetAccountingCashflow2Request,
+            operations.GetAccountingCashflow2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingCashflowResponse:
+    ) -> operations.GetAccountingCashflow2Response:
         r"""Retrieve a cashflow
 
         :param request: The request object to send.
@@ -131,8 +131,8 @@ class Cashflow(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingCashflowRequest)
-        request = cast(operations.GetAccountingCashflowRequest, request)
+            request = utils.unmarshal(request, operations.GetAccountingCashflow2Request)
+        request = cast(operations.GetAccountingCashflow2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -163,7 +163,7 @@ class Cashflow(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingCashflow",
+                operation_id="getAccountingCashflow2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -173,7 +173,7 @@ class Cashflow(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingCashflowResponse(
+            return operations.GetAccountingCashflow2Response(
                 accounting_cashflow=unmarshal_json_response(
                     Optional[shared.AccountingCashflow], http_res
                 ),
@@ -190,18 +190,18 @@ class Cashflow(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_cashflows(
+    def list_accounting_cashflows2(
         self,
         *,
         request: Union[
-            operations.ListAccountingCashflowsRequest,
-            operations.ListAccountingCashflowsRequestTypedDict,
+            operations.ListAccountingCashflows2Request,
+            operations.ListAccountingCashflows2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingCashflowsResponse:
+    ) -> operations.ListAccountingCashflows2Response:
         r"""List all cashflows
 
         :param request: The request object to send.
@@ -222,9 +222,9 @@ class Cashflow(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingCashflowsRequest
+                request, operations.ListAccountingCashflows2Request
             )
-        request = cast(operations.ListAccountingCashflowsRequest, request)
+        request = cast(operations.ListAccountingCashflows2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -255,7 +255,7 @@ class Cashflow(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingCashflows",
+                operation_id="listAccountingCashflows2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -265,7 +265,7 @@ class Cashflow(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingCashflowsResponse(
+            return operations.ListAccountingCashflows2Response(
                 accounting_cashflows=unmarshal_json_response(
                     Optional[List[shared.AccountingCashflow]], http_res
                 ),
@@ -282,18 +282,18 @@ class Cashflow(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_cashflows_async(
+    async def list_accounting_cashflows2_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingCashflowsRequest,
-            operations.ListAccountingCashflowsRequestTypedDict,
+            operations.ListAccountingCashflows2Request,
+            operations.ListAccountingCashflows2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingCashflowsResponse:
+    ) -> operations.ListAccountingCashflows2Response:
         r"""List all cashflows
 
         :param request: The request object to send.
@@ -314,9 +314,9 @@ class Cashflow(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingCashflowsRequest
+                request, operations.ListAccountingCashflows2Request
             )
-        request = cast(operations.ListAccountingCashflowsRequest, request)
+        request = cast(operations.ListAccountingCashflows2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -347,7 +347,7 @@ class Cashflow(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingCashflows",
+                operation_id="listAccountingCashflows2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -357,7 +357,7 @@ class Cashflow(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingCashflowsResponse(
+            return operations.ListAccountingCashflows2Response(
                 accounting_cashflows=unmarshal_json_response(
                     Optional[List[shared.AccountingCashflow]], http_res
                 ),

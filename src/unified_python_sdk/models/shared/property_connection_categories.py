@@ -30,6 +30,7 @@ class PropertyConnectionCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     CALENDAR = "calendar"
     VERIFICATION = "verification"
     ADS = "ads"
+    ANALYTICS = "analytics"
     FORMS = "forms"
     SHIPPING = "shipping"
     ASSESSMENT = "assessment"

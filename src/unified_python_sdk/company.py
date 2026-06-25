@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Company(BaseSDK):
-    def create_ats_company(
+    def create_ats_company2(
         self,
         *,
         request: Union[
-            operations.CreateAtsCompanyRequest,
-            operations.CreateAtsCompanyRequestTypedDict,
+            operations.CreateAtsCompany2Request,
+            operations.CreateAtsCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsCompanyResponse:
+    ) -> operations.CreateAtsCompany2Response:
         r"""Create a company
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsCompanyRequest)
-        request = cast(operations.CreateAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsCompany2Request)
+        request = cast(operations.CreateAtsCompany2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsCompany",
+                operation_id="createAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsCompanyResponse(
+            return operations.CreateAtsCompany2Response(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -103,18 +103,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_company_async(
+    async def create_ats_company2_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsCompanyRequest,
-            operations.CreateAtsCompanyRequestTypedDict,
+            operations.CreateAtsCompany2Request,
+            operations.CreateAtsCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsCompanyResponse:
+    ) -> operations.CreateAtsCompany2Response:
         r"""Create a company
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsCompanyRequest)
-        request = cast(operations.CreateAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsCompany2Request)
+        request = cast(operations.CreateAtsCompany2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsCompany",
+                operation_id="createAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsCompanyResponse(
+            return operations.CreateAtsCompany2Response(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -196,18 +196,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_crm_company(
+    def create_crm_company2(
         self,
         *,
         request: Union[
-            operations.CreateCrmCompanyRequest,
-            operations.CreateCrmCompanyRequestTypedDict,
+            operations.CreateCrmCompany2Request,
+            operations.CreateCrmCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmCompanyResponse:
+    ) -> operations.CreateCrmCompany2Response:
         r"""Create a company
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmCompanyRequest)
-        request = cast(operations.CreateCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.CreateCrmCompany2Request)
+        request = cast(operations.CreateCrmCompany2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +262,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmCompany",
+                operation_id="createCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +272,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmCompanyResponse(
+            return operations.CreateCrmCompany2Response(
                 crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
@@ -289,18 +289,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_crm_company_async(
+    async def create_crm_company2_async(
         self,
         *,
         request: Union[
-            operations.CreateCrmCompanyRequest,
-            operations.CreateCrmCompanyRequestTypedDict,
+            operations.CreateCrmCompany2Request,
+            operations.CreateCrmCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmCompanyResponse:
+    ) -> operations.CreateCrmCompany2Response:
         r"""Create a company
 
         :param request: The request object to send.
@@ -320,8 +320,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmCompanyRequest)
-        request = cast(operations.CreateCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.CreateCrmCompany2Request)
+        request = cast(operations.CreateCrmCompany2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +355,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmCompany",
+                operation_id="createCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +365,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmCompanyResponse(
+            return operations.CreateCrmCompany2Response(
                 crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
@@ -382,18 +382,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_company(
+    def create_hris_company2(
         self,
         *,
         request: Union[
-            operations.CreateHrisCompanyRequest,
-            operations.CreateHrisCompanyRequestTypedDict,
+            operations.CreateHrisCompany2Request,
+            operations.CreateHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisCompanyResponse:
+    ) -> operations.CreateHrisCompany2Response:
         r"""Create a company
 
         :param request: The request object to send.
@@ -413,8 +413,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
-        request = cast(operations.CreateHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisCompany2Request)
+        request = cast(operations.CreateHrisCompany2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -448,7 +448,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisCompany",
+                operation_id="createHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -458,7 +458,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisCompanyResponse(
+            return operations.CreateHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -475,18 +475,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_company_async(
+    async def create_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisCompanyRequest,
-            operations.CreateHrisCompanyRequestTypedDict,
+            operations.CreateHrisCompany2Request,
+            operations.CreateHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisCompanyResponse:
+    ) -> operations.CreateHrisCompany2Response:
         r"""Create a company
 
         :param request: The request object to send.
@@ -506,8 +506,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
-        request = cast(operations.CreateHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisCompany2Request)
+        request = cast(operations.CreateHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -541,7 +541,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisCompany",
+                operation_id="createHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -551,7 +551,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisCompanyResponse(
+            return operations.CreateHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -568,17 +568,17 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_company(
+    def get_ats_company2(
         self,
         *,
         request: Union[
-            operations.GetAtsCompanyRequest, operations.GetAtsCompanyRequestTypedDict
+            operations.GetAtsCompany2Request, operations.GetAtsCompany2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsCompanyResponse:
+    ) -> operations.GetAtsCompany2Response:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -598,8 +598,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
-        request = cast(operations.GetAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsCompany2Request)
+        request = cast(operations.GetAtsCompany2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -630,7 +630,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsCompany",
+                operation_id="getAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -640,7 +640,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsCompanyResponse(
+            return operations.GetAtsCompany2Response(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -657,17 +657,17 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_company_async(
+    async def get_ats_company2_async(
         self,
         *,
         request: Union[
-            operations.GetAtsCompanyRequest, operations.GetAtsCompanyRequestTypedDict
+            operations.GetAtsCompany2Request, operations.GetAtsCompany2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsCompanyResponse:
+    ) -> operations.GetAtsCompany2Response:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -687,8 +687,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
-        request = cast(operations.GetAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsCompany2Request)
+        request = cast(operations.GetAtsCompany2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -719,7 +719,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsCompany",
+                operation_id="getAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -729,7 +729,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsCompanyResponse(
+            return operations.GetAtsCompany2Response(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -746,17 +746,17 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_crm_company(
+    def get_crm_company2(
         self,
         *,
         request: Union[
-            operations.GetCrmCompanyRequest, operations.GetCrmCompanyRequestTypedDict
+            operations.GetCrmCompany2Request, operations.GetCrmCompany2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmCompanyResponse:
+    ) -> operations.GetCrmCompany2Response:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -776,8 +776,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmCompanyRequest)
-        request = cast(operations.GetCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.GetCrmCompany2Request)
+        request = cast(operations.GetCrmCompany2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -808,7 +808,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmCompany",
+                operation_id="getCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -818,7 +818,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmCompanyResponse(
+            return operations.GetCrmCompany2Response(
                 crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
@@ -835,17 +835,17 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_crm_company_async(
+    async def get_crm_company2_async(
         self,
         *,
         request: Union[
-            operations.GetCrmCompanyRequest, operations.GetCrmCompanyRequestTypedDict
+            operations.GetCrmCompany2Request, operations.GetCrmCompany2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmCompanyResponse:
+    ) -> operations.GetCrmCompany2Response:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -865,8 +865,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmCompanyRequest)
-        request = cast(operations.GetCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.GetCrmCompany2Request)
+        request = cast(operations.GetCrmCompany2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -897,7 +897,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmCompany",
+                operation_id="getCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -907,7 +907,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmCompanyResponse(
+            return operations.GetCrmCompany2Response(
                 crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
@@ -924,17 +924,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_company(
+    def get_hris_company2(
         self,
         *,
         request: Union[
-            operations.GetHrisCompanyRequest, operations.GetHrisCompanyRequestTypedDict
+            operations.GetHrisCompany2Request,
+            operations.GetHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisCompanyResponse:
+    ) -> operations.GetHrisCompany2Response:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -954,8 +955,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
-        request = cast(operations.GetHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisCompany2Request)
+        request = cast(operations.GetHrisCompany2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -986,7 +987,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisCompany",
+                operation_id="getHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -996,7 +997,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisCompanyResponse(
+            return operations.GetHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -1013,17 +1014,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_company_async(
+    async def get_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisCompanyRequest, operations.GetHrisCompanyRequestTypedDict
+            operations.GetHrisCompany2Request,
+            operations.GetHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisCompanyResponse:
+    ) -> operations.GetHrisCompany2Response:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -1043,8 +1045,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
-        request = cast(operations.GetHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisCompany2Request)
+        request = cast(operations.GetHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1075,7 +1077,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisCompany",
+                operation_id="getHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1085,7 +1087,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisCompanyResponse(
+            return operations.GetHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -1102,18 +1104,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_companies(
+    def list_ats_companies2(
         self,
         *,
         request: Union[
-            operations.ListAtsCompaniesRequest,
-            operations.ListAtsCompaniesRequestTypedDict,
+            operations.ListAtsCompanies2Request,
+            operations.ListAtsCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsCompaniesResponse:
+    ) -> operations.ListAtsCompanies2Response:
         r"""List all companies
 
         :param request: The request object to send.
@@ -1133,8 +1135,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
-        request = cast(operations.ListAtsCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsCompanies2Request)
+        request = cast(operations.ListAtsCompanies2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1165,7 +1167,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsCompanies",
+                operation_id="listAtsCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1175,7 +1177,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsCompaniesResponse(
+            return operations.ListAtsCompanies2Response(
                 ats_companies=unmarshal_json_response(
                     Optional[List[shared.AtsCompany]], http_res
                 ),
@@ -1192,18 +1194,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_companies_async(
+    async def list_ats_companies2_async(
         self,
         *,
         request: Union[
-            operations.ListAtsCompaniesRequest,
-            operations.ListAtsCompaniesRequestTypedDict,
+            operations.ListAtsCompanies2Request,
+            operations.ListAtsCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsCompaniesResponse:
+    ) -> operations.ListAtsCompanies2Response:
         r"""List all companies
 
         :param request: The request object to send.
@@ -1223,8 +1225,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
-        request = cast(operations.ListAtsCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsCompanies2Request)
+        request = cast(operations.ListAtsCompanies2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1255,7 +1257,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsCompanies",
+                operation_id="listAtsCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1265,7 +1267,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsCompaniesResponse(
+            return operations.ListAtsCompanies2Response(
                 ats_companies=unmarshal_json_response(
                     Optional[List[shared.AtsCompany]], http_res
                 ),
@@ -1282,18 +1284,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_crm_companies(
+    def list_crm_companies2(
         self,
         *,
         request: Union[
-            operations.ListCrmCompaniesRequest,
-            operations.ListCrmCompaniesRequestTypedDict,
+            operations.ListCrmCompanies2Request,
+            operations.ListCrmCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmCompaniesResponse:
+    ) -> operations.ListCrmCompanies2Response:
         r"""List all companies
 
         :param request: The request object to send.
@@ -1313,8 +1315,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmCompaniesRequest)
-        request = cast(operations.ListCrmCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListCrmCompanies2Request)
+        request = cast(operations.ListCrmCompanies2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1345,7 +1347,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmCompanies",
+                operation_id="listCrmCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1355,7 +1357,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmCompaniesResponse(
+            return operations.ListCrmCompanies2Response(
                 crm_companies=unmarshal_json_response(
                     Optional[List[shared.CrmCompany]], http_res
                 ),
@@ -1372,18 +1374,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_crm_companies_async(
+    async def list_crm_companies2_async(
         self,
         *,
         request: Union[
-            operations.ListCrmCompaniesRequest,
-            operations.ListCrmCompaniesRequestTypedDict,
+            operations.ListCrmCompanies2Request,
+            operations.ListCrmCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmCompaniesResponse:
+    ) -> operations.ListCrmCompanies2Response:
         r"""List all companies
 
         :param request: The request object to send.
@@ -1403,8 +1405,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmCompaniesRequest)
-        request = cast(operations.ListCrmCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListCrmCompanies2Request)
+        request = cast(operations.ListCrmCompanies2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1435,7 +1437,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmCompanies",
+                operation_id="listCrmCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1445,7 +1447,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmCompaniesResponse(
+            return operations.ListCrmCompanies2Response(
                 crm_companies=unmarshal_json_response(
                     Optional[List[shared.CrmCompany]], http_res
                 ),
@@ -1462,18 +1464,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_enrich_companies(
+    def list_enrich_companies2(
         self,
         *,
         request: Union[
-            operations.ListEnrichCompaniesRequest,
-            operations.ListEnrichCompaniesRequestTypedDict,
+            operations.ListEnrichCompanies2Request,
+            operations.ListEnrichCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListEnrichCompaniesResponse:
+    ) -> operations.ListEnrichCompanies2Response:
         r"""Retrieve enrichment information for a company
 
         :param request: The request object to send.
@@ -1493,8 +1495,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListEnrichCompaniesRequest)
-        request = cast(operations.ListEnrichCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListEnrichCompanies2Request)
+        request = cast(operations.ListEnrichCompanies2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1525,7 +1527,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listEnrichCompanies",
+                operation_id="listEnrichCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1535,7 +1537,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListEnrichCompaniesResponse(
+            return operations.ListEnrichCompanies2Response(
                 enrich_company=unmarshal_json_response(
                     Optional[shared.EnrichCompany], http_res
                 ),
@@ -1552,18 +1554,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_enrich_companies_async(
+    async def list_enrich_companies2_async(
         self,
         *,
         request: Union[
-            operations.ListEnrichCompaniesRequest,
-            operations.ListEnrichCompaniesRequestTypedDict,
+            operations.ListEnrichCompanies2Request,
+            operations.ListEnrichCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListEnrichCompaniesResponse:
+    ) -> operations.ListEnrichCompanies2Response:
         r"""Retrieve enrichment information for a company
 
         :param request: The request object to send.
@@ -1583,8 +1585,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListEnrichCompaniesRequest)
-        request = cast(operations.ListEnrichCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListEnrichCompanies2Request)
+        request = cast(operations.ListEnrichCompanies2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1615,7 +1617,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listEnrichCompanies",
+                operation_id="listEnrichCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1625,7 +1627,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListEnrichCompaniesResponse(
+            return operations.ListEnrichCompanies2Response(
                 enrich_company=unmarshal_json_response(
                     Optional[shared.EnrichCompany], http_res
                 ),
@@ -1642,18 +1644,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_companies(
+    def list_hris_companies2(
         self,
         *,
         request: Union[
-            operations.ListHrisCompaniesRequest,
-            operations.ListHrisCompaniesRequestTypedDict,
+            operations.ListHrisCompanies2Request,
+            operations.ListHrisCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisCompaniesResponse:
+    ) -> operations.ListHrisCompanies2Response:
         r"""List all companies
 
         :param request: The request object to send.
@@ -1673,8 +1675,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
-        request = cast(operations.ListHrisCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisCompanies2Request)
+        request = cast(operations.ListHrisCompanies2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1705,7 +1707,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisCompanies",
+                operation_id="listHrisCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1715,7 +1717,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisCompaniesResponse(
+            return operations.ListHrisCompanies2Response(
                 hris_companies=unmarshal_json_response(
                     Optional[List[shared.HrisCompany]], http_res
                 ),
@@ -1732,18 +1734,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_companies_async(
+    async def list_hris_companies2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisCompaniesRequest,
-            operations.ListHrisCompaniesRequestTypedDict,
+            operations.ListHrisCompanies2Request,
+            operations.ListHrisCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisCompaniesResponse:
+    ) -> operations.ListHrisCompanies2Response:
         r"""List all companies
 
         :param request: The request object to send.
@@ -1763,8 +1765,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
-        request = cast(operations.ListHrisCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisCompanies2Request)
+        request = cast(operations.ListHrisCompanies2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1795,7 +1797,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisCompanies",
+                operation_id="listHrisCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1805,7 +1807,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisCompaniesResponse(
+            return operations.ListHrisCompanies2Response(
                 hris_companies=unmarshal_json_response(
                     Optional[List[shared.HrisCompany]], http_res
                 ),
@@ -1822,18 +1824,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_company(
+    def patch_ats_company2(
         self,
         *,
         request: Union[
-            operations.PatchAtsCompanyRequest,
-            operations.PatchAtsCompanyRequestTypedDict,
+            operations.PatchAtsCompany2Request,
+            operations.PatchAtsCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsCompanyResponse:
+    ) -> operations.PatchAtsCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -1853,8 +1855,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsCompanyRequest)
-        request = cast(operations.PatchAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsCompany2Request)
+        request = cast(operations.PatchAtsCompany2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1888,7 +1890,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsCompany",
+                operation_id="patchAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1898,7 +1900,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsCompanyResponse(
+            return operations.PatchAtsCompany2Response(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -1915,18 +1917,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_company_async(
+    async def patch_ats_company2_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsCompanyRequest,
-            operations.PatchAtsCompanyRequestTypedDict,
+            operations.PatchAtsCompany2Request,
+            operations.PatchAtsCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsCompanyResponse:
+    ) -> operations.PatchAtsCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -1946,8 +1948,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsCompanyRequest)
-        request = cast(operations.PatchAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsCompany2Request)
+        request = cast(operations.PatchAtsCompany2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1981,7 +1983,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsCompany",
+                operation_id="patchAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1991,7 +1993,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsCompanyResponse(
+            return operations.PatchAtsCompany2Response(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -2008,18 +2010,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_crm_company(
+    def patch_crm_company2(
         self,
         *,
         request: Union[
-            operations.PatchCrmCompanyRequest,
-            operations.PatchCrmCompanyRequestTypedDict,
+            operations.PatchCrmCompany2Request,
+            operations.PatchCrmCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmCompanyResponse:
+    ) -> operations.PatchCrmCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -2039,8 +2041,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmCompanyRequest)
-        request = cast(operations.PatchCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.PatchCrmCompany2Request)
+        request = cast(operations.PatchCrmCompany2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2074,7 +2076,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmCompany",
+                operation_id="patchCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2084,7 +2086,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmCompanyResponse(
+            return operations.PatchCrmCompany2Response(
                 crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
@@ -2101,18 +2103,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_crm_company_async(
+    async def patch_crm_company2_async(
         self,
         *,
         request: Union[
-            operations.PatchCrmCompanyRequest,
-            operations.PatchCrmCompanyRequestTypedDict,
+            operations.PatchCrmCompany2Request,
+            operations.PatchCrmCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmCompanyResponse:
+    ) -> operations.PatchCrmCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -2132,8 +2134,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmCompanyRequest)
-        request = cast(operations.PatchCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.PatchCrmCompany2Request)
+        request = cast(operations.PatchCrmCompany2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2167,7 +2169,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmCompany",
+                operation_id="patchCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2177,7 +2179,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmCompanyResponse(
+            return operations.PatchCrmCompany2Response(
                 crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
@@ -2194,18 +2196,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_company(
+    def patch_hris_company2(
         self,
         *,
         request: Union[
-            operations.PatchHrisCompanyRequest,
-            operations.PatchHrisCompanyRequestTypedDict,
+            operations.PatchHrisCompany2Request,
+            operations.PatchHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisCompanyResponse:
+    ) -> operations.PatchHrisCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -2225,8 +2227,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
-        request = cast(operations.PatchHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisCompany2Request)
+        request = cast(operations.PatchHrisCompany2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2260,7 +2262,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisCompany",
+                operation_id="patchHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2270,7 +2272,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisCompanyResponse(
+            return operations.PatchHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -2287,18 +2289,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_company_async(
+    async def patch_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisCompanyRequest,
-            operations.PatchHrisCompanyRequestTypedDict,
+            operations.PatchHrisCompany2Request,
+            operations.PatchHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisCompanyResponse:
+    ) -> operations.PatchHrisCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -2318,8 +2320,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
-        request = cast(operations.PatchHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisCompany2Request)
+        request = cast(operations.PatchHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2353,7 +2355,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisCompany",
+                operation_id="patchHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2363,7 +2365,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisCompanyResponse(
+            return operations.PatchHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -2380,18 +2382,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_company(
+    def remove_ats_company2(
         self,
         *,
         request: Union[
-            operations.RemoveAtsCompanyRequest,
-            operations.RemoveAtsCompanyRequestTypedDict,
+            operations.RemoveAtsCompany2Request,
+            operations.RemoveAtsCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsCompanyResponse:
+    ) -> operations.RemoveAtsCompany2Response:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -2411,8 +2413,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsCompanyRequest)
-        request = cast(operations.RemoveAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsCompany2Request)
+        request = cast(operations.RemoveAtsCompany2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2443,7 +2445,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsCompany",
+                operation_id="removeAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2453,7 +2455,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsCompanyResponse(
+            return operations.RemoveAtsCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2466,7 +2468,7 @@ class Company(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsCompanyResponse(
+            return operations.RemoveAtsCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2475,18 +2477,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_company_async(
+    async def remove_ats_company2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsCompanyRequest,
-            operations.RemoveAtsCompanyRequestTypedDict,
+            operations.RemoveAtsCompany2Request,
+            operations.RemoveAtsCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsCompanyResponse:
+    ) -> operations.RemoveAtsCompany2Response:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -2506,8 +2508,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsCompanyRequest)
-        request = cast(operations.RemoveAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsCompany2Request)
+        request = cast(operations.RemoveAtsCompany2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2538,7 +2540,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsCompany",
+                operation_id="removeAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2548,7 +2550,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsCompanyResponse(
+            return operations.RemoveAtsCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2561,7 +2563,7 @@ class Company(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsCompanyResponse(
+            return operations.RemoveAtsCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2570,18 +2572,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_crm_company(
+    def remove_crm_company2(
         self,
         *,
         request: Union[
-            operations.RemoveCrmCompanyRequest,
-            operations.RemoveCrmCompanyRequestTypedDict,
+            operations.RemoveCrmCompany2Request,
+            operations.RemoveCrmCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmCompanyResponse:
+    ) -> operations.RemoveCrmCompany2Response:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -2601,8 +2603,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmCompanyRequest)
-        request = cast(operations.RemoveCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.RemoveCrmCompany2Request)
+        request = cast(operations.RemoveCrmCompany2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2633,7 +2635,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmCompany",
+                operation_id="removeCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2643,7 +2645,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmCompanyResponse(
+            return operations.RemoveCrmCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2656,7 +2658,7 @@ class Company(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmCompanyResponse(
+            return operations.RemoveCrmCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2665,18 +2667,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_crm_company_async(
+    async def remove_crm_company2_async(
         self,
         *,
         request: Union[
-            operations.RemoveCrmCompanyRequest,
-            operations.RemoveCrmCompanyRequestTypedDict,
+            operations.RemoveCrmCompany2Request,
+            operations.RemoveCrmCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmCompanyResponse:
+    ) -> operations.RemoveCrmCompany2Response:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -2696,8 +2698,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmCompanyRequest)
-        request = cast(operations.RemoveCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.RemoveCrmCompany2Request)
+        request = cast(operations.RemoveCrmCompany2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2728,7 +2730,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmCompany",
+                operation_id="removeCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2738,7 +2740,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmCompanyResponse(
+            return operations.RemoveCrmCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2751,7 +2753,7 @@ class Company(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmCompanyResponse(
+            return operations.RemoveCrmCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2760,18 +2762,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_company(
+    def remove_hris_company2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisCompanyRequest,
-            operations.RemoveHrisCompanyRequestTypedDict,
+            operations.RemoveHrisCompany2Request,
+            operations.RemoveHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisCompanyResponse:
+    ) -> operations.RemoveHrisCompany2Response:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -2791,8 +2793,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
-        request = cast(operations.RemoveHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisCompany2Request)
+        request = cast(operations.RemoveHrisCompany2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2823,7 +2825,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisCompany",
+                operation_id="removeHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2833,7 +2835,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisCompanyResponse(
+            return operations.RemoveHrisCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2846,7 +2848,7 @@ class Company(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisCompanyResponse(
+            return operations.RemoveHrisCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2855,18 +2857,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_company_async(
+    async def remove_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisCompanyRequest,
-            operations.RemoveHrisCompanyRequestTypedDict,
+            operations.RemoveHrisCompany2Request,
+            operations.RemoveHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisCompanyResponse:
+    ) -> operations.RemoveHrisCompany2Response:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -2886,8 +2888,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
-        request = cast(operations.RemoveHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisCompany2Request)
+        request = cast(operations.RemoveHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2918,7 +2920,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisCompany",
+                operation_id="removeHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2928,7 +2930,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisCompanyResponse(
+            return operations.RemoveHrisCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2941,7 +2943,7 @@ class Company(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisCompanyResponse(
+            return operations.RemoveHrisCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2950,18 +2952,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_company(
+    def update_ats_company2(
         self,
         *,
         request: Union[
-            operations.UpdateAtsCompanyRequest,
-            operations.UpdateAtsCompanyRequestTypedDict,
+            operations.UpdateAtsCompany2Request,
+            operations.UpdateAtsCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsCompanyResponse:
+    ) -> operations.UpdateAtsCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -2981,8 +2983,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsCompanyRequest)
-        request = cast(operations.UpdateAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsCompany2Request)
+        request = cast(operations.UpdateAtsCompany2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3016,7 +3018,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsCompany",
+                operation_id="updateAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3026,7 +3028,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsCompanyResponse(
+            return operations.UpdateAtsCompany2Response(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -3043,18 +3045,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_company_async(
+    async def update_ats_company2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsCompanyRequest,
-            operations.UpdateAtsCompanyRequestTypedDict,
+            operations.UpdateAtsCompany2Request,
+            operations.UpdateAtsCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsCompanyResponse:
+    ) -> operations.UpdateAtsCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -3074,8 +3076,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsCompanyRequest)
-        request = cast(operations.UpdateAtsCompanyRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsCompany2Request)
+        request = cast(operations.UpdateAtsCompany2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3109,7 +3111,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsCompany",
+                operation_id="updateAtsCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3119,7 +3121,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsCompanyResponse(
+            return operations.UpdateAtsCompany2Response(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -3136,18 +3138,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_crm_company(
+    def update_crm_company2(
         self,
         *,
         request: Union[
-            operations.UpdateCrmCompanyRequest,
-            operations.UpdateCrmCompanyRequestTypedDict,
+            operations.UpdateCrmCompany2Request,
+            operations.UpdateCrmCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmCompanyResponse:
+    ) -> operations.UpdateCrmCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -3167,8 +3169,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmCompanyRequest)
-        request = cast(operations.UpdateCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.UpdateCrmCompany2Request)
+        request = cast(operations.UpdateCrmCompany2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3202,7 +3204,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmCompany",
+                operation_id="updateCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3212,7 +3214,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmCompanyResponse(
+            return operations.UpdateCrmCompany2Response(
                 crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
@@ -3229,18 +3231,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_crm_company_async(
+    async def update_crm_company2_async(
         self,
         *,
         request: Union[
-            operations.UpdateCrmCompanyRequest,
-            operations.UpdateCrmCompanyRequestTypedDict,
+            operations.UpdateCrmCompany2Request,
+            operations.UpdateCrmCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmCompanyResponse:
+    ) -> operations.UpdateCrmCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -3260,8 +3262,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmCompanyRequest)
-        request = cast(operations.UpdateCrmCompanyRequest, request)
+            request = utils.unmarshal(request, operations.UpdateCrmCompany2Request)
+        request = cast(operations.UpdateCrmCompany2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3295,7 +3297,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmCompany",
+                operation_id="updateCrmCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3305,7 +3307,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmCompanyResponse(
+            return operations.UpdateCrmCompany2Response(
                 crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
@@ -3322,18 +3324,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_company(
+    def update_hris_company2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisCompanyRequest,
-            operations.UpdateHrisCompanyRequestTypedDict,
+            operations.UpdateHrisCompany2Request,
+            operations.UpdateHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisCompanyResponse:
+    ) -> operations.UpdateHrisCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -3353,8 +3355,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
-        request = cast(operations.UpdateHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisCompany2Request)
+        request = cast(operations.UpdateHrisCompany2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3388,7 +3390,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisCompany",
+                operation_id="updateHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3398,7 +3400,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisCompanyResponse(
+            return operations.UpdateHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -3415,18 +3417,18 @@ class Company(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_company_async(
+    async def update_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisCompanyRequest,
-            operations.UpdateHrisCompanyRequestTypedDict,
+            operations.UpdateHrisCompany2Request,
+            operations.UpdateHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisCompanyResponse:
+    ) -> operations.UpdateHrisCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -3446,8 +3448,8 @@ class Company(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
-        request = cast(operations.UpdateHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisCompany2Request)
+        request = cast(operations.UpdateHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3481,7 +3483,7 @@ class Company(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisCompany",
+                operation_id="updateHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3491,7 +3493,7 @@ class Company(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisCompanyResponse(
+            return operations.UpdateHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),

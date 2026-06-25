@@ -4,38 +4,38 @@
 
 ### Available Operations
 
-* [create_ticketing_category](#create_ticketing_category) - Create a category
-* [create_ticketing_customer](#create_ticketing_customer) - Create a customer
-* [create_ticketing_note](#create_ticketing_note) - Create a note
-* [create_ticketing_ticket](#create_ticketing_ticket) - Create a ticket
-* [get_ticketing_category](#get_ticketing_category) - Retrieve a category
-* [get_ticketing_customer](#get_ticketing_customer) - Retrieve a customer
-* [get_ticketing_note](#get_ticketing_note) - Retrieve a note
-* [get_ticketing_ticket](#get_ticketing_ticket) - Retrieve a ticket
-* [list_ticketing_categories](#list_ticketing_categories) - List all categories
-* [list_ticketing_customers](#list_ticketing_customers) - List all customers
-* [list_ticketing_notes](#list_ticketing_notes) - List all notes
-* [list_ticketing_tickets](#list_ticketing_tickets) - List all tickets
-* [patch_ticketing_category](#patch_ticketing_category) - Update a category
-* [patch_ticketing_customer](#patch_ticketing_customer) - Update a customer
-* [patch_ticketing_note](#patch_ticketing_note) - Update a note
-* [patch_ticketing_ticket](#patch_ticketing_ticket) - Update a ticket
-* [remove_ticketing_category](#remove_ticketing_category) - Remove a category
-* [remove_ticketing_customer](#remove_ticketing_customer) - Remove a customer
-* [remove_ticketing_note](#remove_ticketing_note) - Remove a note
-* [remove_ticketing_ticket](#remove_ticketing_ticket) - Remove a ticket
-* [update_ticketing_category](#update_ticketing_category) - Update a category
-* [update_ticketing_customer](#update_ticketing_customer) - Update a customer
-* [update_ticketing_note](#update_ticketing_note) - Update a note
-* [update_ticketing_ticket](#update_ticketing_ticket) - Update a ticket
+* [create_ticketing_category2](#create_ticketing_category2) - Create a category
+* [create_ticketing_customer2](#create_ticketing_customer2) - Create a customer
+* [create_ticketing_note2](#create_ticketing_note2) - Create a note
+* [create_ticketing_ticket2](#create_ticketing_ticket2) - Create a ticket
+* [get_ticketing_category2](#get_ticketing_category2) - Retrieve a category
+* [get_ticketing_customer2](#get_ticketing_customer2) - Retrieve a customer
+* [get_ticketing_note2](#get_ticketing_note2) - Retrieve a note
+* [get_ticketing_ticket2](#get_ticketing_ticket2) - Retrieve a ticket
+* [list_ticketing_categories2](#list_ticketing_categories2) - List all categories
+* [list_ticketing_customers2](#list_ticketing_customers2) - List all customers
+* [list_ticketing_notes2](#list_ticketing_notes2) - List all notes
+* [list_ticketing_tickets2](#list_ticketing_tickets2) - List all tickets
+* [patch_ticketing_category2](#patch_ticketing_category2) - Update a category
+* [patch_ticketing_customer2](#patch_ticketing_customer2) - Update a customer
+* [patch_ticketing_note2](#patch_ticketing_note2) - Update a note
+* [patch_ticketing_ticket2](#patch_ticketing_ticket2) - Update a ticket
+* [remove_ticketing_category2](#remove_ticketing_category2) - Remove a category
+* [remove_ticketing_customer2](#remove_ticketing_customer2) - Remove a customer
+* [remove_ticketing_note2](#remove_ticketing_note2) - Remove a note
+* [remove_ticketing_ticket2](#remove_ticketing_ticket2) - Remove a ticket
+* [update_ticketing_category2](#update_ticketing_category2) - Update a category
+* [update_ticketing_customer2](#update_ticketing_customer2) - Update a customer
+* [update_ticketing_note2](#update_ticketing_note2) - Update a note
+* [update_ticketing_ticket2](#update_ticketing_ticket2) - Update a ticket
 
-## create_ticketing_category
+## create_ticketing_category2
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="createTicketingCategory2" method="post" path="/ticketing/{connection_id}/category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -47,7 +47,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.create_ticketing_category(request={
+    res = unified_to.ticketing.create_ticketing_category2(request={
         "ticketing_category": {},
         "connection_id": "<id>",
     })
@@ -61,14 +61,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.CreateTicketingCategoryRequest](../../models/operations/createticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.CreateTicketingCategory2Request](../../models/operations/createticketingcategory2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.CreateTicketingCategoryResponse](../../models/operations/createticketingcategoryresponse.md)**
+**[operations.CreateTicketingCategory2Response](../../models/operations/createticketingcategory2response.md)**
 
 ### Errors
 
@@ -76,13 +76,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_ticketing_customer
+## create_ticketing_customer2
 
 Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="python" operationID="createTicketingCustomer2" method="post" path="/ticketing/{connection_id}/customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -94,7 +94,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.create_ticketing_customer(request={
+    res = unified_to.ticketing.create_ticketing_customer2(request={
         "ticketing_customer": {},
         "connection_id": "<id>",
     })
@@ -108,14 +108,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.CreateTicketingCustomerRequest](../../models/operations/createticketingcustomerrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.CreateTicketingCustomer2Request](../../models/operations/createticketingcustomer2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.CreateTicketingCustomerResponse](../../models/operations/createticketingcustomerresponse.md)**
+**[operations.CreateTicketingCustomer2Response](../../models/operations/createticketingcustomer2response.md)**
 
 ### Errors
 
@@ -123,13 +123,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_ticketing_note
+## create_ticketing_note2
 
 Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="python" operationID="createTicketingNote2" method="post" path="/ticketing/{connection_id}/note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -141,7 +141,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.create_ticketing_note(request={
+    res = unified_to.ticketing.create_ticketing_note2(request={
         "ticketing_note": {},
         "connection_id": "<id>",
     })
@@ -155,14 +155,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.CreateTicketingNoteRequest](../../models/operations/createticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreateTicketingNote2Request](../../models/operations/createticketingnote2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.CreateTicketingNoteResponse](../../models/operations/createticketingnoteresponse.md)**
+**[operations.CreateTicketingNote2Response](../../models/operations/createticketingnote2response.md)**
 
 ### Errors
 
@@ -170,13 +170,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_ticketing_ticket
+## create_ticketing_ticket2
 
 Create a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="python" operationID="createTicketingTicket2" method="post" path="/ticketing/{connection_id}/ticket" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -188,7 +188,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.create_ticketing_ticket(request={
+    res = unified_to.ticketing.create_ticketing_ticket2(request={
         "ticketing_ticket": {},
         "connection_id": "<id>",
     })
@@ -202,14 +202,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.CreateTicketingTicketRequest](../../models/operations/createticketingticketrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateTicketingTicket2Request](../../models/operations/createticketingticket2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.CreateTicketingTicketResponse](../../models/operations/createticketingticketresponse.md)**
+**[operations.CreateTicketingTicket2Response](../../models/operations/createticketingticket2response.md)**
 
 ### Errors
 
@@ -217,13 +217,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_ticketing_category
+## get_ticketing_category2
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTicketingCategory2" method="get" path="/ticketing/{connection_id}/category/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -235,7 +235,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.get_ticketing_category(request={
+    res = unified_to.ticketing.get_ticketing_category2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -249,14 +249,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetTicketingCategoryRequest](../../models/operations/getticketingcategoryrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetTicketingCategory2Request](../../models/operations/getticketingcategory2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.GetTicketingCategoryResponse](../../models/operations/getticketingcategoryresponse.md)**
+**[operations.GetTicketingCategory2Response](../../models/operations/getticketingcategory2response.md)**
 
 ### Errors
 
@@ -264,13 +264,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_ticketing_customer
+## get_ticketing_customer2
 
 Retrieve a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTicketingCustomer2" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -282,7 +282,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.get_ticketing_customer(request={
+    res = unified_to.ticketing.get_ticketing_customer2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -296,14 +296,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetTicketingCustomerRequest](../../models/operations/getticketingcustomerrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetTicketingCustomer2Request](../../models/operations/getticketingcustomer2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.GetTicketingCustomerResponse](../../models/operations/getticketingcustomerresponse.md)**
+**[operations.GetTicketingCustomer2Response](../../models/operations/getticketingcustomer2response.md)**
 
 ### Errors
 
@@ -311,13 +311,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_ticketing_note
+## get_ticketing_note2
 
 Retrieve a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTicketingNote2" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -329,7 +329,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.get_ticketing_note(request={
+    res = unified_to.ticketing.get_ticketing_note2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -343,14 +343,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetTicketingNoteRequest](../../models/operations/getticketingnoterequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetTicketingNote2Request](../../models/operations/getticketingnote2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.GetTicketingNoteResponse](../../models/operations/getticketingnoteresponse.md)**
+**[operations.GetTicketingNote2Response](../../models/operations/getticketingnote2response.md)**
 
 ### Errors
 
@@ -358,13 +358,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_ticketing_ticket
+## get_ticketing_ticket2
 
 Retrieve a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTicketingTicket" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTicketingTicket2" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -376,7 +376,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.get_ticketing_ticket(request={
+    res = unified_to.ticketing.get_ticketing_ticket2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -390,14 +390,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.GetTicketingTicketRequest](../../models/operations/getticketingticketrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetTicketingTicket2Request](../../models/operations/getticketingticket2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetTicketingTicketResponse](../../models/operations/getticketingticketresponse.md)**
+**[operations.GetTicketingTicket2Response](../../models/operations/getticketingticket2response.md)**
 
 ### Errors
 
@@ -405,13 +405,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ticketing_categories
+## list_ticketing_categories2
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="listTicketingCategories2" method="get" path="/ticketing/{connection_id}/category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -423,7 +423,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.list_ticketing_categories(request={
+    res = unified_to.ticketing.list_ticketing_categories2(request={
         "connection_id": "<id>",
     })
 
@@ -436,14 +436,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.ListTicketingCategoriesRequest](../../models/operations/listticketingcategoriesrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.ListTicketingCategories2Request](../../models/operations/listticketingcategories2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.ListTicketingCategoriesResponse](../../models/operations/listticketingcategoriesresponse.md)**
+**[operations.ListTicketingCategories2Response](../../models/operations/listticketingcategories2response.md)**
 
 ### Errors
 
@@ -451,13 +451,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ticketing_customers
+## list_ticketing_customers2
 
 List all customers
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="python" operationID="listTicketingCustomers2" method="get" path="/ticketing/{connection_id}/customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -469,7 +469,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.list_ticketing_customers(request={
+    res = unified_to.ticketing.list_ticketing_customers2(request={
         "connection_id": "<id>",
     })
 
@@ -482,14 +482,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListTicketingCustomersRequest](../../models/operations/listticketingcustomersrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListTicketingCustomers2Request](../../models/operations/listticketingcustomers2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.ListTicketingCustomersResponse](../../models/operations/listticketingcustomersresponse.md)**
+**[operations.ListTicketingCustomers2Response](../../models/operations/listticketingcustomers2response.md)**
 
 ### Errors
 
@@ -497,13 +497,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ticketing_notes
+## list_ticketing_notes2
 
 List all notes
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="python" operationID="listTicketingNotes2" method="get" path="/ticketing/{connection_id}/note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -515,7 +515,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.list_ticketing_notes(request={
+    res = unified_to.ticketing.list_ticketing_notes2(request={
         "connection_id": "<id>",
     })
 
@@ -528,14 +528,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.ListTicketingNotesRequest](../../models/operations/listticketingnotesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListTicketingNotes2Request](../../models/operations/listticketingnotes2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.ListTicketingNotesResponse](../../models/operations/listticketingnotesresponse.md)**
+**[operations.ListTicketingNotes2Response](../../models/operations/listticketingnotes2response.md)**
 
 ### Errors
 
@@ -543,13 +543,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ticketing_tickets
+## list_ticketing_tickets2
 
 List all tickets
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTicketingTickets" method="get" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="python" operationID="listTicketingTickets2" method="get" path="/ticketing/{connection_id}/ticket" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -561,7 +561,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.list_ticketing_tickets(request={
+    res = unified_to.ticketing.list_ticketing_tickets2(request={
         "connection_id": "<id>",
     })
 
@@ -574,14 +574,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.ListTicketingTicketsRequest](../../models/operations/listticketingticketsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListTicketingTickets2Request](../../models/operations/listticketingtickets2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListTicketingTicketsResponse](../../models/operations/listticketingticketsresponse.md)**
+**[operations.ListTicketingTickets2Response](../../models/operations/listticketingtickets2response.md)**
 
 ### Errors
 
@@ -589,13 +589,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_ticketing_category
+## patch_ticketing_category2
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingCategory2" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -607,7 +607,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.patch_ticketing_category(request={
+    res = unified_to.ticketing.patch_ticketing_category2(request={
         "ticketing_category": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -622,14 +622,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchTicketingCategoryRequest](../../models/operations/patchticketingcategoryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.PatchTicketingCategory2Request](../../models/operations/patchticketingcategory2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.PatchTicketingCategoryResponse](../../models/operations/patchticketingcategoryresponse.md)**
+**[operations.PatchTicketingCategory2Response](../../models/operations/patchticketingcategory2response.md)**
 
 ### Errors
 
@@ -637,13 +637,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_ticketing_customer
+## patch_ticketing_customer2
 
 Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingCustomer2" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -655,7 +655,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.patch_ticketing_customer(request={
+    res = unified_to.ticketing.patch_ticketing_customer2(request={
         "ticketing_customer": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -670,14 +670,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchTicketingCustomerRequest](../../models/operations/patchticketingcustomerrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.PatchTicketingCustomer2Request](../../models/operations/patchticketingcustomer2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.PatchTicketingCustomerResponse](../../models/operations/patchticketingcustomerresponse.md)**
+**[operations.PatchTicketingCustomer2Response](../../models/operations/patchticketingcustomer2response.md)**
 
 ### Errors
 
@@ -685,13 +685,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_ticketing_note
+## patch_ticketing_note2
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingNote2" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -703,7 +703,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.patch_ticketing_note(request={
+    res = unified_to.ticketing.patch_ticketing_note2(request={
         "ticketing_note": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -718,14 +718,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.PatchTicketingNoteRequest](../../models/operations/patchticketingnoterequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.PatchTicketingNote2Request](../../models/operations/patchticketingnote2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.PatchTicketingNoteResponse](../../models/operations/patchticketingnoteresponse.md)**
+**[operations.PatchTicketingNote2Response](../../models/operations/patchticketingnote2response.md)**
 
 ### Errors
 
@@ -733,13 +733,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_ticketing_ticket
+## patch_ticketing_ticket2
 
 Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingTicket2" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -751,7 +751,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.patch_ticketing_ticket(request={
+    res = unified_to.ticketing.patch_ticketing_ticket2(request={
         "ticketing_ticket": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -766,14 +766,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.PatchTicketingTicketRequest](../../models/operations/patchticketingticketrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PatchTicketingTicket2Request](../../models/operations/patchticketingticket2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.PatchTicketingTicketResponse](../../models/operations/patchticketingticketresponse.md)**
+**[operations.PatchTicketingTicket2Response](../../models/operations/patchticketingticket2response.md)**
 
 ### Errors
 
@@ -781,13 +781,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_ticketing_category
+## remove_ticketing_category2
 
 Remove a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTicketingCategory2" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -799,7 +799,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.remove_ticketing_category(request={
+    res = unified_to.ticketing.remove_ticketing_category2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -813,14 +813,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.RemoveTicketingCategoryRequest](../../models/operations/removeticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.RemoveTicketingCategory2Request](../../models/operations/removeticketingcategory2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.RemoveTicketingCategoryResponse](../../models/operations/removeticketingcategoryresponse.md)**
+**[operations.RemoveTicketingCategory2Response](../../models/operations/removeticketingcategory2response.md)**
 
 ### Errors
 
@@ -828,13 +828,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_ticketing_customer
+## remove_ticketing_customer2
 
 Remove a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTicketingCustomer2" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -846,7 +846,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.remove_ticketing_customer(request={
+    res = unified_to.ticketing.remove_ticketing_customer2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -860,14 +860,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.RemoveTicketingCustomerRequest](../../models/operations/removeticketingcustomerrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.RemoveTicketingCustomer2Request](../../models/operations/removeticketingcustomer2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.RemoveTicketingCustomerResponse](../../models/operations/removeticketingcustomerresponse.md)**
+**[operations.RemoveTicketingCustomer2Response](../../models/operations/removeticketingcustomer2response.md)**
 
 ### Errors
 
@@ -875,13 +875,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_ticketing_note
+## remove_ticketing_note2
 
 Remove a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTicketingNote2" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -893,7 +893,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.remove_ticketing_note(request={
+    res = unified_to.ticketing.remove_ticketing_note2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -907,14 +907,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.RemoveTicketingNoteRequest](../../models/operations/removeticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.RemoveTicketingNote2Request](../../models/operations/removeticketingnote2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.RemoveTicketingNoteResponse](../../models/operations/removeticketingnoteresponse.md)**
+**[operations.RemoveTicketingNote2Response](../../models/operations/removeticketingnote2response.md)**
 
 ### Errors
 
@@ -922,13 +922,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_ticketing_ticket
+## remove_ticketing_ticket2
 
 Remove a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTicketingTicket" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTicketingTicket2" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -940,7 +940,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.remove_ticketing_ticket(request={
+    res = unified_to.ticketing.remove_ticketing_ticket2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -954,14 +954,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.RemoveTicketingTicketRequest](../../models/operations/removeticketingticketrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.RemoveTicketingTicket2Request](../../models/operations/removeticketingticket2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.RemoveTicketingTicketResponse](../../models/operations/removeticketingticketresponse.md)**
+**[operations.RemoveTicketingTicket2Response](../../models/operations/removeticketingticket2response.md)**
 
 ### Errors
 
@@ -969,13 +969,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_ticketing_category
+## update_ticketing_category2
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingCategory2" method="put" path="/ticketing/{connection_id}/category/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -987,7 +987,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.update_ticketing_category(request={
+    res = unified_to.ticketing.update_ticketing_category2(request={
         "ticketing_category": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1002,14 +1002,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.UpdateTicketingCategoryRequest](../../models/operations/updateticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.UpdateTicketingCategory2Request](../../models/operations/updateticketingcategory2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.UpdateTicketingCategoryResponse](../../models/operations/updateticketingcategoryresponse.md)**
+**[operations.UpdateTicketingCategory2Response](../../models/operations/updateticketingcategory2response.md)**
 
 ### Errors
 
@@ -1017,13 +1017,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_ticketing_customer
+## update_ticketing_customer2
 
 Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingCustomer2" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1035,7 +1035,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.update_ticketing_customer(request={
+    res = unified_to.ticketing.update_ticketing_customer2(request={
         "ticketing_customer": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1050,14 +1050,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.UpdateTicketingCustomerRequest](../../models/operations/updateticketingcustomerrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.UpdateTicketingCustomer2Request](../../models/operations/updateticketingcustomer2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.UpdateTicketingCustomerResponse](../../models/operations/updateticketingcustomerresponse.md)**
+**[operations.UpdateTicketingCustomer2Response](../../models/operations/updateticketingcustomer2response.md)**
 
 ### Errors
 
@@ -1065,13 +1065,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_ticketing_note
+## update_ticketing_note2
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingNote2" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1083,7 +1083,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.update_ticketing_note(request={
+    res = unified_to.ticketing.update_ticketing_note2(request={
         "ticketing_note": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1098,14 +1098,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.UpdateTicketingNoteRequest](../../models/operations/updateticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.UpdateTicketingNote2Request](../../models/operations/updateticketingnote2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.UpdateTicketingNoteResponse](../../models/operations/updateticketingnoteresponse.md)**
+**[operations.UpdateTicketingNote2Response](../../models/operations/updateticketingnote2response.md)**
 
 ### Errors
 
@@ -1113,13 +1113,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_ticketing_ticket
+## update_ticketing_ticket2
 
 Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingTicket2" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1131,7 +1131,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.ticketing.update_ticketing_ticket(request={
+    res = unified_to.ticketing.update_ticketing_ticket2(request={
         "ticketing_ticket": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1146,14 +1146,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.UpdateTicketingTicketRequest](../../models/operations/updateticketingticketrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.UpdateTicketingTicket2Request](../../models/operations/updateticketingticket2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.UpdateTicketingTicketResponse](../../models/operations/updateticketingticketresponse.md)**
+**[operations.UpdateTicketingTicket2Response](../../models/operations/updateticketingticket2response.md)**
 
 ### Errors
 

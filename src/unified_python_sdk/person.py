@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Person(BaseSDK):
-    def list_enrich_people(
+    def list_enrich_people2(
         self,
         *,
         request: Union[
-            operations.ListEnrichPeopleRequest,
-            operations.ListEnrichPeopleRequestTypedDict,
+            operations.ListEnrichPeople2Request,
+            operations.ListEnrichPeople2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListEnrichPeopleResponse:
+    ) -> operations.ListEnrichPeople2Response:
         r"""Retrieve enrichment information for a person
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Person(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListEnrichPeopleRequest)
-        request = cast(operations.ListEnrichPeopleRequest, request)
+            request = utils.unmarshal(request, operations.ListEnrichPeople2Request)
+        request = cast(operations.ListEnrichPeople2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Person(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listEnrichPeople",
+                operation_id="listEnrichPeople2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -83,7 +83,7 @@ class Person(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListEnrichPeopleResponse(
+            return operations.ListEnrichPeople2Response(
                 enrich_person=unmarshal_json_response(
                     Optional[shared.EnrichPerson], http_res
                 ),
@@ -100,18 +100,18 @@ class Person(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_enrich_people_async(
+    async def list_enrich_people2_async(
         self,
         *,
         request: Union[
-            operations.ListEnrichPeopleRequest,
-            operations.ListEnrichPeopleRequestTypedDict,
+            operations.ListEnrichPeople2Request,
+            operations.ListEnrichPeople2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListEnrichPeopleResponse:
+    ) -> operations.ListEnrichPeople2Response:
         r"""Retrieve enrichment information for a person
 
         :param request: The request object to send.
@@ -131,8 +131,8 @@ class Person(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListEnrichPeopleRequest)
-        request = cast(operations.ListEnrichPeopleRequest, request)
+            request = utils.unmarshal(request, operations.ListEnrichPeople2Request)
+        request = cast(operations.ListEnrichPeople2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -163,7 +163,7 @@ class Person(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listEnrichPeople",
+                operation_id="listEnrichPeople2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -173,7 +173,7 @@ class Person(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListEnrichPeopleResponse(
+            return operations.ListEnrichPeople2Response(
                 enrich_person=unmarshal_json_response(
                     Optional[shared.EnrichPerson], http_res
                 ),

@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
-* [list_hris_payslips](#list_hris_payslips) - List all payslips
+* [get_hris_payslip2](#get_hris_payslip2) - Retrieve a payslip
+* [list_hris_payslips2](#list_hris_payslips2) - List all payslips
 
-## get_hris_payslip
+## get_hris_payslip2
 
 Retrieve a payslip
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
+<!-- UsageSnippet language="python" operationID="getHrisPayslip2" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -25,7 +25,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.payslip.get_hris_payslip(request={
+    res = unified_to.payslip.get_hris_payslip2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -39,14 +39,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetHrisPayslipRequest](../../models/operations/gethrispaysliprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetHrisPayslip2Request](../../models/operations/gethrispayslip2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetHrisPayslipResponse](../../models/operations/gethrispayslipresponse.md)**
+**[operations.GetHrisPayslip2Response](../../models/operations/gethrispayslip2response.md)**
 
 ### Errors
 
@@ -54,13 +54,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_hris_payslips
+## list_hris_payslips2
 
 List all payslips
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
+<!-- UsageSnippet language="python" operationID="listHrisPayslips2" method="get" path="/hris/{connection_id}/payslip" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -72,7 +72,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.payslip.list_hris_payslips(request={
+    res = unified_to.payslip.list_hris_payslips2(request={
         "connection_id": "<id>",
     })
 
@@ -85,14 +85,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListHrisPayslipsRequest](../../models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListHrisPayslips2Request](../../models/operations/listhrispayslips2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListHrisPayslipsResponse](../../models/operations/listhrispayslipsresponse.md)**
+**[operations.ListHrisPayslips2Response](../../models/operations/listhrispayslips2response.md)**
 
 ### Errors
 

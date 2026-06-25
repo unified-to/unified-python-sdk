@@ -10,17 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Change(BaseSDK):
-    def get_task_change(
+    def get_task_change2(
         self,
         *,
         request: Union[
-            operations.GetTaskChangeRequest, operations.GetTaskChangeRequestTypedDict
+            operations.GetTaskChange2Request, operations.GetTaskChange2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskChangeResponse:
+    ) -> operations.GetTaskChange2Response:
         r"""Retrieve a change
 
         :param request: The request object to send.
@@ -40,8 +40,8 @@ class Change(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskChangeRequest)
-        request = cast(operations.GetTaskChangeRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskChange2Request)
+        request = cast(operations.GetTaskChange2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -72,7 +72,7 @@ class Change(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskChange",
+                operation_id="getTaskChange2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -82,7 +82,7 @@ class Change(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskChangeResponse(
+            return operations.GetTaskChange2Response(
                 task_change=unmarshal_json_response(
                     Optional[shared.TaskChange], http_res
                 ),
@@ -99,17 +99,17 @@ class Change(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_task_change_async(
+    async def get_task_change2_async(
         self,
         *,
         request: Union[
-            operations.GetTaskChangeRequest, operations.GetTaskChangeRequestTypedDict
+            operations.GetTaskChange2Request, operations.GetTaskChange2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskChangeResponse:
+    ) -> operations.GetTaskChange2Response:
         r"""Retrieve a change
 
         :param request: The request object to send.
@@ -129,8 +129,8 @@ class Change(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskChangeRequest)
-        request = cast(operations.GetTaskChangeRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskChange2Request)
+        request = cast(operations.GetTaskChange2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -161,7 +161,7 @@ class Change(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskChange",
+                operation_id="getTaskChange2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -171,7 +171,7 @@ class Change(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskChangeResponse(
+            return operations.GetTaskChange2Response(
                 task_change=unmarshal_json_response(
                     Optional[shared.TaskChange], http_res
                 ),
@@ -188,18 +188,18 @@ class Change(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_task_changes(
+    def list_task_changes2(
         self,
         *,
         request: Union[
-            operations.ListTaskChangesRequest,
-            operations.ListTaskChangesRequestTypedDict,
+            operations.ListTaskChanges2Request,
+            operations.ListTaskChanges2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskChangesResponse:
+    ) -> operations.ListTaskChanges2Response:
         r"""List all changes
 
         :param request: The request object to send.
@@ -219,8 +219,8 @@ class Change(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskChangesRequest)
-        request = cast(operations.ListTaskChangesRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskChanges2Request)
+        request = cast(operations.ListTaskChanges2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -251,7 +251,7 @@ class Change(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskChanges",
+                operation_id="listTaskChanges2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -261,7 +261,7 @@ class Change(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskChangesResponse(
+            return operations.ListTaskChanges2Response(
                 task_changes=unmarshal_json_response(
                     Optional[List[shared.TaskChange]], http_res
                 ),
@@ -278,18 +278,18 @@ class Change(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_task_changes_async(
+    async def list_task_changes2_async(
         self,
         *,
         request: Union[
-            operations.ListTaskChangesRequest,
-            operations.ListTaskChangesRequestTypedDict,
+            operations.ListTaskChanges2Request,
+            operations.ListTaskChanges2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskChangesResponse:
+    ) -> operations.ListTaskChanges2Response:
         r"""List all changes
 
         :param request: The request object to send.
@@ -309,8 +309,8 @@ class Change(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskChangesRequest)
-        request = cast(operations.ListTaskChangesRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskChanges2Request)
+        request = cast(operations.ListTaskChanges2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -341,7 +341,7 @@ class Change(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskChanges",
+                operation_id="listTaskChanges2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -351,7 +351,7 @@ class Change(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskChangesResponse(
+            return operations.ListTaskChanges2Response(
                 task_changes=unmarshal_json_response(
                     Optional[List[shared.TaskChange]], http_res
                 ),

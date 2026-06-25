@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Hris(BaseSDK):
-    def create_hris_bankaccount(
+    def create_hris_bankaccount2(
         self,
         *,
         request: Union[
-            operations.CreateHrisBankaccountRequest,
-            operations.CreateHrisBankaccountRequestTypedDict,
+            operations.CreateHrisBankaccount2Request,
+            operations.CreateHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisBankaccountResponse:
+    ) -> operations.CreateHrisBankaccount2Response:
         r"""Create a bankaccount
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisBankaccountRequest)
-        request = cast(operations.CreateHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisBankaccount2Request)
+        request = cast(operations.CreateHrisBankaccount2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisBankaccount",
+                operation_id="createHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisBankaccountResponse(
+            return operations.CreateHrisBankaccount2Response(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -103,18 +103,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_bankaccount_async(
+    async def create_hris_bankaccount2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisBankaccountRequest,
-            operations.CreateHrisBankaccountRequestTypedDict,
+            operations.CreateHrisBankaccount2Request,
+            operations.CreateHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisBankaccountResponse:
+    ) -> operations.CreateHrisBankaccount2Response:
         r"""Create a bankaccount
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisBankaccountRequest)
-        request = cast(operations.CreateHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisBankaccount2Request)
+        request = cast(operations.CreateHrisBankaccount2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisBankaccount",
+                operation_id="createHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisBankaccountResponse(
+            return operations.CreateHrisBankaccount2Response(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -196,18 +196,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_benefit(
+    def create_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.CreateHrisBenefitRequest,
-            operations.CreateHrisBenefitRequestTypedDict,
+            operations.CreateHrisBenefit2Request,
+            operations.CreateHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisBenefitResponse:
+    ) -> operations.CreateHrisBenefit2Response:
         r"""Create a benefit
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisBenefitRequest)
-        request = cast(operations.CreateHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisBenefit2Request)
+        request = cast(operations.CreateHrisBenefit2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +262,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisBenefit",
+                operation_id="createHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +272,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisBenefitResponse(
+            return operations.CreateHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -289,18 +289,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_benefit_async(
+    async def create_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisBenefitRequest,
-            operations.CreateHrisBenefitRequestTypedDict,
+            operations.CreateHrisBenefit2Request,
+            operations.CreateHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisBenefitResponse:
+    ) -> operations.CreateHrisBenefit2Response:
         r"""Create a benefit
 
         :param request: The request object to send.
@@ -320,8 +320,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisBenefitRequest)
-        request = cast(operations.CreateHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisBenefit2Request)
+        request = cast(operations.CreateHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +355,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisBenefit",
+                operation_id="createHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +365,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisBenefitResponse(
+            return operations.CreateHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -382,18 +382,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_company(
+    def create_hris_company2(
         self,
         *,
         request: Union[
-            operations.CreateHrisCompanyRequest,
-            operations.CreateHrisCompanyRequestTypedDict,
+            operations.CreateHrisCompany2Request,
+            operations.CreateHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisCompanyResponse:
+    ) -> operations.CreateHrisCompany2Response:
         r"""Create a company
 
         :param request: The request object to send.
@@ -413,8 +413,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
-        request = cast(operations.CreateHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisCompany2Request)
+        request = cast(operations.CreateHrisCompany2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -448,7 +448,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisCompany",
+                operation_id="createHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -458,7 +458,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisCompanyResponse(
+            return operations.CreateHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -475,18 +475,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_company_async(
+    async def create_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisCompanyRequest,
-            operations.CreateHrisCompanyRequestTypedDict,
+            operations.CreateHrisCompany2Request,
+            operations.CreateHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisCompanyResponse:
+    ) -> operations.CreateHrisCompany2Response:
         r"""Create a company
 
         :param request: The request object to send.
@@ -506,8 +506,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
-        request = cast(operations.CreateHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisCompany2Request)
+        request = cast(operations.CreateHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -541,7 +541,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisCompany",
+                operation_id="createHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -551,7 +551,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisCompanyResponse(
+            return operations.CreateHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -568,18 +568,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_deduction(
+    def create_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.CreateHrisDeductionRequest,
-            operations.CreateHrisDeductionRequestTypedDict,
+            operations.CreateHrisDeduction2Request,
+            operations.CreateHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisDeductionResponse:
+    ) -> operations.CreateHrisDeduction2Response:
         r"""Create a deduction
 
         :param request: The request object to send.
@@ -599,8 +599,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisDeductionRequest)
-        request = cast(operations.CreateHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisDeduction2Request)
+        request = cast(operations.CreateHrisDeduction2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -634,7 +634,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisDeduction",
+                operation_id="createHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -644,7 +644,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisDeductionResponse(
+            return operations.CreateHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -661,18 +661,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_deduction_async(
+    async def create_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisDeductionRequest,
-            operations.CreateHrisDeductionRequestTypedDict,
+            operations.CreateHrisDeduction2Request,
+            operations.CreateHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisDeductionResponse:
+    ) -> operations.CreateHrisDeduction2Response:
         r"""Create a deduction
 
         :param request: The request object to send.
@@ -692,8 +692,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisDeductionRequest)
-        request = cast(operations.CreateHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisDeduction2Request)
+        request = cast(operations.CreateHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -727,7 +727,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisDeduction",
+                operation_id="createHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -737,7 +737,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisDeductionResponse(
+            return operations.CreateHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -754,18 +754,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_device(
+    def create_hris_device2(
         self,
         *,
         request: Union[
-            operations.CreateHrisDeviceRequest,
-            operations.CreateHrisDeviceRequestTypedDict,
+            operations.CreateHrisDevice2Request,
+            operations.CreateHrisDevice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisDeviceResponse:
+    ) -> operations.CreateHrisDevice2Response:
         r"""Create a device
 
         :param request: The request object to send.
@@ -785,8 +785,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisDeviceRequest)
-        request = cast(operations.CreateHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisDevice2Request)
+        request = cast(operations.CreateHrisDevice2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -820,7 +820,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisDevice",
+                operation_id="createHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -830,7 +830,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisDeviceResponse(
+            return operations.CreateHrisDevice2Response(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -847,18 +847,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_device_async(
+    async def create_hris_device2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisDeviceRequest,
-            operations.CreateHrisDeviceRequestTypedDict,
+            operations.CreateHrisDevice2Request,
+            operations.CreateHrisDevice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisDeviceResponse:
+    ) -> operations.CreateHrisDevice2Response:
         r"""Create a device
 
         :param request: The request object to send.
@@ -878,8 +878,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisDeviceRequest)
-        request = cast(operations.CreateHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisDevice2Request)
+        request = cast(operations.CreateHrisDevice2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -913,7 +913,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisDevice",
+                operation_id="createHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -923,7 +923,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisDeviceResponse(
+            return operations.CreateHrisDevice2Response(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -940,18 +940,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_employee(
+    def create_hris_employee2(
         self,
         *,
         request: Union[
-            operations.CreateHrisEmployeeRequest,
-            operations.CreateHrisEmployeeRequestTypedDict,
+            operations.CreateHrisEmployee2Request,
+            operations.CreateHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisEmployeeResponse:
+    ) -> operations.CreateHrisEmployee2Response:
         r"""Create an employee
 
         :param request: The request object to send.
@@ -971,8 +971,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
-        request = cast(operations.CreateHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisEmployee2Request)
+        request = cast(operations.CreateHrisEmployee2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -1006,7 +1006,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisEmployee",
+                operation_id="createHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1016,7 +1016,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisEmployeeResponse(
+            return operations.CreateHrisEmployee2Response(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -1033,18 +1033,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_employee_async(
+    async def create_hris_employee2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisEmployeeRequest,
-            operations.CreateHrisEmployeeRequestTypedDict,
+            operations.CreateHrisEmployee2Request,
+            operations.CreateHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisEmployeeResponse:
+    ) -> operations.CreateHrisEmployee2Response:
         r"""Create an employee
 
         :param request: The request object to send.
@@ -1064,8 +1064,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
-        request = cast(operations.CreateHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisEmployee2Request)
+        request = cast(operations.CreateHrisEmployee2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1099,7 +1099,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisEmployee",
+                operation_id="createHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1109,7 +1109,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisEmployeeResponse(
+            return operations.CreateHrisEmployee2Response(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -1126,18 +1126,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_group(
+    def create_hris_group2(
         self,
         *,
         request: Union[
-            operations.CreateHrisGroupRequest,
-            operations.CreateHrisGroupRequestTypedDict,
+            operations.CreateHrisGroup2Request,
+            operations.CreateHrisGroup2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisGroupResponse:
+    ) -> operations.CreateHrisGroup2Response:
         r"""Create a group
 
         :param request: The request object to send.
@@ -1157,8 +1157,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
-        request = cast(operations.CreateHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisGroup2Request)
+        request = cast(operations.CreateHrisGroup2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -1192,7 +1192,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisGroup",
+                operation_id="createHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1202,7 +1202,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisGroupResponse(
+            return operations.CreateHrisGroup2Response(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -1219,18 +1219,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_group_async(
+    async def create_hris_group2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisGroupRequest,
-            operations.CreateHrisGroupRequestTypedDict,
+            operations.CreateHrisGroup2Request,
+            operations.CreateHrisGroup2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisGroupResponse:
+    ) -> operations.CreateHrisGroup2Response:
         r"""Create a group
 
         :param request: The request object to send.
@@ -1250,8 +1250,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
-        request = cast(operations.CreateHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisGroup2Request)
+        request = cast(operations.CreateHrisGroup2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1285,7 +1285,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisGroup",
+                operation_id="createHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1295,7 +1295,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisGroupResponse(
+            return operations.CreateHrisGroup2Response(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -1312,18 +1312,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_location(
+    def create_hris_location2(
         self,
         *,
         request: Union[
-            operations.CreateHrisLocationRequest,
-            operations.CreateHrisLocationRequestTypedDict,
+            operations.CreateHrisLocation2Request,
+            operations.CreateHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisLocationResponse:
+    ) -> operations.CreateHrisLocation2Response:
         r"""Create a location
 
         :param request: The request object to send.
@@ -1343,8 +1343,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
-        request = cast(operations.CreateHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisLocation2Request)
+        request = cast(operations.CreateHrisLocation2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -1378,7 +1378,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisLocation",
+                operation_id="createHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1388,7 +1388,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisLocationResponse(
+            return operations.CreateHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -1405,18 +1405,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_location_async(
+    async def create_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisLocationRequest,
-            operations.CreateHrisLocationRequestTypedDict,
+            operations.CreateHrisLocation2Request,
+            operations.CreateHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisLocationResponse:
+    ) -> operations.CreateHrisLocation2Response:
         r"""Create a location
 
         :param request: The request object to send.
@@ -1436,8 +1436,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
-        request = cast(operations.CreateHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisLocation2Request)
+        request = cast(operations.CreateHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1471,7 +1471,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisLocation",
+                operation_id="createHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1481,7 +1481,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisLocationResponse(
+            return operations.CreateHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -1498,18 +1498,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_timeoff(
+    def create_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.CreateHrisTimeoffRequest,
-            operations.CreateHrisTimeoffRequestTypedDict,
+            operations.CreateHrisTimeoff2Request,
+            operations.CreateHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisTimeoffResponse:
+    ) -> operations.CreateHrisTimeoff2Response:
         r"""Create a timeoff
 
         :param request: The request object to send.
@@ -1529,8 +1529,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisTimeoffRequest)
-        request = cast(operations.CreateHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisTimeoff2Request)
+        request = cast(operations.CreateHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -1564,7 +1564,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisTimeoff",
+                operation_id="createHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1574,7 +1574,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisTimeoffResponse(
+            return operations.CreateHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -1591,18 +1591,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_timeoff_async(
+    async def create_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisTimeoffRequest,
-            operations.CreateHrisTimeoffRequestTypedDict,
+            operations.CreateHrisTimeoff2Request,
+            operations.CreateHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisTimeoffResponse:
+    ) -> operations.CreateHrisTimeoff2Response:
         r"""Create a timeoff
 
         :param request: The request object to send.
@@ -1622,8 +1622,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisTimeoffRequest)
-        request = cast(operations.CreateHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisTimeoff2Request)
+        request = cast(operations.CreateHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1657,7 +1657,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisTimeoff",
+                operation_id="createHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1667,7 +1667,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisTimeoffResponse(
+            return operations.CreateHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -1684,18 +1684,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_timeshift(
+    def create_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.CreateHrisTimeshiftRequest,
-            operations.CreateHrisTimeshiftRequestTypedDict,
+            operations.CreateHrisTimeshift2Request,
+            operations.CreateHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisTimeshiftResponse:
+    ) -> operations.CreateHrisTimeshift2Response:
         r"""Create a timeshift
 
         :param request: The request object to send.
@@ -1715,8 +1715,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisTimeshiftRequest)
-        request = cast(operations.CreateHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisTimeshift2Request)
+        request = cast(operations.CreateHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -1750,7 +1750,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisTimeshift",
+                operation_id="createHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1760,7 +1760,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisTimeshiftResponse(
+            return operations.CreateHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -1777,18 +1777,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_timeshift_async(
+    async def create_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisTimeshiftRequest,
-            operations.CreateHrisTimeshiftRequestTypedDict,
+            operations.CreateHrisTimeshift2Request,
+            operations.CreateHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisTimeshiftResponse:
+    ) -> operations.CreateHrisTimeshift2Response:
         r"""Create a timeshift
 
         :param request: The request object to send.
@@ -1808,8 +1808,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisTimeshiftRequest)
-        request = cast(operations.CreateHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisTimeshift2Request)
+        request = cast(operations.CreateHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1843,7 +1843,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisTimeshift",
+                operation_id="createHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1853,7 +1853,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisTimeshiftResponse(
+            return operations.CreateHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -1870,18 +1870,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_bankaccount(
+    def get_hris_bankaccount2(
         self,
         *,
         request: Union[
-            operations.GetHrisBankaccountRequest,
-            operations.GetHrisBankaccountRequestTypedDict,
+            operations.GetHrisBankaccount2Request,
+            operations.GetHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisBankaccountResponse:
+    ) -> operations.GetHrisBankaccount2Response:
         r"""Retrieve a bankaccount
 
         :param request: The request object to send.
@@ -1901,8 +1901,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisBankaccountRequest)
-        request = cast(operations.GetHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisBankaccount2Request)
+        request = cast(operations.GetHrisBankaccount2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1933,7 +1933,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisBankaccount",
+                operation_id="getHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1943,7 +1943,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisBankaccountResponse(
+            return operations.GetHrisBankaccount2Response(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -1960,18 +1960,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_bankaccount_async(
+    async def get_hris_bankaccount2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisBankaccountRequest,
-            operations.GetHrisBankaccountRequestTypedDict,
+            operations.GetHrisBankaccount2Request,
+            operations.GetHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisBankaccountResponse:
+    ) -> operations.GetHrisBankaccount2Response:
         r"""Retrieve a bankaccount
 
         :param request: The request object to send.
@@ -1991,8 +1991,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisBankaccountRequest)
-        request = cast(operations.GetHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisBankaccount2Request)
+        request = cast(operations.GetHrisBankaccount2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2023,7 +2023,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisBankaccount",
+                operation_id="getHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2033,7 +2033,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisBankaccountResponse(
+            return operations.GetHrisBankaccount2Response(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -2050,17 +2050,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_benefit(
+    def get_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.GetHrisBenefitRequest, operations.GetHrisBenefitRequestTypedDict
+            operations.GetHrisBenefit2Request,
+            operations.GetHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisBenefitResponse:
+    ) -> operations.GetHrisBenefit2Response:
         r"""Retrieve a benefit
 
         :param request: The request object to send.
@@ -2080,8 +2081,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisBenefitRequest)
-        request = cast(operations.GetHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisBenefit2Request)
+        request = cast(operations.GetHrisBenefit2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -2112,7 +2113,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisBenefit",
+                operation_id="getHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2122,7 +2123,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisBenefitResponse(
+            return operations.GetHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -2139,17 +2140,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_benefit_async(
+    async def get_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisBenefitRequest, operations.GetHrisBenefitRequestTypedDict
+            operations.GetHrisBenefit2Request,
+            operations.GetHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisBenefitResponse:
+    ) -> operations.GetHrisBenefit2Response:
         r"""Retrieve a benefit
 
         :param request: The request object to send.
@@ -2169,8 +2171,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisBenefitRequest)
-        request = cast(operations.GetHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisBenefit2Request)
+        request = cast(operations.GetHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2201,7 +2203,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisBenefit",
+                operation_id="getHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2211,7 +2213,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisBenefitResponse(
+            return operations.GetHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -2228,17 +2230,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_company(
+    def get_hris_company2(
         self,
         *,
         request: Union[
-            operations.GetHrisCompanyRequest, operations.GetHrisCompanyRequestTypedDict
+            operations.GetHrisCompany2Request,
+            operations.GetHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisCompanyResponse:
+    ) -> operations.GetHrisCompany2Response:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -2258,8 +2261,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
-        request = cast(operations.GetHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisCompany2Request)
+        request = cast(operations.GetHrisCompany2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -2290,7 +2293,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisCompany",
+                operation_id="getHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2300,7 +2303,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisCompanyResponse(
+            return operations.GetHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -2317,17 +2320,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_company_async(
+    async def get_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisCompanyRequest, operations.GetHrisCompanyRequestTypedDict
+            operations.GetHrisCompany2Request,
+            operations.GetHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisCompanyResponse:
+    ) -> operations.GetHrisCompany2Response:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -2347,8 +2351,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
-        request = cast(operations.GetHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisCompany2Request)
+        request = cast(operations.GetHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2379,7 +2383,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisCompany",
+                operation_id="getHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2389,7 +2393,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisCompanyResponse(
+            return operations.GetHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -2406,18 +2410,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_deduction(
+    def get_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.GetHrisDeductionRequest,
-            operations.GetHrisDeductionRequestTypedDict,
+            operations.GetHrisDeduction2Request,
+            operations.GetHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisDeductionResponse:
+    ) -> operations.GetHrisDeduction2Response:
         r"""Retrieve a deduction
 
         :param request: The request object to send.
@@ -2437,8 +2441,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisDeductionRequest)
-        request = cast(operations.GetHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisDeduction2Request)
+        request = cast(operations.GetHrisDeduction2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -2469,7 +2473,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisDeduction",
+                operation_id="getHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2479,7 +2483,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisDeductionResponse(
+            return operations.GetHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -2496,18 +2500,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_deduction_async(
+    async def get_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisDeductionRequest,
-            operations.GetHrisDeductionRequestTypedDict,
+            operations.GetHrisDeduction2Request,
+            operations.GetHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisDeductionResponse:
+    ) -> operations.GetHrisDeduction2Response:
         r"""Retrieve a deduction
 
         :param request: The request object to send.
@@ -2527,8 +2531,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisDeductionRequest)
-        request = cast(operations.GetHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisDeduction2Request)
+        request = cast(operations.GetHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2559,7 +2563,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisDeduction",
+                operation_id="getHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2569,7 +2573,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisDeductionResponse(
+            return operations.GetHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -2586,17 +2590,17 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_device(
+    def get_hris_device2(
         self,
         *,
         request: Union[
-            operations.GetHrisDeviceRequest, operations.GetHrisDeviceRequestTypedDict
+            operations.GetHrisDevice2Request, operations.GetHrisDevice2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisDeviceResponse:
+    ) -> operations.GetHrisDevice2Response:
         r"""Retrieve a device
 
         :param request: The request object to send.
@@ -2616,8 +2620,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisDeviceRequest)
-        request = cast(operations.GetHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisDevice2Request)
+        request = cast(operations.GetHrisDevice2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -2648,7 +2652,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisDevice",
+                operation_id="getHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2658,7 +2662,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisDeviceResponse(
+            return operations.GetHrisDevice2Response(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -2675,17 +2679,17 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_device_async(
+    async def get_hris_device2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisDeviceRequest, operations.GetHrisDeviceRequestTypedDict
+            operations.GetHrisDevice2Request, operations.GetHrisDevice2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisDeviceResponse:
+    ) -> operations.GetHrisDevice2Response:
         r"""Retrieve a device
 
         :param request: The request object to send.
@@ -2705,8 +2709,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisDeviceRequest)
-        request = cast(operations.GetHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisDevice2Request)
+        request = cast(operations.GetHrisDevice2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2737,7 +2741,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisDevice",
+                operation_id="getHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2747,7 +2751,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisDeviceResponse(
+            return operations.GetHrisDevice2Response(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -2764,18 +2768,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_employee(
+    def get_hris_employee2(
         self,
         *,
         request: Union[
-            operations.GetHrisEmployeeRequest,
-            operations.GetHrisEmployeeRequestTypedDict,
+            operations.GetHrisEmployee2Request,
+            operations.GetHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisEmployeeResponse:
+    ) -> operations.GetHrisEmployee2Response:
         r"""Retrieve an employee
 
         :param request: The request object to send.
@@ -2795,8 +2799,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
-        request = cast(operations.GetHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisEmployee2Request)
+        request = cast(operations.GetHrisEmployee2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -2827,7 +2831,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisEmployee",
+                operation_id="getHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2837,7 +2841,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisEmployeeResponse(
+            return operations.GetHrisEmployee2Response(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -2854,18 +2858,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_employee_async(
+    async def get_hris_employee2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisEmployeeRequest,
-            operations.GetHrisEmployeeRequestTypedDict,
+            operations.GetHrisEmployee2Request,
+            operations.GetHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisEmployeeResponse:
+    ) -> operations.GetHrisEmployee2Response:
         r"""Retrieve an employee
 
         :param request: The request object to send.
@@ -2885,8 +2889,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
-        request = cast(operations.GetHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisEmployee2Request)
+        request = cast(operations.GetHrisEmployee2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2917,7 +2921,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisEmployee",
+                operation_id="getHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2927,7 +2931,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisEmployeeResponse(
+            return operations.GetHrisEmployee2Response(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -2944,17 +2948,17 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_group(
+    def get_hris_group2(
         self,
         *,
         request: Union[
-            operations.GetHrisGroupRequest, operations.GetHrisGroupRequestTypedDict
+            operations.GetHrisGroup2Request, operations.GetHrisGroup2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisGroupResponse:
+    ) -> operations.GetHrisGroup2Response:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -2974,8 +2978,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisGroupRequest)
-        request = cast(operations.GetHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisGroup2Request)
+        request = cast(operations.GetHrisGroup2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -3006,7 +3010,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisGroup",
+                operation_id="getHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3016,7 +3020,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisGroupResponse(
+            return operations.GetHrisGroup2Response(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -3033,17 +3037,17 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_group_async(
+    async def get_hris_group2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisGroupRequest, operations.GetHrisGroupRequestTypedDict
+            operations.GetHrisGroup2Request, operations.GetHrisGroup2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisGroupResponse:
+    ) -> operations.GetHrisGroup2Response:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -3063,8 +3067,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisGroupRequest)
-        request = cast(operations.GetHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisGroup2Request)
+        request = cast(operations.GetHrisGroup2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3095,7 +3099,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisGroup",
+                operation_id="getHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3105,7 +3109,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisGroupResponse(
+            return operations.GetHrisGroup2Response(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -3122,18 +3126,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_location(
+    def get_hris_location2(
         self,
         *,
         request: Union[
-            operations.GetHrisLocationRequest,
-            operations.GetHrisLocationRequestTypedDict,
+            operations.GetHrisLocation2Request,
+            operations.GetHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisLocationResponse:
+    ) -> operations.GetHrisLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -3153,8 +3157,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisLocationRequest)
-        request = cast(operations.GetHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisLocation2Request)
+        request = cast(operations.GetHrisLocation2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -3185,7 +3189,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisLocation",
+                operation_id="getHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3195,7 +3199,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisLocationResponse(
+            return operations.GetHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -3212,18 +3216,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_location_async(
+    async def get_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisLocationRequest,
-            operations.GetHrisLocationRequestTypedDict,
+            operations.GetHrisLocation2Request,
+            operations.GetHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisLocationResponse:
+    ) -> operations.GetHrisLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -3243,8 +3247,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisLocationRequest)
-        request = cast(operations.GetHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisLocation2Request)
+        request = cast(operations.GetHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3275,7 +3279,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisLocation",
+                operation_id="getHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3285,7 +3289,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisLocationResponse(
+            return operations.GetHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -3302,17 +3306,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_payslip(
+    def get_hris_payslip2(
         self,
         *,
         request: Union[
-            operations.GetHrisPayslipRequest, operations.GetHrisPayslipRequestTypedDict
+            operations.GetHrisPayslip2Request,
+            operations.GetHrisPayslip2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisPayslipResponse:
+    ) -> operations.GetHrisPayslip2Response:
         r"""Retrieve a payslip
 
         :param request: The request object to send.
@@ -3332,8 +3337,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
-        request = cast(operations.GetHrisPayslipRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisPayslip2Request)
+        request = cast(operations.GetHrisPayslip2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -3364,7 +3369,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisPayslip",
+                operation_id="getHrisPayslip2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3374,7 +3379,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisPayslipResponse(
+            return operations.GetHrisPayslip2Response(
                 hris_payslip=unmarshal_json_response(
                     Optional[shared.HrisPayslip], http_res
                 ),
@@ -3391,17 +3396,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_payslip_async(
+    async def get_hris_payslip2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisPayslipRequest, operations.GetHrisPayslipRequestTypedDict
+            operations.GetHrisPayslip2Request,
+            operations.GetHrisPayslip2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisPayslipResponse:
+    ) -> operations.GetHrisPayslip2Response:
         r"""Retrieve a payslip
 
         :param request: The request object to send.
@@ -3421,8 +3427,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
-        request = cast(operations.GetHrisPayslipRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisPayslip2Request)
+        request = cast(operations.GetHrisPayslip2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3453,7 +3459,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisPayslip",
+                operation_id="getHrisPayslip2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3463,7 +3469,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisPayslipResponse(
+            return operations.GetHrisPayslip2Response(
                 hris_payslip=unmarshal_json_response(
                     Optional[shared.HrisPayslip], http_res
                 ),
@@ -3480,17 +3486,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_timeoff(
+    def get_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.GetHrisTimeoffRequest, operations.GetHrisTimeoffRequestTypedDict
+            operations.GetHrisTimeoff2Request,
+            operations.GetHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisTimeoffResponse:
+    ) -> operations.GetHrisTimeoff2Response:
         r"""Retrieve a timeoff
 
         :param request: The request object to send.
@@ -3510,8 +3517,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisTimeoffRequest)
-        request = cast(operations.GetHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisTimeoff2Request)
+        request = cast(operations.GetHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -3542,7 +3549,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisTimeoff",
+                operation_id="getHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3552,7 +3559,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisTimeoffResponse(
+            return operations.GetHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -3569,17 +3576,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_timeoff_async(
+    async def get_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisTimeoffRequest, operations.GetHrisTimeoffRequestTypedDict
+            operations.GetHrisTimeoff2Request,
+            operations.GetHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisTimeoffResponse:
+    ) -> operations.GetHrisTimeoff2Response:
         r"""Retrieve a timeoff
 
         :param request: The request object to send.
@@ -3599,8 +3607,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisTimeoffRequest)
-        request = cast(operations.GetHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisTimeoff2Request)
+        request = cast(operations.GetHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3631,7 +3639,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisTimeoff",
+                operation_id="getHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3641,7 +3649,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisTimeoffResponse(
+            return operations.GetHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -3658,18 +3666,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_timeshift(
+    def get_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.GetHrisTimeshiftRequest,
-            operations.GetHrisTimeshiftRequestTypedDict,
+            operations.GetHrisTimeshift2Request,
+            operations.GetHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisTimeshiftResponse:
+    ) -> operations.GetHrisTimeshift2Response:
         r"""Retrieve a timeshift
 
         :param request: The request object to send.
@@ -3689,8 +3697,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisTimeshiftRequest)
-        request = cast(operations.GetHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisTimeshift2Request)
+        request = cast(operations.GetHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -3721,7 +3729,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisTimeshift",
+                operation_id="getHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3731,7 +3739,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisTimeshiftResponse(
+            return operations.GetHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -3748,18 +3756,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_timeshift_async(
+    async def get_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisTimeshiftRequest,
-            operations.GetHrisTimeshiftRequestTypedDict,
+            operations.GetHrisTimeshift2Request,
+            operations.GetHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisTimeshiftResponse:
+    ) -> operations.GetHrisTimeshift2Response:
         r"""Retrieve a timeshift
 
         :param request: The request object to send.
@@ -3779,8 +3787,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisTimeshiftRequest)
-        request = cast(operations.GetHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisTimeshift2Request)
+        request = cast(operations.GetHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3811,7 +3819,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisTimeshift",
+                operation_id="getHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3821,7 +3829,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisTimeshiftResponse(
+            return operations.GetHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -3838,18 +3846,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_bankaccounts(
+    def list_hris_bankaccounts2(
         self,
         *,
         request: Union[
-            operations.ListHrisBankaccountsRequest,
-            operations.ListHrisBankaccountsRequestTypedDict,
+            operations.ListHrisBankaccounts2Request,
+            operations.ListHrisBankaccounts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisBankaccountsResponse:
+    ) -> operations.ListHrisBankaccounts2Response:
         r"""List all bankaccounts
 
         :param request: The request object to send.
@@ -3869,8 +3877,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisBankaccountsRequest)
-        request = cast(operations.ListHrisBankaccountsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisBankaccounts2Request)
+        request = cast(operations.ListHrisBankaccounts2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -3901,7 +3909,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisBankaccounts",
+                operation_id="listHrisBankaccounts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3911,7 +3919,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisBankaccountsResponse(
+            return operations.ListHrisBankaccounts2Response(
                 hris_bankaccounts=unmarshal_json_response(
                     Optional[List[shared.HrisBankaccount]], http_res
                 ),
@@ -3928,18 +3936,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_bankaccounts_async(
+    async def list_hris_bankaccounts2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisBankaccountsRequest,
-            operations.ListHrisBankaccountsRequestTypedDict,
+            operations.ListHrisBankaccounts2Request,
+            operations.ListHrisBankaccounts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisBankaccountsResponse:
+    ) -> operations.ListHrisBankaccounts2Response:
         r"""List all bankaccounts
 
         :param request: The request object to send.
@@ -3959,8 +3967,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisBankaccountsRequest)
-        request = cast(operations.ListHrisBankaccountsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisBankaccounts2Request)
+        request = cast(operations.ListHrisBankaccounts2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3991,7 +3999,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisBankaccounts",
+                operation_id="listHrisBankaccounts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4001,7 +4009,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisBankaccountsResponse(
+            return operations.ListHrisBankaccounts2Response(
                 hris_bankaccounts=unmarshal_json_response(
                     Optional[List[shared.HrisBankaccount]], http_res
                 ),
@@ -4018,18 +4026,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_benefits(
+    def list_hris_benefits2(
         self,
         *,
         request: Union[
-            operations.ListHrisBenefitsRequest,
-            operations.ListHrisBenefitsRequestTypedDict,
+            operations.ListHrisBenefits2Request,
+            operations.ListHrisBenefits2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisBenefitsResponse:
+    ) -> operations.ListHrisBenefits2Response:
         r"""List all benefits
 
         :param request: The request object to send.
@@ -4049,8 +4057,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisBenefitsRequest)
-        request = cast(operations.ListHrisBenefitsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisBenefits2Request)
+        request = cast(operations.ListHrisBenefits2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -4081,7 +4089,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisBenefits",
+                operation_id="listHrisBenefits2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4091,7 +4099,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisBenefitsResponse(
+            return operations.ListHrisBenefits2Response(
                 hris_benefits=unmarshal_json_response(
                     Optional[List[shared.HrisBenefit]], http_res
                 ),
@@ -4108,18 +4116,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_benefits_async(
+    async def list_hris_benefits2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisBenefitsRequest,
-            operations.ListHrisBenefitsRequestTypedDict,
+            operations.ListHrisBenefits2Request,
+            operations.ListHrisBenefits2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisBenefitsResponse:
+    ) -> operations.ListHrisBenefits2Response:
         r"""List all benefits
 
         :param request: The request object to send.
@@ -4139,8 +4147,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisBenefitsRequest)
-        request = cast(operations.ListHrisBenefitsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisBenefits2Request)
+        request = cast(operations.ListHrisBenefits2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4171,7 +4179,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisBenefits",
+                operation_id="listHrisBenefits2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4181,7 +4189,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisBenefitsResponse(
+            return operations.ListHrisBenefits2Response(
                 hris_benefits=unmarshal_json_response(
                     Optional[List[shared.HrisBenefit]], http_res
                 ),
@@ -4198,18 +4206,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_companies(
+    def list_hris_companies2(
         self,
         *,
         request: Union[
-            operations.ListHrisCompaniesRequest,
-            operations.ListHrisCompaniesRequestTypedDict,
+            operations.ListHrisCompanies2Request,
+            operations.ListHrisCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisCompaniesResponse:
+    ) -> operations.ListHrisCompanies2Response:
         r"""List all companies
 
         :param request: The request object to send.
@@ -4229,8 +4237,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
-        request = cast(operations.ListHrisCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisCompanies2Request)
+        request = cast(operations.ListHrisCompanies2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -4261,7 +4269,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisCompanies",
+                operation_id="listHrisCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4271,7 +4279,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisCompaniesResponse(
+            return operations.ListHrisCompanies2Response(
                 hris_companies=unmarshal_json_response(
                     Optional[List[shared.HrisCompany]], http_res
                 ),
@@ -4288,18 +4296,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_companies_async(
+    async def list_hris_companies2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisCompaniesRequest,
-            operations.ListHrisCompaniesRequestTypedDict,
+            operations.ListHrisCompanies2Request,
+            operations.ListHrisCompanies2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisCompaniesResponse:
+    ) -> operations.ListHrisCompanies2Response:
         r"""List all companies
 
         :param request: The request object to send.
@@ -4319,8 +4327,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
-        request = cast(operations.ListHrisCompaniesRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisCompanies2Request)
+        request = cast(operations.ListHrisCompanies2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4351,7 +4359,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisCompanies",
+                operation_id="listHrisCompanies2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4361,7 +4369,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisCompaniesResponse(
+            return operations.ListHrisCompanies2Response(
                 hris_companies=unmarshal_json_response(
                     Optional[List[shared.HrisCompany]], http_res
                 ),
@@ -4378,18 +4386,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_deductions(
+    def list_hris_deductions2(
         self,
         *,
         request: Union[
-            operations.ListHrisDeductionsRequest,
-            operations.ListHrisDeductionsRequestTypedDict,
+            operations.ListHrisDeductions2Request,
+            operations.ListHrisDeductions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisDeductionsResponse:
+    ) -> operations.ListHrisDeductions2Response:
         r"""List all deductions
 
         :param request: The request object to send.
@@ -4409,8 +4417,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisDeductionsRequest)
-        request = cast(operations.ListHrisDeductionsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisDeductions2Request)
+        request = cast(operations.ListHrisDeductions2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -4441,7 +4449,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisDeductions",
+                operation_id="listHrisDeductions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4451,7 +4459,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisDeductionsResponse(
+            return operations.ListHrisDeductions2Response(
                 hris_deductions=unmarshal_json_response(
                     Optional[List[shared.HrisDeduction]], http_res
                 ),
@@ -4468,18 +4476,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_deductions_async(
+    async def list_hris_deductions2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisDeductionsRequest,
-            operations.ListHrisDeductionsRequestTypedDict,
+            operations.ListHrisDeductions2Request,
+            operations.ListHrisDeductions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisDeductionsResponse:
+    ) -> operations.ListHrisDeductions2Response:
         r"""List all deductions
 
         :param request: The request object to send.
@@ -4499,8 +4507,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisDeductionsRequest)
-        request = cast(operations.ListHrisDeductionsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisDeductions2Request)
+        request = cast(operations.ListHrisDeductions2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4531,7 +4539,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisDeductions",
+                operation_id="listHrisDeductions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4541,7 +4549,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisDeductionsResponse(
+            return operations.ListHrisDeductions2Response(
                 hris_deductions=unmarshal_json_response(
                     Optional[List[shared.HrisDeduction]], http_res
                 ),
@@ -4558,18 +4566,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_devices(
+    def list_hris_devices2(
         self,
         *,
         request: Union[
-            operations.ListHrisDevicesRequest,
-            operations.ListHrisDevicesRequestTypedDict,
+            operations.ListHrisDevices2Request,
+            operations.ListHrisDevices2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisDevicesResponse:
+    ) -> operations.ListHrisDevices2Response:
         r"""List all devices
 
         :param request: The request object to send.
@@ -4589,8 +4597,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisDevicesRequest)
-        request = cast(operations.ListHrisDevicesRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisDevices2Request)
+        request = cast(operations.ListHrisDevices2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -4621,7 +4629,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisDevices",
+                operation_id="listHrisDevices2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4631,7 +4639,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisDevicesResponse(
+            return operations.ListHrisDevices2Response(
                 hris_devices=unmarshal_json_response(
                     Optional[List[shared.HrisDevice]], http_res
                 ),
@@ -4648,18 +4656,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_devices_async(
+    async def list_hris_devices2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisDevicesRequest,
-            operations.ListHrisDevicesRequestTypedDict,
+            operations.ListHrisDevices2Request,
+            operations.ListHrisDevices2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisDevicesResponse:
+    ) -> operations.ListHrisDevices2Response:
         r"""List all devices
 
         :param request: The request object to send.
@@ -4679,8 +4687,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisDevicesRequest)
-        request = cast(operations.ListHrisDevicesRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisDevices2Request)
+        request = cast(operations.ListHrisDevices2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4711,7 +4719,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisDevices",
+                operation_id="listHrisDevices2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4721,7 +4729,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisDevicesResponse(
+            return operations.ListHrisDevices2Response(
                 hris_devices=unmarshal_json_response(
                     Optional[List[shared.HrisDevice]], http_res
                 ),
@@ -4738,18 +4746,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_employees(
+    def list_hris_employees2(
         self,
         *,
         request: Union[
-            operations.ListHrisEmployeesRequest,
-            operations.ListHrisEmployeesRequestTypedDict,
+            operations.ListHrisEmployees2Request,
+            operations.ListHrisEmployees2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisEmployeesResponse:
+    ) -> operations.ListHrisEmployees2Response:
         r"""List all employees
 
         :param request: The request object to send.
@@ -4769,8 +4777,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
-        request = cast(operations.ListHrisEmployeesRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisEmployees2Request)
+        request = cast(operations.ListHrisEmployees2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -4801,7 +4809,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisEmployees",
+                operation_id="listHrisEmployees2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4811,7 +4819,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisEmployeesResponse(
+            return operations.ListHrisEmployees2Response(
                 hris_employees=unmarshal_json_response(
                     Optional[List[shared.HrisEmployee]], http_res
                 ),
@@ -4828,18 +4836,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_employees_async(
+    async def list_hris_employees2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisEmployeesRequest,
-            operations.ListHrisEmployeesRequestTypedDict,
+            operations.ListHrisEmployees2Request,
+            operations.ListHrisEmployees2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisEmployeesResponse:
+    ) -> operations.ListHrisEmployees2Response:
         r"""List all employees
 
         :param request: The request object to send.
@@ -4859,8 +4867,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
-        request = cast(operations.ListHrisEmployeesRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisEmployees2Request)
+        request = cast(operations.ListHrisEmployees2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4891,7 +4899,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisEmployees",
+                operation_id="listHrisEmployees2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4901,7 +4909,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisEmployeesResponse(
+            return operations.ListHrisEmployees2Response(
                 hris_employees=unmarshal_json_response(
                     Optional[List[shared.HrisEmployee]], http_res
                 ),
@@ -4918,17 +4926,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_groups(
+    def list_hris_groups2(
         self,
         *,
         request: Union[
-            operations.ListHrisGroupsRequest, operations.ListHrisGroupsRequestTypedDict
+            operations.ListHrisGroups2Request,
+            operations.ListHrisGroups2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisGroupsResponse:
+    ) -> operations.ListHrisGroups2Response:
         r"""List all groups
 
         :param request: The request object to send.
@@ -4948,8 +4957,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
-        request = cast(operations.ListHrisGroupsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisGroups2Request)
+        request = cast(operations.ListHrisGroups2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -4980,7 +4989,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisGroups",
+                operation_id="listHrisGroups2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4990,7 +4999,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisGroupsResponse(
+            return operations.ListHrisGroups2Response(
                 hris_groups=unmarshal_json_response(
                     Optional[List[shared.HrisGroup]], http_res
                 ),
@@ -5007,17 +5016,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_groups_async(
+    async def list_hris_groups2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisGroupsRequest, operations.ListHrisGroupsRequestTypedDict
+            operations.ListHrisGroups2Request,
+            operations.ListHrisGroups2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisGroupsResponse:
+    ) -> operations.ListHrisGroups2Response:
         r"""List all groups
 
         :param request: The request object to send.
@@ -5037,8 +5047,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
-        request = cast(operations.ListHrisGroupsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisGroups2Request)
+        request = cast(operations.ListHrisGroups2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -5069,7 +5079,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisGroups",
+                operation_id="listHrisGroups2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5079,7 +5089,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisGroupsResponse(
+            return operations.ListHrisGroups2Response(
                 hris_groups=unmarshal_json_response(
                     Optional[List[shared.HrisGroup]], http_res
                 ),
@@ -5096,18 +5106,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_locations(
+    def list_hris_locations2(
         self,
         *,
         request: Union[
-            operations.ListHrisLocationsRequest,
-            operations.ListHrisLocationsRequestTypedDict,
+            operations.ListHrisLocations2Request,
+            operations.ListHrisLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisLocationsResponse:
+    ) -> operations.ListHrisLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -5127,8 +5137,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
-        request = cast(operations.ListHrisLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisLocations2Request)
+        request = cast(operations.ListHrisLocations2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -5159,7 +5169,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisLocations",
+                operation_id="listHrisLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5169,7 +5179,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisLocationsResponse(
+            return operations.ListHrisLocations2Response(
                 hris_locations=unmarshal_json_response(
                     Optional[List[shared.HrisLocation]], http_res
                 ),
@@ -5186,18 +5196,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_locations_async(
+    async def list_hris_locations2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisLocationsRequest,
-            operations.ListHrisLocationsRequestTypedDict,
+            operations.ListHrisLocations2Request,
+            operations.ListHrisLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisLocationsResponse:
+    ) -> operations.ListHrisLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -5217,8 +5227,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
-        request = cast(operations.ListHrisLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisLocations2Request)
+        request = cast(operations.ListHrisLocations2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -5249,7 +5259,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisLocations",
+                operation_id="listHrisLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5259,7 +5269,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisLocationsResponse(
+            return operations.ListHrisLocations2Response(
                 hris_locations=unmarshal_json_response(
                     Optional[List[shared.HrisLocation]], http_res
                 ),
@@ -5276,18 +5286,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_payslips(
+    def list_hris_payslips2(
         self,
         *,
         request: Union[
-            operations.ListHrisPayslipsRequest,
-            operations.ListHrisPayslipsRequestTypedDict,
+            operations.ListHrisPayslips2Request,
+            operations.ListHrisPayslips2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisPayslipsResponse:
+    ) -> operations.ListHrisPayslips2Response:
         r"""List all payslips
 
         :param request: The request object to send.
@@ -5307,8 +5317,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
-        request = cast(operations.ListHrisPayslipsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisPayslips2Request)
+        request = cast(operations.ListHrisPayslips2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -5339,7 +5349,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisPayslips",
+                operation_id="listHrisPayslips2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5349,7 +5359,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisPayslipsResponse(
+            return operations.ListHrisPayslips2Response(
                 hris_payslips=unmarshal_json_response(
                     Optional[List[shared.HrisPayslip]], http_res
                 ),
@@ -5366,18 +5376,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_payslips_async(
+    async def list_hris_payslips2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisPayslipsRequest,
-            operations.ListHrisPayslipsRequestTypedDict,
+            operations.ListHrisPayslips2Request,
+            operations.ListHrisPayslips2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisPayslipsResponse:
+    ) -> operations.ListHrisPayslips2Response:
         r"""List all payslips
 
         :param request: The request object to send.
@@ -5397,8 +5407,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
-        request = cast(operations.ListHrisPayslipsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisPayslips2Request)
+        request = cast(operations.ListHrisPayslips2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -5429,7 +5439,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisPayslips",
+                operation_id="listHrisPayslips2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5439,7 +5449,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisPayslipsResponse(
+            return operations.ListHrisPayslips2Response(
                 hris_payslips=unmarshal_json_response(
                     Optional[List[shared.HrisPayslip]], http_res
                 ),
@@ -5456,18 +5466,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_timeoffs(
+    def list_hris_timeoffs2(
         self,
         *,
         request: Union[
-            operations.ListHrisTimeoffsRequest,
-            operations.ListHrisTimeoffsRequestTypedDict,
+            operations.ListHrisTimeoffs2Request,
+            operations.ListHrisTimeoffs2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisTimeoffsResponse:
+    ) -> operations.ListHrisTimeoffs2Response:
         r"""List all timeoffs
 
         :param request: The request object to send.
@@ -5487,8 +5497,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisTimeoffsRequest)
-        request = cast(operations.ListHrisTimeoffsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisTimeoffs2Request)
+        request = cast(operations.ListHrisTimeoffs2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -5519,7 +5529,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisTimeoffs",
+                operation_id="listHrisTimeoffs2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5529,7 +5539,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisTimeoffsResponse(
+            return operations.ListHrisTimeoffs2Response(
                 hris_timeoffs=unmarshal_json_response(
                     Optional[List[shared.HrisTimeoff]], http_res
                 ),
@@ -5546,18 +5556,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_timeoffs_async(
+    async def list_hris_timeoffs2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisTimeoffsRequest,
-            operations.ListHrisTimeoffsRequestTypedDict,
+            operations.ListHrisTimeoffs2Request,
+            operations.ListHrisTimeoffs2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisTimeoffsResponse:
+    ) -> operations.ListHrisTimeoffs2Response:
         r"""List all timeoffs
 
         :param request: The request object to send.
@@ -5577,8 +5587,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisTimeoffsRequest)
-        request = cast(operations.ListHrisTimeoffsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisTimeoffs2Request)
+        request = cast(operations.ListHrisTimeoffs2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -5609,7 +5619,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisTimeoffs",
+                operation_id="listHrisTimeoffs2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5619,7 +5629,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisTimeoffsResponse(
+            return operations.ListHrisTimeoffs2Response(
                 hris_timeoffs=unmarshal_json_response(
                     Optional[List[shared.HrisTimeoff]], http_res
                 ),
@@ -5636,18 +5646,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_timeshifts(
+    def list_hris_timeshifts2(
         self,
         *,
         request: Union[
-            operations.ListHrisTimeshiftsRequest,
-            operations.ListHrisTimeshiftsRequestTypedDict,
+            operations.ListHrisTimeshifts2Request,
+            operations.ListHrisTimeshifts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisTimeshiftsResponse:
+    ) -> operations.ListHrisTimeshifts2Response:
         r"""List all timeshifts
 
         :param request: The request object to send.
@@ -5667,8 +5677,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisTimeshiftsRequest)
-        request = cast(operations.ListHrisTimeshiftsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisTimeshifts2Request)
+        request = cast(operations.ListHrisTimeshifts2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -5699,7 +5709,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisTimeshifts",
+                operation_id="listHrisTimeshifts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5709,7 +5719,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisTimeshiftsResponse(
+            return operations.ListHrisTimeshifts2Response(
                 hris_timeshifts=unmarshal_json_response(
                     Optional[List[shared.HrisTimeshift]], http_res
                 ),
@@ -5726,18 +5736,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_timeshifts_async(
+    async def list_hris_timeshifts2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisTimeshiftsRequest,
-            operations.ListHrisTimeshiftsRequestTypedDict,
+            operations.ListHrisTimeshifts2Request,
+            operations.ListHrisTimeshifts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisTimeshiftsResponse:
+    ) -> operations.ListHrisTimeshifts2Response:
         r"""List all timeshifts
 
         :param request: The request object to send.
@@ -5757,8 +5767,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisTimeshiftsRequest)
-        request = cast(operations.ListHrisTimeshiftsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisTimeshifts2Request)
+        request = cast(operations.ListHrisTimeshifts2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -5789,7 +5799,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisTimeshifts",
+                operation_id="listHrisTimeshifts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5799,7 +5809,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisTimeshiftsResponse(
+            return operations.ListHrisTimeshifts2Response(
                 hris_timeshifts=unmarshal_json_response(
                     Optional[List[shared.HrisTimeshift]], http_res
                 ),
@@ -5816,18 +5826,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_bankaccount(
+    def patch_hris_bankaccount2(
         self,
         *,
         request: Union[
-            operations.PatchHrisBankaccountRequest,
-            operations.PatchHrisBankaccountRequestTypedDict,
+            operations.PatchHrisBankaccount2Request,
+            operations.PatchHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisBankaccountResponse:
+    ) -> operations.PatchHrisBankaccount2Response:
         r"""Update a bankaccount
 
         :param request: The request object to send.
@@ -5847,8 +5857,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisBankaccountRequest)
-        request = cast(operations.PatchHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisBankaccount2Request)
+        request = cast(operations.PatchHrisBankaccount2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5882,7 +5892,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisBankaccount",
+                operation_id="patchHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5892,7 +5902,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisBankaccountResponse(
+            return operations.PatchHrisBankaccount2Response(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -5909,18 +5919,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_bankaccount_async(
+    async def patch_hris_bankaccount2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisBankaccountRequest,
-            operations.PatchHrisBankaccountRequestTypedDict,
+            operations.PatchHrisBankaccount2Request,
+            operations.PatchHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisBankaccountResponse:
+    ) -> operations.PatchHrisBankaccount2Response:
         r"""Update a bankaccount
 
         :param request: The request object to send.
@@ -5940,8 +5950,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisBankaccountRequest)
-        request = cast(operations.PatchHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisBankaccount2Request)
+        request = cast(operations.PatchHrisBankaccount2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5975,7 +5985,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisBankaccount",
+                operation_id="patchHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -5985,7 +5995,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisBankaccountResponse(
+            return operations.PatchHrisBankaccount2Response(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -6002,18 +6012,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_benefit(
+    def patch_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.PatchHrisBenefitRequest,
-            operations.PatchHrisBenefitRequestTypedDict,
+            operations.PatchHrisBenefit2Request,
+            operations.PatchHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisBenefitResponse:
+    ) -> operations.PatchHrisBenefit2Response:
         r"""Update a benefit
 
         :param request: The request object to send.
@@ -6033,8 +6043,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisBenefitRequest)
-        request = cast(operations.PatchHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisBenefit2Request)
+        request = cast(operations.PatchHrisBenefit2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6068,7 +6078,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisBenefit",
+                operation_id="patchHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6078,7 +6088,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisBenefitResponse(
+            return operations.PatchHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -6095,18 +6105,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_benefit_async(
+    async def patch_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisBenefitRequest,
-            operations.PatchHrisBenefitRequestTypedDict,
+            operations.PatchHrisBenefit2Request,
+            operations.PatchHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisBenefitResponse:
+    ) -> operations.PatchHrisBenefit2Response:
         r"""Update a benefit
 
         :param request: The request object to send.
@@ -6126,8 +6136,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisBenefitRequest)
-        request = cast(operations.PatchHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisBenefit2Request)
+        request = cast(operations.PatchHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -6161,7 +6171,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisBenefit",
+                operation_id="patchHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6171,7 +6181,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisBenefitResponse(
+            return operations.PatchHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -6188,18 +6198,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_company(
+    def patch_hris_company2(
         self,
         *,
         request: Union[
-            operations.PatchHrisCompanyRequest,
-            operations.PatchHrisCompanyRequestTypedDict,
+            operations.PatchHrisCompany2Request,
+            operations.PatchHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisCompanyResponse:
+    ) -> operations.PatchHrisCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -6219,8 +6229,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
-        request = cast(operations.PatchHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisCompany2Request)
+        request = cast(operations.PatchHrisCompany2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6254,7 +6264,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisCompany",
+                operation_id="patchHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6264,7 +6274,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisCompanyResponse(
+            return operations.PatchHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -6281,18 +6291,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_company_async(
+    async def patch_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisCompanyRequest,
-            operations.PatchHrisCompanyRequestTypedDict,
+            operations.PatchHrisCompany2Request,
+            operations.PatchHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisCompanyResponse:
+    ) -> operations.PatchHrisCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -6312,8 +6322,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
-        request = cast(operations.PatchHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisCompany2Request)
+        request = cast(operations.PatchHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -6347,7 +6357,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisCompany",
+                operation_id="patchHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6357,7 +6367,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisCompanyResponse(
+            return operations.PatchHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -6374,18 +6384,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_deduction(
+    def patch_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.PatchHrisDeductionRequest,
-            operations.PatchHrisDeductionRequestTypedDict,
+            operations.PatchHrisDeduction2Request,
+            operations.PatchHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisDeductionResponse:
+    ) -> operations.PatchHrisDeduction2Response:
         r"""Update a deduction
 
         :param request: The request object to send.
@@ -6405,8 +6415,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisDeductionRequest)
-        request = cast(operations.PatchHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisDeduction2Request)
+        request = cast(operations.PatchHrisDeduction2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6440,7 +6450,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisDeduction",
+                operation_id="patchHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6450,7 +6460,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisDeductionResponse(
+            return operations.PatchHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -6467,18 +6477,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_deduction_async(
+    async def patch_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisDeductionRequest,
-            operations.PatchHrisDeductionRequestTypedDict,
+            operations.PatchHrisDeduction2Request,
+            operations.PatchHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisDeductionResponse:
+    ) -> operations.PatchHrisDeduction2Response:
         r"""Update a deduction
 
         :param request: The request object to send.
@@ -6498,8 +6508,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisDeductionRequest)
-        request = cast(operations.PatchHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisDeduction2Request)
+        request = cast(operations.PatchHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -6533,7 +6543,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisDeduction",
+                operation_id="patchHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6543,7 +6553,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisDeductionResponse(
+            return operations.PatchHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -6560,18 +6570,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_device(
+    def patch_hris_device2(
         self,
         *,
         request: Union[
-            operations.PatchHrisDeviceRequest,
-            operations.PatchHrisDeviceRequestTypedDict,
+            operations.PatchHrisDevice2Request,
+            operations.PatchHrisDevice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisDeviceResponse:
+    ) -> operations.PatchHrisDevice2Response:
         r"""Update a device
 
         :param request: The request object to send.
@@ -6591,8 +6601,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisDeviceRequest)
-        request = cast(operations.PatchHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisDevice2Request)
+        request = cast(operations.PatchHrisDevice2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6626,7 +6636,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisDevice",
+                operation_id="patchHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6636,7 +6646,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisDeviceResponse(
+            return operations.PatchHrisDevice2Response(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -6653,18 +6663,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_device_async(
+    async def patch_hris_device2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisDeviceRequest,
-            operations.PatchHrisDeviceRequestTypedDict,
+            operations.PatchHrisDevice2Request,
+            operations.PatchHrisDevice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisDeviceResponse:
+    ) -> operations.PatchHrisDevice2Response:
         r"""Update a device
 
         :param request: The request object to send.
@@ -6684,8 +6694,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisDeviceRequest)
-        request = cast(operations.PatchHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisDevice2Request)
+        request = cast(operations.PatchHrisDevice2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -6719,7 +6729,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisDevice",
+                operation_id="patchHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6729,7 +6739,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisDeviceResponse(
+            return operations.PatchHrisDevice2Response(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -6746,18 +6756,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_employee(
+    def patch_hris_employee2(
         self,
         *,
         request: Union[
-            operations.PatchHrisEmployeeRequest,
-            operations.PatchHrisEmployeeRequestTypedDict,
+            operations.PatchHrisEmployee2Request,
+            operations.PatchHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisEmployeeResponse:
+    ) -> operations.PatchHrisEmployee2Response:
         r"""Update an employee
 
         :param request: The request object to send.
@@ -6777,8 +6787,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
-        request = cast(operations.PatchHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisEmployee2Request)
+        request = cast(operations.PatchHrisEmployee2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6812,7 +6822,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisEmployee",
+                operation_id="patchHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6822,7 +6832,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisEmployeeResponse(
+            return operations.PatchHrisEmployee2Response(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -6839,18 +6849,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_employee_async(
+    async def patch_hris_employee2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisEmployeeRequest,
-            operations.PatchHrisEmployeeRequestTypedDict,
+            operations.PatchHrisEmployee2Request,
+            operations.PatchHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisEmployeeResponse:
+    ) -> operations.PatchHrisEmployee2Response:
         r"""Update an employee
 
         :param request: The request object to send.
@@ -6870,8 +6880,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
-        request = cast(operations.PatchHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisEmployee2Request)
+        request = cast(operations.PatchHrisEmployee2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -6905,7 +6915,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisEmployee",
+                operation_id="patchHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -6915,7 +6925,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisEmployeeResponse(
+            return operations.PatchHrisEmployee2Response(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -6932,17 +6942,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_group(
+    def patch_hris_group2(
         self,
         *,
         request: Union[
-            operations.PatchHrisGroupRequest, operations.PatchHrisGroupRequestTypedDict
+            operations.PatchHrisGroup2Request,
+            operations.PatchHrisGroup2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisGroupResponse:
+    ) -> operations.PatchHrisGroup2Response:
         r"""Update a group
 
         :param request: The request object to send.
@@ -6962,8 +6973,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
-        request = cast(operations.PatchHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisGroup2Request)
+        request = cast(operations.PatchHrisGroup2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6997,7 +7008,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisGroup",
+                operation_id="patchHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7007,7 +7018,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisGroupResponse(
+            return operations.PatchHrisGroup2Response(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -7024,17 +7035,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_group_async(
+    async def patch_hris_group2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisGroupRequest, operations.PatchHrisGroupRequestTypedDict
+            operations.PatchHrisGroup2Request,
+            operations.PatchHrisGroup2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisGroupResponse:
+    ) -> operations.PatchHrisGroup2Response:
         r"""Update a group
 
         :param request: The request object to send.
@@ -7054,8 +7066,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
-        request = cast(operations.PatchHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisGroup2Request)
+        request = cast(operations.PatchHrisGroup2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -7089,7 +7101,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisGroup",
+                operation_id="patchHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7099,7 +7111,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisGroupResponse(
+            return operations.PatchHrisGroup2Response(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -7116,18 +7128,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_location(
+    def patch_hris_location2(
         self,
         *,
         request: Union[
-            operations.PatchHrisLocationRequest,
-            operations.PatchHrisLocationRequestTypedDict,
+            operations.PatchHrisLocation2Request,
+            operations.PatchHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisLocationResponse:
+    ) -> operations.PatchHrisLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -7147,8 +7159,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
-        request = cast(operations.PatchHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisLocation2Request)
+        request = cast(operations.PatchHrisLocation2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -7182,7 +7194,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisLocation",
+                operation_id="patchHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7192,7 +7204,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisLocationResponse(
+            return operations.PatchHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -7209,18 +7221,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_location_async(
+    async def patch_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisLocationRequest,
-            operations.PatchHrisLocationRequestTypedDict,
+            operations.PatchHrisLocation2Request,
+            operations.PatchHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisLocationResponse:
+    ) -> operations.PatchHrisLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -7240,8 +7252,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
-        request = cast(operations.PatchHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisLocation2Request)
+        request = cast(operations.PatchHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -7275,7 +7287,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisLocation",
+                operation_id="patchHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7285,7 +7297,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisLocationResponse(
+            return operations.PatchHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -7302,18 +7314,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_timeoff(
+    def patch_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.PatchHrisTimeoffRequest,
-            operations.PatchHrisTimeoffRequestTypedDict,
+            operations.PatchHrisTimeoff2Request,
+            operations.PatchHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisTimeoffResponse:
+    ) -> operations.PatchHrisTimeoff2Response:
         r"""Update a timeoff
 
         :param request: The request object to send.
@@ -7333,8 +7345,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisTimeoffRequest)
-        request = cast(operations.PatchHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisTimeoff2Request)
+        request = cast(operations.PatchHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -7368,7 +7380,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisTimeoff",
+                operation_id="patchHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7378,7 +7390,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisTimeoffResponse(
+            return operations.PatchHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -7395,18 +7407,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_timeoff_async(
+    async def patch_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisTimeoffRequest,
-            operations.PatchHrisTimeoffRequestTypedDict,
+            operations.PatchHrisTimeoff2Request,
+            operations.PatchHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisTimeoffResponse:
+    ) -> operations.PatchHrisTimeoff2Response:
         r"""Update a timeoff
 
         :param request: The request object to send.
@@ -7426,8 +7438,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisTimeoffRequest)
-        request = cast(operations.PatchHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisTimeoff2Request)
+        request = cast(operations.PatchHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -7461,7 +7473,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisTimeoff",
+                operation_id="patchHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7471,7 +7483,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisTimeoffResponse(
+            return operations.PatchHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -7488,18 +7500,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_timeshift(
+    def patch_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.PatchHrisTimeshiftRequest,
-            operations.PatchHrisTimeshiftRequestTypedDict,
+            operations.PatchHrisTimeshift2Request,
+            operations.PatchHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisTimeshiftResponse:
+    ) -> operations.PatchHrisTimeshift2Response:
         r"""Update a timeshift
 
         :param request: The request object to send.
@@ -7519,8 +7531,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisTimeshiftRequest)
-        request = cast(operations.PatchHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisTimeshift2Request)
+        request = cast(operations.PatchHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -7554,7 +7566,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisTimeshift",
+                operation_id="patchHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7564,7 +7576,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisTimeshiftResponse(
+            return operations.PatchHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -7581,18 +7593,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_timeshift_async(
+    async def patch_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisTimeshiftRequest,
-            operations.PatchHrisTimeshiftRequestTypedDict,
+            operations.PatchHrisTimeshift2Request,
+            operations.PatchHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisTimeshiftResponse:
+    ) -> operations.PatchHrisTimeshift2Response:
         r"""Update a timeshift
 
         :param request: The request object to send.
@@ -7612,8 +7624,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisTimeshiftRequest)
-        request = cast(operations.PatchHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisTimeshift2Request)
+        request = cast(operations.PatchHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -7647,7 +7659,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisTimeshift",
+                operation_id="patchHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7657,7 +7669,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisTimeshiftResponse(
+            return operations.PatchHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -7674,18 +7686,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_bankaccount(
+    def remove_hris_bankaccount2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisBankaccountRequest,
-            operations.RemoveHrisBankaccountRequestTypedDict,
+            operations.RemoveHrisBankaccount2Request,
+            operations.RemoveHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisBankaccountResponse:
+    ) -> operations.RemoveHrisBankaccount2Response:
         r"""Remove a bankaccount
 
         :param request: The request object to send.
@@ -7705,8 +7717,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisBankaccountRequest)
-        request = cast(operations.RemoveHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisBankaccount2Request)
+        request = cast(operations.RemoveHrisBankaccount2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7737,7 +7749,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisBankaccount",
+                operation_id="removeHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7747,7 +7759,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisBankaccountResponse(
+            return operations.RemoveHrisBankaccount2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7760,7 +7772,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisBankaccountResponse(
+            return operations.RemoveHrisBankaccount2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7769,18 +7781,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_bankaccount_async(
+    async def remove_hris_bankaccount2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisBankaccountRequest,
-            operations.RemoveHrisBankaccountRequestTypedDict,
+            operations.RemoveHrisBankaccount2Request,
+            operations.RemoveHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisBankaccountResponse:
+    ) -> operations.RemoveHrisBankaccount2Response:
         r"""Remove a bankaccount
 
         :param request: The request object to send.
@@ -7800,8 +7812,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisBankaccountRequest)
-        request = cast(operations.RemoveHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisBankaccount2Request)
+        request = cast(operations.RemoveHrisBankaccount2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7832,7 +7844,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisBankaccount",
+                operation_id="removeHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7842,7 +7854,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisBankaccountResponse(
+            return operations.RemoveHrisBankaccount2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7855,7 +7867,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisBankaccountResponse(
+            return operations.RemoveHrisBankaccount2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7864,18 +7876,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_benefit(
+    def remove_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisBenefitRequest,
-            operations.RemoveHrisBenefitRequestTypedDict,
+            operations.RemoveHrisBenefit2Request,
+            operations.RemoveHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisBenefitResponse:
+    ) -> operations.RemoveHrisBenefit2Response:
         r"""Remove a benefit
 
         :param request: The request object to send.
@@ -7895,8 +7907,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisBenefitRequest)
-        request = cast(operations.RemoveHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisBenefit2Request)
+        request = cast(operations.RemoveHrisBenefit2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7927,7 +7939,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisBenefit",
+                operation_id="removeHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -7937,7 +7949,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisBenefitResponse(
+            return operations.RemoveHrisBenefit2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7950,7 +7962,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisBenefitResponse(
+            return operations.RemoveHrisBenefit2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7959,18 +7971,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_benefit_async(
+    async def remove_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisBenefitRequest,
-            operations.RemoveHrisBenefitRequestTypedDict,
+            operations.RemoveHrisBenefit2Request,
+            operations.RemoveHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisBenefitResponse:
+    ) -> operations.RemoveHrisBenefit2Response:
         r"""Remove a benefit
 
         :param request: The request object to send.
@@ -7990,8 +8002,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisBenefitRequest)
-        request = cast(operations.RemoveHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisBenefit2Request)
+        request = cast(operations.RemoveHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -8022,7 +8034,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisBenefit",
+                operation_id="removeHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8032,7 +8044,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisBenefitResponse(
+            return operations.RemoveHrisBenefit2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8045,7 +8057,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisBenefitResponse(
+            return operations.RemoveHrisBenefit2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8054,18 +8066,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_company(
+    def remove_hris_company2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisCompanyRequest,
-            operations.RemoveHrisCompanyRequestTypedDict,
+            operations.RemoveHrisCompany2Request,
+            operations.RemoveHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisCompanyResponse:
+    ) -> operations.RemoveHrisCompany2Response:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -8085,8 +8097,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
-        request = cast(operations.RemoveHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisCompany2Request)
+        request = cast(operations.RemoveHrisCompany2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -8117,7 +8129,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisCompany",
+                operation_id="removeHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8127,7 +8139,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisCompanyResponse(
+            return operations.RemoveHrisCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8140,7 +8152,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisCompanyResponse(
+            return operations.RemoveHrisCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8149,18 +8161,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_company_async(
+    async def remove_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisCompanyRequest,
-            operations.RemoveHrisCompanyRequestTypedDict,
+            operations.RemoveHrisCompany2Request,
+            operations.RemoveHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisCompanyResponse:
+    ) -> operations.RemoveHrisCompany2Response:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -8180,8 +8192,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
-        request = cast(operations.RemoveHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisCompany2Request)
+        request = cast(operations.RemoveHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -8212,7 +8224,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisCompany",
+                operation_id="removeHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8222,7 +8234,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisCompanyResponse(
+            return operations.RemoveHrisCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8235,7 +8247,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisCompanyResponse(
+            return operations.RemoveHrisCompany2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8244,18 +8256,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_deduction(
+    def remove_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisDeductionRequest,
-            operations.RemoveHrisDeductionRequestTypedDict,
+            operations.RemoveHrisDeduction2Request,
+            operations.RemoveHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisDeductionResponse:
+    ) -> operations.RemoveHrisDeduction2Response:
         r"""Remove a deduction
 
         :param request: The request object to send.
@@ -8275,8 +8287,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisDeductionRequest)
-        request = cast(operations.RemoveHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisDeduction2Request)
+        request = cast(operations.RemoveHrisDeduction2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -8307,7 +8319,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisDeduction",
+                operation_id="removeHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8317,7 +8329,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisDeductionResponse(
+            return operations.RemoveHrisDeduction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8330,7 +8342,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisDeductionResponse(
+            return operations.RemoveHrisDeduction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8339,18 +8351,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_deduction_async(
+    async def remove_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisDeductionRequest,
-            operations.RemoveHrisDeductionRequestTypedDict,
+            operations.RemoveHrisDeduction2Request,
+            operations.RemoveHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisDeductionResponse:
+    ) -> operations.RemoveHrisDeduction2Response:
         r"""Remove a deduction
 
         :param request: The request object to send.
@@ -8370,8 +8382,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisDeductionRequest)
-        request = cast(operations.RemoveHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisDeduction2Request)
+        request = cast(operations.RemoveHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -8402,7 +8414,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisDeduction",
+                operation_id="removeHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8412,7 +8424,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisDeductionResponse(
+            return operations.RemoveHrisDeduction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8425,7 +8437,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisDeductionResponse(
+            return operations.RemoveHrisDeduction2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8434,18 +8446,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_device(
+    def remove_hris_device2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisDeviceRequest,
-            operations.RemoveHrisDeviceRequestTypedDict,
+            operations.RemoveHrisDevice2Request,
+            operations.RemoveHrisDevice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisDeviceResponse:
+    ) -> operations.RemoveHrisDevice2Response:
         r"""Remove a device
 
         :param request: The request object to send.
@@ -8465,8 +8477,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisDeviceRequest)
-        request = cast(operations.RemoveHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisDevice2Request)
+        request = cast(operations.RemoveHrisDevice2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -8497,7 +8509,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisDevice",
+                operation_id="removeHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8507,7 +8519,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisDeviceResponse(
+            return operations.RemoveHrisDevice2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8520,7 +8532,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisDeviceResponse(
+            return operations.RemoveHrisDevice2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8529,18 +8541,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_device_async(
+    async def remove_hris_device2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisDeviceRequest,
-            operations.RemoveHrisDeviceRequestTypedDict,
+            operations.RemoveHrisDevice2Request,
+            operations.RemoveHrisDevice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisDeviceResponse:
+    ) -> operations.RemoveHrisDevice2Response:
         r"""Remove a device
 
         :param request: The request object to send.
@@ -8560,8 +8572,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisDeviceRequest)
-        request = cast(operations.RemoveHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisDevice2Request)
+        request = cast(operations.RemoveHrisDevice2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -8592,7 +8604,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisDevice",
+                operation_id="removeHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8602,7 +8614,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisDeviceResponse(
+            return operations.RemoveHrisDevice2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8615,7 +8627,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisDeviceResponse(
+            return operations.RemoveHrisDevice2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8624,18 +8636,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_employee(
+    def remove_hris_employee2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisEmployeeRequest,
-            operations.RemoveHrisEmployeeRequestTypedDict,
+            operations.RemoveHrisEmployee2Request,
+            operations.RemoveHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisEmployeeResponse:
+    ) -> operations.RemoveHrisEmployee2Response:
         r"""Remove an employee
 
         :param request: The request object to send.
@@ -8655,8 +8667,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
-        request = cast(operations.RemoveHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisEmployee2Request)
+        request = cast(operations.RemoveHrisEmployee2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -8687,7 +8699,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisEmployee",
+                operation_id="removeHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8697,7 +8709,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisEmployeeResponse(
+            return operations.RemoveHrisEmployee2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8710,7 +8722,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisEmployeeResponse(
+            return operations.RemoveHrisEmployee2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8719,18 +8731,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_employee_async(
+    async def remove_hris_employee2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisEmployeeRequest,
-            operations.RemoveHrisEmployeeRequestTypedDict,
+            operations.RemoveHrisEmployee2Request,
+            operations.RemoveHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisEmployeeResponse:
+    ) -> operations.RemoveHrisEmployee2Response:
         r"""Remove an employee
 
         :param request: The request object to send.
@@ -8750,8 +8762,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
-        request = cast(operations.RemoveHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisEmployee2Request)
+        request = cast(operations.RemoveHrisEmployee2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -8782,7 +8794,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisEmployee",
+                operation_id="removeHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8792,7 +8804,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisEmployeeResponse(
+            return operations.RemoveHrisEmployee2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8805,7 +8817,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisEmployeeResponse(
+            return operations.RemoveHrisEmployee2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8814,18 +8826,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_group(
+    def remove_hris_group2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisGroupRequest,
-            operations.RemoveHrisGroupRequestTypedDict,
+            operations.RemoveHrisGroup2Request,
+            operations.RemoveHrisGroup2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisGroupResponse:
+    ) -> operations.RemoveHrisGroup2Response:
         r"""Remove a group
 
         :param request: The request object to send.
@@ -8845,8 +8857,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
-        request = cast(operations.RemoveHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisGroup2Request)
+        request = cast(operations.RemoveHrisGroup2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -8877,7 +8889,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisGroup",
+                operation_id="removeHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8887,7 +8899,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisGroupResponse(
+            return operations.RemoveHrisGroup2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8900,7 +8912,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisGroupResponse(
+            return operations.RemoveHrisGroup2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8909,18 +8921,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_group_async(
+    async def remove_hris_group2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisGroupRequest,
-            operations.RemoveHrisGroupRequestTypedDict,
+            operations.RemoveHrisGroup2Request,
+            operations.RemoveHrisGroup2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisGroupResponse:
+    ) -> operations.RemoveHrisGroup2Response:
         r"""Remove a group
 
         :param request: The request object to send.
@@ -8940,8 +8952,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
-        request = cast(operations.RemoveHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisGroup2Request)
+        request = cast(operations.RemoveHrisGroup2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -8972,7 +8984,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisGroup",
+                operation_id="removeHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -8982,7 +8994,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisGroupResponse(
+            return operations.RemoveHrisGroup2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8995,7 +9007,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisGroupResponse(
+            return operations.RemoveHrisGroup2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9004,18 +9016,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_location(
+    def remove_hris_location2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisLocationRequest,
-            operations.RemoveHrisLocationRequestTypedDict,
+            operations.RemoveHrisLocation2Request,
+            operations.RemoveHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisLocationResponse:
+    ) -> operations.RemoveHrisLocation2Response:
         r"""Remove a location
 
         :param request: The request object to send.
@@ -9035,8 +9047,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
-        request = cast(operations.RemoveHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisLocation2Request)
+        request = cast(operations.RemoveHrisLocation2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -9067,7 +9079,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisLocation",
+                operation_id="removeHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9077,7 +9089,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisLocationResponse(
+            return operations.RemoveHrisLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9090,7 +9102,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisLocationResponse(
+            return operations.RemoveHrisLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9099,18 +9111,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_location_async(
+    async def remove_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisLocationRequest,
-            operations.RemoveHrisLocationRequestTypedDict,
+            operations.RemoveHrisLocation2Request,
+            operations.RemoveHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisLocationResponse:
+    ) -> operations.RemoveHrisLocation2Response:
         r"""Remove a location
 
         :param request: The request object to send.
@@ -9130,8 +9142,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
-        request = cast(operations.RemoveHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisLocation2Request)
+        request = cast(operations.RemoveHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -9162,7 +9174,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisLocation",
+                operation_id="removeHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9172,7 +9184,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisLocationResponse(
+            return operations.RemoveHrisLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9185,7 +9197,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisLocationResponse(
+            return operations.RemoveHrisLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9194,18 +9206,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_timeoff(
+    def remove_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisTimeoffRequest,
-            operations.RemoveHrisTimeoffRequestTypedDict,
+            operations.RemoveHrisTimeoff2Request,
+            operations.RemoveHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisTimeoffResponse:
+    ) -> operations.RemoveHrisTimeoff2Response:
         r"""Remove a timeoff
 
         :param request: The request object to send.
@@ -9225,8 +9237,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisTimeoffRequest)
-        request = cast(operations.RemoveHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisTimeoff2Request)
+        request = cast(operations.RemoveHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -9257,7 +9269,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisTimeoff",
+                operation_id="removeHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9267,7 +9279,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisTimeoffResponse(
+            return operations.RemoveHrisTimeoff2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9280,7 +9292,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisTimeoffResponse(
+            return operations.RemoveHrisTimeoff2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9289,18 +9301,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_timeoff_async(
+    async def remove_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisTimeoffRequest,
-            operations.RemoveHrisTimeoffRequestTypedDict,
+            operations.RemoveHrisTimeoff2Request,
+            operations.RemoveHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisTimeoffResponse:
+    ) -> operations.RemoveHrisTimeoff2Response:
         r"""Remove a timeoff
 
         :param request: The request object to send.
@@ -9320,8 +9332,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisTimeoffRequest)
-        request = cast(operations.RemoveHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisTimeoff2Request)
+        request = cast(operations.RemoveHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -9352,7 +9364,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisTimeoff",
+                operation_id="removeHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9362,7 +9374,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisTimeoffResponse(
+            return operations.RemoveHrisTimeoff2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9375,7 +9387,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisTimeoffResponse(
+            return operations.RemoveHrisTimeoff2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9384,18 +9396,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_timeshift(
+    def remove_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisTimeshiftRequest,
-            operations.RemoveHrisTimeshiftRequestTypedDict,
+            operations.RemoveHrisTimeshift2Request,
+            operations.RemoveHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisTimeshiftResponse:
+    ) -> operations.RemoveHrisTimeshift2Response:
         r"""Remove a timeshift
 
         :param request: The request object to send.
@@ -9415,8 +9427,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisTimeshiftRequest)
-        request = cast(operations.RemoveHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisTimeshift2Request)
+        request = cast(operations.RemoveHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -9447,7 +9459,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisTimeshift",
+                operation_id="removeHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9457,7 +9469,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisTimeshiftResponse(
+            return operations.RemoveHrisTimeshift2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9470,7 +9482,7 @@ class Hris(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisTimeshiftResponse(
+            return operations.RemoveHrisTimeshift2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9479,18 +9491,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_timeshift_async(
+    async def remove_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisTimeshiftRequest,
-            operations.RemoveHrisTimeshiftRequestTypedDict,
+            operations.RemoveHrisTimeshift2Request,
+            operations.RemoveHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisTimeshiftResponse:
+    ) -> operations.RemoveHrisTimeshift2Response:
         r"""Remove a timeshift
 
         :param request: The request object to send.
@@ -9510,8 +9522,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisTimeshiftRequest)
-        request = cast(operations.RemoveHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisTimeshift2Request)
+        request = cast(operations.RemoveHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -9542,7 +9554,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisTimeshift",
+                operation_id="removeHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9552,7 +9564,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisTimeshiftResponse(
+            return operations.RemoveHrisTimeshift2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9565,7 +9577,7 @@ class Hris(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisTimeshiftResponse(
+            return operations.RemoveHrisTimeshift2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -9574,18 +9586,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_bankaccount(
+    def update_hris_bankaccount2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisBankaccountRequest,
-            operations.UpdateHrisBankaccountRequestTypedDict,
+            operations.UpdateHrisBankaccount2Request,
+            operations.UpdateHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisBankaccountResponse:
+    ) -> operations.UpdateHrisBankaccount2Response:
         r"""Update a bankaccount
 
         :param request: The request object to send.
@@ -9605,8 +9617,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisBankaccountRequest)
-        request = cast(operations.UpdateHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisBankaccount2Request)
+        request = cast(operations.UpdateHrisBankaccount2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -9640,7 +9652,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisBankaccount",
+                operation_id="updateHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9650,7 +9662,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisBankaccountResponse(
+            return operations.UpdateHrisBankaccount2Response(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -9667,18 +9679,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_bankaccount_async(
+    async def update_hris_bankaccount2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisBankaccountRequest,
-            operations.UpdateHrisBankaccountRequestTypedDict,
+            operations.UpdateHrisBankaccount2Request,
+            operations.UpdateHrisBankaccount2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisBankaccountResponse:
+    ) -> operations.UpdateHrisBankaccount2Response:
         r"""Update a bankaccount
 
         :param request: The request object to send.
@@ -9698,8 +9710,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisBankaccountRequest)
-        request = cast(operations.UpdateHrisBankaccountRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisBankaccount2Request)
+        request = cast(operations.UpdateHrisBankaccount2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -9733,7 +9745,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisBankaccount",
+                operation_id="updateHrisBankaccount2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9743,7 +9755,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisBankaccountResponse(
+            return operations.UpdateHrisBankaccount2Response(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -9760,18 +9772,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_benefit(
+    def update_hris_benefit2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisBenefitRequest,
-            operations.UpdateHrisBenefitRequestTypedDict,
+            operations.UpdateHrisBenefit2Request,
+            operations.UpdateHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisBenefitResponse:
+    ) -> operations.UpdateHrisBenefit2Response:
         r"""Update a benefit
 
         :param request: The request object to send.
@@ -9791,8 +9803,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisBenefitRequest)
-        request = cast(operations.UpdateHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisBenefit2Request)
+        request = cast(operations.UpdateHrisBenefit2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -9826,7 +9838,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisBenefit",
+                operation_id="updateHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9836,7 +9848,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisBenefitResponse(
+            return operations.UpdateHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -9853,18 +9865,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_benefit_async(
+    async def update_hris_benefit2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisBenefitRequest,
-            operations.UpdateHrisBenefitRequestTypedDict,
+            operations.UpdateHrisBenefit2Request,
+            operations.UpdateHrisBenefit2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisBenefitResponse:
+    ) -> operations.UpdateHrisBenefit2Response:
         r"""Update a benefit
 
         :param request: The request object to send.
@@ -9884,8 +9896,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisBenefitRequest)
-        request = cast(operations.UpdateHrisBenefitRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisBenefit2Request)
+        request = cast(operations.UpdateHrisBenefit2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -9919,7 +9931,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisBenefit",
+                operation_id="updateHrisBenefit2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -9929,7 +9941,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisBenefitResponse(
+            return operations.UpdateHrisBenefit2Response(
                 hris_benefit=unmarshal_json_response(
                     Optional[shared.HrisBenefit], http_res
                 ),
@@ -9946,18 +9958,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_company(
+    def update_hris_company2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisCompanyRequest,
-            operations.UpdateHrisCompanyRequestTypedDict,
+            operations.UpdateHrisCompany2Request,
+            operations.UpdateHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisCompanyResponse:
+    ) -> operations.UpdateHrisCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -9977,8 +9989,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
-        request = cast(operations.UpdateHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisCompany2Request)
+        request = cast(operations.UpdateHrisCompany2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -10012,7 +10024,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisCompany",
+                operation_id="updateHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10022,7 +10034,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisCompanyResponse(
+            return operations.UpdateHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -10039,18 +10051,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_company_async(
+    async def update_hris_company2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisCompanyRequest,
-            operations.UpdateHrisCompanyRequestTypedDict,
+            operations.UpdateHrisCompany2Request,
+            operations.UpdateHrisCompany2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisCompanyResponse:
+    ) -> operations.UpdateHrisCompany2Response:
         r"""Update a company
 
         :param request: The request object to send.
@@ -10070,8 +10082,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
-        request = cast(operations.UpdateHrisCompanyRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisCompany2Request)
+        request = cast(operations.UpdateHrisCompany2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -10105,7 +10117,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisCompany",
+                operation_id="updateHrisCompany2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10115,7 +10127,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisCompanyResponse(
+            return operations.UpdateHrisCompany2Response(
                 hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
@@ -10132,18 +10144,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_deduction(
+    def update_hris_deduction2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisDeductionRequest,
-            operations.UpdateHrisDeductionRequestTypedDict,
+            operations.UpdateHrisDeduction2Request,
+            operations.UpdateHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisDeductionResponse:
+    ) -> operations.UpdateHrisDeduction2Response:
         r"""Update a deduction
 
         :param request: The request object to send.
@@ -10163,8 +10175,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisDeductionRequest)
-        request = cast(operations.UpdateHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisDeduction2Request)
+        request = cast(operations.UpdateHrisDeduction2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -10198,7 +10210,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisDeduction",
+                operation_id="updateHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10208,7 +10220,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisDeductionResponse(
+            return operations.UpdateHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -10225,18 +10237,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_deduction_async(
+    async def update_hris_deduction2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisDeductionRequest,
-            operations.UpdateHrisDeductionRequestTypedDict,
+            operations.UpdateHrisDeduction2Request,
+            operations.UpdateHrisDeduction2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisDeductionResponse:
+    ) -> operations.UpdateHrisDeduction2Response:
         r"""Update a deduction
 
         :param request: The request object to send.
@@ -10256,8 +10268,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisDeductionRequest)
-        request = cast(operations.UpdateHrisDeductionRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisDeduction2Request)
+        request = cast(operations.UpdateHrisDeduction2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -10291,7 +10303,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisDeduction",
+                operation_id="updateHrisDeduction2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10301,7 +10313,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisDeductionResponse(
+            return operations.UpdateHrisDeduction2Response(
                 hris_deduction=unmarshal_json_response(
                     Optional[shared.HrisDeduction], http_res
                 ),
@@ -10318,18 +10330,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_device(
+    def update_hris_device2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisDeviceRequest,
-            operations.UpdateHrisDeviceRequestTypedDict,
+            operations.UpdateHrisDevice2Request,
+            operations.UpdateHrisDevice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisDeviceResponse:
+    ) -> operations.UpdateHrisDevice2Response:
         r"""Update a device
 
         :param request: The request object to send.
@@ -10349,8 +10361,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisDeviceRequest)
-        request = cast(operations.UpdateHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisDevice2Request)
+        request = cast(operations.UpdateHrisDevice2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -10384,7 +10396,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisDevice",
+                operation_id="updateHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10394,7 +10406,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisDeviceResponse(
+            return operations.UpdateHrisDevice2Response(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -10411,18 +10423,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_device_async(
+    async def update_hris_device2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisDeviceRequest,
-            operations.UpdateHrisDeviceRequestTypedDict,
+            operations.UpdateHrisDevice2Request,
+            operations.UpdateHrisDevice2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisDeviceResponse:
+    ) -> operations.UpdateHrisDevice2Response:
         r"""Update a device
 
         :param request: The request object to send.
@@ -10442,8 +10454,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisDeviceRequest)
-        request = cast(operations.UpdateHrisDeviceRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisDevice2Request)
+        request = cast(operations.UpdateHrisDevice2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -10477,7 +10489,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisDevice",
+                operation_id="updateHrisDevice2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10487,7 +10499,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisDeviceResponse(
+            return operations.UpdateHrisDevice2Response(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -10504,18 +10516,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_employee(
+    def update_hris_employee2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisEmployeeRequest,
-            operations.UpdateHrisEmployeeRequestTypedDict,
+            operations.UpdateHrisEmployee2Request,
+            operations.UpdateHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisEmployeeResponse:
+    ) -> operations.UpdateHrisEmployee2Response:
         r"""Update an employee
 
         :param request: The request object to send.
@@ -10535,8 +10547,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
-        request = cast(operations.UpdateHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisEmployee2Request)
+        request = cast(operations.UpdateHrisEmployee2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -10570,7 +10582,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisEmployee",
+                operation_id="updateHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10580,7 +10592,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisEmployeeResponse(
+            return operations.UpdateHrisEmployee2Response(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -10597,18 +10609,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_employee_async(
+    async def update_hris_employee2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisEmployeeRequest,
-            operations.UpdateHrisEmployeeRequestTypedDict,
+            operations.UpdateHrisEmployee2Request,
+            operations.UpdateHrisEmployee2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisEmployeeResponse:
+    ) -> operations.UpdateHrisEmployee2Response:
         r"""Update an employee
 
         :param request: The request object to send.
@@ -10628,8 +10640,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
-        request = cast(operations.UpdateHrisEmployeeRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisEmployee2Request)
+        request = cast(operations.UpdateHrisEmployee2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -10663,7 +10675,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisEmployee",
+                operation_id="updateHrisEmployee2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10673,7 +10685,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisEmployeeResponse(
+            return operations.UpdateHrisEmployee2Response(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -10690,18 +10702,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_group(
+    def update_hris_group2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisGroupRequest,
-            operations.UpdateHrisGroupRequestTypedDict,
+            operations.UpdateHrisGroup2Request,
+            operations.UpdateHrisGroup2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisGroupResponse:
+    ) -> operations.UpdateHrisGroup2Response:
         r"""Update a group
 
         :param request: The request object to send.
@@ -10721,8 +10733,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
-        request = cast(operations.UpdateHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisGroup2Request)
+        request = cast(operations.UpdateHrisGroup2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -10756,7 +10768,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisGroup",
+                operation_id="updateHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10766,7 +10778,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisGroupResponse(
+            return operations.UpdateHrisGroup2Response(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -10783,18 +10795,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_group_async(
+    async def update_hris_group2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisGroupRequest,
-            operations.UpdateHrisGroupRequestTypedDict,
+            operations.UpdateHrisGroup2Request,
+            operations.UpdateHrisGroup2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisGroupResponse:
+    ) -> operations.UpdateHrisGroup2Response:
         r"""Update a group
 
         :param request: The request object to send.
@@ -10814,8 +10826,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
-        request = cast(operations.UpdateHrisGroupRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisGroup2Request)
+        request = cast(operations.UpdateHrisGroup2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -10849,7 +10861,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisGroup",
+                operation_id="updateHrisGroup2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10859,7 +10871,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisGroupResponse(
+            return operations.UpdateHrisGroup2Response(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -10876,18 +10888,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_location(
+    def update_hris_location2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisLocationRequest,
-            operations.UpdateHrisLocationRequestTypedDict,
+            operations.UpdateHrisLocation2Request,
+            operations.UpdateHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisLocationResponse:
+    ) -> operations.UpdateHrisLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -10907,8 +10919,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
-        request = cast(operations.UpdateHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisLocation2Request)
+        request = cast(operations.UpdateHrisLocation2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -10942,7 +10954,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisLocation",
+                operation_id="updateHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -10952,7 +10964,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisLocationResponse(
+            return operations.UpdateHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -10969,18 +10981,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_location_async(
+    async def update_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisLocationRequest,
-            operations.UpdateHrisLocationRequestTypedDict,
+            operations.UpdateHrisLocation2Request,
+            operations.UpdateHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisLocationResponse:
+    ) -> operations.UpdateHrisLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -11000,8 +11012,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
-        request = cast(operations.UpdateHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisLocation2Request)
+        request = cast(operations.UpdateHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -11035,7 +11047,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisLocation",
+                operation_id="updateHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -11045,7 +11057,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisLocationResponse(
+            return operations.UpdateHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -11062,18 +11074,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_timeoff(
+    def update_hris_timeoff2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisTimeoffRequest,
-            operations.UpdateHrisTimeoffRequestTypedDict,
+            operations.UpdateHrisTimeoff2Request,
+            operations.UpdateHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisTimeoffResponse:
+    ) -> operations.UpdateHrisTimeoff2Response:
         r"""Update a timeoff
 
         :param request: The request object to send.
@@ -11093,8 +11105,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisTimeoffRequest)
-        request = cast(operations.UpdateHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisTimeoff2Request)
+        request = cast(operations.UpdateHrisTimeoff2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -11128,7 +11140,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisTimeoff",
+                operation_id="updateHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -11138,7 +11150,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisTimeoffResponse(
+            return operations.UpdateHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -11155,18 +11167,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_timeoff_async(
+    async def update_hris_timeoff2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisTimeoffRequest,
-            operations.UpdateHrisTimeoffRequestTypedDict,
+            operations.UpdateHrisTimeoff2Request,
+            operations.UpdateHrisTimeoff2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisTimeoffResponse:
+    ) -> operations.UpdateHrisTimeoff2Response:
         r"""Update a timeoff
 
         :param request: The request object to send.
@@ -11186,8 +11198,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisTimeoffRequest)
-        request = cast(operations.UpdateHrisTimeoffRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisTimeoff2Request)
+        request = cast(operations.UpdateHrisTimeoff2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -11221,7 +11233,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisTimeoff",
+                operation_id="updateHrisTimeoff2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -11231,7 +11243,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisTimeoffResponse(
+            return operations.UpdateHrisTimeoff2Response(
                 hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
@@ -11248,18 +11260,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_timeshift(
+    def update_hris_timeshift2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisTimeshiftRequest,
-            operations.UpdateHrisTimeshiftRequestTypedDict,
+            operations.UpdateHrisTimeshift2Request,
+            operations.UpdateHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisTimeshiftResponse:
+    ) -> operations.UpdateHrisTimeshift2Response:
         r"""Update a timeshift
 
         :param request: The request object to send.
@@ -11279,8 +11291,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisTimeshiftRequest)
-        request = cast(operations.UpdateHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisTimeshift2Request)
+        request = cast(operations.UpdateHrisTimeshift2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -11314,7 +11326,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisTimeshift",
+                operation_id="updateHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -11324,7 +11336,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisTimeshiftResponse(
+            return operations.UpdateHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
@@ -11341,18 +11353,18 @@ class Hris(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_timeshift_async(
+    async def update_hris_timeshift2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisTimeshiftRequest,
-            operations.UpdateHrisTimeshiftRequestTypedDict,
+            operations.UpdateHrisTimeshift2Request,
+            operations.UpdateHrisTimeshift2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisTimeshiftResponse:
+    ) -> operations.UpdateHrisTimeshift2Response:
         r"""Update a timeshift
 
         :param request: The request object to send.
@@ -11372,8 +11384,8 @@ class Hris(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisTimeshiftRequest)
-        request = cast(operations.UpdateHrisTimeshiftRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisTimeshift2Request)
+        request = cast(operations.UpdateHrisTimeshift2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -11407,7 +11419,7 @@ class Hris(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisTimeshift",
+                operation_id="updateHrisTimeshift2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -11417,7 +11429,7 @@ class Hris(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisTimeshiftResponse(
+            return operations.UpdateHrisTimeshift2Response(
                 hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),

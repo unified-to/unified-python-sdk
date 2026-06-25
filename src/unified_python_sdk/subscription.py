@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Subscription(BaseSDK):
-    def create_payment_subscription(
+    def create_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.CreatePaymentSubscriptionRequest,
-            operations.CreatePaymentSubscriptionRequestTypedDict,
+            operations.CreatePaymentSubscription2Request,
+            operations.CreatePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentSubscriptionResponse:
+    ) -> operations.CreatePaymentSubscription2Response:
         r"""Create a subscription
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreatePaymentSubscriptionRequest
+                request, operations.CreatePaymentSubscription2Request
             )
-        request = cast(operations.CreatePaymentSubscriptionRequest, request)
+        request = cast(operations.CreatePaymentSubscription2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentSubscription",
+                operation_id="createPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentSubscriptionResponse(
+            return operations.CreatePaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -109,18 +109,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_payment_subscription_async(
+    async def create_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.CreatePaymentSubscriptionRequest,
-            operations.CreatePaymentSubscriptionRequestTypedDict,
+            operations.CreatePaymentSubscription2Request,
+            operations.CreatePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentSubscriptionResponse:
+    ) -> operations.CreatePaymentSubscription2Response:
         r"""Create a subscription
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreatePaymentSubscriptionRequest
+                request, operations.CreatePaymentSubscription2Request
             )
-        request = cast(operations.CreatePaymentSubscriptionRequest, request)
+        request = cast(operations.CreatePaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentSubscription",
+                operation_id="createPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentSubscriptionResponse(
+            return operations.CreatePaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -208,18 +208,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_payment_subscription(
+    def get_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.GetPaymentSubscriptionRequest,
-            operations.GetPaymentSubscriptionRequestTypedDict,
+            operations.GetPaymentSubscription2Request,
+            operations.GetPaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentSubscriptionResponse:
+    ) -> operations.GetPaymentSubscription2Response:
         r"""Retrieve a subscription
 
         :param request: The request object to send.
@@ -239,8 +239,10 @@ class Subscription(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentSubscriptionRequest)
-        request = cast(operations.GetPaymentSubscriptionRequest, request)
+            request = utils.unmarshal(
+                request, operations.GetPaymentSubscription2Request
+            )
+        request = cast(operations.GetPaymentSubscription2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -271,7 +273,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentSubscription",
+                operation_id="getPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -281,7 +283,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentSubscriptionResponse(
+            return operations.GetPaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -298,18 +300,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_subscription_async(
+    async def get_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentSubscriptionRequest,
-            operations.GetPaymentSubscriptionRequestTypedDict,
+            operations.GetPaymentSubscription2Request,
+            operations.GetPaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentSubscriptionResponse:
+    ) -> operations.GetPaymentSubscription2Response:
         r"""Retrieve a subscription
 
         :param request: The request object to send.
@@ -329,8 +331,10 @@ class Subscription(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentSubscriptionRequest)
-        request = cast(operations.GetPaymentSubscriptionRequest, request)
+            request = utils.unmarshal(
+                request, operations.GetPaymentSubscription2Request
+            )
+        request = cast(operations.GetPaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -361,7 +365,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentSubscription",
+                operation_id="getPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -371,7 +375,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentSubscriptionResponse(
+            return operations.GetPaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -388,18 +392,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_subscriptions(
+    def list_payment_subscriptions2(
         self,
         *,
         request: Union[
-            operations.ListPaymentSubscriptionsRequest,
-            operations.ListPaymentSubscriptionsRequestTypedDict,
+            operations.ListPaymentSubscriptions2Request,
+            operations.ListPaymentSubscriptions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentSubscriptionsResponse:
+    ) -> operations.ListPaymentSubscriptions2Response:
         r"""List all subscriptions
 
         :param request: The request object to send.
@@ -420,9 +424,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListPaymentSubscriptionsRequest
+                request, operations.ListPaymentSubscriptions2Request
             )
-        request = cast(operations.ListPaymentSubscriptionsRequest, request)
+        request = cast(operations.ListPaymentSubscriptions2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -453,7 +457,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentSubscriptions",
+                operation_id="listPaymentSubscriptions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -463,7 +467,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentSubscriptionsResponse(
+            return operations.ListPaymentSubscriptions2Response(
                 payment_subscriptions=unmarshal_json_response(
                     Optional[List[shared.PaymentSubscription]], http_res
                 ),
@@ -480,18 +484,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_subscriptions_async(
+    async def list_payment_subscriptions2_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentSubscriptionsRequest,
-            operations.ListPaymentSubscriptionsRequestTypedDict,
+            operations.ListPaymentSubscriptions2Request,
+            operations.ListPaymentSubscriptions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentSubscriptionsResponse:
+    ) -> operations.ListPaymentSubscriptions2Response:
         r"""List all subscriptions
 
         :param request: The request object to send.
@@ -512,9 +516,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListPaymentSubscriptionsRequest
+                request, operations.ListPaymentSubscriptions2Request
             )
-        request = cast(operations.ListPaymentSubscriptionsRequest, request)
+        request = cast(operations.ListPaymentSubscriptions2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -545,7 +549,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentSubscriptions",
+                operation_id="listPaymentSubscriptions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -555,7 +559,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentSubscriptionsResponse(
+            return operations.ListPaymentSubscriptions2Response(
                 payment_subscriptions=unmarshal_json_response(
                     Optional[List[shared.PaymentSubscription]], http_res
                 ),
@@ -572,18 +576,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_payment_subscription(
+    def patch_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.PatchPaymentSubscriptionRequest,
-            operations.PatchPaymentSubscriptionRequestTypedDict,
+            operations.PatchPaymentSubscription2Request,
+            operations.PatchPaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentSubscriptionResponse:
+    ) -> operations.PatchPaymentSubscription2Response:
         r"""Update a subscription
 
         :param request: The request object to send.
@@ -604,9 +608,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchPaymentSubscriptionRequest
+                request, operations.PatchPaymentSubscription2Request
             )
-        request = cast(operations.PatchPaymentSubscriptionRequest, request)
+        request = cast(operations.PatchPaymentSubscription2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -644,7 +648,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentSubscription",
+                operation_id="patchPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -654,7 +658,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentSubscriptionResponse(
+            return operations.PatchPaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -671,18 +675,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_payment_subscription_async(
+    async def patch_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.PatchPaymentSubscriptionRequest,
-            operations.PatchPaymentSubscriptionRequestTypedDict,
+            operations.PatchPaymentSubscription2Request,
+            operations.PatchPaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentSubscriptionResponse:
+    ) -> operations.PatchPaymentSubscription2Response:
         r"""Update a subscription
 
         :param request: The request object to send.
@@ -703,9 +707,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchPaymentSubscriptionRequest
+                request, operations.PatchPaymentSubscription2Request
             )
-        request = cast(operations.PatchPaymentSubscriptionRequest, request)
+        request = cast(operations.PatchPaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -743,7 +747,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentSubscription",
+                operation_id="patchPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -753,7 +757,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentSubscriptionResponse(
+            return operations.PatchPaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -770,18 +774,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_payment_subscription(
+    def remove_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.RemovePaymentSubscriptionRequest,
-            operations.RemovePaymentSubscriptionRequestTypedDict,
+            operations.RemovePaymentSubscription2Request,
+            operations.RemovePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentSubscriptionResponse:
+    ) -> operations.RemovePaymentSubscription2Response:
         r"""Remove a subscription
 
         :param request: The request object to send.
@@ -802,9 +806,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemovePaymentSubscriptionRequest
+                request, operations.RemovePaymentSubscription2Request
             )
-        request = cast(operations.RemovePaymentSubscriptionRequest, request)
+        request = cast(operations.RemovePaymentSubscription2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -835,7 +839,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentSubscription",
+                operation_id="removePaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -845,7 +849,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentSubscriptionResponse(
+            return operations.RemovePaymentSubscription2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -858,7 +862,7 @@ class Subscription(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentSubscriptionResponse(
+            return operations.RemovePaymentSubscription2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -867,18 +871,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_payment_subscription_async(
+    async def remove_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.RemovePaymentSubscriptionRequest,
-            operations.RemovePaymentSubscriptionRequestTypedDict,
+            operations.RemovePaymentSubscription2Request,
+            operations.RemovePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentSubscriptionResponse:
+    ) -> operations.RemovePaymentSubscription2Response:
         r"""Remove a subscription
 
         :param request: The request object to send.
@@ -899,9 +903,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemovePaymentSubscriptionRequest
+                request, operations.RemovePaymentSubscription2Request
             )
-        request = cast(operations.RemovePaymentSubscriptionRequest, request)
+        request = cast(operations.RemovePaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -932,7 +936,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentSubscription",
+                operation_id="removePaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -942,7 +946,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentSubscriptionResponse(
+            return operations.RemovePaymentSubscription2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -955,7 +959,7 @@ class Subscription(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentSubscriptionResponse(
+            return operations.RemovePaymentSubscription2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -964,18 +968,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_payment_subscription(
+    def update_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentSubscriptionRequest,
-            operations.UpdatePaymentSubscriptionRequestTypedDict,
+            operations.UpdatePaymentSubscription2Request,
+            operations.UpdatePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentSubscriptionResponse:
+    ) -> operations.UpdatePaymentSubscription2Response:
         r"""Update a subscription
 
         :param request: The request object to send.
@@ -996,9 +1000,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdatePaymentSubscriptionRequest
+                request, operations.UpdatePaymentSubscription2Request
             )
-        request = cast(operations.UpdatePaymentSubscriptionRequest, request)
+        request = cast(operations.UpdatePaymentSubscription2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1036,7 +1040,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentSubscription",
+                operation_id="updatePaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1046,7 +1050,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentSubscriptionResponse(
+            return operations.UpdatePaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -1063,18 +1067,18 @@ class Subscription(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_payment_subscription_async(
+    async def update_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentSubscriptionRequest,
-            operations.UpdatePaymentSubscriptionRequestTypedDict,
+            operations.UpdatePaymentSubscription2Request,
+            operations.UpdatePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentSubscriptionResponse:
+    ) -> operations.UpdatePaymentSubscription2Response:
         r"""Update a subscription
 
         :param request: The request object to send.
@@ -1095,9 +1099,9 @@ class Subscription(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdatePaymentSubscriptionRequest
+                request, operations.UpdatePaymentSubscription2Request
             )
-        request = cast(operations.UpdatePaymentSubscriptionRequest, request)
+        request = cast(operations.UpdatePaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1135,7 +1139,7 @@ class Subscription(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentSubscription",
+                operation_id="updatePaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1145,7 +1149,7 @@ class Subscription(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentSubscriptionResponse(
+            return operations.UpdatePaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Member(BaseSDK):
-    def create_martech_member(
+    def create_martech_member2(
         self,
         *,
         request: Union[
-            operations.CreateMartechMemberRequest,
-            operations.CreateMartechMemberRequestTypedDict,
+            operations.CreateMartechMember2Request,
+            operations.CreateMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMartechMemberResponse:
+    ) -> operations.CreateMartechMember2Response:
         r"""Create a member
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateMartechMemberRequest)
-        request = cast(operations.CreateMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.CreateMartechMember2Request)
+        request = cast(operations.CreateMartechMember2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMartechMember",
+                operation_id="createMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMartechMemberResponse(
+            return operations.CreateMartechMember2Response(
                 marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
@@ -103,18 +103,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_martech_member_async(
+    async def create_martech_member2_async(
         self,
         *,
         request: Union[
-            operations.CreateMartechMemberRequest,
-            operations.CreateMartechMemberRequestTypedDict,
+            operations.CreateMartechMember2Request,
+            operations.CreateMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMartechMemberResponse:
+    ) -> operations.CreateMartechMember2Response:
         r"""Create a member
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateMartechMemberRequest)
-        request = cast(operations.CreateMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.CreateMartechMember2Request)
+        request = cast(operations.CreateMartechMember2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMartechMember",
+                operation_id="createMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMartechMemberResponse(
+            return operations.CreateMartechMember2Response(
                 marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
@@ -196,17 +196,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_member(
+    def get_clubs_member2(
         self,
         *,
         request: Union[
-            operations.GetClubsMemberRequest, operations.GetClubsMemberRequestTypedDict
+            operations.GetClubsMember2Request,
+            operations.GetClubsMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsMemberResponse:
+    ) -> operations.GetClubsMember2Response:
         r"""Retrieve a member
 
         :param request: The request object to send.
@@ -226,8 +227,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsMemberRequest)
-        request = cast(operations.GetClubsMemberRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsMember2Request)
+        request = cast(operations.GetClubsMember2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -258,7 +259,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsMember",
+                operation_id="getClubsMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -268,7 +269,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsMemberResponse(
+            return operations.GetClubsMember2Response(
                 clubs_member=unmarshal_json_response(
                     Optional[shared.ClubsMember], http_res
                 ),
@@ -285,17 +286,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_member_async(
+    async def get_clubs_member2_async(
         self,
         *,
         request: Union[
-            operations.GetClubsMemberRequest, operations.GetClubsMemberRequestTypedDict
+            operations.GetClubsMember2Request,
+            operations.GetClubsMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsMemberResponse:
+    ) -> operations.GetClubsMember2Response:
         r"""Retrieve a member
 
         :param request: The request object to send.
@@ -315,8 +317,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsMemberRequest)
-        request = cast(operations.GetClubsMemberRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsMember2Request)
+        request = cast(operations.GetClubsMember2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -347,7 +349,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsMember",
+                operation_id="getClubsMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -357,7 +359,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsMemberResponse(
+            return operations.GetClubsMember2Response(
                 clubs_member=unmarshal_json_response(
                     Optional[shared.ClubsMember], http_res
                 ),
@@ -374,18 +376,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_martech_member(
+    def get_martech_member2(
         self,
         *,
         request: Union[
-            operations.GetMartechMemberRequest,
-            operations.GetMartechMemberRequestTypedDict,
+            operations.GetMartechMember2Request,
+            operations.GetMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMartechMemberResponse:
+    ) -> operations.GetMartechMember2Response:
         r"""Retrieve a member
 
         :param request: The request object to send.
@@ -405,8 +407,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMartechMemberRequest)
-        request = cast(operations.GetMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.GetMartechMember2Request)
+        request = cast(operations.GetMartechMember2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -437,7 +439,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMartechMember",
+                operation_id="getMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -447,7 +449,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMartechMemberResponse(
+            return operations.GetMartechMember2Response(
                 marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
@@ -464,18 +466,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_martech_member_async(
+    async def get_martech_member2_async(
         self,
         *,
         request: Union[
-            operations.GetMartechMemberRequest,
-            operations.GetMartechMemberRequestTypedDict,
+            operations.GetMartechMember2Request,
+            operations.GetMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMartechMemberResponse:
+    ) -> operations.GetMartechMember2Response:
         r"""Retrieve a member
 
         :param request: The request object to send.
@@ -495,8 +497,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMartechMemberRequest)
-        request = cast(operations.GetMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.GetMartechMember2Request)
+        request = cast(operations.GetMartechMember2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -527,7 +529,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMartechMember",
+                operation_id="getMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -537,7 +539,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMartechMemberResponse(
+            return operations.GetMartechMember2Response(
                 marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
@@ -554,18 +556,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_members(
+    def list_clubs_members2(
         self,
         *,
         request: Union[
-            operations.ListClubsMembersRequest,
-            operations.ListClubsMembersRequestTypedDict,
+            operations.ListClubsMembers2Request,
+            operations.ListClubsMembers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsMembersResponse:
+    ) -> operations.ListClubsMembers2Response:
         r"""List all members
 
         :param request: The request object to send.
@@ -585,8 +587,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsMembersRequest)
-        request = cast(operations.ListClubsMembersRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsMembers2Request)
+        request = cast(operations.ListClubsMembers2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -617,7 +619,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsMembers",
+                operation_id="listClubsMembers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -627,7 +629,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsMembersResponse(
+            return operations.ListClubsMembers2Response(
                 clubs_members=unmarshal_json_response(
                     Optional[List[shared.ClubsMember]], http_res
                 ),
@@ -644,18 +646,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_members_async(
+    async def list_clubs_members2_async(
         self,
         *,
         request: Union[
-            operations.ListClubsMembersRequest,
-            operations.ListClubsMembersRequestTypedDict,
+            operations.ListClubsMembers2Request,
+            operations.ListClubsMembers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsMembersResponse:
+    ) -> operations.ListClubsMembers2Response:
         r"""List all members
 
         :param request: The request object to send.
@@ -675,8 +677,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsMembersRequest)
-        request = cast(operations.ListClubsMembersRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsMembers2Request)
+        request = cast(operations.ListClubsMembers2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -707,7 +709,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsMembers",
+                operation_id="listClubsMembers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -717,7 +719,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsMembersResponse(
+            return operations.ListClubsMembers2Response(
                 clubs_members=unmarshal_json_response(
                     Optional[List[shared.ClubsMember]], http_res
                 ),
@@ -734,18 +736,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_martech_members(
+    def list_martech_members2(
         self,
         *,
         request: Union[
-            operations.ListMartechMembersRequest,
-            operations.ListMartechMembersRequestTypedDict,
+            operations.ListMartechMembers2Request,
+            operations.ListMartechMembers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMartechMembersResponse:
+    ) -> operations.ListMartechMembers2Response:
         r"""List all members
 
         :param request: The request object to send.
@@ -765,8 +767,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMartechMembersRequest)
-        request = cast(operations.ListMartechMembersRequest, request)
+            request = utils.unmarshal(request, operations.ListMartechMembers2Request)
+        request = cast(operations.ListMartechMembers2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -797,7 +799,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMartechMembers",
+                operation_id="listMartechMembers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -807,7 +809,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMartechMembersResponse(
+            return operations.ListMartechMembers2Response(
                 marketing_members=unmarshal_json_response(
                     Optional[List[shared.MarketingMember]], http_res
                 ),
@@ -824,18 +826,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_martech_members_async(
+    async def list_martech_members2_async(
         self,
         *,
         request: Union[
-            operations.ListMartechMembersRequest,
-            operations.ListMartechMembersRequestTypedDict,
+            operations.ListMartechMembers2Request,
+            operations.ListMartechMembers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMartechMembersResponse:
+    ) -> operations.ListMartechMembers2Response:
         r"""List all members
 
         :param request: The request object to send.
@@ -855,8 +857,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMartechMembersRequest)
-        request = cast(operations.ListMartechMembersRequest, request)
+            request = utils.unmarshal(request, operations.ListMartechMembers2Request)
+        request = cast(operations.ListMartechMembers2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -887,7 +889,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMartechMembers",
+                operation_id="listMartechMembers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -897,7 +899,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMartechMembersResponse(
+            return operations.ListMartechMembers2Response(
                 marketing_members=unmarshal_json_response(
                     Optional[List[shared.MarketingMember]], http_res
                 ),
@@ -914,18 +916,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_martech_member(
+    def patch_martech_member2(
         self,
         *,
         request: Union[
-            operations.PatchMartechMemberRequest,
-            operations.PatchMartechMemberRequestTypedDict,
+            operations.PatchMartechMember2Request,
+            operations.PatchMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMartechMemberResponse:
+    ) -> operations.PatchMartechMember2Response:
         r"""Update a member
 
         :param request: The request object to send.
@@ -945,8 +947,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMartechMemberRequest)
-        request = cast(operations.PatchMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.PatchMartechMember2Request)
+        request = cast(operations.PatchMartechMember2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -980,7 +982,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMartechMember",
+                operation_id="patchMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -990,7 +992,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMartechMemberResponse(
+            return operations.PatchMartechMember2Response(
                 marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
@@ -1007,18 +1009,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_martech_member_async(
+    async def patch_martech_member2_async(
         self,
         *,
         request: Union[
-            operations.PatchMartechMemberRequest,
-            operations.PatchMartechMemberRequestTypedDict,
+            operations.PatchMartechMember2Request,
+            operations.PatchMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMartechMemberResponse:
+    ) -> operations.PatchMartechMember2Response:
         r"""Update a member
 
         :param request: The request object to send.
@@ -1038,8 +1040,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMartechMemberRequest)
-        request = cast(operations.PatchMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.PatchMartechMember2Request)
+        request = cast(operations.PatchMartechMember2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1073,7 +1075,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMartechMember",
+                operation_id="patchMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1083,7 +1085,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMartechMemberResponse(
+            return operations.PatchMartechMember2Response(
                 marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
@@ -1100,18 +1102,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_martech_member(
+    def remove_martech_member2(
         self,
         *,
         request: Union[
-            operations.RemoveMartechMemberRequest,
-            operations.RemoveMartechMemberRequestTypedDict,
+            operations.RemoveMartechMember2Request,
+            operations.RemoveMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMartechMemberResponse:
+    ) -> operations.RemoveMartechMember2Response:
         r"""Remove a member
 
         :param request: The request object to send.
@@ -1131,8 +1133,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveMartechMemberRequest)
-        request = cast(operations.RemoveMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.RemoveMartechMember2Request)
+        request = cast(operations.RemoveMartechMember2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1163,7 +1165,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMartechMember",
+                operation_id="removeMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1173,7 +1175,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMartechMemberResponse(
+            return operations.RemoveMartechMember2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1186,7 +1188,7 @@ class Member(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMartechMemberResponse(
+            return operations.RemoveMartechMember2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1195,18 +1197,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_martech_member_async(
+    async def remove_martech_member2_async(
         self,
         *,
         request: Union[
-            operations.RemoveMartechMemberRequest,
-            operations.RemoveMartechMemberRequestTypedDict,
+            operations.RemoveMartechMember2Request,
+            operations.RemoveMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMartechMemberResponse:
+    ) -> operations.RemoveMartechMember2Response:
         r"""Remove a member
 
         :param request: The request object to send.
@@ -1226,8 +1228,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveMartechMemberRequest)
-        request = cast(operations.RemoveMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.RemoveMartechMember2Request)
+        request = cast(operations.RemoveMartechMember2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1258,7 +1260,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMartechMember",
+                operation_id="removeMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1268,7 +1270,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMartechMemberResponse(
+            return operations.RemoveMartechMember2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1281,7 +1283,7 @@ class Member(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMartechMemberResponse(
+            return operations.RemoveMartechMember2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1290,18 +1292,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_martech_member(
+    def update_martech_member2(
         self,
         *,
         request: Union[
-            operations.UpdateMartechMemberRequest,
-            operations.UpdateMartechMemberRequestTypedDict,
+            operations.UpdateMartechMember2Request,
+            operations.UpdateMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMartechMemberResponse:
+    ) -> operations.UpdateMartechMember2Response:
         r"""Update a member
 
         :param request: The request object to send.
@@ -1321,8 +1323,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateMartechMemberRequest)
-        request = cast(operations.UpdateMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.UpdateMartechMember2Request)
+        request = cast(operations.UpdateMartechMember2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1356,7 +1358,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMartechMember",
+                operation_id="updateMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1366,7 +1368,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMartechMemberResponse(
+            return operations.UpdateMartechMember2Response(
                 marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
@@ -1383,18 +1385,18 @@ class Member(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_martech_member_async(
+    async def update_martech_member2_async(
         self,
         *,
         request: Union[
-            operations.UpdateMartechMemberRequest,
-            operations.UpdateMartechMemberRequestTypedDict,
+            operations.UpdateMartechMember2Request,
+            operations.UpdateMartechMember2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMartechMemberResponse:
+    ) -> operations.UpdateMartechMember2Response:
         r"""Update a member
 
         :param request: The request object to send.
@@ -1414,8 +1416,8 @@ class Member(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateMartechMemberRequest)
-        request = cast(operations.UpdateMartechMemberRequest, request)
+            request = utils.unmarshal(request, operations.UpdateMartechMember2Request)
+        request = cast(operations.UpdateMartechMember2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1449,7 +1451,7 @@ class Member(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMartechMember",
+                operation_id="updateMartechMember2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1459,7 +1461,7 @@ class Member(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMartechMemberResponse(
+            return operations.UpdateMartechMember2Response(
                 marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),

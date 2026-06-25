@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Interview(BaseSDK):
-    def create_ats_interview(
+    def create_ats_interview2(
         self,
         *,
         request: Union[
-            operations.CreateAtsInterviewRequest,
-            operations.CreateAtsInterviewRequestTypedDict,
+            operations.CreateAtsInterview2Request,
+            operations.CreateAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsInterviewResponse:
+    ) -> operations.CreateAtsInterview2Response:
         r"""Create an interview
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
-        request = cast(operations.CreateAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsInterview2Request)
+        request = cast(operations.CreateAtsInterview2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsInterview",
+                operation_id="createAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsInterviewResponse(
+            return operations.CreateAtsInterview2Response(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -103,18 +103,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_interview_async(
+    async def create_ats_interview2_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsInterviewRequest,
-            operations.CreateAtsInterviewRequestTypedDict,
+            operations.CreateAtsInterview2Request,
+            operations.CreateAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsInterviewResponse:
+    ) -> operations.CreateAtsInterview2Response:
         r"""Create an interview
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
-        request = cast(operations.CreateAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsInterview2Request)
+        request = cast(operations.CreateAtsInterview2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsInterview",
+                operation_id="createAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsInterviewResponse(
+            return operations.CreateAtsInterview2Response(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -196,18 +196,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_interview(
+    def get_ats_interview2(
         self,
         *,
         request: Union[
-            operations.GetAtsInterviewRequest,
-            operations.GetAtsInterviewRequestTypedDict,
+            operations.GetAtsInterview2Request,
+            operations.GetAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsInterviewResponse:
+    ) -> operations.GetAtsInterview2Response:
         r"""Retrieve an interview
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
-        request = cast(operations.GetAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsInterview2Request)
+        request = cast(operations.GetAtsInterview2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -259,7 +259,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsInterview",
+                operation_id="getAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -269,7 +269,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsInterviewResponse(
+            return operations.GetAtsInterview2Response(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -286,18 +286,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_interview_async(
+    async def get_ats_interview2_async(
         self,
         *,
         request: Union[
-            operations.GetAtsInterviewRequest,
-            operations.GetAtsInterviewRequestTypedDict,
+            operations.GetAtsInterview2Request,
+            operations.GetAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsInterviewResponse:
+    ) -> operations.GetAtsInterview2Response:
         r"""Retrieve an interview
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
-        request = cast(operations.GetAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsInterview2Request)
+        request = cast(operations.GetAtsInterview2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsInterview",
+                operation_id="getAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -359,7 +359,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsInterviewResponse(
+            return operations.GetAtsInterview2Response(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -376,18 +376,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_interviews(
+    def list_ats_interviews2(
         self,
         *,
         request: Union[
-            operations.ListAtsInterviewsRequest,
-            operations.ListAtsInterviewsRequestTypedDict,
+            operations.ListAtsInterviews2Request,
+            operations.ListAtsInterviews2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsInterviewsResponse:
+    ) -> operations.ListAtsInterviews2Response:
         r"""List all interviews
 
         :param request: The request object to send.
@@ -407,8 +407,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
-        request = cast(operations.ListAtsInterviewsRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsInterviews2Request)
+        request = cast(operations.ListAtsInterviews2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -439,7 +439,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsInterviews",
+                operation_id="listAtsInterviews2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -449,7 +449,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsInterviewsResponse(
+            return operations.ListAtsInterviews2Response(
                 ats_interviews=unmarshal_json_response(
                     Optional[List[shared.AtsInterview]], http_res
                 ),
@@ -466,18 +466,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_interviews_async(
+    async def list_ats_interviews2_async(
         self,
         *,
         request: Union[
-            operations.ListAtsInterviewsRequest,
-            operations.ListAtsInterviewsRequestTypedDict,
+            operations.ListAtsInterviews2Request,
+            operations.ListAtsInterviews2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsInterviewsResponse:
+    ) -> operations.ListAtsInterviews2Response:
         r"""List all interviews
 
         :param request: The request object to send.
@@ -497,8 +497,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
-        request = cast(operations.ListAtsInterviewsRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsInterviews2Request)
+        request = cast(operations.ListAtsInterviews2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -529,7 +529,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsInterviews",
+                operation_id="listAtsInterviews2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -539,7 +539,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsInterviewsResponse(
+            return operations.ListAtsInterviews2Response(
                 ats_interviews=unmarshal_json_response(
                     Optional[List[shared.AtsInterview]], http_res
                 ),
@@ -556,18 +556,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_interview(
+    def patch_ats_interview2(
         self,
         *,
         request: Union[
-            operations.PatchAtsInterviewRequest,
-            operations.PatchAtsInterviewRequestTypedDict,
+            operations.PatchAtsInterview2Request,
+            operations.PatchAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsInterviewResponse:
+    ) -> operations.PatchAtsInterview2Response:
         r"""Update an interview
 
         :param request: The request object to send.
@@ -587,8 +587,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
-        request = cast(operations.PatchAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsInterview2Request)
+        request = cast(operations.PatchAtsInterview2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -622,7 +622,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsInterview",
+                operation_id="patchAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -632,7 +632,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsInterviewResponse(
+            return operations.PatchAtsInterview2Response(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -649,18 +649,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_interview_async(
+    async def patch_ats_interview2_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsInterviewRequest,
-            operations.PatchAtsInterviewRequestTypedDict,
+            operations.PatchAtsInterview2Request,
+            operations.PatchAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsInterviewResponse:
+    ) -> operations.PatchAtsInterview2Response:
         r"""Update an interview
 
         :param request: The request object to send.
@@ -680,8 +680,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
-        request = cast(operations.PatchAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsInterview2Request)
+        request = cast(operations.PatchAtsInterview2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -715,7 +715,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsInterview",
+                operation_id="patchAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -725,7 +725,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsInterviewResponse(
+            return operations.PatchAtsInterview2Response(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -742,18 +742,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_interview(
+    def remove_ats_interview2(
         self,
         *,
         request: Union[
-            operations.RemoveAtsInterviewRequest,
-            operations.RemoveAtsInterviewRequestTypedDict,
+            operations.RemoveAtsInterview2Request,
+            operations.RemoveAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsInterviewResponse:
+    ) -> operations.RemoveAtsInterview2Response:
         r"""Remove an interview
 
         :param request: The request object to send.
@@ -773,8 +773,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
-        request = cast(operations.RemoveAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsInterview2Request)
+        request = cast(operations.RemoveAtsInterview2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -805,7 +805,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsInterview",
+                operation_id="removeAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -815,7 +815,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsInterviewResponse(
+            return operations.RemoveAtsInterview2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -828,7 +828,7 @@ class Interview(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsInterviewResponse(
+            return operations.RemoveAtsInterview2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -837,18 +837,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_interview_async(
+    async def remove_ats_interview2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsInterviewRequest,
-            operations.RemoveAtsInterviewRequestTypedDict,
+            operations.RemoveAtsInterview2Request,
+            operations.RemoveAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsInterviewResponse:
+    ) -> operations.RemoveAtsInterview2Response:
         r"""Remove an interview
 
         :param request: The request object to send.
@@ -868,8 +868,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
-        request = cast(operations.RemoveAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsInterview2Request)
+        request = cast(operations.RemoveAtsInterview2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -900,7 +900,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsInterview",
+                operation_id="removeAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -910,7 +910,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsInterviewResponse(
+            return operations.RemoveAtsInterview2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -923,7 +923,7 @@ class Interview(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsInterviewResponse(
+            return operations.RemoveAtsInterview2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -932,18 +932,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_interview(
+    def update_ats_interview2(
         self,
         *,
         request: Union[
-            operations.UpdateAtsInterviewRequest,
-            operations.UpdateAtsInterviewRequestTypedDict,
+            operations.UpdateAtsInterview2Request,
+            operations.UpdateAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsInterviewResponse:
+    ) -> operations.UpdateAtsInterview2Response:
         r"""Update an interview
 
         :param request: The request object to send.
@@ -963,8 +963,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
-        request = cast(operations.UpdateAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsInterview2Request)
+        request = cast(operations.UpdateAtsInterview2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -998,7 +998,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsInterview",
+                operation_id="updateAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1008,7 +1008,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsInterviewResponse(
+            return operations.UpdateAtsInterview2Response(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -1025,18 +1025,18 @@ class Interview(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_interview_async(
+    async def update_ats_interview2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsInterviewRequest,
-            operations.UpdateAtsInterviewRequestTypedDict,
+            operations.UpdateAtsInterview2Request,
+            operations.UpdateAtsInterview2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsInterviewResponse:
+    ) -> operations.UpdateAtsInterview2Response:
         r"""Update an interview
 
         :param request: The request object to send.
@@ -1056,8 +1056,8 @@ class Interview(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
-        request = cast(operations.UpdateAtsInterviewRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsInterview2Request)
+        request = cast(operations.UpdateAtsInterview2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1091,7 +1091,7 @@ class Interview(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsInterview",
+                operation_id="updateAtsInterview2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1101,7 +1101,7 @@ class Interview(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsInterviewResponse(
+            return operations.UpdateAtsInterview2Response(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),

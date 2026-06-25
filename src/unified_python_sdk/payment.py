@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Payment(BaseSDK):
-    def create_payment_link(
+    def create_payment_link2(
         self,
         *,
         request: Union[
-            operations.CreatePaymentLinkRequest,
-            operations.CreatePaymentLinkRequestTypedDict,
+            operations.CreatePaymentLink2Request,
+            operations.CreatePaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentLinkResponse:
+    ) -> operations.CreatePaymentLink2Response:
         r"""Create a link
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePaymentLinkRequest)
-        request = cast(operations.CreatePaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.CreatePaymentLink2Request)
+        request = cast(operations.CreatePaymentLink2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentLink",
+                operation_id="createPaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentLinkResponse(
+            return operations.CreatePaymentLink2Response(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -103,18 +103,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_payment_link_async(
+    async def create_payment_link2_async(
         self,
         *,
         request: Union[
-            operations.CreatePaymentLinkRequest,
-            operations.CreatePaymentLinkRequestTypedDict,
+            operations.CreatePaymentLink2Request,
+            operations.CreatePaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentLinkResponse:
+    ) -> operations.CreatePaymentLink2Response:
         r"""Create a link
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePaymentLinkRequest)
-        request = cast(operations.CreatePaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.CreatePaymentLink2Request)
+        request = cast(operations.CreatePaymentLink2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentLink",
+                operation_id="createPaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentLinkResponse(
+            return operations.CreatePaymentLink2Response(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -196,18 +196,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_payment_payment(
+    def create_payment_payment2(
         self,
         *,
         request: Union[
-            operations.CreatePaymentPaymentRequest,
-            operations.CreatePaymentPaymentRequestTypedDict,
+            operations.CreatePaymentPayment2Request,
+            operations.CreatePaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentPaymentResponse:
+    ) -> operations.CreatePaymentPayment2Response:
         r"""Create a payment
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePaymentPaymentRequest)
-        request = cast(operations.CreatePaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.CreatePaymentPayment2Request)
+        request = cast(operations.CreatePaymentPayment2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +262,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentPayment",
+                operation_id="createPaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +272,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentPaymentResponse(
+            return operations.CreatePaymentPayment2Response(
                 payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
@@ -289,18 +289,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_payment_payment_async(
+    async def create_payment_payment2_async(
         self,
         *,
         request: Union[
-            operations.CreatePaymentPaymentRequest,
-            operations.CreatePaymentPaymentRequestTypedDict,
+            operations.CreatePaymentPayment2Request,
+            operations.CreatePaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentPaymentResponse:
+    ) -> operations.CreatePaymentPayment2Response:
         r"""Create a payment
 
         :param request: The request object to send.
@@ -320,8 +320,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePaymentPaymentRequest)
-        request = cast(operations.CreatePaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.CreatePaymentPayment2Request)
+        request = cast(operations.CreatePaymentPayment2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +355,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentPayment",
+                operation_id="createPaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +365,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentPaymentResponse(
+            return operations.CreatePaymentPayment2Response(
                 payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
@@ -382,18 +382,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_payment_subscription(
+    def create_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.CreatePaymentSubscriptionRequest,
-            operations.CreatePaymentSubscriptionRequestTypedDict,
+            operations.CreatePaymentSubscription2Request,
+            operations.CreatePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentSubscriptionResponse:
+    ) -> operations.CreatePaymentSubscription2Response:
         r"""Create a subscription
 
         :param request: The request object to send.
@@ -414,9 +414,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreatePaymentSubscriptionRequest
+                request, operations.CreatePaymentSubscription2Request
             )
-        request = cast(operations.CreatePaymentSubscriptionRequest, request)
+        request = cast(operations.CreatePaymentSubscription2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -454,7 +454,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentSubscription",
+                operation_id="createPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -464,7 +464,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentSubscriptionResponse(
+            return operations.CreatePaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -481,18 +481,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_payment_subscription_async(
+    async def create_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.CreatePaymentSubscriptionRequest,
-            operations.CreatePaymentSubscriptionRequestTypedDict,
+            operations.CreatePaymentSubscription2Request,
+            operations.CreatePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentSubscriptionResponse:
+    ) -> operations.CreatePaymentSubscription2Response:
         r"""Create a subscription
 
         :param request: The request object to send.
@@ -513,9 +513,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreatePaymentSubscriptionRequest
+                request, operations.CreatePaymentSubscription2Request
             )
-        request = cast(operations.CreatePaymentSubscriptionRequest, request)
+        request = cast(operations.CreatePaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -553,7 +553,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentSubscription",
+                operation_id="createPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -563,7 +563,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentSubscriptionResponse(
+            return operations.CreatePaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -580,17 +580,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_payment_link(
+    def get_payment_link2(
         self,
         *,
         request: Union[
-            operations.GetPaymentLinkRequest, operations.GetPaymentLinkRequestTypedDict
+            operations.GetPaymentLink2Request,
+            operations.GetPaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentLinkResponse:
+    ) -> operations.GetPaymentLink2Response:
         r"""Retrieve a link
 
         :param request: The request object to send.
@@ -610,8 +611,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentLinkRequest)
-        request = cast(operations.GetPaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentLink2Request)
+        request = cast(operations.GetPaymentLink2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -642,7 +643,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentLink",
+                operation_id="getPaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -652,7 +653,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentLinkResponse(
+            return operations.GetPaymentLink2Response(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -669,17 +670,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_link_async(
+    async def get_payment_link2_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentLinkRequest, operations.GetPaymentLinkRequestTypedDict
+            operations.GetPaymentLink2Request,
+            operations.GetPaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentLinkResponse:
+    ) -> operations.GetPaymentLink2Response:
         r"""Retrieve a link
 
         :param request: The request object to send.
@@ -699,8 +701,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentLinkRequest)
-        request = cast(operations.GetPaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentLink2Request)
+        request = cast(operations.GetPaymentLink2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -731,7 +733,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentLink",
+                operation_id="getPaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -741,7 +743,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentLinkResponse(
+            return operations.GetPaymentLink2Response(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -758,18 +760,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_payment_payment(
+    def get_payment_payment2(
         self,
         *,
         request: Union[
-            operations.GetPaymentPaymentRequest,
-            operations.GetPaymentPaymentRequestTypedDict,
+            operations.GetPaymentPayment2Request,
+            operations.GetPaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentPaymentResponse:
+    ) -> operations.GetPaymentPayment2Response:
         r"""Retrieve a payment
 
         :param request: The request object to send.
@@ -789,8 +791,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentPaymentRequest)
-        request = cast(operations.GetPaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentPayment2Request)
+        request = cast(operations.GetPaymentPayment2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -821,7 +823,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentPayment",
+                operation_id="getPaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -831,7 +833,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentPaymentResponse(
+            return operations.GetPaymentPayment2Response(
                 payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
@@ -848,18 +850,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_payment_async(
+    async def get_payment_payment2_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentPaymentRequest,
-            operations.GetPaymentPaymentRequestTypedDict,
+            operations.GetPaymentPayment2Request,
+            operations.GetPaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentPaymentResponse:
+    ) -> operations.GetPaymentPayment2Response:
         r"""Retrieve a payment
 
         :param request: The request object to send.
@@ -879,8 +881,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentPaymentRequest)
-        request = cast(operations.GetPaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentPayment2Request)
+        request = cast(operations.GetPaymentPayment2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -911,7 +913,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentPayment",
+                operation_id="getPaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -921,7 +923,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentPaymentResponse(
+            return operations.GetPaymentPayment2Response(
                 payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
@@ -938,18 +940,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_payment_payout(
+    def get_payment_payout2(
         self,
         *,
         request: Union[
-            operations.GetPaymentPayoutRequest,
-            operations.GetPaymentPayoutRequestTypedDict,
+            operations.GetPaymentPayout2Request,
+            operations.GetPaymentPayout2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentPayoutResponse:
+    ) -> operations.GetPaymentPayout2Response:
         r"""Retrieve a payout
 
         :param request: The request object to send.
@@ -969,8 +971,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentPayoutRequest)
-        request = cast(operations.GetPaymentPayoutRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentPayout2Request)
+        request = cast(operations.GetPaymentPayout2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1001,7 +1003,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentPayout",
+                operation_id="getPaymentPayout2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1011,7 +1013,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentPayoutResponse(
+            return operations.GetPaymentPayout2Response(
                 payment_payout=unmarshal_json_response(
                     Optional[shared.PaymentPayout], http_res
                 ),
@@ -1028,18 +1030,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_payout_async(
+    async def get_payment_payout2_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentPayoutRequest,
-            operations.GetPaymentPayoutRequestTypedDict,
+            operations.GetPaymentPayout2Request,
+            operations.GetPaymentPayout2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentPayoutResponse:
+    ) -> operations.GetPaymentPayout2Response:
         r"""Retrieve a payout
 
         :param request: The request object to send.
@@ -1059,8 +1061,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentPayoutRequest)
-        request = cast(operations.GetPaymentPayoutRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentPayout2Request)
+        request = cast(operations.GetPaymentPayout2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1091,7 +1093,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentPayout",
+                operation_id="getPaymentPayout2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1101,7 +1103,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentPayoutResponse(
+            return operations.GetPaymentPayout2Response(
                 payment_payout=unmarshal_json_response(
                     Optional[shared.PaymentPayout], http_res
                 ),
@@ -1118,18 +1120,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_payment_refund(
+    def get_payment_refund2(
         self,
         *,
         request: Union[
-            operations.GetPaymentRefundRequest,
-            operations.GetPaymentRefundRequestTypedDict,
+            operations.GetPaymentRefund2Request,
+            operations.GetPaymentRefund2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentRefundResponse:
+    ) -> operations.GetPaymentRefund2Response:
         r"""Retrieve a refund
 
         :param request: The request object to send.
@@ -1149,8 +1151,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentRefundRequest)
-        request = cast(operations.GetPaymentRefundRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentRefund2Request)
+        request = cast(operations.GetPaymentRefund2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1181,7 +1183,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentRefund",
+                operation_id="getPaymentRefund2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1191,7 +1193,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentRefundResponse(
+            return operations.GetPaymentRefund2Response(
                 payment_refund=unmarshal_json_response(
                     Optional[shared.PaymentRefund], http_res
                 ),
@@ -1208,18 +1210,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_refund_async(
+    async def get_payment_refund2_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentRefundRequest,
-            operations.GetPaymentRefundRequestTypedDict,
+            operations.GetPaymentRefund2Request,
+            operations.GetPaymentRefund2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentRefundResponse:
+    ) -> operations.GetPaymentRefund2Response:
         r"""Retrieve a refund
 
         :param request: The request object to send.
@@ -1239,8 +1241,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentRefundRequest)
-        request = cast(operations.GetPaymentRefundRequest, request)
+            request = utils.unmarshal(request, operations.GetPaymentRefund2Request)
+        request = cast(operations.GetPaymentRefund2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1271,7 +1273,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentRefund",
+                operation_id="getPaymentRefund2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1281,7 +1283,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentRefundResponse(
+            return operations.GetPaymentRefund2Response(
                 payment_refund=unmarshal_json_response(
                     Optional[shared.PaymentRefund], http_res
                 ),
@@ -1298,18 +1300,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_payment_subscription(
+    def get_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.GetPaymentSubscriptionRequest,
-            operations.GetPaymentSubscriptionRequestTypedDict,
+            operations.GetPaymentSubscription2Request,
+            operations.GetPaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentSubscriptionResponse:
+    ) -> operations.GetPaymentSubscription2Response:
         r"""Retrieve a subscription
 
         :param request: The request object to send.
@@ -1329,8 +1331,10 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentSubscriptionRequest)
-        request = cast(operations.GetPaymentSubscriptionRequest, request)
+            request = utils.unmarshal(
+                request, operations.GetPaymentSubscription2Request
+            )
+        request = cast(operations.GetPaymentSubscription2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1361,7 +1365,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentSubscription",
+                operation_id="getPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1371,7 +1375,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentSubscriptionResponse(
+            return operations.GetPaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -1388,18 +1392,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_subscription_async(
+    async def get_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentSubscriptionRequest,
-            operations.GetPaymentSubscriptionRequestTypedDict,
+            operations.GetPaymentSubscription2Request,
+            operations.GetPaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentSubscriptionResponse:
+    ) -> operations.GetPaymentSubscription2Response:
         r"""Retrieve a subscription
 
         :param request: The request object to send.
@@ -1419,8 +1423,10 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentSubscriptionRequest)
-        request = cast(operations.GetPaymentSubscriptionRequest, request)
+            request = utils.unmarshal(
+                request, operations.GetPaymentSubscription2Request
+            )
+        request = cast(operations.GetPaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1451,7 +1457,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentSubscription",
+                operation_id="getPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1461,7 +1467,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentSubscriptionResponse(
+            return operations.GetPaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -1478,18 +1484,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_links(
+    def list_payment_links2(
         self,
         *,
         request: Union[
-            operations.ListPaymentLinksRequest,
-            operations.ListPaymentLinksRequestTypedDict,
+            operations.ListPaymentLinks2Request,
+            operations.ListPaymentLinks2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentLinksResponse:
+    ) -> operations.ListPaymentLinks2Response:
         r"""List all links
 
         :param request: The request object to send.
@@ -1509,8 +1515,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentLinksRequest)
-        request = cast(operations.ListPaymentLinksRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentLinks2Request)
+        request = cast(operations.ListPaymentLinks2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1541,7 +1547,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentLinks",
+                operation_id="listPaymentLinks2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1551,7 +1557,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentLinksResponse(
+            return operations.ListPaymentLinks2Response(
                 payment_links=unmarshal_json_response(
                     Optional[List[shared.PaymentLink]], http_res
                 ),
@@ -1568,18 +1574,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_links_async(
+    async def list_payment_links2_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentLinksRequest,
-            operations.ListPaymentLinksRequestTypedDict,
+            operations.ListPaymentLinks2Request,
+            operations.ListPaymentLinks2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentLinksResponse:
+    ) -> operations.ListPaymentLinks2Response:
         r"""List all links
 
         :param request: The request object to send.
@@ -1599,8 +1605,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentLinksRequest)
-        request = cast(operations.ListPaymentLinksRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentLinks2Request)
+        request = cast(operations.ListPaymentLinks2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1631,7 +1637,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentLinks",
+                operation_id="listPaymentLinks2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1641,7 +1647,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentLinksResponse(
+            return operations.ListPaymentLinks2Response(
                 payment_links=unmarshal_json_response(
                     Optional[List[shared.PaymentLink]], http_res
                 ),
@@ -1658,18 +1664,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_payments(
+    def list_payment_payments2(
         self,
         *,
         request: Union[
-            operations.ListPaymentPaymentsRequest,
-            operations.ListPaymentPaymentsRequestTypedDict,
+            operations.ListPaymentPayments2Request,
+            operations.ListPaymentPayments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentPaymentsResponse:
+    ) -> operations.ListPaymentPayments2Response:
         r"""List all payments
 
         :param request: The request object to send.
@@ -1689,8 +1695,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentPaymentsRequest)
-        request = cast(operations.ListPaymentPaymentsRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentPayments2Request)
+        request = cast(operations.ListPaymentPayments2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1721,7 +1727,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentPayments",
+                operation_id="listPaymentPayments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1731,7 +1737,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentPaymentsResponse(
+            return operations.ListPaymentPayments2Response(
                 payment_payments=unmarshal_json_response(
                     Optional[List[shared.PaymentPayment]], http_res
                 ),
@@ -1748,18 +1754,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_payments_async(
+    async def list_payment_payments2_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentPaymentsRequest,
-            operations.ListPaymentPaymentsRequestTypedDict,
+            operations.ListPaymentPayments2Request,
+            operations.ListPaymentPayments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentPaymentsResponse:
+    ) -> operations.ListPaymentPayments2Response:
         r"""List all payments
 
         :param request: The request object to send.
@@ -1779,8 +1785,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentPaymentsRequest)
-        request = cast(operations.ListPaymentPaymentsRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentPayments2Request)
+        request = cast(operations.ListPaymentPayments2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1811,7 +1817,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentPayments",
+                operation_id="listPaymentPayments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1821,7 +1827,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentPaymentsResponse(
+            return operations.ListPaymentPayments2Response(
                 payment_payments=unmarshal_json_response(
                     Optional[List[shared.PaymentPayment]], http_res
                 ),
@@ -1838,18 +1844,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_payouts(
+    def list_payment_payouts2(
         self,
         *,
         request: Union[
-            operations.ListPaymentPayoutsRequest,
-            operations.ListPaymentPayoutsRequestTypedDict,
+            operations.ListPaymentPayouts2Request,
+            operations.ListPaymentPayouts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentPayoutsResponse:
+    ) -> operations.ListPaymentPayouts2Response:
         r"""List all payouts
 
         :param request: The request object to send.
@@ -1869,8 +1875,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentPayoutsRequest)
-        request = cast(operations.ListPaymentPayoutsRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentPayouts2Request)
+        request = cast(operations.ListPaymentPayouts2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1901,7 +1907,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentPayouts",
+                operation_id="listPaymentPayouts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1911,7 +1917,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentPayoutsResponse(
+            return operations.ListPaymentPayouts2Response(
                 payment_payouts=unmarshal_json_response(
                     Optional[List[shared.PaymentPayout]], http_res
                 ),
@@ -1928,18 +1934,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_payouts_async(
+    async def list_payment_payouts2_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentPayoutsRequest,
-            operations.ListPaymentPayoutsRequestTypedDict,
+            operations.ListPaymentPayouts2Request,
+            operations.ListPaymentPayouts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentPayoutsResponse:
+    ) -> operations.ListPaymentPayouts2Response:
         r"""List all payouts
 
         :param request: The request object to send.
@@ -1959,8 +1965,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentPayoutsRequest)
-        request = cast(operations.ListPaymentPayoutsRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentPayouts2Request)
+        request = cast(operations.ListPaymentPayouts2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1991,7 +1997,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentPayouts",
+                operation_id="listPaymentPayouts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2001,7 +2007,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentPayoutsResponse(
+            return operations.ListPaymentPayouts2Response(
                 payment_payouts=unmarshal_json_response(
                     Optional[List[shared.PaymentPayout]], http_res
                 ),
@@ -2018,18 +2024,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_refunds(
+    def list_payment_refunds2(
         self,
         *,
         request: Union[
-            operations.ListPaymentRefundsRequest,
-            operations.ListPaymentRefundsRequestTypedDict,
+            operations.ListPaymentRefunds2Request,
+            operations.ListPaymentRefunds2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentRefundsResponse:
+    ) -> operations.ListPaymentRefunds2Response:
         r"""List all refunds
 
         :param request: The request object to send.
@@ -2049,8 +2055,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentRefundsRequest)
-        request = cast(operations.ListPaymentRefundsRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentRefunds2Request)
+        request = cast(operations.ListPaymentRefunds2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -2081,7 +2087,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentRefunds",
+                operation_id="listPaymentRefunds2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2091,7 +2097,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentRefundsResponse(
+            return operations.ListPaymentRefunds2Response(
                 payment_refunds=unmarshal_json_response(
                     Optional[List[shared.PaymentRefund]], http_res
                 ),
@@ -2108,18 +2114,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_refunds_async(
+    async def list_payment_refunds2_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentRefundsRequest,
-            operations.ListPaymentRefundsRequestTypedDict,
+            operations.ListPaymentRefunds2Request,
+            operations.ListPaymentRefunds2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentRefundsResponse:
+    ) -> operations.ListPaymentRefunds2Response:
         r"""List all refunds
 
         :param request: The request object to send.
@@ -2139,8 +2145,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentRefundsRequest)
-        request = cast(operations.ListPaymentRefundsRequest, request)
+            request = utils.unmarshal(request, operations.ListPaymentRefunds2Request)
+        request = cast(operations.ListPaymentRefunds2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2171,7 +2177,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentRefunds",
+                operation_id="listPaymentRefunds2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2181,7 +2187,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentRefundsResponse(
+            return operations.ListPaymentRefunds2Response(
                 payment_refunds=unmarshal_json_response(
                     Optional[List[shared.PaymentRefund]], http_res
                 ),
@@ -2198,18 +2204,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_subscriptions(
+    def list_payment_subscriptions2(
         self,
         *,
         request: Union[
-            operations.ListPaymentSubscriptionsRequest,
-            operations.ListPaymentSubscriptionsRequestTypedDict,
+            operations.ListPaymentSubscriptions2Request,
+            operations.ListPaymentSubscriptions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentSubscriptionsResponse:
+    ) -> operations.ListPaymentSubscriptions2Response:
         r"""List all subscriptions
 
         :param request: The request object to send.
@@ -2230,9 +2236,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListPaymentSubscriptionsRequest
+                request, operations.ListPaymentSubscriptions2Request
             )
-        request = cast(operations.ListPaymentSubscriptionsRequest, request)
+        request = cast(operations.ListPaymentSubscriptions2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -2263,7 +2269,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentSubscriptions",
+                operation_id="listPaymentSubscriptions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2273,7 +2279,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentSubscriptionsResponse(
+            return operations.ListPaymentSubscriptions2Response(
                 payment_subscriptions=unmarshal_json_response(
                     Optional[List[shared.PaymentSubscription]], http_res
                 ),
@@ -2290,18 +2296,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_subscriptions_async(
+    async def list_payment_subscriptions2_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentSubscriptionsRequest,
-            operations.ListPaymentSubscriptionsRequestTypedDict,
+            operations.ListPaymentSubscriptions2Request,
+            operations.ListPaymentSubscriptions2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentSubscriptionsResponse:
+    ) -> operations.ListPaymentSubscriptions2Response:
         r"""List all subscriptions
 
         :param request: The request object to send.
@@ -2322,9 +2328,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListPaymentSubscriptionsRequest
+                request, operations.ListPaymentSubscriptions2Request
             )
-        request = cast(operations.ListPaymentSubscriptionsRequest, request)
+        request = cast(operations.ListPaymentSubscriptions2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2355,7 +2361,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentSubscriptions",
+                operation_id="listPaymentSubscriptions2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2365,7 +2371,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentSubscriptionsResponse(
+            return operations.ListPaymentSubscriptions2Response(
                 payment_subscriptions=unmarshal_json_response(
                     Optional[List[shared.PaymentSubscription]], http_res
                 ),
@@ -2382,18 +2388,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_payment_link(
+    def patch_payment_link2(
         self,
         *,
         request: Union[
-            operations.PatchPaymentLinkRequest,
-            operations.PatchPaymentLinkRequestTypedDict,
+            operations.PatchPaymentLink2Request,
+            operations.PatchPaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentLinkResponse:
+    ) -> operations.PatchPaymentLink2Response:
         r"""Update a link
 
         :param request: The request object to send.
@@ -2413,8 +2419,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPaymentLinkRequest)
-        request = cast(operations.PatchPaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.PatchPaymentLink2Request)
+        request = cast(operations.PatchPaymentLink2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2448,7 +2454,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentLink",
+                operation_id="patchPaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2458,7 +2464,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentLinkResponse(
+            return operations.PatchPaymentLink2Response(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -2475,18 +2481,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_payment_link_async(
+    async def patch_payment_link2_async(
         self,
         *,
         request: Union[
-            operations.PatchPaymentLinkRequest,
-            operations.PatchPaymentLinkRequestTypedDict,
+            operations.PatchPaymentLink2Request,
+            operations.PatchPaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentLinkResponse:
+    ) -> operations.PatchPaymentLink2Response:
         r"""Update a link
 
         :param request: The request object to send.
@@ -2506,8 +2512,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPaymentLinkRequest)
-        request = cast(operations.PatchPaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.PatchPaymentLink2Request)
+        request = cast(operations.PatchPaymentLink2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2541,7 +2547,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentLink",
+                operation_id="patchPaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2551,7 +2557,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentLinkResponse(
+            return operations.PatchPaymentLink2Response(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -2568,18 +2574,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_payment_payment(
+    def patch_payment_payment2(
         self,
         *,
         request: Union[
-            operations.PatchPaymentPaymentRequest,
-            operations.PatchPaymentPaymentRequestTypedDict,
+            operations.PatchPaymentPayment2Request,
+            operations.PatchPaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentPaymentResponse:
+    ) -> operations.PatchPaymentPayment2Response:
         r"""Update a payment
 
         :param request: The request object to send.
@@ -2599,8 +2605,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPaymentPaymentRequest)
-        request = cast(operations.PatchPaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.PatchPaymentPayment2Request)
+        request = cast(operations.PatchPaymentPayment2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2634,7 +2640,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentPayment",
+                operation_id="patchPaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2644,7 +2650,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentPaymentResponse(
+            return operations.PatchPaymentPayment2Response(
                 payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
@@ -2661,18 +2667,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_payment_payment_async(
+    async def patch_payment_payment2_async(
         self,
         *,
         request: Union[
-            operations.PatchPaymentPaymentRequest,
-            operations.PatchPaymentPaymentRequestTypedDict,
+            operations.PatchPaymentPayment2Request,
+            operations.PatchPaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentPaymentResponse:
+    ) -> operations.PatchPaymentPayment2Response:
         r"""Update a payment
 
         :param request: The request object to send.
@@ -2692,8 +2698,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPaymentPaymentRequest)
-        request = cast(operations.PatchPaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.PatchPaymentPayment2Request)
+        request = cast(operations.PatchPaymentPayment2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2727,7 +2733,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentPayment",
+                operation_id="patchPaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2737,7 +2743,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentPaymentResponse(
+            return operations.PatchPaymentPayment2Response(
                 payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
@@ -2754,18 +2760,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_payment_subscription(
+    def patch_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.PatchPaymentSubscriptionRequest,
-            operations.PatchPaymentSubscriptionRequestTypedDict,
+            operations.PatchPaymentSubscription2Request,
+            operations.PatchPaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentSubscriptionResponse:
+    ) -> operations.PatchPaymentSubscription2Response:
         r"""Update a subscription
 
         :param request: The request object to send.
@@ -2786,9 +2792,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchPaymentSubscriptionRequest
+                request, operations.PatchPaymentSubscription2Request
             )
-        request = cast(operations.PatchPaymentSubscriptionRequest, request)
+        request = cast(operations.PatchPaymentSubscription2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2826,7 +2832,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentSubscription",
+                operation_id="patchPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2836,7 +2842,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentSubscriptionResponse(
+            return operations.PatchPaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -2853,18 +2859,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_payment_subscription_async(
+    async def patch_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.PatchPaymentSubscriptionRequest,
-            operations.PatchPaymentSubscriptionRequestTypedDict,
+            operations.PatchPaymentSubscription2Request,
+            operations.PatchPaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentSubscriptionResponse:
+    ) -> operations.PatchPaymentSubscription2Response:
         r"""Update a subscription
 
         :param request: The request object to send.
@@ -2885,9 +2891,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchPaymentSubscriptionRequest
+                request, operations.PatchPaymentSubscription2Request
             )
-        request = cast(operations.PatchPaymentSubscriptionRequest, request)
+        request = cast(operations.PatchPaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2925,7 +2931,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentSubscription",
+                operation_id="patchPaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2935,7 +2941,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentSubscriptionResponse(
+            return operations.PatchPaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -2952,18 +2958,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_payment_link(
+    def remove_payment_link2(
         self,
         *,
         request: Union[
-            operations.RemovePaymentLinkRequest,
-            operations.RemovePaymentLinkRequestTypedDict,
+            operations.RemovePaymentLink2Request,
+            operations.RemovePaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentLinkResponse:
+    ) -> operations.RemovePaymentLink2Response:
         r"""Remove a link
 
         :param request: The request object to send.
@@ -2983,8 +2989,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemovePaymentLinkRequest)
-        request = cast(operations.RemovePaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.RemovePaymentLink2Request)
+        request = cast(operations.RemovePaymentLink2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -3015,7 +3021,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentLink",
+                operation_id="removePaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3025,7 +3031,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentLinkResponse(
+            return operations.RemovePaymentLink2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3038,7 +3044,7 @@ class Payment(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentLinkResponse(
+            return operations.RemovePaymentLink2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3047,18 +3053,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_payment_link_async(
+    async def remove_payment_link2_async(
         self,
         *,
         request: Union[
-            operations.RemovePaymentLinkRequest,
-            operations.RemovePaymentLinkRequestTypedDict,
+            operations.RemovePaymentLink2Request,
+            operations.RemovePaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentLinkResponse:
+    ) -> operations.RemovePaymentLink2Response:
         r"""Remove a link
 
         :param request: The request object to send.
@@ -3078,8 +3084,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemovePaymentLinkRequest)
-        request = cast(operations.RemovePaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.RemovePaymentLink2Request)
+        request = cast(operations.RemovePaymentLink2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3110,7 +3116,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentLink",
+                operation_id="removePaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3120,7 +3126,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentLinkResponse(
+            return operations.RemovePaymentLink2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3133,7 +3139,7 @@ class Payment(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentLinkResponse(
+            return operations.RemovePaymentLink2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3142,18 +3148,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_payment_payment(
+    def remove_payment_payment2(
         self,
         *,
         request: Union[
-            operations.RemovePaymentPaymentRequest,
-            operations.RemovePaymentPaymentRequestTypedDict,
+            operations.RemovePaymentPayment2Request,
+            operations.RemovePaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentPaymentResponse:
+    ) -> operations.RemovePaymentPayment2Response:
         r"""Remove a payment
 
         :param request: The request object to send.
@@ -3173,8 +3179,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemovePaymentPaymentRequest)
-        request = cast(operations.RemovePaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.RemovePaymentPayment2Request)
+        request = cast(operations.RemovePaymentPayment2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -3205,7 +3211,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentPayment",
+                operation_id="removePaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3215,7 +3221,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentPaymentResponse(
+            return operations.RemovePaymentPayment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3228,7 +3234,7 @@ class Payment(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentPaymentResponse(
+            return operations.RemovePaymentPayment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3237,18 +3243,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_payment_payment_async(
+    async def remove_payment_payment2_async(
         self,
         *,
         request: Union[
-            operations.RemovePaymentPaymentRequest,
-            operations.RemovePaymentPaymentRequestTypedDict,
+            operations.RemovePaymentPayment2Request,
+            operations.RemovePaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentPaymentResponse:
+    ) -> operations.RemovePaymentPayment2Response:
         r"""Remove a payment
 
         :param request: The request object to send.
@@ -3268,8 +3274,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemovePaymentPaymentRequest)
-        request = cast(operations.RemovePaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.RemovePaymentPayment2Request)
+        request = cast(operations.RemovePaymentPayment2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3300,7 +3306,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentPayment",
+                operation_id="removePaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3310,7 +3316,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentPaymentResponse(
+            return operations.RemovePaymentPayment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3323,7 +3329,7 @@ class Payment(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentPaymentResponse(
+            return operations.RemovePaymentPayment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3332,18 +3338,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_payment_subscription(
+    def remove_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.RemovePaymentSubscriptionRequest,
-            operations.RemovePaymentSubscriptionRequestTypedDict,
+            operations.RemovePaymentSubscription2Request,
+            operations.RemovePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentSubscriptionResponse:
+    ) -> operations.RemovePaymentSubscription2Response:
         r"""Remove a subscription
 
         :param request: The request object to send.
@@ -3364,9 +3370,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemovePaymentSubscriptionRequest
+                request, operations.RemovePaymentSubscription2Request
             )
-        request = cast(operations.RemovePaymentSubscriptionRequest, request)
+        request = cast(operations.RemovePaymentSubscription2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -3397,7 +3403,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentSubscription",
+                operation_id="removePaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3407,7 +3413,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentSubscriptionResponse(
+            return operations.RemovePaymentSubscription2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3420,7 +3426,7 @@ class Payment(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentSubscriptionResponse(
+            return operations.RemovePaymentSubscription2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3429,18 +3435,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_payment_subscription_async(
+    async def remove_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.RemovePaymentSubscriptionRequest,
-            operations.RemovePaymentSubscriptionRequestTypedDict,
+            operations.RemovePaymentSubscription2Request,
+            operations.RemovePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentSubscriptionResponse:
+    ) -> operations.RemovePaymentSubscription2Response:
         r"""Remove a subscription
 
         :param request: The request object to send.
@@ -3461,9 +3467,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemovePaymentSubscriptionRequest
+                request, operations.RemovePaymentSubscription2Request
             )
-        request = cast(operations.RemovePaymentSubscriptionRequest, request)
+        request = cast(operations.RemovePaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3494,7 +3500,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentSubscription",
+                operation_id="removePaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3504,7 +3510,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentSubscriptionResponse(
+            return operations.RemovePaymentSubscription2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3517,7 +3523,7 @@ class Payment(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentSubscriptionResponse(
+            return operations.RemovePaymentSubscription2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3526,18 +3532,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_payment_link(
+    def update_payment_link2(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentLinkRequest,
-            operations.UpdatePaymentLinkRequestTypedDict,
+            operations.UpdatePaymentLink2Request,
+            operations.UpdatePaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentLinkResponse:
+    ) -> operations.UpdatePaymentLink2Response:
         r"""Update a link
 
         :param request: The request object to send.
@@ -3557,8 +3563,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePaymentLinkRequest)
-        request = cast(operations.UpdatePaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.UpdatePaymentLink2Request)
+        request = cast(operations.UpdatePaymentLink2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3592,7 +3598,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentLink",
+                operation_id="updatePaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3602,7 +3608,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentLinkResponse(
+            return operations.UpdatePaymentLink2Response(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -3619,18 +3625,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_payment_link_async(
+    async def update_payment_link2_async(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentLinkRequest,
-            operations.UpdatePaymentLinkRequestTypedDict,
+            operations.UpdatePaymentLink2Request,
+            operations.UpdatePaymentLink2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentLinkResponse:
+    ) -> operations.UpdatePaymentLink2Response:
         r"""Update a link
 
         :param request: The request object to send.
@@ -3650,8 +3656,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePaymentLinkRequest)
-        request = cast(operations.UpdatePaymentLinkRequest, request)
+            request = utils.unmarshal(request, operations.UpdatePaymentLink2Request)
+        request = cast(operations.UpdatePaymentLink2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3685,7 +3691,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentLink",
+                operation_id="updatePaymentLink2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3695,7 +3701,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentLinkResponse(
+            return operations.UpdatePaymentLink2Response(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -3712,18 +3718,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_payment_payment(
+    def update_payment_payment2(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentPaymentRequest,
-            operations.UpdatePaymentPaymentRequestTypedDict,
+            operations.UpdatePaymentPayment2Request,
+            operations.UpdatePaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentPaymentResponse:
+    ) -> operations.UpdatePaymentPayment2Response:
         r"""Update a payment
 
         :param request: The request object to send.
@@ -3743,8 +3749,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePaymentPaymentRequest)
-        request = cast(operations.UpdatePaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.UpdatePaymentPayment2Request)
+        request = cast(operations.UpdatePaymentPayment2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3778,7 +3784,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentPayment",
+                operation_id="updatePaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3788,7 +3794,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentPaymentResponse(
+            return operations.UpdatePaymentPayment2Response(
                 payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
@@ -3805,18 +3811,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_payment_payment_async(
+    async def update_payment_payment2_async(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentPaymentRequest,
-            operations.UpdatePaymentPaymentRequestTypedDict,
+            operations.UpdatePaymentPayment2Request,
+            operations.UpdatePaymentPayment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentPaymentResponse:
+    ) -> operations.UpdatePaymentPayment2Response:
         r"""Update a payment
 
         :param request: The request object to send.
@@ -3836,8 +3842,8 @@ class Payment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePaymentPaymentRequest)
-        request = cast(operations.UpdatePaymentPaymentRequest, request)
+            request = utils.unmarshal(request, operations.UpdatePaymentPayment2Request)
+        request = cast(operations.UpdatePaymentPayment2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3871,7 +3877,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentPayment",
+                operation_id="updatePaymentPayment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3881,7 +3887,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentPaymentResponse(
+            return operations.UpdatePaymentPayment2Response(
                 payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
@@ -3898,18 +3904,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_payment_subscription(
+    def update_payment_subscription2(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentSubscriptionRequest,
-            operations.UpdatePaymentSubscriptionRequestTypedDict,
+            operations.UpdatePaymentSubscription2Request,
+            operations.UpdatePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentSubscriptionResponse:
+    ) -> operations.UpdatePaymentSubscription2Response:
         r"""Update a subscription
 
         :param request: The request object to send.
@@ -3930,9 +3936,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdatePaymentSubscriptionRequest
+                request, operations.UpdatePaymentSubscription2Request
             )
-        request = cast(operations.UpdatePaymentSubscriptionRequest, request)
+        request = cast(operations.UpdatePaymentSubscription2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3970,7 +3976,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentSubscription",
+                operation_id="updatePaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3980,7 +3986,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentSubscriptionResponse(
+            return operations.UpdatePaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
@@ -3997,18 +4003,18 @@ class Payment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_payment_subscription_async(
+    async def update_payment_subscription2_async(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentSubscriptionRequest,
-            operations.UpdatePaymentSubscriptionRequestTypedDict,
+            operations.UpdatePaymentSubscription2Request,
+            operations.UpdatePaymentSubscription2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentSubscriptionResponse:
+    ) -> operations.UpdatePaymentSubscription2Response:
         r"""Update a subscription
 
         :param request: The request object to send.
@@ -4029,9 +4035,9 @@ class Payment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdatePaymentSubscriptionRequest
+                request, operations.UpdatePaymentSubscription2Request
             )
-        request = cast(operations.UpdatePaymentSubscriptionRequest, request)
+        request = cast(operations.UpdatePaymentSubscription2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -4069,7 +4075,7 @@ class Payment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentSubscription",
+                operation_id="updatePaymentSubscription2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -4079,7 +4085,7 @@ class Payment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentSubscriptionResponse(
+            return operations.UpdatePaymentSubscription2Response(
                 payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),

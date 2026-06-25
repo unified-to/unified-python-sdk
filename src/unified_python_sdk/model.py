@@ -10,17 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Model(BaseSDK):
-    def get_genai_model(
+    def get_genai_model2(
         self,
         *,
         request: Union[
-            operations.GetGenaiModelRequest, operations.GetGenaiModelRequestTypedDict
+            operations.GetGenaiModel2Request, operations.GetGenaiModel2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetGenaiModelResponse:
+    ) -> operations.GetGenaiModel2Response:
         r"""Retrieve a model
 
         :param request: The request object to send.
@@ -40,8 +40,8 @@ class Model(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetGenaiModelRequest)
-        request = cast(operations.GetGenaiModelRequest, request)
+            request = utils.unmarshal(request, operations.GetGenaiModel2Request)
+        request = cast(operations.GetGenaiModel2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -72,7 +72,7 @@ class Model(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getGenaiModel",
+                operation_id="getGenaiModel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -82,7 +82,7 @@ class Model(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetGenaiModelResponse(
+            return operations.GetGenaiModel2Response(
                 genai_model=unmarshal_json_response(
                     Optional[shared.GenaiModel], http_res
                 ),
@@ -99,17 +99,17 @@ class Model(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_genai_model_async(
+    async def get_genai_model2_async(
         self,
         *,
         request: Union[
-            operations.GetGenaiModelRequest, operations.GetGenaiModelRequestTypedDict
+            operations.GetGenaiModel2Request, operations.GetGenaiModel2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetGenaiModelResponse:
+    ) -> operations.GetGenaiModel2Response:
         r"""Retrieve a model
 
         :param request: The request object to send.
@@ -129,8 +129,8 @@ class Model(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetGenaiModelRequest)
-        request = cast(operations.GetGenaiModelRequest, request)
+            request = utils.unmarshal(request, operations.GetGenaiModel2Request)
+        request = cast(operations.GetGenaiModel2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -161,7 +161,7 @@ class Model(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getGenaiModel",
+                operation_id="getGenaiModel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -171,7 +171,7 @@ class Model(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetGenaiModelResponse(
+            return operations.GetGenaiModel2Response(
                 genai_model=unmarshal_json_response(
                     Optional[shared.GenaiModel], http_res
                 ),
@@ -188,18 +188,18 @@ class Model(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_genai_models(
+    def list_genai_models2(
         self,
         *,
         request: Union[
-            operations.ListGenaiModelsRequest,
-            operations.ListGenaiModelsRequestTypedDict,
+            operations.ListGenaiModels2Request,
+            operations.ListGenaiModels2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListGenaiModelsResponse:
+    ) -> operations.ListGenaiModels2Response:
         r"""List all models
 
         :param request: The request object to send.
@@ -219,8 +219,8 @@ class Model(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListGenaiModelsRequest)
-        request = cast(operations.ListGenaiModelsRequest, request)
+            request = utils.unmarshal(request, operations.ListGenaiModels2Request)
+        request = cast(operations.ListGenaiModels2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -251,7 +251,7 @@ class Model(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listGenaiModels",
+                operation_id="listGenaiModels2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -261,7 +261,7 @@ class Model(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListGenaiModelsResponse(
+            return operations.ListGenaiModels2Response(
                 genai_models=unmarshal_json_response(
                     Optional[List[shared.GenaiModel]], http_res
                 ),
@@ -278,18 +278,18 @@ class Model(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_genai_models_async(
+    async def list_genai_models2_async(
         self,
         *,
         request: Union[
-            operations.ListGenaiModelsRequest,
-            operations.ListGenaiModelsRequestTypedDict,
+            operations.ListGenaiModels2Request,
+            operations.ListGenaiModels2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListGenaiModelsResponse:
+    ) -> operations.ListGenaiModels2Response:
         r"""List all models
 
         :param request: The request object to send.
@@ -309,8 +309,8 @@ class Model(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListGenaiModelsRequest)
-        request = cast(operations.ListGenaiModelsRequest, request)
+            request = utils.unmarshal(request, operations.ListGenaiModels2Request)
+        request = cast(operations.ListGenaiModels2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -341,7 +341,7 @@ class Model(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listGenaiModels",
+                operation_id="listGenaiModels2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -351,7 +351,7 @@ class Model(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListGenaiModelsResponse(
+            return operations.ListGenaiModels2Response(
                 genai_models=unmarshal_json_response(
                     Optional[List[shared.GenaiModel]], http_res
                 ),

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Embedding(BaseSDK):
-    def create_genai_embedding(
+    def create_genai_embedding2(
         self,
         *,
         request: Union[
-            operations.CreateGenaiEmbeddingRequest,
-            operations.CreateGenaiEmbeddingRequestTypedDict,
+            operations.CreateGenaiEmbedding2Request,
+            operations.CreateGenaiEmbedding2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateGenaiEmbeddingResponse:
+    ) -> operations.CreateGenaiEmbedding2Response:
         r"""Create an embedding
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Embedding(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateGenaiEmbeddingRequest)
-        request = cast(operations.CreateGenaiEmbeddingRequest, request)
+            request = utils.unmarshal(request, operations.CreateGenaiEmbedding2Request)
+        request = cast(operations.CreateGenaiEmbedding2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Embedding(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createGenaiEmbedding",
+                operation_id="createGenaiEmbedding2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Embedding(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateGenaiEmbeddingResponse(
+            return operations.CreateGenaiEmbedding2Response(
                 genai_embedding=unmarshal_json_response(
                     Optional[shared.GenaiEmbedding], http_res
                 ),
@@ -103,18 +103,18 @@ class Embedding(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_genai_embedding_async(
+    async def create_genai_embedding2_async(
         self,
         *,
         request: Union[
-            operations.CreateGenaiEmbeddingRequest,
-            operations.CreateGenaiEmbeddingRequestTypedDict,
+            operations.CreateGenaiEmbedding2Request,
+            operations.CreateGenaiEmbedding2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateGenaiEmbeddingResponse:
+    ) -> operations.CreateGenaiEmbedding2Response:
         r"""Create an embedding
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Embedding(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateGenaiEmbeddingRequest)
-        request = cast(operations.CreateGenaiEmbeddingRequest, request)
+            request = utils.unmarshal(request, operations.CreateGenaiEmbedding2Request)
+        request = cast(operations.CreateGenaiEmbedding2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Embedding(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createGenaiEmbedding",
+                operation_id="createGenaiEmbedding2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Embedding(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateGenaiEmbeddingResponse(
+            return operations.CreateGenaiEmbedding2Response(
                 genai_embedding=unmarshal_json_response(
                     Optional[shared.GenaiEmbedding], http_res
                 ),

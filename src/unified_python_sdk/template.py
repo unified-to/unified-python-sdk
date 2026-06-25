@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Template(BaseSDK):
-    def get_signing_template(
+    def get_signing_template2(
         self,
         *,
         request: Union[
-            operations.GetSigningTemplateRequest,
-            operations.GetSigningTemplateRequestTypedDict,
+            operations.GetSigningTemplate2Request,
+            operations.GetSigningTemplate2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetSigningTemplateResponse:
+    ) -> operations.GetSigningTemplate2Response:
         r"""Retrieve a template
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Template(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetSigningTemplateRequest)
-        request = cast(operations.GetSigningTemplateRequest, request)
+            request = utils.unmarshal(request, operations.GetSigningTemplate2Request)
+        request = cast(operations.GetSigningTemplate2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Template(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getSigningTemplate",
+                operation_id="getSigningTemplate2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -83,7 +83,7 @@ class Template(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetSigningTemplateResponse(
+            return operations.GetSigningTemplate2Response(
                 signing_template=unmarshal_json_response(
                     Optional[shared.SigningTemplate], http_res
                 ),
@@ -100,18 +100,18 @@ class Template(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_signing_template_async(
+    async def get_signing_template2_async(
         self,
         *,
         request: Union[
-            operations.GetSigningTemplateRequest,
-            operations.GetSigningTemplateRequestTypedDict,
+            operations.GetSigningTemplate2Request,
+            operations.GetSigningTemplate2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetSigningTemplateResponse:
+    ) -> operations.GetSigningTemplate2Response:
         r"""Retrieve a template
 
         :param request: The request object to send.
@@ -131,8 +131,8 @@ class Template(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetSigningTemplateRequest)
-        request = cast(operations.GetSigningTemplateRequest, request)
+            request = utils.unmarshal(request, operations.GetSigningTemplate2Request)
+        request = cast(operations.GetSigningTemplate2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -163,7 +163,7 @@ class Template(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getSigningTemplate",
+                operation_id="getSigningTemplate2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -173,7 +173,7 @@ class Template(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetSigningTemplateResponse(
+            return operations.GetSigningTemplate2Response(
                 signing_template=unmarshal_json_response(
                     Optional[shared.SigningTemplate], http_res
                 ),
@@ -190,18 +190,18 @@ class Template(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_signing_templates(
+    def list_signing_templates2(
         self,
         *,
         request: Union[
-            operations.ListSigningTemplatesRequest,
-            operations.ListSigningTemplatesRequestTypedDict,
+            operations.ListSigningTemplates2Request,
+            operations.ListSigningTemplates2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListSigningTemplatesResponse:
+    ) -> operations.ListSigningTemplates2Response:
         r"""List all templates
 
         :param request: The request object to send.
@@ -221,8 +221,8 @@ class Template(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListSigningTemplatesRequest)
-        request = cast(operations.ListSigningTemplatesRequest, request)
+            request = utils.unmarshal(request, operations.ListSigningTemplates2Request)
+        request = cast(operations.ListSigningTemplates2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -253,7 +253,7 @@ class Template(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listSigningTemplates",
+                operation_id="listSigningTemplates2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -263,7 +263,7 @@ class Template(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListSigningTemplatesResponse(
+            return operations.ListSigningTemplates2Response(
                 signing_templates=unmarshal_json_response(
                     Optional[List[shared.SigningTemplate]], http_res
                 ),
@@ -280,18 +280,18 @@ class Template(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_signing_templates_async(
+    async def list_signing_templates2_async(
         self,
         *,
         request: Union[
-            operations.ListSigningTemplatesRequest,
-            operations.ListSigningTemplatesRequestTypedDict,
+            operations.ListSigningTemplates2Request,
+            operations.ListSigningTemplates2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListSigningTemplatesResponse:
+    ) -> operations.ListSigningTemplates2Response:
         r"""List all templates
 
         :param request: The request object to send.
@@ -311,8 +311,8 @@ class Template(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListSigningTemplatesRequest)
-        request = cast(operations.ListSigningTemplatesRequest, request)
+            request = utils.unmarshal(request, operations.ListSigningTemplates2Request)
+        request = cast(operations.ListSigningTemplates2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -343,7 +343,7 @@ class Template(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listSigningTemplates",
+                operation_id="listSigningTemplates2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -353,7 +353,7 @@ class Template(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListSigningTemplatesResponse(
+            return operations.ListSigningTemplates2Response(
                 signing_templates=unmarshal_json_response(
                     Optional[List[shared.SigningTemplate]], http_res
                 ),

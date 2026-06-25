@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Insertionorder(BaseSDK):
-    def create_ads_insertionorder(
+    def create_ads_insertionorder2(
         self,
         *,
         request: Union[
-            operations.CreateAdsInsertionorderRequest,
-            operations.CreateAdsInsertionorderRequestTypedDict,
+            operations.CreateAdsInsertionorder2Request,
+            operations.CreateAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsInsertionorderResponse:
+    ) -> operations.CreateAdsInsertionorder2Response:
         r"""Create an insertionorder
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Insertionorder(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAdsInsertionorderRequest
+                request, operations.CreateAdsInsertionorder2Request
             )
-        request = cast(operations.CreateAdsInsertionorderRequest, request)
+        request = cast(operations.CreateAdsInsertionorder2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsInsertionorder",
+                operation_id="createAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsInsertionorderResponse(
+            return operations.CreateAdsInsertionorder2Response(
                 ads_insertionorder=unmarshal_json_response(
                     Optional[shared.AdsInsertionorder], http_res
                 ),
@@ -109,18 +109,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ads_insertionorder_async(
+    async def create_ads_insertionorder2_async(
         self,
         *,
         request: Union[
-            operations.CreateAdsInsertionorderRequest,
-            operations.CreateAdsInsertionorderRequestTypedDict,
+            operations.CreateAdsInsertionorder2Request,
+            operations.CreateAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsInsertionorderResponse:
+    ) -> operations.CreateAdsInsertionorder2Response:
         r"""Create an insertionorder
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Insertionorder(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAdsInsertionorderRequest
+                request, operations.CreateAdsInsertionorder2Request
             )
-        request = cast(operations.CreateAdsInsertionorderRequest, request)
+        request = cast(operations.CreateAdsInsertionorder2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsInsertionorder",
+                operation_id="createAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsInsertionorderResponse(
+            return operations.CreateAdsInsertionorder2Response(
                 ads_insertionorder=unmarshal_json_response(
                     Optional[shared.AdsInsertionorder], http_res
                 ),
@@ -208,18 +208,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ads_insertionorder(
+    def get_ads_insertionorder2(
         self,
         *,
         request: Union[
-            operations.GetAdsInsertionorderRequest,
-            operations.GetAdsInsertionorderRequestTypedDict,
+            operations.GetAdsInsertionorder2Request,
+            operations.GetAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsInsertionorderResponse:
+    ) -> operations.GetAdsInsertionorder2Response:
         r"""Retrieve an insertionorder
 
         :param request: The request object to send.
@@ -239,8 +239,8 @@ class Insertionorder(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsInsertionorderRequest)
-        request = cast(operations.GetAdsInsertionorderRequest, request)
+            request = utils.unmarshal(request, operations.GetAdsInsertionorder2Request)
+        request = cast(operations.GetAdsInsertionorder2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -271,7 +271,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsInsertionorder",
+                operation_id="getAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -281,7 +281,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsInsertionorderResponse(
+            return operations.GetAdsInsertionorder2Response(
                 ads_insertionorder=unmarshal_json_response(
                     Optional[shared.AdsInsertionorder], http_res
                 ),
@@ -298,18 +298,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ads_insertionorder_async(
+    async def get_ads_insertionorder2_async(
         self,
         *,
         request: Union[
-            operations.GetAdsInsertionorderRequest,
-            operations.GetAdsInsertionorderRequestTypedDict,
+            operations.GetAdsInsertionorder2Request,
+            operations.GetAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsInsertionorderResponse:
+    ) -> operations.GetAdsInsertionorder2Response:
         r"""Retrieve an insertionorder
 
         :param request: The request object to send.
@@ -329,8 +329,8 @@ class Insertionorder(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsInsertionorderRequest)
-        request = cast(operations.GetAdsInsertionorderRequest, request)
+            request = utils.unmarshal(request, operations.GetAdsInsertionorder2Request)
+        request = cast(operations.GetAdsInsertionorder2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -361,7 +361,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsInsertionorder",
+                operation_id="getAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -371,7 +371,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsInsertionorderResponse(
+            return operations.GetAdsInsertionorder2Response(
                 ads_insertionorder=unmarshal_json_response(
                     Optional[shared.AdsInsertionorder], http_res
                 ),
@@ -388,18 +388,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ads_insertionorders(
+    def list_ads_insertionorders2(
         self,
         *,
         request: Union[
-            operations.ListAdsInsertionordersRequest,
-            operations.ListAdsInsertionordersRequestTypedDict,
+            operations.ListAdsInsertionorders2Request,
+            operations.ListAdsInsertionorders2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsInsertionordersResponse:
+    ) -> operations.ListAdsInsertionorders2Response:
         r"""List all insertionorders
 
         :param request: The request object to send.
@@ -419,8 +419,10 @@ class Insertionorder(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsInsertionordersRequest)
-        request = cast(operations.ListAdsInsertionordersRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListAdsInsertionorders2Request
+            )
+        request = cast(operations.ListAdsInsertionorders2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -451,7 +453,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsInsertionorders",
+                operation_id="listAdsInsertionorders2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -461,7 +463,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsInsertionordersResponse(
+            return operations.ListAdsInsertionorders2Response(
                 ads_insertionorders=unmarshal_json_response(
                     Optional[List[shared.AdsInsertionorder]], http_res
                 ),
@@ -478,18 +480,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ads_insertionorders_async(
+    async def list_ads_insertionorders2_async(
         self,
         *,
         request: Union[
-            operations.ListAdsInsertionordersRequest,
-            operations.ListAdsInsertionordersRequestTypedDict,
+            operations.ListAdsInsertionorders2Request,
+            operations.ListAdsInsertionorders2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsInsertionordersResponse:
+    ) -> operations.ListAdsInsertionorders2Response:
         r"""List all insertionorders
 
         :param request: The request object to send.
@@ -509,8 +511,10 @@ class Insertionorder(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsInsertionordersRequest)
-        request = cast(operations.ListAdsInsertionordersRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListAdsInsertionorders2Request
+            )
+        request = cast(operations.ListAdsInsertionorders2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -541,7 +545,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsInsertionorders",
+                operation_id="listAdsInsertionorders2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -551,7 +555,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsInsertionordersResponse(
+            return operations.ListAdsInsertionorders2Response(
                 ads_insertionorders=unmarshal_json_response(
                     Optional[List[shared.AdsInsertionorder]], http_res
                 ),
@@ -568,18 +572,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ads_insertionorder(
+    def patch_ads_insertionorder2(
         self,
         *,
         request: Union[
-            operations.PatchAdsInsertionorderRequest,
-            operations.PatchAdsInsertionorderRequestTypedDict,
+            operations.PatchAdsInsertionorder2Request,
+            operations.PatchAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsInsertionorderResponse:
+    ) -> operations.PatchAdsInsertionorder2Response:
         r"""Update an insertionorder
 
         :param request: The request object to send.
@@ -599,8 +603,10 @@ class Insertionorder(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsInsertionorderRequest)
-        request = cast(operations.PatchAdsInsertionorderRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchAdsInsertionorder2Request
+            )
+        request = cast(operations.PatchAdsInsertionorder2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -638,7 +644,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsInsertionorder",
+                operation_id="patchAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -648,7 +654,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsInsertionorderResponse(
+            return operations.PatchAdsInsertionorder2Response(
                 ads_insertionorder=unmarshal_json_response(
                     Optional[shared.AdsInsertionorder], http_res
                 ),
@@ -665,18 +671,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ads_insertionorder_async(
+    async def patch_ads_insertionorder2_async(
         self,
         *,
         request: Union[
-            operations.PatchAdsInsertionorderRequest,
-            operations.PatchAdsInsertionorderRequestTypedDict,
+            operations.PatchAdsInsertionorder2Request,
+            operations.PatchAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsInsertionorderResponse:
+    ) -> operations.PatchAdsInsertionorder2Response:
         r"""Update an insertionorder
 
         :param request: The request object to send.
@@ -696,8 +702,10 @@ class Insertionorder(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsInsertionorderRequest)
-        request = cast(operations.PatchAdsInsertionorderRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchAdsInsertionorder2Request
+            )
+        request = cast(operations.PatchAdsInsertionorder2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -735,7 +743,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsInsertionorder",
+                operation_id="patchAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -745,7 +753,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsInsertionorderResponse(
+            return operations.PatchAdsInsertionorder2Response(
                 ads_insertionorder=unmarshal_json_response(
                     Optional[shared.AdsInsertionorder], http_res
                 ),
@@ -762,18 +770,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ads_insertionorder(
+    def remove_ads_insertionorder2(
         self,
         *,
         request: Union[
-            operations.RemoveAdsInsertionorderRequest,
-            operations.RemoveAdsInsertionorderRequestTypedDict,
+            operations.RemoveAdsInsertionorder2Request,
+            operations.RemoveAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsInsertionorderResponse:
+    ) -> operations.RemoveAdsInsertionorder2Response:
         r"""Remove an insertionorder
 
         :param request: The request object to send.
@@ -794,9 +802,9 @@ class Insertionorder(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAdsInsertionorderRequest
+                request, operations.RemoveAdsInsertionorder2Request
             )
-        request = cast(operations.RemoveAdsInsertionorderRequest, request)
+        request = cast(operations.RemoveAdsInsertionorder2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -827,7 +835,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsInsertionorder",
+                operation_id="removeAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -837,7 +845,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsInsertionorderResponse(
+            return operations.RemoveAdsInsertionorder2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -850,7 +858,7 @@ class Insertionorder(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsInsertionorderResponse(
+            return operations.RemoveAdsInsertionorder2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -859,18 +867,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ads_insertionorder_async(
+    async def remove_ads_insertionorder2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAdsInsertionorderRequest,
-            operations.RemoveAdsInsertionorderRequestTypedDict,
+            operations.RemoveAdsInsertionorder2Request,
+            operations.RemoveAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsInsertionorderResponse:
+    ) -> operations.RemoveAdsInsertionorder2Response:
         r"""Remove an insertionorder
 
         :param request: The request object to send.
@@ -891,9 +899,9 @@ class Insertionorder(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAdsInsertionorderRequest
+                request, operations.RemoveAdsInsertionorder2Request
             )
-        request = cast(operations.RemoveAdsInsertionorderRequest, request)
+        request = cast(operations.RemoveAdsInsertionorder2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -924,7 +932,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsInsertionorder",
+                operation_id="removeAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -934,7 +942,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsInsertionorderResponse(
+            return operations.RemoveAdsInsertionorder2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -947,7 +955,7 @@ class Insertionorder(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsInsertionorderResponse(
+            return operations.RemoveAdsInsertionorder2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -956,18 +964,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ads_insertionorder(
+    def update_ads_insertionorder2(
         self,
         *,
         request: Union[
-            operations.UpdateAdsInsertionorderRequest,
-            operations.UpdateAdsInsertionorderRequestTypedDict,
+            operations.UpdateAdsInsertionorder2Request,
+            operations.UpdateAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsInsertionorderResponse:
+    ) -> operations.UpdateAdsInsertionorder2Response:
         r"""Update an insertionorder
 
         :param request: The request object to send.
@@ -988,9 +996,9 @@ class Insertionorder(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAdsInsertionorderRequest
+                request, operations.UpdateAdsInsertionorder2Request
             )
-        request = cast(operations.UpdateAdsInsertionorderRequest, request)
+        request = cast(operations.UpdateAdsInsertionorder2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1028,7 +1036,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsInsertionorder",
+                operation_id="updateAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1038,7 +1046,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsInsertionorderResponse(
+            return operations.UpdateAdsInsertionorder2Response(
                 ads_insertionorder=unmarshal_json_response(
                     Optional[shared.AdsInsertionorder], http_res
                 ),
@@ -1055,18 +1063,18 @@ class Insertionorder(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ads_insertionorder_async(
+    async def update_ads_insertionorder2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAdsInsertionorderRequest,
-            operations.UpdateAdsInsertionorderRequestTypedDict,
+            operations.UpdateAdsInsertionorder2Request,
+            operations.UpdateAdsInsertionorder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsInsertionorderResponse:
+    ) -> operations.UpdateAdsInsertionorder2Response:
         r"""Update an insertionorder
 
         :param request: The request object to send.
@@ -1087,9 +1095,9 @@ class Insertionorder(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAdsInsertionorderRequest
+                request, operations.UpdateAdsInsertionorder2Request
             )
-        request = cast(operations.UpdateAdsInsertionorderRequest, request)
+        request = cast(operations.UpdateAdsInsertionorder2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1127,7 +1135,7 @@ class Insertionorder(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsInsertionorder",
+                operation_id="updateAdsInsertionorder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1137,7 +1145,7 @@ class Insertionorder(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsInsertionorderResponse(
+            return operations.UpdateAdsInsertionorder2Response(
                 ads_insertionorder=unmarshal_json_response(
                     Optional[shared.AdsInsertionorder], http_res
                 ),

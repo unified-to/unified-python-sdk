@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Document(BaseSDK):
-    def create_ats_document(
+    def create_ats_document2(
         self,
         *,
         request: Union[
-            operations.CreateAtsDocumentRequest,
-            operations.CreateAtsDocumentRequestTypedDict,
+            operations.CreateAtsDocument2Request,
+            operations.CreateAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsDocumentResponse:
+    ) -> operations.CreateAtsDocument2Response:
         r"""Create a document
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
-        request = cast(operations.CreateAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsDocument2Request)
+        request = cast(operations.CreateAtsDocument2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsDocument",
+                operation_id="createAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsDocumentResponse(
+            return operations.CreateAtsDocument2Response(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -103,18 +103,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_document_async(
+    async def create_ats_document2_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsDocumentRequest,
-            operations.CreateAtsDocumentRequestTypedDict,
+            operations.CreateAtsDocument2Request,
+            operations.CreateAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsDocumentResponse:
+    ) -> operations.CreateAtsDocument2Response:
         r"""Create a document
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
-        request = cast(operations.CreateAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsDocument2Request)
+        request = cast(operations.CreateAtsDocument2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsDocument",
+                operation_id="createAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsDocumentResponse(
+            return operations.CreateAtsDocument2Response(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -196,18 +196,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_signing_document(
+    def create_signing_document2(
         self,
         *,
         request: Union[
-            operations.CreateSigningDocumentRequest,
-            operations.CreateSigningDocumentRequestTypedDict,
+            operations.CreateSigningDocument2Request,
+            operations.CreateSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateSigningDocumentResponse:
+    ) -> operations.CreateSigningDocument2Response:
         r"""Create a document
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateSigningDocumentRequest)
-        request = cast(operations.CreateSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.CreateSigningDocument2Request)
+        request = cast(operations.CreateSigningDocument2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +262,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createSigningDocument",
+                operation_id="createSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +272,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateSigningDocumentResponse(
+            return operations.CreateSigningDocument2Response(
                 signing_document=unmarshal_json_response(
                     Optional[shared.SigningDocument], http_res
                 ),
@@ -289,18 +289,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_signing_document_async(
+    async def create_signing_document2_async(
         self,
         *,
         request: Union[
-            operations.CreateSigningDocumentRequest,
-            operations.CreateSigningDocumentRequestTypedDict,
+            operations.CreateSigningDocument2Request,
+            operations.CreateSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateSigningDocumentResponse:
+    ) -> operations.CreateSigningDocument2Response:
         r"""Create a document
 
         :param request: The request object to send.
@@ -320,8 +320,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateSigningDocumentRequest)
-        request = cast(operations.CreateSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.CreateSigningDocument2Request)
+        request = cast(operations.CreateSigningDocument2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +355,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createSigningDocument",
+                operation_id="createSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +365,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateSigningDocumentResponse(
+            return operations.CreateSigningDocument2Response(
                 signing_document=unmarshal_json_response(
                     Optional[shared.SigningDocument], http_res
                 ),
@@ -382,17 +382,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_document(
+    def get_ats_document2(
         self,
         *,
         request: Union[
-            operations.GetAtsDocumentRequest, operations.GetAtsDocumentRequestTypedDict
+            operations.GetAtsDocument2Request,
+            operations.GetAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsDocumentResponse:
+    ) -> operations.GetAtsDocument2Response:
         r"""Retrieve a document
 
         :param request: The request object to send.
@@ -412,8 +413,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
-        request = cast(operations.GetAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsDocument2Request)
+        request = cast(operations.GetAtsDocument2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -444,7 +445,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsDocument",
+                operation_id="getAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -454,7 +455,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsDocumentResponse(
+            return operations.GetAtsDocument2Response(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -471,17 +472,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_document_async(
+    async def get_ats_document2_async(
         self,
         *,
         request: Union[
-            operations.GetAtsDocumentRequest, operations.GetAtsDocumentRequestTypedDict
+            operations.GetAtsDocument2Request,
+            operations.GetAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsDocumentResponse:
+    ) -> operations.GetAtsDocument2Response:
         r"""Retrieve a document
 
         :param request: The request object to send.
@@ -501,8 +503,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
-        request = cast(operations.GetAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsDocument2Request)
+        request = cast(operations.GetAtsDocument2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -533,7 +535,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsDocument",
+                operation_id="getAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -543,7 +545,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsDocumentResponse(
+            return operations.GetAtsDocument2Response(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -560,18 +562,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_signing_document(
+    def get_signing_document2(
         self,
         *,
         request: Union[
-            operations.GetSigningDocumentRequest,
-            operations.GetSigningDocumentRequestTypedDict,
+            operations.GetSigningDocument2Request,
+            operations.GetSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetSigningDocumentResponse:
+    ) -> operations.GetSigningDocument2Response:
         r"""Retrieve a document
 
         :param request: The request object to send.
@@ -591,8 +593,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetSigningDocumentRequest)
-        request = cast(operations.GetSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.GetSigningDocument2Request)
+        request = cast(operations.GetSigningDocument2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -623,7 +625,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getSigningDocument",
+                operation_id="getSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -633,7 +635,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetSigningDocumentResponse(
+            return operations.GetSigningDocument2Response(
                 signing_document=unmarshal_json_response(
                     Optional[shared.SigningDocument], http_res
                 ),
@@ -650,18 +652,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_signing_document_async(
+    async def get_signing_document2_async(
         self,
         *,
         request: Union[
-            operations.GetSigningDocumentRequest,
-            operations.GetSigningDocumentRequestTypedDict,
+            operations.GetSigningDocument2Request,
+            operations.GetSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetSigningDocumentResponse:
+    ) -> operations.GetSigningDocument2Response:
         r"""Retrieve a document
 
         :param request: The request object to send.
@@ -681,8 +683,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetSigningDocumentRequest)
-        request = cast(operations.GetSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.GetSigningDocument2Request)
+        request = cast(operations.GetSigningDocument2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -713,7 +715,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getSigningDocument",
+                operation_id="getSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -723,7 +725,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetSigningDocumentResponse(
+            return operations.GetSigningDocument2Response(
                 signing_document=unmarshal_json_response(
                     Optional[shared.SigningDocument], http_res
                 ),
@@ -740,18 +742,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_documents(
+    def list_ats_documents2(
         self,
         *,
         request: Union[
-            operations.ListAtsDocumentsRequest,
-            operations.ListAtsDocumentsRequestTypedDict,
+            operations.ListAtsDocuments2Request,
+            operations.ListAtsDocuments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsDocumentsResponse:
+    ) -> operations.ListAtsDocuments2Response:
         r"""List all documents
 
         :param request: The request object to send.
@@ -771,8 +773,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
-        request = cast(operations.ListAtsDocumentsRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsDocuments2Request)
+        request = cast(operations.ListAtsDocuments2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -803,7 +805,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsDocuments",
+                operation_id="listAtsDocuments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -813,7 +815,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsDocumentsResponse(
+            return operations.ListAtsDocuments2Response(
                 ats_documents=unmarshal_json_response(
                     Optional[List[shared.AtsDocument]], http_res
                 ),
@@ -830,18 +832,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_documents_async(
+    async def list_ats_documents2_async(
         self,
         *,
         request: Union[
-            operations.ListAtsDocumentsRequest,
-            operations.ListAtsDocumentsRequestTypedDict,
+            operations.ListAtsDocuments2Request,
+            operations.ListAtsDocuments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsDocumentsResponse:
+    ) -> operations.ListAtsDocuments2Response:
         r"""List all documents
 
         :param request: The request object to send.
@@ -861,8 +863,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
-        request = cast(operations.ListAtsDocumentsRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsDocuments2Request)
+        request = cast(operations.ListAtsDocuments2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -893,7 +895,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsDocuments",
+                operation_id="listAtsDocuments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -903,7 +905,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsDocumentsResponse(
+            return operations.ListAtsDocuments2Response(
                 ats_documents=unmarshal_json_response(
                     Optional[List[shared.AtsDocument]], http_res
                 ),
@@ -920,18 +922,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_signing_documents(
+    def list_signing_documents2(
         self,
         *,
         request: Union[
-            operations.ListSigningDocumentsRequest,
-            operations.ListSigningDocumentsRequestTypedDict,
+            operations.ListSigningDocuments2Request,
+            operations.ListSigningDocuments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListSigningDocumentsResponse:
+    ) -> operations.ListSigningDocuments2Response:
         r"""List all documents
 
         :param request: The request object to send.
@@ -951,8 +953,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListSigningDocumentsRequest)
-        request = cast(operations.ListSigningDocumentsRequest, request)
+            request = utils.unmarshal(request, operations.ListSigningDocuments2Request)
+        request = cast(operations.ListSigningDocuments2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -983,7 +985,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listSigningDocuments",
+                operation_id="listSigningDocuments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -993,7 +995,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListSigningDocumentsResponse(
+            return operations.ListSigningDocuments2Response(
                 signing_documents=unmarshal_json_response(
                     Optional[List[shared.SigningDocument]], http_res
                 ),
@@ -1010,18 +1012,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_signing_documents_async(
+    async def list_signing_documents2_async(
         self,
         *,
         request: Union[
-            operations.ListSigningDocumentsRequest,
-            operations.ListSigningDocumentsRequestTypedDict,
+            operations.ListSigningDocuments2Request,
+            operations.ListSigningDocuments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListSigningDocumentsResponse:
+    ) -> operations.ListSigningDocuments2Response:
         r"""List all documents
 
         :param request: The request object to send.
@@ -1041,8 +1043,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListSigningDocumentsRequest)
-        request = cast(operations.ListSigningDocumentsRequest, request)
+            request = utils.unmarshal(request, operations.ListSigningDocuments2Request)
+        request = cast(operations.ListSigningDocuments2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1073,7 +1075,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listSigningDocuments",
+                operation_id="listSigningDocuments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1083,7 +1085,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListSigningDocumentsResponse(
+            return operations.ListSigningDocuments2Response(
                 signing_documents=unmarshal_json_response(
                     Optional[List[shared.SigningDocument]], http_res
                 ),
@@ -1100,18 +1102,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_document(
+    def patch_ats_document2(
         self,
         *,
         request: Union[
-            operations.PatchAtsDocumentRequest,
-            operations.PatchAtsDocumentRequestTypedDict,
+            operations.PatchAtsDocument2Request,
+            operations.PatchAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsDocumentResponse:
+    ) -> operations.PatchAtsDocument2Response:
         r"""Update a document
 
         :param request: The request object to send.
@@ -1131,8 +1133,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
-        request = cast(operations.PatchAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsDocument2Request)
+        request = cast(operations.PatchAtsDocument2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1166,7 +1168,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsDocument",
+                operation_id="patchAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1176,7 +1178,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsDocumentResponse(
+            return operations.PatchAtsDocument2Response(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -1193,18 +1195,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_document_async(
+    async def patch_ats_document2_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsDocumentRequest,
-            operations.PatchAtsDocumentRequestTypedDict,
+            operations.PatchAtsDocument2Request,
+            operations.PatchAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsDocumentResponse:
+    ) -> operations.PatchAtsDocument2Response:
         r"""Update a document
 
         :param request: The request object to send.
@@ -1224,8 +1226,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
-        request = cast(operations.PatchAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsDocument2Request)
+        request = cast(operations.PatchAtsDocument2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1259,7 +1261,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsDocument",
+                operation_id="patchAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1269,7 +1271,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsDocumentResponse(
+            return operations.PatchAtsDocument2Response(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -1286,18 +1288,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_signing_document(
+    def patch_signing_document2(
         self,
         *,
         request: Union[
-            operations.PatchSigningDocumentRequest,
-            operations.PatchSigningDocumentRequestTypedDict,
+            operations.PatchSigningDocument2Request,
+            operations.PatchSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchSigningDocumentResponse:
+    ) -> operations.PatchSigningDocument2Response:
         r"""Update a document
 
         :param request: The request object to send.
@@ -1317,8 +1319,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchSigningDocumentRequest)
-        request = cast(operations.PatchSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.PatchSigningDocument2Request)
+        request = cast(operations.PatchSigningDocument2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1352,7 +1354,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchSigningDocument",
+                operation_id="patchSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1362,7 +1364,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchSigningDocumentResponse(
+            return operations.PatchSigningDocument2Response(
                 signing_document=unmarshal_json_response(
                     Optional[shared.SigningDocument], http_res
                 ),
@@ -1379,18 +1381,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_signing_document_async(
+    async def patch_signing_document2_async(
         self,
         *,
         request: Union[
-            operations.PatchSigningDocumentRequest,
-            operations.PatchSigningDocumentRequestTypedDict,
+            operations.PatchSigningDocument2Request,
+            operations.PatchSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchSigningDocumentResponse:
+    ) -> operations.PatchSigningDocument2Response:
         r"""Update a document
 
         :param request: The request object to send.
@@ -1410,8 +1412,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchSigningDocumentRequest)
-        request = cast(operations.PatchSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.PatchSigningDocument2Request)
+        request = cast(operations.PatchSigningDocument2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1445,7 +1447,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchSigningDocument",
+                operation_id="patchSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1455,7 +1457,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchSigningDocumentResponse(
+            return operations.PatchSigningDocument2Response(
                 signing_document=unmarshal_json_response(
                     Optional[shared.SigningDocument], http_res
                 ),
@@ -1472,18 +1474,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_document(
+    def remove_ats_document2(
         self,
         *,
         request: Union[
-            operations.RemoveAtsDocumentRequest,
-            operations.RemoveAtsDocumentRequestTypedDict,
+            operations.RemoveAtsDocument2Request,
+            operations.RemoveAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsDocumentResponse:
+    ) -> operations.RemoveAtsDocument2Response:
         r"""Remove a document
 
         :param request: The request object to send.
@@ -1503,8 +1505,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
-        request = cast(operations.RemoveAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsDocument2Request)
+        request = cast(operations.RemoveAtsDocument2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1535,7 +1537,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsDocument",
+                operation_id="removeAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1545,7 +1547,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsDocumentResponse(
+            return operations.RemoveAtsDocument2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1558,7 +1560,7 @@ class Document(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsDocumentResponse(
+            return operations.RemoveAtsDocument2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1567,18 +1569,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_document_async(
+    async def remove_ats_document2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsDocumentRequest,
-            operations.RemoveAtsDocumentRequestTypedDict,
+            operations.RemoveAtsDocument2Request,
+            operations.RemoveAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsDocumentResponse:
+    ) -> operations.RemoveAtsDocument2Response:
         r"""Remove a document
 
         :param request: The request object to send.
@@ -1598,8 +1600,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
-        request = cast(operations.RemoveAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsDocument2Request)
+        request = cast(operations.RemoveAtsDocument2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1630,7 +1632,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsDocument",
+                operation_id="removeAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1640,7 +1642,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsDocumentResponse(
+            return operations.RemoveAtsDocument2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1653,7 +1655,7 @@ class Document(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsDocumentResponse(
+            return operations.RemoveAtsDocument2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1662,18 +1664,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_signing_document(
+    def remove_signing_document2(
         self,
         *,
         request: Union[
-            operations.RemoveSigningDocumentRequest,
-            operations.RemoveSigningDocumentRequestTypedDict,
+            operations.RemoveSigningDocument2Request,
+            operations.RemoveSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveSigningDocumentResponse:
+    ) -> operations.RemoveSigningDocument2Response:
         r"""Remove a document
 
         :param request: The request object to send.
@@ -1693,8 +1695,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveSigningDocumentRequest)
-        request = cast(operations.RemoveSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveSigningDocument2Request)
+        request = cast(operations.RemoveSigningDocument2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1725,7 +1727,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeSigningDocument",
+                operation_id="removeSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1735,7 +1737,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveSigningDocumentResponse(
+            return operations.RemoveSigningDocument2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1748,7 +1750,7 @@ class Document(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveSigningDocumentResponse(
+            return operations.RemoveSigningDocument2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1757,18 +1759,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_signing_document_async(
+    async def remove_signing_document2_async(
         self,
         *,
         request: Union[
-            operations.RemoveSigningDocumentRequest,
-            operations.RemoveSigningDocumentRequestTypedDict,
+            operations.RemoveSigningDocument2Request,
+            operations.RemoveSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveSigningDocumentResponse:
+    ) -> operations.RemoveSigningDocument2Response:
         r"""Remove a document
 
         :param request: The request object to send.
@@ -1788,8 +1790,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveSigningDocumentRequest)
-        request = cast(operations.RemoveSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveSigningDocument2Request)
+        request = cast(operations.RemoveSigningDocument2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1820,7 +1822,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeSigningDocument",
+                operation_id="removeSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1830,7 +1832,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveSigningDocumentResponse(
+            return operations.RemoveSigningDocument2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1843,7 +1845,7 @@ class Document(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveSigningDocumentResponse(
+            return operations.RemoveSigningDocument2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1852,18 +1854,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_document(
+    def update_ats_document2(
         self,
         *,
         request: Union[
-            operations.UpdateAtsDocumentRequest,
-            operations.UpdateAtsDocumentRequestTypedDict,
+            operations.UpdateAtsDocument2Request,
+            operations.UpdateAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsDocumentResponse:
+    ) -> operations.UpdateAtsDocument2Response:
         r"""Update a document
 
         :param request: The request object to send.
@@ -1883,8 +1885,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
-        request = cast(operations.UpdateAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsDocument2Request)
+        request = cast(operations.UpdateAtsDocument2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1918,7 +1920,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsDocument",
+                operation_id="updateAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1928,7 +1930,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsDocumentResponse(
+            return operations.UpdateAtsDocument2Response(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -1945,18 +1947,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_document_async(
+    async def update_ats_document2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsDocumentRequest,
-            operations.UpdateAtsDocumentRequestTypedDict,
+            operations.UpdateAtsDocument2Request,
+            operations.UpdateAtsDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsDocumentResponse:
+    ) -> operations.UpdateAtsDocument2Response:
         r"""Update a document
 
         :param request: The request object to send.
@@ -1976,8 +1978,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
-        request = cast(operations.UpdateAtsDocumentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsDocument2Request)
+        request = cast(operations.UpdateAtsDocument2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2011,7 +2013,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsDocument",
+                operation_id="updateAtsDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2021,7 +2023,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsDocumentResponse(
+            return operations.UpdateAtsDocument2Response(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -2038,18 +2040,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_signing_document(
+    def update_signing_document2(
         self,
         *,
         request: Union[
-            operations.UpdateSigningDocumentRequest,
-            operations.UpdateSigningDocumentRequestTypedDict,
+            operations.UpdateSigningDocument2Request,
+            operations.UpdateSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateSigningDocumentResponse:
+    ) -> operations.UpdateSigningDocument2Response:
         r"""Update a document
 
         :param request: The request object to send.
@@ -2069,8 +2071,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateSigningDocumentRequest)
-        request = cast(operations.UpdateSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateSigningDocument2Request)
+        request = cast(operations.UpdateSigningDocument2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2104,7 +2106,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateSigningDocument",
+                operation_id="updateSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2114,7 +2116,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateSigningDocumentResponse(
+            return operations.UpdateSigningDocument2Response(
                 signing_document=unmarshal_json_response(
                     Optional[shared.SigningDocument], http_res
                 ),
@@ -2131,18 +2133,18 @@ class Document(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_signing_document_async(
+    async def update_signing_document2_async(
         self,
         *,
         request: Union[
-            operations.UpdateSigningDocumentRequest,
-            operations.UpdateSigningDocumentRequestTypedDict,
+            operations.UpdateSigningDocument2Request,
+            operations.UpdateSigningDocument2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateSigningDocumentResponse:
+    ) -> operations.UpdateSigningDocument2Response:
         r"""Update a document
 
         :param request: The request object to send.
@@ -2162,8 +2164,8 @@ class Document(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateSigningDocumentRequest)
-        request = cast(operations.UpdateSigningDocumentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateSigningDocument2Request)
+        request = cast(operations.UpdateSigningDocument2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2197,7 +2199,7 @@ class Document(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateSigningDocument",
+                operation_id="updateSigningDocument2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2207,7 +2209,7 @@ class Document(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateSigningDocumentResponse(
+            return operations.UpdateSigningDocument2Response(
                 signing_document=unmarshal_json_response(
                     Optional[shared.SigningDocument], http_res
                 ),

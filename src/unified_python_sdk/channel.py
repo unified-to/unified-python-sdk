@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Channel(BaseSDK):
-    def get_messaging_channel(
+    def get_messaging_channel2(
         self,
         *,
         request: Union[
-            operations.GetMessagingChannelRequest,
-            operations.GetMessagingChannelRequestTypedDict,
+            operations.GetMessagingChannel2Request,
+            operations.GetMessagingChannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMessagingChannelResponse:
+    ) -> operations.GetMessagingChannel2Response:
         r"""Retrieve a channel
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Channel(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMessagingChannelRequest)
-        request = cast(operations.GetMessagingChannelRequest, request)
+            request = utils.unmarshal(request, operations.GetMessagingChannel2Request)
+        request = cast(operations.GetMessagingChannel2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Channel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMessagingChannel",
+                operation_id="getMessagingChannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -83,7 +83,7 @@ class Channel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMessagingChannelResponse(
+            return operations.GetMessagingChannel2Response(
                 messaging_channel=unmarshal_json_response(
                     Optional[shared.MessagingChannel], http_res
                 ),
@@ -100,18 +100,18 @@ class Channel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_messaging_channel_async(
+    async def get_messaging_channel2_async(
         self,
         *,
         request: Union[
-            operations.GetMessagingChannelRequest,
-            operations.GetMessagingChannelRequestTypedDict,
+            operations.GetMessagingChannel2Request,
+            operations.GetMessagingChannel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMessagingChannelResponse:
+    ) -> operations.GetMessagingChannel2Response:
         r"""Retrieve a channel
 
         :param request: The request object to send.
@@ -131,8 +131,8 @@ class Channel(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMessagingChannelRequest)
-        request = cast(operations.GetMessagingChannelRequest, request)
+            request = utils.unmarshal(request, operations.GetMessagingChannel2Request)
+        request = cast(operations.GetMessagingChannel2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -163,7 +163,7 @@ class Channel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMessagingChannel",
+                operation_id="getMessagingChannel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -173,7 +173,7 @@ class Channel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMessagingChannelResponse(
+            return operations.GetMessagingChannel2Response(
                 messaging_channel=unmarshal_json_response(
                     Optional[shared.MessagingChannel], http_res
                 ),
@@ -190,18 +190,18 @@ class Channel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_messaging_channels(
+    def list_messaging_channels2(
         self,
         *,
         request: Union[
-            operations.ListMessagingChannelsRequest,
-            operations.ListMessagingChannelsRequestTypedDict,
+            operations.ListMessagingChannels2Request,
+            operations.ListMessagingChannels2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMessagingChannelsResponse:
+    ) -> operations.ListMessagingChannels2Response:
         r"""List all channels
 
         :param request: The request object to send.
@@ -221,8 +221,8 @@ class Channel(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMessagingChannelsRequest)
-        request = cast(operations.ListMessagingChannelsRequest, request)
+            request = utils.unmarshal(request, operations.ListMessagingChannels2Request)
+        request = cast(operations.ListMessagingChannels2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -253,7 +253,7 @@ class Channel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMessagingChannels",
+                operation_id="listMessagingChannels2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -263,7 +263,7 @@ class Channel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMessagingChannelsResponse(
+            return operations.ListMessagingChannels2Response(
                 messaging_channels=unmarshal_json_response(
                     Optional[List[shared.MessagingChannel]], http_res
                 ),
@@ -280,18 +280,18 @@ class Channel(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_messaging_channels_async(
+    async def list_messaging_channels2_async(
         self,
         *,
         request: Union[
-            operations.ListMessagingChannelsRequest,
-            operations.ListMessagingChannelsRequestTypedDict,
+            operations.ListMessagingChannels2Request,
+            operations.ListMessagingChannels2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMessagingChannelsResponse:
+    ) -> operations.ListMessagingChannels2Response:
         r"""List all channels
 
         :param request: The request object to send.
@@ -311,8 +311,8 @@ class Channel(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMessagingChannelsRequest)
-        request = cast(operations.ListMessagingChannelsRequest, request)
+            request = utils.unmarshal(request, operations.ListMessagingChannels2Request)
+        request = cast(operations.ListMessagingChannels2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -343,7 +343,7 @@ class Channel(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMessagingChannels",
+                operation_id="listMessagingChannels2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -353,7 +353,7 @@ class Channel(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMessagingChannelsResponse(
+            return operations.ListMessagingChannels2Response(
                 messaging_channels=unmarshal_json_response(
                     Optional[List[shared.MessagingChannel]], http_res
                 ),

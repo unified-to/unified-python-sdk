@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [get_ads_promoted](#get_ads_promoted) - Retrieve a promoted
-* [list_ads_promoteds](#list_ads_promoteds) - List all promoteds
+* [get_ads_promoted2](#get_ads_promoted2) - Retrieve a promoted
+* [list_ads_promoteds2](#list_ads_promoteds2) - List all promoteds
 
-## get_ads_promoted
+## get_ads_promoted2
 
 Retrieve a promoted
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getAdsPromoted" method="get" path="/ads/{connection_id}/promoted/{id}" -->
+<!-- UsageSnippet language="python" operationID="getAdsPromoted2" method="get" path="/ads/{connection_id}/promoted/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -25,7 +25,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.promoted.get_ads_promoted(request={
+    res = unified_to.promoted.get_ads_promoted2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -39,14 +39,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetAdsPromotedRequest](../../models/operations/getadspromotedrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetAdsPromoted2Request](../../models/operations/getadspromoted2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetAdsPromotedResponse](../../models/operations/getadspromotedresponse.md)**
+**[operations.GetAdsPromoted2Response](../../models/operations/getadspromoted2response.md)**
 
 ### Errors
 
@@ -54,13 +54,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ads_promoteds
+## list_ads_promoteds2
 
 List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="python" operationID="listAdsPromoteds2" method="get" path="/ads/{connection_id}/promoted" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -72,7 +72,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.promoted.list_ads_promoteds(request={
+    res = unified_to.promoted.list_ads_promoteds2(request={
         "connection_id": "<id>",
     })
 
@@ -85,14 +85,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListAdsPromotedsRequest](../../models/operations/listadspromotedsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListAdsPromoteds2Request](../../models/operations/listadspromoteds2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListAdsPromotedsResponse](../../models/operations/listadspromotedsresponse.md)**
+**[operations.ListAdsPromoteds2Response](../../models/operations/listadspromoteds2response.md)**
 
 ### Errors
 

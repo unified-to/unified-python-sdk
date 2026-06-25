@@ -4,34 +4,34 @@
 
 ### Available Operations
 
-* [create_ads_group](#create_ads_group) - Create a group
-* [create_hris_group](#create_hris_group) - Create a group
+* [create_ads_group2](#create_ads_group2) - Create a group
+* [create_hris_group2](#create_hris_group2) - Create a group
 * [create_scim_groups](#create_scim_groups) - Create group
-* [get_ads_group](#get_ads_group) - Retrieve a group
-* [get_clubs_group](#get_clubs_group) - Retrieve a group
-* [get_hris_group](#get_hris_group) - Retrieve a group
+* [get_ads_group2](#get_ads_group2) - Retrieve a group
+* [get_clubs_group2](#get_clubs_group2) - Retrieve a group
+* [get_hris_group2](#get_hris_group2) - Retrieve a group
 * [get_scim_groups](#get_scim_groups) - Get group
-* [list_ads_groups](#list_ads_groups) - List all groups
-* [list_clubs_groups](#list_clubs_groups) - List all groups
-* [list_hris_groups](#list_hris_groups) - List all groups
+* [list_ads_groups2](#list_ads_groups2) - List all groups
+* [list_clubs_groups2](#list_clubs_groups2) - List all groups
+* [list_hris_groups2](#list_hris_groups2) - List all groups
 * [list_scim_groups](#list_scim_groups) - List groups
-* [patch_ads_group](#patch_ads_group) - Update a group
-* [patch_hris_group](#patch_hris_group) - Update a group
+* [patch_ads_group2](#patch_ads_group2) - Update a group
+* [patch_hris_group2](#patch_hris_group2) - Update a group
 * [patch_scim_groups](#patch_scim_groups) - Update group
-* [remove_ads_group](#remove_ads_group) - Remove a group
-* [remove_hris_group](#remove_hris_group) - Remove a group
+* [remove_ads_group2](#remove_ads_group2) - Remove a group
+* [remove_hris_group2](#remove_hris_group2) - Remove a group
 * [remove_scim_groups](#remove_scim_groups) - Delete group
-* [update_ads_group](#update_ads_group) - Update a group
-* [update_hris_group](#update_hris_group) - Update a group
+* [update_ads_group2](#update_ads_group2) - Update a group
+* [update_hris_group2](#update_hris_group2) - Update a group
 * [update_scim_groups](#update_scim_groups) - Update group
 
-## create_ads_group
+## create_ads_group2
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="createAdsGroup2" method="post" path="/ads/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -43,7 +43,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.create_ads_group(request={
+    res = unified_to.group.create_ads_group2(request={
         "ads_group": {},
         "connection_id": "<id>",
     })
@@ -57,14 +57,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.CreateAdsGroupRequest](../../models/operations/createadsgrouprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateAdsGroup2Request](../../models/operations/createadsgroup2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.CreateAdsGroupResponse](../../models/operations/createadsgroupresponse.md)**
+**[operations.CreateAdsGroup2Response](../../models/operations/createadsgroup2response.md)**
 
 ### Errors
 
@@ -72,13 +72,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_hris_group
+## create_hris_group2
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="createHrisGroup2" method="post" path="/hris/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -90,7 +90,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.create_hris_group(request={
+    res = unified_to.group.create_hris_group2(request={
         "hris_group": {},
         "connection_id": "<id>",
     })
@@ -104,14 +104,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.CreateHrisGroupRequest](../../models/operations/createhrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.CreateHrisGroup2Request](../../models/operations/createhrisgroup2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.CreateHrisGroupResponse](../../models/operations/createhrisgroupresponse.md)**
+**[operations.CreateHrisGroup2Response](../../models/operations/createhrisgroup2response.md)**
 
 ### Errors
 
@@ -168,13 +168,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_ads_group
+## get_ads_group2
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getAdsGroup" method="get" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="getAdsGroup2" method="get" path="/ads/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -186,7 +186,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.get_ads_group(request={
+    res = unified_to.group.get_ads_group2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -200,14 +200,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.GetAdsGroupRequest](../../models/operations/getadsgrouprequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetAdsGroup2Request](../../models/operations/getadsgroup2request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
 
 ### Response
 
-**[operations.GetAdsGroupResponse](../../models/operations/getadsgroupresponse.md)**
+**[operations.GetAdsGroup2Response](../../models/operations/getadsgroup2response.md)**
 
 ### Errors
 
@@ -215,13 +215,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_clubs_group
+## get_clubs_group2
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="getClubsGroup2" method="get" path="/clubs/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -233,7 +233,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.get_clubs_group(request={
+    res = unified_to.group.get_clubs_group2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -247,14 +247,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetClubsGroupRequest](../../models/operations/getclubsgrouprequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetClubsGroup2Request](../../models/operations/getclubsgroup2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetClubsGroupResponse](../../models/operations/getclubsgroupresponse.md)**
+**[operations.GetClubsGroup2Response](../../models/operations/getclubsgroup2response.md)**
 
 ### Errors
 
@@ -262,13 +262,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_hris_group
+## get_hris_group2
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="getHrisGroup2" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -280,7 +280,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.get_hris_group(request={
+    res = unified_to.group.get_hris_group2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -294,14 +294,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.GetHrisGroupRequest](../../models/operations/gethrisgrouprequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetHrisGroup2Request](../../models/operations/gethrisgroup2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.GetHrisGroupResponse](../../models/operations/gethrisgroupresponse.md)**
+**[operations.GetHrisGroup2Response](../../models/operations/gethrisgroup2response.md)**
 
 ### Errors
 
@@ -356,13 +356,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ads_groups
+## list_ads_groups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAdsGroups" method="get" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="listAdsGroups2" method="get" path="/ads/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -374,7 +374,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.list_ads_groups(request={
+    res = unified_to.group.list_ads_groups2(request={
         "connection_id": "<id>",
     })
 
@@ -387,14 +387,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.ListAdsGroupsRequest](../../models/operations/listadsgroupsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListAdsGroups2Request](../../models/operations/listadsgroups2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.ListAdsGroupsResponse](../../models/operations/listadsgroupsresponse.md)**
+**[operations.ListAdsGroups2Response](../../models/operations/listadsgroups2response.md)**
 
 ### Errors
 
@@ -402,13 +402,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_clubs_groups
+## list_clubs_groups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="listClubsGroups2" method="get" path="/clubs/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -420,7 +420,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.list_clubs_groups(request={
+    res = unified_to.group.list_clubs_groups2(request={
         "connection_id": "<id>",
     })
 
@@ -433,14 +433,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListClubsGroupsRequest](../../models/operations/listclubsgroupsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListClubsGroups2Request](../../models/operations/listclubsgroups2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListClubsGroupsResponse](../../models/operations/listclubsgroupsresponse.md)**
+**[operations.ListClubsGroups2Response](../../models/operations/listclubsgroups2response.md)**
 
 ### Errors
 
@@ -448,13 +448,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_hris_groups
+## list_hris_groups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="listHrisGroups2" method="get" path="/hris/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -466,7 +466,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.list_hris_groups(request={
+    res = unified_to.group.list_hris_groups2(request={
         "connection_id": "<id>",
     })
 
@@ -479,14 +479,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.ListHrisGroupsRequest](../../models/operations/listhrisgroupsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListHrisGroups2Request](../../models/operations/listhrisgroups2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.ListHrisGroupsResponse](../../models/operations/listhrisgroupsresponse.md)**
+**[operations.ListHrisGroups2Response](../../models/operations/listhrisgroups2response.md)**
 
 ### Errors
 
@@ -540,13 +540,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_ads_group
+## patch_ads_group2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsGroup2" method="patch" path="/ads/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -558,7 +558,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.patch_ads_group(request={
+    res = unified_to.group.patch_ads_group2(request={
         "ads_group": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -573,14 +573,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.PatchAdsGroupRequest](../../models/operations/patchadsgrouprequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchAdsGroup2Request](../../models/operations/patchadsgroup2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.PatchAdsGroupResponse](../../models/operations/patchadsgroupresponse.md)**
+**[operations.PatchAdsGroup2Response](../../models/operations/patchadsgroup2response.md)**
 
 ### Errors
 
@@ -588,13 +588,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_hris_group
+## patch_hris_group2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisGroup2" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -606,7 +606,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.patch_hris_group(request={
+    res = unified_to.group.patch_hris_group2(request={
         "hris_group": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -621,14 +621,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.PatchHrisGroupRequest](../../models/operations/patchhrisgrouprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.PatchHrisGroup2Request](../../models/operations/patchhrisgroup2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.PatchHrisGroupResponse](../../models/operations/patchhrisgroupresponse.md)**
+**[operations.PatchHrisGroup2Response](../../models/operations/patchhrisgroup2response.md)**
 
 ### Errors
 
@@ -686,13 +686,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_ads_group
+## remove_ads_group2
 
 Remove a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeAdsGroup" method="delete" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeAdsGroup2" method="delete" path="/ads/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -704,54 +704,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.remove_ads_group(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.RemoveAdsGroupRequest](../../models/operations/removeadsgrouprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
-
-### Response
-
-**[operations.RemoveAdsGroupResponse](../../models/operations/removeadsgroupresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_hris_group
-
-Remove a group
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.group.remove_hris_group(request={
+    res = unified_to.group.remove_ads_group2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -767,12 +720,59 @@ with UnifiedTo(
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.RemoveHrisGroupRequest](../../models/operations/removehrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `request`                                                                              | [operations.RemoveAdsGroup2Request](../../models/operations/removeadsgroup2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 | `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.RemoveHrisGroupResponse](../../models/operations/removehrisgroupresponse.md)**
+**[operations.RemoveAdsGroup2Response](../../models/operations/removeadsgroup2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_hris_group2
+
+Remove a group
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisGroup2" method="delete" path="/hris/{connection_id}/group/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.group.remove_hris_group2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.RemoveHrisGroup2Request](../../models/operations/removehrisgroup2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.RemoveHrisGroup2Response](../../models/operations/removehrisgroup2response.md)**
 
 ### Errors
 
@@ -827,13 +827,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_ads_group
+## update_ads_group2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsGroup2" method="put" path="/ads/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -845,7 +845,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.update_ads_group(request={
+    res = unified_to.group.update_ads_group2(request={
         "ads_group": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -860,14 +860,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.UpdateAdsGroupRequest](../../models/operations/updateadsgrouprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateAdsGroup2Request](../../models/operations/updateadsgroup2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.UpdateAdsGroupResponse](../../models/operations/updateadsgroupresponse.md)**
+**[operations.UpdateAdsGroup2Response](../../models/operations/updateadsgroup2response.md)**
 
 ### Errors
 
@@ -875,13 +875,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_hris_group
+## update_hris_group2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisGroup2" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -893,7 +893,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.group.update_hris_group(request={
+    res = unified_to.group.update_hris_group2(request={
         "hris_group": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -908,14 +908,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.UpdateHrisGroupRequest](../../models/operations/updatehrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.UpdateHrisGroup2Request](../../models/operations/updatehrisgroup2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.UpdateHrisGroupResponse](../../models/operations/updatehrisgroupresponse.md)**
+**[operations.UpdateHrisGroup2Response](../../models/operations/updatehrisgroup2response.md)**
 
 ### Errors
 

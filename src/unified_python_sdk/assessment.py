@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Assessment(BaseSDK):
-    def create_assessment_package(
+    def create_assessment_package2(
         self,
         *,
         request: Union[
-            operations.CreateAssessmentPackageRequest,
-            operations.CreateAssessmentPackageRequestTypedDict,
+            operations.CreateAssessmentPackage2Request,
+            operations.CreateAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAssessmentPackageResponse:
+    ) -> operations.CreateAssessmentPackage2Response:
         r"""Create an assessment package
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Assessment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAssessmentPackageRequest
+                request, operations.CreateAssessmentPackage2Request
             )
-        request = cast(operations.CreateAssessmentPackageRequest, request)
+        request = cast(operations.CreateAssessmentPackage2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAssessmentPackage",
+                operation_id="createAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -92,7 +92,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAssessmentPackageResponse(
+            return operations.CreateAssessmentPackage2Response(
                 assessment_package=unmarshal_json_response(
                     Optional[shared.AssessmentPackage], http_res
                 ),
@@ -109,18 +109,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_assessment_package_async(
+    async def create_assessment_package2_async(
         self,
         *,
         request: Union[
-            operations.CreateAssessmentPackageRequest,
-            operations.CreateAssessmentPackageRequestTypedDict,
+            operations.CreateAssessmentPackage2Request,
+            operations.CreateAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAssessmentPackageResponse:
+    ) -> operations.CreateAssessmentPackage2Response:
         r"""Create an assessment package
 
         :param request: The request object to send.
@@ -141,9 +141,9 @@ class Assessment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAssessmentPackageRequest
+                request, operations.CreateAssessmentPackage2Request
             )
-        request = cast(operations.CreateAssessmentPackageRequest, request)
+        request = cast(operations.CreateAssessmentPackage2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -181,7 +181,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAssessmentPackage",
+                operation_id="createAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -191,7 +191,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAssessmentPackageResponse(
+            return operations.CreateAssessmentPackage2Response(
                 assessment_package=unmarshal_json_response(
                     Optional[shared.AssessmentPackage], http_res
                 ),
@@ -208,18 +208,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_assessment_package(
+    def get_assessment_package2(
         self,
         *,
         request: Union[
-            operations.GetAssessmentPackageRequest,
-            operations.GetAssessmentPackageRequestTypedDict,
+            operations.GetAssessmentPackage2Request,
+            operations.GetAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAssessmentPackageResponse:
+    ) -> operations.GetAssessmentPackage2Response:
         r"""Get an assessment package
 
         :param request: The request object to send.
@@ -239,8 +239,8 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAssessmentPackageRequest)
-        request = cast(operations.GetAssessmentPackageRequest, request)
+            request = utils.unmarshal(request, operations.GetAssessmentPackage2Request)
+        request = cast(operations.GetAssessmentPackage2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -271,7 +271,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAssessmentPackage",
+                operation_id="getAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -281,7 +281,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAssessmentPackageResponse(
+            return operations.GetAssessmentPackage2Response(
                 assessment_package=unmarshal_json_response(
                     Optional[shared.AssessmentPackage], http_res
                 ),
@@ -298,18 +298,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_assessment_package_async(
+    async def get_assessment_package2_async(
         self,
         *,
         request: Union[
-            operations.GetAssessmentPackageRequest,
-            operations.GetAssessmentPackageRequestTypedDict,
+            operations.GetAssessmentPackage2Request,
+            operations.GetAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAssessmentPackageResponse:
+    ) -> operations.GetAssessmentPackage2Response:
         r"""Get an assessment package
 
         :param request: The request object to send.
@@ -329,8 +329,8 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAssessmentPackageRequest)
-        request = cast(operations.GetAssessmentPackageRequest, request)
+            request = utils.unmarshal(request, operations.GetAssessmentPackage2Request)
+        request = cast(operations.GetAssessmentPackage2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -361,7 +361,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAssessmentPackage",
+                operation_id="getAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -371,7 +371,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAssessmentPackageResponse(
+            return operations.GetAssessmentPackage2Response(
                 assessment_package=unmarshal_json_response(
                     Optional[shared.AssessmentPackage], http_res
                 ),
@@ -388,18 +388,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_assessment_packages(
+    def list_assessment_packages2(
         self,
         *,
         request: Union[
-            operations.ListAssessmentPackagesRequest,
-            operations.ListAssessmentPackagesRequestTypedDict,
+            operations.ListAssessmentPackages2Request,
+            operations.ListAssessmentPackages2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAssessmentPackagesResponse:
+    ) -> operations.ListAssessmentPackages2Response:
         r"""List assessment packages
 
         :param request: The request object to send.
@@ -419,8 +419,10 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAssessmentPackagesRequest)
-        request = cast(operations.ListAssessmentPackagesRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListAssessmentPackages2Request
+            )
+        request = cast(operations.ListAssessmentPackages2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -451,7 +453,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAssessmentPackages",
+                operation_id="listAssessmentPackages2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -461,7 +463,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAssessmentPackagesResponse(
+            return operations.ListAssessmentPackages2Response(
                 assessment_packages=unmarshal_json_response(
                     Optional[List[shared.AssessmentPackage]], http_res
                 ),
@@ -478,18 +480,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_assessment_packages_async(
+    async def list_assessment_packages2_async(
         self,
         *,
         request: Union[
-            operations.ListAssessmentPackagesRequest,
-            operations.ListAssessmentPackagesRequestTypedDict,
+            operations.ListAssessmentPackages2Request,
+            operations.ListAssessmentPackages2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAssessmentPackagesResponse:
+    ) -> operations.ListAssessmentPackages2Response:
         r"""List assessment packages
 
         :param request: The request object to send.
@@ -509,8 +511,10 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAssessmentPackagesRequest)
-        request = cast(operations.ListAssessmentPackagesRequest, request)
+            request = utils.unmarshal(
+                request, operations.ListAssessmentPackages2Request
+            )
+        request = cast(operations.ListAssessmentPackages2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -541,7 +545,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAssessmentPackages",
+                operation_id="listAssessmentPackages2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -551,7 +555,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAssessmentPackagesResponse(
+            return operations.ListAssessmentPackages2Response(
                 assessment_packages=unmarshal_json_response(
                     Optional[List[shared.AssessmentPackage]], http_res
                 ),
@@ -568,18 +572,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_assessment_order(
+    def patch_assessment_order2(
         self,
         *,
         request: Union[
-            operations.PatchAssessmentOrderRequest,
-            operations.PatchAssessmentOrderRequestTypedDict,
+            operations.PatchAssessmentOrder2Request,
+            operations.PatchAssessmentOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAssessmentOrderResponse:
+    ) -> operations.PatchAssessmentOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -599,8 +603,8 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAssessmentOrderRequest)
-        request = cast(operations.PatchAssessmentOrderRequest, request)
+            request = utils.unmarshal(request, operations.PatchAssessmentOrder2Request)
+        request = cast(operations.PatchAssessmentOrder2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +638,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAssessmentOrder",
+                operation_id="patchAssessmentOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -644,7 +648,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAssessmentOrderResponse(
+            return operations.PatchAssessmentOrder2Response(
                 assessment_order=unmarshal_json_response(
                     Optional[shared.AssessmentOrder], http_res
                 ),
@@ -661,18 +665,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_assessment_order_async(
+    async def patch_assessment_order2_async(
         self,
         *,
         request: Union[
-            operations.PatchAssessmentOrderRequest,
-            operations.PatchAssessmentOrderRequestTypedDict,
+            operations.PatchAssessmentOrder2Request,
+            operations.PatchAssessmentOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAssessmentOrderResponse:
+    ) -> operations.PatchAssessmentOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -692,8 +696,8 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAssessmentOrderRequest)
-        request = cast(operations.PatchAssessmentOrderRequest, request)
+            request = utils.unmarshal(request, operations.PatchAssessmentOrder2Request)
+        request = cast(operations.PatchAssessmentOrder2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -727,7 +731,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAssessmentOrder",
+                operation_id="patchAssessmentOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -737,7 +741,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAssessmentOrderResponse(
+            return operations.PatchAssessmentOrder2Response(
                 assessment_order=unmarshal_json_response(
                     Optional[shared.AssessmentOrder], http_res
                 ),
@@ -754,18 +758,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_assessment_package(
+    def patch_assessment_package2(
         self,
         *,
         request: Union[
-            operations.PatchAssessmentPackageRequest,
-            operations.PatchAssessmentPackageRequestTypedDict,
+            operations.PatchAssessmentPackage2Request,
+            operations.PatchAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAssessmentPackageResponse:
+    ) -> operations.PatchAssessmentPackage2Response:
         r"""Update an assessment package
 
         :param request: The request object to send.
@@ -785,8 +789,10 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAssessmentPackageRequest)
-        request = cast(operations.PatchAssessmentPackageRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchAssessmentPackage2Request
+            )
+        request = cast(operations.PatchAssessmentPackage2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -824,7 +830,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAssessmentPackage",
+                operation_id="patchAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -834,7 +840,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAssessmentPackageResponse(
+            return operations.PatchAssessmentPackage2Response(
                 assessment_package=unmarshal_json_response(
                     Optional[shared.AssessmentPackage], http_res
                 ),
@@ -851,18 +857,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_assessment_package_async(
+    async def patch_assessment_package2_async(
         self,
         *,
         request: Union[
-            operations.PatchAssessmentPackageRequest,
-            operations.PatchAssessmentPackageRequestTypedDict,
+            operations.PatchAssessmentPackage2Request,
+            operations.PatchAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAssessmentPackageResponse:
+    ) -> operations.PatchAssessmentPackage2Response:
         r"""Update an assessment package
 
         :param request: The request object to send.
@@ -882,8 +888,10 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAssessmentPackageRequest)
-        request = cast(operations.PatchAssessmentPackageRequest, request)
+            request = utils.unmarshal(
+                request, operations.PatchAssessmentPackage2Request
+            )
+        request = cast(operations.PatchAssessmentPackage2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -921,7 +929,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAssessmentPackage",
+                operation_id="patchAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -931,7 +939,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAssessmentPackageResponse(
+            return operations.PatchAssessmentPackage2Response(
                 assessment_package=unmarshal_json_response(
                     Optional[shared.AssessmentPackage], http_res
                 ),
@@ -948,18 +956,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_assessment_package(
+    def remove_assessment_package2(
         self,
         *,
         request: Union[
-            operations.RemoveAssessmentPackageRequest,
-            operations.RemoveAssessmentPackageRequestTypedDict,
+            operations.RemoveAssessmentPackage2Request,
+            operations.RemoveAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAssessmentPackageResponse:
+    ) -> operations.RemoveAssessmentPackage2Response:
         r"""Delete an assessment package
 
         :param request: The request object to send.
@@ -980,9 +988,9 @@ class Assessment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAssessmentPackageRequest
+                request, operations.RemoveAssessmentPackage2Request
             )
-        request = cast(operations.RemoveAssessmentPackageRequest, request)
+        request = cast(operations.RemoveAssessmentPackage2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1013,7 +1021,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAssessmentPackage",
+                operation_id="removeAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1023,7 +1031,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAssessmentPackageResponse(
+            return operations.RemoveAssessmentPackage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1036,7 +1044,7 @@ class Assessment(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAssessmentPackageResponse(
+            return operations.RemoveAssessmentPackage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1045,18 +1053,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_assessment_package_async(
+    async def remove_assessment_package2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAssessmentPackageRequest,
-            operations.RemoveAssessmentPackageRequestTypedDict,
+            operations.RemoveAssessmentPackage2Request,
+            operations.RemoveAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAssessmentPackageResponse:
+    ) -> operations.RemoveAssessmentPackage2Response:
         r"""Delete an assessment package
 
         :param request: The request object to send.
@@ -1077,9 +1085,9 @@ class Assessment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAssessmentPackageRequest
+                request, operations.RemoveAssessmentPackage2Request
             )
-        request = cast(operations.RemoveAssessmentPackageRequest, request)
+        request = cast(operations.RemoveAssessmentPackage2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1110,7 +1118,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAssessmentPackage",
+                operation_id="removeAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1120,7 +1128,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAssessmentPackageResponse(
+            return operations.RemoveAssessmentPackage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1133,7 +1141,7 @@ class Assessment(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAssessmentPackageResponse(
+            return operations.RemoveAssessmentPackage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1142,18 +1150,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_assessment_order(
+    def update_assessment_order2(
         self,
         *,
         request: Union[
-            operations.UpdateAssessmentOrderRequest,
-            operations.UpdateAssessmentOrderRequestTypedDict,
+            operations.UpdateAssessmentOrder2Request,
+            operations.UpdateAssessmentOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAssessmentOrderResponse:
+    ) -> operations.UpdateAssessmentOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -1173,8 +1181,8 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAssessmentOrderRequest)
-        request = cast(operations.UpdateAssessmentOrderRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAssessmentOrder2Request)
+        request = cast(operations.UpdateAssessmentOrder2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1208,7 +1216,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAssessmentOrder",
+                operation_id="updateAssessmentOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1218,7 +1226,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAssessmentOrderResponse(
+            return operations.UpdateAssessmentOrder2Response(
                 assessment_order=unmarshal_json_response(
                     Optional[shared.AssessmentOrder], http_res
                 ),
@@ -1235,18 +1243,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_assessment_order_async(
+    async def update_assessment_order2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAssessmentOrderRequest,
-            operations.UpdateAssessmentOrderRequestTypedDict,
+            operations.UpdateAssessmentOrder2Request,
+            operations.UpdateAssessmentOrder2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAssessmentOrderResponse:
+    ) -> operations.UpdateAssessmentOrder2Response:
         r"""Update an order
 
         :param request: The request object to send.
@@ -1266,8 +1274,8 @@ class Assessment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAssessmentOrderRequest)
-        request = cast(operations.UpdateAssessmentOrderRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAssessmentOrder2Request)
+        request = cast(operations.UpdateAssessmentOrder2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1301,7 +1309,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAssessmentOrder",
+                operation_id="updateAssessmentOrder2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1311,7 +1319,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAssessmentOrderResponse(
+            return operations.UpdateAssessmentOrder2Response(
                 assessment_order=unmarshal_json_response(
                     Optional[shared.AssessmentOrder], http_res
                 ),
@@ -1328,18 +1336,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_assessment_package(
+    def update_assessment_package2(
         self,
         *,
         request: Union[
-            operations.UpdateAssessmentPackageRequest,
-            operations.UpdateAssessmentPackageRequestTypedDict,
+            operations.UpdateAssessmentPackage2Request,
+            operations.UpdateAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAssessmentPackageResponse:
+    ) -> operations.UpdateAssessmentPackage2Response:
         r"""Update an assessment package
 
         :param request: The request object to send.
@@ -1360,9 +1368,9 @@ class Assessment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAssessmentPackageRequest
+                request, operations.UpdateAssessmentPackage2Request
             )
-        request = cast(operations.UpdateAssessmentPackageRequest, request)
+        request = cast(operations.UpdateAssessmentPackage2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -1400,7 +1408,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAssessmentPackage",
+                operation_id="updateAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1410,7 +1418,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAssessmentPackageResponse(
+            return operations.UpdateAssessmentPackage2Response(
                 assessment_package=unmarshal_json_response(
                     Optional[shared.AssessmentPackage], http_res
                 ),
@@ -1427,18 +1435,18 @@ class Assessment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_assessment_package_async(
+    async def update_assessment_package2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAssessmentPackageRequest,
-            operations.UpdateAssessmentPackageRequestTypedDict,
+            operations.UpdateAssessmentPackage2Request,
+            operations.UpdateAssessmentPackage2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAssessmentPackageResponse:
+    ) -> operations.UpdateAssessmentPackage2Response:
         r"""Update an assessment package
 
         :param request: The request object to send.
@@ -1459,9 +1467,9 @@ class Assessment(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAssessmentPackageRequest
+                request, operations.UpdateAssessmentPackage2Request
             )
-        request = cast(operations.UpdateAssessmentPackageRequest, request)
+        request = cast(operations.UpdateAssessmentPackage2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1499,7 +1507,7 @@ class Assessment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAssessmentPackage",
+                operation_id="updateAssessmentPackage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1509,7 +1517,7 @@ class Assessment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAssessmentPackageResponse(
+            return operations.UpdateAssessmentPackage2Response(
                 assessment_package=unmarshal_json_response(
                     Optional[shared.AssessmentPackage], http_res
                 ),

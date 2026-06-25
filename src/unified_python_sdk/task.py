@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Task(BaseSDK):
-    def create_task_comment(
+    def create_task_comment2(
         self,
         *,
         request: Union[
-            operations.CreateTaskCommentRequest,
-            operations.CreateTaskCommentRequestTypedDict,
+            operations.CreateTaskComment2Request,
+            operations.CreateTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTaskCommentResponse:
+    ) -> operations.CreateTaskComment2Response:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTaskCommentRequest)
-        request = cast(operations.CreateTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.CreateTaskComment2Request)
+        request = cast(operations.CreateTaskComment2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTaskComment",
+                operation_id="createTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTaskCommentResponse(
+            return operations.CreateTaskComment2Response(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -103,18 +103,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_task_comment_async(
+    async def create_task_comment2_async(
         self,
         *,
         request: Union[
-            operations.CreateTaskCommentRequest,
-            operations.CreateTaskCommentRequestTypedDict,
+            operations.CreateTaskComment2Request,
+            operations.CreateTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTaskCommentResponse:
+    ) -> operations.CreateTaskComment2Response:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTaskCommentRequest)
-        request = cast(operations.CreateTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.CreateTaskComment2Request)
+        request = cast(operations.CreateTaskComment2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTaskComment",
+                operation_id="createTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTaskCommentResponse(
+            return operations.CreateTaskComment2Response(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -196,18 +196,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_task_project(
+    def create_task_project2(
         self,
         *,
         request: Union[
-            operations.CreateTaskProjectRequest,
-            operations.CreateTaskProjectRequestTypedDict,
+            operations.CreateTaskProject2Request,
+            operations.CreateTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTaskProjectResponse:
+    ) -> operations.CreateTaskProject2Response:
         r"""Create a project
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTaskProjectRequest)
-        request = cast(operations.CreateTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.CreateTaskProject2Request)
+        request = cast(operations.CreateTaskProject2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +262,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTaskProject",
+                operation_id="createTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +272,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTaskProjectResponse(
+            return operations.CreateTaskProject2Response(
                 task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
@@ -289,18 +289,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_task_project_async(
+    async def create_task_project2_async(
         self,
         *,
         request: Union[
-            operations.CreateTaskProjectRequest,
-            operations.CreateTaskProjectRequestTypedDict,
+            operations.CreateTaskProject2Request,
+            operations.CreateTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTaskProjectResponse:
+    ) -> operations.CreateTaskProject2Response:
         r"""Create a project
 
         :param request: The request object to send.
@@ -320,8 +320,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTaskProjectRequest)
-        request = cast(operations.CreateTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.CreateTaskProject2Request)
+        request = cast(operations.CreateTaskProject2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +355,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTaskProject",
+                operation_id="createTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +365,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTaskProjectResponse(
+            return operations.CreateTaskProject2Response(
                 task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
@@ -382,17 +382,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_task_task(
+    def create_task_task2(
         self,
         *,
         request: Union[
-            operations.CreateTaskTaskRequest, operations.CreateTaskTaskRequestTypedDict
+            operations.CreateTaskTask2Request,
+            operations.CreateTaskTask2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTaskTaskResponse:
+    ) -> operations.CreateTaskTask2Response:
         r"""Create a task
 
         :param request: The request object to send.
@@ -412,8 +413,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTaskTaskRequest)
-        request = cast(operations.CreateTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.CreateTaskTask2Request)
+        request = cast(operations.CreateTaskTask2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -447,7 +448,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTaskTask",
+                operation_id="createTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -457,7 +458,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTaskTaskResponse(
+            return operations.CreateTaskTask2Response(
                 task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -472,17 +473,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_task_task_async(
+    async def create_task_task2_async(
         self,
         *,
         request: Union[
-            operations.CreateTaskTaskRequest, operations.CreateTaskTaskRequestTypedDict
+            operations.CreateTaskTask2Request,
+            operations.CreateTaskTask2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTaskTaskResponse:
+    ) -> operations.CreateTaskTask2Response:
         r"""Create a task
 
         :param request: The request object to send.
@@ -502,8 +504,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTaskTaskRequest)
-        request = cast(operations.CreateTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.CreateTaskTask2Request)
+        request = cast(operations.CreateTaskTask2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -537,7 +539,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTaskTask",
+                operation_id="createTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -547,7 +549,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTaskTaskResponse(
+            return operations.CreateTaskTask2Response(
                 task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -562,17 +564,17 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_task_change(
+    def get_task_change2(
         self,
         *,
         request: Union[
-            operations.GetTaskChangeRequest, operations.GetTaskChangeRequestTypedDict
+            operations.GetTaskChange2Request, operations.GetTaskChange2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskChangeResponse:
+    ) -> operations.GetTaskChange2Response:
         r"""Retrieve a change
 
         :param request: The request object to send.
@@ -592,8 +594,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskChangeRequest)
-        request = cast(operations.GetTaskChangeRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskChange2Request)
+        request = cast(operations.GetTaskChange2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -624,7 +626,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskChange",
+                operation_id="getTaskChange2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -634,7 +636,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskChangeResponse(
+            return operations.GetTaskChange2Response(
                 task_change=unmarshal_json_response(
                     Optional[shared.TaskChange], http_res
                 ),
@@ -651,17 +653,17 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_task_change_async(
+    async def get_task_change2_async(
         self,
         *,
         request: Union[
-            operations.GetTaskChangeRequest, operations.GetTaskChangeRequestTypedDict
+            operations.GetTaskChange2Request, operations.GetTaskChange2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskChangeResponse:
+    ) -> operations.GetTaskChange2Response:
         r"""Retrieve a change
 
         :param request: The request object to send.
@@ -681,8 +683,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskChangeRequest)
-        request = cast(operations.GetTaskChangeRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskChange2Request)
+        request = cast(operations.GetTaskChange2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -713,7 +715,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskChange",
+                operation_id="getTaskChange2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -723,7 +725,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskChangeResponse(
+            return operations.GetTaskChange2Response(
                 task_change=unmarshal_json_response(
                     Optional[shared.TaskChange], http_res
                 ),
@@ -740,17 +742,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_task_comment(
+    def get_task_comment2(
         self,
         *,
         request: Union[
-            operations.GetTaskCommentRequest, operations.GetTaskCommentRequestTypedDict
+            operations.GetTaskComment2Request,
+            operations.GetTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskCommentResponse:
+    ) -> operations.GetTaskComment2Response:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -770,8 +773,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskCommentRequest)
-        request = cast(operations.GetTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskComment2Request)
+        request = cast(operations.GetTaskComment2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -802,7 +805,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskComment",
+                operation_id="getTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -812,7 +815,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskCommentResponse(
+            return operations.GetTaskComment2Response(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -829,17 +832,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_task_comment_async(
+    async def get_task_comment2_async(
         self,
         *,
         request: Union[
-            operations.GetTaskCommentRequest, operations.GetTaskCommentRequestTypedDict
+            operations.GetTaskComment2Request,
+            operations.GetTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskCommentResponse:
+    ) -> operations.GetTaskComment2Response:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -859,8 +863,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskCommentRequest)
-        request = cast(operations.GetTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskComment2Request)
+        request = cast(operations.GetTaskComment2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -891,7 +895,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskComment",
+                operation_id="getTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -901,7 +905,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskCommentResponse(
+            return operations.GetTaskComment2Response(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -918,17 +922,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_task_project(
+    def get_task_project2(
         self,
         *,
         request: Union[
-            operations.GetTaskProjectRequest, operations.GetTaskProjectRequestTypedDict
+            operations.GetTaskProject2Request,
+            operations.GetTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskProjectResponse:
+    ) -> operations.GetTaskProject2Response:
         r"""Retrieve a project
 
         :param request: The request object to send.
@@ -948,8 +953,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskProjectRequest)
-        request = cast(operations.GetTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskProject2Request)
+        request = cast(operations.GetTaskProject2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -980,7 +985,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskProject",
+                operation_id="getTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -990,7 +995,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskProjectResponse(
+            return operations.GetTaskProject2Response(
                 task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
@@ -1007,17 +1012,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_task_project_async(
+    async def get_task_project2_async(
         self,
         *,
         request: Union[
-            operations.GetTaskProjectRequest, operations.GetTaskProjectRequestTypedDict
+            operations.GetTaskProject2Request,
+            operations.GetTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskProjectResponse:
+    ) -> operations.GetTaskProject2Response:
         r"""Retrieve a project
 
         :param request: The request object to send.
@@ -1037,8 +1043,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskProjectRequest)
-        request = cast(operations.GetTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskProject2Request)
+        request = cast(operations.GetTaskProject2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1069,7 +1075,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskProject",
+                operation_id="getTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1079,7 +1085,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskProjectResponse(
+            return operations.GetTaskProject2Response(
                 task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
@@ -1096,17 +1102,17 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_task_task(
+    def get_task_task2(
         self,
         *,
         request: Union[
-            operations.GetTaskTaskRequest, operations.GetTaskTaskRequestTypedDict
+            operations.GetTaskTask2Request, operations.GetTaskTask2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskTaskResponse:
+    ) -> operations.GetTaskTask2Response:
         r"""Retrieve a task
 
         :param request: The request object to send.
@@ -1126,8 +1132,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskTaskRequest)
-        request = cast(operations.GetTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskTask2Request)
+        request = cast(operations.GetTaskTask2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1158,7 +1164,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskTask",
+                operation_id="getTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1168,7 +1174,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskTaskResponse(
+            return operations.GetTaskTask2Response(
                 task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1183,17 +1189,17 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_task_task_async(
+    async def get_task_task2_async(
         self,
         *,
         request: Union[
-            operations.GetTaskTaskRequest, operations.GetTaskTaskRequestTypedDict
+            operations.GetTaskTask2Request, operations.GetTaskTask2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskTaskResponse:
+    ) -> operations.GetTaskTask2Response:
         r"""Retrieve a task
 
         :param request: The request object to send.
@@ -1213,8 +1219,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskTaskRequest)
-        request = cast(operations.GetTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.GetTaskTask2Request)
+        request = cast(operations.GetTaskTask2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1245,7 +1251,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskTask",
+                operation_id="getTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1255,7 +1261,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskTaskResponse(
+            return operations.GetTaskTask2Response(
                 task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1270,18 +1276,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_task_changes(
+    def list_task_changes2(
         self,
         *,
         request: Union[
-            operations.ListTaskChangesRequest,
-            operations.ListTaskChangesRequestTypedDict,
+            operations.ListTaskChanges2Request,
+            operations.ListTaskChanges2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskChangesResponse:
+    ) -> operations.ListTaskChanges2Response:
         r"""List all changes
 
         :param request: The request object to send.
@@ -1301,8 +1307,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskChangesRequest)
-        request = cast(operations.ListTaskChangesRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskChanges2Request)
+        request = cast(operations.ListTaskChanges2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1333,7 +1339,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskChanges",
+                operation_id="listTaskChanges2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1343,7 +1349,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskChangesResponse(
+            return operations.ListTaskChanges2Response(
                 task_changes=unmarshal_json_response(
                     Optional[List[shared.TaskChange]], http_res
                 ),
@@ -1360,18 +1366,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_task_changes_async(
+    async def list_task_changes2_async(
         self,
         *,
         request: Union[
-            operations.ListTaskChangesRequest,
-            operations.ListTaskChangesRequestTypedDict,
+            operations.ListTaskChanges2Request,
+            operations.ListTaskChanges2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskChangesResponse:
+    ) -> operations.ListTaskChanges2Response:
         r"""List all changes
 
         :param request: The request object to send.
@@ -1391,8 +1397,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskChangesRequest)
-        request = cast(operations.ListTaskChangesRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskChanges2Request)
+        request = cast(operations.ListTaskChanges2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1423,7 +1429,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskChanges",
+                operation_id="listTaskChanges2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1433,7 +1439,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskChangesResponse(
+            return operations.ListTaskChanges2Response(
                 task_changes=unmarshal_json_response(
                     Optional[List[shared.TaskChange]], http_res
                 ),
@@ -1450,18 +1456,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_task_comments(
+    def list_task_comments2(
         self,
         *,
         request: Union[
-            operations.ListTaskCommentsRequest,
-            operations.ListTaskCommentsRequestTypedDict,
+            operations.ListTaskComments2Request,
+            operations.ListTaskComments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskCommentsResponse:
+    ) -> operations.ListTaskComments2Response:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1481,8 +1487,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskCommentsRequest)
-        request = cast(operations.ListTaskCommentsRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskComments2Request)
+        request = cast(operations.ListTaskComments2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1513,7 +1519,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskComments",
+                operation_id="listTaskComments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1523,7 +1529,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskCommentsResponse(
+            return operations.ListTaskComments2Response(
                 task_comments=unmarshal_json_response(
                     Optional[List[shared.TaskComment]], http_res
                 ),
@@ -1540,18 +1546,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_task_comments_async(
+    async def list_task_comments2_async(
         self,
         *,
         request: Union[
-            operations.ListTaskCommentsRequest,
-            operations.ListTaskCommentsRequestTypedDict,
+            operations.ListTaskComments2Request,
+            operations.ListTaskComments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskCommentsResponse:
+    ) -> operations.ListTaskComments2Response:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1571,8 +1577,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskCommentsRequest)
-        request = cast(operations.ListTaskCommentsRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskComments2Request)
+        request = cast(operations.ListTaskComments2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1603,7 +1609,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskComments",
+                operation_id="listTaskComments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1613,7 +1619,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskCommentsResponse(
+            return operations.ListTaskComments2Response(
                 task_comments=unmarshal_json_response(
                     Optional[List[shared.TaskComment]], http_res
                 ),
@@ -1630,18 +1636,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_task_projects(
+    def list_task_projects2(
         self,
         *,
         request: Union[
-            operations.ListTaskProjectsRequest,
-            operations.ListTaskProjectsRequestTypedDict,
+            operations.ListTaskProjects2Request,
+            operations.ListTaskProjects2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskProjectsResponse:
+    ) -> operations.ListTaskProjects2Response:
         r"""List all projects
 
         :param request: The request object to send.
@@ -1661,8 +1667,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskProjectsRequest)
-        request = cast(operations.ListTaskProjectsRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskProjects2Request)
+        request = cast(operations.ListTaskProjects2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1693,7 +1699,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskProjects",
+                operation_id="listTaskProjects2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1703,7 +1709,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskProjectsResponse(
+            return operations.ListTaskProjects2Response(
                 task_projects=unmarshal_json_response(
                     Optional[List[shared.TaskProject]], http_res
                 ),
@@ -1720,18 +1726,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_task_projects_async(
+    async def list_task_projects2_async(
         self,
         *,
         request: Union[
-            operations.ListTaskProjectsRequest,
-            operations.ListTaskProjectsRequestTypedDict,
+            operations.ListTaskProjects2Request,
+            operations.ListTaskProjects2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskProjectsResponse:
+    ) -> operations.ListTaskProjects2Response:
         r"""List all projects
 
         :param request: The request object to send.
@@ -1751,8 +1757,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskProjectsRequest)
-        request = cast(operations.ListTaskProjectsRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskProjects2Request)
+        request = cast(operations.ListTaskProjects2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1783,7 +1789,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskProjects",
+                operation_id="listTaskProjects2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1793,7 +1799,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskProjectsResponse(
+            return operations.ListTaskProjects2Response(
                 task_projects=unmarshal_json_response(
                     Optional[List[shared.TaskProject]], http_res
                 ),
@@ -1810,17 +1816,17 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_task_tasks(
+    def list_task_tasks2(
         self,
         *,
         request: Union[
-            operations.ListTaskTasksRequest, operations.ListTaskTasksRequestTypedDict
+            operations.ListTaskTasks2Request, operations.ListTaskTasks2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskTasksResponse:
+    ) -> operations.ListTaskTasks2Response:
         r"""List all tasks
 
         :param request: The request object to send.
@@ -1840,8 +1846,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskTasksRequest)
-        request = cast(operations.ListTaskTasksRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskTasks2Request)
+        request = cast(operations.ListTaskTasks2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1872,7 +1878,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskTasks",
+                operation_id="listTaskTasks2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1882,7 +1888,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskTasksResponse(
+            return operations.ListTaskTasks2Response(
                 task_tasks=unmarshal_json_response(
                     Optional[List[shared.TaskTask]], http_res
                 ),
@@ -1899,17 +1905,17 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_task_tasks_async(
+    async def list_task_tasks2_async(
         self,
         *,
         request: Union[
-            operations.ListTaskTasksRequest, operations.ListTaskTasksRequestTypedDict
+            operations.ListTaskTasks2Request, operations.ListTaskTasks2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskTasksResponse:
+    ) -> operations.ListTaskTasks2Response:
         r"""List all tasks
 
         :param request: The request object to send.
@@ -1929,8 +1935,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskTasksRequest)
-        request = cast(operations.ListTaskTasksRequest, request)
+            request = utils.unmarshal(request, operations.ListTaskTasks2Request)
+        request = cast(operations.ListTaskTasks2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1961,7 +1967,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskTasks",
+                operation_id="listTaskTasks2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1971,7 +1977,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskTasksResponse(
+            return operations.ListTaskTasks2Response(
                 task_tasks=unmarshal_json_response(
                     Optional[List[shared.TaskTask]], http_res
                 ),
@@ -1988,18 +1994,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_task_comment(
+    def patch_task_comment2(
         self,
         *,
         request: Union[
-            operations.PatchTaskCommentRequest,
-            operations.PatchTaskCommentRequestTypedDict,
+            operations.PatchTaskComment2Request,
+            operations.PatchTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTaskCommentResponse:
+    ) -> operations.PatchTaskComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2019,8 +2025,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTaskCommentRequest)
-        request = cast(operations.PatchTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.PatchTaskComment2Request)
+        request = cast(operations.PatchTaskComment2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2054,7 +2060,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTaskComment",
+                operation_id="patchTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2064,7 +2070,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTaskCommentResponse(
+            return operations.PatchTaskComment2Response(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -2081,18 +2087,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_task_comment_async(
+    async def patch_task_comment2_async(
         self,
         *,
         request: Union[
-            operations.PatchTaskCommentRequest,
-            operations.PatchTaskCommentRequestTypedDict,
+            operations.PatchTaskComment2Request,
+            operations.PatchTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTaskCommentResponse:
+    ) -> operations.PatchTaskComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2112,8 +2118,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTaskCommentRequest)
-        request = cast(operations.PatchTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.PatchTaskComment2Request)
+        request = cast(operations.PatchTaskComment2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2147,7 +2153,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTaskComment",
+                operation_id="patchTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2157,7 +2163,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTaskCommentResponse(
+            return operations.PatchTaskComment2Response(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -2174,18 +2180,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_task_project(
+    def patch_task_project2(
         self,
         *,
         request: Union[
-            operations.PatchTaskProjectRequest,
-            operations.PatchTaskProjectRequestTypedDict,
+            operations.PatchTaskProject2Request,
+            operations.PatchTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTaskProjectResponse:
+    ) -> operations.PatchTaskProject2Response:
         r"""Update a project
 
         :param request: The request object to send.
@@ -2205,8 +2211,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTaskProjectRequest)
-        request = cast(operations.PatchTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.PatchTaskProject2Request)
+        request = cast(operations.PatchTaskProject2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2240,7 +2246,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTaskProject",
+                operation_id="patchTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2250,7 +2256,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTaskProjectResponse(
+            return operations.PatchTaskProject2Response(
                 task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
@@ -2267,18 +2273,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_task_project_async(
+    async def patch_task_project2_async(
         self,
         *,
         request: Union[
-            operations.PatchTaskProjectRequest,
-            operations.PatchTaskProjectRequestTypedDict,
+            operations.PatchTaskProject2Request,
+            operations.PatchTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTaskProjectResponse:
+    ) -> operations.PatchTaskProject2Response:
         r"""Update a project
 
         :param request: The request object to send.
@@ -2298,8 +2304,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTaskProjectRequest)
-        request = cast(operations.PatchTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.PatchTaskProject2Request)
+        request = cast(operations.PatchTaskProject2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2333,7 +2339,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTaskProject",
+                operation_id="patchTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2343,7 +2349,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTaskProjectResponse(
+            return operations.PatchTaskProject2Response(
                 task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
@@ -2360,17 +2366,17 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_task_task(
+    def patch_task_task2(
         self,
         *,
         request: Union[
-            operations.PatchTaskTaskRequest, operations.PatchTaskTaskRequestTypedDict
+            operations.PatchTaskTask2Request, operations.PatchTaskTask2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTaskTaskResponse:
+    ) -> operations.PatchTaskTask2Response:
         r"""Update a task
 
         :param request: The request object to send.
@@ -2390,8 +2396,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTaskTaskRequest)
-        request = cast(operations.PatchTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.PatchTaskTask2Request)
+        request = cast(operations.PatchTaskTask2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2425,7 +2431,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTaskTask",
+                operation_id="patchTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2435,7 +2441,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTaskTaskResponse(
+            return operations.PatchTaskTask2Response(
                 task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2450,17 +2456,17 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_task_task_async(
+    async def patch_task_task2_async(
         self,
         *,
         request: Union[
-            operations.PatchTaskTaskRequest, operations.PatchTaskTaskRequestTypedDict
+            operations.PatchTaskTask2Request, operations.PatchTaskTask2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTaskTaskResponse:
+    ) -> operations.PatchTaskTask2Response:
         r"""Update a task
 
         :param request: The request object to send.
@@ -2480,8 +2486,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTaskTaskRequest)
-        request = cast(operations.PatchTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.PatchTaskTask2Request)
+        request = cast(operations.PatchTaskTask2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2515,7 +2521,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTaskTask",
+                operation_id="patchTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2525,7 +2531,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTaskTaskResponse(
+            return operations.PatchTaskTask2Response(
                 task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2540,18 +2546,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_task_comment(
+    def remove_task_comment2(
         self,
         *,
         request: Union[
-            operations.RemoveTaskCommentRequest,
-            operations.RemoveTaskCommentRequestTypedDict,
+            operations.RemoveTaskComment2Request,
+            operations.RemoveTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTaskCommentResponse:
+    ) -> operations.RemoveTaskComment2Response:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2571,8 +2577,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTaskCommentRequest)
-        request = cast(operations.RemoveTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTaskComment2Request)
+        request = cast(operations.RemoveTaskComment2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2603,7 +2609,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTaskComment",
+                operation_id="removeTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2613,7 +2619,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTaskCommentResponse(
+            return operations.RemoveTaskComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2626,7 +2632,7 @@ class Task(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTaskCommentResponse(
+            return operations.RemoveTaskComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2635,18 +2641,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_task_comment_async(
+    async def remove_task_comment2_async(
         self,
         *,
         request: Union[
-            operations.RemoveTaskCommentRequest,
-            operations.RemoveTaskCommentRequestTypedDict,
+            operations.RemoveTaskComment2Request,
+            operations.RemoveTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTaskCommentResponse:
+    ) -> operations.RemoveTaskComment2Response:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2666,8 +2672,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTaskCommentRequest)
-        request = cast(operations.RemoveTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTaskComment2Request)
+        request = cast(operations.RemoveTaskComment2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2698,7 +2704,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTaskComment",
+                operation_id="removeTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2708,7 +2714,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTaskCommentResponse(
+            return operations.RemoveTaskComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2721,7 +2727,7 @@ class Task(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTaskCommentResponse(
+            return operations.RemoveTaskComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2730,18 +2736,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_task_project(
+    def remove_task_project2(
         self,
         *,
         request: Union[
-            operations.RemoveTaskProjectRequest,
-            operations.RemoveTaskProjectRequestTypedDict,
+            operations.RemoveTaskProject2Request,
+            operations.RemoveTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTaskProjectResponse:
+    ) -> operations.RemoveTaskProject2Response:
         r"""Remove a project
 
         :param request: The request object to send.
@@ -2761,8 +2767,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTaskProjectRequest)
-        request = cast(operations.RemoveTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTaskProject2Request)
+        request = cast(operations.RemoveTaskProject2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2793,7 +2799,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTaskProject",
+                operation_id="removeTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2803,7 +2809,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTaskProjectResponse(
+            return operations.RemoveTaskProject2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2816,7 +2822,7 @@ class Task(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTaskProjectResponse(
+            return operations.RemoveTaskProject2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2825,18 +2831,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_task_project_async(
+    async def remove_task_project2_async(
         self,
         *,
         request: Union[
-            operations.RemoveTaskProjectRequest,
-            operations.RemoveTaskProjectRequestTypedDict,
+            operations.RemoveTaskProject2Request,
+            operations.RemoveTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTaskProjectResponse:
+    ) -> operations.RemoveTaskProject2Response:
         r"""Remove a project
 
         :param request: The request object to send.
@@ -2856,8 +2862,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTaskProjectRequest)
-        request = cast(operations.RemoveTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTaskProject2Request)
+        request = cast(operations.RemoveTaskProject2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2888,7 +2894,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTaskProject",
+                operation_id="removeTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2898,7 +2904,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTaskProjectResponse(
+            return operations.RemoveTaskProject2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2911,7 +2917,7 @@ class Task(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTaskProjectResponse(
+            return operations.RemoveTaskProject2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2920,17 +2926,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_task_task(
+    def remove_task_task2(
         self,
         *,
         request: Union[
-            operations.RemoveTaskTaskRequest, operations.RemoveTaskTaskRequestTypedDict
+            operations.RemoveTaskTask2Request,
+            operations.RemoveTaskTask2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTaskTaskResponse:
+    ) -> operations.RemoveTaskTask2Response:
         r"""Remove a task
 
         :param request: The request object to send.
@@ -2950,8 +2957,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTaskTaskRequest)
-        request = cast(operations.RemoveTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTaskTask2Request)
+        request = cast(operations.RemoveTaskTask2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2982,7 +2989,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTaskTask",
+                operation_id="removeTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2992,7 +2999,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTaskTaskResponse(
+            return operations.RemoveTaskTask2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3005,7 +3012,7 @@ class Task(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTaskTaskResponse(
+            return operations.RemoveTaskTask2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3014,17 +3021,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_task_task_async(
+    async def remove_task_task2_async(
         self,
         *,
         request: Union[
-            operations.RemoveTaskTaskRequest, operations.RemoveTaskTaskRequestTypedDict
+            operations.RemoveTaskTask2Request,
+            operations.RemoveTaskTask2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTaskTaskResponse:
+    ) -> operations.RemoveTaskTask2Response:
         r"""Remove a task
 
         :param request: The request object to send.
@@ -3044,8 +3052,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTaskTaskRequest)
-        request = cast(operations.RemoveTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.RemoveTaskTask2Request)
+        request = cast(operations.RemoveTaskTask2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3076,7 +3084,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTaskTask",
+                operation_id="removeTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3086,7 +3094,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTaskTaskResponse(
+            return operations.RemoveTaskTask2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3099,7 +3107,7 @@ class Task(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTaskTaskResponse(
+            return operations.RemoveTaskTask2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3108,18 +3116,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_task_comment(
+    def update_task_comment2(
         self,
         *,
         request: Union[
-            operations.UpdateTaskCommentRequest,
-            operations.UpdateTaskCommentRequestTypedDict,
+            operations.UpdateTaskComment2Request,
+            operations.UpdateTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTaskCommentResponse:
+    ) -> operations.UpdateTaskComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -3139,8 +3147,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTaskCommentRequest)
-        request = cast(operations.UpdateTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTaskComment2Request)
+        request = cast(operations.UpdateTaskComment2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3174,7 +3182,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTaskComment",
+                operation_id="updateTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3184,7 +3192,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTaskCommentResponse(
+            return operations.UpdateTaskComment2Response(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -3201,18 +3209,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_task_comment_async(
+    async def update_task_comment2_async(
         self,
         *,
         request: Union[
-            operations.UpdateTaskCommentRequest,
-            operations.UpdateTaskCommentRequestTypedDict,
+            operations.UpdateTaskComment2Request,
+            operations.UpdateTaskComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTaskCommentResponse:
+    ) -> operations.UpdateTaskComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -3232,8 +3240,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTaskCommentRequest)
-        request = cast(operations.UpdateTaskCommentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTaskComment2Request)
+        request = cast(operations.UpdateTaskComment2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3267,7 +3275,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTaskComment",
+                operation_id="updateTaskComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3277,7 +3285,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTaskCommentResponse(
+            return operations.UpdateTaskComment2Response(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -3294,18 +3302,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_task_project(
+    def update_task_project2(
         self,
         *,
         request: Union[
-            operations.UpdateTaskProjectRequest,
-            operations.UpdateTaskProjectRequestTypedDict,
+            operations.UpdateTaskProject2Request,
+            operations.UpdateTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTaskProjectResponse:
+    ) -> operations.UpdateTaskProject2Response:
         r"""Update a project
 
         :param request: The request object to send.
@@ -3325,8 +3333,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTaskProjectRequest)
-        request = cast(operations.UpdateTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTaskProject2Request)
+        request = cast(operations.UpdateTaskProject2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3360,7 +3368,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTaskProject",
+                operation_id="updateTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3370,7 +3378,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTaskProjectResponse(
+            return operations.UpdateTaskProject2Response(
                 task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
@@ -3387,18 +3395,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_task_project_async(
+    async def update_task_project2_async(
         self,
         *,
         request: Union[
-            operations.UpdateTaskProjectRequest,
-            operations.UpdateTaskProjectRequestTypedDict,
+            operations.UpdateTaskProject2Request,
+            operations.UpdateTaskProject2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTaskProjectResponse:
+    ) -> operations.UpdateTaskProject2Response:
         r"""Update a project
 
         :param request: The request object to send.
@@ -3418,8 +3426,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTaskProjectRequest)
-        request = cast(operations.UpdateTaskProjectRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTaskProject2Request)
+        request = cast(operations.UpdateTaskProject2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3453,7 +3461,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTaskProject",
+                operation_id="updateTaskProject2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3463,7 +3471,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTaskProjectResponse(
+            return operations.UpdateTaskProject2Response(
                 task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
@@ -3480,17 +3488,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_task_task(
+    def update_task_task2(
         self,
         *,
         request: Union[
-            operations.UpdateTaskTaskRequest, operations.UpdateTaskTaskRequestTypedDict
+            operations.UpdateTaskTask2Request,
+            operations.UpdateTaskTask2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTaskTaskResponse:
+    ) -> operations.UpdateTaskTask2Response:
         r"""Update a task
 
         :param request: The request object to send.
@@ -3510,8 +3519,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTaskTaskRequest)
-        request = cast(operations.UpdateTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTaskTask2Request)
+        request = cast(operations.UpdateTaskTask2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3545,7 +3554,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTaskTask",
+                operation_id="updateTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3555,7 +3564,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTaskTaskResponse(
+            return operations.UpdateTaskTask2Response(
                 task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3570,17 +3579,18 @@ class Task(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_task_task_async(
+    async def update_task_task2_async(
         self,
         *,
         request: Union[
-            operations.UpdateTaskTaskRequest, operations.UpdateTaskTaskRequestTypedDict
+            operations.UpdateTaskTask2Request,
+            operations.UpdateTaskTask2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTaskTaskResponse:
+    ) -> operations.UpdateTaskTask2Response:
         r"""Update a task
 
         :param request: The request object to send.
@@ -3600,8 +3610,8 @@ class Task(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTaskTaskRequest)
-        request = cast(operations.UpdateTaskTaskRequest, request)
+            request = utils.unmarshal(request, operations.UpdateTaskTask2Request)
+        request = cast(operations.UpdateTaskTask2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3635,7 +3645,7 @@ class Task(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTaskTask",
+                operation_id="updateTaskTask2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3645,7 +3655,7 @@ class Task(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTaskTaskResponse(
+            return operations.UpdateTaskTask2Response(
                 task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

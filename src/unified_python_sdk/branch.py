@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Branch(BaseSDK):
-    def create_repo_branch(
+    def create_repo_branch2(
         self,
         *,
         request: Union[
-            operations.CreateRepoBranchRequest,
-            operations.CreateRepoBranchRequestTypedDict,
+            operations.CreateRepoBranch2Request,
+            operations.CreateRepoBranch2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateRepoBranchResponse:
+    ) -> operations.CreateRepoBranch2Response:
         r"""Create a branch
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateRepoBranchRequest)
-        request = cast(operations.CreateRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.CreateRepoBranch2Request)
+        request = cast(operations.CreateRepoBranch2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createRepoBranch",
+                operation_id="createRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateRepoBranchResponse(
+            return operations.CreateRepoBranch2Response(
                 repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
@@ -103,18 +103,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_repo_branch_async(
+    async def create_repo_branch2_async(
         self,
         *,
         request: Union[
-            operations.CreateRepoBranchRequest,
-            operations.CreateRepoBranchRequestTypedDict,
+            operations.CreateRepoBranch2Request,
+            operations.CreateRepoBranch2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateRepoBranchResponse:
+    ) -> operations.CreateRepoBranch2Response:
         r"""Create a branch
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateRepoBranchRequest)
-        request = cast(operations.CreateRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.CreateRepoBranch2Request)
+        request = cast(operations.CreateRepoBranch2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createRepoBranch",
+                operation_id="createRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateRepoBranchResponse(
+            return operations.CreateRepoBranch2Response(
                 repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
@@ -196,17 +196,17 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_repo_branch(
+    def get_repo_branch2(
         self,
         *,
         request: Union[
-            operations.GetRepoBranchRequest, operations.GetRepoBranchRequestTypedDict
+            operations.GetRepoBranch2Request, operations.GetRepoBranch2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetRepoBranchResponse:
+    ) -> operations.GetRepoBranch2Response:
         r"""Retrieve a branch
 
         :param request: The request object to send.
@@ -226,8 +226,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetRepoBranchRequest)
-        request = cast(operations.GetRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.GetRepoBranch2Request)
+        request = cast(operations.GetRepoBranch2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -258,7 +258,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getRepoBranch",
+                operation_id="getRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -268,7 +268,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetRepoBranchResponse(
+            return operations.GetRepoBranch2Response(
                 repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
@@ -285,17 +285,17 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_repo_branch_async(
+    async def get_repo_branch2_async(
         self,
         *,
         request: Union[
-            operations.GetRepoBranchRequest, operations.GetRepoBranchRequestTypedDict
+            operations.GetRepoBranch2Request, operations.GetRepoBranch2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetRepoBranchResponse:
+    ) -> operations.GetRepoBranch2Response:
         r"""Retrieve a branch
 
         :param request: The request object to send.
@@ -315,8 +315,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetRepoBranchRequest)
-        request = cast(operations.GetRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.GetRepoBranch2Request)
+        request = cast(operations.GetRepoBranch2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -347,7 +347,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getRepoBranch",
+                operation_id="getRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -357,7 +357,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetRepoBranchResponse(
+            return operations.GetRepoBranch2Response(
                 repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
@@ -374,18 +374,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_repo_branches(
+    def list_repo_branches2(
         self,
         *,
         request: Union[
-            operations.ListRepoBranchesRequest,
-            operations.ListRepoBranchesRequestTypedDict,
+            operations.ListRepoBranches2Request,
+            operations.ListRepoBranches2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListRepoBranchesResponse:
+    ) -> operations.ListRepoBranches2Response:
         r"""List all branches
 
         :param request: The request object to send.
@@ -405,8 +405,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListRepoBranchesRequest)
-        request = cast(operations.ListRepoBranchesRequest, request)
+            request = utils.unmarshal(request, operations.ListRepoBranches2Request)
+        request = cast(operations.ListRepoBranches2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -437,7 +437,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listRepoBranches",
+                operation_id="listRepoBranches2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -447,7 +447,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListRepoBranchesResponse(
+            return operations.ListRepoBranches2Response(
                 repo_branches=unmarshal_json_response(
                     Optional[List[shared.RepoBranch]], http_res
                 ),
@@ -464,18 +464,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_repo_branches_async(
+    async def list_repo_branches2_async(
         self,
         *,
         request: Union[
-            operations.ListRepoBranchesRequest,
-            operations.ListRepoBranchesRequestTypedDict,
+            operations.ListRepoBranches2Request,
+            operations.ListRepoBranches2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListRepoBranchesResponse:
+    ) -> operations.ListRepoBranches2Response:
         r"""List all branches
 
         :param request: The request object to send.
@@ -495,8 +495,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListRepoBranchesRequest)
-        request = cast(operations.ListRepoBranchesRequest, request)
+            request = utils.unmarshal(request, operations.ListRepoBranches2Request)
+        request = cast(operations.ListRepoBranches2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -527,7 +527,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listRepoBranches",
+                operation_id="listRepoBranches2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -537,7 +537,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListRepoBranchesResponse(
+            return operations.ListRepoBranches2Response(
                 repo_branches=unmarshal_json_response(
                     Optional[List[shared.RepoBranch]], http_res
                 ),
@@ -554,18 +554,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_repo_branch(
+    def patch_repo_branch2(
         self,
         *,
         request: Union[
-            operations.PatchRepoBranchRequest,
-            operations.PatchRepoBranchRequestTypedDict,
+            operations.PatchRepoBranch2Request,
+            operations.PatchRepoBranch2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchRepoBranchResponse:
+    ) -> operations.PatchRepoBranch2Response:
         r"""Update a branch
 
         :param request: The request object to send.
@@ -585,8 +585,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchRepoBranchRequest)
-        request = cast(operations.PatchRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.PatchRepoBranch2Request)
+        request = cast(operations.PatchRepoBranch2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -620,7 +620,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchRepoBranch",
+                operation_id="patchRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -630,7 +630,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchRepoBranchResponse(
+            return operations.PatchRepoBranch2Response(
                 repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
@@ -647,18 +647,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_repo_branch_async(
+    async def patch_repo_branch2_async(
         self,
         *,
         request: Union[
-            operations.PatchRepoBranchRequest,
-            operations.PatchRepoBranchRequestTypedDict,
+            operations.PatchRepoBranch2Request,
+            operations.PatchRepoBranch2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchRepoBranchResponse:
+    ) -> operations.PatchRepoBranch2Response:
         r"""Update a branch
 
         :param request: The request object to send.
@@ -678,8 +678,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchRepoBranchRequest)
-        request = cast(operations.PatchRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.PatchRepoBranch2Request)
+        request = cast(operations.PatchRepoBranch2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -713,7 +713,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchRepoBranch",
+                operation_id="patchRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -723,7 +723,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchRepoBranchResponse(
+            return operations.PatchRepoBranch2Response(
                 repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
@@ -740,18 +740,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_repo_branch(
+    def remove_repo_branch2(
         self,
         *,
         request: Union[
-            operations.RemoveRepoBranchRequest,
-            operations.RemoveRepoBranchRequestTypedDict,
+            operations.RemoveRepoBranch2Request,
+            operations.RemoveRepoBranch2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveRepoBranchResponse:
+    ) -> operations.RemoveRepoBranch2Response:
         r"""Remove a branch
 
         :param request: The request object to send.
@@ -771,8 +771,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveRepoBranchRequest)
-        request = cast(operations.RemoveRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.RemoveRepoBranch2Request)
+        request = cast(operations.RemoveRepoBranch2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -803,7 +803,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeRepoBranch",
+                operation_id="removeRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -813,7 +813,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveRepoBranchResponse(
+            return operations.RemoveRepoBranch2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -826,7 +826,7 @@ class Branch(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveRepoBranchResponse(
+            return operations.RemoveRepoBranch2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -835,18 +835,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_repo_branch_async(
+    async def remove_repo_branch2_async(
         self,
         *,
         request: Union[
-            operations.RemoveRepoBranchRequest,
-            operations.RemoveRepoBranchRequestTypedDict,
+            operations.RemoveRepoBranch2Request,
+            operations.RemoveRepoBranch2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveRepoBranchResponse:
+    ) -> operations.RemoveRepoBranch2Response:
         r"""Remove a branch
 
         :param request: The request object to send.
@@ -866,8 +866,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveRepoBranchRequest)
-        request = cast(operations.RemoveRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.RemoveRepoBranch2Request)
+        request = cast(operations.RemoveRepoBranch2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -898,7 +898,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeRepoBranch",
+                operation_id="removeRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -908,7 +908,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveRepoBranchResponse(
+            return operations.RemoveRepoBranch2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -921,7 +921,7 @@ class Branch(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveRepoBranchResponse(
+            return operations.RemoveRepoBranch2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -930,18 +930,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_repo_branch(
+    def update_repo_branch2(
         self,
         *,
         request: Union[
-            operations.UpdateRepoBranchRequest,
-            operations.UpdateRepoBranchRequestTypedDict,
+            operations.UpdateRepoBranch2Request,
+            operations.UpdateRepoBranch2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateRepoBranchResponse:
+    ) -> operations.UpdateRepoBranch2Response:
         r"""Update a branch
 
         :param request: The request object to send.
@@ -961,8 +961,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateRepoBranchRequest)
-        request = cast(operations.UpdateRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.UpdateRepoBranch2Request)
+        request = cast(operations.UpdateRepoBranch2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -996,7 +996,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateRepoBranch",
+                operation_id="updateRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1006,7 +1006,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateRepoBranchResponse(
+            return operations.UpdateRepoBranch2Response(
                 repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
@@ -1023,18 +1023,18 @@ class Branch(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_repo_branch_async(
+    async def update_repo_branch2_async(
         self,
         *,
         request: Union[
-            operations.UpdateRepoBranchRequest,
-            operations.UpdateRepoBranchRequestTypedDict,
+            operations.UpdateRepoBranch2Request,
+            operations.UpdateRepoBranch2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateRepoBranchResponse:
+    ) -> operations.UpdateRepoBranch2Response:
         r"""Update a branch
 
         :param request: The request object to send.
@@ -1054,8 +1054,8 @@ class Branch(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateRepoBranchRequest)
-        request = cast(operations.UpdateRepoBranchRequest, request)
+            request = utils.unmarshal(request, operations.UpdateRepoBranch2Request)
+        request = cast(operations.UpdateRepoBranch2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1089,7 +1089,7 @@ class Branch(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateRepoBranch",
+                operation_id="updateRepoBranch2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1099,7 +1099,7 @@ class Branch(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateRepoBranchResponse(
+            return operations.UpdateRepoBranch2Response(
                 repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),

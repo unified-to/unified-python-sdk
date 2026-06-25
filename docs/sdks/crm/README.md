@@ -4,50 +4,50 @@
 
 ### Available Operations
 
-* [create_crm_company](#create_crm_company) - Create a company
-* [create_crm_contact](#create_crm_contact) - Create a contact
-* [create_crm_deal](#create_crm_deal) - Create a deal
-* [create_crm_event](#create_crm_event) - Create an event
-* [create_crm_lead](#create_crm_lead) - Create a lead
-* [create_crm_pipeline](#create_crm_pipeline) - Create a pipeline
-* [get_crm_company](#get_crm_company) - Retrieve a company
-* [get_crm_contact](#get_crm_contact) - Retrieve a contact
-* [get_crm_deal](#get_crm_deal) - Retrieve a deal
-* [get_crm_event](#get_crm_event) - Retrieve an event
-* [get_crm_lead](#get_crm_lead) - Retrieve a lead
-* [get_crm_pipeline](#get_crm_pipeline) - Retrieve a pipeline
-* [list_crm_companies](#list_crm_companies) - List all companies
-* [list_crm_contacts](#list_crm_contacts) - List all contacts
-* [list_crm_deals](#list_crm_deals) - List all deals
-* [list_crm_events](#list_crm_events) - List all events
-* [list_crm_leads](#list_crm_leads) - List all leads
-* [list_crm_pipelines](#list_crm_pipelines) - List all pipelines
-* [patch_crm_company](#patch_crm_company) - Update a company
-* [patch_crm_contact](#patch_crm_contact) - Update a contact
-* [patch_crm_deal](#patch_crm_deal) - Update a deal
-* [patch_crm_event](#patch_crm_event) - Update an event
-* [patch_crm_lead](#patch_crm_lead) - Update a lead
-* [patch_crm_pipeline](#patch_crm_pipeline) - Update a pipeline
-* [remove_crm_company](#remove_crm_company) - Remove a company
-* [remove_crm_contact](#remove_crm_contact) - Remove a contact
-* [remove_crm_deal](#remove_crm_deal) - Remove a deal
-* [remove_crm_event](#remove_crm_event) - Remove an event
-* [remove_crm_lead](#remove_crm_lead) - Remove a lead
-* [remove_crm_pipeline](#remove_crm_pipeline) - Remove a pipeline
-* [update_crm_company](#update_crm_company) - Update a company
-* [update_crm_contact](#update_crm_contact) - Update a contact
-* [update_crm_deal](#update_crm_deal) - Update a deal
-* [update_crm_event](#update_crm_event) - Update an event
-* [update_crm_lead](#update_crm_lead) - Update a lead
-* [update_crm_pipeline](#update_crm_pipeline) - Update a pipeline
+* [create_crm_company2](#create_crm_company2) - Create a company
+* [create_crm_contact2](#create_crm_contact2) - Create a contact
+* [create_crm_deal2](#create_crm_deal2) - Create a deal
+* [create_crm_event2](#create_crm_event2) - Create an event
+* [create_crm_lead2](#create_crm_lead2) - Create a lead
+* [create_crm_pipeline2](#create_crm_pipeline2) - Create a pipeline
+* [get_crm_company2](#get_crm_company2) - Retrieve a company
+* [get_crm_contact2](#get_crm_contact2) - Retrieve a contact
+* [get_crm_deal2](#get_crm_deal2) - Retrieve a deal
+* [get_crm_event2](#get_crm_event2) - Retrieve an event
+* [get_crm_lead2](#get_crm_lead2) - Retrieve a lead
+* [get_crm_pipeline2](#get_crm_pipeline2) - Retrieve a pipeline
+* [list_crm_companies2](#list_crm_companies2) - List all companies
+* [list_crm_contacts2](#list_crm_contacts2) - List all contacts
+* [list_crm_deals2](#list_crm_deals2) - List all deals
+* [list_crm_events2](#list_crm_events2) - List all events
+* [list_crm_leads2](#list_crm_leads2) - List all leads
+* [list_crm_pipelines2](#list_crm_pipelines2) - List all pipelines
+* [patch_crm_company2](#patch_crm_company2) - Update a company
+* [patch_crm_contact2](#patch_crm_contact2) - Update a contact
+* [patch_crm_deal2](#patch_crm_deal2) - Update a deal
+* [patch_crm_event2](#patch_crm_event2) - Update an event
+* [patch_crm_lead2](#patch_crm_lead2) - Update a lead
+* [patch_crm_pipeline2](#patch_crm_pipeline2) - Update a pipeline
+* [remove_crm_company2](#remove_crm_company2) - Remove a company
+* [remove_crm_contact2](#remove_crm_contact2) - Remove a contact
+* [remove_crm_deal2](#remove_crm_deal2) - Remove a deal
+* [remove_crm_event2](#remove_crm_event2) - Remove an event
+* [remove_crm_lead2](#remove_crm_lead2) - Remove a lead
+* [remove_crm_pipeline2](#remove_crm_pipeline2) - Remove a pipeline
+* [update_crm_company2](#update_crm_company2) - Update a company
+* [update_crm_contact2](#update_crm_contact2) - Update a contact
+* [update_crm_deal2](#update_crm_deal2) - Update a deal
+* [update_crm_event2](#update_crm_event2) - Update an event
+* [update_crm_lead2](#update_crm_lead2) - Update a lead
+* [update_crm_pipeline2](#update_crm_pipeline2) - Update a pipeline
 
-## create_crm_company
+## create_crm_company2
 
 Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="python" operationID="createCrmCompany2" method="post" path="/crm/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -59,7 +59,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.create_crm_company(request={
+    res = unified_to.crm.create_crm_company2(request={
         "crm_company": {},
         "connection_id": "<id>",
     })
@@ -73,14 +73,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.CreateCrmCompanyRequest](../../models/operations/createcrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateCrmCompany2Request](../../models/operations/createcrmcompany2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.CreateCrmCompanyResponse](../../models/operations/createcrmcompanyresponse.md)**
+**[operations.CreateCrmCompany2Response](../../models/operations/createcrmcompany2response.md)**
 
 ### Errors
 
@@ -88,13 +88,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_crm_contact
+## create_crm_contact2
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="python" operationID="createCrmContact2" method="post" path="/crm/{connection_id}/contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -106,7 +106,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.create_crm_contact(request={
+    res = unified_to.crm.create_crm_contact2(request={
         "crm_contact": {},
         "connection_id": "<id>",
     })
@@ -120,14 +120,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.CreateCrmContactRequest](../../models/operations/createcrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateCrmContact2Request](../../models/operations/createcrmcontact2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.CreateCrmContactResponse](../../models/operations/createcrmcontactresponse.md)**
+**[operations.CreateCrmContact2Response](../../models/operations/createcrmcontact2response.md)**
 
 ### Errors
 
@@ -135,13 +135,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_crm_deal
+## create_crm_deal2
 
 Create a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="python" operationID="createCrmDeal2" method="post" path="/crm/{connection_id}/deal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -153,7 +153,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.create_crm_deal(request={
+    res = unified_to.crm.create_crm_deal2(request={
         "crm_deal": {},
         "connection_id": "<id>",
     })
@@ -167,14 +167,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateCrmDealRequest](../../models/operations/createcrmdealrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.CreateCrmDeal2Request](../../models/operations/createcrmdeal2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.CreateCrmDealResponse](../../models/operations/createcrmdealresponse.md)**
+**[operations.CreateCrmDeal2Response](../../models/operations/createcrmdeal2response.md)**
 
 ### Errors
 
@@ -182,13 +182,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_crm_event
+## create_crm_event2
 
 Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="python" operationID="createCrmEvent2" method="post" path="/crm/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -200,7 +200,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.create_crm_event(request={
+    res = unified_to.crm.create_crm_event2(request={
         "crm_event": {},
         "connection_id": "<id>",
     })
@@ -214,14 +214,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.CreateCrmEventRequest](../../models/operations/createcrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateCrmEvent2Request](../../models/operations/createcrmevent2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.CreateCrmEventResponse](../../models/operations/createcrmeventresponse.md)**
+**[operations.CreateCrmEvent2Response](../../models/operations/createcrmevent2response.md)**
 
 ### Errors
 
@@ -229,13 +229,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_crm_lead
+## create_crm_lead2
 
 Create a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="python" operationID="createCrmLead2" method="post" path="/crm/{connection_id}/lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -247,7 +247,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.create_crm_lead(request={
+    res = unified_to.crm.create_crm_lead2(request={
         "crm_lead": {},
         "connection_id": "<id>",
     })
@@ -261,14 +261,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateCrmLeadRequest](../../models/operations/createcrmleadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.CreateCrmLead2Request](../../models/operations/createcrmlead2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.CreateCrmLeadResponse](../../models/operations/createcrmleadresponse.md)**
+**[operations.CreateCrmLead2Response](../../models/operations/createcrmlead2response.md)**
 
 ### Errors
 
@@ -276,13 +276,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_crm_pipeline
+## create_crm_pipeline2
 
 Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="python" operationID="createCrmPipeline2" method="post" path="/crm/{connection_id}/pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -294,7 +294,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.create_crm_pipeline(request={
+    res = unified_to.crm.create_crm_pipeline2(request={
         "crm_pipeline": {},
         "connection_id": "<id>",
     })
@@ -308,14 +308,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreateCrmPipelineRequest](../../models/operations/createcrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateCrmPipeline2Request](../../models/operations/createcrmpipeline2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.CreateCrmPipelineResponse](../../models/operations/createcrmpipelineresponse.md)**
+**[operations.CreateCrmPipeline2Response](../../models/operations/createcrmpipeline2response.md)**
 
 ### Errors
 
@@ -323,13 +323,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_crm_company
+## get_crm_company2
 
 Retrieve a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCrmCompany2" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -341,7 +341,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.get_crm_company(request={
+    res = unified_to.crm.get_crm_company2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -355,14 +355,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetCrmCompanyRequest](../../models/operations/getcrmcompanyrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetCrmCompany2Request](../../models/operations/getcrmcompany2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetCrmCompanyResponse](../../models/operations/getcrmcompanyresponse.md)**
+**[operations.GetCrmCompany2Response](../../models/operations/getcrmcompany2response.md)**
 
 ### Errors
 
@@ -370,13 +370,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_crm_contact
+## get_crm_contact2
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCrmContact2" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -388,7 +388,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.get_crm_contact(request={
+    res = unified_to.crm.get_crm_contact2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -402,14 +402,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetCrmContactRequest](../../models/operations/getcrmcontactrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetCrmContact2Request](../../models/operations/getcrmcontact2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetCrmContactResponse](../../models/operations/getcrmcontactresponse.md)**
+**[operations.GetCrmContact2Response](../../models/operations/getcrmcontact2response.md)**
 
 ### Errors
 
@@ -417,13 +417,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_crm_deal
+## get_crm_deal2
 
 Retrieve a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCrmDeal2" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -435,7 +435,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.get_crm_deal(request={
+    res = unified_to.crm.get_crm_deal2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -449,14 +449,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetCrmDealRequest](../../models/operations/getcrmdealrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `retries`                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)             | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetCrmDeal2Request](../../models/operations/getcrmdeal2request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
 
 ### Response
 
-**[operations.GetCrmDealResponse](../../models/operations/getcrmdealresponse.md)**
+**[operations.GetCrmDeal2Response](../../models/operations/getcrmdeal2response.md)**
 
 ### Errors
 
@@ -464,13 +464,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_crm_event
+## get_crm_event2
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCrmEvent2" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -482,7 +482,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.get_crm_event(request={
+    res = unified_to.crm.get_crm_event2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -496,14 +496,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.GetCrmEventRequest](../../models/operations/getcrmeventrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetCrmEvent2Request](../../models/operations/getcrmevent2request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
 
 ### Response
 
-**[operations.GetCrmEventResponse](../../models/operations/getcrmeventresponse.md)**
+**[operations.GetCrmEvent2Response](../../models/operations/getcrmevent2response.md)**
 
 ### Errors
 
@@ -511,13 +511,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_crm_lead
+## get_crm_lead2
 
 Retrieve a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCrmLead" method="get" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCrmLead2" method="get" path="/crm/{connection_id}/lead/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -529,7 +529,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.get_crm_lead(request={
+    res = unified_to.crm.get_crm_lead2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -543,14 +543,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetCrmLeadRequest](../../models/operations/getcrmleadrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `retries`                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)             | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetCrmLead2Request](../../models/operations/getcrmlead2request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
 
 ### Response
 
-**[operations.GetCrmLeadResponse](../../models/operations/getcrmleadresponse.md)**
+**[operations.GetCrmLead2Response](../../models/operations/getcrmlead2response.md)**
 
 ### Errors
 
@@ -558,13 +558,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_crm_pipeline
+## get_crm_pipeline2
 
 Retrieve a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCrmPipeline2" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -576,7 +576,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.get_crm_pipeline(request={
+    res = unified_to.crm.get_crm_pipeline2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -590,14 +590,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetCrmPipelineRequest](../../models/operations/getcrmpipelinerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetCrmPipeline2Request](../../models/operations/getcrmpipeline2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetCrmPipelineResponse](../../models/operations/getcrmpipelineresponse.md)**
+**[operations.GetCrmPipeline2Response](../../models/operations/getcrmpipeline2response.md)**
 
 ### Errors
 
@@ -605,13 +605,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_crm_companies
+## list_crm_companies2
 
 List all companies
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="python" operationID="listCrmCompanies2" method="get" path="/crm/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -623,7 +623,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.list_crm_companies(request={
+    res = unified_to.crm.list_crm_companies2(request={
         "connection_id": "<id>",
     })
 
@@ -636,14 +636,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListCrmCompaniesRequest](../../models/operations/listcrmcompaniesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListCrmCompanies2Request](../../models/operations/listcrmcompanies2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListCrmCompaniesResponse](../../models/operations/listcrmcompaniesresponse.md)**
+**[operations.ListCrmCompanies2Response](../../models/operations/listcrmcompanies2response.md)**
 
 ### Errors
 
@@ -651,13 +651,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_crm_contacts
+## list_crm_contacts2
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="python" operationID="listCrmContacts2" method="get" path="/crm/{connection_id}/contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -669,7 +669,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.list_crm_contacts(request={
+    res = unified_to.crm.list_crm_contacts2(request={
         "connection_id": "<id>",
     })
 
@@ -682,14 +682,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListCrmContactsRequest](../../models/operations/listcrmcontactsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListCrmContacts2Request](../../models/operations/listcrmcontacts2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListCrmContactsResponse](../../models/operations/listcrmcontactsresponse.md)**
+**[operations.ListCrmContacts2Response](../../models/operations/listcrmcontacts2response.md)**
 
 ### Errors
 
@@ -697,13 +697,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_crm_deals
+## list_crm_deals2
 
 List all deals
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="python" operationID="listCrmDeals2" method="get" path="/crm/{connection_id}/deal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -715,7 +715,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.list_crm_deals(request={
+    res = unified_to.crm.list_crm_deals2(request={
         "connection_id": "<id>",
     })
 
@@ -728,14 +728,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListCrmDealsRequest](../../models/operations/listcrmdealsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.ListCrmDeals2Request](../../models/operations/listcrmdeals2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.ListCrmDealsResponse](../../models/operations/listcrmdealsresponse.md)**
+**[operations.ListCrmDeals2Response](../../models/operations/listcrmdeals2response.md)**
 
 ### Errors
 
@@ -743,13 +743,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_crm_events
+## list_crm_events2
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="python" operationID="listCrmEvents2" method="get" path="/crm/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -761,7 +761,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.list_crm_events(request={
+    res = unified_to.crm.list_crm_events2(request={
         "connection_id": "<id>",
     })
 
@@ -774,14 +774,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.ListCrmEventsRequest](../../models/operations/listcrmeventsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListCrmEvents2Request](../../models/operations/listcrmevents2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.ListCrmEventsResponse](../../models/operations/listcrmeventsresponse.md)**
+**[operations.ListCrmEvents2Response](../../models/operations/listcrmevents2response.md)**
 
 ### Errors
 
@@ -789,13 +789,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_crm_leads
+## list_crm_leads2
 
 List all leads
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCrmLeads" method="get" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="python" operationID="listCrmLeads2" method="get" path="/crm/{connection_id}/lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -807,7 +807,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.list_crm_leads(request={
+    res = unified_to.crm.list_crm_leads2(request={
         "connection_id": "<id>",
     })
 
@@ -820,14 +820,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListCrmLeadsRequest](../../models/operations/listcrmleadsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.ListCrmLeads2Request](../../models/operations/listcrmleads2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.ListCrmLeadsResponse](../../models/operations/listcrmleadsresponse.md)**
+**[operations.ListCrmLeads2Response](../../models/operations/listcrmleads2response.md)**
 
 ### Errors
 
@@ -835,13 +835,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_crm_pipelines
+## list_crm_pipelines2
 
 List all pipelines
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="python" operationID="listCrmPipelines2" method="get" path="/crm/{connection_id}/pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -853,7 +853,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.list_crm_pipelines(request={
+    res = unified_to.crm.list_crm_pipelines2(request={
         "connection_id": "<id>",
     })
 
@@ -866,14 +866,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListCrmPipelines2Request](../../models/operations/listcrmpipelines2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListCrmPipelinesResponse](../../models/operations/listcrmpipelinesresponse.md)**
+**[operations.ListCrmPipelines2Response](../../models/operations/listcrmpipelines2response.md)**
 
 ### Errors
 
@@ -881,13 +881,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_crm_company
+## patch_crm_company2
 
 Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmCompany2" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -899,7 +899,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.patch_crm_company(request={
+    res = unified_to.crm.patch_crm_company2(request={
         "crm_company": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -914,14 +914,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.PatchCrmCompanyRequest](../../models/operations/patchcrmcompanyrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchCrmCompany2Request](../../models/operations/patchcrmcompany2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.PatchCrmCompanyResponse](../../models/operations/patchcrmcompanyresponse.md)**
+**[operations.PatchCrmCompany2Response](../../models/operations/patchcrmcompany2response.md)**
 
 ### Errors
 
@@ -929,13 +929,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_crm_contact
+## patch_crm_contact2
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmContact2" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -947,7 +947,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.patch_crm_contact(request={
+    res = unified_to.crm.patch_crm_contact2(request={
         "crm_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -962,14 +962,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.PatchCrmContactRequest](../../models/operations/patchcrmcontactrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchCrmContact2Request](../../models/operations/patchcrmcontact2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.PatchCrmContactResponse](../../models/operations/patchcrmcontactresponse.md)**
+**[operations.PatchCrmContact2Response](../../models/operations/patchcrmcontact2response.md)**
 
 ### Errors
 
@@ -977,13 +977,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_crm_deal
+## patch_crm_deal2
 
 Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmDeal2" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -995,7 +995,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.patch_crm_deal(request={
+    res = unified_to.crm.patch_crm_deal2(request={
         "crm_deal": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1010,14 +1010,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchCrmDealRequest](../../models/operations/patchcrmdealrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.PatchCrmDeal2Request](../../models/operations/patchcrmdeal2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.PatchCrmDealResponse](../../models/operations/patchcrmdealresponse.md)**
+**[operations.PatchCrmDeal2Response](../../models/operations/patchcrmdeal2response.md)**
 
 ### Errors
 
@@ -1025,13 +1025,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_crm_event
+## patch_crm_event2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmEvent2" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1043,7 +1043,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.patch_crm_event(request={
+    res = unified_to.crm.patch_crm_event2(request={
         "crm_event": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1058,14 +1058,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.PatchCrmEventRequest](../../models/operations/patchcrmeventrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchCrmEvent2Request](../../models/operations/patchcrmevent2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.PatchCrmEventResponse](../../models/operations/patchcrmeventresponse.md)**
+**[operations.PatchCrmEvent2Response](../../models/operations/patchcrmevent2response.md)**
 
 ### Errors
 
@@ -1073,13 +1073,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_crm_lead
+## patch_crm_lead2
 
 Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmLead2" method="patch" path="/crm/{connection_id}/lead/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1091,7 +1091,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.patch_crm_lead(request={
+    res = unified_to.crm.patch_crm_lead2(request={
         "crm_lead": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1106,14 +1106,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchCrmLeadRequest](../../models/operations/patchcrmleadrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.PatchCrmLead2Request](../../models/operations/patchcrmlead2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.PatchCrmLeadResponse](../../models/operations/patchcrmleadresponse.md)**
+**[operations.PatchCrmLead2Response](../../models/operations/patchcrmlead2response.md)**
 
 ### Errors
 
@@ -1121,13 +1121,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_crm_pipeline
+## patch_crm_pipeline2
 
 Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmPipeline2" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1139,7 +1139,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.patch_crm_pipeline(request={
+    res = unified_to.crm.patch_crm_pipeline2(request={
         "crm_pipeline": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1154,14 +1154,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchCrmPipelineRequest](../../models/operations/patchcrmpipelinerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchCrmPipeline2Request](../../models/operations/patchcrmpipeline2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.PatchCrmPipelineResponse](../../models/operations/patchcrmpipelineresponse.md)**
+**[operations.PatchCrmPipeline2Response](../../models/operations/patchcrmpipeline2response.md)**
 
 ### Errors
 
@@ -1169,13 +1169,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_crm_company
+## remove_crm_company2
 
 Remove a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeCrmCompany2" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1187,242 +1187,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.remove_crm_company(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.RemoveCrmCompanyRequest](../../models/operations/removecrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.RemoveCrmCompanyResponse](../../models/operations/removecrmcompanyresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_crm_contact
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.crm.remove_crm_contact(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.RemoveCrmContactRequest](../../models/operations/removecrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.RemoveCrmContactResponse](../../models/operations/removecrmcontactresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_crm_deal
-
-Remove a deal
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.crm.remove_crm_deal(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveCrmDealRequest](../../models/operations/removecrmdealrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
-
-### Response
-
-**[operations.RemoveCrmDealResponse](../../models/operations/removecrmdealresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_crm_event
-
-Remove an event
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.crm.remove_crm_event(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.RemoveCrmEventRequest](../../models/operations/removecrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
-
-### Response
-
-**[operations.RemoveCrmEventResponse](../../models/operations/removecrmeventresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_crm_lead
-
-Remove a lead
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeCrmLead" method="delete" path="/crm/{connection_id}/lead/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.crm.remove_crm_lead(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveCrmLeadRequest](../../models/operations/removecrmleadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
-
-### Response
-
-**[operations.RemoveCrmLeadResponse](../../models/operations/removecrmleadresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_crm_pipeline
-
-Remove a pipeline
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.crm.remove_crm_pipeline(request={
+    res = unified_to.crm.remove_crm_company2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1438,12 +1203,12 @@ with UnifiedTo(
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemoveCrmPipelineRequest](../../models/operations/removecrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `request`                                                                                  | [operations.RemoveCrmCompany2Request](../../models/operations/removecrmcompany2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 | `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.RemoveCrmPipelineResponse](../../models/operations/removecrmpipelineresponse.md)**
+**[operations.RemoveCrmCompany2Response](../../models/operations/removecrmcompany2response.md)**
 
 ### Errors
 
@@ -1451,13 +1216,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_crm_company
+## remove_crm_contact2
 
-Update a company
+Remove a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeCrmContact2" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1469,7 +1234,242 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.update_crm_company(request={
+    res = unified_to.crm.remove_crm_contact2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveCrmContact2Request](../../models/operations/removecrmcontact2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.RemoveCrmContact2Response](../../models/operations/removecrmcontact2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_crm_deal2
+
+Remove a deal
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeCrmDeal2" method="delete" path="/crm/{connection_id}/deal/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.crm.remove_crm_deal2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.RemoveCrmDeal2Request](../../models/operations/removecrmdeal2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.RemoveCrmDeal2Response](../../models/operations/removecrmdeal2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_crm_event2
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeCrmEvent2" method="delete" path="/crm/{connection_id}/event/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.crm.remove_crm_event2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveCrmEvent2Request](../../models/operations/removecrmevent2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.RemoveCrmEvent2Response](../../models/operations/removecrmevent2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_crm_lead2
+
+Remove a lead
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeCrmLead2" method="delete" path="/crm/{connection_id}/lead/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.crm.remove_crm_lead2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.RemoveCrmLead2Request](../../models/operations/removecrmlead2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.RemoveCrmLead2Response](../../models/operations/removecrmlead2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_crm_pipeline2
+
+Remove a pipeline
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeCrmPipeline2" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.crm.remove_crm_pipeline2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveCrmPipeline2Request](../../models/operations/removecrmpipeline2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.RemoveCrmPipeline2Response](../../models/operations/removecrmpipeline2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_crm_company2
+
+Update a company
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateCrmCompany2" method="put" path="/crm/{connection_id}/company/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.crm.update_crm_company2(request={
         "crm_company": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1484,14 +1484,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.UpdateCrmCompanyRequest](../../models/operations/updatecrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateCrmCompany2Request](../../models/operations/updatecrmcompany2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.UpdateCrmCompanyResponse](../../models/operations/updatecrmcompanyresponse.md)**
+**[operations.UpdateCrmCompany2Response](../../models/operations/updatecrmcompany2response.md)**
 
 ### Errors
 
@@ -1499,13 +1499,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_crm_contact
+## update_crm_contact2
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmContact2" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1517,7 +1517,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.update_crm_contact(request={
+    res = unified_to.crm.update_crm_contact2(request={
         "crm_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1532,14 +1532,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.UpdateCrmContactRequest](../../models/operations/updatecrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateCrmContact2Request](../../models/operations/updatecrmcontact2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.UpdateCrmContactResponse](../../models/operations/updatecrmcontactresponse.md)**
+**[operations.UpdateCrmContact2Response](../../models/operations/updatecrmcontact2response.md)**
 
 ### Errors
 
@@ -1547,13 +1547,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_crm_deal
+## update_crm_deal2
 
 Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmDeal2" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1565,7 +1565,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.update_crm_deal(request={
+    res = unified_to.crm.update_crm_deal2(request={
         "crm_deal": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1580,14 +1580,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateCrmDealRequest](../../models/operations/updatecrmdealrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.UpdateCrmDeal2Request](../../models/operations/updatecrmdeal2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.UpdateCrmDealResponse](../../models/operations/updatecrmdealresponse.md)**
+**[operations.UpdateCrmDeal2Response](../../models/operations/updatecrmdeal2response.md)**
 
 ### Errors
 
@@ -1595,13 +1595,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_crm_event
+## update_crm_event2
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmEvent2" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1613,7 +1613,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.update_crm_event(request={
+    res = unified_to.crm.update_crm_event2(request={
         "crm_event": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1628,14 +1628,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.UpdateCrmEventRequest](../../models/operations/updatecrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateCrmEvent2Request](../../models/operations/updatecrmevent2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.UpdateCrmEventResponse](../../models/operations/updatecrmeventresponse.md)**
+**[operations.UpdateCrmEvent2Response](../../models/operations/updatecrmevent2response.md)**
 
 ### Errors
 
@@ -1643,13 +1643,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_crm_lead
+## update_crm_lead2
 
 Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmLead2" method="put" path="/crm/{connection_id}/lead/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1661,7 +1661,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.update_crm_lead(request={
+    res = unified_to.crm.update_crm_lead2(request={
         "crm_lead": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1676,14 +1676,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateCrmLeadRequest](../../models/operations/updatecrmleadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.UpdateCrmLead2Request](../../models/operations/updatecrmlead2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.UpdateCrmLeadResponse](../../models/operations/updatecrmleadresponse.md)**
+**[operations.UpdateCrmLead2Response](../../models/operations/updatecrmlead2response.md)**
 
 ### Errors
 
@@ -1691,13 +1691,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_crm_pipeline
+## update_crm_pipeline2
 
 Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmPipeline2" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1709,7 +1709,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.crm.update_crm_pipeline(request={
+    res = unified_to.crm.update_crm_pipeline2(request={
         "crm_pipeline": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1724,14 +1724,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdateCrmPipelineRequest](../../models/operations/updatecrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateCrmPipeline2Request](../../models/operations/updatecrmpipeline2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.UpdateCrmPipelineResponse](../../models/operations/updatecrmpipelineresponse.md)**
+**[operations.UpdateCrmPipeline2Response](../../models/operations/updatecrmpipeline2response.md)**
 
 ### Errors
 

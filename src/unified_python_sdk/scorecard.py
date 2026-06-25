@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Scorecard(BaseSDK):
-    def create_ats_scorecard(
+    def create_ats_scorecard2(
         self,
         *,
         request: Union[
-            operations.CreateAtsScorecardRequest,
-            operations.CreateAtsScorecardRequestTypedDict,
+            operations.CreateAtsScorecard2Request,
+            operations.CreateAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsScorecardResponse:
+    ) -> operations.CreateAtsScorecard2Response:
         r"""Create a scorecard
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
-        request = cast(operations.CreateAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsScorecard2Request)
+        request = cast(operations.CreateAtsScorecard2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsScorecard",
+                operation_id="createAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsScorecardResponse(
+            return operations.CreateAtsScorecard2Response(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -103,18 +103,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_scorecard_async(
+    async def create_ats_scorecard2_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsScorecardRequest,
-            operations.CreateAtsScorecardRequestTypedDict,
+            operations.CreateAtsScorecard2Request,
+            operations.CreateAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsScorecardResponse:
+    ) -> operations.CreateAtsScorecard2Response:
         r"""Create a scorecard
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
-        request = cast(operations.CreateAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.CreateAtsScorecard2Request)
+        request = cast(operations.CreateAtsScorecard2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsScorecard",
+                operation_id="createAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsScorecardResponse(
+            return operations.CreateAtsScorecard2Response(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -196,18 +196,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_scorecard(
+    def get_ats_scorecard2(
         self,
         *,
         request: Union[
-            operations.GetAtsScorecardRequest,
-            operations.GetAtsScorecardRequestTypedDict,
+            operations.GetAtsScorecard2Request,
+            operations.GetAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsScorecardResponse:
+    ) -> operations.GetAtsScorecard2Response:
         r"""Retrieve a scorecard
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
-        request = cast(operations.GetAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsScorecard2Request)
+        request = cast(operations.GetAtsScorecard2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -259,7 +259,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsScorecard",
+                operation_id="getAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -269,7 +269,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsScorecardResponse(
+            return operations.GetAtsScorecard2Response(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -286,18 +286,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_scorecard_async(
+    async def get_ats_scorecard2_async(
         self,
         *,
         request: Union[
-            operations.GetAtsScorecardRequest,
-            operations.GetAtsScorecardRequestTypedDict,
+            operations.GetAtsScorecard2Request,
+            operations.GetAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsScorecardResponse:
+    ) -> operations.GetAtsScorecard2Response:
         r"""Retrieve a scorecard
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
-        request = cast(operations.GetAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.GetAtsScorecard2Request)
+        request = cast(operations.GetAtsScorecard2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsScorecard",
+                operation_id="getAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -359,7 +359,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsScorecardResponse(
+            return operations.GetAtsScorecard2Response(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -376,18 +376,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_scorecards(
+    def list_ats_scorecards2(
         self,
         *,
         request: Union[
-            operations.ListAtsScorecardsRequest,
-            operations.ListAtsScorecardsRequestTypedDict,
+            operations.ListAtsScorecards2Request,
+            operations.ListAtsScorecards2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsScorecardsResponse:
+    ) -> operations.ListAtsScorecards2Response:
         r"""List all scorecards
 
         :param request: The request object to send.
@@ -407,8 +407,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
-        request = cast(operations.ListAtsScorecardsRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsScorecards2Request)
+        request = cast(operations.ListAtsScorecards2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -439,7 +439,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsScorecards",
+                operation_id="listAtsScorecards2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -449,7 +449,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsScorecardsResponse(
+            return operations.ListAtsScorecards2Response(
                 ats_scorecards=unmarshal_json_response(
                     Optional[List[shared.AtsScorecard]], http_res
                 ),
@@ -466,18 +466,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_scorecards_async(
+    async def list_ats_scorecards2_async(
         self,
         *,
         request: Union[
-            operations.ListAtsScorecardsRequest,
-            operations.ListAtsScorecardsRequestTypedDict,
+            operations.ListAtsScorecards2Request,
+            operations.ListAtsScorecards2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsScorecardsResponse:
+    ) -> operations.ListAtsScorecards2Response:
         r"""List all scorecards
 
         :param request: The request object to send.
@@ -497,8 +497,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
-        request = cast(operations.ListAtsScorecardsRequest, request)
+            request = utils.unmarshal(request, operations.ListAtsScorecards2Request)
+        request = cast(operations.ListAtsScorecards2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -529,7 +529,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsScorecards",
+                operation_id="listAtsScorecards2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -539,7 +539,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsScorecardsResponse(
+            return operations.ListAtsScorecards2Response(
                 ats_scorecards=unmarshal_json_response(
                     Optional[List[shared.AtsScorecard]], http_res
                 ),
@@ -556,18 +556,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_scorecard(
+    def patch_ats_scorecard2(
         self,
         *,
         request: Union[
-            operations.PatchAtsScorecardRequest,
-            operations.PatchAtsScorecardRequestTypedDict,
+            operations.PatchAtsScorecard2Request,
+            operations.PatchAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsScorecardResponse:
+    ) -> operations.PatchAtsScorecard2Response:
         r"""Update a scorecard
 
         :param request: The request object to send.
@@ -587,8 +587,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
-        request = cast(operations.PatchAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsScorecard2Request)
+        request = cast(operations.PatchAtsScorecard2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -622,7 +622,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsScorecard",
+                operation_id="patchAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -632,7 +632,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsScorecardResponse(
+            return operations.PatchAtsScorecard2Response(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -649,18 +649,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_scorecard_async(
+    async def patch_ats_scorecard2_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsScorecardRequest,
-            operations.PatchAtsScorecardRequestTypedDict,
+            operations.PatchAtsScorecard2Request,
+            operations.PatchAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsScorecardResponse:
+    ) -> operations.PatchAtsScorecard2Response:
         r"""Update a scorecard
 
         :param request: The request object to send.
@@ -680,8 +680,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
-        request = cast(operations.PatchAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.PatchAtsScorecard2Request)
+        request = cast(operations.PatchAtsScorecard2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -715,7 +715,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsScorecard",
+                operation_id="patchAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -725,7 +725,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsScorecardResponse(
+            return operations.PatchAtsScorecard2Response(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -742,18 +742,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_scorecard(
+    def remove_ats_scorecard2(
         self,
         *,
         request: Union[
-            operations.RemoveAtsScorecardRequest,
-            operations.RemoveAtsScorecardRequestTypedDict,
+            operations.RemoveAtsScorecard2Request,
+            operations.RemoveAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsScorecardResponse:
+    ) -> operations.RemoveAtsScorecard2Response:
         r"""Remove a scorecard
 
         :param request: The request object to send.
@@ -773,8 +773,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
-        request = cast(operations.RemoveAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsScorecard2Request)
+        request = cast(operations.RemoveAtsScorecard2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -805,7 +805,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsScorecard",
+                operation_id="removeAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -815,7 +815,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsScorecardResponse(
+            return operations.RemoveAtsScorecard2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -828,7 +828,7 @@ class Scorecard(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsScorecardResponse(
+            return operations.RemoveAtsScorecard2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -837,18 +837,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_scorecard_async(
+    async def remove_ats_scorecard2_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsScorecardRequest,
-            operations.RemoveAtsScorecardRequestTypedDict,
+            operations.RemoveAtsScorecard2Request,
+            operations.RemoveAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsScorecardResponse:
+    ) -> operations.RemoveAtsScorecard2Response:
         r"""Remove a scorecard
 
         :param request: The request object to send.
@@ -868,8 +868,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
-        request = cast(operations.RemoveAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.RemoveAtsScorecard2Request)
+        request = cast(operations.RemoveAtsScorecard2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -900,7 +900,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsScorecard",
+                operation_id="removeAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -910,7 +910,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsScorecardResponse(
+            return operations.RemoveAtsScorecard2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -923,7 +923,7 @@ class Scorecard(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsScorecardResponse(
+            return operations.RemoveAtsScorecard2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -932,18 +932,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_scorecard(
+    def update_ats_scorecard2(
         self,
         *,
         request: Union[
-            operations.UpdateAtsScorecardRequest,
-            operations.UpdateAtsScorecardRequestTypedDict,
+            operations.UpdateAtsScorecard2Request,
+            operations.UpdateAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsScorecardResponse:
+    ) -> operations.UpdateAtsScorecard2Response:
         r"""Update a scorecard
 
         :param request: The request object to send.
@@ -963,8 +963,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
-        request = cast(operations.UpdateAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsScorecard2Request)
+        request = cast(operations.UpdateAtsScorecard2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -998,7 +998,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsScorecard",
+                operation_id="updateAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1008,7 +1008,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsScorecardResponse(
+            return operations.UpdateAtsScorecard2Response(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -1025,18 +1025,18 @@ class Scorecard(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_scorecard_async(
+    async def update_ats_scorecard2_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsScorecardRequest,
-            operations.UpdateAtsScorecardRequestTypedDict,
+            operations.UpdateAtsScorecard2Request,
+            operations.UpdateAtsScorecard2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsScorecardResponse:
+    ) -> operations.UpdateAtsScorecard2Response:
         r"""Update a scorecard
 
         :param request: The request object to send.
@@ -1056,8 +1056,8 @@ class Scorecard(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
-        request = cast(operations.UpdateAtsScorecardRequest, request)
+            request = utils.unmarshal(request, operations.UpdateAtsScorecard2Request)
+        request = cast(operations.UpdateAtsScorecard2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1091,7 +1091,7 @@ class Scorecard(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsScorecard",
+                operation_id="updateAtsScorecard2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1101,7 +1101,7 @@ class Scorecard(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsScorecardResponse(
+            return operations.UpdateAtsScorecard2Response(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),

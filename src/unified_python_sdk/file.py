@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class File(BaseSDK):
-    def create_storage_file(
+    def create_storage_file2(
         self,
         *,
         request: Union[
-            operations.CreateStorageFileRequest,
-            operations.CreateStorageFileRequestTypedDict,
+            operations.CreateStorageFile2Request,
+            operations.CreateStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateStorageFileResponse:
+    ) -> operations.CreateStorageFile2Response:
         r"""Create a file
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateStorageFileRequest)
-        request = cast(operations.CreateStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.CreateStorageFile2Request)
+        request = cast(operations.CreateStorageFile2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createStorageFile",
+                operation_id="createStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateStorageFileResponse(
+            return operations.CreateStorageFile2Response(
                 storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
@@ -103,18 +103,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_storage_file_async(
+    async def create_storage_file2_async(
         self,
         *,
         request: Union[
-            operations.CreateStorageFileRequest,
-            operations.CreateStorageFileRequestTypedDict,
+            operations.CreateStorageFile2Request,
+            operations.CreateStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateStorageFileResponse:
+    ) -> operations.CreateStorageFile2Response:
         r"""Create a file
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateStorageFileRequest)
-        request = cast(operations.CreateStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.CreateStorageFile2Request)
+        request = cast(operations.CreateStorageFile2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createStorageFile",
+                operation_id="createStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateStorageFileResponse(
+            return operations.CreateStorageFile2Response(
                 storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
@@ -196,17 +196,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_storage_file(
+    def get_storage_file2(
         self,
         *,
         request: Union[
-            operations.GetStorageFileRequest, operations.GetStorageFileRequestTypedDict
+            operations.GetStorageFile2Request,
+            operations.GetStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetStorageFileResponse:
+    ) -> operations.GetStorageFile2Response:
         r"""Retrieve a file
 
         :param request: The request object to send.
@@ -226,8 +227,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetStorageFileRequest)
-        request = cast(operations.GetStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.GetStorageFile2Request)
+        request = cast(operations.GetStorageFile2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -258,7 +259,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getStorageFile",
+                operation_id="getStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -268,7 +269,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetStorageFileResponse(
+            return operations.GetStorageFile2Response(
                 storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
@@ -285,17 +286,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_storage_file_async(
+    async def get_storage_file2_async(
         self,
         *,
         request: Union[
-            operations.GetStorageFileRequest, operations.GetStorageFileRequestTypedDict
+            operations.GetStorageFile2Request,
+            operations.GetStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetStorageFileResponse:
+    ) -> operations.GetStorageFile2Response:
         r"""Retrieve a file
 
         :param request: The request object to send.
@@ -315,8 +317,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetStorageFileRequest)
-        request = cast(operations.GetStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.GetStorageFile2Request)
+        request = cast(operations.GetStorageFile2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -347,7 +349,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getStorageFile",
+                operation_id="getStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -357,7 +359,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetStorageFileResponse(
+            return operations.GetStorageFile2Response(
                 storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
@@ -374,18 +376,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_storage_files(
+    def list_storage_files2(
         self,
         *,
         request: Union[
-            operations.ListStorageFilesRequest,
-            operations.ListStorageFilesRequestTypedDict,
+            operations.ListStorageFiles2Request,
+            operations.ListStorageFiles2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListStorageFilesResponse:
+    ) -> operations.ListStorageFiles2Response:
         r"""List all files
 
         :param request: The request object to send.
@@ -405,8 +407,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListStorageFilesRequest)
-        request = cast(operations.ListStorageFilesRequest, request)
+            request = utils.unmarshal(request, operations.ListStorageFiles2Request)
+        request = cast(operations.ListStorageFiles2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -437,7 +439,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listStorageFiles",
+                operation_id="listStorageFiles2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -447,7 +449,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListStorageFilesResponse(
+            return operations.ListStorageFiles2Response(
                 storage_files=unmarshal_json_response(
                     Optional[List[shared.StorageFile]], http_res
                 ),
@@ -464,18 +466,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_storage_files_async(
+    async def list_storage_files2_async(
         self,
         *,
         request: Union[
-            operations.ListStorageFilesRequest,
-            operations.ListStorageFilesRequestTypedDict,
+            operations.ListStorageFiles2Request,
+            operations.ListStorageFiles2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListStorageFilesResponse:
+    ) -> operations.ListStorageFiles2Response:
         r"""List all files
 
         :param request: The request object to send.
@@ -495,8 +497,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListStorageFilesRequest)
-        request = cast(operations.ListStorageFilesRequest, request)
+            request = utils.unmarshal(request, operations.ListStorageFiles2Request)
+        request = cast(operations.ListStorageFiles2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -527,7 +529,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listStorageFiles",
+                operation_id="listStorageFiles2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -537,7 +539,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListStorageFilesResponse(
+            return operations.ListStorageFiles2Response(
                 storage_files=unmarshal_json_response(
                     Optional[List[shared.StorageFile]], http_res
                 ),
@@ -554,18 +556,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_storage_file(
+    def patch_storage_file2(
         self,
         *,
         request: Union[
-            operations.PatchStorageFileRequest,
-            operations.PatchStorageFileRequestTypedDict,
+            operations.PatchStorageFile2Request,
+            operations.PatchStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchStorageFileResponse:
+    ) -> operations.PatchStorageFile2Response:
         r"""Update a file
 
         :param request: The request object to send.
@@ -585,8 +587,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchStorageFileRequest)
-        request = cast(operations.PatchStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.PatchStorageFile2Request)
+        request = cast(operations.PatchStorageFile2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -620,7 +622,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchStorageFile",
+                operation_id="patchStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -630,7 +632,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchStorageFileResponse(
+            return operations.PatchStorageFile2Response(
                 storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
@@ -647,18 +649,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_storage_file_async(
+    async def patch_storage_file2_async(
         self,
         *,
         request: Union[
-            operations.PatchStorageFileRequest,
-            operations.PatchStorageFileRequestTypedDict,
+            operations.PatchStorageFile2Request,
+            operations.PatchStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchStorageFileResponse:
+    ) -> operations.PatchStorageFile2Response:
         r"""Update a file
 
         :param request: The request object to send.
@@ -678,8 +680,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchStorageFileRequest)
-        request = cast(operations.PatchStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.PatchStorageFile2Request)
+        request = cast(operations.PatchStorageFile2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -713,7 +715,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchStorageFile",
+                operation_id="patchStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -723,7 +725,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchStorageFileResponse(
+            return operations.PatchStorageFile2Response(
                 storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
@@ -740,18 +742,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_storage_file(
+    def remove_storage_file2(
         self,
         *,
         request: Union[
-            operations.RemoveStorageFileRequest,
-            operations.RemoveStorageFileRequestTypedDict,
+            operations.RemoveStorageFile2Request,
+            operations.RemoveStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveStorageFileResponse:
+    ) -> operations.RemoveStorageFile2Response:
         r"""Remove a file
 
         :param request: The request object to send.
@@ -771,8 +773,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveStorageFileRequest)
-        request = cast(operations.RemoveStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.RemoveStorageFile2Request)
+        request = cast(operations.RemoveStorageFile2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -803,7 +805,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeStorageFile",
+                operation_id="removeStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -813,7 +815,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveStorageFileResponse(
+            return operations.RemoveStorageFile2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -826,7 +828,7 @@ class File(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveStorageFileResponse(
+            return operations.RemoveStorageFile2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -835,18 +837,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_storage_file_async(
+    async def remove_storage_file2_async(
         self,
         *,
         request: Union[
-            operations.RemoveStorageFileRequest,
-            operations.RemoveStorageFileRequestTypedDict,
+            operations.RemoveStorageFile2Request,
+            operations.RemoveStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveStorageFileResponse:
+    ) -> operations.RemoveStorageFile2Response:
         r"""Remove a file
 
         :param request: The request object to send.
@@ -866,8 +868,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveStorageFileRequest)
-        request = cast(operations.RemoveStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.RemoveStorageFile2Request)
+        request = cast(operations.RemoveStorageFile2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -898,7 +900,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeStorageFile",
+                operation_id="removeStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -908,7 +910,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveStorageFileResponse(
+            return operations.RemoveStorageFile2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -921,7 +923,7 @@ class File(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveStorageFileResponse(
+            return operations.RemoveStorageFile2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -930,18 +932,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_storage_file(
+    def update_storage_file2(
         self,
         *,
         request: Union[
-            operations.UpdateStorageFileRequest,
-            operations.UpdateStorageFileRequestTypedDict,
+            operations.UpdateStorageFile2Request,
+            operations.UpdateStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateStorageFileResponse:
+    ) -> operations.UpdateStorageFile2Response:
         r"""Update a file
 
         :param request: The request object to send.
@@ -961,8 +963,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateStorageFileRequest)
-        request = cast(operations.UpdateStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.UpdateStorageFile2Request)
+        request = cast(operations.UpdateStorageFile2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -996,7 +998,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateStorageFile",
+                operation_id="updateStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1006,7 +1008,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateStorageFileResponse(
+            return operations.UpdateStorageFile2Response(
                 storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
@@ -1023,18 +1025,18 @@ class File(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_storage_file_async(
+    async def update_storage_file2_async(
         self,
         *,
         request: Union[
-            operations.UpdateStorageFileRequest,
-            operations.UpdateStorageFileRequestTypedDict,
+            operations.UpdateStorageFile2Request,
+            operations.UpdateStorageFile2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateStorageFileResponse:
+    ) -> operations.UpdateStorageFile2Response:
         r"""Update a file
 
         :param request: The request object to send.
@@ -1054,8 +1056,8 @@ class File(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateStorageFileRequest)
-        request = cast(operations.UpdateStorageFileRequest, request)
+            request = utils.unmarshal(request, operations.UpdateStorageFile2Request)
+        request = cast(operations.UpdateStorageFile2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1089,7 +1091,7 @@ class File(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateStorageFile",
+                operation_id="updateStorageFile2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1099,7 +1101,7 @@ class File(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateStorageFileResponse(
+            return operations.UpdateStorageFile2Response(
                 storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),

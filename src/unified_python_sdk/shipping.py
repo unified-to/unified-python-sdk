@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Shipping(BaseSDK):
-    def create_shipping_label(
+    def create_shipping_label2(
         self,
         *,
         request: Union[
-            operations.CreateShippingLabelRequest,
-            operations.CreateShippingLabelRequestTypedDict,
+            operations.CreateShippingLabel2Request,
+            operations.CreateShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingLabelResponse:
+    ) -> operations.CreateShippingLabel2Response:
         r"""Create a label
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingLabelRequest)
-        request = cast(operations.CreateShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.CreateShippingLabel2Request)
+        request = cast(operations.CreateShippingLabel2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingLabel",
+                operation_id="createShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingLabelResponse(
+            return operations.CreateShippingLabel2Response(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -103,18 +103,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_shipping_label_async(
+    async def create_shipping_label2_async(
         self,
         *,
         request: Union[
-            operations.CreateShippingLabelRequest,
-            operations.CreateShippingLabelRequestTypedDict,
+            operations.CreateShippingLabel2Request,
+            operations.CreateShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingLabelResponse:
+    ) -> operations.CreateShippingLabel2Response:
         r"""Create a label
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingLabelRequest)
-        request = cast(operations.CreateShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.CreateShippingLabel2Request)
+        request = cast(operations.CreateShippingLabel2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingLabel",
+                operation_id="createShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingLabelResponse(
+            return operations.CreateShippingLabel2Response(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -196,18 +196,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_shipping_rate(
+    def create_shipping_rate2(
         self,
         *,
         request: Union[
-            operations.CreateShippingRateRequest,
-            operations.CreateShippingRateRequestTypedDict,
+            operations.CreateShippingRate2Request,
+            operations.CreateShippingRate2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingRateResponse:
+    ) -> operations.CreateShippingRate2Response:
         r"""Create a rate
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingRateRequest)
-        request = cast(operations.CreateShippingRateRequest, request)
+            request = utils.unmarshal(request, operations.CreateShippingRate2Request)
+        request = cast(operations.CreateShippingRate2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +262,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingRate",
+                operation_id="createShippingRate2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +272,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingRateResponse(
+            return operations.CreateShippingRate2Response(
                 shipping_rate=unmarshal_json_response(
                     Optional[shared.ShippingRate], http_res
                 ),
@@ -289,18 +289,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_shipping_rate_async(
+    async def create_shipping_rate2_async(
         self,
         *,
         request: Union[
-            operations.CreateShippingRateRequest,
-            operations.CreateShippingRateRequestTypedDict,
+            operations.CreateShippingRate2Request,
+            operations.CreateShippingRate2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingRateResponse:
+    ) -> operations.CreateShippingRate2Response:
         r"""Create a rate
 
         :param request: The request object to send.
@@ -320,8 +320,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingRateRequest)
-        request = cast(operations.CreateShippingRateRequest, request)
+            request = utils.unmarshal(request, operations.CreateShippingRate2Request)
+        request = cast(operations.CreateShippingRate2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +355,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingRate",
+                operation_id="createShippingRate2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +365,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingRateResponse(
+            return operations.CreateShippingRate2Response(
                 shipping_rate=unmarshal_json_response(
                     Optional[shared.ShippingRate], http_res
                 ),
@@ -382,18 +382,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_shipping_shipment(
+    def create_shipping_shipment2(
         self,
         *,
         request: Union[
-            operations.CreateShippingShipmentRequest,
-            operations.CreateShippingShipmentRequestTypedDict,
+            operations.CreateShippingShipment2Request,
+            operations.CreateShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingShipmentResponse:
+    ) -> operations.CreateShippingShipment2Response:
         r"""Create a shipment
 
         :param request: The request object to send.
@@ -413,8 +413,10 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingShipmentRequest)
-        request = cast(operations.CreateShippingShipmentRequest, request)
+            request = utils.unmarshal(
+                request, operations.CreateShippingShipment2Request
+            )
+        request = cast(operations.CreateShippingShipment2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -448,7 +450,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingShipment",
+                operation_id="createShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -458,7 +460,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingShipmentResponse(
+            return operations.CreateShippingShipment2Response(
                 shipping_shipment=unmarshal_json_response(
                     Optional[shared.ShippingShipment], http_res
                 ),
@@ -475,18 +477,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_shipping_shipment_async(
+    async def create_shipping_shipment2_async(
         self,
         *,
         request: Union[
-            operations.CreateShippingShipmentRequest,
-            operations.CreateShippingShipmentRequestTypedDict,
+            operations.CreateShippingShipment2Request,
+            operations.CreateShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingShipmentResponse:
+    ) -> operations.CreateShippingShipment2Response:
         r"""Create a shipment
 
         :param request: The request object to send.
@@ -506,8 +508,10 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingShipmentRequest)
-        request = cast(operations.CreateShippingShipmentRequest, request)
+            request = utils.unmarshal(
+                request, operations.CreateShippingShipment2Request
+            )
+        request = cast(operations.CreateShippingShipment2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -541,7 +545,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingShipment",
+                operation_id="createShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -551,7 +555,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingShipmentResponse(
+            return operations.CreateShippingShipment2Response(
                 shipping_shipment=unmarshal_json_response(
                     Optional[shared.ShippingShipment], http_res
                 ),
@@ -568,18 +572,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_shipping_carrier(
+    def get_shipping_carrier2(
         self,
         *,
         request: Union[
-            operations.GetShippingCarrierRequest,
-            operations.GetShippingCarrierRequestTypedDict,
+            operations.GetShippingCarrier2Request,
+            operations.GetShippingCarrier2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingCarrierResponse:
+    ) -> operations.GetShippingCarrier2Response:
         r"""Retrieve a carrier
 
         :param request: The request object to send.
@@ -599,8 +603,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingCarrierRequest)
-        request = cast(operations.GetShippingCarrierRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingCarrier2Request)
+        request = cast(operations.GetShippingCarrier2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -631,7 +635,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingCarrier",
+                operation_id="getShippingCarrier2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -641,7 +645,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingCarrierResponse(
+            return operations.GetShippingCarrier2Response(
                 shipping_carrier=unmarshal_json_response(
                     Optional[shared.ShippingCarrier], http_res
                 ),
@@ -658,18 +662,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_shipping_carrier_async(
+    async def get_shipping_carrier2_async(
         self,
         *,
         request: Union[
-            operations.GetShippingCarrierRequest,
-            operations.GetShippingCarrierRequestTypedDict,
+            operations.GetShippingCarrier2Request,
+            operations.GetShippingCarrier2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingCarrierResponse:
+    ) -> operations.GetShippingCarrier2Response:
         r"""Retrieve a carrier
 
         :param request: The request object to send.
@@ -689,8 +693,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingCarrierRequest)
-        request = cast(operations.GetShippingCarrierRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingCarrier2Request)
+        request = cast(operations.GetShippingCarrier2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -721,7 +725,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingCarrier",
+                operation_id="getShippingCarrier2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -731,7 +735,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingCarrierResponse(
+            return operations.GetShippingCarrier2Response(
                 shipping_carrier=unmarshal_json_response(
                     Optional[shared.ShippingCarrier], http_res
                 ),
@@ -748,18 +752,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_shipping_label(
+    def get_shipping_label2(
         self,
         *,
         request: Union[
-            operations.GetShippingLabelRequest,
-            operations.GetShippingLabelRequestTypedDict,
+            operations.GetShippingLabel2Request,
+            operations.GetShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingLabelResponse:
+    ) -> operations.GetShippingLabel2Response:
         r"""Retrieve a label
 
         :param request: The request object to send.
@@ -779,8 +783,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingLabelRequest)
-        request = cast(operations.GetShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingLabel2Request)
+        request = cast(operations.GetShippingLabel2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -811,7 +815,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingLabel",
+                operation_id="getShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -821,7 +825,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingLabelResponse(
+            return operations.GetShippingLabel2Response(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -838,18 +842,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_shipping_label_async(
+    async def get_shipping_label2_async(
         self,
         *,
         request: Union[
-            operations.GetShippingLabelRequest,
-            operations.GetShippingLabelRequestTypedDict,
+            operations.GetShippingLabel2Request,
+            operations.GetShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingLabelResponse:
+    ) -> operations.GetShippingLabel2Response:
         r"""Retrieve a label
 
         :param request: The request object to send.
@@ -869,8 +873,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingLabelRequest)
-        request = cast(operations.GetShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingLabel2Request)
+        request = cast(operations.GetShippingLabel2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -901,7 +905,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingLabel",
+                operation_id="getShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -911,7 +915,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingLabelResponse(
+            return operations.GetShippingLabel2Response(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -928,18 +932,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_shipping_shipment(
+    def get_shipping_shipment2(
         self,
         *,
         request: Union[
-            operations.GetShippingShipmentRequest,
-            operations.GetShippingShipmentRequestTypedDict,
+            operations.GetShippingShipment2Request,
+            operations.GetShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingShipmentResponse:
+    ) -> operations.GetShippingShipment2Response:
         r"""Retrieve a shipment
 
         :param request: The request object to send.
@@ -959,8 +963,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingShipmentRequest)
-        request = cast(operations.GetShippingShipmentRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingShipment2Request)
+        request = cast(operations.GetShippingShipment2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -991,7 +995,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingShipment",
+                operation_id="getShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1001,7 +1005,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingShipmentResponse(
+            return operations.GetShippingShipment2Response(
                 shipping_shipment=unmarshal_json_response(
                     Optional[shared.ShippingShipment], http_res
                 ),
@@ -1018,18 +1022,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_shipping_shipment_async(
+    async def get_shipping_shipment2_async(
         self,
         *,
         request: Union[
-            operations.GetShippingShipmentRequest,
-            operations.GetShippingShipmentRequestTypedDict,
+            operations.GetShippingShipment2Request,
+            operations.GetShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingShipmentResponse:
+    ) -> operations.GetShippingShipment2Response:
         r"""Retrieve a shipment
 
         :param request: The request object to send.
@@ -1049,8 +1053,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingShipmentRequest)
-        request = cast(operations.GetShippingShipmentRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingShipment2Request)
+        request = cast(operations.GetShippingShipment2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1081,7 +1085,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingShipment",
+                operation_id="getShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1091,7 +1095,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingShipmentResponse(
+            return operations.GetShippingShipment2Response(
                 shipping_shipment=unmarshal_json_response(
                     Optional[shared.ShippingShipment], http_res
                 ),
@@ -1108,18 +1112,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_shipping_tracking(
+    def get_shipping_tracking2(
         self,
         *,
         request: Union[
-            operations.GetShippingTrackingRequest,
-            operations.GetShippingTrackingRequestTypedDict,
+            operations.GetShippingTracking2Request,
+            operations.GetShippingTracking2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingTrackingResponse:
+    ) -> operations.GetShippingTracking2Response:
         r"""Retrieve a tracking
 
         :param request: The request object to send.
@@ -1139,8 +1143,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingTrackingRequest)
-        request = cast(operations.GetShippingTrackingRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingTracking2Request)
+        request = cast(operations.GetShippingTracking2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1171,7 +1175,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingTracking",
+                operation_id="getShippingTracking2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1181,7 +1185,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingTrackingResponse(
+            return operations.GetShippingTracking2Response(
                 shipping_tracking=unmarshal_json_response(
                     Optional[shared.ShippingTracking], http_res
                 ),
@@ -1198,18 +1202,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_shipping_tracking_async(
+    async def get_shipping_tracking2_async(
         self,
         *,
         request: Union[
-            operations.GetShippingTrackingRequest,
-            operations.GetShippingTrackingRequestTypedDict,
+            operations.GetShippingTracking2Request,
+            operations.GetShippingTracking2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingTrackingResponse:
+    ) -> operations.GetShippingTracking2Response:
         r"""Retrieve a tracking
 
         :param request: The request object to send.
@@ -1229,8 +1233,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingTrackingRequest)
-        request = cast(operations.GetShippingTrackingRequest, request)
+            request = utils.unmarshal(request, operations.GetShippingTracking2Request)
+        request = cast(operations.GetShippingTracking2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1261,7 +1265,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingTracking",
+                operation_id="getShippingTracking2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1271,7 +1275,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingTrackingResponse(
+            return operations.GetShippingTracking2Response(
                 shipping_tracking=unmarshal_json_response(
                     Optional[shared.ShippingTracking], http_res
                 ),
@@ -1288,18 +1292,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_shipping_carriers(
+    def list_shipping_carriers2(
         self,
         *,
         request: Union[
-            operations.ListShippingCarriersRequest,
-            operations.ListShippingCarriersRequestTypedDict,
+            operations.ListShippingCarriers2Request,
+            operations.ListShippingCarriers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingCarriersResponse:
+    ) -> operations.ListShippingCarriers2Response:
         r"""List all carriers
 
         :param request: The request object to send.
@@ -1319,8 +1323,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingCarriersRequest)
-        request = cast(operations.ListShippingCarriersRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingCarriers2Request)
+        request = cast(operations.ListShippingCarriers2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1351,7 +1355,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingCarriers",
+                operation_id="listShippingCarriers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1361,7 +1365,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingCarriersResponse(
+            return operations.ListShippingCarriers2Response(
                 shipping_carriers=unmarshal_json_response(
                     Optional[List[shared.ShippingCarrier]], http_res
                 ),
@@ -1378,18 +1382,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_shipping_carriers_async(
+    async def list_shipping_carriers2_async(
         self,
         *,
         request: Union[
-            operations.ListShippingCarriersRequest,
-            operations.ListShippingCarriersRequestTypedDict,
+            operations.ListShippingCarriers2Request,
+            operations.ListShippingCarriers2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingCarriersResponse:
+    ) -> operations.ListShippingCarriers2Response:
         r"""List all carriers
 
         :param request: The request object to send.
@@ -1409,8 +1413,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingCarriersRequest)
-        request = cast(operations.ListShippingCarriersRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingCarriers2Request)
+        request = cast(operations.ListShippingCarriers2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1441,7 +1445,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingCarriers",
+                operation_id="listShippingCarriers2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1451,7 +1455,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingCarriersResponse(
+            return operations.ListShippingCarriers2Response(
                 shipping_carriers=unmarshal_json_response(
                     Optional[List[shared.ShippingCarrier]], http_res
                 ),
@@ -1468,18 +1472,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_shipping_labels(
+    def list_shipping_labels2(
         self,
         *,
         request: Union[
-            operations.ListShippingLabelsRequest,
-            operations.ListShippingLabelsRequestTypedDict,
+            operations.ListShippingLabels2Request,
+            operations.ListShippingLabels2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingLabelsResponse:
+    ) -> operations.ListShippingLabels2Response:
         r"""List all labels
 
         :param request: The request object to send.
@@ -1499,8 +1503,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingLabelsRequest)
-        request = cast(operations.ListShippingLabelsRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingLabels2Request)
+        request = cast(operations.ListShippingLabels2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1531,7 +1535,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingLabels",
+                operation_id="listShippingLabels2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1541,7 +1545,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingLabelsResponse(
+            return operations.ListShippingLabels2Response(
                 shipping_labels=unmarshal_json_response(
                     Optional[List[shared.ShippingLabel]], http_res
                 ),
@@ -1558,18 +1562,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_shipping_labels_async(
+    async def list_shipping_labels2_async(
         self,
         *,
         request: Union[
-            operations.ListShippingLabelsRequest,
-            operations.ListShippingLabelsRequestTypedDict,
+            operations.ListShippingLabels2Request,
+            operations.ListShippingLabels2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingLabelsResponse:
+    ) -> operations.ListShippingLabels2Response:
         r"""List all labels
 
         :param request: The request object to send.
@@ -1589,8 +1593,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingLabelsRequest)
-        request = cast(operations.ListShippingLabelsRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingLabels2Request)
+        request = cast(operations.ListShippingLabels2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1621,7 +1625,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingLabels",
+                operation_id="listShippingLabels2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1631,7 +1635,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingLabelsResponse(
+            return operations.ListShippingLabels2Response(
                 shipping_labels=unmarshal_json_response(
                     Optional[List[shared.ShippingLabel]], http_res
                 ),
@@ -1648,18 +1652,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_shipping_shipments(
+    def list_shipping_shipments2(
         self,
         *,
         request: Union[
-            operations.ListShippingShipmentsRequest,
-            operations.ListShippingShipmentsRequestTypedDict,
+            operations.ListShippingShipments2Request,
+            operations.ListShippingShipments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingShipmentsResponse:
+    ) -> operations.ListShippingShipments2Response:
         r"""List all shipments
 
         :param request: The request object to send.
@@ -1679,8 +1683,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingShipmentsRequest)
-        request = cast(operations.ListShippingShipmentsRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingShipments2Request)
+        request = cast(operations.ListShippingShipments2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1711,7 +1715,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingShipments",
+                operation_id="listShippingShipments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1721,7 +1725,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingShipmentsResponse(
+            return operations.ListShippingShipments2Response(
                 shipping_shipments=unmarshal_json_response(
                     Optional[List[shared.ShippingShipment]], http_res
                 ),
@@ -1738,18 +1742,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_shipping_shipments_async(
+    async def list_shipping_shipments2_async(
         self,
         *,
         request: Union[
-            operations.ListShippingShipmentsRequest,
-            operations.ListShippingShipmentsRequestTypedDict,
+            operations.ListShippingShipments2Request,
+            operations.ListShippingShipments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingShipmentsResponse:
+    ) -> operations.ListShippingShipments2Response:
         r"""List all shipments
 
         :param request: The request object to send.
@@ -1769,8 +1773,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingShipmentsRequest)
-        request = cast(operations.ListShippingShipmentsRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingShipments2Request)
+        request = cast(operations.ListShippingShipments2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1801,7 +1805,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingShipments",
+                operation_id="listShippingShipments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1811,7 +1815,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingShipmentsResponse(
+            return operations.ListShippingShipments2Response(
                 shipping_shipments=unmarshal_json_response(
                     Optional[List[shared.ShippingShipment]], http_res
                 ),
@@ -1828,18 +1832,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_shipping_trackings(
+    def list_shipping_trackings2(
         self,
         *,
         request: Union[
-            operations.ListShippingTrackingsRequest,
-            operations.ListShippingTrackingsRequestTypedDict,
+            operations.ListShippingTrackings2Request,
+            operations.ListShippingTrackings2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingTrackingsResponse:
+    ) -> operations.ListShippingTrackings2Response:
         r"""List all trackings
 
         :param request: The request object to send.
@@ -1859,8 +1863,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingTrackingsRequest)
-        request = cast(operations.ListShippingTrackingsRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingTrackings2Request)
+        request = cast(operations.ListShippingTrackings2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1891,7 +1895,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingTrackings",
+                operation_id="listShippingTrackings2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1901,7 +1905,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingTrackingsResponse(
+            return operations.ListShippingTrackings2Response(
                 shipping_trackings=unmarshal_json_response(
                     Optional[List[shared.ShippingTracking]], http_res
                 ),
@@ -1918,18 +1922,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_shipping_trackings_async(
+    async def list_shipping_trackings2_async(
         self,
         *,
         request: Union[
-            operations.ListShippingTrackingsRequest,
-            operations.ListShippingTrackingsRequestTypedDict,
+            operations.ListShippingTrackings2Request,
+            operations.ListShippingTrackings2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingTrackingsResponse:
+    ) -> operations.ListShippingTrackings2Response:
         r"""List all trackings
 
         :param request: The request object to send.
@@ -1949,8 +1953,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingTrackingsRequest)
-        request = cast(operations.ListShippingTrackingsRequest, request)
+            request = utils.unmarshal(request, operations.ListShippingTrackings2Request)
+        request = cast(operations.ListShippingTrackings2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1981,7 +1985,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingTrackings",
+                operation_id="listShippingTrackings2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1991,7 +1995,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingTrackingsResponse(
+            return operations.ListShippingTrackings2Response(
                 shipping_trackings=unmarshal_json_response(
                     Optional[List[shared.ShippingTracking]], http_res
                 ),
@@ -2008,18 +2012,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_shipping_label(
+    def patch_shipping_label2(
         self,
         *,
         request: Union[
-            operations.PatchShippingLabelRequest,
-            operations.PatchShippingLabelRequestTypedDict,
+            operations.PatchShippingLabel2Request,
+            operations.PatchShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchShippingLabelResponse:
+    ) -> operations.PatchShippingLabel2Response:
         r"""Update a label
 
         :param request: The request object to send.
@@ -2039,8 +2043,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchShippingLabelRequest)
-        request = cast(operations.PatchShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.PatchShippingLabel2Request)
+        request = cast(operations.PatchShippingLabel2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2074,7 +2078,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchShippingLabel",
+                operation_id="patchShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2084,7 +2088,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchShippingLabelResponse(
+            return operations.PatchShippingLabel2Response(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -2101,18 +2105,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_shipping_label_async(
+    async def patch_shipping_label2_async(
         self,
         *,
         request: Union[
-            operations.PatchShippingLabelRequest,
-            operations.PatchShippingLabelRequestTypedDict,
+            operations.PatchShippingLabel2Request,
+            operations.PatchShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchShippingLabelResponse:
+    ) -> operations.PatchShippingLabel2Response:
         r"""Update a label
 
         :param request: The request object to send.
@@ -2132,8 +2136,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchShippingLabelRequest)
-        request = cast(operations.PatchShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.PatchShippingLabel2Request)
+        request = cast(operations.PatchShippingLabel2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2167,7 +2171,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchShippingLabel",
+                operation_id="patchShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2177,7 +2181,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchShippingLabelResponse(
+            return operations.PatchShippingLabel2Response(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -2194,18 +2198,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_shipping_shipment(
+    def patch_shipping_shipment2(
         self,
         *,
         request: Union[
-            operations.PatchShippingShipmentRequest,
-            operations.PatchShippingShipmentRequestTypedDict,
+            operations.PatchShippingShipment2Request,
+            operations.PatchShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchShippingShipmentResponse:
+    ) -> operations.PatchShippingShipment2Response:
         r"""Update a shipment
 
         :param request: The request object to send.
@@ -2225,8 +2229,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchShippingShipmentRequest)
-        request = cast(operations.PatchShippingShipmentRequest, request)
+            request = utils.unmarshal(request, operations.PatchShippingShipment2Request)
+        request = cast(operations.PatchShippingShipment2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2260,7 +2264,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchShippingShipment",
+                operation_id="patchShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2270,7 +2274,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchShippingShipmentResponse(
+            return operations.PatchShippingShipment2Response(
                 shipping_shipment=unmarshal_json_response(
                     Optional[shared.ShippingShipment], http_res
                 ),
@@ -2287,18 +2291,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_shipping_shipment_async(
+    async def patch_shipping_shipment2_async(
         self,
         *,
         request: Union[
-            operations.PatchShippingShipmentRequest,
-            operations.PatchShippingShipmentRequestTypedDict,
+            operations.PatchShippingShipment2Request,
+            operations.PatchShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchShippingShipmentResponse:
+    ) -> operations.PatchShippingShipment2Response:
         r"""Update a shipment
 
         :param request: The request object to send.
@@ -2318,8 +2322,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchShippingShipmentRequest)
-        request = cast(operations.PatchShippingShipmentRequest, request)
+            request = utils.unmarshal(request, operations.PatchShippingShipment2Request)
+        request = cast(operations.PatchShippingShipment2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2353,7 +2357,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchShippingShipment",
+                operation_id="patchShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2363,7 +2367,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchShippingShipmentResponse(
+            return operations.PatchShippingShipment2Response(
                 shipping_shipment=unmarshal_json_response(
                     Optional[shared.ShippingShipment], http_res
                 ),
@@ -2380,18 +2384,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_shipping_label(
+    def remove_shipping_label2(
         self,
         *,
         request: Union[
-            operations.RemoveShippingLabelRequest,
-            operations.RemoveShippingLabelRequestTypedDict,
+            operations.RemoveShippingLabel2Request,
+            operations.RemoveShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveShippingLabelResponse:
+    ) -> operations.RemoveShippingLabel2Response:
         r"""Remove a label
 
         :param request: The request object to send.
@@ -2411,8 +2415,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveShippingLabelRequest)
-        request = cast(operations.RemoveShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.RemoveShippingLabel2Request)
+        request = cast(operations.RemoveShippingLabel2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2443,7 +2447,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeShippingLabel",
+                operation_id="removeShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2453,7 +2457,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveShippingLabelResponse(
+            return operations.RemoveShippingLabel2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2466,7 +2470,7 @@ class Shipping(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveShippingLabelResponse(
+            return operations.RemoveShippingLabel2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2475,18 +2479,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_shipping_label_async(
+    async def remove_shipping_label2_async(
         self,
         *,
         request: Union[
-            operations.RemoveShippingLabelRequest,
-            operations.RemoveShippingLabelRequestTypedDict,
+            operations.RemoveShippingLabel2Request,
+            operations.RemoveShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveShippingLabelResponse:
+    ) -> operations.RemoveShippingLabel2Response:
         r"""Remove a label
 
         :param request: The request object to send.
@@ -2506,8 +2510,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveShippingLabelRequest)
-        request = cast(operations.RemoveShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.RemoveShippingLabel2Request)
+        request = cast(operations.RemoveShippingLabel2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2538,7 +2542,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeShippingLabel",
+                operation_id="removeShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2548,7 +2552,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveShippingLabelResponse(
+            return operations.RemoveShippingLabel2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2561,7 +2565,7 @@ class Shipping(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveShippingLabelResponse(
+            return operations.RemoveShippingLabel2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2570,18 +2574,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_shipping_shipment(
+    def remove_shipping_shipment2(
         self,
         *,
         request: Union[
-            operations.RemoveShippingShipmentRequest,
-            operations.RemoveShippingShipmentRequestTypedDict,
+            operations.RemoveShippingShipment2Request,
+            operations.RemoveShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveShippingShipmentResponse:
+    ) -> operations.RemoveShippingShipment2Response:
         r"""Remove a shipment
 
         :param request: The request object to send.
@@ -2601,8 +2605,10 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveShippingShipmentRequest)
-        request = cast(operations.RemoveShippingShipmentRequest, request)
+            request = utils.unmarshal(
+                request, operations.RemoveShippingShipment2Request
+            )
+        request = cast(operations.RemoveShippingShipment2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2633,7 +2639,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeShippingShipment",
+                operation_id="removeShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2643,7 +2649,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveShippingShipmentResponse(
+            return operations.RemoveShippingShipment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2656,7 +2662,7 @@ class Shipping(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveShippingShipmentResponse(
+            return operations.RemoveShippingShipment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2665,18 +2671,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_shipping_shipment_async(
+    async def remove_shipping_shipment2_async(
         self,
         *,
         request: Union[
-            operations.RemoveShippingShipmentRequest,
-            operations.RemoveShippingShipmentRequestTypedDict,
+            operations.RemoveShippingShipment2Request,
+            operations.RemoveShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveShippingShipmentResponse:
+    ) -> operations.RemoveShippingShipment2Response:
         r"""Remove a shipment
 
         :param request: The request object to send.
@@ -2696,8 +2702,10 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveShippingShipmentRequest)
-        request = cast(operations.RemoveShippingShipmentRequest, request)
+            request = utils.unmarshal(
+                request, operations.RemoveShippingShipment2Request
+            )
+        request = cast(operations.RemoveShippingShipment2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2728,7 +2736,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeShippingShipment",
+                operation_id="removeShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2738,7 +2746,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveShippingShipmentResponse(
+            return operations.RemoveShippingShipment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2751,7 +2759,7 @@ class Shipping(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveShippingShipmentResponse(
+            return operations.RemoveShippingShipment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2760,18 +2768,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_shipping_label(
+    def update_shipping_label2(
         self,
         *,
         request: Union[
-            operations.UpdateShippingLabelRequest,
-            operations.UpdateShippingLabelRequestTypedDict,
+            operations.UpdateShippingLabel2Request,
+            operations.UpdateShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateShippingLabelResponse:
+    ) -> operations.UpdateShippingLabel2Response:
         r"""Update a label
 
         :param request: The request object to send.
@@ -2791,8 +2799,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateShippingLabelRequest)
-        request = cast(operations.UpdateShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.UpdateShippingLabel2Request)
+        request = cast(operations.UpdateShippingLabel2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2826,7 +2834,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateShippingLabel",
+                operation_id="updateShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2836,7 +2844,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateShippingLabelResponse(
+            return operations.UpdateShippingLabel2Response(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -2853,18 +2861,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_shipping_label_async(
+    async def update_shipping_label2_async(
         self,
         *,
         request: Union[
-            operations.UpdateShippingLabelRequest,
-            operations.UpdateShippingLabelRequestTypedDict,
+            operations.UpdateShippingLabel2Request,
+            operations.UpdateShippingLabel2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateShippingLabelResponse:
+    ) -> operations.UpdateShippingLabel2Response:
         r"""Update a label
 
         :param request: The request object to send.
@@ -2884,8 +2892,8 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateShippingLabelRequest)
-        request = cast(operations.UpdateShippingLabelRequest, request)
+            request = utils.unmarshal(request, operations.UpdateShippingLabel2Request)
+        request = cast(operations.UpdateShippingLabel2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2919,7 +2927,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateShippingLabel",
+                operation_id="updateShippingLabel2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2929,7 +2937,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateShippingLabelResponse(
+            return operations.UpdateShippingLabel2Response(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -2946,18 +2954,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_shipping_shipment(
+    def update_shipping_shipment2(
         self,
         *,
         request: Union[
-            operations.UpdateShippingShipmentRequest,
-            operations.UpdateShippingShipmentRequestTypedDict,
+            operations.UpdateShippingShipment2Request,
+            operations.UpdateShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateShippingShipmentResponse:
+    ) -> operations.UpdateShippingShipment2Response:
         r"""Update a shipment
 
         :param request: The request object to send.
@@ -2977,8 +2985,10 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateShippingShipmentRequest)
-        request = cast(operations.UpdateShippingShipmentRequest, request)
+            request = utils.unmarshal(
+                request, operations.UpdateShippingShipment2Request
+            )
+        request = cast(operations.UpdateShippingShipment2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3012,7 +3022,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateShippingShipment",
+                operation_id="updateShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3022,7 +3032,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateShippingShipmentResponse(
+            return operations.UpdateShippingShipment2Response(
                 shipping_shipment=unmarshal_json_response(
                     Optional[shared.ShippingShipment], http_res
                 ),
@@ -3039,18 +3049,18 @@ class Shipping(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_shipping_shipment_async(
+    async def update_shipping_shipment2_async(
         self,
         *,
         request: Union[
-            operations.UpdateShippingShipmentRequest,
-            operations.UpdateShippingShipmentRequestTypedDict,
+            operations.UpdateShippingShipment2Request,
+            operations.UpdateShippingShipment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateShippingShipmentResponse:
+    ) -> operations.UpdateShippingShipment2Response:
         r"""Update a shipment
 
         :param request: The request object to send.
@@ -3070,8 +3080,10 @@ class Shipping(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateShippingShipmentRequest)
-        request = cast(operations.UpdateShippingShipmentRequest, request)
+            request = utils.unmarshal(
+                request, operations.UpdateShippingShipment2Request
+            )
+        request = cast(operations.UpdateShippingShipment2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3105,7 +3117,7 @@ class Shipping(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateShippingShipment",
+                operation_id="updateShippingShipment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3115,7 +3127,7 @@ class Shipping(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateShippingShipmentResponse(
+            return operations.UpdateShippingShipment2Response(
                 shipping_shipment=unmarshal_json_response(
                     Optional[shared.ShippingShipment], http_res
                 ),

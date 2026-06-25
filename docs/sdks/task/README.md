@@ -4,34 +4,34 @@
 
 ### Available Operations
 
-* [create_task_comment](#create_task_comment) - Create a comment
-* [create_task_project](#create_task_project) - Create a project
-* [create_task_task](#create_task_task) - Create a task
-* [get_task_change](#get_task_change) - Retrieve a change
-* [get_task_comment](#get_task_comment) - Retrieve a comment
-* [get_task_project](#get_task_project) - Retrieve a project
-* [get_task_task](#get_task_task) - Retrieve a task
-* [list_task_changes](#list_task_changes) - List all changes
-* [list_task_comments](#list_task_comments) - List all comments
-* [list_task_projects](#list_task_projects) - List all projects
-* [list_task_tasks](#list_task_tasks) - List all tasks
-* [patch_task_comment](#patch_task_comment) - Update a comment
-* [patch_task_project](#patch_task_project) - Update a project
-* [patch_task_task](#patch_task_task) - Update a task
-* [remove_task_comment](#remove_task_comment) - Remove a comment
-* [remove_task_project](#remove_task_project) - Remove a project
-* [remove_task_task](#remove_task_task) - Remove a task
-* [update_task_comment](#update_task_comment) - Update a comment
-* [update_task_project](#update_task_project) - Update a project
-* [update_task_task](#update_task_task) - Update a task
+* [create_task_comment2](#create_task_comment2) - Create a comment
+* [create_task_project2](#create_task_project2) - Create a project
+* [create_task_task2](#create_task_task2) - Create a task
+* [get_task_change2](#get_task_change2) - Retrieve a change
+* [get_task_comment2](#get_task_comment2) - Retrieve a comment
+* [get_task_project2](#get_task_project2) - Retrieve a project
+* [get_task_task2](#get_task_task2) - Retrieve a task
+* [list_task_changes2](#list_task_changes2) - List all changes
+* [list_task_comments2](#list_task_comments2) - List all comments
+* [list_task_projects2](#list_task_projects2) - List all projects
+* [list_task_tasks2](#list_task_tasks2) - List all tasks
+* [patch_task_comment2](#patch_task_comment2) - Update a comment
+* [patch_task_project2](#patch_task_project2) - Update a project
+* [patch_task_task2](#patch_task_task2) - Update a task
+* [remove_task_comment2](#remove_task_comment2) - Remove a comment
+* [remove_task_project2](#remove_task_project2) - Remove a project
+* [remove_task_task2](#remove_task_task2) - Remove a task
+* [update_task_comment2](#update_task_comment2) - Update a comment
+* [update_task_project2](#update_task_project2) - Update a project
+* [update_task_task2](#update_task_task2) - Update a task
 
-## create_task_comment
+## create_task_comment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="createTaskComment2" method="post" path="/task/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -43,7 +43,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.create_task_comment(request={
+    res = unified_to.task.create_task_comment2(request={
         "task_comment": {},
         "connection_id": "<id>",
     })
@@ -57,14 +57,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreateTaskCommentRequest](../../models/operations/createtaskcommentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateTaskComment2Request](../../models/operations/createtaskcomment2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.CreateTaskCommentResponse](../../models/operations/createtaskcommentresponse.md)**
+**[operations.CreateTaskComment2Response](../../models/operations/createtaskcomment2response.md)**
 
 ### Errors
 
@@ -72,13 +72,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_task_project
+## create_task_project2
 
 Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="python" operationID="createTaskProject2" method="post" path="/task/{connection_id}/project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -90,7 +90,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.create_task_project(request={
+    res = unified_to.task.create_task_project2(request={
         "task_project": {},
         "connection_id": "<id>",
     })
@@ -104,14 +104,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreateTaskProjectRequest](../../models/operations/createtaskprojectrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateTaskProject2Request](../../models/operations/createtaskproject2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.CreateTaskProjectResponse](../../models/operations/createtaskprojectresponse.md)**
+**[operations.CreateTaskProject2Response](../../models/operations/createtaskproject2response.md)**
 
 ### Errors
 
@@ -119,13 +119,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_task_task
+## create_task_task2
 
 Create a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="python" operationID="createTaskTask2" method="post" path="/task/{connection_id}/task" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -137,7 +137,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.create_task_task(request={
+    res = unified_to.task.create_task_task2(request={
         "task_task": {},
         "connection_id": "<id>",
     })
@@ -151,14 +151,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.CreateTaskTaskRequest](../../models/operations/createtasktaskrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateTaskTask2Request](../../models/operations/createtasktask2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.CreateTaskTaskResponse](../../models/operations/createtasktaskresponse.md)**
+**[operations.CreateTaskTask2Response](../../models/operations/createtasktask2response.md)**
 
 ### Errors
 
@@ -166,13 +166,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_task_change
+## get_task_change2
 
 Retrieve a change
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTaskChange" method="get" path="/task/{connection_id}/change/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTaskChange2" method="get" path="/task/{connection_id}/change/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -184,7 +184,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.get_task_change(request={
+    res = unified_to.task.get_task_change2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -198,14 +198,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetTaskChangeRequest](../../models/operations/gettaskchangerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetTaskChange2Request](../../models/operations/gettaskchange2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetTaskChangeResponse](../../models/operations/gettaskchangeresponse.md)**
+**[operations.GetTaskChange2Response](../../models/operations/gettaskchange2response.md)**
 
 ### Errors
 
@@ -213,13 +213,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_task_comment
+## get_task_comment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTaskComment2" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -231,7 +231,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.get_task_comment(request={
+    res = unified_to.task.get_task_comment2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -245,14 +245,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetTaskCommentRequest](../../models/operations/gettaskcommentrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetTaskComment2Request](../../models/operations/gettaskcomment2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetTaskCommentResponse](../../models/operations/gettaskcommentresponse.md)**
+**[operations.GetTaskComment2Response](../../models/operations/gettaskcomment2response.md)**
 
 ### Errors
 
@@ -260,13 +260,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_task_project
+## get_task_project2
 
 Retrieve a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTaskProject2" method="get" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -278,7 +278,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.get_task_project(request={
+    res = unified_to.task.get_task_project2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -292,14 +292,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetTaskProjectRequest](../../models/operations/gettaskprojectrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetTaskProject2Request](../../models/operations/gettaskproject2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetTaskProjectResponse](../../models/operations/gettaskprojectresponse.md)**
+**[operations.GetTaskProject2Response](../../models/operations/gettaskproject2response.md)**
 
 ### Errors
 
@@ -307,13 +307,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_task_task
+## get_task_task2
 
 Retrieve a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTaskTask" method="get" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTaskTask2" method="get" path="/task/{connection_id}/task/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -325,7 +325,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.get_task_task(request={
+    res = unified_to.task.get_task_task2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -339,14 +339,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.GetTaskTaskRequest](../../models/operations/gettasktaskrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetTaskTask2Request](../../models/operations/gettasktask2request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
 
 ### Response
 
-**[operations.GetTaskTaskResponse](../../models/operations/gettasktaskresponse.md)**
+**[operations.GetTaskTask2Response](../../models/operations/gettasktask2response.md)**
 
 ### Errors
 
@@ -354,13 +354,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_task_changes
+## list_task_changes2
 
 List all changes
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTaskChanges" method="get" path="/task/{connection_id}/change" -->
+<!-- UsageSnippet language="python" operationID="listTaskChanges2" method="get" path="/task/{connection_id}/change" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -372,7 +372,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.list_task_changes(request={
+    res = unified_to.task.list_task_changes2(request={
         "connection_id": "<id>",
     })
 
@@ -385,14 +385,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListTaskChangesRequest](../../models/operations/listtaskchangesrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListTaskChanges2Request](../../models/operations/listtaskchanges2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListTaskChangesResponse](../../models/operations/listtaskchangesresponse.md)**
+**[operations.ListTaskChanges2Response](../../models/operations/listtaskchanges2response.md)**
 
 ### Errors
 
@@ -400,13 +400,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_task_comments
+## list_task_comments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="listTaskComments2" method="get" path="/task/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -418,7 +418,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.list_task_comments(request={
+    res = unified_to.task.list_task_comments2(request={
         "connection_id": "<id>",
     })
 
@@ -431,14 +431,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListTaskCommentsRequest](../../models/operations/listtaskcommentsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListTaskComments2Request](../../models/operations/listtaskcomments2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListTaskCommentsResponse](../../models/operations/listtaskcommentsresponse.md)**
+**[operations.ListTaskComments2Response](../../models/operations/listtaskcomments2response.md)**
 
 ### Errors
 
@@ -446,13 +446,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_task_projects
+## list_task_projects2
 
 List all projects
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="python" operationID="listTaskProjects2" method="get" path="/task/{connection_id}/project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -464,7 +464,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.list_task_projects(request={
+    res = unified_to.task.list_task_projects2(request={
         "connection_id": "<id>",
     })
 
@@ -477,14 +477,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListTaskProjectsRequest](../../models/operations/listtaskprojectsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListTaskProjects2Request](../../models/operations/listtaskprojects2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListTaskProjectsResponse](../../models/operations/listtaskprojectsresponse.md)**
+**[operations.ListTaskProjects2Response](../../models/operations/listtaskprojects2response.md)**
 
 ### Errors
 
@@ -492,13 +492,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_task_tasks
+## list_task_tasks2
 
 List all tasks
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTaskTasks" method="get" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="python" operationID="listTaskTasks2" method="get" path="/task/{connection_id}/task" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -510,7 +510,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.list_task_tasks(request={
+    res = unified_to.task.list_task_tasks2(request={
         "connection_id": "<id>",
     })
 
@@ -523,14 +523,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.ListTaskTasksRequest](../../models/operations/listtasktasksrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListTaskTasks2Request](../../models/operations/listtasktasks2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.ListTaskTasksResponse](../../models/operations/listtasktasksresponse.md)**
+**[operations.ListTaskTasks2Response](../../models/operations/listtasktasks2response.md)**
 
 ### Errors
 
@@ -538,13 +538,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_task_comment
+## patch_task_comment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTaskComment2" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -556,7 +556,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.patch_task_comment(request={
+    res = unified_to.task.patch_task_comment2(request={
         "task_comment": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -571,14 +571,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchTaskCommentRequest](../../models/operations/patchtaskcommentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchTaskComment2Request](../../models/operations/patchtaskcomment2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.PatchTaskCommentResponse](../../models/operations/patchtaskcommentresponse.md)**
+**[operations.PatchTaskComment2Response](../../models/operations/patchtaskcomment2response.md)**
 
 ### Errors
 
@@ -586,13 +586,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_task_project
+## patch_task_project2
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTaskProject2" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -604,7 +604,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.patch_task_project(request={
+    res = unified_to.task.patch_task_project2(request={
         "task_project": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -619,14 +619,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchTaskProjectRequest](../../models/operations/patchtaskprojectrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchTaskProject2Request](../../models/operations/patchtaskproject2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.PatchTaskProjectResponse](../../models/operations/patchtaskprojectresponse.md)**
+**[operations.PatchTaskProject2Response](../../models/operations/patchtaskproject2response.md)**
 
 ### Errors
 
@@ -634,13 +634,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_task_task
+## patch_task_task2
 
 Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTaskTask2" method="patch" path="/task/{connection_id}/task/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -652,7 +652,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.patch_task_task(request={
+    res = unified_to.task.patch_task_task2(request={
         "task_task": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -667,14 +667,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.PatchTaskTaskRequest](../../models/operations/patchtasktaskrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchTaskTask2Request](../../models/operations/patchtasktask2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.PatchTaskTaskResponse](../../models/operations/patchtasktaskresponse.md)**
+**[operations.PatchTaskTask2Response](../../models/operations/patchtasktask2response.md)**
 
 ### Errors
 
@@ -682,13 +682,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_task_comment
+## remove_task_comment2
 
 Remove a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTaskComment2" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -700,7 +700,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.remove_task_comment(request={
+    res = unified_to.task.remove_task_comment2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -714,14 +714,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemoveTaskCommentRequest](../../models/operations/removetaskcommentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveTaskComment2Request](../../models/operations/removetaskcomment2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.RemoveTaskCommentResponse](../../models/operations/removetaskcommentresponse.md)**
+**[operations.RemoveTaskComment2Response](../../models/operations/removetaskcomment2response.md)**
 
 ### Errors
 
@@ -729,13 +729,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_task_project
+## remove_task_project2
 
 Remove a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTaskProject2" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -747,7 +747,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.remove_task_project(request={
+    res = unified_to.task.remove_task_project2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -761,14 +761,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemoveTaskProjectRequest](../../models/operations/removetaskprojectrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveTaskProject2Request](../../models/operations/removetaskproject2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.RemoveTaskProjectResponse](../../models/operations/removetaskprojectresponse.md)**
+**[operations.RemoveTaskProject2Response](../../models/operations/removetaskproject2response.md)**
 
 ### Errors
 
@@ -776,13 +776,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_task_task
+## remove_task_task2
 
 Remove a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTaskTask" method="delete" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTaskTask2" method="delete" path="/task/{connection_id}/task/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -794,7 +794,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.remove_task_task(request={
+    res = unified_to.task.remove_task_task2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -808,14 +808,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.RemoveTaskTaskRequest](../../models/operations/removetasktaskrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveTaskTask2Request](../../models/operations/removetasktask2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.RemoveTaskTaskResponse](../../models/operations/removetasktaskresponse.md)**
+**[operations.RemoveTaskTask2Response](../../models/operations/removetasktask2response.md)**
 
 ### Errors
 
@@ -823,13 +823,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_task_comment
+## update_task_comment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskComment2" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -841,7 +841,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.update_task_comment(request={
+    res = unified_to.task.update_task_comment2(request={
         "task_comment": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -856,14 +856,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdateTaskCommentRequest](../../models/operations/updatetaskcommentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateTaskComment2Request](../../models/operations/updatetaskcomment2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.UpdateTaskCommentResponse](../../models/operations/updatetaskcommentresponse.md)**
+**[operations.UpdateTaskComment2Response](../../models/operations/updatetaskcomment2response.md)**
 
 ### Errors
 
@@ -871,13 +871,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_task_project
+## update_task_project2
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskProject2" method="put" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -889,7 +889,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.update_task_project(request={
+    res = unified_to.task.update_task_project2(request={
         "task_project": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -904,14 +904,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdateTaskProjectRequest](../../models/operations/updatetaskprojectrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateTaskProject2Request](../../models/operations/updatetaskproject2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.UpdateTaskProjectResponse](../../models/operations/updatetaskprojectresponse.md)**
+**[operations.UpdateTaskProject2Response](../../models/operations/updatetaskproject2response.md)**
 
 ### Errors
 
@@ -919,13 +919,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_task_task
+## update_task_task2
 
 Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskTask2" method="put" path="/task/{connection_id}/task/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -937,7 +937,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.task.update_task_task(request={
+    res = unified_to.task.update_task_task2(request={
         "task_task": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -952,14 +952,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.UpdateTaskTaskRequest](../../models/operations/updatetasktaskrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateTaskTask2Request](../../models/operations/updatetasktask2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.UpdateTaskTaskResponse](../../models/operations/updatetasktaskresponse.md)**
+**[operations.UpdateTaskTask2Response](../../models/operations/updatetasktask2response.md)**
 
 ### Errors
 

@@ -4,26 +4,26 @@
 
 ### Available Operations
 
-* [create_calendar_link](#create_calendar_link) - Create a link
-* [create_payment_link](#create_payment_link) - Create a link
-* [get_calendar_link](#get_calendar_link) - Retrieve a link
-* [get_payment_link](#get_payment_link) - Retrieve a link
-* [list_calendar_links](#list_calendar_links) - List all links
-* [list_payment_links](#list_payment_links) - List all links
-* [patch_calendar_link](#patch_calendar_link) - Update a link
-* [patch_payment_link](#patch_payment_link) - Update a link
-* [remove_calendar_link](#remove_calendar_link) - Remove a link
-* [remove_payment_link](#remove_payment_link) - Remove a link
-* [update_calendar_link](#update_calendar_link) - Update a link
-* [update_payment_link](#update_payment_link) - Update a link
+* [create_calendar_link2](#create_calendar_link2) - Create a link
+* [create_payment_link2](#create_payment_link2) - Create a link
+* [get_calendar_link2](#get_calendar_link2) - Retrieve a link
+* [get_payment_link2](#get_payment_link2) - Retrieve a link
+* [list_calendar_links2](#list_calendar_links2) - List all links
+* [list_payment_links2](#list_payment_links2) - List all links
+* [patch_calendar_link2](#patch_calendar_link2) - Update a link
+* [patch_payment_link2](#patch_payment_link2) - Update a link
+* [remove_calendar_link2](#remove_calendar_link2) - Remove a link
+* [remove_payment_link2](#remove_payment_link2) - Remove a link
+* [update_calendar_link2](#update_calendar_link2) - Update a link
+* [update_payment_link2](#update_payment_link2) - Update a link
 
-## create_calendar_link
+## create_calendar_link2
 
 Create a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
+<!-- UsageSnippet language="python" operationID="createCalendarLink2" method="post" path="/calendar/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -35,9 +35,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.link.create_calendar_link(request={
+    res = unified_to.link.create_calendar_link2(request={
         "calendar_link": {
-            "url": "https://misguided-thongs.info",
+            "url": "https://prestigious-fort.name/",
         },
         "connection_id": "<id>",
     })
@@ -51,14 +51,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.CreateCalendarLinkRequest](../../models/operations/createcalendarlinkrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateCalendarLink2Request](../../models/operations/createcalendarlink2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.CreateCalendarLinkResponse](../../models/operations/createcalendarlinkresponse.md)**
+**[operations.CreateCalendarLink2Response](../../models/operations/createcalendarlink2response.md)**
 
 ### Errors
 
@@ -66,13 +66,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_payment_link
+## create_payment_link2
 
 Create a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
+<!-- UsageSnippet language="python" operationID="createPaymentLink2" method="post" path="/payment/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -84,7 +84,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.link.create_payment_link(request={
+    res = unified_to.link.create_payment_link2(request={
         "payment_link": {},
         "connection_id": "<id>",
     })
@@ -98,14 +98,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreatePaymentLinkRequest](../../models/operations/createpaymentlinkrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreatePaymentLink2Request](../../models/operations/createpaymentlink2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.CreatePaymentLinkResponse](../../models/operations/createpaymentlinkresponse.md)**
+**[operations.CreatePaymentLink2Response](../../models/operations/createpaymentlink2response.md)**
 
 ### Errors
 
@@ -113,13 +113,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_calendar_link
+## get_calendar_link2
 
 Retrieve a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCalendarLink2" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -131,7 +131,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.link.get_calendar_link(request={
+    res = unified_to.link.get_calendar_link2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -145,14 +145,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.GetCalendarLinkRequest](../../models/operations/getcalendarlinkrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetCalendarLink2Request](../../models/operations/getcalendarlink2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.GetCalendarLinkResponse](../../models/operations/getcalendarlinkresponse.md)**
+**[operations.GetCalendarLink2Response](../../models/operations/getcalendarlink2response.md)**
 
 ### Errors
 
@@ -160,13 +160,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_payment_link
+## get_payment_link2
 
 Retrieve a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="python" operationID="getPaymentLink2" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -178,7 +178,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.link.get_payment_link(request={
+    res = unified_to.link.get_payment_link2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -192,14 +192,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetPaymentLinkRequest](../../models/operations/getpaymentlinkrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetPaymentLink2Request](../../models/operations/getpaymentlink2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetPaymentLinkResponse](../../models/operations/getpaymentlinkresponse.md)**
+**[operations.GetPaymentLink2Response](../../models/operations/getpaymentlink2response.md)**
 
 ### Errors
 
@@ -207,13 +207,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_calendar_links
+## list_calendar_links2
 
 List all links
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
+<!-- UsageSnippet language="python" operationID="listCalendarLinks2" method="get" path="/calendar/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -225,7 +225,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.link.list_calendar_links(request={
+    res = unified_to.link.list_calendar_links2(request={
         "connection_id": "<id>",
     })
 
@@ -238,14 +238,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.ListCalendarLinksRequest](../../models/operations/listcalendarlinksrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListCalendarLinks2Request](../../models/operations/listcalendarlinks2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.ListCalendarLinksResponse](../../models/operations/listcalendarlinksresponse.md)**
+**[operations.ListCalendarLinks2Response](../../models/operations/listcalendarlinks2response.md)**
 
 ### Errors
 
@@ -253,13 +253,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_payment_links
+## list_payment_links2
 
 List all links
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
+<!-- UsageSnippet language="python" operationID="listPaymentLinks2" method="get" path="/payment/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -271,7 +271,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.link.list_payment_links(request={
+    res = unified_to.link.list_payment_links2(request={
         "connection_id": "<id>",
     })
 
@@ -284,64 +284,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListPaymentLinksRequest](../../models/operations/listpaymentlinksrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.ListPaymentLinksResponse](../../models/operations/listpaymentlinksresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## patch_calendar_link
-
-Update a link
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.link.patch_calendar_link(request={
-        "calendar_link": {
-            "url": "https://warm-hexagon.name/",
-        },
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.calendar_link is not None
-
-    # Handle response
-    print(res.calendar_link)
-
-```
-
-### Parameters
-
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.PatchCalendarLinkRequest](../../models/operations/patchcalendarlinkrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `request`                                                                                  | [operations.ListPaymentLinks2Request](../../models/operations/listpaymentlinks2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 | `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.PatchCalendarLinkResponse](../../models/operations/patchcalendarlinkresponse.md)**
+**[operations.ListPaymentLinks2Response](../../models/operations/listpaymentlinks2response.md)**
 
 ### Errors
 
@@ -349,13 +299,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_payment_link
+## patch_calendar_link2
 
 Update a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCalendarLink2" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -367,151 +317,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.link.patch_payment_link(request={
-        "payment_link": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.payment_link is not None
-
-    # Handle response
-    print(res.payment_link)
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchPaymentLinkRequest](../../models/operations/patchpaymentlinkrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.PatchPaymentLinkResponse](../../models/operations/patchpaymentlinkresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_calendar_link
-
-Remove a link
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.link.remove_calendar_link(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.RemoveCalendarLinkRequest](../../models/operations/removecalendarlinkrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
-
-### Response
-
-**[operations.RemoveCalendarLinkResponse](../../models/operations/removecalendarlinkresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_payment_link
-
-Remove a link
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.link.remove_payment_link(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemovePaymentLinkRequest](../../models/operations/removepaymentlinkrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
-
-### Response
-
-**[operations.RemovePaymentLinkResponse](../../models/operations/removepaymentlinkresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_calendar_link
-
-Update a link
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.link.update_calendar_link(request={
+    res = unified_to.link.patch_calendar_link2(request={
         "calendar_link": {
-            "url": "https://partial-hydrocarbon.info",
+            "url": "https://probable-accelerator.info",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -528,12 +336,12 @@ with UnifiedTo(
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.UpdateCalendarLinkRequest](../../models/operations/updatecalendarlinkrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `request`                                                                                    | [operations.PatchCalendarLink2Request](../../models/operations/patchcalendarlink2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 | `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.UpdateCalendarLinkResponse](../../models/operations/updatecalendarlinkresponse.md)**
+**[operations.PatchCalendarLink2Response](../../models/operations/patchcalendarlink2response.md)**
 
 ### Errors
 
@@ -541,13 +349,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_payment_link
+## patch_payment_link2
 
 Update a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchPaymentLink2" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -559,7 +367,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.link.update_payment_link(request={
+    res = unified_to.link.patch_payment_link2(request={
         "payment_link": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -576,12 +384,204 @@ with UnifiedTo(
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdatePaymentLinkRequest](../../models/operations/updatepaymentlinkrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `request`                                                                                  | [operations.PatchPaymentLink2Request](../../models/operations/patchpaymentlink2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 | `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.UpdatePaymentLinkResponse](../../models/operations/updatepaymentlinkresponse.md)**
+**[operations.PatchPaymentLink2Response](../../models/operations/patchpaymentlink2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_calendar_link2
+
+Remove a link
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeCalendarLink2" method="delete" path="/calendar/{connection_id}/link/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.link.remove_calendar_link2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveCalendarLink2Request](../../models/operations/removecalendarlink2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemoveCalendarLink2Response](../../models/operations/removecalendarlink2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_payment_link2
+
+Remove a link
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removePaymentLink2" method="delete" path="/payment/{connection_id}/link/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.link.remove_payment_link2(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemovePaymentLink2Request](../../models/operations/removepaymentlink2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.RemovePaymentLink2Response](../../models/operations/removepaymentlink2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_calendar_link2
+
+Update a link
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateCalendarLink2" method="put" path="/calendar/{connection_id}/link/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.link.update_calendar_link2(request={
+        "calendar_link": {
+            "url": "https://soupy-extension.net/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.calendar_link is not None
+
+    # Handle response
+    print(res.calendar_link)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.UpdateCalendarLink2Request](../../models/operations/updatecalendarlink2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.UpdateCalendarLink2Response](../../models/operations/updatecalendarlink2response.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_payment_link2
+
+Update a link
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updatePaymentLink2" method="put" path="/payment/{connection_id}/link/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.link.update_payment_link2(request={
+        "payment_link": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdatePaymentLink2Request](../../models/operations/updatepaymentlink2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.UpdatePaymentLink2Response](../../models/operations/updatepaymentlink2response.md)**
 
 ### Errors
 

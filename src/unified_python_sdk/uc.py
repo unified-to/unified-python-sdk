@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Uc(BaseSDK):
-    def create_uc_comment(
+    def create_uc_comment2(
         self,
         *,
         request: Union[
-            operations.CreateUcCommentRequest,
-            operations.CreateUcCommentRequestTypedDict,
+            operations.CreateUcComment2Request,
+            operations.CreateUcComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcCommentResponse:
+    ) -> operations.CreateUcComment2Response:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcCommentRequest)
-        request = cast(operations.CreateUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.CreateUcComment2Request)
+        request = cast(operations.CreateUcComment2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcComment",
+                operation_id="createUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcCommentResponse(
+            return operations.CreateUcComment2Response(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -103,18 +103,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_uc_comment_async(
+    async def create_uc_comment2_async(
         self,
         *,
         request: Union[
-            operations.CreateUcCommentRequest,
-            operations.CreateUcCommentRequestTypedDict,
+            operations.CreateUcComment2Request,
+            operations.CreateUcComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcCommentResponse:
+    ) -> operations.CreateUcComment2Response:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcCommentRequest)
-        request = cast(operations.CreateUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.CreateUcComment2Request)
+        request = cast(operations.CreateUcComment2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcComment",
+                operation_id="createUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcCommentResponse(
+            return operations.CreateUcComment2Response(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -196,18 +196,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_uc_contact(
+    def create_uc_contact2(
         self,
         *,
         request: Union[
-            operations.CreateUcContactRequest,
-            operations.CreateUcContactRequestTypedDict,
+            operations.CreateUcContact2Request,
+            operations.CreateUcContact2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcContactResponse:
+    ) -> operations.CreateUcContact2Response:
         r"""Create a contact
 
         :param request: The request object to send.
@@ -227,8 +227,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcContactRequest)
-        request = cast(operations.CreateUcContactRequest, request)
+            request = utils.unmarshal(request, operations.CreateUcContact2Request)
+        request = cast(operations.CreateUcContact2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +262,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcContact",
+                operation_id="createUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +272,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcContactResponse(
+            return operations.CreateUcContact2Response(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -289,18 +289,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_uc_contact_async(
+    async def create_uc_contact2_async(
         self,
         *,
         request: Union[
-            operations.CreateUcContactRequest,
-            operations.CreateUcContactRequestTypedDict,
+            operations.CreateUcContact2Request,
+            operations.CreateUcContact2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcContactResponse:
+    ) -> operations.CreateUcContact2Response:
         r"""Create a contact
 
         :param request: The request object to send.
@@ -320,8 +320,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcContactRequest)
-        request = cast(operations.CreateUcContactRequest, request)
+            request = utils.unmarshal(request, operations.CreateUcContact2Request)
+        request = cast(operations.CreateUcContact2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +355,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcContact",
+                operation_id="createUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +365,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcContactResponse(
+            return operations.CreateUcContact2Response(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -382,18 +382,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_uc_recording(
+    def create_uc_recording2(
         self,
         *,
         request: Union[
-            operations.CreateUcRecordingRequest,
-            operations.CreateUcRecordingRequestTypedDict,
+            operations.CreateUcRecording2Request,
+            operations.CreateUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcRecordingResponse:
+    ) -> operations.CreateUcRecording2Response:
         r"""Create a recording
 
         :param request: The request object to send.
@@ -413,8 +413,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcRecordingRequest)
-        request = cast(operations.CreateUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.CreateUcRecording2Request)
+        request = cast(operations.CreateUcRecording2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -448,7 +448,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcRecording",
+                operation_id="createUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -458,7 +458,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcRecordingResponse(
+            return operations.CreateUcRecording2Response(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -475,18 +475,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_uc_recording_async(
+    async def create_uc_recording2_async(
         self,
         *,
         request: Union[
-            operations.CreateUcRecordingRequest,
-            operations.CreateUcRecordingRequestTypedDict,
+            operations.CreateUcRecording2Request,
+            operations.CreateUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcRecordingResponse:
+    ) -> operations.CreateUcRecording2Response:
         r"""Create a recording
 
         :param request: The request object to send.
@@ -506,8 +506,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcRecordingRequest)
-        request = cast(operations.CreateUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.CreateUcRecording2Request)
+        request = cast(operations.CreateUcRecording2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -541,7 +541,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcRecording",
+                operation_id="createUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -551,7 +551,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcRecordingResponse(
+            return operations.CreateUcRecording2Response(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -568,17 +568,17 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_uc_call(
+    def get_uc_call2(
         self,
         *,
         request: Union[
-            operations.GetUcCallRequest, operations.GetUcCallRequestTypedDict
+            operations.GetUcCall2Request, operations.GetUcCall2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcCallResponse:
+    ) -> operations.GetUcCall2Response:
         r"""Retrieve a call
 
         :param request: The request object to send.
@@ -598,8 +598,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcCallRequest)
-        request = cast(operations.GetUcCallRequest, request)
+            request = utils.unmarshal(request, operations.GetUcCall2Request)
+        request = cast(operations.GetUcCall2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -630,7 +630,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcCall",
+                operation_id="getUcCall2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -640,7 +640,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcCallResponse(
+            return operations.GetUcCall2Response(
                 uc_call=unmarshal_json_response(Optional[shared.UcCall], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -655,17 +655,17 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_uc_call_async(
+    async def get_uc_call2_async(
         self,
         *,
         request: Union[
-            operations.GetUcCallRequest, operations.GetUcCallRequestTypedDict
+            operations.GetUcCall2Request, operations.GetUcCall2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcCallResponse:
+    ) -> operations.GetUcCall2Response:
         r"""Retrieve a call
 
         :param request: The request object to send.
@@ -685,8 +685,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcCallRequest)
-        request = cast(operations.GetUcCallRequest, request)
+            request = utils.unmarshal(request, operations.GetUcCall2Request)
+        request = cast(operations.GetUcCall2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -717,7 +717,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcCall",
+                operation_id="getUcCall2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -727,7 +727,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcCallResponse(
+            return operations.GetUcCall2Response(
                 uc_call=unmarshal_json_response(Optional[shared.UcCall], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -742,17 +742,17 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_uc_comment(
+    def get_uc_comment2(
         self,
         *,
         request: Union[
-            operations.GetUcCommentRequest, operations.GetUcCommentRequestTypedDict
+            operations.GetUcComment2Request, operations.GetUcComment2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcCommentResponse:
+    ) -> operations.GetUcComment2Response:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -772,8 +772,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcCommentRequest)
-        request = cast(operations.GetUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.GetUcComment2Request)
+        request = cast(operations.GetUcComment2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -804,7 +804,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcComment",
+                operation_id="getUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -814,7 +814,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcCommentResponse(
+            return operations.GetUcComment2Response(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -831,17 +831,17 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_uc_comment_async(
+    async def get_uc_comment2_async(
         self,
         *,
         request: Union[
-            operations.GetUcCommentRequest, operations.GetUcCommentRequestTypedDict
+            operations.GetUcComment2Request, operations.GetUcComment2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcCommentResponse:
+    ) -> operations.GetUcComment2Response:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -861,8 +861,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcCommentRequest)
-        request = cast(operations.GetUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.GetUcComment2Request)
+        request = cast(operations.GetUcComment2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -893,7 +893,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcComment",
+                operation_id="getUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -903,7 +903,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcCommentResponse(
+            return operations.GetUcComment2Response(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -920,17 +920,17 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_uc_contact(
+    def get_uc_contact2(
         self,
         *,
         request: Union[
-            operations.GetUcContactRequest, operations.GetUcContactRequestTypedDict
+            operations.GetUcContact2Request, operations.GetUcContact2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcContactResponse:
+    ) -> operations.GetUcContact2Response:
         r"""Retrieve a contact
 
         :param request: The request object to send.
@@ -950,8 +950,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcContactRequest)
-        request = cast(operations.GetUcContactRequest, request)
+            request = utils.unmarshal(request, operations.GetUcContact2Request)
+        request = cast(operations.GetUcContact2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -982,7 +982,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcContact",
+                operation_id="getUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -992,7 +992,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcContactResponse(
+            return operations.GetUcContact2Response(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -1009,17 +1009,17 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_uc_contact_async(
+    async def get_uc_contact2_async(
         self,
         *,
         request: Union[
-            operations.GetUcContactRequest, operations.GetUcContactRequestTypedDict
+            operations.GetUcContact2Request, operations.GetUcContact2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcContactResponse:
+    ) -> operations.GetUcContact2Response:
         r"""Retrieve a contact
 
         :param request: The request object to send.
@@ -1039,8 +1039,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcContactRequest)
-        request = cast(operations.GetUcContactRequest, request)
+            request = utils.unmarshal(request, operations.GetUcContact2Request)
+        request = cast(operations.GetUcContact2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1071,7 +1071,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcContact",
+                operation_id="getUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1081,7 +1081,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcContactResponse(
+            return operations.GetUcContact2Response(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -1098,17 +1098,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_uc_recording(
+    def get_uc_recording2(
         self,
         *,
         request: Union[
-            operations.GetUcRecordingRequest, operations.GetUcRecordingRequestTypedDict
+            operations.GetUcRecording2Request,
+            operations.GetUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcRecordingResponse:
+    ) -> operations.GetUcRecording2Response:
         r"""Retrieve a recording
 
         :param request: The request object to send.
@@ -1128,8 +1129,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcRecordingRequest)
-        request = cast(operations.GetUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.GetUcRecording2Request)
+        request = cast(operations.GetUcRecording2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1160,7 +1161,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcRecording",
+                operation_id="getUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1170,7 +1171,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcRecordingResponse(
+            return operations.GetUcRecording2Response(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -1187,17 +1188,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_uc_recording_async(
+    async def get_uc_recording2_async(
         self,
         *,
         request: Union[
-            operations.GetUcRecordingRequest, operations.GetUcRecordingRequestTypedDict
+            operations.GetUcRecording2Request,
+            operations.GetUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcRecordingResponse:
+    ) -> operations.GetUcRecording2Response:
         r"""Retrieve a recording
 
         :param request: The request object to send.
@@ -1217,8 +1219,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcRecordingRequest)
-        request = cast(operations.GetUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.GetUcRecording2Request)
+        request = cast(operations.GetUcRecording2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1249,7 +1251,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcRecording",
+                operation_id="getUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1259,7 +1261,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcRecordingResponse(
+            return operations.GetUcRecording2Response(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -1276,17 +1278,17 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_uc_calls(
+    def list_uc_calls2(
         self,
         *,
         request: Union[
-            operations.ListUcCallsRequest, operations.ListUcCallsRequestTypedDict
+            operations.ListUcCalls2Request, operations.ListUcCalls2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcCallsResponse:
+    ) -> operations.ListUcCalls2Response:
         r"""List all calls
 
         :param request: The request object to send.
@@ -1306,8 +1308,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcCallsRequest)
-        request = cast(operations.ListUcCallsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcCalls2Request)
+        request = cast(operations.ListUcCalls2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1338,7 +1340,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcCalls",
+                operation_id="listUcCalls2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1348,7 +1350,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcCallsResponse(
+            return operations.ListUcCalls2Response(
                 uc_calls=unmarshal_json_response(
                     Optional[List[shared.UcCall]], http_res
                 ),
@@ -1365,17 +1367,17 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_uc_calls_async(
+    async def list_uc_calls2_async(
         self,
         *,
         request: Union[
-            operations.ListUcCallsRequest, operations.ListUcCallsRequestTypedDict
+            operations.ListUcCalls2Request, operations.ListUcCalls2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcCallsResponse:
+    ) -> operations.ListUcCalls2Response:
         r"""List all calls
 
         :param request: The request object to send.
@@ -1395,8 +1397,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcCallsRequest)
-        request = cast(operations.ListUcCallsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcCalls2Request)
+        request = cast(operations.ListUcCalls2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1427,7 +1429,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcCalls",
+                operation_id="listUcCalls2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1437,7 +1439,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcCallsResponse(
+            return operations.ListUcCalls2Response(
                 uc_calls=unmarshal_json_response(
                     Optional[List[shared.UcCall]], http_res
                 ),
@@ -1454,17 +1456,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_uc_comments(
+    def list_uc_comments2(
         self,
         *,
         request: Union[
-            operations.ListUcCommentsRequest, operations.ListUcCommentsRequestTypedDict
+            operations.ListUcComments2Request,
+            operations.ListUcComments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcCommentsResponse:
+    ) -> operations.ListUcComments2Response:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1484,8 +1487,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcCommentsRequest)
-        request = cast(operations.ListUcCommentsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcComments2Request)
+        request = cast(operations.ListUcComments2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1516,7 +1519,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcComments",
+                operation_id="listUcComments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1526,7 +1529,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcCommentsResponse(
+            return operations.ListUcComments2Response(
                 uc_comments=unmarshal_json_response(
                     Optional[List[shared.UcComment]], http_res
                 ),
@@ -1543,17 +1546,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_uc_comments_async(
+    async def list_uc_comments2_async(
         self,
         *,
         request: Union[
-            operations.ListUcCommentsRequest, operations.ListUcCommentsRequestTypedDict
+            operations.ListUcComments2Request,
+            operations.ListUcComments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcCommentsResponse:
+    ) -> operations.ListUcComments2Response:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1573,8 +1577,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcCommentsRequest)
-        request = cast(operations.ListUcCommentsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcComments2Request)
+        request = cast(operations.ListUcComments2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1605,7 +1609,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcComments",
+                operation_id="listUcComments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1615,7 +1619,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcCommentsResponse(
+            return operations.ListUcComments2Response(
                 uc_comments=unmarshal_json_response(
                     Optional[List[shared.UcComment]], http_res
                 ),
@@ -1632,17 +1636,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_uc_contacts(
+    def list_uc_contacts2(
         self,
         *,
         request: Union[
-            operations.ListUcContactsRequest, operations.ListUcContactsRequestTypedDict
+            operations.ListUcContacts2Request,
+            operations.ListUcContacts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcContactsResponse:
+    ) -> operations.ListUcContacts2Response:
         r"""List all contacts
 
         :param request: The request object to send.
@@ -1662,8 +1667,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcContactsRequest)
-        request = cast(operations.ListUcContactsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcContacts2Request)
+        request = cast(operations.ListUcContacts2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1694,7 +1699,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcContacts",
+                operation_id="listUcContacts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1704,7 +1709,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcContactsResponse(
+            return operations.ListUcContacts2Response(
                 uc_contacts=unmarshal_json_response(
                     Optional[List[shared.UcContact]], http_res
                 ),
@@ -1721,17 +1726,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_uc_contacts_async(
+    async def list_uc_contacts2_async(
         self,
         *,
         request: Union[
-            operations.ListUcContactsRequest, operations.ListUcContactsRequestTypedDict
+            operations.ListUcContacts2Request,
+            operations.ListUcContacts2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcContactsResponse:
+    ) -> operations.ListUcContacts2Response:
         r"""List all contacts
 
         :param request: The request object to send.
@@ -1751,8 +1757,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcContactsRequest)
-        request = cast(operations.ListUcContactsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcContacts2Request)
+        request = cast(operations.ListUcContacts2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1783,7 +1789,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcContacts",
+                operation_id="listUcContacts2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1793,7 +1799,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcContactsResponse(
+            return operations.ListUcContacts2Response(
                 uc_contacts=unmarshal_json_response(
                     Optional[List[shared.UcContact]], http_res
                 ),
@@ -1810,18 +1816,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_uc_recordings(
+    def list_uc_recordings2(
         self,
         *,
         request: Union[
-            operations.ListUcRecordingsRequest,
-            operations.ListUcRecordingsRequestTypedDict,
+            operations.ListUcRecordings2Request,
+            operations.ListUcRecordings2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcRecordingsResponse:
+    ) -> operations.ListUcRecordings2Response:
         r"""List all recordings
 
         :param request: The request object to send.
@@ -1841,8 +1847,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcRecordingsRequest)
-        request = cast(operations.ListUcRecordingsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcRecordings2Request)
+        request = cast(operations.ListUcRecordings2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1873,7 +1879,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcRecordings",
+                operation_id="listUcRecordings2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1883,7 +1889,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcRecordingsResponse(
+            return operations.ListUcRecordings2Response(
                 uc_recordings=unmarshal_json_response(
                     Optional[List[shared.UcRecording]], http_res
                 ),
@@ -1900,18 +1906,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_uc_recordings_async(
+    async def list_uc_recordings2_async(
         self,
         *,
         request: Union[
-            operations.ListUcRecordingsRequest,
-            operations.ListUcRecordingsRequestTypedDict,
+            operations.ListUcRecordings2Request,
+            operations.ListUcRecordings2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcRecordingsResponse:
+    ) -> operations.ListUcRecordings2Response:
         r"""List all recordings
 
         :param request: The request object to send.
@@ -1931,8 +1937,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcRecordingsRequest)
-        request = cast(operations.ListUcRecordingsRequest, request)
+            request = utils.unmarshal(request, operations.ListUcRecordings2Request)
+        request = cast(operations.ListUcRecordings2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1963,7 +1969,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcRecordings",
+                operation_id="listUcRecordings2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1973,7 +1979,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcRecordingsResponse(
+            return operations.ListUcRecordings2Response(
                 uc_recordings=unmarshal_json_response(
                     Optional[List[shared.UcRecording]], http_res
                 ),
@@ -1990,17 +1996,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_uc_comment(
+    def patch_uc_comment2(
         self,
         *,
         request: Union[
-            operations.PatchUcCommentRequest, operations.PatchUcCommentRequestTypedDict
+            operations.PatchUcComment2Request,
+            operations.PatchUcComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcCommentResponse:
+    ) -> operations.PatchUcComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2020,8 +2027,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcCommentRequest)
-        request = cast(operations.PatchUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.PatchUcComment2Request)
+        request = cast(operations.PatchUcComment2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2055,7 +2062,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcComment",
+                operation_id="patchUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2065,7 +2072,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcCommentResponse(
+            return operations.PatchUcComment2Response(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -2082,17 +2089,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_uc_comment_async(
+    async def patch_uc_comment2_async(
         self,
         *,
         request: Union[
-            operations.PatchUcCommentRequest, operations.PatchUcCommentRequestTypedDict
+            operations.PatchUcComment2Request,
+            operations.PatchUcComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcCommentResponse:
+    ) -> operations.PatchUcComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2112,8 +2120,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcCommentRequest)
-        request = cast(operations.PatchUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.PatchUcComment2Request)
+        request = cast(operations.PatchUcComment2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2147,7 +2155,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcComment",
+                operation_id="patchUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2157,7 +2165,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcCommentResponse(
+            return operations.PatchUcComment2Response(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -2174,17 +2182,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_uc_contact(
+    def patch_uc_contact2(
         self,
         *,
         request: Union[
-            operations.PatchUcContactRequest, operations.PatchUcContactRequestTypedDict
+            operations.PatchUcContact2Request,
+            operations.PatchUcContact2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcContactResponse:
+    ) -> operations.PatchUcContact2Response:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -2204,8 +2213,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcContactRequest)
-        request = cast(operations.PatchUcContactRequest, request)
+            request = utils.unmarshal(request, operations.PatchUcContact2Request)
+        request = cast(operations.PatchUcContact2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2239,7 +2248,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcContact",
+                operation_id="patchUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2249,7 +2258,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcContactResponse(
+            return operations.PatchUcContact2Response(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -2266,17 +2275,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_uc_contact_async(
+    async def patch_uc_contact2_async(
         self,
         *,
         request: Union[
-            operations.PatchUcContactRequest, operations.PatchUcContactRequestTypedDict
+            operations.PatchUcContact2Request,
+            operations.PatchUcContact2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcContactResponse:
+    ) -> operations.PatchUcContact2Response:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -2296,8 +2306,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcContactRequest)
-        request = cast(operations.PatchUcContactRequest, request)
+            request = utils.unmarshal(request, operations.PatchUcContact2Request)
+        request = cast(operations.PatchUcContact2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2331,7 +2341,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcContact",
+                operation_id="patchUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2341,7 +2351,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcContactResponse(
+            return operations.PatchUcContact2Response(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -2358,18 +2368,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_uc_recording(
+    def patch_uc_recording2(
         self,
         *,
         request: Union[
-            operations.PatchUcRecordingRequest,
-            operations.PatchUcRecordingRequestTypedDict,
+            operations.PatchUcRecording2Request,
+            operations.PatchUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcRecordingResponse:
+    ) -> operations.PatchUcRecording2Response:
         r"""Update a recording
 
         :param request: The request object to send.
@@ -2389,8 +2399,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcRecordingRequest)
-        request = cast(operations.PatchUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.PatchUcRecording2Request)
+        request = cast(operations.PatchUcRecording2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2424,7 +2434,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcRecording",
+                operation_id="patchUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2434,7 +2444,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcRecordingResponse(
+            return operations.PatchUcRecording2Response(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -2451,18 +2461,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_uc_recording_async(
+    async def patch_uc_recording2_async(
         self,
         *,
         request: Union[
-            operations.PatchUcRecordingRequest,
-            operations.PatchUcRecordingRequestTypedDict,
+            operations.PatchUcRecording2Request,
+            operations.PatchUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcRecordingResponse:
+    ) -> operations.PatchUcRecording2Response:
         r"""Update a recording
 
         :param request: The request object to send.
@@ -2482,8 +2492,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcRecordingRequest)
-        request = cast(operations.PatchUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.PatchUcRecording2Request)
+        request = cast(operations.PatchUcRecording2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2517,7 +2527,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcRecording",
+                operation_id="patchUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2527,7 +2537,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcRecordingResponse(
+            return operations.PatchUcRecording2Response(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -2544,18 +2554,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_uc_comment(
+    def remove_uc_comment2(
         self,
         *,
         request: Union[
-            operations.RemoveUcCommentRequest,
-            operations.RemoveUcCommentRequestTypedDict,
+            operations.RemoveUcComment2Request,
+            operations.RemoveUcComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcCommentResponse:
+    ) -> operations.RemoveUcComment2Response:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2575,8 +2585,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcCommentRequest)
-        request = cast(operations.RemoveUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveUcComment2Request)
+        request = cast(operations.RemoveUcComment2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2607,7 +2617,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcComment",
+                operation_id="removeUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2617,7 +2627,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcCommentResponse(
+            return operations.RemoveUcComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2630,7 +2640,7 @@ class Uc(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcCommentResponse(
+            return operations.RemoveUcComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2639,18 +2649,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_uc_comment_async(
+    async def remove_uc_comment2_async(
         self,
         *,
         request: Union[
-            operations.RemoveUcCommentRequest,
-            operations.RemoveUcCommentRequestTypedDict,
+            operations.RemoveUcComment2Request,
+            operations.RemoveUcComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcCommentResponse:
+    ) -> operations.RemoveUcComment2Response:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2670,8 +2680,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcCommentRequest)
-        request = cast(operations.RemoveUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveUcComment2Request)
+        request = cast(operations.RemoveUcComment2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2702,7 +2712,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcComment",
+                operation_id="removeUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2712,7 +2722,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcCommentResponse(
+            return operations.RemoveUcComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2725,7 +2735,7 @@ class Uc(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcCommentResponse(
+            return operations.RemoveUcComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2734,18 +2744,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_uc_contact(
+    def remove_uc_contact2(
         self,
         *,
         request: Union[
-            operations.RemoveUcContactRequest,
-            operations.RemoveUcContactRequestTypedDict,
+            operations.RemoveUcContact2Request,
+            operations.RemoveUcContact2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcContactResponse:
+    ) -> operations.RemoveUcContact2Response:
         r"""Remove a contact
 
         :param request: The request object to send.
@@ -2765,8 +2775,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcContactRequest)
-        request = cast(operations.RemoveUcContactRequest, request)
+            request = utils.unmarshal(request, operations.RemoveUcContact2Request)
+        request = cast(operations.RemoveUcContact2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2797,7 +2807,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcContact",
+                operation_id="removeUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2807,7 +2817,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcContactResponse(
+            return operations.RemoveUcContact2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2820,7 +2830,7 @@ class Uc(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcContactResponse(
+            return operations.RemoveUcContact2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2829,18 +2839,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_uc_contact_async(
+    async def remove_uc_contact2_async(
         self,
         *,
         request: Union[
-            operations.RemoveUcContactRequest,
-            operations.RemoveUcContactRequestTypedDict,
+            operations.RemoveUcContact2Request,
+            operations.RemoveUcContact2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcContactResponse:
+    ) -> operations.RemoveUcContact2Response:
         r"""Remove a contact
 
         :param request: The request object to send.
@@ -2860,8 +2870,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcContactRequest)
-        request = cast(operations.RemoveUcContactRequest, request)
+            request = utils.unmarshal(request, operations.RemoveUcContact2Request)
+        request = cast(operations.RemoveUcContact2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2892,7 +2902,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcContact",
+                operation_id="removeUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2902,7 +2912,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcContactResponse(
+            return operations.RemoveUcContact2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2915,7 +2925,7 @@ class Uc(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcContactResponse(
+            return operations.RemoveUcContact2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2924,18 +2934,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_uc_recording(
+    def remove_uc_recording2(
         self,
         *,
         request: Union[
-            operations.RemoveUcRecordingRequest,
-            operations.RemoveUcRecordingRequestTypedDict,
+            operations.RemoveUcRecording2Request,
+            operations.RemoveUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcRecordingResponse:
+    ) -> operations.RemoveUcRecording2Response:
         r"""Remove a recording
 
         :param request: The request object to send.
@@ -2955,8 +2965,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcRecordingRequest)
-        request = cast(operations.RemoveUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.RemoveUcRecording2Request)
+        request = cast(operations.RemoveUcRecording2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2987,7 +2997,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcRecording",
+                operation_id="removeUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2997,7 +3007,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcRecordingResponse(
+            return operations.RemoveUcRecording2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3010,7 +3020,7 @@ class Uc(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcRecordingResponse(
+            return operations.RemoveUcRecording2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3019,18 +3029,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_uc_recording_async(
+    async def remove_uc_recording2_async(
         self,
         *,
         request: Union[
-            operations.RemoveUcRecordingRequest,
-            operations.RemoveUcRecordingRequestTypedDict,
+            operations.RemoveUcRecording2Request,
+            operations.RemoveUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcRecordingResponse:
+    ) -> operations.RemoveUcRecording2Response:
         r"""Remove a recording
 
         :param request: The request object to send.
@@ -3050,8 +3060,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcRecordingRequest)
-        request = cast(operations.RemoveUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.RemoveUcRecording2Request)
+        request = cast(operations.RemoveUcRecording2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3082,7 +3092,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcRecording",
+                operation_id="removeUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3092,7 +3102,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcRecordingResponse(
+            return operations.RemoveUcRecording2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3105,7 +3115,7 @@ class Uc(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcRecordingResponse(
+            return operations.RemoveUcRecording2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3114,18 +3124,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_uc_comment(
+    def update_uc_comment2(
         self,
         *,
         request: Union[
-            operations.UpdateUcCommentRequest,
-            operations.UpdateUcCommentRequestTypedDict,
+            operations.UpdateUcComment2Request,
+            operations.UpdateUcComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcCommentResponse:
+    ) -> operations.UpdateUcComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -3145,8 +3155,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcCommentRequest)
-        request = cast(operations.UpdateUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateUcComment2Request)
+        request = cast(operations.UpdateUcComment2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3180,7 +3190,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcComment",
+                operation_id="updateUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3190,7 +3200,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcCommentResponse(
+            return operations.UpdateUcComment2Response(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -3207,18 +3217,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_uc_comment_async(
+    async def update_uc_comment2_async(
         self,
         *,
         request: Union[
-            operations.UpdateUcCommentRequest,
-            operations.UpdateUcCommentRequestTypedDict,
+            operations.UpdateUcComment2Request,
+            operations.UpdateUcComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcCommentResponse:
+    ) -> operations.UpdateUcComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -3238,8 +3248,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcCommentRequest)
-        request = cast(operations.UpdateUcCommentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateUcComment2Request)
+        request = cast(operations.UpdateUcComment2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3273,7 +3283,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcComment",
+                operation_id="updateUcComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3283,7 +3293,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcCommentResponse(
+            return operations.UpdateUcComment2Response(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -3300,18 +3310,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_uc_contact(
+    def update_uc_contact2(
         self,
         *,
         request: Union[
-            operations.UpdateUcContactRequest,
-            operations.UpdateUcContactRequestTypedDict,
+            operations.UpdateUcContact2Request,
+            operations.UpdateUcContact2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcContactResponse:
+    ) -> operations.UpdateUcContact2Response:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -3331,8 +3341,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcContactRequest)
-        request = cast(operations.UpdateUcContactRequest, request)
+            request = utils.unmarshal(request, operations.UpdateUcContact2Request)
+        request = cast(operations.UpdateUcContact2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3366,7 +3376,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcContact",
+                operation_id="updateUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3376,7 +3386,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcContactResponse(
+            return operations.UpdateUcContact2Response(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -3393,18 +3403,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_uc_contact_async(
+    async def update_uc_contact2_async(
         self,
         *,
         request: Union[
-            operations.UpdateUcContactRequest,
-            operations.UpdateUcContactRequestTypedDict,
+            operations.UpdateUcContact2Request,
+            operations.UpdateUcContact2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcContactResponse:
+    ) -> operations.UpdateUcContact2Response:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -3424,8 +3434,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcContactRequest)
-        request = cast(operations.UpdateUcContactRequest, request)
+            request = utils.unmarshal(request, operations.UpdateUcContact2Request)
+        request = cast(operations.UpdateUcContact2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3459,7 +3469,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcContact",
+                operation_id="updateUcContact2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3469,7 +3479,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcContactResponse(
+            return operations.UpdateUcContact2Response(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -3486,18 +3496,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_uc_recording(
+    def update_uc_recording2(
         self,
         *,
         request: Union[
-            operations.UpdateUcRecordingRequest,
-            operations.UpdateUcRecordingRequestTypedDict,
+            operations.UpdateUcRecording2Request,
+            operations.UpdateUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcRecordingResponse:
+    ) -> operations.UpdateUcRecording2Response:
         r"""Update a recording
 
         :param request: The request object to send.
@@ -3517,8 +3527,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcRecordingRequest)
-        request = cast(operations.UpdateUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.UpdateUcRecording2Request)
+        request = cast(operations.UpdateUcRecording2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3552,7 +3562,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcRecording",
+                operation_id="updateUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3562,7 +3572,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcRecordingResponse(
+            return operations.UpdateUcRecording2Response(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -3579,18 +3589,18 @@ class Uc(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_uc_recording_async(
+    async def update_uc_recording2_async(
         self,
         *,
         request: Union[
-            operations.UpdateUcRecordingRequest,
-            operations.UpdateUcRecordingRequestTypedDict,
+            operations.UpdateUcRecording2Request,
+            operations.UpdateUcRecording2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcRecordingResponse:
+    ) -> operations.UpdateUcRecording2Response:
         r"""Update a recording
 
         :param request: The request object to send.
@@ -3610,8 +3620,8 @@ class Uc(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcRecordingRequest)
-        request = cast(operations.UpdateUcRecordingRequest, request)
+            request = utils.unmarshal(request, operations.UpdateUcRecording2Request)
+        request = cast(operations.UpdateUcRecording2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3645,7 +3655,7 @@ class Uc(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcRecording",
+                operation_id="updateUcRecording2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3655,7 +3665,7 @@ class Uc(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcRecordingResponse(
+            return operations.UpdateUcRecording2Response(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),

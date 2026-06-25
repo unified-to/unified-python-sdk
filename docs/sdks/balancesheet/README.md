@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [get_accounting_balancesheet](#get_accounting_balancesheet) - Retrieve a balancesheet
-* [list_accounting_balancesheets](#list_accounting_balancesheets) - List all balancesheets
+* [get_accounting_balancesheet2](#get_accounting_balancesheet2) - Retrieve a balancesheet
+* [list_accounting_balancesheets2](#list_accounting_balancesheets2) - List all balancesheets
 
-## get_accounting_balancesheet
+## get_accounting_balancesheet2
 
 Retrieve a balancesheet
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
+<!-- UsageSnippet language="python" operationID="getAccountingBalancesheet2" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -25,7 +25,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.balancesheet.get_accounting_balancesheet(request={
+    res = unified_to.balancesheet.get_accounting_balancesheet2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -39,14 +39,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetAccountingBalancesheetRequest](../../models/operations/getaccountingbalancesheetrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.GetAccountingBalancesheet2Request](../../models/operations/getaccountingbalancesheet2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
 
 ### Response
 
-**[operations.GetAccountingBalancesheetResponse](../../models/operations/getaccountingbalancesheetresponse.md)**
+**[operations.GetAccountingBalancesheet2Response](../../models/operations/getaccountingbalancesheet2response.md)**
 
 ### Errors
 
@@ -54,13 +54,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_accounting_balancesheets
+## list_accounting_balancesheets2
 
 List all balancesheets
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
+<!-- UsageSnippet language="python" operationID="listAccountingBalancesheets2" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -72,7 +72,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.balancesheet.list_accounting_balancesheets(request={
+    res = unified_to.balancesheet.list_accounting_balancesheets2(request={
         "connection_id": "<id>",
     })
 
@@ -85,14 +85,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.ListAccountingBalancesheetsRequest](../../models/operations/listaccountingbalancesheetsrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `retries`                                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                               | :heavy_minus_sign:                                                                                             | Configuration to override the default retry behavior of the client.                                            |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.ListAccountingBalancesheets2Request](../../models/operations/listaccountingbalancesheets2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `retries`                                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                 | :heavy_minus_sign:                                                                                               | Configuration to override the default retry behavior of the client.                                              |
 
 ### Response
 
-**[operations.ListAccountingBalancesheetsResponse](../../models/operations/listaccountingbalancesheetsresponse.md)**
+**[operations.ListAccountingBalancesheets2Response](../../models/operations/listaccountingbalancesheets2response.md)**
 
 ### Errors
 

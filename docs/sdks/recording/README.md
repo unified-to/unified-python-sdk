@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [create_uc_recording](#create_uc_recording) - Create a recording
-* [get_calendar_recording](#get_calendar_recording) - Retrieve a recording
-* [get_uc_recording](#get_uc_recording) - Retrieve a recording
-* [list_calendar_recordings](#list_calendar_recordings) - List all recordings
-* [list_uc_recordings](#list_uc_recordings) - List all recordings
-* [patch_uc_recording](#patch_uc_recording) - Update a recording
-* [remove_uc_recording](#remove_uc_recording) - Remove a recording
-* [update_uc_recording](#update_uc_recording) - Update a recording
+* [create_uc_recording2](#create_uc_recording2) - Create a recording
+* [get_calendar_recording2](#get_calendar_recording2) - Retrieve a recording
+* [get_uc_recording2](#get_uc_recording2) - Retrieve a recording
+* [list_calendar_recordings2](#list_calendar_recordings2) - List all recordings
+* [list_uc_recordings2](#list_uc_recordings2) - List all recordings
+* [patch_uc_recording2](#patch_uc_recording2) - Update a recording
+* [remove_uc_recording2](#remove_uc_recording2) - Remove a recording
+* [update_uc_recording2](#update_uc_recording2) - Update a recording
 
-## create_uc_recording
+## create_uc_recording2
 
 Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="python" operationID="createUcRecording2" method="post" path="/uc/{connection_id}/recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -31,7 +31,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.recording.create_uc_recording(request={
+    res = unified_to.recording.create_uc_recording2(request={
         "uc_recording": {},
         "connection_id": "<id>",
     })
@@ -45,14 +45,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreateUcRecordingRequest](../../models/operations/createucrecordingrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateUcRecording2Request](../../models/operations/createucrecording2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.CreateUcRecordingResponse](../../models/operations/createucrecordingresponse.md)**
+**[operations.CreateUcRecording2Response](../../models/operations/createucrecording2response.md)**
 
 ### Errors
 
@@ -60,13 +60,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_calendar_recording
+## get_calendar_recording2
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCalendarRecording2" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -78,7 +78,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.recording.get_calendar_recording(request={
+    res = unified_to.recording.get_calendar_recording2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -92,14 +92,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetCalendarRecordingRequest](../../models/operations/getcalendarrecordingrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetCalendarRecording2Request](../../models/operations/getcalendarrecording2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.GetCalendarRecordingResponse](../../models/operations/getcalendarrecordingresponse.md)**
+**[operations.GetCalendarRecording2Response](../../models/operations/getcalendarrecording2response.md)**
 
 ### Errors
 
@@ -107,13 +107,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_uc_recording
+## get_uc_recording2
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="getUcRecording2" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -125,7 +125,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.recording.get_uc_recording(request={
+    res = unified_to.recording.get_uc_recording2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -139,14 +139,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetUcRecordingRequest](../../models/operations/getucrecordingrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetUcRecording2Request](../../models/operations/getucrecording2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetUcRecordingResponse](../../models/operations/getucrecordingresponse.md)**
+**[operations.GetUcRecording2Response](../../models/operations/getucrecording2response.md)**
 
 ### Errors
 
@@ -154,13 +154,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_calendar_recordings
+## list_calendar_recordings2
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
+<!-- UsageSnippet language="python" operationID="listCalendarRecordings2" method="get" path="/calendar/{connection_id}/recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -172,7 +172,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.recording.list_calendar_recordings(request={
+    res = unified_to.recording.list_calendar_recordings2(request={
         "connection_id": "<id>",
     })
 
@@ -185,14 +185,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListCalendarRecordingsRequest](../../models/operations/listcalendarrecordingsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListCalendarRecordings2Request](../../models/operations/listcalendarrecordings2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.ListCalendarRecordingsResponse](../../models/operations/listcalendarrecordingsresponse.md)**
+**[operations.ListCalendarRecordings2Response](../../models/operations/listcalendarrecordings2response.md)**
 
 ### Errors
 
@@ -200,13 +200,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_uc_recordings
+## list_uc_recordings2
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="python" operationID="listUcRecordings2" method="get" path="/uc/{connection_id}/recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -218,7 +218,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.recording.list_uc_recordings(request={
+    res = unified_to.recording.list_uc_recordings2(request={
         "connection_id": "<id>",
     })
 
@@ -231,14 +231,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListUcRecordingsRequest](../../models/operations/listucrecordingsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListUcRecordings2Request](../../models/operations/listucrecordings2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListUcRecordingsResponse](../../models/operations/listucrecordingsresponse.md)**
+**[operations.ListUcRecordings2Response](../../models/operations/listucrecordings2response.md)**
 
 ### Errors
 
@@ -246,13 +246,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_uc_recording
+## patch_uc_recording2
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchUcRecording2" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -264,7 +264,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.recording.patch_uc_recording(request={
+    res = unified_to.recording.patch_uc_recording2(request={
         "uc_recording": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -279,14 +279,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchUcRecordingRequest](../../models/operations/patchucrecordingrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchUcRecording2Request](../../models/operations/patchucrecording2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.PatchUcRecordingResponse](../../models/operations/patchucrecordingresponse.md)**
+**[operations.PatchUcRecording2Response](../../models/operations/patchucrecording2response.md)**
 
 ### Errors
 
@@ -294,13 +294,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_uc_recording
+## remove_uc_recording2
 
 Remove a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeUcRecording2" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -312,7 +312,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.recording.remove_uc_recording(request={
+    res = unified_to.recording.remove_uc_recording2(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -326,14 +326,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemoveUcRecordingRequest](../../models/operations/removeucrecordingrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveUcRecording2Request](../../models/operations/removeucrecording2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.RemoveUcRecordingResponse](../../models/operations/removeucrecordingresponse.md)**
+**[operations.RemoveUcRecording2Response](../../models/operations/removeucrecording2response.md)**
 
 ### Errors
 
@@ -341,13 +341,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_uc_recording
+## update_uc_recording2
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateUcRecording2" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -359,7 +359,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.recording.update_uc_recording(request={
+    res = unified_to.recording.update_uc_recording2(request={
         "uc_recording": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -374,14 +374,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdateUcRecordingRequest](../../models/operations/updateucrecordingrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateUcRecording2Request](../../models/operations/updateucrecording2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.UpdateUcRecordingResponse](../../models/operations/updateucrecordingresponse.md)**
+**[operations.UpdateUcRecording2Response](../../models/operations/updateucrecording2response.md)**
 
 ### Errors
 

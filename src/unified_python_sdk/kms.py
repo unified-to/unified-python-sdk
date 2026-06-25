@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Kms(BaseSDK):
-    def create_kms_comment(
+    def create_kms_comment2(
         self,
         *,
         request: Union[
-            operations.CreateKmsCommentRequest,
-            operations.CreateKmsCommentRequestTypedDict,
+            operations.CreateKmsComment2Request,
+            operations.CreateKmsComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsCommentResponse:
+    ) -> operations.CreateKmsComment2Response:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsCommentRequest)
-        request = cast(operations.CreateKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.CreateKmsComment2Request)
+        request = cast(operations.CreateKmsComment2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsComment",
+                operation_id="createKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +86,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsCommentResponse(
+            return operations.CreateKmsComment2Response(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -103,18 +103,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_kms_comment_async(
+    async def create_kms_comment2_async(
         self,
         *,
         request: Union[
-            operations.CreateKmsCommentRequest,
-            operations.CreateKmsCommentRequestTypedDict,
+            operations.CreateKmsComment2Request,
+            operations.CreateKmsComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsCommentResponse:
+    ) -> operations.CreateKmsComment2Response:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -134,8 +134,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsCommentRequest)
-        request = cast(operations.CreateKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.CreateKmsComment2Request)
+        request = cast(operations.CreateKmsComment2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +169,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsComment",
+                operation_id="createKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +179,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsCommentResponse(
+            return operations.CreateKmsComment2Response(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -196,17 +196,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_kms_page(
+    def create_kms_page2(
         self,
         *,
         request: Union[
-            operations.CreateKmsPageRequest, operations.CreateKmsPageRequestTypedDict
+            operations.CreateKmsPage2Request, operations.CreateKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsPageResponse:
+    ) -> operations.CreateKmsPage2Response:
         r"""Create a page
 
         :param request: The request object to send.
@@ -226,8 +226,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsPageRequest)
-        request = cast(operations.CreateKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.CreateKmsPage2Request)
+        request = cast(operations.CreateKmsPage2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -261,7 +261,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsPage",
+                operation_id="createKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -271,7 +271,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsPageResponse(
+            return operations.CreateKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -286,17 +286,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_kms_page_async(
+    async def create_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.CreateKmsPageRequest, operations.CreateKmsPageRequestTypedDict
+            operations.CreateKmsPage2Request, operations.CreateKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsPageResponse:
+    ) -> operations.CreateKmsPage2Response:
         r"""Create a page
 
         :param request: The request object to send.
@@ -316,8 +316,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsPageRequest)
-        request = cast(operations.CreateKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.CreateKmsPage2Request)
+        request = cast(operations.CreateKmsPage2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -351,7 +351,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsPage",
+                operation_id="createKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -361,7 +361,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsPageResponse(
+            return operations.CreateKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -376,17 +376,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_kms_space(
+    def create_kms_space2(
         self,
         *,
         request: Union[
-            operations.CreateKmsSpaceRequest, operations.CreateKmsSpaceRequestTypedDict
+            operations.CreateKmsSpace2Request,
+            operations.CreateKmsSpace2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsSpaceResponse:
+    ) -> operations.CreateKmsSpace2Response:
         r"""Create a space
 
         :param request: The request object to send.
@@ -406,8 +407,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsSpaceRequest)
-        request = cast(operations.CreateKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.CreateKmsSpace2Request)
+        request = cast(operations.CreateKmsSpace2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -441,7 +442,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsSpace",
+                operation_id="createKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -451,7 +452,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsSpaceResponse(
+            return operations.CreateKmsSpace2Response(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -466,17 +467,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_kms_space_async(
+    async def create_kms_space2_async(
         self,
         *,
         request: Union[
-            operations.CreateKmsSpaceRequest, operations.CreateKmsSpaceRequestTypedDict
+            operations.CreateKmsSpace2Request,
+            operations.CreateKmsSpace2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsSpaceResponse:
+    ) -> operations.CreateKmsSpace2Response:
         r"""Create a space
 
         :param request: The request object to send.
@@ -496,8 +498,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsSpaceRequest)
-        request = cast(operations.CreateKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.CreateKmsSpace2Request)
+        request = cast(operations.CreateKmsSpace2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -531,7 +533,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsSpace",
+                operation_id="createKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -541,7 +543,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsSpaceResponse(
+            return operations.CreateKmsSpace2Response(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -556,17 +558,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_kms_comment(
+    def get_kms_comment2(
         self,
         *,
         request: Union[
-            operations.GetKmsCommentRequest, operations.GetKmsCommentRequestTypedDict
+            operations.GetKmsComment2Request, operations.GetKmsComment2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsCommentResponse:
+    ) -> operations.GetKmsComment2Response:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -586,8 +588,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsCommentRequest)
-        request = cast(operations.GetKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.GetKmsComment2Request)
+        request = cast(operations.GetKmsComment2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -618,7 +620,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsComment",
+                operation_id="getKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -628,7 +630,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsCommentResponse(
+            return operations.GetKmsComment2Response(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -645,17 +647,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_kms_comment_async(
+    async def get_kms_comment2_async(
         self,
         *,
         request: Union[
-            operations.GetKmsCommentRequest, operations.GetKmsCommentRequestTypedDict
+            operations.GetKmsComment2Request, operations.GetKmsComment2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsCommentResponse:
+    ) -> operations.GetKmsComment2Response:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -675,8 +677,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsCommentRequest)
-        request = cast(operations.GetKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.GetKmsComment2Request)
+        request = cast(operations.GetKmsComment2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -707,7 +709,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsComment",
+                operation_id="getKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -717,7 +719,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsCommentResponse(
+            return operations.GetKmsComment2Response(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -734,17 +736,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_kms_page(
+    def get_kms_page2(
         self,
         *,
         request: Union[
-            operations.GetKmsPageRequest, operations.GetKmsPageRequestTypedDict
+            operations.GetKmsPage2Request, operations.GetKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsPageResponse:
+    ) -> operations.GetKmsPage2Response:
         r"""Retrieve a page
 
         :param request: The request object to send.
@@ -764,8 +766,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsPageRequest)
-        request = cast(operations.GetKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.GetKmsPage2Request)
+        request = cast(operations.GetKmsPage2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -796,7 +798,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsPage",
+                operation_id="getKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -806,7 +808,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsPageResponse(
+            return operations.GetKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -821,17 +823,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_kms_page_async(
+    async def get_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.GetKmsPageRequest, operations.GetKmsPageRequestTypedDict
+            operations.GetKmsPage2Request, operations.GetKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsPageResponse:
+    ) -> operations.GetKmsPage2Response:
         r"""Retrieve a page
 
         :param request: The request object to send.
@@ -851,8 +853,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsPageRequest)
-        request = cast(operations.GetKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.GetKmsPage2Request)
+        request = cast(operations.GetKmsPage2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -883,7 +885,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsPage",
+                operation_id="getKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -893,7 +895,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsPageResponse(
+            return operations.GetKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -908,17 +910,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_kms_space(
+    def get_kms_space2(
         self,
         *,
         request: Union[
-            operations.GetKmsSpaceRequest, operations.GetKmsSpaceRequestTypedDict
+            operations.GetKmsSpace2Request, operations.GetKmsSpace2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsSpaceResponse:
+    ) -> operations.GetKmsSpace2Response:
         r"""Retrieve a space
 
         :param request: The request object to send.
@@ -938,8 +940,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsSpaceRequest)
-        request = cast(operations.GetKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.GetKmsSpace2Request)
+        request = cast(operations.GetKmsSpace2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -970,7 +972,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsSpace",
+                operation_id="getKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -980,7 +982,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsSpaceResponse(
+            return operations.GetKmsSpace2Response(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -995,17 +997,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_kms_space_async(
+    async def get_kms_space2_async(
         self,
         *,
         request: Union[
-            operations.GetKmsSpaceRequest, operations.GetKmsSpaceRequestTypedDict
+            operations.GetKmsSpace2Request, operations.GetKmsSpace2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsSpaceResponse:
+    ) -> operations.GetKmsSpace2Response:
         r"""Retrieve a space
 
         :param request: The request object to send.
@@ -1025,8 +1027,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsSpaceRequest)
-        request = cast(operations.GetKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.GetKmsSpace2Request)
+        request = cast(operations.GetKmsSpace2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1057,7 +1059,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsSpace",
+                operation_id="getKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1067,7 +1069,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsSpaceResponse(
+            return operations.GetKmsSpace2Response(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1082,18 +1084,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_kms_comments(
+    def list_kms_comments2(
         self,
         *,
         request: Union[
-            operations.ListKmsCommentsRequest,
-            operations.ListKmsCommentsRequestTypedDict,
+            operations.ListKmsComments2Request,
+            operations.ListKmsComments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsCommentsResponse:
+    ) -> operations.ListKmsComments2Response:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1113,8 +1115,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsCommentsRequest)
-        request = cast(operations.ListKmsCommentsRequest, request)
+            request = utils.unmarshal(request, operations.ListKmsComments2Request)
+        request = cast(operations.ListKmsComments2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1145,7 +1147,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsComments",
+                operation_id="listKmsComments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1155,7 +1157,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsCommentsResponse(
+            return operations.ListKmsComments2Response(
                 kms_comments=unmarshal_json_response(
                     Optional[List[shared.KmsComment]], http_res
                 ),
@@ -1172,18 +1174,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_kms_comments_async(
+    async def list_kms_comments2_async(
         self,
         *,
         request: Union[
-            operations.ListKmsCommentsRequest,
-            operations.ListKmsCommentsRequestTypedDict,
+            operations.ListKmsComments2Request,
+            operations.ListKmsComments2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsCommentsResponse:
+    ) -> operations.ListKmsComments2Response:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1203,8 +1205,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsCommentsRequest)
-        request = cast(operations.ListKmsCommentsRequest, request)
+            request = utils.unmarshal(request, operations.ListKmsComments2Request)
+        request = cast(operations.ListKmsComments2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1235,7 +1237,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsComments",
+                operation_id="listKmsComments2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1245,7 +1247,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsCommentsResponse(
+            return operations.ListKmsComments2Response(
                 kms_comments=unmarshal_json_response(
                     Optional[List[shared.KmsComment]], http_res
                 ),
@@ -1262,17 +1264,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_kms_pages(
+    def list_kms_pages2(
         self,
         *,
         request: Union[
-            operations.ListKmsPagesRequest, operations.ListKmsPagesRequestTypedDict
+            operations.ListKmsPages2Request, operations.ListKmsPages2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsPagesResponse:
+    ) -> operations.ListKmsPages2Response:
         r"""List all pages
 
         :param request: The request object to send.
@@ -1292,8 +1294,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsPagesRequest)
-        request = cast(operations.ListKmsPagesRequest, request)
+            request = utils.unmarshal(request, operations.ListKmsPages2Request)
+        request = cast(operations.ListKmsPages2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1324,7 +1326,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsPages",
+                operation_id="listKmsPages2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1334,7 +1336,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsPagesResponse(
+            return operations.ListKmsPages2Response(
                 kms_pages=unmarshal_json_response(
                     Optional[List[shared.KmsPage]], http_res
                 ),
@@ -1351,17 +1353,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_kms_pages_async(
+    async def list_kms_pages2_async(
         self,
         *,
         request: Union[
-            operations.ListKmsPagesRequest, operations.ListKmsPagesRequestTypedDict
+            operations.ListKmsPages2Request, operations.ListKmsPages2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsPagesResponse:
+    ) -> operations.ListKmsPages2Response:
         r"""List all pages
 
         :param request: The request object to send.
@@ -1381,8 +1383,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsPagesRequest)
-        request = cast(operations.ListKmsPagesRequest, request)
+            request = utils.unmarshal(request, operations.ListKmsPages2Request)
+        request = cast(operations.ListKmsPages2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1413,7 +1415,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsPages",
+                operation_id="listKmsPages2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1423,7 +1425,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsPagesResponse(
+            return operations.ListKmsPages2Response(
                 kms_pages=unmarshal_json_response(
                     Optional[List[shared.KmsPage]], http_res
                 ),
@@ -1440,17 +1442,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_kms_spaces(
+    def list_kms_spaces2(
         self,
         *,
         request: Union[
-            operations.ListKmsSpacesRequest, operations.ListKmsSpacesRequestTypedDict
+            operations.ListKmsSpaces2Request, operations.ListKmsSpaces2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsSpacesResponse:
+    ) -> operations.ListKmsSpaces2Response:
         r"""List all spaces
 
         :param request: The request object to send.
@@ -1470,8 +1472,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsSpacesRequest)
-        request = cast(operations.ListKmsSpacesRequest, request)
+            request = utils.unmarshal(request, operations.ListKmsSpaces2Request)
+        request = cast(operations.ListKmsSpaces2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1502,7 +1504,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsSpaces",
+                operation_id="listKmsSpaces2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1512,7 +1514,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsSpacesResponse(
+            return operations.ListKmsSpaces2Response(
                 kms_spaces=unmarshal_json_response(
                     Optional[List[shared.KmsSpace]], http_res
                 ),
@@ -1529,17 +1531,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_kms_spaces_async(
+    async def list_kms_spaces2_async(
         self,
         *,
         request: Union[
-            operations.ListKmsSpacesRequest, operations.ListKmsSpacesRequestTypedDict
+            operations.ListKmsSpaces2Request, operations.ListKmsSpaces2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsSpacesResponse:
+    ) -> operations.ListKmsSpaces2Response:
         r"""List all spaces
 
         :param request: The request object to send.
@@ -1559,8 +1561,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsSpacesRequest)
-        request = cast(operations.ListKmsSpacesRequest, request)
+            request = utils.unmarshal(request, operations.ListKmsSpaces2Request)
+        request = cast(operations.ListKmsSpaces2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1591,7 +1593,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsSpaces",
+                operation_id="listKmsSpaces2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1601,7 +1603,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsSpacesResponse(
+            return operations.ListKmsSpaces2Response(
                 kms_spaces=unmarshal_json_response(
                     Optional[List[shared.KmsSpace]], http_res
                 ),
@@ -1618,18 +1620,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_kms_comment(
+    def patch_kms_comment2(
         self,
         *,
         request: Union[
-            operations.PatchKmsCommentRequest,
-            operations.PatchKmsCommentRequestTypedDict,
+            operations.PatchKmsComment2Request,
+            operations.PatchKmsComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsCommentResponse:
+    ) -> operations.PatchKmsComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -1649,8 +1651,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsCommentRequest)
-        request = cast(operations.PatchKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.PatchKmsComment2Request)
+        request = cast(operations.PatchKmsComment2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1684,7 +1686,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsComment",
+                operation_id="patchKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1694,7 +1696,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsCommentResponse(
+            return operations.PatchKmsComment2Response(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -1711,18 +1713,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_kms_comment_async(
+    async def patch_kms_comment2_async(
         self,
         *,
         request: Union[
-            operations.PatchKmsCommentRequest,
-            operations.PatchKmsCommentRequestTypedDict,
+            operations.PatchKmsComment2Request,
+            operations.PatchKmsComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsCommentResponse:
+    ) -> operations.PatchKmsComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -1742,8 +1744,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsCommentRequest)
-        request = cast(operations.PatchKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.PatchKmsComment2Request)
+        request = cast(operations.PatchKmsComment2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1777,7 +1779,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsComment",
+                operation_id="patchKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1787,7 +1789,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsCommentResponse(
+            return operations.PatchKmsComment2Response(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -1804,17 +1806,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_kms_page(
+    def patch_kms_page2(
         self,
         *,
         request: Union[
-            operations.PatchKmsPageRequest, operations.PatchKmsPageRequestTypedDict
+            operations.PatchKmsPage2Request, operations.PatchKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsPageResponse:
+    ) -> operations.PatchKmsPage2Response:
         r"""Update a page
 
         :param request: The request object to send.
@@ -1834,8 +1836,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsPageRequest)
-        request = cast(operations.PatchKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.PatchKmsPage2Request)
+        request = cast(operations.PatchKmsPage2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1869,7 +1871,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsPage",
+                operation_id="patchKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1879,7 +1881,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsPageResponse(
+            return operations.PatchKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1894,17 +1896,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_kms_page_async(
+    async def patch_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.PatchKmsPageRequest, operations.PatchKmsPageRequestTypedDict
+            operations.PatchKmsPage2Request, operations.PatchKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsPageResponse:
+    ) -> operations.PatchKmsPage2Response:
         r"""Update a page
 
         :param request: The request object to send.
@@ -1924,8 +1926,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsPageRequest)
-        request = cast(operations.PatchKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.PatchKmsPage2Request)
+        request = cast(operations.PatchKmsPage2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1959,7 +1961,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsPage",
+                operation_id="patchKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1969,7 +1971,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsPageResponse(
+            return operations.PatchKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1984,17 +1986,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_kms_space(
+    def patch_kms_space2(
         self,
         *,
         request: Union[
-            operations.PatchKmsSpaceRequest, operations.PatchKmsSpaceRequestTypedDict
+            operations.PatchKmsSpace2Request, operations.PatchKmsSpace2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsSpaceResponse:
+    ) -> operations.PatchKmsSpace2Response:
         r"""Update a space
 
         :param request: The request object to send.
@@ -2014,8 +2016,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsSpaceRequest)
-        request = cast(operations.PatchKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.PatchKmsSpace2Request)
+        request = cast(operations.PatchKmsSpace2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2049,7 +2051,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsSpace",
+                operation_id="patchKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2059,7 +2061,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsSpaceResponse(
+            return operations.PatchKmsSpace2Response(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2074,17 +2076,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_kms_space_async(
+    async def patch_kms_space2_async(
         self,
         *,
         request: Union[
-            operations.PatchKmsSpaceRequest, operations.PatchKmsSpaceRequestTypedDict
+            operations.PatchKmsSpace2Request, operations.PatchKmsSpace2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsSpaceResponse:
+    ) -> operations.PatchKmsSpace2Response:
         r"""Update a space
 
         :param request: The request object to send.
@@ -2104,8 +2106,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsSpaceRequest)
-        request = cast(operations.PatchKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.PatchKmsSpace2Request)
+        request = cast(operations.PatchKmsSpace2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2139,7 +2141,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsSpace",
+                operation_id="patchKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2149,7 +2151,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsSpaceResponse(
+            return operations.PatchKmsSpace2Response(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2164,18 +2166,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_kms_comment(
+    def remove_kms_comment2(
         self,
         *,
         request: Union[
-            operations.RemoveKmsCommentRequest,
-            operations.RemoveKmsCommentRequestTypedDict,
+            operations.RemoveKmsComment2Request,
+            operations.RemoveKmsComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsCommentResponse:
+    ) -> operations.RemoveKmsComment2Response:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2195,8 +2197,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsCommentRequest)
-        request = cast(operations.RemoveKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveKmsComment2Request)
+        request = cast(operations.RemoveKmsComment2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2227,7 +2229,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsComment",
+                operation_id="removeKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2237,7 +2239,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsCommentResponse(
+            return operations.RemoveKmsComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2250,7 +2252,7 @@ class Kms(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsCommentResponse(
+            return operations.RemoveKmsComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2259,18 +2261,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_kms_comment_async(
+    async def remove_kms_comment2_async(
         self,
         *,
         request: Union[
-            operations.RemoveKmsCommentRequest,
-            operations.RemoveKmsCommentRequestTypedDict,
+            operations.RemoveKmsComment2Request,
+            operations.RemoveKmsComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsCommentResponse:
+    ) -> operations.RemoveKmsComment2Response:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2290,8 +2292,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsCommentRequest)
-        request = cast(operations.RemoveKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.RemoveKmsComment2Request)
+        request = cast(operations.RemoveKmsComment2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2322,7 +2324,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsComment",
+                operation_id="removeKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2332,7 +2334,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsCommentResponse(
+            return operations.RemoveKmsComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2345,7 +2347,7 @@ class Kms(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsCommentResponse(
+            return operations.RemoveKmsComment2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2354,17 +2356,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_kms_page(
+    def remove_kms_page2(
         self,
         *,
         request: Union[
-            operations.RemoveKmsPageRequest, operations.RemoveKmsPageRequestTypedDict
+            operations.RemoveKmsPage2Request, operations.RemoveKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsPageResponse:
+    ) -> operations.RemoveKmsPage2Response:
         r"""Remove a page
 
         :param request: The request object to send.
@@ -2384,8 +2386,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsPageRequest)
-        request = cast(operations.RemoveKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.RemoveKmsPage2Request)
+        request = cast(operations.RemoveKmsPage2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2416,7 +2418,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsPage",
+                operation_id="removeKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2426,7 +2428,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsPageResponse(
+            return operations.RemoveKmsPage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2439,7 +2441,7 @@ class Kms(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsPageResponse(
+            return operations.RemoveKmsPage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2448,17 +2450,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_kms_page_async(
+    async def remove_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.RemoveKmsPageRequest, operations.RemoveKmsPageRequestTypedDict
+            operations.RemoveKmsPage2Request, operations.RemoveKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsPageResponse:
+    ) -> operations.RemoveKmsPage2Response:
         r"""Remove a page
 
         :param request: The request object to send.
@@ -2478,8 +2480,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsPageRequest)
-        request = cast(operations.RemoveKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.RemoveKmsPage2Request)
+        request = cast(operations.RemoveKmsPage2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2510,7 +2512,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsPage",
+                operation_id="removeKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2520,7 +2522,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsPageResponse(
+            return operations.RemoveKmsPage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2533,7 +2535,7 @@ class Kms(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsPageResponse(
+            return operations.RemoveKmsPage2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2542,17 +2544,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_kms_space(
+    def remove_kms_space2(
         self,
         *,
         request: Union[
-            operations.RemoveKmsSpaceRequest, operations.RemoveKmsSpaceRequestTypedDict
+            operations.RemoveKmsSpace2Request,
+            operations.RemoveKmsSpace2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsSpaceResponse:
+    ) -> operations.RemoveKmsSpace2Response:
         r"""Remove a space
 
         :param request: The request object to send.
@@ -2572,8 +2575,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsSpaceRequest)
-        request = cast(operations.RemoveKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.RemoveKmsSpace2Request)
+        request = cast(operations.RemoveKmsSpace2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2604,7 +2607,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsSpace",
+                operation_id="removeKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2614,7 +2617,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsSpaceResponse(
+            return operations.RemoveKmsSpace2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2627,7 +2630,7 @@ class Kms(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsSpaceResponse(
+            return operations.RemoveKmsSpace2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2636,17 +2639,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_kms_space_async(
+    async def remove_kms_space2_async(
         self,
         *,
         request: Union[
-            operations.RemoveKmsSpaceRequest, operations.RemoveKmsSpaceRequestTypedDict
+            operations.RemoveKmsSpace2Request,
+            operations.RemoveKmsSpace2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsSpaceResponse:
+    ) -> operations.RemoveKmsSpace2Response:
         r"""Remove a space
 
         :param request: The request object to send.
@@ -2666,8 +2670,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsSpaceRequest)
-        request = cast(operations.RemoveKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.RemoveKmsSpace2Request)
+        request = cast(operations.RemoveKmsSpace2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2698,7 +2702,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsSpace",
+                operation_id="removeKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2708,7 +2712,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsSpaceResponse(
+            return operations.RemoveKmsSpace2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2721,7 +2725,7 @@ class Kms(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsSpaceResponse(
+            return operations.RemoveKmsSpace2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2730,18 +2734,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_kms_comment(
+    def update_kms_comment2(
         self,
         *,
         request: Union[
-            operations.UpdateKmsCommentRequest,
-            operations.UpdateKmsCommentRequestTypedDict,
+            operations.UpdateKmsComment2Request,
+            operations.UpdateKmsComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsCommentResponse:
+    ) -> operations.UpdateKmsComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2761,8 +2765,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsCommentRequest)
-        request = cast(operations.UpdateKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateKmsComment2Request)
+        request = cast(operations.UpdateKmsComment2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2796,7 +2800,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsComment",
+                operation_id="updateKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2806,7 +2810,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsCommentResponse(
+            return operations.UpdateKmsComment2Response(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -2823,18 +2827,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_kms_comment_async(
+    async def update_kms_comment2_async(
         self,
         *,
         request: Union[
-            operations.UpdateKmsCommentRequest,
-            operations.UpdateKmsCommentRequestTypedDict,
+            operations.UpdateKmsComment2Request,
+            operations.UpdateKmsComment2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsCommentResponse:
+    ) -> operations.UpdateKmsComment2Response:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2854,8 +2858,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsCommentRequest)
-        request = cast(operations.UpdateKmsCommentRequest, request)
+            request = utils.unmarshal(request, operations.UpdateKmsComment2Request)
+        request = cast(operations.UpdateKmsComment2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2889,7 +2893,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsComment",
+                operation_id="updateKmsComment2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2899,7 +2903,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsCommentResponse(
+            return operations.UpdateKmsComment2Response(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -2916,17 +2920,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_kms_page(
+    def update_kms_page2(
         self,
         *,
         request: Union[
-            operations.UpdateKmsPageRequest, operations.UpdateKmsPageRequestTypedDict
+            operations.UpdateKmsPage2Request, operations.UpdateKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsPageResponse:
+    ) -> operations.UpdateKmsPage2Response:
         r"""Update a page
 
         :param request: The request object to send.
@@ -2946,8 +2950,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsPageRequest)
-        request = cast(operations.UpdateKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.UpdateKmsPage2Request)
+        request = cast(operations.UpdateKmsPage2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2981,7 +2985,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsPage",
+                operation_id="updateKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2991,7 +2995,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsPageResponse(
+            return operations.UpdateKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3006,17 +3010,17 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_kms_page_async(
+    async def update_kms_page2_async(
         self,
         *,
         request: Union[
-            operations.UpdateKmsPageRequest, operations.UpdateKmsPageRequestTypedDict
+            operations.UpdateKmsPage2Request, operations.UpdateKmsPage2RequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsPageResponse:
+    ) -> operations.UpdateKmsPage2Response:
         r"""Update a page
 
         :param request: The request object to send.
@@ -3036,8 +3040,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsPageRequest)
-        request = cast(operations.UpdateKmsPageRequest, request)
+            request = utils.unmarshal(request, operations.UpdateKmsPage2Request)
+        request = cast(operations.UpdateKmsPage2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3071,7 +3075,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsPage",
+                operation_id="updateKmsPage2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3081,7 +3085,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsPageResponse(
+            return operations.UpdateKmsPage2Response(
                 kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3096,17 +3100,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_kms_space(
+    def update_kms_space2(
         self,
         *,
         request: Union[
-            operations.UpdateKmsSpaceRequest, operations.UpdateKmsSpaceRequestTypedDict
+            operations.UpdateKmsSpace2Request,
+            operations.UpdateKmsSpace2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsSpaceResponse:
+    ) -> operations.UpdateKmsSpace2Response:
         r"""Update a space
 
         :param request: The request object to send.
@@ -3126,8 +3131,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsSpaceRequest)
-        request = cast(operations.UpdateKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.UpdateKmsSpace2Request)
+        request = cast(operations.UpdateKmsSpace2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -3161,7 +3166,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsSpace",
+                operation_id="updateKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3171,7 +3176,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsSpaceResponse(
+            return operations.UpdateKmsSpace2Response(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3186,17 +3191,18 @@ class Kms(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_kms_space_async(
+    async def update_kms_space2_async(
         self,
         *,
         request: Union[
-            operations.UpdateKmsSpaceRequest, operations.UpdateKmsSpaceRequestTypedDict
+            operations.UpdateKmsSpace2Request,
+            operations.UpdateKmsSpace2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsSpaceResponse:
+    ) -> operations.UpdateKmsSpace2Response:
         r"""Update a space
 
         :param request: The request object to send.
@@ -3216,8 +3222,8 @@ class Kms(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsSpaceRequest)
-        request = cast(operations.UpdateKmsSpaceRequest, request)
+            request = utils.unmarshal(request, operations.UpdateKmsSpace2Request)
+        request = cast(operations.UpdateKmsSpace2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3251,7 +3257,7 @@ class Kms(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsSpace",
+                operation_id="updateKmsSpace2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -3261,7 +3267,7 @@ class Kms(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsSpaceResponse(
+            return operations.UpdateKmsSpace2Response(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

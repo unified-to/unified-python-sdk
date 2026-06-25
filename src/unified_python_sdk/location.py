@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Location(BaseSDK):
-    def create_commerce_location(
+    def create_commerce_location2(
         self,
         *,
         request: Union[
-            operations.CreateCommerceLocationRequest,
-            operations.CreateCommerceLocationRequestTypedDict,
+            operations.CreateCommerceLocation2Request,
+            operations.CreateCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceLocationResponse:
+    ) -> operations.CreateCommerceLocation2Response:
         r"""Create a location
 
         :param request: The request object to send.
@@ -41,8 +41,10 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceLocationRequest)
-        request = cast(operations.CreateCommerceLocationRequest, request)
+            request = utils.unmarshal(
+                request, operations.CreateCommerceLocation2Request
+            )
+        request = cast(operations.CreateCommerceLocation2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +78,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceLocation",
+                operation_id="createCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -86,7 +88,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceLocationResponse(
+            return operations.CreateCommerceLocation2Response(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -103,18 +105,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_location_async(
+    async def create_commerce_location2_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceLocationRequest,
-            operations.CreateCommerceLocationRequestTypedDict,
+            operations.CreateCommerceLocation2Request,
+            operations.CreateCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceLocationResponse:
+    ) -> operations.CreateCommerceLocation2Response:
         r"""Create a location
 
         :param request: The request object to send.
@@ -134,8 +136,10 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceLocationRequest)
-        request = cast(operations.CreateCommerceLocationRequest, request)
+            request = utils.unmarshal(
+                request, operations.CreateCommerceLocation2Request
+            )
+        request = cast(operations.CreateCommerceLocation2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +173,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceLocation",
+                operation_id="createCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -179,7 +183,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceLocationResponse(
+            return operations.CreateCommerceLocation2Response(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -196,18 +200,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_location(
+    def create_hris_location2(
         self,
         *,
         request: Union[
-            operations.CreateHrisLocationRequest,
-            operations.CreateHrisLocationRequestTypedDict,
+            operations.CreateHrisLocation2Request,
+            operations.CreateHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisLocationResponse:
+    ) -> operations.CreateHrisLocation2Response:
         r"""Create a location
 
         :param request: The request object to send.
@@ -227,8 +231,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
-        request = cast(operations.CreateHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisLocation2Request)
+        request = cast(operations.CreateHrisLocation2Request, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +266,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisLocation",
+                operation_id="createHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -272,7 +276,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisLocationResponse(
+            return operations.CreateHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -289,18 +293,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_location_async(
+    async def create_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisLocationRequest,
-            operations.CreateHrisLocationRequestTypedDict,
+            operations.CreateHrisLocation2Request,
+            operations.CreateHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisLocationResponse:
+    ) -> operations.CreateHrisLocation2Response:
         r"""Create a location
 
         :param request: The request object to send.
@@ -320,8 +324,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
-        request = cast(operations.CreateHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.CreateHrisLocation2Request)
+        request = cast(operations.CreateHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="POST",
@@ -355,7 +359,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisLocation",
+                operation_id="createHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -365,7 +369,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisLocationResponse(
+            return operations.CreateHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -382,18 +386,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_location(
+    def get_clubs_location2(
         self,
         *,
         request: Union[
-            operations.GetClubsLocationRequest,
-            operations.GetClubsLocationRequestTypedDict,
+            operations.GetClubsLocation2Request,
+            operations.GetClubsLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsLocationResponse:
+    ) -> operations.GetClubsLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -413,8 +417,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsLocationRequest)
-        request = cast(operations.GetClubsLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsLocation2Request)
+        request = cast(operations.GetClubsLocation2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -445,7 +449,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsLocation",
+                operation_id="getClubsLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -455,7 +459,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsLocationResponse(
+            return operations.GetClubsLocation2Response(
                 clubs_location=unmarshal_json_response(
                     Optional[shared.ClubsLocation], http_res
                 ),
@@ -472,18 +476,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_location_async(
+    async def get_clubs_location2_async(
         self,
         *,
         request: Union[
-            operations.GetClubsLocationRequest,
-            operations.GetClubsLocationRequestTypedDict,
+            operations.GetClubsLocation2Request,
+            operations.GetClubsLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsLocationResponse:
+    ) -> operations.GetClubsLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -503,8 +507,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsLocationRequest)
-        request = cast(operations.GetClubsLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetClubsLocation2Request)
+        request = cast(operations.GetClubsLocation2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -535,7 +539,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsLocation",
+                operation_id="getClubsLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -545,7 +549,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsLocationResponse(
+            return operations.GetClubsLocation2Response(
                 clubs_location=unmarshal_json_response(
                     Optional[shared.ClubsLocation], http_res
                 ),
@@ -562,18 +566,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_location(
+    def get_commerce_location2(
         self,
         *,
         request: Union[
-            operations.GetCommerceLocationRequest,
-            operations.GetCommerceLocationRequestTypedDict,
+            operations.GetCommerceLocation2Request,
+            operations.GetCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceLocationResponse:
+    ) -> operations.GetCommerceLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -593,8 +597,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceLocationRequest)
-        request = cast(operations.GetCommerceLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetCommerceLocation2Request)
+        request = cast(operations.GetCommerceLocation2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -625,7 +629,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceLocation",
+                operation_id="getCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -635,7 +639,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceLocationResponse(
+            return operations.GetCommerceLocation2Response(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -652,18 +656,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_location_async(
+    async def get_commerce_location2_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceLocationRequest,
-            operations.GetCommerceLocationRequestTypedDict,
+            operations.GetCommerceLocation2Request,
+            operations.GetCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceLocationResponse:
+    ) -> operations.GetCommerceLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -683,8 +687,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceLocationRequest)
-        request = cast(operations.GetCommerceLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetCommerceLocation2Request)
+        request = cast(operations.GetCommerceLocation2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -715,7 +719,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceLocation",
+                operation_id="getCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -725,7 +729,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceLocationResponse(
+            return operations.GetCommerceLocation2Response(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -742,18 +746,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_location(
+    def get_hris_location2(
         self,
         *,
         request: Union[
-            operations.GetHrisLocationRequest,
-            operations.GetHrisLocationRequestTypedDict,
+            operations.GetHrisLocation2Request,
+            operations.GetHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisLocationResponse:
+    ) -> operations.GetHrisLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -773,8 +777,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisLocationRequest)
-        request = cast(operations.GetHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisLocation2Request)
+        request = cast(operations.GetHrisLocation2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -805,7 +809,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisLocation",
+                operation_id="getHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -815,7 +819,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisLocationResponse(
+            return operations.GetHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -832,18 +836,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_location_async(
+    async def get_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.GetHrisLocationRequest,
-            operations.GetHrisLocationRequestTypedDict,
+            operations.GetHrisLocation2Request,
+            operations.GetHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisLocationResponse:
+    ) -> operations.GetHrisLocation2Response:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -863,8 +867,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisLocationRequest)
-        request = cast(operations.GetHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.GetHrisLocation2Request)
+        request = cast(operations.GetHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -895,7 +899,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisLocation",
+                operation_id="getHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -905,7 +909,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisLocationResponse(
+            return operations.GetHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -922,18 +926,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_locations(
+    def list_clubs_locations2(
         self,
         *,
         request: Union[
-            operations.ListClubsLocationsRequest,
-            operations.ListClubsLocationsRequestTypedDict,
+            operations.ListClubsLocations2Request,
+            operations.ListClubsLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsLocationsResponse:
+    ) -> operations.ListClubsLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -953,8 +957,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsLocationsRequest)
-        request = cast(operations.ListClubsLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsLocations2Request)
+        request = cast(operations.ListClubsLocations2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -985,7 +989,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsLocations",
+                operation_id="listClubsLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -995,7 +999,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsLocationsResponse(
+            return operations.ListClubsLocations2Response(
                 clubs_locations=unmarshal_json_response(
                     Optional[List[shared.ClubsLocation]], http_res
                 ),
@@ -1012,18 +1016,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_locations_async(
+    async def list_clubs_locations2_async(
         self,
         *,
         request: Union[
-            operations.ListClubsLocationsRequest,
-            operations.ListClubsLocationsRequestTypedDict,
+            operations.ListClubsLocations2Request,
+            operations.ListClubsLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsLocationsResponse:
+    ) -> operations.ListClubsLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -1043,8 +1047,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsLocationsRequest)
-        request = cast(operations.ListClubsLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListClubsLocations2Request)
+        request = cast(operations.ListClubsLocations2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1075,7 +1079,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsLocations",
+                operation_id="listClubsLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1085,7 +1089,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsLocationsResponse(
+            return operations.ListClubsLocations2Response(
                 clubs_locations=unmarshal_json_response(
                     Optional[List[shared.ClubsLocation]], http_res
                 ),
@@ -1102,18 +1106,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_locations(
+    def list_commerce_locations2(
         self,
         *,
         request: Union[
-            operations.ListCommerceLocationsRequest,
-            operations.ListCommerceLocationsRequestTypedDict,
+            operations.ListCommerceLocations2Request,
+            operations.ListCommerceLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceLocationsResponse:
+    ) -> operations.ListCommerceLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -1133,8 +1137,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceLocationsRequest)
-        request = cast(operations.ListCommerceLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListCommerceLocations2Request)
+        request = cast(operations.ListCommerceLocations2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1165,7 +1169,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceLocations",
+                operation_id="listCommerceLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1175,7 +1179,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceLocationsResponse(
+            return operations.ListCommerceLocations2Response(
                 commerce_locations=unmarshal_json_response(
                     Optional[List[shared.CommerceLocation]], http_res
                 ),
@@ -1192,18 +1196,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_locations_async(
+    async def list_commerce_locations2_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceLocationsRequest,
-            operations.ListCommerceLocationsRequestTypedDict,
+            operations.ListCommerceLocations2Request,
+            operations.ListCommerceLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceLocationsResponse:
+    ) -> operations.ListCommerceLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -1223,8 +1227,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceLocationsRequest)
-        request = cast(operations.ListCommerceLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListCommerceLocations2Request)
+        request = cast(operations.ListCommerceLocations2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1255,7 +1259,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceLocations",
+                operation_id="listCommerceLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1265,7 +1269,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceLocationsResponse(
+            return operations.ListCommerceLocations2Response(
                 commerce_locations=unmarshal_json_response(
                     Optional[List[shared.CommerceLocation]], http_res
                 ),
@@ -1282,18 +1286,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_locations(
+    def list_hris_locations2(
         self,
         *,
         request: Union[
-            operations.ListHrisLocationsRequest,
-            operations.ListHrisLocationsRequestTypedDict,
+            operations.ListHrisLocations2Request,
+            operations.ListHrisLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisLocationsResponse:
+    ) -> operations.ListHrisLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -1313,8 +1317,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
-        request = cast(operations.ListHrisLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisLocations2Request)
+        request = cast(operations.ListHrisLocations2Request, request)
 
         req = self._build_request(
             method="GET",
@@ -1345,7 +1349,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisLocations",
+                operation_id="listHrisLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1355,7 +1359,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisLocationsResponse(
+            return operations.ListHrisLocations2Response(
                 hris_locations=unmarshal_json_response(
                     Optional[List[shared.HrisLocation]], http_res
                 ),
@@ -1372,18 +1376,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_locations_async(
+    async def list_hris_locations2_async(
         self,
         *,
         request: Union[
-            operations.ListHrisLocationsRequest,
-            operations.ListHrisLocationsRequestTypedDict,
+            operations.ListHrisLocations2Request,
+            operations.ListHrisLocations2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisLocationsResponse:
+    ) -> operations.ListHrisLocations2Response:
         r"""List all locations
 
         :param request: The request object to send.
@@ -1403,8 +1407,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
-        request = cast(operations.ListHrisLocationsRequest, request)
+            request = utils.unmarshal(request, operations.ListHrisLocations2Request)
+        request = cast(operations.ListHrisLocations2Request, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1435,7 +1439,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisLocations",
+                operation_id="listHrisLocations2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1445,7 +1449,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisLocationsResponse(
+            return operations.ListHrisLocations2Response(
                 hris_locations=unmarshal_json_response(
                     Optional[List[shared.HrisLocation]], http_res
                 ),
@@ -1462,18 +1466,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_location(
+    def patch_commerce_location2(
         self,
         *,
         request: Union[
-            operations.PatchCommerceLocationRequest,
-            operations.PatchCommerceLocationRequestTypedDict,
+            operations.PatchCommerceLocation2Request,
+            operations.PatchCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceLocationResponse:
+    ) -> operations.PatchCommerceLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -1493,8 +1497,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceLocationRequest)
-        request = cast(operations.PatchCommerceLocationRequest, request)
+            request = utils.unmarshal(request, operations.PatchCommerceLocation2Request)
+        request = cast(operations.PatchCommerceLocation2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1528,7 +1532,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceLocation",
+                operation_id="patchCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1538,7 +1542,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceLocationResponse(
+            return operations.PatchCommerceLocation2Response(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -1555,18 +1559,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_location_async(
+    async def patch_commerce_location2_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceLocationRequest,
-            operations.PatchCommerceLocationRequestTypedDict,
+            operations.PatchCommerceLocation2Request,
+            operations.PatchCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceLocationResponse:
+    ) -> operations.PatchCommerceLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -1586,8 +1590,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceLocationRequest)
-        request = cast(operations.PatchCommerceLocationRequest, request)
+            request = utils.unmarshal(request, operations.PatchCommerceLocation2Request)
+        request = cast(operations.PatchCommerceLocation2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1621,7 +1625,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceLocation",
+                operation_id="patchCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1631,7 +1635,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceLocationResponse(
+            return operations.PatchCommerceLocation2Response(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -1648,18 +1652,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_location(
+    def patch_hris_location2(
         self,
         *,
         request: Union[
-            operations.PatchHrisLocationRequest,
-            operations.PatchHrisLocationRequestTypedDict,
+            operations.PatchHrisLocation2Request,
+            operations.PatchHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisLocationResponse:
+    ) -> operations.PatchHrisLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -1679,8 +1683,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
-        request = cast(operations.PatchHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisLocation2Request)
+        request = cast(operations.PatchHrisLocation2Request, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1714,7 +1718,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisLocation",
+                operation_id="patchHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1724,7 +1728,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisLocationResponse(
+            return operations.PatchHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -1741,18 +1745,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_location_async(
+    async def patch_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisLocationRequest,
-            operations.PatchHrisLocationRequestTypedDict,
+            operations.PatchHrisLocation2Request,
+            operations.PatchHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisLocationResponse:
+    ) -> operations.PatchHrisLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -1772,8 +1776,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
-        request = cast(operations.PatchHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.PatchHrisLocation2Request)
+        request = cast(operations.PatchHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1807,7 +1811,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisLocation",
+                operation_id="patchHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1817,7 +1821,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisLocationResponse(
+            return operations.PatchHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -1834,18 +1838,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_location(
+    def remove_commerce_location2(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceLocationRequest,
-            operations.RemoveCommerceLocationRequestTypedDict,
+            operations.RemoveCommerceLocation2Request,
+            operations.RemoveCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceLocationResponse:
+    ) -> operations.RemoveCommerceLocation2Response:
         r"""Remove a location
 
         :param request: The request object to send.
@@ -1865,8 +1869,10 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceLocationRequest)
-        request = cast(operations.RemoveCommerceLocationRequest, request)
+            request = utils.unmarshal(
+                request, operations.RemoveCommerceLocation2Request
+            )
+        request = cast(operations.RemoveCommerceLocation2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1897,7 +1903,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceLocation",
+                operation_id="removeCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -1907,7 +1913,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceLocationResponse(
+            return operations.RemoveCommerceLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1920,7 +1926,7 @@ class Location(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceLocationResponse(
+            return operations.RemoveCommerceLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1929,18 +1935,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_location_async(
+    async def remove_commerce_location2_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceLocationRequest,
-            operations.RemoveCommerceLocationRequestTypedDict,
+            operations.RemoveCommerceLocation2Request,
+            operations.RemoveCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceLocationResponse:
+    ) -> operations.RemoveCommerceLocation2Response:
         r"""Remove a location
 
         :param request: The request object to send.
@@ -1960,8 +1966,10 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceLocationRequest)
-        request = cast(operations.RemoveCommerceLocationRequest, request)
+            request = utils.unmarshal(
+                request, operations.RemoveCommerceLocation2Request
+            )
+        request = cast(operations.RemoveCommerceLocation2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1992,7 +2000,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceLocation",
+                operation_id="removeCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2002,7 +2010,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceLocationResponse(
+            return operations.RemoveCommerceLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2015,7 +2023,7 @@ class Location(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceLocationResponse(
+            return operations.RemoveCommerceLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2024,18 +2032,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_location(
+    def remove_hris_location2(
         self,
         *,
         request: Union[
-            operations.RemoveHrisLocationRequest,
-            operations.RemoveHrisLocationRequestTypedDict,
+            operations.RemoveHrisLocation2Request,
+            operations.RemoveHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisLocationResponse:
+    ) -> operations.RemoveHrisLocation2Response:
         r"""Remove a location
 
         :param request: The request object to send.
@@ -2055,8 +2063,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
-        request = cast(operations.RemoveHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisLocation2Request)
+        request = cast(operations.RemoveHrisLocation2Request, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2087,7 +2095,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisLocation",
+                operation_id="removeHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2097,7 +2105,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisLocationResponse(
+            return operations.RemoveHrisLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2110,7 +2118,7 @@ class Location(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisLocationResponse(
+            return operations.RemoveHrisLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2119,18 +2127,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_location_async(
+    async def remove_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisLocationRequest,
-            operations.RemoveHrisLocationRequestTypedDict,
+            operations.RemoveHrisLocation2Request,
+            operations.RemoveHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisLocationResponse:
+    ) -> operations.RemoveHrisLocation2Response:
         r"""Remove a location
 
         :param request: The request object to send.
@@ -2150,8 +2158,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
-        request = cast(operations.RemoveHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.RemoveHrisLocation2Request)
+        request = cast(operations.RemoveHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2182,7 +2190,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisLocation",
+                operation_id="removeHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2192,7 +2200,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisLocationResponse(
+            return operations.RemoveHrisLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2205,7 +2213,7 @@ class Location(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisLocationResponse(
+            return operations.RemoveHrisLocation2Response(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2214,18 +2222,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_location(
+    def update_commerce_location2(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceLocationRequest,
-            operations.UpdateCommerceLocationRequestTypedDict,
+            operations.UpdateCommerceLocation2Request,
+            operations.UpdateCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceLocationResponse:
+    ) -> operations.UpdateCommerceLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -2245,8 +2253,10 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceLocationRequest)
-        request = cast(operations.UpdateCommerceLocationRequest, request)
+            request = utils.unmarshal(
+                request, operations.UpdateCommerceLocation2Request
+            )
+        request = cast(operations.UpdateCommerceLocation2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2280,7 +2290,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceLocation",
+                operation_id="updateCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2290,7 +2300,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceLocationResponse(
+            return operations.UpdateCommerceLocation2Response(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -2307,18 +2317,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_location_async(
+    async def update_commerce_location2_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceLocationRequest,
-            operations.UpdateCommerceLocationRequestTypedDict,
+            operations.UpdateCommerceLocation2Request,
+            operations.UpdateCommerceLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceLocationResponse:
+    ) -> operations.UpdateCommerceLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -2338,8 +2348,10 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceLocationRequest)
-        request = cast(operations.UpdateCommerceLocationRequest, request)
+            request = utils.unmarshal(
+                request, operations.UpdateCommerceLocation2Request
+            )
+        request = cast(operations.UpdateCommerceLocation2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2373,7 +2385,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceLocation",
+                operation_id="updateCommerceLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2383,7 +2395,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceLocationResponse(
+            return operations.UpdateCommerceLocation2Response(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -2400,18 +2412,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_location(
+    def update_hris_location2(
         self,
         *,
         request: Union[
-            operations.UpdateHrisLocationRequest,
-            operations.UpdateHrisLocationRequestTypedDict,
+            operations.UpdateHrisLocation2Request,
+            operations.UpdateHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisLocationResponse:
+    ) -> operations.UpdateHrisLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -2431,8 +2443,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
-        request = cast(operations.UpdateHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisLocation2Request)
+        request = cast(operations.UpdateHrisLocation2Request, request)
 
         req = self._build_request(
             method="PUT",
@@ -2466,7 +2478,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisLocation",
+                operation_id="updateHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2476,7 +2488,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisLocationResponse(
+            return operations.UpdateHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
@@ -2493,18 +2505,18 @@ class Location(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_location_async(
+    async def update_hris_location2_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisLocationRequest,
-            operations.UpdateHrisLocationRequestTypedDict,
+            operations.UpdateHrisLocation2Request,
+            operations.UpdateHrisLocation2RequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisLocationResponse:
+    ) -> operations.UpdateHrisLocation2Response:
         r"""Update a location
 
         :param request: The request object to send.
@@ -2524,8 +2536,8 @@ class Location(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
-        request = cast(operations.UpdateHrisLocationRequest, request)
+            request = utils.unmarshal(request, operations.UpdateHrisLocation2Request)
+        request = cast(operations.UpdateHrisLocation2Request, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2559,7 +2571,7 @@ class Location(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisLocation",
+                operation_id="updateHrisLocation2",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
             ),
@@ -2569,7 +2581,7 @@ class Location(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisLocationResponse(
+            return operations.UpdateHrisLocation2Response(
                 hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
