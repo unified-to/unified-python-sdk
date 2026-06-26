@@ -777,6 +777,10 @@ if TYPE_CHECKING:
         CreateUnifiedWebhookResponse,
         CreateUnifiedWebhookResponseTypedDict,
     )
+    from .createunifiedworkspacesecretsmanager import (
+        CreateUnifiedWorkspaceSecretsmanagerResponse,
+        CreateUnifiedWorkspaceSecretsmanagerResponseTypedDict,
+    )
     from .createverificationrequest2 import (
         CreateVerificationRequest2QueryParamFields,
         CreateVerificationRequest2Request,
@@ -1719,6 +1723,12 @@ if TYPE_CHECKING:
         GetUnifiedWebhookRequestTypedDict,
         GetUnifiedWebhookResponse,
         GetUnifiedWebhookResponseTypedDict,
+    )
+    from .getunifiedworkspacesecretsmanager import (
+        GetUnifiedWorkspaceSecretsmanagerRequest,
+        GetUnifiedWorkspaceSecretsmanagerRequestTypedDict,
+        GetUnifiedWorkspaceSecretsmanagerResponse,
+        GetUnifiedWorkspaceSecretsmanagerResponseTypedDict,
     )
     from .getverificationpackage2 import (
         GetVerificationPackage2QueryParamFields,
@@ -2736,6 +2746,12 @@ if TYPE_CHECKING:
         ListUnifiedWebhooksRequestTypedDict,
         ListUnifiedWebhooksResponse,
         ListUnifiedWebhooksResponseTypedDict,
+    )
+    from .listunifiedworkspacesecretsmanagers import (
+        ListUnifiedWorkspaceSecretsmanagersRequest,
+        ListUnifiedWorkspaceSecretsmanagersRequestTypedDict,
+        ListUnifiedWorkspaceSecretsmanagersResponse,
+        ListUnifiedWorkspaceSecretsmanagersResponseTypedDict,
     )
     from .listverificationpackages2 import (
         ListVerificationPackages2QueryParamFields,
@@ -4149,6 +4165,12 @@ if TYPE_CHECKING:
         RemoveUnifiedWebhookResponse,
         RemoveUnifiedWebhookResponseTypedDict,
     )
+    from .removeunifiedworkspacesecretsmanager import (
+        RemoveUnifiedWorkspaceSecretsmanagerRequest,
+        RemoveUnifiedWorkspaceSecretsmanagerRequestTypedDict,
+        RemoveUnifiedWorkspaceSecretsmanagerResponse,
+        RemoveUnifiedWorkspaceSecretsmanagerResponseTypedDict,
+    )
     from .removeverificationrequest2 import (
         RemoveVerificationRequest2Request,
         RemoveVerificationRequest2RequestTypedDict,
@@ -5467,6 +5489,8 @@ __all__ = [
     "CreateUnifiedWebhookRequestTypedDict",
     "CreateUnifiedWebhookResponse",
     "CreateUnifiedWebhookResponseTypedDict",
+    "CreateUnifiedWorkspaceSecretsmanagerResponse",
+    "CreateUnifiedWorkspaceSecretsmanagerResponseTypedDict",
     "CreateVerificationRequest2QueryParamFields",
     "CreateVerificationRequest2Request",
     "CreateVerificationRequest2RequestTypedDict",
@@ -6138,6 +6162,10 @@ __all__ = [
     "GetUnifiedWebhookRequestTypedDict",
     "GetUnifiedWebhookResponse",
     "GetUnifiedWebhookResponseTypedDict",
+    "GetUnifiedWorkspaceSecretsmanagerRequest",
+    "GetUnifiedWorkspaceSecretsmanagerRequestTypedDict",
+    "GetUnifiedWorkspaceSecretsmanagerResponse",
+    "GetUnifiedWorkspaceSecretsmanagerResponseTypedDict",
     "GetVerificationPackage2QueryParamFields",
     "GetVerificationPackage2Request",
     "GetVerificationPackage2RequestTypedDict",
@@ -6859,6 +6887,10 @@ __all__ = [
     "ListUnifiedWebhooksRequestTypedDict",
     "ListUnifiedWebhooksResponse",
     "ListUnifiedWebhooksResponseTypedDict",
+    "ListUnifiedWorkspaceSecretsmanagersRequest",
+    "ListUnifiedWorkspaceSecretsmanagersRequestTypedDict",
+    "ListUnifiedWorkspaceSecretsmanagersResponse",
+    "ListUnifiedWorkspaceSecretsmanagersResponseTypedDict",
     "ListVerificationPackages2QueryParamFields",
     "ListVerificationPackages2Request",
     "ListVerificationPackages2RequestTypedDict",
@@ -7837,6 +7869,10 @@ __all__ = [
     "RemoveUnifiedWebhookRequestTypedDict",
     "RemoveUnifiedWebhookResponse",
     "RemoveUnifiedWebhookResponseTypedDict",
+    "RemoveUnifiedWorkspaceSecretsmanagerRequest",
+    "RemoveUnifiedWorkspaceSecretsmanagerRequestTypedDict",
+    "RemoveUnifiedWorkspaceSecretsmanagerResponse",
+    "RemoveUnifiedWorkspaceSecretsmanagerResponseTypedDict",
     "RemoveVerificationRequest2Request",
     "RemoveVerificationRequest2RequestTypedDict",
     "RemoveVerificationRequest2Response",
@@ -8934,6 +8970,8 @@ _dynamic_imports: dict[str, str] = {
     "CreateUnifiedWebhookRequestTypedDict": ".createunifiedwebhook",
     "CreateUnifiedWebhookResponse": ".createunifiedwebhook",
     "CreateUnifiedWebhookResponseTypedDict": ".createunifiedwebhook",
+    "CreateUnifiedWorkspaceSecretsmanagerResponse": ".createunifiedworkspacesecretsmanager",
+    "CreateUnifiedWorkspaceSecretsmanagerResponseTypedDict": ".createunifiedworkspacesecretsmanager",
     "CreateVerificationRequest2QueryParamFields": ".createverificationrequest2",
     "CreateVerificationRequest2Request": ".createverificationrequest2",
     "CreateVerificationRequest2RequestTypedDict": ".createverificationrequest2",
@@ -9605,6 +9643,10 @@ _dynamic_imports: dict[str, str] = {
     "GetUnifiedWebhookRequestTypedDict": ".getunifiedwebhook",
     "GetUnifiedWebhookResponse": ".getunifiedwebhook",
     "GetUnifiedWebhookResponseTypedDict": ".getunifiedwebhook",
+    "GetUnifiedWorkspaceSecretsmanagerRequest": ".getunifiedworkspacesecretsmanager",
+    "GetUnifiedWorkspaceSecretsmanagerRequestTypedDict": ".getunifiedworkspacesecretsmanager",
+    "GetUnifiedWorkspaceSecretsmanagerResponse": ".getunifiedworkspacesecretsmanager",
+    "GetUnifiedWorkspaceSecretsmanagerResponseTypedDict": ".getunifiedworkspacesecretsmanager",
     "GetVerificationPackage2QueryParamFields": ".getverificationpackage2",
     "GetVerificationPackage2Request": ".getverificationpackage2",
     "GetVerificationPackage2RequestTypedDict": ".getverificationpackage2",
@@ -10328,6 +10370,10 @@ _dynamic_imports: dict[str, str] = {
     "ListUnifiedWebhooksRequestTypedDict": ".listunifiedwebhooks",
     "ListUnifiedWebhooksResponse": ".listunifiedwebhooks",
     "ListUnifiedWebhooksResponseTypedDict": ".listunifiedwebhooks",
+    "ListUnifiedWorkspaceSecretsmanagersRequest": ".listunifiedworkspacesecretsmanagers",
+    "ListUnifiedWorkspaceSecretsmanagersRequestTypedDict": ".listunifiedworkspacesecretsmanagers",
+    "ListUnifiedWorkspaceSecretsmanagersResponse": ".listunifiedworkspacesecretsmanagers",
+    "ListUnifiedWorkspaceSecretsmanagersResponseTypedDict": ".listunifiedworkspacesecretsmanagers",
     "ListVerificationPackages2QueryParamFields": ".listverificationpackages2",
     "ListVerificationPackages2Request": ".listverificationpackages2",
     "ListVerificationPackages2RequestTypedDict": ".listverificationpackages2",
@@ -11304,6 +11350,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveUnifiedWebhookRequestTypedDict": ".removeunifiedwebhook",
     "RemoveUnifiedWebhookResponse": ".removeunifiedwebhook",
     "RemoveUnifiedWebhookResponseTypedDict": ".removeunifiedwebhook",
+    "RemoveUnifiedWorkspaceSecretsmanagerRequest": ".removeunifiedworkspacesecretsmanager",
+    "RemoveUnifiedWorkspaceSecretsmanagerRequestTypedDict": ".removeunifiedworkspacesecretsmanager",
+    "RemoveUnifiedWorkspaceSecretsmanagerResponse": ".removeunifiedworkspacesecretsmanager",
+    "RemoveUnifiedWorkspaceSecretsmanagerResponseTypedDict": ".removeunifiedworkspacesecretsmanager",
     "RemoveVerificationRequest2Request": ".removeverificationrequest2",
     "RemoveVerificationRequest2RequestTypedDict": ".removeverificationrequest2",
     "RemoveVerificationRequest2Response": ".removeverificationrequest2",

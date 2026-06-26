@@ -1,0 +1,15 @@
+# SecretsManager
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `auth`                                                                 | Dict[str, *str*]                                                       | :heavy_check_mark:                                                     | secrets-manager specific authentication values                         |
+| `created_at`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects)   | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `dcs`                                                                  | List[*str*]                                                            | :heavy_minus_sign:                                                     | data-regions                                                           |
+| `id`                                                                   | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `name`                                                                 | *str*                                                                  | :heavy_check_mark:                                                     | N/A                                                                    |
+| `type`                                                                 | [shared.SecretsManagerType](../../models/shared/secretsmanagertype.md) | :heavy_check_mark:                                                     | N/A                                                                    |
+| `updated_at`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects)   | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `workspace_id`                                                         | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |

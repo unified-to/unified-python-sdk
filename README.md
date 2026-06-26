@@ -1709,6 +1709,13 @@ asyncio.run(main())
 * [remove_ats_scorecard2](docs/sdks/scorecard/README.md#remove_ats_scorecard2) - Remove a scorecard
 * [update_ats_scorecard2](docs/sdks/scorecard/README.md#update_ats_scorecard2) - Update a scorecard
 
+### [Secretsmanager](docs/sdks/secretsmanager/README.md)
+
+* [create_unified_workspace_secretsmanager](docs/sdks/secretsmanager/README.md#create_unified_workspace_secretsmanager) - Create secrets manager
+* [get_unified_workspace_secretsmanager](docs/sdks/secretsmanager/README.md#get_unified_workspace_secretsmanager) - Retrieve secrets manager
+* [list_unified_workspace_secretsmanagers](docs/sdks/secretsmanager/README.md#list_unified_workspace_secretsmanagers) - List secrets managers
+* [remove_unified_workspace_secretsmanager](docs/sdks/secretsmanager/README.md#remove_unified_workspace_secretsmanager) - Remove secrets manager
+
 ### [Session](docs/sdks/session/README.md)
 
 * [get_analytics_session2](docs/sdks/session/README.md#get_analytics_session2) - Retrieve a session
@@ -1962,11 +1969,13 @@ asyncio.run(main())
 * [create_unified_connection](docs/sdks/unified/README.md#create_unified_connection) - Create connection
 * [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment) - Create new environments
 * [create_unified_webhook](docs/sdks/unified/README.md#create_unified_webhook) - Create webhook subscription
+* [create_unified_workspace_secretsmanager](docs/sdks/unified/README.md#create_unified_workspace_secretsmanager) - Create secrets manager
 * [get_unified_apicall](docs/sdks/unified/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](docs/sdks/unified/README.md#get_unified_integration_auth) - Authorize new connection
 * [get_unified_issue](docs/sdks/unified/README.md#get_unified_issue) - Retrieve support issue
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
+* [get_unified_workspace_secretsmanager](docs/sdks/unified/README.md#get_unified_workspace_secretsmanager) - Retrieve secrets manager
 * [list_unified_apicalls](docs/sdks/unified/README.md#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](docs/sdks/unified/README.md#list_unified_connections) - List all connections
 * [list_unified_environments](docs/sdks/unified/README.md#list_unified_environments) - Returns all environments
@@ -1974,12 +1983,14 @@ asyncio.run(main())
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
+* [list_unified_workspace_secretsmanagers](docs/sdks/unified/README.md#list_unified_workspace_secretsmanagers) - List secrets managers
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
+* [remove_unified_workspace_secretsmanager](docs/sdks/unified/README.md#remove_unified_workspace_secretsmanager) - Remove secrets manager
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook

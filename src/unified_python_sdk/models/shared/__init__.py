@@ -1677,6 +1677,11 @@ if TYPE_CHECKING:
         ScimUserGroupsType,
         ScimUserGroupsTypedDict,
     )
+    from .secretsmanager import (
+        SecretsManager,
+        SecretsManagerType,
+        SecretsManagerTypedDict,
+    )
     from .security import Security, SecurityTypedDict
     from .shippingcarrier import ShippingCarrier, ShippingCarrierTypedDict
     from .shippingcustomsitem import (
@@ -3041,6 +3046,9 @@ __all__ = [
     "SearchLinkedinurl",
     "SearchName",
     "SearchTwitter",
+    "SecretsManager",
+    "SecretsManagerType",
+    "SecretsManagerTypedDict",
     "Security",
     "SecurityTypedDict",
     "SexualOrientation",
@@ -4544,6 +4552,9 @@ _dynamic_imports: dict[str, str] = {
     "ScimUserGroups": ".scimusergroups",
     "ScimUserGroupsType": ".scimusergroups",
     "ScimUserGroupsTypedDict": ".scimusergroups",
+    "SecretsManager": ".secretsmanager",
+    "SecretsManagerType": ".secretsmanager",
+    "SecretsManagerTypedDict": ".secretsmanager",
     "Security": ".security",
     "SecurityTypedDict": ".security",
     "ShippingCarrier": ".shippingcarrier",

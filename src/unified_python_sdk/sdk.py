@@ -135,6 +135,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.salesorder import Salesorder
     from unified_python_sdk.scim import Scim
     from unified_python_sdk.scorecard import Scorecard
+    from unified_python_sdk.secretsmanager import Secretsmanager
     from unified_python_sdk.session import Session
     from unified_python_sdk.shipment import Shipment
     from unified_python_sdk.shipping import Shipping
@@ -317,6 +318,7 @@ class UnifiedTo(BaseSDK):
     login: "Login"
     issue: "Issue"
     webhook: "Webhook"
+    secretsmanager: "Secretsmanager"
     verification: "Verification"
     request: "Request"
     _sub_sdk_map = {
@@ -469,6 +471,7 @@ class UnifiedTo(BaseSDK):
         "login": ("unified_python_sdk.login", "Login"),
         "issue": ("unified_python_sdk.issue", "Issue"),
         "webhook": ("unified_python_sdk.webhook", "Webhook"),
+        "secretsmanager": ("unified_python_sdk.secretsmanager", "Secretsmanager"),
         "verification": ("unified_python_sdk.verification", "Verification"),
         "request": ("unified_python_sdk.request", "Request"),
     }
