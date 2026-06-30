@@ -27,12 +27,12 @@ class UpdateTicketingTicket2QueryParamFields(str, Enum):
     CLOSED_AT = "closed_at"
     PRIORITY = "priority"
     CATEGORY_ID = "category_id"
-    CATEGORY = "category"
     SOURCE = "source"
     SOURCE_REF = "source_ref"
     TAGS = "tags"
     USER_ID = "user_id"
     URL = "url"
+    DUE_AT = "due_at"
     RAW = "raw"
 
 

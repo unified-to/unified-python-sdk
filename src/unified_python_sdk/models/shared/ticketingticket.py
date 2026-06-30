@@ -17,12 +17,12 @@ class TicketingTicketStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class TicketingTicketTypedDict(TypedDict):
-    category: NotRequired[str]
     category_id: NotRequired[str]
     closed_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
     customer_id: NotRequired[str]
     description: NotRequired[str]
+    due_at: NotRequired[datetime]
     id: NotRequired[str]
     priority: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -37,8 +37,6 @@ class TicketingTicketTypedDict(TypedDict):
 
 
 class TicketingTicket(BaseModel):
-    category: Optional[str] = None
-
     category_id: Optional[str] = None
 
     closed_at: Optional[datetime] = None
@@ -48,6 +46,8 @@ class TicketingTicket(BaseModel):
     customer_id: Optional[str] = None
 
     description: Optional[str] = None
+
+    due_at: Optional[datetime] = None
 
     id: Optional[str] = None
 
@@ -84,12 +84,12 @@ class TicketingTicket(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
-                "category",
                 "category_id",
                 "closed_at",
                 "created_at",
                 "customer_id",
                 "description",
+                "due_at",
                 "id",
                 "priority",
                 "raw",

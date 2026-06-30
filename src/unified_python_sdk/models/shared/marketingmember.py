@@ -23,6 +23,7 @@ class MarketingMemberStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 class MarketingMemberTypedDict(TypedDict):
     r"""A member represents a person"""
 
+    company: NotRequired[str]
     created_at: NotRequired[datetime]
     emails: NotRequired[List[MarketingEmailTypedDict]]
     r"""An array of email addresses for this member"""
@@ -41,6 +42,8 @@ class MarketingMemberTypedDict(TypedDict):
 
 class MarketingMember(BaseModel):
     r"""A member represents a person"""
+
+    company: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
@@ -80,6 +83,7 @@ class MarketingMember(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "company",
                 "created_at",
                 "emails",
                 "first_name",
