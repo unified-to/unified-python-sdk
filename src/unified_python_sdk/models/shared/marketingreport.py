@@ -19,6 +19,9 @@ class MarketingReportTypedDict(TypedDict):
     forwards_count: NotRequired[float]
     forwards_opens: NotRequired[float]
     hard_bounces: NotRequired[float]
+    human_open_rate: NotRequired[float]
+    human_opens_total: NotRequired[float]
+    human_unique_opens: NotRequired[float]
     id: NotRequired[str]
     last_click_at: NotRequired[datetime]
     last_open_at: NotRequired[datetime]
@@ -56,6 +59,12 @@ class MarketingReport(BaseModel):
     forwards_opens: Optional[float] = None
 
     hard_bounces: Optional[float] = None
+
+    human_open_rate: Optional[float] = None
+
+    human_opens_total: Optional[float] = None
+
+    human_unique_opens: Optional[float] = None
 
     id: Optional[str] = None
 
@@ -103,6 +112,9 @@ class MarketingReport(BaseModel):
                 "forwards_count",
                 "forwards_opens",
                 "hard_bounces",
+                "human_open_rate",
+                "human_opens_total",
+                "human_unique_opens",
                 "id",
                 "last_click_at",
                 "last_open_at",

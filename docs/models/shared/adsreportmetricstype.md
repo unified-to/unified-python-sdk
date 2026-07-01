@@ -97,6 +97,8 @@ value = AdsReportMetricsType.CLICKS
 | `CROSS_DEVICE_CONVERSIONS`             | CROSS_DEVICE_CONVERSIONS               |
 | `ABSOLUTE_TOP_IMPRESSION_SHARE`        | ABSOLUTE_TOP_IMPRESSION_SHARE          |
 | `TOP_IMPRESSION_SHARE`                 | TOP_IMPRESSION_SHARE                   |
+| `ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT` | ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT   |
+| `TOP_IMPRESSION_RATE_PERCENT`          | TOP_IMPRESSION_RATE_PERCENT            |
 | `VIDEO_FULLSCREENS`                    | VIDEO_FULLSCREENS                      |
 | `VIDEO_PAUSES`                         | VIDEO_PAUSES                           |
 | `VIDEO_MUTES`                          | VIDEO_MUTES                            |
@@ -130,9 +132,6 @@ value = AdsReportMetricsType.CLICKS
 | `ACTIVE_VIEW_VISIBLE_10_S`             | ACTIVE_VIEW_VISIBLE_10S                |
 | `NOT_MEASURABLE_IMPRESSIONS`           | NOT_MEASURABLE_IMPRESSIONS             |
 | `NOT_VIEWABLE_IMPRESSIONS`             | NOT_VIEWABLE_IMPRESSIONS               |
-| `PUBLISHER_PLATFORM`                   | PUBLISHER_PLATFORM                     |
-| `PLATFORM_POSITION`                    | PLATFORM_POSITION                      |
-| `IMPRESSION_DEVICE`                    | IMPRESSION_DEVICE                      |
 | `ONE_D_VIEW`                           | 1D_VIEW                                |
 | `ONE_D_CLICK`                          | 1D_CLICK                               |
 | `SEVEN_D_VIEW`                         | 7D_VIEW                                |

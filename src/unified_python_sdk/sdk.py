@@ -112,6 +112,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.payout import Payout
     from unified_python_sdk.payslip import Payslip
     from unified_python_sdk.person import Person
+    from unified_python_sdk.picklist import Picklist
     from unified_python_sdk.pipeline import Pipeline
     from unified_python_sdk.profitloss import Profitloss
     from unified_python_sdk.project import Project
@@ -237,6 +238,7 @@ class UnifiedTo(BaseSDK):
     crm: "Crm"
     deal: "Deal"
     lead: "Lead"
+    picklist: "Picklist"
     pipeline: "Pipeline"
     datastore: "Datastore"
     database: "Database"
@@ -390,6 +392,7 @@ class UnifiedTo(BaseSDK):
         "crm": ("unified_python_sdk.crm", "Crm"),
         "deal": ("unified_python_sdk.deal", "Deal"),
         "lead": ("unified_python_sdk.lead", "Lead"),
+        "picklist": ("unified_python_sdk.picklist", "Picklist"),
         "pipeline": ("unified_python_sdk.pipeline", "Pipeline"),
         "datastore": ("unified_python_sdk.datastore", "Datastore"),
         "database": ("unified_python_sdk.database", "Database"),

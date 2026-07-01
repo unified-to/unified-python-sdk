@@ -202,8 +202,6 @@ if TYPE_CHECKING:
         AdsReportMetrics,
         AdsReportMetricsType,
         AdsReportMetricsTypedDict,
-        Value,
-        ValueTypedDict,
     )
     from .adstarget import AdsTarget, AdsTargetType, AdsTargetTypedDict
     from .analyticsevent import AnalyticsEvent, AnalyticsEventTypedDict, EventType
@@ -304,8 +302,6 @@ if TYPE_CHECKING:
         AtsMetadata5,
         AtsMetadata5TypedDict,
         AtsMetadataTypedDict,
-        AtsMetadataValue,
-        AtsMetadataValueTypedDict,
         ExtraData,
         ExtraDataTypedDict,
         Five,
@@ -313,6 +309,8 @@ if TYPE_CHECKING:
         Format,
         One,
         OneTypedDict,
+        Value,
+        ValueTypedDict,
     )
     from .atsoffer import AtsOffer, AtsOfferStatus, AtsOfferTypedDict
     from .atsreference import AtsReference, AtsReferenceTypedDict
@@ -491,6 +489,7 @@ if TYPE_CHECKING:
         CrmMetadataValue,
         CrmMetadataValueTypedDict,
     )
+    from .crmpicklist import CrmPicklist, CrmPicklistType, CrmPicklistTypedDict
     from .crmpipeline import CrmPipeline, CrmPipelineTypedDict
     from .crmreference import CrmReference, CrmReferenceTypedDict
     from .crmstage import CrmStage, CrmStageTypedDict
@@ -2049,8 +2048,6 @@ __all__ = [
     "AtsMetadata5",
     "AtsMetadata5TypedDict",
     "AtsMetadataTypedDict",
-    "AtsMetadataValue",
-    "AtsMetadataValueTypedDict",
     "AtsOffer",
     "AtsOfferStatus",
     "AtsOfferTypedDict",
@@ -2214,6 +2211,9 @@ __all__ = [
     "CrmMetadataTypedDict",
     "CrmMetadataValue",
     "CrmMetadataValueTypedDict",
+    "CrmPicklist",
+    "CrmPicklistType",
+    "CrmPicklistTypedDict",
     "CrmPipeline",
     "CrmPipelineTypedDict",
     "CrmReference",
@@ -3403,8 +3403,6 @@ _dynamic_imports: dict[str, str] = {
     "AdsReportMetrics": ".adsreportmetrics",
     "AdsReportMetricsType": ".adsreportmetrics",
     "AdsReportMetricsTypedDict": ".adsreportmetrics",
-    "Value": ".adsreportmetrics",
-    "ValueTypedDict": ".adsreportmetrics",
     "AdsTarget": ".adstarget",
     "AdsTargetType": ".adstarget",
     "AdsTargetTypedDict": ".adstarget",
@@ -3503,8 +3501,6 @@ _dynamic_imports: dict[str, str] = {
     "AtsMetadata5": ".atsmetadata",
     "AtsMetadata5TypedDict": ".atsmetadata",
     "AtsMetadataTypedDict": ".atsmetadata",
-    "AtsMetadataValue": ".atsmetadata",
-    "AtsMetadataValueTypedDict": ".atsmetadata",
     "ExtraData": ".atsmetadata",
     "ExtraDataTypedDict": ".atsmetadata",
     "Five": ".atsmetadata",
@@ -3512,6 +3508,8 @@ _dynamic_imports: dict[str, str] = {
     "Format": ".atsmetadata",
     "One": ".atsmetadata",
     "OneTypedDict": ".atsmetadata",
+    "Value": ".atsmetadata",
+    "ValueTypedDict": ".atsmetadata",
     "AtsOffer": ".atsoffer",
     "AtsOfferStatus": ".atsoffer",
     "AtsOfferTypedDict": ".atsoffer",
@@ -3676,6 +3674,9 @@ _dynamic_imports: dict[str, str] = {
     "CrmMetadataTypedDict": ".crmmetadata",
     "CrmMetadataValue": ".crmmetadata",
     "CrmMetadataValueTypedDict": ".crmmetadata",
+    "CrmPicklist": ".crmpicklist",
+    "CrmPicklistType": ".crmpicklist",
+    "CrmPicklistTypedDict": ".crmpicklist",
     "CrmPipeline": ".crmpipeline",
     "CrmPipelineTypedDict": ".crmpipeline",
     "CrmReference": ".crmreference",

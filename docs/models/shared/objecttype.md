@@ -67,6 +67,7 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `CRM_EVENT`                | crm_event                  |
 | `CRM_LEAD`                 | crm_lead                   |
 | `CRM_PIPELINE`             | crm_pipeline               |
+| `CRM_PICKLIST`             | crm_picklist               |
 | `HRIS_EMPLOYEE`            | hris_employee              |
 | `HRIS_GROUP`               | hris_group                 |
 | `HRIS_PAYSLIP`             | hris_payslip               |

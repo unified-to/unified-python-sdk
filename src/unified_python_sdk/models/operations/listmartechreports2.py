@@ -40,6 +40,9 @@ class ListMartechReports2QueryParamFields(str, Enum):
     CLICK_RATE = "click_rate"
     LAST_CLICK_AT = "last_click_at"
     LINKS = "links"
+    HUMAN_OPENS_TOTAL = "human_opens_total"
+    HUMAN_UNIQUE_OPENS = "human_unique_opens"
+    HUMAN_OPEN_RATE = "human_open_rate"
     RAW = "raw"
 
 

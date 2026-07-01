@@ -15,8 +15,8 @@ from .property_adsreportmetrics_group import (
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Optional, Union
-from typing_extensions import NotRequired, TypeAliasType, TypedDict
+from typing import Optional
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
@@ -105,6 +105,8 @@ class AdsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
     CROSS_DEVICE_CONVERSIONS = "CROSS_DEVICE_CONVERSIONS"
     ABSOLUTE_TOP_IMPRESSION_SHARE = "ABSOLUTE_TOP_IMPRESSION_SHARE"
     TOP_IMPRESSION_SHARE = "TOP_IMPRESSION_SHARE"
+    ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT = "ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT"
+    TOP_IMPRESSION_RATE_PERCENT = "TOP_IMPRESSION_RATE_PERCENT"
     VIDEO_FULLSCREENS = "VIDEO_FULLSCREENS"
     VIDEO_PAUSES = "VIDEO_PAUSES"
     VIDEO_MUTES = "VIDEO_MUTES"
@@ -138,9 +140,6 @@ class AdsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
     ACTIVE_VIEW_VISIBLE_10_S = "ACTIVE_VIEW_VISIBLE_10S"
     NOT_MEASURABLE_IMPRESSIONS = "NOT_MEASURABLE_IMPRESSIONS"
     NOT_VIEWABLE_IMPRESSIONS = "NOT_VIEWABLE_IMPRESSIONS"
-    PUBLISHER_PLATFORM = "PUBLISHER_PLATFORM"
-    PLATFORM_POSITION = "PLATFORM_POSITION"
-    IMPRESSION_DEVICE = "IMPRESSION_DEVICE"
     ONE_D_VIEW = "1D_VIEW"
     ONE_D_CLICK = "1D_CLICK"
     SEVEN_D_VIEW = "7D_VIEW"
@@ -151,18 +150,12 @@ class AdsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
     THIRTY_D_CLICK = "30D_CLICK"
 
 
-ValueTypedDict = TypeAliasType("ValueTypedDict", Union[float, str])
-
-
-Value = TypeAliasType("Value", Union[float, str])
-
-
 class AdsReportMetricsTypedDict(TypedDict):
     ad: NotRequired[PropertyAdsReportMetricsAdTypedDict]
     campaign: NotRequired[PropertyAdsReportMetricsCampaignTypedDict]
     group: NotRequired[PropertyAdsReportMetricsGroupTypedDict]
     type: NotRequired[AdsReportMetricsType]
-    value: NotRequired[ValueTypedDict]
+    value: NotRequired[float]
 
 
 class AdsReportMetrics(BaseModel):
@@ -174,7 +167,7 @@ class AdsReportMetrics(BaseModel):
 
     type: Optional[AdsReportMetricsType] = None
 
-    value: Optional[Value] = None
+    value: Optional[float] = None
 
     @field_serializer("type")
     def serialize_type(self, value):

@@ -2219,6 +2219,13 @@ if TYPE_CHECKING:
         ListCrmLeads2Response,
         ListCrmLeads2ResponseTypedDict,
     )
+    from .listcrmpicklists2 import (
+        ListCrmPicklists2QueryParamFields,
+        ListCrmPicklists2Request,
+        ListCrmPicklists2RequestTypedDict,
+        ListCrmPicklists2Response,
+        ListCrmPicklists2ResponseTypedDict,
+    )
     from .listcrmpipelines2 import (
         ListCrmPipelines2QueryParamFields,
         ListCrmPipelines2Request,
@@ -6515,6 +6522,11 @@ __all__ = [
     "ListCrmLeads2RequestTypedDict",
     "ListCrmLeads2Response",
     "ListCrmLeads2ResponseTypedDict",
+    "ListCrmPicklists2QueryParamFields",
+    "ListCrmPicklists2Request",
+    "ListCrmPicklists2RequestTypedDict",
+    "ListCrmPicklists2Response",
+    "ListCrmPicklists2ResponseTypedDict",
     "ListCrmPipelines2QueryParamFields",
     "ListCrmPipelines2Request",
     "ListCrmPipelines2RequestTypedDict",
@@ -9996,6 +10008,11 @@ _dynamic_imports: dict[str, str] = {
     "ListCrmLeads2RequestTypedDict": ".listcrmleads2",
     "ListCrmLeads2Response": ".listcrmleads2",
     "ListCrmLeads2ResponseTypedDict": ".listcrmleads2",
+    "ListCrmPicklists2QueryParamFields": ".listcrmpicklists2",
+    "ListCrmPicklists2Request": ".listcrmpicklists2",
+    "ListCrmPicklists2RequestTypedDict": ".listcrmpicklists2",
+    "ListCrmPicklists2Response": ".listcrmpicklists2",
+    "ListCrmPicklists2ResponseTypedDict": ".listcrmpicklists2",
     "ListCrmPipelines2QueryParamFields": ".listcrmpipelines2",
     "ListCrmPipelines2Request": ".listcrmpipelines2",
     "ListCrmPipelines2RequestTypedDict": ".listcrmpipelines2",

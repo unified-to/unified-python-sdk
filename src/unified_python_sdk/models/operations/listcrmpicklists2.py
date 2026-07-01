@@ -6,7 +6,7 @@ import httpx
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import hristimeoff as shared_hristimeoff
+from unified_python_sdk.models.shared import crmpicklist as shared_crmpicklist
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -15,34 +15,18 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListHrisTimeoffs2QueryParamFields(str, Enum):
+class ListCrmPicklists2QueryParamFields(str, Enum):
     ID = "id"
-    CREATED_AT = "created_at"
-    UPDATED_AT = "updated_at"
-    USER_ID = "user_id"
-    COMPANY_ID = "company_id"
-    START_AT = "start_at"
-    END_AT = "end_at"
-    IS_PAID = "is_paid"
-    STATUS = "status"
-    APPROVER_USER_ID = "approver_user_id"
-    APPROVED_AT = "approved_at"
-    COMMENTS = "comments"
-    REASON = "reason"
+    NAME = "name"
+    LABEL = "label"
     TYPE = "type"
-    DURATION = "duration"
-    DURATION_TYPE = "duration_type"
     RAW = "raw"
 
 
-class ListHrisTimeoffs2RequestTypedDict(TypedDict):
+class ListCrmPicklists2RequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
-    company_id: NotRequired[str]
-    r"""The company ID to filter by (reference to HrisCompany)"""
-    end_lt: NotRequired[str]
-    r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
-    fields: NotRequired[List[ListHrisTimeoffs2QueryParamFields]]
+    fields: NotRequired[List[ListCrmPicklists2QueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
@@ -52,35 +36,19 @@ class ListHrisTimeoffs2RequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
-    start_gte: NotRequired[str]
-    r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     type: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
-    user_id: NotRequired[str]
-    r"""The user/employee ID to filter by (reference to HrisEmployee)"""
 
 
-class ListHrisTimeoffs2Request(BaseModel):
+class ListCrmPicklists2Request(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
 
-    company_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The company ID to filter by (reference to HrisCompany)"""
-
-    end_lt: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
-
     fields: Annotated[
-        Optional[List[ListHrisTimeoffs2QueryParamFields]],
+        Optional[List[ListCrmPicklists2QueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
@@ -117,12 +85,6 @@ class ListHrisTimeoffs2Request(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
-    start_gte: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
-
     type: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -134,18 +96,10 @@ class ListHrisTimeoffs2Request(BaseModel):
     ] = None
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
-    user_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The user/employee ID to filter by (reference to HrisEmployee)"""
-
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
             [
-                "company_id",
-                "end_lt",
                 "fields",
                 "limit",
                 "offset",
@@ -153,10 +107,8 @@ class ListHrisTimeoffs2Request(BaseModel):
                 "query",
                 "raw",
                 "sort",
-                "start_gte",
                 "type",
                 "updated_gte",
-                "user_id",
             ]
         )
         serialized = handler(self)
@@ -173,18 +125,18 @@ class ListHrisTimeoffs2Request(BaseModel):
         return m
 
 
-class ListHrisTimeoffs2ResponseTypedDict(TypedDict):
+class ListCrmPicklists2ResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    hris_timeoffs: NotRequired[List[shared_hristimeoff.HrisTimeoffTypedDict]]
+    crm_picklists: NotRequired[List[shared_crmpicklist.CrmPicklistTypedDict]]
     r"""Successful"""
 
 
-class ListHrisTimeoffs2Response(BaseModel):
+class ListCrmPicklists2Response(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -194,12 +146,12 @@ class ListHrisTimeoffs2Response(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    hris_timeoffs: Optional[List[shared_hristimeoff.HrisTimeoff]] = None
+    crm_picklists: Optional[List[shared_crmpicklist.CrmPicklist]] = None
     r"""Successful"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["HrisTimeoffs"])
+        optional_fields = set(["CrmPicklists"])
         serialized = handler(self)
         m = {}
 
