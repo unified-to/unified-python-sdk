@@ -10,18 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Group(BaseSDK):
-    def create_ads_group2(
+    def create_ads_group(
         self,
         *,
         request: Union[
-            operations.CreateAdsGroup2Request,
-            operations.CreateAdsGroup2RequestTypedDict,
+            operations.CreateAdsGroupRequest, operations.CreateAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsGroup2Response:
+    ) -> operations.CreateAdsGroupResponse:
         r"""Create a group
 
         :param request: The request object to send.
@@ -41,8 +40,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsGroup2Request)
-        request = cast(operations.CreateAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsGroupRequest)
+        request = cast(operations.CreateAdsGroupRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +75,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsGroup2",
+                operation_id="createAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -88,7 +87,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsGroup2Response(
+            return operations.CreateAdsGroupResponse(
                 ads_group=unmarshal_json_response(Optional[shared.AdsGroup], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -103,18 +102,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ads_group2_async(
+    async def create_ads_group_async(
         self,
         *,
         request: Union[
-            operations.CreateAdsGroup2Request,
-            operations.CreateAdsGroup2RequestTypedDict,
+            operations.CreateAdsGroupRequest, operations.CreateAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsGroup2Response:
+    ) -> operations.CreateAdsGroupResponse:
         r"""Create a group
 
         :param request: The request object to send.
@@ -134,8 +132,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsGroup2Request)
-        request = cast(operations.CreateAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsGroupRequest)
+        request = cast(operations.CreateAdsGroupRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +167,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsGroup2",
+                operation_id="createAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -181,7 +179,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsGroup2Response(
+            return operations.CreateAdsGroupResponse(
                 ads_group=unmarshal_json_response(Optional[shared.AdsGroup], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -196,18 +194,18 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_hris_group2(
+    def create_hris_group(
         self,
         *,
         request: Union[
-            operations.CreateHrisGroup2Request,
-            operations.CreateHrisGroup2RequestTypedDict,
+            operations.CreateHrisGroupRequest,
+            operations.CreateHrisGroupRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisGroup2Response:
+    ) -> operations.CreateHrisGroupResponse:
         r"""Create a group
 
         :param request: The request object to send.
@@ -227,8 +225,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisGroup2Request)
-        request = cast(operations.CreateHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
+        request = cast(operations.CreateHrisGroupRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -262,7 +260,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisGroup2",
+                operation_id="createHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -274,7 +272,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisGroup2Response(
+            return operations.CreateHrisGroupResponse(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -291,18 +289,18 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_group2_async(
+    async def create_hris_group_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisGroup2Request,
-            operations.CreateHrisGroup2RequestTypedDict,
+            operations.CreateHrisGroupRequest,
+            operations.CreateHrisGroupRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisGroup2Response:
+    ) -> operations.CreateHrisGroupResponse:
         r"""Create a group
 
         :param request: The request object to send.
@@ -322,8 +320,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisGroup2Request)
-        request = cast(operations.CreateHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
+        request = cast(operations.CreateHrisGroupRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -357,7 +355,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisGroup2",
+                operation_id="createHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -369,7 +367,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisGroup2Response(
+            return operations.CreateHrisGroupResponse(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -576,17 +574,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ads_group2(
+    def get_ads_group(
         self,
         *,
         request: Union[
-            operations.GetAdsGroup2Request, operations.GetAdsGroup2RequestTypedDict
+            operations.GetAdsGroupRequest, operations.GetAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsGroup2Response:
+    ) -> operations.GetAdsGroupResponse:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -606,8 +604,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsGroup2Request)
-        request = cast(operations.GetAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsGroupRequest)
+        request = cast(operations.GetAdsGroupRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -638,7 +636,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsGroup2",
+                operation_id="getAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -650,7 +648,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsGroup2Response(
+            return operations.GetAdsGroupResponse(
                 ads_group=unmarshal_json_response(Optional[shared.AdsGroup], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -665,17 +663,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ads_group2_async(
+    async def get_ads_group_async(
         self,
         *,
         request: Union[
-            operations.GetAdsGroup2Request, operations.GetAdsGroup2RequestTypedDict
+            operations.GetAdsGroupRequest, operations.GetAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsGroup2Response:
+    ) -> operations.GetAdsGroupResponse:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -695,8 +693,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsGroup2Request)
-        request = cast(operations.GetAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsGroupRequest)
+        request = cast(operations.GetAdsGroupRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -727,7 +725,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsGroup2",
+                operation_id="getAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -739,7 +737,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsGroup2Response(
+            return operations.GetAdsGroupResponse(
                 ads_group=unmarshal_json_response(Optional[shared.AdsGroup], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -754,17 +752,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_group2(
+    def get_clubs_group(
         self,
         *,
         request: Union[
-            operations.GetClubsGroup2Request, operations.GetClubsGroup2RequestTypedDict
+            operations.GetClubsGroupRequest, operations.GetClubsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsGroup2Response:
+    ) -> operations.GetClubsGroupResponse:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -784,8 +782,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsGroup2Request)
-        request = cast(operations.GetClubsGroup2Request, request)
+            request = utils.unmarshal(request, operations.GetClubsGroupRequest)
+        request = cast(operations.GetClubsGroupRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -816,7 +814,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsGroup2",
+                operation_id="getClubsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["clubs", "group"],
@@ -828,7 +826,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsGroup2Response(
+            return operations.GetClubsGroupResponse(
                 clubs_group=unmarshal_json_response(
                     Optional[shared.ClubsGroup], http_res
                 ),
@@ -845,17 +843,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_group2_async(
+    async def get_clubs_group_async(
         self,
         *,
         request: Union[
-            operations.GetClubsGroup2Request, operations.GetClubsGroup2RequestTypedDict
+            operations.GetClubsGroupRequest, operations.GetClubsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsGroup2Response:
+    ) -> operations.GetClubsGroupResponse:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -875,8 +873,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsGroup2Request)
-        request = cast(operations.GetClubsGroup2Request, request)
+            request = utils.unmarshal(request, operations.GetClubsGroupRequest)
+        request = cast(operations.GetClubsGroupRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -907,7 +905,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsGroup2",
+                operation_id="getClubsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["clubs", "group"],
@@ -919,7 +917,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsGroup2Response(
+            return operations.GetClubsGroupResponse(
                 clubs_group=unmarshal_json_response(
                     Optional[shared.ClubsGroup], http_res
                 ),
@@ -936,17 +934,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_group2(
+    def get_hris_group(
         self,
         *,
         request: Union[
-            operations.GetHrisGroup2Request, operations.GetHrisGroup2RequestTypedDict
+            operations.GetHrisGroupRequest, operations.GetHrisGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisGroup2Response:
+    ) -> operations.GetHrisGroupResponse:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -966,8 +964,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisGroup2Request)
-        request = cast(operations.GetHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisGroupRequest)
+        request = cast(operations.GetHrisGroupRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -998,7 +996,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisGroup2",
+                operation_id="getHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -1010,7 +1008,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisGroup2Response(
+            return operations.GetHrisGroupResponse(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -1027,17 +1025,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_group2_async(
+    async def get_hris_group_async(
         self,
         *,
         request: Union[
-            operations.GetHrisGroup2Request, operations.GetHrisGroup2RequestTypedDict
+            operations.GetHrisGroupRequest, operations.GetHrisGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisGroup2Response:
+    ) -> operations.GetHrisGroupResponse:
         r"""Retrieve a group
 
         :param request: The request object to send.
@@ -1057,8 +1055,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisGroup2Request)
-        request = cast(operations.GetHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisGroupRequest)
+        request = cast(operations.GetHrisGroupRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1089,7 +1087,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisGroup2",
+                operation_id="getHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -1101,7 +1099,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisGroup2Response(
+            return operations.GetHrisGroupResponse(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -1300,17 +1298,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ads_groups2(
+    def list_ads_groups(
         self,
         *,
         request: Union[
-            operations.ListAdsGroups2Request, operations.ListAdsGroups2RequestTypedDict
+            operations.ListAdsGroupsRequest, operations.ListAdsGroupsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsGroups2Response:
+    ) -> operations.ListAdsGroupsResponse:
         r"""List all groups
 
         :param request: The request object to send.
@@ -1330,8 +1328,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsGroups2Request)
-        request = cast(operations.ListAdsGroups2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsGroupsRequest)
+        request = cast(operations.ListAdsGroupsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1362,7 +1360,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsGroups2",
+                operation_id="listAdsGroups",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -1374,7 +1372,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsGroups2Response(
+            return operations.ListAdsGroupsResponse(
                 ads_groups=unmarshal_json_response(
                     Optional[List[shared.AdsGroup]], http_res
                 ),
@@ -1391,17 +1389,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ads_groups2_async(
+    async def list_ads_groups_async(
         self,
         *,
         request: Union[
-            operations.ListAdsGroups2Request, operations.ListAdsGroups2RequestTypedDict
+            operations.ListAdsGroupsRequest, operations.ListAdsGroupsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsGroups2Response:
+    ) -> operations.ListAdsGroupsResponse:
         r"""List all groups
 
         :param request: The request object to send.
@@ -1421,8 +1419,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsGroups2Request)
-        request = cast(operations.ListAdsGroups2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsGroupsRequest)
+        request = cast(operations.ListAdsGroupsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1453,7 +1451,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsGroups2",
+                operation_id="listAdsGroups",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -1465,7 +1463,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsGroups2Response(
+            return operations.ListAdsGroupsResponse(
                 ads_groups=unmarshal_json_response(
                     Optional[List[shared.AdsGroup]], http_res
                 ),
@@ -1482,18 +1480,18 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_groups2(
+    def list_clubs_groups(
         self,
         *,
         request: Union[
-            operations.ListClubsGroups2Request,
-            operations.ListClubsGroups2RequestTypedDict,
+            operations.ListClubsGroupsRequest,
+            operations.ListClubsGroupsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsGroups2Response:
+    ) -> operations.ListClubsGroupsResponse:
         r"""List all groups
 
         :param request: The request object to send.
@@ -1513,8 +1511,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsGroups2Request)
-        request = cast(operations.ListClubsGroups2Request, request)
+            request = utils.unmarshal(request, operations.ListClubsGroupsRequest)
+        request = cast(operations.ListClubsGroupsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1545,7 +1543,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsGroups2",
+                operation_id="listClubsGroups",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["clubs", "group"],
@@ -1557,7 +1555,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsGroups2Response(
+            return operations.ListClubsGroupsResponse(
                 clubs_groups=unmarshal_json_response(
                     Optional[List[shared.ClubsGroup]], http_res
                 ),
@@ -1574,18 +1572,18 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_groups2_async(
+    async def list_clubs_groups_async(
         self,
         *,
         request: Union[
-            operations.ListClubsGroups2Request,
-            operations.ListClubsGroups2RequestTypedDict,
+            operations.ListClubsGroupsRequest,
+            operations.ListClubsGroupsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsGroups2Response:
+    ) -> operations.ListClubsGroupsResponse:
         r"""List all groups
 
         :param request: The request object to send.
@@ -1605,8 +1603,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsGroups2Request)
-        request = cast(operations.ListClubsGroups2Request, request)
+            request = utils.unmarshal(request, operations.ListClubsGroupsRequest)
+        request = cast(operations.ListClubsGroupsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1637,7 +1635,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsGroups2",
+                operation_id="listClubsGroups",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["clubs", "group"],
@@ -1649,7 +1647,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsGroups2Response(
+            return operations.ListClubsGroupsResponse(
                 clubs_groups=unmarshal_json_response(
                     Optional[List[shared.ClubsGroup]], http_res
                 ),
@@ -1666,18 +1664,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_groups2(
+    def list_hris_groups(
         self,
         *,
         request: Union[
-            operations.ListHrisGroups2Request,
-            operations.ListHrisGroups2RequestTypedDict,
+            operations.ListHrisGroupsRequest, operations.ListHrisGroupsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisGroups2Response:
+    ) -> operations.ListHrisGroupsResponse:
         r"""List all groups
 
         :param request: The request object to send.
@@ -1697,8 +1694,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisGroups2Request)
-        request = cast(operations.ListHrisGroups2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
+        request = cast(operations.ListHrisGroupsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1729,7 +1726,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisGroups2",
+                operation_id="listHrisGroups",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -1741,7 +1738,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisGroups2Response(
+            return operations.ListHrisGroupsResponse(
                 hris_groups=unmarshal_json_response(
                     Optional[List[shared.HrisGroup]], http_res
                 ),
@@ -1758,18 +1755,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_groups2_async(
+    async def list_hris_groups_async(
         self,
         *,
         request: Union[
-            operations.ListHrisGroups2Request,
-            operations.ListHrisGroups2RequestTypedDict,
+            operations.ListHrisGroupsRequest, operations.ListHrisGroupsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisGroups2Response:
+    ) -> operations.ListHrisGroupsResponse:
         r"""List all groups
 
         :param request: The request object to send.
@@ -1789,8 +1785,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisGroups2Request)
-        request = cast(operations.ListHrisGroups2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
+        request = cast(operations.ListHrisGroupsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1821,7 +1817,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisGroups2",
+                operation_id="listHrisGroups",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -1833,7 +1829,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisGroups2Response(
+            return operations.ListHrisGroupsResponse(
                 hris_groups=unmarshal_json_response(
                     Optional[List[shared.HrisGroup]], http_res
                 ),
@@ -2032,17 +2028,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ads_group2(
+    def patch_ads_group(
         self,
         *,
         request: Union[
-            operations.PatchAdsGroup2Request, operations.PatchAdsGroup2RequestTypedDict
+            operations.PatchAdsGroupRequest, operations.PatchAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsGroup2Response:
+    ) -> operations.PatchAdsGroupResponse:
         r"""Update a group
 
         :param request: The request object to send.
@@ -2062,8 +2058,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsGroup2Request)
-        request = cast(operations.PatchAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsGroupRequest)
+        request = cast(operations.PatchAdsGroupRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2097,7 +2093,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsGroup2",
+                operation_id="patchAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -2109,7 +2105,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsGroup2Response(
+            return operations.PatchAdsGroupResponse(
                 ads_group=unmarshal_json_response(Optional[shared.AdsGroup], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2124,17 +2120,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ads_group2_async(
+    async def patch_ads_group_async(
         self,
         *,
         request: Union[
-            operations.PatchAdsGroup2Request, operations.PatchAdsGroup2RequestTypedDict
+            operations.PatchAdsGroupRequest, operations.PatchAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsGroup2Response:
+    ) -> operations.PatchAdsGroupResponse:
         r"""Update a group
 
         :param request: The request object to send.
@@ -2154,8 +2150,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsGroup2Request)
-        request = cast(operations.PatchAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsGroupRequest)
+        request = cast(operations.PatchAdsGroupRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2189,7 +2185,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsGroup2",
+                operation_id="patchAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -2201,7 +2197,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsGroup2Response(
+            return operations.PatchAdsGroupResponse(
                 ads_group=unmarshal_json_response(Optional[shared.AdsGroup], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2216,18 +2212,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_group2(
+    def patch_hris_group(
         self,
         *,
         request: Union[
-            operations.PatchHrisGroup2Request,
-            operations.PatchHrisGroup2RequestTypedDict,
+            operations.PatchHrisGroupRequest, operations.PatchHrisGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisGroup2Response:
+    ) -> operations.PatchHrisGroupResponse:
         r"""Update a group
 
         :param request: The request object to send.
@@ -2247,8 +2242,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisGroup2Request)
-        request = cast(operations.PatchHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
+        request = cast(operations.PatchHrisGroupRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2282,7 +2277,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisGroup2",
+                operation_id="patchHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -2294,7 +2289,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisGroup2Response(
+            return operations.PatchHrisGroupResponse(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -2311,18 +2306,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_group2_async(
+    async def patch_hris_group_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisGroup2Request,
-            operations.PatchHrisGroup2RequestTypedDict,
+            operations.PatchHrisGroupRequest, operations.PatchHrisGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisGroup2Response:
+    ) -> operations.PatchHrisGroupResponse:
         r"""Update a group
 
         :param request: The request object to send.
@@ -2342,8 +2336,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisGroup2Request)
-        request = cast(operations.PatchHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
+        request = cast(operations.PatchHrisGroupRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2377,7 +2371,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisGroup2",
+                operation_id="patchHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -2389,7 +2383,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisGroup2Response(
+            return operations.PatchHrisGroupResponse(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -2596,18 +2590,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ads_group2(
+    def remove_ads_group(
         self,
         *,
         request: Union[
-            operations.RemoveAdsGroup2Request,
-            operations.RemoveAdsGroup2RequestTypedDict,
+            operations.RemoveAdsGroupRequest, operations.RemoveAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsGroup2Response:
+    ) -> operations.RemoveAdsGroupResponse:
         r"""Remove a group
 
         :param request: The request object to send.
@@ -2627,8 +2620,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsGroup2Request)
-        request = cast(operations.RemoveAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsGroupRequest)
+        request = cast(operations.RemoveAdsGroupRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2659,7 +2652,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsGroup2",
+                operation_id="removeAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -2671,7 +2664,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsGroup2Response(
+            return operations.RemoveAdsGroupResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2684,7 +2677,7 @@ class Group(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsGroup2Response(
+            return operations.RemoveAdsGroupResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2693,18 +2686,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ads_group2_async(
+    async def remove_ads_group_async(
         self,
         *,
         request: Union[
-            operations.RemoveAdsGroup2Request,
-            operations.RemoveAdsGroup2RequestTypedDict,
+            operations.RemoveAdsGroupRequest, operations.RemoveAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsGroup2Response:
+    ) -> operations.RemoveAdsGroupResponse:
         r"""Remove a group
 
         :param request: The request object to send.
@@ -2724,8 +2716,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsGroup2Request)
-        request = cast(operations.RemoveAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsGroupRequest)
+        request = cast(operations.RemoveAdsGroupRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2756,7 +2748,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsGroup2",
+                operation_id="removeAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -2768,7 +2760,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsGroup2Response(
+            return operations.RemoveAdsGroupResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2781,7 +2773,7 @@ class Group(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsGroup2Response(
+            return operations.RemoveAdsGroupResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2790,18 +2782,18 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_group2(
+    def remove_hris_group(
         self,
         *,
         request: Union[
-            operations.RemoveHrisGroup2Request,
-            operations.RemoveHrisGroup2RequestTypedDict,
+            operations.RemoveHrisGroupRequest,
+            operations.RemoveHrisGroupRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisGroup2Response:
+    ) -> operations.RemoveHrisGroupResponse:
         r"""Remove a group
 
         :param request: The request object to send.
@@ -2821,8 +2813,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisGroup2Request)
-        request = cast(operations.RemoveHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
+        request = cast(operations.RemoveHrisGroupRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2853,7 +2845,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisGroup2",
+                operation_id="removeHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -2865,7 +2857,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisGroup2Response(
+            return operations.RemoveHrisGroupResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2878,7 +2870,7 @@ class Group(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisGroup2Response(
+            return operations.RemoveHrisGroupResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2887,18 +2879,18 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_group2_async(
+    async def remove_hris_group_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisGroup2Request,
-            operations.RemoveHrisGroup2RequestTypedDict,
+            operations.RemoveHrisGroupRequest,
+            operations.RemoveHrisGroupRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisGroup2Response:
+    ) -> operations.RemoveHrisGroupResponse:
         r"""Remove a group
 
         :param request: The request object to send.
@@ -2918,8 +2910,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisGroup2Request)
-        request = cast(operations.RemoveHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
+        request = cast(operations.RemoveHrisGroupRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2950,7 +2942,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisGroup2",
+                operation_id="removeHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -2962,7 +2954,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisGroup2Response(
+            return operations.RemoveHrisGroupResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2975,7 +2967,7 @@ class Group(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisGroup2Response(
+            return operations.RemoveHrisGroupResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3178,18 +3170,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ads_group2(
+    def update_ads_group(
         self,
         *,
         request: Union[
-            operations.UpdateAdsGroup2Request,
-            operations.UpdateAdsGroup2RequestTypedDict,
+            operations.UpdateAdsGroupRequest, operations.UpdateAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsGroup2Response:
+    ) -> operations.UpdateAdsGroupResponse:
         r"""Update a group
 
         :param request: The request object to send.
@@ -3209,8 +3200,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsGroup2Request)
-        request = cast(operations.UpdateAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsGroupRequest)
+        request = cast(operations.UpdateAdsGroupRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3244,7 +3235,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsGroup2",
+                operation_id="updateAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -3256,7 +3247,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsGroup2Response(
+            return operations.UpdateAdsGroupResponse(
                 ads_group=unmarshal_json_response(Optional[shared.AdsGroup], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3271,18 +3262,17 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ads_group2_async(
+    async def update_ads_group_async(
         self,
         *,
         request: Union[
-            operations.UpdateAdsGroup2Request,
-            operations.UpdateAdsGroup2RequestTypedDict,
+            operations.UpdateAdsGroupRequest, operations.UpdateAdsGroupRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsGroup2Response:
+    ) -> operations.UpdateAdsGroupResponse:
         r"""Update a group
 
         :param request: The request object to send.
@@ -3302,8 +3292,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsGroup2Request)
-        request = cast(operations.UpdateAdsGroup2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsGroupRequest)
+        request = cast(operations.UpdateAdsGroupRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3337,7 +3327,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsGroup2",
+                operation_id="updateAdsGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "group"],
@@ -3349,7 +3339,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsGroup2Response(
+            return operations.UpdateAdsGroupResponse(
                 ads_group=unmarshal_json_response(Optional[shared.AdsGroup], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3364,18 +3354,18 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_group2(
+    def update_hris_group(
         self,
         *,
         request: Union[
-            operations.UpdateHrisGroup2Request,
-            operations.UpdateHrisGroup2RequestTypedDict,
+            operations.UpdateHrisGroupRequest,
+            operations.UpdateHrisGroupRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisGroup2Response:
+    ) -> operations.UpdateHrisGroupResponse:
         r"""Update a group
 
         :param request: The request object to send.
@@ -3395,8 +3385,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisGroup2Request)
-        request = cast(operations.UpdateHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
+        request = cast(operations.UpdateHrisGroupRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3430,7 +3420,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisGroup2",
+                operation_id="updateHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -3442,7 +3432,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisGroup2Response(
+            return operations.UpdateHrisGroupResponse(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
@@ -3459,18 +3449,18 @@ class Group(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_group2_async(
+    async def update_hris_group_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisGroup2Request,
-            operations.UpdateHrisGroup2RequestTypedDict,
+            operations.UpdateHrisGroupRequest,
+            operations.UpdateHrisGroupRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisGroup2Response:
+    ) -> operations.UpdateHrisGroupResponse:
         r"""Update a group
 
         :param request: The request object to send.
@@ -3490,8 +3480,8 @@ class Group(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisGroup2Request)
-        request = cast(operations.UpdateHrisGroup2Request, request)
+            request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
+        request = cast(operations.UpdateHrisGroupRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3525,7 +3515,7 @@ class Group(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisGroup2",
+                operation_id="updateHrisGroup",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "group"],
@@ -3537,7 +3527,7 @@ class Group(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisGroup2Response(
+            return operations.UpdateHrisGroupResponse(
                 hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),

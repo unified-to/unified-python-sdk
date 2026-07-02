@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Label(BaseSDK):
-    def create_shipping_label2(
+    def create_shipping_label(
         self,
         *,
         request: Union[
-            operations.CreateShippingLabel2Request,
-            operations.CreateShippingLabel2RequestTypedDict,
+            operations.CreateShippingLabelRequest,
+            operations.CreateShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingLabel2Response:
+    ) -> operations.CreateShippingLabelResponse:
         r"""Create a label
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingLabel2Request)
-        request = cast(operations.CreateShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.CreateShippingLabelRequest)
+        request = cast(operations.CreateShippingLabelRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingLabel2",
+                operation_id="createShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -88,7 +88,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingLabel2Response(
+            return operations.CreateShippingLabelResponse(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -105,18 +105,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_shipping_label2_async(
+    async def create_shipping_label_async(
         self,
         *,
         request: Union[
-            operations.CreateShippingLabel2Request,
-            operations.CreateShippingLabel2RequestTypedDict,
+            operations.CreateShippingLabelRequest,
+            operations.CreateShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingLabel2Response:
+    ) -> operations.CreateShippingLabelResponse:
         r"""Create a label
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingLabel2Request)
-        request = cast(operations.CreateShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.CreateShippingLabelRequest)
+        request = cast(operations.CreateShippingLabelRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingLabel2",
+                operation_id="createShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -183,7 +183,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingLabel2Response(
+            return operations.CreateShippingLabelResponse(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -200,18 +200,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_shipping_label2(
+    def get_shipping_label(
         self,
         *,
         request: Union[
-            operations.GetShippingLabel2Request,
-            operations.GetShippingLabel2RequestTypedDict,
+            operations.GetShippingLabelRequest,
+            operations.GetShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingLabel2Response:
+    ) -> operations.GetShippingLabelResponse:
         r"""Retrieve a label
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingLabel2Request)
-        request = cast(operations.GetShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.GetShippingLabelRequest)
+        request = cast(operations.GetShippingLabelRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingLabel2",
+                operation_id="getShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -275,7 +275,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingLabel2Response(
+            return operations.GetShippingLabelResponse(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -292,18 +292,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_shipping_label2_async(
+    async def get_shipping_label_async(
         self,
         *,
         request: Union[
-            operations.GetShippingLabel2Request,
-            operations.GetShippingLabel2RequestTypedDict,
+            operations.GetShippingLabelRequest,
+            operations.GetShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingLabel2Response:
+    ) -> operations.GetShippingLabelResponse:
         r"""Retrieve a label
 
         :param request: The request object to send.
@@ -323,8 +323,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingLabel2Request)
-        request = cast(operations.GetShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.GetShippingLabelRequest)
+        request = cast(operations.GetShippingLabelRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +355,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingLabel2",
+                operation_id="getShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -367,7 +367,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingLabel2Response(
+            return operations.GetShippingLabelResponse(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -384,18 +384,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_shipping_labels2(
+    def list_shipping_labels(
         self,
         *,
         request: Union[
-            operations.ListShippingLabels2Request,
-            operations.ListShippingLabels2RequestTypedDict,
+            operations.ListShippingLabelsRequest,
+            operations.ListShippingLabelsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingLabels2Response:
+    ) -> operations.ListShippingLabelsResponse:
         r"""List all labels
 
         :param request: The request object to send.
@@ -415,8 +415,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingLabels2Request)
-        request = cast(operations.ListShippingLabels2Request, request)
+            request = utils.unmarshal(request, operations.ListShippingLabelsRequest)
+        request = cast(operations.ListShippingLabelsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +447,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingLabels2",
+                operation_id="listShippingLabels",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -459,7 +459,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingLabels2Response(
+            return operations.ListShippingLabelsResponse(
                 shipping_labels=unmarshal_json_response(
                     Optional[List[shared.ShippingLabel]], http_res
                 ),
@@ -476,18 +476,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_shipping_labels2_async(
+    async def list_shipping_labels_async(
         self,
         *,
         request: Union[
-            operations.ListShippingLabels2Request,
-            operations.ListShippingLabels2RequestTypedDict,
+            operations.ListShippingLabelsRequest,
+            operations.ListShippingLabelsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingLabels2Response:
+    ) -> operations.ListShippingLabelsResponse:
         r"""List all labels
 
         :param request: The request object to send.
@@ -507,8 +507,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingLabels2Request)
-        request = cast(operations.ListShippingLabels2Request, request)
+            request = utils.unmarshal(request, operations.ListShippingLabelsRequest)
+        request = cast(operations.ListShippingLabelsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +539,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingLabels2",
+                operation_id="listShippingLabels",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -551,7 +551,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingLabels2Response(
+            return operations.ListShippingLabelsResponse(
                 shipping_labels=unmarshal_json_response(
                     Optional[List[shared.ShippingLabel]], http_res
                 ),
@@ -568,18 +568,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_shipping_label2(
+    def patch_shipping_label(
         self,
         *,
         request: Union[
-            operations.PatchShippingLabel2Request,
-            operations.PatchShippingLabel2RequestTypedDict,
+            operations.PatchShippingLabelRequest,
+            operations.PatchShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchShippingLabel2Response:
+    ) -> operations.PatchShippingLabelResponse:
         r"""Update a label
 
         :param request: The request object to send.
@@ -599,8 +599,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchShippingLabel2Request)
-        request = cast(operations.PatchShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.PatchShippingLabelRequest)
+        request = cast(operations.PatchShippingLabelRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +634,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchShippingLabel2",
+                operation_id="patchShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -646,7 +646,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchShippingLabel2Response(
+            return operations.PatchShippingLabelResponse(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -663,18 +663,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_shipping_label2_async(
+    async def patch_shipping_label_async(
         self,
         *,
         request: Union[
-            operations.PatchShippingLabel2Request,
-            operations.PatchShippingLabel2RequestTypedDict,
+            operations.PatchShippingLabelRequest,
+            operations.PatchShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchShippingLabel2Response:
+    ) -> operations.PatchShippingLabelResponse:
         r"""Update a label
 
         :param request: The request object to send.
@@ -694,8 +694,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchShippingLabel2Request)
-        request = cast(operations.PatchShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.PatchShippingLabelRequest)
+        request = cast(operations.PatchShippingLabelRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +729,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchShippingLabel2",
+                operation_id="patchShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -741,7 +741,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchShippingLabel2Response(
+            return operations.PatchShippingLabelResponse(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -758,18 +758,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_shipping_label2(
+    def remove_shipping_label(
         self,
         *,
         request: Union[
-            operations.RemoveShippingLabel2Request,
-            operations.RemoveShippingLabel2RequestTypedDict,
+            operations.RemoveShippingLabelRequest,
+            operations.RemoveShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveShippingLabel2Response:
+    ) -> operations.RemoveShippingLabelResponse:
         r"""Remove a label
 
         :param request: The request object to send.
@@ -789,8 +789,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveShippingLabel2Request)
-        request = cast(operations.RemoveShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.RemoveShippingLabelRequest)
+        request = cast(operations.RemoveShippingLabelRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +821,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeShippingLabel2",
+                operation_id="removeShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -833,7 +833,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveShippingLabel2Response(
+            return operations.RemoveShippingLabelResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +846,7 @@ class Label(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveShippingLabel2Response(
+            return operations.RemoveShippingLabelResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +855,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_shipping_label2_async(
+    async def remove_shipping_label_async(
         self,
         *,
         request: Union[
-            operations.RemoveShippingLabel2Request,
-            operations.RemoveShippingLabel2RequestTypedDict,
+            operations.RemoveShippingLabelRequest,
+            operations.RemoveShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveShippingLabel2Response:
+    ) -> operations.RemoveShippingLabelResponse:
         r"""Remove a label
 
         :param request: The request object to send.
@@ -886,8 +886,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveShippingLabel2Request)
-        request = cast(operations.RemoveShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.RemoveShippingLabelRequest)
+        request = cast(operations.RemoveShippingLabelRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +918,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeShippingLabel2",
+                operation_id="removeShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -930,7 +930,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveShippingLabel2Response(
+            return operations.RemoveShippingLabelResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +943,7 @@ class Label(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveShippingLabel2Response(
+            return operations.RemoveShippingLabelResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +952,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_shipping_label2(
+    def update_shipping_label(
         self,
         *,
         request: Union[
-            operations.UpdateShippingLabel2Request,
-            operations.UpdateShippingLabel2RequestTypedDict,
+            operations.UpdateShippingLabelRequest,
+            operations.UpdateShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateShippingLabel2Response:
+    ) -> operations.UpdateShippingLabelResponse:
         r"""Update a label
 
         :param request: The request object to send.
@@ -983,8 +983,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateShippingLabel2Request)
-        request = cast(operations.UpdateShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.UpdateShippingLabelRequest)
+        request = cast(operations.UpdateShippingLabelRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1018,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateShippingLabel2",
+                operation_id="updateShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -1030,7 +1030,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateShippingLabel2Response(
+            return operations.UpdateShippingLabelResponse(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),
@@ -1047,18 +1047,18 @@ class Label(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_shipping_label2_async(
+    async def update_shipping_label_async(
         self,
         *,
         request: Union[
-            operations.UpdateShippingLabel2Request,
-            operations.UpdateShippingLabel2RequestTypedDict,
+            operations.UpdateShippingLabelRequest,
+            operations.UpdateShippingLabelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateShippingLabel2Response:
+    ) -> operations.UpdateShippingLabelResponse:
         r"""Update a label
 
         :param request: The request object to send.
@@ -1078,8 +1078,8 @@ class Label(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateShippingLabel2Request)
-        request = cast(operations.UpdateShippingLabel2Request, request)
+            request = utils.unmarshal(request, operations.UpdateShippingLabelRequest)
+        request = cast(operations.UpdateShippingLabelRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1113,7 @@ class Label(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateShippingLabel2",
+                operation_id="updateShippingLabel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "label"],
@@ -1125,7 +1125,7 @@ class Label(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateShippingLabel2Response(
+            return operations.UpdateShippingLabelResponse(
                 shipping_label=unmarshal_json_response(
                     Optional[shared.ShippingLabel], http_res
                 ),

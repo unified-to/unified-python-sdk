@@ -4,26 +4,26 @@
 
 ### Available Operations
 
-* [create_accounting_category2](#create_accounting_category2) - Create a category
-* [create_ticketing_category2](#create_ticketing_category2) - Create a category
-* [get_accounting_category2](#get_accounting_category2) - Retrieve a category
-* [get_ticketing_category2](#get_ticketing_category2) - Retrieve a category
-* [list_accounting_categories2](#list_accounting_categories2) - List all categories
-* [list_ticketing_categories2](#list_ticketing_categories2) - List all categories
-* [patch_accounting_category2](#patch_accounting_category2) - Update a category
-* [patch_ticketing_category2](#patch_ticketing_category2) - Update a category
-* [remove_accounting_category2](#remove_accounting_category2) - Remove a category
-* [remove_ticketing_category2](#remove_ticketing_category2) - Remove a category
-* [update_accounting_category2](#update_accounting_category2) - Update a category
-* [update_ticketing_category2](#update_ticketing_category2) - Update a category
+* [create_accounting_category](#create_accounting_category) - Create a category
+* [create_ticketing_category](#create_ticketing_category) - Create a category
+* [get_accounting_category](#get_accounting_category) - Retrieve a category
+* [get_ticketing_category](#get_ticketing_category) - Retrieve a category
+* [list_accounting_categories](#list_accounting_categories) - List all categories
+* [list_ticketing_categories](#list_ticketing_categories) - List all categories
+* [patch_accounting_category](#patch_accounting_category) - Update a category
+* [patch_ticketing_category](#patch_ticketing_category) - Update a category
+* [remove_accounting_category](#remove_accounting_category) - Remove a category
+* [remove_ticketing_category](#remove_ticketing_category) - Remove a category
+* [update_accounting_category](#update_accounting_category) - Update a category
+* [update_ticketing_category](#update_ticketing_category) - Update a category
 
-## create_accounting_category2
+## create_accounting_category
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingCategory2" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -35,7 +35,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.category.create_accounting_category2(request={
+    res = unified_to.category.create_accounting_category(request={
         "accounting_category": {},
         "connection_id": "<id>",
     })
@@ -49,14 +49,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.CreateAccountingCategory2Request](../../models/operations/createaccountingcategory2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.CreateAccountingCategoryRequest](../../models/operations/createaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.CreateAccountingCategory2Response](../../models/operations/createaccountingcategory2response.md)**
+**[operations.CreateAccountingCategoryResponse](../../models/operations/createaccountingcategoryresponse.md)**
 
 ### Errors
 
@@ -64,13 +64,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_ticketing_category2
+## create_ticketing_category
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingCategory2" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -82,7 +82,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.category.create_ticketing_category2(request={
+    res = unified_to.category.create_ticketing_category(request={
         "ticketing_category": {},
         "connection_id": "<id>",
     })
@@ -96,14 +96,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.CreateTicketingCategory2Request](../../models/operations/createticketingcategory2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateTicketingCategoryRequest](../../models/operations/createticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.CreateTicketingCategory2Response](../../models/operations/createticketingcategory2response.md)**
+**[operations.CreateTicketingCategoryResponse](../../models/operations/createticketingcategoryresponse.md)**
 
 ### Errors
 
@@ -111,13 +111,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_accounting_category2
+## get_accounting_category
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getAccountingCategory2" method="get" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -129,7 +129,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.category.get_accounting_category2(request={
+    res = unified_to.category.get_accounting_category(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -143,14 +143,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetAccountingCategory2Request](../../models/operations/getaccountingcategory2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetAccountingCategoryRequest](../../models/operations/getaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.GetAccountingCategory2Response](../../models/operations/getaccountingcategory2response.md)**
+**[operations.GetAccountingCategoryResponse](../../models/operations/getaccountingcategoryresponse.md)**
 
 ### Errors
 
@@ -158,13 +158,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_ticketing_category2
+## get_ticketing_category
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTicketingCategory2" method="get" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -176,7 +176,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.category.get_ticketing_category2(request={
+    res = unified_to.category.get_ticketing_category(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -190,14 +190,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetTicketingCategory2Request](../../models/operations/getticketingcategory2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetTicketingCategoryRequest](../../models/operations/getticketingcategoryrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.GetTicketingCategory2Response](../../models/operations/getticketingcategory2response.md)**
+**[operations.GetTicketingCategoryResponse](../../models/operations/getticketingcategoryresponse.md)**
 
 ### Errors
 
@@ -205,13 +205,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_accounting_categories2
+## list_accounting_categories
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAccountingCategories2" method="get" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -223,7 +223,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.category.list_accounting_categories2(request={
+    res = unified_to.category.list_accounting_categories(request={
         "connection_id": "<id>",
     })
 
@@ -236,14 +236,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.ListAccountingCategories2Request](../../models/operations/listaccountingcategories2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.ListAccountingCategoriesRequest](../../models/operations/listaccountingcategoriesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.ListAccountingCategories2Response](../../models/operations/listaccountingcategories2response.md)**
+**[operations.ListAccountingCategoriesResponse](../../models/operations/listaccountingcategoriesresponse.md)**
 
 ### Errors
 
@@ -251,13 +251,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ticketing_categories2
+## list_ticketing_categories
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTicketingCategories2" method="get" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -269,7 +269,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.category.list_ticketing_categories2(request={
+    res = unified_to.category.list_ticketing_categories(request={
         "connection_id": "<id>",
     })
 
@@ -282,14 +282,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.ListTicketingCategories2Request](../../models/operations/listticketingcategories2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListTicketingCategoriesRequest](../../models/operations/listticketingcategoriesrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.ListTicketingCategories2Response](../../models/operations/listticketingcategories2response.md)**
+**[operations.ListTicketingCategoriesResponse](../../models/operations/listticketingcategoriesresponse.md)**
 
 ### Errors
 
@@ -297,13 +297,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_accounting_category2
+## patch_accounting_category
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingCategory2" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -315,7 +315,197 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.category.patch_accounting_category2(request={
+    res = unified_to.category.patch_accounting_category(request={
+        "accounting_category": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_category is not None
+
+    # Handle response
+    print(res.accounting_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.PatchAccountingCategoryRequest](../../models/operations/patchaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.PatchAccountingCategoryResponse](../../models/operations/patchaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_ticketing_category
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.category.patch_ticketing_category(request={
+        "ticketing_category": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ticketing_category is not None
+
+    # Handle response
+    print(res.ticketing_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchTicketingCategoryRequest](../../models/operations/patchticketingcategoryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.PatchTicketingCategoryResponse](../../models/operations/patchticketingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_accounting_category
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.category.remove_accounting_category(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.RemoveAccountingCategoryRequest](../../models/operations/removeaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.RemoveAccountingCategoryResponse](../../models/operations/removeaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_ticketing_category
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.category.remove_ticketing_category(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveTicketingCategoryRequest](../../models/operations/removeticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.RemoveTicketingCategoryResponse](../../models/operations/removeticketingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_accounting_category
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.category.update_accounting_category(request={
         "accounting_category": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -332,12 +522,12 @@ with UnifiedTo(
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.PatchAccountingCategory2Request](../../models/operations/patchaccountingcategory2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `request`                                                                                                | [operations.UpdateAccountingCategoryRequest](../../models/operations/updateaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 | `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.PatchAccountingCategory2Response](../../models/operations/patchaccountingcategory2response.md)**
+**[operations.UpdateAccountingCategoryResponse](../../models/operations/updateaccountingcategoryresponse.md)**
 
 ### Errors
 
@@ -345,13 +535,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_ticketing_category2
+## update_ticketing_category
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingCategory2" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -363,7 +553,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.category.patch_ticketing_category2(request={
+    res = unified_to.category.update_ticketing_category(request={
         "ticketing_category": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -380,202 +570,12 @@ with UnifiedTo(
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PatchTicketingCategory2Request](../../models/operations/patchticketingcategory2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `request`                                                                                              | [operations.UpdateTicketingCategoryRequest](../../models/operations/updateticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 | `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.PatchTicketingCategory2Response](../../models/operations/patchticketingcategory2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_accounting_category2
-
-Remove a category
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeAccountingCategory2" method="delete" path="/accounting/{connection_id}/category/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.category.remove_accounting_category2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.RemoveAccountingCategory2Request](../../models/operations/removeaccountingcategory2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
-
-### Response
-
-**[operations.RemoveAccountingCategory2Response](../../models/operations/removeaccountingcategory2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_ticketing_category2
-
-Remove a category
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeTicketingCategory2" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.category.remove_ticketing_category2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.RemoveTicketingCategory2Request](../../models/operations/removeticketingcategory2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
-
-### Response
-
-**[operations.RemoveTicketingCategory2Response](../../models/operations/removeticketingcategory2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_accounting_category2
-
-Update a category
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateAccountingCategory2" method="put" path="/accounting/{connection_id}/category/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.category.update_accounting_category2(request={
-        "accounting_category": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.accounting_category is not None
-
-    # Handle response
-    print(res.accounting_category)
-
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.UpdateAccountingCategory2Request](../../models/operations/updateaccountingcategory2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
-
-### Response
-
-**[operations.UpdateAccountingCategory2Response](../../models/operations/updateaccountingcategory2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_ticketing_category2
-
-Update a category
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateTicketingCategory2" method="put" path="/ticketing/{connection_id}/category/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.category.update_ticketing_category2(request={
-        "ticketing_category": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.ticketing_category is not None
-
-    # Handle response
-    print(res.ticketing_category)
-
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.UpdateTicketingCategory2Request](../../models/operations/updateticketingcategory2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
-
-### Response
-
-**[operations.UpdateTicketingCategory2Response](../../models/operations/updateticketingcategory2response.md)**
+**[operations.UpdateTicketingCategoryResponse](../../models/operations/updateticketingcategoryresponse.md)**
 
 ### Errors
 

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Metadata(BaseSDK):
-    def create_metadata_metadata2(
+    def create_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.CreateMetadataMetadata2Request,
-            operations.CreateMetadataMetadata2RequestTypedDict,
+            operations.CreateMetadataMetadataRequest,
+            operations.CreateMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMetadataMetadata2Response:
+    ) -> operations.CreateMetadataMetadataResponse:
         r"""Create a metadata
 
         :param request: The request object to send.
@@ -41,10 +41,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateMetadataMetadata2Request
-            )
-        request = cast(operations.CreateMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.CreateMetadataMetadataRequest)
+        request = cast(operations.CreateMetadataMetadataRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -78,7 +76,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMetadataMetadata2",
+                operation_id="createMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -90,7 +88,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMetadataMetadata2Response(
+            return operations.CreateMetadataMetadataResponse(
                 metadata_metadata=unmarshal_json_response(
                     Optional[shared.MetadataMetadata], http_res
                 ),
@@ -107,18 +105,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_metadata_metadata2_async(
+    async def create_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.CreateMetadataMetadata2Request,
-            operations.CreateMetadataMetadata2RequestTypedDict,
+            operations.CreateMetadataMetadataRequest,
+            operations.CreateMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMetadataMetadata2Response:
+    ) -> operations.CreateMetadataMetadataResponse:
         r"""Create a metadata
 
         :param request: The request object to send.
@@ -138,10 +136,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateMetadataMetadata2Request
-            )
-        request = cast(operations.CreateMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.CreateMetadataMetadataRequest)
+        request = cast(operations.CreateMetadataMetadataRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -175,7 +171,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMetadataMetadata2",
+                operation_id="createMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -187,7 +183,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMetadataMetadata2Response(
+            return operations.CreateMetadataMetadataResponse(
                 metadata_metadata=unmarshal_json_response(
                     Optional[shared.MetadataMetadata], http_res
                 ),
@@ -204,18 +200,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_metadata_metadata2(
+    def get_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.GetMetadataMetadata2Request,
-            operations.GetMetadataMetadata2RequestTypedDict,
+            operations.GetMetadataMetadataRequest,
+            operations.GetMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMetadataMetadata2Response:
+    ) -> operations.GetMetadataMetadataResponse:
         r"""Retrieve a metadata
 
         :param request: The request object to send.
@@ -235,8 +231,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMetadataMetadata2Request)
-        request = cast(operations.GetMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.GetMetadataMetadataRequest)
+        request = cast(operations.GetMetadataMetadataRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -267,7 +263,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMetadataMetadata2",
+                operation_id="getMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -279,7 +275,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMetadataMetadata2Response(
+            return operations.GetMetadataMetadataResponse(
                 metadata_metadata=unmarshal_json_response(
                     Optional[shared.MetadataMetadata], http_res
                 ),
@@ -296,18 +292,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_metadata_metadata2_async(
+    async def get_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.GetMetadataMetadata2Request,
-            operations.GetMetadataMetadata2RequestTypedDict,
+            operations.GetMetadataMetadataRequest,
+            operations.GetMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMetadataMetadata2Response:
+    ) -> operations.GetMetadataMetadataResponse:
         r"""Retrieve a metadata
 
         :param request: The request object to send.
@@ -327,8 +323,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMetadataMetadata2Request)
-        request = cast(operations.GetMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.GetMetadataMetadataRequest)
+        request = cast(operations.GetMetadataMetadataRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -359,7 +355,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMetadataMetadata2",
+                operation_id="getMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -371,7 +367,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMetadataMetadata2Response(
+            return operations.GetMetadataMetadataResponse(
                 metadata_metadata=unmarshal_json_response(
                     Optional[shared.MetadataMetadata], http_res
                 ),
@@ -388,18 +384,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_metadata_metadatas2(
+    def list_metadata_metadatas(
         self,
         *,
         request: Union[
-            operations.ListMetadataMetadatas2Request,
-            operations.ListMetadataMetadatas2RequestTypedDict,
+            operations.ListMetadataMetadatasRequest,
+            operations.ListMetadataMetadatasRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMetadataMetadatas2Response:
+    ) -> operations.ListMetadataMetadatasResponse:
         r"""List all metadatas
 
         :param request: The request object to send.
@@ -419,8 +415,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMetadataMetadatas2Request)
-        request = cast(operations.ListMetadataMetadatas2Request, request)
+            request = utils.unmarshal(request, operations.ListMetadataMetadatasRequest)
+        request = cast(operations.ListMetadataMetadatasRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -451,7 +447,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMetadataMetadatas2",
+                operation_id="listMetadataMetadatas",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -463,7 +459,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMetadataMetadatas2Response(
+            return operations.ListMetadataMetadatasResponse(
                 metadata_metadatas=unmarshal_json_response(
                     Optional[List[shared.MetadataMetadata]], http_res
                 ),
@@ -480,18 +476,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_metadata_metadatas2_async(
+    async def list_metadata_metadatas_async(
         self,
         *,
         request: Union[
-            operations.ListMetadataMetadatas2Request,
-            operations.ListMetadataMetadatas2RequestTypedDict,
+            operations.ListMetadataMetadatasRequest,
+            operations.ListMetadataMetadatasRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMetadataMetadatas2Response:
+    ) -> operations.ListMetadataMetadatasResponse:
         r"""List all metadatas
 
         :param request: The request object to send.
@@ -511,8 +507,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMetadataMetadatas2Request)
-        request = cast(operations.ListMetadataMetadatas2Request, request)
+            request = utils.unmarshal(request, operations.ListMetadataMetadatasRequest)
+        request = cast(operations.ListMetadataMetadatasRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -543,7 +539,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMetadataMetadatas2",
+                operation_id="listMetadataMetadatas",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -555,7 +551,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMetadataMetadatas2Response(
+            return operations.ListMetadataMetadatasResponse(
                 metadata_metadatas=unmarshal_json_response(
                     Optional[List[shared.MetadataMetadata]], http_res
                 ),
@@ -572,18 +568,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_metadata_metadata2(
+    def patch_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.PatchMetadataMetadata2Request,
-            operations.PatchMetadataMetadata2RequestTypedDict,
+            operations.PatchMetadataMetadataRequest,
+            operations.PatchMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMetadataMetadata2Response:
+    ) -> operations.PatchMetadataMetadataResponse:
         r"""Update a metadata
 
         :param request: The request object to send.
@@ -603,8 +599,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMetadataMetadata2Request)
-        request = cast(operations.PatchMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.PatchMetadataMetadataRequest)
+        request = cast(operations.PatchMetadataMetadataRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -638,7 +634,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMetadataMetadata2",
+                operation_id="patchMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -650,7 +646,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMetadataMetadata2Response(
+            return operations.PatchMetadataMetadataResponse(
                 metadata_metadata=unmarshal_json_response(
                     Optional[shared.MetadataMetadata], http_res
                 ),
@@ -667,18 +663,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_metadata_metadata2_async(
+    async def patch_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.PatchMetadataMetadata2Request,
-            operations.PatchMetadataMetadata2RequestTypedDict,
+            operations.PatchMetadataMetadataRequest,
+            operations.PatchMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMetadataMetadata2Response:
+    ) -> operations.PatchMetadataMetadataResponse:
         r"""Update a metadata
 
         :param request: The request object to send.
@@ -698,8 +694,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMetadataMetadata2Request)
-        request = cast(operations.PatchMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.PatchMetadataMetadataRequest)
+        request = cast(operations.PatchMetadataMetadataRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -733,7 +729,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMetadataMetadata2",
+                operation_id="patchMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -745,7 +741,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMetadataMetadata2Response(
+            return operations.PatchMetadataMetadataResponse(
                 metadata_metadata=unmarshal_json_response(
                     Optional[shared.MetadataMetadata], http_res
                 ),
@@ -762,18 +758,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_metadata_metadata2(
+    def remove_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.RemoveMetadataMetadata2Request,
-            operations.RemoveMetadataMetadata2RequestTypedDict,
+            operations.RemoveMetadataMetadataRequest,
+            operations.RemoveMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMetadataMetadata2Response:
+    ) -> operations.RemoveMetadataMetadataResponse:
         r"""Remove a metadata
 
         :param request: The request object to send.
@@ -793,10 +789,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveMetadataMetadata2Request
-            )
-        request = cast(operations.RemoveMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.RemoveMetadataMetadataRequest)
+        request = cast(operations.RemoveMetadataMetadataRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -827,7 +821,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMetadataMetadata2",
+                operation_id="removeMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -839,7 +833,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMetadataMetadata2Response(
+            return operations.RemoveMetadataMetadataResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -852,7 +846,7 @@ class Metadata(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMetadataMetadata2Response(
+            return operations.RemoveMetadataMetadataResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -861,18 +855,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_metadata_metadata2_async(
+    async def remove_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.RemoveMetadataMetadata2Request,
-            operations.RemoveMetadataMetadata2RequestTypedDict,
+            operations.RemoveMetadataMetadataRequest,
+            operations.RemoveMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMetadataMetadata2Response:
+    ) -> operations.RemoveMetadataMetadataResponse:
         r"""Remove a metadata
 
         :param request: The request object to send.
@@ -892,10 +886,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveMetadataMetadata2Request
-            )
-        request = cast(operations.RemoveMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.RemoveMetadataMetadataRequest)
+        request = cast(operations.RemoveMetadataMetadataRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -926,7 +918,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMetadataMetadata2",
+                operation_id="removeMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -938,7 +930,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMetadataMetadata2Response(
+            return operations.RemoveMetadataMetadataResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -951,7 +943,7 @@ class Metadata(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMetadataMetadata2Response(
+            return operations.RemoveMetadataMetadataResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -960,18 +952,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_metadata_metadata2(
+    def update_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.UpdateMetadataMetadata2Request,
-            operations.UpdateMetadataMetadata2RequestTypedDict,
+            operations.UpdateMetadataMetadataRequest,
+            operations.UpdateMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMetadataMetadata2Response:
+    ) -> operations.UpdateMetadataMetadataResponse:
         r"""Update a metadata
 
         :param request: The request object to send.
@@ -991,10 +983,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateMetadataMetadata2Request
-            )
-        request = cast(operations.UpdateMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMetadataMetadataRequest)
+        request = cast(operations.UpdateMetadataMetadataRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1028,7 +1018,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMetadataMetadata2",
+                operation_id="updateMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -1040,7 +1030,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMetadataMetadata2Response(
+            return operations.UpdateMetadataMetadataResponse(
                 metadata_metadata=unmarshal_json_response(
                     Optional[shared.MetadataMetadata], http_res
                 ),
@@ -1057,18 +1047,18 @@ class Metadata(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_metadata_metadata2_async(
+    async def update_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.UpdateMetadataMetadata2Request,
-            operations.UpdateMetadataMetadata2RequestTypedDict,
+            operations.UpdateMetadataMetadataRequest,
+            operations.UpdateMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMetadataMetadata2Response:
+    ) -> operations.UpdateMetadataMetadataResponse:
         r"""Update a metadata
 
         :param request: The request object to send.
@@ -1088,10 +1078,8 @@ class Metadata(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateMetadataMetadata2Request
-            )
-        request = cast(operations.UpdateMetadataMetadata2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMetadataMetadataRequest)
+        request = cast(operations.UpdateMetadataMetadataRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1125,7 +1113,7 @@ class Metadata(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMetadataMetadata2",
+                operation_id="updateMetadataMetadata",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["metadata", "metadata"],
@@ -1137,7 +1125,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMetadataMetadata2Response(
+            return operations.UpdateMetadataMetadataResponse(
                 metadata_metadata=unmarshal_json_response(
                     Optional[shared.MetadataMetadata], http_res
                 ),

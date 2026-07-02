@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [create_hris_benefit2](#create_hris_benefit2) - Create a benefit
-* [get_hris_benefit2](#get_hris_benefit2) - Retrieve a benefit
-* [list_hris_benefits2](#list_hris_benefits2) - List all benefits
-* [patch_hris_benefit2](#patch_hris_benefit2) - Update a benefit
-* [remove_hris_benefit2](#remove_hris_benefit2) - Remove a benefit
-* [update_hris_benefit2](#update_hris_benefit2) - Update a benefit
+* [create_hris_benefit](#create_hris_benefit) - Create a benefit
+* [get_hris_benefit](#get_hris_benefit) - Retrieve a benefit
+* [list_hris_benefits](#list_hris_benefits) - List all benefits
+* [patch_hris_benefit](#patch_hris_benefit) - Update a benefit
+* [remove_hris_benefit](#remove_hris_benefit) - Remove a benefit
+* [update_hris_benefit](#update_hris_benefit) - Update a benefit
 
-## create_hris_benefit2
+## create_hris_benefit
 
 Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisBenefit2" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="python" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -29,7 +29,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.benefit.create_hris_benefit2(request={
+    res = unified_to.benefit.create_hris_benefit(request={
         "hris_benefit": {},
         "connection_id": "<id>",
     })
@@ -43,14 +43,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.CreateHrisBenefit2Request](../../models/operations/createhrisbenefit2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateHrisBenefitRequest](../../models/operations/createhrisbenefitrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.CreateHrisBenefit2Response](../../models/operations/createhrisbenefit2response.md)**
+**[operations.CreateHrisBenefitResponse](../../models/operations/createhrisbenefitresponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_hris_benefit2
+## get_hris_benefit
 
 Retrieve a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getHrisBenefit2" method="get" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="python" operationID="getHrisBenefit" method="get" path="/hris/{connection_id}/benefit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -76,7 +76,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.benefit.get_hris_benefit2(request={
+    res = unified_to.benefit.get_hris_benefit(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -90,14 +90,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.GetHrisBenefit2Request](../../models/operations/gethrisbenefit2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetHrisBenefitRequest](../../models/operations/gethrisbenefitrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetHrisBenefit2Response](../../models/operations/gethrisbenefit2response.md)**
+**[operations.GetHrisBenefitResponse](../../models/operations/gethrisbenefitresponse.md)**
 
 ### Errors
 
@@ -105,13 +105,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_hris_benefits2
+## list_hris_benefits
 
 List all benefits
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listHrisBenefits2" method="get" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="python" operationID="listHrisBenefits" method="get" path="/hris/{connection_id}/benefit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -123,7 +123,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.benefit.list_hris_benefits2(request={
+    res = unified_to.benefit.list_hris_benefits(request={
         "connection_id": "<id>",
     })
 
@@ -136,14 +136,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.ListHrisBenefits2Request](../../models/operations/listhrisbenefits2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListHrisBenefitsRequest](../../models/operations/listhrisbenefitsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListHrisBenefits2Response](../../models/operations/listhrisbenefits2response.md)**
+**[operations.ListHrisBenefitsResponse](../../models/operations/listhrisbenefitsresponse.md)**
 
 ### Errors
 
@@ -151,13 +151,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_hris_benefit2
+## patch_hris_benefit
 
 Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisBenefit2" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -169,7 +169,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.benefit.patch_hris_benefit2(request={
+    res = unified_to.benefit.patch_hris_benefit(request={
         "hris_benefit": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -184,14 +184,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.PatchHrisBenefit2Request](../../models/operations/patchhrisbenefit2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchHrisBenefitRequest](../../models/operations/patchhrisbenefitrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.PatchHrisBenefit2Response](../../models/operations/patchhrisbenefit2response.md)**
+**[operations.PatchHrisBenefitResponse](../../models/operations/patchhrisbenefitresponse.md)**
 
 ### Errors
 
@@ -199,13 +199,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_hris_benefit2
+## remove_hris_benefit
 
 Remove a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeHrisBenefit2" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeHrisBenefit" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -217,7 +217,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.benefit.remove_hris_benefit2(request={
+    res = unified_to.benefit.remove_hris_benefit(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -231,14 +231,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.RemoveHrisBenefit2Request](../../models/operations/removehrisbenefit2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveHrisBenefitRequest](../../models/operations/removehrisbenefitrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.RemoveHrisBenefit2Response](../../models/operations/removehrisbenefit2response.md)**
+**[operations.RemoveHrisBenefitResponse](../../models/operations/removehrisbenefitresponse.md)**
 
 ### Errors
 
@@ -246,13 +246,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_hris_benefit2
+## update_hris_benefit
 
 Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisBenefit2" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -264,7 +264,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.benefit.update_hris_benefit2(request={
+    res = unified_to.benefit.update_hris_benefit(request={
         "hris_benefit": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -279,14 +279,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.UpdateHrisBenefit2Request](../../models/operations/updatehrisbenefit2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateHrisBenefitRequest](../../models/operations/updatehrisbenefitrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.UpdateHrisBenefit2Response](../../models/operations/updatehrisbenefit2response.md)**
+**[operations.UpdateHrisBenefitResponse](../../models/operations/updatehrisbenefitresponse.md)**
 
 ### Errors
 

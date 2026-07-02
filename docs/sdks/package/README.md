@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [create_assessment_package2](#create_assessment_package2) - Create an assessment package
-* [get_assessment_package2](#get_assessment_package2) - Get an assessment package
-* [get_verification_package2](#get_verification_package2) - Retrieve a package
-* [list_assessment_packages2](#list_assessment_packages2) - List assessment packages
-* [list_verification_packages2](#list_verification_packages2) - List all packages
-* [patch_assessment_package2](#patch_assessment_package2) - Update an assessment package
-* [remove_assessment_package2](#remove_assessment_package2) - Delete an assessment package
-* [update_assessment_package2](#update_assessment_package2) - Update an assessment package
+* [create_assessment_package](#create_assessment_package) - Create an assessment package
+* [get_assessment_package](#get_assessment_package) - Get an assessment package
+* [get_verification_package](#get_verification_package) - Retrieve a package
+* [list_assessment_packages](#list_assessment_packages) - List assessment packages
+* [list_verification_packages](#list_verification_packages) - List all packages
+* [patch_assessment_package](#patch_assessment_package) - Update an assessment package
+* [remove_assessment_package](#remove_assessment_package) - Delete an assessment package
+* [update_assessment_package](#update_assessment_package) - Update an assessment package
 
-## create_assessment_package2
+## create_assessment_package
 
 Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAssessmentPackage2" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="python" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -31,9 +31,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.package.create_assessment_package2(request={
+    res = unified_to.package.create_assessment_package(request={
         "assessment_package": {
-            "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
+            "type": shared.AssessmentPackageType.REFERENCE_CHECK,
         },
         "connection_id": "<id>",
     })
@@ -47,14 +47,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.CreateAssessmentPackage2Request](../../models/operations/createassessmentpackage2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAssessmentPackageRequest](../../models/operations/createassessmentpackagerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.CreateAssessmentPackage2Response](../../models/operations/createassessmentpackage2response.md)**
+**[operations.CreateAssessmentPackageResponse](../../models/operations/createassessmentpackageresponse.md)**
 
 ### Errors
 
@@ -62,13 +62,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_assessment_package2
+## get_assessment_package
 
 Get an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getAssessmentPackage2" method="get" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="python" operationID="getAssessmentPackage" method="get" path="/assessment/{connection_id}/package/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -80,7 +80,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.package.get_assessment_package2(request={
+    res = unified_to.package.get_assessment_package(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -94,14 +94,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetAssessmentPackage2Request](../../models/operations/getassessmentpackage2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAssessmentPackageRequest](../../models/operations/getassessmentpackagerequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.GetAssessmentPackage2Response](../../models/operations/getassessmentpackage2response.md)**
+**[operations.GetAssessmentPackageResponse](../../models/operations/getassessmentpackageresponse.md)**
 
 ### Errors
 
@@ -109,13 +109,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_verification_package2
+## get_verification_package
 
 Retrieve a package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getVerificationPackage2" method="get" path="/verification/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="python" operationID="getVerificationPackage" method="get" path="/verification/{connection_id}/package/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -127,7 +127,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.package.get_verification_package2(request={
+    res = unified_to.package.get_verification_package(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -141,14 +141,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetVerificationPackage2Request](../../models/operations/getverificationpackage2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetVerificationPackageRequest](../../models/operations/getverificationpackagerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.GetVerificationPackage2Response](../../models/operations/getverificationpackage2response.md)**
+**[operations.GetVerificationPackageResponse](../../models/operations/getverificationpackageresponse.md)**
 
 ### Errors
 
@@ -156,13 +156,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_assessment_packages2
+## list_assessment_packages
 
 List assessment packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAssessmentPackages2" method="get" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="python" operationID="listAssessmentPackages" method="get" path="/assessment/{connection_id}/package" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -174,7 +174,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.package.list_assessment_packages2(request={
+    res = unified_to.package.list_assessment_packages(request={
         "connection_id": "<id>",
     })
 
@@ -187,14 +187,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.ListAssessmentPackages2Request](../../models/operations/listassessmentpackages2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAssessmentPackagesRequest](../../models/operations/listassessmentpackagesrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.ListAssessmentPackages2Response](../../models/operations/listassessmentpackages2response.md)**
+**[operations.ListAssessmentPackagesResponse](../../models/operations/listassessmentpackagesresponse.md)**
 
 ### Errors
 
@@ -202,13 +202,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_verification_packages2
+## list_verification_packages
 
 List all packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listVerificationPackages2" method="get" path="/verification/{connection_id}/package" -->
+<!-- UsageSnippet language="python" operationID="listVerificationPackages" method="get" path="/verification/{connection_id}/package" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -220,7 +220,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.package.list_verification_packages2(request={
+    res = unified_to.package.list_verification_packages(request={
         "connection_id": "<id>",
     })
 
@@ -233,14 +233,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.ListVerificationPackages2Request](../../models/operations/listverificationpackages2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.ListVerificationPackagesRequest](../../models/operations/listverificationpackagesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.ListVerificationPackages2Response](../../models/operations/listverificationpackages2response.md)**
+**[operations.ListVerificationPackagesResponse](../../models/operations/listverificationpackagesresponse.md)**
 
 ### Errors
 
@@ -248,13 +248,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_assessment_package2
+## patch_assessment_package
 
 Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAssessmentPackage2" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -266,9 +266,9 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.package.patch_assessment_package2(request={
+    res = unified_to.package.patch_assessment_package(request={
         "assessment_package": {
-            "type": shared.AssessmentPackageType.OTHER,
+            "type": shared.AssessmentPackageType.BACKGROUND_CHECK,
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -283,14 +283,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PatchAssessmentPackage2Request](../../models/operations/patchassessmentpackage2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchAssessmentPackageRequest](../../models/operations/patchassessmentpackagerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.PatchAssessmentPackage2Response](../../models/operations/patchassessmentpackage2response.md)**
+**[operations.PatchAssessmentPackageResponse](../../models/operations/patchassessmentpackageresponse.md)**
 
 ### Errors
 
@@ -298,13 +298,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_assessment_package2
+## remove_assessment_package
 
 Delete an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeAssessmentPackage2" method="delete" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeAssessmentPackage" method="delete" path="/assessment/{connection_id}/package/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -316,7 +316,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.package.remove_assessment_package2(request={
+    res = unified_to.package.remove_assessment_package(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -330,14 +330,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.RemoveAssessmentPackage2Request](../../models/operations/removeassessmentpackage2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveAssessmentPackageRequest](../../models/operations/removeassessmentpackagerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.RemoveAssessmentPackage2Response](../../models/operations/removeassessmentpackage2response.md)**
+**[operations.RemoveAssessmentPackageResponse](../../models/operations/removeassessmentpackageresponse.md)**
 
 ### Errors
 
@@ -345,13 +345,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_assessment_package2
+## update_assessment_package
 
 Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAssessmentPackage2" method="put" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -363,7 +363,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.package.update_assessment_package2(request={
+    res = unified_to.package.update_assessment_package(request={
         "assessment_package": {
             "type": shared.AssessmentPackageType.OTHER,
         },
@@ -380,14 +380,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.UpdateAssessmentPackage2Request](../../models/operations/updateassessmentpackage2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateAssessmentPackageRequest](../../models/operations/updateassessmentpackagerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.UpdateAssessmentPackage2Response](../../models/operations/updateassessmentpackage2response.md)**
+**[operations.UpdateAssessmentPackageResponse](../../models/operations/updateassessmentpackageresponse.md)**
 
 ### Errors
 

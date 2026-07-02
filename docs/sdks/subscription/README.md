@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [create_payment_subscription2](#create_payment_subscription2) - Create a subscription
-* [get_payment_subscription2](#get_payment_subscription2) - Retrieve a subscription
-* [list_payment_subscriptions2](#list_payment_subscriptions2) - List all subscriptions
-* [patch_payment_subscription2](#patch_payment_subscription2) - Update a subscription
-* [remove_payment_subscription2](#remove_payment_subscription2) - Remove a subscription
-* [update_payment_subscription2](#update_payment_subscription2) - Update a subscription
+* [create_payment_subscription](#create_payment_subscription) - Create a subscription
+* [get_payment_subscription](#get_payment_subscription) - Retrieve a subscription
+* [list_payment_subscriptions](#list_payment_subscriptions) - List all subscriptions
+* [patch_payment_subscription](#patch_payment_subscription) - Update a subscription
+* [remove_payment_subscription](#remove_payment_subscription) - Remove a subscription
+* [update_payment_subscription](#update_payment_subscription) - Update a subscription
 
-## create_payment_subscription2
+## create_payment_subscription
 
 Create a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createPaymentSubscription2" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="python" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -29,7 +29,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.subscription.create_payment_subscription2(request={
+    res = unified_to.subscription.create_payment_subscription(request={
         "payment_subscription": {},
         "connection_id": "<id>",
     })
@@ -43,14 +43,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.CreatePaymentSubscription2Request](../../models/operations/createpaymentsubscription2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.CreatePaymentSubscriptionRequest](../../models/operations/createpaymentsubscriptionrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
 
 ### Response
 
-**[operations.CreatePaymentSubscription2Response](../../models/operations/createpaymentsubscription2response.md)**
+**[operations.CreatePaymentSubscriptionResponse](../../models/operations/createpaymentsubscriptionresponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_payment_subscription2
+## get_payment_subscription
 
 Retrieve a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getPaymentSubscription2" method="get" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="python" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -76,7 +76,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.subscription.get_payment_subscription2(request={
+    res = unified_to.subscription.get_payment_subscription(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -90,14 +90,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetPaymentSubscription2Request](../../models/operations/getpaymentsubscription2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetPaymentSubscriptionRequest](../../models/operations/getpaymentsubscriptionrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.GetPaymentSubscription2Response](../../models/operations/getpaymentsubscription2response.md)**
+**[operations.GetPaymentSubscriptionResponse](../../models/operations/getpaymentsubscriptionresponse.md)**
 
 ### Errors
 
@@ -105,13 +105,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_payment_subscriptions2
+## list_payment_subscriptions
 
 List all subscriptions
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listPaymentSubscriptions2" method="get" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="python" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -123,7 +123,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.subscription.list_payment_subscriptions2(request={
+    res = unified_to.subscription.list_payment_subscriptions(request={
         "connection_id": "<id>",
     })
 
@@ -136,14 +136,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.ListPaymentSubscriptions2Request](../../models/operations/listpaymentsubscriptions2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.ListPaymentSubscriptionsRequest](../../models/operations/listpaymentsubscriptionsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.ListPaymentSubscriptions2Response](../../models/operations/listpaymentsubscriptions2response.md)**
+**[operations.ListPaymentSubscriptionsResponse](../../models/operations/listpaymentsubscriptionsresponse.md)**
 
 ### Errors
 
@@ -151,13 +151,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_payment_subscription2
+## patch_payment_subscription
 
 Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchPaymentSubscription2" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -169,7 +169,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.subscription.patch_payment_subscription2(request={
+    res = unified_to.subscription.patch_payment_subscription(request={
         "payment_subscription": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -184,14 +184,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PatchPaymentSubscription2Request](../../models/operations/patchpaymentsubscription2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.PatchPaymentSubscriptionRequest](../../models/operations/patchpaymentsubscriptionrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
-**[operations.PatchPaymentSubscription2Response](../../models/operations/patchpaymentsubscription2response.md)**
+**[operations.PatchPaymentSubscriptionResponse](../../models/operations/patchpaymentsubscriptionresponse.md)**
 
 ### Errors
 
@@ -199,13 +199,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_payment_subscription2
+## remove_payment_subscription
 
 Remove a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removePaymentSubscription2" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="python" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -217,7 +217,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.subscription.remove_payment_subscription2(request={
+    res = unified_to.subscription.remove_payment_subscription(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -231,14 +231,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.RemovePaymentSubscription2Request](../../models/operations/removepaymentsubscription2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.RemovePaymentSubscriptionRequest](../../models/operations/removepaymentsubscriptionrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
 
 ### Response
 
-**[operations.RemovePaymentSubscription2Response](../../models/operations/removepaymentsubscription2response.md)**
+**[operations.RemovePaymentSubscriptionResponse](../../models/operations/removepaymentsubscriptionresponse.md)**
 
 ### Errors
 
@@ -246,13 +246,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_payment_subscription2
+## update_payment_subscription
 
 Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updatePaymentSubscription2" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="python" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -264,7 +264,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.subscription.update_payment_subscription2(request={
+    res = unified_to.subscription.update_payment_subscription(request={
         "payment_subscription": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -279,14 +279,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.UpdatePaymentSubscription2Request](../../models/operations/updatepaymentsubscription2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.UpdatePaymentSubscriptionRequest](../../models/operations/updatepaymentsubscriptionrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
 
 ### Response
 
-**[operations.UpdatePaymentSubscription2Response](../../models/operations/updatepaymentsubscription2response.md)**
+**[operations.UpdatePaymentSubscriptionResponse](../../models/operations/updatepaymentsubscriptionresponse.md)**
 
 ### Errors
 

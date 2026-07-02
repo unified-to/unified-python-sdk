@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Journal(BaseSDK):
-    def create_accounting_journal2(
+    def create_accounting_journal(
         self,
         *,
         request: Union[
-            operations.CreateAccountingJournal2Request,
-            operations.CreateAccountingJournal2RequestTypedDict,
+            operations.CreateAccountingJournalRequest,
+            operations.CreateAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingJournal2Response:
+    ) -> operations.CreateAccountingJournalResponse:
         r"""Create a journal
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Journal(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingJournal2Request
+                request, operations.CreateAccountingJournalRequest
             )
-        request = cast(operations.CreateAccountingJournal2Request, request)
+        request = cast(operations.CreateAccountingJournalRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingJournal2",
+                operation_id="createAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -94,7 +94,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingJournal2Response(
+            return operations.CreateAccountingJournalResponse(
                 accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
@@ -111,18 +111,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_journal2_async(
+    async def create_accounting_journal_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingJournal2Request,
-            operations.CreateAccountingJournal2RequestTypedDict,
+            operations.CreateAccountingJournalRequest,
+            operations.CreateAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingJournal2Response:
+    ) -> operations.CreateAccountingJournalResponse:
         r"""Create a journal
 
         :param request: The request object to send.
@@ -143,9 +143,9 @@ class Journal(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingJournal2Request
+                request, operations.CreateAccountingJournalRequest
             )
-        request = cast(operations.CreateAccountingJournal2Request, request)
+        request = cast(operations.CreateAccountingJournalRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -183,7 +183,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingJournal2",
+                operation_id="createAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -195,7 +195,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingJournal2Response(
+            return operations.CreateAccountingJournalResponse(
                 accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
@@ -212,18 +212,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_journal2(
+    def get_accounting_journal(
         self,
         *,
         request: Union[
-            operations.GetAccountingJournal2Request,
-            operations.GetAccountingJournal2RequestTypedDict,
+            operations.GetAccountingJournalRequest,
+            operations.GetAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingJournal2Response:
+    ) -> operations.GetAccountingJournalResponse:
         r"""Retrieve a journal
 
         :param request: The request object to send.
@@ -243,8 +243,8 @@ class Journal(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingJournal2Request)
-        request = cast(operations.GetAccountingJournal2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingJournalRequest)
+        request = cast(operations.GetAccountingJournalRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -275,7 +275,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingJournal2",
+                operation_id="getAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -287,7 +287,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingJournal2Response(
+            return operations.GetAccountingJournalResponse(
                 accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
@@ -304,18 +304,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_journal2_async(
+    async def get_accounting_journal_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingJournal2Request,
-            operations.GetAccountingJournal2RequestTypedDict,
+            operations.GetAccountingJournalRequest,
+            operations.GetAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingJournal2Response:
+    ) -> operations.GetAccountingJournalResponse:
         r"""Retrieve a journal
 
         :param request: The request object to send.
@@ -335,8 +335,8 @@ class Journal(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingJournal2Request)
-        request = cast(operations.GetAccountingJournal2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingJournalRequest)
+        request = cast(operations.GetAccountingJournalRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -367,7 +367,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingJournal2",
+                operation_id="getAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -379,7 +379,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingJournal2Response(
+            return operations.GetAccountingJournalResponse(
                 accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
@@ -396,18 +396,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_journals2(
+    def list_accounting_journals(
         self,
         *,
         request: Union[
-            operations.ListAccountingJournals2Request,
-            operations.ListAccountingJournals2RequestTypedDict,
+            operations.ListAccountingJournalsRequest,
+            operations.ListAccountingJournalsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingJournals2Response:
+    ) -> operations.ListAccountingJournalsResponse:
         r"""List all journals
 
         :param request: The request object to send.
@@ -427,10 +427,8 @@ class Journal(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingJournals2Request
-            )
-        request = cast(operations.ListAccountingJournals2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingJournalsRequest)
+        request = cast(operations.ListAccountingJournalsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -461,7 +459,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingJournals2",
+                operation_id="listAccountingJournals",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -473,7 +471,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingJournals2Response(
+            return operations.ListAccountingJournalsResponse(
                 accounting_journals=unmarshal_json_response(
                     Optional[List[shared.AccountingJournal]], http_res
                 ),
@@ -490,18 +488,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_journals2_async(
+    async def list_accounting_journals_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingJournals2Request,
-            operations.ListAccountingJournals2RequestTypedDict,
+            operations.ListAccountingJournalsRequest,
+            operations.ListAccountingJournalsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingJournals2Response:
+    ) -> operations.ListAccountingJournalsResponse:
         r"""List all journals
 
         :param request: The request object to send.
@@ -521,10 +519,8 @@ class Journal(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingJournals2Request
-            )
-        request = cast(operations.ListAccountingJournals2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingJournalsRequest)
+        request = cast(operations.ListAccountingJournalsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -555,7 +551,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingJournals2",
+                operation_id="listAccountingJournals",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -567,7 +563,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingJournals2Response(
+            return operations.ListAccountingJournalsResponse(
                 accounting_journals=unmarshal_json_response(
                     Optional[List[shared.AccountingJournal]], http_res
                 ),
@@ -584,18 +580,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_journal2(
+    def patch_accounting_journal(
         self,
         *,
         request: Union[
-            operations.PatchAccountingJournal2Request,
-            operations.PatchAccountingJournal2RequestTypedDict,
+            operations.PatchAccountingJournalRequest,
+            operations.PatchAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingJournal2Response:
+    ) -> operations.PatchAccountingJournalResponse:
         r"""Update a journal
 
         :param request: The request object to send.
@@ -615,10 +611,8 @@ class Journal(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingJournal2Request
-            )
-        request = cast(operations.PatchAccountingJournal2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingJournalRequest)
+        request = cast(operations.PatchAccountingJournalRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -656,7 +650,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingJournal2",
+                operation_id="patchAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -668,7 +662,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingJournal2Response(
+            return operations.PatchAccountingJournalResponse(
                 accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
@@ -685,18 +679,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_journal2_async(
+    async def patch_accounting_journal_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingJournal2Request,
-            operations.PatchAccountingJournal2RequestTypedDict,
+            operations.PatchAccountingJournalRequest,
+            operations.PatchAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingJournal2Response:
+    ) -> operations.PatchAccountingJournalResponse:
         r"""Update a journal
 
         :param request: The request object to send.
@@ -716,10 +710,8 @@ class Journal(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingJournal2Request
-            )
-        request = cast(operations.PatchAccountingJournal2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingJournalRequest)
+        request = cast(operations.PatchAccountingJournalRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -757,7 +749,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingJournal2",
+                operation_id="patchAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -769,7 +761,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingJournal2Response(
+            return operations.PatchAccountingJournalResponse(
                 accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
@@ -786,18 +778,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_journal2(
+    def remove_accounting_journal(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingJournal2Request,
-            operations.RemoveAccountingJournal2RequestTypedDict,
+            operations.RemoveAccountingJournalRequest,
+            operations.RemoveAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingJournal2Response:
+    ) -> operations.RemoveAccountingJournalResponse:
         r"""Remove a journal
 
         :param request: The request object to send.
@@ -818,9 +810,9 @@ class Journal(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingJournal2Request
+                request, operations.RemoveAccountingJournalRequest
             )
-        request = cast(operations.RemoveAccountingJournal2Request, request)
+        request = cast(operations.RemoveAccountingJournalRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -851,7 +843,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingJournal2",
+                operation_id="removeAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -863,7 +855,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingJournal2Response(
+            return operations.RemoveAccountingJournalResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -876,7 +868,7 @@ class Journal(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingJournal2Response(
+            return operations.RemoveAccountingJournalResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -885,18 +877,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_journal2_async(
+    async def remove_accounting_journal_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingJournal2Request,
-            operations.RemoveAccountingJournal2RequestTypedDict,
+            operations.RemoveAccountingJournalRequest,
+            operations.RemoveAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingJournal2Response:
+    ) -> operations.RemoveAccountingJournalResponse:
         r"""Remove a journal
 
         :param request: The request object to send.
@@ -917,9 +909,9 @@ class Journal(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingJournal2Request
+                request, operations.RemoveAccountingJournalRequest
             )
-        request = cast(operations.RemoveAccountingJournal2Request, request)
+        request = cast(operations.RemoveAccountingJournalRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -950,7 +942,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingJournal2",
+                operation_id="removeAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -962,7 +954,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingJournal2Response(
+            return operations.RemoveAccountingJournalResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -975,7 +967,7 @@ class Journal(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingJournal2Response(
+            return operations.RemoveAccountingJournalResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -984,18 +976,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_journal2(
+    def update_accounting_journal(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingJournal2Request,
-            operations.UpdateAccountingJournal2RequestTypedDict,
+            operations.UpdateAccountingJournalRequest,
+            operations.UpdateAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingJournal2Response:
+    ) -> operations.UpdateAccountingJournalResponse:
         r"""Update a journal
 
         :param request: The request object to send.
@@ -1016,9 +1008,9 @@ class Journal(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingJournal2Request
+                request, operations.UpdateAccountingJournalRequest
             )
-        request = cast(operations.UpdateAccountingJournal2Request, request)
+        request = cast(operations.UpdateAccountingJournalRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1056,7 +1048,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingJournal2",
+                operation_id="updateAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -1068,7 +1060,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingJournal2Response(
+            return operations.UpdateAccountingJournalResponse(
                 accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
@@ -1085,18 +1077,18 @@ class Journal(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_journal2_async(
+    async def update_accounting_journal_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingJournal2Request,
-            operations.UpdateAccountingJournal2RequestTypedDict,
+            operations.UpdateAccountingJournalRequest,
+            operations.UpdateAccountingJournalRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingJournal2Response:
+    ) -> operations.UpdateAccountingJournalResponse:
         r"""Update a journal
 
         :param request: The request object to send.
@@ -1117,9 +1109,9 @@ class Journal(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingJournal2Request
+                request, operations.UpdateAccountingJournalRequest
             )
-        request = cast(operations.UpdateAccountingJournal2Request, request)
+        request = cast(operations.UpdateAccountingJournalRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1157,7 +1149,7 @@ class Journal(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingJournal2",
+                operation_id="updateAccountingJournal",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "journal"],
@@ -1169,7 +1161,7 @@ class Journal(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingJournal2Response(
+            return operations.UpdateAccountingJournalResponse(
                 accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),

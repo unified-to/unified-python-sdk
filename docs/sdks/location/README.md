@@ -4,28 +4,28 @@
 
 ### Available Operations
 
-* [create_commerce_location2](#create_commerce_location2) - Create a location
-* [create_hris_location2](#create_hris_location2) - Create a location
-* [get_clubs_location2](#get_clubs_location2) - Retrieve a location
-* [get_commerce_location2](#get_commerce_location2) - Retrieve a location
-* [get_hris_location2](#get_hris_location2) - Retrieve a location
-* [list_clubs_locations2](#list_clubs_locations2) - List all locations
-* [list_commerce_locations2](#list_commerce_locations2) - List all locations
-* [list_hris_locations2](#list_hris_locations2) - List all locations
-* [patch_commerce_location2](#patch_commerce_location2) - Update a location
-* [patch_hris_location2](#patch_hris_location2) - Update a location
-* [remove_commerce_location2](#remove_commerce_location2) - Remove a location
-* [remove_hris_location2](#remove_hris_location2) - Remove a location
-* [update_commerce_location2](#update_commerce_location2) - Update a location
-* [update_hris_location2](#update_hris_location2) - Update a location
+* [create_commerce_location](#create_commerce_location) - Create a location
+* [create_hris_location](#create_hris_location) - Create a location
+* [get_clubs_location](#get_clubs_location) - Retrieve a location
+* [get_commerce_location](#get_commerce_location) - Retrieve a location
+* [get_hris_location](#get_hris_location) - Retrieve a location
+* [list_clubs_locations](#list_clubs_locations) - List all locations
+* [list_commerce_locations](#list_commerce_locations) - List all locations
+* [list_hris_locations](#list_hris_locations) - List all locations
+* [patch_commerce_location](#patch_commerce_location) - Update a location
+* [patch_hris_location](#patch_hris_location) - Update a location
+* [remove_commerce_location](#remove_commerce_location) - Remove a location
+* [remove_hris_location](#remove_hris_location) - Remove a location
+* [update_commerce_location](#update_commerce_location) - Update a location
+* [update_hris_location](#update_hris_location) - Update a location
 
-## create_commerce_location2
+## create_commerce_location
 
 Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCommerceLocation2" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -37,7 +37,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.create_commerce_location2(request={
+    res = unified_to.location.create_commerce_location(request={
         "commerce_location": {},
         "connection_id": "<id>",
     })
@@ -51,14 +51,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.CreateCommerceLocation2Request](../../models/operations/createcommercelocation2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateCommerceLocationRequest](../../models/operations/createcommercelocationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.CreateCommerceLocation2Response](../../models/operations/createcommercelocation2response.md)**
+**[operations.CreateCommerceLocationResponse](../../models/operations/createcommercelocationresponse.md)**
 
 ### Errors
 
@@ -66,13 +66,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_hris_location2
+## create_hris_location
 
 Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisLocation2" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -84,7 +84,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.create_hris_location2(request={
+    res = unified_to.location.create_hris_location(request={
         "hris_location": {},
         "connection_id": "<id>",
     })
@@ -98,14 +98,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.CreateHrisLocation2Request](../../models/operations/createhrislocation2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateHrisLocationRequest](../../models/operations/createhrislocationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.CreateHrisLocation2Response](../../models/operations/createhrislocation2response.md)**
+**[operations.CreateHrisLocationResponse](../../models/operations/createhrislocationresponse.md)**
 
 ### Errors
 
@@ -113,13 +113,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_clubs_location2
+## get_clubs_location
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getClubsLocation2" method="get" path="/clubs/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -131,7 +131,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.get_clubs_location2(request={
+    res = unified_to.location.get_clubs_location(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -145,14 +145,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetClubsLocation2Request](../../models/operations/getclubslocation2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetClubsLocationRequest](../../models/operations/getclubslocationrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.GetClubsLocation2Response](../../models/operations/getclubslocation2response.md)**
+**[operations.GetClubsLocationResponse](../../models/operations/getclubslocationresponse.md)**
 
 ### Errors
 
@@ -160,13 +160,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_commerce_location2
+## get_commerce_location
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getCommerceLocation2" method="get" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -178,7 +178,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.get_commerce_location2(request={
+    res = unified_to.location.get_commerce_location(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -192,14 +192,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetCommerceLocation2Request](../../models/operations/getcommercelocation2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetCommerceLocationRequest](../../models/operations/getcommercelocationrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetCommerceLocation2Response](../../models/operations/getcommercelocation2response.md)**
+**[operations.GetCommerceLocationResponse](../../models/operations/getcommercelocationresponse.md)**
 
 ### Errors
 
@@ -207,13 +207,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_hris_location2
+## get_hris_location
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getHrisLocation2" method="get" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -225,7 +225,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.get_hris_location2(request={
+    res = unified_to.location.get_hris_location(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -239,14 +239,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetHrisLocation2Request](../../models/operations/gethrislocation2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetHrisLocationRequest](../../models/operations/gethrislocationrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.GetHrisLocation2Response](../../models/operations/gethrislocation2response.md)**
+**[operations.GetHrisLocationResponse](../../models/operations/gethrislocationresponse.md)**
 
 ### Errors
 
@@ -254,13 +254,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_clubs_locations2
+## list_clubs_locations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listClubsLocations2" method="get" path="/clubs/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -272,7 +272,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.list_clubs_locations2(request={
+    res = unified_to.location.list_clubs_locations(request={
         "connection_id": "<id>",
     })
 
@@ -285,14 +285,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.ListClubsLocations2Request](../../models/operations/listclubslocations2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListClubsLocationsRequest](../../models/operations/listclubslocationsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.ListClubsLocations2Response](../../models/operations/listclubslocations2response.md)**
+**[operations.ListClubsLocationsResponse](../../models/operations/listclubslocationsresponse.md)**
 
 ### Errors
 
@@ -300,13 +300,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_commerce_locations2
+## list_commerce_locations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCommerceLocations2" method="get" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -318,7 +318,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.list_commerce_locations2(request={
+    res = unified_to.location.list_commerce_locations(request={
         "connection_id": "<id>",
     })
 
@@ -331,14 +331,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListCommerceLocations2Request](../../models/operations/listcommercelocations2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListCommerceLocationsRequest](../../models/operations/listcommercelocationsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListCommerceLocations2Response](../../models/operations/listcommercelocations2response.md)**
+**[operations.ListCommerceLocationsResponse](../../models/operations/listcommercelocationsresponse.md)**
 
 ### Errors
 
@@ -346,13 +346,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_hris_locations2
+## list_hris_locations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listHrisLocations2" method="get" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -364,7 +364,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.list_hris_locations2(request={
+    res = unified_to.location.list_hris_locations(request={
         "connection_id": "<id>",
     })
 
@@ -377,14 +377,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.ListHrisLocations2Request](../../models/operations/listhrislocations2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListHrisLocationsRequest](../../models/operations/listhrislocationsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListHrisLocations2Response](../../models/operations/listhrislocations2response.md)**
+**[operations.ListHrisLocationsResponse](../../models/operations/listhrislocationsresponse.md)**
 
 ### Errors
 
@@ -392,13 +392,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_commerce_location2
+## patch_commerce_location
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCommerceLocation2" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -410,7 +410,197 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.patch_commerce_location2(request={
+    res = unified_to.location.patch_commerce_location(request={
+        "commerce_location": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PatchCommerceLocationRequest](../../models/operations/patchcommercelocationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.PatchCommerceLocationResponse](../../models/operations/patchcommercelocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_hris_location
+
+Update a location
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.patch_hris_location(request={
+        "hris_location": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchHrisLocationRequest](../../models/operations/patchhrislocationrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.PatchHrisLocationResponse](../../models/operations/patchhrislocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_commerce_location
+
+Remove a location
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.remove_commerce_location(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.RemoveCommerceLocationRequest](../../models/operations/removecommercelocationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.RemoveCommerceLocationResponse](../../models/operations/removecommercelocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_hris_location
+
+Remove a location
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.remove_hris_location(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveHrisLocationRequest](../../models/operations/removehrislocationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.RemoveHrisLocationResponse](../../models/operations/removehrislocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_commerce_location
+
+Update a location
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.update_commerce_location(request={
         "commerce_location": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -427,12 +617,12 @@ with UnifiedTo(
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchCommerceLocation2Request](../../models/operations/patchcommercelocation2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.UpdateCommerceLocationRequest](../../models/operations/updatecommercelocationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 | `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.PatchCommerceLocation2Response](../../models/operations/patchcommercelocation2response.md)**
+**[operations.UpdateCommerceLocationResponse](../../models/operations/updatecommercelocationresponse.md)**
 
 ### Errors
 
@@ -440,13 +630,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_hris_location2
+## update_hris_location
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisLocation2" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -458,7 +648,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.location.patch_hris_location2(request={
+    res = unified_to.location.update_hris_location(request={
         "hris_location": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -475,202 +665,12 @@ with UnifiedTo(
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.PatchHrisLocation2Request](../../models/operations/patchhrislocation2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `request`                                                                                    | [operations.UpdateHrisLocationRequest](../../models/operations/updatehrislocationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 | `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.PatchHrisLocation2Response](../../models/operations/patchhrislocation2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_commerce_location2
-
-Remove a location
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeCommerceLocation2" method="delete" path="/commerce/{connection_id}/location/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.location.remove_commerce_location2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.RemoveCommerceLocation2Request](../../models/operations/removecommercelocation2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
-
-### Response
-
-**[operations.RemoveCommerceLocation2Response](../../models/operations/removecommercelocation2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_hris_location2
-
-Remove a location
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeHrisLocation2" method="delete" path="/hris/{connection_id}/location/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.location.remove_hris_location2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.RemoveHrisLocation2Request](../../models/operations/removehrislocation2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
-
-### Response
-
-**[operations.RemoveHrisLocation2Response](../../models/operations/removehrislocation2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_commerce_location2
-
-Update a location
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateCommerceLocation2" method="put" path="/commerce/{connection_id}/location/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.location.update_commerce_location2(request={
-        "commerce_location": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.commerce_location is not None
-
-    # Handle response
-    print(res.commerce_location)
-
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.UpdateCommerceLocation2Request](../../models/operations/updatecommercelocation2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
-
-### Response
-
-**[operations.UpdateCommerceLocation2Response](../../models/operations/updatecommercelocation2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_hris_location2
-
-Update a location
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateHrisLocation2" method="put" path="/hris/{connection_id}/location/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.location.update_hris_location2(request={
-        "hris_location": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.hris_location is not None
-
-    # Handle response
-    print(res.hris_location)
-
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.UpdateHrisLocation2Request](../../models/operations/updatehrislocation2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
-
-### Response
-
-**[operations.UpdateHrisLocation2Response](../../models/operations/updatehrislocation2response.md)**
+**[operations.UpdateHrisLocationResponse](../../models/operations/updatehrislocationresponse.md)**
 
 ### Errors
 

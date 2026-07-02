@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Comment(BaseSDK):
-    def create_kms_comment2(
+    def create_kms_comment(
         self,
         *,
         request: Union[
-            operations.CreateKmsComment2Request,
-            operations.CreateKmsComment2RequestTypedDict,
+            operations.CreateKmsCommentRequest,
+            operations.CreateKmsCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsComment2Response:
+    ) -> operations.CreateKmsCommentResponse:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsComment2Request)
-        request = cast(operations.CreateKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.CreateKmsCommentRequest)
+        request = cast(operations.CreateKmsCommentRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsComment2",
+                operation_id="createKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -88,7 +88,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsComment2Response(
+            return operations.CreateKmsCommentResponse(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -105,18 +105,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_kms_comment2_async(
+    async def create_kms_comment_async(
         self,
         *,
         request: Union[
-            operations.CreateKmsComment2Request,
-            operations.CreateKmsComment2RequestTypedDict,
+            operations.CreateKmsCommentRequest,
+            operations.CreateKmsCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsComment2Response:
+    ) -> operations.CreateKmsCommentResponse:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsComment2Request)
-        request = cast(operations.CreateKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.CreateKmsCommentRequest)
+        request = cast(operations.CreateKmsCommentRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsComment2",
+                operation_id="createKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -183,7 +183,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsComment2Response(
+            return operations.CreateKmsCommentResponse(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -200,18 +200,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_task_comment2(
+    def create_task_comment(
         self,
         *,
         request: Union[
-            operations.CreateTaskComment2Request,
-            operations.CreateTaskComment2RequestTypedDict,
+            operations.CreateTaskCommentRequest,
+            operations.CreateTaskCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTaskComment2Response:
+    ) -> operations.CreateTaskCommentResponse:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTaskComment2Request)
-        request = cast(operations.CreateTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.CreateTaskCommentRequest)
+        request = cast(operations.CreateTaskCommentRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -266,7 +266,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTaskComment2",
+                operation_id="createTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -278,7 +278,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTaskComment2Response(
+            return operations.CreateTaskCommentResponse(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -295,18 +295,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_task_comment2_async(
+    async def create_task_comment_async(
         self,
         *,
         request: Union[
-            operations.CreateTaskComment2Request,
-            operations.CreateTaskComment2RequestTypedDict,
+            operations.CreateTaskCommentRequest,
+            operations.CreateTaskCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTaskComment2Response:
+    ) -> operations.CreateTaskCommentResponse:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -326,8 +326,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTaskComment2Request)
-        request = cast(operations.CreateTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.CreateTaskCommentRequest)
+        request = cast(operations.CreateTaskCommentRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -361,7 +361,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTaskComment2",
+                operation_id="createTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -373,7 +373,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTaskComment2Response(
+            return operations.CreateTaskCommentResponse(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -390,18 +390,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_uc_comment2(
+    def create_uc_comment(
         self,
         *,
         request: Union[
-            operations.CreateUcComment2Request,
-            operations.CreateUcComment2RequestTypedDict,
+            operations.CreateUcCommentRequest,
+            operations.CreateUcCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcComment2Response:
+    ) -> operations.CreateUcCommentResponse:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -421,8 +421,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcComment2Request)
-        request = cast(operations.CreateUcComment2Request, request)
+            request = utils.unmarshal(request, operations.CreateUcCommentRequest)
+        request = cast(operations.CreateUcCommentRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -456,7 +456,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcComment2",
+                operation_id="createUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -468,7 +468,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcComment2Response(
+            return operations.CreateUcCommentResponse(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -485,18 +485,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_uc_comment2_async(
+    async def create_uc_comment_async(
         self,
         *,
         request: Union[
-            operations.CreateUcComment2Request,
-            operations.CreateUcComment2RequestTypedDict,
+            operations.CreateUcCommentRequest,
+            operations.CreateUcCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcComment2Response:
+    ) -> operations.CreateUcCommentResponse:
         r"""Create a comment
 
         :param request: The request object to send.
@@ -516,8 +516,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcComment2Request)
-        request = cast(operations.CreateUcComment2Request, request)
+            request = utils.unmarshal(request, operations.CreateUcCommentRequest)
+        request = cast(operations.CreateUcCommentRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -551,7 +551,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcComment2",
+                operation_id="createUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -563,7 +563,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcComment2Response(
+            return operations.CreateUcCommentResponse(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -580,17 +580,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_kms_comment2(
+    def get_kms_comment(
         self,
         *,
         request: Union[
-            operations.GetKmsComment2Request, operations.GetKmsComment2RequestTypedDict
+            operations.GetKmsCommentRequest, operations.GetKmsCommentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsComment2Response:
+    ) -> operations.GetKmsCommentResponse:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -610,8 +610,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsComment2Request)
-        request = cast(operations.GetKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.GetKmsCommentRequest)
+        request = cast(operations.GetKmsCommentRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -642,7 +642,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsComment2",
+                operation_id="getKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -654,7 +654,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsComment2Response(
+            return operations.GetKmsCommentResponse(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -671,17 +671,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_kms_comment2_async(
+    async def get_kms_comment_async(
         self,
         *,
         request: Union[
-            operations.GetKmsComment2Request, operations.GetKmsComment2RequestTypedDict
+            operations.GetKmsCommentRequest, operations.GetKmsCommentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsComment2Response:
+    ) -> operations.GetKmsCommentResponse:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -701,8 +701,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsComment2Request)
-        request = cast(operations.GetKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.GetKmsCommentRequest)
+        request = cast(operations.GetKmsCommentRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -733,7 +733,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsComment2",
+                operation_id="getKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -745,7 +745,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsComment2Response(
+            return operations.GetKmsCommentResponse(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -762,18 +762,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_task_comment2(
+    def get_task_comment(
         self,
         *,
         request: Union[
-            operations.GetTaskComment2Request,
-            operations.GetTaskComment2RequestTypedDict,
+            operations.GetTaskCommentRequest, operations.GetTaskCommentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskComment2Response:
+    ) -> operations.GetTaskCommentResponse:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -793,8 +792,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskComment2Request)
-        request = cast(operations.GetTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.GetTaskCommentRequest)
+        request = cast(operations.GetTaskCommentRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -825,7 +824,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskComment2",
+                operation_id="getTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -837,7 +836,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskComment2Response(
+            return operations.GetTaskCommentResponse(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -854,18 +853,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_task_comment2_async(
+    async def get_task_comment_async(
         self,
         *,
         request: Union[
-            operations.GetTaskComment2Request,
-            operations.GetTaskComment2RequestTypedDict,
+            operations.GetTaskCommentRequest, operations.GetTaskCommentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTaskComment2Response:
+    ) -> operations.GetTaskCommentResponse:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -885,8 +883,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTaskComment2Request)
-        request = cast(operations.GetTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.GetTaskCommentRequest)
+        request = cast(operations.GetTaskCommentRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -917,7 +915,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTaskComment2",
+                operation_id="getTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -929,7 +927,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTaskComment2Response(
+            return operations.GetTaskCommentResponse(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -946,17 +944,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_uc_comment2(
+    def get_uc_comment(
         self,
         *,
         request: Union[
-            operations.GetUcComment2Request, operations.GetUcComment2RequestTypedDict
+            operations.GetUcCommentRequest, operations.GetUcCommentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcComment2Response:
+    ) -> operations.GetUcCommentResponse:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -976,8 +974,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcComment2Request)
-        request = cast(operations.GetUcComment2Request, request)
+            request = utils.unmarshal(request, operations.GetUcCommentRequest)
+        request = cast(operations.GetUcCommentRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1008,7 +1006,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcComment2",
+                operation_id="getUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -1020,7 +1018,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcComment2Response(
+            return operations.GetUcCommentResponse(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -1037,17 +1035,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_uc_comment2_async(
+    async def get_uc_comment_async(
         self,
         *,
         request: Union[
-            operations.GetUcComment2Request, operations.GetUcComment2RequestTypedDict
+            operations.GetUcCommentRequest, operations.GetUcCommentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcComment2Response:
+    ) -> operations.GetUcCommentResponse:
         r"""Retrieve a comment
 
         :param request: The request object to send.
@@ -1067,8 +1065,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcComment2Request)
-        request = cast(operations.GetUcComment2Request, request)
+            request = utils.unmarshal(request, operations.GetUcCommentRequest)
+        request = cast(operations.GetUcCommentRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1099,7 +1097,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcComment2",
+                operation_id="getUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -1111,7 +1109,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcComment2Response(
+            return operations.GetUcCommentResponse(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -1128,18 +1126,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_kms_comments2(
+    def list_kms_comments(
         self,
         *,
         request: Union[
-            operations.ListKmsComments2Request,
-            operations.ListKmsComments2RequestTypedDict,
+            operations.ListKmsCommentsRequest,
+            operations.ListKmsCommentsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsComments2Response:
+    ) -> operations.ListKmsCommentsResponse:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1159,8 +1157,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsComments2Request)
-        request = cast(operations.ListKmsComments2Request, request)
+            request = utils.unmarshal(request, operations.ListKmsCommentsRequest)
+        request = cast(operations.ListKmsCommentsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1191,7 +1189,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsComments2",
+                operation_id="listKmsComments",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -1203,7 +1201,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsComments2Response(
+            return operations.ListKmsCommentsResponse(
                 kms_comments=unmarshal_json_response(
                     Optional[List[shared.KmsComment]], http_res
                 ),
@@ -1220,18 +1218,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_kms_comments2_async(
+    async def list_kms_comments_async(
         self,
         *,
         request: Union[
-            operations.ListKmsComments2Request,
-            operations.ListKmsComments2RequestTypedDict,
+            operations.ListKmsCommentsRequest,
+            operations.ListKmsCommentsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsComments2Response:
+    ) -> operations.ListKmsCommentsResponse:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1251,8 +1249,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsComments2Request)
-        request = cast(operations.ListKmsComments2Request, request)
+            request = utils.unmarshal(request, operations.ListKmsCommentsRequest)
+        request = cast(operations.ListKmsCommentsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1283,7 +1281,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsComments2",
+                operation_id="listKmsComments",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -1295,7 +1293,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsComments2Response(
+            return operations.ListKmsCommentsResponse(
                 kms_comments=unmarshal_json_response(
                     Optional[List[shared.KmsComment]], http_res
                 ),
@@ -1312,18 +1310,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_task_comments2(
+    def list_task_comments(
         self,
         *,
         request: Union[
-            operations.ListTaskComments2Request,
-            operations.ListTaskComments2RequestTypedDict,
+            operations.ListTaskCommentsRequest,
+            operations.ListTaskCommentsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskComments2Response:
+    ) -> operations.ListTaskCommentsResponse:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1343,8 +1341,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskComments2Request)
-        request = cast(operations.ListTaskComments2Request, request)
+            request = utils.unmarshal(request, operations.ListTaskCommentsRequest)
+        request = cast(operations.ListTaskCommentsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1375,7 +1373,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskComments2",
+                operation_id="listTaskComments",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -1387,7 +1385,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskComments2Response(
+            return operations.ListTaskCommentsResponse(
                 task_comments=unmarshal_json_response(
                     Optional[List[shared.TaskComment]], http_res
                 ),
@@ -1404,18 +1402,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_task_comments2_async(
+    async def list_task_comments_async(
         self,
         *,
         request: Union[
-            operations.ListTaskComments2Request,
-            operations.ListTaskComments2RequestTypedDict,
+            operations.ListTaskCommentsRequest,
+            operations.ListTaskCommentsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTaskComments2Response:
+    ) -> operations.ListTaskCommentsResponse:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1435,8 +1433,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTaskComments2Request)
-        request = cast(operations.ListTaskComments2Request, request)
+            request = utils.unmarshal(request, operations.ListTaskCommentsRequest)
+        request = cast(operations.ListTaskCommentsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1467,7 +1465,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTaskComments2",
+                operation_id="listTaskComments",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -1479,7 +1477,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTaskComments2Response(
+            return operations.ListTaskCommentsResponse(
                 task_comments=unmarshal_json_response(
                     Optional[List[shared.TaskComment]], http_res
                 ),
@@ -1496,18 +1494,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_uc_comments2(
+    def list_uc_comments(
         self,
         *,
         request: Union[
-            operations.ListUcComments2Request,
-            operations.ListUcComments2RequestTypedDict,
+            operations.ListUcCommentsRequest, operations.ListUcCommentsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcComments2Response:
+    ) -> operations.ListUcCommentsResponse:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1527,8 +1524,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcComments2Request)
-        request = cast(operations.ListUcComments2Request, request)
+            request = utils.unmarshal(request, operations.ListUcCommentsRequest)
+        request = cast(operations.ListUcCommentsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1559,7 +1556,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcComments2",
+                operation_id="listUcComments",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -1571,7 +1568,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcComments2Response(
+            return operations.ListUcCommentsResponse(
                 uc_comments=unmarshal_json_response(
                     Optional[List[shared.UcComment]], http_res
                 ),
@@ -1588,18 +1585,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_uc_comments2_async(
+    async def list_uc_comments_async(
         self,
         *,
         request: Union[
-            operations.ListUcComments2Request,
-            operations.ListUcComments2RequestTypedDict,
+            operations.ListUcCommentsRequest, operations.ListUcCommentsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcComments2Response:
+    ) -> operations.ListUcCommentsResponse:
         r"""List all comments
 
         :param request: The request object to send.
@@ -1619,8 +1615,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcComments2Request)
-        request = cast(operations.ListUcComments2Request, request)
+            request = utils.unmarshal(request, operations.ListUcCommentsRequest)
+        request = cast(operations.ListUcCommentsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1651,7 +1647,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcComments2",
+                operation_id="listUcComments",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -1663,7 +1659,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcComments2Response(
+            return operations.ListUcCommentsResponse(
                 uc_comments=unmarshal_json_response(
                     Optional[List[shared.UcComment]], http_res
                 ),
@@ -1680,18 +1676,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_kms_comment2(
+    def patch_kms_comment(
         self,
         *,
         request: Union[
-            operations.PatchKmsComment2Request,
-            operations.PatchKmsComment2RequestTypedDict,
+            operations.PatchKmsCommentRequest,
+            operations.PatchKmsCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsComment2Response:
+    ) -> operations.PatchKmsCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -1711,8 +1707,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsComment2Request)
-        request = cast(operations.PatchKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.PatchKmsCommentRequest)
+        request = cast(operations.PatchKmsCommentRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1746,7 +1742,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsComment2",
+                operation_id="patchKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -1758,7 +1754,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsComment2Response(
+            return operations.PatchKmsCommentResponse(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -1775,18 +1771,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_kms_comment2_async(
+    async def patch_kms_comment_async(
         self,
         *,
         request: Union[
-            operations.PatchKmsComment2Request,
-            operations.PatchKmsComment2RequestTypedDict,
+            operations.PatchKmsCommentRequest,
+            operations.PatchKmsCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsComment2Response:
+    ) -> operations.PatchKmsCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -1806,8 +1802,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsComment2Request)
-        request = cast(operations.PatchKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.PatchKmsCommentRequest)
+        request = cast(operations.PatchKmsCommentRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1841,7 +1837,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsComment2",
+                operation_id="patchKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -1853,7 +1849,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsComment2Response(
+            return operations.PatchKmsCommentResponse(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -1870,18 +1866,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_task_comment2(
+    def patch_task_comment(
         self,
         *,
         request: Union[
-            operations.PatchTaskComment2Request,
-            operations.PatchTaskComment2RequestTypedDict,
+            operations.PatchTaskCommentRequest,
+            operations.PatchTaskCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTaskComment2Response:
+    ) -> operations.PatchTaskCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -1901,8 +1897,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTaskComment2Request)
-        request = cast(operations.PatchTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.PatchTaskCommentRequest)
+        request = cast(operations.PatchTaskCommentRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1936,7 +1932,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTaskComment2",
+                operation_id="patchTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -1948,7 +1944,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTaskComment2Response(
+            return operations.PatchTaskCommentResponse(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -1965,18 +1961,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_task_comment2_async(
+    async def patch_task_comment_async(
         self,
         *,
         request: Union[
-            operations.PatchTaskComment2Request,
-            operations.PatchTaskComment2RequestTypedDict,
+            operations.PatchTaskCommentRequest,
+            operations.PatchTaskCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTaskComment2Response:
+    ) -> operations.PatchTaskCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -1996,8 +1992,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTaskComment2Request)
-        request = cast(operations.PatchTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.PatchTaskCommentRequest)
+        request = cast(operations.PatchTaskCommentRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2031,7 +2027,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTaskComment2",
+                operation_id="patchTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -2043,7 +2039,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTaskComment2Response(
+            return operations.PatchTaskCommentResponse(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -2060,18 +2056,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_uc_comment2(
+    def patch_uc_comment(
         self,
         *,
         request: Union[
-            operations.PatchUcComment2Request,
-            operations.PatchUcComment2RequestTypedDict,
+            operations.PatchUcCommentRequest, operations.PatchUcCommentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcComment2Response:
+    ) -> operations.PatchUcCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2091,8 +2086,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcComment2Request)
-        request = cast(operations.PatchUcComment2Request, request)
+            request = utils.unmarshal(request, operations.PatchUcCommentRequest)
+        request = cast(operations.PatchUcCommentRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2126,7 +2121,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcComment2",
+                operation_id="patchUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -2138,7 +2133,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcComment2Response(
+            return operations.PatchUcCommentResponse(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -2155,18 +2150,17 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_uc_comment2_async(
+    async def patch_uc_comment_async(
         self,
         *,
         request: Union[
-            operations.PatchUcComment2Request,
-            operations.PatchUcComment2RequestTypedDict,
+            operations.PatchUcCommentRequest, operations.PatchUcCommentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcComment2Response:
+    ) -> operations.PatchUcCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2186,8 +2180,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcComment2Request)
-        request = cast(operations.PatchUcComment2Request, request)
+            request = utils.unmarshal(request, operations.PatchUcCommentRequest)
+        request = cast(operations.PatchUcCommentRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2221,7 +2215,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcComment2",
+                operation_id="patchUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -2233,7 +2227,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcComment2Response(
+            return operations.PatchUcCommentResponse(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -2250,18 +2244,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_kms_comment2(
+    def remove_kms_comment(
         self,
         *,
         request: Union[
-            operations.RemoveKmsComment2Request,
-            operations.RemoveKmsComment2RequestTypedDict,
+            operations.RemoveKmsCommentRequest,
+            operations.RemoveKmsCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsComment2Response:
+    ) -> operations.RemoveKmsCommentResponse:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2281,8 +2275,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsComment2Request)
-        request = cast(operations.RemoveKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.RemoveKmsCommentRequest)
+        request = cast(operations.RemoveKmsCommentRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2313,7 +2307,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsComment2",
+                operation_id="removeKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -2325,7 +2319,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsComment2Response(
+            return operations.RemoveKmsCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2338,7 +2332,7 @@ class Comment(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsComment2Response(
+            return operations.RemoveKmsCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2347,18 +2341,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_kms_comment2_async(
+    async def remove_kms_comment_async(
         self,
         *,
         request: Union[
-            operations.RemoveKmsComment2Request,
-            operations.RemoveKmsComment2RequestTypedDict,
+            operations.RemoveKmsCommentRequest,
+            operations.RemoveKmsCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsComment2Response:
+    ) -> operations.RemoveKmsCommentResponse:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2378,8 +2372,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsComment2Request)
-        request = cast(operations.RemoveKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.RemoveKmsCommentRequest)
+        request = cast(operations.RemoveKmsCommentRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2410,7 +2404,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsComment2",
+                operation_id="removeKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -2422,7 +2416,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsComment2Response(
+            return operations.RemoveKmsCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2435,7 +2429,7 @@ class Comment(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsComment2Response(
+            return operations.RemoveKmsCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2444,18 +2438,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_task_comment2(
+    def remove_task_comment(
         self,
         *,
         request: Union[
-            operations.RemoveTaskComment2Request,
-            operations.RemoveTaskComment2RequestTypedDict,
+            operations.RemoveTaskCommentRequest,
+            operations.RemoveTaskCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTaskComment2Response:
+    ) -> operations.RemoveTaskCommentResponse:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2475,8 +2469,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTaskComment2Request)
-        request = cast(operations.RemoveTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.RemoveTaskCommentRequest)
+        request = cast(operations.RemoveTaskCommentRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2507,7 +2501,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTaskComment2",
+                operation_id="removeTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -2519,7 +2513,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTaskComment2Response(
+            return operations.RemoveTaskCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2532,7 +2526,7 @@ class Comment(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTaskComment2Response(
+            return operations.RemoveTaskCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2541,18 +2535,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_task_comment2_async(
+    async def remove_task_comment_async(
         self,
         *,
         request: Union[
-            operations.RemoveTaskComment2Request,
-            operations.RemoveTaskComment2RequestTypedDict,
+            operations.RemoveTaskCommentRequest,
+            operations.RemoveTaskCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTaskComment2Response:
+    ) -> operations.RemoveTaskCommentResponse:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2572,8 +2566,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTaskComment2Request)
-        request = cast(operations.RemoveTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.RemoveTaskCommentRequest)
+        request = cast(operations.RemoveTaskCommentRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2604,7 +2598,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTaskComment2",
+                operation_id="removeTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -2616,7 +2610,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTaskComment2Response(
+            return operations.RemoveTaskCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2629,7 +2623,7 @@ class Comment(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTaskComment2Response(
+            return operations.RemoveTaskCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2638,18 +2632,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_uc_comment2(
+    def remove_uc_comment(
         self,
         *,
         request: Union[
-            operations.RemoveUcComment2Request,
-            operations.RemoveUcComment2RequestTypedDict,
+            operations.RemoveUcCommentRequest,
+            operations.RemoveUcCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcComment2Response:
+    ) -> operations.RemoveUcCommentResponse:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2669,8 +2663,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcComment2Request)
-        request = cast(operations.RemoveUcComment2Request, request)
+            request = utils.unmarshal(request, operations.RemoveUcCommentRequest)
+        request = cast(operations.RemoveUcCommentRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2701,7 +2695,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcComment2",
+                operation_id="removeUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -2713,7 +2707,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcComment2Response(
+            return operations.RemoveUcCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2726,7 +2720,7 @@ class Comment(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcComment2Response(
+            return operations.RemoveUcCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2735,18 +2729,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_uc_comment2_async(
+    async def remove_uc_comment_async(
         self,
         *,
         request: Union[
-            operations.RemoveUcComment2Request,
-            operations.RemoveUcComment2RequestTypedDict,
+            operations.RemoveUcCommentRequest,
+            operations.RemoveUcCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcComment2Response:
+    ) -> operations.RemoveUcCommentResponse:
         r"""Remove a comment
 
         :param request: The request object to send.
@@ -2766,8 +2760,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcComment2Request)
-        request = cast(operations.RemoveUcComment2Request, request)
+            request = utils.unmarshal(request, operations.RemoveUcCommentRequest)
+        request = cast(operations.RemoveUcCommentRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2798,7 +2792,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcComment2",
+                operation_id="removeUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -2810,7 +2804,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcComment2Response(
+            return operations.RemoveUcCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2823,7 +2817,7 @@ class Comment(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcComment2Response(
+            return operations.RemoveUcCommentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2832,18 +2826,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_kms_comment2(
+    def update_kms_comment(
         self,
         *,
         request: Union[
-            operations.UpdateKmsComment2Request,
-            operations.UpdateKmsComment2RequestTypedDict,
+            operations.UpdateKmsCommentRequest,
+            operations.UpdateKmsCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsComment2Response:
+    ) -> operations.UpdateKmsCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2863,8 +2857,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsComment2Request)
-        request = cast(operations.UpdateKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.UpdateKmsCommentRequest)
+        request = cast(operations.UpdateKmsCommentRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -2898,7 +2892,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsComment2",
+                operation_id="updateKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -2910,7 +2904,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsComment2Response(
+            return operations.UpdateKmsCommentResponse(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -2927,18 +2921,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_kms_comment2_async(
+    async def update_kms_comment_async(
         self,
         *,
         request: Union[
-            operations.UpdateKmsComment2Request,
-            operations.UpdateKmsComment2RequestTypedDict,
+            operations.UpdateKmsCommentRequest,
+            operations.UpdateKmsCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsComment2Response:
+    ) -> operations.UpdateKmsCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -2958,8 +2952,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsComment2Request)
-        request = cast(operations.UpdateKmsComment2Request, request)
+            request = utils.unmarshal(request, operations.UpdateKmsCommentRequest)
+        request = cast(operations.UpdateKmsCommentRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2993,7 +2987,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsComment2",
+                operation_id="updateKmsComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "comment"],
@@ -3005,7 +2999,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsComment2Response(
+            return operations.UpdateKmsCommentResponse(
                 kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
@@ -3022,18 +3016,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_task_comment2(
+    def update_task_comment(
         self,
         *,
         request: Union[
-            operations.UpdateTaskComment2Request,
-            operations.UpdateTaskComment2RequestTypedDict,
+            operations.UpdateTaskCommentRequest,
+            operations.UpdateTaskCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTaskComment2Response:
+    ) -> operations.UpdateTaskCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -3053,8 +3047,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTaskComment2Request)
-        request = cast(operations.UpdateTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.UpdateTaskCommentRequest)
+        request = cast(operations.UpdateTaskCommentRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3088,7 +3082,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTaskComment2",
+                operation_id="updateTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -3100,7 +3094,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTaskComment2Response(
+            return operations.UpdateTaskCommentResponse(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -3117,18 +3111,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_task_comment2_async(
+    async def update_task_comment_async(
         self,
         *,
         request: Union[
-            operations.UpdateTaskComment2Request,
-            operations.UpdateTaskComment2RequestTypedDict,
+            operations.UpdateTaskCommentRequest,
+            operations.UpdateTaskCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTaskComment2Response:
+    ) -> operations.UpdateTaskCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -3148,8 +3142,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTaskComment2Request)
-        request = cast(operations.UpdateTaskComment2Request, request)
+            request = utils.unmarshal(request, operations.UpdateTaskCommentRequest)
+        request = cast(operations.UpdateTaskCommentRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3183,7 +3177,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTaskComment2",
+                operation_id="updateTaskComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["task", "comment"],
@@ -3195,7 +3189,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTaskComment2Response(
+            return operations.UpdateTaskCommentResponse(
                 task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
@@ -3212,18 +3206,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_uc_comment2(
+    def update_uc_comment(
         self,
         *,
         request: Union[
-            operations.UpdateUcComment2Request,
-            operations.UpdateUcComment2RequestTypedDict,
+            operations.UpdateUcCommentRequest,
+            operations.UpdateUcCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcComment2Response:
+    ) -> operations.UpdateUcCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -3243,8 +3237,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcComment2Request)
-        request = cast(operations.UpdateUcComment2Request, request)
+            request = utils.unmarshal(request, operations.UpdateUcCommentRequest)
+        request = cast(operations.UpdateUcCommentRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3278,7 +3272,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcComment2",
+                operation_id="updateUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -3290,7 +3284,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcComment2Response(
+            return operations.UpdateUcCommentResponse(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
@@ -3307,18 +3301,18 @@ class Comment(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_uc_comment2_async(
+    async def update_uc_comment_async(
         self,
         *,
         request: Union[
-            operations.UpdateUcComment2Request,
-            operations.UpdateUcComment2RequestTypedDict,
+            operations.UpdateUcCommentRequest,
+            operations.UpdateUcCommentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcComment2Response:
+    ) -> operations.UpdateUcCommentResponse:
         r"""Update a comment
 
         :param request: The request object to send.
@@ -3338,8 +3332,8 @@ class Comment(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcComment2Request)
-        request = cast(operations.UpdateUcComment2Request, request)
+            request = utils.unmarshal(request, operations.UpdateUcCommentRequest)
+        request = cast(operations.UpdateUcCommentRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3373,7 +3367,7 @@ class Comment(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcComment2",
+                operation_id="updateUcComment",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "comment"],
@@ -3385,7 +3379,7 @@ class Comment(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcComment2Response(
+            return operations.UpdateUcCommentResponse(
                 uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),

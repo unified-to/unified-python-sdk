@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Bankaccount(BaseSDK):
-    def create_hris_bankaccount2(
+    def create_hris_bankaccount(
         self,
         *,
         request: Union[
-            operations.CreateHrisBankaccount2Request,
-            operations.CreateHrisBankaccount2RequestTypedDict,
+            operations.CreateHrisBankaccountRequest,
+            operations.CreateHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisBankaccount2Response:
+    ) -> operations.CreateHrisBankaccountResponse:
         r"""Create a bankaccount
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisBankaccount2Request)
-        request = cast(operations.CreateHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.CreateHrisBankaccountRequest)
+        request = cast(operations.CreateHrisBankaccountRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisBankaccount2",
+                operation_id="createHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -88,7 +88,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisBankaccount2Response(
+            return operations.CreateHrisBankaccountResponse(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -105,18 +105,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_bankaccount2_async(
+    async def create_hris_bankaccount_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisBankaccount2Request,
-            operations.CreateHrisBankaccount2RequestTypedDict,
+            operations.CreateHrisBankaccountRequest,
+            operations.CreateHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisBankaccount2Response:
+    ) -> operations.CreateHrisBankaccountResponse:
         r"""Create a bankaccount
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisBankaccount2Request)
-        request = cast(operations.CreateHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.CreateHrisBankaccountRequest)
+        request = cast(operations.CreateHrisBankaccountRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisBankaccount2",
+                operation_id="createHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -183,7 +183,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisBankaccount2Response(
+            return operations.CreateHrisBankaccountResponse(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -200,18 +200,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_bankaccount2(
+    def get_hris_bankaccount(
         self,
         *,
         request: Union[
-            operations.GetHrisBankaccount2Request,
-            operations.GetHrisBankaccount2RequestTypedDict,
+            operations.GetHrisBankaccountRequest,
+            operations.GetHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisBankaccount2Response:
+    ) -> operations.GetHrisBankaccountResponse:
         r"""Retrieve a bankaccount
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisBankaccount2Request)
-        request = cast(operations.GetHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisBankaccountRequest)
+        request = cast(operations.GetHrisBankaccountRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisBankaccount2",
+                operation_id="getHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -275,7 +275,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisBankaccount2Response(
+            return operations.GetHrisBankaccountResponse(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -292,18 +292,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_bankaccount2_async(
+    async def get_hris_bankaccount_async(
         self,
         *,
         request: Union[
-            operations.GetHrisBankaccount2Request,
-            operations.GetHrisBankaccount2RequestTypedDict,
+            operations.GetHrisBankaccountRequest,
+            operations.GetHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisBankaccount2Response:
+    ) -> operations.GetHrisBankaccountResponse:
         r"""Retrieve a bankaccount
 
         :param request: The request object to send.
@@ -323,8 +323,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisBankaccount2Request)
-        request = cast(operations.GetHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisBankaccountRequest)
+        request = cast(operations.GetHrisBankaccountRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +355,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisBankaccount2",
+                operation_id="getHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -367,7 +367,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisBankaccount2Response(
+            return operations.GetHrisBankaccountResponse(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -384,18 +384,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_bankaccounts2(
+    def list_hris_bankaccounts(
         self,
         *,
         request: Union[
-            operations.ListHrisBankaccounts2Request,
-            operations.ListHrisBankaccounts2RequestTypedDict,
+            operations.ListHrisBankaccountsRequest,
+            operations.ListHrisBankaccountsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisBankaccounts2Response:
+    ) -> operations.ListHrisBankaccountsResponse:
         r"""List all bankaccounts
 
         :param request: The request object to send.
@@ -415,8 +415,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisBankaccounts2Request)
-        request = cast(operations.ListHrisBankaccounts2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisBankaccountsRequest)
+        request = cast(operations.ListHrisBankaccountsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +447,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisBankaccounts2",
+                operation_id="listHrisBankaccounts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -459,7 +459,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisBankaccounts2Response(
+            return operations.ListHrisBankaccountsResponse(
                 hris_bankaccounts=unmarshal_json_response(
                     Optional[List[shared.HrisBankaccount]], http_res
                 ),
@@ -476,18 +476,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_bankaccounts2_async(
+    async def list_hris_bankaccounts_async(
         self,
         *,
         request: Union[
-            operations.ListHrisBankaccounts2Request,
-            operations.ListHrisBankaccounts2RequestTypedDict,
+            operations.ListHrisBankaccountsRequest,
+            operations.ListHrisBankaccountsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisBankaccounts2Response:
+    ) -> operations.ListHrisBankaccountsResponse:
         r"""List all bankaccounts
 
         :param request: The request object to send.
@@ -507,8 +507,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisBankaccounts2Request)
-        request = cast(operations.ListHrisBankaccounts2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisBankaccountsRequest)
+        request = cast(operations.ListHrisBankaccountsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +539,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisBankaccounts2",
+                operation_id="listHrisBankaccounts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -551,7 +551,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisBankaccounts2Response(
+            return operations.ListHrisBankaccountsResponse(
                 hris_bankaccounts=unmarshal_json_response(
                     Optional[List[shared.HrisBankaccount]], http_res
                 ),
@@ -568,18 +568,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_bankaccount2(
+    def patch_hris_bankaccount(
         self,
         *,
         request: Union[
-            operations.PatchHrisBankaccount2Request,
-            operations.PatchHrisBankaccount2RequestTypedDict,
+            operations.PatchHrisBankaccountRequest,
+            operations.PatchHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisBankaccount2Response:
+    ) -> operations.PatchHrisBankaccountResponse:
         r"""Update a bankaccount
 
         :param request: The request object to send.
@@ -599,8 +599,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisBankaccount2Request)
-        request = cast(operations.PatchHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.PatchHrisBankaccountRequest)
+        request = cast(operations.PatchHrisBankaccountRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +634,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisBankaccount2",
+                operation_id="patchHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -646,7 +646,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisBankaccount2Response(
+            return operations.PatchHrisBankaccountResponse(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -663,18 +663,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_bankaccount2_async(
+    async def patch_hris_bankaccount_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisBankaccount2Request,
-            operations.PatchHrisBankaccount2RequestTypedDict,
+            operations.PatchHrisBankaccountRequest,
+            operations.PatchHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisBankaccount2Response:
+    ) -> operations.PatchHrisBankaccountResponse:
         r"""Update a bankaccount
 
         :param request: The request object to send.
@@ -694,8 +694,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisBankaccount2Request)
-        request = cast(operations.PatchHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.PatchHrisBankaccountRequest)
+        request = cast(operations.PatchHrisBankaccountRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +729,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisBankaccount2",
+                operation_id="patchHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -741,7 +741,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisBankaccount2Response(
+            return operations.PatchHrisBankaccountResponse(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -758,18 +758,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_bankaccount2(
+    def remove_hris_bankaccount(
         self,
         *,
         request: Union[
-            operations.RemoveHrisBankaccount2Request,
-            operations.RemoveHrisBankaccount2RequestTypedDict,
+            operations.RemoveHrisBankaccountRequest,
+            operations.RemoveHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisBankaccount2Response:
+    ) -> operations.RemoveHrisBankaccountResponse:
         r"""Remove a bankaccount
 
         :param request: The request object to send.
@@ -789,8 +789,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisBankaccount2Request)
-        request = cast(operations.RemoveHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.RemoveHrisBankaccountRequest)
+        request = cast(operations.RemoveHrisBankaccountRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +821,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisBankaccount2",
+                operation_id="removeHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -833,7 +833,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisBankaccount2Response(
+            return operations.RemoveHrisBankaccountResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +846,7 @@ class Bankaccount(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisBankaccount2Response(
+            return operations.RemoveHrisBankaccountResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +855,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_bankaccount2_async(
+    async def remove_hris_bankaccount_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisBankaccount2Request,
-            operations.RemoveHrisBankaccount2RequestTypedDict,
+            operations.RemoveHrisBankaccountRequest,
+            operations.RemoveHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisBankaccount2Response:
+    ) -> operations.RemoveHrisBankaccountResponse:
         r"""Remove a bankaccount
 
         :param request: The request object to send.
@@ -886,8 +886,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisBankaccount2Request)
-        request = cast(operations.RemoveHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.RemoveHrisBankaccountRequest)
+        request = cast(operations.RemoveHrisBankaccountRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +918,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisBankaccount2",
+                operation_id="removeHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -930,7 +930,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisBankaccount2Response(
+            return operations.RemoveHrisBankaccountResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +943,7 @@ class Bankaccount(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisBankaccount2Response(
+            return operations.RemoveHrisBankaccountResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +952,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_bankaccount2(
+    def update_hris_bankaccount(
         self,
         *,
         request: Union[
-            operations.UpdateHrisBankaccount2Request,
-            operations.UpdateHrisBankaccount2RequestTypedDict,
+            operations.UpdateHrisBankaccountRequest,
+            operations.UpdateHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisBankaccount2Response:
+    ) -> operations.UpdateHrisBankaccountResponse:
         r"""Update a bankaccount
 
         :param request: The request object to send.
@@ -983,8 +983,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisBankaccount2Request)
-        request = cast(operations.UpdateHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.UpdateHrisBankaccountRequest)
+        request = cast(operations.UpdateHrisBankaccountRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1018,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisBankaccount2",
+                operation_id="updateHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -1030,7 +1030,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisBankaccount2Response(
+            return operations.UpdateHrisBankaccountResponse(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),
@@ -1047,18 +1047,18 @@ class Bankaccount(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_bankaccount2_async(
+    async def update_hris_bankaccount_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisBankaccount2Request,
-            operations.UpdateHrisBankaccount2RequestTypedDict,
+            operations.UpdateHrisBankaccountRequest,
+            operations.UpdateHrisBankaccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisBankaccount2Response:
+    ) -> operations.UpdateHrisBankaccountResponse:
         r"""Update a bankaccount
 
         :param request: The request object to send.
@@ -1078,8 +1078,8 @@ class Bankaccount(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisBankaccount2Request)
-        request = cast(operations.UpdateHrisBankaccount2Request, request)
+            request = utils.unmarshal(request, operations.UpdateHrisBankaccountRequest)
+        request = cast(operations.UpdateHrisBankaccountRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1113,7 @@ class Bankaccount(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisBankaccount2",
+                operation_id="updateHrisBankaccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "bankaccount"],
@@ -1125,7 +1125,7 @@ class Bankaccount(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisBankaccount2Response(
+            return operations.UpdateHrisBankaccountResponse(
                 hris_bankaccount=unmarshal_json_response(
                     Optional[shared.HrisBankaccount], http_res
                 ),

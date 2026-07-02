@@ -25,6 +25,8 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `ACCOUNTING_INVOICE_WRITE`       | accounting_invoice_write         |
 | `ACCOUNTING_BILL_READ`           | accounting_bill_read             |
 | `ACCOUNTING_BILL_WRITE`          | accounting_bill_write            |
+| `ACCOUNTING_VENDORCREDIT_READ`   | accounting_vendorcredit_read     |
+| `ACCOUNTING_VENDORCREDIT_WRITE`  | accounting_vendorcredit_write    |
 | `ACCOUNTING_CREDITMEMO_READ`     | accounting_creditmemo_read       |
 | `ACCOUNTING_CREDITMEMO_WRITE`    | accounting_creditmemo_write      |
 | `ACCOUNTING_CONTACT_READ`        | accounting_contact_read          |

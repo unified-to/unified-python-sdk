@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Link(BaseSDK):
-    def create_calendar_link2(
+    def create_calendar_link(
         self,
         *,
         request: Union[
-            operations.CreateCalendarLink2Request,
-            operations.CreateCalendarLink2RequestTypedDict,
+            operations.CreateCalendarLinkRequest,
+            operations.CreateCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCalendarLink2Response:
+    ) -> operations.CreateCalendarLinkResponse:
         r"""Create a link
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCalendarLink2Request)
-        request = cast(operations.CreateCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.CreateCalendarLinkRequest)
+        request = cast(operations.CreateCalendarLinkRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCalendarLink2",
+                operation_id="createCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -88,7 +88,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCalendarLink2Response(
+            return operations.CreateCalendarLinkResponse(
                 calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
@@ -105,18 +105,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_calendar_link2_async(
+    async def create_calendar_link_async(
         self,
         *,
         request: Union[
-            operations.CreateCalendarLink2Request,
-            operations.CreateCalendarLink2RequestTypedDict,
+            operations.CreateCalendarLinkRequest,
+            operations.CreateCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCalendarLink2Response:
+    ) -> operations.CreateCalendarLinkResponse:
         r"""Create a link
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCalendarLink2Request)
-        request = cast(operations.CreateCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.CreateCalendarLinkRequest)
+        request = cast(operations.CreateCalendarLinkRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCalendarLink2",
+                operation_id="createCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -183,7 +183,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCalendarLink2Response(
+            return operations.CreateCalendarLinkResponse(
                 calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
@@ -200,18 +200,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_payment_link2(
+    def create_payment_link(
         self,
         *,
         request: Union[
-            operations.CreatePaymentLink2Request,
-            operations.CreatePaymentLink2RequestTypedDict,
+            operations.CreatePaymentLinkRequest,
+            operations.CreatePaymentLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentLink2Response:
+    ) -> operations.CreatePaymentLinkResponse:
         r"""Create a link
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePaymentLink2Request)
-        request = cast(operations.CreatePaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.CreatePaymentLinkRequest)
+        request = cast(operations.CreatePaymentLinkRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -266,7 +266,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentLink2",
+                operation_id="createPaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -278,7 +278,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentLink2Response(
+            return operations.CreatePaymentLinkResponse(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -295,18 +295,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_payment_link2_async(
+    async def create_payment_link_async(
         self,
         *,
         request: Union[
-            operations.CreatePaymentLink2Request,
-            operations.CreatePaymentLink2RequestTypedDict,
+            operations.CreatePaymentLinkRequest,
+            operations.CreatePaymentLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreatePaymentLink2Response:
+    ) -> operations.CreatePaymentLinkResponse:
         r"""Create a link
 
         :param request: The request object to send.
@@ -326,8 +326,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreatePaymentLink2Request)
-        request = cast(operations.CreatePaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.CreatePaymentLinkRequest)
+        request = cast(operations.CreatePaymentLinkRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -361,7 +361,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createPaymentLink2",
+                operation_id="createPaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -373,7 +373,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreatePaymentLink2Response(
+            return operations.CreatePaymentLinkResponse(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -390,18 +390,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_calendar_link2(
+    def get_calendar_link(
         self,
         *,
         request: Union[
-            operations.GetCalendarLink2Request,
-            operations.GetCalendarLink2RequestTypedDict,
+            operations.GetCalendarLinkRequest,
+            operations.GetCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCalendarLink2Response:
+    ) -> operations.GetCalendarLinkResponse:
         r"""Retrieve a link
 
         :param request: The request object to send.
@@ -421,8 +421,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCalendarLink2Request)
-        request = cast(operations.GetCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.GetCalendarLinkRequest)
+        request = cast(operations.GetCalendarLinkRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -453,7 +453,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCalendarLink2",
+                operation_id="getCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -465,7 +465,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCalendarLink2Response(
+            return operations.GetCalendarLinkResponse(
                 calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
@@ -482,18 +482,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_calendar_link2_async(
+    async def get_calendar_link_async(
         self,
         *,
         request: Union[
-            operations.GetCalendarLink2Request,
-            operations.GetCalendarLink2RequestTypedDict,
+            operations.GetCalendarLinkRequest,
+            operations.GetCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCalendarLink2Response:
+    ) -> operations.GetCalendarLinkResponse:
         r"""Retrieve a link
 
         :param request: The request object to send.
@@ -513,8 +513,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCalendarLink2Request)
-        request = cast(operations.GetCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.GetCalendarLinkRequest)
+        request = cast(operations.GetCalendarLinkRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -545,7 +545,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCalendarLink2",
+                operation_id="getCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -557,7 +557,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCalendarLink2Response(
+            return operations.GetCalendarLinkResponse(
                 calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
@@ -574,18 +574,17 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_payment_link2(
+    def get_payment_link(
         self,
         *,
         request: Union[
-            operations.GetPaymentLink2Request,
-            operations.GetPaymentLink2RequestTypedDict,
+            operations.GetPaymentLinkRequest, operations.GetPaymentLinkRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentLink2Response:
+    ) -> operations.GetPaymentLinkResponse:
         r"""Retrieve a link
 
         :param request: The request object to send.
@@ -605,8 +604,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentLink2Request)
-        request = cast(operations.GetPaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.GetPaymentLinkRequest)
+        request = cast(operations.GetPaymentLinkRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -637,7 +636,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentLink2",
+                operation_id="getPaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -649,7 +648,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentLink2Response(
+            return operations.GetPaymentLinkResponse(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -666,18 +665,17 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_link2_async(
+    async def get_payment_link_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentLink2Request,
-            operations.GetPaymentLink2RequestTypedDict,
+            operations.GetPaymentLinkRequest, operations.GetPaymentLinkRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentLink2Response:
+    ) -> operations.GetPaymentLinkResponse:
         r"""Retrieve a link
 
         :param request: The request object to send.
@@ -697,8 +695,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentLink2Request)
-        request = cast(operations.GetPaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.GetPaymentLinkRequest)
+        request = cast(operations.GetPaymentLinkRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -729,7 +727,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentLink2",
+                operation_id="getPaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -741,7 +739,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentLink2Response(
+            return operations.GetPaymentLinkResponse(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -758,18 +756,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_calendar_links2(
+    def list_calendar_links(
         self,
         *,
         request: Union[
-            operations.ListCalendarLinks2Request,
-            operations.ListCalendarLinks2RequestTypedDict,
+            operations.ListCalendarLinksRequest,
+            operations.ListCalendarLinksRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCalendarLinks2Response:
+    ) -> operations.ListCalendarLinksResponse:
         r"""List all links
 
         :param request: The request object to send.
@@ -789,8 +787,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCalendarLinks2Request)
-        request = cast(operations.ListCalendarLinks2Request, request)
+            request = utils.unmarshal(request, operations.ListCalendarLinksRequest)
+        request = cast(operations.ListCalendarLinksRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -821,7 +819,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCalendarLinks2",
+                operation_id="listCalendarLinks",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -833,7 +831,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCalendarLinks2Response(
+            return operations.ListCalendarLinksResponse(
                 calendar_links=unmarshal_json_response(
                     Optional[List[shared.CalendarLink]], http_res
                 ),
@@ -850,18 +848,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_calendar_links2_async(
+    async def list_calendar_links_async(
         self,
         *,
         request: Union[
-            operations.ListCalendarLinks2Request,
-            operations.ListCalendarLinks2RequestTypedDict,
+            operations.ListCalendarLinksRequest,
+            operations.ListCalendarLinksRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCalendarLinks2Response:
+    ) -> operations.ListCalendarLinksResponse:
         r"""List all links
 
         :param request: The request object to send.
@@ -881,8 +879,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCalendarLinks2Request)
-        request = cast(operations.ListCalendarLinks2Request, request)
+            request = utils.unmarshal(request, operations.ListCalendarLinksRequest)
+        request = cast(operations.ListCalendarLinksRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -913,7 +911,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCalendarLinks2",
+                operation_id="listCalendarLinks",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -925,7 +923,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCalendarLinks2Response(
+            return operations.ListCalendarLinksResponse(
                 calendar_links=unmarshal_json_response(
                     Optional[List[shared.CalendarLink]], http_res
                 ),
@@ -942,18 +940,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_links2(
+    def list_payment_links(
         self,
         *,
         request: Union[
-            operations.ListPaymentLinks2Request,
-            operations.ListPaymentLinks2RequestTypedDict,
+            operations.ListPaymentLinksRequest,
+            operations.ListPaymentLinksRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentLinks2Response:
+    ) -> operations.ListPaymentLinksResponse:
         r"""List all links
 
         :param request: The request object to send.
@@ -973,8 +971,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentLinks2Request)
-        request = cast(operations.ListPaymentLinks2Request, request)
+            request = utils.unmarshal(request, operations.ListPaymentLinksRequest)
+        request = cast(operations.ListPaymentLinksRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1005,7 +1003,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentLinks2",
+                operation_id="listPaymentLinks",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -1017,7 +1015,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentLinks2Response(
+            return operations.ListPaymentLinksResponse(
                 payment_links=unmarshal_json_response(
                     Optional[List[shared.PaymentLink]], http_res
                 ),
@@ -1034,18 +1032,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_links2_async(
+    async def list_payment_links_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentLinks2Request,
-            operations.ListPaymentLinks2RequestTypedDict,
+            operations.ListPaymentLinksRequest,
+            operations.ListPaymentLinksRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentLinks2Response:
+    ) -> operations.ListPaymentLinksResponse:
         r"""List all links
 
         :param request: The request object to send.
@@ -1065,8 +1063,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentLinks2Request)
-        request = cast(operations.ListPaymentLinks2Request, request)
+            request = utils.unmarshal(request, operations.ListPaymentLinksRequest)
+        request = cast(operations.ListPaymentLinksRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1097,7 +1095,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentLinks2",
+                operation_id="listPaymentLinks",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -1109,7 +1107,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentLinks2Response(
+            return operations.ListPaymentLinksResponse(
                 payment_links=unmarshal_json_response(
                     Optional[List[shared.PaymentLink]], http_res
                 ),
@@ -1126,18 +1124,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_calendar_link2(
+    def patch_calendar_link(
         self,
         *,
         request: Union[
-            operations.PatchCalendarLink2Request,
-            operations.PatchCalendarLink2RequestTypedDict,
+            operations.PatchCalendarLinkRequest,
+            operations.PatchCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCalendarLink2Response:
+    ) -> operations.PatchCalendarLinkResponse:
         r"""Update a link
 
         :param request: The request object to send.
@@ -1157,8 +1155,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCalendarLink2Request)
-        request = cast(operations.PatchCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.PatchCalendarLinkRequest)
+        request = cast(operations.PatchCalendarLinkRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1192,7 +1190,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCalendarLink2",
+                operation_id="patchCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -1204,7 +1202,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCalendarLink2Response(
+            return operations.PatchCalendarLinkResponse(
                 calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
@@ -1221,18 +1219,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_calendar_link2_async(
+    async def patch_calendar_link_async(
         self,
         *,
         request: Union[
-            operations.PatchCalendarLink2Request,
-            operations.PatchCalendarLink2RequestTypedDict,
+            operations.PatchCalendarLinkRequest,
+            operations.PatchCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCalendarLink2Response:
+    ) -> operations.PatchCalendarLinkResponse:
         r"""Update a link
 
         :param request: The request object to send.
@@ -1252,8 +1250,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCalendarLink2Request)
-        request = cast(operations.PatchCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.PatchCalendarLinkRequest)
+        request = cast(operations.PatchCalendarLinkRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1287,7 +1285,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCalendarLink2",
+                operation_id="patchCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -1299,7 +1297,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCalendarLink2Response(
+            return operations.PatchCalendarLinkResponse(
                 calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
@@ -1316,18 +1314,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_payment_link2(
+    def patch_payment_link(
         self,
         *,
         request: Union[
-            operations.PatchPaymentLink2Request,
-            operations.PatchPaymentLink2RequestTypedDict,
+            operations.PatchPaymentLinkRequest,
+            operations.PatchPaymentLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentLink2Response:
+    ) -> operations.PatchPaymentLinkResponse:
         r"""Update a link
 
         :param request: The request object to send.
@@ -1347,8 +1345,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPaymentLink2Request)
-        request = cast(operations.PatchPaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.PatchPaymentLinkRequest)
+        request = cast(operations.PatchPaymentLinkRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1382,7 +1380,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentLink2",
+                operation_id="patchPaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -1394,7 +1392,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentLink2Response(
+            return operations.PatchPaymentLinkResponse(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -1411,18 +1409,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_payment_link2_async(
+    async def patch_payment_link_async(
         self,
         *,
         request: Union[
-            operations.PatchPaymentLink2Request,
-            operations.PatchPaymentLink2RequestTypedDict,
+            operations.PatchPaymentLinkRequest,
+            operations.PatchPaymentLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchPaymentLink2Response:
+    ) -> operations.PatchPaymentLinkResponse:
         r"""Update a link
 
         :param request: The request object to send.
@@ -1442,8 +1440,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchPaymentLink2Request)
-        request = cast(operations.PatchPaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.PatchPaymentLinkRequest)
+        request = cast(operations.PatchPaymentLinkRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1477,7 +1475,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchPaymentLink2",
+                operation_id="patchPaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -1489,7 +1487,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchPaymentLink2Response(
+            return operations.PatchPaymentLinkResponse(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -1506,18 +1504,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_calendar_link2(
+    def remove_calendar_link(
         self,
         *,
         request: Union[
-            operations.RemoveCalendarLink2Request,
-            operations.RemoveCalendarLink2RequestTypedDict,
+            operations.RemoveCalendarLinkRequest,
+            operations.RemoveCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCalendarLink2Response:
+    ) -> operations.RemoveCalendarLinkResponse:
         r"""Remove a link
 
         :param request: The request object to send.
@@ -1537,8 +1535,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCalendarLink2Request)
-        request = cast(operations.RemoveCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCalendarLinkRequest)
+        request = cast(operations.RemoveCalendarLinkRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1569,7 +1567,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCalendarLink2",
+                operation_id="removeCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -1581,7 +1579,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCalendarLink2Response(
+            return operations.RemoveCalendarLinkResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1594,7 +1592,7 @@ class Link(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCalendarLink2Response(
+            return operations.RemoveCalendarLinkResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1603,18 +1601,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_calendar_link2_async(
+    async def remove_calendar_link_async(
         self,
         *,
         request: Union[
-            operations.RemoveCalendarLink2Request,
-            operations.RemoveCalendarLink2RequestTypedDict,
+            operations.RemoveCalendarLinkRequest,
+            operations.RemoveCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCalendarLink2Response:
+    ) -> operations.RemoveCalendarLinkResponse:
         r"""Remove a link
 
         :param request: The request object to send.
@@ -1634,8 +1632,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCalendarLink2Request)
-        request = cast(operations.RemoveCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCalendarLinkRequest)
+        request = cast(operations.RemoveCalendarLinkRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1666,7 +1664,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCalendarLink2",
+                operation_id="removeCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -1678,7 +1676,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCalendarLink2Response(
+            return operations.RemoveCalendarLinkResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1691,7 +1689,7 @@ class Link(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCalendarLink2Response(
+            return operations.RemoveCalendarLinkResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1700,18 +1698,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_payment_link2(
+    def remove_payment_link(
         self,
         *,
         request: Union[
-            operations.RemovePaymentLink2Request,
-            operations.RemovePaymentLink2RequestTypedDict,
+            operations.RemovePaymentLinkRequest,
+            operations.RemovePaymentLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentLink2Response:
+    ) -> operations.RemovePaymentLinkResponse:
         r"""Remove a link
 
         :param request: The request object to send.
@@ -1731,8 +1729,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemovePaymentLink2Request)
-        request = cast(operations.RemovePaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.RemovePaymentLinkRequest)
+        request = cast(operations.RemovePaymentLinkRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1763,7 +1761,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentLink2",
+                operation_id="removePaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -1775,7 +1773,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentLink2Response(
+            return operations.RemovePaymentLinkResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1788,7 +1786,7 @@ class Link(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentLink2Response(
+            return operations.RemovePaymentLinkResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1797,18 +1795,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_payment_link2_async(
+    async def remove_payment_link_async(
         self,
         *,
         request: Union[
-            operations.RemovePaymentLink2Request,
-            operations.RemovePaymentLink2RequestTypedDict,
+            operations.RemovePaymentLinkRequest,
+            operations.RemovePaymentLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemovePaymentLink2Response:
+    ) -> operations.RemovePaymentLinkResponse:
         r"""Remove a link
 
         :param request: The request object to send.
@@ -1828,8 +1826,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemovePaymentLink2Request)
-        request = cast(operations.RemovePaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.RemovePaymentLinkRequest)
+        request = cast(operations.RemovePaymentLinkRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1860,7 +1858,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removePaymentLink2",
+                operation_id="removePaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -1872,7 +1870,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemovePaymentLink2Response(
+            return operations.RemovePaymentLinkResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1885,7 +1883,7 @@ class Link(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemovePaymentLink2Response(
+            return operations.RemovePaymentLinkResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1894,18 +1892,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_calendar_link2(
+    def update_calendar_link(
         self,
         *,
         request: Union[
-            operations.UpdateCalendarLink2Request,
-            operations.UpdateCalendarLink2RequestTypedDict,
+            operations.UpdateCalendarLinkRequest,
+            operations.UpdateCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCalendarLink2Response:
+    ) -> operations.UpdateCalendarLinkResponse:
         r"""Update a link
 
         :param request: The request object to send.
@@ -1925,8 +1923,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCalendarLink2Request)
-        request = cast(operations.UpdateCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCalendarLinkRequest)
+        request = cast(operations.UpdateCalendarLinkRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1960,7 +1958,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCalendarLink2",
+                operation_id="updateCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -1972,7 +1970,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCalendarLink2Response(
+            return operations.UpdateCalendarLinkResponse(
                 calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
@@ -1989,18 +1987,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_calendar_link2_async(
+    async def update_calendar_link_async(
         self,
         *,
         request: Union[
-            operations.UpdateCalendarLink2Request,
-            operations.UpdateCalendarLink2RequestTypedDict,
+            operations.UpdateCalendarLinkRequest,
+            operations.UpdateCalendarLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCalendarLink2Response:
+    ) -> operations.UpdateCalendarLinkResponse:
         r"""Update a link
 
         :param request: The request object to send.
@@ -2020,8 +2018,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCalendarLink2Request)
-        request = cast(operations.UpdateCalendarLink2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCalendarLinkRequest)
+        request = cast(operations.UpdateCalendarLinkRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2055,7 +2053,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCalendarLink2",
+                operation_id="updateCalendarLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "link"],
@@ -2067,7 +2065,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCalendarLink2Response(
+            return operations.UpdateCalendarLinkResponse(
                 calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
@@ -2084,18 +2082,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_payment_link2(
+    def update_payment_link(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentLink2Request,
-            operations.UpdatePaymentLink2RequestTypedDict,
+            operations.UpdatePaymentLinkRequest,
+            operations.UpdatePaymentLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentLink2Response:
+    ) -> operations.UpdatePaymentLinkResponse:
         r"""Update a link
 
         :param request: The request object to send.
@@ -2115,8 +2113,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePaymentLink2Request)
-        request = cast(operations.UpdatePaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.UpdatePaymentLinkRequest)
+        request = cast(operations.UpdatePaymentLinkRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -2150,7 +2148,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentLink2",
+                operation_id="updatePaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -2162,7 +2160,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentLink2Response(
+            return operations.UpdatePaymentLinkResponse(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
@@ -2179,18 +2177,18 @@ class Link(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_payment_link2_async(
+    async def update_payment_link_async(
         self,
         *,
         request: Union[
-            operations.UpdatePaymentLink2Request,
-            operations.UpdatePaymentLink2RequestTypedDict,
+            operations.UpdatePaymentLinkRequest,
+            operations.UpdatePaymentLinkRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdatePaymentLink2Response:
+    ) -> operations.UpdatePaymentLinkResponse:
         r"""Update a link
 
         :param request: The request object to send.
@@ -2210,8 +2208,8 @@ class Link(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdatePaymentLink2Request)
-        request = cast(operations.UpdatePaymentLink2Request, request)
+            request = utils.unmarshal(request, operations.UpdatePaymentLinkRequest)
+        request = cast(operations.UpdatePaymentLinkRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2245,7 +2243,7 @@ class Link(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updatePaymentLink2",
+                operation_id="updatePaymentLink",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "link"],
@@ -2257,7 +2255,7 @@ class Link(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdatePaymentLink2Response(
+            return operations.UpdatePaymentLinkResponse(
                 payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),

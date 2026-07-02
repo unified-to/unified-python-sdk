@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Query(BaseSDK):
-    def create_datastore_query2(
+    def create_datastore_query(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreQuery2Request,
-            operations.CreateDatastoreQuery2RequestTypedDict,
+            operations.CreateDatastoreQueryRequest,
+            operations.CreateDatastoreQueryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreQuery2Response:
+    ) -> operations.CreateDatastoreQueryResponse:
         r"""Create a query
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Query(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateDatastoreQuery2Request)
-        request = cast(operations.CreateDatastoreQuery2Request, request)
+            request = utils.unmarshal(request, operations.CreateDatastoreQueryRequest)
+        request = cast(operations.CreateDatastoreQueryRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Query(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreQuery2",
+                operation_id="createDatastoreQuery",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "query"],
@@ -88,7 +88,7 @@ class Query(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreQuery2Response(
+            return operations.CreateDatastoreQueryResponse(
                 datastore_query=unmarshal_json_response(
                     Optional[shared.DatastoreQuery], http_res
                 ),
@@ -105,18 +105,18 @@ class Query(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_datastore_query2_async(
+    async def create_datastore_query_async(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreQuery2Request,
-            operations.CreateDatastoreQuery2RequestTypedDict,
+            operations.CreateDatastoreQueryRequest,
+            operations.CreateDatastoreQueryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreQuery2Response:
+    ) -> operations.CreateDatastoreQueryResponse:
         r"""Create a query
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Query(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateDatastoreQuery2Request)
-        request = cast(operations.CreateDatastoreQuery2Request, request)
+            request = utils.unmarshal(request, operations.CreateDatastoreQueryRequest)
+        request = cast(operations.CreateDatastoreQueryRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Query(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreQuery2",
+                operation_id="createDatastoreQuery",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "query"],
@@ -183,7 +183,7 @@ class Query(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreQuery2Response(
+            return operations.CreateDatastoreQueryResponse(
                 datastore_query=unmarshal_json_response(
                     Optional[shared.DatastoreQuery], http_res
                 ),

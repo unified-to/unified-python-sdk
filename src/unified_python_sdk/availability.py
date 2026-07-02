@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Availability(BaseSDK):
-    def list_commerce_availabilities2(
+    def list_commerce_availabilities(
         self,
         *,
         request: Union[
-            operations.ListCommerceAvailabilities2Request,
-            operations.ListCommerceAvailabilities2RequestTypedDict,
+            operations.ListCommerceAvailabilitiesRequest,
+            operations.ListCommerceAvailabilitiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceAvailabilities2Response:
+    ) -> operations.ListCommerceAvailabilitiesResponse:
         r"""List all availabilities
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Availability(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceAvailabilities2Request
+                request, operations.ListCommerceAvailabilitiesRequest
             )
-        request = cast(operations.ListCommerceAvailabilities2Request, request)
+        request = cast(operations.ListCommerceAvailabilitiesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -75,7 +75,7 @@ class Availability(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceAvailabilities2",
+                operation_id="listCommerceAvailabilities",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "availability"],
@@ -87,7 +87,7 @@ class Availability(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceAvailabilities2Response(
+            return operations.ListCommerceAvailabilitiesResponse(
                 commerce_availabilities=unmarshal_json_response(
                     Optional[List[shared.CommerceAvailability]], http_res
                 ),
@@ -104,18 +104,18 @@ class Availability(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_availabilities2_async(
+    async def list_commerce_availabilities_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceAvailabilities2Request,
-            operations.ListCommerceAvailabilities2RequestTypedDict,
+            operations.ListCommerceAvailabilitiesRequest,
+            operations.ListCommerceAvailabilitiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceAvailabilities2Response:
+    ) -> operations.ListCommerceAvailabilitiesResponse:
         r"""List all availabilities
 
         :param request: The request object to send.
@@ -136,9 +136,9 @@ class Availability(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceAvailabilities2Request
+                request, operations.ListCommerceAvailabilitiesRequest
             )
-        request = cast(operations.ListCommerceAvailabilities2Request, request)
+        request = cast(operations.ListCommerceAvailabilitiesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -169,7 +169,7 @@ class Availability(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceAvailabilities2",
+                operation_id="listCommerceAvailabilities",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "availability"],
@@ -181,7 +181,7 @@ class Availability(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceAvailabilities2Response(
+            return operations.ListCommerceAvailabilitiesResponse(
                 commerce_availabilities=unmarshal_json_response(
                     Optional[List[shared.CommerceAvailability]], http_res
                 ),

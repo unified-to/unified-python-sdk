@@ -10,18 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Payslip(BaseSDK):
-    def get_hris_payslip2(
+    def get_hris_payslip(
         self,
         *,
         request: Union[
-            operations.GetHrisPayslip2Request,
-            operations.GetHrisPayslip2RequestTypedDict,
+            operations.GetHrisPayslipRequest, operations.GetHrisPayslipRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisPayslip2Response:
+    ) -> operations.GetHrisPayslipResponse:
         r"""Retrieve a payslip
 
         :param request: The request object to send.
@@ -41,8 +40,8 @@ class Payslip(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisPayslip2Request)
-        request = cast(operations.GetHrisPayslip2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
+        request = cast(operations.GetHrisPayslipRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +72,7 @@ class Payslip(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisPayslip2",
+                operation_id="getHrisPayslip",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "payslip"],
@@ -85,7 +84,7 @@ class Payslip(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisPayslip2Response(
+            return operations.GetHrisPayslipResponse(
                 hris_payslip=unmarshal_json_response(
                     Optional[shared.HrisPayslip], http_res
                 ),
@@ -102,18 +101,17 @@ class Payslip(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_payslip2_async(
+    async def get_hris_payslip_async(
         self,
         *,
         request: Union[
-            operations.GetHrisPayslip2Request,
-            operations.GetHrisPayslip2RequestTypedDict,
+            operations.GetHrisPayslipRequest, operations.GetHrisPayslipRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisPayslip2Response:
+    ) -> operations.GetHrisPayslipResponse:
         r"""Retrieve a payslip
 
         :param request: The request object to send.
@@ -133,8 +131,8 @@ class Payslip(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisPayslip2Request)
-        request = cast(operations.GetHrisPayslip2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
+        request = cast(operations.GetHrisPayslipRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +163,7 @@ class Payslip(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisPayslip2",
+                operation_id="getHrisPayslip",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "payslip"],
@@ -177,7 +175,7 @@ class Payslip(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisPayslip2Response(
+            return operations.GetHrisPayslipResponse(
                 hris_payslip=unmarshal_json_response(
                     Optional[shared.HrisPayslip], http_res
                 ),
@@ -194,18 +192,18 @@ class Payslip(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_payslips2(
+    def list_hris_payslips(
         self,
         *,
         request: Union[
-            operations.ListHrisPayslips2Request,
-            operations.ListHrisPayslips2RequestTypedDict,
+            operations.ListHrisPayslipsRequest,
+            operations.ListHrisPayslipsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisPayslips2Response:
+    ) -> operations.ListHrisPayslipsResponse:
         r"""List all payslips
 
         :param request: The request object to send.
@@ -225,8 +223,8 @@ class Payslip(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisPayslips2Request)
-        request = cast(operations.ListHrisPayslips2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
+        request = cast(operations.ListHrisPayslipsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -257,7 +255,7 @@ class Payslip(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisPayslips2",
+                operation_id="listHrisPayslips",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "payslip"],
@@ -269,7 +267,7 @@ class Payslip(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisPayslips2Response(
+            return operations.ListHrisPayslipsResponse(
                 hris_payslips=unmarshal_json_response(
                     Optional[List[shared.HrisPayslip]], http_res
                 ),
@@ -286,18 +284,18 @@ class Payslip(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_payslips2_async(
+    async def list_hris_payslips_async(
         self,
         *,
         request: Union[
-            operations.ListHrisPayslips2Request,
-            operations.ListHrisPayslips2RequestTypedDict,
+            operations.ListHrisPayslipsRequest,
+            operations.ListHrisPayslipsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisPayslips2Response:
+    ) -> operations.ListHrisPayslipsResponse:
         r"""List all payslips
 
         :param request: The request object to send.
@@ -317,8 +315,8 @@ class Payslip(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisPayslips2Request)
-        request = cast(operations.ListHrisPayslips2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
+        request = cast(operations.ListHrisPayslipsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +347,7 @@ class Payslip(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisPayslips2",
+                operation_id="listHrisPayslips",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "payslip"],
@@ -361,7 +359,7 @@ class Payslip(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisPayslips2Response(
+            return operations.ListHrisPayslipsResponse(
                 hris_payslips=unmarshal_json_response(
                     Optional[List[shared.HrisPayslip]], http_res
                 ),

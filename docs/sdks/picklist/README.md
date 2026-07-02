@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [list_crm_picklists2](#list_crm_picklists2) - List all picklists
+* [list_crm_picklists](#list_crm_picklists) - List all picklists
 
-## list_crm_picklists2
+## list_crm_picklists
 
 List all picklists
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listCrmPicklists2" method="get" path="/crm/{connection_id}/picklist" -->
+<!-- UsageSnippet language="python" operationID="listCrmPicklists" method="get" path="/crm/{connection_id}/picklist" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -24,7 +24,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.picklist.list_crm_picklists2(request={
+    res = unified_to.picklist.list_crm_picklists(request={
         "connection_id": "<id>",
     })
 
@@ -37,14 +37,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.ListCrmPicklists2Request](../../models/operations/listcrmpicklists2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListCrmPicklistsRequest](../../models/operations/listcrmpicklistsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.ListCrmPicklists2Response](../../models/operations/listcrmpicklists2response.md)**
+**[operations.ListCrmPicklistsResponse](../../models/operations/listcrmpicklistsresponse.md)**
 
 ### Errors
 

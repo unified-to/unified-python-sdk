@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Submission(BaseSDK):
-    def get_forms_submission2(
+    def get_forms_submission(
         self,
         *,
         request: Union[
-            operations.GetFormsSubmission2Request,
-            operations.GetFormsSubmission2RequestTypedDict,
+            operations.GetFormsSubmissionRequest,
+            operations.GetFormsSubmissionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetFormsSubmission2Response:
+    ) -> operations.GetFormsSubmissionResponse:
         r"""Retrieve a submission
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Submission(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetFormsSubmission2Request)
-        request = cast(operations.GetFormsSubmission2Request, request)
+            request = utils.unmarshal(request, operations.GetFormsSubmissionRequest)
+        request = cast(operations.GetFormsSubmissionRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Submission(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getFormsSubmission2",
+                operation_id="getFormsSubmission",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["forms", "submission"],
@@ -85,7 +85,7 @@ class Submission(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetFormsSubmission2Response(
+            return operations.GetFormsSubmissionResponse(
                 forms_submission=unmarshal_json_response(
                     Optional[shared.FormsSubmission], http_res
                 ),
@@ -102,18 +102,18 @@ class Submission(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_forms_submission2_async(
+    async def get_forms_submission_async(
         self,
         *,
         request: Union[
-            operations.GetFormsSubmission2Request,
-            operations.GetFormsSubmission2RequestTypedDict,
+            operations.GetFormsSubmissionRequest,
+            operations.GetFormsSubmissionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetFormsSubmission2Response:
+    ) -> operations.GetFormsSubmissionResponse:
         r"""Retrieve a submission
 
         :param request: The request object to send.
@@ -133,8 +133,8 @@ class Submission(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetFormsSubmission2Request)
-        request = cast(operations.GetFormsSubmission2Request, request)
+            request = utils.unmarshal(request, operations.GetFormsSubmissionRequest)
+        request = cast(operations.GetFormsSubmissionRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +165,7 @@ class Submission(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getFormsSubmission2",
+                operation_id="getFormsSubmission",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["forms", "submission"],
@@ -177,7 +177,7 @@ class Submission(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetFormsSubmission2Response(
+            return operations.GetFormsSubmissionResponse(
                 forms_submission=unmarshal_json_response(
                     Optional[shared.FormsSubmission], http_res
                 ),
@@ -194,18 +194,18 @@ class Submission(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_forms_submissions2(
+    def list_forms_submissions(
         self,
         *,
         request: Union[
-            operations.ListFormsSubmissions2Request,
-            operations.ListFormsSubmissions2RequestTypedDict,
+            operations.ListFormsSubmissionsRequest,
+            operations.ListFormsSubmissionsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListFormsSubmissions2Response:
+    ) -> operations.ListFormsSubmissionsResponse:
         r"""List all submissions
 
         :param request: The request object to send.
@@ -225,8 +225,8 @@ class Submission(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListFormsSubmissions2Request)
-        request = cast(operations.ListFormsSubmissions2Request, request)
+            request = utils.unmarshal(request, operations.ListFormsSubmissionsRequest)
+        request = cast(operations.ListFormsSubmissionsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -257,7 +257,7 @@ class Submission(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listFormsSubmissions2",
+                operation_id="listFormsSubmissions",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["forms", "submission"],
@@ -269,7 +269,7 @@ class Submission(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListFormsSubmissions2Response(
+            return operations.ListFormsSubmissionsResponse(
                 forms_submissions=unmarshal_json_response(
                     Optional[List[shared.FormsSubmission]], http_res
                 ),
@@ -286,18 +286,18 @@ class Submission(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_forms_submissions2_async(
+    async def list_forms_submissions_async(
         self,
         *,
         request: Union[
-            operations.ListFormsSubmissions2Request,
-            operations.ListFormsSubmissions2RequestTypedDict,
+            operations.ListFormsSubmissionsRequest,
+            operations.ListFormsSubmissionsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListFormsSubmissions2Response:
+    ) -> operations.ListFormsSubmissionsResponse:
         r"""List all submissions
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Submission(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListFormsSubmissions2Request)
-        request = cast(operations.ListFormsSubmissions2Request, request)
+            request = utils.unmarshal(request, operations.ListFormsSubmissionsRequest)
+        request = cast(operations.ListFormsSubmissionsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Submission(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listFormsSubmissions2",
+                operation_id="listFormsSubmissions",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["forms", "submission"],
@@ -361,7 +361,7 @@ class Submission(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListFormsSubmissions2Response(
+            return operations.ListFormsSubmissionsResponse(
                 forms_submissions=unmarshal_json_response(
                     Optional[List[shared.FormsSubmission]], http_res
                 ),

@@ -4,56 +4,56 @@
 
 ### Available Operations
 
-* [create_lms_activity2](#create_lms_activity2) - Create an activity
-* [create_lms_class2](#create_lms_class2) - Create a class
-* [create_lms_collection2](#create_lms_collection2) - Create a collection
-* [create_lms_content2](#create_lms_content2) - Create a content
-* [create_lms_course2](#create_lms_course2) - Create a course
-* [create_lms_instructor2](#create_lms_instructor2) - Create an instructor
-* [create_lms_student2](#create_lms_student2) - Create a student
-* [get_lms_activity2](#get_lms_activity2) - Retrieve an activity
-* [get_lms_class2](#get_lms_class2) - Retrieve a class
-* [get_lms_collection2](#get_lms_collection2) - Retrieve a collection
-* [get_lms_content2](#get_lms_content2) - Retrieve a content
-* [get_lms_course2](#get_lms_course2) - Retrieve a course
-* [get_lms_instructor2](#get_lms_instructor2) - Retrieve an instructor
-* [get_lms_student2](#get_lms_student2) - Retrieve a student
-* [list_lms_activities2](#list_lms_activities2) - List all activities
-* [list_lms_classes2](#list_lms_classes2) - List all classes
-* [list_lms_collections2](#list_lms_collections2) - List all collections
-* [list_lms_contents2](#list_lms_contents2) - List all contents
-* [list_lms_courses2](#list_lms_courses2) - List all courses
-* [list_lms_instructors2](#list_lms_instructors2) - List all instructors
-* [list_lms_students2](#list_lms_students2) - List all students
-* [patch_lms_activity2](#patch_lms_activity2) - Update an activity
-* [patch_lms_class2](#patch_lms_class2) - Update a class
-* [patch_lms_collection2](#patch_lms_collection2) - Update a collection
-* [patch_lms_content2](#patch_lms_content2) - Update a content
-* [patch_lms_course2](#patch_lms_course2) - Update a course
-* [patch_lms_instructor2](#patch_lms_instructor2) - Update an instructor
-* [patch_lms_student2](#patch_lms_student2) - Update a student
-* [remove_lms_activity2](#remove_lms_activity2) - Remove an activity
-* [remove_lms_class2](#remove_lms_class2) - Remove a class
-* [remove_lms_collection2](#remove_lms_collection2) - Remove a collection
-* [remove_lms_content2](#remove_lms_content2) - Remove a content
-* [remove_lms_course2](#remove_lms_course2) - Remove a course
-* [remove_lms_instructor2](#remove_lms_instructor2) - Remove an instructor
-* [remove_lms_student2](#remove_lms_student2) - Remove a student
-* [update_lms_activity2](#update_lms_activity2) - Update an activity
-* [update_lms_class2](#update_lms_class2) - Update a class
-* [update_lms_collection2](#update_lms_collection2) - Update a collection
-* [update_lms_content2](#update_lms_content2) - Update a content
-* [update_lms_course2](#update_lms_course2) - Update a course
-* [update_lms_instructor2](#update_lms_instructor2) - Update an instructor
-* [update_lms_student2](#update_lms_student2) - Update a student
+* [create_lms_activity](#create_lms_activity) - Create an activity
+* [create_lms_class](#create_lms_class) - Create a class
+* [create_lms_collection](#create_lms_collection) - Create a collection
+* [create_lms_content](#create_lms_content) - Create a content
+* [create_lms_course](#create_lms_course) - Create a course
+* [create_lms_instructor](#create_lms_instructor) - Create an instructor
+* [create_lms_student](#create_lms_student) - Create a student
+* [get_lms_activity](#get_lms_activity) - Retrieve an activity
+* [get_lms_class](#get_lms_class) - Retrieve a class
+* [get_lms_collection](#get_lms_collection) - Retrieve a collection
+* [get_lms_content](#get_lms_content) - Retrieve a content
+* [get_lms_course](#get_lms_course) - Retrieve a course
+* [get_lms_instructor](#get_lms_instructor) - Retrieve an instructor
+* [get_lms_student](#get_lms_student) - Retrieve a student
+* [list_lms_activities](#list_lms_activities) - List all activities
+* [list_lms_classes](#list_lms_classes) - List all classes
+* [list_lms_collections](#list_lms_collections) - List all collections
+* [list_lms_contents](#list_lms_contents) - List all contents
+* [list_lms_courses](#list_lms_courses) - List all courses
+* [list_lms_instructors](#list_lms_instructors) - List all instructors
+* [list_lms_students](#list_lms_students) - List all students
+* [patch_lms_activity](#patch_lms_activity) - Update an activity
+* [patch_lms_class](#patch_lms_class) - Update a class
+* [patch_lms_collection](#patch_lms_collection) - Update a collection
+* [patch_lms_content](#patch_lms_content) - Update a content
+* [patch_lms_course](#patch_lms_course) - Update a course
+* [patch_lms_instructor](#patch_lms_instructor) - Update an instructor
+* [patch_lms_student](#patch_lms_student) - Update a student
+* [remove_lms_activity](#remove_lms_activity) - Remove an activity
+* [remove_lms_class](#remove_lms_class) - Remove a class
+* [remove_lms_collection](#remove_lms_collection) - Remove a collection
+* [remove_lms_content](#remove_lms_content) - Remove a content
+* [remove_lms_course](#remove_lms_course) - Remove a course
+* [remove_lms_instructor](#remove_lms_instructor) - Remove an instructor
+* [remove_lms_student](#remove_lms_student) - Remove a student
+* [update_lms_activity](#update_lms_activity) - Update an activity
+* [update_lms_class](#update_lms_class) - Update a class
+* [update_lms_collection](#update_lms_collection) - Update a collection
+* [update_lms_content](#update_lms_content) - Update a content
+* [update_lms_course](#update_lms_course) - Update a course
+* [update_lms_instructor](#update_lms_instructor) - Update an instructor
+* [update_lms_student](#update_lms_student) - Update a student
 
-## create_lms_activity2
+## create_lms_activity
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsActivity2" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="python" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -65,7 +65,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.create_lms_activity2(request={
+    res = unified_to.lms.create_lms_activity(request={
         "lms_activity": {},
         "connection_id": "<id>",
     })
@@ -79,14 +79,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.CreateLmsActivity2Request](../../models/operations/createlmsactivity2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateLmsActivityRequest](../../models/operations/createlmsactivityrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.CreateLmsActivity2Response](../../models/operations/createlmsactivity2response.md)**
+**[operations.CreateLmsActivityResponse](../../models/operations/createlmsactivityresponse.md)**
 
 ### Errors
 
@@ -94,13 +94,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_lms_class2
+## create_lms_class
 
 Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsClass2" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="python" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -112,7 +112,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.create_lms_class2(request={
+    res = unified_to.lms.create_lms_class(request={
         "lms_class": {},
         "connection_id": "<id>",
     })
@@ -126,14 +126,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.CreateLmsClass2Request](../../models/operations/createlmsclass2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.CreateLmsClassRequest](../../models/operations/createlmsclassrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.CreateLmsClass2Response](../../models/operations/createlmsclass2response.md)**
+**[operations.CreateLmsClassResponse](../../models/operations/createlmsclassresponse.md)**
 
 ### Errors
 
@@ -141,13 +141,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_lms_collection2
+## create_lms_collection
 
 Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsCollection2" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="python" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -159,7 +159,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.create_lms_collection2(request={
+    res = unified_to.lms.create_lms_collection(request={
         "lms_collection": {},
         "connection_id": "<id>",
     })
@@ -173,14 +173,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.CreateLmsCollection2Request](../../models/operations/createlmscollection2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateLmsCollectionRequest](../../models/operations/createlmscollectionrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.CreateLmsCollection2Response](../../models/operations/createlmscollection2response.md)**
+**[operations.CreateLmsCollectionResponse](../../models/operations/createlmscollectionresponse.md)**
 
 ### Errors
 
@@ -188,13 +188,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_lms_content2
+## create_lms_content
 
 Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsContent2" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="python" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -206,7 +206,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.create_lms_content2(request={
+    res = unified_to.lms.create_lms_content(request={
         "lms_content": {},
         "connection_id": "<id>",
     })
@@ -220,14 +220,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreateLmsContent2Request](../../models/operations/createlmscontent2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.CreateLmsContentRequest](../../models/operations/createlmscontentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.CreateLmsContent2Response](../../models/operations/createlmscontent2response.md)**
+**[operations.CreateLmsContentResponse](../../models/operations/createlmscontentresponse.md)**
 
 ### Errors
 
@@ -235,13 +235,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_lms_course2
+## create_lms_course
 
 Create a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsCourse2" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="python" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -253,7 +253,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.create_lms_course2(request={
+    res = unified_to.lms.create_lms_course(request={
         "lms_course": {},
         "connection_id": "<id>",
     })
@@ -267,14 +267,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.CreateLmsCourse2Request](../../models/operations/createlmscourse2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateLmsCourseRequest](../../models/operations/createlmscourserequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.CreateLmsCourse2Response](../../models/operations/createlmscourse2response.md)**
+**[operations.CreateLmsCourseResponse](../../models/operations/createlmscourseresponse.md)**
 
 ### Errors
 
@@ -282,13 +282,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_lms_instructor2
+## create_lms_instructor
 
 Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsInstructor2" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="python" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -300,7 +300,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.create_lms_instructor2(request={
+    res = unified_to.lms.create_lms_instructor(request={
         "lms_instructor": {},
         "connection_id": "<id>",
     })
@@ -314,14 +314,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.CreateLmsInstructor2Request](../../models/operations/createlmsinstructor2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateLmsInstructorRequest](../../models/operations/createlmsinstructorrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.CreateLmsInstructor2Response](../../models/operations/createlmsinstructor2response.md)**
+**[operations.CreateLmsInstructorResponse](../../models/operations/createlmsinstructorresponse.md)**
 
 ### Errors
 
@@ -329,13 +329,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_lms_student2
+## create_lms_student
 
 Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsStudent2" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="python" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -347,7 +347,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.create_lms_student2(request={
+    res = unified_to.lms.create_lms_student(request={
         "lms_student": {},
         "connection_id": "<id>",
     })
@@ -361,14 +361,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreateLmsStudent2Request](../../models/operations/createlmsstudent2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.CreateLmsStudentRequest](../../models/operations/createlmsstudentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.CreateLmsStudent2Response](../../models/operations/createlmsstudent2response.md)**
+**[operations.CreateLmsStudentResponse](../../models/operations/createlmsstudentresponse.md)**
 
 ### Errors
 
@@ -376,13 +376,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_lms_activity2
+## get_lms_activity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getLmsActivity2" method="get" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="getLmsActivity" method="get" path="/lms/{connection_id}/activity/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -394,7 +394,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.get_lms_activity2(request={
+    res = unified_to.lms.get_lms_activity(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -408,14 +408,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.GetLmsActivity2Request](../../models/operations/getlmsactivity2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetLmsActivityRequest](../../models/operations/getlmsactivityrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.GetLmsActivity2Response](../../models/operations/getlmsactivity2response.md)**
+**[operations.GetLmsActivityResponse](../../models/operations/getlmsactivityresponse.md)**
 
 ### Errors
 
@@ -423,13 +423,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_lms_class2
+## get_lms_class
 
 Retrieve a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getLmsClass2" method="get" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="python" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -441,7 +441,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.get_lms_class2(request={
+    res = unified_to.lms.get_lms_class(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -455,14 +455,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.GetLmsClass2Request](../../models/operations/getlmsclass2request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetLmsClassRequest](../../models/operations/getlmsclassrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
 
 ### Response
 
-**[operations.GetLmsClass2Response](../../models/operations/getlmsclass2response.md)**
+**[operations.GetLmsClassResponse](../../models/operations/getlmsclassresponse.md)**
 
 ### Errors
 
@@ -470,13 +470,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_lms_collection2
+## get_lms_collection
 
 Retrieve a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getLmsCollection2" method="get" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="python" operationID="getLmsCollection" method="get" path="/lms/{connection_id}/collection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -488,7 +488,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.get_lms_collection2(request={
+    res = unified_to.lms.get_lms_collection(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -502,14 +502,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetLmsCollection2Request](../../models/operations/getlmscollection2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetLmsCollectionRequest](../../models/operations/getlmscollectionrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.GetLmsCollection2Response](../../models/operations/getlmscollection2response.md)**
+**[operations.GetLmsCollectionResponse](../../models/operations/getlmscollectionresponse.md)**
 
 ### Errors
 
@@ -517,13 +517,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_lms_content2
+## get_lms_content
 
 Retrieve a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getLmsContent2" method="get" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="python" operationID="getLmsContent" method="get" path="/lms/{connection_id}/content/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -535,7 +535,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.get_lms_content2(request={
+    res = unified_to.lms.get_lms_content(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -549,14 +549,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetLmsContent2Request](../../models/operations/getlmscontent2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetLmsContentRequest](../../models/operations/getlmscontentrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.GetLmsContent2Response](../../models/operations/getlmscontent2response.md)**
+**[operations.GetLmsContentResponse](../../models/operations/getlmscontentresponse.md)**
 
 ### Errors
 
@@ -564,13 +564,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_lms_course2
+## get_lms_course
 
 Retrieve a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getLmsCourse2" method="get" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="python" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -582,7 +582,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.get_lms_course2(request={
+    res = unified_to.lms.get_lms_course(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -596,14 +596,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetLmsCourse2Request](../../models/operations/getlmscourse2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetLmsCourseRequest](../../models/operations/getlmscourserequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
 
 ### Response
 
-**[operations.GetLmsCourse2Response](../../models/operations/getlmscourse2response.md)**
+**[operations.GetLmsCourseResponse](../../models/operations/getlmscourseresponse.md)**
 
 ### Errors
 
@@ -611,13 +611,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_lms_instructor2
+## get_lms_instructor
 
 Retrieve an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getLmsInstructor2" method="get" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="python" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -629,7 +629,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.get_lms_instructor2(request={
+    res = unified_to.lms.get_lms_instructor(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -643,14 +643,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetLmsInstructor2Request](../../models/operations/getlmsinstructor2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetLmsInstructorRequest](../../models/operations/getlmsinstructorrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.GetLmsInstructor2Response](../../models/operations/getlmsinstructor2response.md)**
+**[operations.GetLmsInstructorResponse](../../models/operations/getlmsinstructorresponse.md)**
 
 ### Errors
 
@@ -658,13 +658,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_lms_student2
+## get_lms_student
 
 Retrieve a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getLmsStudent2" method="get" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="python" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -676,7 +676,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.get_lms_student2(request={
+    res = unified_to.lms.get_lms_student(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -690,14 +690,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetLmsStudent2Request](../../models/operations/getlmsstudent2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetLmsStudentRequest](../../models/operations/getlmsstudentrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.GetLmsStudent2Response](../../models/operations/getlmsstudent2response.md)**
+**[operations.GetLmsStudentResponse](../../models/operations/getlmsstudentresponse.md)**
 
 ### Errors
 
@@ -705,13 +705,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_lms_activities2
+## list_lms_activities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listLmsActivities2" method="get" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="python" operationID="listLmsActivities" method="get" path="/lms/{connection_id}/activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -723,7 +723,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.list_lms_activities2(request={
+    res = unified_to.lms.list_lms_activities(request={
         "connection_id": "<id>",
     })
 
@@ -736,14 +736,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.ListLmsActivities2Request](../../models/operations/listlmsactivities2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListLmsActivitiesRequest](../../models/operations/listlmsactivitiesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.ListLmsActivities2Response](../../models/operations/listlmsactivities2response.md)**
+**[operations.ListLmsActivitiesResponse](../../models/operations/listlmsactivitiesresponse.md)**
 
 ### Errors
 
@@ -751,13 +751,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_lms_classes2
+## list_lms_classes
 
 List all classes
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listLmsClasses2" method="get" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="python" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -769,7 +769,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.list_lms_classes2(request={
+    res = unified_to.lms.list_lms_classes(request={
         "connection_id": "<id>",
     })
 
@@ -782,14 +782,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListLmsClasses2Request](../../models/operations/listlmsclasses2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListLmsClassesRequest](../../models/operations/listlmsclassesrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.ListLmsClasses2Response](../../models/operations/listlmsclasses2response.md)**
+**[operations.ListLmsClassesResponse](../../models/operations/listlmsclassesresponse.md)**
 
 ### Errors
 
@@ -797,13 +797,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_lms_collections2
+## list_lms_collections
 
 List all collections
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listLmsCollections2" method="get" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="python" operationID="listLmsCollections" method="get" path="/lms/{connection_id}/collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -815,7 +815,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.list_lms_collections2(request={
+    res = unified_to.lms.list_lms_collections(request={
         "connection_id": "<id>",
     })
 
@@ -828,14 +828,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.ListLmsCollections2Request](../../models/operations/listlmscollections2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListLmsCollectionsRequest](../../models/operations/listlmscollectionsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.ListLmsCollections2Response](../../models/operations/listlmscollections2response.md)**
+**[operations.ListLmsCollectionsResponse](../../models/operations/listlmscollectionsresponse.md)**
 
 ### Errors
 
@@ -843,13 +843,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_lms_contents2
+## list_lms_contents
 
 List all contents
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listLmsContents2" method="get" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="python" operationID="listLmsContents" method="get" path="/lms/{connection_id}/content" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -861,7 +861,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.list_lms_contents2(request={
+    res = unified_to.lms.list_lms_contents(request={
         "connection_id": "<id>",
     })
 
@@ -874,14 +874,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListLmsContents2Request](../../models/operations/listlmscontents2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListLmsContentsRequest](../../models/operations/listlmscontentsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.ListLmsContents2Response](../../models/operations/listlmscontents2response.md)**
+**[operations.ListLmsContentsResponse](../../models/operations/listlmscontentsresponse.md)**
 
 ### Errors
 
@@ -889,13 +889,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_lms_courses2
+## list_lms_courses
 
 List all courses
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listLmsCourses2" method="get" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="python" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -907,7 +907,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.list_lms_courses2(request={
+    res = unified_to.lms.list_lms_courses(request={
         "connection_id": "<id>",
     })
 
@@ -920,14 +920,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListLmsCourses2Request](../../models/operations/listlmscourses2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListLmsCoursesRequest](../../models/operations/listlmscoursesrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.ListLmsCourses2Response](../../models/operations/listlmscourses2response.md)**
+**[operations.ListLmsCoursesResponse](../../models/operations/listlmscoursesresponse.md)**
 
 ### Errors
 
@@ -935,13 +935,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_lms_instructors2
+## list_lms_instructors
 
 List all instructors
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listLmsInstructors2" method="get" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="python" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -953,7 +953,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.list_lms_instructors2(request={
+    res = unified_to.lms.list_lms_instructors(request={
         "connection_id": "<id>",
     })
 
@@ -966,14 +966,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.ListLmsInstructors2Request](../../models/operations/listlmsinstructors2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListLmsInstructorsRequest](../../models/operations/listlmsinstructorsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.ListLmsInstructors2Response](../../models/operations/listlmsinstructors2response.md)**
+**[operations.ListLmsInstructorsResponse](../../models/operations/listlmsinstructorsresponse.md)**
 
 ### Errors
 
@@ -981,13 +981,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_lms_students2
+## list_lms_students
 
 List all students
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listLmsStudents2" method="get" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="python" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -999,7 +999,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.list_lms_students2(request={
+    res = unified_to.lms.list_lms_students(request={
         "connection_id": "<id>",
     })
 
@@ -1012,14 +1012,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListLmsStudents2Request](../../models/operations/listlmsstudents2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListLmsStudentsRequest](../../models/operations/listlmsstudentsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.ListLmsStudents2Response](../../models/operations/listlmsstudents2response.md)**
+**[operations.ListLmsStudentsResponse](../../models/operations/listlmsstudentsresponse.md)**
 
 ### Errors
 
@@ -1027,13 +1027,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_lms_activity2
+## patch_lms_activity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsActivity2" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1045,7 +1045,672 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.patch_lms_activity2(request={
+    res = unified_to.lms.patch_lms_activity(request={
+        "lms_activity": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_activity is not None
+
+    # Handle response
+    print(res.lms_activity)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchLmsActivityRequest](../../models/operations/patchlmsactivityrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.PatchLmsActivityResponse](../../models/operations/patchlmsactivityresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_lms_class
+
+Update a class
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.patch_lms_class(request={
+        "lms_class": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_class is not None
+
+    # Handle response
+    print(res.lms_class)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.PatchLmsClassRequest](../../models/operations/patchlmsclassrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.PatchLmsClassResponse](../../models/operations/patchlmsclassresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_lms_collection
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.patch_lms_collection(request={
+        "lms_collection": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_collection is not None
+
+    # Handle response
+    print(res.lms_collection)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchLmsCollectionRequest](../../models/operations/patchlmscollectionrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.PatchLmsCollectionResponse](../../models/operations/patchlmscollectionresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_lms_content
+
+Update a content
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.patch_lms_content(request={
+        "lms_content": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_content is not None
+
+    # Handle response
+    print(res.lms_content)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.PatchLmsContentRequest](../../models/operations/patchlmscontentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.PatchLmsContentResponse](../../models/operations/patchlmscontentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_lms_course
+
+Update a course
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.patch_lms_course(request={
+        "lms_course": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_course is not None
+
+    # Handle response
+    print(res.lms_course)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchLmsCourseRequest](../../models/operations/patchlmscourserequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.PatchLmsCourseResponse](../../models/operations/patchlmscourseresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_lms_instructor
+
+Update an instructor
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.patch_lms_instructor(request={
+        "lms_instructor": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchLmsInstructorRequest](../../models/operations/patchlmsinstructorrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.PatchLmsInstructorResponse](../../models/operations/patchlmsinstructorresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_lms_student
+
+Update a student
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.patch_lms_student(request={
+        "lms_student": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.lms_student is not None
+
+    # Handle response
+    print(res.lms_student)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.PatchLmsStudentRequest](../../models/operations/patchlmsstudentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.PatchLmsStudentResponse](../../models/operations/patchlmsstudentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_lms_activity
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeLmsActivity" method="delete" path="/lms/{connection_id}/activity/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.remove_lms_activity(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveLmsActivityRequest](../../models/operations/removelmsactivityrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.RemoveLmsActivityResponse](../../models/operations/removelmsactivityresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_lms_class
+
+Remove a class
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.remove_lms_class(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.RemoveLmsClassRequest](../../models/operations/removelmsclassrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.RemoveLmsClassResponse](../../models/operations/removelmsclassresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_lms_collection
+
+Remove a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeLmsCollection" method="delete" path="/lms/{connection_id}/collection/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.remove_lms_collection(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveLmsCollectionRequest](../../models/operations/removelmscollectionrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemoveLmsCollectionResponse](../../models/operations/removelmscollectionresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_lms_content
+
+Remove a content
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeLmsContent" method="delete" path="/lms/{connection_id}/content/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.remove_lms_content(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.RemoveLmsContentRequest](../../models/operations/removelmscontentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.RemoveLmsContentResponse](../../models/operations/removelmscontentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_lms_course
+
+Remove a course
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.remove_lms_course(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveLmsCourseRequest](../../models/operations/removelmscourserequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.RemoveLmsCourseResponse](../../models/operations/removelmscourseresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_lms_instructor
+
+Remove an instructor
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.remove_lms_instructor(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveLmsInstructorRequest](../../models/operations/removelmsinstructorrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemoveLmsInstructorResponse](../../models/operations/removelmsinstructorresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_lms_student
+
+Remove a student
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.remove_lms_student(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.RemoveLmsStudentRequest](../../models/operations/removelmsstudentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.RemoveLmsStudentResponse](../../models/operations/removelmsstudentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_lms_activity
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.lms.update_lms_activity(request={
         "lms_activity": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1062,12 +1727,12 @@ with UnifiedTo(
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.PatchLmsActivity2Request](../../models/operations/patchlmsactivity2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `request`                                                                                  | [operations.UpdateLmsActivityRequest](../../models/operations/updatelmsactivityrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 | `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.PatchLmsActivity2Response](../../models/operations/patchlmsactivity2response.md)**
+**[operations.UpdateLmsActivityResponse](../../models/operations/updatelmsactivityresponse.md)**
 
 ### Errors
 
@@ -1075,13 +1740,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_lms_class2
+## update_lms_class
 
 Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsClass2" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1093,7 +1758,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.patch_lms_class2(request={
+    res = unified_to.lms.update_lms_class(request={
         "lms_class": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1110,12 +1775,12 @@ with UnifiedTo(
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.PatchLmsClass2Request](../../models/operations/patchlmsclass2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `request`                                                                            | [operations.UpdateLmsClassRequest](../../models/operations/updatelmsclassrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 | `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
-**[operations.PatchLmsClass2Response](../../models/operations/patchlmsclass2response.md)**
+**[operations.UpdateLmsClassResponse](../../models/operations/updatelmsclassresponse.md)**
 
 ### Errors
 
@@ -1123,13 +1788,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_lms_collection2
+## update_lms_collection
 
 Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsCollection2" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1141,7 +1806,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.patch_lms_collection2(request={
+    res = unified_to.lms.update_lms_collection(request={
         "lms_collection": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1158,12 +1823,12 @@ with UnifiedTo(
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.PatchLmsCollection2Request](../../models/operations/patchlmscollection2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.UpdateLmsCollectionRequest](../../models/operations/updatelmscollectionrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.PatchLmsCollection2Response](../../models/operations/patchlmscollection2response.md)**
+**[operations.UpdateLmsCollectionResponse](../../models/operations/updatelmscollectionresponse.md)**
 
 ### Errors
 
@@ -1171,13 +1836,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_lms_content2
+## update_lms_content
 
 Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsContent2" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1189,7 +1854,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.patch_lms_content2(request={
+    res = unified_to.lms.update_lms_content(request={
         "lms_content": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1206,12 +1871,12 @@ with UnifiedTo(
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchLmsContent2Request](../../models/operations/patchlmscontent2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `request`                                                                                | [operations.UpdateLmsContentRequest](../../models/operations/updatelmscontentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 | `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.PatchLmsContent2Response](../../models/operations/patchlmscontent2response.md)**
+**[operations.UpdateLmsContentResponse](../../models/operations/updatelmscontentresponse.md)**
 
 ### Errors
 
@@ -1219,13 +1884,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_lms_course2
+## update_lms_course
 
 Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsCourse2" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1237,7 +1902,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.patch_lms_course2(request={
+    res = unified_to.lms.update_lms_course(request={
         "lms_course": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1254,12 +1919,12 @@ with UnifiedTo(
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.PatchLmsCourse2Request](../../models/operations/patchlmscourse2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `request`                                                                              | [operations.UpdateLmsCourseRequest](../../models/operations/updatelmscourserequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 | `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.PatchLmsCourse2Response](../../models/operations/patchlmscourse2response.md)**
+**[operations.UpdateLmsCourseResponse](../../models/operations/updatelmscourseresponse.md)**
 
 ### Errors
 
@@ -1267,13 +1932,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_lms_instructor2
+## update_lms_instructor
 
 Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsInstructor2" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1285,7 +1950,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.patch_lms_instructor2(request={
+    res = unified_to.lms.update_lms_instructor(request={
         "lms_instructor": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1302,12 +1967,12 @@ with UnifiedTo(
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.PatchLmsInstructor2Request](../../models/operations/patchlmsinstructor2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.UpdateLmsInstructorRequest](../../models/operations/updatelmsinstructorrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.PatchLmsInstructor2Response](../../models/operations/patchlmsinstructor2response.md)**
+**[operations.UpdateLmsInstructorResponse](../../models/operations/updatelmsinstructorresponse.md)**
 
 ### Errors
 
@@ -1315,13 +1980,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_lms_student2
+## update_lms_student
 
 Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsStudent2" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1333,7 +1998,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.lms.patch_lms_student2(request={
+    res = unified_to.lms.update_lms_student(request={
         "lms_student": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -1350,677 +2015,12 @@ with UnifiedTo(
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchLmsStudent2Request](../../models/operations/patchlmsstudent2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `request`                                                                                | [operations.UpdateLmsStudentRequest](../../models/operations/updatelmsstudentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 | `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.PatchLmsStudent2Response](../../models/operations/patchlmsstudent2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_lms_activity2
-
-Remove an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeLmsActivity2" method="delete" path="/lms/{connection_id}/activity/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.remove_lms_activity2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.RemoveLmsActivity2Request](../../models/operations/removelmsactivity2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
-
-### Response
-
-**[operations.RemoveLmsActivity2Response](../../models/operations/removelmsactivity2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_lms_class2
-
-Remove a class
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeLmsClass2" method="delete" path="/lms/{connection_id}/class/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.remove_lms_class2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.RemoveLmsClass2Request](../../models/operations/removelmsclass2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
-
-### Response
-
-**[operations.RemoveLmsClass2Response](../../models/operations/removelmsclass2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_lms_collection2
-
-Remove a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeLmsCollection2" method="delete" path="/lms/{connection_id}/collection/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.remove_lms_collection2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.RemoveLmsCollection2Request](../../models/operations/removelmscollection2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
-
-### Response
-
-**[operations.RemoveLmsCollection2Response](../../models/operations/removelmscollection2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_lms_content2
-
-Remove a content
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeLmsContent2" method="delete" path="/lms/{connection_id}/content/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.remove_lms_content2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemoveLmsContent2Request](../../models/operations/removelmscontent2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
-
-### Response
-
-**[operations.RemoveLmsContent2Response](../../models/operations/removelmscontent2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_lms_course2
-
-Remove a course
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeLmsCourse2" method="delete" path="/lms/{connection_id}/course/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.remove_lms_course2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.RemoveLmsCourse2Request](../../models/operations/removelmscourse2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.RemoveLmsCourse2Response](../../models/operations/removelmscourse2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_lms_instructor2
-
-Remove an instructor
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeLmsInstructor2" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.remove_lms_instructor2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.RemoveLmsInstructor2Request](../../models/operations/removelmsinstructor2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
-
-### Response
-
-**[operations.RemoveLmsInstructor2Response](../../models/operations/removelmsinstructor2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_lms_student2
-
-Remove a student
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeLmsStudent2" method="delete" path="/lms/{connection_id}/student/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.remove_lms_student2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemoveLmsStudent2Request](../../models/operations/removelmsstudent2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
-
-### Response
-
-**[operations.RemoveLmsStudent2Response](../../models/operations/removelmsstudent2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_lms_activity2
-
-Update an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateLmsActivity2" method="put" path="/lms/{connection_id}/activity/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.update_lms_activity2(request={
-        "lms_activity": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.lms_activity is not None
-
-    # Handle response
-    print(res.lms_activity)
-
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.UpdateLmsActivity2Request](../../models/operations/updatelmsactivity2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
-
-### Response
-
-**[operations.UpdateLmsActivity2Response](../../models/operations/updatelmsactivity2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_lms_class2
-
-Update a class
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateLmsClass2" method="put" path="/lms/{connection_id}/class/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.update_lms_class2(request={
-        "lms_class": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.lms_class is not None
-
-    # Handle response
-    print(res.lms_class)
-
-```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.UpdateLmsClass2Request](../../models/operations/updatelmsclass2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
-
-### Response
-
-**[operations.UpdateLmsClass2Response](../../models/operations/updatelmsclass2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_lms_collection2
-
-Update a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateLmsCollection2" method="put" path="/lms/{connection_id}/collection/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.update_lms_collection2(request={
-        "lms_collection": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.lms_collection is not None
-
-    # Handle response
-    print(res.lms_collection)
-
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.UpdateLmsCollection2Request](../../models/operations/updatelmscollection2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
-
-### Response
-
-**[operations.UpdateLmsCollection2Response](../../models/operations/updatelmscollection2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_lms_content2
-
-Update a content
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateLmsContent2" method="put" path="/lms/{connection_id}/content/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.update_lms_content2(request={
-        "lms_content": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.lms_content is not None
-
-    # Handle response
-    print(res.lms_content)
-
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdateLmsContent2Request](../../models/operations/updatelmscontent2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
-
-### Response
-
-**[operations.UpdateLmsContent2Response](../../models/operations/updatelmscontent2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_lms_course2
-
-Update a course
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateLmsCourse2" method="put" path="/lms/{connection_id}/course/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.update_lms_course2(request={
-        "lms_course": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.lms_course is not None
-
-    # Handle response
-    print(res.lms_course)
-
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.UpdateLmsCourse2Request](../../models/operations/updatelmscourse2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
-
-### Response
-
-**[operations.UpdateLmsCourse2Response](../../models/operations/updatelmscourse2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_lms_instructor2
-
-Update an instructor
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateLmsInstructor2" method="put" path="/lms/{connection_id}/instructor/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.update_lms_instructor2(request={
-        "lms_instructor": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.lms_instructor is not None
-
-    # Handle response
-    print(res.lms_instructor)
-
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.UpdateLmsInstructor2Request](../../models/operations/updatelmsinstructor2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
-
-### Response
-
-**[operations.UpdateLmsInstructor2Response](../../models/operations/updatelmsinstructor2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_lms_student2
-
-Update a student
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateLmsStudent2" method="put" path="/lms/{connection_id}/student/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.lms.update_lms_student2(request={
-        "lms_student": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.lms_student is not None
-
-    # Handle response
-    print(res.lms_student)
-
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdateLmsStudent2Request](../../models/operations/updatelmsstudent2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
-
-### Response
-
-**[operations.UpdateLmsStudent2Response](../../models/operations/updatelmsstudent2response.md)**
+**[operations.UpdateLmsStudentResponse](../../models/operations/updatelmsstudentresponse.md)**
 
 ### Errors
 

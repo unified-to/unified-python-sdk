@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [create_genai_embedding2](#create_genai_embedding2) - Create an embedding
+* [create_genai_embedding](#create_genai_embedding) - Create an embedding
 
-## create_genai_embedding2
+## create_genai_embedding
 
 Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createGenaiEmbedding2" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="python" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -24,7 +24,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.embedding.create_genai_embedding2(request={
+    res = unified_to.embedding.create_genai_embedding(request={
         "genai_embedding": {},
         "connection_id": "<id>",
     })
@@ -38,14 +38,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.CreateGenaiEmbedding2Request](../../models/operations/creategenaiembedding2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreateGenaiEmbeddingRequest](../../models/operations/creategenaiembeddingrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.CreateGenaiEmbedding2Response](../../models/operations/creategenaiembedding2response.md)**
+**[operations.CreateGenaiEmbeddingResponse](../../models/operations/creategenaiembeddingresponse.md)**
 
 ### Errors
 

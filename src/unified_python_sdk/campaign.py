@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Campaign(BaseSDK):
-    def create_ads_campaign2(
+    def create_ads_campaign(
         self,
         *,
         request: Union[
-            operations.CreateAdsCampaign2Request,
-            operations.CreateAdsCampaign2RequestTypedDict,
+            operations.CreateAdsCampaignRequest,
+            operations.CreateAdsCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsCampaign2Response:
+    ) -> operations.CreateAdsCampaignResponse:
         r"""Create a campaign
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsCampaign2Request)
-        request = cast(operations.CreateAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsCampaignRequest)
+        request = cast(operations.CreateAdsCampaignRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsCampaign2",
+                operation_id="createAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -88,7 +88,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsCampaign2Response(
+            return operations.CreateAdsCampaignResponse(
                 ads_campaign=unmarshal_json_response(
                     Optional[shared.AdsCampaign], http_res
                 ),
@@ -105,18 +105,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ads_campaign2_async(
+    async def create_ads_campaign_async(
         self,
         *,
         request: Union[
-            operations.CreateAdsCampaign2Request,
-            operations.CreateAdsCampaign2RequestTypedDict,
+            operations.CreateAdsCampaignRequest,
+            operations.CreateAdsCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsCampaign2Response:
+    ) -> operations.CreateAdsCampaignResponse:
         r"""Create a campaign
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsCampaign2Request)
-        request = cast(operations.CreateAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsCampaignRequest)
+        request = cast(operations.CreateAdsCampaignRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsCampaign2",
+                operation_id="createAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -183,7 +183,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsCampaign2Response(
+            return operations.CreateAdsCampaignResponse(
                 ads_campaign=unmarshal_json_response(
                     Optional[shared.AdsCampaign], http_res
                 ),
@@ -200,18 +200,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_martech_campaign2(
+    def create_martech_campaign(
         self,
         *,
         request: Union[
-            operations.CreateMartechCampaign2Request,
-            operations.CreateMartechCampaign2RequestTypedDict,
+            operations.CreateMartechCampaignRequest,
+            operations.CreateMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMartechCampaign2Response:
+    ) -> operations.CreateMartechCampaignResponse:
         r"""Create a campaign
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateMartechCampaign2Request)
-        request = cast(operations.CreateMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.CreateMartechCampaignRequest)
+        request = cast(operations.CreateMartechCampaignRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -270,7 +270,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMartechCampaign2",
+                operation_id="createMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -282,7 +282,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMartechCampaign2Response(
+            return operations.CreateMartechCampaignResponse(
                 marketing_campaign=unmarshal_json_response(
                     Optional[shared.MarketingCampaign], http_res
                 ),
@@ -299,18 +299,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_martech_campaign2_async(
+    async def create_martech_campaign_async(
         self,
         *,
         request: Union[
-            operations.CreateMartechCampaign2Request,
-            operations.CreateMartechCampaign2RequestTypedDict,
+            operations.CreateMartechCampaignRequest,
+            operations.CreateMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMartechCampaign2Response:
+    ) -> operations.CreateMartechCampaignResponse:
         r"""Create a campaign
 
         :param request: The request object to send.
@@ -330,8 +330,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateMartechCampaign2Request)
-        request = cast(operations.CreateMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.CreateMartechCampaignRequest)
+        request = cast(operations.CreateMartechCampaignRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -369,7 +369,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMartechCampaign2",
+                operation_id="createMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -381,7 +381,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMartechCampaign2Response(
+            return operations.CreateMartechCampaignResponse(
                 marketing_campaign=unmarshal_json_response(
                     Optional[shared.MarketingCampaign], http_res
                 ),
@@ -398,18 +398,17 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ads_campaign2(
+    def get_ads_campaign(
         self,
         *,
         request: Union[
-            operations.GetAdsCampaign2Request,
-            operations.GetAdsCampaign2RequestTypedDict,
+            operations.GetAdsCampaignRequest, operations.GetAdsCampaignRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsCampaign2Response:
+    ) -> operations.GetAdsCampaignResponse:
         r"""Retrieve a campaign
 
         :param request: The request object to send.
@@ -429,8 +428,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsCampaign2Request)
-        request = cast(operations.GetAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsCampaignRequest)
+        request = cast(operations.GetAdsCampaignRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -461,7 +460,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsCampaign2",
+                operation_id="getAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -473,7 +472,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsCampaign2Response(
+            return operations.GetAdsCampaignResponse(
                 ads_campaign=unmarshal_json_response(
                     Optional[shared.AdsCampaign], http_res
                 ),
@@ -490,18 +489,17 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ads_campaign2_async(
+    async def get_ads_campaign_async(
         self,
         *,
         request: Union[
-            operations.GetAdsCampaign2Request,
-            operations.GetAdsCampaign2RequestTypedDict,
+            operations.GetAdsCampaignRequest, operations.GetAdsCampaignRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsCampaign2Response:
+    ) -> operations.GetAdsCampaignResponse:
         r"""Retrieve a campaign
 
         :param request: The request object to send.
@@ -521,8 +519,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsCampaign2Request)
-        request = cast(operations.GetAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsCampaignRequest)
+        request = cast(operations.GetAdsCampaignRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -553,7 +551,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsCampaign2",
+                operation_id="getAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -565,7 +563,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsCampaign2Response(
+            return operations.GetAdsCampaignResponse(
                 ads_campaign=unmarshal_json_response(
                     Optional[shared.AdsCampaign], http_res
                 ),
@@ -582,18 +580,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_martech_campaign2(
+    def get_martech_campaign(
         self,
         *,
         request: Union[
-            operations.GetMartechCampaign2Request,
-            operations.GetMartechCampaign2RequestTypedDict,
+            operations.GetMartechCampaignRequest,
+            operations.GetMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMartechCampaign2Response:
+    ) -> operations.GetMartechCampaignResponse:
         r"""Retrieve a campaign
 
         :param request: The request object to send.
@@ -613,8 +611,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMartechCampaign2Request)
-        request = cast(operations.GetMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.GetMartechCampaignRequest)
+        request = cast(operations.GetMartechCampaignRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -645,7 +643,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMartechCampaign2",
+                operation_id="getMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -657,7 +655,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMartechCampaign2Response(
+            return operations.GetMartechCampaignResponse(
                 marketing_campaign=unmarshal_json_response(
                     Optional[shared.MarketingCampaign], http_res
                 ),
@@ -674,18 +672,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_martech_campaign2_async(
+    async def get_martech_campaign_async(
         self,
         *,
         request: Union[
-            operations.GetMartechCampaign2Request,
-            operations.GetMartechCampaign2RequestTypedDict,
+            operations.GetMartechCampaignRequest,
+            operations.GetMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMartechCampaign2Response:
+    ) -> operations.GetMartechCampaignResponse:
         r"""Retrieve a campaign
 
         :param request: The request object to send.
@@ -705,8 +703,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMartechCampaign2Request)
-        request = cast(operations.GetMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.GetMartechCampaignRequest)
+        request = cast(operations.GetMartechCampaignRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -737,7 +735,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMartechCampaign2",
+                operation_id="getMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -749,7 +747,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMartechCampaign2Response(
+            return operations.GetMartechCampaignResponse(
                 marketing_campaign=unmarshal_json_response(
                     Optional[shared.MarketingCampaign], http_res
                 ),
@@ -766,18 +764,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ads_campaigns2(
+    def list_ads_campaigns(
         self,
         *,
         request: Union[
-            operations.ListAdsCampaigns2Request,
-            operations.ListAdsCampaigns2RequestTypedDict,
+            operations.ListAdsCampaignsRequest,
+            operations.ListAdsCampaignsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsCampaigns2Response:
+    ) -> operations.ListAdsCampaignsResponse:
         r"""List all campaigns
 
         :param request: The request object to send.
@@ -797,8 +795,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsCampaigns2Request)
-        request = cast(operations.ListAdsCampaigns2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsCampaignsRequest)
+        request = cast(operations.ListAdsCampaignsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -829,7 +827,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsCampaigns2",
+                operation_id="listAdsCampaigns",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -841,7 +839,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsCampaigns2Response(
+            return operations.ListAdsCampaignsResponse(
                 ads_campaigns=unmarshal_json_response(
                     Optional[List[shared.AdsCampaign]], http_res
                 ),
@@ -858,18 +856,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ads_campaigns2_async(
+    async def list_ads_campaigns_async(
         self,
         *,
         request: Union[
-            operations.ListAdsCampaigns2Request,
-            operations.ListAdsCampaigns2RequestTypedDict,
+            operations.ListAdsCampaignsRequest,
+            operations.ListAdsCampaignsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsCampaigns2Response:
+    ) -> operations.ListAdsCampaignsResponse:
         r"""List all campaigns
 
         :param request: The request object to send.
@@ -889,8 +887,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsCampaigns2Request)
-        request = cast(operations.ListAdsCampaigns2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsCampaignsRequest)
+        request = cast(operations.ListAdsCampaignsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -921,7 +919,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsCampaigns2",
+                operation_id="listAdsCampaigns",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -933,7 +931,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsCampaigns2Response(
+            return operations.ListAdsCampaignsResponse(
                 ads_campaigns=unmarshal_json_response(
                     Optional[List[shared.AdsCampaign]], http_res
                 ),
@@ -950,18 +948,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_martech_campaigns2(
+    def list_martech_campaigns(
         self,
         *,
         request: Union[
-            operations.ListMartechCampaigns2Request,
-            operations.ListMartechCampaigns2RequestTypedDict,
+            operations.ListMartechCampaignsRequest,
+            operations.ListMartechCampaignsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMartechCampaigns2Response:
+    ) -> operations.ListMartechCampaignsResponse:
         r"""List all campaigns
 
         :param request: The request object to send.
@@ -981,8 +979,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMartechCampaigns2Request)
-        request = cast(operations.ListMartechCampaigns2Request, request)
+            request = utils.unmarshal(request, operations.ListMartechCampaignsRequest)
+        request = cast(operations.ListMartechCampaignsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1013,7 +1011,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMartechCampaigns2",
+                operation_id="listMartechCampaigns",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -1025,7 +1023,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMartechCampaigns2Response(
+            return operations.ListMartechCampaignsResponse(
                 marketing_campaigns=unmarshal_json_response(
                     Optional[List[shared.MarketingCampaign]], http_res
                 ),
@@ -1042,18 +1040,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_martech_campaigns2_async(
+    async def list_martech_campaigns_async(
         self,
         *,
         request: Union[
-            operations.ListMartechCampaigns2Request,
-            operations.ListMartechCampaigns2RequestTypedDict,
+            operations.ListMartechCampaignsRequest,
+            operations.ListMartechCampaignsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMartechCampaigns2Response:
+    ) -> operations.ListMartechCampaignsResponse:
         r"""List all campaigns
 
         :param request: The request object to send.
@@ -1073,8 +1071,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMartechCampaigns2Request)
-        request = cast(operations.ListMartechCampaigns2Request, request)
+            request = utils.unmarshal(request, operations.ListMartechCampaignsRequest)
+        request = cast(operations.ListMartechCampaignsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1105,7 +1103,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMartechCampaigns2",
+                operation_id="listMartechCampaigns",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -1117,7 +1115,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMartechCampaigns2Response(
+            return operations.ListMartechCampaignsResponse(
                 marketing_campaigns=unmarshal_json_response(
                     Optional[List[shared.MarketingCampaign]], http_res
                 ),
@@ -1134,18 +1132,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ads_campaign2(
+    def patch_ads_campaign(
         self,
         *,
         request: Union[
-            operations.PatchAdsCampaign2Request,
-            operations.PatchAdsCampaign2RequestTypedDict,
+            operations.PatchAdsCampaignRequest,
+            operations.PatchAdsCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsCampaign2Response:
+    ) -> operations.PatchAdsCampaignResponse:
         r"""Update a campaign
 
         :param request: The request object to send.
@@ -1165,8 +1163,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsCampaign2Request)
-        request = cast(operations.PatchAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsCampaignRequest)
+        request = cast(operations.PatchAdsCampaignRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1200,7 +1198,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsCampaign2",
+                operation_id="patchAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -1212,7 +1210,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsCampaign2Response(
+            return operations.PatchAdsCampaignResponse(
                 ads_campaign=unmarshal_json_response(
                     Optional[shared.AdsCampaign], http_res
                 ),
@@ -1229,18 +1227,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ads_campaign2_async(
+    async def patch_ads_campaign_async(
         self,
         *,
         request: Union[
-            operations.PatchAdsCampaign2Request,
-            operations.PatchAdsCampaign2RequestTypedDict,
+            operations.PatchAdsCampaignRequest,
+            operations.PatchAdsCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsCampaign2Response:
+    ) -> operations.PatchAdsCampaignResponse:
         r"""Update a campaign
 
         :param request: The request object to send.
@@ -1260,8 +1258,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsCampaign2Request)
-        request = cast(operations.PatchAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsCampaignRequest)
+        request = cast(operations.PatchAdsCampaignRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1295,7 +1293,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsCampaign2",
+                operation_id="patchAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -1307,7 +1305,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsCampaign2Response(
+            return operations.PatchAdsCampaignResponse(
                 ads_campaign=unmarshal_json_response(
                     Optional[shared.AdsCampaign], http_res
                 ),
@@ -1324,18 +1322,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_martech_campaign2(
+    def patch_martech_campaign(
         self,
         *,
         request: Union[
-            operations.PatchMartechCampaign2Request,
-            operations.PatchMartechCampaign2RequestTypedDict,
+            operations.PatchMartechCampaignRequest,
+            operations.PatchMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMartechCampaign2Response:
+    ) -> operations.PatchMartechCampaignResponse:
         r"""Update a campaign
 
         :param request: The request object to send.
@@ -1355,8 +1353,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMartechCampaign2Request)
-        request = cast(operations.PatchMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.PatchMartechCampaignRequest)
+        request = cast(operations.PatchMartechCampaignRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1394,7 +1392,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMartechCampaign2",
+                operation_id="patchMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -1406,7 +1404,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMartechCampaign2Response(
+            return operations.PatchMartechCampaignResponse(
                 marketing_campaign=unmarshal_json_response(
                     Optional[shared.MarketingCampaign], http_res
                 ),
@@ -1423,18 +1421,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_martech_campaign2_async(
+    async def patch_martech_campaign_async(
         self,
         *,
         request: Union[
-            operations.PatchMartechCampaign2Request,
-            operations.PatchMartechCampaign2RequestTypedDict,
+            operations.PatchMartechCampaignRequest,
+            operations.PatchMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMartechCampaign2Response:
+    ) -> operations.PatchMartechCampaignResponse:
         r"""Update a campaign
 
         :param request: The request object to send.
@@ -1454,8 +1452,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMartechCampaign2Request)
-        request = cast(operations.PatchMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.PatchMartechCampaignRequest)
+        request = cast(operations.PatchMartechCampaignRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1493,7 +1491,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMartechCampaign2",
+                operation_id="patchMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -1505,7 +1503,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMartechCampaign2Response(
+            return operations.PatchMartechCampaignResponse(
                 marketing_campaign=unmarshal_json_response(
                     Optional[shared.MarketingCampaign], http_res
                 ),
@@ -1522,18 +1520,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ads_campaign2(
+    def remove_ads_campaign(
         self,
         *,
         request: Union[
-            operations.RemoveAdsCampaign2Request,
-            operations.RemoveAdsCampaign2RequestTypedDict,
+            operations.RemoveAdsCampaignRequest,
+            operations.RemoveAdsCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsCampaign2Response:
+    ) -> operations.RemoveAdsCampaignResponse:
         r"""Remove a campaign
 
         :param request: The request object to send.
@@ -1553,8 +1551,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsCampaign2Request)
-        request = cast(operations.RemoveAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsCampaignRequest)
+        request = cast(operations.RemoveAdsCampaignRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1585,7 +1583,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsCampaign2",
+                operation_id="removeAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -1597,7 +1595,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsCampaign2Response(
+            return operations.RemoveAdsCampaignResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1610,7 +1608,7 @@ class Campaign(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsCampaign2Response(
+            return operations.RemoveAdsCampaignResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1619,18 +1617,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ads_campaign2_async(
+    async def remove_ads_campaign_async(
         self,
         *,
         request: Union[
-            operations.RemoveAdsCampaign2Request,
-            operations.RemoveAdsCampaign2RequestTypedDict,
+            operations.RemoveAdsCampaignRequest,
+            operations.RemoveAdsCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsCampaign2Response:
+    ) -> operations.RemoveAdsCampaignResponse:
         r"""Remove a campaign
 
         :param request: The request object to send.
@@ -1650,8 +1648,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsCampaign2Request)
-        request = cast(operations.RemoveAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsCampaignRequest)
+        request = cast(operations.RemoveAdsCampaignRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1682,7 +1680,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsCampaign2",
+                operation_id="removeAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -1694,7 +1692,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsCampaign2Response(
+            return operations.RemoveAdsCampaignResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1707,7 +1705,7 @@ class Campaign(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsCampaign2Response(
+            return operations.RemoveAdsCampaignResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1716,18 +1714,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_martech_campaign2(
+    def remove_martech_campaign(
         self,
         *,
         request: Union[
-            operations.RemoveMartechCampaign2Request,
-            operations.RemoveMartechCampaign2RequestTypedDict,
+            operations.RemoveMartechCampaignRequest,
+            operations.RemoveMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMartechCampaign2Response:
+    ) -> operations.RemoveMartechCampaignResponse:
         r"""Remove a campaign
 
         :param request: The request object to send.
@@ -1747,8 +1745,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveMartechCampaign2Request)
-        request = cast(operations.RemoveMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.RemoveMartechCampaignRequest)
+        request = cast(operations.RemoveMartechCampaignRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1779,7 +1777,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMartechCampaign2",
+                operation_id="removeMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -1791,7 +1789,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMartechCampaign2Response(
+            return operations.RemoveMartechCampaignResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1804,7 +1802,7 @@ class Campaign(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMartechCampaign2Response(
+            return operations.RemoveMartechCampaignResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1813,18 +1811,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_martech_campaign2_async(
+    async def remove_martech_campaign_async(
         self,
         *,
         request: Union[
-            operations.RemoveMartechCampaign2Request,
-            operations.RemoveMartechCampaign2RequestTypedDict,
+            operations.RemoveMartechCampaignRequest,
+            operations.RemoveMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMartechCampaign2Response:
+    ) -> operations.RemoveMartechCampaignResponse:
         r"""Remove a campaign
 
         :param request: The request object to send.
@@ -1844,8 +1842,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveMartechCampaign2Request)
-        request = cast(operations.RemoveMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.RemoveMartechCampaignRequest)
+        request = cast(operations.RemoveMartechCampaignRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1876,7 +1874,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMartechCampaign2",
+                operation_id="removeMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -1888,7 +1886,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMartechCampaign2Response(
+            return operations.RemoveMartechCampaignResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1901,7 +1899,7 @@ class Campaign(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMartechCampaign2Response(
+            return operations.RemoveMartechCampaignResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1910,18 +1908,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ads_campaign2(
+    def update_ads_campaign(
         self,
         *,
         request: Union[
-            operations.UpdateAdsCampaign2Request,
-            operations.UpdateAdsCampaign2RequestTypedDict,
+            operations.UpdateAdsCampaignRequest,
+            operations.UpdateAdsCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsCampaign2Response:
+    ) -> operations.UpdateAdsCampaignResponse:
         r"""Update a campaign
 
         :param request: The request object to send.
@@ -1941,8 +1939,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsCampaign2Request)
-        request = cast(operations.UpdateAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsCampaignRequest)
+        request = cast(operations.UpdateAdsCampaignRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1976,7 +1974,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsCampaign2",
+                operation_id="updateAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -1988,7 +1986,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsCampaign2Response(
+            return operations.UpdateAdsCampaignResponse(
                 ads_campaign=unmarshal_json_response(
                     Optional[shared.AdsCampaign], http_res
                 ),
@@ -2005,18 +2003,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ads_campaign2_async(
+    async def update_ads_campaign_async(
         self,
         *,
         request: Union[
-            operations.UpdateAdsCampaign2Request,
-            operations.UpdateAdsCampaign2RequestTypedDict,
+            operations.UpdateAdsCampaignRequest,
+            operations.UpdateAdsCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsCampaign2Response:
+    ) -> operations.UpdateAdsCampaignResponse:
         r"""Update a campaign
 
         :param request: The request object to send.
@@ -2036,8 +2034,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsCampaign2Request)
-        request = cast(operations.UpdateAdsCampaign2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsCampaignRequest)
+        request = cast(operations.UpdateAdsCampaignRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2071,7 +2069,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsCampaign2",
+                operation_id="updateAdsCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "campaign"],
@@ -2083,7 +2081,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsCampaign2Response(
+            return operations.UpdateAdsCampaignResponse(
                 ads_campaign=unmarshal_json_response(
                     Optional[shared.AdsCampaign], http_res
                 ),
@@ -2100,18 +2098,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_martech_campaign2(
+    def update_martech_campaign(
         self,
         *,
         request: Union[
-            operations.UpdateMartechCampaign2Request,
-            operations.UpdateMartechCampaign2RequestTypedDict,
+            operations.UpdateMartechCampaignRequest,
+            operations.UpdateMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMartechCampaign2Response:
+    ) -> operations.UpdateMartechCampaignResponse:
         r"""Update a campaign
 
         :param request: The request object to send.
@@ -2131,8 +2129,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateMartechCampaign2Request)
-        request = cast(operations.UpdateMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMartechCampaignRequest)
+        request = cast(operations.UpdateMartechCampaignRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -2170,7 +2168,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMartechCampaign2",
+                operation_id="updateMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -2182,7 +2180,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMartechCampaign2Response(
+            return operations.UpdateMartechCampaignResponse(
                 marketing_campaign=unmarshal_json_response(
                     Optional[shared.MarketingCampaign], http_res
                 ),
@@ -2199,18 +2197,18 @@ class Campaign(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_martech_campaign2_async(
+    async def update_martech_campaign_async(
         self,
         *,
         request: Union[
-            operations.UpdateMartechCampaign2Request,
-            operations.UpdateMartechCampaign2RequestTypedDict,
+            operations.UpdateMartechCampaignRequest,
+            operations.UpdateMartechCampaignRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMartechCampaign2Response:
+    ) -> operations.UpdateMartechCampaignResponse:
         r"""Update a campaign
 
         :param request: The request object to send.
@@ -2230,8 +2228,8 @@ class Campaign(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateMartechCampaign2Request)
-        request = cast(operations.UpdateMartechCampaign2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMartechCampaignRequest)
+        request = cast(operations.UpdateMartechCampaignRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2269,7 +2267,7 @@ class Campaign(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMartechCampaign2",
+                operation_id="updateMartechCampaign",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "campaign"],
@@ -2281,7 +2279,7 @@ class Campaign(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMartechCampaign2Response(
+            return operations.UpdateMartechCampaignResponse(
                 marketing_campaign=unmarshal_json_response(
                     Optional[shared.MarketingCampaign], http_res
                 ),

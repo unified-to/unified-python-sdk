@@ -10,17 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Ad(BaseSDK):
-    def create_ads_ad2(
+    def create_ads_ad(
         self,
         *,
         request: Union[
-            operations.CreateAdsAd2Request, operations.CreateAdsAd2RequestTypedDict
+            operations.CreateAdsAdRequest, operations.CreateAdsAdRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsAd2Response:
+    ) -> operations.CreateAdsAdResponse:
         r"""Create an ad
 
         :param request: The request object to send.
@@ -40,8 +40,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsAd2Request)
-        request = cast(operations.CreateAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsAdRequest)
+        request = cast(operations.CreateAdsAdRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -75,7 +75,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsAd2",
+                operation_id="createAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -87,7 +87,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsAd2Response(
+            return operations.CreateAdsAdResponse(
                 ads_ad=unmarshal_json_response(Optional[shared.AdsAd], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -102,17 +102,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ads_ad2_async(
+    async def create_ads_ad_async(
         self,
         *,
         request: Union[
-            operations.CreateAdsAd2Request, operations.CreateAdsAd2RequestTypedDict
+            operations.CreateAdsAdRequest, operations.CreateAdsAdRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsAd2Response:
+    ) -> operations.CreateAdsAdResponse:
         r"""Create an ad
 
         :param request: The request object to send.
@@ -132,8 +132,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsAd2Request)
-        request = cast(operations.CreateAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsAdRequest)
+        request = cast(operations.CreateAdsAdRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -167,7 +167,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsAd2",
+                operation_id="createAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -179,7 +179,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsAd2Response(
+            return operations.CreateAdsAdResponse(
                 ads_ad=unmarshal_json_response(Optional[shared.AdsAd], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -194,17 +194,15 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ads_ad2(
+    def get_ads_ad(
         self,
         *,
-        request: Union[
-            operations.GetAdsAd2Request, operations.GetAdsAd2RequestTypedDict
-        ],
+        request: Union[operations.GetAdsAdRequest, operations.GetAdsAdRequestTypedDict],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsAd2Response:
+    ) -> operations.GetAdsAdResponse:
         r"""Retrieve an ad
 
         :param request: The request object to send.
@@ -224,8 +222,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsAd2Request)
-        request = cast(operations.GetAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsAdRequest)
+        request = cast(operations.GetAdsAdRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -256,7 +254,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsAd2",
+                operation_id="getAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -268,7 +266,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsAd2Response(
+            return operations.GetAdsAdResponse(
                 ads_ad=unmarshal_json_response(Optional[shared.AdsAd], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -283,17 +281,15 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ads_ad2_async(
+    async def get_ads_ad_async(
         self,
         *,
-        request: Union[
-            operations.GetAdsAd2Request, operations.GetAdsAd2RequestTypedDict
-        ],
+        request: Union[operations.GetAdsAdRequest, operations.GetAdsAdRequestTypedDict],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsAd2Response:
+    ) -> operations.GetAdsAdResponse:
         r"""Retrieve an ad
 
         :param request: The request object to send.
@@ -313,8 +309,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsAd2Request)
-        request = cast(operations.GetAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsAdRequest)
+        request = cast(operations.GetAdsAdRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -345,7 +341,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsAd2",
+                operation_id="getAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -357,7 +353,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsAd2Response(
+            return operations.GetAdsAdResponse(
                 ads_ad=unmarshal_json_response(Optional[shared.AdsAd], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -372,17 +368,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ads_ads2(
+    def list_ads_ads(
         self,
         *,
         request: Union[
-            operations.ListAdsAds2Request, operations.ListAdsAds2RequestTypedDict
+            operations.ListAdsAdsRequest, operations.ListAdsAdsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsAds2Response:
+    ) -> operations.ListAdsAdsResponse:
         r"""List all ads
 
         :param request: The request object to send.
@@ -402,8 +398,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsAds2Request)
-        request = cast(operations.ListAdsAds2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsAdsRequest)
+        request = cast(operations.ListAdsAdsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -434,7 +430,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsAds2",
+                operation_id="listAdsAds",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -446,7 +442,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsAds2Response(
+            return operations.ListAdsAdsResponse(
                 ads_ads=unmarshal_json_response(Optional[List[shared.AdsAd]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -461,17 +457,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ads_ads2_async(
+    async def list_ads_ads_async(
         self,
         *,
         request: Union[
-            operations.ListAdsAds2Request, operations.ListAdsAds2RequestTypedDict
+            operations.ListAdsAdsRequest, operations.ListAdsAdsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsAds2Response:
+    ) -> operations.ListAdsAdsResponse:
         r"""List all ads
 
         :param request: The request object to send.
@@ -491,8 +487,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsAds2Request)
-        request = cast(operations.ListAdsAds2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsAdsRequest)
+        request = cast(operations.ListAdsAdsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -523,7 +519,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsAds2",
+                operation_id="listAdsAds",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -535,7 +531,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsAds2Response(
+            return operations.ListAdsAdsResponse(
                 ads_ads=unmarshal_json_response(Optional[List[shared.AdsAd]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -550,17 +546,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ads_ad2(
+    def patch_ads_ad(
         self,
         *,
         request: Union[
-            operations.PatchAdsAd2Request, operations.PatchAdsAd2RequestTypedDict
+            operations.PatchAdsAdRequest, operations.PatchAdsAdRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsAd2Response:
+    ) -> operations.PatchAdsAdResponse:
         r"""Update an ad
 
         :param request: The request object to send.
@@ -580,8 +576,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsAd2Request)
-        request = cast(operations.PatchAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsAdRequest)
+        request = cast(operations.PatchAdsAdRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -615,7 +611,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsAd2",
+                operation_id="patchAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -627,7 +623,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsAd2Response(
+            return operations.PatchAdsAdResponse(
                 ads_ad=unmarshal_json_response(Optional[shared.AdsAd], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -642,17 +638,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ads_ad2_async(
+    async def patch_ads_ad_async(
         self,
         *,
         request: Union[
-            operations.PatchAdsAd2Request, operations.PatchAdsAd2RequestTypedDict
+            operations.PatchAdsAdRequest, operations.PatchAdsAdRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsAd2Response:
+    ) -> operations.PatchAdsAdResponse:
         r"""Update an ad
 
         :param request: The request object to send.
@@ -672,8 +668,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsAd2Request)
-        request = cast(operations.PatchAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsAdRequest)
+        request = cast(operations.PatchAdsAdRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -707,7 +703,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsAd2",
+                operation_id="patchAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -719,7 +715,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsAd2Response(
+            return operations.PatchAdsAdResponse(
                 ads_ad=unmarshal_json_response(Optional[shared.AdsAd], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -734,17 +730,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ads_ad2(
+    def remove_ads_ad(
         self,
         *,
         request: Union[
-            operations.RemoveAdsAd2Request, operations.RemoveAdsAd2RequestTypedDict
+            operations.RemoveAdsAdRequest, operations.RemoveAdsAdRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsAd2Response:
+    ) -> operations.RemoveAdsAdResponse:
         r"""Remove an ad
 
         :param request: The request object to send.
@@ -764,8 +760,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsAd2Request)
-        request = cast(operations.RemoveAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsAdRequest)
+        request = cast(operations.RemoveAdsAdRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -796,7 +792,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsAd2",
+                operation_id="removeAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -808,7 +804,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsAd2Response(
+            return operations.RemoveAdsAdResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -821,7 +817,7 @@ class Ad(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsAd2Response(
+            return operations.RemoveAdsAdResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -830,17 +826,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ads_ad2_async(
+    async def remove_ads_ad_async(
         self,
         *,
         request: Union[
-            operations.RemoveAdsAd2Request, operations.RemoveAdsAd2RequestTypedDict
+            operations.RemoveAdsAdRequest, operations.RemoveAdsAdRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsAd2Response:
+    ) -> operations.RemoveAdsAdResponse:
         r"""Remove an ad
 
         :param request: The request object to send.
@@ -860,8 +856,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsAd2Request)
-        request = cast(operations.RemoveAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsAdRequest)
+        request = cast(operations.RemoveAdsAdRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -892,7 +888,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsAd2",
+                operation_id="removeAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -904,7 +900,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsAd2Response(
+            return operations.RemoveAdsAdResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -917,7 +913,7 @@ class Ad(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsAd2Response(
+            return operations.RemoveAdsAdResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -926,17 +922,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ads_ad2(
+    def update_ads_ad(
         self,
         *,
         request: Union[
-            operations.UpdateAdsAd2Request, operations.UpdateAdsAd2RequestTypedDict
+            operations.UpdateAdsAdRequest, operations.UpdateAdsAdRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsAd2Response:
+    ) -> operations.UpdateAdsAdResponse:
         r"""Update an ad
 
         :param request: The request object to send.
@@ -956,8 +952,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsAd2Request)
-        request = cast(operations.UpdateAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsAdRequest)
+        request = cast(operations.UpdateAdsAdRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -991,7 +987,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsAd2",
+                operation_id="updateAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -1003,7 +999,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsAd2Response(
+            return operations.UpdateAdsAdResponse(
                 ads_ad=unmarshal_json_response(Optional[shared.AdsAd], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1018,17 +1014,17 @@ class Ad(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ads_ad2_async(
+    async def update_ads_ad_async(
         self,
         *,
         request: Union[
-            operations.UpdateAdsAd2Request, operations.UpdateAdsAd2RequestTypedDict
+            operations.UpdateAdsAdRequest, operations.UpdateAdsAdRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsAd2Response:
+    ) -> operations.UpdateAdsAdResponse:
         r"""Update an ad
 
         :param request: The request object to send.
@@ -1048,8 +1044,8 @@ class Ad(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsAd2Request)
-        request = cast(operations.UpdateAdsAd2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsAdRequest)
+        request = cast(operations.UpdateAdsAdRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1083,7 +1079,7 @@ class Ad(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsAd2",
+                operation_id="updateAdsAd",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "ad"],
@@ -1095,7 +1091,7 @@ class Ad(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsAd2Response(
+            return operations.UpdateAdsAdResponse(
                 ads_ad=unmarshal_json_response(Optional[shared.AdsAd], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

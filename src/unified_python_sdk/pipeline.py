@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Pipeline(BaseSDK):
-    def create_crm_pipeline2(
+    def create_crm_pipeline(
         self,
         *,
         request: Union[
-            operations.CreateCrmPipeline2Request,
-            operations.CreateCrmPipeline2RequestTypedDict,
+            operations.CreateCrmPipelineRequest,
+            operations.CreateCrmPipelineRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmPipeline2Response:
+    ) -> operations.CreateCrmPipelineResponse:
         r"""Create a pipeline
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmPipeline2Request)
-        request = cast(operations.CreateCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.CreateCrmPipelineRequest)
+        request = cast(operations.CreateCrmPipelineRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmPipeline2",
+                operation_id="createCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -88,7 +88,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmPipeline2Response(
+            return operations.CreateCrmPipelineResponse(
                 crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
@@ -105,18 +105,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_crm_pipeline2_async(
+    async def create_crm_pipeline_async(
         self,
         *,
         request: Union[
-            operations.CreateCrmPipeline2Request,
-            operations.CreateCrmPipeline2RequestTypedDict,
+            operations.CreateCrmPipelineRequest,
+            operations.CreateCrmPipelineRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmPipeline2Response:
+    ) -> operations.CreateCrmPipelineResponse:
         r"""Create a pipeline
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmPipeline2Request)
-        request = cast(operations.CreateCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.CreateCrmPipelineRequest)
+        request = cast(operations.CreateCrmPipelineRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmPipeline2",
+                operation_id="createCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -183,7 +183,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmPipeline2Response(
+            return operations.CreateCrmPipelineResponse(
                 crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
@@ -200,18 +200,17 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_crm_pipeline2(
+    def get_crm_pipeline(
         self,
         *,
         request: Union[
-            operations.GetCrmPipeline2Request,
-            operations.GetCrmPipeline2RequestTypedDict,
+            operations.GetCrmPipelineRequest, operations.GetCrmPipelineRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmPipeline2Response:
+    ) -> operations.GetCrmPipelineResponse:
         r"""Retrieve a pipeline
 
         :param request: The request object to send.
@@ -231,8 +230,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmPipeline2Request)
-        request = cast(operations.GetCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.GetCrmPipelineRequest)
+        request = cast(operations.GetCrmPipelineRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +262,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmPipeline2",
+                operation_id="getCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -275,7 +274,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmPipeline2Response(
+            return operations.GetCrmPipelineResponse(
                 crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
@@ -292,18 +291,17 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_crm_pipeline2_async(
+    async def get_crm_pipeline_async(
         self,
         *,
         request: Union[
-            operations.GetCrmPipeline2Request,
-            operations.GetCrmPipeline2RequestTypedDict,
+            operations.GetCrmPipelineRequest, operations.GetCrmPipelineRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmPipeline2Response:
+    ) -> operations.GetCrmPipelineResponse:
         r"""Retrieve a pipeline
 
         :param request: The request object to send.
@@ -323,8 +321,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmPipeline2Request)
-        request = cast(operations.GetCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.GetCrmPipelineRequest)
+        request = cast(operations.GetCrmPipelineRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +353,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmPipeline2",
+                operation_id="getCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -367,7 +365,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmPipeline2Response(
+            return operations.GetCrmPipelineResponse(
                 crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
@@ -384,18 +382,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_crm_pipelines2(
+    def list_crm_pipelines(
         self,
         *,
         request: Union[
-            operations.ListCrmPipelines2Request,
-            operations.ListCrmPipelines2RequestTypedDict,
+            operations.ListCrmPipelinesRequest,
+            operations.ListCrmPipelinesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmPipelines2Response:
+    ) -> operations.ListCrmPipelinesResponse:
         r"""List all pipelines
 
         :param request: The request object to send.
@@ -415,8 +413,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmPipelines2Request)
-        request = cast(operations.ListCrmPipelines2Request, request)
+            request = utils.unmarshal(request, operations.ListCrmPipelinesRequest)
+        request = cast(operations.ListCrmPipelinesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +445,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmPipelines2",
+                operation_id="listCrmPipelines",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -459,7 +457,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmPipelines2Response(
+            return operations.ListCrmPipelinesResponse(
                 crm_pipelines=unmarshal_json_response(
                     Optional[List[shared.CrmPipeline]], http_res
                 ),
@@ -476,18 +474,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_crm_pipelines2_async(
+    async def list_crm_pipelines_async(
         self,
         *,
         request: Union[
-            operations.ListCrmPipelines2Request,
-            operations.ListCrmPipelines2RequestTypedDict,
+            operations.ListCrmPipelinesRequest,
+            operations.ListCrmPipelinesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmPipelines2Response:
+    ) -> operations.ListCrmPipelinesResponse:
         r"""List all pipelines
 
         :param request: The request object to send.
@@ -507,8 +505,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmPipelines2Request)
-        request = cast(operations.ListCrmPipelines2Request, request)
+            request = utils.unmarshal(request, operations.ListCrmPipelinesRequest)
+        request = cast(operations.ListCrmPipelinesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +537,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmPipelines2",
+                operation_id="listCrmPipelines",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -551,7 +549,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmPipelines2Response(
+            return operations.ListCrmPipelinesResponse(
                 crm_pipelines=unmarshal_json_response(
                     Optional[List[shared.CrmPipeline]], http_res
                 ),
@@ -568,18 +566,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_crm_pipeline2(
+    def patch_crm_pipeline(
         self,
         *,
         request: Union[
-            operations.PatchCrmPipeline2Request,
-            operations.PatchCrmPipeline2RequestTypedDict,
+            operations.PatchCrmPipelineRequest,
+            operations.PatchCrmPipelineRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmPipeline2Response:
+    ) -> operations.PatchCrmPipelineResponse:
         r"""Update a pipeline
 
         :param request: The request object to send.
@@ -599,8 +597,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmPipeline2Request)
-        request = cast(operations.PatchCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.PatchCrmPipelineRequest)
+        request = cast(operations.PatchCrmPipelineRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +632,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmPipeline2",
+                operation_id="patchCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -646,7 +644,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmPipeline2Response(
+            return operations.PatchCrmPipelineResponse(
                 crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
@@ -663,18 +661,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_crm_pipeline2_async(
+    async def patch_crm_pipeline_async(
         self,
         *,
         request: Union[
-            operations.PatchCrmPipeline2Request,
-            operations.PatchCrmPipeline2RequestTypedDict,
+            operations.PatchCrmPipelineRequest,
+            operations.PatchCrmPipelineRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmPipeline2Response:
+    ) -> operations.PatchCrmPipelineResponse:
         r"""Update a pipeline
 
         :param request: The request object to send.
@@ -694,8 +692,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmPipeline2Request)
-        request = cast(operations.PatchCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.PatchCrmPipelineRequest)
+        request = cast(operations.PatchCrmPipelineRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +727,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmPipeline2",
+                operation_id="patchCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -741,7 +739,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmPipeline2Response(
+            return operations.PatchCrmPipelineResponse(
                 crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
@@ -758,18 +756,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_crm_pipeline2(
+    def remove_crm_pipeline(
         self,
         *,
         request: Union[
-            operations.RemoveCrmPipeline2Request,
-            operations.RemoveCrmPipeline2RequestTypedDict,
+            operations.RemoveCrmPipelineRequest,
+            operations.RemoveCrmPipelineRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmPipeline2Response:
+    ) -> operations.RemoveCrmPipelineResponse:
         r"""Remove a pipeline
 
         :param request: The request object to send.
@@ -789,8 +787,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmPipeline2Request)
-        request = cast(operations.RemoveCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCrmPipelineRequest)
+        request = cast(operations.RemoveCrmPipelineRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +819,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmPipeline2",
+                operation_id="removeCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -833,7 +831,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmPipeline2Response(
+            return operations.RemoveCrmPipelineResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +844,7 @@ class Pipeline(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmPipeline2Response(
+            return operations.RemoveCrmPipelineResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +853,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_crm_pipeline2_async(
+    async def remove_crm_pipeline_async(
         self,
         *,
         request: Union[
-            operations.RemoveCrmPipeline2Request,
-            operations.RemoveCrmPipeline2RequestTypedDict,
+            operations.RemoveCrmPipelineRequest,
+            operations.RemoveCrmPipelineRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmPipeline2Response:
+    ) -> operations.RemoveCrmPipelineResponse:
         r"""Remove a pipeline
 
         :param request: The request object to send.
@@ -886,8 +884,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmPipeline2Request)
-        request = cast(operations.RemoveCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCrmPipelineRequest)
+        request = cast(operations.RemoveCrmPipelineRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +916,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmPipeline2",
+                operation_id="removeCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -930,7 +928,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmPipeline2Response(
+            return operations.RemoveCrmPipelineResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +941,7 @@ class Pipeline(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmPipeline2Response(
+            return operations.RemoveCrmPipelineResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +950,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_crm_pipeline2(
+    def update_crm_pipeline(
         self,
         *,
         request: Union[
-            operations.UpdateCrmPipeline2Request,
-            operations.UpdateCrmPipeline2RequestTypedDict,
+            operations.UpdateCrmPipelineRequest,
+            operations.UpdateCrmPipelineRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmPipeline2Response:
+    ) -> operations.UpdateCrmPipelineResponse:
         r"""Update a pipeline
 
         :param request: The request object to send.
@@ -983,8 +981,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmPipeline2Request)
-        request = cast(operations.UpdateCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCrmPipelineRequest)
+        request = cast(operations.UpdateCrmPipelineRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1016,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmPipeline2",
+                operation_id="updateCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -1030,7 +1028,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmPipeline2Response(
+            return operations.UpdateCrmPipelineResponse(
                 crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
@@ -1047,18 +1045,18 @@ class Pipeline(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_crm_pipeline2_async(
+    async def update_crm_pipeline_async(
         self,
         *,
         request: Union[
-            operations.UpdateCrmPipeline2Request,
-            operations.UpdateCrmPipeline2RequestTypedDict,
+            operations.UpdateCrmPipelineRequest,
+            operations.UpdateCrmPipelineRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmPipeline2Response:
+    ) -> operations.UpdateCrmPipelineResponse:
         r"""Update a pipeline
 
         :param request: The request object to send.
@@ -1078,8 +1076,8 @@ class Pipeline(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmPipeline2Request)
-        request = cast(operations.UpdateCrmPipeline2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCrmPipelineRequest)
+        request = cast(operations.UpdateCrmPipelineRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1111,7 @@ class Pipeline(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmPipeline2",
+                operation_id="updateCrmPipeline",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "pipeline"],
@@ -1125,7 +1123,7 @@ class Pipeline(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmPipeline2Response(
+            return operations.UpdateCrmPipelineResponse(
                 crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),

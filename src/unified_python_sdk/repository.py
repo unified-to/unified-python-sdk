@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Repository(BaseSDK):
-    def create_repo_repository2(
+    def create_repo_repository(
         self,
         *,
         request: Union[
-            operations.CreateRepoRepository2Request,
-            operations.CreateRepoRepository2RequestTypedDict,
+            operations.CreateRepoRepositoryRequest,
+            operations.CreateRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateRepoRepository2Response:
+    ) -> operations.CreateRepoRepositoryResponse:
         r"""Create a repository
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateRepoRepository2Request)
-        request = cast(operations.CreateRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.CreateRepoRepositoryRequest)
+        request = cast(operations.CreateRepoRepositoryRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createRepoRepository2",
+                operation_id="createRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -88,7 +88,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateRepoRepository2Response(
+            return operations.CreateRepoRepositoryResponse(
                 repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
@@ -105,18 +105,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_repo_repository2_async(
+    async def create_repo_repository_async(
         self,
         *,
         request: Union[
-            operations.CreateRepoRepository2Request,
-            operations.CreateRepoRepository2RequestTypedDict,
+            operations.CreateRepoRepositoryRequest,
+            operations.CreateRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateRepoRepository2Response:
+    ) -> operations.CreateRepoRepositoryResponse:
         r"""Create a repository
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateRepoRepository2Request)
-        request = cast(operations.CreateRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.CreateRepoRepositoryRequest)
+        request = cast(operations.CreateRepoRepositoryRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createRepoRepository2",
+                operation_id="createRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -183,7 +183,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateRepoRepository2Response(
+            return operations.CreateRepoRepositoryResponse(
                 repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
@@ -200,18 +200,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_repo_repository2(
+    def get_repo_repository(
         self,
         *,
         request: Union[
-            operations.GetRepoRepository2Request,
-            operations.GetRepoRepository2RequestTypedDict,
+            operations.GetRepoRepositoryRequest,
+            operations.GetRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetRepoRepository2Response:
+    ) -> operations.GetRepoRepositoryResponse:
         r"""Retrieve a repository
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetRepoRepository2Request)
-        request = cast(operations.GetRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.GetRepoRepositoryRequest)
+        request = cast(operations.GetRepoRepositoryRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getRepoRepository2",
+                operation_id="getRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -275,7 +275,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetRepoRepository2Response(
+            return operations.GetRepoRepositoryResponse(
                 repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
@@ -292,18 +292,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_repo_repository2_async(
+    async def get_repo_repository_async(
         self,
         *,
         request: Union[
-            operations.GetRepoRepository2Request,
-            operations.GetRepoRepository2RequestTypedDict,
+            operations.GetRepoRepositoryRequest,
+            operations.GetRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetRepoRepository2Response:
+    ) -> operations.GetRepoRepositoryResponse:
         r"""Retrieve a repository
 
         :param request: The request object to send.
@@ -323,8 +323,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetRepoRepository2Request)
-        request = cast(operations.GetRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.GetRepoRepositoryRequest)
+        request = cast(operations.GetRepoRepositoryRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +355,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getRepoRepository2",
+                operation_id="getRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -367,7 +367,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetRepoRepository2Response(
+            return operations.GetRepoRepositoryResponse(
                 repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
@@ -384,18 +384,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_repo_repositories2(
+    def list_repo_repositories(
         self,
         *,
         request: Union[
-            operations.ListRepoRepositories2Request,
-            operations.ListRepoRepositories2RequestTypedDict,
+            operations.ListRepoRepositoriesRequest,
+            operations.ListRepoRepositoriesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListRepoRepositories2Response:
+    ) -> operations.ListRepoRepositoriesResponse:
         r"""List all repositories
 
         :param request: The request object to send.
@@ -415,8 +415,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListRepoRepositories2Request)
-        request = cast(operations.ListRepoRepositories2Request, request)
+            request = utils.unmarshal(request, operations.ListRepoRepositoriesRequest)
+        request = cast(operations.ListRepoRepositoriesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +447,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listRepoRepositories2",
+                operation_id="listRepoRepositories",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -459,7 +459,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListRepoRepositories2Response(
+            return operations.ListRepoRepositoriesResponse(
                 repo_repositories=unmarshal_json_response(
                     Optional[List[shared.RepoRepository]], http_res
                 ),
@@ -476,18 +476,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_repo_repositories2_async(
+    async def list_repo_repositories_async(
         self,
         *,
         request: Union[
-            operations.ListRepoRepositories2Request,
-            operations.ListRepoRepositories2RequestTypedDict,
+            operations.ListRepoRepositoriesRequest,
+            operations.ListRepoRepositoriesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListRepoRepositories2Response:
+    ) -> operations.ListRepoRepositoriesResponse:
         r"""List all repositories
 
         :param request: The request object to send.
@@ -507,8 +507,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListRepoRepositories2Request)
-        request = cast(operations.ListRepoRepositories2Request, request)
+            request = utils.unmarshal(request, operations.ListRepoRepositoriesRequest)
+        request = cast(operations.ListRepoRepositoriesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +539,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listRepoRepositories2",
+                operation_id="listRepoRepositories",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -551,7 +551,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListRepoRepositories2Response(
+            return operations.ListRepoRepositoriesResponse(
                 repo_repositories=unmarshal_json_response(
                     Optional[List[shared.RepoRepository]], http_res
                 ),
@@ -568,18 +568,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_repo_repository2(
+    def patch_repo_repository(
         self,
         *,
         request: Union[
-            operations.PatchRepoRepository2Request,
-            operations.PatchRepoRepository2RequestTypedDict,
+            operations.PatchRepoRepositoryRequest,
+            operations.PatchRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchRepoRepository2Response:
+    ) -> operations.PatchRepoRepositoryResponse:
         r"""Update a repository
 
         :param request: The request object to send.
@@ -599,8 +599,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchRepoRepository2Request)
-        request = cast(operations.PatchRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.PatchRepoRepositoryRequest)
+        request = cast(operations.PatchRepoRepositoryRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +634,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchRepoRepository2",
+                operation_id="patchRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -646,7 +646,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchRepoRepository2Response(
+            return operations.PatchRepoRepositoryResponse(
                 repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
@@ -663,18 +663,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_repo_repository2_async(
+    async def patch_repo_repository_async(
         self,
         *,
         request: Union[
-            operations.PatchRepoRepository2Request,
-            operations.PatchRepoRepository2RequestTypedDict,
+            operations.PatchRepoRepositoryRequest,
+            operations.PatchRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchRepoRepository2Response:
+    ) -> operations.PatchRepoRepositoryResponse:
         r"""Update a repository
 
         :param request: The request object to send.
@@ -694,8 +694,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchRepoRepository2Request)
-        request = cast(operations.PatchRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.PatchRepoRepositoryRequest)
+        request = cast(operations.PatchRepoRepositoryRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +729,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchRepoRepository2",
+                operation_id="patchRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -741,7 +741,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchRepoRepository2Response(
+            return operations.PatchRepoRepositoryResponse(
                 repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
@@ -758,18 +758,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_repo_repository2(
+    def remove_repo_repository(
         self,
         *,
         request: Union[
-            operations.RemoveRepoRepository2Request,
-            operations.RemoveRepoRepository2RequestTypedDict,
+            operations.RemoveRepoRepositoryRequest,
+            operations.RemoveRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveRepoRepository2Response:
+    ) -> operations.RemoveRepoRepositoryResponse:
         r"""Remove a repository
 
         :param request: The request object to send.
@@ -789,8 +789,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveRepoRepository2Request)
-        request = cast(operations.RemoveRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.RemoveRepoRepositoryRequest)
+        request = cast(operations.RemoveRepoRepositoryRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +821,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeRepoRepository2",
+                operation_id="removeRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -833,7 +833,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveRepoRepository2Response(
+            return operations.RemoveRepoRepositoryResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +846,7 @@ class Repository(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveRepoRepository2Response(
+            return operations.RemoveRepoRepositoryResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +855,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_repo_repository2_async(
+    async def remove_repo_repository_async(
         self,
         *,
         request: Union[
-            operations.RemoveRepoRepository2Request,
-            operations.RemoveRepoRepository2RequestTypedDict,
+            operations.RemoveRepoRepositoryRequest,
+            operations.RemoveRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveRepoRepository2Response:
+    ) -> operations.RemoveRepoRepositoryResponse:
         r"""Remove a repository
 
         :param request: The request object to send.
@@ -886,8 +886,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveRepoRepository2Request)
-        request = cast(operations.RemoveRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.RemoveRepoRepositoryRequest)
+        request = cast(operations.RemoveRepoRepositoryRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +918,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeRepoRepository2",
+                operation_id="removeRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -930,7 +930,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveRepoRepository2Response(
+            return operations.RemoveRepoRepositoryResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +943,7 @@ class Repository(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveRepoRepository2Response(
+            return operations.RemoveRepoRepositoryResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +952,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_repo_repository2(
+    def update_repo_repository(
         self,
         *,
         request: Union[
-            operations.UpdateRepoRepository2Request,
-            operations.UpdateRepoRepository2RequestTypedDict,
+            operations.UpdateRepoRepositoryRequest,
+            operations.UpdateRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateRepoRepository2Response:
+    ) -> operations.UpdateRepoRepositoryResponse:
         r"""Update a repository
 
         :param request: The request object to send.
@@ -983,8 +983,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateRepoRepository2Request)
-        request = cast(operations.UpdateRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.UpdateRepoRepositoryRequest)
+        request = cast(operations.UpdateRepoRepositoryRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1018,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateRepoRepository2",
+                operation_id="updateRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -1030,7 +1030,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateRepoRepository2Response(
+            return operations.UpdateRepoRepositoryResponse(
                 repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
@@ -1047,18 +1047,18 @@ class Repository(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_repo_repository2_async(
+    async def update_repo_repository_async(
         self,
         *,
         request: Union[
-            operations.UpdateRepoRepository2Request,
-            operations.UpdateRepoRepository2RequestTypedDict,
+            operations.UpdateRepoRepositoryRequest,
+            operations.UpdateRepoRepositoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateRepoRepository2Response:
+    ) -> operations.UpdateRepoRepositoryResponse:
         r"""Update a repository
 
         :param request: The request object to send.
@@ -1078,8 +1078,8 @@ class Repository(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateRepoRepository2Request)
-        request = cast(operations.UpdateRepoRepository2Request, request)
+            request = utils.unmarshal(request, operations.UpdateRepoRepositoryRequest)
+        request = cast(operations.UpdateRepoRepositoryRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1113,7 @@ class Repository(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateRepoRepository2",
+                operation_id="updateRepoRepository",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "repository"],
@@ -1125,7 +1125,7 @@ class Repository(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateRepoRepository2Response(
+            return operations.UpdateRepoRepositoryResponse(
                 repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),

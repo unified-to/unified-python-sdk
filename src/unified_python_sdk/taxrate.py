@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Taxrate(BaseSDK):
-    def create_accounting_taxrate2(
+    def create_accounting_taxrate(
         self,
         *,
         request: Union[
-            operations.CreateAccountingTaxrate2Request,
-            operations.CreateAccountingTaxrate2RequestTypedDict,
+            operations.CreateAccountingTaxrateRequest,
+            operations.CreateAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingTaxrate2Response:
+    ) -> operations.CreateAccountingTaxrateResponse:
         r"""Create a taxrate
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Taxrate(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingTaxrate2Request
+                request, operations.CreateAccountingTaxrateRequest
             )
-        request = cast(operations.CreateAccountingTaxrate2Request, request)
+        request = cast(operations.CreateAccountingTaxrateRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingTaxrate2",
+                operation_id="createAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -94,7 +94,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingTaxrate2Response(
+            return operations.CreateAccountingTaxrateResponse(
                 accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
@@ -111,18 +111,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_taxrate2_async(
+    async def create_accounting_taxrate_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingTaxrate2Request,
-            operations.CreateAccountingTaxrate2RequestTypedDict,
+            operations.CreateAccountingTaxrateRequest,
+            operations.CreateAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingTaxrate2Response:
+    ) -> operations.CreateAccountingTaxrateResponse:
         r"""Create a taxrate
 
         :param request: The request object to send.
@@ -143,9 +143,9 @@ class Taxrate(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingTaxrate2Request
+                request, operations.CreateAccountingTaxrateRequest
             )
-        request = cast(operations.CreateAccountingTaxrate2Request, request)
+        request = cast(operations.CreateAccountingTaxrateRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -183,7 +183,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingTaxrate2",
+                operation_id="createAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -195,7 +195,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingTaxrate2Response(
+            return operations.CreateAccountingTaxrateResponse(
                 accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
@@ -212,18 +212,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_taxrate2(
+    def get_accounting_taxrate(
         self,
         *,
         request: Union[
-            operations.GetAccountingTaxrate2Request,
-            operations.GetAccountingTaxrate2RequestTypedDict,
+            operations.GetAccountingTaxrateRequest,
+            operations.GetAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingTaxrate2Response:
+    ) -> operations.GetAccountingTaxrateResponse:
         r"""Retrieve a taxrate
 
         :param request: The request object to send.
@@ -243,8 +243,8 @@ class Taxrate(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingTaxrate2Request)
-        request = cast(operations.GetAccountingTaxrate2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingTaxrateRequest)
+        request = cast(operations.GetAccountingTaxrateRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -275,7 +275,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingTaxrate2",
+                operation_id="getAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -287,7 +287,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingTaxrate2Response(
+            return operations.GetAccountingTaxrateResponse(
                 accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
@@ -304,18 +304,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_taxrate2_async(
+    async def get_accounting_taxrate_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingTaxrate2Request,
-            operations.GetAccountingTaxrate2RequestTypedDict,
+            operations.GetAccountingTaxrateRequest,
+            operations.GetAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingTaxrate2Response:
+    ) -> operations.GetAccountingTaxrateResponse:
         r"""Retrieve a taxrate
 
         :param request: The request object to send.
@@ -335,8 +335,8 @@ class Taxrate(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingTaxrate2Request)
-        request = cast(operations.GetAccountingTaxrate2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingTaxrateRequest)
+        request = cast(operations.GetAccountingTaxrateRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -367,7 +367,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingTaxrate2",
+                operation_id="getAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -379,7 +379,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingTaxrate2Response(
+            return operations.GetAccountingTaxrateResponse(
                 accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
@@ -396,18 +396,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_taxrates2(
+    def list_accounting_taxrates(
         self,
         *,
         request: Union[
-            operations.ListAccountingTaxrates2Request,
-            operations.ListAccountingTaxrates2RequestTypedDict,
+            operations.ListAccountingTaxratesRequest,
+            operations.ListAccountingTaxratesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingTaxrates2Response:
+    ) -> operations.ListAccountingTaxratesResponse:
         r"""List all taxrates
 
         :param request: The request object to send.
@@ -427,10 +427,8 @@ class Taxrate(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingTaxrates2Request
-            )
-        request = cast(operations.ListAccountingTaxrates2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingTaxratesRequest)
+        request = cast(operations.ListAccountingTaxratesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -461,7 +459,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingTaxrates2",
+                operation_id="listAccountingTaxrates",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -473,7 +471,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingTaxrates2Response(
+            return operations.ListAccountingTaxratesResponse(
                 accounting_taxrates=unmarshal_json_response(
                     Optional[List[shared.AccountingTaxrate]], http_res
                 ),
@@ -490,18 +488,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_taxrates2_async(
+    async def list_accounting_taxrates_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingTaxrates2Request,
-            operations.ListAccountingTaxrates2RequestTypedDict,
+            operations.ListAccountingTaxratesRequest,
+            operations.ListAccountingTaxratesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingTaxrates2Response:
+    ) -> operations.ListAccountingTaxratesResponse:
         r"""List all taxrates
 
         :param request: The request object to send.
@@ -521,10 +519,8 @@ class Taxrate(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingTaxrates2Request
-            )
-        request = cast(operations.ListAccountingTaxrates2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingTaxratesRequest)
+        request = cast(operations.ListAccountingTaxratesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -555,7 +551,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingTaxrates2",
+                operation_id="listAccountingTaxrates",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -567,7 +563,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingTaxrates2Response(
+            return operations.ListAccountingTaxratesResponse(
                 accounting_taxrates=unmarshal_json_response(
                     Optional[List[shared.AccountingTaxrate]], http_res
                 ),
@@ -584,18 +580,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_taxrate2(
+    def patch_accounting_taxrate(
         self,
         *,
         request: Union[
-            operations.PatchAccountingTaxrate2Request,
-            operations.PatchAccountingTaxrate2RequestTypedDict,
+            operations.PatchAccountingTaxrateRequest,
+            operations.PatchAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingTaxrate2Response:
+    ) -> operations.PatchAccountingTaxrateResponse:
         r"""Update a taxrate
 
         :param request: The request object to send.
@@ -615,10 +611,8 @@ class Taxrate(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingTaxrate2Request
-            )
-        request = cast(operations.PatchAccountingTaxrate2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingTaxrateRequest)
+        request = cast(operations.PatchAccountingTaxrateRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -656,7 +650,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingTaxrate2",
+                operation_id="patchAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -668,7 +662,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingTaxrate2Response(
+            return operations.PatchAccountingTaxrateResponse(
                 accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
@@ -685,18 +679,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_taxrate2_async(
+    async def patch_accounting_taxrate_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingTaxrate2Request,
-            operations.PatchAccountingTaxrate2RequestTypedDict,
+            operations.PatchAccountingTaxrateRequest,
+            operations.PatchAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingTaxrate2Response:
+    ) -> operations.PatchAccountingTaxrateResponse:
         r"""Update a taxrate
 
         :param request: The request object to send.
@@ -716,10 +710,8 @@ class Taxrate(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingTaxrate2Request
-            )
-        request = cast(operations.PatchAccountingTaxrate2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingTaxrateRequest)
+        request = cast(operations.PatchAccountingTaxrateRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -757,7 +749,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingTaxrate2",
+                operation_id="patchAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -769,7 +761,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingTaxrate2Response(
+            return operations.PatchAccountingTaxrateResponse(
                 accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
@@ -786,18 +778,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_taxrate2(
+    def remove_accounting_taxrate(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingTaxrate2Request,
-            operations.RemoveAccountingTaxrate2RequestTypedDict,
+            operations.RemoveAccountingTaxrateRequest,
+            operations.RemoveAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingTaxrate2Response:
+    ) -> operations.RemoveAccountingTaxrateResponse:
         r"""Remove a taxrate
 
         :param request: The request object to send.
@@ -818,9 +810,9 @@ class Taxrate(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingTaxrate2Request
+                request, operations.RemoveAccountingTaxrateRequest
             )
-        request = cast(operations.RemoveAccountingTaxrate2Request, request)
+        request = cast(operations.RemoveAccountingTaxrateRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -851,7 +843,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingTaxrate2",
+                operation_id="removeAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -863,7 +855,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingTaxrate2Response(
+            return operations.RemoveAccountingTaxrateResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -876,7 +868,7 @@ class Taxrate(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingTaxrate2Response(
+            return operations.RemoveAccountingTaxrateResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -885,18 +877,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_taxrate2_async(
+    async def remove_accounting_taxrate_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingTaxrate2Request,
-            operations.RemoveAccountingTaxrate2RequestTypedDict,
+            operations.RemoveAccountingTaxrateRequest,
+            operations.RemoveAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingTaxrate2Response:
+    ) -> operations.RemoveAccountingTaxrateResponse:
         r"""Remove a taxrate
 
         :param request: The request object to send.
@@ -917,9 +909,9 @@ class Taxrate(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingTaxrate2Request
+                request, operations.RemoveAccountingTaxrateRequest
             )
-        request = cast(operations.RemoveAccountingTaxrate2Request, request)
+        request = cast(operations.RemoveAccountingTaxrateRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -950,7 +942,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingTaxrate2",
+                operation_id="removeAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -962,7 +954,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingTaxrate2Response(
+            return operations.RemoveAccountingTaxrateResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -975,7 +967,7 @@ class Taxrate(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingTaxrate2Response(
+            return operations.RemoveAccountingTaxrateResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -984,18 +976,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_taxrate2(
+    def update_accounting_taxrate(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingTaxrate2Request,
-            operations.UpdateAccountingTaxrate2RequestTypedDict,
+            operations.UpdateAccountingTaxrateRequest,
+            operations.UpdateAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingTaxrate2Response:
+    ) -> operations.UpdateAccountingTaxrateResponse:
         r"""Update a taxrate
 
         :param request: The request object to send.
@@ -1016,9 +1008,9 @@ class Taxrate(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingTaxrate2Request
+                request, operations.UpdateAccountingTaxrateRequest
             )
-        request = cast(operations.UpdateAccountingTaxrate2Request, request)
+        request = cast(operations.UpdateAccountingTaxrateRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1056,7 +1048,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingTaxrate2",
+                operation_id="updateAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -1068,7 +1060,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingTaxrate2Response(
+            return operations.UpdateAccountingTaxrateResponse(
                 accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
@@ -1085,18 +1077,18 @@ class Taxrate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_taxrate2_async(
+    async def update_accounting_taxrate_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingTaxrate2Request,
-            operations.UpdateAccountingTaxrate2RequestTypedDict,
+            operations.UpdateAccountingTaxrateRequest,
+            operations.UpdateAccountingTaxrateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingTaxrate2Response:
+    ) -> operations.UpdateAccountingTaxrateResponse:
         r"""Update a taxrate
 
         :param request: The request object to send.
@@ -1117,9 +1109,9 @@ class Taxrate(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingTaxrate2Request
+                request, operations.UpdateAccountingTaxrateRequest
             )
-        request = cast(operations.UpdateAccountingTaxrate2Request, request)
+        request = cast(operations.UpdateAccountingTaxrateRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1157,7 +1149,7 @@ class Taxrate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingTaxrate2",
+                operation_id="updateAccountingTaxrate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "taxrate"],
@@ -1169,7 +1161,7 @@ class Taxrate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingTaxrate2Response(
+            return operations.UpdateAccountingTaxrateResponse(
                 accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),

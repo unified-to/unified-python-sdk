@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [create_accounting_account2](#create_accounting_account2) - Create an account
-* [get_accounting_account2](#get_accounting_account2) - Retrieve an account
-* [list_accounting_accounts2](#list_accounting_accounts2) - List all accounts
-* [patch_accounting_account2](#patch_accounting_account2) - Update an account
-* [remove_accounting_account2](#remove_accounting_account2) - Remove an account
-* [update_accounting_account2](#update_accounting_account2) - Update an account
+* [create_accounting_account](#create_accounting_account) - Create an account
+* [get_accounting_account](#get_accounting_account) - Retrieve an account
+* [list_accounting_accounts](#list_accounting_accounts) - List all accounts
+* [patch_accounting_account](#patch_accounting_account) - Update an account
+* [remove_accounting_account](#remove_accounting_account) - Remove an account
+* [update_accounting_account](#update_accounting_account) - Update an account
 
-## create_accounting_account2
+## create_accounting_account
 
 Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingAccount2" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="python" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -29,7 +29,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.account.create_accounting_account2(request={
+    res = unified_to.account.create_accounting_account(request={
         "accounting_account": {},
         "connection_id": "<id>",
     })
@@ -43,14 +43,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.CreateAccountingAccount2Request](../../models/operations/createaccountingaccount2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingAccountRequest](../../models/operations/createaccountingaccountrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.CreateAccountingAccount2Response](../../models/operations/createaccountingaccount2response.md)**
+**[operations.CreateAccountingAccountResponse](../../models/operations/createaccountingaccountresponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_accounting_account2
+## get_accounting_account
 
 Retrieve an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getAccountingAccount2" method="get" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="python" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -76,7 +76,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.account.get_accounting_account2(request={
+    res = unified_to.account.get_accounting_account(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -90,14 +90,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetAccountingAccount2Request](../../models/operations/getaccountingaccount2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAccountingAccountRequest](../../models/operations/getaccountingaccountrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.GetAccountingAccount2Response](../../models/operations/getaccountingaccount2response.md)**
+**[operations.GetAccountingAccountResponse](../../models/operations/getaccountingaccountresponse.md)**
 
 ### Errors
 
@@ -105,13 +105,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_accounting_accounts2
+## list_accounting_accounts
 
 List all accounts
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listAccountingAccounts2" method="get" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="python" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -123,7 +123,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.account.list_accounting_accounts2(request={
+    res = unified_to.account.list_accounting_accounts(request={
         "connection_id": "<id>",
     })
 
@@ -136,14 +136,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.ListAccountingAccounts2Request](../../models/operations/listaccountingaccounts2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAccountingAccountsRequest](../../models/operations/listaccountingaccountsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.ListAccountingAccounts2Response](../../models/operations/listaccountingaccounts2response.md)**
+**[operations.ListAccountingAccountsResponse](../../models/operations/listaccountingaccountsresponse.md)**
 
 ### Errors
 
@@ -151,13 +151,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_accounting_account2
+## patch_accounting_account
 
 Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingAccount2" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -169,7 +169,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.account.patch_accounting_account2(request={
+    res = unified_to.account.patch_accounting_account(request={
         "accounting_account": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -184,14 +184,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PatchAccountingAccount2Request](../../models/operations/patchaccountingaccount2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchAccountingAccountRequest](../../models/operations/patchaccountingaccountrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.PatchAccountingAccount2Response](../../models/operations/patchaccountingaccount2response.md)**
+**[operations.PatchAccountingAccountResponse](../../models/operations/patchaccountingaccountresponse.md)**
 
 ### Errors
 
@@ -199,13 +199,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_accounting_account2
+## remove_accounting_account
 
 Remove an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeAccountingAccount2" method="delete" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -217,7 +217,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.account.remove_accounting_account2(request={
+    res = unified_to.account.remove_accounting_account(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -231,14 +231,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.RemoveAccountingAccount2Request](../../models/operations/removeaccountingaccount2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveAccountingAccountRequest](../../models/operations/removeaccountingaccountrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.RemoveAccountingAccount2Response](../../models/operations/removeaccountingaccount2response.md)**
+**[operations.RemoveAccountingAccountResponse](../../models/operations/removeaccountingaccountresponse.md)**
 
 ### Errors
 
@@ -246,13 +246,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_accounting_account2
+## update_accounting_account
 
 Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingAccount2" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -264,7 +264,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.account.update_accounting_account2(request={
+    res = unified_to.account.update_accounting_account(request={
         "accounting_account": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -279,14 +279,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.UpdateAccountingAccount2Request](../../models/operations/updateaccountingaccount2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateAccountingAccountRequest](../../models/operations/updateaccountingaccountrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
-**[operations.UpdateAccountingAccount2Response](../../models/operations/updateaccountingaccount2response.md)**
+**[operations.UpdateAccountingAccountResponse](../../models/operations/updateaccountingaccountresponse.md)**
 
 ### Errors
 

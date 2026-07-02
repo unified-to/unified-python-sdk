@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [create_ticketing_note2](#create_ticketing_note2) - Create a note
-* [get_ticketing_note2](#get_ticketing_note2) - Retrieve a note
-* [list_ticketing_notes2](#list_ticketing_notes2) - List all notes
-* [patch_ticketing_note2](#patch_ticketing_note2) - Update a note
-* [remove_ticketing_note2](#remove_ticketing_note2) - Remove a note
-* [update_ticketing_note2](#update_ticketing_note2) - Update a note
+* [create_ticketing_note](#create_ticketing_note) - Create a note
+* [get_ticketing_note](#get_ticketing_note) - Retrieve a note
+* [list_ticketing_notes](#list_ticketing_notes) - List all notes
+* [patch_ticketing_note](#patch_ticketing_note) - Update a note
+* [remove_ticketing_note](#remove_ticketing_note) - Remove a note
+* [update_ticketing_note](#update_ticketing_note) - Update a note
 
-## create_ticketing_note2
+## create_ticketing_note
 
 Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingNote2" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="python" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -29,7 +29,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.note.create_ticketing_note2(request={
+    res = unified_to.note.create_ticketing_note(request={
         "ticketing_note": {},
         "connection_id": "<id>",
     })
@@ -43,14 +43,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.CreateTicketingNote2Request](../../models/operations/createticketingnote2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateTicketingNoteRequest](../../models/operations/createticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.CreateTicketingNote2Response](../../models/operations/createticketingnote2response.md)**
+**[operations.CreateTicketingNoteResponse](../../models/operations/createticketingnoteresponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_ticketing_note2
+## get_ticketing_note
 
 Retrieve a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getTicketingNote2" method="get" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -76,7 +76,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.note.get_ticketing_note2(request={
+    res = unified_to.note.get_ticketing_note(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -90,14 +90,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetTicketingNote2Request](../../models/operations/getticketingnote2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetTicketingNoteRequest](../../models/operations/getticketingnoterequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.GetTicketingNote2Response](../../models/operations/getticketingnote2response.md)**
+**[operations.GetTicketingNoteResponse](../../models/operations/getticketingnoteresponse.md)**
 
 ### Errors
 
@@ -105,13 +105,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_ticketing_notes2
+## list_ticketing_notes
 
 List all notes
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listTicketingNotes2" method="get" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="python" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -123,7 +123,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.note.list_ticketing_notes2(request={
+    res = unified_to.note.list_ticketing_notes(request={
         "connection_id": "<id>",
     })
 
@@ -136,14 +136,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.ListTicketingNotes2Request](../../models/operations/listticketingnotes2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListTicketingNotesRequest](../../models/operations/listticketingnotesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.ListTicketingNotes2Response](../../models/operations/listticketingnotes2response.md)**
+**[operations.ListTicketingNotesResponse](../../models/operations/listticketingnotesresponse.md)**
 
 ### Errors
 
@@ -151,13 +151,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_ticketing_note2
+## patch_ticketing_note
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingNote2" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -169,7 +169,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.note.patch_ticketing_note2(request={
+    res = unified_to.note.patch_ticketing_note(request={
         "ticketing_note": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -184,14 +184,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.PatchTicketingNote2Request](../../models/operations/patchticketingnote2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchTicketingNoteRequest](../../models/operations/patchticketingnoterequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.PatchTicketingNote2Response](../../models/operations/patchticketingnote2response.md)**
+**[operations.PatchTicketingNoteResponse](../../models/operations/patchticketingnoteresponse.md)**
 
 ### Errors
 
@@ -199,13 +199,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_ticketing_note2
+## remove_ticketing_note
 
 Remove a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeTicketingNote2" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -217,7 +217,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.note.remove_ticketing_note2(request={
+    res = unified_to.note.remove_ticketing_note(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -231,14 +231,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.RemoveTicketingNote2Request](../../models/operations/removeticketingnote2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveTicketingNoteRequest](../../models/operations/removeticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.RemoveTicketingNote2Response](../../models/operations/removeticketingnote2response.md)**
+**[operations.RemoveTicketingNoteResponse](../../models/operations/removeticketingnoteresponse.md)**
 
 ### Errors
 
@@ -246,13 +246,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_ticketing_note2
+## update_ticketing_note
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingNote2" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -264,7 +264,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.note.update_ticketing_note2(request={
+    res = unified_to.note.update_ticketing_note(request={
         "ticketing_note": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -279,14 +279,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.UpdateTicketingNote2Request](../../models/operations/updateticketingnote2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.UpdateTicketingNoteRequest](../../models/operations/updateticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.UpdateTicketingNote2Response](../../models/operations/updateticketingnote2response.md)**
+**[operations.UpdateTicketingNoteResponse](../../models/operations/updateticketingnoteresponse.md)**
 
 ### Errors
 

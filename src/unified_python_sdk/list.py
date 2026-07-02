@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class ListT(BaseSDK):
-    def create_martech_list2(
+    def create_martech_list(
         self,
         *,
         request: Union[
-            operations.CreateMartechList2Request,
-            operations.CreateMartechList2RequestTypedDict,
+            operations.CreateMartechListRequest,
+            operations.CreateMartechListRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMartechList2Response:
+    ) -> operations.CreateMartechListResponse:
         r"""Create a list
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateMartechList2Request)
-        request = cast(operations.CreateMartechList2Request, request)
+            request = utils.unmarshal(request, operations.CreateMartechListRequest)
+        request = cast(operations.CreateMartechListRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMartechList2",
+                operation_id="createMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -88,7 +88,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMartechList2Response(
+            return operations.CreateMartechListResponse(
                 marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
@@ -105,18 +105,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_martech_list2_async(
+    async def create_martech_list_async(
         self,
         *,
         request: Union[
-            operations.CreateMartechList2Request,
-            operations.CreateMartechList2RequestTypedDict,
+            operations.CreateMartechListRequest,
+            operations.CreateMartechListRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMartechList2Response:
+    ) -> operations.CreateMartechListResponse:
         r"""Create a list
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateMartechList2Request)
-        request = cast(operations.CreateMartechList2Request, request)
+            request = utils.unmarshal(request, operations.CreateMartechListRequest)
+        request = cast(operations.CreateMartechListRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMartechList2",
+                operation_id="createMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -183,7 +183,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMartechList2Response(
+            return operations.CreateMartechListResponse(
                 marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
@@ -200,18 +200,17 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_martech_list2(
+    def get_martech_list(
         self,
         *,
         request: Union[
-            operations.GetMartechList2Request,
-            operations.GetMartechList2RequestTypedDict,
+            operations.GetMartechListRequest, operations.GetMartechListRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMartechList2Response:
+    ) -> operations.GetMartechListResponse:
         r"""Retrieve a list
 
         :param request: The request object to send.
@@ -231,8 +230,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMartechList2Request)
-        request = cast(operations.GetMartechList2Request, request)
+            request = utils.unmarshal(request, operations.GetMartechListRequest)
+        request = cast(operations.GetMartechListRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +262,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMartechList2",
+                operation_id="getMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -275,7 +274,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMartechList2Response(
+            return operations.GetMartechListResponse(
                 marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
@@ -292,18 +291,17 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_martech_list2_async(
+    async def get_martech_list_async(
         self,
         *,
         request: Union[
-            operations.GetMartechList2Request,
-            operations.GetMartechList2RequestTypedDict,
+            operations.GetMartechListRequest, operations.GetMartechListRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMartechList2Response:
+    ) -> operations.GetMartechListResponse:
         r"""Retrieve a list
 
         :param request: The request object to send.
@@ -323,8 +321,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMartechList2Request)
-        request = cast(operations.GetMartechList2Request, request)
+            request = utils.unmarshal(request, operations.GetMartechListRequest)
+        request = cast(operations.GetMartechListRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +353,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMartechList2",
+                operation_id="getMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -367,7 +365,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMartechList2Response(
+            return operations.GetMartechListResponse(
                 marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
@@ -384,18 +382,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_martech_lists2(
+    def list_martech_lists(
         self,
         *,
         request: Union[
-            operations.ListMartechLists2Request,
-            operations.ListMartechLists2RequestTypedDict,
+            operations.ListMartechListsRequest,
+            operations.ListMartechListsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMartechLists2Response:
+    ) -> operations.ListMartechListsResponse:
         r"""List all lists
 
         :param request: The request object to send.
@@ -415,8 +413,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMartechLists2Request)
-        request = cast(operations.ListMartechLists2Request, request)
+            request = utils.unmarshal(request, operations.ListMartechListsRequest)
+        request = cast(operations.ListMartechListsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +445,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMartechLists2",
+                operation_id="listMartechLists",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -459,7 +457,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMartechLists2Response(
+            return operations.ListMartechListsResponse(
                 marketing_lists=unmarshal_json_response(
                     Optional[List[shared.MarketingList]], http_res
                 ),
@@ -476,18 +474,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_martech_lists2_async(
+    async def list_martech_lists_async(
         self,
         *,
         request: Union[
-            operations.ListMartechLists2Request,
-            operations.ListMartechLists2RequestTypedDict,
+            operations.ListMartechListsRequest,
+            operations.ListMartechListsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMartechLists2Response:
+    ) -> operations.ListMartechListsResponse:
         r"""List all lists
 
         :param request: The request object to send.
@@ -507,8 +505,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMartechLists2Request)
-        request = cast(operations.ListMartechLists2Request, request)
+            request = utils.unmarshal(request, operations.ListMartechListsRequest)
+        request = cast(operations.ListMartechListsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +537,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMartechLists2",
+                operation_id="listMartechLists",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -551,7 +549,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMartechLists2Response(
+            return operations.ListMartechListsResponse(
                 marketing_lists=unmarshal_json_response(
                     Optional[List[shared.MarketingList]], http_res
                 ),
@@ -568,18 +566,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_martech_list2(
+    def patch_martech_list(
         self,
         *,
         request: Union[
-            operations.PatchMartechList2Request,
-            operations.PatchMartechList2RequestTypedDict,
+            operations.PatchMartechListRequest,
+            operations.PatchMartechListRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMartechList2Response:
+    ) -> operations.PatchMartechListResponse:
         r"""Update a list
 
         :param request: The request object to send.
@@ -599,8 +597,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMartechList2Request)
-        request = cast(operations.PatchMartechList2Request, request)
+            request = utils.unmarshal(request, operations.PatchMartechListRequest)
+        request = cast(operations.PatchMartechListRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +632,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMartechList2",
+                operation_id="patchMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -646,7 +644,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMartechList2Response(
+            return operations.PatchMartechListResponse(
                 marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
@@ -663,18 +661,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_martech_list2_async(
+    async def patch_martech_list_async(
         self,
         *,
         request: Union[
-            operations.PatchMartechList2Request,
-            operations.PatchMartechList2RequestTypedDict,
+            operations.PatchMartechListRequest,
+            operations.PatchMartechListRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMartechList2Response:
+    ) -> operations.PatchMartechListResponse:
         r"""Update a list
 
         :param request: The request object to send.
@@ -694,8 +692,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMartechList2Request)
-        request = cast(operations.PatchMartechList2Request, request)
+            request = utils.unmarshal(request, operations.PatchMartechListRequest)
+        request = cast(operations.PatchMartechListRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +727,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMartechList2",
+                operation_id="patchMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -741,7 +739,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMartechList2Response(
+            return operations.PatchMartechListResponse(
                 marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
@@ -758,18 +756,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_martech_list2(
+    def remove_martech_list(
         self,
         *,
         request: Union[
-            operations.RemoveMartechList2Request,
-            operations.RemoveMartechList2RequestTypedDict,
+            operations.RemoveMartechListRequest,
+            operations.RemoveMartechListRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMartechList2Response:
+    ) -> operations.RemoveMartechListResponse:
         r"""Remove a list
 
         :param request: The request object to send.
@@ -789,8 +787,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveMartechList2Request)
-        request = cast(operations.RemoveMartechList2Request, request)
+            request = utils.unmarshal(request, operations.RemoveMartechListRequest)
+        request = cast(operations.RemoveMartechListRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +819,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMartechList2",
+                operation_id="removeMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -833,7 +831,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMartechList2Response(
+            return operations.RemoveMartechListResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +844,7 @@ class ListT(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMartechList2Response(
+            return operations.RemoveMartechListResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +853,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_martech_list2_async(
+    async def remove_martech_list_async(
         self,
         *,
         request: Union[
-            operations.RemoveMartechList2Request,
-            operations.RemoveMartechList2RequestTypedDict,
+            operations.RemoveMartechListRequest,
+            operations.RemoveMartechListRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMartechList2Response:
+    ) -> operations.RemoveMartechListResponse:
         r"""Remove a list
 
         :param request: The request object to send.
@@ -886,8 +884,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveMartechList2Request)
-        request = cast(operations.RemoveMartechList2Request, request)
+            request = utils.unmarshal(request, operations.RemoveMartechListRequest)
+        request = cast(operations.RemoveMartechListRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +916,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMartechList2",
+                operation_id="removeMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -930,7 +928,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMartechList2Response(
+            return operations.RemoveMartechListResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +941,7 @@ class ListT(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMartechList2Response(
+            return operations.RemoveMartechListResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +950,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_martech_list2(
+    def update_martech_list(
         self,
         *,
         request: Union[
-            operations.UpdateMartechList2Request,
-            operations.UpdateMartechList2RequestTypedDict,
+            operations.UpdateMartechListRequest,
+            operations.UpdateMartechListRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMartechList2Response:
+    ) -> operations.UpdateMartechListResponse:
         r"""Update a list
 
         :param request: The request object to send.
@@ -983,8 +981,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateMartechList2Request)
-        request = cast(operations.UpdateMartechList2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMartechListRequest)
+        request = cast(operations.UpdateMartechListRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1016,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMartechList2",
+                operation_id="updateMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -1030,7 +1028,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMartechList2Response(
+            return operations.UpdateMartechListResponse(
                 marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
@@ -1047,18 +1045,18 @@ class ListT(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_martech_list2_async(
+    async def update_martech_list_async(
         self,
         *,
         request: Union[
-            operations.UpdateMartechList2Request,
-            operations.UpdateMartechList2RequestTypedDict,
+            operations.UpdateMartechListRequest,
+            operations.UpdateMartechListRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMartechList2Response:
+    ) -> operations.UpdateMartechListResponse:
         r"""Update a list
 
         :param request: The request object to send.
@@ -1078,8 +1076,8 @@ class ListT(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateMartechList2Request)
-        request = cast(operations.UpdateMartechList2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMartechListRequest)
+        request = cast(operations.UpdateMartechListRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1111,7 @@ class ListT(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMartechList2",
+                operation_id="updateMartechList",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "list"],
@@ -1125,7 +1123,7 @@ class ListT(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMartechList2Response(
+            return operations.UpdateMartechListResponse(
                 marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),

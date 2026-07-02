@@ -10,18 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Space(BaseSDK):
-    def create_kms_space2(
+    def create_kms_space(
         self,
         *,
         request: Union[
-            operations.CreateKmsSpace2Request,
-            operations.CreateKmsSpace2RequestTypedDict,
+            operations.CreateKmsSpaceRequest, operations.CreateKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsSpace2Response:
+    ) -> operations.CreateKmsSpaceResponse:
         r"""Create a space
 
         :param request: The request object to send.
@@ -41,8 +40,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsSpace2Request)
-        request = cast(operations.CreateKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.CreateKmsSpaceRequest)
+        request = cast(operations.CreateKmsSpaceRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +75,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsSpace2",
+                operation_id="createKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -88,7 +87,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsSpace2Response(
+            return operations.CreateKmsSpaceResponse(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -103,18 +102,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_kms_space2_async(
+    async def create_kms_space_async(
         self,
         *,
         request: Union[
-            operations.CreateKmsSpace2Request,
-            operations.CreateKmsSpace2RequestTypedDict,
+            operations.CreateKmsSpaceRequest, operations.CreateKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateKmsSpace2Response:
+    ) -> operations.CreateKmsSpaceResponse:
         r"""Create a space
 
         :param request: The request object to send.
@@ -134,8 +132,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateKmsSpace2Request)
-        request = cast(operations.CreateKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.CreateKmsSpaceRequest)
+        request = cast(operations.CreateKmsSpaceRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -169,7 +167,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createKmsSpace2",
+                operation_id="createKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -181,7 +179,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateKmsSpace2Response(
+            return operations.CreateKmsSpaceResponse(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -196,17 +194,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_kms_space2(
+    def get_kms_space(
         self,
         *,
         request: Union[
-            operations.GetKmsSpace2Request, operations.GetKmsSpace2RequestTypedDict
+            operations.GetKmsSpaceRequest, operations.GetKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsSpace2Response:
+    ) -> operations.GetKmsSpaceResponse:
         r"""Retrieve a space
 
         :param request: The request object to send.
@@ -226,8 +224,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsSpace2Request)
-        request = cast(operations.GetKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.GetKmsSpaceRequest)
+        request = cast(operations.GetKmsSpaceRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -258,7 +256,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsSpace2",
+                operation_id="getKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -270,7 +268,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsSpace2Response(
+            return operations.GetKmsSpaceResponse(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -285,17 +283,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_kms_space2_async(
+    async def get_kms_space_async(
         self,
         *,
         request: Union[
-            operations.GetKmsSpace2Request, operations.GetKmsSpace2RequestTypedDict
+            operations.GetKmsSpaceRequest, operations.GetKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetKmsSpace2Response:
+    ) -> operations.GetKmsSpaceResponse:
         r"""Retrieve a space
 
         :param request: The request object to send.
@@ -315,8 +313,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetKmsSpace2Request)
-        request = cast(operations.GetKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.GetKmsSpaceRequest)
+        request = cast(operations.GetKmsSpaceRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -347,7 +345,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getKmsSpace2",
+                operation_id="getKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -359,7 +357,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetKmsSpace2Response(
+            return operations.GetKmsSpaceResponse(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -374,17 +372,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_kms_spaces2(
+    def list_kms_spaces(
         self,
         *,
         request: Union[
-            operations.ListKmsSpaces2Request, operations.ListKmsSpaces2RequestTypedDict
+            operations.ListKmsSpacesRequest, operations.ListKmsSpacesRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsSpaces2Response:
+    ) -> operations.ListKmsSpacesResponse:
         r"""List all spaces
 
         :param request: The request object to send.
@@ -404,8 +402,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsSpaces2Request)
-        request = cast(operations.ListKmsSpaces2Request, request)
+            request = utils.unmarshal(request, operations.ListKmsSpacesRequest)
+        request = cast(operations.ListKmsSpacesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -436,7 +434,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsSpaces2",
+                operation_id="listKmsSpaces",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -448,7 +446,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsSpaces2Response(
+            return operations.ListKmsSpacesResponse(
                 kms_spaces=unmarshal_json_response(
                     Optional[List[shared.KmsSpace]], http_res
                 ),
@@ -465,17 +463,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_kms_spaces2_async(
+    async def list_kms_spaces_async(
         self,
         *,
         request: Union[
-            operations.ListKmsSpaces2Request, operations.ListKmsSpaces2RequestTypedDict
+            operations.ListKmsSpacesRequest, operations.ListKmsSpacesRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListKmsSpaces2Response:
+    ) -> operations.ListKmsSpacesResponse:
         r"""List all spaces
 
         :param request: The request object to send.
@@ -495,8 +493,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListKmsSpaces2Request)
-        request = cast(operations.ListKmsSpaces2Request, request)
+            request = utils.unmarshal(request, operations.ListKmsSpacesRequest)
+        request = cast(operations.ListKmsSpacesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -527,7 +525,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listKmsSpaces2",
+                operation_id="listKmsSpaces",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -539,7 +537,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListKmsSpaces2Response(
+            return operations.ListKmsSpacesResponse(
                 kms_spaces=unmarshal_json_response(
                     Optional[List[shared.KmsSpace]], http_res
                 ),
@@ -556,17 +554,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_kms_space2(
+    def patch_kms_space(
         self,
         *,
         request: Union[
-            operations.PatchKmsSpace2Request, operations.PatchKmsSpace2RequestTypedDict
+            operations.PatchKmsSpaceRequest, operations.PatchKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsSpace2Response:
+    ) -> operations.PatchKmsSpaceResponse:
         r"""Update a space
 
         :param request: The request object to send.
@@ -586,8 +584,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsSpace2Request)
-        request = cast(operations.PatchKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.PatchKmsSpaceRequest)
+        request = cast(operations.PatchKmsSpaceRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -621,7 +619,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsSpace2",
+                operation_id="patchKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -633,7 +631,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsSpace2Response(
+            return operations.PatchKmsSpaceResponse(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -648,17 +646,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_kms_space2_async(
+    async def patch_kms_space_async(
         self,
         *,
         request: Union[
-            operations.PatchKmsSpace2Request, operations.PatchKmsSpace2RequestTypedDict
+            operations.PatchKmsSpaceRequest, operations.PatchKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchKmsSpace2Response:
+    ) -> operations.PatchKmsSpaceResponse:
         r"""Update a space
 
         :param request: The request object to send.
@@ -678,8 +676,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchKmsSpace2Request)
-        request = cast(operations.PatchKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.PatchKmsSpaceRequest)
+        request = cast(operations.PatchKmsSpaceRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -713,7 +711,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchKmsSpace2",
+                operation_id="patchKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -725,7 +723,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchKmsSpace2Response(
+            return operations.PatchKmsSpaceResponse(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -740,18 +738,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_kms_space2(
+    def remove_kms_space(
         self,
         *,
         request: Union[
-            operations.RemoveKmsSpace2Request,
-            operations.RemoveKmsSpace2RequestTypedDict,
+            operations.RemoveKmsSpaceRequest, operations.RemoveKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsSpace2Response:
+    ) -> operations.RemoveKmsSpaceResponse:
         r"""Remove a space
 
         :param request: The request object to send.
@@ -771,8 +768,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsSpace2Request)
-        request = cast(operations.RemoveKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.RemoveKmsSpaceRequest)
+        request = cast(operations.RemoveKmsSpaceRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -803,7 +800,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsSpace2",
+                operation_id="removeKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -815,7 +812,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsSpace2Response(
+            return operations.RemoveKmsSpaceResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -828,7 +825,7 @@ class Space(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsSpace2Response(
+            return operations.RemoveKmsSpaceResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -837,18 +834,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_kms_space2_async(
+    async def remove_kms_space_async(
         self,
         *,
         request: Union[
-            operations.RemoveKmsSpace2Request,
-            operations.RemoveKmsSpace2RequestTypedDict,
+            operations.RemoveKmsSpaceRequest, operations.RemoveKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveKmsSpace2Response:
+    ) -> operations.RemoveKmsSpaceResponse:
         r"""Remove a space
 
         :param request: The request object to send.
@@ -868,8 +864,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveKmsSpace2Request)
-        request = cast(operations.RemoveKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.RemoveKmsSpaceRequest)
+        request = cast(operations.RemoveKmsSpaceRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -900,7 +896,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeKmsSpace2",
+                operation_id="removeKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -912,7 +908,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveKmsSpace2Response(
+            return operations.RemoveKmsSpaceResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -925,7 +921,7 @@ class Space(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveKmsSpace2Response(
+            return operations.RemoveKmsSpaceResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -934,18 +930,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_kms_space2(
+    def update_kms_space(
         self,
         *,
         request: Union[
-            operations.UpdateKmsSpace2Request,
-            operations.UpdateKmsSpace2RequestTypedDict,
+            operations.UpdateKmsSpaceRequest, operations.UpdateKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsSpace2Response:
+    ) -> operations.UpdateKmsSpaceResponse:
         r"""Update a space
 
         :param request: The request object to send.
@@ -965,8 +960,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsSpace2Request)
-        request = cast(operations.UpdateKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.UpdateKmsSpaceRequest)
+        request = cast(operations.UpdateKmsSpaceRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1000,7 +995,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsSpace2",
+                operation_id="updateKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -1012,7 +1007,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsSpace2Response(
+            return operations.UpdateKmsSpaceResponse(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1027,18 +1022,17 @@ class Space(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_kms_space2_async(
+    async def update_kms_space_async(
         self,
         *,
         request: Union[
-            operations.UpdateKmsSpace2Request,
-            operations.UpdateKmsSpace2RequestTypedDict,
+            operations.UpdateKmsSpaceRequest, operations.UpdateKmsSpaceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateKmsSpace2Response:
+    ) -> operations.UpdateKmsSpaceResponse:
         r"""Update a space
 
         :param request: The request object to send.
@@ -1058,8 +1052,8 @@ class Space(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateKmsSpace2Request)
-        request = cast(operations.UpdateKmsSpace2Request, request)
+            request = utils.unmarshal(request, operations.UpdateKmsSpaceRequest)
+        request = cast(operations.UpdateKmsSpaceRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1093,7 +1087,7 @@ class Space(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateKmsSpace2",
+                operation_id="updateKmsSpace",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["kms", "space"],
@@ -1105,7 +1099,7 @@ class Space(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateKmsSpace2Response(
+            return operations.UpdateKmsSpaceResponse(
                 kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

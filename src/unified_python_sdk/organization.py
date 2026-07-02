@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Organization(BaseSDK):
-    def create_ads_organization2(
+    def create_ads_organization(
         self,
         *,
         request: Union[
-            operations.CreateAdsOrganization2Request,
-            operations.CreateAdsOrganization2RequestTypedDict,
+            operations.CreateAdsOrganizationRequest,
+            operations.CreateAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsOrganization2Response:
+    ) -> operations.CreateAdsOrganizationResponse:
         r"""Create an organization
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsOrganization2Request)
-        request = cast(operations.CreateAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsOrganizationRequest)
+        request = cast(operations.CreateAdsOrganizationRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsOrganization2",
+                operation_id="createAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -88,7 +88,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsOrganization2Response(
+            return operations.CreateAdsOrganizationResponse(
                 ads_organization=unmarshal_json_response(
                     Optional[shared.AdsOrganization], http_res
                 ),
@@ -105,18 +105,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ads_organization2_async(
+    async def create_ads_organization_async(
         self,
         *,
         request: Union[
-            operations.CreateAdsOrganization2Request,
-            operations.CreateAdsOrganization2RequestTypedDict,
+            operations.CreateAdsOrganizationRequest,
+            operations.CreateAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsOrganization2Response:
+    ) -> operations.CreateAdsOrganizationResponse:
         r"""Create an organization
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsOrganization2Request)
-        request = cast(operations.CreateAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsOrganizationRequest)
+        request = cast(operations.CreateAdsOrganizationRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsOrganization2",
+                operation_id="createAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -183,7 +183,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsOrganization2Response(
+            return operations.CreateAdsOrganizationResponse(
                 ads_organization=unmarshal_json_response(
                     Optional[shared.AdsOrganization], http_res
                 ),
@@ -200,18 +200,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_repo_organization2(
+    def create_repo_organization(
         self,
         *,
         request: Union[
-            operations.CreateRepoOrganization2Request,
-            operations.CreateRepoOrganization2RequestTypedDict,
+            operations.CreateRepoOrganizationRequest,
+            operations.CreateRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateRepoOrganization2Response:
+    ) -> operations.CreateRepoOrganizationResponse:
         r"""Create an organization
 
         :param request: The request object to send.
@@ -231,10 +231,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateRepoOrganization2Request
-            )
-        request = cast(operations.CreateRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.CreateRepoOrganizationRequest)
+        request = cast(operations.CreateRepoOrganizationRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -268,7 +266,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createRepoOrganization2",
+                operation_id="createRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -280,7 +278,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateRepoOrganization2Response(
+            return operations.CreateRepoOrganizationResponse(
                 repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
@@ -297,18 +295,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_repo_organization2_async(
+    async def create_repo_organization_async(
         self,
         *,
         request: Union[
-            operations.CreateRepoOrganization2Request,
-            operations.CreateRepoOrganization2RequestTypedDict,
+            operations.CreateRepoOrganizationRequest,
+            operations.CreateRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateRepoOrganization2Response:
+    ) -> operations.CreateRepoOrganizationResponse:
         r"""Create an organization
 
         :param request: The request object to send.
@@ -328,10 +326,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateRepoOrganization2Request
-            )
-        request = cast(operations.CreateRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.CreateRepoOrganizationRequest)
+        request = cast(operations.CreateRepoOrganizationRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -365,7 +361,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createRepoOrganization2",
+                operation_id="createRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -377,7 +373,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateRepoOrganization2Response(
+            return operations.CreateRepoOrganizationResponse(
                 repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
@@ -394,18 +390,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_organization2(
+    def get_accounting_organization(
         self,
         *,
         request: Union[
-            operations.GetAccountingOrganization2Request,
-            operations.GetAccountingOrganization2RequestTypedDict,
+            operations.GetAccountingOrganizationRequest,
+            operations.GetAccountingOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingOrganization2Response:
+    ) -> operations.GetAccountingOrganizationResponse:
         r"""Retrieve an organization
 
         :param request: The request object to send.
@@ -426,9 +422,9 @@ class Organization(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingOrganization2Request
+                request, operations.GetAccountingOrganizationRequest
             )
-        request = cast(operations.GetAccountingOrganization2Request, request)
+        request = cast(operations.GetAccountingOrganizationRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -459,7 +455,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingOrganization2",
+                operation_id="getAccountingOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "organization"],
@@ -471,7 +467,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingOrganization2Response(
+            return operations.GetAccountingOrganizationResponse(
                 accounting_organization=unmarshal_json_response(
                     Optional[shared.AccountingOrganization], http_res
                 ),
@@ -488,18 +484,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_organization2_async(
+    async def get_accounting_organization_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingOrganization2Request,
-            operations.GetAccountingOrganization2RequestTypedDict,
+            operations.GetAccountingOrganizationRequest,
+            operations.GetAccountingOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingOrganization2Response:
+    ) -> operations.GetAccountingOrganizationResponse:
         r"""Retrieve an organization
 
         :param request: The request object to send.
@@ -520,9 +516,9 @@ class Organization(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingOrganization2Request
+                request, operations.GetAccountingOrganizationRequest
             )
-        request = cast(operations.GetAccountingOrganization2Request, request)
+        request = cast(operations.GetAccountingOrganizationRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -553,7 +549,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingOrganization2",
+                operation_id="getAccountingOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "organization"],
@@ -565,7 +561,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingOrganization2Response(
+            return operations.GetAccountingOrganizationResponse(
                 accounting_organization=unmarshal_json_response(
                     Optional[shared.AccountingOrganization], http_res
                 ),
@@ -582,18 +578,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ads_organization2(
+    def get_ads_organization(
         self,
         *,
         request: Union[
-            operations.GetAdsOrganization2Request,
-            operations.GetAdsOrganization2RequestTypedDict,
+            operations.GetAdsOrganizationRequest,
+            operations.GetAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsOrganization2Response:
+    ) -> operations.GetAdsOrganizationResponse:
         r"""Retrieve an organization
 
         :param request: The request object to send.
@@ -613,8 +609,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsOrganization2Request)
-        request = cast(operations.GetAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsOrganizationRequest)
+        request = cast(operations.GetAdsOrganizationRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -645,7 +641,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsOrganization2",
+                operation_id="getAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -657,7 +653,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsOrganization2Response(
+            return operations.GetAdsOrganizationResponse(
                 ads_organization=unmarshal_json_response(
                     Optional[shared.AdsOrganization], http_res
                 ),
@@ -674,18 +670,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ads_organization2_async(
+    async def get_ads_organization_async(
         self,
         *,
         request: Union[
-            operations.GetAdsOrganization2Request,
-            operations.GetAdsOrganization2RequestTypedDict,
+            operations.GetAdsOrganizationRequest,
+            operations.GetAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsOrganization2Response:
+    ) -> operations.GetAdsOrganizationResponse:
         r"""Retrieve an organization
 
         :param request: The request object to send.
@@ -705,8 +701,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsOrganization2Request)
-        request = cast(operations.GetAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsOrganizationRequest)
+        request = cast(operations.GetAdsOrganizationRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -737,7 +733,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsOrganization2",
+                operation_id="getAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -749,7 +745,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsOrganization2Response(
+            return operations.GetAdsOrganizationResponse(
                 ads_organization=unmarshal_json_response(
                     Optional[shared.AdsOrganization], http_res
                 ),
@@ -766,18 +762,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_repo_organization2(
+    def get_repo_organization(
         self,
         *,
         request: Union[
-            operations.GetRepoOrganization2Request,
-            operations.GetRepoOrganization2RequestTypedDict,
+            operations.GetRepoOrganizationRequest,
+            operations.GetRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetRepoOrganization2Response:
+    ) -> operations.GetRepoOrganizationResponse:
         r"""Retrieve an organization
 
         :param request: The request object to send.
@@ -797,8 +793,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetRepoOrganization2Request)
-        request = cast(operations.GetRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.GetRepoOrganizationRequest)
+        request = cast(operations.GetRepoOrganizationRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -829,7 +825,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getRepoOrganization2",
+                operation_id="getRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -841,7 +837,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetRepoOrganization2Response(
+            return operations.GetRepoOrganizationResponse(
                 repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
@@ -858,18 +854,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_repo_organization2_async(
+    async def get_repo_organization_async(
         self,
         *,
         request: Union[
-            operations.GetRepoOrganization2Request,
-            operations.GetRepoOrganization2RequestTypedDict,
+            operations.GetRepoOrganizationRequest,
+            operations.GetRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetRepoOrganization2Response:
+    ) -> operations.GetRepoOrganizationResponse:
         r"""Retrieve an organization
 
         :param request: The request object to send.
@@ -889,8 +885,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetRepoOrganization2Request)
-        request = cast(operations.GetRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.GetRepoOrganizationRequest)
+        request = cast(operations.GetRepoOrganizationRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -921,7 +917,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getRepoOrganization2",
+                operation_id="getRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -933,7 +929,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetRepoOrganization2Response(
+            return operations.GetRepoOrganizationResponse(
                 repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
@@ -950,18 +946,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_organizations2(
+    def list_accounting_organizations(
         self,
         *,
         request: Union[
-            operations.ListAccountingOrganizations2Request,
-            operations.ListAccountingOrganizations2RequestTypedDict,
+            operations.ListAccountingOrganizationsRequest,
+            operations.ListAccountingOrganizationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingOrganizations2Response:
+    ) -> operations.ListAccountingOrganizationsResponse:
         r"""List all organizations
 
         :param request: The request object to send.
@@ -982,9 +978,9 @@ class Organization(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingOrganizations2Request
+                request, operations.ListAccountingOrganizationsRequest
             )
-        request = cast(operations.ListAccountingOrganizations2Request, request)
+        request = cast(operations.ListAccountingOrganizationsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1015,7 +1011,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingOrganizations2",
+                operation_id="listAccountingOrganizations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "organization"],
@@ -1027,7 +1023,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingOrganizations2Response(
+            return operations.ListAccountingOrganizationsResponse(
                 accounting_organizations=unmarshal_json_response(
                     Optional[List[shared.AccountingOrganization]], http_res
                 ),
@@ -1044,18 +1040,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_organizations2_async(
+    async def list_accounting_organizations_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingOrganizations2Request,
-            operations.ListAccountingOrganizations2RequestTypedDict,
+            operations.ListAccountingOrganizationsRequest,
+            operations.ListAccountingOrganizationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingOrganizations2Response:
+    ) -> operations.ListAccountingOrganizationsResponse:
         r"""List all organizations
 
         :param request: The request object to send.
@@ -1076,9 +1072,9 @@ class Organization(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingOrganizations2Request
+                request, operations.ListAccountingOrganizationsRequest
             )
-        request = cast(operations.ListAccountingOrganizations2Request, request)
+        request = cast(operations.ListAccountingOrganizationsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1109,7 +1105,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingOrganizations2",
+                operation_id="listAccountingOrganizations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "organization"],
@@ -1121,7 +1117,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingOrganizations2Response(
+            return operations.ListAccountingOrganizationsResponse(
                 accounting_organizations=unmarshal_json_response(
                     Optional[List[shared.AccountingOrganization]], http_res
                 ),
@@ -1138,18 +1134,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ads_organizations2(
+    def list_ads_organizations(
         self,
         *,
         request: Union[
-            operations.ListAdsOrganizations2Request,
-            operations.ListAdsOrganizations2RequestTypedDict,
+            operations.ListAdsOrganizationsRequest,
+            operations.ListAdsOrganizationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsOrganizations2Response:
+    ) -> operations.ListAdsOrganizationsResponse:
         r"""List all organizations
 
         :param request: The request object to send.
@@ -1169,8 +1165,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsOrganizations2Request)
-        request = cast(operations.ListAdsOrganizations2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsOrganizationsRequest)
+        request = cast(operations.ListAdsOrganizationsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1201,7 +1197,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsOrganizations2",
+                operation_id="listAdsOrganizations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -1213,7 +1209,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsOrganizations2Response(
+            return operations.ListAdsOrganizationsResponse(
                 ads_organizations=unmarshal_json_response(
                     Optional[List[shared.AdsOrganization]], http_res
                 ),
@@ -1230,18 +1226,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ads_organizations2_async(
+    async def list_ads_organizations_async(
         self,
         *,
         request: Union[
-            operations.ListAdsOrganizations2Request,
-            operations.ListAdsOrganizations2RequestTypedDict,
+            operations.ListAdsOrganizationsRequest,
+            operations.ListAdsOrganizationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsOrganizations2Response:
+    ) -> operations.ListAdsOrganizationsResponse:
         r"""List all organizations
 
         :param request: The request object to send.
@@ -1261,8 +1257,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsOrganizations2Request)
-        request = cast(operations.ListAdsOrganizations2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsOrganizationsRequest)
+        request = cast(operations.ListAdsOrganizationsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1293,7 +1289,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsOrganizations2",
+                operation_id="listAdsOrganizations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -1305,7 +1301,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsOrganizations2Response(
+            return operations.ListAdsOrganizationsResponse(
                 ads_organizations=unmarshal_json_response(
                     Optional[List[shared.AdsOrganization]], http_res
                 ),
@@ -1322,18 +1318,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_repo_organizations2(
+    def list_repo_organizations(
         self,
         *,
         request: Union[
-            operations.ListRepoOrganizations2Request,
-            operations.ListRepoOrganizations2RequestTypedDict,
+            operations.ListRepoOrganizationsRequest,
+            operations.ListRepoOrganizationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListRepoOrganizations2Response:
+    ) -> operations.ListRepoOrganizationsResponse:
         r"""List all organizations
 
         :param request: The request object to send.
@@ -1353,8 +1349,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListRepoOrganizations2Request)
-        request = cast(operations.ListRepoOrganizations2Request, request)
+            request = utils.unmarshal(request, operations.ListRepoOrganizationsRequest)
+        request = cast(operations.ListRepoOrganizationsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1385,7 +1381,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listRepoOrganizations2",
+                operation_id="listRepoOrganizations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -1397,7 +1393,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListRepoOrganizations2Response(
+            return operations.ListRepoOrganizationsResponse(
                 repo_organizations=unmarshal_json_response(
                     Optional[List[shared.RepoOrganization]], http_res
                 ),
@@ -1414,18 +1410,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_repo_organizations2_async(
+    async def list_repo_organizations_async(
         self,
         *,
         request: Union[
-            operations.ListRepoOrganizations2Request,
-            operations.ListRepoOrganizations2RequestTypedDict,
+            operations.ListRepoOrganizationsRequest,
+            operations.ListRepoOrganizationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListRepoOrganizations2Response:
+    ) -> operations.ListRepoOrganizationsResponse:
         r"""List all organizations
 
         :param request: The request object to send.
@@ -1445,8 +1441,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListRepoOrganizations2Request)
-        request = cast(operations.ListRepoOrganizations2Request, request)
+            request = utils.unmarshal(request, operations.ListRepoOrganizationsRequest)
+        request = cast(operations.ListRepoOrganizationsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1477,7 +1473,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listRepoOrganizations2",
+                operation_id="listRepoOrganizations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -1489,7 +1485,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListRepoOrganizations2Response(
+            return operations.ListRepoOrganizationsResponse(
                 repo_organizations=unmarshal_json_response(
                     Optional[List[shared.RepoOrganization]], http_res
                 ),
@@ -1506,18 +1502,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ads_organization2(
+    def patch_ads_organization(
         self,
         *,
         request: Union[
-            operations.PatchAdsOrganization2Request,
-            operations.PatchAdsOrganization2RequestTypedDict,
+            operations.PatchAdsOrganizationRequest,
+            operations.PatchAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsOrganization2Response:
+    ) -> operations.PatchAdsOrganizationResponse:
         r"""Update an organization
 
         :param request: The request object to send.
@@ -1537,8 +1533,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsOrganization2Request)
-        request = cast(operations.PatchAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsOrganizationRequest)
+        request = cast(operations.PatchAdsOrganizationRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1572,7 +1568,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsOrganization2",
+                operation_id="patchAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -1584,7 +1580,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsOrganization2Response(
+            return operations.PatchAdsOrganizationResponse(
                 ads_organization=unmarshal_json_response(
                     Optional[shared.AdsOrganization], http_res
                 ),
@@ -1601,18 +1597,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ads_organization2_async(
+    async def patch_ads_organization_async(
         self,
         *,
         request: Union[
-            operations.PatchAdsOrganization2Request,
-            operations.PatchAdsOrganization2RequestTypedDict,
+            operations.PatchAdsOrganizationRequest,
+            operations.PatchAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsOrganization2Response:
+    ) -> operations.PatchAdsOrganizationResponse:
         r"""Update an organization
 
         :param request: The request object to send.
@@ -1632,8 +1628,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsOrganization2Request)
-        request = cast(operations.PatchAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsOrganizationRequest)
+        request = cast(operations.PatchAdsOrganizationRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1667,7 +1663,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsOrganization2",
+                operation_id="patchAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -1679,7 +1675,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsOrganization2Response(
+            return operations.PatchAdsOrganizationResponse(
                 ads_organization=unmarshal_json_response(
                     Optional[shared.AdsOrganization], http_res
                 ),
@@ -1696,18 +1692,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_repo_organization2(
+    def patch_repo_organization(
         self,
         *,
         request: Union[
-            operations.PatchRepoOrganization2Request,
-            operations.PatchRepoOrganization2RequestTypedDict,
+            operations.PatchRepoOrganizationRequest,
+            operations.PatchRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchRepoOrganization2Response:
+    ) -> operations.PatchRepoOrganizationResponse:
         r"""Update an organization
 
         :param request: The request object to send.
@@ -1727,8 +1723,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchRepoOrganization2Request)
-        request = cast(operations.PatchRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.PatchRepoOrganizationRequest)
+        request = cast(operations.PatchRepoOrganizationRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1762,7 +1758,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchRepoOrganization2",
+                operation_id="patchRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -1774,7 +1770,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchRepoOrganization2Response(
+            return operations.PatchRepoOrganizationResponse(
                 repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
@@ -1791,18 +1787,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_repo_organization2_async(
+    async def patch_repo_organization_async(
         self,
         *,
         request: Union[
-            operations.PatchRepoOrganization2Request,
-            operations.PatchRepoOrganization2RequestTypedDict,
+            operations.PatchRepoOrganizationRequest,
+            operations.PatchRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchRepoOrganization2Response:
+    ) -> operations.PatchRepoOrganizationResponse:
         r"""Update an organization
 
         :param request: The request object to send.
@@ -1822,8 +1818,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchRepoOrganization2Request)
-        request = cast(operations.PatchRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.PatchRepoOrganizationRequest)
+        request = cast(operations.PatchRepoOrganizationRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1857,7 +1853,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchRepoOrganization2",
+                operation_id="patchRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -1869,7 +1865,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchRepoOrganization2Response(
+            return operations.PatchRepoOrganizationResponse(
                 repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
@@ -1886,18 +1882,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ads_organization2(
+    def remove_ads_organization(
         self,
         *,
         request: Union[
-            operations.RemoveAdsOrganization2Request,
-            operations.RemoveAdsOrganization2RequestTypedDict,
+            operations.RemoveAdsOrganizationRequest,
+            operations.RemoveAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsOrganization2Response:
+    ) -> operations.RemoveAdsOrganizationResponse:
         r"""Remove an organization
 
         :param request: The request object to send.
@@ -1917,8 +1913,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsOrganization2Request)
-        request = cast(operations.RemoveAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsOrganizationRequest)
+        request = cast(operations.RemoveAdsOrganizationRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1949,7 +1945,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsOrganization2",
+                operation_id="removeAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -1961,7 +1957,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsOrganization2Response(
+            return operations.RemoveAdsOrganizationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1974,7 +1970,7 @@ class Organization(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsOrganization2Response(
+            return operations.RemoveAdsOrganizationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1983,18 +1979,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ads_organization2_async(
+    async def remove_ads_organization_async(
         self,
         *,
         request: Union[
-            operations.RemoveAdsOrganization2Request,
-            operations.RemoveAdsOrganization2RequestTypedDict,
+            operations.RemoveAdsOrganizationRequest,
+            operations.RemoveAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsOrganization2Response:
+    ) -> operations.RemoveAdsOrganizationResponse:
         r"""Remove an organization
 
         :param request: The request object to send.
@@ -2014,8 +2010,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsOrganization2Request)
-        request = cast(operations.RemoveAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsOrganizationRequest)
+        request = cast(operations.RemoveAdsOrganizationRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2046,7 +2042,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsOrganization2",
+                operation_id="removeAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -2058,7 +2054,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsOrganization2Response(
+            return operations.RemoveAdsOrganizationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2071,7 +2067,7 @@ class Organization(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsOrganization2Response(
+            return operations.RemoveAdsOrganizationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2080,18 +2076,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_repo_organization2(
+    def remove_repo_organization(
         self,
         *,
         request: Union[
-            operations.RemoveRepoOrganization2Request,
-            operations.RemoveRepoOrganization2RequestTypedDict,
+            operations.RemoveRepoOrganizationRequest,
+            operations.RemoveRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveRepoOrganization2Response:
+    ) -> operations.RemoveRepoOrganizationResponse:
         r"""Remove an organization
 
         :param request: The request object to send.
@@ -2111,10 +2107,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveRepoOrganization2Request
-            )
-        request = cast(operations.RemoveRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.RemoveRepoOrganizationRequest)
+        request = cast(operations.RemoveRepoOrganizationRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2145,7 +2139,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeRepoOrganization2",
+                operation_id="removeRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -2157,7 +2151,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveRepoOrganization2Response(
+            return operations.RemoveRepoOrganizationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2170,7 +2164,7 @@ class Organization(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveRepoOrganization2Response(
+            return operations.RemoveRepoOrganizationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2179,18 +2173,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_repo_organization2_async(
+    async def remove_repo_organization_async(
         self,
         *,
         request: Union[
-            operations.RemoveRepoOrganization2Request,
-            operations.RemoveRepoOrganization2RequestTypedDict,
+            operations.RemoveRepoOrganizationRequest,
+            operations.RemoveRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveRepoOrganization2Response:
+    ) -> operations.RemoveRepoOrganizationResponse:
         r"""Remove an organization
 
         :param request: The request object to send.
@@ -2210,10 +2204,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveRepoOrganization2Request
-            )
-        request = cast(operations.RemoveRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.RemoveRepoOrganizationRequest)
+        request = cast(operations.RemoveRepoOrganizationRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2244,7 +2236,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeRepoOrganization2",
+                operation_id="removeRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -2256,7 +2248,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveRepoOrganization2Response(
+            return operations.RemoveRepoOrganizationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2269,7 +2261,7 @@ class Organization(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveRepoOrganization2Response(
+            return operations.RemoveRepoOrganizationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2278,18 +2270,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ads_organization2(
+    def update_ads_organization(
         self,
         *,
         request: Union[
-            operations.UpdateAdsOrganization2Request,
-            operations.UpdateAdsOrganization2RequestTypedDict,
+            operations.UpdateAdsOrganizationRequest,
+            operations.UpdateAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsOrganization2Response:
+    ) -> operations.UpdateAdsOrganizationResponse:
         r"""Update an organization
 
         :param request: The request object to send.
@@ -2309,8 +2301,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsOrganization2Request)
-        request = cast(operations.UpdateAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsOrganizationRequest)
+        request = cast(operations.UpdateAdsOrganizationRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -2344,7 +2336,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsOrganization2",
+                operation_id="updateAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -2356,7 +2348,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsOrganization2Response(
+            return operations.UpdateAdsOrganizationResponse(
                 ads_organization=unmarshal_json_response(
                     Optional[shared.AdsOrganization], http_res
                 ),
@@ -2373,18 +2365,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ads_organization2_async(
+    async def update_ads_organization_async(
         self,
         *,
         request: Union[
-            operations.UpdateAdsOrganization2Request,
-            operations.UpdateAdsOrganization2RequestTypedDict,
+            operations.UpdateAdsOrganizationRequest,
+            operations.UpdateAdsOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsOrganization2Response:
+    ) -> operations.UpdateAdsOrganizationResponse:
         r"""Update an organization
 
         :param request: The request object to send.
@@ -2404,8 +2396,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsOrganization2Request)
-        request = cast(operations.UpdateAdsOrganization2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsOrganizationRequest)
+        request = cast(operations.UpdateAdsOrganizationRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2439,7 +2431,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsOrganization2",
+                operation_id="updateAdsOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "organization"],
@@ -2451,7 +2443,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsOrganization2Response(
+            return operations.UpdateAdsOrganizationResponse(
                 ads_organization=unmarshal_json_response(
                     Optional[shared.AdsOrganization], http_res
                 ),
@@ -2468,18 +2460,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_repo_organization2(
+    def update_repo_organization(
         self,
         *,
         request: Union[
-            operations.UpdateRepoOrganization2Request,
-            operations.UpdateRepoOrganization2RequestTypedDict,
+            operations.UpdateRepoOrganizationRequest,
+            operations.UpdateRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateRepoOrganization2Response:
+    ) -> operations.UpdateRepoOrganizationResponse:
         r"""Update an organization
 
         :param request: The request object to send.
@@ -2499,10 +2491,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateRepoOrganization2Request
-            )
-        request = cast(operations.UpdateRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.UpdateRepoOrganizationRequest)
+        request = cast(operations.UpdateRepoOrganizationRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -2536,7 +2526,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateRepoOrganization2",
+                operation_id="updateRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -2548,7 +2538,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateRepoOrganization2Response(
+            return operations.UpdateRepoOrganizationResponse(
                 repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
@@ -2565,18 +2555,18 @@ class Organization(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_repo_organization2_async(
+    async def update_repo_organization_async(
         self,
         *,
         request: Union[
-            operations.UpdateRepoOrganization2Request,
-            operations.UpdateRepoOrganization2RequestTypedDict,
+            operations.UpdateRepoOrganizationRequest,
+            operations.UpdateRepoOrganizationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateRepoOrganization2Response:
+    ) -> operations.UpdateRepoOrganizationResponse:
         r"""Update an organization
 
         :param request: The request object to send.
@@ -2596,10 +2586,8 @@ class Organization(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateRepoOrganization2Request
-            )
-        request = cast(operations.UpdateRepoOrganization2Request, request)
+            request = utils.unmarshal(request, operations.UpdateRepoOrganizationRequest)
+        request = cast(operations.UpdateRepoOrganizationRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -2633,7 +2621,7 @@ class Organization(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateRepoOrganization2",
+                operation_id="updateRepoOrganization",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["repo", "organization"],
@@ -2645,7 +2633,7 @@ class Organization(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateRepoOrganization2Response(
+            return operations.UpdateRepoOrganizationResponse(
                 repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),

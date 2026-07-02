@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Note(BaseSDK):
-    def create_ticketing_note2(
+    def create_ticketing_note(
         self,
         *,
         request: Union[
-            operations.CreateTicketingNote2Request,
-            operations.CreateTicketingNote2RequestTypedDict,
+            operations.CreateTicketingNoteRequest,
+            operations.CreateTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingNote2Response:
+    ) -> operations.CreateTicketingNoteResponse:
         r"""Create a note
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTicketingNote2Request)
-        request = cast(operations.CreateTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.CreateTicketingNoteRequest)
+        request = cast(operations.CreateTicketingNoteRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingNote2",
+                operation_id="createTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -88,7 +88,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingNote2Response(
+            return operations.CreateTicketingNoteResponse(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -105,18 +105,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ticketing_note2_async(
+    async def create_ticketing_note_async(
         self,
         *,
         request: Union[
-            operations.CreateTicketingNote2Request,
-            operations.CreateTicketingNote2RequestTypedDict,
+            operations.CreateTicketingNoteRequest,
+            operations.CreateTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateTicketingNote2Response:
+    ) -> operations.CreateTicketingNoteResponse:
         r"""Create a note
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateTicketingNote2Request)
-        request = cast(operations.CreateTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.CreateTicketingNoteRequest)
+        request = cast(operations.CreateTicketingNoteRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createTicketingNote2",
+                operation_id="createTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -183,7 +183,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateTicketingNote2Response(
+            return operations.CreateTicketingNoteResponse(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -200,18 +200,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ticketing_note2(
+    def get_ticketing_note(
         self,
         *,
         request: Union[
-            operations.GetTicketingNote2Request,
-            operations.GetTicketingNote2RequestTypedDict,
+            operations.GetTicketingNoteRequest,
+            operations.GetTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingNote2Response:
+    ) -> operations.GetTicketingNoteResponse:
         r"""Retrieve a note
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingNote2Request)
-        request = cast(operations.GetTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.GetTicketingNoteRequest)
+        request = cast(operations.GetTicketingNoteRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingNote2",
+                operation_id="getTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -275,7 +275,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingNote2Response(
+            return operations.GetTicketingNoteResponse(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -292,18 +292,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ticketing_note2_async(
+    async def get_ticketing_note_async(
         self,
         *,
         request: Union[
-            operations.GetTicketingNote2Request,
-            operations.GetTicketingNote2RequestTypedDict,
+            operations.GetTicketingNoteRequest,
+            operations.GetTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetTicketingNote2Response:
+    ) -> operations.GetTicketingNoteResponse:
         r"""Retrieve a note
 
         :param request: The request object to send.
@@ -323,8 +323,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetTicketingNote2Request)
-        request = cast(operations.GetTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.GetTicketingNoteRequest)
+        request = cast(operations.GetTicketingNoteRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +355,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getTicketingNote2",
+                operation_id="getTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -367,7 +367,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetTicketingNote2Response(
+            return operations.GetTicketingNoteResponse(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -384,18 +384,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ticketing_notes2(
+    def list_ticketing_notes(
         self,
         *,
         request: Union[
-            operations.ListTicketingNotes2Request,
-            operations.ListTicketingNotes2RequestTypedDict,
+            operations.ListTicketingNotesRequest,
+            operations.ListTicketingNotesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingNotes2Response:
+    ) -> operations.ListTicketingNotesResponse:
         r"""List all notes
 
         :param request: The request object to send.
@@ -415,8 +415,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTicketingNotes2Request)
-        request = cast(operations.ListTicketingNotes2Request, request)
+            request = utils.unmarshal(request, operations.ListTicketingNotesRequest)
+        request = cast(operations.ListTicketingNotesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +447,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingNotes2",
+                operation_id="listTicketingNotes",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -459,7 +459,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingNotes2Response(
+            return operations.ListTicketingNotesResponse(
                 ticketing_notes=unmarshal_json_response(
                     Optional[List[shared.TicketingNote]], http_res
                 ),
@@ -476,18 +476,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ticketing_notes2_async(
+    async def list_ticketing_notes_async(
         self,
         *,
         request: Union[
-            operations.ListTicketingNotes2Request,
-            operations.ListTicketingNotes2RequestTypedDict,
+            operations.ListTicketingNotesRequest,
+            operations.ListTicketingNotesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListTicketingNotes2Response:
+    ) -> operations.ListTicketingNotesResponse:
         r"""List all notes
 
         :param request: The request object to send.
@@ -507,8 +507,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListTicketingNotes2Request)
-        request = cast(operations.ListTicketingNotes2Request, request)
+            request = utils.unmarshal(request, operations.ListTicketingNotesRequest)
+        request = cast(operations.ListTicketingNotesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +539,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listTicketingNotes2",
+                operation_id="listTicketingNotes",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -551,7 +551,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListTicketingNotes2Response(
+            return operations.ListTicketingNotesResponse(
                 ticketing_notes=unmarshal_json_response(
                     Optional[List[shared.TicketingNote]], http_res
                 ),
@@ -568,18 +568,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ticketing_note2(
+    def patch_ticketing_note(
         self,
         *,
         request: Union[
-            operations.PatchTicketingNote2Request,
-            operations.PatchTicketingNote2RequestTypedDict,
+            operations.PatchTicketingNoteRequest,
+            operations.PatchTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingNote2Response:
+    ) -> operations.PatchTicketingNoteResponse:
         r"""Update a note
 
         :param request: The request object to send.
@@ -599,8 +599,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingNote2Request)
-        request = cast(operations.PatchTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.PatchTicketingNoteRequest)
+        request = cast(operations.PatchTicketingNoteRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +634,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingNote2",
+                operation_id="patchTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -646,7 +646,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingNote2Response(
+            return operations.PatchTicketingNoteResponse(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -663,18 +663,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ticketing_note2_async(
+    async def patch_ticketing_note_async(
         self,
         *,
         request: Union[
-            operations.PatchTicketingNote2Request,
-            operations.PatchTicketingNote2RequestTypedDict,
+            operations.PatchTicketingNoteRequest,
+            operations.PatchTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchTicketingNote2Response:
+    ) -> operations.PatchTicketingNoteResponse:
         r"""Update a note
 
         :param request: The request object to send.
@@ -694,8 +694,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchTicketingNote2Request)
-        request = cast(operations.PatchTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.PatchTicketingNoteRequest)
+        request = cast(operations.PatchTicketingNoteRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +729,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchTicketingNote2",
+                operation_id="patchTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -741,7 +741,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchTicketingNote2Response(
+            return operations.PatchTicketingNoteResponse(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -758,18 +758,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ticketing_note2(
+    def remove_ticketing_note(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingNote2Request,
-            operations.RemoveTicketingNote2RequestTypedDict,
+            operations.RemoveTicketingNoteRequest,
+            operations.RemoveTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingNote2Response:
+    ) -> operations.RemoveTicketingNoteResponse:
         r"""Remove a note
 
         :param request: The request object to send.
@@ -789,8 +789,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTicketingNote2Request)
-        request = cast(operations.RemoveTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.RemoveTicketingNoteRequest)
+        request = cast(operations.RemoveTicketingNoteRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +821,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingNote2",
+                operation_id="removeTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -833,7 +833,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingNote2Response(
+            return operations.RemoveTicketingNoteResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +846,7 @@ class Note(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingNote2Response(
+            return operations.RemoveTicketingNoteResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +855,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ticketing_note2_async(
+    async def remove_ticketing_note_async(
         self,
         *,
         request: Union[
-            operations.RemoveTicketingNote2Request,
-            operations.RemoveTicketingNote2RequestTypedDict,
+            operations.RemoveTicketingNoteRequest,
+            operations.RemoveTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveTicketingNote2Response:
+    ) -> operations.RemoveTicketingNoteResponse:
         r"""Remove a note
 
         :param request: The request object to send.
@@ -886,8 +886,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveTicketingNote2Request)
-        request = cast(operations.RemoveTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.RemoveTicketingNoteRequest)
+        request = cast(operations.RemoveTicketingNoteRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +918,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeTicketingNote2",
+                operation_id="removeTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -930,7 +930,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveTicketingNote2Response(
+            return operations.RemoveTicketingNoteResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +943,7 @@ class Note(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveTicketingNote2Response(
+            return operations.RemoveTicketingNoteResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +952,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ticketing_note2(
+    def update_ticketing_note(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingNote2Request,
-            operations.UpdateTicketingNote2RequestTypedDict,
+            operations.UpdateTicketingNoteRequest,
+            operations.UpdateTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingNote2Response:
+    ) -> operations.UpdateTicketingNoteResponse:
         r"""Update a note
 
         :param request: The request object to send.
@@ -983,8 +983,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTicketingNote2Request)
-        request = cast(operations.UpdateTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.UpdateTicketingNoteRequest)
+        request = cast(operations.UpdateTicketingNoteRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1018,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingNote2",
+                operation_id="updateTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -1030,7 +1030,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingNote2Response(
+            return operations.UpdateTicketingNoteResponse(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
@@ -1047,18 +1047,18 @@ class Note(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ticketing_note2_async(
+    async def update_ticketing_note_async(
         self,
         *,
         request: Union[
-            operations.UpdateTicketingNote2Request,
-            operations.UpdateTicketingNote2RequestTypedDict,
+            operations.UpdateTicketingNoteRequest,
+            operations.UpdateTicketingNoteRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateTicketingNote2Response:
+    ) -> operations.UpdateTicketingNoteResponse:
         r"""Update a note
 
         :param request: The request object to send.
@@ -1078,8 +1078,8 @@ class Note(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateTicketingNote2Request)
-        request = cast(operations.UpdateTicketingNote2Request, request)
+            request = utils.unmarshal(request, operations.UpdateTicketingNoteRequest)
+        request = cast(operations.UpdateTicketingNoteRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1113,7 @@ class Note(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateTicketingNote2",
+                operation_id="updateTicketingNote",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ticketing", "note"],
@@ -1125,7 +1125,7 @@ class Note(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateTicketingNote2Response(
+            return operations.UpdateTicketingNoteResponse(
                 ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),

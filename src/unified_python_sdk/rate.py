@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Rate(BaseSDK):
-    def create_shipping_rate2(
+    def create_shipping_rate(
         self,
         *,
         request: Union[
-            operations.CreateShippingRate2Request,
-            operations.CreateShippingRate2RequestTypedDict,
+            operations.CreateShippingRateRequest,
+            operations.CreateShippingRateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingRate2Response:
+    ) -> operations.CreateShippingRateResponse:
         r"""Create a rate
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Rate(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingRate2Request)
-        request = cast(operations.CreateShippingRate2Request, request)
+            request = utils.unmarshal(request, operations.CreateShippingRateRequest)
+        request = cast(operations.CreateShippingRateRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Rate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingRate2",
+                operation_id="createShippingRate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "rate"],
@@ -88,7 +88,7 @@ class Rate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingRate2Response(
+            return operations.CreateShippingRateResponse(
                 shipping_rate=unmarshal_json_response(
                     Optional[shared.ShippingRate], http_res
                 ),
@@ -105,18 +105,18 @@ class Rate(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_shipping_rate2_async(
+    async def create_shipping_rate_async(
         self,
         *,
         request: Union[
-            operations.CreateShippingRate2Request,
-            operations.CreateShippingRate2RequestTypedDict,
+            operations.CreateShippingRateRequest,
+            operations.CreateShippingRateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateShippingRate2Response:
+    ) -> operations.CreateShippingRateResponse:
         r"""Create a rate
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Rate(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateShippingRate2Request)
-        request = cast(operations.CreateShippingRate2Request, request)
+            request = utils.unmarshal(request, operations.CreateShippingRateRequest)
+        request = cast(operations.CreateShippingRateRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Rate(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createShippingRate2",
+                operation_id="createShippingRate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "rate"],
@@ -183,7 +183,7 @@ class Rate(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateShippingRate2Response(
+            return operations.CreateShippingRateResponse(
                 shipping_rate=unmarshal_json_response(
                     Optional[shared.ShippingRate], http_res
                 ),

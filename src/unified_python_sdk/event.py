@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Event(BaseSDK):
-    def create_analytics_event2(
+    def create_analytics_event(
         self,
         *,
         request: Union[
-            operations.CreateAnalyticsEvent2Request,
-            operations.CreateAnalyticsEvent2RequestTypedDict,
+            operations.CreateAnalyticsEventRequest,
+            operations.CreateAnalyticsEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAnalyticsEvent2Response:
+    ) -> operations.CreateAnalyticsEventResponse:
         r"""Create an event
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAnalyticsEvent2Request)
-        request = cast(operations.CreateAnalyticsEvent2Request, request)
+            request = utils.unmarshal(request, operations.CreateAnalyticsEventRequest)
+        request = cast(operations.CreateAnalyticsEventRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAnalyticsEvent2",
+                operation_id="createAnalyticsEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "event"],
@@ -88,7 +88,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAnalyticsEvent2Response(
+            return operations.CreateAnalyticsEventResponse(
                 analytics_event=unmarshal_json_response(
                     Optional[shared.AnalyticsEvent], http_res
                 ),
@@ -105,18 +105,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_analytics_event2_async(
+    async def create_analytics_event_async(
         self,
         *,
         request: Union[
-            operations.CreateAnalyticsEvent2Request,
-            operations.CreateAnalyticsEvent2RequestTypedDict,
+            operations.CreateAnalyticsEventRequest,
+            operations.CreateAnalyticsEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAnalyticsEvent2Response:
+    ) -> operations.CreateAnalyticsEventResponse:
         r"""Create an event
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAnalyticsEvent2Request)
-        request = cast(operations.CreateAnalyticsEvent2Request, request)
+            request = utils.unmarshal(request, operations.CreateAnalyticsEventRequest)
+        request = cast(operations.CreateAnalyticsEventRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAnalyticsEvent2",
+                operation_id="createAnalyticsEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "event"],
@@ -183,7 +183,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAnalyticsEvent2Response(
+            return operations.CreateAnalyticsEventResponse(
                 analytics_event=unmarshal_json_response(
                     Optional[shared.AnalyticsEvent], http_res
                 ),
@@ -200,18 +200,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_calendar_event2(
+    def create_calendar_event(
         self,
         *,
         request: Union[
-            operations.CreateCalendarEvent2Request,
-            operations.CreateCalendarEvent2RequestTypedDict,
+            operations.CreateCalendarEventRequest,
+            operations.CreateCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCalendarEvent2Response:
+    ) -> operations.CreateCalendarEventResponse:
         r"""Create an event
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCalendarEvent2Request)
-        request = cast(operations.CreateCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.CreateCalendarEventRequest)
+        request = cast(operations.CreateCalendarEventRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -266,7 +266,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCalendarEvent2",
+                operation_id="createCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -278,7 +278,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCalendarEvent2Response(
+            return operations.CreateCalendarEventResponse(
                 calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
@@ -295,18 +295,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_calendar_event2_async(
+    async def create_calendar_event_async(
         self,
         *,
         request: Union[
-            operations.CreateCalendarEvent2Request,
-            operations.CreateCalendarEvent2RequestTypedDict,
+            operations.CreateCalendarEventRequest,
+            operations.CreateCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCalendarEvent2Response:
+    ) -> operations.CreateCalendarEventResponse:
         r"""Create an event
 
         :param request: The request object to send.
@@ -326,8 +326,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCalendarEvent2Request)
-        request = cast(operations.CreateCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.CreateCalendarEventRequest)
+        request = cast(operations.CreateCalendarEventRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -361,7 +361,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCalendarEvent2",
+                operation_id="createCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -373,7 +373,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCalendarEvent2Response(
+            return operations.CreateCalendarEventResponse(
                 calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
@@ -390,18 +390,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_crm_event2(
+    def create_crm_event(
         self,
         *,
         request: Union[
-            operations.CreateCrmEvent2Request,
-            operations.CreateCrmEvent2RequestTypedDict,
+            operations.CreateCrmEventRequest, operations.CreateCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmEvent2Response:
+    ) -> operations.CreateCrmEventResponse:
         r"""Create an event
 
         :param request: The request object to send.
@@ -421,8 +420,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmEvent2Request)
-        request = cast(operations.CreateCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.CreateCrmEventRequest)
+        request = cast(operations.CreateCrmEventRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -456,7 +455,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmEvent2",
+                operation_id="createCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -468,7 +467,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmEvent2Response(
+            return operations.CreateCrmEventResponse(
                 crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -483,18 +482,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_crm_event2_async(
+    async def create_crm_event_async(
         self,
         *,
         request: Union[
-            operations.CreateCrmEvent2Request,
-            operations.CreateCrmEvent2RequestTypedDict,
+            operations.CreateCrmEventRequest, operations.CreateCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmEvent2Response:
+    ) -> operations.CreateCrmEventResponse:
         r"""Create an event
 
         :param request: The request object to send.
@@ -514,8 +512,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmEvent2Request)
-        request = cast(operations.CreateCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.CreateCrmEventRequest)
+        request = cast(operations.CreateCrmEventRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -549,7 +547,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmEvent2",
+                operation_id="createCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -561,7 +559,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmEvent2Response(
+            return operations.CreateCrmEventResponse(
                 crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -576,18 +574,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_analytics_event2(
+    def get_analytics_event(
         self,
         *,
         request: Union[
-            operations.GetAnalyticsEvent2Request,
-            operations.GetAnalyticsEvent2RequestTypedDict,
+            operations.GetAnalyticsEventRequest,
+            operations.GetAnalyticsEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAnalyticsEvent2Response:
+    ) -> operations.GetAnalyticsEventResponse:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -607,8 +605,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAnalyticsEvent2Request)
-        request = cast(operations.GetAnalyticsEvent2Request, request)
+            request = utils.unmarshal(request, operations.GetAnalyticsEventRequest)
+        request = cast(operations.GetAnalyticsEventRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -639,7 +637,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAnalyticsEvent2",
+                operation_id="getAnalyticsEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "event"],
@@ -651,7 +649,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAnalyticsEvent2Response(
+            return operations.GetAnalyticsEventResponse(
                 analytics_event=unmarshal_json_response(
                     Optional[shared.AnalyticsEvent], http_res
                 ),
@@ -668,18 +666,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_analytics_event2_async(
+    async def get_analytics_event_async(
         self,
         *,
         request: Union[
-            operations.GetAnalyticsEvent2Request,
-            operations.GetAnalyticsEvent2RequestTypedDict,
+            operations.GetAnalyticsEventRequest,
+            operations.GetAnalyticsEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAnalyticsEvent2Response:
+    ) -> operations.GetAnalyticsEventResponse:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -699,8 +697,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAnalyticsEvent2Request)
-        request = cast(operations.GetAnalyticsEvent2Request, request)
+            request = utils.unmarshal(request, operations.GetAnalyticsEventRequest)
+        request = cast(operations.GetAnalyticsEventRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -731,7 +729,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAnalyticsEvent2",
+                operation_id="getAnalyticsEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "event"],
@@ -743,7 +741,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAnalyticsEvent2Response(
+            return operations.GetAnalyticsEventResponse(
                 analytics_event=unmarshal_json_response(
                     Optional[shared.AnalyticsEvent], http_res
                 ),
@@ -760,18 +758,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_calendar_event2(
+    def get_calendar_event(
         self,
         *,
         request: Union[
-            operations.GetCalendarEvent2Request,
-            operations.GetCalendarEvent2RequestTypedDict,
+            operations.GetCalendarEventRequest,
+            operations.GetCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCalendarEvent2Response:
+    ) -> operations.GetCalendarEventResponse:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -791,8 +789,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCalendarEvent2Request)
-        request = cast(operations.GetCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.GetCalendarEventRequest)
+        request = cast(operations.GetCalendarEventRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -823,7 +821,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCalendarEvent2",
+                operation_id="getCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -835,7 +833,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCalendarEvent2Response(
+            return operations.GetCalendarEventResponse(
                 calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
@@ -852,18 +850,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_calendar_event2_async(
+    async def get_calendar_event_async(
         self,
         *,
         request: Union[
-            operations.GetCalendarEvent2Request,
-            operations.GetCalendarEvent2RequestTypedDict,
+            operations.GetCalendarEventRequest,
+            operations.GetCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCalendarEvent2Response:
+    ) -> operations.GetCalendarEventResponse:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -883,8 +881,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCalendarEvent2Request)
-        request = cast(operations.GetCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.GetCalendarEventRequest)
+        request = cast(operations.GetCalendarEventRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -915,7 +913,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCalendarEvent2",
+                operation_id="getCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -927,7 +925,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCalendarEvent2Response(
+            return operations.GetCalendarEventResponse(
                 calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
@@ -944,17 +942,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_clubs_event2(
+    def get_clubs_event(
         self,
         *,
         request: Union[
-            operations.GetClubsEvent2Request, operations.GetClubsEvent2RequestTypedDict
+            operations.GetClubsEventRequest, operations.GetClubsEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsEvent2Response:
+    ) -> operations.GetClubsEventResponse:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -974,8 +972,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsEvent2Request)
-        request = cast(operations.GetClubsEvent2Request, request)
+            request = utils.unmarshal(request, operations.GetClubsEventRequest)
+        request = cast(operations.GetClubsEventRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1006,7 +1004,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsEvent2",
+                operation_id="getClubsEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["clubs", "event"],
@@ -1018,7 +1016,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsEvent2Response(
+            return operations.GetClubsEventResponse(
                 clubs_event=unmarshal_json_response(
                     Optional[shared.ClubsEvent], http_res
                 ),
@@ -1035,17 +1033,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_clubs_event2_async(
+    async def get_clubs_event_async(
         self,
         *,
         request: Union[
-            operations.GetClubsEvent2Request, operations.GetClubsEvent2RequestTypedDict
+            operations.GetClubsEventRequest, operations.GetClubsEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetClubsEvent2Response:
+    ) -> operations.GetClubsEventResponse:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -1065,8 +1063,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetClubsEvent2Request)
-        request = cast(operations.GetClubsEvent2Request, request)
+            request = utils.unmarshal(request, operations.GetClubsEventRequest)
+        request = cast(operations.GetClubsEventRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1097,7 +1095,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getClubsEvent2",
+                operation_id="getClubsEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["clubs", "event"],
@@ -1109,7 +1107,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetClubsEvent2Response(
+            return operations.GetClubsEventResponse(
                 clubs_event=unmarshal_json_response(
                     Optional[shared.ClubsEvent], http_res
                 ),
@@ -1126,17 +1124,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_crm_event2(
+    def get_crm_event(
         self,
         *,
         request: Union[
-            operations.GetCrmEvent2Request, operations.GetCrmEvent2RequestTypedDict
+            operations.GetCrmEventRequest, operations.GetCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmEvent2Response:
+    ) -> operations.GetCrmEventResponse:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -1156,8 +1154,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmEvent2Request)
-        request = cast(operations.GetCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.GetCrmEventRequest)
+        request = cast(operations.GetCrmEventRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1188,7 +1186,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmEvent2",
+                operation_id="getCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -1200,7 +1198,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmEvent2Response(
+            return operations.GetCrmEventResponse(
                 crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1215,17 +1213,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_crm_event2_async(
+    async def get_crm_event_async(
         self,
         *,
         request: Union[
-            operations.GetCrmEvent2Request, operations.GetCrmEvent2RequestTypedDict
+            operations.GetCrmEventRequest, operations.GetCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmEvent2Response:
+    ) -> operations.GetCrmEventResponse:
         r"""Retrieve an event
 
         :param request: The request object to send.
@@ -1245,8 +1243,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmEvent2Request)
-        request = cast(operations.GetCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.GetCrmEventRequest)
+        request = cast(operations.GetCrmEventRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1277,7 +1275,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmEvent2",
+                operation_id="getCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -1289,7 +1287,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmEvent2Response(
+            return operations.GetCrmEventResponse(
                 crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1304,18 +1302,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_analytics_events2(
+    def list_analytics_events(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsEvents2Request,
-            operations.ListAnalyticsEvents2RequestTypedDict,
+            operations.ListAnalyticsEventsRequest,
+            operations.ListAnalyticsEventsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsEvents2Response:
+    ) -> operations.ListAnalyticsEventsResponse:
         r"""List all events
 
         :param request: The request object to send.
@@ -1335,8 +1333,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAnalyticsEvents2Request)
-        request = cast(operations.ListAnalyticsEvents2Request, request)
+            request = utils.unmarshal(request, operations.ListAnalyticsEventsRequest)
+        request = cast(operations.ListAnalyticsEventsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1367,7 +1365,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsEvents2",
+                operation_id="listAnalyticsEvents",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "event"],
@@ -1379,7 +1377,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsEvents2Response(
+            return operations.ListAnalyticsEventsResponse(
                 analytics_events=unmarshal_json_response(
                     Optional[List[shared.AnalyticsEvent]], http_res
                 ),
@@ -1396,18 +1394,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_analytics_events2_async(
+    async def list_analytics_events_async(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsEvents2Request,
-            operations.ListAnalyticsEvents2RequestTypedDict,
+            operations.ListAnalyticsEventsRequest,
+            operations.ListAnalyticsEventsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsEvents2Response:
+    ) -> operations.ListAnalyticsEventsResponse:
         r"""List all events
 
         :param request: The request object to send.
@@ -1427,8 +1425,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAnalyticsEvents2Request)
-        request = cast(operations.ListAnalyticsEvents2Request, request)
+            request = utils.unmarshal(request, operations.ListAnalyticsEventsRequest)
+        request = cast(operations.ListAnalyticsEventsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1459,7 +1457,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsEvents2",
+                operation_id="listAnalyticsEvents",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "event"],
@@ -1471,7 +1469,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsEvents2Response(
+            return operations.ListAnalyticsEventsResponse(
                 analytics_events=unmarshal_json_response(
                     Optional[List[shared.AnalyticsEvent]], http_res
                 ),
@@ -1488,18 +1486,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_calendar_events2(
+    def list_calendar_events(
         self,
         *,
         request: Union[
-            operations.ListCalendarEvents2Request,
-            operations.ListCalendarEvents2RequestTypedDict,
+            operations.ListCalendarEventsRequest,
+            operations.ListCalendarEventsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCalendarEvents2Response:
+    ) -> operations.ListCalendarEventsResponse:
         r"""List all events
 
         :param request: The request object to send.
@@ -1519,8 +1517,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCalendarEvents2Request)
-        request = cast(operations.ListCalendarEvents2Request, request)
+            request = utils.unmarshal(request, operations.ListCalendarEventsRequest)
+        request = cast(operations.ListCalendarEventsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1551,7 +1549,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCalendarEvents2",
+                operation_id="listCalendarEvents",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -1563,7 +1561,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCalendarEvents2Response(
+            return operations.ListCalendarEventsResponse(
                 calendar_events=unmarshal_json_response(
                     Optional[List[shared.CalendarEvent]], http_res
                 ),
@@ -1580,18 +1578,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_calendar_events2_async(
+    async def list_calendar_events_async(
         self,
         *,
         request: Union[
-            operations.ListCalendarEvents2Request,
-            operations.ListCalendarEvents2RequestTypedDict,
+            operations.ListCalendarEventsRequest,
+            operations.ListCalendarEventsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCalendarEvents2Response:
+    ) -> operations.ListCalendarEventsResponse:
         r"""List all events
 
         :param request: The request object to send.
@@ -1611,8 +1609,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCalendarEvents2Request)
-        request = cast(operations.ListCalendarEvents2Request, request)
+            request = utils.unmarshal(request, operations.ListCalendarEventsRequest)
+        request = cast(operations.ListCalendarEventsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1643,7 +1641,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCalendarEvents2",
+                operation_id="listCalendarEvents",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -1655,7 +1653,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCalendarEvents2Response(
+            return operations.ListCalendarEventsResponse(
                 calendar_events=unmarshal_json_response(
                     Optional[List[shared.CalendarEvent]], http_res
                 ),
@@ -1672,18 +1670,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_clubs_events2(
+    def list_clubs_events(
         self,
         *,
         request: Union[
-            operations.ListClubsEvents2Request,
-            operations.ListClubsEvents2RequestTypedDict,
+            operations.ListClubsEventsRequest,
+            operations.ListClubsEventsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsEvents2Response:
+    ) -> operations.ListClubsEventsResponse:
         r"""List all events
 
         :param request: The request object to send.
@@ -1703,8 +1701,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsEvents2Request)
-        request = cast(operations.ListClubsEvents2Request, request)
+            request = utils.unmarshal(request, operations.ListClubsEventsRequest)
+        request = cast(operations.ListClubsEventsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1735,7 +1733,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsEvents2",
+                operation_id="listClubsEvents",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["clubs", "event"],
@@ -1747,7 +1745,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsEvents2Response(
+            return operations.ListClubsEventsResponse(
                 clubs_events=unmarshal_json_response(
                     Optional[List[shared.ClubsEvent]], http_res
                 ),
@@ -1764,18 +1762,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_clubs_events2_async(
+    async def list_clubs_events_async(
         self,
         *,
         request: Union[
-            operations.ListClubsEvents2Request,
-            operations.ListClubsEvents2RequestTypedDict,
+            operations.ListClubsEventsRequest,
+            operations.ListClubsEventsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListClubsEvents2Response:
+    ) -> operations.ListClubsEventsResponse:
         r"""List all events
 
         :param request: The request object to send.
@@ -1795,8 +1793,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListClubsEvents2Request)
-        request = cast(operations.ListClubsEvents2Request, request)
+            request = utils.unmarshal(request, operations.ListClubsEventsRequest)
+        request = cast(operations.ListClubsEventsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1827,7 +1825,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listClubsEvents2",
+                operation_id="listClubsEvents",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["clubs", "event"],
@@ -1839,7 +1837,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListClubsEvents2Response(
+            return operations.ListClubsEventsResponse(
                 clubs_events=unmarshal_json_response(
                     Optional[List[shared.ClubsEvent]], http_res
                 ),
@@ -1856,17 +1854,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_crm_events2(
+    def list_crm_events(
         self,
         *,
         request: Union[
-            operations.ListCrmEvents2Request, operations.ListCrmEvents2RequestTypedDict
+            operations.ListCrmEventsRequest, operations.ListCrmEventsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmEvents2Response:
+    ) -> operations.ListCrmEventsResponse:
         r"""List all events
 
         :param request: The request object to send.
@@ -1886,8 +1884,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmEvents2Request)
-        request = cast(operations.ListCrmEvents2Request, request)
+            request = utils.unmarshal(request, operations.ListCrmEventsRequest)
+        request = cast(operations.ListCrmEventsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1918,7 +1916,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmEvents2",
+                operation_id="listCrmEvents",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -1930,7 +1928,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmEvents2Response(
+            return operations.ListCrmEventsResponse(
                 crm_events=unmarshal_json_response(
                     Optional[List[shared.CrmEvent]], http_res
                 ),
@@ -1947,17 +1945,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_crm_events2_async(
+    async def list_crm_events_async(
         self,
         *,
         request: Union[
-            operations.ListCrmEvents2Request, operations.ListCrmEvents2RequestTypedDict
+            operations.ListCrmEventsRequest, operations.ListCrmEventsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmEvents2Response:
+    ) -> operations.ListCrmEventsResponse:
         r"""List all events
 
         :param request: The request object to send.
@@ -1977,8 +1975,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmEvents2Request)
-        request = cast(operations.ListCrmEvents2Request, request)
+            request = utils.unmarshal(request, operations.ListCrmEventsRequest)
+        request = cast(operations.ListCrmEventsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2009,7 +2007,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmEvents2",
+                operation_id="listCrmEvents",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -2021,7 +2019,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmEvents2Response(
+            return operations.ListCrmEventsResponse(
                 crm_events=unmarshal_json_response(
                     Optional[List[shared.CrmEvent]], http_res
                 ),
@@ -2038,18 +2036,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_calendar_event2(
+    def patch_calendar_event(
         self,
         *,
         request: Union[
-            operations.PatchCalendarEvent2Request,
-            operations.PatchCalendarEvent2RequestTypedDict,
+            operations.PatchCalendarEventRequest,
+            operations.PatchCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCalendarEvent2Response:
+    ) -> operations.PatchCalendarEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -2069,8 +2067,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCalendarEvent2Request)
-        request = cast(operations.PatchCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.PatchCalendarEventRequest)
+        request = cast(operations.PatchCalendarEventRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2104,7 +2102,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCalendarEvent2",
+                operation_id="patchCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -2116,7 +2114,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCalendarEvent2Response(
+            return operations.PatchCalendarEventResponse(
                 calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
@@ -2133,18 +2131,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_calendar_event2_async(
+    async def patch_calendar_event_async(
         self,
         *,
         request: Union[
-            operations.PatchCalendarEvent2Request,
-            operations.PatchCalendarEvent2RequestTypedDict,
+            operations.PatchCalendarEventRequest,
+            operations.PatchCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCalendarEvent2Response:
+    ) -> operations.PatchCalendarEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -2164,8 +2162,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCalendarEvent2Request)
-        request = cast(operations.PatchCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.PatchCalendarEventRequest)
+        request = cast(operations.PatchCalendarEventRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2199,7 +2197,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCalendarEvent2",
+                operation_id="patchCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -2211,7 +2209,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCalendarEvent2Response(
+            return operations.PatchCalendarEventResponse(
                 calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
@@ -2228,17 +2226,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_crm_event2(
+    def patch_crm_event(
         self,
         *,
         request: Union[
-            operations.PatchCrmEvent2Request, operations.PatchCrmEvent2RequestTypedDict
+            operations.PatchCrmEventRequest, operations.PatchCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmEvent2Response:
+    ) -> operations.PatchCrmEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -2258,8 +2256,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmEvent2Request)
-        request = cast(operations.PatchCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.PatchCrmEventRequest)
+        request = cast(operations.PatchCrmEventRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2293,7 +2291,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmEvent2",
+                operation_id="patchCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -2305,7 +2303,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmEvent2Response(
+            return operations.PatchCrmEventResponse(
                 crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2320,17 +2318,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_crm_event2_async(
+    async def patch_crm_event_async(
         self,
         *,
         request: Union[
-            operations.PatchCrmEvent2Request, operations.PatchCrmEvent2RequestTypedDict
+            operations.PatchCrmEventRequest, operations.PatchCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmEvent2Response:
+    ) -> operations.PatchCrmEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -2350,8 +2348,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmEvent2Request)
-        request = cast(operations.PatchCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.PatchCrmEventRequest)
+        request = cast(operations.PatchCrmEventRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2385,7 +2383,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmEvent2",
+                operation_id="patchCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -2397,7 +2395,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmEvent2Response(
+            return operations.PatchCrmEventResponse(
                 crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2412,18 +2410,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_messaging_event2(
+    def patch_messaging_event(
         self,
         *,
         request: Union[
-            operations.PatchMessagingEvent2Request,
-            operations.PatchMessagingEvent2RequestTypedDict,
+            operations.PatchMessagingEventRequest,
+            operations.PatchMessagingEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMessagingEvent2Response:
+    ) -> operations.PatchMessagingEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -2443,8 +2441,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMessagingEvent2Request)
-        request = cast(operations.PatchMessagingEvent2Request, request)
+            request = utils.unmarshal(request, operations.PatchMessagingEventRequest)
+        request = cast(operations.PatchMessagingEventRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2478,7 +2476,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMessagingEvent2",
+                operation_id="patchMessagingEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "event"],
@@ -2490,7 +2488,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMessagingEvent2Response(
+            return operations.PatchMessagingEventResponse(
                 messaging_event=unmarshal_json_response(
                     Optional[shared.MessagingEvent], http_res
                 ),
@@ -2507,18 +2505,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_messaging_event2_async(
+    async def patch_messaging_event_async(
         self,
         *,
         request: Union[
-            operations.PatchMessagingEvent2Request,
-            operations.PatchMessagingEvent2RequestTypedDict,
+            operations.PatchMessagingEventRequest,
+            operations.PatchMessagingEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMessagingEvent2Response:
+    ) -> operations.PatchMessagingEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -2538,8 +2536,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMessagingEvent2Request)
-        request = cast(operations.PatchMessagingEvent2Request, request)
+            request = utils.unmarshal(request, operations.PatchMessagingEventRequest)
+        request = cast(operations.PatchMessagingEventRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2573,7 +2571,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMessagingEvent2",
+                operation_id="patchMessagingEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "event"],
@@ -2585,7 +2583,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMessagingEvent2Response(
+            return operations.PatchMessagingEventResponse(
                 messaging_event=unmarshal_json_response(
                     Optional[shared.MessagingEvent], http_res
                 ),
@@ -2602,18 +2600,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_calendar_event2(
+    def remove_calendar_event(
         self,
         *,
         request: Union[
-            operations.RemoveCalendarEvent2Request,
-            operations.RemoveCalendarEvent2RequestTypedDict,
+            operations.RemoveCalendarEventRequest,
+            operations.RemoveCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCalendarEvent2Response:
+    ) -> operations.RemoveCalendarEventResponse:
         r"""Remove an event
 
         :param request: The request object to send.
@@ -2633,8 +2631,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCalendarEvent2Request)
-        request = cast(operations.RemoveCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCalendarEventRequest)
+        request = cast(operations.RemoveCalendarEventRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2665,7 +2663,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCalendarEvent2",
+                operation_id="removeCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -2677,7 +2675,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCalendarEvent2Response(
+            return operations.RemoveCalendarEventResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2690,7 +2688,7 @@ class Event(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCalendarEvent2Response(
+            return operations.RemoveCalendarEventResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2699,18 +2697,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_calendar_event2_async(
+    async def remove_calendar_event_async(
         self,
         *,
         request: Union[
-            operations.RemoveCalendarEvent2Request,
-            operations.RemoveCalendarEvent2RequestTypedDict,
+            operations.RemoveCalendarEventRequest,
+            operations.RemoveCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCalendarEvent2Response:
+    ) -> operations.RemoveCalendarEventResponse:
         r"""Remove an event
 
         :param request: The request object to send.
@@ -2730,8 +2728,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCalendarEvent2Request)
-        request = cast(operations.RemoveCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCalendarEventRequest)
+        request = cast(operations.RemoveCalendarEventRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2762,7 +2760,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCalendarEvent2",
+                operation_id="removeCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -2774,7 +2772,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCalendarEvent2Response(
+            return operations.RemoveCalendarEventResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2787,7 +2785,7 @@ class Event(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCalendarEvent2Response(
+            return operations.RemoveCalendarEventResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2796,18 +2794,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_crm_event2(
+    def remove_crm_event(
         self,
         *,
         request: Union[
-            operations.RemoveCrmEvent2Request,
-            operations.RemoveCrmEvent2RequestTypedDict,
+            operations.RemoveCrmEventRequest, operations.RemoveCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmEvent2Response:
+    ) -> operations.RemoveCrmEventResponse:
         r"""Remove an event
 
         :param request: The request object to send.
@@ -2827,8 +2824,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmEvent2Request)
-        request = cast(operations.RemoveCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCrmEventRequest)
+        request = cast(operations.RemoveCrmEventRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2859,7 +2856,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmEvent2",
+                operation_id="removeCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -2871,7 +2868,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmEvent2Response(
+            return operations.RemoveCrmEventResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2884,7 +2881,7 @@ class Event(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmEvent2Response(
+            return operations.RemoveCrmEventResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2893,18 +2890,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_crm_event2_async(
+    async def remove_crm_event_async(
         self,
         *,
         request: Union[
-            operations.RemoveCrmEvent2Request,
-            operations.RemoveCrmEvent2RequestTypedDict,
+            operations.RemoveCrmEventRequest, operations.RemoveCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmEvent2Response:
+    ) -> operations.RemoveCrmEventResponse:
         r"""Remove an event
 
         :param request: The request object to send.
@@ -2924,8 +2920,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmEvent2Request)
-        request = cast(operations.RemoveCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCrmEventRequest)
+        request = cast(operations.RemoveCrmEventRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2956,7 +2952,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmEvent2",
+                operation_id="removeCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -2968,7 +2964,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmEvent2Response(
+            return operations.RemoveCrmEventResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2981,7 +2977,7 @@ class Event(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmEvent2Response(
+            return operations.RemoveCrmEventResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2990,18 +2986,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_calendar_event2(
+    def update_calendar_event(
         self,
         *,
         request: Union[
-            operations.UpdateCalendarEvent2Request,
-            operations.UpdateCalendarEvent2RequestTypedDict,
+            operations.UpdateCalendarEventRequest,
+            operations.UpdateCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCalendarEvent2Response:
+    ) -> operations.UpdateCalendarEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -3021,8 +3017,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCalendarEvent2Request)
-        request = cast(operations.UpdateCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCalendarEventRequest)
+        request = cast(operations.UpdateCalendarEventRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3056,7 +3052,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCalendarEvent2",
+                operation_id="updateCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -3068,7 +3064,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCalendarEvent2Response(
+            return operations.UpdateCalendarEventResponse(
                 calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
@@ -3085,18 +3081,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_calendar_event2_async(
+    async def update_calendar_event_async(
         self,
         *,
         request: Union[
-            operations.UpdateCalendarEvent2Request,
-            operations.UpdateCalendarEvent2RequestTypedDict,
+            operations.UpdateCalendarEventRequest,
+            operations.UpdateCalendarEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCalendarEvent2Response:
+    ) -> operations.UpdateCalendarEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -3116,8 +3112,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCalendarEvent2Request)
-        request = cast(operations.UpdateCalendarEvent2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCalendarEventRequest)
+        request = cast(operations.UpdateCalendarEventRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3151,7 +3147,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCalendarEvent2",
+                operation_id="updateCalendarEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "event"],
@@ -3163,7 +3159,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCalendarEvent2Response(
+            return operations.UpdateCalendarEventResponse(
                 calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
@@ -3180,18 +3176,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_crm_event2(
+    def update_crm_event(
         self,
         *,
         request: Union[
-            operations.UpdateCrmEvent2Request,
-            operations.UpdateCrmEvent2RequestTypedDict,
+            operations.UpdateCrmEventRequest, operations.UpdateCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmEvent2Response:
+    ) -> operations.UpdateCrmEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -3211,8 +3206,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmEvent2Request)
-        request = cast(operations.UpdateCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCrmEventRequest)
+        request = cast(operations.UpdateCrmEventRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3246,7 +3241,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmEvent2",
+                operation_id="updateCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -3258,7 +3253,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmEvent2Response(
+            return operations.UpdateCrmEventResponse(
                 crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3273,18 +3268,17 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_crm_event2_async(
+    async def update_crm_event_async(
         self,
         *,
         request: Union[
-            operations.UpdateCrmEvent2Request,
-            operations.UpdateCrmEvent2RequestTypedDict,
+            operations.UpdateCrmEventRequest, operations.UpdateCrmEventRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmEvent2Response:
+    ) -> operations.UpdateCrmEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -3304,8 +3298,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmEvent2Request)
-        request = cast(operations.UpdateCrmEvent2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCrmEventRequest)
+        request = cast(operations.UpdateCrmEventRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3339,7 +3333,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmEvent2",
+                operation_id="updateCrmEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "event"],
@@ -3351,7 +3345,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmEvent2Response(
+            return operations.UpdateCrmEventResponse(
                 crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -3366,18 +3360,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_messaging_event2(
+    def update_messaging_event(
         self,
         *,
         request: Union[
-            operations.UpdateMessagingEvent2Request,
-            operations.UpdateMessagingEvent2RequestTypedDict,
+            operations.UpdateMessagingEventRequest,
+            operations.UpdateMessagingEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMessagingEvent2Response:
+    ) -> operations.UpdateMessagingEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -3397,8 +3391,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateMessagingEvent2Request)
-        request = cast(operations.UpdateMessagingEvent2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMessagingEventRequest)
+        request = cast(operations.UpdateMessagingEventRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3432,7 +3426,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMessagingEvent2",
+                operation_id="updateMessagingEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "event"],
@@ -3444,7 +3438,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMessagingEvent2Response(
+            return operations.UpdateMessagingEventResponse(
                 messaging_event=unmarshal_json_response(
                     Optional[shared.MessagingEvent], http_res
                 ),
@@ -3461,18 +3455,18 @@ class Event(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_messaging_event2_async(
+    async def update_messaging_event_async(
         self,
         *,
         request: Union[
-            operations.UpdateMessagingEvent2Request,
-            operations.UpdateMessagingEvent2RequestTypedDict,
+            operations.UpdateMessagingEventRequest,
+            operations.UpdateMessagingEventRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMessagingEvent2Response:
+    ) -> operations.UpdateMessagingEventResponse:
         r"""Update an event
 
         :param request: The request object to send.
@@ -3492,8 +3486,8 @@ class Event(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateMessagingEvent2Request)
-        request = cast(operations.UpdateMessagingEvent2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMessagingEventRequest)
+        request = cast(operations.UpdateMessagingEventRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3527,7 +3521,7 @@ class Event(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMessagingEvent2",
+                operation_id="updateMessagingEvent",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "event"],
@@ -3539,7 +3533,7 @@ class Event(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMessagingEvent2Response(
+            return operations.UpdateMessagingEventResponse(
                 messaging_event=unmarshal_json_response(
                     Optional[shared.MessagingEvent], http_res
                 ),

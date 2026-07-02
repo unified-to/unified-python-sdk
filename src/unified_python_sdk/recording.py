@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Recording(BaseSDK):
-    def create_uc_recording2(
+    def create_uc_recording(
         self,
         *,
         request: Union[
-            operations.CreateUcRecording2Request,
-            operations.CreateUcRecording2RequestTypedDict,
+            operations.CreateUcRecordingRequest,
+            operations.CreateUcRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcRecording2Response:
+    ) -> operations.CreateUcRecordingResponse:
         r"""Create a recording
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcRecording2Request)
-        request = cast(operations.CreateUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.CreateUcRecordingRequest)
+        request = cast(operations.CreateUcRecordingRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcRecording2",
+                operation_id="createUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -88,7 +88,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcRecording2Response(
+            return operations.CreateUcRecordingResponse(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -105,18 +105,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_uc_recording2_async(
+    async def create_uc_recording_async(
         self,
         *,
         request: Union[
-            operations.CreateUcRecording2Request,
-            operations.CreateUcRecording2RequestTypedDict,
+            operations.CreateUcRecordingRequest,
+            operations.CreateUcRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcRecording2Response:
+    ) -> operations.CreateUcRecordingResponse:
         r"""Create a recording
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcRecording2Request)
-        request = cast(operations.CreateUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.CreateUcRecordingRequest)
+        request = cast(operations.CreateUcRecordingRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcRecording2",
+                operation_id="createUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -183,7 +183,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcRecording2Response(
+            return operations.CreateUcRecordingResponse(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -200,18 +200,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_calendar_recording2(
+    def get_calendar_recording(
         self,
         *,
         request: Union[
-            operations.GetCalendarRecording2Request,
-            operations.GetCalendarRecording2RequestTypedDict,
+            operations.GetCalendarRecordingRequest,
+            operations.GetCalendarRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCalendarRecording2Response:
+    ) -> operations.GetCalendarRecordingResponse:
         r"""Retrieve a recording
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCalendarRecording2Request)
-        request = cast(operations.GetCalendarRecording2Request, request)
+            request = utils.unmarshal(request, operations.GetCalendarRecordingRequest)
+        request = cast(operations.GetCalendarRecordingRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCalendarRecording2",
+                operation_id="getCalendarRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "recording"],
@@ -275,7 +275,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCalendarRecording2Response(
+            return operations.GetCalendarRecordingResponse(
                 calendar_recording=unmarshal_json_response(
                     Optional[shared.CalendarRecording], http_res
                 ),
@@ -292,18 +292,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_calendar_recording2_async(
+    async def get_calendar_recording_async(
         self,
         *,
         request: Union[
-            operations.GetCalendarRecording2Request,
-            operations.GetCalendarRecording2RequestTypedDict,
+            operations.GetCalendarRecordingRequest,
+            operations.GetCalendarRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCalendarRecording2Response:
+    ) -> operations.GetCalendarRecordingResponse:
         r"""Retrieve a recording
 
         :param request: The request object to send.
@@ -323,8 +323,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCalendarRecording2Request)
-        request = cast(operations.GetCalendarRecording2Request, request)
+            request = utils.unmarshal(request, operations.GetCalendarRecordingRequest)
+        request = cast(operations.GetCalendarRecordingRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +355,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCalendarRecording2",
+                operation_id="getCalendarRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "recording"],
@@ -367,7 +367,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCalendarRecording2Response(
+            return operations.GetCalendarRecordingResponse(
                 calendar_recording=unmarshal_json_response(
                     Optional[shared.CalendarRecording], http_res
                 ),
@@ -384,18 +384,17 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_uc_recording2(
+    def get_uc_recording(
         self,
         *,
         request: Union[
-            operations.GetUcRecording2Request,
-            operations.GetUcRecording2RequestTypedDict,
+            operations.GetUcRecordingRequest, operations.GetUcRecordingRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcRecording2Response:
+    ) -> operations.GetUcRecordingResponse:
         r"""Retrieve a recording
 
         :param request: The request object to send.
@@ -415,8 +414,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcRecording2Request)
-        request = cast(operations.GetUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.GetUcRecordingRequest)
+        request = cast(operations.GetUcRecordingRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +446,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcRecording2",
+                operation_id="getUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -459,7 +458,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcRecording2Response(
+            return operations.GetUcRecordingResponse(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -476,18 +475,17 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_uc_recording2_async(
+    async def get_uc_recording_async(
         self,
         *,
         request: Union[
-            operations.GetUcRecording2Request,
-            operations.GetUcRecording2RequestTypedDict,
+            operations.GetUcRecordingRequest, operations.GetUcRecordingRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcRecording2Response:
+    ) -> operations.GetUcRecordingResponse:
         r"""Retrieve a recording
 
         :param request: The request object to send.
@@ -507,8 +505,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcRecording2Request)
-        request = cast(operations.GetUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.GetUcRecordingRequest)
+        request = cast(operations.GetUcRecordingRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +537,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcRecording2",
+                operation_id="getUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -551,7 +549,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcRecording2Response(
+            return operations.GetUcRecordingResponse(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -568,18 +566,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_calendar_recordings2(
+    def list_calendar_recordings(
         self,
         *,
         request: Union[
-            operations.ListCalendarRecordings2Request,
-            operations.ListCalendarRecordings2RequestTypedDict,
+            operations.ListCalendarRecordingsRequest,
+            operations.ListCalendarRecordingsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCalendarRecordings2Response:
+    ) -> operations.ListCalendarRecordingsResponse:
         r"""List all recordings
 
         :param request: The request object to send.
@@ -599,10 +597,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListCalendarRecordings2Request
-            )
-        request = cast(operations.ListCalendarRecordings2Request, request)
+            request = utils.unmarshal(request, operations.ListCalendarRecordingsRequest)
+        request = cast(operations.ListCalendarRecordingsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -633,7 +629,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCalendarRecordings2",
+                operation_id="listCalendarRecordings",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "recording"],
@@ -645,7 +641,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCalendarRecordings2Response(
+            return operations.ListCalendarRecordingsResponse(
                 calendar_recordings=unmarshal_json_response(
                     Optional[List[shared.CalendarRecording]], http_res
                 ),
@@ -662,18 +658,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_calendar_recordings2_async(
+    async def list_calendar_recordings_async(
         self,
         *,
         request: Union[
-            operations.ListCalendarRecordings2Request,
-            operations.ListCalendarRecordings2RequestTypedDict,
+            operations.ListCalendarRecordingsRequest,
+            operations.ListCalendarRecordingsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCalendarRecordings2Response:
+    ) -> operations.ListCalendarRecordingsResponse:
         r"""List all recordings
 
         :param request: The request object to send.
@@ -693,10 +689,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListCalendarRecordings2Request
-            )
-        request = cast(operations.ListCalendarRecordings2Request, request)
+            request = utils.unmarshal(request, operations.ListCalendarRecordingsRequest)
+        request = cast(operations.ListCalendarRecordingsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -727,7 +721,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCalendarRecordings2",
+                operation_id="listCalendarRecordings",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "recording"],
@@ -739,7 +733,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCalendarRecordings2Response(
+            return operations.ListCalendarRecordingsResponse(
                 calendar_recordings=unmarshal_json_response(
                     Optional[List[shared.CalendarRecording]], http_res
                 ),
@@ -756,18 +750,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_uc_recordings2(
+    def list_uc_recordings(
         self,
         *,
         request: Union[
-            operations.ListUcRecordings2Request,
-            operations.ListUcRecordings2RequestTypedDict,
+            operations.ListUcRecordingsRequest,
+            operations.ListUcRecordingsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcRecordings2Response:
+    ) -> operations.ListUcRecordingsResponse:
         r"""List all recordings
 
         :param request: The request object to send.
@@ -787,8 +781,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcRecordings2Request)
-        request = cast(operations.ListUcRecordings2Request, request)
+            request = utils.unmarshal(request, operations.ListUcRecordingsRequest)
+        request = cast(operations.ListUcRecordingsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -819,7 +813,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcRecordings2",
+                operation_id="listUcRecordings",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -831,7 +825,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcRecordings2Response(
+            return operations.ListUcRecordingsResponse(
                 uc_recordings=unmarshal_json_response(
                     Optional[List[shared.UcRecording]], http_res
                 ),
@@ -848,18 +842,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_uc_recordings2_async(
+    async def list_uc_recordings_async(
         self,
         *,
         request: Union[
-            operations.ListUcRecordings2Request,
-            operations.ListUcRecordings2RequestTypedDict,
+            operations.ListUcRecordingsRequest,
+            operations.ListUcRecordingsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcRecordings2Response:
+    ) -> operations.ListUcRecordingsResponse:
         r"""List all recordings
 
         :param request: The request object to send.
@@ -879,8 +873,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcRecordings2Request)
-        request = cast(operations.ListUcRecordings2Request, request)
+            request = utils.unmarshal(request, operations.ListUcRecordingsRequest)
+        request = cast(operations.ListUcRecordingsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -911,7 +905,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcRecordings2",
+                operation_id="listUcRecordings",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -923,7 +917,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcRecordings2Response(
+            return operations.ListUcRecordingsResponse(
                 uc_recordings=unmarshal_json_response(
                     Optional[List[shared.UcRecording]], http_res
                 ),
@@ -940,18 +934,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_uc_recording2(
+    def patch_uc_recording(
         self,
         *,
         request: Union[
-            operations.PatchUcRecording2Request,
-            operations.PatchUcRecording2RequestTypedDict,
+            operations.PatchUcRecordingRequest,
+            operations.PatchUcRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcRecording2Response:
+    ) -> operations.PatchUcRecordingResponse:
         r"""Update a recording
 
         :param request: The request object to send.
@@ -971,8 +965,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcRecording2Request)
-        request = cast(operations.PatchUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.PatchUcRecordingRequest)
+        request = cast(operations.PatchUcRecordingRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1006,7 +1000,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcRecording2",
+                operation_id="patchUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -1018,7 +1012,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcRecording2Response(
+            return operations.PatchUcRecordingResponse(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -1035,18 +1029,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_uc_recording2_async(
+    async def patch_uc_recording_async(
         self,
         *,
         request: Union[
-            operations.PatchUcRecording2Request,
-            operations.PatchUcRecording2RequestTypedDict,
+            operations.PatchUcRecordingRequest,
+            operations.PatchUcRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcRecording2Response:
+    ) -> operations.PatchUcRecordingResponse:
         r"""Update a recording
 
         :param request: The request object to send.
@@ -1066,8 +1060,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcRecording2Request)
-        request = cast(operations.PatchUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.PatchUcRecordingRequest)
+        request = cast(operations.PatchUcRecordingRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1101,7 +1095,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcRecording2",
+                operation_id="patchUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -1113,7 +1107,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcRecording2Response(
+            return operations.PatchUcRecordingResponse(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -1130,18 +1124,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_uc_recording2(
+    def remove_uc_recording(
         self,
         *,
         request: Union[
-            operations.RemoveUcRecording2Request,
-            operations.RemoveUcRecording2RequestTypedDict,
+            operations.RemoveUcRecordingRequest,
+            operations.RemoveUcRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcRecording2Response:
+    ) -> operations.RemoveUcRecordingResponse:
         r"""Remove a recording
 
         :param request: The request object to send.
@@ -1161,8 +1155,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcRecording2Request)
-        request = cast(operations.RemoveUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.RemoveUcRecordingRequest)
+        request = cast(operations.RemoveUcRecordingRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -1193,7 +1187,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcRecording2",
+                operation_id="removeUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -1205,7 +1199,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcRecording2Response(
+            return operations.RemoveUcRecordingResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1218,7 +1212,7 @@ class Recording(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcRecording2Response(
+            return operations.RemoveUcRecordingResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1227,18 +1221,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_uc_recording2_async(
+    async def remove_uc_recording_async(
         self,
         *,
         request: Union[
-            operations.RemoveUcRecording2Request,
-            operations.RemoveUcRecording2RequestTypedDict,
+            operations.RemoveUcRecordingRequest,
+            operations.RemoveUcRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcRecording2Response:
+    ) -> operations.RemoveUcRecordingResponse:
         r"""Remove a recording
 
         :param request: The request object to send.
@@ -1258,8 +1252,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcRecording2Request)
-        request = cast(operations.RemoveUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.RemoveUcRecordingRequest)
+        request = cast(operations.RemoveUcRecordingRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -1290,7 +1284,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcRecording2",
+                operation_id="removeUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -1302,7 +1296,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcRecording2Response(
+            return operations.RemoveUcRecordingResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1315,7 +1309,7 @@ class Recording(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcRecording2Response(
+            return operations.RemoveUcRecordingResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1324,18 +1318,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_uc_recording2(
+    def update_uc_recording(
         self,
         *,
         request: Union[
-            operations.UpdateUcRecording2Request,
-            operations.UpdateUcRecording2RequestTypedDict,
+            operations.UpdateUcRecordingRequest,
+            operations.UpdateUcRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcRecording2Response:
+    ) -> operations.UpdateUcRecordingResponse:
         r"""Update a recording
 
         :param request: The request object to send.
@@ -1355,8 +1349,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcRecording2Request)
-        request = cast(operations.UpdateUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.UpdateUcRecordingRequest)
+        request = cast(operations.UpdateUcRecordingRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1390,7 +1384,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcRecording2",
+                operation_id="updateUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -1402,7 +1396,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcRecording2Response(
+            return operations.UpdateUcRecordingResponse(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
@@ -1419,18 +1413,18 @@ class Recording(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_uc_recording2_async(
+    async def update_uc_recording_async(
         self,
         *,
         request: Union[
-            operations.UpdateUcRecording2Request,
-            operations.UpdateUcRecording2RequestTypedDict,
+            operations.UpdateUcRecordingRequest,
+            operations.UpdateUcRecordingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcRecording2Response:
+    ) -> operations.UpdateUcRecordingResponse:
         r"""Update a recording
 
         :param request: The request object to send.
@@ -1450,8 +1444,8 @@ class Recording(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcRecording2Request)
-        request = cast(operations.UpdateUcRecording2Request, request)
+            request = utils.unmarshal(request, operations.UpdateUcRecordingRequest)
+        request = cast(operations.UpdateUcRecordingRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1485,7 +1479,7 @@ class Recording(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcRecording2",
+                operation_id="updateUcRecording",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "recording"],
@@ -1497,7 +1491,7 @@ class Recording(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcRecording2Response(
+            return operations.UpdateUcRecordingResponse(
                 uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),

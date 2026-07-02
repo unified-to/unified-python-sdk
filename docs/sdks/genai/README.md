@@ -4,18 +4,18 @@
 
 ### Available Operations
 
-* [create_genai_embedding2](#create_genai_embedding2) - Create an embedding
-* [create_genai_prompt2](#create_genai_prompt2) - Create a prompt
-* [get_genai_model2](#get_genai_model2) - Retrieve a model
-* [list_genai_models2](#list_genai_models2) - List all models
+* [create_genai_embedding](#create_genai_embedding) - Create an embedding
+* [create_genai_prompt](#create_genai_prompt) - Create a prompt
+* [get_genai_model](#get_genai_model) - Retrieve a model
+* [list_genai_models](#list_genai_models) - List all models
 
-## create_genai_embedding2
+## create_genai_embedding
 
 Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createGenaiEmbedding2" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="python" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -27,7 +27,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.genai.create_genai_embedding2(request={
+    res = unified_to.genai.create_genai_embedding(request={
         "genai_embedding": {},
         "connection_id": "<id>",
     })
@@ -41,14 +41,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.CreateGenaiEmbedding2Request](../../models/operations/creategenaiembedding2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreateGenaiEmbeddingRequest](../../models/operations/creategenaiembeddingrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.CreateGenaiEmbedding2Response](../../models/operations/creategenaiembedding2response.md)**
+**[operations.CreateGenaiEmbeddingResponse](../../models/operations/creategenaiembeddingresponse.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_genai_prompt2
+## create_genai_prompt
 
 Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createGenaiPrompt2" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="python" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -74,7 +74,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.genai.create_genai_prompt2(request={
+    res = unified_to.genai.create_genai_prompt(request={
         "genai_prompt": {},
         "connection_id": "<id>",
     })
@@ -88,14 +88,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.CreateGenaiPrompt2Request](../../models/operations/creategenaiprompt2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateGenaiPromptRequest](../../models/operations/creategenaipromptrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
-**[operations.CreateGenaiPrompt2Response](../../models/operations/creategenaiprompt2response.md)**
+**[operations.CreateGenaiPromptResponse](../../models/operations/creategenaipromptresponse.md)**
 
 ### Errors
 
@@ -103,13 +103,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_genai_model2
+## get_genai_model
 
 Retrieve a model
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getGenaiModel2" method="get" path="/genai/{connection_id}/model/{id}" -->
+<!-- UsageSnippet language="python" operationID="getGenaiModel" method="get" path="/genai/{connection_id}/model/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -121,7 +121,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.genai.get_genai_model2(request={
+    res = unified_to.genai.get_genai_model(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -135,14 +135,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetGenaiModel2Request](../../models/operations/getgenaimodel2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetGenaiModelRequest](../../models/operations/getgenaimodelrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
-**[operations.GetGenaiModel2Response](../../models/operations/getgenaimodel2response.md)**
+**[operations.GetGenaiModelResponse](../../models/operations/getgenaimodelresponse.md)**
 
 ### Errors
 
@@ -150,13 +150,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_genai_models2
+## list_genai_models
 
 List all models
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listGenaiModels2" method="get" path="/genai/{connection_id}/model" -->
+<!-- UsageSnippet language="python" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -168,7 +168,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.genai.list_genai_models2(request={
+    res = unified_to.genai.list_genai_models(request={
         "connection_id": "<id>",
     })
 
@@ -181,14 +181,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListGenaiModels2Request](../../models/operations/listgenaimodels2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListGenaiModelsRequest](../../models/operations/listgenaimodelsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
-**[operations.ListGenaiModels2Response](../../models/operations/listgenaimodels2response.md)**
+**[operations.ListGenaiModelsResponse](../../models/operations/listgenaimodelsresponse.md)**
 
 ### Errors
 

@@ -162,6 +162,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.uc import Uc
     from unified_python_sdk.unified import Unified
     from unified_python_sdk.user import User
+    from unified_python_sdk.vendorcredit import Vendorcredit
     from unified_python_sdk.verification import Verification
     from unified_python_sdk.visitor import Visitor
     from unified_python_sdk.webhook import Webhook
@@ -193,6 +194,7 @@ class UnifiedTo(BaseSDK):
     taxrate: "Taxrate"
     transaction: "Transaction"
     trialbalance: "Trialbalance"
+    vendorcredit: "Vendorcredit"
     ads: "Ads"
     ad: "Ad"
     campaign: "Campaign"
@@ -344,6 +346,7 @@ class UnifiedTo(BaseSDK):
         "taxrate": ("unified_python_sdk.taxrate", "Taxrate"),
         "transaction": ("unified_python_sdk.transaction", "Transaction"),
         "trialbalance": ("unified_python_sdk.trialbalance", "Trialbalance"),
+        "vendorcredit": ("unified_python_sdk.vendorcredit", "Vendorcredit"),
         "ads": ("unified_python_sdk.ads", "Ads"),
         "ad": ("unified_python_sdk.ad", "Ad"),
         "campaign": ("unified_python_sdk.campaign", "Campaign"),

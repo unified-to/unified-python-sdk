@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Busy(BaseSDK):
-    def list_calendar_busies2(
+    def list_calendar_busies(
         self,
         *,
         request: Union[
-            operations.ListCalendarBusies2Request,
-            operations.ListCalendarBusies2RequestTypedDict,
+            operations.ListCalendarBusiesRequest,
+            operations.ListCalendarBusiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCalendarBusies2Response:
+    ) -> operations.ListCalendarBusiesResponse:
         r"""List all busies
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Busy(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCalendarBusies2Request)
-        request = cast(operations.ListCalendarBusies2Request, request)
+            request = utils.unmarshal(request, operations.ListCalendarBusiesRequest)
+        request = cast(operations.ListCalendarBusiesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Busy(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCalendarBusies2",
+                operation_id="listCalendarBusies",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "busy"],
@@ -85,7 +85,7 @@ class Busy(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCalendarBusies2Response(
+            return operations.ListCalendarBusiesResponse(
                 calendar_busies=unmarshal_json_response(
                     Optional[List[shared.CalendarBusy]], http_res
                 ),
@@ -102,18 +102,18 @@ class Busy(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_calendar_busies2_async(
+    async def list_calendar_busies_async(
         self,
         *,
         request: Union[
-            operations.ListCalendarBusies2Request,
-            operations.ListCalendarBusies2RequestTypedDict,
+            operations.ListCalendarBusiesRequest,
+            operations.ListCalendarBusiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCalendarBusies2Response:
+    ) -> operations.ListCalendarBusiesResponse:
         r"""List all busies
 
         :param request: The request object to send.
@@ -133,8 +133,8 @@ class Busy(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCalendarBusies2Request)
-        request = cast(operations.ListCalendarBusies2Request, request)
+            request = utils.unmarshal(request, operations.ListCalendarBusiesRequest)
+        request = cast(operations.ListCalendarBusiesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +165,7 @@ class Busy(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCalendarBusies2",
+                operation_id="listCalendarBusies",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["calendar", "busy"],
@@ -177,7 +177,7 @@ class Busy(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCalendarBusies2Response(
+            return operations.ListCalendarBusiesResponse(
                 calendar_busies=unmarshal_json_response(
                     Optional[List[shared.CalendarBusy]], http_res
                 ),

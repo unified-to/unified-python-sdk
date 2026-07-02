@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Bill(BaseSDK):
-    def create_accounting_bill2(
+    def create_accounting_bill(
         self,
         *,
         request: Union[
-            operations.CreateAccountingBill2Request,
-            operations.CreateAccountingBill2RequestTypedDict,
+            operations.CreateAccountingBillRequest,
+            operations.CreateAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingBill2Response:
+    ) -> operations.CreateAccountingBillResponse:
         r"""Create a bill
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAccountingBill2Request)
-        request = cast(operations.CreateAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.CreateAccountingBillRequest)
+        request = cast(operations.CreateAccountingBillRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingBill2",
+                operation_id="createAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -88,7 +88,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingBill2Response(
+            return operations.CreateAccountingBillResponse(
                 accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
@@ -105,18 +105,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_bill2_async(
+    async def create_accounting_bill_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingBill2Request,
-            operations.CreateAccountingBill2RequestTypedDict,
+            operations.CreateAccountingBillRequest,
+            operations.CreateAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingBill2Response:
+    ) -> operations.CreateAccountingBillResponse:
         r"""Create a bill
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAccountingBill2Request)
-        request = cast(operations.CreateAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.CreateAccountingBillRequest)
+        request = cast(operations.CreateAccountingBillRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingBill2",
+                operation_id="createAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -183,7 +183,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingBill2Response(
+            return operations.CreateAccountingBillResponse(
                 accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
@@ -200,18 +200,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_bill2(
+    def get_accounting_bill(
         self,
         *,
         request: Union[
-            operations.GetAccountingBill2Request,
-            operations.GetAccountingBill2RequestTypedDict,
+            operations.GetAccountingBillRequest,
+            operations.GetAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingBill2Response:
+    ) -> operations.GetAccountingBillResponse:
         r"""Retrieve a bill
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingBill2Request)
-        request = cast(operations.GetAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingBillRequest)
+        request = cast(operations.GetAccountingBillRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingBill2",
+                operation_id="getAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -275,7 +275,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingBill2Response(
+            return operations.GetAccountingBillResponse(
                 accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
@@ -292,18 +292,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_bill2_async(
+    async def get_accounting_bill_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingBill2Request,
-            operations.GetAccountingBill2RequestTypedDict,
+            operations.GetAccountingBillRequest,
+            operations.GetAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingBill2Response:
+    ) -> operations.GetAccountingBillResponse:
         r"""Retrieve a bill
 
         :param request: The request object to send.
@@ -323,8 +323,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingBill2Request)
-        request = cast(operations.GetAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingBillRequest)
+        request = cast(operations.GetAccountingBillRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +355,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingBill2",
+                operation_id="getAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -367,7 +367,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingBill2Response(
+            return operations.GetAccountingBillResponse(
                 accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
@@ -384,18 +384,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_bills2(
+    def list_accounting_bills(
         self,
         *,
         request: Union[
-            operations.ListAccountingBills2Request,
-            operations.ListAccountingBills2RequestTypedDict,
+            operations.ListAccountingBillsRequest,
+            operations.ListAccountingBillsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingBills2Response:
+    ) -> operations.ListAccountingBillsResponse:
         r"""List all bills
 
         :param request: The request object to send.
@@ -415,8 +415,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAccountingBills2Request)
-        request = cast(operations.ListAccountingBills2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingBillsRequest)
+        request = cast(operations.ListAccountingBillsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +447,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingBills2",
+                operation_id="listAccountingBills",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -459,7 +459,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingBills2Response(
+            return operations.ListAccountingBillsResponse(
                 accounting_bills=unmarshal_json_response(
                     Optional[List[shared.AccountingBill]], http_res
                 ),
@@ -476,18 +476,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_bills2_async(
+    async def list_accounting_bills_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingBills2Request,
-            operations.ListAccountingBills2RequestTypedDict,
+            operations.ListAccountingBillsRequest,
+            operations.ListAccountingBillsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingBills2Response:
+    ) -> operations.ListAccountingBillsResponse:
         r"""List all bills
 
         :param request: The request object to send.
@@ -507,8 +507,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAccountingBills2Request)
-        request = cast(operations.ListAccountingBills2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingBillsRequest)
+        request = cast(operations.ListAccountingBillsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +539,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingBills2",
+                operation_id="listAccountingBills",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -551,7 +551,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingBills2Response(
+            return operations.ListAccountingBillsResponse(
                 accounting_bills=unmarshal_json_response(
                     Optional[List[shared.AccountingBill]], http_res
                 ),
@@ -568,18 +568,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_bill2(
+    def patch_accounting_bill(
         self,
         *,
         request: Union[
-            operations.PatchAccountingBill2Request,
-            operations.PatchAccountingBill2RequestTypedDict,
+            operations.PatchAccountingBillRequest,
+            operations.PatchAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingBill2Response:
+    ) -> operations.PatchAccountingBillResponse:
         r"""Update a bill
 
         :param request: The request object to send.
@@ -599,8 +599,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAccountingBill2Request)
-        request = cast(operations.PatchAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingBillRequest)
+        request = cast(operations.PatchAccountingBillRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +634,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingBill2",
+                operation_id="patchAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -646,7 +646,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingBill2Response(
+            return operations.PatchAccountingBillResponse(
                 accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
@@ -663,18 +663,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_bill2_async(
+    async def patch_accounting_bill_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingBill2Request,
-            operations.PatchAccountingBill2RequestTypedDict,
+            operations.PatchAccountingBillRequest,
+            operations.PatchAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingBill2Response:
+    ) -> operations.PatchAccountingBillResponse:
         r"""Update a bill
 
         :param request: The request object to send.
@@ -694,8 +694,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAccountingBill2Request)
-        request = cast(operations.PatchAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingBillRequest)
+        request = cast(operations.PatchAccountingBillRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +729,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingBill2",
+                operation_id="patchAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -741,7 +741,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingBill2Response(
+            return operations.PatchAccountingBillResponse(
                 accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
@@ -758,18 +758,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_bill2(
+    def remove_accounting_bill(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingBill2Request,
-            operations.RemoveAccountingBill2RequestTypedDict,
+            operations.RemoveAccountingBillRequest,
+            operations.RemoveAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingBill2Response:
+    ) -> operations.RemoveAccountingBillResponse:
         r"""Remove a bill
 
         :param request: The request object to send.
@@ -789,8 +789,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAccountingBill2Request)
-        request = cast(operations.RemoveAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAccountingBillRequest)
+        request = cast(operations.RemoveAccountingBillRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +821,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingBill2",
+                operation_id="removeAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -833,7 +833,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingBill2Response(
+            return operations.RemoveAccountingBillResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +846,7 @@ class Bill(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingBill2Response(
+            return operations.RemoveAccountingBillResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +855,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_bill2_async(
+    async def remove_accounting_bill_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingBill2Request,
-            operations.RemoveAccountingBill2RequestTypedDict,
+            operations.RemoveAccountingBillRequest,
+            operations.RemoveAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingBill2Response:
+    ) -> operations.RemoveAccountingBillResponse:
         r"""Remove a bill
 
         :param request: The request object to send.
@@ -886,8 +886,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAccountingBill2Request)
-        request = cast(operations.RemoveAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAccountingBillRequest)
+        request = cast(operations.RemoveAccountingBillRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +918,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingBill2",
+                operation_id="removeAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -930,7 +930,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingBill2Response(
+            return operations.RemoveAccountingBillResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +943,7 @@ class Bill(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingBill2Response(
+            return operations.RemoveAccountingBillResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +952,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_bill2(
+    def update_accounting_bill(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingBill2Request,
-            operations.UpdateAccountingBill2RequestTypedDict,
+            operations.UpdateAccountingBillRequest,
+            operations.UpdateAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingBill2Response:
+    ) -> operations.UpdateAccountingBillResponse:
         r"""Update a bill
 
         :param request: The request object to send.
@@ -983,8 +983,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAccountingBill2Request)
-        request = cast(operations.UpdateAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAccountingBillRequest)
+        request = cast(operations.UpdateAccountingBillRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1018,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingBill2",
+                operation_id="updateAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -1030,7 +1030,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingBill2Response(
+            return operations.UpdateAccountingBillResponse(
                 accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
@@ -1047,18 +1047,18 @@ class Bill(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_bill2_async(
+    async def update_accounting_bill_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingBill2Request,
-            operations.UpdateAccountingBill2RequestTypedDict,
+            operations.UpdateAccountingBillRequest,
+            operations.UpdateAccountingBillRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingBill2Response:
+    ) -> operations.UpdateAccountingBillResponse:
         r"""Update a bill
 
         :param request: The request object to send.
@@ -1078,8 +1078,8 @@ class Bill(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAccountingBill2Request)
-        request = cast(operations.UpdateAccountingBill2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAccountingBillRequest)
+        request = cast(operations.UpdateAccountingBillRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1113,7 @@ class Bill(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingBill2",
+                operation_id="updateAccountingBill",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "bill"],
@@ -1125,7 +1125,7 @@ class Bill(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingBill2Response(
+            return operations.UpdateAccountingBillResponse(
                 accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),

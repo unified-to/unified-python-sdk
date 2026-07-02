@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Ats(BaseSDK):
-    def create_ats_activity2(
+    def create_ats_activity(
         self,
         *,
         request: Union[
-            operations.CreateAtsActivity2Request,
-            operations.CreateAtsActivity2RequestTypedDict,
+            operations.CreateAtsActivityRequest,
+            operations.CreateAtsActivityRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsActivity2Response:
+    ) -> operations.CreateAtsActivityResponse:
         r"""Create an activity
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsActivity2Request)
-        request = cast(operations.CreateAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
+        request = cast(operations.CreateAtsActivityRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsActivity2",
+                operation_id="createAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -88,7 +88,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsActivity2Response(
+            return operations.CreateAtsActivityResponse(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -105,18 +105,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_activity2_async(
+    async def create_ats_activity_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsActivity2Request,
-            operations.CreateAtsActivity2RequestTypedDict,
+            operations.CreateAtsActivityRequest,
+            operations.CreateAtsActivityRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsActivity2Response:
+    ) -> operations.CreateAtsActivityResponse:
         r"""Create an activity
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsActivity2Request)
-        request = cast(operations.CreateAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
+        request = cast(operations.CreateAtsActivityRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsActivity2",
+                operation_id="createAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -183,7 +183,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsActivity2Response(
+            return operations.CreateAtsActivityResponse(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -200,18 +200,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ats_application2(
+    def create_ats_application(
         self,
         *,
         request: Union[
-            operations.CreateAtsApplication2Request,
-            operations.CreateAtsApplication2RequestTypedDict,
+            operations.CreateAtsApplicationRequest,
+            operations.CreateAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsApplication2Response:
+    ) -> operations.CreateAtsApplicationResponse:
         r"""Create an application
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsApplication2Request)
-        request = cast(operations.CreateAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsApplicationRequest)
+        request = cast(operations.CreateAtsApplicationRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -266,7 +266,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsApplication2",
+                operation_id="createAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -278,7 +278,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsApplication2Response(
+            return operations.CreateAtsApplicationResponse(
                 ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
@@ -295,18 +295,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_application2_async(
+    async def create_ats_application_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsApplication2Request,
-            operations.CreateAtsApplication2RequestTypedDict,
+            operations.CreateAtsApplicationRequest,
+            operations.CreateAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsApplication2Response:
+    ) -> operations.CreateAtsApplicationResponse:
         r"""Create an application
 
         :param request: The request object to send.
@@ -326,8 +326,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsApplication2Request)
-        request = cast(operations.CreateAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsApplicationRequest)
+        request = cast(operations.CreateAtsApplicationRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -361,7 +361,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsApplication2",
+                operation_id="createAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -373,7 +373,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsApplication2Response(
+            return operations.CreateAtsApplicationResponse(
                 ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
@@ -390,18 +390,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ats_candidate2(
+    def create_ats_candidate(
         self,
         *,
         request: Union[
-            operations.CreateAtsCandidate2Request,
-            operations.CreateAtsCandidate2RequestTypedDict,
+            operations.CreateAtsCandidateRequest,
+            operations.CreateAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsCandidate2Response:
+    ) -> operations.CreateAtsCandidateResponse:
         r"""Create a candidate
 
         :param request: The request object to send.
@@ -421,8 +421,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsCandidate2Request)
-        request = cast(operations.CreateAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsCandidateRequest)
+        request = cast(operations.CreateAtsCandidateRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -456,7 +456,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsCandidate2",
+                operation_id="createAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -468,7 +468,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsCandidate2Response(
+            return operations.CreateAtsCandidateResponse(
                 ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
@@ -485,18 +485,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_candidate2_async(
+    async def create_ats_candidate_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsCandidate2Request,
-            operations.CreateAtsCandidate2RequestTypedDict,
+            operations.CreateAtsCandidateRequest,
+            operations.CreateAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsCandidate2Response:
+    ) -> operations.CreateAtsCandidateResponse:
         r"""Create a candidate
 
         :param request: The request object to send.
@@ -516,8 +516,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsCandidate2Request)
-        request = cast(operations.CreateAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsCandidateRequest)
+        request = cast(operations.CreateAtsCandidateRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -551,7 +551,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsCandidate2",
+                operation_id="createAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -563,7 +563,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsCandidate2Response(
+            return operations.CreateAtsCandidateResponse(
                 ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
@@ -580,18 +580,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ats_company2(
+    def create_ats_company(
         self,
         *,
         request: Union[
-            operations.CreateAtsCompany2Request,
-            operations.CreateAtsCompany2RequestTypedDict,
+            operations.CreateAtsCompanyRequest,
+            operations.CreateAtsCompanyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsCompany2Response:
+    ) -> operations.CreateAtsCompanyResponse:
         r"""Create a company
 
         :param request: The request object to send.
@@ -611,8 +611,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsCompany2Request)
-        request = cast(operations.CreateAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsCompanyRequest)
+        request = cast(operations.CreateAtsCompanyRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -646,7 +646,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsCompany2",
+                operation_id="createAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -658,7 +658,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsCompany2Response(
+            return operations.CreateAtsCompanyResponse(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -675,18 +675,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_company2_async(
+    async def create_ats_company_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsCompany2Request,
-            operations.CreateAtsCompany2RequestTypedDict,
+            operations.CreateAtsCompanyRequest,
+            operations.CreateAtsCompanyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsCompany2Response:
+    ) -> operations.CreateAtsCompanyResponse:
         r"""Create a company
 
         :param request: The request object to send.
@@ -706,8 +706,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsCompany2Request)
-        request = cast(operations.CreateAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsCompanyRequest)
+        request = cast(operations.CreateAtsCompanyRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -741,7 +741,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsCompany2",
+                operation_id="createAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -753,7 +753,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsCompany2Response(
+            return operations.CreateAtsCompanyResponse(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -770,18 +770,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ats_document2(
+    def create_ats_document(
         self,
         *,
         request: Union[
-            operations.CreateAtsDocument2Request,
-            operations.CreateAtsDocument2RequestTypedDict,
+            operations.CreateAtsDocumentRequest,
+            operations.CreateAtsDocumentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsDocument2Response:
+    ) -> operations.CreateAtsDocumentResponse:
         r"""Create a document
 
         :param request: The request object to send.
@@ -801,8 +801,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsDocument2Request)
-        request = cast(operations.CreateAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
+        request = cast(operations.CreateAtsDocumentRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -836,7 +836,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsDocument2",
+                operation_id="createAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -848,7 +848,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsDocument2Response(
+            return operations.CreateAtsDocumentResponse(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -865,18 +865,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_document2_async(
+    async def create_ats_document_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsDocument2Request,
-            operations.CreateAtsDocument2RequestTypedDict,
+            operations.CreateAtsDocumentRequest,
+            operations.CreateAtsDocumentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsDocument2Response:
+    ) -> operations.CreateAtsDocumentResponse:
         r"""Create a document
 
         :param request: The request object to send.
@@ -896,8 +896,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsDocument2Request)
-        request = cast(operations.CreateAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
+        request = cast(operations.CreateAtsDocumentRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -931,7 +931,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsDocument2",
+                operation_id="createAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -943,7 +943,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsDocument2Response(
+            return operations.CreateAtsDocumentResponse(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -960,18 +960,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ats_interview2(
+    def create_ats_interview(
         self,
         *,
         request: Union[
-            operations.CreateAtsInterview2Request,
-            operations.CreateAtsInterview2RequestTypedDict,
+            operations.CreateAtsInterviewRequest,
+            operations.CreateAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsInterview2Response:
+    ) -> operations.CreateAtsInterviewResponse:
         r"""Create an interview
 
         :param request: The request object to send.
@@ -991,8 +991,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsInterview2Request)
-        request = cast(operations.CreateAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
+        request = cast(operations.CreateAtsInterviewRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -1026,7 +1026,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsInterview2",
+                operation_id="createAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -1038,7 +1038,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsInterview2Response(
+            return operations.CreateAtsInterviewResponse(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -1055,18 +1055,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_interview2_async(
+    async def create_ats_interview_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsInterview2Request,
-            operations.CreateAtsInterview2RequestTypedDict,
+            operations.CreateAtsInterviewRequest,
+            operations.CreateAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsInterview2Response:
+    ) -> operations.CreateAtsInterviewResponse:
         r"""Create an interview
 
         :param request: The request object to send.
@@ -1086,8 +1086,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsInterview2Request)
-        request = cast(operations.CreateAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
+        request = cast(operations.CreateAtsInterviewRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1121,7 +1121,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsInterview2",
+                operation_id="createAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -1133,7 +1133,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsInterview2Response(
+            return operations.CreateAtsInterviewResponse(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -1150,17 +1150,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ats_job2(
+    def create_ats_job(
         self,
         *,
         request: Union[
-            operations.CreateAtsJob2Request, operations.CreateAtsJob2RequestTypedDict
+            operations.CreateAtsJobRequest, operations.CreateAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsJob2Response:
+    ) -> operations.CreateAtsJobResponse:
         r"""Create a job
 
         :param request: The request object to send.
@@ -1180,8 +1180,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsJob2Request)
-        request = cast(operations.CreateAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsJobRequest)
+        request = cast(operations.CreateAtsJobRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -1215,7 +1215,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsJob2",
+                operation_id="createAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -1227,7 +1227,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsJob2Response(
+            return operations.CreateAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1242,17 +1242,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_job2_async(
+    async def create_ats_job_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsJob2Request, operations.CreateAtsJob2RequestTypedDict
+            operations.CreateAtsJobRequest, operations.CreateAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsJob2Response:
+    ) -> operations.CreateAtsJobResponse:
         r"""Create a job
 
         :param request: The request object to send.
@@ -1272,8 +1272,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsJob2Request)
-        request = cast(operations.CreateAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsJobRequest)
+        request = cast(operations.CreateAtsJobRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1307,7 +1307,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsJob2",
+                operation_id="createAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -1319,7 +1319,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsJob2Response(
+            return operations.CreateAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1334,18 +1334,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_ats_scorecard2(
+    def create_ats_scorecard(
         self,
         *,
         request: Union[
-            operations.CreateAtsScorecard2Request,
-            operations.CreateAtsScorecard2RequestTypedDict,
+            operations.CreateAtsScorecardRequest,
+            operations.CreateAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsScorecard2Response:
+    ) -> operations.CreateAtsScorecardResponse:
         r"""Create a scorecard
 
         :param request: The request object to send.
@@ -1365,8 +1365,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsScorecard2Request)
-        request = cast(operations.CreateAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
+        request = cast(operations.CreateAtsScorecardRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -1400,7 +1400,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsScorecard2",
+                operation_id="createAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -1412,7 +1412,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsScorecard2Response(
+            return operations.CreateAtsScorecardResponse(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -1429,18 +1429,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_scorecard2_async(
+    async def create_ats_scorecard_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsScorecard2Request,
-            operations.CreateAtsScorecard2RequestTypedDict,
+            operations.CreateAtsScorecardRequest,
+            operations.CreateAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsScorecard2Response:
+    ) -> operations.CreateAtsScorecardResponse:
         r"""Create a scorecard
 
         :param request: The request object to send.
@@ -1460,8 +1460,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsScorecard2Request)
-        request = cast(operations.CreateAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
+        request = cast(operations.CreateAtsScorecardRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1495,7 +1495,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsScorecard2",
+                operation_id="createAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -1507,7 +1507,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsScorecard2Response(
+            return operations.CreateAtsScorecardResponse(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -1524,18 +1524,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_activity2(
+    def get_ats_activity(
         self,
         *,
         request: Union[
-            operations.GetAtsActivity2Request,
-            operations.GetAtsActivity2RequestTypedDict,
+            operations.GetAtsActivityRequest, operations.GetAtsActivityRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsActivity2Response:
+    ) -> operations.GetAtsActivityResponse:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -1555,8 +1554,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsActivity2Request)
-        request = cast(operations.GetAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsActivityRequest)
+        request = cast(operations.GetAtsActivityRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1587,7 +1586,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsActivity2",
+                operation_id="getAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -1599,7 +1598,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsActivity2Response(
+            return operations.GetAtsActivityResponse(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -1616,18 +1615,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_activity2_async(
+    async def get_ats_activity_async(
         self,
         *,
         request: Union[
-            operations.GetAtsActivity2Request,
-            operations.GetAtsActivity2RequestTypedDict,
+            operations.GetAtsActivityRequest, operations.GetAtsActivityRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsActivity2Response:
+    ) -> operations.GetAtsActivityResponse:
         r"""Retrieve an activity
 
         :param request: The request object to send.
@@ -1647,8 +1645,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsActivity2Request)
-        request = cast(operations.GetAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsActivityRequest)
+        request = cast(operations.GetAtsActivityRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1679,7 +1677,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsActivity2",
+                operation_id="getAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -1691,7 +1689,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsActivity2Response(
+            return operations.GetAtsActivityResponse(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -1708,18 +1706,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_application2(
+    def get_ats_application(
         self,
         *,
         request: Union[
-            operations.GetAtsApplication2Request,
-            operations.GetAtsApplication2RequestTypedDict,
+            operations.GetAtsApplicationRequest,
+            operations.GetAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsApplication2Response:
+    ) -> operations.GetAtsApplicationResponse:
         r"""Retrieve an application
 
         :param request: The request object to send.
@@ -1739,8 +1737,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsApplication2Request)
-        request = cast(operations.GetAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsApplicationRequest)
+        request = cast(operations.GetAtsApplicationRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1771,7 +1769,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsApplication2",
+                operation_id="getAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -1783,7 +1781,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsApplication2Response(
+            return operations.GetAtsApplicationResponse(
                 ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
@@ -1800,18 +1798,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_application2_async(
+    async def get_ats_application_async(
         self,
         *,
         request: Union[
-            operations.GetAtsApplication2Request,
-            operations.GetAtsApplication2RequestTypedDict,
+            operations.GetAtsApplicationRequest,
+            operations.GetAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsApplication2Response:
+    ) -> operations.GetAtsApplicationResponse:
         r"""Retrieve an application
 
         :param request: The request object to send.
@@ -1831,8 +1829,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsApplication2Request)
-        request = cast(operations.GetAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsApplicationRequest)
+        request = cast(operations.GetAtsApplicationRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1863,7 +1861,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsApplication2",
+                operation_id="getAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -1875,7 +1873,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsApplication2Response(
+            return operations.GetAtsApplicationResponse(
                 ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
@@ -1892,18 +1890,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_candidate2(
+    def get_ats_candidate(
         self,
         *,
         request: Union[
-            operations.GetAtsCandidate2Request,
-            operations.GetAtsCandidate2RequestTypedDict,
+            operations.GetAtsCandidateRequest,
+            operations.GetAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsCandidate2Response:
+    ) -> operations.GetAtsCandidateResponse:
         r"""Retrieve a candidate
 
         :param request: The request object to send.
@@ -1923,8 +1921,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsCandidate2Request)
-        request = cast(operations.GetAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsCandidateRequest)
+        request = cast(operations.GetAtsCandidateRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1955,7 +1953,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsCandidate2",
+                operation_id="getAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -1967,7 +1965,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsCandidate2Response(
+            return operations.GetAtsCandidateResponse(
                 ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
@@ -1984,18 +1982,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_candidate2_async(
+    async def get_ats_candidate_async(
         self,
         *,
         request: Union[
-            operations.GetAtsCandidate2Request,
-            operations.GetAtsCandidate2RequestTypedDict,
+            operations.GetAtsCandidateRequest,
+            operations.GetAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsCandidate2Response:
+    ) -> operations.GetAtsCandidateResponse:
         r"""Retrieve a candidate
 
         :param request: The request object to send.
@@ -2015,8 +2013,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsCandidate2Request)
-        request = cast(operations.GetAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsCandidateRequest)
+        request = cast(operations.GetAtsCandidateRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2047,7 +2045,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsCandidate2",
+                operation_id="getAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -2059,7 +2057,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsCandidate2Response(
+            return operations.GetAtsCandidateResponse(
                 ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
@@ -2076,17 +2074,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_company2(
+    def get_ats_company(
         self,
         *,
         request: Union[
-            operations.GetAtsCompany2Request, operations.GetAtsCompany2RequestTypedDict
+            operations.GetAtsCompanyRequest, operations.GetAtsCompanyRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsCompany2Response:
+    ) -> operations.GetAtsCompanyResponse:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -2106,8 +2104,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsCompany2Request)
-        request = cast(operations.GetAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
+        request = cast(operations.GetAtsCompanyRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2138,7 +2136,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsCompany2",
+                operation_id="getAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -2150,7 +2148,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsCompany2Response(
+            return operations.GetAtsCompanyResponse(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -2167,17 +2165,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_company2_async(
+    async def get_ats_company_async(
         self,
         *,
         request: Union[
-            operations.GetAtsCompany2Request, operations.GetAtsCompany2RequestTypedDict
+            operations.GetAtsCompanyRequest, operations.GetAtsCompanyRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsCompany2Response:
+    ) -> operations.GetAtsCompanyResponse:
         r"""Retrieve a company
 
         :param request: The request object to send.
@@ -2197,8 +2195,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsCompany2Request)
-        request = cast(operations.GetAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
+        request = cast(operations.GetAtsCompanyRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2229,7 +2227,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsCompany2",
+                operation_id="getAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -2241,7 +2239,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsCompany2Response(
+            return operations.GetAtsCompanyResponse(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -2258,18 +2256,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_document2(
+    def get_ats_document(
         self,
         *,
         request: Union[
-            operations.GetAtsDocument2Request,
-            operations.GetAtsDocument2RequestTypedDict,
+            operations.GetAtsDocumentRequest, operations.GetAtsDocumentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsDocument2Response:
+    ) -> operations.GetAtsDocumentResponse:
         r"""Retrieve a document
 
         :param request: The request object to send.
@@ -2289,8 +2286,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsDocument2Request)
-        request = cast(operations.GetAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
+        request = cast(operations.GetAtsDocumentRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2321,7 +2318,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsDocument2",
+                operation_id="getAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -2333,7 +2330,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsDocument2Response(
+            return operations.GetAtsDocumentResponse(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -2350,18 +2347,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_document2_async(
+    async def get_ats_document_async(
         self,
         *,
         request: Union[
-            operations.GetAtsDocument2Request,
-            operations.GetAtsDocument2RequestTypedDict,
+            operations.GetAtsDocumentRequest, operations.GetAtsDocumentRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsDocument2Response:
+    ) -> operations.GetAtsDocumentResponse:
         r"""Retrieve a document
 
         :param request: The request object to send.
@@ -2381,8 +2377,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsDocument2Request)
-        request = cast(operations.GetAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
+        request = cast(operations.GetAtsDocumentRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2413,7 +2409,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsDocument2",
+                operation_id="getAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -2425,7 +2421,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsDocument2Response(
+            return operations.GetAtsDocumentResponse(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -2442,18 +2438,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_interview2(
+    def get_ats_interview(
         self,
         *,
         request: Union[
-            operations.GetAtsInterview2Request,
-            operations.GetAtsInterview2RequestTypedDict,
+            operations.GetAtsInterviewRequest,
+            operations.GetAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsInterview2Response:
+    ) -> operations.GetAtsInterviewResponse:
         r"""Retrieve an interview
 
         :param request: The request object to send.
@@ -2473,8 +2469,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsInterview2Request)
-        request = cast(operations.GetAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
+        request = cast(operations.GetAtsInterviewRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2505,7 +2501,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsInterview2",
+                operation_id="getAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -2517,7 +2513,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsInterview2Response(
+            return operations.GetAtsInterviewResponse(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -2534,18 +2530,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_interview2_async(
+    async def get_ats_interview_async(
         self,
         *,
         request: Union[
-            operations.GetAtsInterview2Request,
-            operations.GetAtsInterview2RequestTypedDict,
+            operations.GetAtsInterviewRequest,
+            operations.GetAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsInterview2Response:
+    ) -> operations.GetAtsInterviewResponse:
         r"""Retrieve an interview
 
         :param request: The request object to send.
@@ -2565,8 +2561,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsInterview2Request)
-        request = cast(operations.GetAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
+        request = cast(operations.GetAtsInterviewRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2597,7 +2593,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsInterview2",
+                operation_id="getAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -2609,7 +2605,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsInterview2Response(
+            return operations.GetAtsInterviewResponse(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -2626,17 +2622,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_job2(
+    def get_ats_job(
         self,
         *,
         request: Union[
-            operations.GetAtsJob2Request, operations.GetAtsJob2RequestTypedDict
+            operations.GetAtsJobRequest, operations.GetAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsJob2Response:
+    ) -> operations.GetAtsJobResponse:
         r"""Retrieve a job
 
         :param request: The request object to send.
@@ -2656,8 +2652,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsJob2Request)
-        request = cast(operations.GetAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsJobRequest)
+        request = cast(operations.GetAtsJobRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2688,7 +2684,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsJob2",
+                operation_id="getAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -2700,7 +2696,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsJob2Response(
+            return operations.GetAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2715,17 +2711,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_job2_async(
+    async def get_ats_job_async(
         self,
         *,
         request: Union[
-            operations.GetAtsJob2Request, operations.GetAtsJob2RequestTypedDict
+            operations.GetAtsJobRequest, operations.GetAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsJob2Response:
+    ) -> operations.GetAtsJobResponse:
         r"""Retrieve a job
 
         :param request: The request object to send.
@@ -2745,8 +2741,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsJob2Request)
-        request = cast(operations.GetAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsJobRequest)
+        request = cast(operations.GetAtsJobRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2777,7 +2773,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsJob2",
+                operation_id="getAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -2789,7 +2785,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsJob2Response(
+            return operations.GetAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2804,18 +2800,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_scorecard2(
+    def get_ats_scorecard(
         self,
         *,
         request: Union[
-            operations.GetAtsScorecard2Request,
-            operations.GetAtsScorecard2RequestTypedDict,
+            operations.GetAtsScorecardRequest,
+            operations.GetAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsScorecard2Response:
+    ) -> operations.GetAtsScorecardResponse:
         r"""Retrieve a scorecard
 
         :param request: The request object to send.
@@ -2835,8 +2831,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsScorecard2Request)
-        request = cast(operations.GetAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
+        request = cast(operations.GetAtsScorecardRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2867,7 +2863,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsScorecard2",
+                operation_id="getAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -2879,7 +2875,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsScorecard2Response(
+            return operations.GetAtsScorecardResponse(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -2896,18 +2892,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_scorecard2_async(
+    async def get_ats_scorecard_async(
         self,
         *,
         request: Union[
-            operations.GetAtsScorecard2Request,
-            operations.GetAtsScorecard2RequestTypedDict,
+            operations.GetAtsScorecardRequest,
+            operations.GetAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsScorecard2Response:
+    ) -> operations.GetAtsScorecardResponse:
         r"""Retrieve a scorecard
 
         :param request: The request object to send.
@@ -2927,8 +2923,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsScorecard2Request)
-        request = cast(operations.GetAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
+        request = cast(operations.GetAtsScorecardRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2959,7 +2955,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsScorecard2",
+                operation_id="getAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -2971,7 +2967,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsScorecard2Response(
+            return operations.GetAtsScorecardResponse(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -2988,18 +2984,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_activities2(
+    def list_ats_activities(
         self,
         *,
         request: Union[
-            operations.ListAtsActivities2Request,
-            operations.ListAtsActivities2RequestTypedDict,
+            operations.ListAtsActivitiesRequest,
+            operations.ListAtsActivitiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsActivities2Response:
+    ) -> operations.ListAtsActivitiesResponse:
         r"""List all activities
 
         :param request: The request object to send.
@@ -3019,8 +3015,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsActivities2Request)
-        request = cast(operations.ListAtsActivities2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
+        request = cast(operations.ListAtsActivitiesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3051,7 +3047,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsActivities2",
+                operation_id="listAtsActivities",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -3063,7 +3059,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsActivities2Response(
+            return operations.ListAtsActivitiesResponse(
                 ats_activities=unmarshal_json_response(
                     Optional[List[shared.AtsActivity]], http_res
                 ),
@@ -3080,18 +3076,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_activities2_async(
+    async def list_ats_activities_async(
         self,
         *,
         request: Union[
-            operations.ListAtsActivities2Request,
-            operations.ListAtsActivities2RequestTypedDict,
+            operations.ListAtsActivitiesRequest,
+            operations.ListAtsActivitiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsActivities2Response:
+    ) -> operations.ListAtsActivitiesResponse:
         r"""List all activities
 
         :param request: The request object to send.
@@ -3111,8 +3107,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsActivities2Request)
-        request = cast(operations.ListAtsActivities2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
+        request = cast(operations.ListAtsActivitiesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3143,7 +3139,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsActivities2",
+                operation_id="listAtsActivities",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -3155,7 +3151,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsActivities2Response(
+            return operations.ListAtsActivitiesResponse(
                 ats_activities=unmarshal_json_response(
                     Optional[List[shared.AtsActivity]], http_res
                 ),
@@ -3172,18 +3168,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_applications2(
+    def list_ats_applications(
         self,
         *,
         request: Union[
-            operations.ListAtsApplications2Request,
-            operations.ListAtsApplications2RequestTypedDict,
+            operations.ListAtsApplicationsRequest,
+            operations.ListAtsApplicationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsApplications2Response:
+    ) -> operations.ListAtsApplicationsResponse:
         r"""List all applications
 
         :param request: The request object to send.
@@ -3203,8 +3199,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsApplications2Request)
-        request = cast(operations.ListAtsApplications2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsApplicationsRequest)
+        request = cast(operations.ListAtsApplicationsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3235,7 +3231,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsApplications2",
+                operation_id="listAtsApplications",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -3247,7 +3243,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsApplications2Response(
+            return operations.ListAtsApplicationsResponse(
                 ats_applications=unmarshal_json_response(
                     Optional[List[shared.AtsApplication]], http_res
                 ),
@@ -3264,18 +3260,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_applications2_async(
+    async def list_ats_applications_async(
         self,
         *,
         request: Union[
-            operations.ListAtsApplications2Request,
-            operations.ListAtsApplications2RequestTypedDict,
+            operations.ListAtsApplicationsRequest,
+            operations.ListAtsApplicationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsApplications2Response:
+    ) -> operations.ListAtsApplicationsResponse:
         r"""List all applications
 
         :param request: The request object to send.
@@ -3295,8 +3291,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsApplications2Request)
-        request = cast(operations.ListAtsApplications2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsApplicationsRequest)
+        request = cast(operations.ListAtsApplicationsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3327,7 +3323,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsApplications2",
+                operation_id="listAtsApplications",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -3339,7 +3335,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsApplications2Response(
+            return operations.ListAtsApplicationsResponse(
                 ats_applications=unmarshal_json_response(
                     Optional[List[shared.AtsApplication]], http_res
                 ),
@@ -3356,18 +3352,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_applicationstatuses2(
+    def list_ats_applicationstatuses(
         self,
         *,
         request: Union[
-            operations.ListAtsApplicationstatuses2Request,
-            operations.ListAtsApplicationstatuses2RequestTypedDict,
+            operations.ListAtsApplicationstatusesRequest,
+            operations.ListAtsApplicationstatusesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsApplicationstatuses2Response:
+    ) -> operations.ListAtsApplicationstatusesResponse:
         r"""List all applicationstatuses
 
         :param request: The request object to send.
@@ -3388,9 +3384,9 @@ class Ats(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAtsApplicationstatuses2Request
+                request, operations.ListAtsApplicationstatusesRequest
             )
-        request = cast(operations.ListAtsApplicationstatuses2Request, request)
+        request = cast(operations.ListAtsApplicationstatusesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3421,7 +3417,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsApplicationstatuses2",
+                operation_id="listAtsApplicationstatuses",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "applicationstatus"],
@@ -3433,7 +3429,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsApplicationstatuses2Response(
+            return operations.ListAtsApplicationstatusesResponse(
                 ats_statuses=unmarshal_json_response(
                     Optional[List[shared.AtsStatus]], http_res
                 ),
@@ -3450,18 +3446,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_applicationstatuses2_async(
+    async def list_ats_applicationstatuses_async(
         self,
         *,
         request: Union[
-            operations.ListAtsApplicationstatuses2Request,
-            operations.ListAtsApplicationstatuses2RequestTypedDict,
+            operations.ListAtsApplicationstatusesRequest,
+            operations.ListAtsApplicationstatusesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsApplicationstatuses2Response:
+    ) -> operations.ListAtsApplicationstatusesResponse:
         r"""List all applicationstatuses
 
         :param request: The request object to send.
@@ -3482,9 +3478,9 @@ class Ats(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAtsApplicationstatuses2Request
+                request, operations.ListAtsApplicationstatusesRequest
             )
-        request = cast(operations.ListAtsApplicationstatuses2Request, request)
+        request = cast(operations.ListAtsApplicationstatusesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3515,7 +3511,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsApplicationstatuses2",
+                operation_id="listAtsApplicationstatuses",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "applicationstatus"],
@@ -3527,7 +3523,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsApplicationstatuses2Response(
+            return operations.ListAtsApplicationstatusesResponse(
                 ats_statuses=unmarshal_json_response(
                     Optional[List[shared.AtsStatus]], http_res
                 ),
@@ -3544,18 +3540,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_candidates2(
+    def list_ats_candidates(
         self,
         *,
         request: Union[
-            operations.ListAtsCandidates2Request,
-            operations.ListAtsCandidates2RequestTypedDict,
+            operations.ListAtsCandidatesRequest,
+            operations.ListAtsCandidatesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsCandidates2Response:
+    ) -> operations.ListAtsCandidatesResponse:
         r"""List all candidates
 
         :param request: The request object to send.
@@ -3575,8 +3571,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsCandidates2Request)
-        request = cast(operations.ListAtsCandidates2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsCandidatesRequest)
+        request = cast(operations.ListAtsCandidatesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3607,7 +3603,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsCandidates2",
+                operation_id="listAtsCandidates",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -3619,7 +3615,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsCandidates2Response(
+            return operations.ListAtsCandidatesResponse(
                 ats_candidates=unmarshal_json_response(
                     Optional[List[shared.AtsCandidate]], http_res
                 ),
@@ -3636,18 +3632,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_candidates2_async(
+    async def list_ats_candidates_async(
         self,
         *,
         request: Union[
-            operations.ListAtsCandidates2Request,
-            operations.ListAtsCandidates2RequestTypedDict,
+            operations.ListAtsCandidatesRequest,
+            operations.ListAtsCandidatesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsCandidates2Response:
+    ) -> operations.ListAtsCandidatesResponse:
         r"""List all candidates
 
         :param request: The request object to send.
@@ -3667,8 +3663,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsCandidates2Request)
-        request = cast(operations.ListAtsCandidates2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsCandidatesRequest)
+        request = cast(operations.ListAtsCandidatesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3699,7 +3695,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsCandidates2",
+                operation_id="listAtsCandidates",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -3711,7 +3707,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsCandidates2Response(
+            return operations.ListAtsCandidatesResponse(
                 ats_candidates=unmarshal_json_response(
                     Optional[List[shared.AtsCandidate]], http_res
                 ),
@@ -3728,18 +3724,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_companies2(
+    def list_ats_companies(
         self,
         *,
         request: Union[
-            operations.ListAtsCompanies2Request,
-            operations.ListAtsCompanies2RequestTypedDict,
+            operations.ListAtsCompaniesRequest,
+            operations.ListAtsCompaniesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsCompanies2Response:
+    ) -> operations.ListAtsCompaniesResponse:
         r"""List all companies
 
         :param request: The request object to send.
@@ -3759,8 +3755,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsCompanies2Request)
-        request = cast(operations.ListAtsCompanies2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
+        request = cast(operations.ListAtsCompaniesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3791,7 +3787,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsCompanies2",
+                operation_id="listAtsCompanies",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -3803,7 +3799,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsCompanies2Response(
+            return operations.ListAtsCompaniesResponse(
                 ats_companies=unmarshal_json_response(
                     Optional[List[shared.AtsCompany]], http_res
                 ),
@@ -3820,18 +3816,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_companies2_async(
+    async def list_ats_companies_async(
         self,
         *,
         request: Union[
-            operations.ListAtsCompanies2Request,
-            operations.ListAtsCompanies2RequestTypedDict,
+            operations.ListAtsCompaniesRequest,
+            operations.ListAtsCompaniesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsCompanies2Response:
+    ) -> operations.ListAtsCompaniesResponse:
         r"""List all companies
 
         :param request: The request object to send.
@@ -3851,8 +3847,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsCompanies2Request)
-        request = cast(operations.ListAtsCompanies2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
+        request = cast(operations.ListAtsCompaniesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3883,7 +3879,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsCompanies2",
+                operation_id="listAtsCompanies",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -3895,7 +3891,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsCompanies2Response(
+            return operations.ListAtsCompaniesResponse(
                 ats_companies=unmarshal_json_response(
                     Optional[List[shared.AtsCompany]], http_res
                 ),
@@ -3912,18 +3908,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_documents2(
+    def list_ats_documents(
         self,
         *,
         request: Union[
-            operations.ListAtsDocuments2Request,
-            operations.ListAtsDocuments2RequestTypedDict,
+            operations.ListAtsDocumentsRequest,
+            operations.ListAtsDocumentsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsDocuments2Response:
+    ) -> operations.ListAtsDocumentsResponse:
         r"""List all documents
 
         :param request: The request object to send.
@@ -3943,8 +3939,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsDocuments2Request)
-        request = cast(operations.ListAtsDocuments2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
+        request = cast(operations.ListAtsDocumentsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3975,7 +3971,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsDocuments2",
+                operation_id="listAtsDocuments",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -3987,7 +3983,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsDocuments2Response(
+            return operations.ListAtsDocumentsResponse(
                 ats_documents=unmarshal_json_response(
                     Optional[List[shared.AtsDocument]], http_res
                 ),
@@ -4004,18 +4000,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_documents2_async(
+    async def list_ats_documents_async(
         self,
         *,
         request: Union[
-            operations.ListAtsDocuments2Request,
-            operations.ListAtsDocuments2RequestTypedDict,
+            operations.ListAtsDocumentsRequest,
+            operations.ListAtsDocumentsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsDocuments2Response:
+    ) -> operations.ListAtsDocumentsResponse:
         r"""List all documents
 
         :param request: The request object to send.
@@ -4035,8 +4031,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsDocuments2Request)
-        request = cast(operations.ListAtsDocuments2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
+        request = cast(operations.ListAtsDocumentsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4067,7 +4063,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsDocuments2",
+                operation_id="listAtsDocuments",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -4079,7 +4075,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsDocuments2Response(
+            return operations.ListAtsDocumentsResponse(
                 ats_documents=unmarshal_json_response(
                     Optional[List[shared.AtsDocument]], http_res
                 ),
@@ -4096,18 +4092,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_interviews2(
+    def list_ats_interviews(
         self,
         *,
         request: Union[
-            operations.ListAtsInterviews2Request,
-            operations.ListAtsInterviews2RequestTypedDict,
+            operations.ListAtsInterviewsRequest,
+            operations.ListAtsInterviewsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsInterviews2Response:
+    ) -> operations.ListAtsInterviewsResponse:
         r"""List all interviews
 
         :param request: The request object to send.
@@ -4127,8 +4123,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsInterviews2Request)
-        request = cast(operations.ListAtsInterviews2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
+        request = cast(operations.ListAtsInterviewsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -4159,7 +4155,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsInterviews2",
+                operation_id="listAtsInterviews",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -4171,7 +4167,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsInterviews2Response(
+            return operations.ListAtsInterviewsResponse(
                 ats_interviews=unmarshal_json_response(
                     Optional[List[shared.AtsInterview]], http_res
                 ),
@@ -4188,18 +4184,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_interviews2_async(
+    async def list_ats_interviews_async(
         self,
         *,
         request: Union[
-            operations.ListAtsInterviews2Request,
-            operations.ListAtsInterviews2RequestTypedDict,
+            operations.ListAtsInterviewsRequest,
+            operations.ListAtsInterviewsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsInterviews2Response:
+    ) -> operations.ListAtsInterviewsResponse:
         r"""List all interviews
 
         :param request: The request object to send.
@@ -4219,8 +4215,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsInterviews2Request)
-        request = cast(operations.ListAtsInterviews2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
+        request = cast(operations.ListAtsInterviewsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4251,7 +4247,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsInterviews2",
+                operation_id="listAtsInterviews",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -4263,7 +4259,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsInterviews2Response(
+            return operations.ListAtsInterviewsResponse(
                 ats_interviews=unmarshal_json_response(
                     Optional[List[shared.AtsInterview]], http_res
                 ),
@@ -4280,17 +4276,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_jobs2(
+    def list_ats_jobs(
         self,
         *,
         request: Union[
-            operations.ListAtsJobs2Request, operations.ListAtsJobs2RequestTypedDict
+            operations.ListAtsJobsRequest, operations.ListAtsJobsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsJobs2Response:
+    ) -> operations.ListAtsJobsResponse:
         r"""List all jobs
 
         :param request: The request object to send.
@@ -4310,8 +4306,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsJobs2Request)
-        request = cast(operations.ListAtsJobs2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsJobsRequest)
+        request = cast(operations.ListAtsJobsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -4342,7 +4338,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsJobs2",
+                operation_id="listAtsJobs",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -4354,7 +4350,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsJobs2Response(
+            return operations.ListAtsJobsResponse(
                 ats_jobs=unmarshal_json_response(
                     Optional[List[shared.AtsJob]], http_res
                 ),
@@ -4371,17 +4367,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_jobs2_async(
+    async def list_ats_jobs_async(
         self,
         *,
         request: Union[
-            operations.ListAtsJobs2Request, operations.ListAtsJobs2RequestTypedDict
+            operations.ListAtsJobsRequest, operations.ListAtsJobsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsJobs2Response:
+    ) -> operations.ListAtsJobsResponse:
         r"""List all jobs
 
         :param request: The request object to send.
@@ -4401,8 +4397,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsJobs2Request)
-        request = cast(operations.ListAtsJobs2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsJobsRequest)
+        request = cast(operations.ListAtsJobsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4433,7 +4429,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsJobs2",
+                operation_id="listAtsJobs",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -4445,7 +4441,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsJobs2Response(
+            return operations.ListAtsJobsResponse(
                 ats_jobs=unmarshal_json_response(
                     Optional[List[shared.AtsJob]], http_res
                 ),
@@ -4462,18 +4458,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_scorecards2(
+    def list_ats_scorecards(
         self,
         *,
         request: Union[
-            operations.ListAtsScorecards2Request,
-            operations.ListAtsScorecards2RequestTypedDict,
+            operations.ListAtsScorecardsRequest,
+            operations.ListAtsScorecardsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsScorecards2Response:
+    ) -> operations.ListAtsScorecardsResponse:
         r"""List all scorecards
 
         :param request: The request object to send.
@@ -4493,8 +4489,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsScorecards2Request)
-        request = cast(operations.ListAtsScorecards2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
+        request = cast(operations.ListAtsScorecardsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -4525,7 +4521,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsScorecards2",
+                operation_id="listAtsScorecards",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -4537,7 +4533,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsScorecards2Response(
+            return operations.ListAtsScorecardsResponse(
                 ats_scorecards=unmarshal_json_response(
                     Optional[List[shared.AtsScorecard]], http_res
                 ),
@@ -4554,18 +4550,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_scorecards2_async(
+    async def list_ats_scorecards_async(
         self,
         *,
         request: Union[
-            operations.ListAtsScorecards2Request,
-            operations.ListAtsScorecards2RequestTypedDict,
+            operations.ListAtsScorecardsRequest,
+            operations.ListAtsScorecardsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsScorecards2Response:
+    ) -> operations.ListAtsScorecardsResponse:
         r"""List all scorecards
 
         :param request: The request object to send.
@@ -4585,8 +4581,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsScorecards2Request)
-        request = cast(operations.ListAtsScorecards2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
+        request = cast(operations.ListAtsScorecardsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4617,7 +4613,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsScorecards2",
+                operation_id="listAtsScorecards",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -4629,7 +4625,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsScorecards2Response(
+            return operations.ListAtsScorecardsResponse(
                 ats_scorecards=unmarshal_json_response(
                     Optional[List[shared.AtsScorecard]], http_res
                 ),
@@ -4646,18 +4642,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_activity2(
+    def patch_ats_activity(
         self,
         *,
         request: Union[
-            operations.PatchAtsActivity2Request,
-            operations.PatchAtsActivity2RequestTypedDict,
+            operations.PatchAtsActivityRequest,
+            operations.PatchAtsActivityRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsActivity2Response:
+    ) -> operations.PatchAtsActivityResponse:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -4677,8 +4673,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsActivity2Request)
-        request = cast(operations.PatchAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
+        request = cast(operations.PatchAtsActivityRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -4712,7 +4708,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsActivity2",
+                operation_id="patchAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -4724,7 +4720,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsActivity2Response(
+            return operations.PatchAtsActivityResponse(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -4741,18 +4737,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_activity2_async(
+    async def patch_ats_activity_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsActivity2Request,
-            operations.PatchAtsActivity2RequestTypedDict,
+            operations.PatchAtsActivityRequest,
+            operations.PatchAtsActivityRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsActivity2Response:
+    ) -> operations.PatchAtsActivityResponse:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -4772,8 +4768,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsActivity2Request)
-        request = cast(operations.PatchAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
+        request = cast(operations.PatchAtsActivityRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -4807,7 +4803,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsActivity2",
+                operation_id="patchAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -4819,7 +4815,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsActivity2Response(
+            return operations.PatchAtsActivityResponse(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -4836,18 +4832,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_application2(
+    def patch_ats_application(
         self,
         *,
         request: Union[
-            operations.PatchAtsApplication2Request,
-            operations.PatchAtsApplication2RequestTypedDict,
+            operations.PatchAtsApplicationRequest,
+            operations.PatchAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsApplication2Response:
+    ) -> operations.PatchAtsApplicationResponse:
         r"""Update an application
 
         :param request: The request object to send.
@@ -4867,8 +4863,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsApplication2Request)
-        request = cast(operations.PatchAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsApplicationRequest)
+        request = cast(operations.PatchAtsApplicationRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -4902,7 +4898,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsApplication2",
+                operation_id="patchAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -4914,7 +4910,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsApplication2Response(
+            return operations.PatchAtsApplicationResponse(
                 ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
@@ -4931,18 +4927,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_application2_async(
+    async def patch_ats_application_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsApplication2Request,
-            operations.PatchAtsApplication2RequestTypedDict,
+            operations.PatchAtsApplicationRequest,
+            operations.PatchAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsApplication2Response:
+    ) -> operations.PatchAtsApplicationResponse:
         r"""Update an application
 
         :param request: The request object to send.
@@ -4962,8 +4958,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsApplication2Request)
-        request = cast(operations.PatchAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsApplicationRequest)
+        request = cast(operations.PatchAtsApplicationRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -4997,7 +4993,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsApplication2",
+                operation_id="patchAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -5009,7 +5005,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsApplication2Response(
+            return operations.PatchAtsApplicationResponse(
                 ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
@@ -5026,18 +5022,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_candidate2(
+    def patch_ats_candidate(
         self,
         *,
         request: Union[
-            operations.PatchAtsCandidate2Request,
-            operations.PatchAtsCandidate2RequestTypedDict,
+            operations.PatchAtsCandidateRequest,
+            operations.PatchAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsCandidate2Response:
+    ) -> operations.PatchAtsCandidateResponse:
         r"""Update a candidate
 
         :param request: The request object to send.
@@ -5057,8 +5053,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsCandidate2Request)
-        request = cast(operations.PatchAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsCandidateRequest)
+        request = cast(operations.PatchAtsCandidateRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5092,7 +5088,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsCandidate2",
+                operation_id="patchAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -5104,7 +5100,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsCandidate2Response(
+            return operations.PatchAtsCandidateResponse(
                 ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
@@ -5121,18 +5117,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_candidate2_async(
+    async def patch_ats_candidate_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsCandidate2Request,
-            operations.PatchAtsCandidate2RequestTypedDict,
+            operations.PatchAtsCandidateRequest,
+            operations.PatchAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsCandidate2Response:
+    ) -> operations.PatchAtsCandidateResponse:
         r"""Update a candidate
 
         :param request: The request object to send.
@@ -5152,8 +5148,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsCandidate2Request)
-        request = cast(operations.PatchAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsCandidateRequest)
+        request = cast(operations.PatchAtsCandidateRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5187,7 +5183,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsCandidate2",
+                operation_id="patchAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -5199,7 +5195,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsCandidate2Response(
+            return operations.PatchAtsCandidateResponse(
                 ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
@@ -5216,18 +5212,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_company2(
+    def patch_ats_company(
         self,
         *,
         request: Union[
-            operations.PatchAtsCompany2Request,
-            operations.PatchAtsCompany2RequestTypedDict,
+            operations.PatchAtsCompanyRequest,
+            operations.PatchAtsCompanyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsCompany2Response:
+    ) -> operations.PatchAtsCompanyResponse:
         r"""Update a company
 
         :param request: The request object to send.
@@ -5247,8 +5243,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsCompany2Request)
-        request = cast(operations.PatchAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsCompanyRequest)
+        request = cast(operations.PatchAtsCompanyRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5282,7 +5278,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsCompany2",
+                operation_id="patchAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -5294,7 +5290,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsCompany2Response(
+            return operations.PatchAtsCompanyResponse(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -5311,18 +5307,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_company2_async(
+    async def patch_ats_company_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsCompany2Request,
-            operations.PatchAtsCompany2RequestTypedDict,
+            operations.PatchAtsCompanyRequest,
+            operations.PatchAtsCompanyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsCompany2Response:
+    ) -> operations.PatchAtsCompanyResponse:
         r"""Update a company
 
         :param request: The request object to send.
@@ -5342,8 +5338,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsCompany2Request)
-        request = cast(operations.PatchAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsCompanyRequest)
+        request = cast(operations.PatchAtsCompanyRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5377,7 +5373,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsCompany2",
+                operation_id="patchAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -5389,7 +5385,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsCompany2Response(
+            return operations.PatchAtsCompanyResponse(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -5406,18 +5402,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_document2(
+    def patch_ats_document(
         self,
         *,
         request: Union[
-            operations.PatchAtsDocument2Request,
-            operations.PatchAtsDocument2RequestTypedDict,
+            operations.PatchAtsDocumentRequest,
+            operations.PatchAtsDocumentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsDocument2Response:
+    ) -> operations.PatchAtsDocumentResponse:
         r"""Update a document
 
         :param request: The request object to send.
@@ -5437,8 +5433,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsDocument2Request)
-        request = cast(operations.PatchAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
+        request = cast(operations.PatchAtsDocumentRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5472,7 +5468,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsDocument2",
+                operation_id="patchAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -5484,7 +5480,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsDocument2Response(
+            return operations.PatchAtsDocumentResponse(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -5501,18 +5497,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_document2_async(
+    async def patch_ats_document_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsDocument2Request,
-            operations.PatchAtsDocument2RequestTypedDict,
+            operations.PatchAtsDocumentRequest,
+            operations.PatchAtsDocumentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsDocument2Response:
+    ) -> operations.PatchAtsDocumentResponse:
         r"""Update a document
 
         :param request: The request object to send.
@@ -5532,8 +5528,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsDocument2Request)
-        request = cast(operations.PatchAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
+        request = cast(operations.PatchAtsDocumentRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5567,7 +5563,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsDocument2",
+                operation_id="patchAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -5579,7 +5575,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsDocument2Response(
+            return operations.PatchAtsDocumentResponse(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -5596,18 +5592,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_interview2(
+    def patch_ats_interview(
         self,
         *,
         request: Union[
-            operations.PatchAtsInterview2Request,
-            operations.PatchAtsInterview2RequestTypedDict,
+            operations.PatchAtsInterviewRequest,
+            operations.PatchAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsInterview2Response:
+    ) -> operations.PatchAtsInterviewResponse:
         r"""Update an interview
 
         :param request: The request object to send.
@@ -5627,8 +5623,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsInterview2Request)
-        request = cast(operations.PatchAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
+        request = cast(operations.PatchAtsInterviewRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5662,7 +5658,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsInterview2",
+                operation_id="patchAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -5674,7 +5670,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsInterview2Response(
+            return operations.PatchAtsInterviewResponse(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -5691,18 +5687,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_interview2_async(
+    async def patch_ats_interview_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsInterview2Request,
-            operations.PatchAtsInterview2RequestTypedDict,
+            operations.PatchAtsInterviewRequest,
+            operations.PatchAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsInterview2Response:
+    ) -> operations.PatchAtsInterviewResponse:
         r"""Update an interview
 
         :param request: The request object to send.
@@ -5722,8 +5718,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsInterview2Request)
-        request = cast(operations.PatchAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
+        request = cast(operations.PatchAtsInterviewRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5757,7 +5753,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsInterview2",
+                operation_id="patchAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -5769,7 +5765,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsInterview2Response(
+            return operations.PatchAtsInterviewResponse(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -5786,17 +5782,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_job2(
+    def patch_ats_job(
         self,
         *,
         request: Union[
-            operations.PatchAtsJob2Request, operations.PatchAtsJob2RequestTypedDict
+            operations.PatchAtsJobRequest, operations.PatchAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsJob2Response:
+    ) -> operations.PatchAtsJobResponse:
         r"""Update a job
 
         :param request: The request object to send.
@@ -5816,8 +5812,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsJob2Request)
-        request = cast(operations.PatchAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsJobRequest)
+        request = cast(operations.PatchAtsJobRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5851,7 +5847,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsJob2",
+                operation_id="patchAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -5863,7 +5859,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsJob2Response(
+            return operations.PatchAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -5878,17 +5874,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_job2_async(
+    async def patch_ats_job_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsJob2Request, operations.PatchAtsJob2RequestTypedDict
+            operations.PatchAtsJobRequest, operations.PatchAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsJob2Response:
+    ) -> operations.PatchAtsJobResponse:
         r"""Update a job
 
         :param request: The request object to send.
@@ -5908,8 +5904,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsJob2Request)
-        request = cast(operations.PatchAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsJobRequest)
+        request = cast(operations.PatchAtsJobRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5943,7 +5939,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsJob2",
+                operation_id="patchAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -5955,7 +5951,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsJob2Response(
+            return operations.PatchAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -5970,18 +5966,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_scorecard2(
+    def patch_ats_scorecard(
         self,
         *,
         request: Union[
-            operations.PatchAtsScorecard2Request,
-            operations.PatchAtsScorecard2RequestTypedDict,
+            operations.PatchAtsScorecardRequest,
+            operations.PatchAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsScorecard2Response:
+    ) -> operations.PatchAtsScorecardResponse:
         r"""Update a scorecard
 
         :param request: The request object to send.
@@ -6001,8 +5997,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsScorecard2Request)
-        request = cast(operations.PatchAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
+        request = cast(operations.PatchAtsScorecardRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6036,7 +6032,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsScorecard2",
+                operation_id="patchAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -6048,7 +6044,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsScorecard2Response(
+            return operations.PatchAtsScorecardResponse(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -6065,18 +6061,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_scorecard2_async(
+    async def patch_ats_scorecard_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsScorecard2Request,
-            operations.PatchAtsScorecard2RequestTypedDict,
+            operations.PatchAtsScorecardRequest,
+            operations.PatchAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsScorecard2Response:
+    ) -> operations.PatchAtsScorecardResponse:
         r"""Update a scorecard
 
         :param request: The request object to send.
@@ -6096,8 +6092,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsScorecard2Request)
-        request = cast(operations.PatchAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
+        request = cast(operations.PatchAtsScorecardRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -6131,7 +6127,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsScorecard2",
+                operation_id="patchAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -6143,7 +6139,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsScorecard2Response(
+            return operations.PatchAtsScorecardResponse(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -6160,18 +6156,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_activity2(
+    def remove_ats_activity(
         self,
         *,
         request: Union[
-            operations.RemoveAtsActivity2Request,
-            operations.RemoveAtsActivity2RequestTypedDict,
+            operations.RemoveAtsActivityRequest,
+            operations.RemoveAtsActivityRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsActivity2Response:
+    ) -> operations.RemoveAtsActivityResponse:
         r"""Remove an activity
 
         :param request: The request object to send.
@@ -6191,8 +6187,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsActivity2Request)
-        request = cast(operations.RemoveAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
+        request = cast(operations.RemoveAtsActivityRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6223,7 +6219,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsActivity2",
+                operation_id="removeAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -6235,7 +6231,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsActivity2Response(
+            return operations.RemoveAtsActivityResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6248,7 +6244,7 @@ class Ats(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsActivity2Response(
+            return operations.RemoveAtsActivityResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6257,18 +6253,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_activity2_async(
+    async def remove_ats_activity_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsActivity2Request,
-            operations.RemoveAtsActivity2RequestTypedDict,
+            operations.RemoveAtsActivityRequest,
+            operations.RemoveAtsActivityRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsActivity2Response:
+    ) -> operations.RemoveAtsActivityResponse:
         r"""Remove an activity
 
         :param request: The request object to send.
@@ -6288,8 +6284,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsActivity2Request)
-        request = cast(operations.RemoveAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
+        request = cast(operations.RemoveAtsActivityRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -6320,7 +6316,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsActivity2",
+                operation_id="removeAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -6332,7 +6328,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsActivity2Response(
+            return operations.RemoveAtsActivityResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6345,7 +6341,7 @@ class Ats(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsActivity2Response(
+            return operations.RemoveAtsActivityResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6354,18 +6350,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_application2(
+    def remove_ats_application(
         self,
         *,
         request: Union[
-            operations.RemoveAtsApplication2Request,
-            operations.RemoveAtsApplication2RequestTypedDict,
+            operations.RemoveAtsApplicationRequest,
+            operations.RemoveAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsApplication2Response:
+    ) -> operations.RemoveAtsApplicationResponse:
         r"""Remove an application
 
         :param request: The request object to send.
@@ -6385,8 +6381,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsApplication2Request)
-        request = cast(operations.RemoveAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsApplicationRequest)
+        request = cast(operations.RemoveAtsApplicationRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6417,7 +6413,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsApplication2",
+                operation_id="removeAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -6429,7 +6425,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsApplication2Response(
+            return operations.RemoveAtsApplicationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6442,7 +6438,7 @@ class Ats(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsApplication2Response(
+            return operations.RemoveAtsApplicationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6451,18 +6447,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_application2_async(
+    async def remove_ats_application_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsApplication2Request,
-            operations.RemoveAtsApplication2RequestTypedDict,
+            operations.RemoveAtsApplicationRequest,
+            operations.RemoveAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsApplication2Response:
+    ) -> operations.RemoveAtsApplicationResponse:
         r"""Remove an application
 
         :param request: The request object to send.
@@ -6482,8 +6478,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsApplication2Request)
-        request = cast(operations.RemoveAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsApplicationRequest)
+        request = cast(operations.RemoveAtsApplicationRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -6514,7 +6510,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsApplication2",
+                operation_id="removeAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -6526,7 +6522,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsApplication2Response(
+            return operations.RemoveAtsApplicationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6539,7 +6535,7 @@ class Ats(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsApplication2Response(
+            return operations.RemoveAtsApplicationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6548,18 +6544,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_candidate2(
+    def remove_ats_candidate(
         self,
         *,
         request: Union[
-            operations.RemoveAtsCandidate2Request,
-            operations.RemoveAtsCandidate2RequestTypedDict,
+            operations.RemoveAtsCandidateRequest,
+            operations.RemoveAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsCandidate2Response:
+    ) -> operations.RemoveAtsCandidateResponse:
         r"""Remove a candidate
 
         :param request: The request object to send.
@@ -6579,8 +6575,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsCandidate2Request)
-        request = cast(operations.RemoveAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsCandidateRequest)
+        request = cast(operations.RemoveAtsCandidateRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6611,7 +6607,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsCandidate2",
+                operation_id="removeAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -6623,7 +6619,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsCandidate2Response(
+            return operations.RemoveAtsCandidateResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6636,7 +6632,7 @@ class Ats(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsCandidate2Response(
+            return operations.RemoveAtsCandidateResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6645,18 +6641,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_candidate2_async(
+    async def remove_ats_candidate_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsCandidate2Request,
-            operations.RemoveAtsCandidate2RequestTypedDict,
+            operations.RemoveAtsCandidateRequest,
+            operations.RemoveAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsCandidate2Response:
+    ) -> operations.RemoveAtsCandidateResponse:
         r"""Remove a candidate
 
         :param request: The request object to send.
@@ -6676,8 +6672,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsCandidate2Request)
-        request = cast(operations.RemoveAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsCandidateRequest)
+        request = cast(operations.RemoveAtsCandidateRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -6708,7 +6704,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsCandidate2",
+                operation_id="removeAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -6720,7 +6716,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsCandidate2Response(
+            return operations.RemoveAtsCandidateResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6733,7 +6729,7 @@ class Ats(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsCandidate2Response(
+            return operations.RemoveAtsCandidateResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6742,18 +6738,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_company2(
+    def remove_ats_company(
         self,
         *,
         request: Union[
-            operations.RemoveAtsCompany2Request,
-            operations.RemoveAtsCompany2RequestTypedDict,
+            operations.RemoveAtsCompanyRequest,
+            operations.RemoveAtsCompanyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsCompany2Response:
+    ) -> operations.RemoveAtsCompanyResponse:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -6773,8 +6769,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsCompany2Request)
-        request = cast(operations.RemoveAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsCompanyRequest)
+        request = cast(operations.RemoveAtsCompanyRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6805,7 +6801,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsCompany2",
+                operation_id="removeAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -6817,7 +6813,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsCompany2Response(
+            return operations.RemoveAtsCompanyResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6830,7 +6826,7 @@ class Ats(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsCompany2Response(
+            return operations.RemoveAtsCompanyResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6839,18 +6835,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_company2_async(
+    async def remove_ats_company_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsCompany2Request,
-            operations.RemoveAtsCompany2RequestTypedDict,
+            operations.RemoveAtsCompanyRequest,
+            operations.RemoveAtsCompanyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsCompany2Response:
+    ) -> operations.RemoveAtsCompanyResponse:
         r"""Remove a company
 
         :param request: The request object to send.
@@ -6870,8 +6866,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsCompany2Request)
-        request = cast(operations.RemoveAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsCompanyRequest)
+        request = cast(operations.RemoveAtsCompanyRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -6902,7 +6898,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsCompany2",
+                operation_id="removeAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -6914,7 +6910,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsCompany2Response(
+            return operations.RemoveAtsCompanyResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6927,7 +6923,7 @@ class Ats(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsCompany2Response(
+            return operations.RemoveAtsCompanyResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6936,18 +6932,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_document2(
+    def remove_ats_document(
         self,
         *,
         request: Union[
-            operations.RemoveAtsDocument2Request,
-            operations.RemoveAtsDocument2RequestTypedDict,
+            operations.RemoveAtsDocumentRequest,
+            operations.RemoveAtsDocumentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsDocument2Response:
+    ) -> operations.RemoveAtsDocumentResponse:
         r"""Remove a document
 
         :param request: The request object to send.
@@ -6967,8 +6963,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsDocument2Request)
-        request = cast(operations.RemoveAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
+        request = cast(operations.RemoveAtsDocumentRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6999,7 +6995,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsDocument2",
+                operation_id="removeAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -7011,7 +7007,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsDocument2Response(
+            return operations.RemoveAtsDocumentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7024,7 +7020,7 @@ class Ats(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsDocument2Response(
+            return operations.RemoveAtsDocumentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7033,18 +7029,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_document2_async(
+    async def remove_ats_document_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsDocument2Request,
-            operations.RemoveAtsDocument2RequestTypedDict,
+            operations.RemoveAtsDocumentRequest,
+            operations.RemoveAtsDocumentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsDocument2Response:
+    ) -> operations.RemoveAtsDocumentResponse:
         r"""Remove a document
 
         :param request: The request object to send.
@@ -7064,8 +7060,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsDocument2Request)
-        request = cast(operations.RemoveAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
+        request = cast(operations.RemoveAtsDocumentRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7096,7 +7092,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsDocument2",
+                operation_id="removeAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -7108,7 +7104,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsDocument2Response(
+            return operations.RemoveAtsDocumentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7121,7 +7117,7 @@ class Ats(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsDocument2Response(
+            return operations.RemoveAtsDocumentResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7130,18 +7126,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_interview2(
+    def remove_ats_interview(
         self,
         *,
         request: Union[
-            operations.RemoveAtsInterview2Request,
-            operations.RemoveAtsInterview2RequestTypedDict,
+            operations.RemoveAtsInterviewRequest,
+            operations.RemoveAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsInterview2Response:
+    ) -> operations.RemoveAtsInterviewResponse:
         r"""Remove an interview
 
         :param request: The request object to send.
@@ -7161,8 +7157,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsInterview2Request)
-        request = cast(operations.RemoveAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
+        request = cast(operations.RemoveAtsInterviewRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7193,7 +7189,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsInterview2",
+                operation_id="removeAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -7205,7 +7201,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsInterview2Response(
+            return operations.RemoveAtsInterviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7218,7 +7214,7 @@ class Ats(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsInterview2Response(
+            return operations.RemoveAtsInterviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7227,18 +7223,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_interview2_async(
+    async def remove_ats_interview_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsInterview2Request,
-            operations.RemoveAtsInterview2RequestTypedDict,
+            operations.RemoveAtsInterviewRequest,
+            operations.RemoveAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsInterview2Response:
+    ) -> operations.RemoveAtsInterviewResponse:
         r"""Remove an interview
 
         :param request: The request object to send.
@@ -7258,8 +7254,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsInterview2Request)
-        request = cast(operations.RemoveAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
+        request = cast(operations.RemoveAtsInterviewRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7290,7 +7286,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsInterview2",
+                operation_id="removeAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -7302,7 +7298,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsInterview2Response(
+            return operations.RemoveAtsInterviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7315,7 +7311,7 @@ class Ats(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsInterview2Response(
+            return operations.RemoveAtsInterviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7324,17 +7320,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_job2(
+    def remove_ats_job(
         self,
         *,
         request: Union[
-            operations.RemoveAtsJob2Request, operations.RemoveAtsJob2RequestTypedDict
+            operations.RemoveAtsJobRequest, operations.RemoveAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsJob2Response:
+    ) -> operations.RemoveAtsJobResponse:
         r"""Remove a job
 
         :param request: The request object to send.
@@ -7354,8 +7350,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsJob2Request)
-        request = cast(operations.RemoveAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
+        request = cast(operations.RemoveAtsJobRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7386,7 +7382,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsJob2",
+                operation_id="removeAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -7398,7 +7394,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsJob2Response(
+            return operations.RemoveAtsJobResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7411,7 +7407,7 @@ class Ats(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsJob2Response(
+            return operations.RemoveAtsJobResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7420,17 +7416,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_job2_async(
+    async def remove_ats_job_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsJob2Request, operations.RemoveAtsJob2RequestTypedDict
+            operations.RemoveAtsJobRequest, operations.RemoveAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsJob2Response:
+    ) -> operations.RemoveAtsJobResponse:
         r"""Remove a job
 
         :param request: The request object to send.
@@ -7450,8 +7446,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsJob2Request)
-        request = cast(operations.RemoveAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
+        request = cast(operations.RemoveAtsJobRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7482,7 +7478,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsJob2",
+                operation_id="removeAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -7494,7 +7490,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsJob2Response(
+            return operations.RemoveAtsJobResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7507,7 +7503,7 @@ class Ats(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsJob2Response(
+            return operations.RemoveAtsJobResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7516,18 +7512,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_scorecard2(
+    def remove_ats_scorecard(
         self,
         *,
         request: Union[
-            operations.RemoveAtsScorecard2Request,
-            operations.RemoveAtsScorecard2RequestTypedDict,
+            operations.RemoveAtsScorecardRequest,
+            operations.RemoveAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsScorecard2Response:
+    ) -> operations.RemoveAtsScorecardResponse:
         r"""Remove a scorecard
 
         :param request: The request object to send.
@@ -7547,8 +7543,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsScorecard2Request)
-        request = cast(operations.RemoveAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
+        request = cast(operations.RemoveAtsScorecardRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7579,7 +7575,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsScorecard2",
+                operation_id="removeAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -7591,7 +7587,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsScorecard2Response(
+            return operations.RemoveAtsScorecardResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7604,7 +7600,7 @@ class Ats(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsScorecard2Response(
+            return operations.RemoveAtsScorecardResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7613,18 +7609,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_scorecard2_async(
+    async def remove_ats_scorecard_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsScorecard2Request,
-            operations.RemoveAtsScorecard2RequestTypedDict,
+            operations.RemoveAtsScorecardRequest,
+            operations.RemoveAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsScorecard2Response:
+    ) -> operations.RemoveAtsScorecardResponse:
         r"""Remove a scorecard
 
         :param request: The request object to send.
@@ -7644,8 +7640,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsScorecard2Request)
-        request = cast(operations.RemoveAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
+        request = cast(operations.RemoveAtsScorecardRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7676,7 +7672,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsScorecard2",
+                operation_id="removeAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -7688,7 +7684,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsScorecard2Response(
+            return operations.RemoveAtsScorecardResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7701,7 +7697,7 @@ class Ats(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsScorecard2Response(
+            return operations.RemoveAtsScorecardResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7710,18 +7706,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_activity2(
+    def update_ats_activity(
         self,
         *,
         request: Union[
-            operations.UpdateAtsActivity2Request,
-            operations.UpdateAtsActivity2RequestTypedDict,
+            operations.UpdateAtsActivityRequest,
+            operations.UpdateAtsActivityRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsActivity2Response:
+    ) -> operations.UpdateAtsActivityResponse:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -7741,8 +7737,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsActivity2Request)
-        request = cast(operations.UpdateAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
+        request = cast(operations.UpdateAtsActivityRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -7776,7 +7772,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsActivity2",
+                operation_id="updateAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -7788,7 +7784,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsActivity2Response(
+            return operations.UpdateAtsActivityResponse(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -7805,18 +7801,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_activity2_async(
+    async def update_ats_activity_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsActivity2Request,
-            operations.UpdateAtsActivity2RequestTypedDict,
+            operations.UpdateAtsActivityRequest,
+            operations.UpdateAtsActivityRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsActivity2Response:
+    ) -> operations.UpdateAtsActivityResponse:
         r"""Update an activity
 
         :param request: The request object to send.
@@ -7836,8 +7832,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsActivity2Request)
-        request = cast(operations.UpdateAtsActivity2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
+        request = cast(operations.UpdateAtsActivityRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -7871,7 +7867,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsActivity2",
+                operation_id="updateAtsActivity",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "activity"],
@@ -7883,7 +7879,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsActivity2Response(
+            return operations.UpdateAtsActivityResponse(
                 ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
@@ -7900,18 +7896,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_application2(
+    def update_ats_application(
         self,
         *,
         request: Union[
-            operations.UpdateAtsApplication2Request,
-            operations.UpdateAtsApplication2RequestTypedDict,
+            operations.UpdateAtsApplicationRequest,
+            operations.UpdateAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsApplication2Response:
+    ) -> operations.UpdateAtsApplicationResponse:
         r"""Update an application
 
         :param request: The request object to send.
@@ -7931,8 +7927,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsApplication2Request)
-        request = cast(operations.UpdateAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsApplicationRequest)
+        request = cast(operations.UpdateAtsApplicationRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -7966,7 +7962,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsApplication2",
+                operation_id="updateAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -7978,7 +7974,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsApplication2Response(
+            return operations.UpdateAtsApplicationResponse(
                 ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
@@ -7995,18 +7991,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_application2_async(
+    async def update_ats_application_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsApplication2Request,
-            operations.UpdateAtsApplication2RequestTypedDict,
+            operations.UpdateAtsApplicationRequest,
+            operations.UpdateAtsApplicationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsApplication2Response:
+    ) -> operations.UpdateAtsApplicationResponse:
         r"""Update an application
 
         :param request: The request object to send.
@@ -8026,8 +8022,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsApplication2Request)
-        request = cast(operations.UpdateAtsApplication2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsApplicationRequest)
+        request = cast(operations.UpdateAtsApplicationRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8061,7 +8057,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsApplication2",
+                operation_id="updateAtsApplication",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "application"],
@@ -8073,7 +8069,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsApplication2Response(
+            return operations.UpdateAtsApplicationResponse(
                 ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
@@ -8090,18 +8086,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_candidate2(
+    def update_ats_candidate(
         self,
         *,
         request: Union[
-            operations.UpdateAtsCandidate2Request,
-            operations.UpdateAtsCandidate2RequestTypedDict,
+            operations.UpdateAtsCandidateRequest,
+            operations.UpdateAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsCandidate2Response:
+    ) -> operations.UpdateAtsCandidateResponse:
         r"""Update a candidate
 
         :param request: The request object to send.
@@ -8121,8 +8117,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsCandidate2Request)
-        request = cast(operations.UpdateAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsCandidateRequest)
+        request = cast(operations.UpdateAtsCandidateRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8156,7 +8152,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsCandidate2",
+                operation_id="updateAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -8168,7 +8164,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsCandidate2Response(
+            return operations.UpdateAtsCandidateResponse(
                 ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
@@ -8185,18 +8181,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_candidate2_async(
+    async def update_ats_candidate_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsCandidate2Request,
-            operations.UpdateAtsCandidate2RequestTypedDict,
+            operations.UpdateAtsCandidateRequest,
+            operations.UpdateAtsCandidateRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsCandidate2Response:
+    ) -> operations.UpdateAtsCandidateResponse:
         r"""Update a candidate
 
         :param request: The request object to send.
@@ -8216,8 +8212,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsCandidate2Request)
-        request = cast(operations.UpdateAtsCandidate2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsCandidateRequest)
+        request = cast(operations.UpdateAtsCandidateRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8251,7 +8247,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsCandidate2",
+                operation_id="updateAtsCandidate",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "candidate"],
@@ -8263,7 +8259,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsCandidate2Response(
+            return operations.UpdateAtsCandidateResponse(
                 ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
@@ -8280,18 +8276,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_company2(
+    def update_ats_company(
         self,
         *,
         request: Union[
-            operations.UpdateAtsCompany2Request,
-            operations.UpdateAtsCompany2RequestTypedDict,
+            operations.UpdateAtsCompanyRequest,
+            operations.UpdateAtsCompanyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsCompany2Response:
+    ) -> operations.UpdateAtsCompanyResponse:
         r"""Update a company
 
         :param request: The request object to send.
@@ -8311,8 +8307,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsCompany2Request)
-        request = cast(operations.UpdateAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsCompanyRequest)
+        request = cast(operations.UpdateAtsCompanyRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8346,7 +8342,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsCompany2",
+                operation_id="updateAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -8358,7 +8354,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsCompany2Response(
+            return operations.UpdateAtsCompanyResponse(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -8375,18 +8371,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_company2_async(
+    async def update_ats_company_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsCompany2Request,
-            operations.UpdateAtsCompany2RequestTypedDict,
+            operations.UpdateAtsCompanyRequest,
+            operations.UpdateAtsCompanyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsCompany2Response:
+    ) -> operations.UpdateAtsCompanyResponse:
         r"""Update a company
 
         :param request: The request object to send.
@@ -8406,8 +8402,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsCompany2Request)
-        request = cast(operations.UpdateAtsCompany2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsCompanyRequest)
+        request = cast(operations.UpdateAtsCompanyRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8441,7 +8437,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsCompany2",
+                operation_id="updateAtsCompany",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "company"],
@@ -8453,7 +8449,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsCompany2Response(
+            return operations.UpdateAtsCompanyResponse(
                 ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
@@ -8470,18 +8466,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_document2(
+    def update_ats_document(
         self,
         *,
         request: Union[
-            operations.UpdateAtsDocument2Request,
-            operations.UpdateAtsDocument2RequestTypedDict,
+            operations.UpdateAtsDocumentRequest,
+            operations.UpdateAtsDocumentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsDocument2Response:
+    ) -> operations.UpdateAtsDocumentResponse:
         r"""Update a document
 
         :param request: The request object to send.
@@ -8501,8 +8497,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsDocument2Request)
-        request = cast(operations.UpdateAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
+        request = cast(operations.UpdateAtsDocumentRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8536,7 +8532,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsDocument2",
+                operation_id="updateAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -8548,7 +8544,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsDocument2Response(
+            return operations.UpdateAtsDocumentResponse(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -8565,18 +8561,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_document2_async(
+    async def update_ats_document_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsDocument2Request,
-            operations.UpdateAtsDocument2RequestTypedDict,
+            operations.UpdateAtsDocumentRequest,
+            operations.UpdateAtsDocumentRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsDocument2Response:
+    ) -> operations.UpdateAtsDocumentResponse:
         r"""Update a document
 
         :param request: The request object to send.
@@ -8596,8 +8592,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsDocument2Request)
-        request = cast(operations.UpdateAtsDocument2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
+        request = cast(operations.UpdateAtsDocumentRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8631,7 +8627,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsDocument2",
+                operation_id="updateAtsDocument",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "document"],
@@ -8643,7 +8639,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsDocument2Response(
+            return operations.UpdateAtsDocumentResponse(
                 ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
@@ -8660,18 +8656,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_interview2(
+    def update_ats_interview(
         self,
         *,
         request: Union[
-            operations.UpdateAtsInterview2Request,
-            operations.UpdateAtsInterview2RequestTypedDict,
+            operations.UpdateAtsInterviewRequest,
+            operations.UpdateAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsInterview2Response:
+    ) -> operations.UpdateAtsInterviewResponse:
         r"""Update an interview
 
         :param request: The request object to send.
@@ -8691,8 +8687,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsInterview2Request)
-        request = cast(operations.UpdateAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
+        request = cast(operations.UpdateAtsInterviewRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8726,7 +8722,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsInterview2",
+                operation_id="updateAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -8738,7 +8734,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsInterview2Response(
+            return operations.UpdateAtsInterviewResponse(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -8755,18 +8751,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_interview2_async(
+    async def update_ats_interview_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsInterview2Request,
-            operations.UpdateAtsInterview2RequestTypedDict,
+            operations.UpdateAtsInterviewRequest,
+            operations.UpdateAtsInterviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsInterview2Response:
+    ) -> operations.UpdateAtsInterviewResponse:
         r"""Update an interview
 
         :param request: The request object to send.
@@ -8786,8 +8782,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsInterview2Request)
-        request = cast(operations.UpdateAtsInterview2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
+        request = cast(operations.UpdateAtsInterviewRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8821,7 +8817,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsInterview2",
+                operation_id="updateAtsInterview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "interview"],
@@ -8833,7 +8829,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsInterview2Response(
+            return operations.UpdateAtsInterviewResponse(
                 ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
@@ -8850,17 +8846,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_job2(
+    def update_ats_job(
         self,
         *,
         request: Union[
-            operations.UpdateAtsJob2Request, operations.UpdateAtsJob2RequestTypedDict
+            operations.UpdateAtsJobRequest, operations.UpdateAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsJob2Response:
+    ) -> operations.UpdateAtsJobResponse:
         r"""Update a job
 
         :param request: The request object to send.
@@ -8880,8 +8876,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsJob2Request)
-        request = cast(operations.UpdateAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
+        request = cast(operations.UpdateAtsJobRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8915,7 +8911,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsJob2",
+                operation_id="updateAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -8927,7 +8923,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsJob2Response(
+            return operations.UpdateAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -8942,17 +8938,17 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_job2_async(
+    async def update_ats_job_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsJob2Request, operations.UpdateAtsJob2RequestTypedDict
+            operations.UpdateAtsJobRequest, operations.UpdateAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsJob2Response:
+    ) -> operations.UpdateAtsJobResponse:
         r"""Update a job
 
         :param request: The request object to send.
@@ -8972,8 +8968,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsJob2Request)
-        request = cast(operations.UpdateAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
+        request = cast(operations.UpdateAtsJobRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -9007,7 +9003,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsJob2",
+                operation_id="updateAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -9019,7 +9015,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsJob2Response(
+            return operations.UpdateAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -9034,18 +9030,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_scorecard2(
+    def update_ats_scorecard(
         self,
         *,
         request: Union[
-            operations.UpdateAtsScorecard2Request,
-            operations.UpdateAtsScorecard2RequestTypedDict,
+            operations.UpdateAtsScorecardRequest,
+            operations.UpdateAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsScorecard2Response:
+    ) -> operations.UpdateAtsScorecardResponse:
         r"""Update a scorecard
 
         :param request: The request object to send.
@@ -9065,8 +9061,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsScorecard2Request)
-        request = cast(operations.UpdateAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
+        request = cast(operations.UpdateAtsScorecardRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -9100,7 +9096,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsScorecard2",
+                operation_id="updateAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -9112,7 +9108,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsScorecard2Response(
+            return operations.UpdateAtsScorecardResponse(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
@@ -9129,18 +9125,18 @@ class Ats(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_scorecard2_async(
+    async def update_ats_scorecard_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsScorecard2Request,
-            operations.UpdateAtsScorecard2RequestTypedDict,
+            operations.UpdateAtsScorecardRequest,
+            operations.UpdateAtsScorecardRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsScorecard2Response:
+    ) -> operations.UpdateAtsScorecardResponse:
         r"""Update a scorecard
 
         :param request: The request object to send.
@@ -9160,8 +9156,8 @@ class Ats(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsScorecard2Request)
-        request = cast(operations.UpdateAtsScorecard2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
+        request = cast(operations.UpdateAtsScorecardRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -9195,7 +9191,7 @@ class Ats(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsScorecard2",
+                operation_id="updateAtsScorecard",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "scorecard"],
@@ -9207,7 +9203,7 @@ class Ats(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsScorecard2Response(
+            return operations.UpdateAtsScorecardResponse(
                 ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),

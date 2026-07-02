@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Enrich(BaseSDK):
-    def list_enrich_companies2(
+    def list_enrich_companies(
         self,
         *,
         request: Union[
-            operations.ListEnrichCompanies2Request,
-            operations.ListEnrichCompanies2RequestTypedDict,
+            operations.ListEnrichCompaniesRequest,
+            operations.ListEnrichCompaniesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListEnrichCompanies2Response:
+    ) -> operations.ListEnrichCompaniesResponse:
         r"""Retrieve enrichment information for a company
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Enrich(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListEnrichCompanies2Request)
-        request = cast(operations.ListEnrichCompanies2Request, request)
+            request = utils.unmarshal(request, operations.ListEnrichCompaniesRequest)
+        request = cast(operations.ListEnrichCompaniesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Enrich(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listEnrichCompanies2",
+                operation_id="listEnrichCompanies",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["enrich", "company"],
@@ -85,7 +85,7 @@ class Enrich(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListEnrichCompanies2Response(
+            return operations.ListEnrichCompaniesResponse(
                 enrich_company=unmarshal_json_response(
                     Optional[shared.EnrichCompany], http_res
                 ),
@@ -102,18 +102,18 @@ class Enrich(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_enrich_companies2_async(
+    async def list_enrich_companies_async(
         self,
         *,
         request: Union[
-            operations.ListEnrichCompanies2Request,
-            operations.ListEnrichCompanies2RequestTypedDict,
+            operations.ListEnrichCompaniesRequest,
+            operations.ListEnrichCompaniesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListEnrichCompanies2Response:
+    ) -> operations.ListEnrichCompaniesResponse:
         r"""Retrieve enrichment information for a company
 
         :param request: The request object to send.
@@ -133,8 +133,8 @@ class Enrich(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListEnrichCompanies2Request)
-        request = cast(operations.ListEnrichCompanies2Request, request)
+            request = utils.unmarshal(request, operations.ListEnrichCompaniesRequest)
+        request = cast(operations.ListEnrichCompaniesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +165,7 @@ class Enrich(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listEnrichCompanies2",
+                operation_id="listEnrichCompanies",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["enrich", "company"],
@@ -177,7 +177,7 @@ class Enrich(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListEnrichCompanies2Response(
+            return operations.ListEnrichCompaniesResponse(
                 enrich_company=unmarshal_json_response(
                     Optional[shared.EnrichCompany], http_res
                 ),
@@ -194,18 +194,18 @@ class Enrich(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_enrich_people2(
+    def list_enrich_people(
         self,
         *,
         request: Union[
-            operations.ListEnrichPeople2Request,
-            operations.ListEnrichPeople2RequestTypedDict,
+            operations.ListEnrichPeopleRequest,
+            operations.ListEnrichPeopleRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListEnrichPeople2Response:
+    ) -> operations.ListEnrichPeopleResponse:
         r"""Retrieve enrichment information for a person
 
         :param request: The request object to send.
@@ -225,8 +225,8 @@ class Enrich(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListEnrichPeople2Request)
-        request = cast(operations.ListEnrichPeople2Request, request)
+            request = utils.unmarshal(request, operations.ListEnrichPeopleRequest)
+        request = cast(operations.ListEnrichPeopleRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -257,7 +257,7 @@ class Enrich(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listEnrichPeople2",
+                operation_id="listEnrichPeople",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["enrich", "person"],
@@ -269,7 +269,7 @@ class Enrich(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListEnrichPeople2Response(
+            return operations.ListEnrichPeopleResponse(
                 enrich_person=unmarshal_json_response(
                     Optional[shared.EnrichPerson], http_res
                 ),
@@ -286,18 +286,18 @@ class Enrich(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_enrich_people2_async(
+    async def list_enrich_people_async(
         self,
         *,
         request: Union[
-            operations.ListEnrichPeople2Request,
-            operations.ListEnrichPeople2RequestTypedDict,
+            operations.ListEnrichPeopleRequest,
+            operations.ListEnrichPeopleRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListEnrichPeople2Response:
+    ) -> operations.ListEnrichPeopleResponse:
         r"""Retrieve enrichment information for a person
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Enrich(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListEnrichPeople2Request)
-        request = cast(operations.ListEnrichPeople2Request, request)
+            request = utils.unmarshal(request, operations.ListEnrichPeopleRequest)
+        request = cast(operations.ListEnrichPeopleRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Enrich(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listEnrichPeople2",
+                operation_id="listEnrichPeople",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["enrich", "person"],
@@ -361,7 +361,7 @@ class Enrich(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListEnrichPeople2Response(
+            return operations.ListEnrichPeopleResponse(
                 enrich_person=unmarshal_json_response(
                     Optional[shared.EnrichPerson], http_res
                 ),

@@ -4,31 +4,31 @@
 
 ### Available Operations
 
-* [create_shipping_label2](#create_shipping_label2) - Create a label
-* [create_shipping_rate2](#create_shipping_rate2) - Create a rate
-* [create_shipping_shipment2](#create_shipping_shipment2) - Create a shipment
-* [get_shipping_carrier2](#get_shipping_carrier2) - Retrieve a carrier
-* [get_shipping_label2](#get_shipping_label2) - Retrieve a label
-* [get_shipping_shipment2](#get_shipping_shipment2) - Retrieve a shipment
-* [get_shipping_tracking2](#get_shipping_tracking2) - Retrieve a tracking
-* [list_shipping_carriers2](#list_shipping_carriers2) - List all carriers
-* [list_shipping_labels2](#list_shipping_labels2) - List all labels
-* [list_shipping_shipments2](#list_shipping_shipments2) - List all shipments
-* [list_shipping_trackings2](#list_shipping_trackings2) - List all trackings
-* [patch_shipping_label2](#patch_shipping_label2) - Update a label
-* [patch_shipping_shipment2](#patch_shipping_shipment2) - Update a shipment
-* [remove_shipping_label2](#remove_shipping_label2) - Remove a label
-* [remove_shipping_shipment2](#remove_shipping_shipment2) - Remove a shipment
-* [update_shipping_label2](#update_shipping_label2) - Update a label
-* [update_shipping_shipment2](#update_shipping_shipment2) - Update a shipment
+* [create_shipping_label](#create_shipping_label) - Create a label
+* [create_shipping_rate](#create_shipping_rate) - Create a rate
+* [create_shipping_shipment](#create_shipping_shipment) - Create a shipment
+* [get_shipping_carrier](#get_shipping_carrier) - Retrieve a carrier
+* [get_shipping_label](#get_shipping_label) - Retrieve a label
+* [get_shipping_shipment](#get_shipping_shipment) - Retrieve a shipment
+* [get_shipping_tracking](#get_shipping_tracking) - Retrieve a tracking
+* [list_shipping_carriers](#list_shipping_carriers) - List all carriers
+* [list_shipping_labels](#list_shipping_labels) - List all labels
+* [list_shipping_shipments](#list_shipping_shipments) - List all shipments
+* [list_shipping_trackings](#list_shipping_trackings) - List all trackings
+* [patch_shipping_label](#patch_shipping_label) - Update a label
+* [patch_shipping_shipment](#patch_shipping_shipment) - Update a shipment
+* [remove_shipping_label](#remove_shipping_label) - Remove a label
+* [remove_shipping_shipment](#remove_shipping_shipment) - Remove a shipment
+* [update_shipping_label](#update_shipping_label) - Update a label
+* [update_shipping_shipment](#update_shipping_shipment) - Update a shipment
 
-## create_shipping_label2
+## create_shipping_label
 
 Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingLabel2" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="python" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -40,7 +40,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.create_shipping_label2(request={
+    res = unified_to.shipping.create_shipping_label(request={
         "shipping_label": {},
         "connection_id": "<id>",
     })
@@ -54,14 +54,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.CreateShippingLabel2Request](../../models/operations/createshippinglabel2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateShippingLabelRequest](../../models/operations/createshippinglabelrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.CreateShippingLabel2Response](../../models/operations/createshippinglabel2response.md)**
+**[operations.CreateShippingLabelResponse](../../models/operations/createshippinglabelresponse.md)**
 
 ### Errors
 
@@ -69,13 +69,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_shipping_rate2
+## create_shipping_rate
 
 Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingRate2" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="python" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -87,7 +87,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.create_shipping_rate2(request={
+    res = unified_to.shipping.create_shipping_rate(request={
         "shipping_rate": {},
         "connection_id": "<id>",
     })
@@ -101,14 +101,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.CreateShippingRate2Request](../../models/operations/createshippingrate2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateShippingRateRequest](../../models/operations/createshippingraterequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.CreateShippingRate2Response](../../models/operations/createshippingrate2response.md)**
+**[operations.CreateShippingRateResponse](../../models/operations/createshippingrateresponse.md)**
 
 ### Errors
 
@@ -116,13 +116,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_shipping_shipment2
+## create_shipping_shipment
 
 Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingShipment2" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="python" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -134,7 +134,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.create_shipping_shipment2(request={
+    res = unified_to.shipping.create_shipping_shipment(request={
         "shipping_shipment": {},
         "connection_id": "<id>",
     })
@@ -148,14 +148,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.CreateShippingShipment2Request](../../models/operations/createshippingshipment2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateShippingShipmentRequest](../../models/operations/createshippingshipmentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.CreateShippingShipment2Response](../../models/operations/createshippingshipment2response.md)**
+**[operations.CreateShippingShipmentResponse](../../models/operations/createshippingshipmentresponse.md)**
 
 ### Errors
 
@@ -163,13 +163,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_shipping_carrier2
+## get_shipping_carrier
 
 Retrieve a carrier
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getShippingCarrier2" method="get" path="/shipping/{connection_id}/carrier/{id}" -->
+<!-- UsageSnippet language="python" operationID="getShippingCarrier" method="get" path="/shipping/{connection_id}/carrier/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -181,7 +181,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.get_shipping_carrier2(request={
+    res = unified_to.shipping.get_shipping_carrier(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -195,14 +195,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetShippingCarrier2Request](../../models/operations/getshippingcarrier2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GetShippingCarrierRequest](../../models/operations/getshippingcarrierrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.GetShippingCarrier2Response](../../models/operations/getshippingcarrier2response.md)**
+**[operations.GetShippingCarrierResponse](../../models/operations/getshippingcarrierresponse.md)**
 
 ### Errors
 
@@ -210,13 +210,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_shipping_label2
+## get_shipping_label
 
 Retrieve a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getShippingLabel2" method="get" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="python" operationID="getShippingLabel" method="get" path="/shipping/{connection_id}/label/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -228,7 +228,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.get_shipping_label2(request={
+    res = unified_to.shipping.get_shipping_label(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -242,14 +242,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetShippingLabel2Request](../../models/operations/getshippinglabel2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetShippingLabelRequest](../../models/operations/getshippinglabelrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
-**[operations.GetShippingLabel2Response](../../models/operations/getshippinglabel2response.md)**
+**[operations.GetShippingLabelResponse](../../models/operations/getshippinglabelresponse.md)**
 
 ### Errors
 
@@ -257,13 +257,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_shipping_shipment2
+## get_shipping_shipment
 
 Retrieve a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getShippingShipment2" method="get" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="python" operationID="getShippingShipment" method="get" path="/shipping/{connection_id}/shipment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -275,7 +275,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.get_shipping_shipment2(request={
+    res = unified_to.shipping.get_shipping_shipment(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -289,14 +289,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetShippingShipment2Request](../../models/operations/getshippingshipment2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetShippingShipmentRequest](../../models/operations/getshippingshipmentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetShippingShipment2Response](../../models/operations/getshippingshipment2response.md)**
+**[operations.GetShippingShipmentResponse](../../models/operations/getshippingshipmentresponse.md)**
 
 ### Errors
 
@@ -304,13 +304,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_shipping_tracking2
+## get_shipping_tracking
 
 Retrieve a tracking
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getShippingTracking2" method="get" path="/shipping/{connection_id}/tracking/{id}" -->
+<!-- UsageSnippet language="python" operationID="getShippingTracking" method="get" path="/shipping/{connection_id}/tracking/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -322,7 +322,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.get_shipping_tracking2(request={
+    res = unified_to.shipping.get_shipping_tracking(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -336,14 +336,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetShippingTracking2Request](../../models/operations/getshippingtracking2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetShippingTrackingRequest](../../models/operations/getshippingtrackingrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetShippingTracking2Response](../../models/operations/getshippingtracking2response.md)**
+**[operations.GetShippingTrackingResponse](../../models/operations/getshippingtrackingresponse.md)**
 
 ### Errors
 
@@ -351,13 +351,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_shipping_carriers2
+## list_shipping_carriers
 
 List all carriers
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listShippingCarriers2" method="get" path="/shipping/{connection_id}/carrier" -->
+<!-- UsageSnippet language="python" operationID="listShippingCarriers" method="get" path="/shipping/{connection_id}/carrier" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -369,7 +369,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.list_shipping_carriers2(request={
+    res = unified_to.shipping.list_shipping_carriers(request={
         "connection_id": "<id>",
     })
 
@@ -382,14 +382,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.ListShippingCarriers2Request](../../models/operations/listshippingcarriers2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.ListShippingCarriersRequest](../../models/operations/listshippingcarriersrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
-**[operations.ListShippingCarriers2Response](../../models/operations/listshippingcarriers2response.md)**
+**[operations.ListShippingCarriersResponse](../../models/operations/listshippingcarriersresponse.md)**
 
 ### Errors
 
@@ -397,13 +397,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_shipping_labels2
+## list_shipping_labels
 
 List all labels
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listShippingLabels2" method="get" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="python" operationID="listShippingLabels" method="get" path="/shipping/{connection_id}/label" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -415,7 +415,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.list_shipping_labels2(request={
+    res = unified_to.shipping.list_shipping_labels(request={
         "connection_id": "<id>",
     })
 
@@ -428,14 +428,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.ListShippingLabels2Request](../../models/operations/listshippinglabels2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListShippingLabelsRequest](../../models/operations/listshippinglabelsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
-**[operations.ListShippingLabels2Response](../../models/operations/listshippinglabels2response.md)**
+**[operations.ListShippingLabelsResponse](../../models/operations/listshippinglabelsresponse.md)**
 
 ### Errors
 
@@ -443,13 +443,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_shipping_shipments2
+## list_shipping_shipments
 
 List all shipments
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listShippingShipments2" method="get" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="python" operationID="listShippingShipments" method="get" path="/shipping/{connection_id}/shipment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -461,7 +461,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.list_shipping_shipments2(request={
+    res = unified_to.shipping.list_shipping_shipments(request={
         "connection_id": "<id>",
     })
 
@@ -474,14 +474,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListShippingShipments2Request](../../models/operations/listshippingshipments2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListShippingShipmentsRequest](../../models/operations/listshippingshipmentsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListShippingShipments2Response](../../models/operations/listshippingshipments2response.md)**
+**[operations.ListShippingShipmentsResponse](../../models/operations/listshippingshipmentsresponse.md)**
 
 ### Errors
 
@@ -489,13 +489,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_shipping_trackings2
+## list_shipping_trackings
 
 List all trackings
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listShippingTrackings2" method="get" path="/shipping/{connection_id}/tracking" -->
+<!-- UsageSnippet language="python" operationID="listShippingTrackings" method="get" path="/shipping/{connection_id}/tracking" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -507,7 +507,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.list_shipping_trackings2(request={
+    res = unified_to.shipping.list_shipping_trackings(request={
         "connection_id": "<id>",
     })
 
@@ -520,14 +520,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListShippingTrackings2Request](../../models/operations/listshippingtrackings2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListShippingTrackingsRequest](../../models/operations/listshippingtrackingsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListShippingTrackings2Response](../../models/operations/listshippingtrackings2response.md)**
+**[operations.ListShippingTrackingsResponse](../../models/operations/listshippingtrackingsresponse.md)**
 
 ### Errors
 
@@ -535,13 +535,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_shipping_label2
+## patch_shipping_label
 
 Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchShippingLabel2" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -553,7 +553,197 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.patch_shipping_label2(request={
+    res = unified_to.shipping.patch_shipping_label(request={
+        "shipping_label": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.shipping_label is not None
+
+    # Handle response
+    print(res.shipping_label)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchShippingLabelRequest](../../models/operations/patchshippinglabelrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.PatchShippingLabelResponse](../../models/operations/patchshippinglabelresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_shipping_shipment
+
+Update a shipment
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.shipping.patch_shipping_shipment(request={
+        "shipping_shipment": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.shipping_shipment is not None
+
+    # Handle response
+    print(res.shipping_shipment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PatchShippingShipmentRequest](../../models/operations/patchshippingshipmentrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.PatchShippingShipmentResponse](../../models/operations/patchshippingshipmentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_shipping_label
+
+Remove a label
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeShippingLabel" method="delete" path="/shipping/{connection_id}/label/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.shipping.remove_shipping_label(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveShippingLabelRequest](../../models/operations/removeshippinglabelrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemoveShippingLabelResponse](../../models/operations/removeshippinglabelresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_shipping_shipment
+
+Remove a shipment
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeShippingShipment" method="delete" path="/shipping/{connection_id}/shipment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.shipping.remove_shipping_shipment(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.RemoveShippingShipmentRequest](../../models/operations/removeshippingshipmentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.RemoveShippingShipmentResponse](../../models/operations/removeshippingshipmentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_shipping_label
+
+Update a label
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.shipping.update_shipping_label(request={
         "shipping_label": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -570,12 +760,12 @@ with UnifiedTo(
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.PatchShippingLabel2Request](../../models/operations/patchshippinglabel2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.UpdateShippingLabelRequest](../../models/operations/updateshippinglabelrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.PatchShippingLabel2Response](../../models/operations/patchshippinglabel2response.md)**
+**[operations.UpdateShippingLabelResponse](../../models/operations/updateshippinglabelresponse.md)**
 
 ### Errors
 
@@ -583,13 +773,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_shipping_shipment2
+## update_shipping_shipment
 
 Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchShippingShipment2" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -601,7 +791,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.shipping.patch_shipping_shipment2(request={
+    res = unified_to.shipping.update_shipping_shipment(request={
         "shipping_shipment": {},
         "connection_id": "<id>",
         "id": "<id>",
@@ -618,202 +808,12 @@ with UnifiedTo(
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchShippingShipment2Request](../../models/operations/patchshippingshipment2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.UpdateShippingShipmentRequest](../../models/operations/updateshippingshipmentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 | `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.PatchShippingShipment2Response](../../models/operations/patchshippingshipment2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_shipping_label2
-
-Remove a label
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeShippingLabel2" method="delete" path="/shipping/{connection_id}/label/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.shipping.remove_shipping_label2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.RemoveShippingLabel2Request](../../models/operations/removeshippinglabel2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
-
-### Response
-
-**[operations.RemoveShippingLabel2Response](../../models/operations/removeshippinglabel2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## remove_shipping_shipment2
-
-Remove a shipment
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="removeShippingShipment2" method="delete" path="/shipping/{connection_id}/shipment/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.shipping.remove_shipping_shipment2(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res is not None
-
-    # Handle response
-    print(res)
-
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.RemoveShippingShipment2Request](../../models/operations/removeshippingshipment2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
-
-### Response
-
-**[operations.RemoveShippingShipment2Response](../../models/operations/removeshippingshipment2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_shipping_label2
-
-Update a label
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateShippingLabel2" method="put" path="/shipping/{connection_id}/label/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.shipping.update_shipping_label2(request={
-        "shipping_label": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.shipping_label is not None
-
-    # Handle response
-    print(res.shipping_label)
-
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.UpdateShippingLabel2Request](../../models/operations/updateshippinglabel2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
-
-### Response
-
-**[operations.UpdateShippingLabel2Response](../../models/operations/updateshippinglabel2response.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## update_shipping_shipment2
-
-Update a shipment
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="updateShippingShipment2" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.shipping.update_shipping_shipment2(request={
-        "shipping_shipment": {},
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.shipping_shipment is not None
-
-    # Handle response
-    print(res.shipping_shipment)
-
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.UpdateShippingShipment2Request](../../models/operations/updateshippingshipment2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
-
-### Response
-
-**[operations.UpdateShippingShipment2Response](../../models/operations/updateshippingshipment2response.md)**
+**[operations.UpdateShippingShipmentResponse](../../models/operations/updateshippingshipmentresponse.md)**
 
 ### Errors
 

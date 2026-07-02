@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Creative(BaseSDK):
-    def create_ads_creative2(
+    def create_ads_creative(
         self,
         *,
         request: Union[
-            operations.CreateAdsCreative2Request,
-            operations.CreateAdsCreative2RequestTypedDict,
+            operations.CreateAdsCreativeRequest,
+            operations.CreateAdsCreativeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsCreative2Response:
+    ) -> operations.CreateAdsCreativeResponse:
         r"""Create a creative
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsCreative2Request)
-        request = cast(operations.CreateAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsCreativeRequest)
+        request = cast(operations.CreateAdsCreativeRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsCreative2",
+                operation_id="createAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -88,7 +88,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsCreative2Response(
+            return operations.CreateAdsCreativeResponse(
                 ads_creative=unmarshal_json_response(
                     Optional[shared.AdsCreative], http_res
                 ),
@@ -105,18 +105,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ads_creative2_async(
+    async def create_ads_creative_async(
         self,
         *,
         request: Union[
-            operations.CreateAdsCreative2Request,
-            operations.CreateAdsCreative2RequestTypedDict,
+            operations.CreateAdsCreativeRequest,
+            operations.CreateAdsCreativeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAdsCreative2Response:
+    ) -> operations.CreateAdsCreativeResponse:
         r"""Create a creative
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAdsCreative2Request)
-        request = cast(operations.CreateAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.CreateAdsCreativeRequest)
+        request = cast(operations.CreateAdsCreativeRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAdsCreative2",
+                operation_id="createAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -183,7 +183,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAdsCreative2Response(
+            return operations.CreateAdsCreativeResponse(
                 ads_creative=unmarshal_json_response(
                     Optional[shared.AdsCreative], http_res
                 ),
@@ -200,18 +200,17 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ads_creative2(
+    def get_ads_creative(
         self,
         *,
         request: Union[
-            operations.GetAdsCreative2Request,
-            operations.GetAdsCreative2RequestTypedDict,
+            operations.GetAdsCreativeRequest, operations.GetAdsCreativeRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsCreative2Response:
+    ) -> operations.GetAdsCreativeResponse:
         r"""Retrieve a creative
 
         :param request: The request object to send.
@@ -231,8 +230,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsCreative2Request)
-        request = cast(operations.GetAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsCreativeRequest)
+        request = cast(operations.GetAdsCreativeRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +262,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsCreative2",
+                operation_id="getAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -275,7 +274,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsCreative2Response(
+            return operations.GetAdsCreativeResponse(
                 ads_creative=unmarshal_json_response(
                     Optional[shared.AdsCreative], http_res
                 ),
@@ -292,18 +291,17 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ads_creative2_async(
+    async def get_ads_creative_async(
         self,
         *,
         request: Union[
-            operations.GetAdsCreative2Request,
-            operations.GetAdsCreative2RequestTypedDict,
+            operations.GetAdsCreativeRequest, operations.GetAdsCreativeRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAdsCreative2Response:
+    ) -> operations.GetAdsCreativeResponse:
         r"""Retrieve a creative
 
         :param request: The request object to send.
@@ -323,8 +321,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAdsCreative2Request)
-        request = cast(operations.GetAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.GetAdsCreativeRequest)
+        request = cast(operations.GetAdsCreativeRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +353,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAdsCreative2",
+                operation_id="getAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -367,7 +365,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAdsCreative2Response(
+            return operations.GetAdsCreativeResponse(
                 ads_creative=unmarshal_json_response(
                     Optional[shared.AdsCreative], http_res
                 ),
@@ -384,18 +382,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ads_creatives2(
+    def list_ads_creatives(
         self,
         *,
         request: Union[
-            operations.ListAdsCreatives2Request,
-            operations.ListAdsCreatives2RequestTypedDict,
+            operations.ListAdsCreativesRequest,
+            operations.ListAdsCreativesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsCreatives2Response:
+    ) -> operations.ListAdsCreativesResponse:
         r"""List all creatives
 
         :param request: The request object to send.
@@ -415,8 +413,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsCreatives2Request)
-        request = cast(operations.ListAdsCreatives2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsCreativesRequest)
+        request = cast(operations.ListAdsCreativesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +445,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsCreatives2",
+                operation_id="listAdsCreatives",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -459,7 +457,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsCreatives2Response(
+            return operations.ListAdsCreativesResponse(
                 ads_creatives=unmarshal_json_response(
                     Optional[List[shared.AdsCreative]], http_res
                 ),
@@ -476,18 +474,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ads_creatives2_async(
+    async def list_ads_creatives_async(
         self,
         *,
         request: Union[
-            operations.ListAdsCreatives2Request,
-            operations.ListAdsCreatives2RequestTypedDict,
+            operations.ListAdsCreativesRequest,
+            operations.ListAdsCreativesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsCreatives2Response:
+    ) -> operations.ListAdsCreativesResponse:
         r"""List all creatives
 
         :param request: The request object to send.
@@ -507,8 +505,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsCreatives2Request)
-        request = cast(operations.ListAdsCreatives2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsCreativesRequest)
+        request = cast(operations.ListAdsCreativesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +537,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsCreatives2",
+                operation_id="listAdsCreatives",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -551,7 +549,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsCreatives2Response(
+            return operations.ListAdsCreativesResponse(
                 ads_creatives=unmarshal_json_response(
                     Optional[List[shared.AdsCreative]], http_res
                 ),
@@ -568,18 +566,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ads_creative2(
+    def patch_ads_creative(
         self,
         *,
         request: Union[
-            operations.PatchAdsCreative2Request,
-            operations.PatchAdsCreative2RequestTypedDict,
+            operations.PatchAdsCreativeRequest,
+            operations.PatchAdsCreativeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsCreative2Response:
+    ) -> operations.PatchAdsCreativeResponse:
         r"""Update a creative
 
         :param request: The request object to send.
@@ -599,8 +597,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsCreative2Request)
-        request = cast(operations.PatchAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsCreativeRequest)
+        request = cast(operations.PatchAdsCreativeRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +632,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsCreative2",
+                operation_id="patchAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -646,7 +644,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsCreative2Response(
+            return operations.PatchAdsCreativeResponse(
                 ads_creative=unmarshal_json_response(
                     Optional[shared.AdsCreative], http_res
                 ),
@@ -663,18 +661,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ads_creative2_async(
+    async def patch_ads_creative_async(
         self,
         *,
         request: Union[
-            operations.PatchAdsCreative2Request,
-            operations.PatchAdsCreative2RequestTypedDict,
+            operations.PatchAdsCreativeRequest,
+            operations.PatchAdsCreativeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAdsCreative2Response:
+    ) -> operations.PatchAdsCreativeResponse:
         r"""Update a creative
 
         :param request: The request object to send.
@@ -694,8 +692,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAdsCreative2Request)
-        request = cast(operations.PatchAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.PatchAdsCreativeRequest)
+        request = cast(operations.PatchAdsCreativeRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +727,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAdsCreative2",
+                operation_id="patchAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -741,7 +739,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAdsCreative2Response(
+            return operations.PatchAdsCreativeResponse(
                 ads_creative=unmarshal_json_response(
                     Optional[shared.AdsCreative], http_res
                 ),
@@ -758,18 +756,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ads_creative2(
+    def remove_ads_creative(
         self,
         *,
         request: Union[
-            operations.RemoveAdsCreative2Request,
-            operations.RemoveAdsCreative2RequestTypedDict,
+            operations.RemoveAdsCreativeRequest,
+            operations.RemoveAdsCreativeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsCreative2Response:
+    ) -> operations.RemoveAdsCreativeResponse:
         r"""Remove a creative
 
         :param request: The request object to send.
@@ -789,8 +787,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsCreative2Request)
-        request = cast(operations.RemoveAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsCreativeRequest)
+        request = cast(operations.RemoveAdsCreativeRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +819,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsCreative2",
+                operation_id="removeAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -833,7 +831,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsCreative2Response(
+            return operations.RemoveAdsCreativeResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +844,7 @@ class Creative(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsCreative2Response(
+            return operations.RemoveAdsCreativeResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +853,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ads_creative2_async(
+    async def remove_ads_creative_async(
         self,
         *,
         request: Union[
-            operations.RemoveAdsCreative2Request,
-            operations.RemoveAdsCreative2RequestTypedDict,
+            operations.RemoveAdsCreativeRequest,
+            operations.RemoveAdsCreativeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAdsCreative2Response:
+    ) -> operations.RemoveAdsCreativeResponse:
         r"""Remove a creative
 
         :param request: The request object to send.
@@ -886,8 +884,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAdsCreative2Request)
-        request = cast(operations.RemoveAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAdsCreativeRequest)
+        request = cast(operations.RemoveAdsCreativeRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +916,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAdsCreative2",
+                operation_id="removeAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -930,7 +928,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAdsCreative2Response(
+            return operations.RemoveAdsCreativeResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +941,7 @@ class Creative(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAdsCreative2Response(
+            return operations.RemoveAdsCreativeResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +950,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ads_creative2(
+    def update_ads_creative(
         self,
         *,
         request: Union[
-            operations.UpdateAdsCreative2Request,
-            operations.UpdateAdsCreative2RequestTypedDict,
+            operations.UpdateAdsCreativeRequest,
+            operations.UpdateAdsCreativeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsCreative2Response:
+    ) -> operations.UpdateAdsCreativeResponse:
         r"""Update a creative
 
         :param request: The request object to send.
@@ -983,8 +981,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsCreative2Request)
-        request = cast(operations.UpdateAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsCreativeRequest)
+        request = cast(operations.UpdateAdsCreativeRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1016,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsCreative2",
+                operation_id="updateAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -1030,7 +1028,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsCreative2Response(
+            return operations.UpdateAdsCreativeResponse(
                 ads_creative=unmarshal_json_response(
                     Optional[shared.AdsCreative], http_res
                 ),
@@ -1047,18 +1045,18 @@ class Creative(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ads_creative2_async(
+    async def update_ads_creative_async(
         self,
         *,
         request: Union[
-            operations.UpdateAdsCreative2Request,
-            operations.UpdateAdsCreative2RequestTypedDict,
+            operations.UpdateAdsCreativeRequest,
+            operations.UpdateAdsCreativeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAdsCreative2Response:
+    ) -> operations.UpdateAdsCreativeResponse:
         r"""Update a creative
 
         :param request: The request object to send.
@@ -1078,8 +1076,8 @@ class Creative(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAdsCreative2Request)
-        request = cast(operations.UpdateAdsCreative2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAdsCreativeRequest)
+        request = cast(operations.UpdateAdsCreativeRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1111,7 @@ class Creative(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAdsCreative2",
+                operation_id="updateAdsCreative",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "creative"],
@@ -1125,7 +1123,7 @@ class Creative(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAdsCreative2Response(
+            return operations.UpdateAdsCreativeResponse(
                 ads_creative=unmarshal_json_response(
                     Optional[shared.AdsCreative], http_res
                 ),

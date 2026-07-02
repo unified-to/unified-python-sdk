@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Contact(BaseSDK):
-    def create_accounting_contact2(
+    def create_accounting_contact(
         self,
         *,
         request: Union[
-            operations.CreateAccountingContact2Request,
-            operations.CreateAccountingContact2RequestTypedDict,
+            operations.CreateAccountingContactRequest,
+            operations.CreateAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingContact2Response:
+    ) -> operations.CreateAccountingContactResponse:
         r"""Create a contact
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Contact(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingContact2Request
+                request, operations.CreateAccountingContactRequest
             )
-        request = cast(operations.CreateAccountingContact2Request, request)
+        request = cast(operations.CreateAccountingContactRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingContact2",
+                operation_id="createAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -94,7 +94,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingContact2Response(
+            return operations.CreateAccountingContactResponse(
                 accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
@@ -111,18 +111,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_contact2_async(
+    async def create_accounting_contact_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingContact2Request,
-            operations.CreateAccountingContact2RequestTypedDict,
+            operations.CreateAccountingContactRequest,
+            operations.CreateAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingContact2Response:
+    ) -> operations.CreateAccountingContactResponse:
         r"""Create a contact
 
         :param request: The request object to send.
@@ -143,9 +143,9 @@ class Contact(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingContact2Request
+                request, operations.CreateAccountingContactRequest
             )
-        request = cast(operations.CreateAccountingContact2Request, request)
+        request = cast(operations.CreateAccountingContactRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -183,7 +183,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingContact2",
+                operation_id="createAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -195,7 +195,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingContact2Response(
+            return operations.CreateAccountingContactResponse(
                 accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
@@ -212,18 +212,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_crm_contact2(
+    def create_crm_contact(
         self,
         *,
         request: Union[
-            operations.CreateCrmContact2Request,
-            operations.CreateCrmContact2RequestTypedDict,
+            operations.CreateCrmContactRequest,
+            operations.CreateCrmContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmContact2Response:
+    ) -> operations.CreateCrmContactResponse:
         r"""Create a contact
 
         :param request: The request object to send.
@@ -243,8 +243,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmContact2Request)
-        request = cast(operations.CreateCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.CreateCrmContactRequest)
+        request = cast(operations.CreateCrmContactRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -278,7 +278,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmContact2",
+                operation_id="createCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -290,7 +290,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmContact2Response(
+            return operations.CreateCrmContactResponse(
                 crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
@@ -307,18 +307,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_crm_contact2_async(
+    async def create_crm_contact_async(
         self,
         *,
         request: Union[
-            operations.CreateCrmContact2Request,
-            operations.CreateCrmContact2RequestTypedDict,
+            operations.CreateCrmContactRequest,
+            operations.CreateCrmContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCrmContact2Response:
+    ) -> operations.CreateCrmContactResponse:
         r"""Create a contact
 
         :param request: The request object to send.
@@ -338,8 +338,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCrmContact2Request)
-        request = cast(operations.CreateCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.CreateCrmContactRequest)
+        request = cast(operations.CreateCrmContactRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -373,7 +373,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCrmContact2",
+                operation_id="createCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -385,7 +385,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCrmContact2Response(
+            return operations.CreateCrmContactResponse(
                 crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
@@ -402,18 +402,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_uc_contact2(
+    def create_uc_contact(
         self,
         *,
         request: Union[
-            operations.CreateUcContact2Request,
-            operations.CreateUcContact2RequestTypedDict,
+            operations.CreateUcContactRequest,
+            operations.CreateUcContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcContact2Response:
+    ) -> operations.CreateUcContactResponse:
         r"""Create a contact
 
         :param request: The request object to send.
@@ -433,8 +433,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcContact2Request)
-        request = cast(operations.CreateUcContact2Request, request)
+            request = utils.unmarshal(request, operations.CreateUcContactRequest)
+        request = cast(operations.CreateUcContactRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -468,7 +468,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcContact2",
+                operation_id="createUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -480,7 +480,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcContact2Response(
+            return operations.CreateUcContactResponse(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -497,18 +497,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_uc_contact2_async(
+    async def create_uc_contact_async(
         self,
         *,
         request: Union[
-            operations.CreateUcContact2Request,
-            operations.CreateUcContact2RequestTypedDict,
+            operations.CreateUcContactRequest,
+            operations.CreateUcContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateUcContact2Response:
+    ) -> operations.CreateUcContactResponse:
         r"""Create a contact
 
         :param request: The request object to send.
@@ -528,8 +528,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateUcContact2Request)
-        request = cast(operations.CreateUcContact2Request, request)
+            request = utils.unmarshal(request, operations.CreateUcContactRequest)
+        request = cast(operations.CreateUcContactRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -563,7 +563,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createUcContact2",
+                operation_id="createUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -575,7 +575,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateUcContact2Response(
+            return operations.CreateUcContactResponse(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -592,18 +592,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_contact2(
+    def get_accounting_contact(
         self,
         *,
         request: Union[
-            operations.GetAccountingContact2Request,
-            operations.GetAccountingContact2RequestTypedDict,
+            operations.GetAccountingContactRequest,
+            operations.GetAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingContact2Response:
+    ) -> operations.GetAccountingContactResponse:
         r"""Retrieve a contact
 
         :param request: The request object to send.
@@ -623,8 +623,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingContact2Request)
-        request = cast(operations.GetAccountingContact2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingContactRequest)
+        request = cast(operations.GetAccountingContactRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -655,7 +655,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingContact2",
+                operation_id="getAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -667,7 +667,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingContact2Response(
+            return operations.GetAccountingContactResponse(
                 accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
@@ -684,18 +684,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_contact2_async(
+    async def get_accounting_contact_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingContact2Request,
-            operations.GetAccountingContact2RequestTypedDict,
+            operations.GetAccountingContactRequest,
+            operations.GetAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingContact2Response:
+    ) -> operations.GetAccountingContactResponse:
         r"""Retrieve a contact
 
         :param request: The request object to send.
@@ -715,8 +715,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingContact2Request)
-        request = cast(operations.GetAccountingContact2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingContactRequest)
+        request = cast(operations.GetAccountingContactRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -747,7 +747,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingContact2",
+                operation_id="getAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -759,7 +759,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingContact2Response(
+            return operations.GetAccountingContactResponse(
                 accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
@@ -776,17 +776,17 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_crm_contact2(
+    def get_crm_contact(
         self,
         *,
         request: Union[
-            operations.GetCrmContact2Request, operations.GetCrmContact2RequestTypedDict
+            operations.GetCrmContactRequest, operations.GetCrmContactRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmContact2Response:
+    ) -> operations.GetCrmContactResponse:
         r"""Retrieve a contact
 
         :param request: The request object to send.
@@ -806,8 +806,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmContact2Request)
-        request = cast(operations.GetCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.GetCrmContactRequest)
+        request = cast(operations.GetCrmContactRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -838,7 +838,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmContact2",
+                operation_id="getCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -850,7 +850,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmContact2Response(
+            return operations.GetCrmContactResponse(
                 crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
@@ -867,17 +867,17 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_crm_contact2_async(
+    async def get_crm_contact_async(
         self,
         *,
         request: Union[
-            operations.GetCrmContact2Request, operations.GetCrmContact2RequestTypedDict
+            operations.GetCrmContactRequest, operations.GetCrmContactRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCrmContact2Response:
+    ) -> operations.GetCrmContactResponse:
         r"""Retrieve a contact
 
         :param request: The request object to send.
@@ -897,8 +897,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCrmContact2Request)
-        request = cast(operations.GetCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.GetCrmContactRequest)
+        request = cast(operations.GetCrmContactRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -929,7 +929,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCrmContact2",
+                operation_id="getCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -941,7 +941,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCrmContact2Response(
+            return operations.GetCrmContactResponse(
                 crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
@@ -958,17 +958,17 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_uc_contact2(
+    def get_uc_contact(
         self,
         *,
         request: Union[
-            operations.GetUcContact2Request, operations.GetUcContact2RequestTypedDict
+            operations.GetUcContactRequest, operations.GetUcContactRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcContact2Response:
+    ) -> operations.GetUcContactResponse:
         r"""Retrieve a contact
 
         :param request: The request object to send.
@@ -988,8 +988,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcContact2Request)
-        request = cast(operations.GetUcContact2Request, request)
+            request = utils.unmarshal(request, operations.GetUcContactRequest)
+        request = cast(operations.GetUcContactRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1020,7 +1020,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcContact2",
+                operation_id="getUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -1032,7 +1032,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcContact2Response(
+            return operations.GetUcContactResponse(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -1049,17 +1049,17 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_uc_contact2_async(
+    async def get_uc_contact_async(
         self,
         *,
         request: Union[
-            operations.GetUcContact2Request, operations.GetUcContact2RequestTypedDict
+            operations.GetUcContactRequest, operations.GetUcContactRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUcContact2Response:
+    ) -> operations.GetUcContactResponse:
         r"""Retrieve a contact
 
         :param request: The request object to send.
@@ -1079,8 +1079,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetUcContact2Request)
-        request = cast(operations.GetUcContact2Request, request)
+            request = utils.unmarshal(request, operations.GetUcContactRequest)
+        request = cast(operations.GetUcContactRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1111,7 +1111,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUcContact2",
+                operation_id="getUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -1123,7 +1123,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetUcContact2Response(
+            return operations.GetUcContactResponse(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -1140,18 +1140,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_contacts2(
+    def list_accounting_contacts(
         self,
         *,
         request: Union[
-            operations.ListAccountingContacts2Request,
-            operations.ListAccountingContacts2RequestTypedDict,
+            operations.ListAccountingContactsRequest,
+            operations.ListAccountingContactsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingContacts2Response:
+    ) -> operations.ListAccountingContactsResponse:
         r"""List all contacts
 
         :param request: The request object to send.
@@ -1171,10 +1171,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingContacts2Request
-            )
-        request = cast(operations.ListAccountingContacts2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingContactsRequest)
+        request = cast(operations.ListAccountingContactsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1205,7 +1203,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingContacts2",
+                operation_id="listAccountingContacts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -1217,7 +1215,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingContacts2Response(
+            return operations.ListAccountingContactsResponse(
                 accounting_contacts=unmarshal_json_response(
                     Optional[List[shared.AccountingContact]], http_res
                 ),
@@ -1234,18 +1232,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_contacts2_async(
+    async def list_accounting_contacts_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingContacts2Request,
-            operations.ListAccountingContacts2RequestTypedDict,
+            operations.ListAccountingContactsRequest,
+            operations.ListAccountingContactsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingContacts2Response:
+    ) -> operations.ListAccountingContactsResponse:
         r"""List all contacts
 
         :param request: The request object to send.
@@ -1265,10 +1263,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingContacts2Request
-            )
-        request = cast(operations.ListAccountingContacts2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingContactsRequest)
+        request = cast(operations.ListAccountingContactsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1299,7 +1295,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingContacts2",
+                operation_id="listAccountingContacts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -1311,7 +1307,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingContacts2Response(
+            return operations.ListAccountingContactsResponse(
                 accounting_contacts=unmarshal_json_response(
                     Optional[List[shared.AccountingContact]], http_res
                 ),
@@ -1328,18 +1324,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_crm_contacts2(
+    def list_crm_contacts(
         self,
         *,
         request: Union[
-            operations.ListCrmContacts2Request,
-            operations.ListCrmContacts2RequestTypedDict,
+            operations.ListCrmContactsRequest,
+            operations.ListCrmContactsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmContacts2Response:
+    ) -> operations.ListCrmContactsResponse:
         r"""List all contacts
 
         :param request: The request object to send.
@@ -1359,8 +1355,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmContacts2Request)
-        request = cast(operations.ListCrmContacts2Request, request)
+            request = utils.unmarshal(request, operations.ListCrmContactsRequest)
+        request = cast(operations.ListCrmContactsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1391,7 +1387,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmContacts2",
+                operation_id="listCrmContacts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -1403,7 +1399,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmContacts2Response(
+            return operations.ListCrmContactsResponse(
                 crm_contacts=unmarshal_json_response(
                     Optional[List[shared.CrmContact]], http_res
                 ),
@@ -1420,18 +1416,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_crm_contacts2_async(
+    async def list_crm_contacts_async(
         self,
         *,
         request: Union[
-            operations.ListCrmContacts2Request,
-            operations.ListCrmContacts2RequestTypedDict,
+            operations.ListCrmContactsRequest,
+            operations.ListCrmContactsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmContacts2Response:
+    ) -> operations.ListCrmContactsResponse:
         r"""List all contacts
 
         :param request: The request object to send.
@@ -1451,8 +1447,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmContacts2Request)
-        request = cast(operations.ListCrmContacts2Request, request)
+            request = utils.unmarshal(request, operations.ListCrmContactsRequest)
+        request = cast(operations.ListCrmContactsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1483,7 +1479,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmContacts2",
+                operation_id="listCrmContacts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -1495,7 +1491,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmContacts2Response(
+            return operations.ListCrmContactsResponse(
                 crm_contacts=unmarshal_json_response(
                     Optional[List[shared.CrmContact]], http_res
                 ),
@@ -1512,18 +1508,17 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_uc_contacts2(
+    def list_uc_contacts(
         self,
         *,
         request: Union[
-            operations.ListUcContacts2Request,
-            operations.ListUcContacts2RequestTypedDict,
+            operations.ListUcContactsRequest, operations.ListUcContactsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcContacts2Response:
+    ) -> operations.ListUcContactsResponse:
         r"""List all contacts
 
         :param request: The request object to send.
@@ -1543,8 +1538,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcContacts2Request)
-        request = cast(operations.ListUcContacts2Request, request)
+            request = utils.unmarshal(request, operations.ListUcContactsRequest)
+        request = cast(operations.ListUcContactsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1575,7 +1570,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcContacts2",
+                operation_id="listUcContacts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -1587,7 +1582,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcContacts2Response(
+            return operations.ListUcContactsResponse(
                 uc_contacts=unmarshal_json_response(
                     Optional[List[shared.UcContact]], http_res
                 ),
@@ -1604,18 +1599,17 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_uc_contacts2_async(
+    async def list_uc_contacts_async(
         self,
         *,
         request: Union[
-            operations.ListUcContacts2Request,
-            operations.ListUcContacts2RequestTypedDict,
+            operations.ListUcContactsRequest, operations.ListUcContactsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListUcContacts2Response:
+    ) -> operations.ListUcContactsResponse:
         r"""List all contacts
 
         :param request: The request object to send.
@@ -1635,8 +1629,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListUcContacts2Request)
-        request = cast(operations.ListUcContacts2Request, request)
+            request = utils.unmarshal(request, operations.ListUcContactsRequest)
+        request = cast(operations.ListUcContactsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1667,7 +1661,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listUcContacts2",
+                operation_id="listUcContacts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -1679,7 +1673,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListUcContacts2Response(
+            return operations.ListUcContactsResponse(
                 uc_contacts=unmarshal_json_response(
                     Optional[List[shared.UcContact]], http_res
                 ),
@@ -1696,18 +1690,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_contact2(
+    def patch_accounting_contact(
         self,
         *,
         request: Union[
-            operations.PatchAccountingContact2Request,
-            operations.PatchAccountingContact2RequestTypedDict,
+            operations.PatchAccountingContactRequest,
+            operations.PatchAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingContact2Response:
+    ) -> operations.PatchAccountingContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -1727,10 +1721,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingContact2Request
-            )
-        request = cast(operations.PatchAccountingContact2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingContactRequest)
+        request = cast(operations.PatchAccountingContactRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1768,7 +1760,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingContact2",
+                operation_id="patchAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -1780,7 +1772,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingContact2Response(
+            return operations.PatchAccountingContactResponse(
                 accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
@@ -1797,18 +1789,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_contact2_async(
+    async def patch_accounting_contact_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingContact2Request,
-            operations.PatchAccountingContact2RequestTypedDict,
+            operations.PatchAccountingContactRequest,
+            operations.PatchAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingContact2Response:
+    ) -> operations.PatchAccountingContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -1828,10 +1820,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingContact2Request
-            )
-        request = cast(operations.PatchAccountingContact2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingContactRequest)
+        request = cast(operations.PatchAccountingContactRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -1869,7 +1859,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingContact2",
+                operation_id="patchAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -1881,7 +1871,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingContact2Response(
+            return operations.PatchAccountingContactResponse(
                 accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
@@ -1898,18 +1888,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_crm_contact2(
+    def patch_crm_contact(
         self,
         *,
         request: Union[
-            operations.PatchCrmContact2Request,
-            operations.PatchCrmContact2RequestTypedDict,
+            operations.PatchCrmContactRequest,
+            operations.PatchCrmContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmContact2Response:
+    ) -> operations.PatchCrmContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -1929,8 +1919,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmContact2Request)
-        request = cast(operations.PatchCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.PatchCrmContactRequest)
+        request = cast(operations.PatchCrmContactRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1964,7 +1954,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmContact2",
+                operation_id="patchCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -1976,7 +1966,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmContact2Response(
+            return operations.PatchCrmContactResponse(
                 crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
@@ -1993,18 +1983,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_crm_contact2_async(
+    async def patch_crm_contact_async(
         self,
         *,
         request: Union[
-            operations.PatchCrmContact2Request,
-            operations.PatchCrmContact2RequestTypedDict,
+            operations.PatchCrmContactRequest,
+            operations.PatchCrmContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCrmContact2Response:
+    ) -> operations.PatchCrmContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -2024,8 +2014,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCrmContact2Request)
-        request = cast(operations.PatchCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.PatchCrmContactRequest)
+        request = cast(operations.PatchCrmContactRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2059,7 +2049,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCrmContact2",
+                operation_id="patchCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -2071,7 +2061,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCrmContact2Response(
+            return operations.PatchCrmContactResponse(
                 crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
@@ -2088,18 +2078,17 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_uc_contact2(
+    def patch_uc_contact(
         self,
         *,
         request: Union[
-            operations.PatchUcContact2Request,
-            operations.PatchUcContact2RequestTypedDict,
+            operations.PatchUcContactRequest, operations.PatchUcContactRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcContact2Response:
+    ) -> operations.PatchUcContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -2119,8 +2108,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcContact2Request)
-        request = cast(operations.PatchUcContact2Request, request)
+            request = utils.unmarshal(request, operations.PatchUcContactRequest)
+        request = cast(operations.PatchUcContactRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2154,7 +2143,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcContact2",
+                operation_id="patchUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -2166,7 +2155,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcContact2Response(
+            return operations.PatchUcContactResponse(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -2183,18 +2172,17 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_uc_contact2_async(
+    async def patch_uc_contact_async(
         self,
         *,
         request: Union[
-            operations.PatchUcContact2Request,
-            operations.PatchUcContact2RequestTypedDict,
+            operations.PatchUcContactRequest, operations.PatchUcContactRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchUcContact2Response:
+    ) -> operations.PatchUcContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -2214,8 +2202,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchUcContact2Request)
-        request = cast(operations.PatchUcContact2Request, request)
+            request = utils.unmarshal(request, operations.PatchUcContactRequest)
+        request = cast(operations.PatchUcContactRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2249,7 +2237,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchUcContact2",
+                operation_id="patchUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -2261,7 +2249,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchUcContact2Response(
+            return operations.PatchUcContactResponse(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -2278,18 +2266,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_contact2(
+    def remove_accounting_contact(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingContact2Request,
-            operations.RemoveAccountingContact2RequestTypedDict,
+            operations.RemoveAccountingContactRequest,
+            operations.RemoveAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingContact2Response:
+    ) -> operations.RemoveAccountingContactResponse:
         r"""Remove a contact
 
         :param request: The request object to send.
@@ -2310,9 +2298,9 @@ class Contact(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingContact2Request
+                request, operations.RemoveAccountingContactRequest
             )
-        request = cast(operations.RemoveAccountingContact2Request, request)
+        request = cast(operations.RemoveAccountingContactRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2343,7 +2331,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingContact2",
+                operation_id="removeAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -2355,7 +2343,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingContact2Response(
+            return operations.RemoveAccountingContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2368,7 +2356,7 @@ class Contact(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingContact2Response(
+            return operations.RemoveAccountingContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2377,18 +2365,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_contact2_async(
+    async def remove_accounting_contact_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingContact2Request,
-            operations.RemoveAccountingContact2RequestTypedDict,
+            operations.RemoveAccountingContactRequest,
+            operations.RemoveAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingContact2Response:
+    ) -> operations.RemoveAccountingContactResponse:
         r"""Remove a contact
 
         :param request: The request object to send.
@@ -2409,9 +2397,9 @@ class Contact(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingContact2Request
+                request, operations.RemoveAccountingContactRequest
             )
-        request = cast(operations.RemoveAccountingContact2Request, request)
+        request = cast(operations.RemoveAccountingContactRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2442,7 +2430,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingContact2",
+                operation_id="removeAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -2454,7 +2442,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingContact2Response(
+            return operations.RemoveAccountingContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2467,7 +2455,7 @@ class Contact(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingContact2Response(
+            return operations.RemoveAccountingContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2476,18 +2464,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_crm_contact2(
+    def remove_crm_contact(
         self,
         *,
         request: Union[
-            operations.RemoveCrmContact2Request,
-            operations.RemoveCrmContact2RequestTypedDict,
+            operations.RemoveCrmContactRequest,
+            operations.RemoveCrmContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmContact2Response:
+    ) -> operations.RemoveCrmContactResponse:
         r"""Remove a contact
 
         :param request: The request object to send.
@@ -2507,8 +2495,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmContact2Request)
-        request = cast(operations.RemoveCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCrmContactRequest)
+        request = cast(operations.RemoveCrmContactRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2539,7 +2527,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmContact2",
+                operation_id="removeCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -2551,7 +2539,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmContact2Response(
+            return operations.RemoveCrmContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2564,7 +2552,7 @@ class Contact(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmContact2Response(
+            return operations.RemoveCrmContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2573,18 +2561,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_crm_contact2_async(
+    async def remove_crm_contact_async(
         self,
         *,
         request: Union[
-            operations.RemoveCrmContact2Request,
-            operations.RemoveCrmContact2RequestTypedDict,
+            operations.RemoveCrmContactRequest,
+            operations.RemoveCrmContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCrmContact2Response:
+    ) -> operations.RemoveCrmContactResponse:
         r"""Remove a contact
 
         :param request: The request object to send.
@@ -2604,8 +2592,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCrmContact2Request)
-        request = cast(operations.RemoveCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCrmContactRequest)
+        request = cast(operations.RemoveCrmContactRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2636,7 +2624,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCrmContact2",
+                operation_id="removeCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -2648,7 +2636,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCrmContact2Response(
+            return operations.RemoveCrmContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2661,7 +2649,7 @@ class Contact(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCrmContact2Response(
+            return operations.RemoveCrmContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2670,18 +2658,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_uc_contact2(
+    def remove_uc_contact(
         self,
         *,
         request: Union[
-            operations.RemoveUcContact2Request,
-            operations.RemoveUcContact2RequestTypedDict,
+            operations.RemoveUcContactRequest,
+            operations.RemoveUcContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcContact2Response:
+    ) -> operations.RemoveUcContactResponse:
         r"""Remove a contact
 
         :param request: The request object to send.
@@ -2701,8 +2689,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcContact2Request)
-        request = cast(operations.RemoveUcContact2Request, request)
+            request = utils.unmarshal(request, operations.RemoveUcContactRequest)
+        request = cast(operations.RemoveUcContactRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2733,7 +2721,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcContact2",
+                operation_id="removeUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -2745,7 +2733,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcContact2Response(
+            return operations.RemoveUcContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2758,7 +2746,7 @@ class Contact(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcContact2Response(
+            return operations.RemoveUcContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2767,18 +2755,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_uc_contact2_async(
+    async def remove_uc_contact_async(
         self,
         *,
         request: Union[
-            operations.RemoveUcContact2Request,
-            operations.RemoveUcContact2RequestTypedDict,
+            operations.RemoveUcContactRequest,
+            operations.RemoveUcContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveUcContact2Response:
+    ) -> operations.RemoveUcContactResponse:
         r"""Remove a contact
 
         :param request: The request object to send.
@@ -2798,8 +2786,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveUcContact2Request)
-        request = cast(operations.RemoveUcContact2Request, request)
+            request = utils.unmarshal(request, operations.RemoveUcContactRequest)
+        request = cast(operations.RemoveUcContactRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2830,7 +2818,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeUcContact2",
+                operation_id="removeUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -2842,7 +2830,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveUcContact2Response(
+            return operations.RemoveUcContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2855,7 +2843,7 @@ class Contact(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveUcContact2Response(
+            return operations.RemoveUcContactResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2864,18 +2852,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_contact2(
+    def update_accounting_contact(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingContact2Request,
-            operations.UpdateAccountingContact2RequestTypedDict,
+            operations.UpdateAccountingContactRequest,
+            operations.UpdateAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingContact2Response:
+    ) -> operations.UpdateAccountingContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -2896,9 +2884,9 @@ class Contact(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingContact2Request
+                request, operations.UpdateAccountingContactRequest
             )
-        request = cast(operations.UpdateAccountingContact2Request, request)
+        request = cast(operations.UpdateAccountingContactRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -2936,7 +2924,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingContact2",
+                operation_id="updateAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -2948,7 +2936,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingContact2Response(
+            return operations.UpdateAccountingContactResponse(
                 accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
@@ -2965,18 +2953,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_contact2_async(
+    async def update_accounting_contact_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingContact2Request,
-            operations.UpdateAccountingContact2RequestTypedDict,
+            operations.UpdateAccountingContactRequest,
+            operations.UpdateAccountingContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingContact2Response:
+    ) -> operations.UpdateAccountingContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -2997,9 +2985,9 @@ class Contact(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingContact2Request
+                request, operations.UpdateAccountingContactRequest
             )
-        request = cast(operations.UpdateAccountingContact2Request, request)
+        request = cast(operations.UpdateAccountingContactRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3037,7 +3025,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingContact2",
+                operation_id="updateAccountingContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "contact"],
@@ -3049,7 +3037,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingContact2Response(
+            return operations.UpdateAccountingContactResponse(
                 accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
@@ -3066,18 +3054,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_crm_contact2(
+    def update_crm_contact(
         self,
         *,
         request: Union[
-            operations.UpdateCrmContact2Request,
-            operations.UpdateCrmContact2RequestTypedDict,
+            operations.UpdateCrmContactRequest,
+            operations.UpdateCrmContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmContact2Response:
+    ) -> operations.UpdateCrmContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -3097,8 +3085,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmContact2Request)
-        request = cast(operations.UpdateCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCrmContactRequest)
+        request = cast(operations.UpdateCrmContactRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3132,7 +3120,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmContact2",
+                operation_id="updateCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -3144,7 +3132,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmContact2Response(
+            return operations.UpdateCrmContactResponse(
                 crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
@@ -3161,18 +3149,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_crm_contact2_async(
+    async def update_crm_contact_async(
         self,
         *,
         request: Union[
-            operations.UpdateCrmContact2Request,
-            operations.UpdateCrmContact2RequestTypedDict,
+            operations.UpdateCrmContactRequest,
+            operations.UpdateCrmContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCrmContact2Response:
+    ) -> operations.UpdateCrmContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -3192,8 +3180,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCrmContact2Request)
-        request = cast(operations.UpdateCrmContact2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCrmContactRequest)
+        request = cast(operations.UpdateCrmContactRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3227,7 +3215,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCrmContact2",
+                operation_id="updateCrmContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "contact"],
@@ -3239,7 +3227,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCrmContact2Response(
+            return operations.UpdateCrmContactResponse(
                 crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
@@ -3256,18 +3244,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_uc_contact2(
+    def update_uc_contact(
         self,
         *,
         request: Union[
-            operations.UpdateUcContact2Request,
-            operations.UpdateUcContact2RequestTypedDict,
+            operations.UpdateUcContactRequest,
+            operations.UpdateUcContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcContact2Response:
+    ) -> operations.UpdateUcContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -3287,8 +3275,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcContact2Request)
-        request = cast(operations.UpdateUcContact2Request, request)
+            request = utils.unmarshal(request, operations.UpdateUcContactRequest)
+        request = cast(operations.UpdateUcContactRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3322,7 +3310,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcContact2",
+                operation_id="updateUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -3334,7 +3322,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcContact2Response(
+            return operations.UpdateUcContactResponse(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
@@ -3351,18 +3339,18 @@ class Contact(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_uc_contact2_async(
+    async def update_uc_contact_async(
         self,
         *,
         request: Union[
-            operations.UpdateUcContact2Request,
-            operations.UpdateUcContact2RequestTypedDict,
+            operations.UpdateUcContactRequest,
+            operations.UpdateUcContactRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateUcContact2Response:
+    ) -> operations.UpdateUcContactResponse:
         r"""Update a contact
 
         :param request: The request object to send.
@@ -3382,8 +3370,8 @@ class Contact(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateUcContact2Request)
-        request = cast(operations.UpdateUcContact2Request, request)
+            request = utils.unmarshal(request, operations.UpdateUcContactRequest)
+        request = cast(operations.UpdateUcContactRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3417,7 +3405,7 @@ class Contact(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateUcContact2",
+                operation_id="updateUcContact",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["uc", "contact"],
@@ -3429,7 +3417,7 @@ class Contact(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateUcContact2Response(
+            return operations.UpdateUcContactResponse(
                 uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),

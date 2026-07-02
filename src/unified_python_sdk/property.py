@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Property(BaseSDK):
-    def create_analytics_property2(
+    def create_analytics_property(
         self,
         *,
         request: Union[
-            operations.CreateAnalyticsProperty2Request,
-            operations.CreateAnalyticsProperty2RequestTypedDict,
+            operations.CreateAnalyticsPropertyRequest,
+            operations.CreateAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAnalyticsProperty2Response:
+    ) -> operations.CreateAnalyticsPropertyResponse:
         r"""Create a property
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Property(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAnalyticsProperty2Request
+                request, operations.CreateAnalyticsPropertyRequest
             )
-        request = cast(operations.CreateAnalyticsProperty2Request, request)
+        request = cast(operations.CreateAnalyticsPropertyRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAnalyticsProperty2",
+                operation_id="createAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -94,7 +94,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAnalyticsProperty2Response(
+            return operations.CreateAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
                 ),
@@ -111,18 +111,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_analytics_property2_async(
+    async def create_analytics_property_async(
         self,
         *,
         request: Union[
-            operations.CreateAnalyticsProperty2Request,
-            operations.CreateAnalyticsProperty2RequestTypedDict,
+            operations.CreateAnalyticsPropertyRequest,
+            operations.CreateAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAnalyticsProperty2Response:
+    ) -> operations.CreateAnalyticsPropertyResponse:
         r"""Create a property
 
         :param request: The request object to send.
@@ -143,9 +143,9 @@ class Property(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAnalyticsProperty2Request
+                request, operations.CreateAnalyticsPropertyRequest
             )
-        request = cast(operations.CreateAnalyticsProperty2Request, request)
+        request = cast(operations.CreateAnalyticsPropertyRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -183,7 +183,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAnalyticsProperty2",
+                operation_id="createAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -195,7 +195,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAnalyticsProperty2Response(
+            return operations.CreateAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
                 ),
@@ -212,18 +212,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_analytics_property2(
+    def get_analytics_property(
         self,
         *,
         request: Union[
-            operations.GetAnalyticsProperty2Request,
-            operations.GetAnalyticsProperty2RequestTypedDict,
+            operations.GetAnalyticsPropertyRequest,
+            operations.GetAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAnalyticsProperty2Response:
+    ) -> operations.GetAnalyticsPropertyResponse:
         r"""Retrieve a property
 
         :param request: The request object to send.
@@ -243,8 +243,8 @@ class Property(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAnalyticsProperty2Request)
-        request = cast(operations.GetAnalyticsProperty2Request, request)
+            request = utils.unmarshal(request, operations.GetAnalyticsPropertyRequest)
+        request = cast(operations.GetAnalyticsPropertyRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -275,7 +275,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAnalyticsProperty2",
+                operation_id="getAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -287,7 +287,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAnalyticsProperty2Response(
+            return operations.GetAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
                 ),
@@ -304,18 +304,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_analytics_property2_async(
+    async def get_analytics_property_async(
         self,
         *,
         request: Union[
-            operations.GetAnalyticsProperty2Request,
-            operations.GetAnalyticsProperty2RequestTypedDict,
+            operations.GetAnalyticsPropertyRequest,
+            operations.GetAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAnalyticsProperty2Response:
+    ) -> operations.GetAnalyticsPropertyResponse:
         r"""Retrieve a property
 
         :param request: The request object to send.
@@ -335,8 +335,8 @@ class Property(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAnalyticsProperty2Request)
-        request = cast(operations.GetAnalyticsProperty2Request, request)
+            request = utils.unmarshal(request, operations.GetAnalyticsPropertyRequest)
+        request = cast(operations.GetAnalyticsPropertyRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -367,7 +367,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAnalyticsProperty2",
+                operation_id="getAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -379,7 +379,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAnalyticsProperty2Response(
+            return operations.GetAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
                 ),
@@ -396,18 +396,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_analytics_properties2(
+    def list_analytics_properties(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsProperties2Request,
-            operations.ListAnalyticsProperties2RequestTypedDict,
+            operations.ListAnalyticsPropertiesRequest,
+            operations.ListAnalyticsPropertiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsProperties2Response:
+    ) -> operations.ListAnalyticsPropertiesResponse:
         r"""List all properties
 
         :param request: The request object to send.
@@ -428,9 +428,9 @@ class Property(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAnalyticsProperties2Request
+                request, operations.ListAnalyticsPropertiesRequest
             )
-        request = cast(operations.ListAnalyticsProperties2Request, request)
+        request = cast(operations.ListAnalyticsPropertiesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -461,7 +461,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsProperties2",
+                operation_id="listAnalyticsProperties",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -473,7 +473,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsProperties2Response(
+            return operations.ListAnalyticsPropertiesResponse(
                 analytics_properties=unmarshal_json_response(
                     Optional[List[shared.AnalyticsProperty]], http_res
                 ),
@@ -490,18 +490,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_analytics_properties2_async(
+    async def list_analytics_properties_async(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsProperties2Request,
-            operations.ListAnalyticsProperties2RequestTypedDict,
+            operations.ListAnalyticsPropertiesRequest,
+            operations.ListAnalyticsPropertiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsProperties2Response:
+    ) -> operations.ListAnalyticsPropertiesResponse:
         r"""List all properties
 
         :param request: The request object to send.
@@ -522,9 +522,9 @@ class Property(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAnalyticsProperties2Request
+                request, operations.ListAnalyticsPropertiesRequest
             )
-        request = cast(operations.ListAnalyticsProperties2Request, request)
+        request = cast(operations.ListAnalyticsPropertiesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -555,7 +555,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsProperties2",
+                operation_id="listAnalyticsProperties",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -567,7 +567,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsProperties2Response(
+            return operations.ListAnalyticsPropertiesResponse(
                 analytics_properties=unmarshal_json_response(
                     Optional[List[shared.AnalyticsProperty]], http_res
                 ),
@@ -584,18 +584,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_analytics_property2(
+    def patch_analytics_property(
         self,
         *,
         request: Union[
-            operations.PatchAnalyticsProperty2Request,
-            operations.PatchAnalyticsProperty2RequestTypedDict,
+            operations.PatchAnalyticsPropertyRequest,
+            operations.PatchAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAnalyticsProperty2Response:
+    ) -> operations.PatchAnalyticsPropertyResponse:
         r"""Update a property
 
         :param request: The request object to send.
@@ -615,10 +615,8 @@ class Property(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAnalyticsProperty2Request
-            )
-        request = cast(operations.PatchAnalyticsProperty2Request, request)
+            request = utils.unmarshal(request, operations.PatchAnalyticsPropertyRequest)
+        request = cast(operations.PatchAnalyticsPropertyRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -656,7 +654,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAnalyticsProperty2",
+                operation_id="patchAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -668,7 +666,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAnalyticsProperty2Response(
+            return operations.PatchAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
                 ),
@@ -685,18 +683,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_analytics_property2_async(
+    async def patch_analytics_property_async(
         self,
         *,
         request: Union[
-            operations.PatchAnalyticsProperty2Request,
-            operations.PatchAnalyticsProperty2RequestTypedDict,
+            operations.PatchAnalyticsPropertyRequest,
+            operations.PatchAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAnalyticsProperty2Response:
+    ) -> operations.PatchAnalyticsPropertyResponse:
         r"""Update a property
 
         :param request: The request object to send.
@@ -716,10 +714,8 @@ class Property(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAnalyticsProperty2Request
-            )
-        request = cast(operations.PatchAnalyticsProperty2Request, request)
+            request = utils.unmarshal(request, operations.PatchAnalyticsPropertyRequest)
+        request = cast(operations.PatchAnalyticsPropertyRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -757,7 +753,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAnalyticsProperty2",
+                operation_id="patchAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -769,7 +765,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAnalyticsProperty2Response(
+            return operations.PatchAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
                 ),
@@ -786,18 +782,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_analytics_property2(
+    def remove_analytics_property(
         self,
         *,
         request: Union[
-            operations.RemoveAnalyticsProperty2Request,
-            operations.RemoveAnalyticsProperty2RequestTypedDict,
+            operations.RemoveAnalyticsPropertyRequest,
+            operations.RemoveAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAnalyticsProperty2Response:
+    ) -> operations.RemoveAnalyticsPropertyResponse:
         r"""Remove a property
 
         :param request: The request object to send.
@@ -818,9 +814,9 @@ class Property(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAnalyticsProperty2Request
+                request, operations.RemoveAnalyticsPropertyRequest
             )
-        request = cast(operations.RemoveAnalyticsProperty2Request, request)
+        request = cast(operations.RemoveAnalyticsPropertyRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -851,7 +847,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAnalyticsProperty2",
+                operation_id="removeAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -863,7 +859,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAnalyticsProperty2Response(
+            return operations.RemoveAnalyticsPropertyResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -876,7 +872,7 @@ class Property(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAnalyticsProperty2Response(
+            return operations.RemoveAnalyticsPropertyResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -885,18 +881,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_analytics_property2_async(
+    async def remove_analytics_property_async(
         self,
         *,
         request: Union[
-            operations.RemoveAnalyticsProperty2Request,
-            operations.RemoveAnalyticsProperty2RequestTypedDict,
+            operations.RemoveAnalyticsPropertyRequest,
+            operations.RemoveAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAnalyticsProperty2Response:
+    ) -> operations.RemoveAnalyticsPropertyResponse:
         r"""Remove a property
 
         :param request: The request object to send.
@@ -917,9 +913,9 @@ class Property(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAnalyticsProperty2Request
+                request, operations.RemoveAnalyticsPropertyRequest
             )
-        request = cast(operations.RemoveAnalyticsProperty2Request, request)
+        request = cast(operations.RemoveAnalyticsPropertyRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -950,7 +946,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAnalyticsProperty2",
+                operation_id="removeAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -962,7 +958,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAnalyticsProperty2Response(
+            return operations.RemoveAnalyticsPropertyResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -975,7 +971,7 @@ class Property(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAnalyticsProperty2Response(
+            return operations.RemoveAnalyticsPropertyResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -984,18 +980,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_analytics_property2(
+    def update_analytics_property(
         self,
         *,
         request: Union[
-            operations.UpdateAnalyticsProperty2Request,
-            operations.UpdateAnalyticsProperty2RequestTypedDict,
+            operations.UpdateAnalyticsPropertyRequest,
+            operations.UpdateAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAnalyticsProperty2Response:
+    ) -> operations.UpdateAnalyticsPropertyResponse:
         r"""Update a property
 
         :param request: The request object to send.
@@ -1016,9 +1012,9 @@ class Property(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAnalyticsProperty2Request
+                request, operations.UpdateAnalyticsPropertyRequest
             )
-        request = cast(operations.UpdateAnalyticsProperty2Request, request)
+        request = cast(operations.UpdateAnalyticsPropertyRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1056,7 +1052,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAnalyticsProperty2",
+                operation_id="updateAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -1068,7 +1064,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAnalyticsProperty2Response(
+            return operations.UpdateAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
                 ),
@@ -1085,18 +1081,18 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_analytics_property2_async(
+    async def update_analytics_property_async(
         self,
         *,
         request: Union[
-            operations.UpdateAnalyticsProperty2Request,
-            operations.UpdateAnalyticsProperty2RequestTypedDict,
+            operations.UpdateAnalyticsPropertyRequest,
+            operations.UpdateAnalyticsPropertyRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAnalyticsProperty2Response:
+    ) -> operations.UpdateAnalyticsPropertyResponse:
         r"""Update a property
 
         :param request: The request object to send.
@@ -1117,9 +1113,9 @@ class Property(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAnalyticsProperty2Request
+                request, operations.UpdateAnalyticsPropertyRequest
             )
-        request = cast(operations.UpdateAnalyticsProperty2Request, request)
+        request = cast(operations.UpdateAnalyticsPropertyRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1157,7 +1153,7 @@ class Property(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAnalyticsProperty2",
+                operation_id="updateAnalyticsProperty",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "property"],
@@ -1169,7 +1165,7 @@ class Property(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAnalyticsProperty2Response(
+            return operations.UpdateAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
                 ),

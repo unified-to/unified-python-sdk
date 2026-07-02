@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Carrier(BaseSDK):
-    def get_shipping_carrier2(
+    def get_shipping_carrier(
         self,
         *,
         request: Union[
-            operations.GetShippingCarrier2Request,
-            operations.GetShippingCarrier2RequestTypedDict,
+            operations.GetShippingCarrierRequest,
+            operations.GetShippingCarrierRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingCarrier2Response:
+    ) -> operations.GetShippingCarrierResponse:
         r"""Retrieve a carrier
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Carrier(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingCarrier2Request)
-        request = cast(operations.GetShippingCarrier2Request, request)
+            request = utils.unmarshal(request, operations.GetShippingCarrierRequest)
+        request = cast(operations.GetShippingCarrierRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Carrier(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingCarrier2",
+                operation_id="getShippingCarrier",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "carrier"],
@@ -85,7 +85,7 @@ class Carrier(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingCarrier2Response(
+            return operations.GetShippingCarrierResponse(
                 shipping_carrier=unmarshal_json_response(
                     Optional[shared.ShippingCarrier], http_res
                 ),
@@ -102,18 +102,18 @@ class Carrier(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_shipping_carrier2_async(
+    async def get_shipping_carrier_async(
         self,
         *,
         request: Union[
-            operations.GetShippingCarrier2Request,
-            operations.GetShippingCarrier2RequestTypedDict,
+            operations.GetShippingCarrierRequest,
+            operations.GetShippingCarrierRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetShippingCarrier2Response:
+    ) -> operations.GetShippingCarrierResponse:
         r"""Retrieve a carrier
 
         :param request: The request object to send.
@@ -133,8 +133,8 @@ class Carrier(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetShippingCarrier2Request)
-        request = cast(operations.GetShippingCarrier2Request, request)
+            request = utils.unmarshal(request, operations.GetShippingCarrierRequest)
+        request = cast(operations.GetShippingCarrierRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +165,7 @@ class Carrier(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getShippingCarrier2",
+                operation_id="getShippingCarrier",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "carrier"],
@@ -177,7 +177,7 @@ class Carrier(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetShippingCarrier2Response(
+            return operations.GetShippingCarrierResponse(
                 shipping_carrier=unmarshal_json_response(
                     Optional[shared.ShippingCarrier], http_res
                 ),
@@ -194,18 +194,18 @@ class Carrier(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_shipping_carriers2(
+    def list_shipping_carriers(
         self,
         *,
         request: Union[
-            operations.ListShippingCarriers2Request,
-            operations.ListShippingCarriers2RequestTypedDict,
+            operations.ListShippingCarriersRequest,
+            operations.ListShippingCarriersRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingCarriers2Response:
+    ) -> operations.ListShippingCarriersResponse:
         r"""List all carriers
 
         :param request: The request object to send.
@@ -225,8 +225,8 @@ class Carrier(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingCarriers2Request)
-        request = cast(operations.ListShippingCarriers2Request, request)
+            request = utils.unmarshal(request, operations.ListShippingCarriersRequest)
+        request = cast(operations.ListShippingCarriersRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -257,7 +257,7 @@ class Carrier(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingCarriers2",
+                operation_id="listShippingCarriers",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "carrier"],
@@ -269,7 +269,7 @@ class Carrier(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingCarriers2Response(
+            return operations.ListShippingCarriersResponse(
                 shipping_carriers=unmarshal_json_response(
                     Optional[List[shared.ShippingCarrier]], http_res
                 ),
@@ -286,18 +286,18 @@ class Carrier(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_shipping_carriers2_async(
+    async def list_shipping_carriers_async(
         self,
         *,
         request: Union[
-            operations.ListShippingCarriers2Request,
-            operations.ListShippingCarriers2RequestTypedDict,
+            operations.ListShippingCarriersRequest,
+            operations.ListShippingCarriersRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListShippingCarriers2Response:
+    ) -> operations.ListShippingCarriersResponse:
         r"""List all carriers
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Carrier(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListShippingCarriers2Request)
-        request = cast(operations.ListShippingCarriers2Request, request)
+            request = utils.unmarshal(request, operations.ListShippingCarriersRequest)
+        request = cast(operations.ListShippingCarriersRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Carrier(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listShippingCarriers2",
+                operation_id="listShippingCarriers",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["shipping", "carrier"],
@@ -361,7 +361,7 @@ class Carrier(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListShippingCarriers2Response(
+            return operations.ListShippingCarriersResponse(
                 shipping_carriers=unmarshal_json_response(
                     Optional[List[shared.ShippingCarrier]], http_res
                 ),

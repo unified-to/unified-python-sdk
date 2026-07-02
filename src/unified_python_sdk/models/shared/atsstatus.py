@@ -30,6 +30,7 @@ class AtsStatusStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 class AtsStatusTypedDict(TypedDict):
     description: NotRequired[str]
     id: NotRequired[str]
+    job_id: NotRequired[str]
     original_status: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[AtsStatusStatus]
@@ -39,6 +40,8 @@ class AtsStatus(BaseModel):
     description: Optional[str] = None
 
     id: Optional[str] = None
+
+    job_id: Optional[str] = None
 
     original_status: Optional[str] = None
 
@@ -57,7 +60,9 @@ class AtsStatus(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["description", "id", "original_status", "raw", "status"])
+        optional_fields = set(
+            ["description", "id", "job_id", "original_status", "raw", "status"]
+        )
         serialized = handler(self)
         m = {}
 

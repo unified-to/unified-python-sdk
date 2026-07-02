@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Course(BaseSDK):
-    def create_lms_course2(
+    def create_lms_course(
         self,
         *,
         request: Union[
-            operations.CreateLmsCourse2Request,
-            operations.CreateLmsCourse2RequestTypedDict,
+            operations.CreateLmsCourseRequest,
+            operations.CreateLmsCourseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateLmsCourse2Response:
+    ) -> operations.CreateLmsCourseResponse:
         r"""Create a course
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateLmsCourse2Request)
-        request = cast(operations.CreateLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.CreateLmsCourseRequest)
+        request = cast(operations.CreateLmsCourseRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createLmsCourse2",
+                operation_id="createLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -88,7 +88,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateLmsCourse2Response(
+            return operations.CreateLmsCourseResponse(
                 lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
@@ -105,18 +105,18 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_lms_course2_async(
+    async def create_lms_course_async(
         self,
         *,
         request: Union[
-            operations.CreateLmsCourse2Request,
-            operations.CreateLmsCourse2RequestTypedDict,
+            operations.CreateLmsCourseRequest,
+            operations.CreateLmsCourseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateLmsCourse2Response:
+    ) -> operations.CreateLmsCourseResponse:
         r"""Create a course
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateLmsCourse2Request)
-        request = cast(operations.CreateLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.CreateLmsCourseRequest)
+        request = cast(operations.CreateLmsCourseRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createLmsCourse2",
+                operation_id="createLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -183,7 +183,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateLmsCourse2Response(
+            return operations.CreateLmsCourseResponse(
                 lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
@@ -200,17 +200,17 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_lms_course2(
+    def get_lms_course(
         self,
         *,
         request: Union[
-            operations.GetLmsCourse2Request, operations.GetLmsCourse2RequestTypedDict
+            operations.GetLmsCourseRequest, operations.GetLmsCourseRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetLmsCourse2Response:
+    ) -> operations.GetLmsCourseResponse:
         r"""Retrieve a course
 
         :param request: The request object to send.
@@ -230,8 +230,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetLmsCourse2Request)
-        request = cast(operations.GetLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.GetLmsCourseRequest)
+        request = cast(operations.GetLmsCourseRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -262,7 +262,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getLmsCourse2",
+                operation_id="getLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -274,7 +274,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetLmsCourse2Response(
+            return operations.GetLmsCourseResponse(
                 lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
@@ -291,17 +291,17 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_lms_course2_async(
+    async def get_lms_course_async(
         self,
         *,
         request: Union[
-            operations.GetLmsCourse2Request, operations.GetLmsCourse2RequestTypedDict
+            operations.GetLmsCourseRequest, operations.GetLmsCourseRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetLmsCourse2Response:
+    ) -> operations.GetLmsCourseResponse:
         r"""Retrieve a course
 
         :param request: The request object to send.
@@ -321,8 +321,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetLmsCourse2Request)
-        request = cast(operations.GetLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.GetLmsCourseRequest)
+        request = cast(operations.GetLmsCourseRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -353,7 +353,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getLmsCourse2",
+                operation_id="getLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -365,7 +365,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetLmsCourse2Response(
+            return operations.GetLmsCourseResponse(
                 lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
@@ -382,18 +382,17 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_lms_courses2(
+    def list_lms_courses(
         self,
         *,
         request: Union[
-            operations.ListLmsCourses2Request,
-            operations.ListLmsCourses2RequestTypedDict,
+            operations.ListLmsCoursesRequest, operations.ListLmsCoursesRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListLmsCourses2Response:
+    ) -> operations.ListLmsCoursesResponse:
         r"""List all courses
 
         :param request: The request object to send.
@@ -413,8 +412,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListLmsCourses2Request)
-        request = cast(operations.ListLmsCourses2Request, request)
+            request = utils.unmarshal(request, operations.ListLmsCoursesRequest)
+        request = cast(operations.ListLmsCoursesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -445,7 +444,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listLmsCourses2",
+                operation_id="listLmsCourses",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -457,7 +456,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListLmsCourses2Response(
+            return operations.ListLmsCoursesResponse(
                 lms_courses=unmarshal_json_response(
                     Optional[List[shared.LmsCourse]], http_res
                 ),
@@ -474,18 +473,17 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_lms_courses2_async(
+    async def list_lms_courses_async(
         self,
         *,
         request: Union[
-            operations.ListLmsCourses2Request,
-            operations.ListLmsCourses2RequestTypedDict,
+            operations.ListLmsCoursesRequest, operations.ListLmsCoursesRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListLmsCourses2Response:
+    ) -> operations.ListLmsCoursesResponse:
         r"""List all courses
 
         :param request: The request object to send.
@@ -505,8 +503,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListLmsCourses2Request)
-        request = cast(operations.ListLmsCourses2Request, request)
+            request = utils.unmarshal(request, operations.ListLmsCoursesRequest)
+        request = cast(operations.ListLmsCoursesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -537,7 +535,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listLmsCourses2",
+                operation_id="listLmsCourses",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -549,7 +547,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListLmsCourses2Response(
+            return operations.ListLmsCoursesResponse(
                 lms_courses=unmarshal_json_response(
                     Optional[List[shared.LmsCourse]], http_res
                 ),
@@ -566,18 +564,17 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_lms_course2(
+    def patch_lms_course(
         self,
         *,
         request: Union[
-            operations.PatchLmsCourse2Request,
-            operations.PatchLmsCourse2RequestTypedDict,
+            operations.PatchLmsCourseRequest, operations.PatchLmsCourseRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchLmsCourse2Response:
+    ) -> operations.PatchLmsCourseResponse:
         r"""Update a course
 
         :param request: The request object to send.
@@ -597,8 +594,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchLmsCourse2Request)
-        request = cast(operations.PatchLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.PatchLmsCourseRequest)
+        request = cast(operations.PatchLmsCourseRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -632,7 +629,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchLmsCourse2",
+                operation_id="patchLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -644,7 +641,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchLmsCourse2Response(
+            return operations.PatchLmsCourseResponse(
                 lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
@@ -661,18 +658,17 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_lms_course2_async(
+    async def patch_lms_course_async(
         self,
         *,
         request: Union[
-            operations.PatchLmsCourse2Request,
-            operations.PatchLmsCourse2RequestTypedDict,
+            operations.PatchLmsCourseRequest, operations.PatchLmsCourseRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchLmsCourse2Response:
+    ) -> operations.PatchLmsCourseResponse:
         r"""Update a course
 
         :param request: The request object to send.
@@ -692,8 +688,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchLmsCourse2Request)
-        request = cast(operations.PatchLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.PatchLmsCourseRequest)
+        request = cast(operations.PatchLmsCourseRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -727,7 +723,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchLmsCourse2",
+                operation_id="patchLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -739,7 +735,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchLmsCourse2Response(
+            return operations.PatchLmsCourseResponse(
                 lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
@@ -756,18 +752,18 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_lms_course2(
+    def remove_lms_course(
         self,
         *,
         request: Union[
-            operations.RemoveLmsCourse2Request,
-            operations.RemoveLmsCourse2RequestTypedDict,
+            operations.RemoveLmsCourseRequest,
+            operations.RemoveLmsCourseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveLmsCourse2Response:
+    ) -> operations.RemoveLmsCourseResponse:
         r"""Remove a course
 
         :param request: The request object to send.
@@ -787,8 +783,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveLmsCourse2Request)
-        request = cast(operations.RemoveLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.RemoveLmsCourseRequest)
+        request = cast(operations.RemoveLmsCourseRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -819,7 +815,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeLmsCourse2",
+                operation_id="removeLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -831,7 +827,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveLmsCourse2Response(
+            return operations.RemoveLmsCourseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -844,7 +840,7 @@ class Course(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveLmsCourse2Response(
+            return operations.RemoveLmsCourseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -853,18 +849,18 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_lms_course2_async(
+    async def remove_lms_course_async(
         self,
         *,
         request: Union[
-            operations.RemoveLmsCourse2Request,
-            operations.RemoveLmsCourse2RequestTypedDict,
+            operations.RemoveLmsCourseRequest,
+            operations.RemoveLmsCourseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveLmsCourse2Response:
+    ) -> operations.RemoveLmsCourseResponse:
         r"""Remove a course
 
         :param request: The request object to send.
@@ -884,8 +880,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveLmsCourse2Request)
-        request = cast(operations.RemoveLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.RemoveLmsCourseRequest)
+        request = cast(operations.RemoveLmsCourseRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -916,7 +912,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeLmsCourse2",
+                operation_id="removeLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -928,7 +924,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveLmsCourse2Response(
+            return operations.RemoveLmsCourseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -941,7 +937,7 @@ class Course(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveLmsCourse2Response(
+            return operations.RemoveLmsCourseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -950,18 +946,18 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_lms_course2(
+    def update_lms_course(
         self,
         *,
         request: Union[
-            operations.UpdateLmsCourse2Request,
-            operations.UpdateLmsCourse2RequestTypedDict,
+            operations.UpdateLmsCourseRequest,
+            operations.UpdateLmsCourseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateLmsCourse2Response:
+    ) -> operations.UpdateLmsCourseResponse:
         r"""Update a course
 
         :param request: The request object to send.
@@ -981,8 +977,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateLmsCourse2Request)
-        request = cast(operations.UpdateLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.UpdateLmsCourseRequest)
+        request = cast(operations.UpdateLmsCourseRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1016,7 +1012,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateLmsCourse2",
+                operation_id="updateLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -1028,7 +1024,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateLmsCourse2Response(
+            return operations.UpdateLmsCourseResponse(
                 lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
@@ -1045,18 +1041,18 @@ class Course(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_lms_course2_async(
+    async def update_lms_course_async(
         self,
         *,
         request: Union[
-            operations.UpdateLmsCourse2Request,
-            operations.UpdateLmsCourse2RequestTypedDict,
+            operations.UpdateLmsCourseRequest,
+            operations.UpdateLmsCourseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateLmsCourse2Response:
+    ) -> operations.UpdateLmsCourseResponse:
         r"""Update a course
 
         :param request: The request object to send.
@@ -1076,8 +1072,8 @@ class Course(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateLmsCourse2Request)
-        request = cast(operations.UpdateLmsCourse2Request, request)
+            request = utils.unmarshal(request, operations.UpdateLmsCourseRequest)
+        request = cast(operations.UpdateLmsCourseRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1111,7 +1107,7 @@ class Course(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateLmsCourse2",
+                operation_id="updateLmsCourse",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["lms", "course"],
@@ -1123,7 +1119,7 @@ class Course(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateLmsCourse2Response(
+            return operations.UpdateLmsCourseResponse(
                 lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Commerce(BaseSDK):
-    def create_commerce_collection2(
+    def create_commerce_collection(
         self,
         *,
         request: Union[
-            operations.CreateCommerceCollection2Request,
-            operations.CreateCommerceCollection2RequestTypedDict,
+            operations.CreateCommerceCollectionRequest,
+            operations.CreateCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceCollection2Response:
+    ) -> operations.CreateCommerceCollectionResponse:
         r"""Create a collection
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceCollection2Request
+                request, operations.CreateCommerceCollectionRequest
             )
-        request = cast(operations.CreateCommerceCollection2Request, request)
+        request = cast(operations.CreateCommerceCollectionRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceCollection2",
+                operation_id="createCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -94,7 +94,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceCollection2Response(
+            return operations.CreateCommerceCollectionResponse(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -111,18 +111,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_collection2_async(
+    async def create_commerce_collection_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceCollection2Request,
-            operations.CreateCommerceCollection2RequestTypedDict,
+            operations.CreateCommerceCollectionRequest,
+            operations.CreateCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceCollection2Response:
+    ) -> operations.CreateCommerceCollectionResponse:
         r"""Create a collection
 
         :param request: The request object to send.
@@ -143,9 +143,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceCollection2Request
+                request, operations.CreateCommerceCollectionRequest
             )
-        request = cast(operations.CreateCommerceCollection2Request, request)
+        request = cast(operations.CreateCommerceCollectionRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -183,7 +183,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceCollection2",
+                operation_id="createCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -195,7 +195,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceCollection2Response(
+            return operations.CreateCommerceCollectionResponse(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -212,18 +212,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_commerce_inventory2(
+    def create_commerce_inventory(
         self,
         *,
         request: Union[
-            operations.CreateCommerceInventory2Request,
-            operations.CreateCommerceInventory2RequestTypedDict,
+            operations.CreateCommerceInventoryRequest,
+            operations.CreateCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceInventory2Response:
+    ) -> operations.CreateCommerceInventoryResponse:
         r"""Create an inventory
 
         :param request: The request object to send.
@@ -244,9 +244,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceInventory2Request
+                request, operations.CreateCommerceInventoryRequest
             )
-        request = cast(operations.CreateCommerceInventory2Request, request)
+        request = cast(operations.CreateCommerceInventoryRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -284,7 +284,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceInventory2",
+                operation_id="createCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -296,7 +296,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceInventory2Response(
+            return operations.CreateCommerceInventoryResponse(
                 commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
@@ -313,18 +313,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_inventory2_async(
+    async def create_commerce_inventory_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceInventory2Request,
-            operations.CreateCommerceInventory2RequestTypedDict,
+            operations.CreateCommerceInventoryRequest,
+            operations.CreateCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceInventory2Response:
+    ) -> operations.CreateCommerceInventoryResponse:
         r"""Create an inventory
 
         :param request: The request object to send.
@@ -345,9 +345,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceInventory2Request
+                request, operations.CreateCommerceInventoryRequest
             )
-        request = cast(operations.CreateCommerceInventory2Request, request)
+        request = cast(operations.CreateCommerceInventoryRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -385,7 +385,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceInventory2",
+                operation_id="createCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -397,7 +397,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceInventory2Response(
+            return operations.CreateCommerceInventoryResponse(
                 commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
@@ -414,18 +414,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_commerce_item2(
+    def create_commerce_item(
         self,
         *,
         request: Union[
-            operations.CreateCommerceItem2Request,
-            operations.CreateCommerceItem2RequestTypedDict,
+            operations.CreateCommerceItemRequest,
+            operations.CreateCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceItem2Response:
+    ) -> operations.CreateCommerceItemResponse:
         r"""Create an item
 
         :param request: The request object to send.
@@ -445,8 +445,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceItem2Request)
-        request = cast(operations.CreateCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.CreateCommerceItemRequest)
+        request = cast(operations.CreateCommerceItemRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -480,7 +480,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceItem2",
+                operation_id="createCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -492,7 +492,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceItem2Response(
+            return operations.CreateCommerceItemResponse(
                 commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
@@ -509,18 +509,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_item2_async(
+    async def create_commerce_item_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceItem2Request,
-            operations.CreateCommerceItem2RequestTypedDict,
+            operations.CreateCommerceItemRequest,
+            operations.CreateCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceItem2Response:
+    ) -> operations.CreateCommerceItemResponse:
         r"""Create an item
 
         :param request: The request object to send.
@@ -540,8 +540,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceItem2Request)
-        request = cast(operations.CreateCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.CreateCommerceItemRequest)
+        request = cast(operations.CreateCommerceItemRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -575,7 +575,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceItem2",
+                operation_id="createCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -587,7 +587,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceItem2Response(
+            return operations.CreateCommerceItemResponse(
                 commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
@@ -604,18 +604,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_commerce_itemvariant2(
+    def create_commerce_itemvariant(
         self,
         *,
         request: Union[
-            operations.CreateCommerceItemvariant2Request,
-            operations.CreateCommerceItemvariant2RequestTypedDict,
+            operations.CreateCommerceItemvariantRequest,
+            operations.CreateCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceItemvariant2Response:
+    ) -> operations.CreateCommerceItemvariantResponse:
         r"""Create an itemvariant
 
         :param request: The request object to send.
@@ -636,9 +636,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceItemvariant2Request
+                request, operations.CreateCommerceItemvariantRequest
             )
-        request = cast(operations.CreateCommerceItemvariant2Request, request)
+        request = cast(operations.CreateCommerceItemvariantRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -676,7 +676,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceItemvariant2",
+                operation_id="createCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -688,7 +688,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceItemvariant2Response(
+            return operations.CreateCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
                     Optional[shared.CommerceItemvariant], http_res
                 ),
@@ -705,18 +705,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_itemvariant2_async(
+    async def create_commerce_itemvariant_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceItemvariant2Request,
-            operations.CreateCommerceItemvariant2RequestTypedDict,
+            operations.CreateCommerceItemvariantRequest,
+            operations.CreateCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceItemvariant2Response:
+    ) -> operations.CreateCommerceItemvariantResponse:
         r"""Create an itemvariant
 
         :param request: The request object to send.
@@ -737,9 +737,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceItemvariant2Request
+                request, operations.CreateCommerceItemvariantRequest
             )
-        request = cast(operations.CreateCommerceItemvariant2Request, request)
+        request = cast(operations.CreateCommerceItemvariantRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -777,7 +777,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceItemvariant2",
+                operation_id="createCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -789,7 +789,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceItemvariant2Response(
+            return operations.CreateCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
                     Optional[shared.CommerceItemvariant], http_res
                 ),
@@ -806,18 +806,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_commerce_location2(
+    def create_commerce_location(
         self,
         *,
         request: Union[
-            operations.CreateCommerceLocation2Request,
-            operations.CreateCommerceLocation2RequestTypedDict,
+            operations.CreateCommerceLocationRequest,
+            operations.CreateCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceLocation2Response:
+    ) -> operations.CreateCommerceLocationResponse:
         r"""Create a location
 
         :param request: The request object to send.
@@ -837,10 +837,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateCommerceLocation2Request
-            )
-        request = cast(operations.CreateCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.CreateCommerceLocationRequest)
+        request = cast(operations.CreateCommerceLocationRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -874,7 +872,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceLocation2",
+                operation_id="createCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -886,7 +884,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceLocation2Response(
+            return operations.CreateCommerceLocationResponse(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -903,18 +901,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_location2_async(
+    async def create_commerce_location_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceLocation2Request,
-            operations.CreateCommerceLocation2RequestTypedDict,
+            operations.CreateCommerceLocationRequest,
+            operations.CreateCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceLocation2Response:
+    ) -> operations.CreateCommerceLocationResponse:
         r"""Create a location
 
         :param request: The request object to send.
@@ -934,10 +932,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateCommerceLocation2Request
-            )
-        request = cast(operations.CreateCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.CreateCommerceLocationRequest)
+        request = cast(operations.CreateCommerceLocationRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -971,7 +967,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceLocation2",
+                operation_id="createCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -983,7 +979,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceLocation2Response(
+            return operations.CreateCommerceLocationResponse(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -1000,18 +996,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_commerce_reservation2(
+    def create_commerce_reservation(
         self,
         *,
         request: Union[
-            operations.CreateCommerceReservation2Request,
-            operations.CreateCommerceReservation2RequestTypedDict,
+            operations.CreateCommerceReservationRequest,
+            operations.CreateCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceReservation2Response:
+    ) -> operations.CreateCommerceReservationResponse:
         r"""Create a reservation
 
         :param request: The request object to send.
@@ -1032,9 +1028,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceReservation2Request
+                request, operations.CreateCommerceReservationRequest
             )
-        request = cast(operations.CreateCommerceReservation2Request, request)
+        request = cast(operations.CreateCommerceReservationRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -1072,7 +1068,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceReservation2",
+                operation_id="createCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -1084,7 +1080,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceReservation2Response(
+            return operations.CreateCommerceReservationResponse(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -1101,18 +1097,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_reservation2_async(
+    async def create_commerce_reservation_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceReservation2Request,
-            operations.CreateCommerceReservation2RequestTypedDict,
+            operations.CreateCommerceReservationRequest,
+            operations.CreateCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceReservation2Response:
+    ) -> operations.CreateCommerceReservationResponse:
         r"""Create a reservation
 
         :param request: The request object to send.
@@ -1133,9 +1129,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceReservation2Request
+                request, operations.CreateCommerceReservationRequest
             )
-        request = cast(operations.CreateCommerceReservation2Request, request)
+        request = cast(operations.CreateCommerceReservationRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1173,7 +1169,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceReservation2",
+                operation_id="createCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -1185,7 +1181,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceReservation2Response(
+            return operations.CreateCommerceReservationResponse(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -1202,18 +1198,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_commerce_review2(
+    def create_commerce_review(
         self,
         *,
         request: Union[
-            operations.CreateCommerceReview2Request,
-            operations.CreateCommerceReview2RequestTypedDict,
+            operations.CreateCommerceReviewRequest,
+            operations.CreateCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceReview2Response:
+    ) -> operations.CreateCommerceReviewResponse:
         r"""Create a review
 
         :param request: The request object to send.
@@ -1233,8 +1229,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceReview2Request)
-        request = cast(operations.CreateCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.CreateCommerceReviewRequest)
+        request = cast(operations.CreateCommerceReviewRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -1268,7 +1264,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceReview2",
+                operation_id="createCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -1280,7 +1276,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceReview2Response(
+            return operations.CreateCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -1297,18 +1293,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_review2_async(
+    async def create_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceReview2Request,
-            operations.CreateCommerceReview2RequestTypedDict,
+            operations.CreateCommerceReviewRequest,
+            operations.CreateCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceReview2Response:
+    ) -> operations.CreateCommerceReviewResponse:
         r"""Create a review
 
         :param request: The request object to send.
@@ -1328,8 +1324,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceReview2Request)
-        request = cast(operations.CreateCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.CreateCommerceReviewRequest)
+        request = cast(operations.CreateCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1363,7 +1359,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceReview2",
+                operation_id="createCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -1375,7 +1371,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceReview2Response(
+            return operations.CreateCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -1392,18 +1388,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_commerce_saleschannel2(
+    def create_commerce_saleschannel(
         self,
         *,
         request: Union[
-            operations.CreateCommerceSaleschannel2Request,
-            operations.CreateCommerceSaleschannel2RequestTypedDict,
+            operations.CreateCommerceSaleschannelRequest,
+            operations.CreateCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceSaleschannel2Response:
+    ) -> operations.CreateCommerceSaleschannelResponse:
         r"""Create a saleschannel
 
         :param request: The request object to send.
@@ -1424,9 +1420,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceSaleschannel2Request
+                request, operations.CreateCommerceSaleschannelRequest
             )
-        request = cast(operations.CreateCommerceSaleschannel2Request, request)
+        request = cast(operations.CreateCommerceSaleschannelRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -1464,7 +1460,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceSaleschannel2",
+                operation_id="createCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -1476,7 +1472,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceSaleschannel2Response(
+            return operations.CreateCommerceSaleschannelResponse(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -1493,18 +1489,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_saleschannel2_async(
+    async def create_commerce_saleschannel_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceSaleschannel2Request,
-            operations.CreateCommerceSaleschannel2RequestTypedDict,
+            operations.CreateCommerceSaleschannelRequest,
+            operations.CreateCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceSaleschannel2Response:
+    ) -> operations.CreateCommerceSaleschannelResponse:
         r"""Create a saleschannel
 
         :param request: The request object to send.
@@ -1525,9 +1521,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateCommerceSaleschannel2Request
+                request, operations.CreateCommerceSaleschannelRequest
             )
-        request = cast(operations.CreateCommerceSaleschannel2Request, request)
+        request = cast(operations.CreateCommerceSaleschannelRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -1565,7 +1561,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceSaleschannel2",
+                operation_id="createCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -1577,7 +1573,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceSaleschannel2Response(
+            return operations.CreateCommerceSaleschannelResponse(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -1594,18 +1590,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_collection2(
+    def get_commerce_collection(
         self,
         *,
         request: Union[
-            operations.GetCommerceCollection2Request,
-            operations.GetCommerceCollection2RequestTypedDict,
+            operations.GetCommerceCollectionRequest,
+            operations.GetCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceCollection2Response:
+    ) -> operations.GetCommerceCollectionResponse:
         r"""Retrieve a collection
 
         :param request: The request object to send.
@@ -1625,8 +1621,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceCollection2Request)
-        request = cast(operations.GetCommerceCollection2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceCollectionRequest)
+        request = cast(operations.GetCommerceCollectionRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1657,7 +1653,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceCollection2",
+                operation_id="getCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -1669,7 +1665,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceCollection2Response(
+            return operations.GetCommerceCollectionResponse(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -1686,18 +1682,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_collection2_async(
+    async def get_commerce_collection_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceCollection2Request,
-            operations.GetCommerceCollection2RequestTypedDict,
+            operations.GetCommerceCollectionRequest,
+            operations.GetCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceCollection2Response:
+    ) -> operations.GetCommerceCollectionResponse:
         r"""Retrieve a collection
 
         :param request: The request object to send.
@@ -1717,8 +1713,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceCollection2Request)
-        request = cast(operations.GetCommerceCollection2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceCollectionRequest)
+        request = cast(operations.GetCommerceCollectionRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1749,7 +1745,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceCollection2",
+                operation_id="getCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -1761,7 +1757,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceCollection2Response(
+            return operations.GetCommerceCollectionResponse(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -1778,18 +1774,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_inventory2(
+    def get_commerce_inventory(
         self,
         *,
         request: Union[
-            operations.GetCommerceInventory2Request,
-            operations.GetCommerceInventory2RequestTypedDict,
+            operations.GetCommerceInventoryRequest,
+            operations.GetCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceInventory2Response:
+    ) -> operations.GetCommerceInventoryResponse:
         r"""Retrieve an inventory
 
         :param request: The request object to send.
@@ -1809,8 +1805,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceInventory2Request)
-        request = cast(operations.GetCommerceInventory2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceInventoryRequest)
+        request = cast(operations.GetCommerceInventoryRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1841,7 +1837,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceInventory2",
+                operation_id="getCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -1853,7 +1849,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceInventory2Response(
+            return operations.GetCommerceInventoryResponse(
                 commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
@@ -1870,18 +1866,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_inventory2_async(
+    async def get_commerce_inventory_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceInventory2Request,
-            operations.GetCommerceInventory2RequestTypedDict,
+            operations.GetCommerceInventoryRequest,
+            operations.GetCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceInventory2Response:
+    ) -> operations.GetCommerceInventoryResponse:
         r"""Retrieve an inventory
 
         :param request: The request object to send.
@@ -1901,8 +1897,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceInventory2Request)
-        request = cast(operations.GetCommerceInventory2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceInventoryRequest)
+        request = cast(operations.GetCommerceInventoryRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1933,7 +1929,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceInventory2",
+                operation_id="getCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -1945,7 +1941,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceInventory2Response(
+            return operations.GetCommerceInventoryResponse(
                 commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
@@ -1962,18 +1958,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_item2(
+    def get_commerce_item(
         self,
         *,
         request: Union[
-            operations.GetCommerceItem2Request,
-            operations.GetCommerceItem2RequestTypedDict,
+            operations.GetCommerceItemRequest,
+            operations.GetCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceItem2Response:
+    ) -> operations.GetCommerceItemResponse:
         r"""Retrieve an item
 
         :param request: The request object to send.
@@ -1993,8 +1989,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceItem2Request)
-        request = cast(operations.GetCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceItemRequest)
+        request = cast(operations.GetCommerceItemRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2025,7 +2021,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceItem2",
+                operation_id="getCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -2037,7 +2033,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceItem2Response(
+            return operations.GetCommerceItemResponse(
                 commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
@@ -2054,18 +2050,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_item2_async(
+    async def get_commerce_item_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceItem2Request,
-            operations.GetCommerceItem2RequestTypedDict,
+            operations.GetCommerceItemRequest,
+            operations.GetCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceItem2Response:
+    ) -> operations.GetCommerceItemResponse:
         r"""Retrieve an item
 
         :param request: The request object to send.
@@ -2085,8 +2081,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceItem2Request)
-        request = cast(operations.GetCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceItemRequest)
+        request = cast(operations.GetCommerceItemRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2117,7 +2113,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceItem2",
+                operation_id="getCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -2129,7 +2125,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceItem2Response(
+            return operations.GetCommerceItemResponse(
                 commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
@@ -2146,18 +2142,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_itemvariant2(
+    def get_commerce_itemvariant(
         self,
         *,
         request: Union[
-            operations.GetCommerceItemvariant2Request,
-            operations.GetCommerceItemvariant2RequestTypedDict,
+            operations.GetCommerceItemvariantRequest,
+            operations.GetCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceItemvariant2Response:
+    ) -> operations.GetCommerceItemvariantResponse:
         r"""Retrieve an itemvariant
 
         :param request: The request object to send.
@@ -2177,10 +2173,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.GetCommerceItemvariant2Request
-            )
-        request = cast(operations.GetCommerceItemvariant2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceItemvariantRequest)
+        request = cast(operations.GetCommerceItemvariantRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2211,7 +2205,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceItemvariant2",
+                operation_id="getCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -2223,7 +2217,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceItemvariant2Response(
+            return operations.GetCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
                     Optional[shared.CommerceItemvariant], http_res
                 ),
@@ -2240,18 +2234,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_itemvariant2_async(
+    async def get_commerce_itemvariant_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceItemvariant2Request,
-            operations.GetCommerceItemvariant2RequestTypedDict,
+            operations.GetCommerceItemvariantRequest,
+            operations.GetCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceItemvariant2Response:
+    ) -> operations.GetCommerceItemvariantResponse:
         r"""Retrieve an itemvariant
 
         :param request: The request object to send.
@@ -2271,10 +2265,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.GetCommerceItemvariant2Request
-            )
-        request = cast(operations.GetCommerceItemvariant2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceItemvariantRequest)
+        request = cast(operations.GetCommerceItemvariantRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2305,7 +2297,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceItemvariant2",
+                operation_id="getCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -2317,7 +2309,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceItemvariant2Response(
+            return operations.GetCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
                     Optional[shared.CommerceItemvariant], http_res
                 ),
@@ -2334,18 +2326,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_location2(
+    def get_commerce_location(
         self,
         *,
         request: Union[
-            operations.GetCommerceLocation2Request,
-            operations.GetCommerceLocation2RequestTypedDict,
+            operations.GetCommerceLocationRequest,
+            operations.GetCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceLocation2Response:
+    ) -> operations.GetCommerceLocationResponse:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -2365,8 +2357,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceLocation2Request)
-        request = cast(operations.GetCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceLocationRequest)
+        request = cast(operations.GetCommerceLocationRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2397,7 +2389,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceLocation2",
+                operation_id="getCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -2409,7 +2401,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceLocation2Response(
+            return operations.GetCommerceLocationResponse(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -2426,18 +2418,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_location2_async(
+    async def get_commerce_location_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceLocation2Request,
-            operations.GetCommerceLocation2RequestTypedDict,
+            operations.GetCommerceLocationRequest,
+            operations.GetCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceLocation2Response:
+    ) -> operations.GetCommerceLocationResponse:
         r"""Retrieve a location
 
         :param request: The request object to send.
@@ -2457,8 +2449,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceLocation2Request)
-        request = cast(operations.GetCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceLocationRequest)
+        request = cast(operations.GetCommerceLocationRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2489,7 +2481,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceLocation2",
+                operation_id="getCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -2501,7 +2493,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceLocation2Response(
+            return operations.GetCommerceLocationResponse(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -2518,18 +2510,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_reservation2(
+    def get_commerce_reservation(
         self,
         *,
         request: Union[
-            operations.GetCommerceReservation2Request,
-            operations.GetCommerceReservation2RequestTypedDict,
+            operations.GetCommerceReservationRequest,
+            operations.GetCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceReservation2Response:
+    ) -> operations.GetCommerceReservationResponse:
         r"""Retrieve a reservation
 
         :param request: The request object to send.
@@ -2549,10 +2541,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.GetCommerceReservation2Request
-            )
-        request = cast(operations.GetCommerceReservation2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceReservationRequest)
+        request = cast(operations.GetCommerceReservationRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2583,7 +2573,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceReservation2",
+                operation_id="getCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -2595,7 +2585,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceReservation2Response(
+            return operations.GetCommerceReservationResponse(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -2612,18 +2602,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_reservation2_async(
+    async def get_commerce_reservation_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceReservation2Request,
-            operations.GetCommerceReservation2RequestTypedDict,
+            operations.GetCommerceReservationRequest,
+            operations.GetCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceReservation2Response:
+    ) -> operations.GetCommerceReservationResponse:
         r"""Retrieve a reservation
 
         :param request: The request object to send.
@@ -2643,10 +2633,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.GetCommerceReservation2Request
-            )
-        request = cast(operations.GetCommerceReservation2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceReservationRequest)
+        request = cast(operations.GetCommerceReservationRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2677,7 +2665,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceReservation2",
+                operation_id="getCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -2689,7 +2677,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceReservation2Response(
+            return operations.GetCommerceReservationResponse(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -2706,18 +2694,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_review2(
+    def get_commerce_review(
         self,
         *,
         request: Union[
-            operations.GetCommerceReview2Request,
-            operations.GetCommerceReview2RequestTypedDict,
+            operations.GetCommerceReviewRequest,
+            operations.GetCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceReview2Response:
+    ) -> operations.GetCommerceReviewResponse:
         r"""Retrieve a review
 
         :param request: The request object to send.
@@ -2737,8 +2725,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceReview2Request)
-        request = cast(operations.GetCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceReviewRequest)
+        request = cast(operations.GetCommerceReviewRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2769,7 +2757,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceReview2",
+                operation_id="getCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -2781,7 +2769,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceReview2Response(
+            return operations.GetCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -2798,18 +2786,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_review2_async(
+    async def get_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceReview2Request,
-            operations.GetCommerceReview2RequestTypedDict,
+            operations.GetCommerceReviewRequest,
+            operations.GetCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceReview2Response:
+    ) -> operations.GetCommerceReviewResponse:
         r"""Retrieve a review
 
         :param request: The request object to send.
@@ -2829,8 +2817,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceReview2Request)
-        request = cast(operations.GetCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceReviewRequest)
+        request = cast(operations.GetCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -2861,7 +2849,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceReview2",
+                operation_id="getCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -2873,7 +2861,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceReview2Response(
+            return operations.GetCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -2890,18 +2878,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_saleschannel2(
+    def get_commerce_saleschannel(
         self,
         *,
         request: Union[
-            operations.GetCommerceSaleschannel2Request,
-            operations.GetCommerceSaleschannel2RequestTypedDict,
+            operations.GetCommerceSaleschannelRequest,
+            operations.GetCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceSaleschannel2Response:
+    ) -> operations.GetCommerceSaleschannelResponse:
         r"""Retrieve a saleschannel
 
         :param request: The request object to send.
@@ -2922,9 +2910,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetCommerceSaleschannel2Request
+                request, operations.GetCommerceSaleschannelRequest
             )
-        request = cast(operations.GetCommerceSaleschannel2Request, request)
+        request = cast(operations.GetCommerceSaleschannelRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -2955,7 +2943,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceSaleschannel2",
+                operation_id="getCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -2967,7 +2955,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceSaleschannel2Response(
+            return operations.GetCommerceSaleschannelResponse(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -2984,18 +2972,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_saleschannel2_async(
+    async def get_commerce_saleschannel_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceSaleschannel2Request,
-            operations.GetCommerceSaleschannel2RequestTypedDict,
+            operations.GetCommerceSaleschannelRequest,
+            operations.GetCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceSaleschannel2Response:
+    ) -> operations.GetCommerceSaleschannelResponse:
         r"""Retrieve a saleschannel
 
         :param request: The request object to send.
@@ -3016,9 +3004,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetCommerceSaleschannel2Request
+                request, operations.GetCommerceSaleschannelRequest
             )
-        request = cast(operations.GetCommerceSaleschannel2Request, request)
+        request = cast(operations.GetCommerceSaleschannelRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3049,7 +3037,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceSaleschannel2",
+                operation_id="getCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -3061,7 +3049,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceSaleschannel2Response(
+            return operations.GetCommerceSaleschannelResponse(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -3078,18 +3066,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_availabilities2(
+    def list_commerce_availabilities(
         self,
         *,
         request: Union[
-            operations.ListCommerceAvailabilities2Request,
-            operations.ListCommerceAvailabilities2RequestTypedDict,
+            operations.ListCommerceAvailabilitiesRequest,
+            operations.ListCommerceAvailabilitiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceAvailabilities2Response:
+    ) -> operations.ListCommerceAvailabilitiesResponse:
         r"""List all availabilities
 
         :param request: The request object to send.
@@ -3110,9 +3098,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceAvailabilities2Request
+                request, operations.ListCommerceAvailabilitiesRequest
             )
-        request = cast(operations.ListCommerceAvailabilities2Request, request)
+        request = cast(operations.ListCommerceAvailabilitiesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3143,7 +3131,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceAvailabilities2",
+                operation_id="listCommerceAvailabilities",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "availability"],
@@ -3155,7 +3143,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceAvailabilities2Response(
+            return operations.ListCommerceAvailabilitiesResponse(
                 commerce_availabilities=unmarshal_json_response(
                     Optional[List[shared.CommerceAvailability]], http_res
                 ),
@@ -3172,18 +3160,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_availabilities2_async(
+    async def list_commerce_availabilities_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceAvailabilities2Request,
-            operations.ListCommerceAvailabilities2RequestTypedDict,
+            operations.ListCommerceAvailabilitiesRequest,
+            operations.ListCommerceAvailabilitiesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceAvailabilities2Response:
+    ) -> operations.ListCommerceAvailabilitiesResponse:
         r"""List all availabilities
 
         :param request: The request object to send.
@@ -3204,9 +3192,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceAvailabilities2Request
+                request, operations.ListCommerceAvailabilitiesRequest
             )
-        request = cast(operations.ListCommerceAvailabilities2Request, request)
+        request = cast(operations.ListCommerceAvailabilitiesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3237,7 +3225,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceAvailabilities2",
+                operation_id="listCommerceAvailabilities",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "availability"],
@@ -3249,7 +3237,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceAvailabilities2Response(
+            return operations.ListCommerceAvailabilitiesResponse(
                 commerce_availabilities=unmarshal_json_response(
                     Optional[List[shared.CommerceAvailability]], http_res
                 ),
@@ -3266,18 +3254,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_collections2(
+    def list_commerce_collections(
         self,
         *,
         request: Union[
-            operations.ListCommerceCollections2Request,
-            operations.ListCommerceCollections2RequestTypedDict,
+            operations.ListCommerceCollectionsRequest,
+            operations.ListCommerceCollectionsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceCollections2Response:
+    ) -> operations.ListCommerceCollectionsResponse:
         r"""List all collections
 
         :param request: The request object to send.
@@ -3298,9 +3286,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceCollections2Request
+                request, operations.ListCommerceCollectionsRequest
             )
-        request = cast(operations.ListCommerceCollections2Request, request)
+        request = cast(operations.ListCommerceCollectionsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3331,7 +3319,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceCollections2",
+                operation_id="listCommerceCollections",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -3343,7 +3331,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceCollections2Response(
+            return operations.ListCommerceCollectionsResponse(
                 commerce_collections=unmarshal_json_response(
                     Optional[List[shared.CommerceCollection]], http_res
                 ),
@@ -3360,18 +3348,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_collections2_async(
+    async def list_commerce_collections_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceCollections2Request,
-            operations.ListCommerceCollections2RequestTypedDict,
+            operations.ListCommerceCollectionsRequest,
+            operations.ListCommerceCollectionsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceCollections2Response:
+    ) -> operations.ListCommerceCollectionsResponse:
         r"""List all collections
 
         :param request: The request object to send.
@@ -3392,9 +3380,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceCollections2Request
+                request, operations.ListCommerceCollectionsRequest
             )
-        request = cast(operations.ListCommerceCollections2Request, request)
+        request = cast(operations.ListCommerceCollectionsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3425,7 +3413,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceCollections2",
+                operation_id="listCommerceCollections",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -3437,7 +3425,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceCollections2Response(
+            return operations.ListCommerceCollectionsResponse(
                 commerce_collections=unmarshal_json_response(
                     Optional[List[shared.CommerceCollection]], http_res
                 ),
@@ -3454,18 +3442,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_inventories2(
+    def list_commerce_inventories(
         self,
         *,
         request: Union[
-            operations.ListCommerceInventories2Request,
-            operations.ListCommerceInventories2RequestTypedDict,
+            operations.ListCommerceInventoriesRequest,
+            operations.ListCommerceInventoriesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceInventories2Response:
+    ) -> operations.ListCommerceInventoriesResponse:
         r"""List all inventories
 
         :param request: The request object to send.
@@ -3486,9 +3474,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceInventories2Request
+                request, operations.ListCommerceInventoriesRequest
             )
-        request = cast(operations.ListCommerceInventories2Request, request)
+        request = cast(operations.ListCommerceInventoriesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3519,7 +3507,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceInventories2",
+                operation_id="listCommerceInventories",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -3531,7 +3519,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceInventories2Response(
+            return operations.ListCommerceInventoriesResponse(
                 commerce_inventories=unmarshal_json_response(
                     Optional[List[shared.CommerceInventory]], http_res
                 ),
@@ -3548,18 +3536,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_inventories2_async(
+    async def list_commerce_inventories_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceInventories2Request,
-            operations.ListCommerceInventories2RequestTypedDict,
+            operations.ListCommerceInventoriesRequest,
+            operations.ListCommerceInventoriesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceInventories2Response:
+    ) -> operations.ListCommerceInventoriesResponse:
         r"""List all inventories
 
         :param request: The request object to send.
@@ -3580,9 +3568,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceInventories2Request
+                request, operations.ListCommerceInventoriesRequest
             )
-        request = cast(operations.ListCommerceInventories2Request, request)
+        request = cast(operations.ListCommerceInventoriesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3613,7 +3601,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceInventories2",
+                operation_id="listCommerceInventories",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -3625,7 +3613,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceInventories2Response(
+            return operations.ListCommerceInventoriesResponse(
                 commerce_inventories=unmarshal_json_response(
                     Optional[List[shared.CommerceInventory]], http_res
                 ),
@@ -3642,18 +3630,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_items2(
+    def list_commerce_items(
         self,
         *,
         request: Union[
-            operations.ListCommerceItems2Request,
-            operations.ListCommerceItems2RequestTypedDict,
+            operations.ListCommerceItemsRequest,
+            operations.ListCommerceItemsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceItems2Response:
+    ) -> operations.ListCommerceItemsResponse:
         r"""List all items
 
         :param request: The request object to send.
@@ -3673,8 +3661,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceItems2Request)
-        request = cast(operations.ListCommerceItems2Request, request)
+            request = utils.unmarshal(request, operations.ListCommerceItemsRequest)
+        request = cast(operations.ListCommerceItemsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3705,7 +3693,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceItems2",
+                operation_id="listCommerceItems",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -3717,7 +3705,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceItems2Response(
+            return operations.ListCommerceItemsResponse(
                 commerce_items=unmarshal_json_response(
                     Optional[List[shared.CommerceItem]], http_res
                 ),
@@ -3734,18 +3722,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_items2_async(
+    async def list_commerce_items_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceItems2Request,
-            operations.ListCommerceItems2RequestTypedDict,
+            operations.ListCommerceItemsRequest,
+            operations.ListCommerceItemsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceItems2Response:
+    ) -> operations.ListCommerceItemsResponse:
         r"""List all items
 
         :param request: The request object to send.
@@ -3765,8 +3753,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceItems2Request)
-        request = cast(operations.ListCommerceItems2Request, request)
+            request = utils.unmarshal(request, operations.ListCommerceItemsRequest)
+        request = cast(operations.ListCommerceItemsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3797,7 +3785,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceItems2",
+                operation_id="listCommerceItems",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -3809,7 +3797,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceItems2Response(
+            return operations.ListCommerceItemsResponse(
                 commerce_items=unmarshal_json_response(
                     Optional[List[shared.CommerceItem]], http_res
                 ),
@@ -3826,18 +3814,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_itemvariants2(
+    def list_commerce_itemvariants(
         self,
         *,
         request: Union[
-            operations.ListCommerceItemvariants2Request,
-            operations.ListCommerceItemvariants2RequestTypedDict,
+            operations.ListCommerceItemvariantsRequest,
+            operations.ListCommerceItemvariantsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceItemvariants2Response:
+    ) -> operations.ListCommerceItemvariantsResponse:
         r"""List all itemvariants
 
         :param request: The request object to send.
@@ -3858,9 +3846,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceItemvariants2Request
+                request, operations.ListCommerceItemvariantsRequest
             )
-        request = cast(operations.ListCommerceItemvariants2Request, request)
+        request = cast(operations.ListCommerceItemvariantsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -3891,7 +3879,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceItemvariants2",
+                operation_id="listCommerceItemvariants",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -3903,7 +3891,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceItemvariants2Response(
+            return operations.ListCommerceItemvariantsResponse(
                 commerce_itemvariants=unmarshal_json_response(
                     Optional[List[shared.CommerceItemvariant]], http_res
                 ),
@@ -3920,18 +3908,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_itemvariants2_async(
+    async def list_commerce_itemvariants_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceItemvariants2Request,
-            operations.ListCommerceItemvariants2RequestTypedDict,
+            operations.ListCommerceItemvariantsRequest,
+            operations.ListCommerceItemvariantsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceItemvariants2Response:
+    ) -> operations.ListCommerceItemvariantsResponse:
         r"""List all itemvariants
 
         :param request: The request object to send.
@@ -3952,9 +3940,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceItemvariants2Request
+                request, operations.ListCommerceItemvariantsRequest
             )
-        request = cast(operations.ListCommerceItemvariants2Request, request)
+        request = cast(operations.ListCommerceItemvariantsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -3985,7 +3973,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceItemvariants2",
+                operation_id="listCommerceItemvariants",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -3997,7 +3985,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceItemvariants2Response(
+            return operations.ListCommerceItemvariantsResponse(
                 commerce_itemvariants=unmarshal_json_response(
                     Optional[List[shared.CommerceItemvariant]], http_res
                 ),
@@ -4014,18 +4002,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_locations2(
+    def list_commerce_locations(
         self,
         *,
         request: Union[
-            operations.ListCommerceLocations2Request,
-            operations.ListCommerceLocations2RequestTypedDict,
+            operations.ListCommerceLocationsRequest,
+            operations.ListCommerceLocationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceLocations2Response:
+    ) -> operations.ListCommerceLocationsResponse:
         r"""List all locations
 
         :param request: The request object to send.
@@ -4045,8 +4033,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceLocations2Request)
-        request = cast(operations.ListCommerceLocations2Request, request)
+            request = utils.unmarshal(request, operations.ListCommerceLocationsRequest)
+        request = cast(operations.ListCommerceLocationsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -4077,7 +4065,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceLocations2",
+                operation_id="listCommerceLocations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -4089,7 +4077,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceLocations2Response(
+            return operations.ListCommerceLocationsResponse(
                 commerce_locations=unmarshal_json_response(
                     Optional[List[shared.CommerceLocation]], http_res
                 ),
@@ -4106,18 +4094,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_locations2_async(
+    async def list_commerce_locations_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceLocations2Request,
-            operations.ListCommerceLocations2RequestTypedDict,
+            operations.ListCommerceLocationsRequest,
+            operations.ListCommerceLocationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceLocations2Response:
+    ) -> operations.ListCommerceLocationsResponse:
         r"""List all locations
 
         :param request: The request object to send.
@@ -4137,8 +4125,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceLocations2Request)
-        request = cast(operations.ListCommerceLocations2Request, request)
+            request = utils.unmarshal(request, operations.ListCommerceLocationsRequest)
+        request = cast(operations.ListCommerceLocationsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4169,7 +4157,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceLocations2",
+                operation_id="listCommerceLocations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -4181,7 +4169,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceLocations2Response(
+            return operations.ListCommerceLocationsResponse(
                 commerce_locations=unmarshal_json_response(
                     Optional[List[shared.CommerceLocation]], http_res
                 ),
@@ -4198,18 +4186,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_reservations2(
+    def list_commerce_reservations(
         self,
         *,
         request: Union[
-            operations.ListCommerceReservations2Request,
-            operations.ListCommerceReservations2RequestTypedDict,
+            operations.ListCommerceReservationsRequest,
+            operations.ListCommerceReservationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceReservations2Response:
+    ) -> operations.ListCommerceReservationsResponse:
         r"""List all reservations
 
         :param request: The request object to send.
@@ -4230,9 +4218,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceReservations2Request
+                request, operations.ListCommerceReservationsRequest
             )
-        request = cast(operations.ListCommerceReservations2Request, request)
+        request = cast(operations.ListCommerceReservationsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -4263,7 +4251,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceReservations2",
+                operation_id="listCommerceReservations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -4275,7 +4263,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceReservations2Response(
+            return operations.ListCommerceReservationsResponse(
                 commerce_reservations=unmarshal_json_response(
                     Optional[List[shared.CommerceReservation]], http_res
                 ),
@@ -4292,18 +4280,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_reservations2_async(
+    async def list_commerce_reservations_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceReservations2Request,
-            operations.ListCommerceReservations2RequestTypedDict,
+            operations.ListCommerceReservationsRequest,
+            operations.ListCommerceReservationsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceReservations2Response:
+    ) -> operations.ListCommerceReservationsResponse:
         r"""List all reservations
 
         :param request: The request object to send.
@@ -4324,9 +4312,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceReservations2Request
+                request, operations.ListCommerceReservationsRequest
             )
-        request = cast(operations.ListCommerceReservations2Request, request)
+        request = cast(operations.ListCommerceReservationsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4357,7 +4345,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceReservations2",
+                operation_id="listCommerceReservations",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -4369,7 +4357,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceReservations2Response(
+            return operations.ListCommerceReservationsResponse(
                 commerce_reservations=unmarshal_json_response(
                     Optional[List[shared.CommerceReservation]], http_res
                 ),
@@ -4386,18 +4374,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_reviews2(
+    def list_commerce_reviews(
         self,
         *,
         request: Union[
-            operations.ListCommerceReviews2Request,
-            operations.ListCommerceReviews2RequestTypedDict,
+            operations.ListCommerceReviewsRequest,
+            operations.ListCommerceReviewsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceReviews2Response:
+    ) -> operations.ListCommerceReviewsResponse:
         r"""List all reviews
 
         :param request: The request object to send.
@@ -4417,8 +4405,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceReviews2Request)
-        request = cast(operations.ListCommerceReviews2Request, request)
+            request = utils.unmarshal(request, operations.ListCommerceReviewsRequest)
+        request = cast(operations.ListCommerceReviewsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -4449,7 +4437,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceReviews2",
+                operation_id="listCommerceReviews",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -4461,7 +4449,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceReviews2Response(
+            return operations.ListCommerceReviewsResponse(
                 commerce_reviews=unmarshal_json_response(
                     Optional[List[shared.CommerceReview]], http_res
                 ),
@@ -4478,18 +4466,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_reviews2_async(
+    async def list_commerce_reviews_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceReviews2Request,
-            operations.ListCommerceReviews2RequestTypedDict,
+            operations.ListCommerceReviewsRequest,
+            operations.ListCommerceReviewsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceReviews2Response:
+    ) -> operations.ListCommerceReviewsResponse:
         r"""List all reviews
 
         :param request: The request object to send.
@@ -4509,8 +4497,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceReviews2Request)
-        request = cast(operations.ListCommerceReviews2Request, request)
+            request = utils.unmarshal(request, operations.ListCommerceReviewsRequest)
+        request = cast(operations.ListCommerceReviewsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4541,7 +4529,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceReviews2",
+                operation_id="listCommerceReviews",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -4553,7 +4541,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceReviews2Response(
+            return operations.ListCommerceReviewsResponse(
                 commerce_reviews=unmarshal_json_response(
                     Optional[List[shared.CommerceReview]], http_res
                 ),
@@ -4570,18 +4558,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_saleschannels2(
+    def list_commerce_saleschannels(
         self,
         *,
         request: Union[
-            operations.ListCommerceSaleschannels2Request,
-            operations.ListCommerceSaleschannels2RequestTypedDict,
+            operations.ListCommerceSaleschannelsRequest,
+            operations.ListCommerceSaleschannelsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceSaleschannels2Response:
+    ) -> operations.ListCommerceSaleschannelsResponse:
         r"""List all saleschannels
 
         :param request: The request object to send.
@@ -4602,9 +4590,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceSaleschannels2Request
+                request, operations.ListCommerceSaleschannelsRequest
             )
-        request = cast(operations.ListCommerceSaleschannels2Request, request)
+        request = cast(operations.ListCommerceSaleschannelsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -4635,7 +4623,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceSaleschannels2",
+                operation_id="listCommerceSaleschannels",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -4647,7 +4635,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceSaleschannels2Response(
+            return operations.ListCommerceSaleschannelsResponse(
                 commerce_saleschannels=unmarshal_json_response(
                     Optional[List[shared.CommerceSaleschannel]], http_res
                 ),
@@ -4664,18 +4652,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_saleschannels2_async(
+    async def list_commerce_saleschannels_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceSaleschannels2Request,
-            operations.ListCommerceSaleschannels2RequestTypedDict,
+            operations.ListCommerceSaleschannelsRequest,
+            operations.ListCommerceSaleschannelsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceSaleschannels2Response:
+    ) -> operations.ListCommerceSaleschannelsResponse:
         r"""List all saleschannels
 
         :param request: The request object to send.
@@ -4696,9 +4684,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListCommerceSaleschannels2Request
+                request, operations.ListCommerceSaleschannelsRequest
             )
-        request = cast(operations.ListCommerceSaleschannels2Request, request)
+        request = cast(operations.ListCommerceSaleschannelsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -4729,7 +4717,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceSaleschannels2",
+                operation_id="listCommerceSaleschannels",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -4741,7 +4729,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceSaleschannels2Response(
+            return operations.ListCommerceSaleschannelsResponse(
                 commerce_saleschannels=unmarshal_json_response(
                     Optional[List[shared.CommerceSaleschannel]], http_res
                 ),
@@ -4758,18 +4746,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_collection2(
+    def patch_commerce_collection(
         self,
         *,
         request: Union[
-            operations.PatchCommerceCollection2Request,
-            operations.PatchCommerceCollection2RequestTypedDict,
+            operations.PatchCommerceCollectionRequest,
+            operations.PatchCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceCollection2Response:
+    ) -> operations.PatchCommerceCollectionResponse:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -4790,9 +4778,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceCollection2Request
+                request, operations.PatchCommerceCollectionRequest
             )
-        request = cast(operations.PatchCommerceCollection2Request, request)
+        request = cast(operations.PatchCommerceCollectionRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -4830,7 +4818,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceCollection2",
+                operation_id="patchCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -4842,7 +4830,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceCollection2Response(
+            return operations.PatchCommerceCollectionResponse(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -4859,18 +4847,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_collection2_async(
+    async def patch_commerce_collection_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceCollection2Request,
-            operations.PatchCommerceCollection2RequestTypedDict,
+            operations.PatchCommerceCollectionRequest,
+            operations.PatchCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceCollection2Response:
+    ) -> operations.PatchCommerceCollectionResponse:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -4891,9 +4879,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceCollection2Request
+                request, operations.PatchCommerceCollectionRequest
             )
-        request = cast(operations.PatchCommerceCollection2Request, request)
+        request = cast(operations.PatchCommerceCollectionRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -4931,7 +4919,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceCollection2",
+                operation_id="patchCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -4943,7 +4931,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceCollection2Response(
+            return operations.PatchCommerceCollectionResponse(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -4960,18 +4948,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_inventory2(
+    def patch_commerce_inventory(
         self,
         *,
         request: Union[
-            operations.PatchCommerceInventory2Request,
-            operations.PatchCommerceInventory2RequestTypedDict,
+            operations.PatchCommerceInventoryRequest,
+            operations.PatchCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceInventory2Response:
+    ) -> operations.PatchCommerceInventoryResponse:
         r"""Update an inventory
 
         :param request: The request object to send.
@@ -4991,10 +4979,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchCommerceInventory2Request
-            )
-        request = cast(operations.PatchCommerceInventory2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceInventoryRequest)
+        request = cast(operations.PatchCommerceInventoryRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5032,7 +5018,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceInventory2",
+                operation_id="patchCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -5044,7 +5030,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceInventory2Response(
+            return operations.PatchCommerceInventoryResponse(
                 commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
@@ -5061,18 +5047,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_inventory2_async(
+    async def patch_commerce_inventory_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceInventory2Request,
-            operations.PatchCommerceInventory2RequestTypedDict,
+            operations.PatchCommerceInventoryRequest,
+            operations.PatchCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceInventory2Response:
+    ) -> operations.PatchCommerceInventoryResponse:
         r"""Update an inventory
 
         :param request: The request object to send.
@@ -5092,10 +5078,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchCommerceInventory2Request
-            )
-        request = cast(operations.PatchCommerceInventory2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceInventoryRequest)
+        request = cast(operations.PatchCommerceInventoryRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5133,7 +5117,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceInventory2",
+                operation_id="patchCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -5145,7 +5129,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceInventory2Response(
+            return operations.PatchCommerceInventoryResponse(
                 commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
@@ -5162,18 +5146,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_item2(
+    def patch_commerce_item(
         self,
         *,
         request: Union[
-            operations.PatchCommerceItem2Request,
-            operations.PatchCommerceItem2RequestTypedDict,
+            operations.PatchCommerceItemRequest,
+            operations.PatchCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceItem2Response:
+    ) -> operations.PatchCommerceItemResponse:
         r"""Update an item
 
         :param request: The request object to send.
@@ -5193,8 +5177,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceItem2Request)
-        request = cast(operations.PatchCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceItemRequest)
+        request = cast(operations.PatchCommerceItemRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5228,7 +5212,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceItem2",
+                operation_id="patchCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -5240,7 +5224,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceItem2Response(
+            return operations.PatchCommerceItemResponse(
                 commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
@@ -5257,18 +5241,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_item2_async(
+    async def patch_commerce_item_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceItem2Request,
-            operations.PatchCommerceItem2RequestTypedDict,
+            operations.PatchCommerceItemRequest,
+            operations.PatchCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceItem2Response:
+    ) -> operations.PatchCommerceItemResponse:
         r"""Update an item
 
         :param request: The request object to send.
@@ -5288,8 +5272,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceItem2Request)
-        request = cast(operations.PatchCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceItemRequest)
+        request = cast(operations.PatchCommerceItemRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5323,7 +5307,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceItem2",
+                operation_id="patchCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -5335,7 +5319,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceItem2Response(
+            return operations.PatchCommerceItemResponse(
                 commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
@@ -5352,18 +5336,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_itemvariant2(
+    def patch_commerce_itemvariant(
         self,
         *,
         request: Union[
-            operations.PatchCommerceItemvariant2Request,
-            operations.PatchCommerceItemvariant2RequestTypedDict,
+            operations.PatchCommerceItemvariantRequest,
+            operations.PatchCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceItemvariant2Response:
+    ) -> operations.PatchCommerceItemvariantResponse:
         r"""Update an itemvariant
 
         :param request: The request object to send.
@@ -5384,9 +5368,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceItemvariant2Request
+                request, operations.PatchCommerceItemvariantRequest
             )
-        request = cast(operations.PatchCommerceItemvariant2Request, request)
+        request = cast(operations.PatchCommerceItemvariantRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5424,7 +5408,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceItemvariant2",
+                operation_id="patchCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -5436,7 +5420,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceItemvariant2Response(
+            return operations.PatchCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
                     Optional[shared.CommerceItemvariant], http_res
                 ),
@@ -5453,18 +5437,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_itemvariant2_async(
+    async def patch_commerce_itemvariant_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceItemvariant2Request,
-            operations.PatchCommerceItemvariant2RequestTypedDict,
+            operations.PatchCommerceItemvariantRequest,
+            operations.PatchCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceItemvariant2Response:
+    ) -> operations.PatchCommerceItemvariantResponse:
         r"""Update an itemvariant
 
         :param request: The request object to send.
@@ -5485,9 +5469,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceItemvariant2Request
+                request, operations.PatchCommerceItemvariantRequest
             )
-        request = cast(operations.PatchCommerceItemvariant2Request, request)
+        request = cast(operations.PatchCommerceItemvariantRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5525,7 +5509,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceItemvariant2",
+                operation_id="patchCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -5537,7 +5521,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceItemvariant2Response(
+            return operations.PatchCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
                     Optional[shared.CommerceItemvariant], http_res
                 ),
@@ -5554,18 +5538,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_location2(
+    def patch_commerce_location(
         self,
         *,
         request: Union[
-            operations.PatchCommerceLocation2Request,
-            operations.PatchCommerceLocation2RequestTypedDict,
+            operations.PatchCommerceLocationRequest,
+            operations.PatchCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceLocation2Response:
+    ) -> operations.PatchCommerceLocationResponse:
         r"""Update a location
 
         :param request: The request object to send.
@@ -5585,8 +5569,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceLocation2Request)
-        request = cast(operations.PatchCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceLocationRequest)
+        request = cast(operations.PatchCommerceLocationRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5620,7 +5604,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceLocation2",
+                operation_id="patchCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -5632,7 +5616,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceLocation2Response(
+            return operations.PatchCommerceLocationResponse(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -5649,18 +5633,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_location2_async(
+    async def patch_commerce_location_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceLocation2Request,
-            operations.PatchCommerceLocation2RequestTypedDict,
+            operations.PatchCommerceLocationRequest,
+            operations.PatchCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceLocation2Response:
+    ) -> operations.PatchCommerceLocationResponse:
         r"""Update a location
 
         :param request: The request object to send.
@@ -5680,8 +5664,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceLocation2Request)
-        request = cast(operations.PatchCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceLocationRequest)
+        request = cast(operations.PatchCommerceLocationRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5715,7 +5699,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceLocation2",
+                operation_id="patchCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -5727,7 +5711,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceLocation2Response(
+            return operations.PatchCommerceLocationResponse(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -5744,18 +5728,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_reservation2(
+    def patch_commerce_reservation(
         self,
         *,
         request: Union[
-            operations.PatchCommerceReservation2Request,
-            operations.PatchCommerceReservation2RequestTypedDict,
+            operations.PatchCommerceReservationRequest,
+            operations.PatchCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceReservation2Response:
+    ) -> operations.PatchCommerceReservationResponse:
         r"""Update a reservation
 
         :param request: The request object to send.
@@ -5776,9 +5760,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceReservation2Request
+                request, operations.PatchCommerceReservationRequest
             )
-        request = cast(operations.PatchCommerceReservation2Request, request)
+        request = cast(operations.PatchCommerceReservationRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -5816,7 +5800,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceReservation2",
+                operation_id="patchCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -5828,7 +5812,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceReservation2Response(
+            return operations.PatchCommerceReservationResponse(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -5845,18 +5829,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_reservation2_async(
+    async def patch_commerce_reservation_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceReservation2Request,
-            operations.PatchCommerceReservation2RequestTypedDict,
+            operations.PatchCommerceReservationRequest,
+            operations.PatchCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceReservation2Response:
+    ) -> operations.PatchCommerceReservationResponse:
         r"""Update a reservation
 
         :param request: The request object to send.
@@ -5877,9 +5861,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceReservation2Request
+                request, operations.PatchCommerceReservationRequest
             )
-        request = cast(operations.PatchCommerceReservation2Request, request)
+        request = cast(operations.PatchCommerceReservationRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -5917,7 +5901,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceReservation2",
+                operation_id="patchCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -5929,7 +5913,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceReservation2Response(
+            return operations.PatchCommerceReservationResponse(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -5946,18 +5930,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_review2(
+    def patch_commerce_review(
         self,
         *,
         request: Union[
-            operations.PatchCommerceReview2Request,
-            operations.PatchCommerceReview2RequestTypedDict,
+            operations.PatchCommerceReviewRequest,
+            operations.PatchCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceReview2Response:
+    ) -> operations.PatchCommerceReviewResponse:
         r"""Update a review
 
         :param request: The request object to send.
@@ -5977,8 +5961,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceReview2Request)
-        request = cast(operations.PatchCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceReviewRequest)
+        request = cast(operations.PatchCommerceReviewRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6012,7 +5996,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceReview2",
+                operation_id="patchCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -6024,7 +6008,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceReview2Response(
+            return operations.PatchCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -6041,18 +6025,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_review2_async(
+    async def patch_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceReview2Request,
-            operations.PatchCommerceReview2RequestTypedDict,
+            operations.PatchCommerceReviewRequest,
+            operations.PatchCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceReview2Response:
+    ) -> operations.PatchCommerceReviewResponse:
         r"""Update a review
 
         :param request: The request object to send.
@@ -6072,8 +6056,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceReview2Request)
-        request = cast(operations.PatchCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceReviewRequest)
+        request = cast(operations.PatchCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -6107,7 +6091,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceReview2",
+                operation_id="patchCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -6119,7 +6103,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceReview2Response(
+            return operations.PatchCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -6136,18 +6120,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_saleschannel2(
+    def patch_commerce_saleschannel(
         self,
         *,
         request: Union[
-            operations.PatchCommerceSaleschannel2Request,
-            operations.PatchCommerceSaleschannel2RequestTypedDict,
+            operations.PatchCommerceSaleschannelRequest,
+            operations.PatchCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceSaleschannel2Response:
+    ) -> operations.PatchCommerceSaleschannelResponse:
         r"""Update a saleschannel
 
         :param request: The request object to send.
@@ -6168,9 +6152,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceSaleschannel2Request
+                request, operations.PatchCommerceSaleschannelRequest
             )
-        request = cast(operations.PatchCommerceSaleschannel2Request, request)
+        request = cast(operations.PatchCommerceSaleschannelRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -6208,7 +6192,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceSaleschannel2",
+                operation_id="patchCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -6220,7 +6204,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceSaleschannel2Response(
+            return operations.PatchCommerceSaleschannelResponse(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -6237,18 +6221,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_saleschannel2_async(
+    async def patch_commerce_saleschannel_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceSaleschannel2Request,
-            operations.PatchCommerceSaleschannel2RequestTypedDict,
+            operations.PatchCommerceSaleschannelRequest,
+            operations.PatchCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceSaleschannel2Response:
+    ) -> operations.PatchCommerceSaleschannelResponse:
         r"""Update a saleschannel
 
         :param request: The request object to send.
@@ -6269,9 +6253,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.PatchCommerceSaleschannel2Request
+                request, operations.PatchCommerceSaleschannelRequest
             )
-        request = cast(operations.PatchCommerceSaleschannel2Request, request)
+        request = cast(operations.PatchCommerceSaleschannelRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -6309,7 +6293,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceSaleschannel2",
+                operation_id="patchCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -6321,7 +6305,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceSaleschannel2Response(
+            return operations.PatchCommerceSaleschannelResponse(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -6338,18 +6322,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_collection2(
+    def remove_commerce_collection(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceCollection2Request,
-            operations.RemoveCommerceCollection2RequestTypedDict,
+            operations.RemoveCommerceCollectionRequest,
+            operations.RemoveCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceCollection2Response:
+    ) -> operations.RemoveCommerceCollectionResponse:
         r"""Remove a collection
 
         :param request: The request object to send.
@@ -6370,9 +6354,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceCollection2Request
+                request, operations.RemoveCommerceCollectionRequest
             )
-        request = cast(operations.RemoveCommerceCollection2Request, request)
+        request = cast(operations.RemoveCommerceCollectionRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6403,7 +6387,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceCollection2",
+                operation_id="removeCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -6415,7 +6399,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceCollection2Response(
+            return operations.RemoveCommerceCollectionResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6428,7 +6412,7 @@ class Commerce(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceCollection2Response(
+            return operations.RemoveCommerceCollectionResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6437,18 +6421,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_collection2_async(
+    async def remove_commerce_collection_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceCollection2Request,
-            operations.RemoveCommerceCollection2RequestTypedDict,
+            operations.RemoveCommerceCollectionRequest,
+            operations.RemoveCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceCollection2Response:
+    ) -> operations.RemoveCommerceCollectionResponse:
         r"""Remove a collection
 
         :param request: The request object to send.
@@ -6469,9 +6453,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceCollection2Request
+                request, operations.RemoveCommerceCollectionRequest
             )
-        request = cast(operations.RemoveCommerceCollection2Request, request)
+        request = cast(operations.RemoveCommerceCollectionRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -6502,7 +6486,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceCollection2",
+                operation_id="removeCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -6514,7 +6498,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceCollection2Response(
+            return operations.RemoveCommerceCollectionResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6527,7 +6511,7 @@ class Commerce(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceCollection2Response(
+            return operations.RemoveCommerceCollectionResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6536,18 +6520,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_inventory2(
+    def remove_commerce_inventory(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceInventory2Request,
-            operations.RemoveCommerceInventory2RequestTypedDict,
+            operations.RemoveCommerceInventoryRequest,
+            operations.RemoveCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceInventory2Response:
+    ) -> operations.RemoveCommerceInventoryResponse:
         r"""Remove an inventory
 
         :param request: The request object to send.
@@ -6568,9 +6552,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceInventory2Request
+                request, operations.RemoveCommerceInventoryRequest
             )
-        request = cast(operations.RemoveCommerceInventory2Request, request)
+        request = cast(operations.RemoveCommerceInventoryRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6601,7 +6585,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceInventory2",
+                operation_id="removeCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -6613,7 +6597,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceInventory2Response(
+            return operations.RemoveCommerceInventoryResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6626,7 +6610,7 @@ class Commerce(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceInventory2Response(
+            return operations.RemoveCommerceInventoryResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6635,18 +6619,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_inventory2_async(
+    async def remove_commerce_inventory_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceInventory2Request,
-            operations.RemoveCommerceInventory2RequestTypedDict,
+            operations.RemoveCommerceInventoryRequest,
+            operations.RemoveCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceInventory2Response:
+    ) -> operations.RemoveCommerceInventoryResponse:
         r"""Remove an inventory
 
         :param request: The request object to send.
@@ -6667,9 +6651,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceInventory2Request
+                request, operations.RemoveCommerceInventoryRequest
             )
-        request = cast(operations.RemoveCommerceInventory2Request, request)
+        request = cast(operations.RemoveCommerceInventoryRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -6700,7 +6684,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceInventory2",
+                operation_id="removeCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -6712,7 +6696,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceInventory2Response(
+            return operations.RemoveCommerceInventoryResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6725,7 +6709,7 @@ class Commerce(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceInventory2Response(
+            return operations.RemoveCommerceInventoryResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6734,18 +6718,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_item2(
+    def remove_commerce_item(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceItem2Request,
-            operations.RemoveCommerceItem2RequestTypedDict,
+            operations.RemoveCommerceItemRequest,
+            operations.RemoveCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceItem2Response:
+    ) -> operations.RemoveCommerceItemResponse:
         r"""Remove an item
 
         :param request: The request object to send.
@@ -6765,8 +6749,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceItem2Request)
-        request = cast(operations.RemoveCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCommerceItemRequest)
+        request = cast(operations.RemoveCommerceItemRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6797,7 +6781,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceItem2",
+                operation_id="removeCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -6809,7 +6793,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceItem2Response(
+            return operations.RemoveCommerceItemResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6822,7 +6806,7 @@ class Commerce(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceItem2Response(
+            return operations.RemoveCommerceItemResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6831,18 +6815,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_item2_async(
+    async def remove_commerce_item_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceItem2Request,
-            operations.RemoveCommerceItem2RequestTypedDict,
+            operations.RemoveCommerceItemRequest,
+            operations.RemoveCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceItem2Response:
+    ) -> operations.RemoveCommerceItemResponse:
         r"""Remove an item
 
         :param request: The request object to send.
@@ -6862,8 +6846,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceItem2Request)
-        request = cast(operations.RemoveCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCommerceItemRequest)
+        request = cast(operations.RemoveCommerceItemRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -6894,7 +6878,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceItem2",
+                operation_id="removeCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -6906,7 +6890,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceItem2Response(
+            return operations.RemoveCommerceItemResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6919,7 +6903,7 @@ class Commerce(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceItem2Response(
+            return operations.RemoveCommerceItemResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6928,18 +6912,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_itemvariant2(
+    def remove_commerce_itemvariant(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceItemvariant2Request,
-            operations.RemoveCommerceItemvariant2RequestTypedDict,
+            operations.RemoveCommerceItemvariantRequest,
+            operations.RemoveCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceItemvariant2Response:
+    ) -> operations.RemoveCommerceItemvariantResponse:
         r"""Remove an itemvariant
 
         :param request: The request object to send.
@@ -6960,9 +6944,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceItemvariant2Request
+                request, operations.RemoveCommerceItemvariantRequest
             )
-        request = cast(operations.RemoveCommerceItemvariant2Request, request)
+        request = cast(operations.RemoveCommerceItemvariantRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -6993,7 +6977,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceItemvariant2",
+                operation_id="removeCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -7005,7 +6989,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceItemvariant2Response(
+            return operations.RemoveCommerceItemvariantResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7018,7 +7002,7 @@ class Commerce(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceItemvariant2Response(
+            return operations.RemoveCommerceItemvariantResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7027,18 +7011,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_itemvariant2_async(
+    async def remove_commerce_itemvariant_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceItemvariant2Request,
-            operations.RemoveCommerceItemvariant2RequestTypedDict,
+            operations.RemoveCommerceItemvariantRequest,
+            operations.RemoveCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceItemvariant2Response:
+    ) -> operations.RemoveCommerceItemvariantResponse:
         r"""Remove an itemvariant
 
         :param request: The request object to send.
@@ -7059,9 +7043,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceItemvariant2Request
+                request, operations.RemoveCommerceItemvariantRequest
             )
-        request = cast(operations.RemoveCommerceItemvariant2Request, request)
+        request = cast(operations.RemoveCommerceItemvariantRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7092,7 +7076,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceItemvariant2",
+                operation_id="removeCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -7104,7 +7088,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceItemvariant2Response(
+            return operations.RemoveCommerceItemvariantResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7117,7 +7101,7 @@ class Commerce(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceItemvariant2Response(
+            return operations.RemoveCommerceItemvariantResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7126,18 +7110,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_location2(
+    def remove_commerce_location(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceLocation2Request,
-            operations.RemoveCommerceLocation2RequestTypedDict,
+            operations.RemoveCommerceLocationRequest,
+            operations.RemoveCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceLocation2Response:
+    ) -> operations.RemoveCommerceLocationResponse:
         r"""Remove a location
 
         :param request: The request object to send.
@@ -7157,10 +7141,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveCommerceLocation2Request
-            )
-        request = cast(operations.RemoveCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCommerceLocationRequest)
+        request = cast(operations.RemoveCommerceLocationRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7191,7 +7173,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceLocation2",
+                operation_id="removeCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -7203,7 +7185,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceLocation2Response(
+            return operations.RemoveCommerceLocationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7216,7 +7198,7 @@ class Commerce(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceLocation2Response(
+            return operations.RemoveCommerceLocationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7225,18 +7207,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_location2_async(
+    async def remove_commerce_location_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceLocation2Request,
-            operations.RemoveCommerceLocation2RequestTypedDict,
+            operations.RemoveCommerceLocationRequest,
+            operations.RemoveCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceLocation2Response:
+    ) -> operations.RemoveCommerceLocationResponse:
         r"""Remove a location
 
         :param request: The request object to send.
@@ -7256,10 +7238,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveCommerceLocation2Request
-            )
-        request = cast(operations.RemoveCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCommerceLocationRequest)
+        request = cast(operations.RemoveCommerceLocationRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7290,7 +7270,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceLocation2",
+                operation_id="removeCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -7302,7 +7282,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceLocation2Response(
+            return operations.RemoveCommerceLocationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7315,7 +7295,7 @@ class Commerce(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceLocation2Response(
+            return operations.RemoveCommerceLocationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7324,18 +7304,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_reservation2(
+    def remove_commerce_reservation(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceReservation2Request,
-            operations.RemoveCommerceReservation2RequestTypedDict,
+            operations.RemoveCommerceReservationRequest,
+            operations.RemoveCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceReservation2Response:
+    ) -> operations.RemoveCommerceReservationResponse:
         r"""Remove a reservation
 
         :param request: The request object to send.
@@ -7356,9 +7336,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceReservation2Request
+                request, operations.RemoveCommerceReservationRequest
             )
-        request = cast(operations.RemoveCommerceReservation2Request, request)
+        request = cast(operations.RemoveCommerceReservationRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7389,7 +7369,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceReservation2",
+                operation_id="removeCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -7401,7 +7381,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceReservation2Response(
+            return operations.RemoveCommerceReservationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7414,7 +7394,7 @@ class Commerce(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceReservation2Response(
+            return operations.RemoveCommerceReservationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7423,18 +7403,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_reservation2_async(
+    async def remove_commerce_reservation_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceReservation2Request,
-            operations.RemoveCommerceReservation2RequestTypedDict,
+            operations.RemoveCommerceReservationRequest,
+            operations.RemoveCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceReservation2Response:
+    ) -> operations.RemoveCommerceReservationResponse:
         r"""Remove a reservation
 
         :param request: The request object to send.
@@ -7455,9 +7435,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceReservation2Request
+                request, operations.RemoveCommerceReservationRequest
             )
-        request = cast(operations.RemoveCommerceReservation2Request, request)
+        request = cast(operations.RemoveCommerceReservationRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7488,7 +7468,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceReservation2",
+                operation_id="removeCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -7500,7 +7480,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceReservation2Response(
+            return operations.RemoveCommerceReservationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7513,7 +7493,7 @@ class Commerce(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceReservation2Response(
+            return operations.RemoveCommerceReservationResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7522,18 +7502,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_review2(
+    def remove_commerce_review(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceReview2Request,
-            operations.RemoveCommerceReview2RequestTypedDict,
+            operations.RemoveCommerceReviewRequest,
+            operations.RemoveCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceReview2Response:
+    ) -> operations.RemoveCommerceReviewResponse:
         r"""Remove a review
 
         :param request: The request object to send.
@@ -7553,8 +7533,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceReview2Request)
-        request = cast(operations.RemoveCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCommerceReviewRequest)
+        request = cast(operations.RemoveCommerceReviewRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7585,7 +7565,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceReview2",
+                operation_id="removeCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -7597,7 +7577,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceReview2Response(
+            return operations.RemoveCommerceReviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7610,7 +7590,7 @@ class Commerce(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceReview2Response(
+            return operations.RemoveCommerceReviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7619,18 +7599,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_review2_async(
+    async def remove_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceReview2Request,
-            operations.RemoveCommerceReview2RequestTypedDict,
+            operations.RemoveCommerceReviewRequest,
+            operations.RemoveCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceReview2Response:
+    ) -> operations.RemoveCommerceReviewResponse:
         r"""Remove a review
 
         :param request: The request object to send.
@@ -7650,8 +7630,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceReview2Request)
-        request = cast(operations.RemoveCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCommerceReviewRequest)
+        request = cast(operations.RemoveCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7682,7 +7662,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceReview2",
+                operation_id="removeCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -7694,7 +7674,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceReview2Response(
+            return operations.RemoveCommerceReviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7707,7 +7687,7 @@ class Commerce(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceReview2Response(
+            return operations.RemoveCommerceReviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7716,18 +7696,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_saleschannel2(
+    def remove_commerce_saleschannel(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceSaleschannel2Request,
-            operations.RemoveCommerceSaleschannel2RequestTypedDict,
+            operations.RemoveCommerceSaleschannelRequest,
+            operations.RemoveCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceSaleschannel2Response:
+    ) -> operations.RemoveCommerceSaleschannelResponse:
         r"""Remove a saleschannel
 
         :param request: The request object to send.
@@ -7748,9 +7728,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceSaleschannel2Request
+                request, operations.RemoveCommerceSaleschannelRequest
             )
-        request = cast(operations.RemoveCommerceSaleschannel2Request, request)
+        request = cast(operations.RemoveCommerceSaleschannelRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -7781,7 +7761,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceSaleschannel2",
+                operation_id="removeCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -7793,7 +7773,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceSaleschannel2Response(
+            return operations.RemoveCommerceSaleschannelResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7806,7 +7786,7 @@ class Commerce(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceSaleschannel2Response(
+            return operations.RemoveCommerceSaleschannelResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7815,18 +7795,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_saleschannel2_async(
+    async def remove_commerce_saleschannel_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceSaleschannel2Request,
-            operations.RemoveCommerceSaleschannel2RequestTypedDict,
+            operations.RemoveCommerceSaleschannelRequest,
+            operations.RemoveCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceSaleschannel2Response:
+    ) -> operations.RemoveCommerceSaleschannelResponse:
         r"""Remove a saleschannel
 
         :param request: The request object to send.
@@ -7847,9 +7827,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveCommerceSaleschannel2Request
+                request, operations.RemoveCommerceSaleschannelRequest
             )
-        request = cast(operations.RemoveCommerceSaleschannel2Request, request)
+        request = cast(operations.RemoveCommerceSaleschannelRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -7880,7 +7860,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceSaleschannel2",
+                operation_id="removeCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -7892,7 +7872,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceSaleschannel2Response(
+            return operations.RemoveCommerceSaleschannelResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7905,7 +7885,7 @@ class Commerce(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceSaleschannel2Response(
+            return operations.RemoveCommerceSaleschannelResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -7914,18 +7894,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_collection2(
+    def update_commerce_collection(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceCollection2Request,
-            operations.UpdateCommerceCollection2RequestTypedDict,
+            operations.UpdateCommerceCollectionRequest,
+            operations.UpdateCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceCollection2Response:
+    ) -> operations.UpdateCommerceCollectionResponse:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -7946,9 +7926,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceCollection2Request
+                request, operations.UpdateCommerceCollectionRequest
             )
-        request = cast(operations.UpdateCommerceCollection2Request, request)
+        request = cast(operations.UpdateCommerceCollectionRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -7986,7 +7966,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceCollection2",
+                operation_id="updateCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -7998,7 +7978,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceCollection2Response(
+            return operations.UpdateCommerceCollectionResponse(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -8015,18 +7995,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_collection2_async(
+    async def update_commerce_collection_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceCollection2Request,
-            operations.UpdateCommerceCollection2RequestTypedDict,
+            operations.UpdateCommerceCollectionRequest,
+            operations.UpdateCommerceCollectionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceCollection2Response:
+    ) -> operations.UpdateCommerceCollectionResponse:
         r"""Update a collection
 
         :param request: The request object to send.
@@ -8047,9 +8027,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceCollection2Request
+                request, operations.UpdateCommerceCollectionRequest
             )
-        request = cast(operations.UpdateCommerceCollection2Request, request)
+        request = cast(operations.UpdateCommerceCollectionRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8087,7 +8067,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceCollection2",
+                operation_id="updateCommerceCollection",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "collection"],
@@ -8099,7 +8079,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceCollection2Response(
+            return operations.UpdateCommerceCollectionResponse(
                 commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
@@ -8116,18 +8096,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_inventory2(
+    def update_commerce_inventory(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceInventory2Request,
-            operations.UpdateCommerceInventory2RequestTypedDict,
+            operations.UpdateCommerceInventoryRequest,
+            operations.UpdateCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceInventory2Response:
+    ) -> operations.UpdateCommerceInventoryResponse:
         r"""Update an inventory
 
         :param request: The request object to send.
@@ -8148,9 +8128,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceInventory2Request
+                request, operations.UpdateCommerceInventoryRequest
             )
-        request = cast(operations.UpdateCommerceInventory2Request, request)
+        request = cast(operations.UpdateCommerceInventoryRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8188,7 +8168,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceInventory2",
+                operation_id="updateCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -8200,7 +8180,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceInventory2Response(
+            return operations.UpdateCommerceInventoryResponse(
                 commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
@@ -8217,18 +8197,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_inventory2_async(
+    async def update_commerce_inventory_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceInventory2Request,
-            operations.UpdateCommerceInventory2RequestTypedDict,
+            operations.UpdateCommerceInventoryRequest,
+            operations.UpdateCommerceInventoryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceInventory2Response:
+    ) -> operations.UpdateCommerceInventoryResponse:
         r"""Update an inventory
 
         :param request: The request object to send.
@@ -8249,9 +8229,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceInventory2Request
+                request, operations.UpdateCommerceInventoryRequest
             )
-        request = cast(operations.UpdateCommerceInventory2Request, request)
+        request = cast(operations.UpdateCommerceInventoryRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8289,7 +8269,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceInventory2",
+                operation_id="updateCommerceInventory",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "inventory"],
@@ -8301,7 +8281,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceInventory2Response(
+            return operations.UpdateCommerceInventoryResponse(
                 commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
@@ -8318,18 +8298,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_item2(
+    def update_commerce_item(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceItem2Request,
-            operations.UpdateCommerceItem2RequestTypedDict,
+            operations.UpdateCommerceItemRequest,
+            operations.UpdateCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceItem2Response:
+    ) -> operations.UpdateCommerceItemResponse:
         r"""Update an item
 
         :param request: The request object to send.
@@ -8349,8 +8329,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceItem2Request)
-        request = cast(operations.UpdateCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCommerceItemRequest)
+        request = cast(operations.UpdateCommerceItemRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8384,7 +8364,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceItem2",
+                operation_id="updateCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -8396,7 +8376,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceItem2Response(
+            return operations.UpdateCommerceItemResponse(
                 commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
@@ -8413,18 +8393,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_item2_async(
+    async def update_commerce_item_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceItem2Request,
-            operations.UpdateCommerceItem2RequestTypedDict,
+            operations.UpdateCommerceItemRequest,
+            operations.UpdateCommerceItemRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceItem2Response:
+    ) -> operations.UpdateCommerceItemResponse:
         r"""Update an item
 
         :param request: The request object to send.
@@ -8444,8 +8424,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceItem2Request)
-        request = cast(operations.UpdateCommerceItem2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCommerceItemRequest)
+        request = cast(operations.UpdateCommerceItemRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8479,7 +8459,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceItem2",
+                operation_id="updateCommerceItem",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "item"],
@@ -8491,7 +8471,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceItem2Response(
+            return operations.UpdateCommerceItemResponse(
                 commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
@@ -8508,18 +8488,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_itemvariant2(
+    def update_commerce_itemvariant(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceItemvariant2Request,
-            operations.UpdateCommerceItemvariant2RequestTypedDict,
+            operations.UpdateCommerceItemvariantRequest,
+            operations.UpdateCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceItemvariant2Response:
+    ) -> operations.UpdateCommerceItemvariantResponse:
         r"""Update an itemvariant
 
         :param request: The request object to send.
@@ -8540,9 +8520,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceItemvariant2Request
+                request, operations.UpdateCommerceItemvariantRequest
             )
-        request = cast(operations.UpdateCommerceItemvariant2Request, request)
+        request = cast(operations.UpdateCommerceItemvariantRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8580,7 +8560,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceItemvariant2",
+                operation_id="updateCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -8592,7 +8572,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceItemvariant2Response(
+            return operations.UpdateCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
                     Optional[shared.CommerceItemvariant], http_res
                 ),
@@ -8609,18 +8589,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_itemvariant2_async(
+    async def update_commerce_itemvariant_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceItemvariant2Request,
-            operations.UpdateCommerceItemvariant2RequestTypedDict,
+            operations.UpdateCommerceItemvariantRequest,
+            operations.UpdateCommerceItemvariantRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceItemvariant2Response:
+    ) -> operations.UpdateCommerceItemvariantResponse:
         r"""Update an itemvariant
 
         :param request: The request object to send.
@@ -8641,9 +8621,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceItemvariant2Request
+                request, operations.UpdateCommerceItemvariantRequest
             )
-        request = cast(operations.UpdateCommerceItemvariant2Request, request)
+        request = cast(operations.UpdateCommerceItemvariantRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8681,7 +8661,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceItemvariant2",
+                operation_id="updateCommerceItemvariant",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "itemvariant"],
@@ -8693,7 +8673,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceItemvariant2Response(
+            return operations.UpdateCommerceItemvariantResponse(
                 commerce_itemvariant=unmarshal_json_response(
                     Optional[shared.CommerceItemvariant], http_res
                 ),
@@ -8710,18 +8690,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_location2(
+    def update_commerce_location(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceLocation2Request,
-            operations.UpdateCommerceLocation2RequestTypedDict,
+            operations.UpdateCommerceLocationRequest,
+            operations.UpdateCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceLocation2Response:
+    ) -> operations.UpdateCommerceLocationResponse:
         r"""Update a location
 
         :param request: The request object to send.
@@ -8741,10 +8721,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateCommerceLocation2Request
-            )
-        request = cast(operations.UpdateCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCommerceLocationRequest)
+        request = cast(operations.UpdateCommerceLocationRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8778,7 +8756,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceLocation2",
+                operation_id="updateCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -8790,7 +8768,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceLocation2Response(
+            return operations.UpdateCommerceLocationResponse(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -8807,18 +8785,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_location2_async(
+    async def update_commerce_location_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceLocation2Request,
-            operations.UpdateCommerceLocation2RequestTypedDict,
+            operations.UpdateCommerceLocationRequest,
+            operations.UpdateCommerceLocationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceLocation2Response:
+    ) -> operations.UpdateCommerceLocationResponse:
         r"""Update a location
 
         :param request: The request object to send.
@@ -8838,10 +8816,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateCommerceLocation2Request
-            )
-        request = cast(operations.UpdateCommerceLocation2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCommerceLocationRequest)
+        request = cast(operations.UpdateCommerceLocationRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -8875,7 +8851,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceLocation2",
+                operation_id="updateCommerceLocation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "location"],
@@ -8887,7 +8863,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceLocation2Response(
+            return operations.UpdateCommerceLocationResponse(
                 commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
@@ -8904,18 +8880,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_reservation2(
+    def update_commerce_reservation(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceReservation2Request,
-            operations.UpdateCommerceReservation2RequestTypedDict,
+            operations.UpdateCommerceReservationRequest,
+            operations.UpdateCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceReservation2Response:
+    ) -> operations.UpdateCommerceReservationResponse:
         r"""Update a reservation
 
         :param request: The request object to send.
@@ -8936,9 +8912,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceReservation2Request
+                request, operations.UpdateCommerceReservationRequest
             )
-        request = cast(operations.UpdateCommerceReservation2Request, request)
+        request = cast(operations.UpdateCommerceReservationRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -8976,7 +8952,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceReservation2",
+                operation_id="updateCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -8988,7 +8964,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceReservation2Response(
+            return operations.UpdateCommerceReservationResponse(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -9005,18 +8981,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_reservation2_async(
+    async def update_commerce_reservation_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceReservation2Request,
-            operations.UpdateCommerceReservation2RequestTypedDict,
+            operations.UpdateCommerceReservationRequest,
+            operations.UpdateCommerceReservationRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceReservation2Response:
+    ) -> operations.UpdateCommerceReservationResponse:
         r"""Update a reservation
 
         :param request: The request object to send.
@@ -9037,9 +9013,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceReservation2Request
+                request, operations.UpdateCommerceReservationRequest
             )
-        request = cast(operations.UpdateCommerceReservation2Request, request)
+        request = cast(operations.UpdateCommerceReservationRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -9077,7 +9053,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceReservation2",
+                operation_id="updateCommerceReservation",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "reservation"],
@@ -9089,7 +9065,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceReservation2Response(
+            return operations.UpdateCommerceReservationResponse(
                 commerce_reservation=unmarshal_json_response(
                     Optional[shared.CommerceReservation], http_res
                 ),
@@ -9106,18 +9082,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_review2(
+    def update_commerce_review(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceReview2Request,
-            operations.UpdateCommerceReview2RequestTypedDict,
+            operations.UpdateCommerceReviewRequest,
+            operations.UpdateCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceReview2Response:
+    ) -> operations.UpdateCommerceReviewResponse:
         r"""Update a review
 
         :param request: The request object to send.
@@ -9137,8 +9113,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceReview2Request)
-        request = cast(operations.UpdateCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCommerceReviewRequest)
+        request = cast(operations.UpdateCommerceReviewRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -9172,7 +9148,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceReview2",
+                operation_id="updateCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -9184,7 +9160,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceReview2Response(
+            return operations.UpdateCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -9201,18 +9177,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_review2_async(
+    async def update_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceReview2Request,
-            operations.UpdateCommerceReview2RequestTypedDict,
+            operations.UpdateCommerceReviewRequest,
+            operations.UpdateCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceReview2Response:
+    ) -> operations.UpdateCommerceReviewResponse:
         r"""Update a review
 
         :param request: The request object to send.
@@ -9232,8 +9208,8 @@ class Commerce(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceReview2Request)
-        request = cast(operations.UpdateCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCommerceReviewRequest)
+        request = cast(operations.UpdateCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -9267,7 +9243,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceReview2",
+                operation_id="updateCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -9279,7 +9255,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceReview2Response(
+            return operations.UpdateCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -9296,18 +9272,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_saleschannel2(
+    def update_commerce_saleschannel(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceSaleschannel2Request,
-            operations.UpdateCommerceSaleschannel2RequestTypedDict,
+            operations.UpdateCommerceSaleschannelRequest,
+            operations.UpdateCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceSaleschannel2Response:
+    ) -> operations.UpdateCommerceSaleschannelResponse:
         r"""Update a saleschannel
 
         :param request: The request object to send.
@@ -9328,9 +9304,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceSaleschannel2Request
+                request, operations.UpdateCommerceSaleschannelRequest
             )
-        request = cast(operations.UpdateCommerceSaleschannel2Request, request)
+        request = cast(operations.UpdateCommerceSaleschannelRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -9368,7 +9344,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceSaleschannel2",
+                operation_id="updateCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -9380,7 +9356,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceSaleschannel2Response(
+            return operations.UpdateCommerceSaleschannelResponse(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),
@@ -9397,18 +9373,18 @@ class Commerce(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_saleschannel2_async(
+    async def update_commerce_saleschannel_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceSaleschannel2Request,
-            operations.UpdateCommerceSaleschannel2RequestTypedDict,
+            operations.UpdateCommerceSaleschannelRequest,
+            operations.UpdateCommerceSaleschannelRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceSaleschannel2Response:
+    ) -> operations.UpdateCommerceSaleschannelResponse:
         r"""Update a saleschannel
 
         :param request: The request object to send.
@@ -9429,9 +9405,9 @@ class Commerce(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateCommerceSaleschannel2Request
+                request, operations.UpdateCommerceSaleschannelRequest
             )
-        request = cast(operations.UpdateCommerceSaleschannel2Request, request)
+        request = cast(operations.UpdateCommerceSaleschannelRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -9469,7 +9445,7 @@ class Commerce(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceSaleschannel2",
+                operation_id="updateCommerceSaleschannel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "saleschannel"],
@@ -9481,7 +9457,7 @@ class Commerce(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceSaleschannel2Response(
+            return operations.UpdateCommerceSaleschannelResponse(
                 commerce_saleschannel=unmarshal_json_response(
                     Optional[shared.CommerceSaleschannel], http_res
                 ),

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Message(BaseSDK):
-    def create_messaging_message2(
+    def create_messaging_message(
         self,
         *,
         request: Union[
-            operations.CreateMessagingMessage2Request,
-            operations.CreateMessagingMessage2RequestTypedDict,
+            operations.CreateMessagingMessageRequest,
+            operations.CreateMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMessagingMessage2Response:
+    ) -> operations.CreateMessagingMessageResponse:
         r"""Create a message
 
         :param request: The request object to send.
@@ -41,10 +41,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateMessagingMessage2Request
-            )
-        request = cast(operations.CreateMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.CreateMessagingMessageRequest)
+        request = cast(operations.CreateMessagingMessageRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -78,7 +76,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMessagingMessage2",
+                operation_id="createMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -90,7 +88,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMessagingMessage2Response(
+            return operations.CreateMessagingMessageResponse(
                 messaging_message=unmarshal_json_response(
                     Optional[shared.MessagingMessage], http_res
                 ),
@@ -107,18 +105,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_messaging_message2_async(
+    async def create_messaging_message_async(
         self,
         *,
         request: Union[
-            operations.CreateMessagingMessage2Request,
-            operations.CreateMessagingMessage2RequestTypedDict,
+            operations.CreateMessagingMessageRequest,
+            operations.CreateMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateMessagingMessage2Response:
+    ) -> operations.CreateMessagingMessageResponse:
         r"""Create a message
 
         :param request: The request object to send.
@@ -138,10 +136,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateMessagingMessage2Request
-            )
-        request = cast(operations.CreateMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.CreateMessagingMessageRequest)
+        request = cast(operations.CreateMessagingMessageRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -175,7 +171,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createMessagingMessage2",
+                operation_id="createMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -187,7 +183,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateMessagingMessage2Response(
+            return operations.CreateMessagingMessageResponse(
                 messaging_message=unmarshal_json_response(
                     Optional[shared.MessagingMessage], http_res
                 ),
@@ -204,18 +200,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_messaging_message2(
+    def get_messaging_message(
         self,
         *,
         request: Union[
-            operations.GetMessagingMessage2Request,
-            operations.GetMessagingMessage2RequestTypedDict,
+            operations.GetMessagingMessageRequest,
+            operations.GetMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMessagingMessage2Response:
+    ) -> operations.GetMessagingMessageResponse:
         r"""Retrieve a message
 
         :param request: The request object to send.
@@ -235,8 +231,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMessagingMessage2Request)
-        request = cast(operations.GetMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.GetMessagingMessageRequest)
+        request = cast(operations.GetMessagingMessageRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -267,7 +263,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMessagingMessage2",
+                operation_id="getMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -279,7 +275,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMessagingMessage2Response(
+            return operations.GetMessagingMessageResponse(
                 messaging_message=unmarshal_json_response(
                     Optional[shared.MessagingMessage], http_res
                 ),
@@ -296,18 +292,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_messaging_message2_async(
+    async def get_messaging_message_async(
         self,
         *,
         request: Union[
-            operations.GetMessagingMessage2Request,
-            operations.GetMessagingMessage2RequestTypedDict,
+            operations.GetMessagingMessageRequest,
+            operations.GetMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetMessagingMessage2Response:
+    ) -> operations.GetMessagingMessageResponse:
         r"""Retrieve a message
 
         :param request: The request object to send.
@@ -327,8 +323,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetMessagingMessage2Request)
-        request = cast(operations.GetMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.GetMessagingMessageRequest)
+        request = cast(operations.GetMessagingMessageRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -359,7 +355,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getMessagingMessage2",
+                operation_id="getMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -371,7 +367,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetMessagingMessage2Response(
+            return operations.GetMessagingMessageResponse(
                 messaging_message=unmarshal_json_response(
                     Optional[shared.MessagingMessage], http_res
                 ),
@@ -388,18 +384,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_messaging_messages2(
+    def list_messaging_messages(
         self,
         *,
         request: Union[
-            operations.ListMessagingMessages2Request,
-            operations.ListMessagingMessages2RequestTypedDict,
+            operations.ListMessagingMessagesRequest,
+            operations.ListMessagingMessagesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMessagingMessages2Response:
+    ) -> operations.ListMessagingMessagesResponse:
         r"""List all messages
 
         :param request: The request object to send.
@@ -419,8 +415,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMessagingMessages2Request)
-        request = cast(operations.ListMessagingMessages2Request, request)
+            request = utils.unmarshal(request, operations.ListMessagingMessagesRequest)
+        request = cast(operations.ListMessagingMessagesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -451,7 +447,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMessagingMessages2",
+                operation_id="listMessagingMessages",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -463,7 +459,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMessagingMessages2Response(
+            return operations.ListMessagingMessagesResponse(
                 messaging_messages=unmarshal_json_response(
                     Optional[List[shared.MessagingMessage]], http_res
                 ),
@@ -480,18 +476,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_messaging_messages2_async(
+    async def list_messaging_messages_async(
         self,
         *,
         request: Union[
-            operations.ListMessagingMessages2Request,
-            operations.ListMessagingMessages2RequestTypedDict,
+            operations.ListMessagingMessagesRequest,
+            operations.ListMessagingMessagesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMessagingMessages2Response:
+    ) -> operations.ListMessagingMessagesResponse:
         r"""List all messages
 
         :param request: The request object to send.
@@ -511,8 +507,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMessagingMessages2Request)
-        request = cast(operations.ListMessagingMessages2Request, request)
+            request = utils.unmarshal(request, operations.ListMessagingMessagesRequest)
+        request = cast(operations.ListMessagingMessagesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -543,7 +539,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMessagingMessages2",
+                operation_id="listMessagingMessages",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -555,7 +551,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMessagingMessages2Response(
+            return operations.ListMessagingMessagesResponse(
                 messaging_messages=unmarshal_json_response(
                     Optional[List[shared.MessagingMessage]], http_res
                 ),
@@ -572,18 +568,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_messaging_message2(
+    def patch_messaging_message(
         self,
         *,
         request: Union[
-            operations.PatchMessagingMessage2Request,
-            operations.PatchMessagingMessage2RequestTypedDict,
+            operations.PatchMessagingMessageRequest,
+            operations.PatchMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMessagingMessage2Response:
+    ) -> operations.PatchMessagingMessageResponse:
         r"""Update a message
 
         :param request: The request object to send.
@@ -603,8 +599,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMessagingMessage2Request)
-        request = cast(operations.PatchMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.PatchMessagingMessageRequest)
+        request = cast(operations.PatchMessagingMessageRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -638,7 +634,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMessagingMessage2",
+                operation_id="patchMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -650,7 +646,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMessagingMessage2Response(
+            return operations.PatchMessagingMessageResponse(
                 messaging_message=unmarshal_json_response(
                     Optional[shared.MessagingMessage], http_res
                 ),
@@ -667,18 +663,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_messaging_message2_async(
+    async def patch_messaging_message_async(
         self,
         *,
         request: Union[
-            operations.PatchMessagingMessage2Request,
-            operations.PatchMessagingMessage2RequestTypedDict,
+            operations.PatchMessagingMessageRequest,
+            operations.PatchMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchMessagingMessage2Response:
+    ) -> operations.PatchMessagingMessageResponse:
         r"""Update a message
 
         :param request: The request object to send.
@@ -698,8 +694,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchMessagingMessage2Request)
-        request = cast(operations.PatchMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.PatchMessagingMessageRequest)
+        request = cast(operations.PatchMessagingMessageRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -733,7 +729,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchMessagingMessage2",
+                operation_id="patchMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -745,7 +741,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchMessagingMessage2Response(
+            return operations.PatchMessagingMessageResponse(
                 messaging_message=unmarshal_json_response(
                     Optional[shared.MessagingMessage], http_res
                 ),
@@ -762,18 +758,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_messaging_message2(
+    def remove_messaging_message(
         self,
         *,
         request: Union[
-            operations.RemoveMessagingMessage2Request,
-            operations.RemoveMessagingMessage2RequestTypedDict,
+            operations.RemoveMessagingMessageRequest,
+            operations.RemoveMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMessagingMessage2Response:
+    ) -> operations.RemoveMessagingMessageResponse:
         r"""Remove a message
 
         :param request: The request object to send.
@@ -793,10 +789,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveMessagingMessage2Request
-            )
-        request = cast(operations.RemoveMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.RemoveMessagingMessageRequest)
+        request = cast(operations.RemoveMessagingMessageRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -827,7 +821,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMessagingMessage2",
+                operation_id="removeMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -839,7 +833,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMessagingMessage2Response(
+            return operations.RemoveMessagingMessageResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -852,7 +846,7 @@ class Message(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMessagingMessage2Response(
+            return operations.RemoveMessagingMessageResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -861,18 +855,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_messaging_message2_async(
+    async def remove_messaging_message_async(
         self,
         *,
         request: Union[
-            operations.RemoveMessagingMessage2Request,
-            operations.RemoveMessagingMessage2RequestTypedDict,
+            operations.RemoveMessagingMessageRequest,
+            operations.RemoveMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveMessagingMessage2Response:
+    ) -> operations.RemoveMessagingMessageResponse:
         r"""Remove a message
 
         :param request: The request object to send.
@@ -892,10 +886,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveMessagingMessage2Request
-            )
-        request = cast(operations.RemoveMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.RemoveMessagingMessageRequest)
+        request = cast(operations.RemoveMessagingMessageRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -926,7 +918,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeMessagingMessage2",
+                operation_id="removeMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -938,7 +930,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveMessagingMessage2Response(
+            return operations.RemoveMessagingMessageResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -951,7 +943,7 @@ class Message(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveMessagingMessage2Response(
+            return operations.RemoveMessagingMessageResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -960,18 +952,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_messaging_message2(
+    def update_messaging_message(
         self,
         *,
         request: Union[
-            operations.UpdateMessagingMessage2Request,
-            operations.UpdateMessagingMessage2RequestTypedDict,
+            operations.UpdateMessagingMessageRequest,
+            operations.UpdateMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMessagingMessage2Response:
+    ) -> operations.UpdateMessagingMessageResponse:
         r"""Update a message
 
         :param request: The request object to send.
@@ -991,10 +983,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateMessagingMessage2Request
-            )
-        request = cast(operations.UpdateMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMessagingMessageRequest)
+        request = cast(operations.UpdateMessagingMessageRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1028,7 +1018,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMessagingMessage2",
+                operation_id="updateMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -1040,7 +1030,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMessagingMessage2Response(
+            return operations.UpdateMessagingMessageResponse(
                 messaging_message=unmarshal_json_response(
                     Optional[shared.MessagingMessage], http_res
                 ),
@@ -1057,18 +1047,18 @@ class Message(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_messaging_message2_async(
+    async def update_messaging_message_async(
         self,
         *,
         request: Union[
-            operations.UpdateMessagingMessage2Request,
-            operations.UpdateMessagingMessage2RequestTypedDict,
+            operations.UpdateMessagingMessageRequest,
+            operations.UpdateMessagingMessageRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateMessagingMessage2Response:
+    ) -> operations.UpdateMessagingMessageResponse:
         r"""Update a message
 
         :param request: The request object to send.
@@ -1088,10 +1078,8 @@ class Message(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateMessagingMessage2Request
-            )
-        request = cast(operations.UpdateMessagingMessage2Request, request)
+            request = utils.unmarshal(request, operations.UpdateMessagingMessageRequest)
+        request = cast(operations.UpdateMessagingMessageRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1125,7 +1113,7 @@ class Message(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateMessagingMessage2",
+                operation_id="updateMessagingMessage",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["messaging", "message"],
@@ -1137,7 +1125,7 @@ class Message(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateMessagingMessage2Response(
+            return operations.UpdateMessagingMessageResponse(
                 messaging_message=unmarshal_json_response(
                     Optional[shared.MessagingMessage], http_res
                 ),

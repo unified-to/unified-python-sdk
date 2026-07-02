@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Device(BaseSDK):
-    def create_hris_device2(
+    def create_hris_device(
         self,
         *,
         request: Union[
-            operations.CreateHrisDevice2Request,
-            operations.CreateHrisDevice2RequestTypedDict,
+            operations.CreateHrisDeviceRequest,
+            operations.CreateHrisDeviceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisDevice2Response:
+    ) -> operations.CreateHrisDeviceResponse:
         r"""Create a device
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisDevice2Request)
-        request = cast(operations.CreateHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.CreateHrisDeviceRequest)
+        request = cast(operations.CreateHrisDeviceRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisDevice2",
+                operation_id="createHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -88,7 +88,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisDevice2Response(
+            return operations.CreateHrisDeviceResponse(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -105,18 +105,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_device2_async(
+    async def create_hris_device_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisDevice2Request,
-            operations.CreateHrisDevice2RequestTypedDict,
+            operations.CreateHrisDeviceRequest,
+            operations.CreateHrisDeviceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisDevice2Response:
+    ) -> operations.CreateHrisDeviceResponse:
         r"""Create a device
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisDevice2Request)
-        request = cast(operations.CreateHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.CreateHrisDeviceRequest)
+        request = cast(operations.CreateHrisDeviceRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisDevice2",
+                operation_id="createHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -183,7 +183,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisDevice2Response(
+            return operations.CreateHrisDeviceResponse(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -200,17 +200,17 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_device2(
+    def get_hris_device(
         self,
         *,
         request: Union[
-            operations.GetHrisDevice2Request, operations.GetHrisDevice2RequestTypedDict
+            operations.GetHrisDeviceRequest, operations.GetHrisDeviceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisDevice2Response:
+    ) -> operations.GetHrisDeviceResponse:
         r"""Retrieve a device
 
         :param request: The request object to send.
@@ -230,8 +230,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisDevice2Request)
-        request = cast(operations.GetHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisDeviceRequest)
+        request = cast(operations.GetHrisDeviceRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -262,7 +262,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisDevice2",
+                operation_id="getHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -274,7 +274,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisDevice2Response(
+            return operations.GetHrisDeviceResponse(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -291,17 +291,17 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_device2_async(
+    async def get_hris_device_async(
         self,
         *,
         request: Union[
-            operations.GetHrisDevice2Request, operations.GetHrisDevice2RequestTypedDict
+            operations.GetHrisDeviceRequest, operations.GetHrisDeviceRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisDevice2Response:
+    ) -> operations.GetHrisDeviceResponse:
         r"""Retrieve a device
 
         :param request: The request object to send.
@@ -321,8 +321,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisDevice2Request)
-        request = cast(operations.GetHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisDeviceRequest)
+        request = cast(operations.GetHrisDeviceRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -353,7 +353,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisDevice2",
+                operation_id="getHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -365,7 +365,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisDevice2Response(
+            return operations.GetHrisDeviceResponse(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -382,18 +382,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_devices2(
+    def list_hris_devices(
         self,
         *,
         request: Union[
-            operations.ListHrisDevices2Request,
-            operations.ListHrisDevices2RequestTypedDict,
+            operations.ListHrisDevicesRequest,
+            operations.ListHrisDevicesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisDevices2Response:
+    ) -> operations.ListHrisDevicesResponse:
         r"""List all devices
 
         :param request: The request object to send.
@@ -413,8 +413,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisDevices2Request)
-        request = cast(operations.ListHrisDevices2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisDevicesRequest)
+        request = cast(operations.ListHrisDevicesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -445,7 +445,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisDevices2",
+                operation_id="listHrisDevices",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -457,7 +457,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisDevices2Response(
+            return operations.ListHrisDevicesResponse(
                 hris_devices=unmarshal_json_response(
                     Optional[List[shared.HrisDevice]], http_res
                 ),
@@ -474,18 +474,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_devices2_async(
+    async def list_hris_devices_async(
         self,
         *,
         request: Union[
-            operations.ListHrisDevices2Request,
-            operations.ListHrisDevices2RequestTypedDict,
+            operations.ListHrisDevicesRequest,
+            operations.ListHrisDevicesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisDevices2Response:
+    ) -> operations.ListHrisDevicesResponse:
         r"""List all devices
 
         :param request: The request object to send.
@@ -505,8 +505,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisDevices2Request)
-        request = cast(operations.ListHrisDevices2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisDevicesRequest)
+        request = cast(operations.ListHrisDevicesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -537,7 +537,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisDevices2",
+                operation_id="listHrisDevices",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -549,7 +549,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisDevices2Response(
+            return operations.ListHrisDevicesResponse(
                 hris_devices=unmarshal_json_response(
                     Optional[List[shared.HrisDevice]], http_res
                 ),
@@ -566,18 +566,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_device2(
+    def patch_hris_device(
         self,
         *,
         request: Union[
-            operations.PatchHrisDevice2Request,
-            operations.PatchHrisDevice2RequestTypedDict,
+            operations.PatchHrisDeviceRequest,
+            operations.PatchHrisDeviceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisDevice2Response:
+    ) -> operations.PatchHrisDeviceResponse:
         r"""Update a device
 
         :param request: The request object to send.
@@ -597,8 +597,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisDevice2Request)
-        request = cast(operations.PatchHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.PatchHrisDeviceRequest)
+        request = cast(operations.PatchHrisDeviceRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -632,7 +632,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisDevice2",
+                operation_id="patchHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -644,7 +644,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisDevice2Response(
+            return operations.PatchHrisDeviceResponse(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -661,18 +661,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_device2_async(
+    async def patch_hris_device_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisDevice2Request,
-            operations.PatchHrisDevice2RequestTypedDict,
+            operations.PatchHrisDeviceRequest,
+            operations.PatchHrisDeviceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisDevice2Response:
+    ) -> operations.PatchHrisDeviceResponse:
         r"""Update a device
 
         :param request: The request object to send.
@@ -692,8 +692,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisDevice2Request)
-        request = cast(operations.PatchHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.PatchHrisDeviceRequest)
+        request = cast(operations.PatchHrisDeviceRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -727,7 +727,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisDevice2",
+                operation_id="patchHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -739,7 +739,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisDevice2Response(
+            return operations.PatchHrisDeviceResponse(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -756,18 +756,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_device2(
+    def remove_hris_device(
         self,
         *,
         request: Union[
-            operations.RemoveHrisDevice2Request,
-            operations.RemoveHrisDevice2RequestTypedDict,
+            operations.RemoveHrisDeviceRequest,
+            operations.RemoveHrisDeviceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisDevice2Response:
+    ) -> operations.RemoveHrisDeviceResponse:
         r"""Remove a device
 
         :param request: The request object to send.
@@ -787,8 +787,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisDevice2Request)
-        request = cast(operations.RemoveHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.RemoveHrisDeviceRequest)
+        request = cast(operations.RemoveHrisDeviceRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -819,7 +819,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisDevice2",
+                operation_id="removeHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -831,7 +831,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisDevice2Response(
+            return operations.RemoveHrisDeviceResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -844,7 +844,7 @@ class Device(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisDevice2Response(
+            return operations.RemoveHrisDeviceResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -853,18 +853,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_device2_async(
+    async def remove_hris_device_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisDevice2Request,
-            operations.RemoveHrisDevice2RequestTypedDict,
+            operations.RemoveHrisDeviceRequest,
+            operations.RemoveHrisDeviceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisDevice2Response:
+    ) -> operations.RemoveHrisDeviceResponse:
         r"""Remove a device
 
         :param request: The request object to send.
@@ -884,8 +884,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisDevice2Request)
-        request = cast(operations.RemoveHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.RemoveHrisDeviceRequest)
+        request = cast(operations.RemoveHrisDeviceRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -916,7 +916,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisDevice2",
+                operation_id="removeHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -928,7 +928,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisDevice2Response(
+            return operations.RemoveHrisDeviceResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -941,7 +941,7 @@ class Device(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisDevice2Response(
+            return operations.RemoveHrisDeviceResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -950,18 +950,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_device2(
+    def update_hris_device(
         self,
         *,
         request: Union[
-            operations.UpdateHrisDevice2Request,
-            operations.UpdateHrisDevice2RequestTypedDict,
+            operations.UpdateHrisDeviceRequest,
+            operations.UpdateHrisDeviceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisDevice2Response:
+    ) -> operations.UpdateHrisDeviceResponse:
         r"""Update a device
 
         :param request: The request object to send.
@@ -981,8 +981,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisDevice2Request)
-        request = cast(operations.UpdateHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.UpdateHrisDeviceRequest)
+        request = cast(operations.UpdateHrisDeviceRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1016,7 +1016,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisDevice2",
+                operation_id="updateHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -1028,7 +1028,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisDevice2Response(
+            return operations.UpdateHrisDeviceResponse(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
@@ -1045,18 +1045,18 @@ class Device(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_device2_async(
+    async def update_hris_device_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisDevice2Request,
-            operations.UpdateHrisDevice2RequestTypedDict,
+            operations.UpdateHrisDeviceRequest,
+            operations.UpdateHrisDeviceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisDevice2Response:
+    ) -> operations.UpdateHrisDeviceResponse:
         r"""Update a device
 
         :param request: The request object to send.
@@ -1076,8 +1076,8 @@ class Device(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisDevice2Request)
-        request = cast(operations.UpdateHrisDevice2Request, request)
+            request = utils.unmarshal(request, operations.UpdateHrisDeviceRequest)
+        request = cast(operations.UpdateHrisDeviceRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1111,7 +1111,7 @@ class Device(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisDevice2",
+                operation_id="updateHrisDevice",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "device"],
@@ -1123,7 +1123,7 @@ class Device(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisDevice2Response(
+            return operations.UpdateHrisDeviceResponse(
                 hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),

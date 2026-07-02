@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Balancesheet(BaseSDK):
-    def get_accounting_balancesheet2(
+    def get_accounting_balancesheet(
         self,
         *,
         request: Union[
-            operations.GetAccountingBalancesheet2Request,
-            operations.GetAccountingBalancesheet2RequestTypedDict,
+            operations.GetAccountingBalancesheetRequest,
+            operations.GetAccountingBalancesheetRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingBalancesheet2Response:
+    ) -> operations.GetAccountingBalancesheetResponse:
         r"""Retrieve a balancesheet
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Balancesheet(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingBalancesheet2Request
+                request, operations.GetAccountingBalancesheetRequest
             )
-        request = cast(operations.GetAccountingBalancesheet2Request, request)
+        request = cast(operations.GetAccountingBalancesheetRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -75,7 +75,7 @@ class Balancesheet(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingBalancesheet2",
+                operation_id="getAccountingBalancesheet",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "balancesheet"],
@@ -87,7 +87,7 @@ class Balancesheet(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingBalancesheet2Response(
+            return operations.GetAccountingBalancesheetResponse(
                 accounting_balancesheet=unmarshal_json_response(
                     Optional[shared.AccountingBalancesheet], http_res
                 ),
@@ -104,18 +104,18 @@ class Balancesheet(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_balancesheet2_async(
+    async def get_accounting_balancesheet_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingBalancesheet2Request,
-            operations.GetAccountingBalancesheet2RequestTypedDict,
+            operations.GetAccountingBalancesheetRequest,
+            operations.GetAccountingBalancesheetRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingBalancesheet2Response:
+    ) -> operations.GetAccountingBalancesheetResponse:
         r"""Retrieve a balancesheet
 
         :param request: The request object to send.
@@ -136,9 +136,9 @@ class Balancesheet(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingBalancesheet2Request
+                request, operations.GetAccountingBalancesheetRequest
             )
-        request = cast(operations.GetAccountingBalancesheet2Request, request)
+        request = cast(operations.GetAccountingBalancesheetRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -169,7 +169,7 @@ class Balancesheet(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingBalancesheet2",
+                operation_id="getAccountingBalancesheet",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "balancesheet"],
@@ -181,7 +181,7 @@ class Balancesheet(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingBalancesheet2Response(
+            return operations.GetAccountingBalancesheetResponse(
                 accounting_balancesheet=unmarshal_json_response(
                     Optional[shared.AccountingBalancesheet], http_res
                 ),
@@ -198,18 +198,18 @@ class Balancesheet(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_balancesheets2(
+    def list_accounting_balancesheets(
         self,
         *,
         request: Union[
-            operations.ListAccountingBalancesheets2Request,
-            operations.ListAccountingBalancesheets2RequestTypedDict,
+            operations.ListAccountingBalancesheetsRequest,
+            operations.ListAccountingBalancesheetsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingBalancesheets2Response:
+    ) -> operations.ListAccountingBalancesheetsResponse:
         r"""List all balancesheets
 
         :param request: The request object to send.
@@ -230,9 +230,9 @@ class Balancesheet(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingBalancesheets2Request
+                request, operations.ListAccountingBalancesheetsRequest
             )
-        request = cast(operations.ListAccountingBalancesheets2Request, request)
+        request = cast(operations.ListAccountingBalancesheetsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Balancesheet(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingBalancesheets2",
+                operation_id="listAccountingBalancesheets",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "balancesheet"],
@@ -275,7 +275,7 @@ class Balancesheet(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingBalancesheets2Response(
+            return operations.ListAccountingBalancesheetsResponse(
                 accounting_balancesheets=unmarshal_json_response(
                     Optional[List[shared.AccountingBalancesheet]], http_res
                 ),
@@ -292,18 +292,18 @@ class Balancesheet(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_balancesheets2_async(
+    async def list_accounting_balancesheets_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingBalancesheets2Request,
-            operations.ListAccountingBalancesheets2RequestTypedDict,
+            operations.ListAccountingBalancesheetsRequest,
+            operations.ListAccountingBalancesheetsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingBalancesheets2Response:
+    ) -> operations.ListAccountingBalancesheetsResponse:
         r"""List all balancesheets
 
         :param request: The request object to send.
@@ -324,9 +324,9 @@ class Balancesheet(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingBalancesheets2Request
+                request, operations.ListAccountingBalancesheetsRequest
             )
-        request = cast(operations.ListAccountingBalancesheets2Request, request)
+        request = cast(operations.ListAccountingBalancesheetsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -357,7 +357,7 @@ class Balancesheet(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingBalancesheets2",
+                operation_id="listAccountingBalancesheets",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "balancesheet"],
@@ -369,7 +369,7 @@ class Balancesheet(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingBalancesheets2Response(
+            return operations.ListAccountingBalancesheetsResponse(
                 accounting_balancesheets=unmarshal_json_response(
                     Optional[List[shared.AccountingBalancesheet]], http_res
                 ),

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Trialbalance(BaseSDK):
-    def get_accounting_trialbalance2(
+    def get_accounting_trialbalance(
         self,
         *,
         request: Union[
-            operations.GetAccountingTrialbalance2Request,
-            operations.GetAccountingTrialbalance2RequestTypedDict,
+            operations.GetAccountingTrialbalanceRequest,
+            operations.GetAccountingTrialbalanceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingTrialbalance2Response:
+    ) -> operations.GetAccountingTrialbalanceResponse:
         r"""Retrieve a trialbalance
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Trialbalance(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingTrialbalance2Request
+                request, operations.GetAccountingTrialbalanceRequest
             )
-        request = cast(operations.GetAccountingTrialbalance2Request, request)
+        request = cast(operations.GetAccountingTrialbalanceRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -75,7 +75,7 @@ class Trialbalance(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingTrialbalance2",
+                operation_id="getAccountingTrialbalance",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "trialbalance"],
@@ -87,7 +87,7 @@ class Trialbalance(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingTrialbalance2Response(
+            return operations.GetAccountingTrialbalanceResponse(
                 accounting_trialbalance=unmarshal_json_response(
                     Optional[shared.AccountingTrialbalance], http_res
                 ),
@@ -104,18 +104,18 @@ class Trialbalance(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_trialbalance2_async(
+    async def get_accounting_trialbalance_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingTrialbalance2Request,
-            operations.GetAccountingTrialbalance2RequestTypedDict,
+            operations.GetAccountingTrialbalanceRequest,
+            operations.GetAccountingTrialbalanceRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingTrialbalance2Response:
+    ) -> operations.GetAccountingTrialbalanceResponse:
         r"""Retrieve a trialbalance
 
         :param request: The request object to send.
@@ -136,9 +136,9 @@ class Trialbalance(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetAccountingTrialbalance2Request
+                request, operations.GetAccountingTrialbalanceRequest
             )
-        request = cast(operations.GetAccountingTrialbalance2Request, request)
+        request = cast(operations.GetAccountingTrialbalanceRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -169,7 +169,7 @@ class Trialbalance(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingTrialbalance2",
+                operation_id="getAccountingTrialbalance",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "trialbalance"],
@@ -181,7 +181,7 @@ class Trialbalance(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingTrialbalance2Response(
+            return operations.GetAccountingTrialbalanceResponse(
                 accounting_trialbalance=unmarshal_json_response(
                     Optional[shared.AccountingTrialbalance], http_res
                 ),
@@ -198,18 +198,18 @@ class Trialbalance(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_trialbalances2(
+    def list_accounting_trialbalances(
         self,
         *,
         request: Union[
-            operations.ListAccountingTrialbalances2Request,
-            operations.ListAccountingTrialbalances2RequestTypedDict,
+            operations.ListAccountingTrialbalancesRequest,
+            operations.ListAccountingTrialbalancesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingTrialbalances2Response:
+    ) -> operations.ListAccountingTrialbalancesResponse:
         r"""List all trialbalances
 
         :param request: The request object to send.
@@ -230,9 +230,9 @@ class Trialbalance(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingTrialbalances2Request
+                request, operations.ListAccountingTrialbalancesRequest
             )
-        request = cast(operations.ListAccountingTrialbalances2Request, request)
+        request = cast(operations.ListAccountingTrialbalancesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Trialbalance(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingTrialbalances2",
+                operation_id="listAccountingTrialbalances",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "trialbalance"],
@@ -275,7 +275,7 @@ class Trialbalance(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingTrialbalances2Response(
+            return operations.ListAccountingTrialbalancesResponse(
                 accounting_trialbalances=unmarshal_json_response(
                     Optional[List[shared.AccountingTrialbalance]], http_res
                 ),
@@ -292,18 +292,18 @@ class Trialbalance(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_trialbalances2_async(
+    async def list_accounting_trialbalances_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingTrialbalances2Request,
-            operations.ListAccountingTrialbalances2RequestTypedDict,
+            operations.ListAccountingTrialbalancesRequest,
+            operations.ListAccountingTrialbalancesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingTrialbalances2Response:
+    ) -> operations.ListAccountingTrialbalancesResponse:
         r"""List all trialbalances
 
         :param request: The request object to send.
@@ -324,9 +324,9 @@ class Trialbalance(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.ListAccountingTrialbalances2Request
+                request, operations.ListAccountingTrialbalancesRequest
             )
-        request = cast(operations.ListAccountingTrialbalances2Request, request)
+        request = cast(operations.ListAccountingTrialbalancesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -357,7 +357,7 @@ class Trialbalance(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingTrialbalances2",
+                operation_id="listAccountingTrialbalances",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "trialbalance"],
@@ -369,7 +369,7 @@ class Trialbalance(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingTrialbalances2Response(
+            return operations.ListAccountingTrialbalancesResponse(
                 accounting_trialbalances=unmarshal_json_response(
                     Optional[List[shared.AccountingTrialbalance]], http_res
                 ),

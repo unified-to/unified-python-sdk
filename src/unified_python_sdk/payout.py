@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Payout(BaseSDK):
-    def get_payment_payout2(
+    def get_payment_payout(
         self,
         *,
         request: Union[
-            operations.GetPaymentPayout2Request,
-            operations.GetPaymentPayout2RequestTypedDict,
+            operations.GetPaymentPayoutRequest,
+            operations.GetPaymentPayoutRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentPayout2Response:
+    ) -> operations.GetPaymentPayoutResponse:
         r"""Retrieve a payout
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Payout(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentPayout2Request)
-        request = cast(operations.GetPaymentPayout2Request, request)
+            request = utils.unmarshal(request, operations.GetPaymentPayoutRequest)
+        request = cast(operations.GetPaymentPayoutRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Payout(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentPayout2",
+                operation_id="getPaymentPayout",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "payout"],
@@ -85,7 +85,7 @@ class Payout(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentPayout2Response(
+            return operations.GetPaymentPayoutResponse(
                 payment_payout=unmarshal_json_response(
                     Optional[shared.PaymentPayout], http_res
                 ),
@@ -102,18 +102,18 @@ class Payout(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_payment_payout2_async(
+    async def get_payment_payout_async(
         self,
         *,
         request: Union[
-            operations.GetPaymentPayout2Request,
-            operations.GetPaymentPayout2RequestTypedDict,
+            operations.GetPaymentPayoutRequest,
+            operations.GetPaymentPayoutRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetPaymentPayout2Response:
+    ) -> operations.GetPaymentPayoutResponse:
         r"""Retrieve a payout
 
         :param request: The request object to send.
@@ -133,8 +133,8 @@ class Payout(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetPaymentPayout2Request)
-        request = cast(operations.GetPaymentPayout2Request, request)
+            request = utils.unmarshal(request, operations.GetPaymentPayoutRequest)
+        request = cast(operations.GetPaymentPayoutRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +165,7 @@ class Payout(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getPaymentPayout2",
+                operation_id="getPaymentPayout",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "payout"],
@@ -177,7 +177,7 @@ class Payout(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetPaymentPayout2Response(
+            return operations.GetPaymentPayoutResponse(
                 payment_payout=unmarshal_json_response(
                     Optional[shared.PaymentPayout], http_res
                 ),
@@ -194,18 +194,18 @@ class Payout(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_payment_payouts2(
+    def list_payment_payouts(
         self,
         *,
         request: Union[
-            operations.ListPaymentPayouts2Request,
-            operations.ListPaymentPayouts2RequestTypedDict,
+            operations.ListPaymentPayoutsRequest,
+            operations.ListPaymentPayoutsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentPayouts2Response:
+    ) -> operations.ListPaymentPayoutsResponse:
         r"""List all payouts
 
         :param request: The request object to send.
@@ -225,8 +225,8 @@ class Payout(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentPayouts2Request)
-        request = cast(operations.ListPaymentPayouts2Request, request)
+            request = utils.unmarshal(request, operations.ListPaymentPayoutsRequest)
+        request = cast(operations.ListPaymentPayoutsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -257,7 +257,7 @@ class Payout(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentPayouts2",
+                operation_id="listPaymentPayouts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "payout"],
@@ -269,7 +269,7 @@ class Payout(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentPayouts2Response(
+            return operations.ListPaymentPayoutsResponse(
                 payment_payouts=unmarshal_json_response(
                     Optional[List[shared.PaymentPayout]], http_res
                 ),
@@ -286,18 +286,18 @@ class Payout(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_payment_payouts2_async(
+    async def list_payment_payouts_async(
         self,
         *,
         request: Union[
-            operations.ListPaymentPayouts2Request,
-            operations.ListPaymentPayouts2RequestTypedDict,
+            operations.ListPaymentPayoutsRequest,
+            operations.ListPaymentPayoutsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListPaymentPayouts2Response:
+    ) -> operations.ListPaymentPayoutsResponse:
         r"""List all payouts
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Payout(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListPaymentPayouts2Request)
-        request = cast(operations.ListPaymentPayouts2Request, request)
+            request = utils.unmarshal(request, operations.ListPaymentPayoutsRequest)
+        request = cast(operations.ListPaymentPayoutsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Payout(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listPaymentPayouts2",
+                operation_id="listPaymentPayouts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["payment", "payout"],
@@ -361,7 +361,7 @@ class Payout(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListPaymentPayouts2Response(
+            return operations.ListPaymentPayoutsResponse(
                 payment_payouts=unmarshal_json_response(
                     Optional[List[shared.PaymentPayout]], http_res
                 ),

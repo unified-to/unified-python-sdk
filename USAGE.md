@@ -11,7 +11,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.accounting.create_accounting_account2(request={
+    res = unified_to.accounting.create_accounting_account(request={
         "accounting_account": {},
         "connection_id": "<id>",
     })
@@ -40,7 +40,7 @@ async def main():
         ),
     ) as unified_to:
 
-        res = await unified_to.accounting.create_accounting_account2_async(request={
+        res = await unified_to.accounting.create_accounting_account_async(request={
             "accounting_account": {},
             "connection_id": "<id>",
         })

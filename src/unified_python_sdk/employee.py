@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Employee(BaseSDK):
-    def create_hris_employee2(
+    def create_hris_employee(
         self,
         *,
         request: Union[
-            operations.CreateHrisEmployee2Request,
-            operations.CreateHrisEmployee2RequestTypedDict,
+            operations.CreateHrisEmployeeRequest,
+            operations.CreateHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisEmployee2Response:
+    ) -> operations.CreateHrisEmployeeResponse:
         r"""Create an employee
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisEmployee2Request)
-        request = cast(operations.CreateHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
+        request = cast(operations.CreateHrisEmployeeRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisEmployee2",
+                operation_id="createHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -88,7 +88,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisEmployee2Response(
+            return operations.CreateHrisEmployeeResponse(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -105,18 +105,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_hris_employee2_async(
+    async def create_hris_employee_async(
         self,
         *,
         request: Union[
-            operations.CreateHrisEmployee2Request,
-            operations.CreateHrisEmployee2RequestTypedDict,
+            operations.CreateHrisEmployeeRequest,
+            operations.CreateHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateHrisEmployee2Response:
+    ) -> operations.CreateHrisEmployeeResponse:
         r"""Create an employee
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateHrisEmployee2Request)
-        request = cast(operations.CreateHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
+        request = cast(operations.CreateHrisEmployeeRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createHrisEmployee2",
+                operation_id="createHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -183,7 +183,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateHrisEmployee2Response(
+            return operations.CreateHrisEmployeeResponse(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -200,18 +200,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_hris_employee2(
+    def get_hris_employee(
         self,
         *,
         request: Union[
-            operations.GetHrisEmployee2Request,
-            operations.GetHrisEmployee2RequestTypedDict,
+            operations.GetHrisEmployeeRequest,
+            operations.GetHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisEmployee2Response:
+    ) -> operations.GetHrisEmployeeResponse:
         r"""Retrieve an employee
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisEmployee2Request)
-        request = cast(operations.GetHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
+        request = cast(operations.GetHrisEmployeeRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisEmployee2",
+                operation_id="getHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -275,7 +275,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisEmployee2Response(
+            return operations.GetHrisEmployeeResponse(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -292,18 +292,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_hris_employee2_async(
+    async def get_hris_employee_async(
         self,
         *,
         request: Union[
-            operations.GetHrisEmployee2Request,
-            operations.GetHrisEmployee2RequestTypedDict,
+            operations.GetHrisEmployeeRequest,
+            operations.GetHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetHrisEmployee2Response:
+    ) -> operations.GetHrisEmployeeResponse:
         r"""Retrieve an employee
 
         :param request: The request object to send.
@@ -323,8 +323,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetHrisEmployee2Request)
-        request = cast(operations.GetHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
+        request = cast(operations.GetHrisEmployeeRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +355,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getHrisEmployee2",
+                operation_id="getHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -367,7 +367,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetHrisEmployee2Response(
+            return operations.GetHrisEmployeeResponse(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -384,18 +384,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_hris_employees2(
+    def list_hris_employees(
         self,
         *,
         request: Union[
-            operations.ListHrisEmployees2Request,
-            operations.ListHrisEmployees2RequestTypedDict,
+            operations.ListHrisEmployeesRequest,
+            operations.ListHrisEmployeesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisEmployees2Response:
+    ) -> operations.ListHrisEmployeesResponse:
         r"""List all employees
 
         :param request: The request object to send.
@@ -415,8 +415,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisEmployees2Request)
-        request = cast(operations.ListHrisEmployees2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
+        request = cast(operations.ListHrisEmployeesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +447,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisEmployees2",
+                operation_id="listHrisEmployees",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -459,7 +459,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisEmployees2Response(
+            return operations.ListHrisEmployeesResponse(
                 hris_employees=unmarshal_json_response(
                     Optional[List[shared.HrisEmployee]], http_res
                 ),
@@ -476,18 +476,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_hris_employees2_async(
+    async def list_hris_employees_async(
         self,
         *,
         request: Union[
-            operations.ListHrisEmployees2Request,
-            operations.ListHrisEmployees2RequestTypedDict,
+            operations.ListHrisEmployeesRequest,
+            operations.ListHrisEmployeesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListHrisEmployees2Response:
+    ) -> operations.ListHrisEmployeesResponse:
         r"""List all employees
 
         :param request: The request object to send.
@@ -507,8 +507,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListHrisEmployees2Request)
-        request = cast(operations.ListHrisEmployees2Request, request)
+            request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
+        request = cast(operations.ListHrisEmployeesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +539,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listHrisEmployees2",
+                operation_id="listHrisEmployees",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -551,7 +551,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListHrisEmployees2Response(
+            return operations.ListHrisEmployeesResponse(
                 hris_employees=unmarshal_json_response(
                     Optional[List[shared.HrisEmployee]], http_res
                 ),
@@ -568,18 +568,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_hris_employee2(
+    def patch_hris_employee(
         self,
         *,
         request: Union[
-            operations.PatchHrisEmployee2Request,
-            operations.PatchHrisEmployee2RequestTypedDict,
+            operations.PatchHrisEmployeeRequest,
+            operations.PatchHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisEmployee2Response:
+    ) -> operations.PatchHrisEmployeeResponse:
         r"""Update an employee
 
         :param request: The request object to send.
@@ -599,8 +599,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisEmployee2Request)
-        request = cast(operations.PatchHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
+        request = cast(operations.PatchHrisEmployeeRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +634,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisEmployee2",
+                operation_id="patchHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -646,7 +646,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisEmployee2Response(
+            return operations.PatchHrisEmployeeResponse(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -663,18 +663,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_hris_employee2_async(
+    async def patch_hris_employee_async(
         self,
         *,
         request: Union[
-            operations.PatchHrisEmployee2Request,
-            operations.PatchHrisEmployee2RequestTypedDict,
+            operations.PatchHrisEmployeeRequest,
+            operations.PatchHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchHrisEmployee2Response:
+    ) -> operations.PatchHrisEmployeeResponse:
         r"""Update an employee
 
         :param request: The request object to send.
@@ -694,8 +694,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchHrisEmployee2Request)
-        request = cast(operations.PatchHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
+        request = cast(operations.PatchHrisEmployeeRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +729,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchHrisEmployee2",
+                operation_id="patchHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -741,7 +741,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchHrisEmployee2Response(
+            return operations.PatchHrisEmployeeResponse(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -758,18 +758,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_hris_employee2(
+    def remove_hris_employee(
         self,
         *,
         request: Union[
-            operations.RemoveHrisEmployee2Request,
-            operations.RemoveHrisEmployee2RequestTypedDict,
+            operations.RemoveHrisEmployeeRequest,
+            operations.RemoveHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisEmployee2Response:
+    ) -> operations.RemoveHrisEmployeeResponse:
         r"""Remove an employee
 
         :param request: The request object to send.
@@ -789,8 +789,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisEmployee2Request)
-        request = cast(operations.RemoveHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
+        request = cast(operations.RemoveHrisEmployeeRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +821,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisEmployee2",
+                operation_id="removeHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -833,7 +833,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisEmployee2Response(
+            return operations.RemoveHrisEmployeeResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +846,7 @@ class Employee(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisEmployee2Response(
+            return operations.RemoveHrisEmployeeResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +855,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_hris_employee2_async(
+    async def remove_hris_employee_async(
         self,
         *,
         request: Union[
-            operations.RemoveHrisEmployee2Request,
-            operations.RemoveHrisEmployee2RequestTypedDict,
+            operations.RemoveHrisEmployeeRequest,
+            operations.RemoveHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveHrisEmployee2Response:
+    ) -> operations.RemoveHrisEmployeeResponse:
         r"""Remove an employee
 
         :param request: The request object to send.
@@ -886,8 +886,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveHrisEmployee2Request)
-        request = cast(operations.RemoveHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
+        request = cast(operations.RemoveHrisEmployeeRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +918,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeHrisEmployee2",
+                operation_id="removeHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -930,7 +930,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveHrisEmployee2Response(
+            return operations.RemoveHrisEmployeeResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +943,7 @@ class Employee(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveHrisEmployee2Response(
+            return operations.RemoveHrisEmployeeResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +952,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_hris_employee2(
+    def update_hris_employee(
         self,
         *,
         request: Union[
-            operations.UpdateHrisEmployee2Request,
-            operations.UpdateHrisEmployee2RequestTypedDict,
+            operations.UpdateHrisEmployeeRequest,
+            operations.UpdateHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisEmployee2Response:
+    ) -> operations.UpdateHrisEmployeeResponse:
         r"""Update an employee
 
         :param request: The request object to send.
@@ -983,8 +983,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisEmployee2Request)
-        request = cast(operations.UpdateHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
+        request = cast(operations.UpdateHrisEmployeeRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1018,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisEmployee2",
+                operation_id="updateHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -1030,7 +1030,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisEmployee2Response(
+            return operations.UpdateHrisEmployeeResponse(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
@@ -1047,18 +1047,18 @@ class Employee(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_hris_employee2_async(
+    async def update_hris_employee_async(
         self,
         *,
         request: Union[
-            operations.UpdateHrisEmployee2Request,
-            operations.UpdateHrisEmployee2RequestTypedDict,
+            operations.UpdateHrisEmployeeRequest,
+            operations.UpdateHrisEmployeeRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateHrisEmployee2Response:
+    ) -> operations.UpdateHrisEmployeeResponse:
         r"""Update an employee
 
         :param request: The request object to send.
@@ -1078,8 +1078,8 @@ class Employee(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateHrisEmployee2Request)
-        request = cast(operations.UpdateHrisEmployee2Request, request)
+            request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
+        request = cast(operations.UpdateHrisEmployeeRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1113,7 @@ class Employee(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateHrisEmployee2",
+                operation_id="updateHrisEmployee",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["hris", "employee"],
@@ -1125,7 +1125,7 @@ class Employee(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateHrisEmployee2Response(
+            return operations.UpdateHrisEmployeeResponse(
                 hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),

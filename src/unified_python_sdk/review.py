@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Review(BaseSDK):
-    def create_commerce_review2(
+    def create_commerce_review(
         self,
         *,
         request: Union[
-            operations.CreateCommerceReview2Request,
-            operations.CreateCommerceReview2RequestTypedDict,
+            operations.CreateCommerceReviewRequest,
+            operations.CreateCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceReview2Response:
+    ) -> operations.CreateCommerceReviewResponse:
         r"""Create a review
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceReview2Request)
-        request = cast(operations.CreateCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.CreateCommerceReviewRequest)
+        request = cast(operations.CreateCommerceReviewRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceReview2",
+                operation_id="createCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -88,7 +88,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceReview2Response(
+            return operations.CreateCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -105,18 +105,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_commerce_review2_async(
+    async def create_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceReview2Request,
-            operations.CreateCommerceReview2RequestTypedDict,
+            operations.CreateCommerceReviewRequest,
+            operations.CreateCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateCommerceReview2Response:
+    ) -> operations.CreateCommerceReviewResponse:
         r"""Create a review
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceReview2Request)
-        request = cast(operations.CreateCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.CreateCommerceReviewRequest)
+        request = cast(operations.CreateCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createCommerceReview2",
+                operation_id="createCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -183,7 +183,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceReview2Response(
+            return operations.CreateCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -200,18 +200,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_commerce_review2(
+    def get_commerce_review(
         self,
         *,
         request: Union[
-            operations.GetCommerceReview2Request,
-            operations.GetCommerceReview2RequestTypedDict,
+            operations.GetCommerceReviewRequest,
+            operations.GetCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceReview2Response:
+    ) -> operations.GetCommerceReviewResponse:
         r"""Retrieve a review
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceReview2Request)
-        request = cast(operations.GetCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceReviewRequest)
+        request = cast(operations.GetCommerceReviewRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -263,7 +263,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceReview2",
+                operation_id="getCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -275,7 +275,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceReview2Response(
+            return operations.GetCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -292,18 +292,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_commerce_review2_async(
+    async def get_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceReview2Request,
-            operations.GetCommerceReview2RequestTypedDict,
+            operations.GetCommerceReviewRequest,
+            operations.GetCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetCommerceReview2Response:
+    ) -> operations.GetCommerceReviewResponse:
         r"""Retrieve a review
 
         :param request: The request object to send.
@@ -323,8 +323,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceReview2Request)
-        request = cast(operations.GetCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.GetCommerceReviewRequest)
+        request = cast(operations.GetCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -355,7 +355,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getCommerceReview2",
+                operation_id="getCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -367,7 +367,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceReview2Response(
+            return operations.GetCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -384,18 +384,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_commerce_reviews2(
+    def list_commerce_reviews(
         self,
         *,
         request: Union[
-            operations.ListCommerceReviews2Request,
-            operations.ListCommerceReviews2RequestTypedDict,
+            operations.ListCommerceReviewsRequest,
+            operations.ListCommerceReviewsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceReviews2Response:
+    ) -> operations.ListCommerceReviewsResponse:
         r"""List all reviews
 
         :param request: The request object to send.
@@ -415,8 +415,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceReviews2Request)
-        request = cast(operations.ListCommerceReviews2Request, request)
+            request = utils.unmarshal(request, operations.ListCommerceReviewsRequest)
+        request = cast(operations.ListCommerceReviewsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -447,7 +447,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceReviews2",
+                operation_id="listCommerceReviews",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -459,7 +459,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceReviews2Response(
+            return operations.ListCommerceReviewsResponse(
                 commerce_reviews=unmarshal_json_response(
                     Optional[List[shared.CommerceReview]], http_res
                 ),
@@ -476,18 +476,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_commerce_reviews2_async(
+    async def list_commerce_reviews_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceReviews2Request,
-            operations.ListCommerceReviews2RequestTypedDict,
+            operations.ListCommerceReviewsRequest,
+            operations.ListCommerceReviewsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCommerceReviews2Response:
+    ) -> operations.ListCommerceReviewsResponse:
         r"""List all reviews
 
         :param request: The request object to send.
@@ -507,8 +507,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceReviews2Request)
-        request = cast(operations.ListCommerceReviews2Request, request)
+            request = utils.unmarshal(request, operations.ListCommerceReviewsRequest)
+        request = cast(operations.ListCommerceReviewsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -539,7 +539,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCommerceReviews2",
+                operation_id="listCommerceReviews",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -551,7 +551,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceReviews2Response(
+            return operations.ListCommerceReviewsResponse(
                 commerce_reviews=unmarshal_json_response(
                     Optional[List[shared.CommerceReview]], http_res
                 ),
@@ -568,18 +568,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_commerce_review2(
+    def patch_commerce_review(
         self,
         *,
         request: Union[
-            operations.PatchCommerceReview2Request,
-            operations.PatchCommerceReview2RequestTypedDict,
+            operations.PatchCommerceReviewRequest,
+            operations.PatchCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceReview2Response:
+    ) -> operations.PatchCommerceReviewResponse:
         r"""Update a review
 
         :param request: The request object to send.
@@ -599,8 +599,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceReview2Request)
-        request = cast(operations.PatchCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceReviewRequest)
+        request = cast(operations.PatchCommerceReviewRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -634,7 +634,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceReview2",
+                operation_id="patchCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -646,7 +646,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceReview2Response(
+            return operations.PatchCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -663,18 +663,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_commerce_review2_async(
+    async def patch_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceReview2Request,
-            operations.PatchCommerceReview2RequestTypedDict,
+            operations.PatchCommerceReviewRequest,
+            operations.PatchCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchCommerceReview2Response:
+    ) -> operations.PatchCommerceReviewResponse:
         r"""Update a review
 
         :param request: The request object to send.
@@ -694,8 +694,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceReview2Request)
-        request = cast(operations.PatchCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.PatchCommerceReviewRequest)
+        request = cast(operations.PatchCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -729,7 +729,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchCommerceReview2",
+                operation_id="patchCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -741,7 +741,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceReview2Response(
+            return operations.PatchCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -758,18 +758,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_commerce_review2(
+    def remove_commerce_review(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceReview2Request,
-            operations.RemoveCommerceReview2RequestTypedDict,
+            operations.RemoveCommerceReviewRequest,
+            operations.RemoveCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceReview2Response:
+    ) -> operations.RemoveCommerceReviewResponse:
         r"""Remove a review
 
         :param request: The request object to send.
@@ -789,8 +789,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceReview2Request)
-        request = cast(operations.RemoveCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCommerceReviewRequest)
+        request = cast(operations.RemoveCommerceReviewRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -821,7 +821,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceReview2",
+                operation_id="removeCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -833,7 +833,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceReview2Response(
+            return operations.RemoveCommerceReviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -846,7 +846,7 @@ class Review(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceReview2Response(
+            return operations.RemoveCommerceReviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -855,18 +855,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_commerce_review2_async(
+    async def remove_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceReview2Request,
-            operations.RemoveCommerceReview2RequestTypedDict,
+            operations.RemoveCommerceReviewRequest,
+            operations.RemoveCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveCommerceReview2Response:
+    ) -> operations.RemoveCommerceReviewResponse:
         r"""Remove a review
 
         :param request: The request object to send.
@@ -886,8 +886,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceReview2Request)
-        request = cast(operations.RemoveCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.RemoveCommerceReviewRequest)
+        request = cast(operations.RemoveCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -918,7 +918,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeCommerceReview2",
+                operation_id="removeCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -930,7 +930,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceReview2Response(
+            return operations.RemoveCommerceReviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -943,7 +943,7 @@ class Review(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceReview2Response(
+            return operations.RemoveCommerceReviewResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -952,18 +952,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_commerce_review2(
+    def update_commerce_review(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceReview2Request,
-            operations.UpdateCommerceReview2RequestTypedDict,
+            operations.UpdateCommerceReviewRequest,
+            operations.UpdateCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceReview2Response:
+    ) -> operations.UpdateCommerceReviewResponse:
         r"""Update a review
 
         :param request: The request object to send.
@@ -983,8 +983,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceReview2Request)
-        request = cast(operations.UpdateCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCommerceReviewRequest)
+        request = cast(operations.UpdateCommerceReviewRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1018,7 +1018,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceReview2",
+                operation_id="updateCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -1030,7 +1030,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceReview2Response(
+            return operations.UpdateCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
@@ -1047,18 +1047,18 @@ class Review(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_commerce_review2_async(
+    async def update_commerce_review_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceReview2Request,
-            operations.UpdateCommerceReview2RequestTypedDict,
+            operations.UpdateCommerceReviewRequest,
+            operations.UpdateCommerceReviewRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateCommerceReview2Response:
+    ) -> operations.UpdateCommerceReviewResponse:
         r"""Update a review
 
         :param request: The request object to send.
@@ -1078,8 +1078,8 @@ class Review(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceReview2Request)
-        request = cast(operations.UpdateCommerceReview2Request, request)
+            request = utils.unmarshal(request, operations.UpdateCommerceReviewRequest)
+        request = cast(operations.UpdateCommerceReviewRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1113,7 +1113,7 @@ class Review(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateCommerceReview2",
+                operation_id="updateCommerceReview",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["commerce", "review"],
@@ -1125,7 +1125,7 @@ class Review(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceReview2Response(
+            return operations.UpdateCommerceReviewResponse(
                 commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),

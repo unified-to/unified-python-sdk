@@ -10,17 +10,17 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Job(BaseSDK):
-    def create_ats_job2(
+    def create_ats_job(
         self,
         *,
         request: Union[
-            operations.CreateAtsJob2Request, operations.CreateAtsJob2RequestTypedDict
+            operations.CreateAtsJobRequest, operations.CreateAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsJob2Response:
+    ) -> operations.CreateAtsJobResponse:
         r"""Create a job
 
         :param request: The request object to send.
@@ -40,8 +40,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsJob2Request)
-        request = cast(operations.CreateAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsJobRequest)
+        request = cast(operations.CreateAtsJobRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -75,7 +75,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsJob2",
+                operation_id="createAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -87,7 +87,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsJob2Response(
+            return operations.CreateAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -102,17 +102,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_ats_job2_async(
+    async def create_ats_job_async(
         self,
         *,
         request: Union[
-            operations.CreateAtsJob2Request, operations.CreateAtsJob2RequestTypedDict
+            operations.CreateAtsJobRequest, operations.CreateAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAtsJob2Response:
+    ) -> operations.CreateAtsJobResponse:
         r"""Create a job
 
         :param request: The request object to send.
@@ -132,8 +132,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateAtsJob2Request)
-        request = cast(operations.CreateAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.CreateAtsJobRequest)
+        request = cast(operations.CreateAtsJobRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -167,7 +167,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAtsJob2",
+                operation_id="createAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -179,7 +179,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAtsJob2Response(
+            return operations.CreateAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -194,17 +194,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_ats_job2(
+    def get_ats_job(
         self,
         *,
         request: Union[
-            operations.GetAtsJob2Request, operations.GetAtsJob2RequestTypedDict
+            operations.GetAtsJobRequest, operations.GetAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsJob2Response:
+    ) -> operations.GetAtsJobResponse:
         r"""Retrieve a job
 
         :param request: The request object to send.
@@ -224,8 +224,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsJob2Request)
-        request = cast(operations.GetAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsJobRequest)
+        request = cast(operations.GetAtsJobRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -256,7 +256,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsJob2",
+                operation_id="getAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -268,7 +268,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsJob2Response(
+            return operations.GetAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -283,17 +283,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_ats_job2_async(
+    async def get_ats_job_async(
         self,
         *,
         request: Union[
-            operations.GetAtsJob2Request, operations.GetAtsJob2RequestTypedDict
+            operations.GetAtsJobRequest, operations.GetAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAtsJob2Response:
+    ) -> operations.GetAtsJobResponse:
         r"""Retrieve a job
 
         :param request: The request object to send.
@@ -313,8 +313,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAtsJob2Request)
-        request = cast(operations.GetAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.GetAtsJobRequest)
+        request = cast(operations.GetAtsJobRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -345,7 +345,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAtsJob2",
+                operation_id="getAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -357,7 +357,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAtsJob2Response(
+            return operations.GetAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -372,17 +372,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ats_jobs2(
+    def list_ats_jobs(
         self,
         *,
         request: Union[
-            operations.ListAtsJobs2Request, operations.ListAtsJobs2RequestTypedDict
+            operations.ListAtsJobsRequest, operations.ListAtsJobsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsJobs2Response:
+    ) -> operations.ListAtsJobsResponse:
         r"""List all jobs
 
         :param request: The request object to send.
@@ -402,8 +402,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsJobs2Request)
-        request = cast(operations.ListAtsJobs2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsJobsRequest)
+        request = cast(operations.ListAtsJobsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -434,7 +434,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsJobs2",
+                operation_id="listAtsJobs",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -446,7 +446,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsJobs2Response(
+            return operations.ListAtsJobsResponse(
                 ats_jobs=unmarshal_json_response(
                     Optional[List[shared.AtsJob]], http_res
                 ),
@@ -463,17 +463,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ats_jobs2_async(
+    async def list_ats_jobs_async(
         self,
         *,
         request: Union[
-            operations.ListAtsJobs2Request, operations.ListAtsJobs2RequestTypedDict
+            operations.ListAtsJobsRequest, operations.ListAtsJobsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAtsJobs2Response:
+    ) -> operations.ListAtsJobsResponse:
         r"""List all jobs
 
         :param request: The request object to send.
@@ -493,8 +493,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAtsJobs2Request)
-        request = cast(operations.ListAtsJobs2Request, request)
+            request = utils.unmarshal(request, operations.ListAtsJobsRequest)
+        request = cast(operations.ListAtsJobsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -525,7 +525,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAtsJobs2",
+                operation_id="listAtsJobs",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -537,7 +537,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAtsJobs2Response(
+            return operations.ListAtsJobsResponse(
                 ats_jobs=unmarshal_json_response(
                     Optional[List[shared.AtsJob]], http_res
                 ),
@@ -554,17 +554,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_ats_job2(
+    def patch_ats_job(
         self,
         *,
         request: Union[
-            operations.PatchAtsJob2Request, operations.PatchAtsJob2RequestTypedDict
+            operations.PatchAtsJobRequest, operations.PatchAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsJob2Response:
+    ) -> operations.PatchAtsJobResponse:
         r"""Update a job
 
         :param request: The request object to send.
@@ -584,8 +584,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsJob2Request)
-        request = cast(operations.PatchAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsJobRequest)
+        request = cast(operations.PatchAtsJobRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -619,7 +619,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsJob2",
+                operation_id="patchAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -631,7 +631,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsJob2Response(
+            return operations.PatchAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -646,17 +646,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_ats_job2_async(
+    async def patch_ats_job_async(
         self,
         *,
         request: Union[
-            operations.PatchAtsJob2Request, operations.PatchAtsJob2RequestTypedDict
+            operations.PatchAtsJobRequest, operations.PatchAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAtsJob2Response:
+    ) -> operations.PatchAtsJobResponse:
         r"""Update a job
 
         :param request: The request object to send.
@@ -676,8 +676,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAtsJob2Request)
-        request = cast(operations.PatchAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.PatchAtsJobRequest)
+        request = cast(operations.PatchAtsJobRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -711,7 +711,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAtsJob2",
+                operation_id="patchAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -723,7 +723,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAtsJob2Response(
+            return operations.PatchAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -738,17 +738,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_ats_job2(
+    def remove_ats_job(
         self,
         *,
         request: Union[
-            operations.RemoveAtsJob2Request, operations.RemoveAtsJob2RequestTypedDict
+            operations.RemoveAtsJobRequest, operations.RemoveAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsJob2Response:
+    ) -> operations.RemoveAtsJobResponse:
         r"""Remove a job
 
         :param request: The request object to send.
@@ -768,8 +768,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsJob2Request)
-        request = cast(operations.RemoveAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
+        request = cast(operations.RemoveAtsJobRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -800,7 +800,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsJob2",
+                operation_id="removeAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -812,7 +812,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsJob2Response(
+            return operations.RemoveAtsJobResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -825,7 +825,7 @@ class Job(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsJob2Response(
+            return operations.RemoveAtsJobResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -834,17 +834,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_ats_job2_async(
+    async def remove_ats_job_async(
         self,
         *,
         request: Union[
-            operations.RemoveAtsJob2Request, operations.RemoveAtsJob2RequestTypedDict
+            operations.RemoveAtsJobRequest, operations.RemoveAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAtsJob2Response:
+    ) -> operations.RemoveAtsJobResponse:
         r"""Remove a job
 
         :param request: The request object to send.
@@ -864,8 +864,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveAtsJob2Request)
-        request = cast(operations.RemoveAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
+        request = cast(operations.RemoveAtsJobRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -896,7 +896,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAtsJob2",
+                operation_id="removeAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -908,7 +908,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAtsJob2Response(
+            return operations.RemoveAtsJobResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -921,7 +921,7 @@ class Job(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAtsJob2Response(
+            return operations.RemoveAtsJobResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -930,17 +930,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_ats_job2(
+    def update_ats_job(
         self,
         *,
         request: Union[
-            operations.UpdateAtsJob2Request, operations.UpdateAtsJob2RequestTypedDict
+            operations.UpdateAtsJobRequest, operations.UpdateAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsJob2Response:
+    ) -> operations.UpdateAtsJobResponse:
         r"""Update a job
 
         :param request: The request object to send.
@@ -960,8 +960,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsJob2Request)
-        request = cast(operations.UpdateAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
+        request = cast(operations.UpdateAtsJobRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -995,7 +995,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsJob2",
+                operation_id="updateAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -1007,7 +1007,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsJob2Response(
+            return operations.UpdateAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1022,17 +1022,17 @@ class Job(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_ats_job2_async(
+    async def update_ats_job_async(
         self,
         *,
         request: Union[
-            operations.UpdateAtsJob2Request, operations.UpdateAtsJob2RequestTypedDict
+            operations.UpdateAtsJobRequest, operations.UpdateAtsJobRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAtsJob2Response:
+    ) -> operations.UpdateAtsJobResponse:
         r"""Update a job
 
         :param request: The request object to send.
@@ -1052,8 +1052,8 @@ class Job(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateAtsJob2Request)
-        request = cast(operations.UpdateAtsJob2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
+        request = cast(operations.UpdateAtsJobRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1087,7 +1087,7 @@ class Job(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAtsJob2",
+                operation_id="updateAtsJob",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ats", "job"],
@@ -1099,7 +1099,7 @@ class Job(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAtsJob2Response(
+            return operations.UpdateAtsJobResponse(
                 ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

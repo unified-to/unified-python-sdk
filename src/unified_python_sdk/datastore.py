@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Datastore(BaseSDK):
-    def create_datastore_database2(
+    def create_datastore_database(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreDatabase2Request,
-            operations.CreateDatastoreDatabase2RequestTypedDict,
+            operations.CreateDatastoreDatabaseRequest,
+            operations.CreateDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreDatabase2Response:
+    ) -> operations.CreateDatastoreDatabaseResponse:
         r"""Create a database
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Datastore(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateDatastoreDatabase2Request
+                request, operations.CreateDatastoreDatabaseRequest
             )
-        request = cast(operations.CreateDatastoreDatabase2Request, request)
+        request = cast(operations.CreateDatastoreDatabaseRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreDatabase2",
+                operation_id="createDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -94,7 +94,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreDatabase2Response(
+            return operations.CreateDatastoreDatabaseResponse(
                 datastore_database=unmarshal_json_response(
                     Optional[shared.DatastoreDatabase], http_res
                 ),
@@ -111,18 +111,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_datastore_database2_async(
+    async def create_datastore_database_async(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreDatabase2Request,
-            operations.CreateDatastoreDatabase2RequestTypedDict,
+            operations.CreateDatastoreDatabaseRequest,
+            operations.CreateDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreDatabase2Response:
+    ) -> operations.CreateDatastoreDatabaseResponse:
         r"""Create a database
 
         :param request: The request object to send.
@@ -143,9 +143,9 @@ class Datastore(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateDatastoreDatabase2Request
+                request, operations.CreateDatastoreDatabaseRequest
             )
-        request = cast(operations.CreateDatastoreDatabase2Request, request)
+        request = cast(operations.CreateDatastoreDatabaseRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -183,7 +183,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreDatabase2",
+                operation_id="createDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -195,7 +195,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreDatabase2Response(
+            return operations.CreateDatastoreDatabaseResponse(
                 datastore_database=unmarshal_json_response(
                     Optional[shared.DatastoreDatabase], http_res
                 ),
@@ -212,18 +212,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_datastore_query2(
+    def create_datastore_query(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreQuery2Request,
-            operations.CreateDatastoreQuery2RequestTypedDict,
+            operations.CreateDatastoreQueryRequest,
+            operations.CreateDatastoreQueryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreQuery2Response:
+    ) -> operations.CreateDatastoreQueryResponse:
         r"""Create a query
 
         :param request: The request object to send.
@@ -243,8 +243,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateDatastoreQuery2Request)
-        request = cast(operations.CreateDatastoreQuery2Request, request)
+            request = utils.unmarshal(request, operations.CreateDatastoreQueryRequest)
+        request = cast(operations.CreateDatastoreQueryRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -278,7 +278,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreQuery2",
+                operation_id="createDatastoreQuery",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "query"],
@@ -290,7 +290,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreQuery2Response(
+            return operations.CreateDatastoreQueryResponse(
                 datastore_query=unmarshal_json_response(
                     Optional[shared.DatastoreQuery], http_res
                 ),
@@ -307,18 +307,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_datastore_query2_async(
+    async def create_datastore_query_async(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreQuery2Request,
-            operations.CreateDatastoreQuery2RequestTypedDict,
+            operations.CreateDatastoreQueryRequest,
+            operations.CreateDatastoreQueryRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreQuery2Response:
+    ) -> operations.CreateDatastoreQueryResponse:
         r"""Create a query
 
         :param request: The request object to send.
@@ -338,8 +338,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateDatastoreQuery2Request)
-        request = cast(operations.CreateDatastoreQuery2Request, request)
+            request = utils.unmarshal(request, operations.CreateDatastoreQueryRequest)
+        request = cast(operations.CreateDatastoreQueryRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -373,7 +373,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreQuery2",
+                operation_id="createDatastoreQuery",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "query"],
@@ -385,7 +385,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreQuery2Response(
+            return operations.CreateDatastoreQueryResponse(
                 datastore_query=unmarshal_json_response(
                     Optional[shared.DatastoreQuery], http_res
                 ),
@@ -402,18 +402,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_datastore_record2(
+    def create_datastore_record(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreRecord2Request,
-            operations.CreateDatastoreRecord2RequestTypedDict,
+            operations.CreateDatastoreRecordRequest,
+            operations.CreateDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreRecord2Response:
+    ) -> operations.CreateDatastoreRecordResponse:
         r"""Create a record
 
         :param request: The request object to send.
@@ -433,8 +433,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateDatastoreRecord2Request)
-        request = cast(operations.CreateDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.CreateDatastoreRecordRequest)
+        request = cast(operations.CreateDatastoreRecordRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -468,7 +468,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreRecord2",
+                operation_id="createDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -480,7 +480,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreRecord2Response(
+            return operations.CreateDatastoreRecordResponse(
                 datastore_record=unmarshal_json_response(
                     Optional[shared.DatastoreRecord], http_res
                 ),
@@ -497,18 +497,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_datastore_record2_async(
+    async def create_datastore_record_async(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreRecord2Request,
-            operations.CreateDatastoreRecord2RequestTypedDict,
+            operations.CreateDatastoreRecordRequest,
+            operations.CreateDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreRecord2Response:
+    ) -> operations.CreateDatastoreRecordResponse:
         r"""Create a record
 
         :param request: The request object to send.
@@ -528,8 +528,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateDatastoreRecord2Request)
-        request = cast(operations.CreateDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.CreateDatastoreRecordRequest)
+        request = cast(operations.CreateDatastoreRecordRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -563,7 +563,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreRecord2",
+                operation_id="createDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -575,7 +575,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreRecord2Response(
+            return operations.CreateDatastoreRecordResponse(
                 datastore_record=unmarshal_json_response(
                     Optional[shared.DatastoreRecord], http_res
                 ),
@@ -592,18 +592,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_datastore_table2(
+    def create_datastore_table(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreTable2Request,
-            operations.CreateDatastoreTable2RequestTypedDict,
+            operations.CreateDatastoreTableRequest,
+            operations.CreateDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreTable2Response:
+    ) -> operations.CreateDatastoreTableResponse:
         r"""Create a table
 
         :param request: The request object to send.
@@ -623,8 +623,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateDatastoreTable2Request)
-        request = cast(operations.CreateDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.CreateDatastoreTableRequest)
+        request = cast(operations.CreateDatastoreTableRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -658,7 +658,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreTable2",
+                operation_id="createDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -670,7 +670,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreTable2Response(
+            return operations.CreateDatastoreTableResponse(
                 datastore_table=unmarshal_json_response(
                     Optional[shared.DatastoreTable], http_res
                 ),
@@ -687,18 +687,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_datastore_table2_async(
+    async def create_datastore_table_async(
         self,
         *,
         request: Union[
-            operations.CreateDatastoreTable2Request,
-            operations.CreateDatastoreTable2RequestTypedDict,
+            operations.CreateDatastoreTableRequest,
+            operations.CreateDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateDatastoreTable2Response:
+    ) -> operations.CreateDatastoreTableResponse:
         r"""Create a table
 
         :param request: The request object to send.
@@ -718,8 +718,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateDatastoreTable2Request)
-        request = cast(operations.CreateDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.CreateDatastoreTableRequest)
+        request = cast(operations.CreateDatastoreTableRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -753,7 +753,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createDatastoreTable2",
+                operation_id="createDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -765,7 +765,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateDatastoreTable2Response(
+            return operations.CreateDatastoreTableResponse(
                 datastore_table=unmarshal_json_response(
                     Optional[shared.DatastoreTable], http_res
                 ),
@@ -782,18 +782,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_datastore_database2(
+    def get_datastore_database(
         self,
         *,
         request: Union[
-            operations.GetDatastoreDatabase2Request,
-            operations.GetDatastoreDatabase2RequestTypedDict,
+            operations.GetDatastoreDatabaseRequest,
+            operations.GetDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetDatastoreDatabase2Response:
+    ) -> operations.GetDatastoreDatabaseResponse:
         r"""Retrieve a database
 
         :param request: The request object to send.
@@ -813,8 +813,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetDatastoreDatabase2Request)
-        request = cast(operations.GetDatastoreDatabase2Request, request)
+            request = utils.unmarshal(request, operations.GetDatastoreDatabaseRequest)
+        request = cast(operations.GetDatastoreDatabaseRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -845,7 +845,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getDatastoreDatabase2",
+                operation_id="getDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -857,7 +857,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetDatastoreDatabase2Response(
+            return operations.GetDatastoreDatabaseResponse(
                 datastore_database=unmarshal_json_response(
                     Optional[shared.DatastoreDatabase], http_res
                 ),
@@ -874,18 +874,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_datastore_database2_async(
+    async def get_datastore_database_async(
         self,
         *,
         request: Union[
-            operations.GetDatastoreDatabase2Request,
-            operations.GetDatastoreDatabase2RequestTypedDict,
+            operations.GetDatastoreDatabaseRequest,
+            operations.GetDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetDatastoreDatabase2Response:
+    ) -> operations.GetDatastoreDatabaseResponse:
         r"""Retrieve a database
 
         :param request: The request object to send.
@@ -905,8 +905,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetDatastoreDatabase2Request)
-        request = cast(operations.GetDatastoreDatabase2Request, request)
+            request = utils.unmarshal(request, operations.GetDatastoreDatabaseRequest)
+        request = cast(operations.GetDatastoreDatabaseRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -937,7 +937,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getDatastoreDatabase2",
+                operation_id="getDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -949,7 +949,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetDatastoreDatabase2Response(
+            return operations.GetDatastoreDatabaseResponse(
                 datastore_database=unmarshal_json_response(
                     Optional[shared.DatastoreDatabase], http_res
                 ),
@@ -966,18 +966,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_datastore_record2(
+    def get_datastore_record(
         self,
         *,
         request: Union[
-            operations.GetDatastoreRecord2Request,
-            operations.GetDatastoreRecord2RequestTypedDict,
+            operations.GetDatastoreRecordRequest,
+            operations.GetDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetDatastoreRecord2Response:
+    ) -> operations.GetDatastoreRecordResponse:
         r"""Retrieve a record
 
         :param request: The request object to send.
@@ -997,8 +997,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetDatastoreRecord2Request)
-        request = cast(operations.GetDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.GetDatastoreRecordRequest)
+        request = cast(operations.GetDatastoreRecordRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1029,7 +1029,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getDatastoreRecord2",
+                operation_id="getDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -1041,7 +1041,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetDatastoreRecord2Response(
+            return operations.GetDatastoreRecordResponse(
                 datastore_record=unmarshal_json_response(
                     Optional[shared.DatastoreRecord], http_res
                 ),
@@ -1058,18 +1058,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_datastore_record2_async(
+    async def get_datastore_record_async(
         self,
         *,
         request: Union[
-            operations.GetDatastoreRecord2Request,
-            operations.GetDatastoreRecord2RequestTypedDict,
+            operations.GetDatastoreRecordRequest,
+            operations.GetDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetDatastoreRecord2Response:
+    ) -> operations.GetDatastoreRecordResponse:
         r"""Retrieve a record
 
         :param request: The request object to send.
@@ -1089,8 +1089,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetDatastoreRecord2Request)
-        request = cast(operations.GetDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.GetDatastoreRecordRequest)
+        request = cast(operations.GetDatastoreRecordRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1121,7 +1121,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getDatastoreRecord2",
+                operation_id="getDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -1133,7 +1133,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetDatastoreRecord2Response(
+            return operations.GetDatastoreRecordResponse(
                 datastore_record=unmarshal_json_response(
                     Optional[shared.DatastoreRecord], http_res
                 ),
@@ -1150,18 +1150,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_datastore_table2(
+    def get_datastore_table(
         self,
         *,
         request: Union[
-            operations.GetDatastoreTable2Request,
-            operations.GetDatastoreTable2RequestTypedDict,
+            operations.GetDatastoreTableRequest,
+            operations.GetDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetDatastoreTable2Response:
+    ) -> operations.GetDatastoreTableResponse:
         r"""Retrieve a table
 
         :param request: The request object to send.
@@ -1181,8 +1181,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetDatastoreTable2Request)
-        request = cast(operations.GetDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.GetDatastoreTableRequest)
+        request = cast(operations.GetDatastoreTableRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1213,7 +1213,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getDatastoreTable2",
+                operation_id="getDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -1225,7 +1225,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetDatastoreTable2Response(
+            return operations.GetDatastoreTableResponse(
                 datastore_table=unmarshal_json_response(
                     Optional[shared.DatastoreTable], http_res
                 ),
@@ -1242,18 +1242,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_datastore_table2_async(
+    async def get_datastore_table_async(
         self,
         *,
         request: Union[
-            operations.GetDatastoreTable2Request,
-            operations.GetDatastoreTable2RequestTypedDict,
+            operations.GetDatastoreTableRequest,
+            operations.GetDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetDatastoreTable2Response:
+    ) -> operations.GetDatastoreTableResponse:
         r"""Retrieve a table
 
         :param request: The request object to send.
@@ -1273,8 +1273,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetDatastoreTable2Request)
-        request = cast(operations.GetDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.GetDatastoreTableRequest)
+        request = cast(operations.GetDatastoreTableRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1305,7 +1305,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getDatastoreTable2",
+                operation_id="getDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -1317,7 +1317,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetDatastoreTable2Response(
+            return operations.GetDatastoreTableResponse(
                 datastore_table=unmarshal_json_response(
                     Optional[shared.DatastoreTable], http_res
                 ),
@@ -1334,18 +1334,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_datastore_databases2(
+    def list_datastore_databases(
         self,
         *,
         request: Union[
-            operations.ListDatastoreDatabases2Request,
-            operations.ListDatastoreDatabases2RequestTypedDict,
+            operations.ListDatastoreDatabasesRequest,
+            operations.ListDatastoreDatabasesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListDatastoreDatabases2Response:
+    ) -> operations.ListDatastoreDatabasesResponse:
         r"""List all databases
 
         :param request: The request object to send.
@@ -1365,10 +1365,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListDatastoreDatabases2Request
-            )
-        request = cast(operations.ListDatastoreDatabases2Request, request)
+            request = utils.unmarshal(request, operations.ListDatastoreDatabasesRequest)
+        request = cast(operations.ListDatastoreDatabasesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1399,7 +1397,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listDatastoreDatabases2",
+                operation_id="listDatastoreDatabases",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -1411,7 +1409,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListDatastoreDatabases2Response(
+            return operations.ListDatastoreDatabasesResponse(
                 datastore_databases=unmarshal_json_response(
                     Optional[List[shared.DatastoreDatabase]], http_res
                 ),
@@ -1428,18 +1426,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_datastore_databases2_async(
+    async def list_datastore_databases_async(
         self,
         *,
         request: Union[
-            operations.ListDatastoreDatabases2Request,
-            operations.ListDatastoreDatabases2RequestTypedDict,
+            operations.ListDatastoreDatabasesRequest,
+            operations.ListDatastoreDatabasesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListDatastoreDatabases2Response:
+    ) -> operations.ListDatastoreDatabasesResponse:
         r"""List all databases
 
         :param request: The request object to send.
@@ -1459,10 +1457,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListDatastoreDatabases2Request
-            )
-        request = cast(operations.ListDatastoreDatabases2Request, request)
+            request = utils.unmarshal(request, operations.ListDatastoreDatabasesRequest)
+        request = cast(operations.ListDatastoreDatabasesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1493,7 +1489,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listDatastoreDatabases2",
+                operation_id="listDatastoreDatabases",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -1505,7 +1501,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListDatastoreDatabases2Response(
+            return operations.ListDatastoreDatabasesResponse(
                 datastore_databases=unmarshal_json_response(
                     Optional[List[shared.DatastoreDatabase]], http_res
                 ),
@@ -1522,18 +1518,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_datastore_records2(
+    def list_datastore_records(
         self,
         *,
         request: Union[
-            operations.ListDatastoreRecords2Request,
-            operations.ListDatastoreRecords2RequestTypedDict,
+            operations.ListDatastoreRecordsRequest,
+            operations.ListDatastoreRecordsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListDatastoreRecords2Response:
+    ) -> operations.ListDatastoreRecordsResponse:
         r"""List all records
 
         :param request: The request object to send.
@@ -1553,8 +1549,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListDatastoreRecords2Request)
-        request = cast(operations.ListDatastoreRecords2Request, request)
+            request = utils.unmarshal(request, operations.ListDatastoreRecordsRequest)
+        request = cast(operations.ListDatastoreRecordsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1585,7 +1581,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listDatastoreRecords2",
+                operation_id="listDatastoreRecords",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -1597,7 +1593,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListDatastoreRecords2Response(
+            return operations.ListDatastoreRecordsResponse(
                 datastore_records=unmarshal_json_response(
                     Optional[List[shared.DatastoreRecord]], http_res
                 ),
@@ -1614,18 +1610,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_datastore_records2_async(
+    async def list_datastore_records_async(
         self,
         *,
         request: Union[
-            operations.ListDatastoreRecords2Request,
-            operations.ListDatastoreRecords2RequestTypedDict,
+            operations.ListDatastoreRecordsRequest,
+            operations.ListDatastoreRecordsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListDatastoreRecords2Response:
+    ) -> operations.ListDatastoreRecordsResponse:
         r"""List all records
 
         :param request: The request object to send.
@@ -1645,8 +1641,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListDatastoreRecords2Request)
-        request = cast(operations.ListDatastoreRecords2Request, request)
+            request = utils.unmarshal(request, operations.ListDatastoreRecordsRequest)
+        request = cast(operations.ListDatastoreRecordsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1677,7 +1673,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listDatastoreRecords2",
+                operation_id="listDatastoreRecords",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -1689,7 +1685,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListDatastoreRecords2Response(
+            return operations.ListDatastoreRecordsResponse(
                 datastore_records=unmarshal_json_response(
                     Optional[List[shared.DatastoreRecord]], http_res
                 ),
@@ -1706,18 +1702,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_datastore_tables2(
+    def list_datastore_tables(
         self,
         *,
         request: Union[
-            operations.ListDatastoreTables2Request,
-            operations.ListDatastoreTables2RequestTypedDict,
+            operations.ListDatastoreTablesRequest,
+            operations.ListDatastoreTablesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListDatastoreTables2Response:
+    ) -> operations.ListDatastoreTablesResponse:
         r"""List all tables
 
         :param request: The request object to send.
@@ -1737,8 +1733,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListDatastoreTables2Request)
-        request = cast(operations.ListDatastoreTables2Request, request)
+            request = utils.unmarshal(request, operations.ListDatastoreTablesRequest)
+        request = cast(operations.ListDatastoreTablesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -1769,7 +1765,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listDatastoreTables2",
+                operation_id="listDatastoreTables",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -1781,7 +1777,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListDatastoreTables2Response(
+            return operations.ListDatastoreTablesResponse(
                 datastore_tables=unmarshal_json_response(
                     Optional[List[shared.DatastoreTable]], http_res
                 ),
@@ -1798,18 +1794,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_datastore_tables2_async(
+    async def list_datastore_tables_async(
         self,
         *,
         request: Union[
-            operations.ListDatastoreTables2Request,
-            operations.ListDatastoreTables2RequestTypedDict,
+            operations.ListDatastoreTablesRequest,
+            operations.ListDatastoreTablesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListDatastoreTables2Response:
+    ) -> operations.ListDatastoreTablesResponse:
         r"""List all tables
 
         :param request: The request object to send.
@@ -1829,8 +1825,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListDatastoreTables2Request)
-        request = cast(operations.ListDatastoreTables2Request, request)
+            request = utils.unmarshal(request, operations.ListDatastoreTablesRequest)
+        request = cast(operations.ListDatastoreTablesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -1861,7 +1857,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listDatastoreTables2",
+                operation_id="listDatastoreTables",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -1873,7 +1869,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListDatastoreTables2Response(
+            return operations.ListDatastoreTablesResponse(
                 datastore_tables=unmarshal_json_response(
                     Optional[List[shared.DatastoreTable]], http_res
                 ),
@@ -1890,18 +1886,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_datastore_database2(
+    def patch_datastore_database(
         self,
         *,
         request: Union[
-            operations.PatchDatastoreDatabase2Request,
-            operations.PatchDatastoreDatabase2RequestTypedDict,
+            operations.PatchDatastoreDatabaseRequest,
+            operations.PatchDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchDatastoreDatabase2Response:
+    ) -> operations.PatchDatastoreDatabaseResponse:
         r"""Update a database
 
         :param request: The request object to send.
@@ -1921,10 +1917,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchDatastoreDatabase2Request
-            )
-        request = cast(operations.PatchDatastoreDatabase2Request, request)
+            request = utils.unmarshal(request, operations.PatchDatastoreDatabaseRequest)
+        request = cast(operations.PatchDatastoreDatabaseRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -1962,7 +1956,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchDatastoreDatabase2",
+                operation_id="patchDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -1974,7 +1968,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchDatastoreDatabase2Response(
+            return operations.PatchDatastoreDatabaseResponse(
                 datastore_database=unmarshal_json_response(
                     Optional[shared.DatastoreDatabase], http_res
                 ),
@@ -1991,18 +1985,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_datastore_database2_async(
+    async def patch_datastore_database_async(
         self,
         *,
         request: Union[
-            operations.PatchDatastoreDatabase2Request,
-            operations.PatchDatastoreDatabase2RequestTypedDict,
+            operations.PatchDatastoreDatabaseRequest,
+            operations.PatchDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchDatastoreDatabase2Response:
+    ) -> operations.PatchDatastoreDatabaseResponse:
         r"""Update a database
 
         :param request: The request object to send.
@@ -2022,10 +2016,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchDatastoreDatabase2Request
-            )
-        request = cast(operations.PatchDatastoreDatabase2Request, request)
+            request = utils.unmarshal(request, operations.PatchDatastoreDatabaseRequest)
+        request = cast(operations.PatchDatastoreDatabaseRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2063,7 +2055,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchDatastoreDatabase2",
+                operation_id="patchDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -2075,7 +2067,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchDatastoreDatabase2Response(
+            return operations.PatchDatastoreDatabaseResponse(
                 datastore_database=unmarshal_json_response(
                     Optional[shared.DatastoreDatabase], http_res
                 ),
@@ -2092,18 +2084,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_datastore_record2(
+    def patch_datastore_record(
         self,
         *,
         request: Union[
-            operations.PatchDatastoreRecord2Request,
-            operations.PatchDatastoreRecord2RequestTypedDict,
+            operations.PatchDatastoreRecordRequest,
+            operations.PatchDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchDatastoreRecord2Response:
+    ) -> operations.PatchDatastoreRecordResponse:
         r"""Update a record
 
         :param request: The request object to send.
@@ -2123,8 +2115,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchDatastoreRecord2Request)
-        request = cast(operations.PatchDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.PatchDatastoreRecordRequest)
+        request = cast(operations.PatchDatastoreRecordRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2158,7 +2150,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchDatastoreRecord2",
+                operation_id="patchDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -2170,7 +2162,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchDatastoreRecord2Response(
+            return operations.PatchDatastoreRecordResponse(
                 datastore_record=unmarshal_json_response(
                     Optional[shared.DatastoreRecord], http_res
                 ),
@@ -2187,18 +2179,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_datastore_record2_async(
+    async def patch_datastore_record_async(
         self,
         *,
         request: Union[
-            operations.PatchDatastoreRecord2Request,
-            operations.PatchDatastoreRecord2RequestTypedDict,
+            operations.PatchDatastoreRecordRequest,
+            operations.PatchDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchDatastoreRecord2Response:
+    ) -> operations.PatchDatastoreRecordResponse:
         r"""Update a record
 
         :param request: The request object to send.
@@ -2218,8 +2210,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchDatastoreRecord2Request)
-        request = cast(operations.PatchDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.PatchDatastoreRecordRequest)
+        request = cast(operations.PatchDatastoreRecordRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2253,7 +2245,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchDatastoreRecord2",
+                operation_id="patchDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -2265,7 +2257,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchDatastoreRecord2Response(
+            return operations.PatchDatastoreRecordResponse(
                 datastore_record=unmarshal_json_response(
                     Optional[shared.DatastoreRecord], http_res
                 ),
@@ -2282,18 +2274,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_datastore_table2(
+    def patch_datastore_table(
         self,
         *,
         request: Union[
-            operations.PatchDatastoreTable2Request,
-            operations.PatchDatastoreTable2RequestTypedDict,
+            operations.PatchDatastoreTableRequest,
+            operations.PatchDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchDatastoreTable2Response:
+    ) -> operations.PatchDatastoreTableResponse:
         r"""Update a table
 
         :param request: The request object to send.
@@ -2313,8 +2305,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchDatastoreTable2Request)
-        request = cast(operations.PatchDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.PatchDatastoreTableRequest)
+        request = cast(operations.PatchDatastoreTableRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -2348,7 +2340,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchDatastoreTable2",
+                operation_id="patchDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -2360,7 +2352,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchDatastoreTable2Response(
+            return operations.PatchDatastoreTableResponse(
                 datastore_table=unmarshal_json_response(
                     Optional[shared.DatastoreTable], http_res
                 ),
@@ -2377,18 +2369,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_datastore_table2_async(
+    async def patch_datastore_table_async(
         self,
         *,
         request: Union[
-            operations.PatchDatastoreTable2Request,
-            operations.PatchDatastoreTable2RequestTypedDict,
+            operations.PatchDatastoreTableRequest,
+            operations.PatchDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchDatastoreTable2Response:
+    ) -> operations.PatchDatastoreTableResponse:
         r"""Update a table
 
         :param request: The request object to send.
@@ -2408,8 +2400,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchDatastoreTable2Request)
-        request = cast(operations.PatchDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.PatchDatastoreTableRequest)
+        request = cast(operations.PatchDatastoreTableRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -2443,7 +2435,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchDatastoreTable2",
+                operation_id="patchDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -2455,7 +2447,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchDatastoreTable2Response(
+            return operations.PatchDatastoreTableResponse(
                 datastore_table=unmarshal_json_response(
                     Optional[shared.DatastoreTable], http_res
                 ),
@@ -2472,18 +2464,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_datastore_database2(
+    def remove_datastore_database(
         self,
         *,
         request: Union[
-            operations.RemoveDatastoreDatabase2Request,
-            operations.RemoveDatastoreDatabase2RequestTypedDict,
+            operations.RemoveDatastoreDatabaseRequest,
+            operations.RemoveDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveDatastoreDatabase2Response:
+    ) -> operations.RemoveDatastoreDatabaseResponse:
         r"""Remove a database
 
         :param request: The request object to send.
@@ -2504,9 +2496,9 @@ class Datastore(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveDatastoreDatabase2Request
+                request, operations.RemoveDatastoreDatabaseRequest
             )
-        request = cast(operations.RemoveDatastoreDatabase2Request, request)
+        request = cast(operations.RemoveDatastoreDatabaseRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2537,7 +2529,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeDatastoreDatabase2",
+                operation_id="removeDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -2549,7 +2541,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveDatastoreDatabase2Response(
+            return operations.RemoveDatastoreDatabaseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2562,7 +2554,7 @@ class Datastore(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveDatastoreDatabase2Response(
+            return operations.RemoveDatastoreDatabaseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2571,18 +2563,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_datastore_database2_async(
+    async def remove_datastore_database_async(
         self,
         *,
         request: Union[
-            operations.RemoveDatastoreDatabase2Request,
-            operations.RemoveDatastoreDatabase2RequestTypedDict,
+            operations.RemoveDatastoreDatabaseRequest,
+            operations.RemoveDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveDatastoreDatabase2Response:
+    ) -> operations.RemoveDatastoreDatabaseResponse:
         r"""Remove a database
 
         :param request: The request object to send.
@@ -2603,9 +2595,9 @@ class Datastore(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveDatastoreDatabase2Request
+                request, operations.RemoveDatastoreDatabaseRequest
             )
-        request = cast(operations.RemoveDatastoreDatabase2Request, request)
+        request = cast(operations.RemoveDatastoreDatabaseRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2636,7 +2628,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeDatastoreDatabase2",
+                operation_id="removeDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -2648,7 +2640,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveDatastoreDatabase2Response(
+            return operations.RemoveDatastoreDatabaseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2661,7 +2653,7 @@ class Datastore(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveDatastoreDatabase2Response(
+            return operations.RemoveDatastoreDatabaseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2670,18 +2662,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_datastore_record2(
+    def remove_datastore_record(
         self,
         *,
         request: Union[
-            operations.RemoveDatastoreRecord2Request,
-            operations.RemoveDatastoreRecord2RequestTypedDict,
+            operations.RemoveDatastoreRecordRequest,
+            operations.RemoveDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveDatastoreRecord2Response:
+    ) -> operations.RemoveDatastoreRecordResponse:
         r"""Remove a record
 
         :param request: The request object to send.
@@ -2701,8 +2693,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveDatastoreRecord2Request)
-        request = cast(operations.RemoveDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.RemoveDatastoreRecordRequest)
+        request = cast(operations.RemoveDatastoreRecordRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2733,7 +2725,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeDatastoreRecord2",
+                operation_id="removeDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -2745,7 +2737,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveDatastoreRecord2Response(
+            return operations.RemoveDatastoreRecordResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2758,7 +2750,7 @@ class Datastore(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveDatastoreRecord2Response(
+            return operations.RemoveDatastoreRecordResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2767,18 +2759,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_datastore_record2_async(
+    async def remove_datastore_record_async(
         self,
         *,
         request: Union[
-            operations.RemoveDatastoreRecord2Request,
-            operations.RemoveDatastoreRecord2RequestTypedDict,
+            operations.RemoveDatastoreRecordRequest,
+            operations.RemoveDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveDatastoreRecord2Response:
+    ) -> operations.RemoveDatastoreRecordResponse:
         r"""Remove a record
 
         :param request: The request object to send.
@@ -2798,8 +2790,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveDatastoreRecord2Request)
-        request = cast(operations.RemoveDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.RemoveDatastoreRecordRequest)
+        request = cast(operations.RemoveDatastoreRecordRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -2830,7 +2822,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeDatastoreRecord2",
+                operation_id="removeDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -2842,7 +2834,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveDatastoreRecord2Response(
+            return operations.RemoveDatastoreRecordResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2855,7 +2847,7 @@ class Datastore(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveDatastoreRecord2Response(
+            return operations.RemoveDatastoreRecordResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2864,18 +2856,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_datastore_table2(
+    def remove_datastore_table(
         self,
         *,
         request: Union[
-            operations.RemoveDatastoreTable2Request,
-            operations.RemoveDatastoreTable2RequestTypedDict,
+            operations.RemoveDatastoreTableRequest,
+            operations.RemoveDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveDatastoreTable2Response:
+    ) -> operations.RemoveDatastoreTableResponse:
         r"""Remove a table
 
         :param request: The request object to send.
@@ -2895,8 +2887,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveDatastoreTable2Request)
-        request = cast(operations.RemoveDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.RemoveDatastoreTableRequest)
+        request = cast(operations.RemoveDatastoreTableRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -2927,7 +2919,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeDatastoreTable2",
+                operation_id="removeDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -2939,7 +2931,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveDatastoreTable2Response(
+            return operations.RemoveDatastoreTableResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2952,7 +2944,7 @@ class Datastore(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveDatastoreTable2Response(
+            return operations.RemoveDatastoreTableResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2961,18 +2953,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_datastore_table2_async(
+    async def remove_datastore_table_async(
         self,
         *,
         request: Union[
-            operations.RemoveDatastoreTable2Request,
-            operations.RemoveDatastoreTable2RequestTypedDict,
+            operations.RemoveDatastoreTableRequest,
+            operations.RemoveDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveDatastoreTable2Response:
+    ) -> operations.RemoveDatastoreTableResponse:
         r"""Remove a table
 
         :param request: The request object to send.
@@ -2992,8 +2984,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveDatastoreTable2Request)
-        request = cast(operations.RemoveDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.RemoveDatastoreTableRequest)
+        request = cast(operations.RemoveDatastoreTableRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -3024,7 +3016,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeDatastoreTable2",
+                operation_id="removeDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -3036,7 +3028,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveDatastoreTable2Response(
+            return operations.RemoveDatastoreTableResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3049,7 +3041,7 @@ class Datastore(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveDatastoreTable2Response(
+            return operations.RemoveDatastoreTableResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3058,18 +3050,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_datastore_database2(
+    def update_datastore_database(
         self,
         *,
         request: Union[
-            operations.UpdateDatastoreDatabase2Request,
-            operations.UpdateDatastoreDatabase2RequestTypedDict,
+            operations.UpdateDatastoreDatabaseRequest,
+            operations.UpdateDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateDatastoreDatabase2Response:
+    ) -> operations.UpdateDatastoreDatabaseResponse:
         r"""Update a database
 
         :param request: The request object to send.
@@ -3090,9 +3082,9 @@ class Datastore(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateDatastoreDatabase2Request
+                request, operations.UpdateDatastoreDatabaseRequest
             )
-        request = cast(operations.UpdateDatastoreDatabase2Request, request)
+        request = cast(operations.UpdateDatastoreDatabaseRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3130,7 +3122,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateDatastoreDatabase2",
+                operation_id="updateDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -3142,7 +3134,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateDatastoreDatabase2Response(
+            return operations.UpdateDatastoreDatabaseResponse(
                 datastore_database=unmarshal_json_response(
                     Optional[shared.DatastoreDatabase], http_res
                 ),
@@ -3159,18 +3151,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_datastore_database2_async(
+    async def update_datastore_database_async(
         self,
         *,
         request: Union[
-            operations.UpdateDatastoreDatabase2Request,
-            operations.UpdateDatastoreDatabase2RequestTypedDict,
+            operations.UpdateDatastoreDatabaseRequest,
+            operations.UpdateDatastoreDatabaseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateDatastoreDatabase2Response:
+    ) -> operations.UpdateDatastoreDatabaseResponse:
         r"""Update a database
 
         :param request: The request object to send.
@@ -3191,9 +3183,9 @@ class Datastore(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateDatastoreDatabase2Request
+                request, operations.UpdateDatastoreDatabaseRequest
             )
-        request = cast(operations.UpdateDatastoreDatabase2Request, request)
+        request = cast(operations.UpdateDatastoreDatabaseRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3231,7 +3223,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateDatastoreDatabase2",
+                operation_id="updateDatastoreDatabase",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "database"],
@@ -3243,7 +3235,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateDatastoreDatabase2Response(
+            return operations.UpdateDatastoreDatabaseResponse(
                 datastore_database=unmarshal_json_response(
                     Optional[shared.DatastoreDatabase], http_res
                 ),
@@ -3260,18 +3252,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_datastore_record2(
+    def update_datastore_record(
         self,
         *,
         request: Union[
-            operations.UpdateDatastoreRecord2Request,
-            operations.UpdateDatastoreRecord2RequestTypedDict,
+            operations.UpdateDatastoreRecordRequest,
+            operations.UpdateDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateDatastoreRecord2Response:
+    ) -> operations.UpdateDatastoreRecordResponse:
         r"""Update a record
 
         :param request: The request object to send.
@@ -3291,8 +3283,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateDatastoreRecord2Request)
-        request = cast(operations.UpdateDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.UpdateDatastoreRecordRequest)
+        request = cast(operations.UpdateDatastoreRecordRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3326,7 +3318,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateDatastoreRecord2",
+                operation_id="updateDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -3338,7 +3330,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateDatastoreRecord2Response(
+            return operations.UpdateDatastoreRecordResponse(
                 datastore_record=unmarshal_json_response(
                     Optional[shared.DatastoreRecord], http_res
                 ),
@@ -3355,18 +3347,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_datastore_record2_async(
+    async def update_datastore_record_async(
         self,
         *,
         request: Union[
-            operations.UpdateDatastoreRecord2Request,
-            operations.UpdateDatastoreRecord2RequestTypedDict,
+            operations.UpdateDatastoreRecordRequest,
+            operations.UpdateDatastoreRecordRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateDatastoreRecord2Response:
+    ) -> operations.UpdateDatastoreRecordResponse:
         r"""Update a record
 
         :param request: The request object to send.
@@ -3386,8 +3378,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateDatastoreRecord2Request)
-        request = cast(operations.UpdateDatastoreRecord2Request, request)
+            request = utils.unmarshal(request, operations.UpdateDatastoreRecordRequest)
+        request = cast(operations.UpdateDatastoreRecordRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3421,7 +3413,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateDatastoreRecord2",
+                operation_id="updateDatastoreRecord",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "record"],
@@ -3433,7 +3425,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateDatastoreRecord2Response(
+            return operations.UpdateDatastoreRecordResponse(
                 datastore_record=unmarshal_json_response(
                     Optional[shared.DatastoreRecord], http_res
                 ),
@@ -3450,18 +3442,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_datastore_table2(
+    def update_datastore_table(
         self,
         *,
         request: Union[
-            operations.UpdateDatastoreTable2Request,
-            operations.UpdateDatastoreTable2RequestTypedDict,
+            operations.UpdateDatastoreTableRequest,
+            operations.UpdateDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateDatastoreTable2Response:
+    ) -> operations.UpdateDatastoreTableResponse:
         r"""Update a table
 
         :param request: The request object to send.
@@ -3481,8 +3473,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateDatastoreTable2Request)
-        request = cast(operations.UpdateDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.UpdateDatastoreTableRequest)
+        request = cast(operations.UpdateDatastoreTableRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -3516,7 +3508,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateDatastoreTable2",
+                operation_id="updateDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -3528,7 +3520,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateDatastoreTable2Response(
+            return operations.UpdateDatastoreTableResponse(
                 datastore_table=unmarshal_json_response(
                     Optional[shared.DatastoreTable], http_res
                 ),
@@ -3545,18 +3537,18 @@ class Datastore(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_datastore_table2_async(
+    async def update_datastore_table_async(
         self,
         *,
         request: Union[
-            operations.UpdateDatastoreTable2Request,
-            operations.UpdateDatastoreTable2RequestTypedDict,
+            operations.UpdateDatastoreTableRequest,
+            operations.UpdateDatastoreTableRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateDatastoreTable2Response:
+    ) -> operations.UpdateDatastoreTableResponse:
         r"""Update a table
 
         :param request: The request object to send.
@@ -3576,8 +3568,8 @@ class Datastore(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateDatastoreTable2Request)
-        request = cast(operations.UpdateDatastoreTable2Request, request)
+            request = utils.unmarshal(request, operations.UpdateDatastoreTableRequest)
+        request = cast(operations.UpdateDatastoreTableRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -3611,7 +3603,7 @@ class Datastore(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateDatastoreTable2",
+                operation_id="updateDatastoreTable",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["datastore", "table"],
@@ -3623,7 +3615,7 @@ class Datastore(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateDatastoreTable2Response(
+            return operations.UpdateDatastoreTableResponse(
                 datastore_table=unmarshal_json_response(
                     Optional[shared.DatastoreTable], http_res
                 ),

@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [create_metadata_metadata2](#create_metadata_metadata2) - Create a metadata
-* [get_metadata_metadata2](#get_metadata_metadata2) - Retrieve a metadata
-* [list_metadata_metadatas2](#list_metadata_metadatas2) - List all metadatas
-* [patch_metadata_metadata2](#patch_metadata_metadata2) - Update a metadata
-* [remove_metadata_metadata2](#remove_metadata_metadata2) - Remove a metadata
-* [update_metadata_metadata2](#update_metadata_metadata2) - Update a metadata
+* [create_metadata_metadata](#create_metadata_metadata) - Create a metadata
+* [get_metadata_metadata](#get_metadata_metadata) - Retrieve a metadata
+* [list_metadata_metadatas](#list_metadata_metadatas) - List all metadatas
+* [patch_metadata_metadata](#patch_metadata_metadata) - Update a metadata
+* [remove_metadata_metadata](#remove_metadata_metadata) - Remove a metadata
+* [update_metadata_metadata](#update_metadata_metadata) - Update a metadata
 
-## create_metadata_metadata2
+## create_metadata_metadata
 
 Create a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMetadataMetadata2" method="post" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="python" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -29,7 +29,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.metadata.create_metadata_metadata2(request={
+    res = unified_to.metadata.create_metadata_metadata(request={
         "metadata_metadata": {
             "name": "<value>",
             "object_type": "<value>",
@@ -46,14 +46,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.CreateMetadataMetadata2Request](../../models/operations/createmetadatametadata2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateMetadataMetadataRequest](../../models/operations/createmetadatametadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.CreateMetadataMetadata2Response](../../models/operations/createmetadatametadata2response.md)**
+**[operations.CreateMetadataMetadataResponse](../../models/operations/createmetadatametadataresponse.md)**
 
 ### Errors
 
@@ -61,13 +61,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_metadata_metadata2
+## get_metadata_metadata
 
 Retrieve a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="getMetadataMetadata2" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="python" operationID="getMetadataMetadata" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -79,7 +79,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.metadata.get_metadata_metadata2(request={
+    res = unified_to.metadata.get_metadata_metadata(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -93,14 +93,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetMetadataMetadata2Request](../../models/operations/getmetadatametadata2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetMetadataMetadataRequest](../../models/operations/getmetadatametadatarequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetMetadataMetadata2Response](../../models/operations/getmetadatametadata2response.md)**
+**[operations.GetMetadataMetadataResponse](../../models/operations/getmetadatametadataresponse.md)**
 
 ### Errors
 
@@ -108,13 +108,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_metadata_metadatas2
+## list_metadata_metadatas
 
 List all metadatas
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="listMetadataMetadatas2" method="get" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="python" operationID="listMetadataMetadatas" method="get" path="/metadata/{connection_id}/metadata" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -126,7 +126,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.metadata.list_metadata_metadatas2(request={
+    res = unified_to.metadata.list_metadata_metadatas(request={
         "connection_id": "<id>",
     })
 
@@ -139,14 +139,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListMetadataMetadatas2Request](../../models/operations/listmetadatametadatas2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListMetadataMetadatasRequest](../../models/operations/listmetadatametadatasrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListMetadataMetadatas2Response](../../models/operations/listmetadatametadatas2response.md)**
+**[operations.ListMetadataMetadatasResponse](../../models/operations/listmetadatametadatasresponse.md)**
 
 ### Errors
 
@@ -154,13 +154,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_metadata_metadata2
+## patch_metadata_metadata
 
 Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMetadataMetadata2" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -172,7 +172,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.metadata.patch_metadata_metadata2(request={
+    res = unified_to.metadata.patch_metadata_metadata(request={
         "metadata_metadata": {
             "name": "<value>",
             "object_type": "<value>",
@@ -190,14 +190,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchMetadataMetadata2Request](../../models/operations/patchmetadatametadata2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PatchMetadataMetadataRequest](../../models/operations/patchmetadatametadatarequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.PatchMetadataMetadata2Response](../../models/operations/patchmetadatametadata2response.md)**
+**[operations.PatchMetadataMetadataResponse](../../models/operations/patchmetadatametadataresponse.md)**
 
 ### Errors
 
@@ -205,13 +205,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_metadata_metadata2
+## remove_metadata_metadata
 
 Remove a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="removeMetadataMetadata2" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="python" operationID="removeMetadataMetadata" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -223,7 +223,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.metadata.remove_metadata_metadata2(request={
+    res = unified_to.metadata.remove_metadata_metadata(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -237,14 +237,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.RemoveMetadataMetadata2Request](../../models/operations/removemetadatametadata2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.RemoveMetadataMetadataRequest](../../models/operations/removemetadatametadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.RemoveMetadataMetadata2Response](../../models/operations/removemetadatametadata2response.md)**
+**[operations.RemoveMetadataMetadataResponse](../../models/operations/removemetadatametadataresponse.md)**
 
 ### Errors
 
@@ -252,13 +252,13 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_metadata_metadata2
+## update_metadata_metadata
 
 Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMetadataMetadata2" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -270,7 +270,7 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.metadata.update_metadata_metadata2(request={
+    res = unified_to.metadata.update_metadata_metadata(request={
         "metadata_metadata": {
             "name": "<value>",
             "object_type": "<value>",
@@ -288,14 +288,14 @@ with UnifiedTo(
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.UpdateMetadataMetadata2Request](../../models/operations/updatemetadatametadata2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.UpdateMetadataMetadataRequest](../../models/operations/updatemetadatametadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.UpdateMetadataMetadata2Response](../../models/operations/updatemetadatametadata2response.md)**
+**[operations.UpdateMetadataMetadataResponse](../../models/operations/updatemetadatametadataresponse.md)**
 
 ### Errors
 

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Report(BaseSDK):
-    def get_accounting_report2(
+    def get_accounting_report(
         self,
         *,
         request: Union[
-            operations.GetAccountingReport2Request,
-            operations.GetAccountingReport2RequestTypedDict,
+            operations.GetAccountingReportRequest,
+            operations.GetAccountingReportRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingReport2Response:
+    ) -> operations.GetAccountingReportResponse:
         r"""Retrieve a report
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingReport2Request)
-        request = cast(operations.GetAccountingReport2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingReportRequest)
+        request = cast(operations.GetAccountingReportRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingReport2",
+                operation_id="getAccountingReport",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "report"],
@@ -85,7 +85,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingReport2Response(
+            return operations.GetAccountingReportResponse(
                 accounting_report=unmarshal_json_response(
                     Optional[shared.AccountingReport], http_res
                 ),
@@ -102,18 +102,18 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_report2_async(
+    async def get_accounting_report_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingReport2Request,
-            operations.GetAccountingReport2RequestTypedDict,
+            operations.GetAccountingReportRequest,
+            operations.GetAccountingReportRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingReport2Response:
+    ) -> operations.GetAccountingReportResponse:
         r"""Retrieve a report
 
         :param request: The request object to send.
@@ -133,8 +133,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingReport2Request)
-        request = cast(operations.GetAccountingReport2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingReportRequest)
+        request = cast(operations.GetAccountingReportRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +165,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingReport2",
+                operation_id="getAccountingReport",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "report"],
@@ -177,7 +177,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingReport2Response(
+            return operations.GetAccountingReportResponse(
                 accounting_report=unmarshal_json_response(
                     Optional[shared.AccountingReport], http_res
                 ),
@@ -194,18 +194,18 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_reports2(
+    def list_accounting_reports(
         self,
         *,
         request: Union[
-            operations.ListAccountingReports2Request,
-            operations.ListAccountingReports2RequestTypedDict,
+            operations.ListAccountingReportsRequest,
+            operations.ListAccountingReportsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingReports2Response:
+    ) -> operations.ListAccountingReportsResponse:
         r"""List all reports
 
         :param request: The request object to send.
@@ -225,8 +225,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAccountingReports2Request)
-        request = cast(operations.ListAccountingReports2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingReportsRequest)
+        request = cast(operations.ListAccountingReportsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -257,7 +257,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingReports2",
+                operation_id="listAccountingReports",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "report"],
@@ -269,7 +269,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingReports2Response(
+            return operations.ListAccountingReportsResponse(
                 accounting_reports=unmarshal_json_response(
                     Optional[List[shared.AccountingReport]], http_res
                 ),
@@ -286,18 +286,18 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_reports2_async(
+    async def list_accounting_reports_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingReports2Request,
-            operations.ListAccountingReports2RequestTypedDict,
+            operations.ListAccountingReportsRequest,
+            operations.ListAccountingReportsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingReports2Response:
+    ) -> operations.ListAccountingReportsResponse:
         r"""List all reports
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAccountingReports2Request)
-        request = cast(operations.ListAccountingReports2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingReportsRequest)
+        request = cast(operations.ListAccountingReportsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingReports2",
+                operation_id="listAccountingReports",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "report"],
@@ -361,7 +361,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingReports2Response(
+            return operations.ListAccountingReportsResponse(
                 accounting_reports=unmarshal_json_response(
                     Optional[List[shared.AccountingReport]], http_res
                 ),
@@ -378,18 +378,17 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_ads_reports2(
+    def list_ads_reports(
         self,
         *,
         request: Union[
-            operations.ListAdsReports2Request,
-            operations.ListAdsReports2RequestTypedDict,
+            operations.ListAdsReportsRequest, operations.ListAdsReportsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsReports2Response:
+    ) -> operations.ListAdsReportsResponse:
         r"""List all reports
 
         :param request: The request object to send.
@@ -409,8 +408,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsReports2Request)
-        request = cast(operations.ListAdsReports2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsReportsRequest)
+        request = cast(operations.ListAdsReportsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -441,7 +440,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsReports2",
+                operation_id="listAdsReports",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "report"],
@@ -453,7 +452,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsReports2Response(
+            return operations.ListAdsReportsResponse(
                 ads_reports=unmarshal_json_response(
                     Optional[List[shared.AdsReport]], http_res
                 ),
@@ -470,18 +469,17 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_ads_reports2_async(
+    async def list_ads_reports_async(
         self,
         *,
         request: Union[
-            operations.ListAdsReports2Request,
-            operations.ListAdsReports2RequestTypedDict,
+            operations.ListAdsReportsRequest, operations.ListAdsReportsRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAdsReports2Response:
+    ) -> operations.ListAdsReportsResponse:
         r"""List all reports
 
         :param request: The request object to send.
@@ -501,8 +499,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAdsReports2Request)
-        request = cast(operations.ListAdsReports2Request, request)
+            request = utils.unmarshal(request, operations.ListAdsReportsRequest)
+        request = cast(operations.ListAdsReportsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -533,7 +531,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAdsReports2",
+                operation_id="listAdsReports",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["ads", "report"],
@@ -545,7 +543,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAdsReports2Response(
+            return operations.ListAdsReportsResponse(
                 ads_reports=unmarshal_json_response(
                     Optional[List[shared.AdsReport]], http_res
                 ),
@@ -562,18 +560,18 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_analytics_reports2(
+    def list_analytics_reports(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsReports2Request,
-            operations.ListAnalyticsReports2RequestTypedDict,
+            operations.ListAnalyticsReportsRequest,
+            operations.ListAnalyticsReportsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsReports2Response:
+    ) -> operations.ListAnalyticsReportsResponse:
         r"""List all reports
 
         :param request: The request object to send.
@@ -593,8 +591,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAnalyticsReports2Request)
-        request = cast(operations.ListAnalyticsReports2Request, request)
+            request = utils.unmarshal(request, operations.ListAnalyticsReportsRequest)
+        request = cast(operations.ListAnalyticsReportsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -625,7 +623,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsReports2",
+                operation_id="listAnalyticsReports",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "report"],
@@ -637,7 +635,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsReports2Response(
+            return operations.ListAnalyticsReportsResponse(
                 analytics_reports=unmarshal_json_response(
                     Optional[List[shared.AnalyticsReport]], http_res
                 ),
@@ -654,18 +652,18 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_analytics_reports2_async(
+    async def list_analytics_reports_async(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsReports2Request,
-            operations.ListAnalyticsReports2RequestTypedDict,
+            operations.ListAnalyticsReportsRequest,
+            operations.ListAnalyticsReportsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsReports2Response:
+    ) -> operations.ListAnalyticsReportsResponse:
         r"""List all reports
 
         :param request: The request object to send.
@@ -685,8 +683,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAnalyticsReports2Request)
-        request = cast(operations.ListAnalyticsReports2Request, request)
+            request = utils.unmarshal(request, operations.ListAnalyticsReportsRequest)
+        request = cast(operations.ListAnalyticsReportsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -717,7 +715,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsReports2",
+                operation_id="listAnalyticsReports",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "report"],
@@ -729,7 +727,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsReports2Response(
+            return operations.ListAnalyticsReportsResponse(
                 analytics_reports=unmarshal_json_response(
                     Optional[List[shared.AnalyticsReport]], http_res
                 ),
@@ -746,18 +744,18 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_martech_reports2(
+    def list_martech_reports(
         self,
         *,
         request: Union[
-            operations.ListMartechReports2Request,
-            operations.ListMartechReports2RequestTypedDict,
+            operations.ListMartechReportsRequest,
+            operations.ListMartechReportsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMartechReports2Response:
+    ) -> operations.ListMartechReportsResponse:
         r"""List all reports
 
         :param request: The request object to send.
@@ -777,8 +775,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMartechReports2Request)
-        request = cast(operations.ListMartechReports2Request, request)
+            request = utils.unmarshal(request, operations.ListMartechReportsRequest)
+        request = cast(operations.ListMartechReportsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -809,7 +807,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMartechReports2",
+                operation_id="listMartechReports",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "report"],
@@ -821,7 +819,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMartechReports2Response(
+            return operations.ListMartechReportsResponse(
                 marketing_reports=unmarshal_json_response(
                     Optional[List[shared.MarketingReport]], http_res
                 ),
@@ -838,18 +836,18 @@ class Report(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_martech_reports2_async(
+    async def list_martech_reports_async(
         self,
         *,
         request: Union[
-            operations.ListMartechReports2Request,
-            operations.ListMartechReports2RequestTypedDict,
+            operations.ListMartechReportsRequest,
+            operations.ListMartechReportsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListMartechReports2Response:
+    ) -> operations.ListMartechReportsResponse:
         r"""List all reports
 
         :param request: The request object to send.
@@ -869,8 +867,8 @@ class Report(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListMartechReports2Request)
-        request = cast(operations.ListMartechReports2Request, request)
+            request = utils.unmarshal(request, operations.ListMartechReportsRequest)
+        request = cast(operations.ListMartechReportsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -901,7 +899,7 @@ class Report(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listMartechReports2",
+                operation_id="listMartechReports",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["martech", "report"],
@@ -913,7 +911,7 @@ class Report(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListMartechReports2Response(
+            return operations.ListMartechReportsResponse(
                 marketing_reports=unmarshal_json_response(
                     Optional[List[shared.MarketingReport]], http_res
                 ),

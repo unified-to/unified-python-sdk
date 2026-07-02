@@ -13,6 +13,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AccountingLineitemTypedDict(TypedDict):
     account_id: NotRequired[str]
     category_ids: NotRequired[List[str]]
+    contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     discount_amount: NotRequired[float]
     fees: NotRequired[List[AccountingFeeTypedDict]]
@@ -38,6 +39,8 @@ class AccountingLineitem(BaseModel):
     account_id: Optional[str] = None
 
     category_ids: Optional[List[str]] = None
+
+    contact_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
@@ -83,6 +86,7 @@ class AccountingLineitem(BaseModel):
             [
                 "account_id",
                 "category_ids",
+                "contact_id",
                 "created_at",
                 "discount_amount",
                 "fees",

@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Picklist(BaseSDK):
-    def list_crm_picklists2(
+    def list_crm_picklists(
         self,
         *,
         request: Union[
-            operations.ListCrmPicklists2Request,
-            operations.ListCrmPicklists2RequestTypedDict,
+            operations.ListCrmPicklistsRequest,
+            operations.ListCrmPicklistsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmPicklists2Response:
+    ) -> operations.ListCrmPicklistsResponse:
         r"""List all picklists
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Picklist(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmPicklists2Request)
-        request = cast(operations.ListCrmPicklists2Request, request)
+            request = utils.unmarshal(request, operations.ListCrmPicklistsRequest)
+        request = cast(operations.ListCrmPicklistsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Picklist(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmPicklists2",
+                operation_id="listCrmPicklists",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "picklist"],
@@ -85,7 +85,7 @@ class Picklist(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmPicklists2Response(
+            return operations.ListCrmPicklistsResponse(
                 crm_picklists=unmarshal_json_response(
                     Optional[List[shared.CrmPicklist]], http_res
                 ),
@@ -102,18 +102,18 @@ class Picklist(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_crm_picklists2_async(
+    async def list_crm_picklists_async(
         self,
         *,
         request: Union[
-            operations.ListCrmPicklists2Request,
-            operations.ListCrmPicklists2RequestTypedDict,
+            operations.ListCrmPicklistsRequest,
+            operations.ListCrmPicklistsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListCrmPicklists2Response:
+    ) -> operations.ListCrmPicklistsResponse:
         r"""List all picklists
 
         :param request: The request object to send.
@@ -133,8 +133,8 @@ class Picklist(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCrmPicklists2Request)
-        request = cast(operations.ListCrmPicklists2Request, request)
+            request = utils.unmarshal(request, operations.ListCrmPicklistsRequest)
+        request = cast(operations.ListCrmPicklistsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +165,7 @@ class Picklist(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listCrmPicklists2",
+                operation_id="listCrmPicklists",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["crm", "picklist"],
@@ -177,7 +177,7 @@ class Picklist(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCrmPicklists2Response(
+            return operations.ListCrmPicklistsResponse(
                 crm_picklists=unmarshal_json_response(
                     Optional[List[shared.CrmPicklist]], http_res
                 ),

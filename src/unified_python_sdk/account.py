@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Account(BaseSDK):
-    def create_accounting_account2(
+    def create_accounting_account(
         self,
         *,
         request: Union[
-            operations.CreateAccountingAccount2Request,
-            operations.CreateAccountingAccount2RequestTypedDict,
+            operations.CreateAccountingAccountRequest,
+            operations.CreateAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingAccount2Response:
+    ) -> operations.CreateAccountingAccountResponse:
         r"""Create an account
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Account(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingAccount2Request
+                request, operations.CreateAccountingAccountRequest
             )
-        request = cast(operations.CreateAccountingAccount2Request, request)
+        request = cast(operations.CreateAccountingAccountRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingAccount2",
+                operation_id="createAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -94,7 +94,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingAccount2Response(
+            return operations.CreateAccountingAccountResponse(
                 accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
@@ -111,18 +111,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_account2_async(
+    async def create_accounting_account_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingAccount2Request,
-            operations.CreateAccountingAccount2RequestTypedDict,
+            operations.CreateAccountingAccountRequest,
+            operations.CreateAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingAccount2Response:
+    ) -> operations.CreateAccountingAccountResponse:
         r"""Create an account
 
         :param request: The request object to send.
@@ -143,9 +143,9 @@ class Account(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingAccount2Request
+                request, operations.CreateAccountingAccountRequest
             )
-        request = cast(operations.CreateAccountingAccount2Request, request)
+        request = cast(operations.CreateAccountingAccountRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -183,7 +183,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingAccount2",
+                operation_id="createAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -195,7 +195,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingAccount2Response(
+            return operations.CreateAccountingAccountResponse(
                 accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
@@ -212,18 +212,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_account2(
+    def get_accounting_account(
         self,
         *,
         request: Union[
-            operations.GetAccountingAccount2Request,
-            operations.GetAccountingAccount2RequestTypedDict,
+            operations.GetAccountingAccountRequest,
+            operations.GetAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingAccount2Response:
+    ) -> operations.GetAccountingAccountResponse:
         r"""Retrieve an account
 
         :param request: The request object to send.
@@ -243,8 +243,8 @@ class Account(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingAccount2Request)
-        request = cast(operations.GetAccountingAccount2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingAccountRequest)
+        request = cast(operations.GetAccountingAccountRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -275,7 +275,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingAccount2",
+                operation_id="getAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -287,7 +287,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingAccount2Response(
+            return operations.GetAccountingAccountResponse(
                 accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
@@ -304,18 +304,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_account2_async(
+    async def get_accounting_account_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingAccount2Request,
-            operations.GetAccountingAccount2RequestTypedDict,
+            operations.GetAccountingAccountRequest,
+            operations.GetAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingAccount2Response:
+    ) -> operations.GetAccountingAccountResponse:
         r"""Retrieve an account
 
         :param request: The request object to send.
@@ -335,8 +335,8 @@ class Account(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingAccount2Request)
-        request = cast(operations.GetAccountingAccount2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingAccountRequest)
+        request = cast(operations.GetAccountingAccountRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -367,7 +367,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingAccount2",
+                operation_id="getAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -379,7 +379,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingAccount2Response(
+            return operations.GetAccountingAccountResponse(
                 accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
@@ -396,18 +396,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_accounts2(
+    def list_accounting_accounts(
         self,
         *,
         request: Union[
-            operations.ListAccountingAccounts2Request,
-            operations.ListAccountingAccounts2RequestTypedDict,
+            operations.ListAccountingAccountsRequest,
+            operations.ListAccountingAccountsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingAccounts2Response:
+    ) -> operations.ListAccountingAccountsResponse:
         r"""List all accounts
 
         :param request: The request object to send.
@@ -427,10 +427,8 @@ class Account(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingAccounts2Request
-            )
-        request = cast(operations.ListAccountingAccounts2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingAccountsRequest)
+        request = cast(operations.ListAccountingAccountsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -461,7 +459,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingAccounts2",
+                operation_id="listAccountingAccounts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -473,7 +471,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingAccounts2Response(
+            return operations.ListAccountingAccountsResponse(
                 accounting_accounts=unmarshal_json_response(
                     Optional[List[shared.AccountingAccount]], http_res
                 ),
@@ -490,18 +488,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_accounts2_async(
+    async def list_accounting_accounts_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingAccounts2Request,
-            operations.ListAccountingAccounts2RequestTypedDict,
+            operations.ListAccountingAccountsRequest,
+            operations.ListAccountingAccountsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingAccounts2Response:
+    ) -> operations.ListAccountingAccountsResponse:
         r"""List all accounts
 
         :param request: The request object to send.
@@ -521,10 +519,8 @@ class Account(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingAccounts2Request
-            )
-        request = cast(operations.ListAccountingAccounts2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingAccountsRequest)
+        request = cast(operations.ListAccountingAccountsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -555,7 +551,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingAccounts2",
+                operation_id="listAccountingAccounts",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -567,7 +563,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingAccounts2Response(
+            return operations.ListAccountingAccountsResponse(
                 accounting_accounts=unmarshal_json_response(
                     Optional[List[shared.AccountingAccount]], http_res
                 ),
@@ -584,18 +580,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_account2(
+    def patch_accounting_account(
         self,
         *,
         request: Union[
-            operations.PatchAccountingAccount2Request,
-            operations.PatchAccountingAccount2RequestTypedDict,
+            operations.PatchAccountingAccountRequest,
+            operations.PatchAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingAccount2Response:
+    ) -> operations.PatchAccountingAccountResponse:
         r"""Update an account
 
         :param request: The request object to send.
@@ -615,10 +611,8 @@ class Account(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingAccount2Request
-            )
-        request = cast(operations.PatchAccountingAccount2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingAccountRequest)
+        request = cast(operations.PatchAccountingAccountRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -656,7 +650,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingAccount2",
+                operation_id="patchAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -668,7 +662,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingAccount2Response(
+            return operations.PatchAccountingAccountResponse(
                 accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
@@ -685,18 +679,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_account2_async(
+    async def patch_accounting_account_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingAccount2Request,
-            operations.PatchAccountingAccount2RequestTypedDict,
+            operations.PatchAccountingAccountRequest,
+            operations.PatchAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingAccount2Response:
+    ) -> operations.PatchAccountingAccountResponse:
         r"""Update an account
 
         :param request: The request object to send.
@@ -716,10 +710,8 @@ class Account(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingAccount2Request
-            )
-        request = cast(operations.PatchAccountingAccount2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingAccountRequest)
+        request = cast(operations.PatchAccountingAccountRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -757,7 +749,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingAccount2",
+                operation_id="patchAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -769,7 +761,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingAccount2Response(
+            return operations.PatchAccountingAccountResponse(
                 accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
@@ -786,18 +778,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_account2(
+    def remove_accounting_account(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingAccount2Request,
-            operations.RemoveAccountingAccount2RequestTypedDict,
+            operations.RemoveAccountingAccountRequest,
+            operations.RemoveAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingAccount2Response:
+    ) -> operations.RemoveAccountingAccountResponse:
         r"""Remove an account
 
         :param request: The request object to send.
@@ -818,9 +810,9 @@ class Account(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingAccount2Request
+                request, operations.RemoveAccountingAccountRequest
             )
-        request = cast(operations.RemoveAccountingAccount2Request, request)
+        request = cast(operations.RemoveAccountingAccountRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -851,7 +843,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingAccount2",
+                operation_id="removeAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -863,7 +855,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingAccount2Response(
+            return operations.RemoveAccountingAccountResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -876,7 +868,7 @@ class Account(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingAccount2Response(
+            return operations.RemoveAccountingAccountResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -885,18 +877,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_account2_async(
+    async def remove_accounting_account_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingAccount2Request,
-            operations.RemoveAccountingAccount2RequestTypedDict,
+            operations.RemoveAccountingAccountRequest,
+            operations.RemoveAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingAccount2Response:
+    ) -> operations.RemoveAccountingAccountResponse:
         r"""Remove an account
 
         :param request: The request object to send.
@@ -917,9 +909,9 @@ class Account(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingAccount2Request
+                request, operations.RemoveAccountingAccountRequest
             )
-        request = cast(operations.RemoveAccountingAccount2Request, request)
+        request = cast(operations.RemoveAccountingAccountRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -950,7 +942,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingAccount2",
+                operation_id="removeAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -962,7 +954,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingAccount2Response(
+            return operations.RemoveAccountingAccountResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -975,7 +967,7 @@ class Account(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingAccount2Response(
+            return operations.RemoveAccountingAccountResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -984,18 +976,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_account2(
+    def update_accounting_account(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingAccount2Request,
-            operations.UpdateAccountingAccount2RequestTypedDict,
+            operations.UpdateAccountingAccountRequest,
+            operations.UpdateAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingAccount2Response:
+    ) -> operations.UpdateAccountingAccountResponse:
         r"""Update an account
 
         :param request: The request object to send.
@@ -1016,9 +1008,9 @@ class Account(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingAccount2Request
+                request, operations.UpdateAccountingAccountRequest
             )
-        request = cast(operations.UpdateAccountingAccount2Request, request)
+        request = cast(operations.UpdateAccountingAccountRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1056,7 +1048,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingAccount2",
+                operation_id="updateAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -1068,7 +1060,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingAccount2Response(
+            return operations.UpdateAccountingAccountResponse(
                 accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
@@ -1085,18 +1077,18 @@ class Account(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_account2_async(
+    async def update_accounting_account_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingAccount2Request,
-            operations.UpdateAccountingAccount2RequestTypedDict,
+            operations.UpdateAccountingAccountRequest,
+            operations.UpdateAccountingAccountRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingAccount2Response:
+    ) -> operations.UpdateAccountingAccountResponse:
         r"""Update an account
 
         :param request: The request object to send.
@@ -1117,9 +1109,9 @@ class Account(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingAccount2Request
+                request, operations.UpdateAccountingAccountRequest
             )
-        request = cast(operations.UpdateAccountingAccount2Request, request)
+        request = cast(operations.UpdateAccountingAccountRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1157,7 +1149,7 @@ class Account(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingAccount2",
+                operation_id="updateAccountingAccount",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "account"],
@@ -1169,7 +1161,7 @@ class Account(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingAccount2Response(
+            return operations.UpdateAccountingAccountResponse(
                 accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),

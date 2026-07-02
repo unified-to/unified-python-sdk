@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Session(BaseSDK):
-    def get_analytics_session2(
+    def get_analytics_session(
         self,
         *,
         request: Union[
-            operations.GetAnalyticsSession2Request,
-            operations.GetAnalyticsSession2RequestTypedDict,
+            operations.GetAnalyticsSessionRequest,
+            operations.GetAnalyticsSessionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAnalyticsSession2Response:
+    ) -> operations.GetAnalyticsSessionResponse:
         r"""Retrieve a session
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Session(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAnalyticsSession2Request)
-        request = cast(operations.GetAnalyticsSession2Request, request)
+            request = utils.unmarshal(request, operations.GetAnalyticsSessionRequest)
+        request = cast(operations.GetAnalyticsSessionRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -73,7 +73,7 @@ class Session(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAnalyticsSession2",
+                operation_id="getAnalyticsSession",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "session"],
@@ -85,7 +85,7 @@ class Session(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAnalyticsSession2Response(
+            return operations.GetAnalyticsSessionResponse(
                 analytics_session=unmarshal_json_response(
                     Optional[shared.AnalyticsSession], http_res
                 ),
@@ -102,18 +102,18 @@ class Session(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_analytics_session2_async(
+    async def get_analytics_session_async(
         self,
         *,
         request: Union[
-            operations.GetAnalyticsSession2Request,
-            operations.GetAnalyticsSession2RequestTypedDict,
+            operations.GetAnalyticsSessionRequest,
+            operations.GetAnalyticsSessionRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAnalyticsSession2Response:
+    ) -> operations.GetAnalyticsSessionResponse:
         r"""Retrieve a session
 
         :param request: The request object to send.
@@ -133,8 +133,8 @@ class Session(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAnalyticsSession2Request)
-        request = cast(operations.GetAnalyticsSession2Request, request)
+            request = utils.unmarshal(request, operations.GetAnalyticsSessionRequest)
+        request = cast(operations.GetAnalyticsSessionRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -165,7 +165,7 @@ class Session(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAnalyticsSession2",
+                operation_id="getAnalyticsSession",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "session"],
@@ -177,7 +177,7 @@ class Session(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAnalyticsSession2Response(
+            return operations.GetAnalyticsSessionResponse(
                 analytics_session=unmarshal_json_response(
                     Optional[shared.AnalyticsSession], http_res
                 ),
@@ -194,18 +194,18 @@ class Session(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_analytics_sessions2(
+    def list_analytics_sessions(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsSessions2Request,
-            operations.ListAnalyticsSessions2RequestTypedDict,
+            operations.ListAnalyticsSessionsRequest,
+            operations.ListAnalyticsSessionsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsSessions2Response:
+    ) -> operations.ListAnalyticsSessionsResponse:
         r"""List all sessions
 
         :param request: The request object to send.
@@ -225,8 +225,8 @@ class Session(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAnalyticsSessions2Request)
-        request = cast(operations.ListAnalyticsSessions2Request, request)
+            request = utils.unmarshal(request, operations.ListAnalyticsSessionsRequest)
+        request = cast(operations.ListAnalyticsSessionsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -257,7 +257,7 @@ class Session(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsSessions2",
+                operation_id="listAnalyticsSessions",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "session"],
@@ -269,7 +269,7 @@ class Session(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsSessions2Response(
+            return operations.ListAnalyticsSessionsResponse(
                 analytics_sessions=unmarshal_json_response(
                     Optional[List[shared.AnalyticsSession]], http_res
                 ),
@@ -286,18 +286,18 @@ class Session(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_analytics_sessions2_async(
+    async def list_analytics_sessions_async(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsSessions2Request,
-            operations.ListAnalyticsSessions2RequestTypedDict,
+            operations.ListAnalyticsSessionsRequest,
+            operations.ListAnalyticsSessionsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsSessions2Response:
+    ) -> operations.ListAnalyticsSessionsResponse:
         r"""List all sessions
 
         :param request: The request object to send.
@@ -317,8 +317,8 @@ class Session(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAnalyticsSessions2Request)
-        request = cast(operations.ListAnalyticsSessions2Request, request)
+            request = utils.unmarshal(request, operations.ListAnalyticsSessionsRequest)
+        request = cast(operations.ListAnalyticsSessionsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -349,7 +349,7 @@ class Session(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsSessions2",
+                operation_id="listAnalyticsSessions",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "session"],
@@ -361,7 +361,7 @@ class Session(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsSessions2Response(
+            return operations.ListAnalyticsSessionsResponse(
                 analytics_sessions=unmarshal_json_response(
                     Optional[List[shared.AnalyticsSession]], http_res
                 ),

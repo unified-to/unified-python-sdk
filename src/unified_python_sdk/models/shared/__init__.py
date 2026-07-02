@@ -156,6 +156,11 @@ if TYPE_CHECKING:
         AccountingTrialbalanceSubItem,
         AccountingTrialbalanceSubItemTypedDict,
     )
+    from .accountingvendorcredit import (
+        AccountingVendorcredit,
+        AccountingVendorcreditStatus,
+        AccountingVendorcreditTypedDict,
+    )
     from .adsad import AdType, AdsAd, AdsAdStatus, AdsAdTypedDict
     from .adscampaign import (
         AdsCampaign,
@@ -1925,6 +1930,9 @@ __all__ = [
     "AccountingTrialbalanceSubItem",
     "AccountingTrialbalanceSubItemTypedDict",
     "AccountingTrialbalanceTypedDict",
+    "AccountingVendorcredit",
+    "AccountingVendorcreditStatus",
+    "AccountingVendorcreditTypedDict",
     "AdSchedule",
     "AdScheduleTypedDict",
     "AdType",
@@ -3357,6 +3365,9 @@ _dynamic_imports: dict[str, str] = {
     "AccountingTrialbalanceTypedDict": ".accountingtrialbalance",
     "AccountingTrialbalanceSubItem": ".accountingtrialbalancesubitem",
     "AccountingTrialbalanceSubItemTypedDict": ".accountingtrialbalancesubitem",
+    "AccountingVendorcredit": ".accountingvendorcredit",
+    "AccountingVendorcreditStatus": ".accountingvendorcredit",
+    "AccountingVendorcreditTypedDict": ".accountingvendorcredit",
     "AdType": ".adsad",
     "AdsAd": ".adsad",
     "AdsAdStatus": ".adsad",

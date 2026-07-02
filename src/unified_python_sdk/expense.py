@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Expense(BaseSDK):
-    def create_accounting_expense2(
+    def create_accounting_expense(
         self,
         *,
         request: Union[
-            operations.CreateAccountingExpense2Request,
-            operations.CreateAccountingExpense2RequestTypedDict,
+            operations.CreateAccountingExpenseRequest,
+            operations.CreateAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingExpense2Response:
+    ) -> operations.CreateAccountingExpenseResponse:
         r"""Create an expense
 
         :param request: The request object to send.
@@ -42,9 +42,9 @@ class Expense(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingExpense2Request
+                request, operations.CreateAccountingExpenseRequest
             )
-        request = cast(operations.CreateAccountingExpense2Request, request)
+        request = cast(operations.CreateAccountingExpenseRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -82,7 +82,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingExpense2",
+                operation_id="createAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -94,7 +94,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingExpense2Response(
+            return operations.CreateAccountingExpenseResponse(
                 accounting_expense=unmarshal_json_response(
                     Optional[shared.AccountingExpense], http_res
                 ),
@@ -111,18 +111,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_accounting_expense2_async(
+    async def create_accounting_expense_async(
         self,
         *,
         request: Union[
-            operations.CreateAccountingExpense2Request,
-            operations.CreateAccountingExpense2RequestTypedDict,
+            operations.CreateAccountingExpenseRequest,
+            operations.CreateAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAccountingExpense2Response:
+    ) -> operations.CreateAccountingExpenseResponse:
         r"""Create an expense
 
         :param request: The request object to send.
@@ -143,9 +143,9 @@ class Expense(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.CreateAccountingExpense2Request
+                request, operations.CreateAccountingExpenseRequest
             )
-        request = cast(operations.CreateAccountingExpense2Request, request)
+        request = cast(operations.CreateAccountingExpenseRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -183,7 +183,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAccountingExpense2",
+                operation_id="createAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -195,7 +195,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAccountingExpense2Response(
+            return operations.CreateAccountingExpenseResponse(
                 accounting_expense=unmarshal_json_response(
                     Optional[shared.AccountingExpense], http_res
                 ),
@@ -212,18 +212,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_accounting_expense2(
+    def get_accounting_expense(
         self,
         *,
         request: Union[
-            operations.GetAccountingExpense2Request,
-            operations.GetAccountingExpense2RequestTypedDict,
+            operations.GetAccountingExpenseRequest,
+            operations.GetAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingExpense2Response:
+    ) -> operations.GetAccountingExpenseResponse:
         r"""Retrieve an expense
 
         :param request: The request object to send.
@@ -243,8 +243,8 @@ class Expense(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingExpense2Request)
-        request = cast(operations.GetAccountingExpense2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingExpenseRequest)
+        request = cast(operations.GetAccountingExpenseRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -275,7 +275,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingExpense2",
+                operation_id="getAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -287,7 +287,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingExpense2Response(
+            return operations.GetAccountingExpenseResponse(
                 accounting_expense=unmarshal_json_response(
                     Optional[shared.AccountingExpense], http_res
                 ),
@@ -304,18 +304,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_accounting_expense2_async(
+    async def get_accounting_expense_async(
         self,
         *,
         request: Union[
-            operations.GetAccountingExpense2Request,
-            operations.GetAccountingExpense2RequestTypedDict,
+            operations.GetAccountingExpenseRequest,
+            operations.GetAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAccountingExpense2Response:
+    ) -> operations.GetAccountingExpenseResponse:
         r"""Retrieve an expense
 
         :param request: The request object to send.
@@ -335,8 +335,8 @@ class Expense(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAccountingExpense2Request)
-        request = cast(operations.GetAccountingExpense2Request, request)
+            request = utils.unmarshal(request, operations.GetAccountingExpenseRequest)
+        request = cast(operations.GetAccountingExpenseRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -367,7 +367,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAccountingExpense2",
+                operation_id="getAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -379,7 +379,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAccountingExpense2Response(
+            return operations.GetAccountingExpenseResponse(
                 accounting_expense=unmarshal_json_response(
                     Optional[shared.AccountingExpense], http_res
                 ),
@@ -396,18 +396,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_accounting_expenses2(
+    def list_accounting_expenses(
         self,
         *,
         request: Union[
-            operations.ListAccountingExpenses2Request,
-            operations.ListAccountingExpenses2RequestTypedDict,
+            operations.ListAccountingExpensesRequest,
+            operations.ListAccountingExpensesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingExpenses2Response:
+    ) -> operations.ListAccountingExpensesResponse:
         r"""List all expenses
 
         :param request: The request object to send.
@@ -427,10 +427,8 @@ class Expense(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingExpenses2Request
-            )
-        request = cast(operations.ListAccountingExpenses2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingExpensesRequest)
+        request = cast(operations.ListAccountingExpensesRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -461,7 +459,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingExpenses2",
+                operation_id="listAccountingExpenses",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -473,7 +471,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingExpenses2Response(
+            return operations.ListAccountingExpensesResponse(
                 accounting_expenses=unmarshal_json_response(
                     Optional[List[shared.AccountingExpense]], http_res
                 ),
@@ -490,18 +488,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_accounting_expenses2_async(
+    async def list_accounting_expenses_async(
         self,
         *,
         request: Union[
-            operations.ListAccountingExpenses2Request,
-            operations.ListAccountingExpenses2RequestTypedDict,
+            operations.ListAccountingExpensesRequest,
+            operations.ListAccountingExpensesRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAccountingExpenses2Response:
+    ) -> operations.ListAccountingExpensesResponse:
         r"""List all expenses
 
         :param request: The request object to send.
@@ -521,10 +519,8 @@ class Expense(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.ListAccountingExpenses2Request
-            )
-        request = cast(operations.ListAccountingExpenses2Request, request)
+            request = utils.unmarshal(request, operations.ListAccountingExpensesRequest)
+        request = cast(operations.ListAccountingExpensesRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -555,7 +551,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAccountingExpenses2",
+                operation_id="listAccountingExpenses",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -567,7 +563,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAccountingExpenses2Response(
+            return operations.ListAccountingExpensesResponse(
                 accounting_expenses=unmarshal_json_response(
                     Optional[List[shared.AccountingExpense]], http_res
                 ),
@@ -584,18 +580,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_accounting_expense2(
+    def patch_accounting_expense(
         self,
         *,
         request: Union[
-            operations.PatchAccountingExpense2Request,
-            operations.PatchAccountingExpense2RequestTypedDict,
+            operations.PatchAccountingExpenseRequest,
+            operations.PatchAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingExpense2Response:
+    ) -> operations.PatchAccountingExpenseResponse:
         r"""Update an expense
 
         :param request: The request object to send.
@@ -615,10 +611,8 @@ class Expense(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingExpense2Request
-            )
-        request = cast(operations.PatchAccountingExpense2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingExpenseRequest)
+        request = cast(operations.PatchAccountingExpenseRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -656,7 +650,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingExpense2",
+                operation_id="patchAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -668,7 +662,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingExpense2Response(
+            return operations.PatchAccountingExpenseResponse(
                 accounting_expense=unmarshal_json_response(
                     Optional[shared.AccountingExpense], http_res
                 ),
@@ -685,18 +679,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_accounting_expense2_async(
+    async def patch_accounting_expense_async(
         self,
         *,
         request: Union[
-            operations.PatchAccountingExpense2Request,
-            operations.PatchAccountingExpense2RequestTypedDict,
+            operations.PatchAccountingExpenseRequest,
+            operations.PatchAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAccountingExpense2Response:
+    ) -> operations.PatchAccountingExpenseResponse:
         r"""Update an expense
 
         :param request: The request object to send.
@@ -716,10 +710,8 @@ class Expense(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.PatchAccountingExpense2Request
-            )
-        request = cast(operations.PatchAccountingExpense2Request, request)
+            request = utils.unmarshal(request, operations.PatchAccountingExpenseRequest)
+        request = cast(operations.PatchAccountingExpenseRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -757,7 +749,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAccountingExpense2",
+                operation_id="patchAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -769,7 +761,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAccountingExpense2Response(
+            return operations.PatchAccountingExpenseResponse(
                 accounting_expense=unmarshal_json_response(
                     Optional[shared.AccountingExpense], http_res
                 ),
@@ -786,18 +778,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_accounting_expense2(
+    def remove_accounting_expense(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingExpense2Request,
-            operations.RemoveAccountingExpense2RequestTypedDict,
+            operations.RemoveAccountingExpenseRequest,
+            operations.RemoveAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingExpense2Response:
+    ) -> operations.RemoveAccountingExpenseResponse:
         r"""Remove an expense
 
         :param request: The request object to send.
@@ -818,9 +810,9 @@ class Expense(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingExpense2Request
+                request, operations.RemoveAccountingExpenseRequest
             )
-        request = cast(operations.RemoveAccountingExpense2Request, request)
+        request = cast(operations.RemoveAccountingExpenseRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -851,7 +843,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingExpense2",
+                operation_id="removeAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -863,7 +855,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingExpense2Response(
+            return operations.RemoveAccountingExpenseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -876,7 +868,7 @@ class Expense(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingExpense2Response(
+            return operations.RemoveAccountingExpenseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -885,18 +877,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_accounting_expense2_async(
+    async def remove_accounting_expense_async(
         self,
         *,
         request: Union[
-            operations.RemoveAccountingExpense2Request,
-            operations.RemoveAccountingExpense2RequestTypedDict,
+            operations.RemoveAccountingExpenseRequest,
+            operations.RemoveAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAccountingExpense2Response:
+    ) -> operations.RemoveAccountingExpenseResponse:
         r"""Remove an expense
 
         :param request: The request object to send.
@@ -917,9 +909,9 @@ class Expense(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.RemoveAccountingExpense2Request
+                request, operations.RemoveAccountingExpenseRequest
             )
-        request = cast(operations.RemoveAccountingExpense2Request, request)
+        request = cast(operations.RemoveAccountingExpenseRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -950,7 +942,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAccountingExpense2",
+                operation_id="removeAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -962,7 +954,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAccountingExpense2Response(
+            return operations.RemoveAccountingExpenseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -975,7 +967,7 @@ class Expense(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAccountingExpense2Response(
+            return operations.RemoveAccountingExpenseResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -984,18 +976,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_accounting_expense2(
+    def update_accounting_expense(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingExpense2Request,
-            operations.UpdateAccountingExpense2RequestTypedDict,
+            operations.UpdateAccountingExpenseRequest,
+            operations.UpdateAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingExpense2Response:
+    ) -> operations.UpdateAccountingExpenseResponse:
         r"""Update an expense
 
         :param request: The request object to send.
@@ -1016,9 +1008,9 @@ class Expense(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingExpense2Request
+                request, operations.UpdateAccountingExpenseRequest
             )
-        request = cast(operations.UpdateAccountingExpense2Request, request)
+        request = cast(operations.UpdateAccountingExpenseRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1056,7 +1048,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingExpense2",
+                operation_id="updateAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -1068,7 +1060,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingExpense2Response(
+            return operations.UpdateAccountingExpenseResponse(
                 accounting_expense=unmarshal_json_response(
                     Optional[shared.AccountingExpense], http_res
                 ),
@@ -1085,18 +1077,18 @@ class Expense(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_accounting_expense2_async(
+    async def update_accounting_expense_async(
         self,
         *,
         request: Union[
-            operations.UpdateAccountingExpense2Request,
-            operations.UpdateAccountingExpense2RequestTypedDict,
+            operations.UpdateAccountingExpenseRequest,
+            operations.UpdateAccountingExpenseRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAccountingExpense2Response:
+    ) -> operations.UpdateAccountingExpenseResponse:
         r"""Update an expense
 
         :param request: The request object to send.
@@ -1117,9 +1109,9 @@ class Expense(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.UpdateAccountingExpense2Request
+                request, operations.UpdateAccountingExpenseRequest
             )
-        request = cast(operations.UpdateAccountingExpense2Request, request)
+        request = cast(operations.UpdateAccountingExpenseRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1157,7 +1149,7 @@ class Expense(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAccountingExpense2",
+                operation_id="updateAccountingExpense",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["accounting", "expense"],
@@ -1169,7 +1161,7 @@ class Expense(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAccountingExpense2Response(
+            return operations.UpdateAccountingExpenseResponse(
                 accounting_expense=unmarshal_json_response(
                     Optional[shared.AccountingExpense], http_res
                 ),

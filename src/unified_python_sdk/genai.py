@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Genai(BaseSDK):
-    def create_genai_embedding2(
+    def create_genai_embedding(
         self,
         *,
         request: Union[
-            operations.CreateGenaiEmbedding2Request,
-            operations.CreateGenaiEmbedding2RequestTypedDict,
+            operations.CreateGenaiEmbeddingRequest,
+            operations.CreateGenaiEmbeddingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateGenaiEmbedding2Response:
+    ) -> operations.CreateGenaiEmbeddingResponse:
         r"""Create an embedding
 
         :param request: The request object to send.
@@ -41,8 +41,8 @@ class Genai(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateGenaiEmbedding2Request)
-        request = cast(operations.CreateGenaiEmbedding2Request, request)
+            request = utils.unmarshal(request, operations.CreateGenaiEmbeddingRequest)
+        request = cast(operations.CreateGenaiEmbeddingRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -76,7 +76,7 @@ class Genai(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createGenaiEmbedding2",
+                operation_id="createGenaiEmbedding",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["genai", "embedding"],
@@ -88,7 +88,7 @@ class Genai(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateGenaiEmbedding2Response(
+            return operations.CreateGenaiEmbeddingResponse(
                 genai_embedding=unmarshal_json_response(
                     Optional[shared.GenaiEmbedding], http_res
                 ),
@@ -105,18 +105,18 @@ class Genai(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_genai_embedding2_async(
+    async def create_genai_embedding_async(
         self,
         *,
         request: Union[
-            operations.CreateGenaiEmbedding2Request,
-            operations.CreateGenaiEmbedding2RequestTypedDict,
+            operations.CreateGenaiEmbeddingRequest,
+            operations.CreateGenaiEmbeddingRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateGenaiEmbedding2Response:
+    ) -> operations.CreateGenaiEmbeddingResponse:
         r"""Create an embedding
 
         :param request: The request object to send.
@@ -136,8 +136,8 @@ class Genai(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateGenaiEmbedding2Request)
-        request = cast(operations.CreateGenaiEmbedding2Request, request)
+            request = utils.unmarshal(request, operations.CreateGenaiEmbeddingRequest)
+        request = cast(operations.CreateGenaiEmbeddingRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -171,7 +171,7 @@ class Genai(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createGenaiEmbedding2",
+                operation_id="createGenaiEmbedding",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["genai", "embedding"],
@@ -183,7 +183,7 @@ class Genai(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateGenaiEmbedding2Response(
+            return operations.CreateGenaiEmbeddingResponse(
                 genai_embedding=unmarshal_json_response(
                     Optional[shared.GenaiEmbedding], http_res
                 ),
@@ -200,18 +200,18 @@ class Genai(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def create_genai_prompt2(
+    def create_genai_prompt(
         self,
         *,
         request: Union[
-            operations.CreateGenaiPrompt2Request,
-            operations.CreateGenaiPrompt2RequestTypedDict,
+            operations.CreateGenaiPromptRequest,
+            operations.CreateGenaiPromptRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateGenaiPrompt2Response:
+    ) -> operations.CreateGenaiPromptResponse:
         r"""Create a prompt
 
         :param request: The request object to send.
@@ -231,8 +231,8 @@ class Genai(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateGenaiPrompt2Request)
-        request = cast(operations.CreateGenaiPrompt2Request, request)
+            request = utils.unmarshal(request, operations.CreateGenaiPromptRequest)
+        request = cast(operations.CreateGenaiPromptRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -266,7 +266,7 @@ class Genai(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createGenaiPrompt2",
+                operation_id="createGenaiPrompt",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["genai", "prompt"],
@@ -278,7 +278,7 @@ class Genai(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateGenaiPrompt2Response(
+            return operations.CreateGenaiPromptResponse(
                 genai_prompt=unmarshal_json_response(
                     Optional[shared.GenaiPrompt], http_res
                 ),
@@ -295,18 +295,18 @@ class Genai(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_genai_prompt2_async(
+    async def create_genai_prompt_async(
         self,
         *,
         request: Union[
-            operations.CreateGenaiPrompt2Request,
-            operations.CreateGenaiPrompt2RequestTypedDict,
+            operations.CreateGenaiPromptRequest,
+            operations.CreateGenaiPromptRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateGenaiPrompt2Response:
+    ) -> operations.CreateGenaiPromptResponse:
         r"""Create a prompt
 
         :param request: The request object to send.
@@ -326,8 +326,8 @@ class Genai(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateGenaiPrompt2Request)
-        request = cast(operations.CreateGenaiPrompt2Request, request)
+            request = utils.unmarshal(request, operations.CreateGenaiPromptRequest)
+        request = cast(operations.CreateGenaiPromptRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -361,7 +361,7 @@ class Genai(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createGenaiPrompt2",
+                operation_id="createGenaiPrompt",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["genai", "prompt"],
@@ -373,7 +373,7 @@ class Genai(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateGenaiPrompt2Response(
+            return operations.CreateGenaiPromptResponse(
                 genai_prompt=unmarshal_json_response(
                     Optional[shared.GenaiPrompt], http_res
                 ),
@@ -390,17 +390,17 @@ class Genai(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_genai_model2(
+    def get_genai_model(
         self,
         *,
         request: Union[
-            operations.GetGenaiModel2Request, operations.GetGenaiModel2RequestTypedDict
+            operations.GetGenaiModelRequest, operations.GetGenaiModelRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetGenaiModel2Response:
+    ) -> operations.GetGenaiModelResponse:
         r"""Retrieve a model
 
         :param request: The request object to send.
@@ -420,8 +420,8 @@ class Genai(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetGenaiModel2Request)
-        request = cast(operations.GetGenaiModel2Request, request)
+            request = utils.unmarshal(request, operations.GetGenaiModelRequest)
+        request = cast(operations.GetGenaiModelRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -452,7 +452,7 @@ class Genai(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getGenaiModel2",
+                operation_id="getGenaiModel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["genai", "model"],
@@ -464,7 +464,7 @@ class Genai(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetGenaiModel2Response(
+            return operations.GetGenaiModelResponse(
                 genai_model=unmarshal_json_response(
                     Optional[shared.GenaiModel], http_res
                 ),
@@ -481,17 +481,17 @@ class Genai(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_genai_model2_async(
+    async def get_genai_model_async(
         self,
         *,
         request: Union[
-            operations.GetGenaiModel2Request, operations.GetGenaiModel2RequestTypedDict
+            operations.GetGenaiModelRequest, operations.GetGenaiModelRequestTypedDict
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetGenaiModel2Response:
+    ) -> operations.GetGenaiModelResponse:
         r"""Retrieve a model
 
         :param request: The request object to send.
@@ -511,8 +511,8 @@ class Genai(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetGenaiModel2Request)
-        request = cast(operations.GetGenaiModel2Request, request)
+            request = utils.unmarshal(request, operations.GetGenaiModelRequest)
+        request = cast(operations.GetGenaiModelRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -543,7 +543,7 @@ class Genai(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getGenaiModel2",
+                operation_id="getGenaiModel",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["genai", "model"],
@@ -555,7 +555,7 @@ class Genai(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetGenaiModel2Response(
+            return operations.GetGenaiModelResponse(
                 genai_model=unmarshal_json_response(
                     Optional[shared.GenaiModel], http_res
                 ),
@@ -572,18 +572,18 @@ class Genai(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_genai_models2(
+    def list_genai_models(
         self,
         *,
         request: Union[
-            operations.ListGenaiModels2Request,
-            operations.ListGenaiModels2RequestTypedDict,
+            operations.ListGenaiModelsRequest,
+            operations.ListGenaiModelsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListGenaiModels2Response:
+    ) -> operations.ListGenaiModelsResponse:
         r"""List all models
 
         :param request: The request object to send.
@@ -603,8 +603,8 @@ class Genai(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListGenaiModels2Request)
-        request = cast(operations.ListGenaiModels2Request, request)
+            request = utils.unmarshal(request, operations.ListGenaiModelsRequest)
+        request = cast(operations.ListGenaiModelsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -635,7 +635,7 @@ class Genai(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listGenaiModels2",
+                operation_id="listGenaiModels",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["genai", "model"],
@@ -647,7 +647,7 @@ class Genai(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListGenaiModels2Response(
+            return operations.ListGenaiModelsResponse(
                 genai_models=unmarshal_json_response(
                     Optional[List[shared.GenaiModel]], http_res
                 ),
@@ -664,18 +664,18 @@ class Genai(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_genai_models2_async(
+    async def list_genai_models_async(
         self,
         *,
         request: Union[
-            operations.ListGenaiModels2Request,
-            operations.ListGenaiModels2RequestTypedDict,
+            operations.ListGenaiModelsRequest,
+            operations.ListGenaiModelsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListGenaiModels2Response:
+    ) -> operations.ListGenaiModelsResponse:
         r"""List all models
 
         :param request: The request object to send.
@@ -695,8 +695,8 @@ class Genai(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListGenaiModels2Request)
-        request = cast(operations.ListGenaiModels2Request, request)
+            request = utils.unmarshal(request, operations.ListGenaiModelsRequest)
+        request = cast(operations.ListGenaiModelsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -727,7 +727,7 @@ class Genai(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listGenaiModels2",
+                operation_id="listGenaiModels",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["genai", "model"],
@@ -739,7 +739,7 @@ class Genai(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListGenaiModels2Response(
+            return operations.ListGenaiModelsResponse(
                 genai_models=unmarshal_json_response(
                     Optional[List[shared.GenaiModel]], http_res
                 ),

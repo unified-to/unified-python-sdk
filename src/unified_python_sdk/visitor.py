@@ -10,18 +10,18 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Visitor(BaseSDK):
-    def create_analytics_visitor2(
+    def create_analytics_visitor(
         self,
         *,
         request: Union[
-            operations.CreateAnalyticsVisitor2Request,
-            operations.CreateAnalyticsVisitor2RequestTypedDict,
+            operations.CreateAnalyticsVisitorRequest,
+            operations.CreateAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAnalyticsVisitor2Response:
+    ) -> operations.CreateAnalyticsVisitorResponse:
         r"""Create a visitor
 
         :param request: The request object to send.
@@ -41,10 +41,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateAnalyticsVisitor2Request
-            )
-        request = cast(operations.CreateAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.CreateAnalyticsVisitorRequest)
+        request = cast(operations.CreateAnalyticsVisitorRequest, request)
 
         req = self._build_request(
             method="POST",
@@ -78,7 +76,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAnalyticsVisitor2",
+                operation_id="createAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -90,7 +88,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAnalyticsVisitor2Response(
+            return operations.CreateAnalyticsVisitorResponse(
                 analytics_visitor=unmarshal_json_response(
                     Optional[shared.AnalyticsVisitor], http_res
                 ),
@@ -107,18 +105,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def create_analytics_visitor2_async(
+    async def create_analytics_visitor_async(
         self,
         *,
         request: Union[
-            operations.CreateAnalyticsVisitor2Request,
-            operations.CreateAnalyticsVisitor2RequestTypedDict,
+            operations.CreateAnalyticsVisitorRequest,
+            operations.CreateAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.CreateAnalyticsVisitor2Response:
+    ) -> operations.CreateAnalyticsVisitorResponse:
         r"""Create a visitor
 
         :param request: The request object to send.
@@ -138,10 +136,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.CreateAnalyticsVisitor2Request
-            )
-        request = cast(operations.CreateAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.CreateAnalyticsVisitorRequest)
+        request = cast(operations.CreateAnalyticsVisitorRequest, request)
 
         req = self._build_request_async(
             method="POST",
@@ -175,7 +171,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="createAnalyticsVisitor2",
+                operation_id="createAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -187,7 +183,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateAnalyticsVisitor2Response(
+            return operations.CreateAnalyticsVisitorResponse(
                 analytics_visitor=unmarshal_json_response(
                     Optional[shared.AnalyticsVisitor], http_res
                 ),
@@ -204,18 +200,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def get_analytics_visitor2(
+    def get_analytics_visitor(
         self,
         *,
         request: Union[
-            operations.GetAnalyticsVisitor2Request,
-            operations.GetAnalyticsVisitor2RequestTypedDict,
+            operations.GetAnalyticsVisitorRequest,
+            operations.GetAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAnalyticsVisitor2Response:
+    ) -> operations.GetAnalyticsVisitorResponse:
         r"""Retrieve a visitor
 
         :param request: The request object to send.
@@ -235,8 +231,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAnalyticsVisitor2Request)
-        request = cast(operations.GetAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.GetAnalyticsVisitorRequest)
+        request = cast(operations.GetAnalyticsVisitorRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -267,7 +263,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAnalyticsVisitor2",
+                operation_id="getAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -279,7 +275,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAnalyticsVisitor2Response(
+            return operations.GetAnalyticsVisitorResponse(
                 analytics_visitor=unmarshal_json_response(
                     Optional[shared.AnalyticsVisitor], http_res
                 ),
@@ -296,18 +292,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_analytics_visitor2_async(
+    async def get_analytics_visitor_async(
         self,
         *,
         request: Union[
-            operations.GetAnalyticsVisitor2Request,
-            operations.GetAnalyticsVisitor2RequestTypedDict,
+            operations.GetAnalyticsVisitorRequest,
+            operations.GetAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetAnalyticsVisitor2Response:
+    ) -> operations.GetAnalyticsVisitorResponse:
         r"""Retrieve a visitor
 
         :param request: The request object to send.
@@ -327,8 +323,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetAnalyticsVisitor2Request)
-        request = cast(operations.GetAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.GetAnalyticsVisitorRequest)
+        request = cast(operations.GetAnalyticsVisitorRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -359,7 +355,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getAnalyticsVisitor2",
+                operation_id="getAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -371,7 +367,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetAnalyticsVisitor2Response(
+            return operations.GetAnalyticsVisitorResponse(
                 analytics_visitor=unmarshal_json_response(
                     Optional[shared.AnalyticsVisitor], http_res
                 ),
@@ -388,18 +384,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def list_analytics_visitors2(
+    def list_analytics_visitors(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsVisitors2Request,
-            operations.ListAnalyticsVisitors2RequestTypedDict,
+            operations.ListAnalyticsVisitorsRequest,
+            operations.ListAnalyticsVisitorsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsVisitors2Response:
+    ) -> operations.ListAnalyticsVisitorsResponse:
         r"""List all visitors
 
         :param request: The request object to send.
@@ -419,8 +415,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAnalyticsVisitors2Request)
-        request = cast(operations.ListAnalyticsVisitors2Request, request)
+            request = utils.unmarshal(request, operations.ListAnalyticsVisitorsRequest)
+        request = cast(operations.ListAnalyticsVisitorsRequest, request)
 
         req = self._build_request(
             method="GET",
@@ -451,7 +447,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsVisitors2",
+                operation_id="listAnalyticsVisitors",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -463,7 +459,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsVisitors2Response(
+            return operations.ListAnalyticsVisitorsResponse(
                 analytics_visitors=unmarshal_json_response(
                     Optional[List[shared.AnalyticsVisitor]], http_res
                 ),
@@ -480,18 +476,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def list_analytics_visitors2_async(
+    async def list_analytics_visitors_async(
         self,
         *,
         request: Union[
-            operations.ListAnalyticsVisitors2Request,
-            operations.ListAnalyticsVisitors2RequestTypedDict,
+            operations.ListAnalyticsVisitorsRequest,
+            operations.ListAnalyticsVisitorsRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.ListAnalyticsVisitors2Response:
+    ) -> operations.ListAnalyticsVisitorsResponse:
         r"""List all visitors
 
         :param request: The request object to send.
@@ -511,8 +507,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListAnalyticsVisitors2Request)
-        request = cast(operations.ListAnalyticsVisitors2Request, request)
+            request = utils.unmarshal(request, operations.ListAnalyticsVisitorsRequest)
+        request = cast(operations.ListAnalyticsVisitorsRequest, request)
 
         req = self._build_request_async(
             method="GET",
@@ -543,7 +539,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="listAnalyticsVisitors2",
+                operation_id="listAnalyticsVisitors",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -555,7 +551,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListAnalyticsVisitors2Response(
+            return operations.ListAnalyticsVisitorsResponse(
                 analytics_visitors=unmarshal_json_response(
                     Optional[List[shared.AnalyticsVisitor]], http_res
                 ),
@@ -572,18 +568,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def patch_analytics_visitor2(
+    def patch_analytics_visitor(
         self,
         *,
         request: Union[
-            operations.PatchAnalyticsVisitor2Request,
-            operations.PatchAnalyticsVisitor2RequestTypedDict,
+            operations.PatchAnalyticsVisitorRequest,
+            operations.PatchAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAnalyticsVisitor2Response:
+    ) -> operations.PatchAnalyticsVisitorResponse:
         r"""Update a visitor
 
         :param request: The request object to send.
@@ -603,8 +599,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAnalyticsVisitor2Request)
-        request = cast(operations.PatchAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.PatchAnalyticsVisitorRequest)
+        request = cast(operations.PatchAnalyticsVisitorRequest, request)
 
         req = self._build_request(
             method="PATCH",
@@ -638,7 +634,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAnalyticsVisitor2",
+                operation_id="patchAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -650,7 +646,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAnalyticsVisitor2Response(
+            return operations.PatchAnalyticsVisitorResponse(
                 analytics_visitor=unmarshal_json_response(
                     Optional[shared.AnalyticsVisitor], http_res
                 ),
@@ -667,18 +663,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def patch_analytics_visitor2_async(
+    async def patch_analytics_visitor_async(
         self,
         *,
         request: Union[
-            operations.PatchAnalyticsVisitor2Request,
-            operations.PatchAnalyticsVisitor2RequestTypedDict,
+            operations.PatchAnalyticsVisitorRequest,
+            operations.PatchAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.PatchAnalyticsVisitor2Response:
+    ) -> operations.PatchAnalyticsVisitorResponse:
         r"""Update a visitor
 
         :param request: The request object to send.
@@ -698,8 +694,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchAnalyticsVisitor2Request)
-        request = cast(operations.PatchAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.PatchAnalyticsVisitorRequest)
+        request = cast(operations.PatchAnalyticsVisitorRequest, request)
 
         req = self._build_request_async(
             method="PATCH",
@@ -733,7 +729,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="patchAnalyticsVisitor2",
+                operation_id="patchAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -745,7 +741,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchAnalyticsVisitor2Response(
+            return operations.PatchAnalyticsVisitorResponse(
                 analytics_visitor=unmarshal_json_response(
                     Optional[shared.AnalyticsVisitor], http_res
                 ),
@@ -762,18 +758,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def remove_analytics_visitor2(
+    def remove_analytics_visitor(
         self,
         *,
         request: Union[
-            operations.RemoveAnalyticsVisitor2Request,
-            operations.RemoveAnalyticsVisitor2RequestTypedDict,
+            operations.RemoveAnalyticsVisitorRequest,
+            operations.RemoveAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAnalyticsVisitor2Response:
+    ) -> operations.RemoveAnalyticsVisitorResponse:
         r"""Remove a visitor
 
         :param request: The request object to send.
@@ -793,10 +789,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveAnalyticsVisitor2Request
-            )
-        request = cast(operations.RemoveAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAnalyticsVisitorRequest)
+        request = cast(operations.RemoveAnalyticsVisitorRequest, request)
 
         req = self._build_request(
             method="DELETE",
@@ -827,7 +821,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAnalyticsVisitor2",
+                operation_id="removeAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -839,7 +833,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAnalyticsVisitor2Response(
+            return operations.RemoveAnalyticsVisitorResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -852,7 +846,7 @@ class Visitor(BaseSDK):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAnalyticsVisitor2Response(
+            return operations.RemoveAnalyticsVisitorResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -861,18 +855,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def remove_analytics_visitor2_async(
+    async def remove_analytics_visitor_async(
         self,
         *,
         request: Union[
-            operations.RemoveAnalyticsVisitor2Request,
-            operations.RemoveAnalyticsVisitor2RequestTypedDict,
+            operations.RemoveAnalyticsVisitorRequest,
+            operations.RemoveAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.RemoveAnalyticsVisitor2Response:
+    ) -> operations.RemoveAnalyticsVisitorResponse:
         r"""Remove a visitor
 
         :param request: The request object to send.
@@ -892,10 +886,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.RemoveAnalyticsVisitor2Request
-            )
-        request = cast(operations.RemoveAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.RemoveAnalyticsVisitorRequest)
+        request = cast(operations.RemoveAnalyticsVisitorRequest, request)
 
         req = self._build_request_async(
             method="DELETE",
@@ -926,7 +918,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="removeAnalyticsVisitor2",
+                operation_id="removeAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -938,7 +930,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveAnalyticsVisitor2Response(
+            return operations.RemoveAnalyticsVisitorResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -951,7 +943,7 @@ class Visitor(BaseSDK):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveAnalyticsVisitor2Response(
+            return operations.RemoveAnalyticsVisitorResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -960,18 +952,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    def update_analytics_visitor2(
+    def update_analytics_visitor(
         self,
         *,
         request: Union[
-            operations.UpdateAnalyticsVisitor2Request,
-            operations.UpdateAnalyticsVisitor2RequestTypedDict,
+            operations.UpdateAnalyticsVisitorRequest,
+            operations.UpdateAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAnalyticsVisitor2Response:
+    ) -> operations.UpdateAnalyticsVisitorResponse:
         r"""Update a visitor
 
         :param request: The request object to send.
@@ -991,10 +983,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateAnalyticsVisitor2Request
-            )
-        request = cast(operations.UpdateAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAnalyticsVisitorRequest)
+        request = cast(operations.UpdateAnalyticsVisitorRequest, request)
 
         req = self._build_request(
             method="PUT",
@@ -1028,7 +1018,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAnalyticsVisitor2",
+                operation_id="updateAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -1040,7 +1030,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAnalyticsVisitor2Response(
+            return operations.UpdateAnalyticsVisitorResponse(
                 analytics_visitor=unmarshal_json_response(
                     Optional[shared.AnalyticsVisitor], http_res
                 ),
@@ -1057,18 +1047,18 @@ class Visitor(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def update_analytics_visitor2_async(
+    async def update_analytics_visitor_async(
         self,
         *,
         request: Union[
-            operations.UpdateAnalyticsVisitor2Request,
-            operations.UpdateAnalyticsVisitor2RequestTypedDict,
+            operations.UpdateAnalyticsVisitorRequest,
+            operations.UpdateAnalyticsVisitorRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.UpdateAnalyticsVisitor2Response:
+    ) -> operations.UpdateAnalyticsVisitorResponse:
         r"""Update a visitor
 
         :param request: The request object to send.
@@ -1088,10 +1078,8 @@ class Visitor(BaseSDK):
             base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(
-                request, operations.UpdateAnalyticsVisitor2Request
-            )
-        request = cast(operations.UpdateAnalyticsVisitor2Request, request)
+            request = utils.unmarshal(request, operations.UpdateAnalyticsVisitorRequest)
+        request = cast(operations.UpdateAnalyticsVisitorRequest, request)
 
         req = self._build_request_async(
             method="PUT",
@@ -1125,7 +1113,7 @@ class Visitor(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="updateAnalyticsVisitor2",
+                operation_id="updateAnalyticsVisitor",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
                 tags=["analytics", "visitor"],
@@ -1137,7 +1125,7 @@ class Visitor(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateAnalyticsVisitor2Response(
+            return operations.UpdateAnalyticsVisitorResponse(
                 analytics_visitor=unmarshal_json_response(
                     Optional[shared.AnalyticsVisitor], http_res
                 ),
