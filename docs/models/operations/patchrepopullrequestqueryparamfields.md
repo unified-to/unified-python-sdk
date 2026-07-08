@@ -11,15 +11,19 @@ value = PatchRepoPullrequestQueryParamFields.ID
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `ID`         | id           |
-| `CREATED_AT` | created_at   |
-| `UPDATED_AT` | updated_at   |
-| `USER_IDS`   | user_ids     |
-| `REPO_ID`    | repo_id      |
-| `STATUS`     | status       |
-| `LABELS`     | labels       |
-| `CLOSED_AT`  | closed_at    |
-| `COMMIT_IDS` | commit_ids   |
-| `RAW`        | raw          |
+| Name               | Value              |
+| ------------------ | ------------------ |
+| `ID`               | id                 |
+| `CREATED_AT`       | created_at         |
+| `UPDATED_AT`       | updated_at         |
+| `USER_IDS`         | user_ids           |
+| `REPO_ID`          | repo_id            |
+| `TITLE`            | title              |
+| `NOTES`            | notes              |
+| `TARGET_BRANCH_ID` | target_branch_id   |
+| `SOURCE_BRANCH_ID` | source_branch_id   |
+| `STATUS`           | status             |
+| `LABELS`           | labels             |
+| `CLOSED_AT`        | closed_at          |
+| `COMMIT_IDS`       | commit_ids         |
+| `RAW`              | raw                |

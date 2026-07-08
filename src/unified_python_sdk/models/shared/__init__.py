@@ -37,6 +37,7 @@ if TYPE_CHECKING:
         AccountingBillStatus,
         AccountingBillTypedDict,
         PaymentCollectionMethod,
+        Term,
     )
     from .accountingcashflow import AccountingCashflow, AccountingCashflowTypedDict
     from .accountingcashflowitem import (
@@ -75,6 +76,7 @@ if TYPE_CHECKING:
         AccountingInvoice,
         AccountingInvoicePaymentCollectionMethod,
         AccountingInvoiceStatus,
+        AccountingInvoiceTerm,
         AccountingInvoiceType,
         AccountingInvoiceTypedDict,
     )
@@ -1880,6 +1882,7 @@ __all__ = [
     "AccountingInvoice",
     "AccountingInvoicePaymentCollectionMethod",
     "AccountingInvoiceStatus",
+    "AccountingInvoiceTerm",
     "AccountingInvoiceType",
     "AccountingInvoiceTypedDict",
     "AccountingJournal",
@@ -3138,6 +3141,7 @@ __all__ = [
     "Tax",
     "TaxExemption",
     "TaxesPaidBy",
+    "Term",
     "TicketingCategory",
     "TicketingCategoryTypedDict",
     "TicketingCustomer",
@@ -3286,6 +3290,7 @@ _dynamic_imports: dict[str, str] = {
     "AccountingBillStatus": ".accountingbill",
     "AccountingBillTypedDict": ".accountingbill",
     "PaymentCollectionMethod": ".accountingbill",
+    "Term": ".accountingbill",
     "AccountingCashflow": ".accountingcashflow",
     "AccountingCashflowTypedDict": ".accountingcashflow",
     "AccountingCashflowItem": ".accountingcashflowitem",
@@ -3315,6 +3320,7 @@ _dynamic_imports: dict[str, str] = {
     "AccountingInvoice": ".accountinginvoice",
     "AccountingInvoicePaymentCollectionMethod": ".accountinginvoice",
     "AccountingInvoiceStatus": ".accountinginvoice",
+    "AccountingInvoiceTerm": ".accountinginvoice",
     "AccountingInvoiceType": ".accountinginvoice",
     "AccountingInvoiceTypedDict": ".accountinginvoice",
     "AccountingJournal": ".accountingjournal",

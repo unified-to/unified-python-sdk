@@ -13,6 +13,9 @@ class RepoCommitTypedDict(TypedDict):
     branch_id: NotRequired[str]
     created_at: NotRequired[datetime]
     id: NotRequired[str]
+    lines_added: NotRequired[float]
+    lines_changed: NotRequired[float]
+    lines_deleted: NotRequired[float]
     message: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
@@ -28,6 +31,12 @@ class RepoCommit(BaseModel):
 
     id: Optional[str] = None
 
+    lines_added: Optional[float] = None
+
+    lines_changed: Optional[float] = None
+
+    lines_deleted: Optional[float] = None
+
     message: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
@@ -39,7 +48,18 @@ class RepoCommit(BaseModel):
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
-            ["branch_id", "created_at", "id", "message", "raw", "updated_at", "user_id"]
+            [
+                "branch_id",
+                "created_at",
+                "id",
+                "lines_added",
+                "lines_changed",
+                "lines_deleted",
+                "message",
+                "raw",
+                "updated_at",
+                "user_id",
+            ]
         )
         serialized = handler(self)
         m = {}

@@ -29,7 +29,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.59.3
+  version: 0.59.4
   additionalDependencies:
     dev: {}
     main: {}
@@ -45,6 +45,7 @@ python:
   constFieldCasing: upper
   defaultErrorName: SDKError
   description: Python Client SDK for Unified.to
+  durationFormat: false
   enableCustomCodeRegions: false
   enumFormat: enum
   errorSchemaValidation: true
@@ -93,3 +94,4 @@ python:
   sseFlatResponse: false
   templateVersion: v2
   useAsyncHooks: false
+  uuidFormat: false

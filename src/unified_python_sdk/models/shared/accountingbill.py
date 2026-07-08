@@ -31,6 +31,14 @@ class AccountingBillStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     OVERDUE = "OVERDUE"
 
 
+class Term(str, Enum, metaclass=utils.OpenEnumMeta):
+    ON_RECEIPT = "ON_RECEIPT"
+    NET_10 = "NET_10"
+    NET_15 = "NET_15"
+    NET_30 = "NET_30"
+    NET_60 = "NET_60"
+
+
 class AccountingBillTypedDict(TypedDict):
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     balance_amount: NotRequired[float]
@@ -56,6 +64,7 @@ class AccountingBillTypedDict(TypedDict):
     send: NotRequired[bool]
     status: NotRequired[AccountingBillStatus]
     tax_amount: NotRequired[float]
+    term: NotRequired[Term]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
     url: NotRequired[str]
@@ -110,6 +119,8 @@ class AccountingBill(BaseModel):
 
     tax_amount: Optional[float] = None
 
+    term: Optional[Term] = None
+
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
@@ -130,6 +141,15 @@ class AccountingBill(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.AccountingBillStatus(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("term")
+    def serialize_term(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.Term(value)
             except ValueError:
                 return value
         return value
@@ -162,6 +182,7 @@ class AccountingBill(BaseModel):
                 "send",
                 "status",
                 "tax_amount",
+                "term",
                 "total_amount",
                 "updated_at",
                 "url",

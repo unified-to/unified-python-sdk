@@ -15,6 +15,7 @@ value = CreateAccountingBillQueryParamFields.ID
 | --------------------------- | --------------------------- |
 | `ID`                        | id                          |
 | `BILL_NUMBER`               | bill_number                 |
+| `TERM`                      | term                        |
 | `CREATED_AT`                | created_at                  |
 | `UPDATED_AT`                | updated_at                  |
 | `DUE_AT`                    | due_at                      |

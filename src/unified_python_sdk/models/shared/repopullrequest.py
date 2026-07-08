@@ -23,9 +23,13 @@ class RepoPullrequestTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     id: NotRequired[str]
     labels: NotRequired[List[str]]
+    notes: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     repo_id: NotRequired[str]
+    source_branch_id: NotRequired[str]
     status: NotRequired[RepoPullrequestStatus]
+    target_branch_id: NotRequired[str]
+    title: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_ids: NotRequired[List[str]]
 
@@ -41,11 +45,19 @@ class RepoPullrequest(BaseModel):
 
     labels: Optional[List[str]] = None
 
+    notes: Optional[str] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     repo_id: Optional[str] = None
 
+    source_branch_id: Optional[str] = None
+
     status: Optional[RepoPullrequestStatus] = None
+
+    target_branch_id: Optional[str] = None
+
+    title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
 
@@ -69,9 +81,13 @@ class RepoPullrequest(BaseModel):
                 "created_at",
                 "id",
                 "labels",
+                "notes",
                 "raw",
                 "repo_id",
+                "source_branch_id",
                 "status",
+                "target_branch_id",
+                "title",
                 "updated_at",
                 "user_ids",
             ]
