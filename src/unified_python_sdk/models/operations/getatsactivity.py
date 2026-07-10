@@ -35,6 +35,7 @@ class GetAtsActivityQueryParamFields(str, Enum):
     BCC = "bcc"
     SUB_TYPE = "sub_type"
     COMPANY_ID = "company_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

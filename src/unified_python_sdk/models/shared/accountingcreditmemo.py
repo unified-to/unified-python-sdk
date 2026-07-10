@@ -44,6 +44,7 @@ class AccountingCreditmemoTypedDict(TypedDict):
     discount_amount: NotRequired[float]
     due_at: NotRequired[datetime]
     id: NotRequired[str]
+    invoice_id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
@@ -83,6 +84,8 @@ class AccountingCreditmemo(BaseModel):
     due_at: Optional[datetime] = None
 
     id: Optional[str] = None
+
+    invoice_id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
 
@@ -152,6 +155,7 @@ class AccountingCreditmemo(BaseModel):
                 "discount_amount",
                 "due_at",
                 "id",
+                "invoice_id",
                 "lineitems",
                 "notes",
                 "organization_id",

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .atsemail import AtsEmail, AtsEmailTypedDict
+from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
 from .property_atsactivity_from import (
     PropertyAtsActivityFrom,
     PropertyAtsActivityFromTypedDict,
@@ -38,6 +39,7 @@ class AtsActivityTypedDict(TypedDict):
     interview_id: NotRequired[str]
     is_private: NotRequired[bool]
     job_id: NotRequired[str]
+    metadata: NotRequired[List[AtsMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     sub_type: NotRequired[str]
     title: NotRequired[str]
@@ -77,6 +79,8 @@ class AtsActivity(BaseModel):
     is_private: Optional[bool] = None
 
     job_id: Optional[str] = None
+
+    metadata: Optional[List[AtsMetadata]] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -119,6 +123,7 @@ class AtsActivity(BaseModel):
                 "interview_id",
                 "is_private",
                 "job_id",
+                "metadata",
                 "raw",
                 "sub_type",
                 "title",

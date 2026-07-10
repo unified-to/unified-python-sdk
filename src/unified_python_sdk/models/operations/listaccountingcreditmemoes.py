@@ -34,6 +34,7 @@ class ListAccountingCreditmemoesQueryParamFields(str, Enum):
     BALANCE_AMOUNT = "balance_amount"
     CREDITMEMO_NUMBER = "creditmemo_number"
     CONTACT_ID = "contact_id"
+    INVOICE_ID = "invoice_id"
     CURRENCY = "currency"
     NOTES = "notes"
     REFUND_REASON = "refund_reason"

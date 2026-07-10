@@ -19,7 +19,6 @@ from unified_python_sdk.utils import (
 class UpdateAccountingBillQueryParamFields(str, Enum):
     ID = "id"
     BILL_NUMBER = "bill_number"
-    TERM = "term"
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
     DUE_AT = "due_at"
@@ -45,6 +44,7 @@ class UpdateAccountingBillQueryParamFields(str, Enum):
     SEND = "send"
     ORGANIZATION_ID = "organization_id"
     RAW = "raw"
+    TERM = "term"
 
 
 class UpdateAccountingBillRequestTypedDict(TypedDict):
