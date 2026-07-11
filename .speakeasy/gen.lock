@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: d678a2007a56718bfb29f419fb284e0a
+  docChecksum: 765c9a8f026f994299cd84192f56c8b0
   docVersion: "1.0"
-  speakeasyVersion: 1.789.1
+  speakeasyVersion: 1.789.2
   generationVersion: 2.916.4
-  releaseVersion: 0.59.5
-  configChecksum: df13ee13c8ec7d0eb60f9cb7a9e76220
+  releaseVersion: 0.59.6
+  configChecksum: 1b4886b861b5eee1450d4351cb1ce481
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: ff6f65ab-b55f-44fb-9b2d-76daad702bb0
-  pristine_commit_hash: 734d51fa1e28895914a5b03ed60ee38b9becea2e
-  pristine_tree_hash: 87d93fa6781ef0eb72019f5d90d880e2a5ab6572
+  generation_id: 21f3fc87-d7a6-4d0e-9843-009630e73d3a
+  pristine_commit_hash: 30eb4d30d884932b8756dea9e67b498f73654790
+  pristine_tree_hash: 06f792ff09147983592238cddbe12696ff8362e5
 features:
   python:
     acceptHeaders: 3.0.0
@@ -4526,8 +4526,8 @@ trackedFiles:
     pristine_git_object: 88a0ba828b896e3d469e2a6eb22d075903d297cf
   docs/models/operations/listtaskchangesrequest.md:
     id: 1fbb949af200
-    last_write_checksum: sha1:4860a90ad4184874a914e528e3c0046ab2315ae2
-    pristine_git_object: 6b4ba6094a241efe9371325771d58932017094fa
+    last_write_checksum: sha1:aa5450eeab964be8f4b1699c45e1a901ffdc30b7
+    pristine_git_object: c538e13a0a8c1e1e5d67f562f9c42181861c5715
   docs/models/operations/listtaskchangesresponse.md:
     id: 661d8318779b
     last_write_checksum: sha1:a9895848c612e169a7dfcba1c7af28c801dd528c
@@ -12670,8 +12670,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:e75cede872f052d50fa0655559eaee77bfd3eeb0
-    pristine_git_object: c50013a041d3c991f1cdc81015472ac0edb36a37
+    last_write_checksum: sha1:78cd81c44a21ab77ef1e2bb183096b91d04c9b5e
+    pristine_git_object: a1fd8b356eae27a096f53c2ab2e149a20c0a2361
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -12698,8 +12698,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:0e2d6be3c15c52c889dcc005edff9b923457c4ac
-    pristine_git_object: 29a9a389d050310c5884b0064eb59c9b570f7616
+    last_write_checksum: sha1:f1988a800dcff829658e0fc856686f61962fb0fd
+    pristine_git_object: 25972eceeeaba9c81c65004f34028b644f84bc5f
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -14610,8 +14610,8 @@ trackedFiles:
     pristine_git_object: f7f25245a74dee370c9ea8db6c1a5b50b6ad80a1
   src/unified_python_sdk/models/operations/listtaskchanges.py:
     id: 3ff631529a4e
-    last_write_checksum: sha1:35dae733b0c913d5e9e13990497acb9f238511c6
-    pristine_git_object: 09763094b9a9d15152437f2b5e76a6b12ad7e74e
+    last_write_checksum: sha1:07029faf9931db7b0f25fa222e66a121792f5435
+    pristine_git_object: 8909bf2c846561bcf4d052e97a9deab412296201
   src/unified_python_sdk/models/operations/listtaskcomments.py:
     id: 473cd997fd4a
     last_write_checksum: sha1:d45315009c17d1b4743570e211d53a7eb490a1f1
@@ -31233,7 +31233,7 @@ examples:
           application/json: [{"id": "<id>"}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.accounting.create_accounting_bill()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.create_accounting_creditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoice_id` **Added**\n* `unified_to.accounting.get_accounting_bill()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.get_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n  *  `response.invoice_id` **Added**\n* `unified_to.accounting.list_accounting_bills()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.list_accounting_creditmemoes()`: \n  *  `request.fields` **Changed**\n  *  `response.[].invoice_id` **Added**\n* `unified_to.accounting.patch_accounting_bill()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.patch_accounting_creditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoice_id` **Added**\n* `unified_to.accounting.update_accounting_bill()`: \n  *  `request.fields` **Changed**\n* `unified_to.accounting.update_accounting_creditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoice_id` **Added**\n* `unified_to.bill.create_accounting_bill()`: \n  *  `request.fields` **Changed**\n* `unified_to.bill.get_accounting_bill()`: \n  *  `request.fields` **Changed**\n* `unified_to.bill.list_accounting_bills()`: \n  *  `request.fields` **Changed**\n* `unified_to.bill.patch_accounting_bill()`: \n  *  `request.fields` **Changed**\n* `unified_to.bill.update_accounting_bill()`: \n  *  `request.fields` **Changed**\n* `unified_to.creditmemo.create_accounting_creditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoice_id` **Added**\n* `unified_to.creditmemo.get_accounting_creditmemo()`: \n  *  `request.fields` **Changed**\n  *  `response.invoice_id` **Added**\n* `unified_to.creditmemo.list_accounting_creditmemoes()`: \n  *  `request.fields` **Changed**\n  *  `response.[].invoice_id` **Added**\n* `unified_to.creditmemo.patch_accounting_creditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoice_id` **Added**\n* `unified_to.creditmemo.update_accounting_creditmemo()`: \n  *  `request` **Changed**\n  *  `response.invoice_id` **Added**\n* `unified_to.ats.create_ats_activity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.ats.get_ats_activity()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.ats.list_ats_activities()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified_to.ats.patch_ats_activity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.ats.update_ats_activity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.activity.create_ats_activity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.activity.get_ats_activity()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.activity.list_ats_activities()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified_to.activity.patch_ats_activity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.activity.update_ats_activity()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.task.list_task_changes()`: \n  *  `request.project_id` **Added**\n* `unified_to.change.list_task_changes()`: \n  *  `request.project_id` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

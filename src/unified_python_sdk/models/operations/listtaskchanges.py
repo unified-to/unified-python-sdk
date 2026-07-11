@@ -33,6 +33,8 @@ class ListTaskChangesRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    project_id: NotRequired[str]
+    r"""The project ID to filter by (reference to TaskProject)"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -71,6 +73,12 @@ class ListTaskChangesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    project_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The project ID to filter by (reference to TaskProject)"""
+
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -108,6 +116,7 @@ class ListTaskChangesRequest(BaseModel):
                 "limit",
                 "offset",
                 "order",
+                "project_id",
                 "query",
                 "raw",
                 "sort",
