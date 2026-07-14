@@ -34,6 +34,7 @@ class AccountingCreditmemoStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AccountingCreditmemoTypedDict(TypedDict):
+    apply_amount: NotRequired[float]
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     balance_amount: NotRequired[float]
     cancelled_at: NotRequired[datetime]
@@ -65,6 +66,8 @@ class AccountingCreditmemoTypedDict(TypedDict):
 
 
 class AccountingCreditmemo(BaseModel):
+    apply_amount: Optional[float] = None
+
     attachments: Optional[List[AccountingAttachment]] = None
 
     balance_amount: Optional[float] = None
@@ -145,6 +148,7 @@ class AccountingCreditmemo(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "apply_amount",
                 "attachments",
                 "balance_amount",
                 "cancelled_at",

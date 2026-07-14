@@ -42,6 +42,7 @@ class PropertyAdsReportMetricsAdStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 class PropertyAdsReportMetricsAdTypedDict(TypedDict):
     ad_copy: NotRequired[str]
     ad_type: NotRequired[PropertyAdsReportMetricsAdAdType]
+    advertiser_name: NotRequired[str]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
     creative_asset_url: NotRequired[str]
@@ -53,6 +54,7 @@ class PropertyAdsReportMetricsAdTypedDict(TypedDict):
     group_id: NotRequired[str]
     headline: NotRequired[str]
     id: NotRequired[str]
+    logo_creative_id: NotRequired[str]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     path1: NotRequired[str]
@@ -67,6 +69,8 @@ class PropertyAdsReportMetricsAd(BaseModel):
     ad_copy: Optional[str] = None
 
     ad_type: Optional[PropertyAdsReportMetricsAdAdType] = None
+
+    advertiser_name: Optional[str] = None
 
     campaign_id: Optional[str] = None
 
@@ -89,6 +93,8 @@ class PropertyAdsReportMetricsAd(BaseModel):
     headline: Optional[str] = None
 
     id: Optional[str] = None
+
+    logo_creative_id: Optional[str] = None
 
     name: Optional[str] = None
 
@@ -130,6 +136,7 @@ class PropertyAdsReportMetricsAd(BaseModel):
             [
                 "ad_copy",
                 "ad_type",
+                "advertiser_name",
                 "campaign_id",
                 "created_at",
                 "creative_asset_url",
@@ -141,6 +148,7 @@ class PropertyAdsReportMetricsAd(BaseModel):
                 "group_id",
                 "headline",
                 "id",
+                "logo_creative_id",
                 "name",
                 "organization_id",
                 "path1",

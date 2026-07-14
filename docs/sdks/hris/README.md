@@ -9,6 +9,7 @@
 * [create_hris_company](#create_hris_company) - Create a company
 * [create_hris_deduction](#create_hris_deduction) - Create a deduction
 * [create_hris_device](#create_hris_device) - Create a device
+* [create_hris_document](#create_hris_document) - Create a document
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_hris_location](#create_hris_location) - Create a location
@@ -19,6 +20,7 @@
 * [get_hris_company](#get_hris_company) - Retrieve a company
 * [get_hris_deduction](#get_hris_deduction) - Retrieve a deduction
 * [get_hris_device](#get_hris_device) - Retrieve a device
+* [get_hris_document](#get_hris_document) - Retrieve a document
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
 * [get_hris_location](#get_hris_location) - Retrieve a location
@@ -30,6 +32,7 @@
 * [list_hris_companies](#list_hris_companies) - List all companies
 * [list_hris_deductions](#list_hris_deductions) - List all deductions
 * [list_hris_devices](#list_hris_devices) - List all devices
+* [list_hris_documents](#list_hris_documents) - List all documents
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_hris_locations](#list_hris_locations) - List all locations
@@ -41,6 +44,7 @@
 * [patch_hris_company](#patch_hris_company) - Update a company
 * [patch_hris_deduction](#patch_hris_deduction) - Update a deduction
 * [patch_hris_device](#patch_hris_device) - Update a device
+* [patch_hris_document](#patch_hris_document) - Update a document
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
 * [patch_hris_location](#patch_hris_location) - Update a location
@@ -51,6 +55,7 @@
 * [remove_hris_company](#remove_hris_company) - Remove a company
 * [remove_hris_deduction](#remove_hris_deduction) - Remove a deduction
 * [remove_hris_device](#remove_hris_device) - Remove a device
+* [remove_hris_document](#remove_hris_document) - Remove a document
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
 * [remove_hris_group](#remove_hris_group) - Remove a group
 * [remove_hris_location](#remove_hris_location) - Remove a location
@@ -61,6 +66,7 @@
 * [update_hris_company](#update_hris_company) - Update a company
 * [update_hris_deduction](#update_hris_deduction) - Update a deduction
 * [update_hris_device](#update_hris_device) - Update a device
+* [update_hris_document](#update_hris_document) - Update a document
 * [update_hris_employee](#update_hris_employee) - Update an employee
 * [update_hris_group](#update_hris_group) - Update a group
 * [update_hris_location](#update_hris_location) - Update a location
@@ -295,6 +301,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHrisDeviceResponse](../../models/operations/createhrisdeviceresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_hris_document
+
+Create a document
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.create_hris_document(request={
+        "hris_document": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_document is not None
+
+    # Handle response
+    print(res.hris_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateHrisDocumentRequest](../../models/operations/createhrisdocumentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.CreateHrisDocumentResponse](../../models/operations/createhrisdocumentresponse.md)**
 
 ### Errors
 
@@ -769,6 +822,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHrisDeviceResponse](../../models/operations/gethrisdeviceresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_hris_document
+
+Retrieve a document
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisDocument" method="get" path="/hris/{connection_id}/document/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.get_hris_document(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_document is not None
+
+    # Handle response
+    print(res.hris_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetHrisDocumentRequest](../../models/operations/gethrisdocumentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.GetHrisDocumentResponse](../../models/operations/gethrisdocumentresponse.md)**
 
 ### Errors
 
@@ -1281,6 +1381,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListHrisDevicesResponse](../../models/operations/listhrisdevicesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_hris_documents
+
+List all documents
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisDocuments" method="get" path="/hris/{connection_id}/document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.list_hris_documents(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_documents is not None
+
+    # Handle response
+    print(res.hris_documents)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListHrisDocumentsRequest](../../models/operations/listhrisdocumentsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.ListHrisDocumentsResponse](../../models/operations/listhrisdocumentsresponse.md)**
 
 ### Errors
 
@@ -1804,6 +1950,54 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_hris_document
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.patch_hris_document(request={
+        "hris_document": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_document is not None
+
+    # Handle response
+    print(res.hris_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchHrisDocumentRequest](../../models/operations/patchhrisdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.PatchHrisDocumentResponse](../../models/operations/patchhrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_hris_employee
 
 Update an employee
@@ -2283,6 +2477,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_hris_document
+
+Remove a document
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisDocument" method="delete" path="/hris/{connection_id}/document/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.remove_hris_document(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveHrisDocumentRequest](../../models/operations/removehrisdocumentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.RemoveHrisDocumentResponse](../../models/operations/removehrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_hris_employee
 
 Remove an employee
@@ -2751,6 +2992,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateHrisDeviceResponse](../../models/operations/updatehrisdeviceresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_hris_document
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.update_hris_document(request={
+        "hris_document": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_document is not None
+
+    # Handle response
+    print(res.hris_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateHrisDocumentRequest](../../models/operations/updatehrisdocumentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.UpdateHrisDocumentResponse](../../models/operations/updatehrisdocumentresponse.md)**
 
 ### Errors
 

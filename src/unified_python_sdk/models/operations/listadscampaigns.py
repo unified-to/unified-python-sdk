@@ -46,6 +46,7 @@ class ListAdsCampaignsRequestTypedDict(TypedDict):
     r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListAdsCampaignsQueryParamFields]]
     r"""Fields to return"""
+    goal: NotRequired[str]
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -81,6 +82,11 @@ class ListAdsCampaignsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    goal: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     limit: Annotated[
         Optional[float],
@@ -144,6 +150,7 @@ class ListAdsCampaignsRequest(BaseModel):
             [
                 "end_lt",
                 "fields",
+                "goal",
                 "limit",
                 "offset",
                 "order",

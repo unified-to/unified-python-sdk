@@ -42,6 +42,7 @@ class AdsAdStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 class AdsAdTypedDict(TypedDict):
     ad_copy: NotRequired[str]
     ad_type: NotRequired[AdType]
+    advertiser_name: NotRequired[str]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
     creative_asset_url: NotRequired[str]
@@ -53,6 +54,7 @@ class AdsAdTypedDict(TypedDict):
     group_id: NotRequired[str]
     headline: NotRequired[str]
     id: NotRequired[str]
+    logo_creative_id: NotRequired[str]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     path1: NotRequired[str]
@@ -67,6 +69,8 @@ class AdsAd(BaseModel):
     ad_copy: Optional[str] = None
 
     ad_type: Optional[AdType] = None
+
+    advertiser_name: Optional[str] = None
 
     campaign_id: Optional[str] = None
 
@@ -89,6 +93,8 @@ class AdsAd(BaseModel):
     headline: Optional[str] = None
 
     id: Optional[str] = None
+
+    logo_creative_id: Optional[str] = None
 
     name: Optional[str] = None
 
@@ -130,6 +136,7 @@ class AdsAd(BaseModel):
             [
                 "ad_copy",
                 "ad_type",
+                "advertiser_name",
                 "campaign_id",
                 "created_at",
                 "creative_asset_url",
@@ -141,6 +148,7 @@ class AdsAd(BaseModel):
                 "group_id",
                 "headline",
                 "id",
+                "logo_creative_id",
                 "name",
                 "organization_id",
                 "path1",

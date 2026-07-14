@@ -570,6 +570,7 @@ if TYPE_CHECKING:
         HrisDeductionTypedDict,
     )
     from .hrisdevice import HrisDevice, HrisDeviceTypedDict
+    from .hrisdocument import HrisDocument, HrisDocumentType, HrisDocumentTypedDict
     from .hrisemail import HrisEmail, HrisEmailType, HrisEmailTypedDict
     from .hrisemployee import (
         EmploymentStatus,
@@ -679,6 +680,7 @@ if TYPE_CHECKING:
         ListExpand,
         ListFormID,
         ListFulltext,
+        ListGoal,
         ListGroupID,
         ListInstructorID,
         ListInterviewID,
@@ -2328,6 +2330,9 @@ __all__ = [
     "HrisDeductionTypedDict",
     "HrisDevice",
     "HrisDeviceTypedDict",
+    "HrisDocument",
+    "HrisDocumentType",
+    "HrisDocumentTypedDict",
     "HrisEmail",
     "HrisEmailType",
     "HrisEmailTypedDict",
@@ -2449,6 +2454,7 @@ __all__ = [
     "ListExpand",
     "ListFormID",
     "ListFulltext",
+    "ListGoal",
     "ListGroupID",
     "ListInstructorID",
     "ListInterviewID",
@@ -3780,6 +3786,9 @@ _dynamic_imports: dict[str, str] = {
     "HrisDeductionTypedDict": ".hrisdeduction",
     "HrisDevice": ".hrisdevice",
     "HrisDeviceTypedDict": ".hrisdevice",
+    "HrisDocument": ".hrisdocument",
+    "HrisDocumentType": ".hrisdocument",
+    "HrisDocumentTypedDict": ".hrisdocument",
     "HrisEmail": ".hrisemail",
     "HrisEmailType": ".hrisemail",
     "HrisEmailTypedDict": ".hrisemail",
@@ -3886,6 +3895,7 @@ _dynamic_imports: dict[str, str] = {
     "ListExpand": ".integrationsupport",
     "ListFormID": ".integrationsupport",
     "ListFulltext": ".integrationsupport",
+    "ListGoal": ".integrationsupport",
     "ListGroupID": ".integrationsupport",
     "ListInstructorID": ".integrationsupport",
     "ListInterviewID": ".integrationsupport",

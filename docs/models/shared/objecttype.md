@@ -80,6 +80,7 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `HRIS_DEDUCTION`           | hris_deduction             |
 | `HRIS_BENEFIT`             | hris_benefit               |
 | `HRIS_BANKACCOUNT`         | hris_bankaccount           |
+| `HRIS_DOCUMENT`            | hris_document              |
 | `MARTECH_LIST`             | martech_list               |
 | `MARTECH_MEMBER`           | martech_member             |
 | `MARTECH_CAMPAIGN`         | martech_campaign           |

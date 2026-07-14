@@ -194,6 +194,12 @@ class ListFulltext(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListGoal(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListGroupID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1108,6 +1114,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_expand: NotRequired[ListExpand]
     list_form_id: NotRequired[ListFormID]
     list_fulltext: NotRequired[ListFulltext]
+    list_goal: NotRequired[ListGoal]
     list_group_id: NotRequired[ListGroupID]
     list_instructor_id: NotRequired[ListInstructorID]
     list_interview_id: NotRequired[ListInterviewID]
@@ -1325,6 +1332,8 @@ class IntegrationSupport(BaseModel):
     list_form_id: Optional[ListFormID] = None
 
     list_fulltext: Optional[ListFulltext] = None
+
+    list_goal: Optional[ListGoal] = None
 
     list_group_id: Optional[ListGroupID] = None
 
@@ -1897,6 +1906,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListFulltext(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_goal")
+    def serialize_list_goal(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListGoal(value)
             except ValueError:
                 return value
         return value
@@ -3259,6 +3277,7 @@ class IntegrationSupport(BaseModel):
                 "list_expand",
                 "list_form_id",
                 "list_fulltext",
+                "list_goal",
                 "list_group_id",
                 "list_instructor_id",
                 "list_interview_id",

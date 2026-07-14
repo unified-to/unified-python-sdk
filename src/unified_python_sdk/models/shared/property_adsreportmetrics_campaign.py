@@ -49,6 +49,7 @@ class PropertyAdsReportMetricsCampaignBudgetPeriod(
 class PropertyAdsReportMetricsCampaignGoal(str, Enum, metaclass=utils.OpenEnumMeta):
     UNSPECIFIED = "UNSPECIFIED"
     BRAND_AWARENESS = "BRAND_AWARENESS"
+    ENGAGEMENT = "ENGAGEMENT"
     REACH = "REACH"
     WEBSITE_TRAFFIC = "WEBSITE_TRAFFIC"
     LEADS = "LEADS"

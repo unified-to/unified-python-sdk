@@ -27,6 +27,7 @@ class AccountingVendorcreditStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingVendorcreditTypedDict(TypedDict):
     account_id: NotRequired[str]
+    apply_amount: NotRequired[float]
     balance_amount: NotRequired[float]
     bill_id: NotRequired[str]
     contact_id: NotRequired[str]
@@ -46,6 +47,8 @@ class AccountingVendorcreditTypedDict(TypedDict):
 
 class AccountingVendorcredit(BaseModel):
     account_id: Optional[str] = None
+
+    apply_amount: Optional[float] = None
 
     balance_amount: Optional[float] = None
 
@@ -91,6 +94,7 @@ class AccountingVendorcredit(BaseModel):
         optional_fields = set(
             [
                 "account_id",
+                "apply_amount",
                 "balance_amount",
                 "bill_id",
                 "contact_id",

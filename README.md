@@ -917,16 +917,22 @@ asyncio.run(main())
 ### [Document](docs/sdks/document/README.md)
 
 * [create_ats_document](docs/sdks/document/README.md#create_ats_document) - Create a document
+* [create_hris_document](docs/sdks/document/README.md#create_hris_document) - Create a document
 * [create_signing_document](docs/sdks/document/README.md#create_signing_document) - Create a document
 * [get_ats_document](docs/sdks/document/README.md#get_ats_document) - Retrieve a document
+* [get_hris_document](docs/sdks/document/README.md#get_hris_document) - Retrieve a document
 * [get_signing_document](docs/sdks/document/README.md#get_signing_document) - Retrieve a document
 * [list_ats_documents](docs/sdks/document/README.md#list_ats_documents) - List all documents
+* [list_hris_documents](docs/sdks/document/README.md#list_hris_documents) - List all documents
 * [list_signing_documents](docs/sdks/document/README.md#list_signing_documents) - List all documents
 * [patch_ats_document](docs/sdks/document/README.md#patch_ats_document) - Update a document
+* [patch_hris_document](docs/sdks/document/README.md#patch_hris_document) - Update a document
 * [patch_signing_document](docs/sdks/document/README.md#patch_signing_document) - Update a document
 * [remove_ats_document](docs/sdks/document/README.md#remove_ats_document) - Remove a document
+* [remove_hris_document](docs/sdks/document/README.md#remove_hris_document) - Remove a document
 * [remove_signing_document](docs/sdks/document/README.md#remove_signing_document) - Remove a document
 * [update_ats_document](docs/sdks/document/README.md#update_ats_document) - Update a document
+* [update_hris_document](docs/sdks/document/README.md#update_hris_document) - Update a document
 * [update_signing_document](docs/sdks/document/README.md#update_signing_document) - Update a document
 
 ### [Embedding](docs/sdks/embedding/README.md)
@@ -1050,6 +1056,7 @@ asyncio.run(main())
 * [create_hris_company](docs/sdks/hris/README.md#create_hris_company) - Create a company
 * [create_hris_deduction](docs/sdks/hris/README.md#create_hris_deduction) - Create a deduction
 * [create_hris_device](docs/sdks/hris/README.md#create_hris_device) - Create a device
+* [create_hris_document](docs/sdks/hris/README.md#create_hris_document) - Create a document
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
@@ -1060,6 +1067,7 @@ asyncio.run(main())
 * [get_hris_company](docs/sdks/hris/README.md#get_hris_company) - Retrieve a company
 * [get_hris_deduction](docs/sdks/hris/README.md#get_hris_deduction) - Retrieve a deduction
 * [get_hris_device](docs/sdks/hris/README.md#get_hris_device) - Retrieve a device
+* [get_hris_document](docs/sdks/hris/README.md#get_hris_document) - Retrieve a document
 * [get_hris_employee](docs/sdks/hris/README.md#get_hris_employee) - Retrieve an employee
 * [get_hris_group](docs/sdks/hris/README.md#get_hris_group) - Retrieve a group
 * [get_hris_location](docs/sdks/hris/README.md#get_hris_location) - Retrieve a location
@@ -1071,6 +1079,7 @@ asyncio.run(main())
 * [list_hris_companies](docs/sdks/hris/README.md#list_hris_companies) - List all companies
 * [list_hris_deductions](docs/sdks/hris/README.md#list_hris_deductions) - List all deductions
 * [list_hris_devices](docs/sdks/hris/README.md#list_hris_devices) - List all devices
+* [list_hris_documents](docs/sdks/hris/README.md#list_hris_documents) - List all documents
 * [list_hris_employees](docs/sdks/hris/README.md#list_hris_employees) - List all employees
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
 * [list_hris_locations](docs/sdks/hris/README.md#list_hris_locations) - List all locations
@@ -1082,6 +1091,7 @@ asyncio.run(main())
 * [patch_hris_company](docs/sdks/hris/README.md#patch_hris_company) - Update a company
 * [patch_hris_deduction](docs/sdks/hris/README.md#patch_hris_deduction) - Update a deduction
 * [patch_hris_device](docs/sdks/hris/README.md#patch_hris_device) - Update a device
+* [patch_hris_document](docs/sdks/hris/README.md#patch_hris_document) - Update a document
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
@@ -1092,6 +1102,7 @@ asyncio.run(main())
 * [remove_hris_company](docs/sdks/hris/README.md#remove_hris_company) - Remove a company
 * [remove_hris_deduction](docs/sdks/hris/README.md#remove_hris_deduction) - Remove a deduction
 * [remove_hris_device](docs/sdks/hris/README.md#remove_hris_device) - Remove a device
+* [remove_hris_document](docs/sdks/hris/README.md#remove_hris_document) - Remove a document
 * [remove_hris_employee](docs/sdks/hris/README.md#remove_hris_employee) - Remove an employee
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
@@ -1102,6 +1113,7 @@ asyncio.run(main())
 * [update_hris_company](docs/sdks/hris/README.md#update_hris_company) - Update a company
 * [update_hris_deduction](docs/sdks/hris/README.md#update_hris_deduction) - Update a deduction
 * [update_hris_device](docs/sdks/hris/README.md#update_hris_device) - Update a device
+* [update_hris_document](docs/sdks/hris/README.md#update_hris_document) - Update a document
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
