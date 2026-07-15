@@ -25,6 +25,7 @@
 * [get_hris_group](#get_hris_group) - Retrieve a group
 * [get_hris_location](#get_hris_location) - Retrieve a location
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
+* [get_hris_taxonomy](#get_hris_taxonomy) - Retrieve a taxonomy
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](#get_hris_timeshift) - Retrieve a timeshift
 * [list_hris_bankaccounts](#list_hris_bankaccounts) - List all bankaccounts
@@ -37,6 +38,7 @@
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_hris_locations](#list_hris_locations) - List all locations
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
+* [list_hris_taxonomies](#list_hris_taxonomies) - List all taxonomies
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](#list_hris_timeshifts) - List all timeshifts
 * [patch_hris_bankaccount](#patch_hris_bankaccount) - Update a bankaccount
@@ -1064,6 +1066,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_hris_taxonomy
+
+Retrieve a taxonomy
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisTaxonomy" method="get" path="/hris/{connection_id}/taxonomy/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.get_hris_taxonomy(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_taxonomy is not None
+
+    # Handle response
+    print(res.hris_taxonomy)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetHrisTaxonomyRequest](../../models/operations/gethristaxonomyrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.GetHrisTaxonomyResponse](../../models/operations/gethristaxonomyresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_hris_timeoff
 
 Retrieve a timeoff
@@ -1611,6 +1660,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListHrisPayslipsResponse](../../models/operations/listhrispayslipsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_hris_taxonomies
+
+List all taxonomies
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisTaxonomies" method="get" path="/hris/{connection_id}/taxonomy" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.list_hris_taxonomies(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_taxonomies is not None
+
+    # Handle response
+    print(res.hris_taxonomies)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListHrisTaxonomiesRequest](../../models/operations/listhristaxonomiesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListHrisTaxonomiesResponse](../../models/operations/listhristaxonomiesresponse.md)**
 
 ### Errors
 

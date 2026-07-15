@@ -150,6 +150,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.table import Table
     from unified_python_sdk.target import Target
     from unified_python_sdk.task import Task
+    from unified_python_sdk.taxonomy import Taxonomy
     from unified_python_sdk.taxrate import Taxrate
     from unified_python_sdk.template import Template
     from unified_python_sdk.ticket import Ticket
@@ -263,6 +264,7 @@ class UnifiedTo(BaseSDK):
     device: "Device"
     employee: "Employee"
     payslip: "Payslip"
+    taxonomy: "Taxonomy"
     timeoff: "Timeoff"
     timeshift: "Timeshift"
     kms: "Kms"
@@ -418,6 +420,7 @@ class UnifiedTo(BaseSDK):
         "device": ("unified_python_sdk.device", "Device"),
         "employee": ("unified_python_sdk.employee", "Employee"),
         "payslip": ("unified_python_sdk.payslip", "Payslip"),
+        "taxonomy": ("unified_python_sdk.taxonomy", "Taxonomy"),
         "timeoff": ("unified_python_sdk.timeoff", "Timeoff"),
         "timeshift": ("unified_python_sdk.timeshift", "Timeshift"),
         "kms": ("unified_python_sdk.kms", "Kms"),

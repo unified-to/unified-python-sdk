@@ -6,7 +6,7 @@ import httpx
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import hrispayslip as shared_hrispayslip
+from unified_python_sdk.models.shared import hristaxonomy as shared_hristaxonomy
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -15,60 +15,54 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListHrisPayslipsQueryParamFields(str, Enum):
+class ListHrisTaxonomiesQueryParamFields(str, Enum):
     ID = "id"
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
-    USER_ID = "user_id"
-    COMPANY_ID = "company_id"
-    PAYMENT_REFERENCE = "payment_reference"
-    PAYMENT_TYPE = "payment_type"
-    PAID_AT = "paid_at"
-    START_AT = "start_at"
-    END_AT = "end_at"
-    CURRENCY = "currency"
-    GROSS_AMOUNT = "gross_amount"
-    NET_AMOUNT = "net_amount"
-    DETAILS = "details"
-    DEDUCTION = "deduction"
+    TYPE = "type"
+    NAME = "name"
+    DESCRIPTION = "description"
+    DOMAIN = "domain"
+    CATEGORY = "category"
+    SUBCATEGORY = "subcategory"
+    PARENT_ID = "parent_id"
+    ALTERNATIVE_NAMES = "alternative_names"
+    URL = "url"
+    ROLE_IDS = "role_ids"
+    IS_ACTIVE = "is_active"
     RAW = "raw"
 
 
-class ListHrisPayslipsRequestTypedDict(TypedDict):
+class ListHrisTaxonomiesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
-    company_id: NotRequired[str]
-    r"""The company ID to filter by (reference to HrisCompany)"""
-    fields: NotRequired[List[ListHrisPayslipsQueryParamFields]]
+    fields: NotRequired[List[ListHrisTaxonomiesQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    parent_id: NotRequired[str]
+    r"""The parent ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
+    role_id: NotRequired[str]
+    r"""The role ID to filter by"""
     sort: NotRequired[str]
+    type: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
-    user_id: NotRequired[str]
-    r"""The user/employee ID to filter by (reference to HrisEmployee)"""
 
 
-class ListHrisPayslipsRequest(BaseModel):
+class ListHrisTaxonomiesRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
 
-    company_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The company ID to filter by (reference to HrisCompany)"""
-
     fields: Annotated[
-        Optional[List[ListHrisPayslipsQueryParamFields]],
+        Optional[List[ListHrisTaxonomiesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
@@ -88,6 +82,12 @@ class ListHrisPayslipsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    parent_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The parent ID to filter by"""
+
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -100,7 +100,18 @@ class ListHrisPayslipsRequest(BaseModel):
     ] = None
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
+    role_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The role ID to filter by"""
+
     sort: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    type: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
@@ -111,26 +122,21 @@ class ListHrisPayslipsRequest(BaseModel):
     ] = None
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
-    user_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The user/employee ID to filter by (reference to HrisEmployee)"""
-
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
             [
-                "company_id",
                 "fields",
                 "limit",
                 "offset",
                 "order",
+                "parent_id",
                 "query",
                 "raw",
+                "role_id",
                 "sort",
+                "type",
                 "updated_gte",
-                "user_id",
             ]
         )
         serialized = handler(self)
@@ -147,18 +153,18 @@ class ListHrisPayslipsRequest(BaseModel):
         return m
 
 
-class ListHrisPayslipsResponseTypedDict(TypedDict):
+class ListHrisTaxonomiesResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    hris_payslips: NotRequired[List[shared_hrispayslip.HrisPayslipTypedDict]]
+    hris_taxonomies: NotRequired[List[shared_hristaxonomy.HrisTaxonomyTypedDict]]
     r"""Successful"""
 
 
-class ListHrisPayslipsResponse(BaseModel):
+class ListHrisTaxonomiesResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -168,12 +174,12 @@ class ListHrisPayslipsResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    hris_payslips: Optional[List[shared_hrispayslip.HrisPayslip]] = None
+    hris_taxonomies: Optional[List[shared_hristaxonomy.HrisTaxonomy]] = None
     r"""Successful"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["HrisPayslips"])
+        optional_fields = set(["HrisTaxonomies"])
         serialized = handler(self)
         m = {}
 

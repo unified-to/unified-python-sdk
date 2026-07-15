@@ -392,6 +392,12 @@ class ListRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListRoleID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListRootID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1147,6 +1153,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_raw_fields: NotRequired[ListRawFields]
     list_reference: NotRequired[ListReference]
     list_repo_id: NotRequired[ListRepoID]
+    list_role_id: NotRequired[ListRoleID]
     list_root_id: NotRequired[ListRootID]
     list_saleschannel_id: NotRequired[ListSaleschannelID]
     list_session_id: NotRequired[ListSessionID]
@@ -1398,6 +1405,8 @@ class IntegrationSupport(BaseModel):
     list_reference: Optional[ListReference] = None
 
     list_repo_id: Optional[ListRepoID] = None
+
+    list_role_id: Optional[ListRoleID] = None
 
     list_root_id: Optional[ListRootID] = None
 
@@ -2203,6 +2212,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListRepoID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_role_id")
+    def serialize_list_role_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListRoleID(value)
             except ValueError:
                 return value
         return value
@@ -3310,6 +3328,7 @@ class IntegrationSupport(BaseModel):
                 "list_raw_fields",
                 "list_reference",
                 "list_repo_id",
+                "list_role_id",
                 "list_root_id",
                 "list_saleschannel_id",
                 "list_session_id",

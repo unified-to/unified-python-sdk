@@ -1072,6 +1072,7 @@ asyncio.run(main())
 * [get_hris_group](docs/sdks/hris/README.md#get_hris_group) - Retrieve a group
 * [get_hris_location](docs/sdks/hris/README.md#get_hris_location) - Retrieve a location
 * [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
+* [get_hris_taxonomy](docs/sdks/hris/README.md#get_hris_taxonomy) - Retrieve a taxonomy
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](docs/sdks/hris/README.md#get_hris_timeshift) - Retrieve a timeshift
 * [list_hris_bankaccounts](docs/sdks/hris/README.md#list_hris_bankaccounts) - List all bankaccounts
@@ -1084,6 +1085,7 @@ asyncio.run(main())
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
 * [list_hris_locations](docs/sdks/hris/README.md#list_hris_locations) - List all locations
 * [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
+* [list_hris_taxonomies](docs/sdks/hris/README.md#list_hris_taxonomies) - List all taxonomies
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](docs/sdks/hris/README.md#list_hris_timeshifts) - List all timeshifts
 * [patch_hris_bankaccount](docs/sdks/hris/README.md#patch_hris_bankaccount) - Update a bankaccount
@@ -1876,6 +1878,11 @@ asyncio.run(main())
 * [update_task_comment](docs/sdks/task/README.md#update_task_comment) - Update a comment
 * [update_task_project](docs/sdks/task/README.md#update_task_project) - Update a project
 * [update_task_task](docs/sdks/task/README.md#update_task_task) - Update a task
+
+### [Taxonomy](docs/sdks/taxonomy/README.md)
+
+* [get_hris_taxonomy](docs/sdks/taxonomy/README.md#get_hris_taxonomy) - Retrieve a taxonomy
+* [list_hris_taxonomies](docs/sdks/taxonomy/README.md#list_hris_taxonomies) - List all taxonomies
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 

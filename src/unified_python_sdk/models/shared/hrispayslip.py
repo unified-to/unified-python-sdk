@@ -34,6 +34,7 @@ class HrisPayslipTypedDict(TypedDict):
     id: NotRequired[str]
     net_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
+    payment_reference: NotRequired[str]
     payment_type: NotRequired[PaymentType]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
@@ -62,6 +63,8 @@ class HrisPayslip(BaseModel):
     net_amount: Optional[float] = None
 
     paid_at: Optional[datetime] = None
+
+    payment_reference: Optional[str] = None
 
     payment_type: Optional[PaymentType] = None
 
@@ -96,6 +99,7 @@ class HrisPayslip(BaseModel):
                 "id",
                 "net_amount",
                 "paid_at",
+                "payment_reference",
                 "payment_type",
                 "raw",
                 "start_at",

@@ -6,7 +6,7 @@ import httpx
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import hrispayslip as shared_hrispayslip
+from unified_python_sdk.models.shared import hristaxonomy as shared_hristaxonomy
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -15,37 +15,36 @@ from unified_python_sdk.utils import (
 )
 
 
-class GetHrisPayslipQueryParamFields(str, Enum):
+class GetHrisTaxonomyQueryParamFields(str, Enum):
     ID = "id"
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
-    USER_ID = "user_id"
-    COMPANY_ID = "company_id"
-    PAYMENT_REFERENCE = "payment_reference"
-    PAYMENT_TYPE = "payment_type"
-    PAID_AT = "paid_at"
-    START_AT = "start_at"
-    END_AT = "end_at"
-    CURRENCY = "currency"
-    GROSS_AMOUNT = "gross_amount"
-    NET_AMOUNT = "net_amount"
-    DETAILS = "details"
-    DEDUCTION = "deduction"
+    TYPE = "type"
+    NAME = "name"
+    DESCRIPTION = "description"
+    DOMAIN = "domain"
+    CATEGORY = "category"
+    SUBCATEGORY = "subcategory"
+    PARENT_ID = "parent_id"
+    ALTERNATIVE_NAMES = "alternative_names"
+    URL = "url"
+    ROLE_IDS = "role_ids"
+    IS_ACTIVE = "is_active"
     RAW = "raw"
 
 
-class GetHrisPayslipRequestTypedDict(TypedDict):
+class GetHrisTaxonomyRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     id: str
-    r"""ID of the Payslip"""
-    fields: NotRequired[List[GetHrisPayslipQueryParamFields]]
+    r"""ID of the Taxonomy"""
+    fields: NotRequired[List[GetHrisTaxonomyQueryParamFields]]
     r"""Fields to return"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
 
-class GetHrisPayslipRequest(BaseModel):
+class GetHrisTaxonomyRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -54,10 +53,10 @@ class GetHrisPayslipRequest(BaseModel):
     id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
-    r"""ID of the Payslip"""
+    r"""ID of the Taxonomy"""
 
     fields: Annotated[
-        Optional[List[GetHrisPayslipQueryParamFields]],
+        Optional[List[GetHrisTaxonomyQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
@@ -85,18 +84,18 @@ class GetHrisPayslipRequest(BaseModel):
         return m
 
 
-class GetHrisPayslipResponseTypedDict(TypedDict):
+class GetHrisTaxonomyResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    hris_payslip: NotRequired[shared_hrispayslip.HrisPayslipTypedDict]
+    hris_taxonomy: NotRequired[shared_hristaxonomy.HrisTaxonomyTypedDict]
     r"""Successful"""
 
 
-class GetHrisPayslipResponse(BaseModel):
+class GetHrisTaxonomyResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -106,12 +105,12 @@ class GetHrisPayslipResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    hris_payslip: Optional[shared_hrispayslip.HrisPayslip] = None
+    hris_taxonomy: Optional[shared_hristaxonomy.HrisTaxonomy] = None
     r"""Successful"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["HrisPayslip"])
+        optional_fields = set(["HrisTaxonomy"])
         serialized = handler(self)
         m = {}
 

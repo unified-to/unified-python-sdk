@@ -610,6 +610,7 @@ if TYPE_CHECKING:
         HrisPayslipDetailType,
         HrisPayslipDetailTypedDict,
     )
+    from .hristaxonomy import HrisTaxonomy, HrisTaxonomyType, HrisTaxonomyTypedDict
     from .hristelephone import HrisTelephone, HrisTelephoneType, HrisTelephoneTypedDict
     from .hristimeoff import (
         DurationType,
@@ -713,6 +714,7 @@ if TYPE_CHECKING:
         ListRawFields,
         ListReference,
         ListRepoID,
+        ListRoleID,
         ListRootID,
         ListSaleschannelID,
         ListSessionID,
@@ -2368,6 +2370,9 @@ __all__ = [
     "HrisPayslipDetailType",
     "HrisPayslipDetailTypedDict",
     "HrisPayslipTypedDict",
+    "HrisTaxonomy",
+    "HrisTaxonomyType",
+    "HrisTaxonomyTypedDict",
     "HrisTelephone",
     "HrisTelephoneType",
     "HrisTelephoneTypedDict",
@@ -2487,6 +2492,7 @@ __all__ = [
     "ListRawFields",
     "ListReference",
     "ListRepoID",
+    "ListRoleID",
     "ListRootID",
     "ListSaleschannelID",
     "ListSessionID",
@@ -3827,6 +3833,9 @@ _dynamic_imports: dict[str, str] = {
     "HrisPayslipDetail": ".hrispayslipdetail",
     "HrisPayslipDetailType": ".hrispayslipdetail",
     "HrisPayslipDetailTypedDict": ".hrispayslipdetail",
+    "HrisTaxonomy": ".hristaxonomy",
+    "HrisTaxonomyType": ".hristaxonomy",
+    "HrisTaxonomyTypedDict": ".hristaxonomy",
     "HrisTelephone": ".hristelephone",
     "HrisTelephoneType": ".hristelephone",
     "HrisTelephoneTypedDict": ".hristelephone",
@@ -3928,6 +3937,7 @@ _dynamic_imports: dict[str, str] = {
     "ListRawFields": ".integrationsupport",
     "ListReference": ".integrationsupport",
     "ListRepoID": ".integrationsupport",
+    "ListRoleID": ".integrationsupport",
     "ListRootID": ".integrationsupport",
     "ListSaleschannelID": ".integrationsupport",
     "ListSessionID": ".integrationsupport",
