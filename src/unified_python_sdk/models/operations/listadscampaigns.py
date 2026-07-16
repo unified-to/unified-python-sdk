@@ -22,6 +22,7 @@ class ListAdsCampaignsQueryParamFields(str, Enum):
     NAME = "name"
     ORGANIZATION_ID = "organization_id"
     STATUS = "status"
+    EFFECTIVE_STATUS = "effective_status"
     START_AT = "start_at"
     END_AT = "end_at"
     BUDGET_AMOUNT = "budget_amount"
@@ -42,6 +43,7 @@ class ListAdsCampaignsQueryParamFields(str, Enum):
 class ListAdsCampaignsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    effective_status: NotRequired[str]
     end_lt: NotRequired[str]
     r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListAdsCampaignsQueryParamFields]]
@@ -70,6 +72,11 @@ class ListAdsCampaignsRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    effective_status: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     end_lt: Annotated[
         Optional[str],
@@ -148,6 +155,7 @@ class ListAdsCampaignsRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "effective_status",
                 "end_lt",
                 "fields",
                 "goal",

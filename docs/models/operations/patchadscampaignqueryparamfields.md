@@ -19,6 +19,7 @@ value = PatchAdsCampaignQueryParamFields.ID
 | `NAME`                       | name                         |
 | `ORGANIZATION_ID`            | organization_id              |
 | `STATUS`                     | status                       |
+| `EFFECTIVE_STATUS`           | effective_status             |
 | `START_AT`                   | start_at                     |
 | `END_AT`                     | end_at                       |
 | `BUDGET_AMOUNT`              | budget_amount                |

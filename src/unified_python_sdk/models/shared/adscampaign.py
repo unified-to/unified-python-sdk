@@ -42,6 +42,20 @@ class BudgetPeriod(str, Enum, metaclass=utils.OpenEnumMeta):
     LIFETIME = "LIFETIME"
 
 
+class EffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    UNSPECIFIED = "UNSPECIFIED"
+    SERVING = "SERVING"
+    LIMITED = "LIMITED"
+    LEARNING = "LEARNING"
+    PAUSED = "PAUSED"
+    PENDING = "PENDING"
+    ENDED = "ENDED"
+    MISCONFIGURED = "MISCONFIGURED"
+    NOT_ELIGIBLE = "NOT_ELIGIBLE"
+    ARCHIVED = "ARCHIVED"
+    REMOVED = "REMOVED"
+
+
 class Goal(str, Enum, metaclass=utils.OpenEnumMeta):
     UNSPECIFIED = "UNSPECIFIED"
     BRAND_AWARENESS = "BRAND_AWARENESS"
@@ -72,6 +86,7 @@ class AdsCampaignTypedDict(TypedDict):
     category: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    effective_status: NotRequired[EffectiveStatus]
     end_at: NotRequired[datetime]
     frequency_cap: NotRequired[PropertyAdsCampaignFrequencyCapTypedDict]
     goal: NotRequired[Goal]
@@ -102,6 +117,8 @@ class AdsCampaign(BaseModel):
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
+
+    effective_status: Optional[EffectiveStatus] = None
 
     end_at: Optional[datetime] = None
 
@@ -149,6 +166,15 @@ class AdsCampaign(BaseModel):
                 return value
         return value
 
+    @field_serializer("effective_status")
+    def serialize_effective_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.EffectiveStatus(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("goal")
     def serialize_goal(self, value):
         if isinstance(value, str):
@@ -178,6 +204,7 @@ class AdsCampaign(BaseModel):
                 "category",
                 "created_at",
                 "currency",
+                "effective_status",
                 "end_at",
                 "frequency_cap",
                 "goal",

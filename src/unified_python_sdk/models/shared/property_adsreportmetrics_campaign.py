@@ -46,6 +46,22 @@ class PropertyAdsReportMetricsCampaignBudgetPeriod(
     LIFETIME = "LIFETIME"
 
 
+class PropertyAdsReportMetricsCampaignEffectiveStatus(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
+    UNSPECIFIED = "UNSPECIFIED"
+    SERVING = "SERVING"
+    LIMITED = "LIMITED"
+    LEARNING = "LEARNING"
+    PAUSED = "PAUSED"
+    PENDING = "PENDING"
+    ENDED = "ENDED"
+    MISCONFIGURED = "MISCONFIGURED"
+    NOT_ELIGIBLE = "NOT_ELIGIBLE"
+    ARCHIVED = "ARCHIVED"
+    REMOVED = "REMOVED"
+
+
 class PropertyAdsReportMetricsCampaignGoal(str, Enum, metaclass=utils.OpenEnumMeta):
     UNSPECIFIED = "UNSPECIFIED"
     BRAND_AWARENESS = "BRAND_AWARENESS"
@@ -78,6 +94,7 @@ class PropertyAdsReportMetricsCampaignTypedDict(TypedDict):
     category: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    effective_status: NotRequired[PropertyAdsReportMetricsCampaignEffectiveStatus]
     end_at: NotRequired[datetime]
     frequency_cap: NotRequired[PropertyAdsReportMetricsCampaignFrequencyCapTypedDict]
     goal: NotRequired[PropertyAdsReportMetricsCampaignGoal]
@@ -110,6 +127,8 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
+
+    effective_status: Optional[PropertyAdsReportMetricsCampaignEffectiveStatus] = None
 
     end_at: Optional[datetime] = None
 
@@ -159,6 +178,15 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
                 return value
         return value
 
+    @field_serializer("effective_status")
+    def serialize_effective_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyAdsReportMetricsCampaignEffectiveStatus(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("goal")
     def serialize_goal(self, value):
         if isinstance(value, str):
@@ -188,6 +216,7 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
                 "category",
                 "created_at",
                 "currency",
+                "effective_status",
                 "end_at",
                 "frequency_cap",
                 "goal",
