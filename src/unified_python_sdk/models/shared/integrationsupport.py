@@ -164,6 +164,12 @@ class ListDocumentID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListEffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListEndLt(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1115,6 +1121,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_deal_id: NotRequired[ListDealID]
     list_dimension: NotRequired[ListDimension]
     list_document_id: NotRequired[ListDocumentID]
+    list_effective_status: NotRequired[ListEffectiveStatus]
     list_end_lt: NotRequired[ListEndLt]
     list_event_id: NotRequired[ListEventID]
     list_expand: NotRequired[ListExpand]
@@ -1329,6 +1336,8 @@ class IntegrationSupport(BaseModel):
     list_dimension: Optional[ListDimension] = None
 
     list_document_id: Optional[ListDocumentID] = None
+
+    list_effective_status: Optional[ListEffectiveStatus] = None
 
     list_end_lt: Optional[ListEndLt] = None
 
@@ -1870,6 +1879,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListDocumentID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_effective_status")
+    def serialize_list_effective_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListEffectiveStatus(value)
             except ValueError:
                 return value
         return value
@@ -3290,6 +3308,7 @@ class IntegrationSupport(BaseModel):
                 "list_deal_id",
                 "list_dimension",
                 "list_document_id",
+                "list_effective_status",
                 "list_end_lt",
                 "list_event_id",
                 "list_expand",
