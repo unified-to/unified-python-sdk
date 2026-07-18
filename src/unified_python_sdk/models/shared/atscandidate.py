@@ -60,6 +60,8 @@ class AtsCandidateTypedDict(TypedDict):
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
+    user_ids: NotRequired[List[str]]
+    r"""references hris employees"""
     web_url: NotRequired[str]
 
 
@@ -117,6 +119,9 @@ class AtsCandidate(BaseModel):
 
     user_id: Optional[str] = None
 
+    user_ids: Optional[List[str]] = None
+    r"""references hris employees"""
+
     web_url: Optional[str] = None
 
     @field_serializer("origin")
@@ -158,6 +163,7 @@ class AtsCandidate(BaseModel):
                 "title",
                 "updated_at",
                 "user_id",
+                "user_ids",
                 "web_url",
             ]
         )

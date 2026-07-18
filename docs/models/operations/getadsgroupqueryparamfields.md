@@ -22,6 +22,7 @@ value = GetAdsGroupQueryParamFields.ID
 | `ORGANIZATION_ID`        | organization_id          |
 | `INSERTIONORDER_ID`      | insertionorder_id        |
 | `STATUS`                 | status                   |
+| `EFFECTIVE_STATUS`       | effective_status         |
 | `TARGETING`              | targeting                |
 | `BID_AMOUNT`             | bid_amount               |
 | `BID_STRATEGY`           | bid_strategy             |

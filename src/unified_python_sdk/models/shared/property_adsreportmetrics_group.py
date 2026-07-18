@@ -67,6 +67,22 @@ class PropertyAdsReportMetricsGroupBudgetUnit(str, Enum, metaclass=utils.OpenEnu
     IMPRESSIONS = "IMPRESSIONS"
 
 
+class PropertyAdsReportMetricsGroupEffectiveStatus(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
+    UNSPECIFIED = "UNSPECIFIED"
+    SERVING = "SERVING"
+    LIMITED = "LIMITED"
+    LEARNING = "LEARNING"
+    PAUSED = "PAUSED"
+    PENDING = "PENDING"
+    ENDED = "ENDED"
+    MISCONFIGURED = "MISCONFIGURED"
+    NOT_ELIGIBLE = "NOT_ELIGIBLE"
+    ARCHIVED = "ARCHIVED"
+    REMOVED = "REMOVED"
+
+
 class PropertyAdsReportMetricsGroupOptimizationGoal(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
@@ -127,6 +143,7 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     creative_ids: NotRequired[List[str]]
     currency: NotRequired[str]
+    effective_status: NotRequired[PropertyAdsReportMetricsGroupEffectiveStatus]
     end_at: NotRequired[datetime]
     frequency_cap: NotRequired[PropertyAdsReportMetricsGroupFrequencyCapTypedDict]
     has_eu_political_ads: NotRequired[bool]
@@ -173,6 +190,8 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     creative_ids: Optional[List[str]] = None
 
     currency: Optional[str] = None
+
+    effective_status: Optional[PropertyAdsReportMetricsGroupEffectiveStatus] = None
 
     end_at: Optional[datetime] = None
 
@@ -244,6 +263,15 @@ class PropertyAdsReportMetricsGroup(BaseModel):
                 return value
         return value
 
+    @field_serializer("effective_status")
+    def serialize_effective_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyAdsReportMetricsGroupEffectiveStatus(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("optimization_goal")
     def serialize_optimization_goal(self, value):
         if isinstance(value, str):
@@ -287,6 +315,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
                 "created_at",
                 "creative_ids",
                 "currency",
+                "effective_status",
                 "end_at",
                 "frequency_cap",
                 "has_eu_political_ads",

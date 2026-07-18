@@ -24,7 +24,6 @@ value = PatchAdsAdQueryParamFields.ID
 | `AD_TYPE`            | ad_type              |
 | `ADVERTISER_NAME`    | advertiser_name      |
 | `CREATIVE_IDS`       | creative_ids         |
-| `LOGO_CREATIVE_ID`   | logo_creative_id     |
 | `CREATIVE_ASSET_URL` | creative_asset_url   |
 | `AD_COPY`            | ad_copy              |
 | `HEADLINE`           | headline             |
@@ -35,4 +34,5 @@ value = PatchAdsAdQueryParamFields.ID
 | `PATH1`              | path1                |
 | `PATH2`              | path2                |
 | `PROMOTED`           | promoted             |
+| `LOGO_CREATIVE_ID`   | logo_creative_id     |
 | `RAW`                | raw                  |

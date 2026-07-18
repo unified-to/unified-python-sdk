@@ -3,7 +3,7 @@
 from __future__ import annotations
 from datetime import datetime
 from pydantic import model_serializer
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
@@ -17,6 +17,7 @@ class RepoCommitTypedDict(TypedDict):
     lines_changed: NotRequired[float]
     lines_deleted: NotRequired[float]
     message: NotRequired[str]
+    pullrequest_ids: NotRequired[List[str]]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -39,6 +40,8 @@ class RepoCommit(BaseModel):
 
     message: Optional[str] = None
 
+    pullrequest_ids: Optional[List[str]] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
@@ -56,6 +59,7 @@ class RepoCommit(BaseModel):
                 "lines_changed",
                 "lines_deleted",
                 "message",
+                "pullrequest_ids",
                 "raw",
                 "updated_at",
                 "user_id",

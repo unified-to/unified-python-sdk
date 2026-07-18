@@ -147,6 +147,7 @@ class IntegrationTypedDict(TypedDict):
     partnership: NotRequired[PartnershipTypedDict]
     popularity: NotRequired[float]
     rate_limit_description: NotRequired[str]
+    requires_cname: NotRequired[bool]
     saml: NotRequired[SamlTypedDict]
     sandbox: NotRequired[SandboxTypedDict]
     support: NotRequired[Dict[str, IntegrationSupportTypedDict]]
@@ -202,6 +203,8 @@ class Integration(BaseModel):
 
     rate_limit_description: Optional[str] = None
 
+    requires_cname: Optional[bool] = None
+
     saml: Optional[Saml] = None
 
     sandbox: Optional[Sandbox] = None
@@ -242,6 +245,7 @@ class Integration(BaseModel):
                 "partnership",
                 "popularity",
                 "rate_limit_description",
+                "requires_cname",
                 "saml",
                 "sandbox",
                 "support",

@@ -11,16 +11,17 @@ value = UpdateRepoCommitQueryParamFields.ID
 
 ## Values
 
-| Name            | Value           |
-| --------------- | --------------- |
-| `ID`            | id              |
-| `CREATED_AT`    | created_at      |
-| `UPDATED_AT`    | updated_at      |
-| `USER_ID`       | user_id         |
-| `REPO_ID`       | repo_id         |
-| `MESSAGE`       | message         |
-| `BRANCH_ID`     | branch_id       |
-| `LINES_ADDED`   | lines_added     |
-| `LINES_DELETED` | lines_deleted   |
-| `LINES_CHANGED` | lines_changed   |
-| `RAW`           | raw             |
+| Name              | Value             |
+| ----------------- | ----------------- |
+| `ID`              | id                |
+| `CREATED_AT`      | created_at        |
+| `UPDATED_AT`      | updated_at        |
+| `USER_ID`         | user_id           |
+| `REPO_ID`         | repo_id           |
+| `MESSAGE`         | message           |
+| `BRANCH_ID`       | branch_id         |
+| `PULLREQUEST_IDS` | pullrequest_ids   |
+| `LINES_ADDED`     | lines_added       |
+| `LINES_DELETED`   | lines_deleted     |
+| `LINES_CHANGED`   | lines_changed     |
+| `RAW`             | raw               |

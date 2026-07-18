@@ -25,6 +25,7 @@ class ListAdsGroupsQueryParamFields(str, Enum):
     ORGANIZATION_ID = "organization_id"
     INSERTIONORDER_ID = "insertionorder_id"
     STATUS = "status"
+    EFFECTIVE_STATUS = "effective_status"
     TARGETING = "targeting"
     BID_AMOUNT = "bid_amount"
     BID_STRATEGY = "bid_strategy"
@@ -52,6 +53,7 @@ class ListAdsGroupsRequestTypedDict(TypedDict):
     r"""ID of the connection"""
     campaign_id: NotRequired[str]
     r"""The campaign ID to filter by"""
+    effective_status: NotRequired[str]
     end_lt: NotRequired[str]
     r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListAdsGroupsQueryParamFields]]
@@ -89,6 +91,11 @@ class ListAdsGroupsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""The campaign ID to filter by"""
+
+    effective_status: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     end_lt: Annotated[
         Optional[str],
@@ -175,6 +182,7 @@ class ListAdsGroupsRequest(BaseModel):
         optional_fields = set(
             [
                 "campaign_id",
+                "effective_status",
                 "end_lt",
                 "fields",
                 "io_id",

@@ -37,6 +37,7 @@ class UpdateAtsCandidateQueryParamFields(str, Enum):
     SOURCES = "sources"
     DATE_OF_BIRTH = "date_of_birth"
     USER_ID = "user_id"
+    USER_IDS = "user_ids"
     WEB_URL = "web_url"
     EXPERIENCES = "experiences"
     EDUCATION = "education"
