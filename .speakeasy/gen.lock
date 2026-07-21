@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 3b22e3eb6058fda75068b7b68db79d73
+  docChecksum: 1c53d4c83d670f3e7401df3422270680
   docVersion: "1.0"
-  speakeasyVersion: 1.790.2
-  generationVersion: 2.918.3
-  releaseVersion: 0.59.11
-  configChecksum: f2bad6fce5ff94aeea192770097211eb
+  speakeasyVersion: 1.790.3
+  generationVersion: 2.918.4
+  releaseVersion: 0.59.12
+  configChecksum: d931e414bffc4a1316d1806ac6a67c39
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: acd9e744-e89b-4638-9237-c6b52e36ff88
-  pristine_commit_hash: edce9c3420a95751d0f57d115d724bb2e11fcc51
-  pristine_tree_hash: b9408afd54826bf4542067ad9ae6889fd6fa9225
+  generation_id: 3a48f377-8de9-4048-9406-9c235ea422de
+  pristine_commit_hash: 0cd13cce9e5d6c70d761b83986f589e16b308947
+  pristine_tree_hash: 7e9363ffb80cc19d7084c64692b8413f44729065
 features:
   python:
     acceptHeaders: 3.0.0
@@ -1016,6 +1016,18 @@ trackedFiles:
     id: c285befe4a34
     last_write_checksum: sha1:84f1972a78606fc902c1bcc60d1da0a0365205fb
     pristine_git_object: f0764e3f9dc0b54712f5e4b33ebf0592d59a178f
+  docs/models/operations/createmessagingchannelqueryparamfields.md:
+    id: 467cd08168c5
+    last_write_checksum: sha1:40e7fad5b0eee0e300c2728f349ca4fdb9988351
+    pristine_git_object: ba334b1ee3ea267b40122bfbc7d8b3043d3aa083
+  docs/models/operations/createmessagingchannelrequest.md:
+    id: 5335b8a4aa32
+    last_write_checksum: sha1:1ba5c250ba0014c445815a5efd7d2c93c774ead9
+    pristine_git_object: efb94d3f5cff6d741b1fd2d48f1d041912e01878
+  docs/models/operations/createmessagingchannelresponse.md:
+    id: 903936ec707a
+    last_write_checksum: sha1:d52a26fc89a60ee1e03b9e49dc2720c25067b74f
+    pristine_git_object: 7a0e1c7190bfb524f95cf3b8a5278fa942512dd7
   docs/models/operations/createmessagingmessagequeryparamfields.md:
     id: f3a7b29239ad
     last_write_checksum: sha1:b8a4b8c4553251648709aa7def949432e5fc3c28
@@ -5744,6 +5756,18 @@ trackedFiles:
     id: 5f22932b3e2e
     last_write_checksum: sha1:3c1dbaeff8feee784d6c82a3b69c52cb64421775
     pristine_git_object: 919fe3b9a0d0993cad0e9f908df81ab1bed75008
+  docs/models/operations/patchmessagingchannelqueryparamfields.md:
+    id: de89ab163312
+    last_write_checksum: sha1:c7dc2b89f251bd0efc424168a95b4bcfb3e06bba
+    pristine_git_object: b8a8dcf0f25345e07fb46c271a4cac220a7430fb
+  docs/models/operations/patchmessagingchannelrequest.md:
+    id: 478d6be69da3
+    last_write_checksum: sha1:f2770a5e8a57511085759e257d0907153fbeecf7
+    pristine_git_object: c038dff88d5ed4d77906e2dfd6d6996e2272b851
+  docs/models/operations/patchmessagingchannelresponse.md:
+    id: 6262b5dab223
+    last_write_checksum: sha1:216c2f78e6071f6e29317ad041a05ee5a9ec0bd7
+    pristine_git_object: 8f37bb227681af60181cb12f2846f82fdc532ac6
   docs/models/operations/patchmessagingeventqueryparamfields.md:
     id: 94ec5e20392a
     last_write_checksum: sha1:59d8235d82fe2b025ca284b194a0f40ba981e224
@@ -6748,6 +6772,14 @@ trackedFiles:
     id: f2ee4f3ac8a1
     last_write_checksum: sha1:a6b3f2b39d82a7ced5be777cc3340b4670db9ceb
     pristine_git_object: fe7ad60474f6697e7f9d9239ca8a64b526592477
+  docs/models/operations/removemessagingchannelrequest.md:
+    id: b2423ef526e3
+    last_write_checksum: sha1:9a239ba8079335f7afed774f1c0cbd92d237eef7
+    pristine_git_object: 59e61e63d436d683d93ccf9e7d8e382d92f525d7
+  docs/models/operations/removemessagingchannelresponse.md:
+    id: 944b22648418
+    last_write_checksum: sha1:5dd5c1238a55cff61830fd01d3c18899f82a5ca7
+    pristine_git_object: 8b36f14da21bc5f21c4c7ac159d3c84b074ca959
   docs/models/operations/removemessagingmessagerequest.md:
     id: 5bf775daffbe
     last_write_checksum: sha1:8292b761ad739816c753fb839b1ecf47a4b93b21
@@ -7944,6 +7976,18 @@ trackedFiles:
     id: 2981e26f8a92
     last_write_checksum: sha1:73862269056370e463800e9b521ba40113b90981
     pristine_git_object: 7c910ec4e72fb5bb4fc6eb34d8615c94597aadf2
+  docs/models/operations/updatemessagingchannelqueryparamfields.md:
+    id: da1a05181dd3
+    last_write_checksum: sha1:480173234cab863a10a337eec78c82bf9c471b01
+    pristine_git_object: 0c67fa49168320dd3f0710cd8414ca128ea47539
+  docs/models/operations/updatemessagingchannelrequest.md:
+    id: e48a633a5909
+    last_write_checksum: sha1:6d07bae80c304cb08facb9432301c2420a53b22d
+    pristine_git_object: f9521e4742dd259607efabe64f74c4daa249050b
+  docs/models/operations/updatemessagingchannelresponse.md:
+    id: "849779232134"
+    last_write_checksum: sha1:4e511b1a349e1d4d83249f0a6d668dc1e178f169
+    pristine_git_object: 55663ae2fd95d67d0d3e57abb01dd47f9750a47b
   docs/models/operations/updatemessagingeventqueryparamfields.md:
     id: fea28d6cb840
     last_write_checksum: sha1:d688f91f7cbad8a2ea8d52b167e2db31ca934196
@@ -11050,8 +11094,8 @@ trackedFiles:
     pristine_git_object: bdf6c616293e9492a63d34e91707ff55b214ae6b
   docs/models/shared/propertyconnectionpermissions.md:
     id: ba669e8bae08
-    last_write_checksum: sha1:1d8540269792a4a29f54d999e333d869ad63fa70
-    pristine_git_object: 361e7519fa22bb9edc1e3854f245f525e3fa5c23
+    last_write_checksum: sha1:5c6273c358b83f8ab9f3c62893382b62f7c509cc
+    pristine_git_object: a56c900080e0cc647cd06ee50f3c304660c94676
   docs/models/shared/propertycrmcompanyaddress.md:
     id: 41f29a125712
     last_write_checksum: sha1:73f2561f7faf2feb9e98565137f1301b8a6b084c
@@ -12298,8 +12342,8 @@ trackedFiles:
     pristine_git_object: 047d6181d494f5681fc8d4638d778f8213a363e7
   docs/sdks/channel/README.md:
     id: 53c1192ca208
-    last_write_checksum: sha1:3b4afca82065775aa9c2c89ffea838cf32e2dbed
-    pristine_git_object: 2f608f25d30e60b86f06ad98ab074112cb6018a6
+    last_write_checksum: sha1:18e749c7573a238d53329db63f020514a65e204f
+    pristine_git_object: 038c93cd5454ae1af8e159ff0fee4d6b9ff2b741
   docs/sdks/class/README.md:
     id: 3d83b7f3788f
     last_write_checksum: sha1:963a75c63aef6c780c92cab56d099ff9d0c4c4e8
@@ -12522,8 +12566,8 @@ trackedFiles:
     pristine_git_object: b5d324526596a8e7b4002207f46577973288f34b
   docs/sdks/messaging/README.md:
     id: 827f9d81a390
-    last_write_checksum: sha1:a909e37fcd32c6112c35cd6709f483a3429b0a4e
-    pristine_git_object: 454ed2c9e542ee908ff420caa3a766a39c03ada4
+    last_write_checksum: sha1:8165a33d27eb17c509fc0172272a001198ce172c
+    pristine_git_object: f03e56304728c3940d5a7e2904eed291049e9f7d
   docs/sdks/metadata/README.md:
     id: de871ca7dbeb
     last_write_checksum: sha1:7b95517d44ad6b9d8f5124665176161a33f0cb86
@@ -12810,8 +12854,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:e759c9ab12e66516d777bb1da722d0b703033e78
-    pristine_git_object: 0c4153e718900a24c9f773fcddb548b43d085448
+    last_write_checksum: sha1:4e262ea701bdc133ca71e827d9ae46cbcb8c9e80
+    pristine_git_object: b29adc1e3c7680232bd88c54a35423b8602612f4
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -12838,8 +12882,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:d9aa667c58f491405ed7a9380789187a0c8aad5d
-    pristine_git_object: 1d73a99372ea209a04fd9be55c91425450124068
+    last_write_checksum: sha1:0fd6dca4f6729ec5e78c74982e0943f519e3940b
+    pristine_git_object: baf8847aa9540a49777abcba2a4e313a006c88d3
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -12954,8 +12998,8 @@ trackedFiles:
     pristine_git_object: 702f70f738226b903bb76dd8f4b2e6467d42cfa5
   src/unified_python_sdk/channel.py:
     id: 0d40563578b4
-    last_write_checksum: sha1:cd77b73e351f12ebde9678c322d1d324a2c2491c
-    pristine_git_object: d48ecb11e8f22a4b893d582760b8eaa233fa1320
+    last_write_checksum: sha1:0fe95eed20df27da4e2bf5b2e3463e8962c440bf
+    pristine_git_object: 3465f34919ff99604d2b80f0becb7a49579fdb85
   src/unified_python_sdk/class_.py:
     id: eeff5bf5f478
     last_write_checksum: sha1:56f96952ced01cdea150e7e113a6b5c7258874ae
@@ -13182,8 +13226,8 @@ trackedFiles:
     pristine_git_object: 01df13f6ecc9a3d3d6e390199925e5a420f5a82d
   src/unified_python_sdk/messaging.py:
     id: 992e626b4c8d
-    last_write_checksum: sha1:33573477a33f0f4fae21f8be52597df67361fbf9
-    pristine_git_object: b063174d256aaf671cefae8166429ac2d1a7a82a
+    last_write_checksum: sha1:cb8731d74f80852106f4dee735877be1a32f0980
+    pristine_git_object: 76d5da1f5b92b6e09d866b57e0250e453dd06f95
   src/unified_python_sdk/metadata.py:
     id: 15da1cb2196e
     last_write_checksum: sha1:c8ae0a0dcc29f1a3dec891d022efeb8c3c3b1186
@@ -13218,8 +13262,8 @@ trackedFiles:
     pristine_git_object: 01a716a03809ab4f4d1f089ae11e04e8392ba5e8
   src/unified_python_sdk/models/operations/__init__.py:
     id: 486383712deb
-    last_write_checksum: sha1:ae9766bacdeec54fcabdbadcebab76075e84c742
-    pristine_git_object: 41b0d96e02dec8588441e2bbb9fc3aa40794d77d
+    last_write_checksum: sha1:f4871c25ddfc9ec405828065ef4fb5f1be21fcb4
+    pristine_git_object: 8ae629576ad88adaaaf96fe27bb72315d12d747e
   src/unified_python_sdk/models/operations/createaccountingaccount.py:
     id: 52d116750aa5
     last_write_checksum: sha1:11a920dbaaa54c33ecb3bea4f9cf36a2317c58ae
@@ -13544,6 +13588,10 @@ trackedFiles:
     id: c41d772df75a
     last_write_checksum: sha1:35cd993f216666bf13e55e432550169684ec26bf
     pristine_git_object: 35aa7b6ab5397b7af39f47ee7a98eeea17e9d2bd
+  src/unified_python_sdk/models/operations/createmessagingchannel.py:
+    id: ea971cd23360
+    last_write_checksum: sha1:301ab3e5ed159cd79ede14b5344750f508507207
+    pristine_git_object: 413fcd0dd2ca99df0a251d3a04c213b5c363ff55
   src/unified_python_sdk/models/operations/createmessagingmessage.py:
     id: efc64df98361
     last_write_checksum: sha1:e7457d793ec547ba6688d1d74e719db18475fad3
@@ -15168,6 +15216,10 @@ trackedFiles:
     id: 8a1073bcdd58
     last_write_checksum: sha1:647769f6bc4a148420d2903bd16c29dc8d7cd4a4
     pristine_git_object: 663c969ff6d592af4ad5cd46a57df0ed2de3a03c
+  src/unified_python_sdk/models/operations/patchmessagingchannel.py:
+    id: 437c17ddc837
+    last_write_checksum: sha1:b332499355ee647eb89b93ddc66682930fda2c97
+    pristine_git_object: 14ff114db2318e56bf1c35c9e4aebec240a5ed6a
   src/unified_python_sdk/models/operations/patchmessagingevent.py:
     id: c4552b88f825
     last_write_checksum: sha1:8d75a27fa77df8bbcf0dcb42493274ecd1af75ae
@@ -15612,6 +15664,10 @@ trackedFiles:
     id: 54b3102bda3a
     last_write_checksum: sha1:67ad7f480dc5789640bc9a2d98f0f087aedea565
     pristine_git_object: b384aa9cf4014b7d4717d304c71b1097c5213e60
+  src/unified_python_sdk/models/operations/removemessagingchannel.py:
+    id: 74b43463fa59
+    last_write_checksum: sha1:90e22b75c79a7c133a6ca66497d189a8ea3b6546
+    pristine_git_object: df9e32b82cae75652e961b5531ef401775753a43
   src/unified_python_sdk/models/operations/removemessagingmessage.py:
     id: 493ab8dcccbc
     last_write_checksum: sha1:ac53423e44bf9573418a08d449bece069b6a6bed
@@ -16056,6 +16112,10 @@ trackedFiles:
     id: fc17472e06bf
     last_write_checksum: sha1:0aa7df37a858a8820ef5b3d00bdbeff4fa6478eb
     pristine_git_object: 371f096ace2e54ae493498cde244d3c53bc3c710
+  src/unified_python_sdk/models/operations/updatemessagingchannel.py:
+    id: a0911672b321
+    last_write_checksum: sha1:8d9ca116ea9feb1ac3aefe2993e83b1c0297a2eb
+    pristine_git_object: f41095e6bf837f29e20ddc8de85ef46af1544c4c
   src/unified_python_sdk/models/operations/updatemessagingevent.py:
     id: 9eddcc028d1b
     last_write_checksum: sha1:cf95e370c78b075e2a1146a53fdb0b3a844a1f7f
@@ -17510,8 +17570,8 @@ trackedFiles:
     pristine_git_object: 8396dd5f5ab0ff11f00efd0fe92694689666fca0
   src/unified_python_sdk/models/shared/property_connection_permissions.py:
     id: 8046a25dee7c
-    last_write_checksum: sha1:968ab5007dfabf8279efea08865249b81daaceaf
-    pristine_git_object: 8e3143fad408b94b36ff8145d05d82e8d0ed7fc8
+    last_write_checksum: sha1:a793ca7262a375ed30dbadebbde384c5982b65b9
+    pristine_git_object: fe999a3be9b627aace79704e699d597d0a6b939e
   src/unified_python_sdk/models/shared/property_crmcompany_address.py:
     id: f5121a79f64a
     last_write_checksum: sha1:75fd90ed6c673cade2d87f9dcfe86f8ed234c571
@@ -31487,9 +31547,47 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createMessagingChannel:
+    speakeasy-default-create-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchMessagingChannel:
+    speakeasy-default-patch-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeMessagingChannel:
+    speakeasy-default-remove-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMessagingChannel:
+    speakeasy-default-update-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.report.list_ads_reports()`:  `response.[].metrics[].group.effective_status` **Added**\n* `unified_to.ads.create_ads_ad()`: \n  *  `request.fields` **Changed**\n* `unified_to.ads.create_ads_group()`: \n  *  `request` **Changed**\n  *  `response.effective_status` **Added**\n* `unified_to.ads.get_ads_ad()`: \n  *  `request.fields` **Changed**\n* `unified_to.ads.get_ads_group()`: \n  *  `request.fields` **Changed**\n  *  `response.effective_status` **Added**\n* `unified_to.ads.list_ads_ads()`: \n  *  `request.fields` **Changed**\n* `unified_to.ads.list_ads_groups()`: \n  *  `request` **Changed**\n  *  `response.[].effective_status` **Added**\n* `unified_to.ads.list_ads_reports()`:  `response.[].metrics[].group.effective_status` **Added**\n* `unified_to.ads.patch_ads_ad()`: \n  *  `request.fields` **Changed**\n* `unified_to.ads.patch_ads_group()`: \n  *  `request` **Changed**\n  *  `response.effective_status` **Added**\n* `unified_to.ads.update_ads_ad()`: \n  *  `request.fields` **Changed**\n* `unified_to.ads.update_ads_group()`: \n  *  `request` **Changed**\n  *  `response.effective_status` **Added**\n* `unified_to.ad.create_ads_ad()`: \n  *  `request.fields` **Changed**\n* `unified_to.ad.get_ads_ad()`: \n  *  `request.fields` **Changed**\n* `unified_to.ad.list_ads_ads()`: \n  *  `request.fields` **Changed**\n* `unified_to.ad.patch_ads_ad()`: \n  *  `request.fields` **Changed**\n* `unified_to.ad.update_ads_ad()`: \n  *  `request.fields` **Changed**\n* `unified_to.group.create_ads_group()`: \n  *  `request` **Changed**\n  *  `response.effective_status` **Added**\n* `unified_to.group.get_ads_group()`: \n  *  `request.fields` **Changed**\n  *  `response.effective_status` **Added**\n* `unified_to.group.list_ads_groups()`: \n  *  `request` **Changed**\n  *  `response.[].effective_status` **Added**\n* `unified_to.group.patch_ads_group()`: \n  *  `request` **Changed**\n  *  `response.effective_status` **Added**\n* `unified_to.group.update_ads_group()`: \n  *  `request` **Changed**\n  *  `response.effective_status` **Added**\n* `unified_to.ats.create_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.user_ids` **Added**\n* `unified_to.ats.get_ats_candidate()`: \n  *  `request.fields` **Changed**\n  *  `response.user_ids` **Added**\n* `unified_to.ats.list_ats_candidates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].user_ids` **Added**\n* `unified_to.ats.patch_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.user_ids` **Added**\n* `unified_to.ats.update_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.user_ids` **Added**\n* `unified_to.candidate.create_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.user_ids` **Added**\n* `unified_to.candidate.get_ats_candidate()`: \n  *  `request.fields` **Changed**\n  *  `response.user_ids` **Added**\n* `unified_to.candidate.list_ats_candidates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].user_ids` **Added**\n* `unified_to.candidate.patch_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.user_ids` **Added**\n* `unified_to.candidate.update_ats_candidate()`: \n  *  `request` **Changed**\n  *  `response.user_ids` **Added**\n* `unified_to.repo.create_repo_commit()`: \n  *  `request` **Changed**\n  *  `response.pullrequest_ids` **Added**\n* `unified_to.repo.get_repo_commit()`: \n  *  `request.fields` **Changed**\n  *  `response.pullrequest_ids` **Added**\n* `unified_to.repo.list_repo_commits()`: \n  *  `request.fields` **Changed**\n  *  `response.[].pullrequest_ids` **Added**\n* `unified_to.repo.patch_repo_commit()`: \n  *  `request` **Changed**\n  *  `response.pullrequest_ids` **Added**\n* `unified_to.repo.update_repo_commit()`: \n  *  `request` **Changed**\n  *  `response.pullrequest_ids` **Added**\n* `unified_to.commit.create_repo_commit()`: \n  *  `request` **Changed**\n  *  `response.pullrequest_ids` **Added**\n* `unified_to.commit.get_repo_commit()`: \n  *  `request.fields` **Changed**\n  *  `response.pullrequest_ids` **Added**\n* `unified_to.commit.list_repo_commits()`: \n  *  `request.fields` **Changed**\n  *  `response.[].pullrequest_ids` **Added**\n* `unified_to.commit.patch_repo_commit()`: \n  *  `request` **Changed**\n  *  `response.pullrequest_ids` **Added**\n* `unified_to.commit.update_repo_commit()`: \n  *  `request` **Changed**\n  *  `response.pullrequest_ids` **Added**\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].requires_cname` **Added**\n* `unified_to.unified.list_unified_integrations()`:  `response.[].requires_cname` **Added**\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].requires_cname` **Added**\n* `unified_to.integration.list_unified_integrations()`:  `response.[].requires_cname` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.messaging.create_messaging_channel()`: **Added**\n* `unified_to.messaging.patch_messaging_channel()`: **Added**\n* `unified_to.messaging.remove_messaging_channel()`: **Added**\n* `unified_to.messaging.update_messaging_channel()`: **Added**\n* `unified_to.channel.create_messaging_channel()`: **Added**\n* `unified_to.channel.patch_messaging_channel()`: **Added**\n* `unified_to.channel.remove_messaging_channel()`: **Added**\n* `unified_to.channel.update_messaging_channel()`: **Added**\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.unified.list_unified_connections()`:  `response.[].permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.get_unified_connection()`:  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.list_unified_connections()`:  `response.[].permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

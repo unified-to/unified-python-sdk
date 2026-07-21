@@ -4,16 +4,67 @@
 
 ### Available Operations
 
+* [create_messaging_channel](#create_messaging_channel) - Create a channel
 * [create_messaging_message](#create_messaging_message) - Create a message
 * [get_messaging_channel](#get_messaging_channel) - Retrieve a channel
 * [get_messaging_message](#get_messaging_message) - Retrieve a message
 * [list_messaging_channels](#list_messaging_channels) - List all channels
 * [list_messaging_messages](#list_messaging_messages) - List all messages
+* [patch_messaging_channel](#patch_messaging_channel) - Update a channel
 * [patch_messaging_event](#patch_messaging_event) - Update an event
 * [patch_messaging_message](#patch_messaging_message) - Update a message
+* [remove_messaging_channel](#remove_messaging_channel) - Remove a channel
 * [remove_messaging_message](#remove_messaging_message) - Remove a message
+* [update_messaging_channel](#update_messaging_channel) - Update a channel
 * [update_messaging_event](#update_messaging_event) - Update an event
 * [update_messaging_message](#update_messaging_message) - Update a message
+
+## create_messaging_channel
+
+Create a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.messaging.create_messaging_channel(request={
+        "messaging_channel": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.messaging_channel is not None
+
+    # Handle response
+    print(res.messaging_channel)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateMessagingChannelRequest](../../models/operations/createmessagingchannelrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.CreateMessagingChannelResponse](../../models/operations/createmessagingchannelresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_messaging_message
 
@@ -248,6 +299,54 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_messaging_channel
+
+Update a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.messaging.patch_messaging_channel(request={
+        "messaging_channel": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.messaging_channel is not None
+
+    # Handle response
+    print(res.messaging_channel)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PatchMessagingChannelRequest](../../models/operations/patchmessagingchannelrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.PatchMessagingChannelResponse](../../models/operations/patchmessagingchannelresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_messaging_event
 
 Update an event
@@ -344,6 +443,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_messaging_channel
+
+Remove a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeMessagingChannel" method="delete" path="/messaging/{connection_id}/channel/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.messaging.remove_messaging_channel(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.RemoveMessagingChannelRequest](../../models/operations/removemessagingchannelrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.RemoveMessagingChannelResponse](../../models/operations/removemessagingchannelresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_messaging_message
 
 Remove a message
@@ -384,6 +530,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveMessagingMessageResponse](../../models/operations/removemessagingmessageresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_messaging_channel
+
+Update a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.messaging.update_messaging_channel(request={
+        "messaging_channel": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.messaging_channel is not None
+
+    # Handle response
+    print(res.messaging_channel)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.UpdateMessagingChannelRequest](../../models/operations/updatemessagingchannelrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.UpdateMessagingChannelResponse](../../models/operations/updatemessagingchannelresponse.md)**
 
 ### Errors
 

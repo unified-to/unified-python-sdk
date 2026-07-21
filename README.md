@@ -597,8 +597,12 @@ asyncio.run(main())
 
 ### [Channel](docs/sdks/channel/README.md)
 
+* [create_messaging_channel](docs/sdks/channel/README.md#create_messaging_channel) - Create a channel
 * [get_messaging_channel](docs/sdks/channel/README.md#get_messaging_channel) - Retrieve a channel
 * [list_messaging_channels](docs/sdks/channel/README.md#list_messaging_channels) - List all channels
+* [patch_messaging_channel](docs/sdks/channel/README.md#patch_messaging_channel) - Update a channel
+* [remove_messaging_channel](docs/sdks/channel/README.md#remove_messaging_channel) - Remove a channel
+* [update_messaging_channel](docs/sdks/channel/README.md#update_messaging_channel) - Update a channel
 
 ### [Class](docs/sdks/class/README.md)
 
@@ -1387,14 +1391,18 @@ asyncio.run(main())
 
 ### [Messaging](docs/sdks/messaging/README.md)
 
+* [create_messaging_channel](docs/sdks/messaging/README.md#create_messaging_channel) - Create a channel
 * [create_messaging_message](docs/sdks/messaging/README.md#create_messaging_message) - Create a message
 * [get_messaging_channel](docs/sdks/messaging/README.md#get_messaging_channel) - Retrieve a channel
 * [get_messaging_message](docs/sdks/messaging/README.md#get_messaging_message) - Retrieve a message
 * [list_messaging_channels](docs/sdks/messaging/README.md#list_messaging_channels) - List all channels
 * [list_messaging_messages](docs/sdks/messaging/README.md#list_messaging_messages) - List all messages
+* [patch_messaging_channel](docs/sdks/messaging/README.md#patch_messaging_channel) - Update a channel
 * [patch_messaging_event](docs/sdks/messaging/README.md#patch_messaging_event) - Update an event
 * [patch_messaging_message](docs/sdks/messaging/README.md#patch_messaging_message) - Update a message
+* [remove_messaging_channel](docs/sdks/messaging/README.md#remove_messaging_channel) - Remove a channel
 * [remove_messaging_message](docs/sdks/messaging/README.md#remove_messaging_message) - Remove a message
+* [update_messaging_channel](docs/sdks/messaging/README.md#update_messaging_channel) - Update a channel
 * [update_messaging_event](docs/sdks/messaging/README.md#update_messaging_event) - Update an event
 * [update_messaging_message](docs/sdks/messaging/README.md#update_messaging_message) - Update a message
 

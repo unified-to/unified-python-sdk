@@ -175,6 +175,7 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `MESSAGING_MESSAGE_READ`         | messaging_message_read           |
 | `MESSAGING_MESSAGE_WRITE`        | messaging_message_write          |
 | `MESSAGING_CHANNEL_READ`         | messaging_channel_read           |
+| `MESSAGING_CHANNEL_WRITE`        | messaging_channel_write          |
 | `MESSAGING_EVENT_READ`           | messaging_event_read             |
 | `MESSAGING_EVENT_WRITE`          | messaging_event_write            |
 | `KMS_SPACE_READ`                 | kms_space_read                   |
