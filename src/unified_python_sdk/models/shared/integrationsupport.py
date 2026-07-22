@@ -38,6 +38,12 @@ class ListApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListAssignedUserID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListBenefitID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -734,6 +740,12 @@ class VirtualWebhookApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookAssignedUserID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookBenefitID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1100,6 +1112,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_account_id: NotRequired[ListAccountID]
     list_ad_id: NotRequired[ListAdID]
     list_application_id: NotRequired[ListApplicationID]
+    list_assigned_user_id: NotRequired[ListAssignedUserID]
     list_benefit_id: NotRequired[ListBenefitID]
     list_bill_id: NotRequired[ListBillID]
     list_branch_id: NotRequired[ListBranchID]
@@ -1221,6 +1234,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_account_id: NotRequired[VirtualWebhookAccountID]
     virtual_webhook_ad_id: NotRequired[VirtualWebhookAdID]
     virtual_webhook_application_id: NotRequired[VirtualWebhookApplicationID]
+    virtual_webhook_assigned_user_id: NotRequired[VirtualWebhookAssignedUserID]
     virtual_webhook_benefit_id: NotRequired[VirtualWebhookBenefitID]
     virtual_webhook_bill_id: NotRequired[VirtualWebhookBillID]
     virtual_webhook_branch_id: NotRequired[VirtualWebhookBranchID]
@@ -1294,6 +1308,8 @@ class IntegrationSupport(BaseModel):
     list_ad_id: Optional[ListAdID] = None
 
     list_application_id: Optional[ListApplicationID] = None
+
+    list_assigned_user_id: Optional[ListAssignedUserID] = None
 
     list_benefit_id: Optional[ListBenefitID] = None
 
@@ -1536,6 +1552,8 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_application_id: Optional[VirtualWebhookApplicationID] = None
 
+    virtual_webhook_assigned_user_id: Optional[VirtualWebhookAssignedUserID] = None
+
     virtual_webhook_benefit_id: Optional[VirtualWebhookBenefitID] = None
 
     virtual_webhook_bill_id: Optional[VirtualWebhookBillID] = None
@@ -1690,6 +1708,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListApplicationID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_assigned_user_id")
+    def serialize_list_assigned_user_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListAssignedUserID(value)
             except ValueError:
                 return value
         return value
@@ -2738,6 +2765,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_assigned_user_id")
+    def serialize_virtual_webhook_assigned_user_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookAssignedUserID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_benefit_id")
     def serialize_virtual_webhook_benefit_id(self, value):
         if isinstance(value, str):
@@ -3287,6 +3323,7 @@ class IntegrationSupport(BaseModel):
                 "list_account_id",
                 "list_ad_id",
                 "list_application_id",
+                "list_assigned_user_id",
                 "list_benefit_id",
                 "list_bill_id",
                 "list_branch_id",
@@ -3407,6 +3444,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_account_id",
                 "virtual_webhook_ad_id",
                 "virtual_webhook_application_id",
+                "virtual_webhook_assigned_user_id",
                 "virtual_webhook_benefit_id",
                 "virtual_webhook_bill_id",
                 "virtual_webhook_branch_id",

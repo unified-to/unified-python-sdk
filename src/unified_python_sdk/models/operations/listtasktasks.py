@@ -26,6 +26,8 @@ class ListTaskTasksQueryParamFields(str, Enum):
     STATUS = "status"
     NOTES = "notes"
     DUE_AT = "due_at"
+    START_AT = "start_at"
+    END_AT = "end_at"
     PRIORITY = "priority"
     ASSIGNED_USER_IDS = "assigned_user_ids"
     CREATOR_USER_ID = "creator_user_id"
@@ -36,12 +38,15 @@ class ListTaskTasksQueryParamFields(str, Enum):
     ATTACHMENT_IDS = "attachment_ids"
     METADATA = "metadata"
     HAS_CHILDREN = "has_children"
+    TYPE = "type"
     RAW = "raw"
 
 
 class ListTaskTasksRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    assigned_user_id: NotRequired[str]
+    r"""The assigned user/employee ID to filter by (reference to HrisEmployee)"""
     end_lt: NotRequired[str]
     r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListTaskTasksQueryParamFields]]
@@ -73,6 +78,12 @@ class ListTaskTasksRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    assigned_user_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The assigned user/employee ID to filter by (reference to HrisEmployee)"""
 
     end_lt: Annotated[
         Optional[str],
@@ -158,6 +169,7 @@ class ListTaskTasksRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "assigned_user_id",
                 "end_lt",
                 "fields",
                 "limit",

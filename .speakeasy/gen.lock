@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 1c53d4c83d670f3e7401df3422270680
+  docChecksum: 335e17908653c0fa69c4c2a83a1a7885
   docVersion: "1.0"
   speakeasyVersion: 1.790.3
   generationVersion: 2.918.4
-  releaseVersion: 0.59.12
-  configChecksum: d931e414bffc4a1316d1806ac6a67c39
+  releaseVersion: 0.59.13
+  configChecksum: ba2548e4be4c596c6d4d2fc0dfed58a5
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 3a48f377-8de9-4048-9406-9c235ea422de
-  pristine_commit_hash: 0cd13cce9e5d6c70d761b83986f589e16b308947
-  pristine_tree_hash: 7e9363ffb80cc19d7084c64692b8413f44729065
+  generation_id: effd4ae1-8123-4693-bd95-8303095571ef
+  pristine_commit_hash: f55343094234da52c761fbb5978e773d9aeea839
+  pristine_tree_hash: 72269a6ba001998d135b20891f91911547033eac
 features:
   python:
     acceptHeaders: 3.0.0
@@ -1278,8 +1278,8 @@ trackedFiles:
     pristine_git_object: f761fe8735cbdb4565697229ea3eee656f677b64
   docs/models/operations/createtasktaskqueryparamfields.md:
     id: ec85ca8a14ea
-    last_write_checksum: sha1:bdb8cd4b6ab9d49e76b199274d074c64e62f6b10
-    pristine_git_object: 82927b2e4b04a741295ef5846305225162c74270
+    last_write_checksum: sha1:6b131ce362c4043c3cccf4cb7c0f5661415b0e20
+    pristine_git_object: ef642e4e78107cf2b4130f22f8bd8fc177ed4df3
   docs/models/operations/createtasktaskrequest.md:
     id: 56100dacf175
     last_write_checksum: sha1:bb53e190cf6b4c074a3d1a5b9b317ba0aa712b22
@@ -2870,8 +2870,8 @@ trackedFiles:
     pristine_git_object: 6894777d774d611a9f16d18c0271695d1d2d7129
   docs/models/operations/gettasktaskqueryparamfields.md:
     id: 7773fc84273e
-    last_write_checksum: sha1:0d24672f1d7e396f9c3d367270bdfab0e990d890
-    pristine_git_object: 7ecc572c66196139187a0d7a529ea610929c057c
+    last_write_checksum: sha1:0b95bf621595f8ce6cc43d709e623757b01882ce
+    pristine_git_object: 9b3ffee132289f57c76aae9b73ba751e2e7911f1
   docs/models/operations/gettasktaskrequest.md:
     id: 2a47c743251a
     last_write_checksum: sha1:54c4f89666cc9db9917c72b926ce5f62882dae50
@@ -4630,12 +4630,12 @@ trackedFiles:
     pristine_git_object: 4e45453d7d5d6fd4e61924397192f255fcaa6f81
   docs/models/operations/listtasktasksqueryparamfields.md:
     id: 8fa835791075
-    last_write_checksum: sha1:a5494c6ab81f8cd384ae16dc04261a6ad04482b1
-    pristine_git_object: fbcd7198aa4deda1025b38f2f27889c0275b11f7
+    last_write_checksum: sha1:42bedab51e333ce65d6f02cc521a0539064a82b4
+    pristine_git_object: b7ff9b7a3d40f0948412e6b1458a2f1019817ee8
   docs/models/operations/listtasktasksrequest.md:
     id: d920a01cb5f4
-    last_write_checksum: sha1:c30c7fcbc6979cad2985f17c6d6c694666a954de
-    pristine_git_object: c497b67c05daead17589cee122b0c6f07b0226ff
+    last_write_checksum: sha1:cf81ec85bfe1e78df2386890ce4d23a112da7ce0
+    pristine_git_object: 86dbe2d9e4c0a704a9ff36c8d204d0ff71f5154e
   docs/models/operations/listtasktasksresponse.md:
     id: 6a987f8dd43b
     last_write_checksum: sha1:1a16028fa2aa219b3a5fd200d37cd25233b4009c
@@ -6018,8 +6018,8 @@ trackedFiles:
     pristine_git_object: bc63844ac2c4aa7098f57b6709550294dbefa72f
   docs/models/operations/patchtasktaskqueryparamfields.md:
     id: 04bde7cd3110
-    last_write_checksum: sha1:3eba19be828e90009595d1b7ef0313c240ee6a02
-    pristine_git_object: 981c1b0ea4976c0ceb8eab6bbce2e942129f7849
+    last_write_checksum: sha1:9bc1420c013ce9bec5d573cd18cbaf3c7edcff84
+    pristine_git_object: 32db57bde49c4e5ab4d4047b7b611f6d70c8b919
   docs/models/operations/patchtasktaskrequest.md:
     id: 7862d2e73cdb
     last_write_checksum: sha1:707d23842b185c8c055716cf6380d891de4a4d38
@@ -8238,8 +8238,8 @@ trackedFiles:
     pristine_git_object: 78f5d2da2a22bf69e2d3ec6f3994b339cae3547c
   docs/models/operations/updatetasktaskqueryparamfields.md:
     id: 0d4fc74d18e9
-    last_write_checksum: sha1:4f07238cd393e4628fe4ef04b33d672a0be4717b
-    pristine_git_object: 85b62773d056c22d7cb92f619c9c419c0ace7451
+    last_write_checksum: sha1:6f41d2284522a91dae68eab8ebd33ede07162d77
+    pristine_git_object: 663fe0892143e8dd6b03468e143fa5b0ee0dab4e
   docs/models/operations/updatetasktaskrequest.md:
     id: 31108f5c3215
     last_write_checksum: sha1:4f883af3a4596e5ff8a5dddfb5c27804a9c5a183
@@ -9762,8 +9762,8 @@ trackedFiles:
     pristine_git_object: a6315547fe02bef56572e8966e5dd4ac2c1483af
   docs/models/shared/integrationsupport.md:
     id: c0d9decd3d9d
-    last_write_checksum: sha1:a0f819252b015b842117161e507462f57ac72d49
-    pristine_git_object: 71457da8da94748df14646db96989d17822a06bb
+    last_write_checksum: sha1:071cab0f2cc6b101635d8d1c859ef9e9ce2a071c
+    pristine_git_object: 2c72e0e01a489fe6e0bc138fdde2eafdd31389e2
   docs/models/shared/intervalunit.md:
     id: 3522c0790cee
     last_write_checksum: sha1:c48aa5c6eeec13af0afffc29274c37b2552c6778
@@ -9844,6 +9844,10 @@ trackedFiles:
     id: cbc0d87b1cbc
     last_write_checksum: sha1:94efea4f17181c1100c56695fccd11e1193cff9e
     pristine_git_object: 2484bcd13819fab7a49ea1f37066af9064025a72
+  docs/models/shared/listassigneduserid.md:
+    id: 55f57349c7c1
+    last_write_checksum: sha1:65bb7b81722d9d89d6b4b37966053ca9057be7fe
+    pristine_git_object: 56841b50b4486e54d1471a65d3c189a00c290279
   docs/models/shared/listbenefitid.md:
     id: a28646a8dcc8
     last_write_checksum: sha1:ae22d7543354538faa64f19f4cc31a03486f1b26
@@ -11794,8 +11798,8 @@ trackedFiles:
     pristine_git_object: 5269af716b2614aa5815a37a90dd712880989d49
   docs/models/shared/tasktask.md:
     id: e9e0e35bbf80
-    last_write_checksum: sha1:8b70487453eace1a804741004d0563ececfce08c
-    pristine_git_object: ff46a173f9e4708d4e6c637cb5d3975cdb3a495b
+    last_write_checksum: sha1:deb908ab96c12ec168292907e3819e2f8a95c8d0
+    pristine_git_object: ee2fd3dfe9ce0330a72f7e5c826577a04e74d3e6
   docs/models/shared/tasktaskstatus.md:
     id: 15880eba8c58
     last_write_checksum: sha1:71fcad0b65f6a543934ac1bd55cb78acde28a8d0
@@ -11968,6 +11972,10 @@ trackedFiles:
     id: 5cf047b641b7
     last_write_checksum: sha1:ad1f241c2b410f130ffdbd4aef90db226836f2e8
     pristine_git_object: 631b19e9e6504bd47a0b6dddf4df66e58aeafc71
+  docs/models/shared/virtualwebhookassigneduserid.md:
+    id: e3a226a602e8
+    last_write_checksum: sha1:e84c32677573d07817dbb8ac358403983a4a289d
+    pristine_git_object: d75cf225d42c02e19bd772915bde64665bf3c649
   docs/models/shared/virtualwebhookbenefitid.md:
     id: 86164b68eeb2
     last_write_checksum: sha1:d47d69b46ca825114d6942ef295867b2f8c27550
@@ -12854,8 +12862,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:4e262ea701bdc133ca71e827d9ae46cbcb8c9e80
-    pristine_git_object: b29adc1e3c7680232bd88c54a35423b8602612f4
+    last_write_checksum: sha1:952a272c74c8f7b6d28335c5cb0a69806c8f88c3
+    pristine_git_object: 39c6b11cfdd47db5dd18c541a331b160233738dc
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -12882,8 +12890,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:0fd6dca4f6729ec5e78c74982e0943f519e3940b
-    pristine_git_object: baf8847aa9540a49777abcba2a4e313a006c88d3
+    last_write_checksum: sha1:9b298e23150ba3226e200ef1a0d44ed197a71eee
+    pristine_git_object: eb49bca49683a21d480759bc2f92ae2eed9a6211
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -13682,8 +13690,8 @@ trackedFiles:
     pristine_git_object: f9fed49fade47965a8c501126af9dcaffec82c60
   src/unified_python_sdk/models/operations/createtasktask.py:
     id: f7215d482fdc
-    last_write_checksum: sha1:2e369616fc139da257fadd01e5ae6e41c37833e1
-    pristine_git_object: bb128cb92b93b60c38031a8a797256e8049f868b
+    last_write_checksum: sha1:8900205c34411dff26296ad87534fef1b82931ba
+    pristine_git_object: eb0a49a93e312a90691c0da68d44e744e5272222
   src/unified_python_sdk/models/operations/createticketingcategory.py:
     id: 70ef573abaec
     last_write_checksum: sha1:9590d5b4e2fca26937606fc9d2bd7dc5865ab4a0
@@ -14226,8 +14234,8 @@ trackedFiles:
     pristine_git_object: b2747e20bf38d00879042936ce71ae53fe90130c
   src/unified_python_sdk/models/operations/gettasktask.py:
     id: 3cde1b654faa
-    last_write_checksum: sha1:92ac89cb76346d59d12fcae148de5a2737336006
-    pristine_git_object: 6acbd726b487e634957796c1cf9eee0f60151ddc
+    last_write_checksum: sha1:60bc6b806014d3546ddb8cf3978ce38ee31380d1
+    pristine_git_object: f3e2c50c9d2f2e584a1dd2d494d8f2e2914c756a
   src/unified_python_sdk/models/operations/getticketingcategory.py:
     id: 6dd084f5d5d9
     last_write_checksum: sha1:fb6599d925bc805602246ae1e5f292c7f798c492
@@ -14830,8 +14838,8 @@ trackedFiles:
     pristine_git_object: a0b4aa3616a56b347ad413d15141deda4e730a4c
   src/unified_python_sdk/models/operations/listtasktasks.py:
     id: 4e99e341bca9
-    last_write_checksum: sha1:32ce82d93a6d1207cea8985b9f179ebab060f768
-    pristine_git_object: 6f062f0df8dba116deb775bc441a485f8609fa99
+    last_write_checksum: sha1:6a500fd5be843ab620514339e8bd672a473943bc
+    pristine_git_object: 117c64e9b56a1e0b19a54a82faa1bf8fe6d04c67
   src/unified_python_sdk/models/operations/listticketingcategories.py:
     id: d47e02f2182c
     last_write_checksum: sha1:c8474f3710af4ed843a289f2d0dd0c821fe7e890
@@ -15310,8 +15318,8 @@ trackedFiles:
     pristine_git_object: 9a2ce3edf020857b621ab4f89d0a9fdb83fb0133
   src/unified_python_sdk/models/operations/patchtasktask.py:
     id: f2bf578f1ddf
-    last_write_checksum: sha1:385d9f5d577a4b83dbbf2c97c53b3f9602f98d89
-    pristine_git_object: 14c75e8b167cd485b858c0f7e8e259732fcff667
+    last_write_checksum: sha1:1ec203f653b7e30064e05d926cf6219503457b90
+    pristine_git_object: 2c3b91c744468441d68fa5735115982ad73f9193
   src/unified_python_sdk/models/operations/patchticketingcategory.py:
     id: a3fc85626488
     last_write_checksum: sha1:d301d2a66c1c17a4ca65918009500bf6363a1b34
@@ -16206,8 +16214,8 @@ trackedFiles:
     pristine_git_object: 03249dbf5abdf739d4b84d7a969dc7167262af22
   src/unified_python_sdk/models/operations/updatetasktask.py:
     id: a70964ddb9b5
-    last_write_checksum: sha1:438c44b7c9fd91246a411dbd2e3082a2c07390fb
-    pristine_git_object: eca9aa2d47d09203f0864d8a73f2ae130ba5dfac
+    last_write_checksum: sha1:c482769bd4dcdb292c6fdbb875ba754ab670d21b
+    pristine_git_object: c236088e0ec72b72337e8047cd5f8096702863fb
   src/unified_python_sdk/models/operations/updateticketingcategory.py:
     id: 78d33c8b0d02
     last_write_checksum: sha1:e686a5b51e7ddf897499320be77474f60bb352a2
@@ -16254,8 +16262,8 @@ trackedFiles:
     pristine_git_object: c928c141900141c4357a16d9c9702d90e8ee8a59
   src/unified_python_sdk/models/shared/__init__.py:
     id: 8825f2c566be
-    last_write_checksum: sha1:5e71ed8f704aead1dd215a7f3612e7adcff579fa
-    pristine_git_object: 2c818de639a6fd9d2ed905c03eca1770935423d9
+    last_write_checksum: sha1:b12602021d62ab19be9b76ea44a458ff7fefa5d5
+    pristine_git_object: 1c713e0d67c3a93d78eb09104cc5f8bd4e6bb2a8
   src/unified_python_sdk/models/shared/accountingaccount.py:
     id: b8ab638302ba
     last_write_checksum: sha1:fd681fb913ad336200985e29333073ebb362c0a2
@@ -17006,8 +17014,8 @@ trackedFiles:
     pristine_git_object: 2b9211753a0d7efa2c99943e312c11597ae5b683
   src/unified_python_sdk/models/shared/integrationsupport.py:
     id: 813d8416e449
-    last_write_checksum: sha1:bb023f069176cf01de903b2903f1335a0a8fbf9c
-    pristine_git_object: 539a44b0172e4c341769631337d0f7626314976e
+    last_write_checksum: sha1:235b98e99ec33afc7ad1989fb8918d9add705e0a
+    pristine_git_object: fbbed9d430bc193fb1609436939efc98a7d94cce
   src/unified_python_sdk/models/shared/issue.py:
     id: 5fb54952d878
     last_write_checksum: sha1:b67c1b4b8c452c8046a4a5d767c6812c64dac657
@@ -18034,8 +18042,8 @@ trackedFiles:
     pristine_git_object: f134dce3b7fa6f1cf983dfde35b4ee13966abdf7
   src/unified_python_sdk/models/shared/tasktask.py:
     id: df21f2062392
-    last_write_checksum: sha1:d2680817ce09f23f3e861e25785b6231e9e4c11d
-    pristine_git_object: 16808f36a2ffcb39a5db1c5c980fe82abd91ec8f
+    last_write_checksum: sha1:bcdaf783cc30b79d684e7eff97a9ca6c7f8b8cc4
+    pristine_git_object: 5bb0933787bda7028843bf0e42ee677c7b7b94ba
   src/unified_python_sdk/models/shared/ticketingcategory.py:
     id: 8632929b11fa
     last_write_checksum: sha1:2948c427c2ca9b36ada91855933c3cd5b3f9c389
@@ -31587,7 +31595,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.messaging.create_messaging_channel()`: **Added**\n* `unified_to.messaging.patch_messaging_channel()`: **Added**\n* `unified_to.messaging.remove_messaging_channel()`: **Added**\n* `unified_to.messaging.update_messaging_channel()`: **Added**\n* `unified_to.channel.create_messaging_channel()`: **Added**\n* `unified_to.channel.patch_messaging_channel()`: **Added**\n* `unified_to.channel.remove_messaging_channel()`: **Added**\n* `unified_to.channel.update_messaging_channel()`: **Added**\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.unified.list_unified_connections()`:  `response.[].permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.get_unified_connection()`:  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.list_unified_connections()`:  `response.[].permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.permissions[].enum(messaging_channel_write)` **Added**\n  *  `response.permissions[].enum(messaging_channel_write)` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.task.create_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.get_task_task()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.list_task_tasks()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.task.patch_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.update_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.unified.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified_to.integration.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

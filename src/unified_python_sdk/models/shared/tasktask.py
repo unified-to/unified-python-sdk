@@ -26,6 +26,7 @@ class TaskTaskTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     creator_user_id: NotRequired[str]
     due_at: NotRequired[datetime]
+    end_at: NotRequired[datetime]
     follower_user_ids: NotRequired[List[str]]
     group_ids: NotRequired[List[str]]
     has_children: NotRequired[bool]
@@ -37,8 +38,10 @@ class TaskTaskTypedDict(TypedDict):
     priority: NotRequired[str]
     project_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    start_at: NotRequired[datetime]
     status: NotRequired[TaskTaskStatus]
     tags: NotRequired[List[str]]
+    type: NotRequired[str]
     updated_at: NotRequired[datetime]
     url: NotRequired[str]
 
@@ -56,6 +59,8 @@ class TaskTask(BaseModel):
     creator_user_id: Optional[str] = None
 
     due_at: Optional[datetime] = None
+
+    end_at: Optional[datetime] = None
 
     follower_user_ids: Optional[List[str]] = None
 
@@ -79,9 +84,13 @@ class TaskTask(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
+    start_at: Optional[datetime] = None
+
     status: Optional[TaskTaskStatus] = None
 
     tags: Optional[List[str]] = None
+
+    type: Optional[str] = None
 
     updated_at: Optional[datetime] = None
 
@@ -106,6 +115,7 @@ class TaskTask(BaseModel):
                 "created_at",
                 "creator_user_id",
                 "due_at",
+                "end_at",
                 "follower_user_ids",
                 "group_ids",
                 "has_children",
@@ -117,8 +127,10 @@ class TaskTask(BaseModel):
                 "priority",
                 "project_id",
                 "raw",
+                "start_at",
                 "status",
                 "tags",
+                "type",
                 "updated_at",
                 "url",
             ]
