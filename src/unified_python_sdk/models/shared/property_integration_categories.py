@@ -37,3 +37,4 @@ class PropertyIntegrationCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     SIGNING = "signing"
     CLUBS = "clubs"
     DATASTORE = "datastore"
+    CDP = "cdp"

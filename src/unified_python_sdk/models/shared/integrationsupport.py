@@ -368,6 +368,12 @@ class ListPipelineID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListProfileID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListProjectID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -986,6 +992,12 @@ class VirtualWebhookPipelineID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookProfileID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookProjectID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1167,6 +1179,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_payment_id: NotRequired[ListPaymentID]
     list_payslip_id: NotRequired[ListPayslipID]
     list_pipeline_id: NotRequired[ListPipelineID]
+    list_profile_id: NotRequired[ListProfileID]
     list_project_id: NotRequired[ListProjectID]
     list_property_id: NotRequired[ListPropertyID]
     list_query: NotRequired[ListQuery]
@@ -1275,6 +1288,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_parent_id: NotRequired[VirtualWebhookParentID]
     virtual_webhook_payment_id: NotRequired[VirtualWebhookPaymentID]
     virtual_webhook_pipeline_id: NotRequired[VirtualWebhookPipelineID]
+    virtual_webhook_profile_id: NotRequired[VirtualWebhookProfileID]
     virtual_webhook_project_id: NotRequired[VirtualWebhookProjectID]
     virtual_webhook_property_id: NotRequired[VirtualWebhookPropertyID]
     virtual_webhook_reference: NotRequired[VirtualWebhookReference]
@@ -1418,6 +1432,8 @@ class IntegrationSupport(BaseModel):
     list_payslip_id: Optional[ListPayslipID] = None
 
     list_pipeline_id: Optional[ListPipelineID] = None
+
+    list_profile_id: Optional[ListProfileID] = None
 
     list_project_id: Optional[ListProjectID] = None
 
@@ -1633,6 +1649,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_payment_id: Optional[VirtualWebhookPaymentID] = None
 
     virtual_webhook_pipeline_id: Optional[VirtualWebhookPipelineID] = None
+
+    virtual_webhook_profile_id: Optional[VirtualWebhookProfileID] = None
 
     virtual_webhook_project_id: Optional[VirtualWebhookProjectID] = None
 
@@ -2203,6 +2221,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListPipelineID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_profile_id")
+    def serialize_list_profile_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListProfileID(value)
             except ValueError:
                 return value
         return value
@@ -3134,6 +3161,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_profile_id")
+    def serialize_virtual_webhook_profile_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookProfileID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_project_id")
     def serialize_virtual_webhook_project_id(self, value):
         if isinstance(value, str):
@@ -3378,6 +3414,7 @@ class IntegrationSupport(BaseModel):
                 "list_payment_id",
                 "list_payslip_id",
                 "list_pipeline_id",
+                "list_profile_id",
                 "list_project_id",
                 "list_property_id",
                 "list_query",
@@ -3485,6 +3522,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_parent_id",
                 "virtual_webhook_payment_id",
                 "virtual_webhook_pipeline_id",
+                "virtual_webhook_profile_id",
                 "virtual_webhook_project_id",
                 "virtual_webhook_property_id",
                 "virtual_webhook_reference",

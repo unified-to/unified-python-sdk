@@ -6,6 +6,7 @@ from .lmscontentlocalization import (
     LmsContentLocalizationTypedDict,
 )
 from .lmsmedia import LmsMedia, LmsMediaTypedDict
+from .lmssubject import LmsSubject, LmsSubjectTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -19,6 +20,7 @@ class LmsContentTypedDict(TypedDict):
     course_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
     description: NotRequired[str]
+    difficulty: NotRequired[str]
     duration_minutes: NotRequired[float]
     external_reference: NotRequired[str]
     id: NotRequired[str]
@@ -29,10 +31,14 @@ class LmsContentTypedDict(TypedDict):
     media: NotRequired[List[LmsMediaTypedDict]]
     name: NotRequired[str]
     provider_name: NotRequired[str]
+    published_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     short_description: NotRequired[str]
     skills: NotRequired[List[str]]
     sort_order: NotRequired[float]
+    subjects: NotRequired[List[LmsSubjectTypedDict]]
+    r"""Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)"""
+    tags: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
 
 
@@ -46,6 +52,8 @@ class LmsContent(BaseModel):
     created_at: Optional[datetime] = None
 
     description: Optional[str] = None
+
+    difficulty: Optional[str] = None
 
     duration_minutes: Optional[float] = None
 
@@ -67,6 +75,8 @@ class LmsContent(BaseModel):
 
     provider_name: Optional[str] = None
 
+    published_at: Optional[datetime] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     short_description: Optional[str] = None
@@ -74,6 +84,11 @@ class LmsContent(BaseModel):
     skills: Optional[List[str]] = None
 
     sort_order: Optional[float] = None
+
+    subjects: Optional[List[LmsSubject]] = None
+    r"""Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)"""
+
+    tags: Optional[List[str]] = None
 
     updated_at: Optional[datetime] = None
 
@@ -86,6 +101,7 @@ class LmsContent(BaseModel):
                 "course_ids",
                 "created_at",
                 "description",
+                "difficulty",
                 "duration_minutes",
                 "external_reference",
                 "id",
@@ -96,10 +112,13 @@ class LmsContent(BaseModel):
                 "media",
                 "name",
                 "provider_name",
+                "published_at",
                 "raw",
                 "short_description",
                 "skills",
                 "sort_order",
+                "subjects",
+                "tags",
                 "updated_at",
             ]
         )

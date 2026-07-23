@@ -280,6 +280,15 @@ asyncio.run(main())
 * [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
 * [update_accounting_vendorcredit](docs/sdks/accounting/README.md#update_accounting_vendorcredit) - Update a vendorcredit
 
+### [Activation](docs/sdks/activation/README.md)
+
+* [create_cdp_activation](docs/sdks/activation/README.md#create_cdp_activation) - Create an activation
+* [get_cdp_activation](docs/sdks/activation/README.md#get_cdp_activation) - Retrieve an activation
+* [list_cdp_activations](docs/sdks/activation/README.md#list_cdp_activations) - List all activations
+* [patch_cdp_activation](docs/sdks/activation/README.md#patch_cdp_activation) - Update an activation
+* [remove_cdp_activation](docs/sdks/activation/README.md#remove_cdp_activation) - Remove an activation
+* [update_cdp_activation](docs/sdks/activation/README.md#update_cdp_activation) - Update an activation
+
 ### [Activity](docs/sdks/activity/README.md)
 
 * [create_ats_activity](docs/sdks/activity/README.md#create_ats_activity) - Create an activity
@@ -589,6 +598,45 @@ asyncio.run(main())
 * [remove_ticketing_category](docs/sdks/category/README.md#remove_ticketing_category) - Remove a category
 * [update_accounting_category](docs/sdks/category/README.md#update_accounting_category) - Update a category
 * [update_ticketing_category](docs/sdks/category/README.md#update_ticketing_category) - Update a category
+
+### [Cdp](docs/sdks/cdp/README.md)
+
+* [create_cdp_activation](docs/sdks/cdp/README.md#create_cdp_activation) - Create an activation
+* [create_cdp_destination](docs/sdks/cdp/README.md#create_cdp_destination) - Create a destination
+* [create_cdp_event](docs/sdks/cdp/README.md#create_cdp_event) - Create an event
+* [create_cdp_profile](docs/sdks/cdp/README.md#create_cdp_profile) - Create a profile
+* [create_cdp_segment](docs/sdks/cdp/README.md#create_cdp_segment) - Create a segment
+* [create_cdp_source](docs/sdks/cdp/README.md#create_cdp_source) - Create a source
+* [get_cdp_activation](docs/sdks/cdp/README.md#get_cdp_activation) - Retrieve an activation
+* [get_cdp_destination](docs/sdks/cdp/README.md#get_cdp_destination) - Retrieve a destination
+* [get_cdp_event](docs/sdks/cdp/README.md#get_cdp_event) - Retrieve an event
+* [get_cdp_profile](docs/sdks/cdp/README.md#get_cdp_profile) - Retrieve a profile
+* [get_cdp_segment](docs/sdks/cdp/README.md#get_cdp_segment) - Retrieve a segment
+* [get_cdp_source](docs/sdks/cdp/README.md#get_cdp_source) - Retrieve a source
+* [list_cdp_activations](docs/sdks/cdp/README.md#list_cdp_activations) - List all activations
+* [list_cdp_destinations](docs/sdks/cdp/README.md#list_cdp_destinations) - List all destinations
+* [list_cdp_events](docs/sdks/cdp/README.md#list_cdp_events) - List all events
+* [list_cdp_profiles](docs/sdks/cdp/README.md#list_cdp_profiles) - List all profiles
+* [list_cdp_segments](docs/sdks/cdp/README.md#list_cdp_segments) - List all segments
+* [list_cdp_sources](docs/sdks/cdp/README.md#list_cdp_sources) - List all sources
+* [patch_cdp_activation](docs/sdks/cdp/README.md#patch_cdp_activation) - Update an activation
+* [patch_cdp_destination](docs/sdks/cdp/README.md#patch_cdp_destination) - Update a destination
+* [patch_cdp_event](docs/sdks/cdp/README.md#patch_cdp_event) - Update an event
+* [patch_cdp_profile](docs/sdks/cdp/README.md#patch_cdp_profile) - Update a profile
+* [patch_cdp_segment](docs/sdks/cdp/README.md#patch_cdp_segment) - Update a segment
+* [patch_cdp_source](docs/sdks/cdp/README.md#patch_cdp_source) - Update a source
+* [remove_cdp_activation](docs/sdks/cdp/README.md#remove_cdp_activation) - Remove an activation
+* [remove_cdp_destination](docs/sdks/cdp/README.md#remove_cdp_destination) - Remove a destination
+* [remove_cdp_event](docs/sdks/cdp/README.md#remove_cdp_event) - Remove an event
+* [remove_cdp_profile](docs/sdks/cdp/README.md#remove_cdp_profile) - Remove a profile
+* [remove_cdp_segment](docs/sdks/cdp/README.md#remove_cdp_segment) - Remove a segment
+* [remove_cdp_source](docs/sdks/cdp/README.md#remove_cdp_source) - Remove a source
+* [update_cdp_activation](docs/sdks/cdp/README.md#update_cdp_activation) - Update an activation
+* [update_cdp_destination](docs/sdks/cdp/README.md#update_cdp_destination) - Update a destination
+* [update_cdp_event](docs/sdks/cdp/README.md#update_cdp_event) - Update an event
+* [update_cdp_profile](docs/sdks/cdp/README.md#update_cdp_profile) - Update a profile
+* [update_cdp_segment](docs/sdks/cdp/README.md#update_cdp_segment) - Update a segment
+* [update_cdp_source](docs/sdks/cdp/README.md#update_cdp_source) - Update a source
 
 ### [Change](docs/sdks/change/README.md)
 
@@ -909,6 +957,15 @@ asyncio.run(main())
 * [remove_hris_deduction](docs/sdks/deduction/README.md#remove_hris_deduction) - Remove a deduction
 * [update_hris_deduction](docs/sdks/deduction/README.md#update_hris_deduction) - Update a deduction
 
+### [Destination](docs/sdks/destination/README.md)
+
+* [create_cdp_destination](docs/sdks/destination/README.md#create_cdp_destination) - Create a destination
+* [get_cdp_destination](docs/sdks/destination/README.md#get_cdp_destination) - Retrieve a destination
+* [list_cdp_destinations](docs/sdks/destination/README.md#list_cdp_destinations) - List all destinations
+* [patch_cdp_destination](docs/sdks/destination/README.md#patch_cdp_destination) - Update a destination
+* [remove_cdp_destination](docs/sdks/destination/README.md#remove_cdp_destination) - Remove a destination
+* [update_cdp_destination](docs/sdks/destination/README.md#update_cdp_destination) - Update a destination
+
 ### [Device](docs/sdks/device/README.md)
 
 * [create_hris_device](docs/sdks/device/README.md#create_hris_device) - Create a device
@@ -967,21 +1024,27 @@ asyncio.run(main())
 
 * [create_analytics_event](docs/sdks/event/README.md#create_analytics_event) - Create an event
 * [create_calendar_event](docs/sdks/event/README.md#create_calendar_event) - Create an event
+* [create_cdp_event](docs/sdks/event/README.md#create_cdp_event) - Create an event
 * [create_crm_event](docs/sdks/event/README.md#create_crm_event) - Create an event
 * [get_analytics_event](docs/sdks/event/README.md#get_analytics_event) - Retrieve an event
 * [get_calendar_event](docs/sdks/event/README.md#get_calendar_event) - Retrieve an event
+* [get_cdp_event](docs/sdks/event/README.md#get_cdp_event) - Retrieve an event
 * [get_clubs_event](docs/sdks/event/README.md#get_clubs_event) - Retrieve an event
 * [get_crm_event](docs/sdks/event/README.md#get_crm_event) - Retrieve an event
 * [list_analytics_events](docs/sdks/event/README.md#list_analytics_events) - List all events
 * [list_calendar_events](docs/sdks/event/README.md#list_calendar_events) - List all events
+* [list_cdp_events](docs/sdks/event/README.md#list_cdp_events) - List all events
 * [list_clubs_events](docs/sdks/event/README.md#list_clubs_events) - List all events
 * [list_crm_events](docs/sdks/event/README.md#list_crm_events) - List all events
 * [patch_calendar_event](docs/sdks/event/README.md#patch_calendar_event) - Update an event
+* [patch_cdp_event](docs/sdks/event/README.md#patch_cdp_event) - Update an event
 * [patch_crm_event](docs/sdks/event/README.md#patch_crm_event) - Update an event
 * [patch_messaging_event](docs/sdks/event/README.md#patch_messaging_event) - Update an event
 * [remove_calendar_event](docs/sdks/event/README.md#remove_calendar_event) - Remove an event
+* [remove_cdp_event](docs/sdks/event/README.md#remove_cdp_event) - Remove an event
 * [remove_crm_event](docs/sdks/event/README.md#remove_crm_event) - Remove an event
 * [update_calendar_event](docs/sdks/event/README.md#update_calendar_event) - Update an event
+* [update_cdp_event](docs/sdks/event/README.md#update_cdp_event) - Update an event
 * [update_crm_event](docs/sdks/event/README.md#update_crm_event) - Update an event
 * [update_messaging_event](docs/sdks/event/README.md#update_messaging_event) - Update an event
 
@@ -1540,6 +1603,15 @@ asyncio.run(main())
 * [remove_crm_pipeline](docs/sdks/pipeline/README.md#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_pipeline](docs/sdks/pipeline/README.md#update_crm_pipeline) - Update a pipeline
 
+### [Profile](docs/sdks/profile/README.md)
+
+* [create_cdp_profile](docs/sdks/profile/README.md#create_cdp_profile) - Create a profile
+* [get_cdp_profile](docs/sdks/profile/README.md#get_cdp_profile) - Retrieve a profile
+* [list_cdp_profiles](docs/sdks/profile/README.md#list_cdp_profiles) - List all profiles
+* [patch_cdp_profile](docs/sdks/profile/README.md#patch_cdp_profile) - Update a profile
+* [remove_cdp_profile](docs/sdks/profile/README.md#remove_cdp_profile) - Remove a profile
+* [update_cdp_profile](docs/sdks/profile/README.md#update_cdp_profile) - Update a profile
+
 ### [Profitloss](docs/sdks/profitloss/README.md)
 
 * [get_accounting_profitloss](docs/sdks/profitloss/README.md#get_accounting_profitloss) - Retrieve a profitloss
@@ -1749,6 +1821,15 @@ asyncio.run(main())
 * [list_unified_workspace_secretsmanagers](docs/sdks/secretsmanager/README.md#list_unified_workspace_secretsmanagers) - List secrets managers
 * [remove_unified_workspace_secretsmanager](docs/sdks/secretsmanager/README.md#remove_unified_workspace_secretsmanager) - Remove secrets manager
 
+### [Segment](docs/sdks/segment/README.md)
+
+* [create_cdp_segment](docs/sdks/segment/README.md#create_cdp_segment) - Create a segment
+* [get_cdp_segment](docs/sdks/segment/README.md#get_cdp_segment) - Retrieve a segment
+* [list_cdp_segments](docs/sdks/segment/README.md#list_cdp_segments) - List all segments
+* [patch_cdp_segment](docs/sdks/segment/README.md#patch_cdp_segment) - Update a segment
+* [remove_cdp_segment](docs/sdks/segment/README.md#remove_cdp_segment) - Remove a segment
+* [update_cdp_segment](docs/sdks/segment/README.md#update_cdp_segment) - Update a segment
+
 ### [Session](docs/sdks/session/README.md)
 
 * [get_analytics_session](docs/sdks/session/README.md#get_analytics_session) - Retrieve a session
@@ -1808,6 +1889,15 @@ asyncio.run(main())
 * [remove_signing_signatory](docs/sdks/signing/README.md#remove_signing_signatory) - Remove a signatory
 * [update_signing_document](docs/sdks/signing/README.md#update_signing_document) - Update a document
 * [update_signing_signatory](docs/sdks/signing/README.md#update_signing_signatory) - Update a signatory
+
+### [Source](docs/sdks/source/README.md)
+
+* [create_cdp_source](docs/sdks/source/README.md#create_cdp_source) - Create a source
+* [get_cdp_source](docs/sdks/source/README.md#get_cdp_source) - Retrieve a source
+* [list_cdp_sources](docs/sdks/source/README.md#list_cdp_sources) - List all sources
+* [patch_cdp_source](docs/sdks/source/README.md#patch_cdp_source) - Update a source
+* [remove_cdp_source](docs/sdks/source/README.md#remove_cdp_source) - Remove a source
+* [update_cdp_source](docs/sdks/source/README.md#update_cdp_source) - Update a source
 
 ### [Space](docs/sdks/space/README.md)
 

@@ -25,10 +25,14 @@ value = PatchLmsContentQueryParamFields.ID
 | `IS_ACTIVE`          | is_active            |
 | `DURATION_MINUTES`   | duration_minutes     |
 | `CATEGORIES`         | categories           |
+| `SUBJECTS`           | subjects             |
 | `SKILLS`             | skills               |
+| `TAGS`               | tags                 |
+| `DIFFICULTY`         | difficulty           |
 | `SORT_ORDER`         | sort_order           |
 | `PROVIDER_NAME`      | provider_name        |
 | `SHORT_DESCRIPTION`  | short_description    |
+| `PUBLISHED_AT`       | published_at         |
 | `LOCALIZATIONS`      | localizations        |
 | `INSTRUCTOR_IDS`     | instructor_ids       |
 | `COLLECTION_IDS`     | collection_ids       |

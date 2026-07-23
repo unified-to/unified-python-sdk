@@ -1,0 +1,12 @@
+# CdpIdentifier
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `encoding`                                                                     | *Optional[str]*                                                                | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `is_primary`                                                                   | *Optional[bool]*                                                               | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `source`                                                                       | *Optional[str]*                                                                | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `type`                                                                         | [Optional[shared.CdpIdentifierType]](../../models/shared/cdpidentifiertype.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `value`                                                                        | *str*                                                                          | :heavy_check_mark:                                                             | N/A                                                                            |

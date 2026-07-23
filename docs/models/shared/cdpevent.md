@@ -1,0 +1,18 @@
+# CdpEvent
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `created_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `identifiers`                                                        | List[[shared.CdpIdentifier](../../models/shared/cdpidentifier.md)]   | :heavy_minus_sign:                                                   | The identifiers that link this event to a profile                    |
+| `metadata`                                                           | List[[shared.CdpMetadata](../../models/shared/cdpmetadata.md)]       | :heavy_minus_sign:                                                   | The event payload/properties                                         |
+| `name`                                                               | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `occurred_at`                                                        | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `profile_id`                                                         | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `raw`                                                                | Dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `source`                                                             | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `source_id`                                                          | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `type`                                                               | [Optional[shared.CdpEventType]](../../models/shared/cdpeventtype.md) | :heavy_minus_sign:                                                   | N/A                                                                  |

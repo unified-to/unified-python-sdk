@@ -18,6 +18,7 @@ import weakref
 if TYPE_CHECKING:
     from unified_python_sdk.account import Account
     from unified_python_sdk.accounting import Accounting
+    from unified_python_sdk.activation import Activation
     from unified_python_sdk.activity import Activity
     from unified_python_sdk.ad import Ad
     from unified_python_sdk.ads import Ads
@@ -42,6 +43,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.carrier import Carrier
     from unified_python_sdk.cashflow import Cashflow
     from unified_python_sdk.category import Category
+    from unified_python_sdk.cdp import Cdp
     from unified_python_sdk.change import Change
     from unified_python_sdk.channel import Channel
     from unified_python_sdk.class_ import Class
@@ -63,6 +65,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.datastore import Datastore
     from unified_python_sdk.deal import Deal
     from unified_python_sdk.deduction import Deduction
+    from unified_python_sdk.destination import Destination
     from unified_python_sdk.device import Device
     from unified_python_sdk.document import Document
     from unified_python_sdk.embedding import Embedding
@@ -114,6 +117,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.person import Person
     from unified_python_sdk.picklist import Picklist
     from unified_python_sdk.pipeline import Pipeline
+    from unified_python_sdk.profile import Profile
     from unified_python_sdk.profitloss import Profitloss
     from unified_python_sdk.project import Project
     from unified_python_sdk.promoted import Promoted
@@ -137,11 +141,13 @@ if TYPE_CHECKING:
     from unified_python_sdk.scim import Scim
     from unified_python_sdk.scorecard import Scorecard
     from unified_python_sdk.secretsmanager import Secretsmanager
+    from unified_python_sdk.segment import Segment
     from unified_python_sdk.session import Session
     from unified_python_sdk.shipment import Shipment
     from unified_python_sdk.shipping import Shipping
     from unified_python_sdk.signatory import Signatory
     from unified_python_sdk.signing import Signing
+    from unified_python_sdk.source import Source
     from unified_python_sdk.space import Space
     from unified_python_sdk.storage import Storage
     from unified_python_sdk.student import Student
@@ -226,6 +232,12 @@ class UnifiedTo(BaseSDK):
     link: "Link"
     recording: "Recording"
     webinar: "Webinar"
+    cdp: "Cdp"
+    activation: "Activation"
+    destination: "Destination"
+    profile: "Profile"
+    segment: "Segment"
+    source: "Source"
     clubs: "Clubs"
     location: "Location"
     member: "Member"
@@ -382,6 +394,12 @@ class UnifiedTo(BaseSDK):
         "link": ("unified_python_sdk.link", "Link"),
         "recording": ("unified_python_sdk.recording", "Recording"),
         "webinar": ("unified_python_sdk.webinar", "Webinar"),
+        "cdp": ("unified_python_sdk.cdp", "Cdp"),
+        "activation": ("unified_python_sdk.activation", "Activation"),
+        "destination": ("unified_python_sdk.destination", "Destination"),
+        "profile": ("unified_python_sdk.profile", "Profile"),
+        "segment": ("unified_python_sdk.segment", "Segment"),
+        "source": ("unified_python_sdk.source", "Source"),
         "clubs": ("unified_python_sdk.clubs", "Clubs"),
         "location": ("unified_python_sdk.location", "Location"),
         "member": ("unified_python_sdk.member", "Member"),

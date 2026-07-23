@@ -43,6 +43,7 @@ class Categories(str, Enum):
     SIGNING = "signing"
     CLUBS = "clubs"
     DATASTORE = "datastore"
+    CDP = "cdp"
 
 
 class ListUnifiedConnectionsRequestTypedDict(TypedDict):

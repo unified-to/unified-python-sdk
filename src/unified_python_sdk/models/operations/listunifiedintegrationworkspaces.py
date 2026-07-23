@@ -47,6 +47,7 @@ class QueryParamCategories(str, Enum):
     SIGNING = "signing"
     CLUBS = "clubs"
     DATASTORE = "datastore"
+    CDP = "cdp"
 
 
 class ListUnifiedIntegrationWorkspacesRequestTypedDict(TypedDict):

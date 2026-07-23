@@ -44,3 +44,4 @@ value = ListUnifiedIntegrationsQueryParamCategories.PASSTHROUGH
 | `SIGNING`      | signing        |
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
+| `CDP`          | cdp            |

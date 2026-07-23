@@ -165,3 +165,9 @@ value = ObjectType.ACCOUNTING_ACCOUNT
 | `DATASTORE_TABLE`          | datastore_table            |
 | `DATASTORE_RECORD`         | datastore_record           |
 | `DATASTORE_QUERY`          | datastore_query            |
+| `CDP_PROFILE`              | cdp_profile                |
+| `CDP_SEGMENT`              | cdp_segment                |
+| `CDP_EVENT`                | cdp_event                  |
+| `CDP_SOURCE`               | cdp_source                 |
+| `CDP_DESTINATION`          | cdp_destination            |
+| `CDP_ACTIVATION`           | cdp_activation             |
