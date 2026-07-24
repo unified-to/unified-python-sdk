@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: df9d7e70f96a426fc6497f3a82fde17e
+  docChecksum: 4926c88b7af5a30853ff3f6a7d37afe1
   docVersion: "1.0"
   speakeasyVersion: 1.790.3
   generationVersion: 2.918.4
-  releaseVersion: 0.59.14
-  configChecksum: 055d339e6f492197e3c5fc804f472590
+  releaseVersion: 0.59.15
+  configChecksum: 798177e8b4db3feef105bf715fd44a6f
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: c045fb4c-cbec-459c-9e1b-33b49670cfd3
-  pristine_commit_hash: 4e29bed2b465a2fe380eea3e9fd444ba24544ed3
-  pristine_tree_hash: bfbce40dd6088f9fc88d4387c081779741abfe1d
+  generation_id: 46c83606-92d9-417f-a4b0-cf6fec17586a
+  pristine_commit_hash: d7ced5cca34627ee89003eb0c50f2e2408a74181
+  pristine_tree_hash: 523dadb6cddd3beff10b05ce5dba57759f42eaa7
 features:
   python:
     acceptHeaders: 3.0.0
@@ -3530,8 +3530,8 @@ trackedFiles:
     pristine_git_object: f3081300967719a74c53ce8cc4965738ddb758bf
   docs/models/operations/listadsreportsrequest.md:
     id: 9c8d67f73409
-    last_write_checksum: sha1:d5130f6358985221dd638803bd7d5b297d86c194
-    pristine_git_object: 46f49ecb0992639f51802d9155364eaf439cc842
+    last_write_checksum: sha1:486e5a45a7ea34a4cedc16c7f586aa8199e4b9e4
+    pristine_git_object: 75aed14cf4fd41346fcc5a4f231e98a543c8e83d
   docs/models/operations/listadsreportsresponse.md:
     id: 2c37c257106b
     last_write_checksum: sha1:4af63351df6fd7ddb90d6f464887fa3c16c7fd16
@@ -9102,8 +9102,8 @@ trackedFiles:
     pristine_git_object: b3986fc3f0772e079852e7b90201969ef0807171
   docs/models/shared/adsreportmetricstype.md:
     id: 58282854d108
-    last_write_checksum: sha1:a88531b802506ab7d7e64563a8b71b0fef816a90
-    pristine_git_object: a46e3d75506fec5c4ff662fac3265d169f09e03a
+    last_write_checksum: sha1:35b533843554d870b51fa5c5af654755b5bba32b
+    pristine_git_object: 1c6eccf7236de06f8e2fa82349761acf4320232c
   docs/models/shared/adstarget.md:
     id: 49a6c3438442
     last_write_checksum: sha1:f5477596b86adc0ff0144ec034803f4e4b3d46f6
@@ -13414,8 +13414,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:80c650b873e510807f93e2dd09344a910120fe5d
-    pristine_git_object: acd508fc54d26305f31b2ed49983006ccb572d86
+    last_write_checksum: sha1:627d34f1d62a7428a48c216c61481f17222daeaa
+    pristine_git_object: 2d246afabc64f4235a1cf636b1eba6b1ea9cfbfe
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -13442,8 +13442,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:9359fb906d710f16955b1839151f7cc3729892e7
-    pristine_git_object: 3c4eeea730a34292c38663178f9d20ce0dad67ec
+    last_write_checksum: sha1:25b12f64e43e9e623b82ead94d8582bb39b0ae1b
+    pristine_git_object: bd1c50a6153688ba8777141c0aa8e980ef462dac
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -15026,8 +15026,8 @@ trackedFiles:
     pristine_git_object: 60e089ee8bf0c6d2c1bd53dd09ccfda77fce1907
   src/unified_python_sdk/models/operations/listadsreports.py:
     id: a919159e8d1d
-    last_write_checksum: sha1:78b48adfe15651217af5eb461ea9dcdf449d4bd5
-    pristine_git_object: 4f5d345cc922021ae323b2617c6ca77f834b5ca3
+    last_write_checksum: sha1:4fa8e45d7c86f59e90adff6d1d0dc5a945fcc756
+    pristine_git_object: 1e2ae27bbaf345f6376df47a7ca8dea746ac0991
   src/unified_python_sdk/models/operations/listadstargets.py:
     id: e14389547087
     last_write_checksum: sha1:54921cbd280d53d31922a546090b885582afabe2
@@ -17178,8 +17178,8 @@ trackedFiles:
     pristine_git_object: aa43a5bcebd7fc5d8f27366f68e9b24a8a87a72e
   src/unified_python_sdk/models/shared/adsreportmetrics.py:
     id: 6db36c1f8b32
-    last_write_checksum: sha1:df7d3383df0f753cf5ae4de5f422d6de98162803
-    pristine_git_object: 7f6a577c658be4b573864a55c24ff04ec59059f6
+    last_write_checksum: sha1:b3b576f49c515616f819f8d6a677cc13e58744dd
+    pristine_git_object: f4ce1f83af26df50b664d9fd68cc539d66db86e6
   src/unified_python_sdk/models/shared/adstarget.py:
     id: 296b0bc66fc0
     last_write_checksum: sha1:9992826cfee504180907848aaec12a8443a3b913
@@ -32693,7 +32693,10 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.event.create_cdp_event()`: **Added**\n* `unified_to.event.get_cdp_event()`: **Added**\n* `unified_to.event.list_cdp_events()`: **Added**\n* `unified_to.event.patch_cdp_event()`: **Added**\n* `unified_to.event.remove_cdp_event()`: **Added**\n* `unified_to.event.update_cdp_event()`: **Added**\n* `unified_to.cdp.create_cdp_activation()`: **Added**\n* `unified_to.cdp.create_cdp_destination()`: **Added**\n* `unified_to.cdp.create_cdp_event()`: **Added**\n* `unified_to.cdp.create_cdp_profile()`: **Added**\n* `unified_to.cdp.create_cdp_segment()`: **Added**\n* `unified_to.cdp.create_cdp_source()`: **Added**\n* `unified_to.cdp.get_cdp_activation()`: **Added**\n* `unified_to.cdp.get_cdp_destination()`: **Added**\n* `unified_to.cdp.get_cdp_event()`: **Added**\n* `unified_to.cdp.get_cdp_profile()`: **Added**\n* `unified_to.cdp.get_cdp_segment()`: **Added**\n* `unified_to.cdp.get_cdp_source()`: **Added**\n* `unified_to.cdp.list_cdp_activations()`: **Added**\n* `unified_to.cdp.list_cdp_destinations()`: **Added**\n* `unified_to.cdp.list_cdp_events()`: **Added**\n* `unified_to.cdp.list_cdp_profiles()`: **Added**\n* `unified_to.cdp.list_cdp_segments()`: **Added**\n* `unified_to.cdp.list_cdp_sources()`: **Added**\n* `unified_to.cdp.patch_cdp_activation()`: **Added**\n* `unified_to.cdp.patch_cdp_destination()`: **Added**\n* `unified_to.cdp.patch_cdp_event()`: **Added**\n* `unified_to.cdp.patch_cdp_profile()`: **Added**\n* `unified_to.cdp.patch_cdp_segment()`: **Added**\n* `unified_to.cdp.patch_cdp_source()`: **Added**\n* `unified_to.cdp.remove_cdp_activation()`: **Added**\n* `unified_to.cdp.remove_cdp_destination()`: **Added**\n* `unified_to.cdp.remove_cdp_event()`: **Added**\n* `unified_to.cdp.remove_cdp_profile()`: **Added**\n* `unified_to.cdp.remove_cdp_segment()`: **Added**\n* `unified_to.cdp.remove_cdp_source()`: **Added**\n* `unified_to.cdp.update_cdp_activation()`: **Added**\n* `unified_to.cdp.update_cdp_destination()`: **Added**\n* `unified_to.cdp.update_cdp_event()`: **Added**\n* `unified_to.cdp.update_cdp_profile()`: **Added**\n* `unified_to.cdp.update_cdp_segment()`: **Added**\n* `unified_to.cdp.update_cdp_source()`: **Added**\n* `unified_to.activation.create_cdp_activation()`: **Added**\n* `unified_to.activation.get_cdp_activation()`: **Added**\n* `unified_to.activation.list_cdp_activations()`: **Added**\n* `unified_to.activation.patch_cdp_activation()`: **Added**\n* `unified_to.activation.remove_cdp_activation()`: **Added**\n* `unified_to.activation.update_cdp_activation()`: **Added**\n* `unified_to.destination.create_cdp_destination()`: **Added**\n* `unified_to.destination.get_cdp_destination()`: **Added**\n* `unified_to.destination.list_cdp_destinations()`: **Added**\n* `unified_to.destination.patch_cdp_destination()`: **Added**\n* `unified_to.destination.remove_cdp_destination()`: **Added**\n* `unified_to.destination.update_cdp_destination()`: **Added**\n* `unified_to.profile.create_cdp_profile()`: **Added**\n* `unified_to.profile.get_cdp_profile()`: **Added**\n* `unified_to.profile.list_cdp_profiles()`: **Added**\n* `unified_to.profile.patch_cdp_profile()`: **Added**\n* `unified_to.profile.remove_cdp_profile()`: **Added**\n* `unified_to.profile.update_cdp_profile()`: **Added**\n* `unified_to.segment.create_cdp_segment()`: **Added**\n* `unified_to.segment.get_cdp_segment()`: **Added**\n* `unified_to.segment.list_cdp_segments()`: **Added**\n* `unified_to.segment.patch_cdp_segment()`: **Added**\n* `unified_to.segment.remove_cdp_segment()`: **Added**\n* `unified_to.segment.update_cdp_segment()`: **Added**\n* `unified_to.source.create_cdp_source()`: **Added**\n* `unified_to.source.get_cdp_source()`: **Added**\n* `unified_to.source.list_cdp_sources()`: **Added**\n* `unified_to.source.patch_cdp_source()`: **Added**\n* `unified_to.source.remove_cdp_source()`: **Added**\n* `unified_to.source.update_cdp_source()`: **Added**\n* `unified_to.lms.create_lms_content()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.lms.get_lms_content()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.lms.list_lms_contents()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.lms.patch_lms_content()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.lms.update_lms_content()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.content.create_lms_content()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.content.get_lms_content()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.content.list_lms_contents()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.content.patch_lms_content()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.content.update_lms_content()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.create_unified_connection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.unified.get_unified_connection()`:  `response` **Changed**\n* `unified_to.unified.get_unified_webhook()`:  `response.object_type` **Changed**\n* `unified_to.unified.list_unified_connections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.unified.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].object_type` **Changed**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.connection.get_unified_connection()`:  `response` **Changed**\n* `unified_to.connection.list_unified_connections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.integration.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.webhook.get_unified_webhook()`:  `response.object_type` **Changed**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].object_type` **Changed**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.object_type` **Changed**\n  *  `response.object_type` **Changed**\n"
+releaseNotes: |
+  ## Python SDK Changes:
+  * `unified_to.report.list_ads_reports()`:  `response.[].metrics[].type` **Changed**
+  * `unified_to.ads.list_ads_reports()`:  `response.[].metrics[].type` **Changed**
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

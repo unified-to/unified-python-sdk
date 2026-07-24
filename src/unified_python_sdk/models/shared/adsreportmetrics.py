@@ -148,6 +148,8 @@ class AdsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
     TWENTY_EIGHT_D_VIEW = "28D_VIEW"
     TWENTY_EIGHT_D_CLICK = "28D_CLICK"
     THIRTY_D_CLICK = "30D_CLICK"
+    VISITS = "VISITS"
+    AUDIO_MUTES = "AUDIO_MUTES"
 
 
 class AdsReportMetricsTypedDict(TypedDict):
