@@ -17,6 +17,8 @@ class TicketingTicketStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class TicketingTicketTypedDict(TypedDict):
+    attachment_ids: NotRequired[List[str]]
+    r"""Array of attachment IDs retrieved from StorageFile.Get endpoint"""
     category_id: NotRequired[str]
     closed_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
@@ -37,6 +39,9 @@ class TicketingTicketTypedDict(TypedDict):
 
 
 class TicketingTicket(BaseModel):
+    attachment_ids: Optional[List[str]] = None
+    r"""Array of attachment IDs retrieved from StorageFile.Get endpoint"""
+
     category_id: Optional[str] = None
 
     closed_at: Optional[datetime] = None
@@ -84,6 +89,7 @@ class TicketingTicket(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "attachment_ids",
                 "category_id",
                 "closed_at",
                 "created_at",

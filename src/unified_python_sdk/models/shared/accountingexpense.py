@@ -3,21 +3,37 @@
 from __future__ import annotations
 from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingreference import AccountingReference, AccountingReferenceTypedDict
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class AccountingExpenseStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    DRAFT = "DRAFT"
+    SUBMITTED = "SUBMITTED"
+    PENDING = "PENDING"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+    PAID = "PAID"
 
 
 class AccountingExpenseTypedDict(TypedDict):
     account_id: NotRequired[str]
     approved_at: NotRequired[datetime]
     approver_user_id: NotRequired[str]
+    approver_users: NotRequired[List[AccountingReferenceTypedDict]]
+    r"""expense approver(s); id is HR employee/user when resolved"""
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    external_number: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     name: NotRequired[str]
@@ -27,10 +43,12 @@ class AccountingExpenseTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     reimbursed_amount: NotRequired[float]
     reimbursed_at: NotRequired[datetime]
+    status: NotRequired[AccountingExpenseStatus]
     tax_amount: NotRequired[float]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
+    users: NotRequired[List[AccountingReferenceTypedDict]]
 
 
 class AccountingExpense(BaseModel):
@@ -40,6 +58,9 @@ class AccountingExpense(BaseModel):
 
     approver_user_id: Optional[str] = None
 
+    approver_users: Optional[List[AccountingReference]] = None
+    r"""expense approver(s); id is HR employee/user when resolved"""
+
     attachments: Optional[List[AccountingAttachment]] = None
 
     contact_id: Optional[str] = None
@@ -47,6 +68,8 @@ class AccountingExpense(BaseModel):
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
+
+    external_number: Optional[str] = None
 
     id: Optional[str] = None
 
@@ -66,6 +89,8 @@ class AccountingExpense(BaseModel):
 
     reimbursed_at: Optional[datetime] = None
 
+    status: Optional[AccountingExpenseStatus] = None
+
     tax_amount: Optional[float] = None
 
     total_amount: Optional[float] = None
@@ -74,6 +99,17 @@ class AccountingExpense(BaseModel):
 
     user_id: Optional[str] = None
 
+    users: Optional[List[AccountingReference]] = None
+
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingExpenseStatus(value)
+            except ValueError:
+                return value
+        return value
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
@@ -81,10 +117,12 @@ class AccountingExpense(BaseModel):
                 "account_id",
                 "approved_at",
                 "approver_user_id",
+                "approver_users",
                 "attachments",
                 "contact_id",
                 "created_at",
                 "currency",
+                "external_number",
                 "id",
                 "lineitems",
                 "name",
@@ -94,10 +132,12 @@ class AccountingExpense(BaseModel):
                 "raw",
                 "reimbursed_amount",
                 "reimbursed_at",
+                "status",
                 "tax_amount",
                 "total_amount",
                 "updated_at",
                 "user_id",
+                "users",
             ]
         )
         serialized = handler(self)

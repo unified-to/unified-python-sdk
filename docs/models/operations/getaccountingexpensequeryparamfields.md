@@ -32,4 +32,8 @@ value = GetAccountingExpenseQueryParamFields.ID
 | `LINEITEMS`         | lineitems           |
 | `ATTACHMENTS`       | attachments         |
 | `ORGANIZATION_ID`   | organization_id     |
+| `USERS`             | users               |
+| `APPROVER_USERS`    | approver_users      |
+| `STATUS`            | status              |
+| `EXTERNAL_NUMBER`   | external_number     |
 | `RAW`               | raw                 |

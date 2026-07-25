@@ -31,6 +31,7 @@ class ListTicketingTicketsQueryParamFields(str, Enum):
     TAGS = "tags"
     USER_ID = "user_id"
     URL = "url"
+    ATTACHMENT_IDS = "attachment_ids"
     DUE_AT = "due_at"
     RAW = "raw"
 

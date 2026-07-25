@@ -1838,6 +1838,12 @@ if TYPE_CHECKING:
         GetUnifiedIntegrationLoginResponse,
         GetUnifiedIntegrationLoginResponseTypedDict,
     )
+    from .getunifiedintegrationsaml import (
+        GetUnifiedIntegrationSamlRequest,
+        GetUnifiedIntegrationSamlRequestTypedDict,
+        GetUnifiedIntegrationSamlResponse,
+        GetUnifiedIntegrationSamlResponseTypedDict,
+    )
     from .getunifiedissue import (
         GetUnifiedIssueRequest,
         GetUnifiedIssueRequestTypedDict,
@@ -6620,6 +6626,10 @@ __all__ = [
     "GetUnifiedIntegrationLoginRequestTypedDict",
     "GetUnifiedIntegrationLoginResponse",
     "GetUnifiedIntegrationLoginResponseTypedDict",
+    "GetUnifiedIntegrationSamlRequest",
+    "GetUnifiedIntegrationSamlRequestTypedDict",
+    "GetUnifiedIntegrationSamlResponse",
+    "GetUnifiedIntegrationSamlResponseTypedDict",
     "GetUnifiedIssueRequest",
     "GetUnifiedIssueRequestTypedDict",
     "GetUnifiedIssueResponse",
@@ -10367,6 +10377,10 @@ _dynamic_imports: dict[str, str] = {
     "GetUnifiedIntegrationLoginRequestTypedDict": ".getunifiedintegrationlogin",
     "GetUnifiedIntegrationLoginResponse": ".getunifiedintegrationlogin",
     "GetUnifiedIntegrationLoginResponseTypedDict": ".getunifiedintegrationlogin",
+    "GetUnifiedIntegrationSamlRequest": ".getunifiedintegrationsaml",
+    "GetUnifiedIntegrationSamlRequestTypedDict": ".getunifiedintegrationsaml",
+    "GetUnifiedIntegrationSamlResponse": ".getunifiedintegrationsaml",
+    "GetUnifiedIntegrationSamlResponseTypedDict": ".getunifiedintegrationsaml",
     "GetUnifiedIssueRequest": ".getunifiedissue",
     "GetUnifiedIssueRequestTypedDict": ".getunifiedissue",
     "GetUnifiedIssueResponse": ".getunifiedissue",

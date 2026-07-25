@@ -10,6 +10,7 @@ class PropertyConnectionCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     HRIS = "hris"
     ATS = "ats"
     AUTH = "auth"
+    SAML = "saml"
     CRM = "crm"
     ENRICH = "enrich"
     MARTECH = "martech"

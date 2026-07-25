@@ -465,6 +465,7 @@ asyncio.run(main())
 
 * [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Authorize new connection
 * [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
+* [get_unified_integration_saml](docs/sdks/auth/README.md#get_unified_integration_saml) - Sign in a user via SAML
 
 ### [Availability](docs/sdks/availability/README.md)
 
@@ -1409,6 +1410,7 @@ asyncio.run(main())
 ### [Login](docs/sdks/login/README.md)
 
 * [get_unified_integration_login](docs/sdks/login/README.md#get_unified_integration_login) - Sign in a user
+* [get_unified_integration_saml](docs/sdks/login/README.md#get_unified_integration_saml) - Sign in a user via SAML
 
 ### [Martech](docs/sdks/martech/README.md)
 
