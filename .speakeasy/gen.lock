@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: f0c8e2a50fe79bd0fbd409999c098a04
+  docChecksum: 5b461abb1257ca6221e3f7381711a0fe
   docVersion: "1.0"
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 0.59.16
-  configChecksum: faf2ec2f3f0d36c23fae7b46e84cd7a9
+  releaseVersion: 0.59.17
+  configChecksum: 1df268d51c08ccd5042ae56c45e9128b
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: cbd3b705-e1f8-497f-a32b-e170bdaa06b8
-  pristine_commit_hash: 0fad3c6c7ac9a8eca78862f45854f9057afac2f4
-  pristine_tree_hash: 18762d9149f8b84bc629e1536900d6de0919b8fb
+  generation_id: 63b08211-c66c-4524-bb42-4dc8ea40b78f
+  pristine_commit_hash: 3ae5bc5a479da6de7159146f5d1662ed275167f8
+  pristine_tree_hash: 938a2db05720b85b338fcc6679a92112ef8e1f4d
 features:
   python:
     acceptHeaders: 3.0.0
@@ -1350,8 +1350,8 @@ trackedFiles:
     pristine_git_object: f761fe8735cbdb4565697229ea3eee656f677b64
   docs/models/operations/createtasktaskqueryparamfields.md:
     id: ec85ca8a14ea
-    last_write_checksum: sha1:6b131ce362c4043c3cccf4cb7c0f5661415b0e20
-    pristine_git_object: ef642e4e78107cf2b4130f22f8bd8fc177ed4df3
+    last_write_checksum: sha1:7c289e5e05f9b3aa90c60da2ec7ea5a89f8f4dfd
+    pristine_git_object: aba81bc405e70f4d807277c37761aae97540c401
   docs/models/operations/createtasktaskrequest.md:
     id: 56100dacf175
     last_write_checksum: sha1:bb53e190cf6b4c074a3d1a5b9b317ba0aa712b22
@@ -3014,8 +3014,8 @@ trackedFiles:
     pristine_git_object: 6894777d774d611a9f16d18c0271695d1d2d7129
   docs/models/operations/gettasktaskqueryparamfields.md:
     id: 7773fc84273e
-    last_write_checksum: sha1:0b95bf621595f8ce6cc43d709e623757b01882ce
-    pristine_git_object: 9b3ffee132289f57c76aae9b73ba751e2e7911f1
+    last_write_checksum: sha1:d16b3e3bb5e7dfcff0b9ace380f706ec57224633
+    pristine_git_object: d91a6124a98f1425d05120555b88318315ebe98b
   docs/models/operations/gettasktaskrequest.md:
     id: 2a47c743251a
     last_write_checksum: sha1:54c4f89666cc9db9917c72b926ce5f62882dae50
@@ -4854,8 +4854,8 @@ trackedFiles:
     pristine_git_object: 4e45453d7d5d6fd4e61924397192f255fcaa6f81
   docs/models/operations/listtasktasksqueryparamfields.md:
     id: 8fa835791075
-    last_write_checksum: sha1:42bedab51e333ce65d6f02cc521a0539064a82b4
-    pristine_git_object: b7ff9b7a3d40f0948412e6b1458a2f1019817ee8
+    last_write_checksum: sha1:276607f09e50439ba71e03dd343963266c2bd5ea
+    pristine_git_object: 4304313701e49f14771dc63102bbfb48d5545c32
   docs/models/operations/listtasktasksrequest.md:
     id: d920a01cb5f4
     last_write_checksum: sha1:cf81ec85bfe1e78df2386890ce4d23a112da7ce0
@@ -6314,8 +6314,8 @@ trackedFiles:
     pristine_git_object: bc63844ac2c4aa7098f57b6709550294dbefa72f
   docs/models/operations/patchtasktaskqueryparamfields.md:
     id: 04bde7cd3110
-    last_write_checksum: sha1:9bc1420c013ce9bec5d573cd18cbaf3c7edcff84
-    pristine_git_object: 32db57bde49c4e5ab4d4047b7b611f6d70c8b919
+    last_write_checksum: sha1:eaa547a0c4713433636316896b4530c6625b0bcc
+    pristine_git_object: 8cc7f390e532c9bb74baf463be920be271bd29c7
   docs/models/operations/patchtasktaskrequest.md:
     id: 7862d2e73cdb
     last_write_checksum: sha1:707d23842b185c8c055716cf6380d891de4a4d38
@@ -8654,8 +8654,8 @@ trackedFiles:
     pristine_git_object: 78f5d2da2a22bf69e2d3ec6f3994b339cae3547c
   docs/models/operations/updatetasktaskqueryparamfields.md:
     id: 0d4fc74d18e9
-    last_write_checksum: sha1:6f41d2284522a91dae68eab8ebd33ede07162d77
-    pristine_git_object: 663fe0892143e8dd6b03468e143fa5b0ee0dab4e
+    last_write_checksum: sha1:53d73bddb135b336f918d6e50a4766a6291f121a
+    pristine_git_object: 59f25c1f4dc3cbe8295929422f9fc69fc93cc744
   docs/models/operations/updatetasktaskrequest.md:
     id: 31108f5c3215
     last_write_checksum: sha1:4f883af3a4596e5ff8a5dddfb5c27804a9c5a183
@@ -12334,8 +12334,8 @@ trackedFiles:
     pristine_git_object: 5269af716b2614aa5815a37a90dd712880989d49
   docs/models/shared/tasktask.md:
     id: e9e0e35bbf80
-    last_write_checksum: sha1:deb908ab96c12ec168292907e3819e2f8a95c8d0
-    pristine_git_object: ee2fd3dfe9ce0330a72f7e5c826577a04e74d3e6
+    last_write_checksum: sha1:19dabd00153c69d97db88a423a23760361bb81d6
+    pristine_git_object: c7b27aba51b941edf5023586e278104b140cabf3
   docs/models/shared/tasktaskstatus.md:
     id: 15880eba8c58
     last_write_checksum: sha1:71fcad0b65f6a543934ac1bd55cb78acde28a8d0
@@ -13426,8 +13426,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:acbfc2cda165738d1d9ad824c53c6908c3b7bd91
-    pristine_git_object: 38d6c2c10b16825e56a2a06ae05169a59a68287b
+    last_write_checksum: sha1:6aff7f15006416ab37126497b7cc8d90dddd7b2e
+    pristine_git_object: 0d50b0ab2d6d2225f99bc1bccaa064d173e4c0d1
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -13454,8 +13454,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:7520083c2024b6edbd20f637fc3437f4f5b1a2ae
-    pristine_git_object: f4a46a0c4f2e8083d231422f74c59288920eb143
+    last_write_checksum: sha1:573c8f3684617003d34ec2617e5440f951684f4b
+    pristine_git_object: f38d8c67e6cbbca4d362d0965fd992e8936c053b
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -14290,8 +14290,8 @@ trackedFiles:
     pristine_git_object: f9fed49fade47965a8c501126af9dcaffec82c60
   src/unified_python_sdk/models/operations/createtasktask.py:
     id: f7215d482fdc
-    last_write_checksum: sha1:8900205c34411dff26296ad87534fef1b82931ba
-    pristine_git_object: eb0a49a93e312a90691c0da68d44e744e5272222
+    last_write_checksum: sha1:8837721d5cddebe5d4e54cdafce102f8fea87fdb
+    pristine_git_object: db92803a5480d9d829369fb74a731f3b786e6a95
   src/unified_python_sdk/models/operations/createticketingcategory.py:
     id: 70ef573abaec
     last_write_checksum: sha1:9590d5b4e2fca26937606fc9d2bd7dc5865ab4a0
@@ -14858,8 +14858,8 @@ trackedFiles:
     pristine_git_object: b2747e20bf38d00879042936ce71ae53fe90130c
   src/unified_python_sdk/models/operations/gettasktask.py:
     id: 3cde1b654faa
-    last_write_checksum: sha1:60bc6b806014d3546ddb8cf3978ce38ee31380d1
-    pristine_git_object: f3e2c50c9d2f2e584a1dd2d494d8f2e2914c756a
+    last_write_checksum: sha1:5e7198128747fdf5a9829bebed9b5b018e9b7c10
+    pristine_git_object: 49033468d8f2bc9c316df3713b1c971a7eaeeff2
   src/unified_python_sdk/models/operations/getticketingcategory.py:
     id: 6dd084f5d5d9
     last_write_checksum: sha1:fb6599d925bc805602246ae1e5f292c7f798c492
@@ -15490,8 +15490,8 @@ trackedFiles:
     pristine_git_object: a0b4aa3616a56b347ad413d15141deda4e730a4c
   src/unified_python_sdk/models/operations/listtasktasks.py:
     id: 4e99e341bca9
-    last_write_checksum: sha1:6a500fd5be843ab620514339e8bd672a473943bc
-    pristine_git_object: 117c64e9b56a1e0b19a54a82faa1bf8fe6d04c67
+    last_write_checksum: sha1:63de99f5208111f7bc69db2265eca3db32b29887
+    pristine_git_object: a0c0f5ce003d3d411b7522cc13fde8acf8102f54
   src/unified_python_sdk/models/operations/listticketingcategories.py:
     id: d47e02f2182c
     last_write_checksum: sha1:c8474f3710af4ed843a289f2d0dd0c821fe7e890
@@ -15994,8 +15994,8 @@ trackedFiles:
     pristine_git_object: 9a2ce3edf020857b621ab4f89d0a9fdb83fb0133
   src/unified_python_sdk/models/operations/patchtasktask.py:
     id: f2bf578f1ddf
-    last_write_checksum: sha1:1ec203f653b7e30064e05d926cf6219503457b90
-    pristine_git_object: 2c3b91c744468441d68fa5735115982ad73f9193
+    last_write_checksum: sha1:9df40efc7a50bf0200d8b879033ea57cea15f334
+    pristine_git_object: 5eb9f62f4168495c290f73aec075104516a68abf
   src/unified_python_sdk/models/operations/patchticketingcategory.py:
     id: a3fc85626488
     last_write_checksum: sha1:d301d2a66c1c17a4ca65918009500bf6363a1b34
@@ -16938,8 +16938,8 @@ trackedFiles:
     pristine_git_object: 03249dbf5abdf739d4b84d7a969dc7167262af22
   src/unified_python_sdk/models/operations/updatetasktask.py:
     id: a70964ddb9b5
-    last_write_checksum: sha1:c482769bd4dcdb292c6fdbb875ba754ab670d21b
-    pristine_git_object: c236088e0ec72b72337e8047cd5f8096702863fb
+    last_write_checksum: sha1:4f60a8cf896c1b02d7f50f22f839fcc2d94704bd
+    pristine_git_object: 99cf6421695e2d68150900e717493c7d40dea0be
   src/unified_python_sdk/models/operations/updateticketingcategory.py:
     id: 78d33c8b0d02
     last_write_checksum: sha1:e686a5b51e7ddf897499320be77474f60bb352a2
@@ -18814,8 +18814,8 @@ trackedFiles:
     pristine_git_object: f134dce3b7fa6f1cf983dfde35b4ee13966abdf7
   src/unified_python_sdk/models/shared/tasktask.py:
     id: df21f2062392
-    last_write_checksum: sha1:bcdaf783cc30b79d684e7eff97a9ca6c7f8b8cc4
-    pristine_git_object: 5bb0933787bda7028843bf0e42ee677c7b7b94ba
+    last_write_checksum: sha1:1166e61069eaef8b4adf430c9bcc4e7b02fbfcf5
+    pristine_git_object: b34528e0e793d2ca68945f18a0f857ed76627366
   src/unified_python_sdk/models/shared/ticketingcategory.py:
     id: 8632929b11fa
     last_write_checksum: sha1:2948c427c2ca9b36ada91855933c3cd5b3f9c389
@@ -32718,7 +32718,7 @@ examples:
           text/plain: "<value>"
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.auth.get_unified_integration_saml()`: **Added**\n* `unified_to.login.get_unified_integration_saml()`: **Added**\n* `unified_to.accounting.create_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.accounting.get_accounting_expense()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.accounting.list_accounting_expenses()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.accounting.patch_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.accounting.update_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.expense.create_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.expense.get_accounting_expense()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.expense.list_accounting_expenses()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.expense.patch_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.expense.update_accounting_expense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.ticketing.create_ticketing_ticket()`: \n  *  `request` **Changed**\n  *  `response.attachment_ids` **Added**\n* `unified_to.ticketing.get_ticketing_ticket()`: \n  *  `request.fields` **Changed**\n  *  `response.attachment_ids` **Added**\n* `unified_to.ticketing.list_ticketing_tickets()`: \n  *  `request.fields` **Changed**\n  *  `response.[].attachment_ids` **Added**\n* `unified_to.ticketing.patch_ticketing_ticket()`: \n  *  `request` **Changed**\n  *  `response.attachment_ids` **Added**\n* `unified_to.ticketing.update_ticketing_ticket()`: \n  *  `request` **Changed**\n  *  `response.attachment_ids` **Added**\n* `unified_to.ticket.create_ticketing_ticket()`: \n  *  `request` **Changed**\n  *  `response.attachment_ids` **Added**\n* `unified_to.ticket.get_ticketing_ticket()`: \n  *  `request.fields` **Changed**\n  *  `response.attachment_ids` **Added**\n* `unified_to.ticket.list_ticketing_tickets()`: \n  *  `request.fields` **Changed**\n  *  `response.[].attachment_ids` **Added**\n* `unified_to.ticket.patch_ticketing_ticket()`: \n  *  `request` **Changed**\n  *  `response.attachment_ids` **Added**\n* `unified_to.ticket.update_ticketing_ticket()`: \n  *  `request` **Changed**\n  *  `response.attachment_ids` **Added**\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.categories[].enum(saml)` **Added**\n  *  `response.categories[].enum(saml)` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.categories[].enum(saml)` **Added**\n* `unified_to.unified.list_unified_connections()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(saml)` **Added**\n* `unified_to.unified.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(saml)` **Added**\n* `unified_to.unified.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(saml)` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.categories[].enum(saml)` **Added**\n  *  `response.categories[].enum(saml)` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.categories[].enum(saml)` **Added**\n  *  `response.categories[].enum(saml)` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.categories[].enum(saml)` **Added**\n  *  `response.categories[].enum(saml)` **Added**\n* `unified_to.connection.get_unified_connection()`:  `response.categories[].enum(saml)` **Added**\n* `unified_to.connection.list_unified_connections()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(saml)` **Added**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.categories[].enum(saml)` **Added**\n  *  `response.categories[].enum(saml)` **Added**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.categories[].enum(saml)` **Added**\n  *  `response.categories[].enum(saml)` **Added**\n* `unified_to.integration.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(saml)` **Added**\n* `unified_to.integration.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(saml)` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.task.create_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.get_task_task()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.list_task_tasks()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.task.patch_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.update_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

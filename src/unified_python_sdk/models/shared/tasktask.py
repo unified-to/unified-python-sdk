@@ -36,11 +36,15 @@ class TaskTaskTypedDict(TypedDict):
     notes: NotRequired[str]
     parent_id: NotRequired[str]
     priority: NotRequired[str]
+    progress: NotRequired[float]
     project_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     status: NotRequired[TaskTaskStatus]
+    story_points: NotRequired[float]
     tags: NotRequired[List[str]]
+    time_spent: NotRequired[float]
+    time_spent_unit: NotRequired[str]
     type: NotRequired[str]
     updated_at: NotRequired[datetime]
     url: NotRequired[str]
@@ -80,6 +84,8 @@ class TaskTask(BaseModel):
 
     priority: Optional[str] = None
 
+    progress: Optional[float] = None
+
     project_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
@@ -88,7 +94,13 @@ class TaskTask(BaseModel):
 
     status: Optional[TaskTaskStatus] = None
 
+    story_points: Optional[float] = None
+
     tags: Optional[List[str]] = None
+
+    time_spent: Optional[float] = None
+
+    time_spent_unit: Optional[str] = None
 
     type: Optional[str] = None
 
@@ -125,11 +137,15 @@ class TaskTask(BaseModel):
                 "notes",
                 "parent_id",
                 "priority",
+                "progress",
                 "project_id",
                 "raw",
                 "start_at",
                 "status",
+                "story_points",
                 "tags",
+                "time_spent",
+                "time_spent_unit",
                 "type",
                 "updated_at",
                 "url",
