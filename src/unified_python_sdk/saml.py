@@ -8,22 +8,22 @@ from unified_python_sdk.models import errors, operations
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
 
 
-class Login(BaseSDK):
-    def get_unified_integration_login(
+class Saml(BaseSDK):
+    def get_unified_integration_saml(
         self,
         *,
         request: Union[
-            operations.GetUnifiedIntegrationLoginRequest,
-            operations.GetUnifiedIntegrationLoginRequestTypedDict,
+            operations.GetUnifiedIntegrationSamlRequest,
+            operations.GetUnifiedIntegrationSamlRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUnifiedIntegrationLoginResponse:
-        r"""Sign in a user
+    ) -> operations.GetUnifiedIntegrationSamlResponse:
+        r"""Sign in a user via SAML
 
-        Returns an authentication URL for the specified integration.  Once a successful OAuth2 code-flow authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+        Returns a SAML authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -43,13 +43,13 @@ class Login(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetUnifiedIntegrationLoginRequest
+                request, operations.GetUnifiedIntegrationSamlRequest
             )
-        request = cast(operations.GetUnifiedIntegrationLoginRequest, request)
+        request = cast(operations.GetUnifiedIntegrationSamlRequest, request)
 
         req = self._build_request(
             method="GET",
-            path="/unified/integration/login/{workspace_id}/{integration_type}",
+            path="/unified/integration/saml/{workspace_id}/{integration_type}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -76,10 +76,10 @@ class Login(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUnifiedIntegrationLogin",
+                operation_id="getUnifiedIntegrationSaml",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
-                tags=["auth", "login"],
+                tags=["auth", "saml"],
                 extensions=None,
             ),
             request=req,
@@ -88,7 +88,7 @@ class Login(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "text/plain"):
-            return operations.GetUnifiedIntegrationLoginResponse(
+            return operations.GetUnifiedIntegrationSamlResponse(
                 res=http_res.text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -103,21 +103,21 @@ class Login(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
-    async def get_unified_integration_login_async(
+    async def get_unified_integration_saml_async(
         self,
         *,
         request: Union[
-            operations.GetUnifiedIntegrationLoginRequest,
-            operations.GetUnifiedIntegrationLoginRequestTypedDict,
+            operations.GetUnifiedIntegrationSamlRequest,
+            operations.GetUnifiedIntegrationSamlRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> operations.GetUnifiedIntegrationLoginResponse:
-        r"""Sign in a user
+    ) -> operations.GetUnifiedIntegrationSamlResponse:
+        r"""Sign in a user via SAML
 
-        Returns an authentication URL for the specified integration.  Once a successful OAuth2 code-flow authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+        Returns a SAML authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -137,13 +137,13 @@ class Login(BaseSDK):
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
-                request, operations.GetUnifiedIntegrationLoginRequest
+                request, operations.GetUnifiedIntegrationSamlRequest
             )
-        request = cast(operations.GetUnifiedIntegrationLoginRequest, request)
+        request = cast(operations.GetUnifiedIntegrationSamlRequest, request)
 
         req = self._build_request_async(
             method="GET",
-            path="/unified/integration/login/{workspace_id}/{integration_type}",
+            path="/unified/integration/saml/{workspace_id}/{integration_type}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -170,10 +170,10 @@ class Login(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="getUnifiedIntegrationLogin",
+                operation_id="getUnifiedIntegrationSaml",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
-                tags=["auth", "login"],
+                tags=["auth", "saml"],
                 extensions=None,
             ),
             request=req,
@@ -182,7 +182,7 @@ class Login(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "text/plain"):
-            return operations.GetUnifiedIntegrationLoginResponse(
+            return operations.GetUnifiedIntegrationSamlResponse(
                 res=http_res.text,
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

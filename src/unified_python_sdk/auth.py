@@ -211,7 +211,7 @@ class Auth(BaseSDK):
     ) -> operations.GetUnifiedIntegrationLoginResponse:
         r"""Sign in a user
 
-        Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+        Returns an authentication URL for the specified integration.  Once a successful OAuth2 code-flow authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -305,7 +305,7 @@ class Auth(BaseSDK):
     ) -> operations.GetUnifiedIntegrationLoginResponse:
         r"""Sign in a user
 
-        Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+        Returns an authentication URL for the specified integration.  Once a successful OAuth2 code-flow authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -455,7 +455,7 @@ class Auth(BaseSDK):
                 operation_id="getUnifiedIntegrationSaml",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
-                tags=["auth", "login"],
+                tags=["auth", "saml"],
                 extensions=None,
             ),
             request=req,
@@ -549,7 +549,7 @@ class Auth(BaseSDK):
                 operation_id="getUnifiedIntegrationSaml",
                 oauth2_scopes=None,
                 security_source=self.sdk_configuration.security,
-                tags=["auth", "login"],
+                tags=["auth", "saml"],
                 extensions=None,
             ),
             request=req,

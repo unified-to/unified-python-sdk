@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 5b461abb1257ca6221e3f7381711a0fe
+  docChecksum: 80d7cdbe65fe311af91a91a99f56bf35
   docVersion: "1.0"
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 0.59.17
-  configChecksum: 1df268d51c08ccd5042ae56c45e9128b
+  releaseVersion: 0.59.18
+  configChecksum: b373246ccf14da9e268c759f76ca214c
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 63b08211-c66c-4524-bb42-4dc8ea40b78f
-  pristine_commit_hash: 3ae5bc5a479da6de7159146f5d1662ed275167f8
-  pristine_tree_hash: 938a2db05720b85b338fcc6679a92112ef8e1f4d
+  generation_id: 20ee2311-d919-41f3-978a-60f4edb2ae69
+  pristine_commit_hash: bf855ed3d1640ac7c753804cfd688f4943223f4e
+  pristine_tree_hash: 681ecac2cdb31272ff27ec560d008cdaa3ddf4b3
 features:
   python:
     acceptHeaders: 3.0.0
@@ -12830,8 +12830,8 @@ trackedFiles:
     pristine_git_object: 7d370d5d59445b1bb664dfce8fd766c5e82d85b2
   docs/sdks/auth/README.md:
     id: e9724f17945f
-    last_write_checksum: sha1:b924ed9a2d4f9f9ae78e7f22a1ff2df2c8d9ce2d
-    pristine_git_object: b3601f248384ba5dbd1361d7ca5c64cb26ff8577
+    last_write_checksum: sha1:2b2943900c52894e631694957e316d6529508608
+    pristine_git_object: c1190361a8f801dc152a5d75b15616366b66932a
   docs/sdks/availability/README.md:
     id: 2226d6a22b27
     last_write_checksum: sha1:5614a5ca16e7a58f7042b1d97620e2869aeb161c
@@ -13110,8 +13110,8 @@ trackedFiles:
     pristine_git_object: ab9151e7d1c14eeccc9ae2d46dca32c387161179
   docs/sdks/login/README.md:
     id: 795cc2a6ce04
-    last_write_checksum: sha1:7101551fdd8e3752c2c03197c2f2df6599110247
-    pristine_git_object: 95e9c6e59517c74ba02c37e3613267395abe1307
+    last_write_checksum: sha1:0eb526580196e57c1a5589b81d9035b40cc8f147
+    pristine_git_object: 82e94664968d97f99c3141589b6102d6efc076b9
   docs/sdks/martech/README.md:
     id: ba21e4ca633c
     last_write_checksum: sha1:03ab4af23fc5366494521ac3150b478ba44e5f99
@@ -13268,6 +13268,10 @@ trackedFiles:
     id: 276981d6d854
     last_write_checksum: sha1:6b798b4e7452fb4b9ed986a36eee0ee12a4aba46
     pristine_git_object: 6fe05a5c5487ff2610331d312d80c2ed84820304
+  docs/sdks/saml/README.md:
+    id: f6b6fd24d6c6
+    last_write_checksum: sha1:559916db526c382858df62a63c8da2ce21f67cfb
+    pristine_git_object: 82f4eec48e1afd0e1228c07d6a6c9584648fec09
   docs/sdks/scim/README.md:
     id: 1d60f0a72b05
     last_write_checksum: sha1:789675ef9bf260da58121a050acc48151ad6df82
@@ -13426,8 +13430,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:6aff7f15006416ab37126497b7cc8d90dddd7b2e
-    pristine_git_object: 0d50b0ab2d6d2225f99bc1bccaa064d173e4c0d1
+    last_write_checksum: sha1:d633d1631d5e1e96a78efc072a6e296b6f699b01
+    pristine_git_object: 26a4ef63ca8d3aa9c7f1530f4eed1faa2e2c87be
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -13454,8 +13458,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:573c8f3684617003d34ec2617e5440f951684f4b
-    pristine_git_object: f38d8c67e6cbbca4d362d0965fd992e8936c053b
+    last_write_checksum: sha1:0c864cbf023a3dd7e04ced4bf48115f69d7327ce
+    pristine_git_object: 799b3579193daea9a0731833687500cf9c203a89
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -13506,8 +13510,8 @@ trackedFiles:
     pristine_git_object: 2608adce843570c7b0d7fce6a8aecc45eaece823
   src/unified_python_sdk/auth.py:
     id: 339d6937ec42
-    last_write_checksum: sha1:6062e04aed44a84f9f06da524429c92d7c6e7693
-    pristine_git_object: 853690797afaec651ab1d21510655e6eabdba453
+    last_write_checksum: sha1:57deb3a3c14ab428ea81605949268a04528ab19e
+    pristine_git_object: 92f1b8f6caa8410297ba11d1b8486a705e2da466
   src/unified_python_sdk/availability.py:
     id: 2b0fd1d3287a
     last_write_checksum: sha1:658b5da6602532709ec6dcda26e81928bed9f52b
@@ -13794,8 +13798,8 @@ trackedFiles:
     pristine_git_object: 8ac7ee4d57f7e133c518216607723dfd161f3555
   src/unified_python_sdk/login.py:
     id: 129208f44ff4
-    last_write_checksum: sha1:1169bb4d840ebeccb21d38dd5acc65ca8307f02c
-    pristine_git_object: e66ec2ae7da5ca83a99520bd5ca931bd926f871f
+    last_write_checksum: sha1:87c2638bc83981540b04013cc9d85afc5ee2e883
+    pristine_git_object: 049f9c78fa15fd4b0f37e660d7c5b89430f7222e
   src/unified_python_sdk/martech.py:
     id: 6644bd4c072e
     last_write_checksum: sha1:9bcda18d9a3fc9e6a211444ec3caab01059afc52
@@ -19040,6 +19044,10 @@ trackedFiles:
     id: 36296f7de1e7
     last_write_checksum: sha1:afe62dcefeaf6312a431c699bd966f9f190c8c86
     pristine_git_object: 625b7d20597a454a12b434049c73e5ca562b03c4
+  src/unified_python_sdk/saml.py:
+    id: fa95bc07254f
+    last_write_checksum: sha1:8a5d2b29861334c6faf48a8a6d4a8c82895f1d8a
+    pristine_git_object: e161197862687bb1d2090d7fa06b15ced1a42f3a
   src/unified_python_sdk/scim.py:
     id: ec8c33b7c1f3
     last_write_checksum: sha1:85c42f984ca6303914fff525dfbe1213d36c170e
@@ -19050,8 +19058,8 @@ trackedFiles:
     pristine_git_object: eee92983b40c49ffaf1c650058cd696bff3b8c68
   src/unified_python_sdk/sdk.py:
     id: 0889561d07f8
-    last_write_checksum: sha1:7d7ab47e524edf46585c70e27958864576827ada
-    pristine_git_object: 1694959a434a271879530f43a327d6df494a6bc4
+    last_write_checksum: sha1:c2075cb160e9ee48c2d534bfb054ed349bad59f4
+    pristine_git_object: cb29cf84cc302a1eca46ed3cd15f1b480d7a2780
   src/unified_python_sdk/sdkconfiguration.py:
     id: e88898c63a5f
     last_write_checksum: sha1:9e30b511855cc2ff1e3e6335aaabe2e7723893d3
@@ -32718,7 +32726,10 @@ examples:
           text/plain: "<value>"
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.task.create_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.get_task_task()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.list_task_tasks()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.task.patch_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.task.update_task_task()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: |
+  ## Python SDK Changes:
+  * `unified_to.saml.get_unified_integration_saml()`: **Added**
+  * `unified_to.login.get_unified_integration_saml()`: **Removed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

@@ -138,6 +138,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.review import Review
     from unified_python_sdk.saleschannel import Saleschannel
     from unified_python_sdk.salesorder import Salesorder
+    from unified_python_sdk.saml import Saml
     from unified_python_sdk.scim import Scim
     from unified_python_sdk.scorecard import Scorecard
     from unified_python_sdk.secretsmanager import Secretsmanager
@@ -334,6 +335,7 @@ class UnifiedTo(BaseSDK):
     integration: "Integration"
     auth: "Auth"
     login: "Login"
+    saml: "Saml"
     issue: "Issue"
     webhook: "Webhook"
     secretsmanager: "Secretsmanager"
@@ -496,6 +498,7 @@ class UnifiedTo(BaseSDK):
         "integration": ("unified_python_sdk.integration", "Integration"),
         "auth": ("unified_python_sdk.auth", "Auth"),
         "login": ("unified_python_sdk.login", "Login"),
+        "saml": ("unified_python_sdk.saml", "Saml"),
         "issue": ("unified_python_sdk.issue", "Issue"),
         "webhook": ("unified_python_sdk.webhook", "Webhook"),
         "secretsmanager": ("unified_python_sdk.secretsmanager", "Secretsmanager"),
