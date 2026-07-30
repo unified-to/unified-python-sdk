@@ -2,24 +2,43 @@
 
 from __future__ import annotations
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class AccountingCategoryType(str, Enum, metaclass=utils.OpenEnumMeta):
+    CLASS = "CLASS"
+    DEPARTMENT = "DEPARTMENT"
+    LOCATION = "LOCATION"
+    PROJECT = "PROJECT"
+    TASK = "TASK"
+    CUSTOM = "CUSTOM"
+    EXPENSE = "EXPENSE"
+    INCOME = "INCOME"
+
+
 class AccountingCategoryTypedDict(TypedDict):
+    code: NotRequired[str]
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     name: NotRequired[str]
+    organization_id: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    type: NotRequired[AccountingCategoryType]
     updated_at: NotRequired[datetime]
 
 
 class AccountingCategory(BaseModel):
+    code: Optional[str] = None
+
     created_at: Optional[datetime] = None
 
     description: Optional[str] = None
@@ -30,23 +49,39 @@ class AccountingCategory(BaseModel):
 
     name: Optional[str] = None
 
+    organization_id: Optional[str] = None
+
     parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
+    type: Optional[AccountingCategoryType] = None
+
     updated_at: Optional[datetime] = None
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingCategoryType(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "code",
                 "created_at",
                 "description",
                 "id",
                 "is_active",
                 "name",
+                "organization_id",
                 "parent_id",
                 "raw",
+                "type",
                 "updated_at",
             ]
         )

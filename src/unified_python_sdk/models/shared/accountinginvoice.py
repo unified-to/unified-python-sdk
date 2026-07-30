@@ -3,6 +3,10 @@
 from __future__ import annotations
 from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingpaymentreference import (
+    AccountingPaymentReference,
+    AccountingPaymentReferenceTypedDict,
+)
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -16,6 +20,20 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AccountingInvoicePaymentCollectionMethod(str, Enum, metaclass=utils.OpenEnumMeta):
     SEND_INVOICE = "send_invoice"
     CHARGE_AUTOMATICALLY = "charge_automatically"
+
+
+class AccountingInvoicePaymentTerms(str, Enum, metaclass=utils.OpenEnumMeta):
+    ON_RECEIPT = "ON_RECEIPT"
+    NET_7 = "NET_7"
+    NET_10 = "NET_10"
+    NET_15 = "NET_15"
+    NET_20 = "NET_20"
+    NET_25 = "NET_25"
+    NET_30 = "NET_30"
+    NET_45 = "NET_45"
+    NET_60 = "NET_60"
+    NET_90 = "NET_90"
+    OTHER = "OTHER"
 
 
 class AccountingInvoiceStatus(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -39,7 +57,10 @@ class AccountingInvoiceTerm(str, Enum, metaclass=utils.OpenEnumMeta):
     NET_20 = "NET_20"
     NET_25 = "NET_25"
     NET_30 = "NET_30"
+    NET_45 = "NET_45"
     NET_60 = "NET_60"
+    NET_90 = "NET_90"
+    OTHER = "OTHER"
 
 
 class AccountingInvoiceType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -52,6 +73,7 @@ class AccountingInvoiceTypedDict(TypedDict):
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     balance_amount: NotRequired[float]
     cancelled_at: NotRequired[datetime]
+    category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
@@ -65,6 +87,9 @@ class AccountingInvoiceTypedDict(TypedDict):
     paid_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
     payment_collection_method: NotRequired[AccountingInvoicePaymentCollectionMethod]
+    payment_terms: NotRequired[AccountingInvoicePaymentTerms]
+    payments: NotRequired[List[AccountingPaymentReferenceTypedDict]]
+    r"""ead-only reciprocal of PaymentPayment.allocations; payments applied to this invoice"""
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
@@ -87,6 +112,8 @@ class AccountingInvoice(BaseModel):
     balance_amount: Optional[float] = None
 
     cancelled_at: Optional[datetime] = None
+
+    category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
 
@@ -113,6 +140,11 @@ class AccountingInvoice(BaseModel):
     paid_at: Optional[datetime] = None
 
     payment_collection_method: Optional[AccountingInvoicePaymentCollectionMethod] = None
+
+    payment_terms: Optional[AccountingInvoicePaymentTerms] = None
+
+    payments: Optional[List[AccountingPaymentReference]] = None
+    r"""ead-only reciprocal of PaymentPayment.allocations; payments applied to this invoice"""
 
     posted_at: Optional[datetime] = None
 
@@ -151,6 +183,15 @@ class AccountingInvoice(BaseModel):
                 return value
         return value
 
+    @field_serializer("payment_terms")
+    def serialize_payment_terms(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingInvoicePaymentTerms(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("status")
     def serialize_status(self, value):
         if isinstance(value, str):
@@ -185,6 +226,7 @@ class AccountingInvoice(BaseModel):
                 "attachments",
                 "balance_amount",
                 "cancelled_at",
+                "category_ids",
                 "contact_id",
                 "created_at",
                 "currency",
@@ -198,6 +240,8 @@ class AccountingInvoice(BaseModel):
                 "paid_amount",
                 "paid_at",
                 "payment_collection_method",
+                "payment_terms",
+                "payments",
                 "posted_at",
                 "raw",
                 "reference",

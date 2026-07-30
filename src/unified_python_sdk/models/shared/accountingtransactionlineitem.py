@@ -2,13 +2,14 @@
 
 from __future__ import annotations
 from pydantic import model_serializer
-from typing import Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingTransactionLineItemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    category_ids: NotRequired[List[str]]
     description: NotRequired[str]
     id: NotRequired[str]
     name: NotRequired[str]
@@ -20,6 +21,8 @@ class AccountingTransactionLineItemTypedDict(TypedDict):
 
 class AccountingTransactionLineItem(BaseModel):
     account_id: Optional[str] = None
+
+    category_ids: Optional[List[str]] = None
 
     description: Optional[str] = None
 
@@ -40,6 +43,7 @@ class AccountingTransactionLineItem(BaseModel):
         optional_fields = set(
             [
                 "account_id",
+                "category_ids",
                 "description",
                 "id",
                 "name",

@@ -37,6 +37,7 @@ class CreateAccountingTransactionQueryParamFields(str, Enum):
     CURRENCY = "currency"
     CONTACTS = "contacts"
     ORGANIZATION_ID = "organization_id"
+    CATEGORY_IDS = "category_ids"
     RAW = "raw"
 
 

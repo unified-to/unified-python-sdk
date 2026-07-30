@@ -29,4 +29,5 @@ value = PatchAccountingVendorcreditQueryParamFields.ID
 | `STATUS`          | status            |
 | `ORGANIZATION_ID` | organization_id   |
 | `APPLY_AMOUNT`    | apply_amount      |
+| `APPLICATIONS`    | applications      |
 | `RAW`             | raw               |

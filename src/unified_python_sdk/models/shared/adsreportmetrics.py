@@ -9,9 +9,25 @@ from .property_adsreportmetrics_campaign import (
     PropertyAdsReportMetricsCampaign,
     PropertyAdsReportMetricsCampaignTypedDict,
 )
+from .property_adsreportmetrics_creative import (
+    PropertyAdsReportMetricsCreative,
+    PropertyAdsReportMetricsCreativeTypedDict,
+)
 from .property_adsreportmetrics_group import (
     PropertyAdsReportMetricsGroup,
     PropertyAdsReportMetricsGroupTypedDict,
+)
+from .property_adsreportmetrics_insertionorder import (
+    PropertyAdsReportMetricsInsertionorder,
+    PropertyAdsReportMetricsInsertionorderTypedDict,
+)
+from .property_adsreportmetrics_keyword import (
+    PropertyAdsReportMetricsKeyword,
+    PropertyAdsReportMetricsKeywordTypedDict,
+)
+from .property_adsreportmetrics_placement import (
+    PropertyAdsReportMetricsPlacement,
+    PropertyAdsReportMetricsPlacementTypedDict,
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -20,6 +36,13 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class Dimension(str, Enum, metaclass=utils.OpenEnumMeta):
+    DATE = "DATE"
+    PLATFORM = "PLATFORM"
+    PLATFORM_POSITION = "PLATFORM_POSITION"
+    DEVICE = "DEVICE"
 
 
 class AdsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -155,7 +178,13 @@ class AdsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
 class AdsReportMetricsTypedDict(TypedDict):
     ad: NotRequired[PropertyAdsReportMetricsAdTypedDict]
     campaign: NotRequired[PropertyAdsReportMetricsCampaignTypedDict]
+    creative: NotRequired[PropertyAdsReportMetricsCreativeTypedDict]
+    dimension: NotRequired[Dimension]
+    dimension_value: NotRequired[str]
     group: NotRequired[PropertyAdsReportMetricsGroupTypedDict]
+    insertionorder: NotRequired[PropertyAdsReportMetricsInsertionorderTypedDict]
+    keyword: NotRequired[PropertyAdsReportMetricsKeywordTypedDict]
+    placement: NotRequired[PropertyAdsReportMetricsPlacementTypedDict]
     type: NotRequired[AdsReportMetricsType]
     value: NotRequired[float]
 
@@ -165,11 +194,32 @@ class AdsReportMetrics(BaseModel):
 
     campaign: Optional[PropertyAdsReportMetricsCampaign] = None
 
+    creative: Optional[PropertyAdsReportMetricsCreative] = None
+
+    dimension: Optional[Dimension] = None
+
+    dimension_value: Optional[str] = None
+
     group: Optional[PropertyAdsReportMetricsGroup] = None
+
+    insertionorder: Optional[PropertyAdsReportMetricsInsertionorder] = None
+
+    keyword: Optional[PropertyAdsReportMetricsKeyword] = None
+
+    placement: Optional[PropertyAdsReportMetricsPlacement] = None
 
     type: Optional[AdsReportMetricsType] = None
 
     value: Optional[float] = None
+
+    @field_serializer("dimension")
+    def serialize_dimension(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.Dimension(value)
+            except ValueError:
+                return value
+        return value
 
     @field_serializer("type")
     def serialize_type(self, value):
@@ -182,7 +232,21 @@ class AdsReportMetrics(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["ad", "campaign", "group", "type", "value"])
+        optional_fields = set(
+            [
+                "ad",
+                "campaign",
+                "creative",
+                "dimension",
+                "dimension_value",
+                "group",
+                "insertionorder",
+                "keyword",
+                "placement",
+                "type",
+                "value",
+            ]
+        )
         serialized = handler(self)
         m = {}
 

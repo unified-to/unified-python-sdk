@@ -34,6 +34,8 @@ class ListAdsReportsRequestTypedDict(TypedDict):
     r"""The ad ID to filter by"""
     campaign_id: NotRequired[str]
     r"""The campaign ID to filter by"""
+    dimension: NotRequired[str]
+    r"""One or more (comma-separated) of: DATE, PLATFORM, PLATFORM_POSITION, DEVICE"""
     end_lt: NotRequired[str]
     r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListAdsReportsQueryParamFields]]
@@ -75,6 +77,12 @@ class ListAdsReportsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""The campaign ID to filter by"""
+
+    dimension: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""One or more (comma-separated) of: DATE, PLATFORM, PLATFORM_POSITION, DEVICE"""
 
     end_lt: Annotated[
         Optional[str],
@@ -156,6 +164,7 @@ class ListAdsReportsRequest(BaseModel):
             [
                 "ad_id",
                 "campaign_id",
+                "dimension",
                 "end_lt",
                 "fields",
                 "group_id",

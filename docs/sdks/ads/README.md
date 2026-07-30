@@ -5,12 +5,14 @@
 ### Available Operations
 
 * [create_ads_ad](#create_ads_ad) - Create an ad
+* [create_ads_asset](#create_ads_asset) - Create an asset
 * [create_ads_campaign](#create_ads_campaign) - Create a campaign
 * [create_ads_creative](#create_ads_creative) - Create a creative
 * [create_ads_group](#create_ads_group) - Create a group
 * [create_ads_insertionorder](#create_ads_insertionorder) - Create an insertionorder
 * [create_ads_organization](#create_ads_organization) - Create an organization
 * [get_ads_ad](#get_ads_ad) - Retrieve an ad
+* [get_ads_asset](#get_ads_asset) - Retrieve an asset
 * [get_ads_campaign](#get_ads_campaign) - Retrieve a campaign
 * [get_ads_creative](#get_ads_creative) - Retrieve a creative
 * [get_ads_group](#get_ads_group) - Retrieve a group
@@ -19,6 +21,7 @@
 * [get_ads_promoted](#get_ads_promoted) - Retrieve a promoted
 * [get_ads_target](#get_ads_target) - Retrieve a target
 * [list_ads_ads](#list_ads_ads) - List all ads
+* [list_ads_assets](#list_ads_assets) - List all assets
 * [list_ads_campaigns](#list_ads_campaigns) - List all campaigns
 * [list_ads_creatives](#list_ads_creatives) - List all creatives
 * [list_ads_groups](#list_ads_groups) - List all groups
@@ -86,6 +89,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAdsAdResponse](../../models/operations/createadsadresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_ads_asset
+
+Create an asset
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ads.create_ads_asset(request={
+        "ads_asset": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.ads_asset is not None
+
+    # Handle response
+    print(res.ads_asset)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.CreateAdsAssetRequest](../../models/operations/createadsassetrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.CreateAdsAssetResponse](../../models/operations/createadsassetresponse.md)**
 
 ### Errors
 
@@ -368,6 +418,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAdsAdResponse](../../models/operations/getadsadresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_ads_asset
+
+Retrieve an asset
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAdsAsset" method="get" path="/ads/{connection_id}/asset/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ads.get_ads_asset(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ads_asset is not None
+
+    # Handle response
+    print(res.ads_asset)
+
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetAdsAssetRequest](../../models/operations/getadsassetrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+
+### Response
+
+**[operations.GetAdsAssetResponse](../../models/operations/getadsassetresponse.md)**
 
 ### Errors
 
@@ -743,6 +840,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAdsAdsResponse](../../models/operations/listadsadsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_ads_assets
+
+List all assets
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAdsAssets" method="get" path="/ads/{connection_id}/asset" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ads.list_ads_assets(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.ads_assets is not None
+
+    # Handle response
+    print(res.ads_assets)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.ListAdsAssetsRequest](../../models/operations/listadsassetsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.ListAdsAssetsResponse](../../models/operations/listadsassetsresponse.md)**
 
 ### Errors
 

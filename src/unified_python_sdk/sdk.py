@@ -27,6 +27,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.application import Application
     from unified_python_sdk.applicationstatus import Applicationstatus
     from unified_python_sdk.assessment import Assessment
+    from unified_python_sdk.asset import Asset
     from unified_python_sdk.ats import Ats
     from unified_python_sdk.auth import Auth
     from unified_python_sdk.availability import Availability
@@ -205,6 +206,7 @@ class UnifiedTo(BaseSDK):
     vendorcredit: "Vendorcredit"
     ads: "Ads"
     ad: "Ad"
+    asset: "Asset"
     campaign: "Campaign"
     creative: "Creative"
     group: "Group"
@@ -365,6 +367,7 @@ class UnifiedTo(BaseSDK):
         "vendorcredit": ("unified_python_sdk.vendorcredit", "Vendorcredit"),
         "ads": ("unified_python_sdk.ads", "Ads"),
         "ad": ("unified_python_sdk.ad", "Ad"),
+        "asset": ("unified_python_sdk.asset", "Asset"),
         "campaign": ("unified_python_sdk.campaign", "Campaign"),
         "creative": ("unified_python_sdk.creative", "Creative"),
         "group": ("unified_python_sdk.group", "Group"),

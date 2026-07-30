@@ -36,6 +36,7 @@ class AccountingSalesorderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 class AccountingSalesorderTypedDict(TypedDict):
     account_id: NotRequired[str]
     billing_address: NotRequired[PropertyAccountingSalesorderBillingAddressTypedDict]
+    category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
@@ -56,6 +57,8 @@ class AccountingSalesorder(BaseModel):
     account_id: Optional[str] = None
 
     billing_address: Optional[PropertyAccountingSalesorderBillingAddress] = None
+
+    category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
 
@@ -100,6 +103,7 @@ class AccountingSalesorder(BaseModel):
             [
                 "account_id",
                 "billing_address",
+                "category_ids",
                 "contact_id",
                 "created_at",
                 "currency",

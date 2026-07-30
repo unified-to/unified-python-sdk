@@ -33,6 +33,7 @@ class ListAccountingSalesordersQueryParamFields(str, Enum):
     SALES_CHANNEL = "sales_channel"
     ORGANIZATION_ID = "organization_id"
     FEES = "fees"
+    CATEGORY_IDS = "category_ids"
     RAW = "raw"
 
 

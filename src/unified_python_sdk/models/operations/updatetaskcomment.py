@@ -24,6 +24,8 @@ class UpdateTaskCommentQueryParamFields(str, Enum):
     USER_ID = "user_id"
     USER_NAME = "user_name"
     TASK_ID = "task_id"
+    PARENT_ID = "parent_id"
+    HAS_CHILDREN = "has_children"
     RAW = "raw"
 
 

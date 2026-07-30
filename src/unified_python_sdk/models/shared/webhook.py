@@ -27,7 +27,7 @@ class Event(str, Enum, metaclass=utils.OpenEnumMeta):
     DELETED = "deleted"
 
 
-class ObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
+class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     ACCOUNTING_ACCOUNT = "accounting_account"
     ACCOUNTING_TRANSACTION = "accounting_transaction"
     ACCOUNTING_JOURNAL = "accounting_journal"
@@ -151,6 +151,7 @@ class ObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     ADS_REPORT = "ads_report"
     ADS_GROUP = "ads_group"
     ADS_CREATIVE = "ads_creative"
+    ADS_ASSET = "ads_asset"
     ADS_INSERTIONORDER = "ads_insertionorder"
     ADS_TARGET = "ads_target"
     ADS_PROMOTED = "ads_promoted"
@@ -196,7 +197,7 @@ class WebhookTypedDict(TypedDict):
 
     connection_id: str
     event: Event
-    object_type: ObjectType
+    object_type: WebhookObjectType
     checked_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
     db_name_prefix: NotRequired[str]
@@ -228,7 +229,7 @@ class Webhook(BaseModel):
 
     event: Event
 
-    object_type: ObjectType
+    object_type: WebhookObjectType
 
     checked_at: Optional[datetime] = None
 
@@ -295,7 +296,7 @@ class Webhook(BaseModel):
     def serialize_object_type(self, value):
         if isinstance(value, str):
             try:
-                return shared.ObjectType(value)
+                return shared.WebhookObjectType(value)
             except ValueError:
                 return value
         return value

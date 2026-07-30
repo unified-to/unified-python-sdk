@@ -22,4 +22,7 @@ value = AccountingInvoiceTerm.ON_RECEIPT
 | `NET_20`     | NET_20       |
 | `NET_25`     | NET_25       |
 | `NET_30`     | NET_30       |
+| `NET_45`     | NET_45       |
 | `NET_60`     | NET_60       |
+| `NET_90`     | NET_90       |
+| `OTHER`      | OTHER        |

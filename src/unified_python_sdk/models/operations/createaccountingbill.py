@@ -43,8 +43,11 @@ class CreateAccountingBillQueryParamFields(str, Enum):
     ATTACHMENTS = "attachments"
     SEND = "send"
     ORGANIZATION_ID = "organization_id"
-    RAW = "raw"
     TERM = "term"
+    PAYMENT_TERMS = "payment_terms"
+    PAYMENTS = "payments"
+    CATEGORY_IDS = "category_ids"
+    RAW = "raw"
 
 
 class CreateAccountingBillRequestTypedDict(TypedDict):

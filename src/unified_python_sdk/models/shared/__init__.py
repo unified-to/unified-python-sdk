@@ -37,6 +37,7 @@ if TYPE_CHECKING:
         AccountingBillStatus,
         AccountingBillTypedDict,
         PaymentCollectionMethod,
+        PaymentTerms,
         Term,
     )
     from .accountingcashflow import AccountingCashflow, AccountingCashflowTypedDict
@@ -48,9 +49,14 @@ if TYPE_CHECKING:
         AccountingCashflowSection,
         AccountingCashflowSectionTypedDict,
     )
-    from .accountingcategory import AccountingCategory, AccountingCategoryTypedDict
+    from .accountingcategory import (
+        AccountingCategory,
+        AccountingCategoryType,
+        AccountingCategoryTypedDict,
+    )
     from .accountingcontact import (
         AccountingContact,
+        AccountingContactPaymentTerms,
         AccountingContactTypedDict,
         TaxExemption,
     )
@@ -58,6 +64,11 @@ if TYPE_CHECKING:
         AccountingContactPaymentMethod,
         AccountingContactPaymentMethodType,
         AccountingContactPaymentMethodTypedDict,
+    )
+    from .accountingcreditapplication import (
+        AccountingCreditApplication,
+        AccountingCreditApplicationTypedDict,
+        ObjectType,
     )
     from .accountingcreditmemo import (
         AccountingCreditmemo,
@@ -79,6 +90,7 @@ if TYPE_CHECKING:
     from .accountinginvoice import (
         AccountingInvoice,
         AccountingInvoicePaymentCollectionMethod,
+        AccountingInvoicePaymentTerms,
         AccountingInvoiceStatus,
         AccountingInvoiceTerm,
         AccountingInvoiceType,
@@ -98,7 +110,12 @@ if TYPE_CHECKING:
     )
     from .accountingorganization import (
         AccountingOrganization,
+        AccountingOrganizationType,
         AccountingOrganizationTypedDict,
+    )
+    from .accountingpaymentreference import (
+        AccountingPaymentReference,
+        AccountingPaymentReferenceTypedDict,
     )
     from .accountingprofitloss import (
         AccountingProfitloss,
@@ -168,6 +185,7 @@ if TYPE_CHECKING:
         AccountingVendorcreditTypedDict,
     )
     from .adsad import AdType, AdsAd, AdsAdStatus, AdsAdTypedDict
+    from .adsasset import AdsAsset, AdsAssetType, AdsAssetTypedDict
     from .adscampaign import (
         AdsCampaign,
         AdsCampaignStatus,
@@ -215,6 +233,7 @@ if TYPE_CHECKING:
         AdsReportMetrics,
         AdsReportMetricsType,
         AdsReportMetricsTypedDict,
+        Dimension,
     )
     from .adstarget import AdsTarget, AdsTargetType, AdsTargetTypedDict
     from .analyticsevent import AnalyticsEvent, AnalyticsEventTypedDict, EventType
@@ -222,9 +241,9 @@ if TYPE_CHECKING:
     from .analyticsreport import AnalyticsReport, AnalyticsReportTypedDict
     from .analyticsreportmetrics import (
         AnalyticsReportMetrics,
+        AnalyticsReportMetricsDimension,
         AnalyticsReportMetricsType,
         AnalyticsReportMetricsTypedDict,
-        Dimension,
     )
     from .analyticssession import AnalyticsSession, AnalyticsSessionTypedDict
     from .analyticsvisitor import AnalyticsVisitor, AnalyticsVisitorTypedDict, Gender
@@ -944,6 +963,11 @@ if TYPE_CHECKING:
         MetadataMetadataFormat,
         MetadataMetadataTypedDict,
     )
+    from .paymentallocation import (
+        PaymentAllocation,
+        PaymentAllocationObjectType,
+        PaymentAllocationTypedDict,
+    )
     from .paymentlineitem import PaymentLineitem, PaymentLineitemTypedDict
     from .paymentlink import PaymentLink, PaymentLinkTypedDict
     from .paymentpayment import (
@@ -1250,6 +1274,13 @@ if TYPE_CHECKING:
         PropertyAdsReportMetricsCampaignTargetingPlacement,
         PropertyAdsReportMetricsCampaignTargetingPlacementTypedDict,
     )
+    from .property_adsreportmetrics_creative import (
+        PropertyAdsReportMetricsCreative,
+        PropertyAdsReportMetricsCreativeCreativeType,
+        PropertyAdsReportMetricsCreativeHostingSource,
+        PropertyAdsReportMetricsCreativeStatus,
+        PropertyAdsReportMetricsCreativeTypedDict,
+    )
     from .property_adsreportmetrics_group import (
         PropertyAdsReportMetricsGroup,
         PropertyAdsReportMetricsGroupBillingEvent,
@@ -1335,6 +1366,42 @@ if TYPE_CHECKING:
     from .property_adsreportmetrics_group_targeting_placement import (
         PropertyAdsReportMetricsGroupTargetingPlacement,
         PropertyAdsReportMetricsGroupTargetingPlacementTypedDict,
+    )
+    from .property_adsreportmetrics_insertionorder import (
+        PropertyAdsReportMetricsInsertionorder,
+        PropertyAdsReportMetricsInsertionorderBudgetUnit,
+        PropertyAdsReportMetricsInsertionorderStatus,
+        PropertyAdsReportMetricsInsertionorderTypedDict,
+    )
+    from .property_adsreportmetrics_insertionorder_bid_strategy import (
+        PropertyAdsReportMetricsInsertionorderBidStrategy,
+        PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType,
+        PropertyAdsReportMetricsInsertionorderBidStrategyType,
+        PropertyAdsReportMetricsInsertionorderBidStrategyTypedDict,
+        PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType,
+    )
+    from .property_adsreportmetrics_insertionorder_frequency_cap import (
+        PropertyAdsReportMetricsInsertionorderFrequencyCap,
+        PropertyAdsReportMetricsInsertionorderFrequencyCapTimeUnit,
+        PropertyAdsReportMetricsInsertionorderFrequencyCapTypedDict,
+    )
+    from .property_adsreportmetrics_insertionorder_kpi import (
+        PropertyAdsReportMetricsInsertionorderKpi,
+        PropertyAdsReportMetricsInsertionorderKpiType,
+        PropertyAdsReportMetricsInsertionorderKpiTypedDict,
+    )
+    from .property_adsreportmetrics_insertionorder_pacing import (
+        PropertyAdsReportMetricsInsertionorderPacing,
+        PropertyAdsReportMetricsInsertionorderPacingPeriod,
+        PropertyAdsReportMetricsInsertionorderPacingTypedDict,
+    )
+    from .property_adsreportmetrics_keyword import (
+        PropertyAdsReportMetricsKeyword,
+        PropertyAdsReportMetricsKeywordTypedDict,
+    )
+    from .property_adsreportmetrics_placement import (
+        PropertyAdsReportMetricsPlacement,
+        PropertyAdsReportMetricsPlacementTypedDict,
     )
     from .property_analyticsevent_metadata import (
         PropertyAnalyticsEventMetadata,
@@ -1877,8 +1944,8 @@ if TYPE_CHECKING:
     from .webhook import (
         DbType,
         Event,
-        ObjectType,
         Webhook,
+        WebhookObjectType,
         WebhookType,
         WebhookTypedDict,
     )
@@ -1913,12 +1980,16 @@ __all__ = [
     "AccountingCashflowSectionTypedDict",
     "AccountingCashflowTypedDict",
     "AccountingCategory",
+    "AccountingCategoryType",
     "AccountingCategoryTypedDict",
     "AccountingContact",
     "AccountingContactPaymentMethod",
     "AccountingContactPaymentMethodType",
     "AccountingContactPaymentMethodTypedDict",
+    "AccountingContactPaymentTerms",
     "AccountingContactTypedDict",
+    "AccountingCreditApplication",
+    "AccountingCreditApplicationTypedDict",
     "AccountingCreditmemo",
     "AccountingCreditmemoPaymentCollectionMethod",
     "AccountingCreditmemoStatus",
@@ -1934,6 +2005,7 @@ __all__ = [
     "AccountingFeeTypedDict",
     "AccountingInvoice",
     "AccountingInvoicePaymentCollectionMethod",
+    "AccountingInvoicePaymentTerms",
     "AccountingInvoiceStatus",
     "AccountingInvoiceTerm",
     "AccountingInvoiceType",
@@ -1949,7 +2021,10 @@ __all__ = [
     "AccountingOrderType",
     "AccountingOrderTypedDict",
     "AccountingOrganization",
+    "AccountingOrganizationType",
     "AccountingOrganizationTypedDict",
+    "AccountingPaymentReference",
+    "AccountingPaymentReferenceTypedDict",
     "AccountingProfitloss",
     "AccountingProfitlossAccount",
     "AccountingProfitlossAccountTypedDict",
@@ -1995,6 +2070,9 @@ __all__ = [
     "AdsAd",
     "AdsAdStatus",
     "AdsAdTypedDict",
+    "AdsAsset",
+    "AdsAssetType",
+    "AdsAssetTypedDict",
     "AdsCampaign",
     "AdsCampaignStatus",
     "AdsCampaignTypedDict",
@@ -2035,6 +2113,7 @@ __all__ = [
     "AnalyticsPropertyTypedDict",
     "AnalyticsReport",
     "AnalyticsReportMetrics",
+    "AnalyticsReportMetricsDimension",
     "AnalyticsReportMetricsType",
     "AnalyticsReportMetricsTypedDict",
     "AnalyticsReportTypedDict",
@@ -2713,6 +2792,9 @@ __all__ = [
     "Origin",
     "Partnership",
     "PartnershipTypedDict",
+    "PaymentAllocation",
+    "PaymentAllocationObjectType",
+    "PaymentAllocationTypedDict",
     "PaymentCollectionMethod",
     "PaymentLineitem",
     "PaymentLineitemTypedDict",
@@ -2730,6 +2812,7 @@ __all__ = [
     "PaymentSubscription",
     "PaymentSubscriptionStatus",
     "PaymentSubscriptionTypedDict",
+    "PaymentTerms",
     "PaymentType",
     "PerformanceGoalType",
     "Period",
@@ -2877,6 +2960,11 @@ __all__ = [
     "PropertyAdsReportMetricsCampaignTargetingPlacementTypedDict",
     "PropertyAdsReportMetricsCampaignTargetingTypedDict",
     "PropertyAdsReportMetricsCampaignTypedDict",
+    "PropertyAdsReportMetricsCreative",
+    "PropertyAdsReportMetricsCreativeCreativeType",
+    "PropertyAdsReportMetricsCreativeHostingSource",
+    "PropertyAdsReportMetricsCreativeStatus",
+    "PropertyAdsReportMetricsCreativeTypedDict",
     "PropertyAdsReportMetricsGroup",
     "PropertyAdsReportMetricsGroupBidStrategy",
     "PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType",
@@ -2925,6 +3013,28 @@ __all__ = [
     "PropertyAdsReportMetricsGroupTargetingTypedDict",
     "PropertyAdsReportMetricsGroupType",
     "PropertyAdsReportMetricsGroupTypedDict",
+    "PropertyAdsReportMetricsInsertionorder",
+    "PropertyAdsReportMetricsInsertionorderBidStrategy",
+    "PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType",
+    "PropertyAdsReportMetricsInsertionorderBidStrategyType",
+    "PropertyAdsReportMetricsInsertionorderBidStrategyTypedDict",
+    "PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType",
+    "PropertyAdsReportMetricsInsertionorderBudgetUnit",
+    "PropertyAdsReportMetricsInsertionorderFrequencyCap",
+    "PropertyAdsReportMetricsInsertionorderFrequencyCapTimeUnit",
+    "PropertyAdsReportMetricsInsertionorderFrequencyCapTypedDict",
+    "PropertyAdsReportMetricsInsertionorderKpi",
+    "PropertyAdsReportMetricsInsertionorderKpiType",
+    "PropertyAdsReportMetricsInsertionorderKpiTypedDict",
+    "PropertyAdsReportMetricsInsertionorderPacing",
+    "PropertyAdsReportMetricsInsertionorderPacingPeriod",
+    "PropertyAdsReportMetricsInsertionorderPacingTypedDict",
+    "PropertyAdsReportMetricsInsertionorderStatus",
+    "PropertyAdsReportMetricsInsertionorderTypedDict",
+    "PropertyAdsReportMetricsKeyword",
+    "PropertyAdsReportMetricsKeywordTypedDict",
+    "PropertyAdsReportMetricsPlacement",
+    "PropertyAdsReportMetricsPlacementTypedDict",
     "PropertyAnalyticsEventMetadata",
     "PropertyAnalyticsEventMetadataTypedDict",
     "PropertyAnalyticsVisitorMetadata",
@@ -3379,6 +3489,7 @@ __all__ = [
     "VirtualWebhookUserMentionedID",
     "VirtualWebhookVisitorID",
     "Webhook",
+    "WebhookObjectType",
     "WebhookType",
     "WebhookTypedDict",
     "WeekStart",
@@ -3406,6 +3517,7 @@ _dynamic_imports: dict[str, str] = {
     "AccountingBillStatus": ".accountingbill",
     "AccountingBillTypedDict": ".accountingbill",
     "PaymentCollectionMethod": ".accountingbill",
+    "PaymentTerms": ".accountingbill",
     "Term": ".accountingbill",
     "AccountingCashflow": ".accountingcashflow",
     "AccountingCashflowTypedDict": ".accountingcashflow",
@@ -3414,13 +3526,18 @@ _dynamic_imports: dict[str, str] = {
     "AccountingCashflowSection": ".accountingcashflowsection",
     "AccountingCashflowSectionTypedDict": ".accountingcashflowsection",
     "AccountingCategory": ".accountingcategory",
+    "AccountingCategoryType": ".accountingcategory",
     "AccountingCategoryTypedDict": ".accountingcategory",
     "AccountingContact": ".accountingcontact",
+    "AccountingContactPaymentTerms": ".accountingcontact",
     "AccountingContactTypedDict": ".accountingcontact",
     "TaxExemption": ".accountingcontact",
     "AccountingContactPaymentMethod": ".accountingcontactpaymentmethod",
     "AccountingContactPaymentMethodType": ".accountingcontactpaymentmethod",
     "AccountingContactPaymentMethodTypedDict": ".accountingcontactpaymentmethod",
+    "AccountingCreditApplication": ".accountingcreditapplication",
+    "AccountingCreditApplicationTypedDict": ".accountingcreditapplication",
+    "ObjectType": ".accountingcreditapplication",
     "AccountingCreditmemo": ".accountingcreditmemo",
     "AccountingCreditmemoPaymentCollectionMethod": ".accountingcreditmemo",
     "AccountingCreditmemoStatus": ".accountingcreditmemo",
@@ -3436,6 +3553,7 @@ _dynamic_imports: dict[str, str] = {
     "AccountingFeeTypedDict": ".accountingfee",
     "AccountingInvoice": ".accountinginvoice",
     "AccountingInvoicePaymentCollectionMethod": ".accountinginvoice",
+    "AccountingInvoicePaymentTerms": ".accountinginvoice",
     "AccountingInvoiceStatus": ".accountinginvoice",
     "AccountingInvoiceTerm": ".accountinginvoice",
     "AccountingInvoiceType": ".accountinginvoice",
@@ -3451,7 +3569,10 @@ _dynamic_imports: dict[str, str] = {
     "AccountingOrderType": ".accountingorder",
     "AccountingOrderTypedDict": ".accountingorder",
     "AccountingOrganization": ".accountingorganization",
+    "AccountingOrganizationType": ".accountingorganization",
     "AccountingOrganizationTypedDict": ".accountingorganization",
+    "AccountingPaymentReference": ".accountingpaymentreference",
+    "AccountingPaymentReferenceTypedDict": ".accountingpaymentreference",
     "AccountingProfitloss": ".accountingprofitloss",
     "AccountingProfitlossTypedDict": ".accountingprofitloss",
     "AccountingProfitlossAccount": ".accountingprofitlossaccount",
@@ -3495,6 +3616,9 @@ _dynamic_imports: dict[str, str] = {
     "AdsAd": ".adsad",
     "AdsAdStatus": ".adsad",
     "AdsAdTypedDict": ".adsad",
+    "AdsAsset": ".adsasset",
+    "AdsAssetType": ".adsasset",
+    "AdsAssetTypedDict": ".adsasset",
     "AdsCampaign": ".adscampaign",
     "AdsCampaignStatus": ".adscampaign",
     "AdsCampaignTypedDict": ".adscampaign",
@@ -3539,6 +3663,7 @@ _dynamic_imports: dict[str, str] = {
     "AdsReportMetrics": ".adsreportmetrics",
     "AdsReportMetricsType": ".adsreportmetrics",
     "AdsReportMetricsTypedDict": ".adsreportmetrics",
+    "Dimension": ".adsreportmetrics",
     "AdsTarget": ".adstarget",
     "AdsTargetType": ".adstarget",
     "AdsTargetTypedDict": ".adstarget",
@@ -3550,9 +3675,9 @@ _dynamic_imports: dict[str, str] = {
     "AnalyticsReport": ".analyticsreport",
     "AnalyticsReportTypedDict": ".analyticsreport",
     "AnalyticsReportMetrics": ".analyticsreportmetrics",
+    "AnalyticsReportMetricsDimension": ".analyticsreportmetrics",
     "AnalyticsReportMetricsType": ".analyticsreportmetrics",
     "AnalyticsReportMetricsTypedDict": ".analyticsreportmetrics",
-    "Dimension": ".analyticsreportmetrics",
     "AnalyticsSession": ".analyticssession",
     "AnalyticsSessionTypedDict": ".analyticssession",
     "AnalyticsVisitor": ".analyticsvisitor",
@@ -4297,6 +4422,9 @@ _dynamic_imports: dict[str, str] = {
     "MetadataMetadata": ".metadatametadata",
     "MetadataMetadataFormat": ".metadatametadata",
     "MetadataMetadataTypedDict": ".metadatametadata",
+    "PaymentAllocation": ".paymentallocation",
+    "PaymentAllocationObjectType": ".paymentallocation",
+    "PaymentAllocationTypedDict": ".paymentallocation",
     "PaymentLineitem": ".paymentlineitem",
     "PaymentLineitemTypedDict": ".paymentlineitem",
     "PaymentLink": ".paymentlink",
@@ -4461,6 +4589,11 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict": ".property_adsreportmetrics_campaign_targeting_optimization",
     "PropertyAdsReportMetricsCampaignTargetingPlacement": ".property_adsreportmetrics_campaign_targeting_placement",
     "PropertyAdsReportMetricsCampaignTargetingPlacementTypedDict": ".property_adsreportmetrics_campaign_targeting_placement",
+    "PropertyAdsReportMetricsCreative": ".property_adsreportmetrics_creative",
+    "PropertyAdsReportMetricsCreativeCreativeType": ".property_adsreportmetrics_creative",
+    "PropertyAdsReportMetricsCreativeHostingSource": ".property_adsreportmetrics_creative",
+    "PropertyAdsReportMetricsCreativeStatus": ".property_adsreportmetrics_creative",
+    "PropertyAdsReportMetricsCreativeTypedDict": ".property_adsreportmetrics_creative",
     "PropertyAdsReportMetricsGroup": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBillingEvent": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBudgetAllocationType": ".property_adsreportmetrics_group",
@@ -4509,6 +4642,28 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict": ".property_adsreportmetrics_group_targeting_optimization",
     "PropertyAdsReportMetricsGroupTargetingPlacement": ".property_adsreportmetrics_group_targeting_placement",
     "PropertyAdsReportMetricsGroupTargetingPlacementTypedDict": ".property_adsreportmetrics_group_targeting_placement",
+    "PropertyAdsReportMetricsInsertionorder": ".property_adsreportmetrics_insertionorder",
+    "PropertyAdsReportMetricsInsertionorderBudgetUnit": ".property_adsreportmetrics_insertionorder",
+    "PropertyAdsReportMetricsInsertionorderStatus": ".property_adsreportmetrics_insertionorder",
+    "PropertyAdsReportMetricsInsertionorderTypedDict": ".property_adsreportmetrics_insertionorder",
+    "PropertyAdsReportMetricsInsertionorderBidStrategy": ".property_adsreportmetrics_insertionorder_bid_strategy",
+    "PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType": ".property_adsreportmetrics_insertionorder_bid_strategy",
+    "PropertyAdsReportMetricsInsertionorderBidStrategyType": ".property_adsreportmetrics_insertionorder_bid_strategy",
+    "PropertyAdsReportMetricsInsertionorderBidStrategyTypedDict": ".property_adsreportmetrics_insertionorder_bid_strategy",
+    "PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType": ".property_adsreportmetrics_insertionorder_bid_strategy",
+    "PropertyAdsReportMetricsInsertionorderFrequencyCap": ".property_adsreportmetrics_insertionorder_frequency_cap",
+    "PropertyAdsReportMetricsInsertionorderFrequencyCapTimeUnit": ".property_adsreportmetrics_insertionorder_frequency_cap",
+    "PropertyAdsReportMetricsInsertionorderFrequencyCapTypedDict": ".property_adsreportmetrics_insertionorder_frequency_cap",
+    "PropertyAdsReportMetricsInsertionorderKpi": ".property_adsreportmetrics_insertionorder_kpi",
+    "PropertyAdsReportMetricsInsertionorderKpiType": ".property_adsreportmetrics_insertionorder_kpi",
+    "PropertyAdsReportMetricsInsertionorderKpiTypedDict": ".property_adsreportmetrics_insertionorder_kpi",
+    "PropertyAdsReportMetricsInsertionorderPacing": ".property_adsreportmetrics_insertionorder_pacing",
+    "PropertyAdsReportMetricsInsertionorderPacingPeriod": ".property_adsreportmetrics_insertionorder_pacing",
+    "PropertyAdsReportMetricsInsertionorderPacingTypedDict": ".property_adsreportmetrics_insertionorder_pacing",
+    "PropertyAdsReportMetricsKeyword": ".property_adsreportmetrics_keyword",
+    "PropertyAdsReportMetricsKeywordTypedDict": ".property_adsreportmetrics_keyword",
+    "PropertyAdsReportMetricsPlacement": ".property_adsreportmetrics_placement",
+    "PropertyAdsReportMetricsPlacementTypedDict": ".property_adsreportmetrics_placement",
     "PropertyAnalyticsEventMetadata": ".property_analyticsevent_metadata",
     "PropertyAnalyticsEventMetadataTypedDict": ".property_analyticsevent_metadata",
     "PropertyAnalyticsVisitorMetadata": ".property_analyticsvisitor_metadata",
@@ -4883,8 +5038,8 @@ _dynamic_imports: dict[str, str] = {
     "VerificationTimeTypedDict": ".verificationtime",
     "DbType": ".webhook",
     "Event": ".webhook",
-    "ObjectType": ".webhook",
     "Webhook": ".webhook",
+    "WebhookObjectType": ".webhook",
     "WebhookType": ".webhook",
     "WebhookTypedDict": ".webhook",
 }

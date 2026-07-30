@@ -29,6 +29,20 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class AccountingContactPaymentTerms(str, Enum, metaclass=utils.OpenEnumMeta):
+    ON_RECEIPT = "ON_RECEIPT"
+    NET_7 = "NET_7"
+    NET_10 = "NET_10"
+    NET_15 = "NET_15"
+    NET_20 = "NET_20"
+    NET_25 = "NET_25"
+    NET_30 = "NET_30"
+    NET_45 = "NET_45"
+    NET_60 = "NET_60"
+    NET_90 = "NET_90"
+    OTHER = "OTHER"
+
+
 class TaxExemption(str, Enum, metaclass=utils.OpenEnumMeta):
     FEDERAL_GOV = "FEDERAL_GOV"
     REGION_GOV = "REGION_GOV"
@@ -60,6 +74,7 @@ class AccountingContactTypedDict(TypedDict):
     name: NotRequired[str]
     organization_id: NotRequired[str]
     payment_methods: NotRequired[List[AccountingContactPaymentMethodTypedDict]]
+    payment_terms: NotRequired[AccountingContactPaymentTerms]
     portal_url: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     shipping_address: NotRequired[PropertyAccountingContactShippingAddressTypedDict]
@@ -102,6 +117,8 @@ class AccountingContact(BaseModel):
 
     payment_methods: Optional[List[AccountingContactPaymentMethod]] = None
 
+    payment_terms: Optional[AccountingContactPaymentTerms] = None
+
     portal_url: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
@@ -115,6 +132,15 @@ class AccountingContact(BaseModel):
     telephones: Optional[List[AccountingTelephone]] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("payment_terms")
+    def serialize_payment_terms(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingContactPaymentTerms(value)
+            except ValueError:
+                return value
+        return value
 
     @field_serializer("tax_exemption")
     def serialize_tax_exemption(self, value):
@@ -145,6 +171,7 @@ class AccountingContact(BaseModel):
                 "name",
                 "organization_id",
                 "payment_methods",
+                "payment_terms",
                 "portal_url",
                 "raw",
                 "shipping_address",

@@ -35,4 +35,5 @@ value = CreateAccountingContactQueryParamFields.ID
 | `IDENTIFICATION`      | identification        |
 | `ASSOCIATED_CONTACTS` | associated_contacts   |
 | `ORGANIZATION_ID`     | organization_id       |
+| `PAYMENT_TERMS`       | payment_terms         |
 | `RAW`                 | raw                   |

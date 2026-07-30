@@ -6,10 +6,20 @@ from .property_accountingorganization_address import (
     PropertyAccountingOrganizationAddressTypedDict,
 )
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class AccountingOrganizationType(str, Enum, metaclass=utils.OpenEnumMeta):
+    COMPANY = "COMPANY"
+    SUBSIDIARY = "SUBSIDIARY"
+    DIVISION = "DIVISION"
+    LOCATION = "LOCATION"
 
 
 class AccountingOrganizationTypedDict(TypedDict):
@@ -18,6 +28,7 @@ class AccountingOrganizationTypedDict(TypedDict):
     currency: NotRequired[str]
     fiscal_year_end_month: NotRequired[float]
     id: NotRequired[str]
+    is_elimination: NotRequired[bool]
     legal_name: NotRequired[str]
     name: NotRequired[str]
     organization_code: NotRequired[str]
@@ -25,6 +36,7 @@ class AccountingOrganizationTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     tax_number: NotRequired[str]
     timezone: NotRequired[str]
+    type: NotRequired[AccountingOrganizationType]
     updated_at: NotRequired[datetime]
     website: NotRequired[str]
 
@@ -40,6 +52,8 @@ class AccountingOrganization(BaseModel):
 
     id: Optional[str] = None
 
+    is_elimination: Optional[bool] = None
+
     legal_name: Optional[str] = None
 
     name: Optional[str] = None
@@ -54,9 +68,20 @@ class AccountingOrganization(BaseModel):
 
     timezone: Optional[str] = None
 
+    type: Optional[AccountingOrganizationType] = None
+
     updated_at: Optional[datetime] = None
 
     website: Optional[str] = None
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingOrganizationType(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -67,6 +92,7 @@ class AccountingOrganization(BaseModel):
                 "currency",
                 "fiscal_year_end_month",
                 "id",
+                "is_elimination",
                 "legal_name",
                 "name",
                 "organization_code",
@@ -74,6 +100,7 @@ class AccountingOrganization(BaseModel):
                 "raw",
                 "tax_number",
                 "timezone",
+                "type",
                 "updated_at",
                 "website",
             ]

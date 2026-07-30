@@ -39,6 +39,7 @@ class ListAccountingInvoicesQueryParamFields(str, Enum):
     NOTES = "notes"
     REFUND_REASON = "refund_reason"
     TERM = "term"
+    PAYMENT_TERMS = "payment_terms"
     LINEITEMS = "lineitems"
     STATUS = "status"
     URL = "url"
@@ -47,6 +48,8 @@ class ListAccountingInvoicesQueryParamFields(str, Enum):
     ATTACHMENTS = "attachments"
     SEND = "send"
     ORGANIZATION_ID = "organization_id"
+    PAYMENTS = "payments"
+    CATEGORY_IDS = "category_ids"
     RAW = "raw"
 
 

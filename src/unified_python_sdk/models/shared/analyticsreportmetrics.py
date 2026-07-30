@@ -10,7 +10,7 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class Dimension(str, Enum, metaclass=utils.OpenEnumMeta):
+class AnalyticsReportMetricsDimension(str, Enum, metaclass=utils.OpenEnumMeta):
     DATE = "DATE"
     HOUR = "HOUR"
     DAY_OF_WEEK = "DAY_OF_WEEK"
@@ -70,14 +70,14 @@ class AnalyticsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AnalyticsReportMetricsTypedDict(TypedDict):
-    dimension: NotRequired[Dimension]
+    dimension: NotRequired[AnalyticsReportMetricsDimension]
     dimension_value: NotRequired[str]
     type: NotRequired[AnalyticsReportMetricsType]
     value: NotRequired[float]
 
 
 class AnalyticsReportMetrics(BaseModel):
-    dimension: Optional[Dimension] = None
+    dimension: Optional[AnalyticsReportMetricsDimension] = None
 
     dimension_value: Optional[str] = None
 
@@ -89,7 +89,7 @@ class AnalyticsReportMetrics(BaseModel):
     def serialize_dimension(self, value):
         if isinstance(value, str):
             try:
-                return shared.Dimension(value)
+                return shared.AnalyticsReportMetricsDimension(value)
             except ValueError:
                 return value
         return value

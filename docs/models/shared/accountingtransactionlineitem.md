@@ -6,6 +6,7 @@
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `account_id`       | *Optional[str]*    | :heavy_minus_sign: | N/A                |
+| `category_ids`     | List[*str*]        | :heavy_minus_sign: | N/A                |
 | `description`      | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `id`               | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `name`             | *Optional[str]*    | :heavy_minus_sign: | N/A                |

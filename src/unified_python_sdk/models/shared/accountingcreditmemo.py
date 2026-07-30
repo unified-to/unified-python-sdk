@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
+from .accountingcreditapplication import (
+    AccountingCreditApplication,
+    AccountingCreditApplicationTypedDict,
+)
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
 from datetime import datetime
 from enum import Enum
@@ -34,6 +38,8 @@ class AccountingCreditmemoStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AccountingCreditmemoTypedDict(TypedDict):
+    applications: NotRequired[List[AccountingCreditApplicationTypedDict]]
+    r"""What this credit memo was applied to (invoices/bills). Writable inline on create/update."""
     apply_amount: NotRequired[float]
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     balance_amount: NotRequired[float]
@@ -66,6 +72,9 @@ class AccountingCreditmemoTypedDict(TypedDict):
 
 
 class AccountingCreditmemo(BaseModel):
+    applications: Optional[List[AccountingCreditApplication]] = None
+    r"""What this credit memo was applied to (invoices/bills). Writable inline on create/update."""
+
     apply_amount: Optional[float] = None
 
     attachments: Optional[List[AccountingAttachment]] = None
@@ -148,6 +157,7 @@ class AccountingCreditmemo(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "applications",
                 "apply_amount",
                 "attachments",
                 "balance_amount",

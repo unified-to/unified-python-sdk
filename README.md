@@ -318,12 +318,14 @@ asyncio.run(main())
 ### [Ads](docs/sdks/ads/README.md)
 
 * [create_ads_ad](docs/sdks/ads/README.md#create_ads_ad) - Create an ad
+* [create_ads_asset](docs/sdks/ads/README.md#create_ads_asset) - Create an asset
 * [create_ads_campaign](docs/sdks/ads/README.md#create_ads_campaign) - Create a campaign
 * [create_ads_creative](docs/sdks/ads/README.md#create_ads_creative) - Create a creative
 * [create_ads_group](docs/sdks/ads/README.md#create_ads_group) - Create a group
 * [create_ads_insertionorder](docs/sdks/ads/README.md#create_ads_insertionorder) - Create an insertionorder
 * [create_ads_organization](docs/sdks/ads/README.md#create_ads_organization) - Create an organization
 * [get_ads_ad](docs/sdks/ads/README.md#get_ads_ad) - Retrieve an ad
+* [get_ads_asset](docs/sdks/ads/README.md#get_ads_asset) - Retrieve an asset
 * [get_ads_campaign](docs/sdks/ads/README.md#get_ads_campaign) - Retrieve a campaign
 * [get_ads_creative](docs/sdks/ads/README.md#get_ads_creative) - Retrieve a creative
 * [get_ads_group](docs/sdks/ads/README.md#get_ads_group) - Retrieve a group
@@ -332,6 +334,7 @@ asyncio.run(main())
 * [get_ads_promoted](docs/sdks/ads/README.md#get_ads_promoted) - Retrieve a promoted
 * [get_ads_target](docs/sdks/ads/README.md#get_ads_target) - Retrieve a target
 * [list_ads_ads](docs/sdks/ads/README.md#list_ads_ads) - List all ads
+* [list_ads_assets](docs/sdks/ads/README.md#list_ads_assets) - List all assets
 * [list_ads_campaigns](docs/sdks/ads/README.md#list_ads_campaigns) - List all campaigns
 * [list_ads_creatives](docs/sdks/ads/README.md#list_ads_creatives) - List all creatives
 * [list_ads_groups](docs/sdks/ads/README.md#list_ads_groups) - List all groups
@@ -408,6 +411,12 @@ asyncio.run(main())
 * [remove_assessment_package](docs/sdks/assessment/README.md#remove_assessment_package) - Delete an assessment package
 * [update_assessment_order](docs/sdks/assessment/README.md#update_assessment_order) - Update an order
 * [update_assessment_package](docs/sdks/assessment/README.md#update_assessment_package) - Update an assessment package
+
+### [Asset](docs/sdks/asset/README.md)
+
+* [create_ads_asset](docs/sdks/asset/README.md#create_ads_asset) - Create an asset
+* [get_ads_asset](docs/sdks/asset/README.md#get_ads_asset) - Retrieve an asset
+* [list_ads_assets](docs/sdks/asset/README.md#list_ads_assets) - List all assets
 
 ### [Ats](docs/sdks/ats/README.md)
 

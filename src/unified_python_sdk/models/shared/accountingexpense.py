@@ -30,6 +30,7 @@ class AccountingExpenseTypedDict(TypedDict):
     approver_users: NotRequired[List[AccountingReferenceTypedDict]]
     r"""expense approver(s); id is HR employee/user when resolved"""
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
+    category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
@@ -62,6 +63,8 @@ class AccountingExpense(BaseModel):
     r"""expense approver(s); id is HR employee/user when resolved"""
 
     attachments: Optional[List[AccountingAttachment]] = None
+
+    category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
 
@@ -119,6 +122,7 @@ class AccountingExpense(BaseModel):
                 "approver_user_id",
                 "approver_users",
                 "attachments",
+                "category_ids",
                 "contact_id",
                 "created_at",
                 "currency",

@@ -10,7 +10,9 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class TaskCommentTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    has_children: NotRequired[bool]
     id: NotRequired[str]
+    parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     task_id: NotRequired[str]
     text: NotRequired[str]
@@ -22,7 +24,11 @@ class TaskCommentTypedDict(TypedDict):
 class TaskComment(BaseModel):
     created_at: Optional[datetime] = None
 
+    has_children: Optional[bool] = None
+
     id: Optional[str] = None
+
+    parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -41,7 +47,9 @@ class TaskComment(BaseModel):
         optional_fields = set(
             [
                 "created_at",
+                "has_children",
                 "id",
+                "parent_id",
                 "raw",
                 "task_id",
                 "text",

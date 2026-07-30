@@ -149,7 +149,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
-            "object_type": shared.ObjectType.ATS_SCORECARD,
+            "object_type": shared.WebhookObjectType.ATS_SCORECARD,
         },
     })
 
@@ -934,7 +934,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.UPDATED,
-            "object_type": shared.ObjectType.TICKETING_CUSTOMER,
+            "object_type": shared.WebhookObjectType.TICKETING_CUSTOMER,
         },
         "id": "<id>",
     })
@@ -1269,7 +1269,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.DELETED,
-            "object_type": shared.ObjectType.MESSAGING_CHANNEL,
+            "object_type": shared.WebhookObjectType.MESSAGING_CHANNEL,
         },
         "id": "<id>",
     })

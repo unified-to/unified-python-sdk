@@ -30,6 +30,7 @@ class CreateAccountingOrderQueryParamFields(str, Enum):
     BILLING_ADDRESS = "billing_address"
     STATUS = "status"
     LINEITEMS = "lineitems"
+    ORGANIZATION_ID = "organization_id"
     RAW = "raw"
 
 

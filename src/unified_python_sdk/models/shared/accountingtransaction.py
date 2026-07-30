@@ -18,6 +18,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingTransactionTypedDict(TypedDict):
     account_id: NotRequired[str]
+    category_ids: NotRequired[List[str]]
     contacts: NotRequired[List[AccountingTransactionContactTypedDict]]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
@@ -40,6 +41,8 @@ class AccountingTransactionTypedDict(TypedDict):
 
 class AccountingTransaction(BaseModel):
     account_id: Optional[str] = None
+
+    category_ids: Optional[List[str]] = None
 
     contacts: Optional[List[AccountingTransactionContact]] = None
 
@@ -82,6 +85,7 @@ class AccountingTransaction(BaseModel):
         optional_fields = set(
             [
                 "account_id",
+                "category_ids",
                 "contacts",
                 "created_at",
                 "currency",
