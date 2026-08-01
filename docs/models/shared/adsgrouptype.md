@@ -28,3 +28,6 @@ value = AdsGroupType.TEXT
 | `SEARCH`     | SEARCH       |
 | `AUDIO`      | AUDIO        |
 | `YOUTUBE`    | YOUTUBE      |
+| `NATIVE`     | NATIVE       |
+| `CTV`        | CTV          |
+| `DOOH`       | DOOH         |

@@ -35,6 +35,9 @@ class PropertyAdsReportMetricsCampaignAdvertisingChannelType(
     SEARCH = "SEARCH"
     AUDIO = "AUDIO"
     YOUTUBE = "YOUTUBE"
+    NATIVE = "NATIVE"
+    CTV = "CTV"
+    DOOH = "DOOH"
 
 
 class PropertyAdsReportMetricsCampaignBudgetPeriod(
@@ -44,6 +47,14 @@ class PropertyAdsReportMetricsCampaignBudgetPeriod(
     MONTHLY = "MONTHLY"
     TOTAL = "TOTAL"
     LIFETIME = "LIFETIME"
+
+
+class PropertyAdsReportMetricsCampaignBudgetUnit(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
+    UNSPECIFIED = "UNSPECIFIED"
+    CURRENCY = "CURRENCY"
+    IMPRESSIONS = "IMPRESSIONS"
 
 
 class PropertyAdsReportMetricsCampaignEffectiveStatus(
@@ -90,6 +101,7 @@ class PropertyAdsReportMetricsCampaignTypedDict(TypedDict):
     ]
     budget_amount: NotRequired[float]
     budget_period: NotRequired[PropertyAdsReportMetricsCampaignBudgetPeriod]
+    budget_unit: NotRequired[PropertyAdsReportMetricsCampaignBudgetUnit]
     campaign_budget_identifier: NotRequired[str]
     category: NotRequired[str]
     created_at: NotRequired[datetime]
@@ -119,6 +131,8 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
     budget_amount: Optional[float] = None
 
     budget_period: Optional[PropertyAdsReportMetricsCampaignBudgetPeriod] = None
+
+    budget_unit: Optional[PropertyAdsReportMetricsCampaignBudgetUnit] = None
 
     campaign_budget_identifier: Optional[str] = None
 
@@ -178,6 +192,15 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
                 return value
         return value
 
+    @field_serializer("budget_unit")
+    def serialize_budget_unit(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyAdsReportMetricsCampaignBudgetUnit(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("effective_status")
     def serialize_effective_status(self, value):
         if isinstance(value, str):
@@ -212,6 +235,7 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
                 "advertising_channel_type",
                 "budget_amount",
                 "budget_period",
+                "budget_unit",
                 "campaign_budget_identifier",
                 "category",
                 "created_at",

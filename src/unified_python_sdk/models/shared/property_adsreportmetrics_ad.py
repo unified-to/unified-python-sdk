@@ -26,6 +26,9 @@ class PropertyAdsReportMetricsAdAdType(str, Enum, metaclass=utils.OpenEnumMeta):
     SEARCH = "SEARCH"
     AUDIO = "AUDIO"
     YOUTUBE = "YOUTUBE"
+    NATIVE = "NATIVE"
+    CTV = "CTV"
+    DOOH = "DOOH"
 
 
 class PropertyAdsReportMetricsAdStatus(str, Enum, metaclass=utils.OpenEnumMeta):

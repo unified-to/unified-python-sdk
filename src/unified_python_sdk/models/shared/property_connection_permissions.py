@@ -260,6 +260,7 @@ class PropertyConnectionPermissions(str, Enum, metaclass=utils.OpenEnumMeta):
     SHIPPING_LABEL_WRITE = "shipping_label_write"
     SHIPPING_TRACKING_READ = "shipping_tracking_read"
     SHIPPING_RATE_READ = "shipping_rate_read"
+    SHIPPING_RATE_WRITE = "shipping_rate_write"
     SHIPPING_CARRIER_READ = "shipping_carrier_read"
     SIGNING_DOCUMENT_READ = "signing_document_read"
     SIGNING_DOCUMENT_WRITE = "signing_document_write"

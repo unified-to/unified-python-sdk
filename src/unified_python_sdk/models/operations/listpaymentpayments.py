@@ -31,8 +31,8 @@ class ListPaymentPaymentsQueryParamFields(str, Enum):
     ACCOUNT_ID = "account_id"
     REFERENCE = "reference"
     ORGANIZATION_ID = "organization_id"
-    ALLOCATIONS = "allocations"
     RAW = "raw"
+    ALLOCATIONS = "allocations"
 
 
 class ListPaymentPaymentsRequestTypedDict(TypedDict):

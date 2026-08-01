@@ -14,6 +14,7 @@ class PaymentLinkTypedDict(TypedDict):
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     is_chargeable_now: NotRequired[bool]
@@ -33,6 +34,8 @@ class PaymentLink(BaseModel):
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
+
+    description: Optional[str] = None
 
     id: Optional[str] = None
 
@@ -60,6 +63,7 @@ class PaymentLink(BaseModel):
                 "contact_id",
                 "created_at",
                 "currency",
+                "description",
                 "id",
                 "is_active",
                 "is_chargeable_now",

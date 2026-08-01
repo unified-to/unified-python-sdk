@@ -28,6 +28,7 @@ class GetPaymentSubscriptionQueryParamFields(str, Enum):
     CURRENT_PERIOD_START_AT = "current_period_start_at"
     CANCELED_AT = "canceled_at"
     CURRENCY = "currency"
+    TOTAL_AMOUNT = "total_amount"
     START_AT = "start_at"
     END_AT = "end_at"
     STATUS = "status"

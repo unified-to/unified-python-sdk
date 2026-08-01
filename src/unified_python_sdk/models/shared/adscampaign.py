@@ -33,6 +33,9 @@ class AdvertisingChannelType(str, Enum, metaclass=utils.OpenEnumMeta):
     SEARCH = "SEARCH"
     AUDIO = "AUDIO"
     YOUTUBE = "YOUTUBE"
+    NATIVE = "NATIVE"
+    CTV = "CTV"
+    DOOH = "DOOH"
 
 
 class BudgetPeriod(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -40,6 +43,12 @@ class BudgetPeriod(str, Enum, metaclass=utils.OpenEnumMeta):
     MONTHLY = "MONTHLY"
     TOTAL = "TOTAL"
     LIFETIME = "LIFETIME"
+
+
+class BudgetUnit(str, Enum, metaclass=utils.OpenEnumMeta):
+    UNSPECIFIED = "UNSPECIFIED"
+    CURRENCY = "CURRENCY"
+    IMPRESSIONS = "IMPRESSIONS"
 
 
 class EffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -82,6 +91,7 @@ class AdsCampaignTypedDict(TypedDict):
     advertising_channel_type: NotRequired[AdvertisingChannelType]
     budget_amount: NotRequired[float]
     budget_period: NotRequired[BudgetPeriod]
+    budget_unit: NotRequired[BudgetUnit]
     campaign_budget_identifier: NotRequired[str]
     category: NotRequired[str]
     created_at: NotRequired[datetime]
@@ -109,6 +119,8 @@ class AdsCampaign(BaseModel):
     budget_amount: Optional[float] = None
 
     budget_period: Optional[BudgetPeriod] = None
+
+    budget_unit: Optional[BudgetUnit] = None
 
     campaign_budget_identifier: Optional[str] = None
 
@@ -166,6 +178,15 @@ class AdsCampaign(BaseModel):
                 return value
         return value
 
+    @field_serializer("budget_unit")
+    def serialize_budget_unit(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.BudgetUnit(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("effective_status")
     def serialize_effective_status(self, value):
         if isinstance(value, str):
@@ -200,6 +221,7 @@ class AdsCampaign(BaseModel):
                 "advertising_channel_type",
                 "budget_amount",
                 "budget_period",
+                "budget_unit",
                 "campaign_budget_identifier",
                 "category",
                 "created_at",

@@ -125,6 +125,9 @@ class PropertyAdsReportMetricsGroupType(str, Enum, metaclass=utils.OpenEnumMeta)
     SEARCH = "SEARCH"
     AUDIO = "AUDIO"
     YOUTUBE = "YOUTUBE"
+    NATIVE = "NATIVE"
+    CTV = "CTV"
+    DOOH = "DOOH"
 
 
 class PropertyAdsReportMetricsGroupTypedDict(TypedDict):

@@ -55,7 +55,7 @@ class AdsGroupBudgetPeriod(str, Enum, metaclass=utils.OpenEnumMeta):
     LIFETIME = "LIFETIME"
 
 
-class BudgetUnit(str, Enum, metaclass=utils.OpenEnumMeta):
+class AdsGroupBudgetUnit(str, Enum, metaclass=utils.OpenEnumMeta):
     UNSPECIFIED = "UNSPECIFIED"
     CURRENCY = "CURRENCY"
     IMPRESSIONS = "IMPRESSIONS"
@@ -115,6 +115,9 @@ class AdsGroupType(str, Enum, metaclass=utils.OpenEnumMeta):
     SEARCH = "SEARCH"
     AUDIO = "AUDIO"
     YOUTUBE = "YOUTUBE"
+    NATIVE = "NATIVE"
+    CTV = "CTV"
+    DOOH = "DOOH"
 
 
 class AdsGroupTypedDict(TypedDict):
@@ -126,7 +129,7 @@ class AdsGroupTypedDict(TypedDict):
     budget_amount: NotRequired[float]
     budget_max_amount: NotRequired[float]
     budget_period: NotRequired[AdsGroupBudgetPeriod]
-    budget_unit: NotRequired[BudgetUnit]
+    budget_unit: NotRequired[AdsGroupBudgetUnit]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
     creative_ids: NotRequired[List[str]]
@@ -167,7 +170,7 @@ class AdsGroup(BaseModel):
 
     budget_period: Optional[AdsGroupBudgetPeriod] = None
 
-    budget_unit: Optional[BudgetUnit] = None
+    budget_unit: Optional[AdsGroupBudgetUnit] = None
 
     campaign_id: Optional[str] = None
 
@@ -244,7 +247,7 @@ class AdsGroup(BaseModel):
     def serialize_budget_unit(self, value):
         if isinstance(value, str):
             try:
-                return shared.BudgetUnit(value)
+                return shared.AdsGroupBudgetUnit(value)
             except ValueError:
                 return value
         return value

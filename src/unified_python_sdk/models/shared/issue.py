@@ -26,6 +26,7 @@ class IssueTypedDict(TypedDict):
     title: str
     workspace_id: str
     created_at: NotRequired[str]
+    customer_note: NotRequired[str]
     id: NotRequired[str]
     importance: NotRequired[float]
     resolution_time: NotRequired[float]
@@ -45,6 +46,8 @@ class Issue(BaseModel):
     workspace_id: str
 
     created_at: Optional[str] = None
+
+    customer_note: Optional[str] = None
 
     id: Optional[str] = None
 
@@ -74,6 +77,7 @@ class Issue(BaseModel):
         optional_fields = set(
             [
                 "created_at",
+                "customer_note",
                 "id",
                 "importance",
                 "resolution_time",

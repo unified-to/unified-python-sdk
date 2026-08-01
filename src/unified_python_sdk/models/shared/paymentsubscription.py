@@ -46,6 +46,7 @@ class PaymentSubscriptionTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     status: NotRequired[PaymentSubscriptionStatus]
+    total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
 
 
@@ -87,6 +88,8 @@ class PaymentSubscription(BaseModel):
     start_at: Optional[datetime] = None
 
     status: Optional[PaymentSubscriptionStatus] = None
+
+    total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
 
@@ -131,6 +134,7 @@ class PaymentSubscription(BaseModel):
                 "raw",
                 "start_at",
                 "status",
+                "total_amount",
                 "updated_at",
             ]
         )

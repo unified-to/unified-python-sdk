@@ -23,6 +23,7 @@ value = PatchPaymentLinkQueryParamFields.ID
 | `PAYMENT_ID`        | payment_id          |
 | `CONTACT_ID`        | contact_id          |
 | `URL`               | url                 |
+| `DESCRIPTION`       | description         |
 | `IS_CHARGEABLE_NOW` | is_chargeable_now   |
 | `SUCCESS_URL`       | success_url         |
 | `RAW`               | raw                 |
