@@ -20,6 +20,7 @@ class HrisTimeoffStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     APPROVED = "APPROVED"
     PENDING = "PENDING"
     DENIED = "DENIED"
+    CANCELLED = "CANCELLED"
 
 
 class HrisTimeoffType(str, Enum, metaclass=utils.OpenEnumMeta):

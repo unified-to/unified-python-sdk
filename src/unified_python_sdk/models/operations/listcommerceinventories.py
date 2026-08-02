@@ -33,6 +33,8 @@ class ListCommerceInventoriesRequestTypedDict(TypedDict):
     r"""ID of the connection"""
     fields: NotRequired[List[ListCommerceInventoriesQueryParamFields]]
     r"""Fields to return"""
+    item_id: NotRequired[str]
+    r"""The item ID to filter by (reference to CommerceItem)"""
     item_variant_id: NotRequired[str]
     r"""The item variant ID to filter by (reference to CommerceCommerceItemvariant)"""
     limit: NotRequired[float]
@@ -60,6 +62,12 @@ class ListCommerceInventoriesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    item_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The item ID to filter by (reference to CommerceItem)"""
 
     item_variant_id: Annotated[
         Optional[str],
@@ -116,6 +124,7 @@ class ListCommerceInventoriesRequest(BaseModel):
         optional_fields = set(
             [
                 "fields",
+                "item_id",
                 "item_variant_id",
                 "limit",
                 "location_id",
