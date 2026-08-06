@@ -31,6 +31,7 @@ class ConnectionTypedDict(TypedDict):
     is_paused: NotRequired[bool]
     last_healthy_at: NotRequired[datetime]
     last_unhealthy_at: NotRequired[datetime]
+    last_unhealthy_code: NotRequired[str]
     secretsmanager_id: NotRequired[str]
     secretsmanager_key: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -66,6 +67,8 @@ class Connection(BaseModel):
 
     last_unhealthy_at: Optional[datetime] = None
 
+    last_unhealthy_code: Optional[str] = None
+
     secretsmanager_id: Optional[str] = None
 
     secretsmanager_key: Optional[str] = None
@@ -87,6 +90,7 @@ class Connection(BaseModel):
                 "is_paused",
                 "last_healthy_at",
                 "last_unhealthy_at",
+                "last_unhealthy_code",
                 "secretsmanager_id",
                 "secretsmanager_key",
                 "updated_at",

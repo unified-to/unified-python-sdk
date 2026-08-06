@@ -1,26 +1,26 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: eaa7c7c10c6b862aff52c98e1484ea59
+  docChecksum: 6bf7f9e899b77c356d345eaaf87bb444
   docVersion: "1.0"
-  speakeasyVersion: 1.791.0
-  generationVersion: 2.924.0
-  releaseVersion: 0.59.21
-  configChecksum: ea019b9794b668f192bf50b8f1c85484
+  speakeasyVersion: 1.791.4
+  generationVersion: 2.926.8
+  releaseVersion: 0.59.22
+  configChecksum: bf97e75d8bce2fd087f09c7426c8fbfb
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: da230a43-9a61-43de-9a24-b500d2078723
-  pristine_commit_hash: 43a0dc2427cb6d05add1fccab014bf9b77648669
-  pristine_tree_hash: c216fb285fbed634ddab3a8ed86a585234f13da0
+  generation_id: ae1464bd-42e2-4d9b-ae93-2f14a855b5f7
+  pristine_commit_hash: d4ec44ce38d383e3048005aaa8a89b80c53a91d3
+  pristine_tree_hash: 47525ab361d7175ef607f147ac8c9b056540c688
 features:
   python:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.1.0
     constsAndDefaults: 1.0.7
-    core: 6.0.34
+    core: 6.0.35
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.1
@@ -33,7 +33,7 @@ features:
     responseFormat: 1.1.0
     retries: 3.0.7
     sdkHooks: 1.3.0
-    unions: 3.1.7
+    unions: 3.1.8
     uploadStreams: 1.0.3
 trackedFiles:
   .gitattributes:
@@ -9814,8 +9814,8 @@ trackedFiles:
     pristine_git_object: 23bbb16075d32a2940ef2c50703f8a834ea00b89
   docs/models/shared/connection.md:
     id: 906ff4b2d85c
-    last_write_checksum: sha1:6739b1bef38bcc7a21816b85c267e858e620fb4f
-    pristine_git_object: d692d982ba864d9bfbd492cdd1e35d91335282a4
+    last_write_checksum: sha1:fceaa5d780b1e846b4cf576915000b81ee719b56
+    pristine_git_object: 8afb282f988a71e85b1dc865454b39fdf11d4896
   docs/models/shared/contentstype.md:
     id: 805032d356f5
     last_write_checksum: sha1:803112fb7050a10f706059c14dbc0c630454a1f4
@@ -13606,8 +13606,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:a136a8f642e41ef0213c98cd03a37eb54e78f837
-    pristine_git_object: af0eaf14a1ff269b9e1f46221fc9950322c2d79d
+    last_write_checksum: sha1:97e65d847ad1274faebe3bc5a36fa6e945c5f745
+    pristine_git_object: 0ff8fd6fa2db64494965666b50f91fcfa49feed2
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -13634,8 +13634,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:8a89428d9135ae7a3ed924d6d307b0f390da144e
-    pristine_git_object: 3a0f7d6b4f1d60cd9fdad02251c485302aadd80f
+    last_write_checksum: sha1:2ccfb91b65d1512a77ad7409386c0a6cc2fb8431
+    pristine_git_object: b55954e7e5d32ad725be2d9d4a94c7a0952c1102
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -17754,8 +17754,8 @@ trackedFiles:
     pristine_git_object: d1ea2f82416837725342fe1c67bb617c81968b9e
   src/unified_python_sdk/models/shared/connection.py:
     id: 222fe6e1836b
-    last_write_checksum: sha1:a542e272e092ebc99f2c1369240cc4fe32a2d133
-    pristine_git_object: c0bcadfd78a1581e8161ad6f26cf71e3ccd38b19
+    last_write_checksum: sha1:676b422c9ede3c506635a9fc2ee86dc3d7c0f95b
+    pristine_git_object: 7acf06ca2c6eb91977591654ee59773510c6ded1
   src/unified_python_sdk/models/shared/crmcompany.py:
     id: 466d23cc748f
     last_write_checksum: sha1:215434a198c5c7084b93350c0f958953f2db4610
@@ -32993,7 +32993,7 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.commerce.list_commerce_inventories()`: \n  *  `request.item_id` **Added**\n* `unified_to.inventory.list_commerce_inventories()`: \n  *  `request.item_id` **Added**\n* `unified_to.hris.create_hris_timeoff()`: \n  *  `request.hris_timeoff.status.enum(cancelled)` **Added**\n  *  `response.status.enum(cancelled)` **Added**\n* `unified_to.hris.get_hris_timeoff()`:  `response.status.enum(cancelled)` **Added**\n* `unified_to.hris.list_hris_timeoffs()`:  `response.[].status.enum(cancelled)` **Added**\n* `unified_to.hris.patch_hris_timeoff()`: \n  *  `request.hris_timeoff.status.enum(cancelled)` **Added**\n  *  `response.status.enum(cancelled)` **Added**\n* `unified_to.hris.update_hris_timeoff()`: \n  *  `request.hris_timeoff.status.enum(cancelled)` **Added**\n  *  `response.status.enum(cancelled)` **Added**\n* `unified_to.timeoff.create_hris_timeoff()`: \n  *  `request.hris_timeoff.status.enum(cancelled)` **Added**\n  *  `response.status.enum(cancelled)` **Added**\n* `unified_to.timeoff.get_hris_timeoff()`:  `response.status.enum(cancelled)` **Added**\n* `unified_to.timeoff.list_hris_timeoffs()`:  `response.[].status.enum(cancelled)` **Added**\n* `unified_to.timeoff.patch_hris_timeoff()`: \n  *  `request.hris_timeoff.status.enum(cancelled)` **Added**\n  *  `response.status.enum(cancelled)` **Added**\n* `unified_to.timeoff.update_hris_timeoff()`: \n  *  `request.hris_timeoff.status.enum(cancelled)` **Added**\n  *  `response.status.enum(cancelled)` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.last_unhealthy_code` **Added**\n* `unified_to.unified.list_unified_connections()`:  `response.[].last_unhealthy_code` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.connection.get_unified_connection()`:  `response.last_unhealthy_code` **Added**\n* `unified_to.connection.list_unified_connections()`:  `response.[].last_unhealthy_code` **Added**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
