@@ -428,6 +428,12 @@ class ListSaleschannelID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListSegmentID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListSessionID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -645,6 +651,12 @@ class NativeWebhookProjectID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class NativeWebhookPropertyID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class NativeWebhookSegmentID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -1028,6 +1040,12 @@ class VirtualWebhookSaleschannelID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookSegmentID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookSessionID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1189,6 +1207,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_role_id: NotRequired[ListRoleID]
     list_root_id: NotRequired[ListRootID]
     list_saleschannel_id: NotRequired[ListSaleschannelID]
+    list_segment_id: NotRequired[ListSegmentID]
     list_session_id: NotRequired[ListSessionID]
     list_shipment_id: NotRequired[ListShipmentID]
     list_size: NotRequired[ListSize]
@@ -1227,6 +1246,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_parent_id: NotRequired[NativeWebhookParentID]
     native_webhook_project_id: NotRequired[NativeWebhookProjectID]
     native_webhook_property_id: NotRequired[NativeWebhookPropertyID]
+    native_webhook_segment_id: NotRequired[NativeWebhookSegmentID]
     native_webhook_session_id: NotRequired[NativeWebhookSessionID]
     native_webhook_shipment_id: NotRequired[NativeWebhookShipmentID]
     native_webhook_student_id: NotRequired[NativeWebhookStudentID]
@@ -1294,6 +1314,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_reference: NotRequired[VirtualWebhookReference]
     virtual_webhook_repo_id: NotRequired[VirtualWebhookRepoID]
     virtual_webhook_saleschannel_id: NotRequired[VirtualWebhookSaleschannelID]
+    virtual_webhook_segment_id: NotRequired[VirtualWebhookSegmentID]
     virtual_webhook_session_id: NotRequired[VirtualWebhookSessionID]
     virtual_webhook_shipment_id: NotRequired[VirtualWebhookShipmentID]
     virtual_webhook_space_id: NotRequired[VirtualWebhookSpaceID]
@@ -1453,6 +1474,8 @@ class IntegrationSupport(BaseModel):
 
     list_saleschannel_id: Optional[ListSaleschannelID] = None
 
+    list_segment_id: Optional[ListSegmentID] = None
+
     list_session_id: Optional[ListSessionID] = None
 
     list_shipment_id: Optional[ListShipmentID] = None
@@ -1528,6 +1551,8 @@ class IntegrationSupport(BaseModel):
     native_webhook_project_id: Optional[NativeWebhookProjectID] = None
 
     native_webhook_property_id: Optional[NativeWebhookPropertyID] = None
+
+    native_webhook_segment_id: Optional[NativeWebhookSegmentID] = None
 
     native_webhook_session_id: Optional[NativeWebhookSessionID] = None
 
@@ -1661,6 +1686,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_repo_id: Optional[VirtualWebhookRepoID] = None
 
     virtual_webhook_saleschannel_id: Optional[VirtualWebhookSaleschannelID] = None
+
+    virtual_webhook_segment_id: Optional[VirtualWebhookSegmentID] = None
 
     virtual_webhook_session_id: Optional[VirtualWebhookSessionID] = None
 
@@ -2315,6 +2342,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_segment_id")
+    def serialize_list_segment_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListSegmentID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_session_id")
     def serialize_list_session_id(self, value):
         if isinstance(value, str):
@@ -2644,6 +2680,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.NativeWebhookPropertyID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("native_webhook_segment_id")
+    def serialize_native_webhook_segment_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookSegmentID(value)
             except ValueError:
                 return value
         return value
@@ -3215,6 +3260,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_segment_id")
+    def serialize_virtual_webhook_segment_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookSegmentID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_session_id")
     def serialize_virtual_webhook_session_id(self, value):
         if isinstance(value, str):
@@ -3424,6 +3478,7 @@ class IntegrationSupport(BaseModel):
                 "list_role_id",
                 "list_root_id",
                 "list_saleschannel_id",
+                "list_segment_id",
                 "list_session_id",
                 "list_shipment_id",
                 "list_size",
@@ -3462,6 +3517,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_parent_id",
                 "native_webhook_project_id",
                 "native_webhook_property_id",
+                "native_webhook_segment_id",
                 "native_webhook_session_id",
                 "native_webhook_shipment_id",
                 "native_webhook_student_id",
@@ -3528,6 +3584,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_reference",
                 "virtual_webhook_repo_id",
                 "virtual_webhook_saleschannel_id",
+                "virtual_webhook_segment_id",
                 "virtual_webhook_session_id",
                 "virtual_webhook_shipment_id",
                 "virtual_webhook_space_id",

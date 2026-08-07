@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 6bf7f9e899b77c356d345eaaf87bb444
+  docChecksum: 5def7c5e27b4f683945fa43fd9eb32fb
   docVersion: "1.0"
   speakeasyVersion: 1.791.4
   generationVersion: 2.926.8
-  releaseVersion: 0.59.22
-  configChecksum: bf97e75d8bce2fd087f09c7426c8fbfb
+  releaseVersion: 0.59.23
+  configChecksum: e074dba69c81acb16ea04b5190430d5a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: ae1464bd-42e2-4d9b-ae93-2f14a855b5f7
-  pristine_commit_hash: d4ec44ce38d383e3048005aaa8a89b80c53a91d3
-  pristine_tree_hash: 47525ab361d7175ef607f147ac8c9b056540c688
+  generation_id: 32f379d6-024f-40c1-bf7b-60dd99075cb7
+  pristine_commit_hash: 71d4531185cb6bf93c9ad5cb4a4f5e6aed8f799a
+  pristine_tree_hash: 55aec35ba3fcda59ac8789a0ef6dd915d3ba2194
 features:
   python:
     acceptHeaders: 3.0.0
@@ -3846,8 +3846,8 @@ trackedFiles:
     pristine_git_object: c7977969c766e37868e1f78b10fc249133db4e00
   docs/models/operations/listcdpactivationsrequest.md:
     id: 4c06ef343e55
-    last_write_checksum: sha1:fe633b039437ef5b75c88411c3e8fd091f3eb085
-    pristine_git_object: dc992bfed9df53e957096d42c5ad35ae79c78831
+    last_write_checksum: sha1:55666c5b9de74b41d82b730c6d8b942058b55f03
+    pristine_git_object: d41c6a0e1e4ea1d32e7613d6e2975f7d31ee6adf
   docs/models/operations/listcdpactivationsresponse.md:
     id: 433da785ebc5
     last_write_checksum: sha1:0bd1b3a4250a3b3744b4b87a5d61857d3672b1d1
@@ -10362,8 +10362,8 @@ trackedFiles:
     pristine_git_object: a6315547fe02bef56572e8966e5dd4ac2c1483af
   docs/models/shared/integrationsupport.md:
     id: c0d9decd3d9d
-    last_write_checksum: sha1:c94cc123cae30510a4e5607e91180bee6ee5d61e
-    pristine_git_object: a2001267bcb4d2593cb52d0f1a09c64920305ab3
+    last_write_checksum: sha1:87e40201d6c287c30398f984cbe55aaf8f2d924a
+    pristine_git_object: 0524941cd6b5d88221743599d47ce57ef89989b3
   docs/models/shared/intervalunit.md:
     id: 3522c0790cee
     last_write_checksum: sha1:c48aa5c6eeec13af0afffc29274c37b2552c6778
@@ -10704,6 +10704,10 @@ trackedFiles:
     id: ae28e19ff6b4
     last_write_checksum: sha1:87ff8fad84dd7e54d949d9c3e36c7404c66417e6
     pristine_git_object: 290df46808a3dde10f8728879b4fc38dc75344fd
+  docs/models/shared/listsegmentid.md:
+    id: 2b6b8ebff08b
+    last_write_checksum: sha1:786ce52e213d8e1c241696bf125b0bee93fb51f0
+    pristine_git_object: 8a9b9cd022bab5d7e4c4389ae0de180128e9b3b5
   docs/models/shared/listsessionid.md:
     id: 974d9e59b4e2
     last_write_checksum: sha1:ef7fec3b5861db5d301994ce6583c479fe89e23c
@@ -11012,6 +11016,10 @@ trackedFiles:
     id: 37443ef97428
     last_write_checksum: sha1:319cd8f21e9be16d1db354a4ae54890930c09268
     pristine_git_object: be089a139bd18a1360be7c2d28e314cee58a6811
+  docs/models/shared/nativewebhooksegmentid.md:
+    id: b95f372b7d09
+    last_write_checksum: sha1:9a5801ec85168c60bc0ae5bec98f7e392d8b29b2
+    pristine_git_object: 335580fd5f29a2888bf74bff36945a2c73518ee4
   docs/models/shared/nativewebhooksessionid.md:
     id: 54700e9f839d
     last_write_checksum: sha1:ed64b7b8496a247e524f02b62a8267d36cddb10e
@@ -12864,6 +12872,10 @@ trackedFiles:
     id: 1cef9e2330a1
     last_write_checksum: sha1:1e3a7b26681bb64734a5276571159db03d3e7c9d
     pristine_git_object: 57c788e28e4372dda48d1cf1875457916e92e457
+  docs/models/shared/virtualwebhooksegmentid.md:
+    id: fa0a962bcb74
+    last_write_checksum: sha1:92ca78da8e12673fbb0b93db1b9d31e10fae2567
+    pristine_git_object: b26552a676c2c76f4f8594c509b953262a17337a
   docs/models/shared/virtualwebhooksessionid.md:
     id: 6eb690c390bf
     last_write_checksum: sha1:6891e6a5a77f78e867b324a35843a3a9c86fd385
@@ -13606,8 +13618,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:97e65d847ad1274faebe3bc5a36fa6e945c5f745
-    pristine_git_object: 0ff8fd6fa2db64494965666b50f91fcfa49feed2
+    last_write_checksum: sha1:e09a2839eed8810ce3b1ae1ef89cf913b858fa8a
+    pristine_git_object: cbc0b63a0b6f81ea8e28dab4b9d7ee3c7f421619
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -13634,8 +13646,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:2ccfb91b65d1512a77ad7409386c0a6cc2fb8431
-    pristine_git_object: b55954e7e5d32ad725be2d9d4a94c7a0952c1102
+    last_write_checksum: sha1:80770bd9443be97210eadd2487d2da01b873eb68
+    pristine_git_object: 6bd8ec071e5583befdfff89f2f9a5f4e4490970b
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -15330,8 +15342,8 @@ trackedFiles:
     pristine_git_object: 244dc3fc25d73f06f86f212c6640349e248b2f05
   src/unified_python_sdk/models/operations/listcdpactivations.py:
     id: f70a45eb1a65
-    last_write_checksum: sha1:73bb010e6ff98c76ccc9cb79afb3cde13b44b672
-    pristine_git_object: dbba5d0f96cf25b1a339c2bb6ae1b3bbba767f98
+    last_write_checksum: sha1:8c215b1935c83e9fb3fb908b87a890575a364b4c
+    pristine_git_object: fcf79d8891404e79cdb2fb4481b9c21ec5509ede
   src/unified_python_sdk/models/operations/listcdpdestinations.py:
     id: 8bd1d606e260
     last_write_checksum: sha1:18c3973ab90c2ba4ae1cfb1bf3fb2e783c9a2c00
@@ -17182,8 +17194,8 @@ trackedFiles:
     pristine_git_object: c928c141900141c4357a16d9c9702d90e8ee8a59
   src/unified_python_sdk/models/shared/__init__.py:
     id: 8825f2c566be
-    last_write_checksum: sha1:e9ff576f7588bd6f8d038c2270a9efd2c11cb253
-    pristine_git_object: 745e860404988b5b1670b8062bcbde314be8d841
+    last_write_checksum: sha1:51c8c6a6dde10379a58e5253b52bc263fc596f8c
+    pristine_git_object: 3d2981d5864cca12da5e1d559b336a3b71daa03a
   src/unified_python_sdk/models/shared/accountingaccount.py:
     id: b8ab638302ba
     last_write_checksum: sha1:fd681fb913ad336200985e29333073ebb362c0a2
@@ -17986,8 +17998,8 @@ trackedFiles:
     pristine_git_object: 2b9211753a0d7efa2c99943e312c11597ae5b683
   src/unified_python_sdk/models/shared/integrationsupport.py:
     id: 813d8416e449
-    last_write_checksum: sha1:1261d3e36ecab5e1744095fbbc9b430ab1393eb6
-    pristine_git_object: 4717030c6e33d8d9c1fdc02beafafff0fed78b1f
+    last_write_checksum: sha1:29968097bf553a56feb621981f1f11d942b76295
+    pristine_git_object: 1a8305d760c2ea20a7bb30600414093e3fadbf13
   src/unified_python_sdk/models/shared/issue.py:
     id: 5fb54952d878
     last_write_checksum: sha1:f365ad19b3140656d0c3677a6a31d81513d688e8
@@ -32993,7 +33005,12 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.last_unhealthy_code` **Added**\n* `unified_to.unified.list_unified_connections()`:  `response.[].last_unhealthy_code` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.connection.get_unified_connection()`:  `response.last_unhealthy_code` **Added**\n* `unified_to.connection.list_unified_connections()`:  `response.[].last_unhealthy_code` **Added**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.last_unhealthy_code` **Added**\n  *  `response.last_unhealthy_code` **Added**\n"
+releaseNotes: |
+  ## Python SDK Changes:
+  * `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**
+  * `unified_to.unified.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**
+  * `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**
+  * `unified_to.integration.list_unified_integrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

@@ -44,6 +44,7 @@ class ListCdpActivationsRequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     segment_id: NotRequired[str]
+    r"""The segment ID to filter by"""
     sort: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -97,6 +98,7 @@ class ListCdpActivationsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The segment ID to filter by"""
 
     sort: Annotated[
         Optional[str],
