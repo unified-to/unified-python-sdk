@@ -29,6 +29,7 @@ class AccountingTransactionTypedDict(TypedDict):
     organization_id: NotRequired[str]
     payment_method: NotRequired[str]
     payment_terms: NotRequired[str]
+    project_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     split_account_id: NotRequired[str]
@@ -64,6 +65,8 @@ class AccountingTransaction(BaseModel):
 
     payment_terms: Optional[str] = None
 
+    project_id: Optional[str] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     reference: Optional[str] = None
@@ -96,6 +99,7 @@ class AccountingTransaction(BaseModel):
                 "organization_id",
                 "payment_method",
                 "payment_terms",
+                "project_id",
                 "raw",
                 "reference",
                 "split_account_id",

@@ -61,6 +61,11 @@ class AdsGroupBudgetUnit(str, Enum, metaclass=utils.OpenEnumMeta):
     IMPRESSIONS = "IMPRESSIONS"
 
 
+class CreativeSelection(str, Enum, metaclass=utils.OpenEnumMeta):
+    OPTIMIZED = "OPTIMIZED"
+    ROUND_ROBIN = "ROUND_ROBIN"
+
+
 class AdsGroupEffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     UNSPECIFIED = "UNSPECIFIED"
     SERVING = "SERVING"
@@ -133,6 +138,7 @@ class AdsGroupTypedDict(TypedDict):
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
     creative_ids: NotRequired[List[str]]
+    creative_selection: NotRequired[CreativeSelection]
     currency: NotRequired[str]
     effective_status: NotRequired[AdsGroupEffectiveStatus]
     end_at: NotRequired[datetime]
@@ -140,6 +146,7 @@ class AdsGroupTypedDict(TypedDict):
     has_eu_political_ads: NotRequired[bool]
     id: NotRequired[str]
     insertionorder_id: NotRequired[str]
+    language_locale: NotRequired[str]
     name: NotRequired[str]
     optimization_goal: NotRequired[OptimizationGoal]
     organization_id: NotRequired[str]
@@ -178,6 +185,8 @@ class AdsGroup(BaseModel):
 
     creative_ids: Optional[List[str]] = None
 
+    creative_selection: Optional[CreativeSelection] = None
+
     currency: Optional[str] = None
 
     effective_status: Optional[AdsGroupEffectiveStatus] = None
@@ -191,6 +200,8 @@ class AdsGroup(BaseModel):
     id: Optional[str] = None
 
     insertionorder_id: Optional[str] = None
+
+    language_locale: Optional[str] = None
 
     name: Optional[str] = None
 
@@ -252,6 +263,15 @@ class AdsGroup(BaseModel):
                 return value
         return value
 
+    @field_serializer("creative_selection")
+    def serialize_creative_selection(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.CreativeSelection(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("effective_status")
     def serialize_effective_status(self, value):
         if isinstance(value, str):
@@ -303,6 +323,7 @@ class AdsGroup(BaseModel):
                 "campaign_id",
                 "created_at",
                 "creative_ids",
+                "creative_selection",
                 "currency",
                 "effective_status",
                 "end_at",
@@ -310,6 +331,7 @@ class AdsGroup(BaseModel):
                 "has_eu_political_ads",
                 "id",
                 "insertionorder_id",
+                "language_locale",
                 "name",
                 "optimization_goal",
                 "organization_id",

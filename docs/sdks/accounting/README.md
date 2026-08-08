@@ -13,12 +13,16 @@
 * [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](#create_accounting_journal) - Create a journal
 * [create_accounting_order](#create_accounting_order) - Create an order
+* [create_accounting_project](#create_accounting_project) - Create a project
 * [create_accounting_purchaseorder](#create_accounting_purchaseorder) - Create a purchaseorder
+* [create_accounting_quote](#create_accounting_quote) - Create a quote
 * [create_accounting_salesorder](#create_accounting_salesorder) - Create a salesorder
 * [create_accounting_taxrate](#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](#create_accounting_transaction) - Create a transaction
 * [create_accounting_vendorcredit](#create_accounting_vendorcredit) - Create a vendorcredit
 * [get_accounting_account](#get_accounting_account) - Retrieve an account
+* [get_accounting_agedpayable](#get_accounting_agedpayable) - Retrieve an agedpayable
+* [get_accounting_agedreceivable](#get_accounting_agedreceivable) - Retrieve an agedreceivable
 * [get_accounting_balancesheet](#get_accounting_balancesheet) - Retrieve a balancesheet
 * [get_accounting_bill](#get_accounting_bill) - Retrieve a bill
 * [get_accounting_cashflow](#get_accounting_cashflow) - Retrieve a cashflow
@@ -31,7 +35,9 @@
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_accounting_profitloss](#get_accounting_profitloss) - Retrieve a profitloss
+* [get_accounting_project](#get_accounting_project) - Retrieve a project
 * [get_accounting_purchaseorder](#get_accounting_purchaseorder) - Retrieve a purchaseorder
+* [get_accounting_quote](#get_accounting_quote) - Retrieve a quote
 * [get_accounting_report](#get_accounting_report) - Retrieve a report
 * [get_accounting_salesorder](#get_accounting_salesorder) - Retrieve a salesorder
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
@@ -39,6 +45,8 @@
 * [get_accounting_trialbalance](#get_accounting_trialbalance) - Retrieve a trialbalance
 * [get_accounting_vendorcredit](#get_accounting_vendorcredit) - Retrieve a vendorcredit
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
+* [list_accounting_agedpayables](#list_accounting_agedpayables) - List all agedpayables
+* [list_accounting_agedreceivables](#list_accounting_agedreceivables) - List all agedreceivables
 * [list_accounting_balancesheets](#list_accounting_balancesheets) - List all balancesheets
 * [list_accounting_bills](#list_accounting_bills) - List all bills
 * [list_accounting_cashflows](#list_accounting_cashflows) - List all cashflows
@@ -51,7 +59,9 @@
 * [list_accounting_orders](#list_accounting_orders) - List all orders
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_accounting_profitlosses](#list_accounting_profitlosses) - List all profitlosses
+* [list_accounting_projects](#list_accounting_projects) - List all projects
 * [list_accounting_purchaseorders](#list_accounting_purchaseorders) - List all purchaseorders
+* [list_accounting_quotes](#list_accounting_quotes) - List all quotes
 * [list_accounting_reports](#list_accounting_reports) - List all reports
 * [list_accounting_salesorders](#list_accounting_salesorders) - List all salesorders
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
@@ -67,7 +77,9 @@
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](#patch_accounting_journal) - Update a journal
 * [patch_accounting_order](#patch_accounting_order) - Update an order
+* [patch_accounting_project](#patch_accounting_project) - Update a project
 * [patch_accounting_purchaseorder](#patch_accounting_purchaseorder) - Update a purchaseorder
+* [patch_accounting_quote](#patch_accounting_quote) - Update a quote
 * [patch_accounting_salesorder](#patch_accounting_salesorder) - Update a salesorder
 * [patch_accounting_taxrate](#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
@@ -81,7 +93,9 @@
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](#remove_accounting_journal) - Remove a journal
 * [remove_accounting_order](#remove_accounting_order) - Remove an order
+* [remove_accounting_project](#remove_accounting_project) - Remove a project
 * [remove_accounting_purchaseorder](#remove_accounting_purchaseorder) - Remove a purchaseorder
+* [remove_accounting_quote](#remove_accounting_quote) - Remove a quote
 * [remove_accounting_salesorder](#remove_accounting_salesorder) - Remove a salesorder
 * [remove_accounting_taxrate](#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
@@ -95,7 +109,9 @@
 * [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](#update_accounting_journal) - Update a journal
 * [update_accounting_order](#update_accounting_order) - Update an order
+* [update_accounting_project](#update_accounting_project) - Update a project
 * [update_accounting_purchaseorder](#update_accounting_purchaseorder) - Update a purchaseorder
+* [update_accounting_quote](#update_accounting_quote) - Update a quote
 * [update_accounting_salesorder](#update_accounting_salesorder) - Update a salesorder
 * [update_accounting_taxrate](#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](#update_accounting_transaction) - Update a transaction
@@ -524,6 +540,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## create_accounting_project
+
+Create a project
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createAccountingProject" method="post" path="/accounting/{connection_id}/project" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.create_accounting_project(request={
+        "accounting_project": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_project is not None
+
+    # Handle response
+    print(res.accounting_project)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingProjectRequest](../../models/operations/createaccountingprojectrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.CreateAccountingProjectResponse](../../models/operations/createaccountingprojectresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## create_accounting_purchaseorder
 
 Create a purchaseorder
@@ -564,6 +627,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAccountingPurchaseorderResponse](../../models/operations/createaccountingpurchaseorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_accounting_quote
+
+Create a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createAccountingQuote" method="post" path="/accounting/{connection_id}/quote" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.create_accounting_quote(request={
+        "accounting_quote": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_quote is not None
+
+    # Handle response
+    print(res.accounting_quote)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.CreateAccountingQuoteRequest](../../models/operations/createaccountingquoterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.CreateAccountingQuoteResponse](../../models/operations/createaccountingquoteresponse.md)**
 
 ### Errors
 
@@ -799,6 +909,100 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAccountingAccountResponse](../../models/operations/getaccountingaccountresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_accounting_agedpayable
+
+Retrieve an agedpayable
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingAgedpayable" method="get" path="/accounting/{connection_id}/agedpayable/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_agedpayable(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_agedpayable is not None
+
+    # Handle response
+    print(res.accounting_agedpayable)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.GetAccountingAgedpayableRequest](../../models/operations/getaccountingagedpayablerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.GetAccountingAgedpayableResponse](../../models/operations/getaccountingagedpayableresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_accounting_agedreceivable
+
+Retrieve an agedreceivable
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingAgedreceivable" method="get" path="/accounting/{connection_id}/agedreceivable/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_agedreceivable(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_agedreceivable is not None
+
+    # Handle response
+    print(res.accounting_agedreceivable)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.GetAccountingAgedreceivableRequest](../../models/operations/getaccountingagedreceivablerequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `retries`                                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                               | :heavy_minus_sign:                                                                                             | Configuration to override the default retry behavior of the client.                                            |
+
+### Response
+
+**[operations.GetAccountingAgedreceivableResponse](../../models/operations/getaccountingagedreceivableresponse.md)**
 
 ### Errors
 
@@ -1370,6 +1574,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_accounting_project
+
+Retrieve a project
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingProject" method="get" path="/accounting/{connection_id}/project/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_project(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_project is not None
+
+    # Handle response
+    print(res.accounting_project)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAccountingProjectRequest](../../models/operations/getaccountingprojectrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.GetAccountingProjectResponse](../../models/operations/getaccountingprojectresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_accounting_purchaseorder
 
 Retrieve a purchaseorder
@@ -1410,6 +1661,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAccountingPurchaseorderResponse](../../models/operations/getaccountingpurchaseorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_accounting_quote
+
+Retrieve a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingQuote" method="get" path="/accounting/{connection_id}/quote/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_quote(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_quote is not None
+
+    # Handle response
+    print(res.accounting_quote)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GetAccountingQuoteRequest](../../models/operations/getaccountingquoterequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.GetAccountingQuoteResponse](../../models/operations/getaccountingquoteresponse.md)**
 
 ### Errors
 
@@ -1738,6 +2036,98 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAccountingAccountsResponse](../../models/operations/listaccountingaccountsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_accounting_agedpayables
+
+List all agedpayables
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingAgedpayables" method="get" path="/accounting/{connection_id}/agedpayable" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_agedpayables(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_agedpayables is not None
+
+    # Handle response
+    print(res.accounting_agedpayables)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.ListAccountingAgedpayablesRequest](../../models/operations/listaccountingagedpayablesrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
+
+### Response
+
+**[operations.ListAccountingAgedpayablesResponse](../../models/operations/listaccountingagedpayablesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_accounting_agedreceivables
+
+List all agedreceivables
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingAgedreceivables" method="get" path="/accounting/{connection_id}/agedreceivable" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_agedreceivables(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_agedreceivables is not None
+
+    # Handle response
+    print(res.accounting_agedreceivables)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.ListAccountingAgedreceivablesRequest](../../models/operations/listaccountingagedreceivablesrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `retries`                                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                   | :heavy_minus_sign:                                                                                                 | Configuration to override the default retry behavior of the client.                                                |
+
+### Response
+
+**[operations.ListAccountingAgedreceivablesResponse](../../models/operations/listaccountingagedreceivablesresponse.md)**
 
 ### Errors
 
@@ -2297,6 +2687,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_accounting_projects
+
+List all projects
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingProjects" method="get" path="/accounting/{connection_id}/project" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_projects(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_projects is not None
+
+    # Handle response
+    print(res.accounting_projects)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAccountingProjectsRequest](../../models/operations/listaccountingprojectsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.ListAccountingProjectsResponse](../../models/operations/listaccountingprojectsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_accounting_purchaseorders
 
 List all purchaseorders
@@ -2336,6 +2772,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAccountingPurchaseordersResponse](../../models/operations/listaccountingpurchaseordersresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_accounting_quotes
+
+List all quotes
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingQuotes" method="get" path="/accounting/{connection_id}/quote" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_quotes(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_quotes is not None
+
+    # Handle response
+    print(res.accounting_quotes)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.ListAccountingQuotesRequest](../../models/operations/listaccountingquotesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.ListAccountingQuotesResponse](../../models/operations/listaccountingquotesresponse.md)**
 
 ### Errors
 
@@ -3051,6 +3533,54 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_accounting_project
+
+Update a project
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchAccountingProject" method="patch" path="/accounting/{connection_id}/project/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.patch_accounting_project(request={
+        "accounting_project": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_project is not None
+
+    # Handle response
+    print(res.accounting_project)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchAccountingProjectRequest](../../models/operations/patchaccountingprojectrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.PatchAccountingProjectResponse](../../models/operations/patchaccountingprojectresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_accounting_purchaseorder
 
 Update a purchaseorder
@@ -3092,6 +3622,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchAccountingPurchaseorderResponse](../../models/operations/patchaccountingpurchaseorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_accounting_quote
+
+Update a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchAccountingQuote" method="patch" path="/accounting/{connection_id}/quote/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.patch_accounting_quote(request={
+        "accounting_quote": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_quote is not None
+
+    # Handle response
+    print(res.accounting_quote)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.PatchAccountingQuoteRequest](../../models/operations/patchaccountingquoterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.PatchAccountingQuoteResponse](../../models/operations/patchaccountingquoteresponse.md)**
 
 ### Errors
 
@@ -3714,6 +4292,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_accounting_project
+
+Remove a project
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeAccountingProject" method="delete" path="/accounting/{connection_id}/project/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.remove_accounting_project(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveAccountingProjectRequest](../../models/operations/removeaccountingprojectrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.RemoveAccountingProjectResponse](../../models/operations/removeaccountingprojectresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_accounting_purchaseorder
 
 Remove a purchaseorder
@@ -3754,6 +4379,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveAccountingPurchaseorderResponse](../../models/operations/removeaccountingpurchaseorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_accounting_quote
+
+Remove a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeAccountingQuote" method="delete" path="/accounting/{connection_id}/quote/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.remove_accounting_quote(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.RemoveAccountingQuoteRequest](../../models/operations/removeaccountingquoterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.RemoveAccountingQuoteResponse](../../models/operations/removeaccountingquoteresponse.md)**
 
 ### Errors
 
@@ -4381,6 +5053,54 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## update_accounting_project
+
+Update a project
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateAccountingProject" method="put" path="/accounting/{connection_id}/project/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.update_accounting_project(request={
+        "accounting_project": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_project is not None
+
+    # Handle response
+    print(res.accounting_project)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateAccountingProjectRequest](../../models/operations/updateaccountingprojectrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.UpdateAccountingProjectResponse](../../models/operations/updateaccountingprojectresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## update_accounting_purchaseorder
 
 Update a purchaseorder
@@ -4422,6 +5142,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateAccountingPurchaseorderResponse](../../models/operations/updateaccountingpurchaseorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_accounting_quote
+
+Update a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateAccountingQuote" method="put" path="/accounting/{connection_id}/quote/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.update_accounting_quote(request={
+        "accounting_quote": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_quote is not None
+
+    # Handle response
+    print(res.accounting_quote)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.UpdateAccountingQuoteRequest](../../models/operations/updateaccountingquoterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.UpdateAccountingQuoteResponse](../../models/operations/updateaccountingquoteresponse.md)**
 
 ### Errors
 

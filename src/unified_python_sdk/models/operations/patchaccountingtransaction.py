@@ -38,6 +38,7 @@ class PatchAccountingTransactionQueryParamFields(str, Enum):
     CONTACTS = "contacts"
     ORGANIZATION_ID = "organization_id"
     CATEGORY_IDS = "category_ids"
+    PROJECT_ID = "project_id"
     RAW = "raw"
 
 

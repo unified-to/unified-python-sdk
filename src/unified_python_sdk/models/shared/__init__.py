@@ -16,6 +16,19 @@ if TYPE_CHECKING:
         AccountingAccountTaxonomyType,
         AccountingAccountTaxonomyTypedDict,
     )
+    from .accountingagedpayable import (
+        AccountingAgedpayable,
+        AccountingAgedpayableTypedDict,
+    )
+    from .accountingagedperiod import (
+        AccountingAgedPeriod,
+        AccountingAgedPeriodTypedDict,
+    )
+    from .accountingagedreceivable import (
+        AccountingAgedreceivable,
+        AccountingAgedreceivableTypedDict,
+    )
+    from .accountingagedrow import AccountingAgedRow, AccountingAgedRowTypedDict
     from .accountingassociatedcontact import (
         AccountingAssociatedContact,
         AccountingAssociatedContactTypedDict,
@@ -137,10 +150,23 @@ if TYPE_CHECKING:
         AccountingProfitlossSubcategory,
         AccountingProfitlossSubcategoryTypedDict,
     )
+    from .accountingproject import (
+        AccountingProject,
+        AccountingProjectStatus,
+        AccountingProjectTypedDict,
+        BillingType,
+    )
     from .accountingpurchaseorder import (
         AccountingPurchaseorder,
         AccountingPurchaseorderStatus,
         AccountingPurchaseorderTypedDict,
+    )
+    from .accountingquote import (
+        AccountingQuote,
+        AccountingQuotePaymentTerms,
+        AccountingQuoteStatus,
+        AccountingQuoteTypedDict,
+        TaxMode,
     )
     from .accountingreference import AccountingReference, AccountingReferenceTypedDict
     from .accountingreport import (
@@ -214,6 +240,7 @@ if TYPE_CHECKING:
         AdsGroupTypedDict,
         BillingEvent,
         BudgetAllocationType,
+        CreativeSelection,
         OptimizationGoal,
     )
     from .adsinsertionorder import (
@@ -227,7 +254,12 @@ if TYPE_CHECKING:
         AdsInsertionorderBudgetSegmentTypedDict,
     )
     from .adskeyword import AdsKeyword, AdsKeywordTypedDict, MatchType
-    from .adsorganization import AdsOrganization, AdsOrganizationTypedDict
+    from .adsmanager import AdsManager, AdsManagerTypedDict
+    from .adsorganization import (
+        AdsOrganization,
+        AdsOrganizationStatus,
+        AdsOrganizationTypedDict,
+    )
     from .adspromoted import AdsPromoted, AdsPromotedType, AdsPromotedTypedDict
     from .adsreport import AdsReport, AdsReportTypedDict
     from .adsreportmetrics import (
@@ -814,7 +846,6 @@ if TYPE_CHECKING:
         NativeWebhookParentID,
         NativeWebhookProjectID,
         NativeWebhookPropertyID,
-        NativeWebhookSegmentID,
         NativeWebhookSessionID,
         NativeWebhookShipmentID,
         NativeWebhookStudentID,
@@ -878,7 +909,6 @@ if TYPE_CHECKING:
         VirtualWebhookReference,
         VirtualWebhookRepoID,
         VirtualWebhookSaleschannelID,
-        VirtualWebhookSegmentID,
         VirtualWebhookSessionID,
         VirtualWebhookShipmentID,
         VirtualWebhookSpaceID,
@@ -994,6 +1024,14 @@ if TYPE_CHECKING:
         PaymentSubscription,
         PaymentSubscriptionStatus,
         PaymentSubscriptionTypedDict,
+    )
+    from .property_accountingagedrow_contact import (
+        PropertyAccountingAgedRowContact,
+        PropertyAccountingAgedRowContactTypedDict,
+    )
+    from .property_accountingagedrow_transaction import (
+        PropertyAccountingAgedRowTransaction,
+        PropertyAccountingAgedRowTransactionTypedDict,
     )
     from .property_accountingcontact_billing_address import (
         PropertyAccountingContactBillingAddress,
@@ -1292,6 +1330,7 @@ if TYPE_CHECKING:
         PropertyAdsReportMetricsGroupBudgetAllocationType,
         PropertyAdsReportMetricsGroupBudgetPeriod,
         PropertyAdsReportMetricsGroupBudgetUnit,
+        PropertyAdsReportMetricsGroupCreativeSelection,
         PropertyAdsReportMetricsGroupEffectiveStatus,
         PropertyAdsReportMetricsGroupOptimizationGoal,
         PropertyAdsReportMetricsGroupStatus,
@@ -1967,6 +2006,14 @@ __all__ = [
     "AccountingAccountTaxonomyType",
     "AccountingAccountTaxonomyTypedDict",
     "AccountingAccountTypedDict",
+    "AccountingAgedPeriod",
+    "AccountingAgedPeriodTypedDict",
+    "AccountingAgedRow",
+    "AccountingAgedRowTypedDict",
+    "AccountingAgedpayable",
+    "AccountingAgedpayableTypedDict",
+    "AccountingAgedreceivable",
+    "AccountingAgedreceivableTypedDict",
     "AccountingAssociatedContact",
     "AccountingAssociatedContactTypedDict",
     "AccountingAttachment",
@@ -2040,9 +2087,16 @@ __all__ = [
     "AccountingProfitlossSubcategory",
     "AccountingProfitlossSubcategoryTypedDict",
     "AccountingProfitlossTypedDict",
+    "AccountingProject",
+    "AccountingProjectStatus",
+    "AccountingProjectTypedDict",
     "AccountingPurchaseorder",
     "AccountingPurchaseorderStatus",
     "AccountingPurchaseorderTypedDict",
+    "AccountingQuote",
+    "AccountingQuotePaymentTerms",
+    "AccountingQuoteStatus",
+    "AccountingQuoteTypedDict",
     "AccountingReference",
     "AccountingReferenceTypedDict",
     "AccountingReport",
@@ -2099,7 +2153,10 @@ __all__ = [
     "AdsInsertionorderTypedDict",
     "AdsKeyword",
     "AdsKeywordTypedDict",
+    "AdsManager",
+    "AdsManagerTypedDict",
     "AdsOrganization",
+    "AdsOrganizationStatus",
     "AdsOrganizationTypedDict",
     "AdsPromoted",
     "AdsPromotedType",
@@ -2216,6 +2273,7 @@ __all__ = [
     "AudienceCombination",
     "AudienceCombinationTypedDict",
     "BillingEvent",
+    "BillingType",
     "BudgetAllocationType",
     "BudgetPeriod",
     "BudgetUnit",
@@ -2367,6 +2425,7 @@ __all__ = [
     "ContentsType",
     "CoverageLevel",
     "CoverageType",
+    "CreativeSelection",
     "CreativeType",
     "CrmCompany",
     "CrmCompanyTypedDict",
@@ -2782,7 +2841,6 @@ __all__ = [
     "NativeWebhookParentID",
     "NativeWebhookProjectID",
     "NativeWebhookPropertyID",
-    "NativeWebhookSegmentID",
     "NativeWebhookSessionID",
     "NativeWebhookShipmentID",
     "NativeWebhookStudentID",
@@ -2827,6 +2885,10 @@ __all__ = [
     "PresenceType",
     "Priority",
     "ProfileGender",
+    "PropertyAccountingAgedRowContact",
+    "PropertyAccountingAgedRowContactTypedDict",
+    "PropertyAccountingAgedRowTransaction",
+    "PropertyAccountingAgedRowTransactionTypedDict",
     "PropertyAccountingContactBillingAddress",
     "PropertyAccountingContactBillingAddressTypedDict",
     "PropertyAccountingContactShippingAddress",
@@ -2984,6 +3046,7 @@ __all__ = [
     "PropertyAdsReportMetricsGroupBudgetAllocationType",
     "PropertyAdsReportMetricsGroupBudgetPeriod",
     "PropertyAdsReportMetricsGroupBudgetUnit",
+    "PropertyAdsReportMetricsGroupCreativeSelection",
     "PropertyAdsReportMetricsGroupEffectiveStatus",
     "PropertyAdsReportMetricsGroupFrequencyCap",
     "PropertyAdsReportMetricsGroupFrequencyCapTimeUnit",
@@ -3373,6 +3436,7 @@ __all__ = [
     "TaskTaskTypedDict",
     "Tax",
     "TaxExemption",
+    "TaxMode",
     "TaxesPaidBy",
     "Term",
     "TicketingCategory",
@@ -3482,7 +3546,6 @@ __all__ = [
     "VirtualWebhookReference",
     "VirtualWebhookRepoID",
     "VirtualWebhookSaleschannelID",
-    "VirtualWebhookSegmentID",
     "VirtualWebhookSessionID",
     "VirtualWebhookShipmentID",
     "VirtualWebhookSpaceID",
@@ -3515,6 +3578,14 @@ _dynamic_imports: dict[str, str] = {
     "AccountingAccountTaxonomy": ".accountingaccounttaxonomy",
     "AccountingAccountTaxonomyType": ".accountingaccounttaxonomy",
     "AccountingAccountTaxonomyTypedDict": ".accountingaccounttaxonomy",
+    "AccountingAgedpayable": ".accountingagedpayable",
+    "AccountingAgedpayableTypedDict": ".accountingagedpayable",
+    "AccountingAgedPeriod": ".accountingagedperiod",
+    "AccountingAgedPeriodTypedDict": ".accountingagedperiod",
+    "AccountingAgedreceivable": ".accountingagedreceivable",
+    "AccountingAgedreceivableTypedDict": ".accountingagedreceivable",
+    "AccountingAgedRow": ".accountingagedrow",
+    "AccountingAgedRowTypedDict": ".accountingagedrow",
     "AccountingAssociatedContact": ".accountingassociatedcontact",
     "AccountingAssociatedContactTypedDict": ".accountingassociatedcontact",
     "AccountingAttachment": ".accountingattachment",
@@ -3593,9 +3664,18 @@ _dynamic_imports: dict[str, str] = {
     "AccountingProfitlossSectionTypedDict": ".accountingprofitlosssection",
     "AccountingProfitlossSubcategory": ".accountingprofitlosssubcategory",
     "AccountingProfitlossSubcategoryTypedDict": ".accountingprofitlosssubcategory",
+    "AccountingProject": ".accountingproject",
+    "AccountingProjectStatus": ".accountingproject",
+    "AccountingProjectTypedDict": ".accountingproject",
+    "BillingType": ".accountingproject",
     "AccountingPurchaseorder": ".accountingpurchaseorder",
     "AccountingPurchaseorderStatus": ".accountingpurchaseorder",
     "AccountingPurchaseorderTypedDict": ".accountingpurchaseorder",
+    "AccountingQuote": ".accountingquote",
+    "AccountingQuotePaymentTerms": ".accountingquote",
+    "AccountingQuoteStatus": ".accountingquote",
+    "AccountingQuoteTypedDict": ".accountingquote",
+    "TaxMode": ".accountingquote",
     "AccountingReference": ".accountingreference",
     "AccountingReferenceTypedDict": ".accountingreference",
     "AccountingReport": ".accountingreport",
@@ -3654,6 +3734,7 @@ _dynamic_imports: dict[str, str] = {
     "AdsGroupTypedDict": ".adsgroup",
     "BillingEvent": ".adsgroup",
     "BudgetAllocationType": ".adsgroup",
+    "CreativeSelection": ".adsgroup",
     "OptimizationGoal": ".adsgroup",
     "AdsInsertionorder": ".adsinsertionorder",
     "AdsInsertionorderBudgetUnit": ".adsinsertionorder",
@@ -3664,7 +3745,10 @@ _dynamic_imports: dict[str, str] = {
     "AdsKeyword": ".adskeyword",
     "AdsKeywordTypedDict": ".adskeyword",
     "MatchType": ".adskeyword",
+    "AdsManager": ".adsmanager",
+    "AdsManagerTypedDict": ".adsmanager",
     "AdsOrganization": ".adsorganization",
+    "AdsOrganizationStatus": ".adsorganization",
     "AdsOrganizationTypedDict": ".adsorganization",
     "AdsPromoted": ".adspromoted",
     "AdsPromotedType": ".adspromoted",
@@ -4266,7 +4350,6 @@ _dynamic_imports: dict[str, str] = {
     "NativeWebhookParentID": ".integrationsupport",
     "NativeWebhookProjectID": ".integrationsupport",
     "NativeWebhookPropertyID": ".integrationsupport",
-    "NativeWebhookSegmentID": ".integrationsupport",
     "NativeWebhookSessionID": ".integrationsupport",
     "NativeWebhookShipmentID": ".integrationsupport",
     "NativeWebhookStudentID": ".integrationsupport",
@@ -4330,7 +4413,6 @@ _dynamic_imports: dict[str, str] = {
     "VirtualWebhookReference": ".integrationsupport",
     "VirtualWebhookRepoID": ".integrationsupport",
     "VirtualWebhookSaleschannelID": ".integrationsupport",
-    "VirtualWebhookSegmentID": ".integrationsupport",
     "VirtualWebhookSessionID": ".integrationsupport",
     "VirtualWebhookShipmentID": ".integrationsupport",
     "VirtualWebhookSpaceID": ".integrationsupport",
@@ -4456,6 +4538,10 @@ _dynamic_imports: dict[str, str] = {
     "PaymentSubscription": ".paymentsubscription",
     "PaymentSubscriptionStatus": ".paymentsubscription",
     "PaymentSubscriptionTypedDict": ".paymentsubscription",
+    "PropertyAccountingAgedRowContact": ".property_accountingagedrow_contact",
+    "PropertyAccountingAgedRowContactTypedDict": ".property_accountingagedrow_contact",
+    "PropertyAccountingAgedRowTransaction": ".property_accountingagedrow_transaction",
+    "PropertyAccountingAgedRowTransactionTypedDict": ".property_accountingagedrow_transaction",
     "PropertyAccountingContactBillingAddress": ".property_accountingcontact_billing_address",
     "PropertyAccountingContactBillingAddressTypedDict": ".property_accountingcontact_billing_address",
     "PropertyAccountingContactShippingAddress": ".property_accountingcontact_shipping_address",
@@ -4614,6 +4700,7 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsGroupBudgetAllocationType": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBudgetPeriod": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBudgetUnit": ".property_adsreportmetrics_group",
+    "PropertyAdsReportMetricsGroupCreativeSelection": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupEffectiveStatus": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupOptimizationGoal": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupStatus": ".property_adsreportmetrics_group",

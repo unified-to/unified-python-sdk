@@ -62,6 +62,7 @@ class AdsCreativeTypedDict(TypedDict):
     hosting_source: NotRequired[HostingSource]
     id: NotRequired[str]
     item_id: NotRequired[str]
+    labels: NotRequired[List[str]]
     link_url: NotRequired[str]
     name: NotRequired[str]
     organization_id: NotRequired[str]
@@ -73,6 +74,7 @@ class AdsCreativeTypedDict(TypedDict):
     third_party_tag: NotRequired[str]
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
+    url_tags: NotRequired[str]
     vast_tag_url: NotRequired[str]
     width: NotRequired[float]
 
@@ -109,6 +111,8 @@ class AdsCreative(BaseModel):
 
     item_id: Optional[str] = None
 
+    labels: Optional[List[str]] = None
+
     link_url: Optional[str] = None
 
     name: Optional[str] = None
@@ -130,6 +134,8 @@ class AdsCreative(BaseModel):
     title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+
+    url_tags: Optional[str] = None
 
     vast_tag_url: Optional[str] = None
 
@@ -181,6 +187,7 @@ class AdsCreative(BaseModel):
                 "hosting_source",
                 "id",
                 "item_id",
+                "labels",
                 "link_url",
                 "name",
                 "organization_id",
@@ -192,6 +199,7 @@ class AdsCreative(BaseModel):
                 "third_party_tag",
                 "title",
                 "updated_at",
+                "url_tags",
                 "vast_tag_url",
                 "width",
             ]

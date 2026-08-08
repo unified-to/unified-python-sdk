@@ -32,6 +32,7 @@ class StorageFileTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     references: NotRequired[List[StorageReferenceTypedDict]]
     size: NotRequired[float]
+    tags: NotRequired[List[str]]
     type: NotRequired[StorageFileType]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -65,6 +66,8 @@ class StorageFile(BaseModel):
     references: Optional[List[StorageReference]] = None
 
     size: Optional[float] = None
+
+    tags: Optional[List[str]] = None
 
     type: Optional[StorageFileType] = None
 
@@ -102,6 +105,7 @@ class StorageFile(BaseModel):
                 "raw",
                 "references",
                 "size",
+                "tags",
                 "type",
                 "updated_at",
                 "user_id",

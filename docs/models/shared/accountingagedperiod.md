@@ -1,0 +1,12 @@
+# AccountingAgedPeriod
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `end_at`                                                                   | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `name`                                                                     | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `start_at`                                                                 | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `sub_items`                                                                | List[[shared.AccountingAgedRow](../../models/shared/accountingagedrow.md)] | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `total_amount`                                                             | *Optional[float]*                                                          | :heavy_minus_sign:                                                         | N/A                                                                        |

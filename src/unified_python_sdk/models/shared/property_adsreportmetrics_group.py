@@ -67,6 +67,13 @@ class PropertyAdsReportMetricsGroupBudgetUnit(str, Enum, metaclass=utils.OpenEnu
     IMPRESSIONS = "IMPRESSIONS"
 
 
+class PropertyAdsReportMetricsGroupCreativeSelection(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
+    OPTIMIZED = "OPTIMIZED"
+    ROUND_ROBIN = "ROUND_ROBIN"
+
+
 class PropertyAdsReportMetricsGroupEffectiveStatus(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
@@ -145,6 +152,7 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
     creative_ids: NotRequired[List[str]]
+    creative_selection: NotRequired[PropertyAdsReportMetricsGroupCreativeSelection]
     currency: NotRequired[str]
     effective_status: NotRequired[PropertyAdsReportMetricsGroupEffectiveStatus]
     end_at: NotRequired[datetime]
@@ -152,6 +160,7 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     has_eu_political_ads: NotRequired[bool]
     id: NotRequired[str]
     insertionorder_id: NotRequired[str]
+    language_locale: NotRequired[str]
     name: NotRequired[str]
     optimization_goal: NotRequired[PropertyAdsReportMetricsGroupOptimizationGoal]
     organization_id: NotRequired[str]
@@ -192,6 +201,8 @@ class PropertyAdsReportMetricsGroup(BaseModel):
 
     creative_ids: Optional[List[str]] = None
 
+    creative_selection: Optional[PropertyAdsReportMetricsGroupCreativeSelection] = None
+
     currency: Optional[str] = None
 
     effective_status: Optional[PropertyAdsReportMetricsGroupEffectiveStatus] = None
@@ -205,6 +216,8 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     id: Optional[str] = None
 
     insertionorder_id: Optional[str] = None
+
+    language_locale: Optional[str] = None
 
     name: Optional[str] = None
 
@@ -266,6 +279,15 @@ class PropertyAdsReportMetricsGroup(BaseModel):
                 return value
         return value
 
+    @field_serializer("creative_selection")
+    def serialize_creative_selection(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyAdsReportMetricsGroupCreativeSelection(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("effective_status")
     def serialize_effective_status(self, value):
         if isinstance(value, str):
@@ -317,6 +339,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
                 "campaign_id",
                 "created_at",
                 "creative_ids",
+                "creative_selection",
                 "currency",
                 "effective_status",
                 "end_at",
@@ -324,6 +347,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
                 "has_eu_political_ads",
                 "id",
                 "insertionorder_id",
+                "language_locale",
                 "name",
                 "optimization_goal",
                 "organization_id",

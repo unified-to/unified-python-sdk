@@ -41,6 +41,7 @@ class AccountingExpenseTypedDict(TypedDict):
     organization_id: NotRequired[str]
     payment_method: NotRequired[str]
     posted_at: NotRequired[datetime]
+    project_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reimbursed_amount: NotRequired[float]
     reimbursed_at: NotRequired[datetime]
@@ -85,6 +86,8 @@ class AccountingExpense(BaseModel):
     payment_method: Optional[str] = None
 
     posted_at: Optional[datetime] = None
+
+    project_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -133,6 +136,7 @@ class AccountingExpense(BaseModel):
                 "organization_id",
                 "payment_method",
                 "posted_at",
+                "project_id",
                 "raw",
                 "reimbursed_amount",
                 "reimbursed_at",

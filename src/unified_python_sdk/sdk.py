@@ -22,6 +22,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.activity import Activity
     from unified_python_sdk.ad import Ad
     from unified_python_sdk.ads import Ads
+    from unified_python_sdk.agedpayable import Agedpayable
+    from unified_python_sdk.agedreceivable import Agedreceivable
     from unified_python_sdk.analytics import Analytics
     from unified_python_sdk.apicall import Apicall
     from unified_python_sdk.application import Application
@@ -127,6 +129,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.pullrequest import Pullrequest
     from unified_python_sdk.purchaseorder import Purchaseorder
     from unified_python_sdk.query import Query
+    from unified_python_sdk.quote import Quote
     from unified_python_sdk.rate import Rate
     from unified_python_sdk.record import Record
     from unified_python_sdk.recording import Recording
@@ -185,6 +188,8 @@ class UnifiedTo(BaseSDK):
 
     accounting: "Accounting"
     account: "Account"
+    agedpayable: "Agedpayable"
+    agedreceivable: "Agedreceivable"
     balancesheet: "Balancesheet"
     bill: "Bill"
     cashflow: "Cashflow"
@@ -197,7 +202,9 @@ class UnifiedTo(BaseSDK):
     order: "Order"
     organization: "Organization"
     profitloss: "Profitloss"
+    project: "Project"
     purchaseorder: "Purchaseorder"
+    quote: "Quote"
     report: "Report"
     salesorder: "Salesorder"
     taxrate: "Taxrate"
@@ -323,7 +330,6 @@ class UnifiedTo(BaseSDK):
     file: "File"
     task: "Task"
     change: "Change"
-    project: "Project"
     ticketing: "Ticketing"
     customer: "Customer"
     note: "Note"
@@ -346,6 +352,8 @@ class UnifiedTo(BaseSDK):
     _sub_sdk_map = {
         "accounting": ("unified_python_sdk.accounting", "Accounting"),
         "account": ("unified_python_sdk.account", "Account"),
+        "agedpayable": ("unified_python_sdk.agedpayable", "Agedpayable"),
+        "agedreceivable": ("unified_python_sdk.agedreceivable", "Agedreceivable"),
         "balancesheet": ("unified_python_sdk.balancesheet", "Balancesheet"),
         "bill": ("unified_python_sdk.bill", "Bill"),
         "cashflow": ("unified_python_sdk.cashflow", "Cashflow"),
@@ -358,7 +366,9 @@ class UnifiedTo(BaseSDK):
         "order": ("unified_python_sdk.order", "Order"),
         "organization": ("unified_python_sdk.organization", "Organization"),
         "profitloss": ("unified_python_sdk.profitloss", "Profitloss"),
+        "project": ("unified_python_sdk.project", "Project"),
         "purchaseorder": ("unified_python_sdk.purchaseorder", "Purchaseorder"),
+        "quote": ("unified_python_sdk.quote", "Quote"),
         "report": ("unified_python_sdk.report", "Report"),
         "salesorder": ("unified_python_sdk.salesorder", "Salesorder"),
         "taxrate": ("unified_python_sdk.taxrate", "Taxrate"),
@@ -487,7 +497,6 @@ class UnifiedTo(BaseSDK):
         "file": ("unified_python_sdk.file", "File"),
         "task": ("unified_python_sdk.task", "Task"),
         "change": ("unified_python_sdk.change", "Change"),
-        "project": ("unified_python_sdk.project", "Project"),
         "ticketing": ("unified_python_sdk.ticketing", "Ticketing"),
         "customer": ("unified_python_sdk.customer", "Customer"),
         "note": ("unified_python_sdk.note", "Note"),

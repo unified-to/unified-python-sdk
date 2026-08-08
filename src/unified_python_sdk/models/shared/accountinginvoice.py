@@ -91,6 +91,7 @@ class AccountingInvoiceTypedDict(TypedDict):
     payments: NotRequired[List[AccountingPaymentReferenceTypedDict]]
     r"""ead-only reciprocal of PaymentPayment.allocations; payments applied to this invoice"""
     posted_at: NotRequired[datetime]
+    project_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     refund_amount: NotRequired[float]
@@ -147,6 +148,8 @@ class AccountingInvoice(BaseModel):
     r"""ead-only reciprocal of PaymentPayment.allocations; payments applied to this invoice"""
 
     posted_at: Optional[datetime] = None
+
+    project_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -243,6 +246,7 @@ class AccountingInvoice(BaseModel):
                 "payment_terms",
                 "payments",
                 "posted_at",
+                "project_id",
                 "raw",
                 "reference",
                 "refund_amount",

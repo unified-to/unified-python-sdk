@@ -12,7 +12,7 @@ from .property_adsreportmetrics_campaign_targeting import (
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -112,6 +112,7 @@ class PropertyAdsReportMetricsCampaignTypedDict(TypedDict):
     goal: NotRequired[PropertyAdsReportMetricsCampaignGoal]
     has_eu_political_ads: NotRequired[bool]
     id: NotRequired[str]
+    labels: NotRequired[List[str]]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     planned_spend_amount: NotRequired[float]
@@ -153,6 +154,8 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
     has_eu_political_ads: Optional[bool] = None
 
     id: Optional[str] = None
+
+    labels: Optional[List[str]] = None
 
     name: Optional[str] = None
 
@@ -246,6 +249,7 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
                 "goal",
                 "has_eu_political_ads",
                 "id",
+                "labels",
                 "name",
                 "organization_id",
                 "planned_spend_amount",

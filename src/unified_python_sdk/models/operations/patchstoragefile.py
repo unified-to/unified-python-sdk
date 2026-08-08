@@ -34,6 +34,7 @@ class PatchStorageFileQueryParamFields(str, Enum):
     VERSION = "version"
     WEB_URL = "web_url"
     REFERENCES = "references"
+    TAGS = "tags"
     RAW = "raw"
 
 
