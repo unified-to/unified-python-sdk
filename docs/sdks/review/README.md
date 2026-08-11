@@ -6,7 +6,9 @@
 
 * [create_commerce_review](#create_commerce_review) - Create a review
 * [get_commerce_review](#get_commerce_review) - Retrieve a review
+* [get_performance_review](#get_performance_review) - Retrieve a review
 * [list_commerce_reviews](#list_commerce_reviews) - List all reviews
+* [list_performance_reviews](#list_performance_reviews) - List all reviews
 * [patch_commerce_review](#patch_commerce_review) - Update a review
 * [remove_commerce_review](#remove_commerce_review) - Remove a review
 * [update_commerce_review](#update_commerce_review) - Update a review
@@ -105,6 +107,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_performance_review
+
+Retrieve a review
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getPerformanceReview" method="get" path="/performance/{connection_id}/review/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.review.get_performance_review(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.performance_review is not None
+
+    # Handle response
+    print(res.performance_review)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetPerformanceReviewRequest](../../models/operations/getperformancereviewrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.GetPerformanceReviewResponse](../../models/operations/getperformancereviewresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_commerce_reviews
 
 List all reviews
@@ -144,6 +193,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListCommerceReviewsResponse](../../models/operations/listcommercereviewsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_performance_reviews
+
+List all reviews
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listPerformanceReviews" method="get" path="/performance/{connection_id}/review" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.review.list_performance_reviews(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.performance_reviews is not None
+
+    # Handle response
+    print(res.performance_reviews)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListPerformanceReviewsRequest](../../models/operations/listperformancereviewsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.ListPerformanceReviewsResponse](../../models/operations/listperformancereviewsresponse.md)**
 
 ### Errors
 

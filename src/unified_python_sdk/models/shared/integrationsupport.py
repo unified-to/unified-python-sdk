@@ -146,6 +146,12 @@ class ListCustomerID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListCycleID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListDatabaseID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -842,6 +848,12 @@ class VirtualWebhookCustomerID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookCycleID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookDatabaseID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1148,6 +1160,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_content_id: NotRequired[ListContentID]
     list_course_id: NotRequired[ListCourseID]
     list_customer_id: NotRequired[ListCustomerID]
+    list_cycle_id: NotRequired[ListCycleID]
     list_database_id: NotRequired[ListDatabaseID]
     list_deal_id: NotRequired[ListDealID]
     list_dimension: NotRequired[ListDimension]
@@ -1269,6 +1282,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_contact_id: NotRequired[VirtualWebhookContactID]
     virtual_webhook_course_id: NotRequired[VirtualWebhookCourseID]
     virtual_webhook_customer_id: NotRequired[VirtualWebhookCustomerID]
+    virtual_webhook_cycle_id: NotRequired[VirtualWebhookCycleID]
     virtual_webhook_database_id: NotRequired[VirtualWebhookDatabaseID]
     virtual_webhook_deal_id: NotRequired[VirtualWebhookDealID]
     virtual_webhook_end_lt: NotRequired[VirtualWebhookEndLt]
@@ -1365,6 +1379,8 @@ class IntegrationSupport(BaseModel):
     list_course_id: Optional[ListCourseID] = None
 
     list_customer_id: Optional[ListCustomerID] = None
+
+    list_cycle_id: Optional[ListCycleID] = None
 
     list_database_id: Optional[ListDatabaseID] = None
 
@@ -1606,6 +1622,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_course_id: Optional[VirtualWebhookCourseID] = None
 
     virtual_webhook_customer_id: Optional[VirtualWebhookCustomerID] = None
+
+    virtual_webhook_cycle_id: Optional[VirtualWebhookCycleID] = None
 
     virtual_webhook_database_id: Optional[VirtualWebhookDatabaseID] = None
 
@@ -1897,6 +1915,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListCustomerID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_cycle_id")
+    def serialize_list_cycle_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListCycleID(value)
             except ValueError:
                 return value
         return value
@@ -2945,6 +2972,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_cycle_id")
+    def serialize_virtual_webhook_cycle_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookCycleID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_database_id")
     def serialize_virtual_webhook_database_id(self, value):
         if isinstance(value, str):
@@ -3395,6 +3431,7 @@ class IntegrationSupport(BaseModel):
                 "list_content_id",
                 "list_course_id",
                 "list_customer_id",
+                "list_cycle_id",
                 "list_database_id",
                 "list_deal_id",
                 "list_dimension",
@@ -3515,6 +3552,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_contact_id",
                 "virtual_webhook_course_id",
                 "virtual_webhook_customer_id",
+                "virtual_webhook_cycle_id",
                 "virtual_webhook_database_id",
                 "virtual_webhook_deal_id",
                 "virtual_webhook_end_lt",

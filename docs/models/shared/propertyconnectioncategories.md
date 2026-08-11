@@ -48,3 +48,4 @@ value = PropertyConnectionCategories.PASSTHROUGH
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
 | `CDP`          | cdp            |
+| `PERFORMANCE`  | performance    |

@@ -36,6 +36,7 @@ class PatchAccountingOrderQueryParamFields(str, Enum):
 
 class PatchAccountingOrderRequestTypedDict(TypedDict):
     accounting_order: shared_accountingorder.AccountingOrderTypedDict
+    r"""@deprecated; use AccountingSalesorder or AccountingPurchaseorder"""
     connection_id: str
     r"""ID of the connection"""
     id: str
@@ -51,6 +52,7 @@ class PatchAccountingOrderRequest(BaseModel):
         shared_accountingorder.AccountingOrder,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
+    r"""@deprecated; use AccountingSalesorder or AccountingPurchaseorder"""
 
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))

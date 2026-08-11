@@ -38,6 +38,8 @@ class AccountingOrderType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AccountingOrderTypedDict(TypedDict):
+    r"""@deprecated; use AccountingSalesorder or AccountingPurchaseorder"""
+
     account_id: NotRequired[str]
     billing_address: NotRequired[PropertyAccountingOrderBillingAddressTypedDict]
     contact_id: NotRequired[str]
@@ -56,6 +58,8 @@ class AccountingOrderTypedDict(TypedDict):
 
 
 class AccountingOrder(BaseModel):
+    r"""@deprecated; use AccountingSalesorder or AccountingPurchaseorder"""
+
     account_id: Optional[str] = None
 
     billing_address: Optional[PropertyAccountingOrderBillingAddress] = None

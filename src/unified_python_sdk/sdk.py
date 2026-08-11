@@ -64,6 +64,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.creditmemo import Creditmemo
     from unified_python_sdk.crm import Crm
     from unified_python_sdk.customer import Customer
+    from unified_python_sdk.cycle import Cycle
     from unified_python_sdk.database import Database
     from unified_python_sdk.datastore import Datastore
     from unified_python_sdk.deal import Deal
@@ -77,10 +78,12 @@ if TYPE_CHECKING:
     from unified_python_sdk.environment import Environment
     from unified_python_sdk.event import Event
     from unified_python_sdk.expense import Expense
+    from unified_python_sdk.feedback import Feedback
     from unified_python_sdk.file import File
     from unified_python_sdk.form import Form
     from unified_python_sdk.forms import Forms
     from unified_python_sdk.genai import Genai
+    from unified_python_sdk.goal import Goal
     from unified_python_sdk.group import Group
     from unified_python_sdk.hris import Hris
     from unified_python_sdk.insertionorder import Insertionorder
@@ -117,6 +120,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.payment import Payment
     from unified_python_sdk.payout import Payout
     from unified_python_sdk.payslip import Payslip
+    from unified_python_sdk.performance import Performance
     from unified_python_sdk.person import Person
     from unified_python_sdk.picklist import Picklist
     from unified_python_sdk.pipeline import Pipeline
@@ -310,6 +314,10 @@ class UnifiedTo(BaseSDK):
     payout: "Payout"
     refund: "Refund"
     subscription: "Subscription"
+    performance: "Performance"
+    cycle: "Cycle"
+    feedback: "Feedback"
+    goal: "Goal"
     repo: "Repo"
     branch: "Branch"
     commit: "Commit"
@@ -477,6 +485,10 @@ class UnifiedTo(BaseSDK):
         "payout": ("unified_python_sdk.payout", "Payout"),
         "refund": ("unified_python_sdk.refund", "Refund"),
         "subscription": ("unified_python_sdk.subscription", "Subscription"),
+        "performance": ("unified_python_sdk.performance", "Performance"),
+        "cycle": ("unified_python_sdk.cycle", "Cycle"),
+        "feedback": ("unified_python_sdk.feedback", "Feedback"),
+        "goal": ("unified_python_sdk.goal", "Goal"),
         "repo": ("unified_python_sdk.repo", "Repo"),
         "branch": ("unified_python_sdk.branch", "Branch"),
         "commit": ("unified_python_sdk.commit", "Commit"),

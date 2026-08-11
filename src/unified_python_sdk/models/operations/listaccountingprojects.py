@@ -60,7 +60,6 @@ class ListAccountingProjectsRequestTypedDict(TypedDict):
     r"""The contact ID to filter by (reference to AccountingContact)"""
     fields: NotRequired[List[ListAccountingProjectsQueryParamFields]]
     r"""Fields to return"""
-    is_active: NotRequired[str]
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -95,11 +94,6 @@ class ListAccountingProjectsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
-
-    is_active: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
 
     limit: Annotated[
         Optional[float],
@@ -162,7 +156,6 @@ class ListAccountingProjectsRequest(BaseModel):
             [
                 "contact_id",
                 "fields",
-                "is_active",
                 "limit",
                 "offset",
                 "order",

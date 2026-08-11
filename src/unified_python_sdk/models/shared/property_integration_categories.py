@@ -39,3 +39,4 @@ class PropertyIntegrationCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     CLUBS = "clubs"
     DATASTORE = "datastore"
     CDP = "cdp"
+    PERFORMANCE = "performance"

@@ -312,3 +312,10 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `CDP_DESTINATION_WRITE`          | cdp_destination_write            |
 | `CDP_ACTIVATION_READ`            | cdp_activation_read              |
 | `CDP_ACTIVATION_WRITE`           | cdp_activation_write             |
+| `PERFORMANCE_CYCLE_READ`         | performance_cycle_read           |
+| `PERFORMANCE_REVIEW_READ`        | performance_review_read          |
+| `PERFORMANCE_REVIEW_WRITE`       | performance_review_write         |
+| `PERFORMANCE_GOAL_READ`          | performance_goal_read            |
+| `PERFORMANCE_GOAL_WRITE`         | performance_goal_write           |
+| `PERFORMANCE_FEEDBACK_READ`      | performance_feedback_read        |
+| `PERFORMANCE_FEEDBACK_WRITE`     | performance_feedback_write       |

@@ -11,3 +11,5 @@ class PropertyHrisEmployeeEmployeeRoles(str, Enum, metaclass=utils.OpenEnumMeta)
     RECRUITER = "RECRUITER"
     SALESREP = "SALESREP"
     INTERVIEWER = "INTERVIEWER"
+    USER = "USER"
+    EMPLOYEE = "EMPLOYEE"
