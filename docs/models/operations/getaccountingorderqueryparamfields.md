@@ -27,4 +27,5 @@ value = GetAccountingOrderQueryParamFields.ID
 | `STATUS`           | status             |
 | `LINEITEMS`        | lineitems          |
 | `ORGANIZATION_ID`  | organization_id    |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

@@ -32,8 +32,17 @@ class PatchPaymentPaymentQueryParamFields(str, Enum):
     ACCOUNT_ID = "account_id"
     REFERENCE = "reference"
     ORGANIZATION_ID = "organization_id"
-    RAW = "raw"
     ALLOCATIONS = "allocations"
+    STATUS = "status"
+    SALESORDER_ID = "salesorder_id"
+    TENDER_TYPE = "tender_type"
+    TIP_AMOUNT = "tip_amount"
+    FEE_AMOUNT = "fee_amount"
+    LOCATION_ID = "location_id"
+    DEVICE_ID = "device_id"
+    CARD_BRAND = "card_brand"
+    CARD_LAST4 = "card_last4"
+    RAW = "raw"
 
 
 class PatchPaymentPaymentRequestTypedDict(TypedDict):

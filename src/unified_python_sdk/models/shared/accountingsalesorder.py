@@ -3,6 +3,11 @@
 from __future__ import annotations
 from .accountingfee import AccountingFee, AccountingFeeTypedDict
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
+from .accountingpaymentreference import (
+    AccountingPaymentReference,
+    AccountingPaymentReferenceTypedDict,
+)
 from .property_accountingsalesorder_billing_address import (
     PropertyAccountingSalesorderBillingAddress,
     PropertyAccountingSalesorderBillingAddressTypedDict,
@@ -21,6 +26,17 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class FulfillmentType(str, Enum, metaclass=utils.OpenEnumMeta):
+    DINE_IN = "DINE_IN"
+    TAKEOUT = "TAKEOUT"
+    DELIVERY = "DELIVERY"
+    PICKUP = "PICKUP"
+    CURBSIDE = "CURBSIDE"
+    SHIPPING = "SHIPPING"
+    DIGITAL = "DIGITAL"
+    OTHER = "OTHER"
+
+
 class AccountingSalesorderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     DRAFT = "DRAFT"
     VOIDED = "VOIDED"
@@ -31,24 +47,44 @@ class AccountingSalesorderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     REFUNDED = "REFUNDED"
     SUBMITTED = "SUBMITTED"
     DELETED = "DELETED"
+    OPEN = "OPEN"
+    COMPLETED = "COMPLETED"
+    CANCELED = "CANCELED"
 
 
 class AccountingSalesorderTypedDict(TypedDict):
     account_id: NotRequired[str]
     billing_address: NotRequired[PropertyAccountingSalesorderBillingAddressTypedDict]
     category_ids: NotRequired[List[str]]
+    closed_at: NotRequired[datetime]
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    device_id: NotRequired[str]
+    discount_amount: NotRequired[float]
+    employee_user_id: NotRequired[str]
     fees: NotRequired[List[AccountingFeeTypedDict]]
+    fulfillment_type: NotRequired[FulfillmentType]
+    guest_count: NotRequired[float]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    location_id: NotRequired[str]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
+    order_number: NotRequired[str]
     organization_id: NotRequired[str]
+    payments: NotRequired[List[AccountingPaymentReferenceTypedDict]]
+    r"""read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order"""
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
+    refunded_amount: NotRequired[float]
     sales_channel: NotRequired[str]
+    service_charge_amount: NotRequired[float]
     shipping_address: NotRequired[PropertyAccountingSalesorderShippingAddressTypedDict]
     status: NotRequired[AccountingSalesorderStatus]
+    subscription_id: NotRequired[str]
+    subtotal_amount: NotRequired[float]
+    tax_amount: NotRequired[float]
+    tip_amount: NotRequired[float]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
 
@@ -60,33 +96,75 @@ class AccountingSalesorder(BaseModel):
 
     category_ids: Optional[List[str]] = None
 
+    closed_at: Optional[datetime] = None
+
     contact_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
 
+    device_id: Optional[str] = None
+
+    discount_amount: Optional[float] = None
+
+    employee_user_id: Optional[str] = None
+
     fees: Optional[List[AccountingFee]] = None
+
+    fulfillment_type: Optional[FulfillmentType] = None
+
+    guest_count: Optional[float] = None
 
     id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
 
+    location_id: Optional[str] = None
+
+    metadata: Optional[List[AccountingMetadata]] = None
+
+    order_number: Optional[str] = None
+
     organization_id: Optional[str] = None
+
+    payments: Optional[List[AccountingPaymentReference]] = None
+    r"""read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order"""
 
     posted_at: Optional[datetime] = None
 
     raw: Optional[Dict[str, Any]] = None
 
+    refunded_amount: Optional[float] = None
+
     sales_channel: Optional[str] = None
+
+    service_charge_amount: Optional[float] = None
 
     shipping_address: Optional[PropertyAccountingSalesorderShippingAddress] = None
 
     status: Optional[AccountingSalesorderStatus] = None
 
+    subscription_id: Optional[str] = None
+
+    subtotal_amount: Optional[float] = None
+
+    tax_amount: Optional[float] = None
+
+    tip_amount: Optional[float] = None
+
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("fulfillment_type")
+    def serialize_fulfillment_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.FulfillmentType(value)
+            except ValueError:
+                return value
+        return value
 
     @field_serializer("status")
     def serialize_status(self, value):
@@ -104,18 +182,34 @@ class AccountingSalesorder(BaseModel):
                 "account_id",
                 "billing_address",
                 "category_ids",
+                "closed_at",
                 "contact_id",
                 "created_at",
                 "currency",
+                "device_id",
+                "discount_amount",
+                "employee_user_id",
                 "fees",
+                "fulfillment_type",
+                "guest_count",
                 "id",
                 "lineitems",
+                "location_id",
+                "metadata",
+                "order_number",
                 "organization_id",
+                "payments",
                 "posted_at",
                 "raw",
+                "refunded_amount",
                 "sales_channel",
+                "service_charge_amount",
                 "shipping_address",
                 "status",
+                "subscription_id",
+                "subtotal_amount",
+                "tax_amount",
+                "tip_amount",
                 "total_amount",
                 "updated_at",
             ]

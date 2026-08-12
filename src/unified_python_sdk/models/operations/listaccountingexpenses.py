@@ -43,6 +43,7 @@ class ListAccountingExpensesQueryParamFields(str, Enum):
     EXTERNAL_NUMBER = "external_number"
     CATEGORY_IDS = "category_ids"
     PROJECT_ID = "project_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

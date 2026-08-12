@@ -4,6 +4,7 @@
 
 ### Available Operations
 
+* [create_hris_attendance](#create_hris_attendance) - Create an attendance
 * [create_hris_bankaccount](#create_hris_bankaccount) - Create a bankaccount
 * [create_hris_benefit](#create_hris_benefit) - Create a benefit
 * [create_hris_company](#create_hris_company) - Create a company
@@ -15,6 +16,7 @@
 * [create_hris_location](#create_hris_location) - Create a location
 * [create_hris_timeoff](#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](#create_hris_timeshift) - Create a timeshift
+* [get_hris_attendance](#get_hris_attendance) - Retrieve an attendance
 * [get_hris_bankaccount](#get_hris_bankaccount) - Retrieve a bankaccount
 * [get_hris_benefit](#get_hris_benefit) - Retrieve a benefit
 * [get_hris_company](#get_hris_company) - Retrieve a company
@@ -28,6 +30,7 @@
 * [get_hris_taxonomy](#get_hris_taxonomy) - Retrieve a taxonomy
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](#get_hris_timeshift) - Retrieve a timeshift
+* [list_hris_attendances](#list_hris_attendances) - List all attendances
 * [list_hris_bankaccounts](#list_hris_bankaccounts) - List all bankaccounts
 * [list_hris_benefits](#list_hris_benefits) - List all benefits
 * [list_hris_companies](#list_hris_companies) - List all companies
@@ -41,6 +44,7 @@
 * [list_hris_taxonomies](#list_hris_taxonomies) - List all taxonomies
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](#list_hris_timeshifts) - List all timeshifts
+* [patch_hris_attendance](#patch_hris_attendance) - Update an attendance
 * [patch_hris_bankaccount](#patch_hris_bankaccount) - Update a bankaccount
 * [patch_hris_benefit](#patch_hris_benefit) - Update a benefit
 * [patch_hris_company](#patch_hris_company) - Update a company
@@ -52,6 +56,7 @@
 * [patch_hris_location](#patch_hris_location) - Update a location
 * [patch_hris_timeoff](#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](#patch_hris_timeshift) - Update a timeshift
+* [remove_hris_attendance](#remove_hris_attendance) - Remove an attendance
 * [remove_hris_bankaccount](#remove_hris_bankaccount) - Remove a bankaccount
 * [remove_hris_benefit](#remove_hris_benefit) - Remove a benefit
 * [remove_hris_company](#remove_hris_company) - Remove a company
@@ -63,6 +68,7 @@
 * [remove_hris_location](#remove_hris_location) - Remove a location
 * [remove_hris_timeoff](#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](#remove_hris_timeshift) - Remove a timeshift
+* [update_hris_attendance](#update_hris_attendance) - Update an attendance
 * [update_hris_bankaccount](#update_hris_bankaccount) - Update a bankaccount
 * [update_hris_benefit](#update_hris_benefit) - Update a benefit
 * [update_hris_company](#update_hris_company) - Update a company
@@ -74,6 +80,58 @@
 * [update_hris_location](#update_hris_location) - Update a location
 * [update_hris_timeoff](#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](#update_hris_timeshift) - Update a timeshift
+
+## create_hris_attendance
+
+Create an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.create_hris_attendance(request={
+        "hris_attendance": {
+            "employee_user_id": "<id>",
+            "end_at": parse_datetime("2026-07-01T14:10:09.942Z"),
+            "start_at": parse_datetime("2026-03-31T03:51:43.280Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_attendance is not None
+
+    # Handle response
+    print(res.hris_attendance)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreateHrisAttendanceRequest](../../models/operations/createhrisattendancerequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.CreateHrisAttendanceResponse](../../models/operations/createhrisattendanceresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_hris_bankaccount
 
@@ -589,6 +647,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHrisTimeshiftResponse](../../models/operations/createhristimeshiftresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_hris_attendance
+
+Retrieve an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisAttendance" method="get" path="/hris/{connection_id}/attendance/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.get_hris_attendance(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_attendance is not None
+
+    # Handle response
+    print(res.hris_attendance)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetHrisAttendanceRequest](../../models/operations/gethrisattendancerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.GetHrisAttendanceResponse](../../models/operations/gethrisattendanceresponse.md)**
 
 ### Errors
 
@@ -1207,6 +1312,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_hris_attendances
+
+List all attendances
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisAttendances" method="get" path="/hris/{connection_id}/attendance" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.list_hris_attendances(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_attendances is not None
+
+    # Handle response
+    print(res.hris_attendances)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListHrisAttendancesRequest](../../models/operations/listhrisattendancesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.ListHrisAttendancesResponse](../../models/operations/listhrisattendancesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_hris_bankaccounts
 
 List all bankaccounts
@@ -1805,6 +1956,59 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_hris_attendance
+
+Update an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.patch_hris_attendance(request={
+        "hris_attendance": {
+            "employee_user_id": "<id>",
+            "end_at": parse_datetime("2024-09-28T22:23:28.906Z"),
+            "start_at": parse_datetime("2025-01-18T09:17:09.936Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_attendance is not None
+
+    # Handle response
+    print(res.hris_attendance)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.PatchHrisAttendanceRequest](../../models/operations/patchhrisattendancerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.PatchHrisAttendanceResponse](../../models/operations/patchhrisattendanceresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_hris_bankaccount
 
 Update a bankaccount
@@ -2337,6 +2541,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_hris_attendance
+
+Remove an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisAttendance" method="delete" path="/hris/{connection_id}/attendance/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.remove_hris_attendance(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.RemoveHrisAttendanceRequest](../../models/operations/removehrisattendancerequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.RemoveHrisAttendanceResponse](../../models/operations/removehrisattendanceresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_hris_bankaccount
 
 Remove a bankaccount
@@ -2847,6 +3098,59 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveHrisTimeshiftResponse](../../models/operations/removehristimeshiftresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_hris_attendance
+
+Update an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.update_hris_attendance(request={
+        "hris_attendance": {
+            "employee_user_id": "<id>",
+            "end_at": parse_datetime("2024-07-06T19:51:15.352Z"),
+            "start_at": parse_datetime("2024-05-22T08:12:53.996Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_attendance is not None
+
+    # Handle response
+    print(res.hris_attendance)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.UpdateHrisAttendanceRequest](../../models/operations/updatehrisattendancerequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.UpdateHrisAttendanceResponse](../../models/operations/updatehrisattendanceresponse.md)**
 
 ### Errors
 

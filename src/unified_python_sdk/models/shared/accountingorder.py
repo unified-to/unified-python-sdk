@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from .property_accountingorder_billing_address import (
     PropertyAccountingOrderBillingAddress,
     PropertyAccountingOrderBillingAddressTypedDict,
@@ -30,6 +31,9 @@ class AccountingOrderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     REFUNDED = "REFUNDED"
     SUBMITTED = "SUBMITTED"
     DELETED = "DELETED"
+    OPEN = "OPEN"
+    COMPLETED = "COMPLETED"
+    CANCELED = "CANCELED"
 
 
 class AccountingOrderType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -47,6 +51,7 @@ class AccountingOrderTypedDict(TypedDict):
     currency: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     organization_id: NotRequired[str]
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
@@ -73,6 +78,8 @@ class AccountingOrder(BaseModel):
     id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     organization_id: Optional[str] = None
 
@@ -119,6 +126,7 @@ class AccountingOrder(BaseModel):
                 "currency",
                 "id",
                 "lineitems",
+                "metadata",
                 "organization_id",
                 "posted_at",
                 "raw",

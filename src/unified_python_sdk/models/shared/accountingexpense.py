@@ -3,6 +3,7 @@
 from __future__ import annotations
 from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from .accountingreference import AccountingReference, AccountingReferenceTypedDict
 from datetime import datetime
 from enum import Enum
@@ -37,6 +38,7 @@ class AccountingExpenseTypedDict(TypedDict):
     external_number: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     payment_method: NotRequired[str]
@@ -78,6 +80,8 @@ class AccountingExpense(BaseModel):
     id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     name: Optional[str] = None
 
@@ -132,6 +136,7 @@ class AccountingExpense(BaseModel):
                 "external_number",
                 "id",
                 "lineitems",
+                "metadata",
                 "name",
                 "organization_id",
                 "payment_method",

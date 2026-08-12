@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from .accountingtransactioncontact import (
     AccountingTransactionContact,
     AccountingTransactionContactTypedDict,
@@ -67,6 +68,7 @@ class AccountingQuoteTypedDict(TypedDict):
     issued_at: NotRequired[datetime]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     memo: NotRequired[str]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     organization_id: NotRequired[str]
     payment_terms: NotRequired[AccountingQuotePaymentTerms]
     project_id: NotRequired[str]
@@ -121,6 +123,8 @@ class AccountingQuote(BaseModel):
     lineitems: Optional[List[AccountingLineitem]] = None
 
     memo: Optional[str] = None
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     organization_id: Optional[str] = None
 
@@ -202,6 +206,7 @@ class AccountingQuote(BaseModel):
                 "issued_at",
                 "lineitems",
                 "memo",
+                "metadata",
                 "organization_id",
                 "payment_terms",
                 "project_id",

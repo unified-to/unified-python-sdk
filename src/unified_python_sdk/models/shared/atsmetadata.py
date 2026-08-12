@@ -11,46 +11,6 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class OneTypedDict(TypedDict):
-    pass
-
-
-class One(BaseModel):
-    pass
-
-
-FiveTypedDict = TypeAliasType("FiveTypedDict", Union[OneTypedDict, str, float, bool])
-
-
-Five = TypeAliasType("Five", Union[One, str, float, bool])
-
-
-ExtraDataTypedDict = TypeAliasType(
-    "ExtraDataTypedDict", Union[Dict[str, Any], str, float, bool, List[FiveTypedDict]]
-)
-
-
-ExtraData = TypeAliasType(
-    "ExtraData", Union[Dict[str, Any], str, float, bool, List[Five]]
-)
-
-
-class Format(str, Enum, metaclass=utils.OpenEnumMeta):
-    TEXT = "TEXT"
-    NUMBER = "NUMBER"
-    DATE = "DATE"
-    BOOLEAN = "BOOLEAN"
-    FILE = "FILE"
-    TEXTAREA = "TEXTAREA"
-    SINGLE_SELECT = "SINGLE_SELECT"
-    MULTIPLE_SELECT = "MULTIPLE_SELECT"
-    MEASUREMENT = "MEASUREMENT"
-    PRICE = "PRICE"
-    YES_NO = "YES_NO"
-    CURRENCY = "CURRENCY"
-    URL = "URL"
-
-
 class AtsMetadata1TypedDict(TypedDict):
     pass
 
@@ -67,30 +27,79 @@ AtsMetadata5TypedDict = TypeAliasType(
 AtsMetadata5 = TypeAliasType("AtsMetadata5", Union[AtsMetadata1, str, float, bool])
 
 
-ValueTypedDict = TypeAliasType(
-    "ValueTypedDict",
+AtsMetadataExtraDataTypedDict = TypeAliasType(
+    "AtsMetadataExtraDataTypedDict",
     Union[Dict[str, Any], str, float, bool, List[AtsMetadata5TypedDict]],
 )
 
 
-Value = TypeAliasType(
-    "Value", Union[Dict[str, Any], str, float, bool, List[AtsMetadata5]]
+AtsMetadataExtraData = TypeAliasType(
+    "AtsMetadataExtraData", Union[Dict[str, Any], str, float, bool, List[AtsMetadata5]]
+)
+
+
+class AtsMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+    TEXT = "TEXT"
+    NUMBER = "NUMBER"
+    DATE = "DATE"
+    BOOLEAN = "BOOLEAN"
+    FILE = "FILE"
+    TEXTAREA = "TEXTAREA"
+    SINGLE_SELECT = "SINGLE_SELECT"
+    MULTIPLE_SELECT = "MULTIPLE_SELECT"
+    MEASUREMENT = "MEASUREMENT"
+    PRICE = "PRICE"
+    YES_NO = "YES_NO"
+    CURRENCY = "CURRENCY"
+    URL = "URL"
+
+
+class AtsMetadataSchemas1TypedDict(TypedDict):
+    pass
+
+
+class AtsMetadataSchemas1(BaseModel):
+    pass
+
+
+AtsMetadataSchemas5TypedDict = TypeAliasType(
+    "AtsMetadataSchemas5TypedDict",
+    Union[AtsMetadataSchemas1TypedDict, str, float, bool],
+)
+
+
+AtsMetadataSchemas5 = TypeAliasType(
+    "AtsMetadataSchemas5", Union[AtsMetadataSchemas1, str, float, bool]
+)
+
+
+AtsMetadataValueTypedDict = TypeAliasType(
+    "AtsMetadataValueTypedDict",
+    Union[Dict[str, Any], str, float, bool, List[AtsMetadataSchemas5TypedDict]],
+)
+
+
+AtsMetadataValue = TypeAliasType(
+    "AtsMetadataValue",
+    Union[Dict[str, Any], str, float, bool, List[AtsMetadataSchemas5]],
 )
 
 
 class AtsMetadataTypedDict(TypedDict):
-    extra_data: NotRequired[ExtraDataTypedDict]
-    format_: NotRequired[Format]
+    extra_data: NotRequired[AtsMetadataExtraDataTypedDict]
+    format_: NotRequired[AtsMetadataFormat]
     id: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    value: NotRequired[ValueTypedDict]
+    value: NotRequired[AtsMetadataValueTypedDict]
 
 
 class AtsMetadata(BaseModel):
-    extra_data: Optional[ExtraData] = None
+    extra_data: Optional[AtsMetadataExtraData] = None
 
-    format_: Annotated[Optional[Format], pydantic.Field(alias="format")] = None
+    format_: Annotated[Optional[AtsMetadataFormat], pydantic.Field(alias="format")] = (
+        None
+    )
 
     id: Optional[str] = None
 
@@ -98,13 +107,13 @@ class AtsMetadata(BaseModel):
 
     slug: Optional[str] = None
 
-    value: Optional[Value] = None
+    value: Optional[AtsMetadataValue] = None
 
     @field_serializer("format_")
     def serialize_format_(self, value):
         if isinstance(value, str):
             try:
-                return shared.Format(value)
+                return shared.AtsMetadataFormat(value)
             except ValueError:
                 return value
         return value

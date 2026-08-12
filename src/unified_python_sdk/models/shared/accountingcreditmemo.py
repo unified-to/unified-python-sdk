@@ -7,6 +7,7 @@ from .accountingcreditapplication import (
     AccountingCreditApplicationTypedDict,
 )
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -53,6 +54,7 @@ class AccountingCreditmemoTypedDict(TypedDict):
     id: NotRequired[str]
     invoice_id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
     paid_amount: NotRequired[float]
@@ -100,6 +102,8 @@ class AccountingCreditmemo(BaseModel):
     invoice_id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     notes: Optional[str] = None
 
@@ -171,6 +175,7 @@ class AccountingCreditmemo(BaseModel):
                 "id",
                 "invoice_id",
                 "lineitems",
+                "metadata",
                 "notes",
                 "organization_id",
                 "paid_amount",

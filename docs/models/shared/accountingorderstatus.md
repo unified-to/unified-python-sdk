@@ -24,3 +24,6 @@ value = AccountingOrderStatus.DRAFT
 | `REFUNDED`           | REFUNDED             |
 | `SUBMITTED`          | SUBMITTED            |
 | `DELETED`            | DELETED              |
+| `OPEN`               | OPEN                 |
+| `COMPLETED`          | COMPLETED            |
+| `CANCELED`           | CANCELED             |

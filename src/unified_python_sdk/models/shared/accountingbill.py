@@ -3,6 +3,7 @@
 from __future__ import annotations
 from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from .accountingpaymentreference import (
     AccountingPaymentReference,
     AccountingPaymentReferenceTypedDict,
@@ -76,6 +77,7 @@ class AccountingBillTypedDict(TypedDict):
     due_at: NotRequired[datetime]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
     paid_amount: NotRequired[float]
@@ -123,6 +125,8 @@ class AccountingBill(BaseModel):
     id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     notes: Optional[str] = None
 
@@ -217,6 +221,7 @@ class AccountingBill(BaseModel):
                 "due_at",
                 "id",
                 "lineitems",
+                "metadata",
                 "notes",
                 "organization_id",
                 "paid_amount",

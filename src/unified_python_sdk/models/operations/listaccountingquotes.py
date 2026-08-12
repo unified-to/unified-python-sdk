@@ -48,6 +48,7 @@ class ListAccountingQuotesQueryParamFields(str, Enum):
     CATEGORY_IDS = "category_ids"
     URL = "url"
     ORGANIZATION_ID = "organization_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

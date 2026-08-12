@@ -18,6 +18,8 @@ class AccountingFeeType(str, Enum, metaclass=utils.OpenEnumMeta):
     GIFT_WRAP = "GIFT_WRAP"
     COD = "COD"
     SURCHARGE = "SURCHARGE"
+    TIP = "TIP"
+    SERVICE_CHARGE = "SERVICE_CHARGE"
     OTHER = "OTHER"
 
 

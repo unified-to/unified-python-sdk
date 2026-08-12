@@ -6,6 +6,7 @@ from .accountingcreditapplication import (
     AccountingCreditApplicationTypedDict,
 )
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -42,6 +43,7 @@ class AccountingVendorcreditTypedDict(TypedDict):
     due_at: NotRequired[datetime]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
     posted_at: NotRequired[datetime]
@@ -74,6 +76,8 @@ class AccountingVendorcredit(BaseModel):
     id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     notes: Optional[str] = None
 
@@ -113,6 +117,7 @@ class AccountingVendorcredit(BaseModel):
                 "due_at",
                 "id",
                 "lineitems",
+                "metadata",
                 "notes",
                 "organization_id",
                 "posted_at",

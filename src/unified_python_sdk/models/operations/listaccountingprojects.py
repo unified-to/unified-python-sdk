@@ -50,6 +50,7 @@ class ListAccountingProjectsQueryParamFields(str, Enum):
     CATEGORY_IDS = "category_ids"
     LOCATION_ID = "location_id"
     ORGANIZATION_ID = "organization_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

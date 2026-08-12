@@ -31,6 +31,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.assessment import Assessment
     from unified_python_sdk.asset import Asset
     from unified_python_sdk.ats import Ats
+    from unified_python_sdk.attendance import Attendance
     from unified_python_sdk.auth import Auth
     from unified_python_sdk.availability import Availability
     from unified_python_sdk.balancesheet import Balancesheet
@@ -284,6 +285,7 @@ class UnifiedTo(BaseSDK):
     model: "Model"
     prompt: "Prompt"
     hris: "Hris"
+    attendance: "Attendance"
     bankaccount: "Bankaccount"
     benefit: "Benefit"
     deduction: "Deduction"
@@ -455,6 +457,7 @@ class UnifiedTo(BaseSDK):
         "model": ("unified_python_sdk.model", "Model"),
         "prompt": ("unified_python_sdk.prompt", "Prompt"),
         "hris": ("unified_python_sdk.hris", "Hris"),
+        "attendance": ("unified_python_sdk.attendance", "Attendance"),
         "bankaccount": ("unified_python_sdk.bankaccount", "Bankaccount"),
         "benefit": ("unified_python_sdk.benefit", "Benefit"),
         "deduction": ("unified_python_sdk.deduction", "Deduction"),

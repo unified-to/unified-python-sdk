@@ -12,6 +12,27 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class PaymentPaymentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUCCEEDED = "SUCCEEDED"
+    PENDING = "PENDING"
+    AUTHORIZED = "AUTHORIZED"
+    FAILED = "FAILED"
+    CANCELED = "CANCELED"
+
+
+class TenderType(str, Enum, metaclass=utils.OpenEnumMeta):
+    CARD = "CARD"
+    CASH = "CASH"
+    GIFT_CARD = "GIFT_CARD"
+    BANK_TRANSFER = "BANK_TRANSFER"
+    WALLET = "WALLET"
+    CHECK = "CHECK"
+    STORE_CREDIT = "STORE_CREDIT"
+    BUY_NOW_PAY_LATER = "BUY_NOW_PAY_LATER"
+    EXTERNAL = "EXTERNAL"
+    OTHER = "OTHER"
+
+
 class PaymentPaymentType(str, Enum, metaclass=utils.OpenEnumMeta):
     INVOICE = "INVOICE"
     BILL = "BILL"
@@ -22,17 +43,26 @@ class PaymentPaymentTypedDict(TypedDict):
     allocations: NotRequired[List[PaymentAllocationTypedDict]]
     r"""What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate invoice/bill payment endpoints."""
     bill_id: NotRequired[str]
+    card_brand: NotRequired[str]
+    card_last4: NotRequired[str]
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    device_id: NotRequired[str]
+    fee_amount: NotRequired[float]
     id: NotRequired[str]
     invoice_id: NotRequired[str]
     link_id: NotRequired[str]
+    location_id: NotRequired[str]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
     payment_method: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
+    salesorder_id: NotRequired[str]
+    status: NotRequired[PaymentPaymentStatus]
+    tender_type: NotRequired[TenderType]
+    tip_amount: NotRequired[float]
     total_amount: NotRequired[float]
     type: NotRequired[PaymentPaymentType]
     updated_at: NotRequired[datetime]
@@ -46,17 +76,27 @@ class PaymentPayment(BaseModel):
 
     bill_id: Optional[str] = None
 
+    card_brand: Optional[str] = None
+
+    card_last4: Optional[str] = None
+
     contact_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = "USD"
 
+    device_id: Optional[str] = None
+
+    fee_amount: Optional[float] = None
+
     id: Optional[str] = None
 
     invoice_id: Optional[str] = None
 
     link_id: Optional[str] = None
+
+    location_id: Optional[str] = None
 
     notes: Optional[str] = None
 
@@ -68,11 +108,37 @@ class PaymentPayment(BaseModel):
 
     reference: Optional[str] = None
 
+    salesorder_id: Optional[str] = None
+
+    status: Optional[PaymentPaymentStatus] = None
+
+    tender_type: Optional[TenderType] = None
+
+    tip_amount: Optional[float] = None
+
     total_amount: Optional[float] = None
 
     type: Optional[PaymentPaymentType] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PaymentPaymentStatus(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("tender_type")
+    def serialize_tender_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.TenderType(value)
+            except ValueError:
+                return value
+        return value
 
     @field_serializer("type")
     def serialize_type(self, value):
@@ -90,17 +156,26 @@ class PaymentPayment(BaseModel):
                 "account_id",
                 "allocations",
                 "bill_id",
+                "card_brand",
+                "card_last4",
                 "contact_id",
                 "created_at",
                 "currency",
+                "device_id",
+                "fee_amount",
                 "id",
                 "invoice_id",
                 "link_id",
+                "location_id",
                 "notes",
                 "organization_id",
                 "payment_method",
                 "raw",
                 "reference",
+                "salesorder_id",
+                "status",
+                "tender_type",
+                "tip_amount",
                 "total_amount",
                 "type",
                 "updated_at",

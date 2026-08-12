@@ -496,6 +496,15 @@ asyncio.run(main())
 * [update_ats_job](docs/sdks/ats/README.md#update_ats_job) - Update a job
 * [update_ats_scorecard](docs/sdks/ats/README.md#update_ats_scorecard) - Update a scorecard
 
+### [Attendance](docs/sdks/attendance/README.md)
+
+* [create_hris_attendance](docs/sdks/attendance/README.md#create_hris_attendance) - Create an attendance
+* [get_hris_attendance](docs/sdks/attendance/README.md#get_hris_attendance) - Retrieve an attendance
+* [list_hris_attendances](docs/sdks/attendance/README.md#list_hris_attendances) - List all attendances
+* [patch_hris_attendance](docs/sdks/attendance/README.md#patch_hris_attendance) - Update an attendance
+* [remove_hris_attendance](docs/sdks/attendance/README.md#remove_hris_attendance) - Remove an attendance
+* [update_hris_attendance](docs/sdks/attendance/README.md#update_hris_attendance) - Update an attendance
+
 ### [Auth](docs/sdks/auth/README.md)
 
 * [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Authorize new connection
@@ -1174,6 +1183,7 @@ asyncio.run(main())
 
 ### [Hris](docs/sdks/hris/README.md)
 
+* [create_hris_attendance](docs/sdks/hris/README.md#create_hris_attendance) - Create an attendance
 * [create_hris_bankaccount](docs/sdks/hris/README.md#create_hris_bankaccount) - Create a bankaccount
 * [create_hris_benefit](docs/sdks/hris/README.md#create_hris_benefit) - Create a benefit
 * [create_hris_company](docs/sdks/hris/README.md#create_hris_company) - Create a company
@@ -1185,6 +1195,7 @@ asyncio.run(main())
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
 * [create_hris_timeoff](docs/sdks/hris/README.md#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](docs/sdks/hris/README.md#create_hris_timeshift) - Create a timeshift
+* [get_hris_attendance](docs/sdks/hris/README.md#get_hris_attendance) - Retrieve an attendance
 * [get_hris_bankaccount](docs/sdks/hris/README.md#get_hris_bankaccount) - Retrieve a bankaccount
 * [get_hris_benefit](docs/sdks/hris/README.md#get_hris_benefit) - Retrieve a benefit
 * [get_hris_company](docs/sdks/hris/README.md#get_hris_company) - Retrieve a company
@@ -1198,6 +1209,7 @@ asyncio.run(main())
 * [get_hris_taxonomy](docs/sdks/hris/README.md#get_hris_taxonomy) - Retrieve a taxonomy
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](docs/sdks/hris/README.md#get_hris_timeshift) - Retrieve a timeshift
+* [list_hris_attendances](docs/sdks/hris/README.md#list_hris_attendances) - List all attendances
 * [list_hris_bankaccounts](docs/sdks/hris/README.md#list_hris_bankaccounts) - List all bankaccounts
 * [list_hris_benefits](docs/sdks/hris/README.md#list_hris_benefits) - List all benefits
 * [list_hris_companies](docs/sdks/hris/README.md#list_hris_companies) - List all companies
@@ -1211,6 +1223,7 @@ asyncio.run(main())
 * [list_hris_taxonomies](docs/sdks/hris/README.md#list_hris_taxonomies) - List all taxonomies
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](docs/sdks/hris/README.md#list_hris_timeshifts) - List all timeshifts
+* [patch_hris_attendance](docs/sdks/hris/README.md#patch_hris_attendance) - Update an attendance
 * [patch_hris_bankaccount](docs/sdks/hris/README.md#patch_hris_bankaccount) - Update a bankaccount
 * [patch_hris_benefit](docs/sdks/hris/README.md#patch_hris_benefit) - Update a benefit
 * [patch_hris_company](docs/sdks/hris/README.md#patch_hris_company) - Update a company
@@ -1222,6 +1235,7 @@ asyncio.run(main())
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
 * [patch_hris_timeoff](docs/sdks/hris/README.md#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](docs/sdks/hris/README.md#patch_hris_timeshift) - Update a timeshift
+* [remove_hris_attendance](docs/sdks/hris/README.md#remove_hris_attendance) - Remove an attendance
 * [remove_hris_bankaccount](docs/sdks/hris/README.md#remove_hris_bankaccount) - Remove a bankaccount
 * [remove_hris_benefit](docs/sdks/hris/README.md#remove_hris_benefit) - Remove a benefit
 * [remove_hris_company](docs/sdks/hris/README.md#remove_hris_company) - Remove a company
@@ -1233,6 +1247,7 @@ asyncio.run(main())
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
 * [remove_hris_timeoff](docs/sdks/hris/README.md#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](docs/sdks/hris/README.md#remove_hris_timeshift) - Remove a timeshift
+* [update_hris_attendance](docs/sdks/hris/README.md#update_hris_attendance) - Update an attendance
 * [update_hris_bankaccount](docs/sdks/hris/README.md#update_hris_bankaccount) - Update a bankaccount
 * [update_hris_benefit](docs/sdks/hris/README.md#update_hris_benefit) - Update a benefit
 * [update_hris_company](docs/sdks/hris/README.md#update_hris_company) - Update a company

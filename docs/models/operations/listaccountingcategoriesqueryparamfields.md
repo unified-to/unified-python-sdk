@@ -23,4 +23,5 @@ value = ListAccountingCategoriesQueryParamFields.ID
 | `TYPE`            | type              |
 | `CODE`            | code              |
 | `ORGANIZATION_ID` | organization_id   |
+| `METADATA`        | metadata          |
 | `RAW`             | raw               |
