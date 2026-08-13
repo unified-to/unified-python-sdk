@@ -6,6 +6,7 @@ from .lmscontentlocalization import (
     LmsContentLocalizationTypedDict,
 )
 from .lmsmedia import LmsMedia, LmsMediaTypedDict
+from .lmsreference import LmsReference, LmsReferenceTypedDict
 from .lmssubject import LmsSubject, LmsSubjectTypedDict
 from datetime import datetime
 from pydantic import model_serializer
@@ -25,6 +26,8 @@ class LmsContentTypedDict(TypedDict):
     external_reference: NotRequired[str]
     id: NotRequired[str]
     instructor_ids: NotRequired[List[str]]
+    r"""@deprecated; use instructors"""
+    instructors: NotRequired[List[LmsReferenceTypedDict]]
     is_active: NotRequired[bool]
     languages: NotRequired[List[str]]
     localizations: NotRequired[List[LmsContentLocalizationTypedDict]]
@@ -62,6 +65,9 @@ class LmsContent(BaseModel):
     id: Optional[str] = None
 
     instructor_ids: Optional[List[str]] = None
+    r"""@deprecated; use instructors"""
+
+    instructors: Optional[List[LmsReference]] = None
 
     is_active: Optional[bool] = None
 
@@ -106,6 +112,7 @@ class LmsContent(BaseModel):
                 "external_reference",
                 "id",
                 "instructor_ids",
+                "instructors",
                 "is_active",
                 "languages",
                 "localizations",

@@ -984,6 +984,7 @@ if TYPE_CHECKING:
     from .lmsemail import LmsEmail, LmsEmailTypedDict
     from .lmsinstructor import LmsInstructor, LmsInstructorTypedDict
     from .lmsmedia import LmsMedia, LmsMediaType, LmsMediaTypedDict
+    from .lmsreference import LmsReference, LmsReferenceTypedDict
     from .lmsstudent import LmsStudent, LmsStudentTypedDict
     from .lmssubject import LmsSubject, LmsSubjectTypedDict
     from .lmstelephone import LmsTelephone, LmsTelephoneType, LmsTelephoneTypedDict
@@ -2862,6 +2863,8 @@ __all__ = [
     "LmsMedia",
     "LmsMediaType",
     "LmsMediaTypedDict",
+    "LmsReference",
+    "LmsReferenceTypedDict",
     "LmsStudent",
     "LmsStudentTypedDict",
     "LmsSubject",
@@ -4608,6 +4611,8 @@ _dynamic_imports: dict[str, str] = {
     "LmsMedia": ".lmsmedia",
     "LmsMediaType": ".lmsmedia",
     "LmsMediaTypedDict": ".lmsmedia",
+    "LmsReference": ".lmsreference",
+    "LmsReferenceTypedDict": ".lmsreference",
     "LmsStudent": ".lmsstudent",
     "LmsStudentTypedDict": ".lmsstudent",
     "LmsSubject": ".lmssubject",

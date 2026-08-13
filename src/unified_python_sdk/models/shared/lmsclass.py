@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .lmsmedia import LmsMedia, LmsMediaTypedDict
+from .lmsreference import LmsReference, LmsReferenceTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -15,11 +16,15 @@ class LmsClassTypedDict(TypedDict):
     description: NotRequired[str]
     id: NotRequired[str]
     instructor_ids: NotRequired[List[str]]
+    r"""@deprecated; use instructors"""
+    instructors: NotRequired[List[LmsReferenceTypedDict]]
     languages: NotRequired[List[str]]
     media: NotRequired[List[LmsMediaTypedDict]]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     student_ids: NotRequired[List[str]]
+    r"""@deprecated; use students"""
+    students: NotRequired[List[LmsReferenceTypedDict]]
     updated_at: NotRequired[datetime]
 
 
@@ -33,6 +38,9 @@ class LmsClass(BaseModel):
     id: Optional[str] = None
 
     instructor_ids: Optional[List[str]] = None
+    r"""@deprecated; use instructors"""
+
+    instructors: Optional[List[LmsReference]] = None
 
     languages: Optional[List[str]] = None
 
@@ -43,6 +51,9 @@ class LmsClass(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     student_ids: Optional[List[str]] = None
+    r"""@deprecated; use students"""
+
+    students: Optional[List[LmsReference]] = None
 
     updated_at: Optional[datetime] = None
 
@@ -55,11 +66,13 @@ class LmsClass(BaseModel):
                 "description",
                 "id",
                 "instructor_ids",
+                "instructors",
                 "languages",
                 "media",
                 "name",
                 "raw",
                 "student_ids",
+                "students",
                 "updated_at",
             ]
         )
