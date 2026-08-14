@@ -11,7 +11,7 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class AccountType(str, Enum, metaclass=utils.OpenEnumMeta):
+class HrisBankaccountAccountType(str, Enum, metaclass=utils.OpenEnumMeta):
     CHECKING = "CHECKING"
     SAVINGS = "SAVINGS"
 
@@ -19,7 +19,7 @@ class AccountType(str, Enum, metaclass=utils.OpenEnumMeta):
 class HrisBankaccountTypedDict(TypedDict):
     account_number: NotRequired[str]
     account_number_last4: NotRequired[str]
-    account_type: NotRequired[AccountType]
+    account_type: NotRequired[HrisBankaccountAccountType]
     bank_name: NotRequired[str]
     company_id: NotRequired[str]
     created_at: NotRequired[datetime]
@@ -37,7 +37,7 @@ class HrisBankaccount(BaseModel):
 
     account_number_last4: Optional[str] = None
 
-    account_type: Optional[AccountType] = None
+    account_type: Optional[HrisBankaccountAccountType] = None
 
     bank_name: Optional[str] = None
 
@@ -63,7 +63,7 @@ class HrisBankaccount(BaseModel):
     def serialize_account_type(self, value):
         if isinstance(value, str):
             try:
-                return shared.AccountType(value)
+                return shared.HrisBankaccountAccountType(value)
             except ValueError:
                 return value
         return value

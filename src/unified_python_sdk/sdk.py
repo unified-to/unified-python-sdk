@@ -36,6 +36,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.availability import Availability
     from unified_python_sdk.balancesheet import Balancesheet
     from unified_python_sdk.bankaccount import Bankaccount
+    from unified_python_sdk.bankfeedaccount import Bankfeedaccount
+    from unified_python_sdk.bankfeedtransaction import Bankfeedtransaction
     from unified_python_sdk.benefit import Benefit
     from unified_python_sdk.bill import Bill
     from unified_python_sdk.branch import Branch
@@ -196,6 +198,8 @@ class UnifiedTo(BaseSDK):
     agedpayable: "Agedpayable"
     agedreceivable: "Agedreceivable"
     balancesheet: "Balancesheet"
+    bankfeedaccount: "Bankfeedaccount"
+    bankfeedtransaction: "Bankfeedtransaction"
     bill: "Bill"
     cashflow: "Cashflow"
     category: "Category"
@@ -365,6 +369,11 @@ class UnifiedTo(BaseSDK):
         "agedpayable": ("unified_python_sdk.agedpayable", "Agedpayable"),
         "agedreceivable": ("unified_python_sdk.agedreceivable", "Agedreceivable"),
         "balancesheet": ("unified_python_sdk.balancesheet", "Balancesheet"),
+        "bankfeedaccount": ("unified_python_sdk.bankfeedaccount", "Bankfeedaccount"),
+        "bankfeedtransaction": (
+            "unified_python_sdk.bankfeedtransaction",
+            "Bankfeedtransaction",
+        ),
         "bill": ("unified_python_sdk.bill", "Bill"),
         "cashflow": ("unified_python_sdk.cashflow", "Cashflow"),
         "category": ("unified_python_sdk.category", "Category"),

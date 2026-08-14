@@ -45,6 +45,17 @@ if TYPE_CHECKING:
         AccountingBalancesheetItem,
         AccountingBalancesheetItemTypedDict,
     )
+    from .accountingbankfeedaccount import (
+        AccountType,
+        AccountingBankfeedaccount,
+        AccountingBankfeedaccountStatus,
+        AccountingBankfeedaccountTypedDict,
+    )
+    from .accountingbankfeedtransaction import (
+        AccountingBankfeedtransaction,
+        AccountingBankfeedtransactionType,
+        AccountingBankfeedtransactionTypedDict,
+    )
     from .accountingbill import (
         AccountingBill,
         AccountingBillStatus,
@@ -657,7 +668,11 @@ if TYPE_CHECKING:
         HrisAttendanceTypedDict,
     )
     from .hrisattendancebreak import HrisAttendanceBreak, HrisAttendanceBreakTypedDict
-    from .hrisbankaccount import AccountType, HrisBankaccount, HrisBankaccountTypedDict
+    from .hrisbankaccount import (
+        HrisBankaccount,
+        HrisBankaccountAccountType,
+        HrisBankaccountTypedDict,
+    )
     from .hrisbenefit import (
         CoverageLevel,
         EmployerContributionType,
@@ -768,6 +783,7 @@ if TYPE_CHECKING:
         ListAdID,
         ListApplicationID,
         ListAssignedUserID,
+        ListBankfeedaccountID,
         ListBenefitID,
         ListBillID,
         ListBranchID,
@@ -888,6 +904,7 @@ if TYPE_CHECKING:
         VirtualWebhookAdID,
         VirtualWebhookApplicationID,
         VirtualWebhookAssignedUserID,
+        VirtualWebhookBankfeedaccountID,
         VirtualWebhookBenefitID,
         VirtualWebhookBillID,
         VirtualWebhookBranchID,
@@ -2087,6 +2104,12 @@ __all__ = [
     "AccountingBalancesheetItem",
     "AccountingBalancesheetItemTypedDict",
     "AccountingBalancesheetTypedDict",
+    "AccountingBankfeedaccount",
+    "AccountingBankfeedaccountStatus",
+    "AccountingBankfeedaccountTypedDict",
+    "AccountingBankfeedtransaction",
+    "AccountingBankfeedtransactionType",
+    "AccountingBankfeedtransactionTypedDict",
     "AccountingBill",
     "AccountingBillStatus",
     "AccountingBillTypedDict",
@@ -2637,6 +2660,7 @@ __all__ = [
     "HrisAttendanceStatus",
     "HrisAttendanceTypedDict",
     "HrisBankaccount",
+    "HrisBankaccountAccountType",
     "HrisBankaccountTypedDict",
     "HrisBenefit",
     "HrisBenefitFrequency",
@@ -2757,6 +2781,7 @@ __all__ = [
     "ListAdID",
     "ListApplicationID",
     "ListAssignedUserID",
+    "ListBankfeedaccountID",
     "ListBenefitID",
     "ListBillID",
     "ListBranchID",
@@ -3613,6 +3638,7 @@ __all__ = [
     "VirtualWebhookAdID",
     "VirtualWebhookApplicationID",
     "VirtualWebhookAssignedUserID",
+    "VirtualWebhookBankfeedaccountID",
     "VirtualWebhookBenefitID",
     "VirtualWebhookBillID",
     "VirtualWebhookBranchID",
@@ -3708,6 +3734,13 @@ _dynamic_imports: dict[str, str] = {
     "AccountingBalancesheetTypedDict": ".accountingbalancesheet",
     "AccountingBalancesheetItem": ".accountingbalancesheetitem",
     "AccountingBalancesheetItemTypedDict": ".accountingbalancesheetitem",
+    "AccountType": ".accountingbankfeedaccount",
+    "AccountingBankfeedaccount": ".accountingbankfeedaccount",
+    "AccountingBankfeedaccountStatus": ".accountingbankfeedaccount",
+    "AccountingBankfeedaccountTypedDict": ".accountingbankfeedaccount",
+    "AccountingBankfeedtransaction": ".accountingbankfeedtransaction",
+    "AccountingBankfeedtransactionType": ".accountingbankfeedtransaction",
+    "AccountingBankfeedtransactionTypedDict": ".accountingbankfeedtransaction",
     "AccountingBill": ".accountingbill",
     "AccountingBillStatus": ".accountingbill",
     "AccountingBillTypedDict": ".accountingbill",
@@ -4273,8 +4306,8 @@ _dynamic_imports: dict[str, str] = {
     "HrisAttendanceTypedDict": ".hrisattendance",
     "HrisAttendanceBreak": ".hrisattendancebreak",
     "HrisAttendanceBreakTypedDict": ".hrisattendancebreak",
-    "AccountType": ".hrisbankaccount",
     "HrisBankaccount": ".hrisbankaccount",
+    "HrisBankaccountAccountType": ".hrisbankaccount",
     "HrisBankaccountTypedDict": ".hrisbankaccount",
     "CoverageLevel": ".hrisbenefit",
     "EmployerContributionType": ".hrisbenefit",
@@ -4383,6 +4416,7 @@ _dynamic_imports: dict[str, str] = {
     "ListAdID": ".integrationsupport",
     "ListApplicationID": ".integrationsupport",
     "ListAssignedUserID": ".integrationsupport",
+    "ListBankfeedaccountID": ".integrationsupport",
     "ListBenefitID": ".integrationsupport",
     "ListBillID": ".integrationsupport",
     "ListBranchID": ".integrationsupport",
@@ -4503,6 +4537,7 @@ _dynamic_imports: dict[str, str] = {
     "VirtualWebhookAdID": ".integrationsupport",
     "VirtualWebhookApplicationID": ".integrationsupport",
     "VirtualWebhookAssignedUserID": ".integrationsupport",
+    "VirtualWebhookBankfeedaccountID": ".integrationsupport",
     "VirtualWebhookBenefitID": ".integrationsupport",
     "VirtualWebhookBillID": ".integrationsupport",
     "VirtualWebhookBranchID": ".integrationsupport",
