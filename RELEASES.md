@@ -4399,3 +4399,13 @@ Based on:
 - [python v0.59.28] .
 ### Releases
 - [PyPI v0.59.28] https://pypi.org/project/Unified-python-sdk/0.59.28 - .
+
+## 2026-08-15 00:22:46
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.794.0 (2.930.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.59.29] .
+### Releases
+- [PyPI v0.59.29] https://pypi.org/project/Unified-python-sdk/0.59.29 - .
