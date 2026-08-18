@@ -26,4 +26,5 @@ value = ListUcCallsQueryParamFields.ID
 | `USER_NAME`  | user_name    |
 | `USER_PHONE` | user_phone   |
 | `TYPE`       | type         |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

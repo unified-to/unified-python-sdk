@@ -17,6 +17,7 @@ value = ListShippingShipmentsQueryParamFields.ID
 | `CREATED_AT`                  | created_at                    |
 | `UPDATED_AT`                  | updated_at                    |
 | `ORDER_ID`                    | order_id                      |
+| `ORGANIZATION_ID`             | organization_id               |
 | `FROM_ADDRESS`                | from_address                  |
 | `TO_ADDRESS`                  | to_address                    |
 | `PACKAGES`                    | packages                      |
@@ -48,4 +49,7 @@ value = ListShippingShipmentsQueryParamFields.ID
 | `ORIGINAL_SHIPMENT_ID`        | original_shipment_id          |
 | `RETURN_REASON`               | return_reason                 |
 | `RETURN_TYPE`                 | return_type                   |
+| `CARRIER_NAME`                | carrier_name                  |
+| `TRACKING_URL`                | tracking_url                  |
+| `LINEITEMS`                   | lineitems                     |
 | `RAW`                         | raw                           |

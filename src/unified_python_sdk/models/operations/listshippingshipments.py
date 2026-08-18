@@ -20,6 +20,7 @@ class ListShippingShipmentsQueryParamFields(str, Enum):
     CREATED_AT = "created_at"
     UPDATED_AT = "updated_at"
     ORDER_ID = "order_id"
+    ORGANIZATION_ID = "organization_id"
     FROM_ADDRESS = "from_address"
     TO_ADDRESS = "to_address"
     PACKAGES = "packages"
@@ -51,6 +52,9 @@ class ListShippingShipmentsQueryParamFields(str, Enum):
     ORIGINAL_SHIPMENT_ID = "original_shipment_id"
     RETURN_REASON = "return_reason"
     RETURN_TYPE = "return_type"
+    CARRIER_NAME = "carrier_name"
+    TRACKING_URL = "tracking_url"
+    LINEITEMS = "lineitems"
     RAW = "raw"
 
 
@@ -66,6 +70,8 @@ class ListShippingShipmentsRequestTypedDict(TypedDict):
     order: NotRequired[str]
     order_id: NotRequired[str]
     r"""The AccountingOrder ID to filter by"""
+    org_id: NotRequired[str]
+    r"""The org ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -114,6 +120,12 @@ class ListShippingShipmentsRequest(BaseModel):
     ] = None
     r"""The AccountingOrder ID to filter by"""
 
+    org_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The org ID to filter by"""
+
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -147,6 +159,7 @@ class ListShippingShipmentsRequest(BaseModel):
                 "offset",
                 "order",
                 "order_id",
+                "org_id",
                 "query",
                 "raw",
                 "sort",

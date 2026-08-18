@@ -6,6 +6,7 @@ from .property_uccall_telephone import (
     PropertyUcCallTelephoneTypedDict,
 )
 from .uccontact import UcContact, UcContactTypedDict
+from .ucmetadata import UcMetadata, UcMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -28,6 +29,7 @@ class UcCallTypedDict(TypedDict):
     end_at: NotRequired[datetime]
     id: NotRequired[str]
     is_private: NotRequired[bool]
+    metadata: NotRequired[List[UcMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     telephone: NotRequired[PropertyUcCallTelephoneTypedDict]
@@ -51,6 +53,8 @@ class UcCall(BaseModel):
     id: Optional[str] = None
 
     is_private: Optional[bool] = None
+
+    metadata: Optional[List[UcMetadata]] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -88,6 +92,7 @@ class UcCall(BaseModel):
                 "end_at",
                 "id",
                 "is_private",
+                "metadata",
                 "raw",
                 "start_at",
                 "telephone",

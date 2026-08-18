@@ -40,6 +40,8 @@ class ListShippingTrackingsRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    order_id: NotRequired[str]
+    r"""The AccountingOrder ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -76,6 +78,12 @@ class ListShippingTrackingsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    order_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The AccountingOrder ID to filter by"""
+
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -107,6 +115,7 @@ class ListShippingTrackingsRequest(BaseModel):
                 "limit",
                 "offset",
                 "order",
+                "order_id",
                 "query",
                 "raw",
                 "sort",

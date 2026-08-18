@@ -22,6 +22,10 @@ from .property_shippingshipment_to_address import (
     PropertyShippingShipmentToAddressTypedDict,
 )
 from .shippingpackage import ShippingPackage, ShippingPackageTypedDict
+from .shippingshipmentlineitem import (
+    ShippingShipmentLineitem,
+    ShippingShipmentLineitemTypedDict,
+)
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -59,6 +63,7 @@ class ShippingShipmentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class ShippingShipmentTypedDict(TypedDict):
     carrier_id: NotRequired[str]
+    carrier_name: NotRequired[str]
     created_at: NotRequired[datetime]
     customs: NotRequired[PropertyShippingShipmentCustomsTypedDict]
     r"""Customs information"""
@@ -73,7 +78,10 @@ class ShippingShipmentTypedDict(TypedDict):
     is_return: NotRequired[bool]
     is_signature_required: NotRequired[bool]
     label_id: NotRequired[str]
+    lineitems: NotRequired[List[ShippingShipmentLineitemTypedDict]]
+    r"""Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments"""
     order_id: NotRequired[str]
+    organization_id: NotRequired[str]
     original_shipment_id: NotRequired[str]
     packages: NotRequired[List[ShippingPackageTypedDict]]
     r"""Array of packages in this shipment"""
@@ -98,6 +106,7 @@ class ShippingShipmentTypedDict(TypedDict):
     to_address: NotRequired[PropertyShippingShipmentToAddressTypedDict]
     r"""Destination address"""
     tracking_id: NotRequired[str]
+    tracking_url: NotRequired[str]
     updated_at: NotRequired[datetime]
     warehouse_location_id: NotRequired[str]
     warehouse_location_name: NotRequired[str]
@@ -105,6 +114,8 @@ class ShippingShipmentTypedDict(TypedDict):
 
 class ShippingShipment(BaseModel):
     carrier_id: Optional[str] = None
+
+    carrier_name: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
@@ -131,7 +142,12 @@ class ShippingShipment(BaseModel):
 
     label_id: Optional[str] = None
 
+    lineitems: Optional[List[ShippingShipmentLineitem]] = None
+    r"""Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments"""
+
     order_id: Optional[str] = None
+
+    organization_id: Optional[str] = None
 
     original_shipment_id: Optional[str] = None
 
@@ -177,6 +193,8 @@ class ShippingShipment(BaseModel):
 
     tracking_id: Optional[str] = None
 
+    tracking_url: Optional[str] = None
+
     updated_at: Optional[datetime] = None
 
     warehouse_location_id: Optional[str] = None
@@ -206,6 +224,7 @@ class ShippingShipment(BaseModel):
         optional_fields = set(
             [
                 "carrier_id",
+                "carrier_name",
                 "created_at",
                 "customs",
                 "from_address",
@@ -217,7 +236,9 @@ class ShippingShipment(BaseModel):
                 "is_return",
                 "is_signature_required",
                 "label_id",
+                "lineitems",
                 "order_id",
+                "organization_id",
                 "original_shipment_id",
                 "packages",
                 "rate_amount",
@@ -238,6 +259,7 @@ class ShippingShipment(BaseModel):
                 "status",
                 "to_address",
                 "tracking_id",
+                "tracking_url",
                 "updated_at",
                 "warehouse_location_id",
                 "warehouse_location_name",
