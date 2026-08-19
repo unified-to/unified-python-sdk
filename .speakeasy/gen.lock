@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 0c936c60770ab094bb7fea41b06b41b6
+  docChecksum: 886b4ea0644bd8b8175e53cfbdd19e43
   docVersion: "1.0"
-  speakeasyVersion: 1.794.1
+  speakeasyVersion: 1.795.0
   generationVersion: 2.931.0
-  releaseVersion: 0.60.0
-  configChecksum: b1d28ef87066080bbde38dc58d95a6b5
+  releaseVersion: 0.60.1
+  configChecksum: 2dd14544c5d989f13f06c22bb5405c38
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 4e4429ab-65bf-44b7-8184-275f8e5d17a6
-  pristine_commit_hash: 2a529814964e4aa9aac935f9b17159ae325d8626
-  pristine_tree_hash: 1d4306b99cb0d91da38dfd7b9b717611fd24d1a4
+  generation_id: 808d5e37-2e3e-426a-a20f-17d79e3c8acb
+  pristine_commit_hash: add4158fc8890a5ee9eef7260b3e93d80dfdae91
+  pristine_tree_hash: fae57b0b25de1d3ca842ca3ec6be6cd0f1415e31
 features:
   python:
     acceptHeaders: 3.0.0
@@ -3978,8 +3978,8 @@ trackedFiles:
     pristine_git_object: 70974fc54ad3e298ceda11336e06e614ded9ae81
   docs/models/operations/listatsapplicationstatusesrequest.md:
     id: 79aed68928c7
-    last_write_checksum: sha1:503c4fc8e1fd4e1f977de232561799a5b68b7819
-    pristine_git_object: f1109bc7bc32369123370c0ee87ae7d35bcb7171
+    last_write_checksum: sha1:5ccf3a6647864babf73afde9a7acb7d3c2d8d493
+    pristine_git_object: 352ea42ca3c9ba7ed8ee00b88d54240d8a57bd92
   docs/models/operations/listatsapplicationstatusesresponse.md:
     id: 540bd9478c70
     last_write_checksum: sha1:01a929676e86b6d1a1593beb374d19ab26d5fabb
@@ -14450,8 +14450,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:04abf5d4d0c7ecabc0e840241d208b0eb565281e
-    pristine_git_object: e68835e3b084978d8d77beba51efd23bbf3bfbb0
+    last_write_checksum: sha1:d3f55f3a5eee10b4bc792fa351e8ed5e6825b6c9
+    pristine_git_object: f5f102e33e23b7406b9f3347d11878bbf0e98083
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -14478,8 +14478,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:31f9c1eba0c0038e069df20bb6205f2d407f2fb7
-    pristine_git_object: 18d0fc5fd8f129483b9db5952462c80014602516
+    last_write_checksum: sha1:842fe7027c31b58f8cd749d940c9d1f196bce08b
+    pristine_git_object: 5b3e88fbc49a286f625fcc1dda0b293908171f77
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -16250,8 +16250,8 @@ trackedFiles:
     pristine_git_object: 01db96d02b89f42ebff587b501733c794bac6e77
   src/unified_python_sdk/models/operations/listatsapplicationstatuses.py:
     id: 8735cf38afc2
-    last_write_checksum: sha1:48919a4a8ac6febf0f5276d5fe938a625db77431
-    pristine_git_object: 6ef26ce392f8d3e0d011e06c6b9bba4f0fa2dac2
+    last_write_checksum: sha1:edd00c6d5de3a5fee5d93790d1945403292d933e
+    pristine_git_object: a53ef9d45c59bd1c1202be923e350a6d12c496f6
   src/unified_python_sdk/models/operations/listatscandidates.py:
     id: 5aa6abef9af9
     last_write_checksum: sha1:40632b691238b530928b16723e28c04b58a04fd1
@@ -34586,7 +34586,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.shipping.create_shipping_shipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.shipping.get_shipping_shipment()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.shipping.list_shipping_shipments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.shipping.list_shipping_trackings()`: \n  *  `request.order_id` **Added**\n* `unified_to.shipping.patch_shipping_shipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.shipping.update_shipping_shipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.shipment.create_shipping_shipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.shipment.get_shipping_shipment()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified_to.shipment.list_shipping_shipments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified_to.shipment.patch_shipping_shipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.shipment.update_shipping_shipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified_to.tracking.list_shipping_trackings()`: \n  *  `request.order_id` **Added**\n* `unified_to.uc.get_uc_call()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.uc.list_uc_calls()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified_to.call.get_uc_call()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified_to.call.list_uc_calls()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.ats.list_ats_applicationstatuses()`: \n  *  `request.job_id` **Added**\n* `unified_to.applicationstatus.list_ats_applicationstatuses()`: \n  *  `request.job_id` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

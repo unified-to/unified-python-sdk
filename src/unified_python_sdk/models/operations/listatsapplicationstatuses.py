@@ -29,6 +29,8 @@ class ListAtsApplicationstatusesRequestTypedDict(TypedDict):
     r"""ID of the connection"""
     fields: NotRequired[List[ListAtsApplicationstatusesQueryParamFields]]
     r"""Fields to return"""
+    job_id: NotRequired[str]
+    r"""The job ID to filter by"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -52,6 +54,12 @@ class ListAtsApplicationstatusesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    job_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The job ID to filter by"""
 
     limit: Annotated[
         Optional[float],
@@ -96,6 +104,7 @@ class ListAtsApplicationstatusesRequest(BaseModel):
         optional_fields = set(
             [
                 "fields",
+                "job_id",
                 "limit",
                 "offset",
                 "order",
