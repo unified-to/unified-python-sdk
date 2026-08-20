@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 886b4ea0644bd8b8175e53cfbdd19e43
+  docChecksum: f1b21bdacc13bdae2d4bb40a40b83aba
   docVersion: "1.0"
   speakeasyVersion: 1.795.0
   generationVersion: 2.931.0
-  releaseVersion: 0.60.1
-  configChecksum: 2dd14544c5d989f13f06c22bb5405c38
+  releaseVersion: 0.60.2
+  configChecksum: 581a925f0db1a9a6958dd8d0c95bc15a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 808d5e37-2e3e-426a-a20f-17d79e3c8acb
-  pristine_commit_hash: add4158fc8890a5ee9eef7260b3e93d80dfdae91
-  pristine_tree_hash: fae57b0b25de1d3ca842ca3ec6be6cd0f1415e31
+  generation_id: 87ed2a33-2dae-4898-9364-65227e76abeb
+  pristine_commit_hash: 588ba2d2e7edd394ad2aa74f37fe4211af3a023f
+  pristine_tree_hash: f424a6bf7f17326d19d647e62ecae4779dc1fc47
 features:
   python:
     acceptHeaders: 3.0.0
@@ -4654,8 +4654,8 @@ trackedFiles:
     pristine_git_object: af91bd8b5b423e53985ea2e3186da3f31b3c4407
   docs/models/operations/listhrislocationsrequest.md:
     id: 98e4114040b8
-    last_write_checksum: sha1:37d4042e9b84e073e4268eac11624772b47f3ea7
-    pristine_git_object: 5555075193e87bca5f0eedae528d08b7ac8d76cd
+    last_write_checksum: sha1:14b216571604a5733e3d59da8a6729a7aabbd5fe
+    pristine_git_object: 3cc432bd3258189c28b0861891342f146b727a29
   docs/models/operations/listhrislocationsresponse.md:
     id: fc587e73c048
     last_write_checksum: sha1:f71a2e57d8f4483db07e6c9fdaee89652d60940b
@@ -14450,8 +14450,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:d3f55f3a5eee10b4bc792fa351e8ed5e6825b6c9
-    pristine_git_object: f5f102e33e23b7406b9f3347d11878bbf0e98083
+    last_write_checksum: sha1:c6d9d55e87417cbaf5751b1075238395f559c504
+    pristine_git_object: f33dc346fc266d64efd1052f5435070435d5aa46
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -14478,8 +14478,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:842fe7027c31b58f8cd749d940c9d1f196bce08b
-    pristine_git_object: 5b3e88fbc49a286f625fcc1dda0b293908171f77
+    last_write_checksum: sha1:96e687f710f613dd2cd41e28fcebaa8da3ed54b2
+    pristine_git_object: 2aca27ffee022c37446437951f5d97ffe7adb795
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -16478,8 +16478,8 @@ trackedFiles:
     pristine_git_object: 663b52d8d49553c1380bcaf172f3c4f423422d9f
   src/unified_python_sdk/models/operations/listhrislocations.py:
     id: c8ab7369bc0b
-    last_write_checksum: sha1:67e208ee32b1e1b6707f469aff1804f1b0f9f697
-    pristine_git_object: 23f2ae3948fe6577a98e2361d60bc8052189284d
+    last_write_checksum: sha1:8674c1a07c71c72f1d993e7b22ec775b5ef59886
+    pristine_git_object: 6f8e45c0f52acb8f7d93437cd214d9d3e9fcf8ad
   src/unified_python_sdk/models/operations/listhrispayslips.py:
     id: 2f6b4c9ac67c
     last_write_checksum: sha1:12ac30e2cc18aeea1eaa4dbe5aca8faf4b7a1d4c
@@ -34586,7 +34586,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.ats.list_ats_applicationstatuses()`: \n  *  `request.job_id` **Added**\n* `unified_to.applicationstatus.list_ats_applicationstatuses()`: \n  *  `request.job_id` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.location.list_hris_locations()`: \n  *  `request.parent_id` **Added**\n* `unified_to.hris.list_hris_locations()`: \n  *  `request.parent_id` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
