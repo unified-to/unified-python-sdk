@@ -54,6 +54,7 @@ class ListHrisTimeoffsRequestTypedDict(TypedDict):
     sort: NotRequired[str]
     start_gte: NotRequired[str]
     r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    status: NotRequired[str]
     type: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -123,6 +124,11 @@ class ListHrisTimeoffsRequest(BaseModel):
     ] = None
     r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
+    status: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
     type: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -154,6 +160,7 @@ class ListHrisTimeoffsRequest(BaseModel):
                 "raw",
                 "sort",
                 "start_gte",
+                "status",
                 "type",
                 "updated_gte",
                 "user_id",

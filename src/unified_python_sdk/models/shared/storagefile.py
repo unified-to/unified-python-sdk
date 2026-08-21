@@ -33,6 +33,7 @@ class StorageFileTypedDict(TypedDict):
     references: NotRequired[List[StorageReferenceTypedDict]]
     size: NotRequired[float]
     tags: NotRequired[List[str]]
+    r"""labels"""
     type: NotRequired[StorageFileType]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -68,6 +69,7 @@ class StorageFile(BaseModel):
     size: Optional[float] = None
 
     tags: Optional[List[str]] = None
+    r"""labels"""
 
     type: Optional[StorageFileType] = None
 

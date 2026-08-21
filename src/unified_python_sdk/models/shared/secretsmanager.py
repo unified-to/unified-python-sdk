@@ -17,6 +17,12 @@ class SecretsManagerType(str, Enum, metaclass=utils.OpenEnumMeta):
     GCP = "gcp"
     HASHICORP = "hashicorp"
     COMPOSIO = "composio"
+    ONEPASSWORD = "1password"
+    BITWARDEN = "bitwarden"
+    DOPPLER = "doppler"
+    AKEYLESS = "akeyless"
+    PIPEDREAM = "pipedream"
+    ALIBABACLOUD = "alibabacloud"
 
 
 class SecretsManagerTypedDict(TypedDict):
