@@ -1593,6 +1593,10 @@ asyncio.run(main())
 * [remove_ticketing_note](docs/sdks/note/README.md#remove_ticketing_note) - Remove a note
 * [update_ticketing_note](docs/sdks/note/README.md#update_ticketing_note) - Update a note
 
+### [Notification](docs/sdks/notification/README.md)
+
+* [list_unified_notifications](docs/sdks/notification/README.md#list_unified_notifications) - List event notifications
+
 ### [Order](docs/sdks/order/README.md)
 
 * [create_accounting_order](docs/sdks/order/README.md#create_accounting_order) - Create an order
@@ -2248,6 +2252,7 @@ asyncio.run(main())
 * [list_unified_integration_workspaces](docs/sdks/unified/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
+* [list_unified_notifications](docs/sdks/unified/README.md#list_unified_notifications) - List event notifications
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [list_unified_workspace_secretsmanagers](docs/sdks/unified/README.md#list_unified_workspace_secretsmanagers) - List secrets managers
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection

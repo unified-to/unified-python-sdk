@@ -21,7 +21,7 @@ class DbType(str, Enum, metaclass=utils.OpenEnumMeta):
     SNOWFLAKE = "snowflake"
 
 
-class Event(str, Enum, metaclass=utils.OpenEnumMeta):
+class WebhookEvent(str, Enum, metaclass=utils.OpenEnumMeta):
     UPDATED = "updated"
     CREATED = "created"
     DELETED = "deleted"
@@ -207,7 +207,7 @@ class WebhookTypedDict(TypedDict):
     r"""A webhook is used to POST new/updated information to your server."""
 
     connection_id: str
-    event: Event
+    event: WebhookEvent
     object_type: WebhookObjectType
     checked_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
@@ -238,7 +238,7 @@ class Webhook(BaseModel):
 
     connection_id: str
 
-    event: Event
+    event: WebhookEvent
 
     object_type: WebhookObjectType
 
@@ -298,7 +298,7 @@ class Webhook(BaseModel):
     def serialize_event(self, value):
         if isinstance(value, str):
             try:
-                return shared.Event(value)
+                return shared.WebhookEvent(value)
             except ValueError:
                 return value
         return value

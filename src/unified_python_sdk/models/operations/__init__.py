@@ -3167,6 +3167,12 @@ if TYPE_CHECKING:
         ListUnifiedIssuesResponse,
         ListUnifiedIssuesResponseTypedDict,
     )
+    from .listunifiednotifications import (
+        ListUnifiedNotificationsRequest,
+        ListUnifiedNotificationsRequestTypedDict,
+        ListUnifiedNotificationsResponse,
+        ListUnifiedNotificationsResponseTypedDict,
+    )
     from .listunifiedwebhooks import (
         ListUnifiedWebhooksRequest,
         ListUnifiedWebhooksRequestTypedDict,
@@ -7913,6 +7919,10 @@ __all__ = [
     "ListUnifiedIssuesRequestTypedDict",
     "ListUnifiedIssuesResponse",
     "ListUnifiedIssuesResponseTypedDict",
+    "ListUnifiedNotificationsRequest",
+    "ListUnifiedNotificationsRequestTypedDict",
+    "ListUnifiedNotificationsResponse",
+    "ListUnifiedNotificationsResponseTypedDict",
     "ListUnifiedWebhooksRequest",
     "ListUnifiedWebhooksRequestTypedDict",
     "ListUnifiedWebhooksResponse",
@@ -11910,6 +11920,10 @@ _dynamic_imports: dict[str, str] = {
     "ListUnifiedIssuesRequestTypedDict": ".listunifiedissues",
     "ListUnifiedIssuesResponse": ".listunifiedissues",
     "ListUnifiedIssuesResponseTypedDict": ".listunifiedissues",
+    "ListUnifiedNotificationsRequest": ".listunifiednotifications",
+    "ListUnifiedNotificationsRequestTypedDict": ".listunifiednotifications",
+    "ListUnifiedNotificationsResponse": ".listunifiednotifications",
+    "ListUnifiedNotificationsResponseTypedDict": ".listunifiednotifications",
     "ListUnifiedWebhooksRequest": ".listunifiedwebhooks",
     "ListUnifiedWebhooksRequestTypedDict": ".listunifiedwebhooks",
     "ListUnifiedWebhooksResponse": ".listunifiedwebhooks",

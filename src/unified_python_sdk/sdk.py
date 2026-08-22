@@ -115,6 +115,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.metadata import Metadata
     from unified_python_sdk.model import Model
     from unified_python_sdk.note import Note
+    from unified_python_sdk.notification import Notification
     from unified_python_sdk.order import Order
     from unified_python_sdk.organization import Organization
     from unified_python_sdk.package import Package
@@ -359,6 +360,7 @@ class UnifiedTo(BaseSDK):
     login: "Login"
     saml: "Saml"
     issue: "Issue"
+    notification: "Notification"
     webhook: "Webhook"
     secretsmanager: "Secretsmanager"
     verification: "Verification"
@@ -536,6 +538,7 @@ class UnifiedTo(BaseSDK):
         "login": ("unified_python_sdk.login", "Login"),
         "saml": ("unified_python_sdk.saml", "Saml"),
         "issue": ("unified_python_sdk.issue", "Issue"),
+        "notification": ("unified_python_sdk.notification", "Notification"),
         "webhook": ("unified_python_sdk.webhook", "Webhook"),
         "secretsmanager": ("unified_python_sdk.secretsmanager", "Secretsmanager"),
         "verification": ("unified_python_sdk.verification", "Verification"),

@@ -20,6 +20,7 @@
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](#list_unified_issues) - List support issues
+* [list_unified_notifications](#list_unified_notifications) - List event notifications
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
 * [list_unified_workspace_secretsmanagers](#list_unified_workspace_secretsmanagers) - List secrets managers
 * [patch_unified_connection](#patch_unified_connection) - Update connection
@@ -148,7 +149,7 @@ with UnifiedTo(
     res = unified_to.unified.create_unified_webhook(request={
         "webhook": {
             "connection_id": "<id>",
-            "event": shared.Event.CREATED,
+            "event": shared.WebhookEvent.CREATED,
             "object_type": shared.WebhookObjectType.ATS_SCORECARD,
         },
     })
@@ -769,6 +770,50 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_unified_notifications
+
+List event notifications
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listUnifiedNotifications" method="get" path="/unified/notification" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.unified.list_unified_notifications(request={})
+
+    assert res.notifications is not None
+
+    # Handle response
+    print(res.notifications)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.ListUnifiedNotificationsRequest](../../models/operations/listunifiednotificationsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.ListUnifiedNotificationsResponse](../../models/operations/listunifiednotificationsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_unified_webhooks
 
 Returns all registered webhooks
@@ -933,7 +978,7 @@ with UnifiedTo(
     res = unified_to.unified.patch_unified_webhook(request={
         "webhook": {
             "connection_id": "<id>",
-            "event": shared.Event.UPDATED,
+            "event": shared.WebhookEvent.UPDATED,
             "object_type": shared.WebhookObjectType.TICKETING_CUSTOMER,
         },
         "id": "<id>",
@@ -1268,7 +1313,7 @@ with UnifiedTo(
     res = unified_to.unified.update_unified_webhook(request={
         "webhook": {
             "connection_id": "<id>",
-            "event": shared.Event.DELETED,
+            "event": shared.WebhookEvent.DELETED,
             "object_type": shared.WebhookObjectType.MESSAGING_CHANNEL,
         },
         "id": "<id>",

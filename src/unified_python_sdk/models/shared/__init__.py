@@ -1041,6 +1041,7 @@ if TYPE_CHECKING:
         MetadataMetadataFormat,
         MetadataMetadataTypedDict,
     )
+    from .notification import Event, Notification, NotificationTypedDict
     from .paymentallocation import (
         PaymentAllocation,
         PaymentAllocationObjectType,
@@ -2090,8 +2091,8 @@ if TYPE_CHECKING:
     from .verificationtime import VerificationTime, VerificationTimeTypedDict
     from .webhook import (
         DbType,
-        Event,
         Webhook,
+        WebhookEvent,
         WebhookObjectType,
         WebhookType,
         WebhookTypedDict,
@@ -2985,6 +2986,8 @@ __all__ = [
     "NativeWebhookType",
     "NativeWebhookVisitorID",
     "NonDeliveryOption",
+    "Notification",
+    "NotificationTypedDict",
     "ObjectType",
     "One",
     "OneTypedDict",
@@ -3740,6 +3743,7 @@ __all__ = [
     "VirtualWebhookUserMentionedID",
     "VirtualWebhookVisitorID",
     "Webhook",
+    "WebhookEvent",
     "WebhookObjectType",
     "WebhookType",
     "WebhookTypedDict",
@@ -4730,6 +4734,9 @@ _dynamic_imports: dict[str, str] = {
     "MetadataMetadata": ".metadatametadata",
     "MetadataMetadataFormat": ".metadatametadata",
     "MetadataMetadataTypedDict": ".metadatametadata",
+    "Event": ".notification",
+    "Notification": ".notification",
+    "NotificationTypedDict": ".notification",
     "PaymentAllocation": ".paymentallocation",
     "PaymentAllocationObjectType": ".paymentallocation",
     "PaymentAllocationTypedDict": ".paymentallocation",
@@ -5392,8 +5399,8 @@ _dynamic_imports: dict[str, str] = {
     "VerificationTime": ".verificationtime",
     "VerificationTimeTypedDict": ".verificationtime",
     "DbType": ".webhook",
-    "Event": ".webhook",
     "Webhook": ".webhook",
+    "WebhookEvent": ".webhook",
     "WebhookObjectType": ".webhook",
     "WebhookType": ".webhook",
     "WebhookTypedDict": ".webhook",

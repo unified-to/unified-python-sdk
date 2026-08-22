@@ -1,0 +1,20 @@
+# WebhookEvent
+
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import WebhookEvent
+
+value = WebhookEvent.UPDATED
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
+
+## Values
+
+| Name      | Value     |
+| --------- | --------- |
+| `UPDATED` | updated   |
+| `CREATED` | created   |
+| `DELETED` | deleted   |
