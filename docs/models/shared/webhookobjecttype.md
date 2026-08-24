@@ -24,6 +24,7 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `ACCOUNTING_VENDORCREDIT`        | accounting_vendorcredit          |
 | `ACCOUNTING_CREDITMEMO`          | accounting_creditmemo            |
 | `ACCOUNTING_TAXRATE`             | accounting_taxrate               |
+| `ACCOUNTING_PAYMENTTERM`         | accounting_paymentterm           |
 | `ACCOUNTING_ORGANIZATION`        | accounting_organization          |
 | `ACCOUNTING_ORDER`               | accounting_order                 |
 | `ACCOUNTING_SALESORDER`          | accounting_salesorder            |

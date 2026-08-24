@@ -36,4 +36,5 @@ value = GetAccountingContactQueryParamFields.ID
 | `ASSOCIATED_CONTACTS` | associated_contacts   |
 | `ORGANIZATION_ID`     | organization_id       |
 | `PAYMENT_TERMS`       | payment_terms         |
+| `PAYMENTTERM_ID`      | paymentterm_id        |
 | `RAW`                 | raw                   |

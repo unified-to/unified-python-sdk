@@ -158,6 +158,12 @@ if TYPE_CHECKING:
         AccountingPaymentReference,
         AccountingPaymentReferenceTypedDict,
     )
+    from .accountingpaymentterm import (
+        AccountingPaymentterm,
+        AccountingPaymenttermType,
+        AccountingPaymenttermTypedDict,
+        Category,
+    )
     from .accountingprofitloss import (
         AccountingProfitloss,
         AccountingProfitlossTypedDict,
@@ -2193,6 +2199,9 @@ __all__ = [
     "AccountingOrganizationTypedDict",
     "AccountingPaymentReference",
     "AccountingPaymentReferenceTypedDict",
+    "AccountingPaymentterm",
+    "AccountingPaymenttermType",
+    "AccountingPaymenttermTypedDict",
     "AccountingProfitloss",
     "AccountingProfitlossAccount",
     "AccountingProfitlossAccountTypedDict",
@@ -2435,6 +2444,7 @@ __all__ = [
     "CalendarWebinarRegistrantTypedDict",
     "CalendarWebinarStatus",
     "CalendarWebinarTypedDict",
+    "Category",
     "CdpActivation",
     "CdpActivationStatus",
     "CdpActivationTypedDict",
@@ -3858,6 +3868,10 @@ _dynamic_imports: dict[str, str] = {
     "AccountingOrganizationTypedDict": ".accountingorganization",
     "AccountingPaymentReference": ".accountingpaymentreference",
     "AccountingPaymentReferenceTypedDict": ".accountingpaymentreference",
+    "AccountingPaymentterm": ".accountingpaymentterm",
+    "AccountingPaymenttermType": ".accountingpaymentterm",
+    "AccountingPaymenttermTypedDict": ".accountingpaymentterm",
+    "Category": ".accountingpaymentterm",
     "AccountingProfitloss": ".accountingprofitloss",
     "AccountingProfitlossTypedDict": ".accountingprofitloss",
     "AccountingProfitlossAccount": ".accountingprofitlossaccount",

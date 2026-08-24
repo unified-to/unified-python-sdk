@@ -35,6 +35,8 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `ACCOUNTING_EXPENSE_WRITE`             | accounting_expense_write               |
 | `ACCOUNTING_TAXRATE_READ`              | accounting_taxrate_read                |
 | `ACCOUNTING_TAXRATE_WRITE`             | accounting_taxrate_write               |
+| `ACCOUNTING_PAYMENTTERM_READ`          | accounting_paymentterm_read            |
+| `ACCOUNTING_PAYMENTTERM_WRITE`         | accounting_paymentterm_write           |
 | `ACCOUNTING_ORGANIZATION_READ`         | accounting_organization_read           |
 | `ACCOUNTING_ORDER_READ`                | accounting_order_read                  |
 | `ACCOUNTING_ORDER_WRITE`               | accounting_order_write                 |

@@ -75,6 +75,7 @@ class AccountingContactTypedDict(TypedDict):
     organization_id: NotRequired[str]
     payment_methods: NotRequired[List[AccountingContactPaymentMethodTypedDict]]
     payment_terms: NotRequired[AccountingContactPaymentTerms]
+    paymentterm_id: NotRequired[str]
     portal_url: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     shipping_address: NotRequired[PropertyAccountingContactShippingAddressTypedDict]
@@ -118,6 +119,8 @@ class AccountingContact(BaseModel):
     payment_methods: Optional[List[AccountingContactPaymentMethod]] = None
 
     payment_terms: Optional[AccountingContactPaymentTerms] = None
+
+    paymentterm_id: Optional[str] = None
 
     portal_url: Optional[str] = None
 
@@ -172,6 +175,7 @@ class AccountingContact(BaseModel):
                 "organization_id",
                 "payment_methods",
                 "payment_terms",
+                "paymentterm_id",
                 "portal_url",
                 "raw",
                 "shipping_address",

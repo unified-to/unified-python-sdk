@@ -122,6 +122,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.page import Page
     from unified_python_sdk.passthrough import Passthrough
     from unified_python_sdk.payment import Payment
+    from unified_python_sdk.paymentterm import Paymentterm
     from unified_python_sdk.payout import Payout
     from unified_python_sdk.payslip import Payslip
     from unified_python_sdk.performance import Performance
@@ -211,6 +212,7 @@ class UnifiedTo(BaseSDK):
     journal: "Journal"
     order: "Order"
     organization: "Organization"
+    paymentterm: "Paymentterm"
     profitloss: "Profitloss"
     project: "Project"
     purchaseorder: "Purchaseorder"
@@ -386,6 +388,7 @@ class UnifiedTo(BaseSDK):
         "journal": ("unified_python_sdk.journal", "Journal"),
         "order": ("unified_python_sdk.order", "Order"),
         "organization": ("unified_python_sdk.organization", "Organization"),
+        "paymentterm": ("unified_python_sdk.paymentterm", "Paymentterm"),
         "profitloss": ("unified_python_sdk.profitloss", "Profitloss"),
         "project": ("unified_python_sdk.project", "Project"),
         "purchaseorder": ("unified_python_sdk.purchaseorder", "Purchaseorder"),

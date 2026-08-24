@@ -45,6 +45,7 @@ class PatchAccountingBillQueryParamFields(str, Enum):
     ORGANIZATION_ID = "organization_id"
     TERM = "term"
     PAYMENT_TERMS = "payment_terms"
+    PAYMENTTERM_ID = "paymentterm_id"
     PAYMENTS = "payments"
     CATEGORY_IDS = "category_ids"
     PROJECT_ID = "project_id"

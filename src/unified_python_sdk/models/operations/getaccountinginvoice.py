@@ -40,6 +40,7 @@ class GetAccountingInvoiceQueryParamFields(str, Enum):
     REFUND_REASON = "refund_reason"
     TERM = "term"
     PAYMENT_TERMS = "payment_terms"
+    PAYMENTTERM_ID = "paymentterm_id"
     LINEITEMS = "lineitems"
     STATUS = "status"
     URL = "url"
