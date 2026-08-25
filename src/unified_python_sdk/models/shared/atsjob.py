@@ -53,6 +53,7 @@ class AtsJobTypedDict(TypedDict):
     hiring_manager_ids: NotRequired[List[str]]
     hiring_managers: NotRequired[List[AtsReferenceTypedDict]]
     id: NotRequired[str]
+    industry: NotRequired[str]
     language_locale: NotRequired[str]
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     minimum_degree: NotRequired[str]
@@ -97,6 +98,8 @@ class AtsJob(BaseModel):
     hiring_managers: Optional[List[AtsReference]] = None
 
     id: Optional[str] = None
+
+    industry: Optional[str] = None
 
     language_locale: Optional[str] = None
 
@@ -167,6 +170,7 @@ class AtsJob(BaseModel):
                 "hiring_manager_ids",
                 "hiring_managers",
                 "id",
+                "industry",
                 "language_locale",
                 "metadata",
                 "minimum_degree",

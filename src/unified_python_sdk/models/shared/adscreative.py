@@ -22,8 +22,8 @@ class CreativeType(str, Enum, metaclass=utils.OpenEnumMeta):
     PUBLISHER_HOSTED = "PUBLISHER_HOSTED"
     ASSET_BASED = "ASSET_BASED"
     IMAGE = "IMAGE"
-    SHARE = "SHARE"
     DOCUMENT = "DOCUMENT"
+    SHARE = "SHARE"
 
 
 class HostingSource(str, Enum, metaclass=utils.OpenEnumMeta):

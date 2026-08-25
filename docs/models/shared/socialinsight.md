@@ -1,0 +1,16 @@
+# SocialInsight
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `created_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `date_`                                                              | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `metric`                                                             | [Optional[shared.Metric]](../../models/shared/metric.md)             | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `period`                                                             | [Optional[shared.Period]](../../models/shared/period.md)             | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `post_id`                                                            | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `profile_id`                                                         | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `raw`                                                                | Dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `value`                                                              | *Optional[float]*                                                    | :heavy_minus_sign:                                                   | N/A                                                                  |

@@ -10,7 +10,7 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class Period(str, Enum, metaclass=utils.OpenEnumMeta):
+class PropertyAdsGroupPacingPeriod(str, Enum, metaclass=utils.OpenEnumMeta):
     UNSPECIFIED = "UNSPECIFIED"
     DAILY = "DAILY"
     FLIGHT = "FLIGHT"
@@ -19,7 +19,7 @@ class Period(str, Enum, metaclass=utils.OpenEnumMeta):
 class PropertyAdsGroupPacingTypedDict(TypedDict):
     daily_max_amount: NotRequired[float]
     daily_max_impressions: NotRequired[float]
-    period: NotRequired[Period]
+    period: NotRequired[PropertyAdsGroupPacingPeriod]
     type: NotRequired[str]
 
 
@@ -28,7 +28,7 @@ class PropertyAdsGroupPacing(BaseModel):
 
     daily_max_impressions: Optional[float] = None
 
-    period: Optional[Period] = None
+    period: Optional[PropertyAdsGroupPacingPeriod] = None
 
     type: Optional[str] = None
 
@@ -36,7 +36,7 @@ class PropertyAdsGroupPacing(BaseModel):
     def serialize_period(self, value):
         if isinstance(value, str):
             try:
-                return shared.Period(value)
+                return shared.PropertyAdsGroupPacingPeriod(value)
             except ValueError:
                 return value
         return value

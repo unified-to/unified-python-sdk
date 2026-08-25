@@ -6,7 +6,9 @@
 
 * [create_cdp_profile](#create_cdp_profile) - Create a profile
 * [get_cdp_profile](#get_cdp_profile) - Retrieve a profile
+* [get_social_profile](#get_social_profile) - Retrieve a profile
 * [list_cdp_profiles](#list_cdp_profiles) - List all profiles
+* [list_social_profiles](#list_social_profiles) - List all profiles
 * [patch_cdp_profile](#patch_cdp_profile) - Update a profile
 * [remove_cdp_profile](#remove_cdp_profile) - Remove a profile
 * [update_cdp_profile](#update_cdp_profile) - Update a profile
@@ -105,6 +107,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_social_profile
+
+Retrieve a profile
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getSocialProfile" method="get" path="/social/{connection_id}/profile/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.profile.get_social_profile(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_profile is not None
+
+    # Handle response
+    print(res.social_profile)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetSocialProfileRequest](../../models/operations/getsocialprofilerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetSocialProfileResponse](../../models/operations/getsocialprofileresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_cdp_profiles
 
 List all profiles
@@ -144,6 +193,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListCdpProfilesResponse](../../models/operations/listcdpprofilesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_social_profiles
+
+List all profiles
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listSocialProfiles" method="get" path="/social/{connection_id}/profile" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.profile.list_social_profiles(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.social_profiles is not None
+
+    # Handle response
+    print(res.social_profiles)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListSocialProfilesRequest](../../models/operations/listsocialprofilesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListSocialProfilesResponse](../../models/operations/listsocialprofilesresponse.md)**
 
 ### Errors
 

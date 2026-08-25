@@ -184,3 +184,7 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `PERFORMANCE_REVIEW`             | performance_review               |
 | `PERFORMANCE_GOAL`               | performance_goal                 |
 | `PERFORMANCE_FEEDBACK`           | performance_feedback             |
+| `SOCIAL_POST`                    | social_post                      |
+| `SOCIAL_PROFILE`                 | social_profile                   |
+| `SOCIAL_REVIEW`                  | social_review                    |
+| `SOCIAL_INSIGHT`                 | social_insight                   |

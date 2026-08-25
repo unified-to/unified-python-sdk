@@ -46,6 +46,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     DATASTORE = "datastore"
     CDP = "cdp"
     PERFORMANCE = "performance"
+    SOCIAL = "social"
 
 
 class ListUnifiedIntegrationsRequestTypedDict(TypedDict):

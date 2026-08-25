@@ -5,6 +5,10 @@ from .property_adsreportmetrics_campaign_frequency_cap import (
     PropertyAdsReportMetricsCampaignFrequencyCap,
     PropertyAdsReportMetricsCampaignFrequencyCapTypedDict,
 )
+from .property_adsreportmetrics_campaign_kpi import (
+    PropertyAdsReportMetricsCampaignKpi,
+    PropertyAdsReportMetricsCampaignKpiTypedDict,
+)
 from .property_adsreportmetrics_campaign_targeting import (
     PropertyAdsReportMetricsCampaignTargeting,
     PropertyAdsReportMetricsCampaignTargetingTypedDict,
@@ -112,6 +116,7 @@ class PropertyAdsReportMetricsCampaignTypedDict(TypedDict):
     goal: NotRequired[PropertyAdsReportMetricsCampaignGoal]
     has_eu_political_ads: NotRequired[bool]
     id: NotRequired[str]
+    kpi: NotRequired[PropertyAdsReportMetricsCampaignKpiTypedDict]
     labels: NotRequired[List[str]]
     name: NotRequired[str]
     organization_id: NotRequired[str]
@@ -154,6 +159,8 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
     has_eu_political_ads: Optional[bool] = None
 
     id: Optional[str] = None
+
+    kpi: Optional[PropertyAdsReportMetricsCampaignKpi] = None
 
     labels: Optional[List[str]] = None
 
@@ -249,6 +256,7 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
                 "goal",
                 "has_eu_political_ads",
                 "id",
+                "kpi",
                 "labels",
                 "name",
                 "organization_id",

@@ -1305,6 +1305,11 @@ asyncio.run(main())
 * [remove_ads_insertionorder](docs/sdks/insertionorder/README.md#remove_ads_insertionorder) - Remove an insertionorder
 * [update_ads_insertionorder](docs/sdks/insertionorder/README.md#update_ads_insertionorder) - Update an insertionorder
 
+### [Insight](docs/sdks/insight/README.md)
+
+* [get_social_insight](docs/sdks/insight/README.md#get_social_insight) - Retrieve an insight
+* [list_social_insights](docs/sdks/insight/README.md#list_social_insights) - List all insights
+
 ### [Instructor](docs/sdks/instructor/README.md)
 
 * [create_lms_instructor](docs/sdks/instructor/README.md#create_lms_instructor) - Create an instructor
@@ -1739,11 +1744,22 @@ asyncio.run(main())
 * [remove_crm_pipeline](docs/sdks/pipeline/README.md#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_pipeline](docs/sdks/pipeline/README.md#update_crm_pipeline) - Update a pipeline
 
+### [Post](docs/sdks/post/README.md)
+
+* [create_social_post](docs/sdks/post/README.md#create_social_post) - Create a post
+* [get_social_post](docs/sdks/post/README.md#get_social_post) - Retrieve a post
+* [list_social_posts](docs/sdks/post/README.md#list_social_posts) - List all posts
+* [patch_social_post](docs/sdks/post/README.md#patch_social_post) - Update a post
+* [remove_social_post](docs/sdks/post/README.md#remove_social_post) - Remove a post
+* [update_social_post](docs/sdks/post/README.md#update_social_post) - Update a post
+
 ### [Profile](docs/sdks/profile/README.md)
 
 * [create_cdp_profile](docs/sdks/profile/README.md#create_cdp_profile) - Create a profile
 * [get_cdp_profile](docs/sdks/profile/README.md#get_cdp_profile) - Retrieve a profile
+* [get_social_profile](docs/sdks/profile/README.md#get_social_profile) - Retrieve a profile
 * [list_cdp_profiles](docs/sdks/profile/README.md#list_cdp_profiles) - List all profiles
+* [list_social_profiles](docs/sdks/profile/README.md#list_social_profiles) - List all profiles
 * [patch_cdp_profile](docs/sdks/profile/README.md#patch_cdp_profile) - Update a profile
 * [remove_cdp_profile](docs/sdks/profile/README.md#remove_cdp_profile) - Remove a profile
 * [update_cdp_profile](docs/sdks/profile/README.md#update_cdp_profile) - Update a profile
@@ -1919,11 +1935,15 @@ asyncio.run(main())
 * [create_commerce_review](docs/sdks/review/README.md#create_commerce_review) - Create a review
 * [get_commerce_review](docs/sdks/review/README.md#get_commerce_review) - Retrieve a review
 * [get_performance_review](docs/sdks/review/README.md#get_performance_review) - Retrieve a review
+* [get_social_review](docs/sdks/review/README.md#get_social_review) - Retrieve a review
 * [list_commerce_reviews](docs/sdks/review/README.md#list_commerce_reviews) - List all reviews
 * [list_performance_reviews](docs/sdks/review/README.md#list_performance_reviews) - List all reviews
+* [list_social_reviews](docs/sdks/review/README.md#list_social_reviews) - List all reviews
 * [patch_commerce_review](docs/sdks/review/README.md#patch_commerce_review) - Update a review
+* [patch_social_review](docs/sdks/review/README.md#patch_social_review) - Update a review
 * [remove_commerce_review](docs/sdks/review/README.md#remove_commerce_review) - Remove a review
 * [update_commerce_review](docs/sdks/review/README.md#update_commerce_review) - Update a review
+* [update_social_review](docs/sdks/review/README.md#update_social_review) - Update a review
 
 ### [Saleschannel](docs/sdks/saleschannel/README.md)
 
@@ -2046,6 +2066,23 @@ asyncio.run(main())
 * [remove_signing_signatory](docs/sdks/signing/README.md#remove_signing_signatory) - Remove a signatory
 * [update_signing_document](docs/sdks/signing/README.md#update_signing_document) - Update a document
 * [update_signing_signatory](docs/sdks/signing/README.md#update_signing_signatory) - Update a signatory
+
+### [Social](docs/sdks/social/README.md)
+
+* [create_social_post](docs/sdks/social/README.md#create_social_post) - Create a post
+* [get_social_insight](docs/sdks/social/README.md#get_social_insight) - Retrieve an insight
+* [get_social_post](docs/sdks/social/README.md#get_social_post) - Retrieve a post
+* [get_social_profile](docs/sdks/social/README.md#get_social_profile) - Retrieve a profile
+* [get_social_review](docs/sdks/social/README.md#get_social_review) - Retrieve a review
+* [list_social_insights](docs/sdks/social/README.md#list_social_insights) - List all insights
+* [list_social_posts](docs/sdks/social/README.md#list_social_posts) - List all posts
+* [list_social_profiles](docs/sdks/social/README.md#list_social_profiles) - List all profiles
+* [list_social_reviews](docs/sdks/social/README.md#list_social_reviews) - List all reviews
+* [patch_social_post](docs/sdks/social/README.md#patch_social_post) - Update a post
+* [patch_social_review](docs/sdks/social/README.md#patch_social_review) - Update a review
+* [remove_social_post](docs/sdks/social/README.md#remove_social_post) - Remove a post
+* [update_social_post](docs/sdks/social/README.md#update_social_post) - Update a post
+* [update_social_review](docs/sdks/social/README.md#update_social_review) - Update a review
 
 ### [Source](docs/sdks/source/README.md)
 

@@ -1,0 +1,14 @@
+# SocialMedia
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `alt`                                                                      | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `height`                                                                   | *Optional[float]*                                                          | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `id`                                                                       | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `position`                                                                 | *Optional[float]*                                                          | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `type`                                                                     | [Optional[shared.SocialMediaType]](../../models/shared/socialmediatype.md) | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `url`                                                                      | *str*                                                                      | :heavy_check_mark:                                                         | N/A                                                                        |
+| `width`                                                                    | *Optional[float]*                                                          | :heavy_minus_sign:                                                         | N/A                                                                        |

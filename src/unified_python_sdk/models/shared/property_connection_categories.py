@@ -40,3 +40,4 @@ class PropertyConnectionCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     DATASTORE = "datastore"
     CDP = "cdp"
     PERFORMANCE = "performance"
+    SOCIAL = "social"

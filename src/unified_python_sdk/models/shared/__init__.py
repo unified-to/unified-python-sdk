@@ -845,6 +845,7 @@ if TYPE_CHECKING:
         ListPaymentID,
         ListPayslipID,
         ListPipelineID,
+        ListPostID,
         ListProfileID,
         ListProjectID,
         ListPropertyID,
@@ -952,6 +953,7 @@ if TYPE_CHECKING:
         VirtualWebhookParentID,
         VirtualWebhookPaymentID,
         VirtualWebhookPipelineID,
+        VirtualWebhookPostID,
         VirtualWebhookProfileID,
         VirtualWebhookProjectID,
         VirtualWebhookPropertyID,
@@ -1171,6 +1173,11 @@ if TYPE_CHECKING:
         PropertyAdsCampaignFrequencyCapTypedDict,
         TimeUnit,
     )
+    from .property_adscampaign_kpi import (
+        PropertyAdsCampaignKpi,
+        PropertyAdsCampaignKpiType,
+        PropertyAdsCampaignKpiTypedDict,
+    )
     from .property_adscampaign_targeting import (
         PropertyAdsCampaignTargeting,
         PropertyAdsCampaignTargetingTypedDict,
@@ -1241,8 +1248,8 @@ if TYPE_CHECKING:
         PropertyAdsGroupFrequencyCapTypedDict,
     )
     from .property_adsgroup_pacing import (
-        Period,
         PropertyAdsGroupPacing,
+        PropertyAdsGroupPacingPeriod,
         PropertyAdsGroupPacingTypedDict,
     )
     from .property_adsgroup_targeting import (
@@ -1344,6 +1351,11 @@ if TYPE_CHECKING:
         PropertyAdsReportMetricsCampaignFrequencyCap,
         PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit,
         PropertyAdsReportMetricsCampaignFrequencyCapTypedDict,
+    )
+    from .property_adsreportmetrics_campaign_kpi import (
+        PropertyAdsReportMetricsCampaignKpi,
+        PropertyAdsReportMetricsCampaignKpiType,
+        PropertyAdsReportMetricsCampaignKpiTypedDict,
     )
     from .property_adsreportmetrics_campaign_targeting import (
         PropertyAdsReportMetricsCampaignTargeting,
@@ -1895,6 +1907,27 @@ if TYPE_CHECKING:
         PropertyShippingTrackingEventLocationAddress,
         PropertyShippingTrackingEventLocationAddressTypedDict,
     )
+    from .property_socialpost_call_to_action import (
+        PropertySocialPostCallToAction,
+        PropertySocialPostCallToActionType,
+        PropertySocialPostCallToActionTypedDict,
+    )
+    from .property_socialpost_metrics import (
+        PropertySocialPostMetrics,
+        PropertySocialPostMetricsTypedDict,
+    )
+    from .property_socialprofile_address import (
+        PropertySocialProfileAddress,
+        PropertySocialProfileAddressTypedDict,
+    )
+    from .property_socialprofile_metrics import (
+        PropertySocialProfileMetrics,
+        PropertySocialProfileMetricsTypedDict,
+    )
+    from .property_socialreview_reply import (
+        PropertySocialReviewReply,
+        PropertySocialReviewReplyTypedDict,
+    )
     from .property_storagepermission_roles import PropertyStoragePermissionRoles
     from .property_uccall_telephone import (
         PropertyUcCallTelephone,
@@ -1997,6 +2030,16 @@ if TYPE_CHECKING:
         SigningSignatoryTypedDict,
     )
     from .signingtemplate import SigningTemplate, SigningTemplateTypedDict
+    from .socialinsight import Metric, Period, SocialInsight, SocialInsightTypedDict
+    from .socialmedia import SocialMedia, SocialMediaType, SocialMediaTypedDict
+    from .socialpost import (
+        SocialPost,
+        SocialPostStatus,
+        SocialPostType,
+        SocialPostTypedDict,
+    )
+    from .socialprofile import SocialProfile, SocialProfileTypedDict
+    from .socialreview import SocialReview, SocialReviewTypedDict
     from .storagefile import StorageFile, StorageFileType, StorageFileTypedDict
     from .storagepermission import StoragePermission, StoragePermissionTypedDict
     from .storagereference import StorageReference, StorageReferenceTypedDict
@@ -2869,6 +2912,7 @@ __all__ = [
     "ListPaymentID",
     "ListPayslipID",
     "ListPipelineID",
+    "ListPostID",
     "ListProfileID",
     "ListProjectID",
     "ListPropertyID",
@@ -2970,6 +3014,7 @@ __all__ = [
     "MetadataMetadata",
     "MetadataMetadataFormat",
     "MetadataMetadataTypedDict",
+    "Metric",
     "Mode",
     "NativeWebhookCalendarID",
     "NativeWebhookCarrierID",
@@ -3084,6 +3129,9 @@ __all__ = [
     "PropertyAccountingSalesorderShippingAddressTypedDict",
     "PropertyAdsCampaignFrequencyCap",
     "PropertyAdsCampaignFrequencyCapTypedDict",
+    "PropertyAdsCampaignKpi",
+    "PropertyAdsCampaignKpiType",
+    "PropertyAdsCampaignKpiTypedDict",
     "PropertyAdsCampaignTargeting",
     "PropertyAdsCampaignTargetingAudience",
     "PropertyAdsCampaignTargetingAudienceTypedDict",
@@ -3116,6 +3164,7 @@ __all__ = [
     "PropertyAdsGroupFrequencyCapTimeUnit",
     "PropertyAdsGroupFrequencyCapTypedDict",
     "PropertyAdsGroupPacing",
+    "PropertyAdsGroupPacingPeriod",
     "PropertyAdsGroupPacingTypedDict",
     "PropertyAdsGroupTargeting",
     "PropertyAdsGroupTargetingAudience",
@@ -3171,6 +3220,9 @@ __all__ = [
     "PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit",
     "PropertyAdsReportMetricsCampaignFrequencyCapTypedDict",
     "PropertyAdsReportMetricsCampaignGoal",
+    "PropertyAdsReportMetricsCampaignKpi",
+    "PropertyAdsReportMetricsCampaignKpiType",
+    "PropertyAdsReportMetricsCampaignKpiTypedDict",
     "PropertyAdsReportMetricsCampaignStatus",
     "PropertyAdsReportMetricsCampaignTargeting",
     "PropertyAdsReportMetricsCampaignTargetingAudience",
@@ -3461,6 +3513,17 @@ __all__ = [
     "PropertyShippingShipmentToAddressTypedDict",
     "PropertyShippingTrackingEventLocationAddress",
     "PropertyShippingTrackingEventLocationAddressTypedDict",
+    "PropertySocialPostCallToAction",
+    "PropertySocialPostCallToActionType",
+    "PropertySocialPostCallToActionTypedDict",
+    "PropertySocialPostMetrics",
+    "PropertySocialPostMetricsTypedDict",
+    "PropertySocialProfileAddress",
+    "PropertySocialProfileAddressTypedDict",
+    "PropertySocialProfileMetrics",
+    "PropertySocialProfileMetricsTypedDict",
+    "PropertySocialReviewReply",
+    "PropertySocialReviewReplyTypedDict",
     "PropertyStoragePermissionRoles",
     "PropertyUcCallTelephone",
     "PropertyUcCallTelephoneType",
@@ -3569,6 +3632,19 @@ __all__ = [
     "SigningTemplate",
     "SigningTemplateTypedDict",
     "SizeUnit",
+    "SocialInsight",
+    "SocialInsightTypedDict",
+    "SocialMedia",
+    "SocialMediaType",
+    "SocialMediaTypedDict",
+    "SocialPost",
+    "SocialPostStatus",
+    "SocialPostType",
+    "SocialPostTypedDict",
+    "SocialProfile",
+    "SocialProfileTypedDict",
+    "SocialReview",
+    "SocialReviewTypedDict",
     "SortOrder",
     "SportType",
     "Status",
@@ -3731,6 +3807,7 @@ __all__ = [
     "VirtualWebhookParentID",
     "VirtualWebhookPaymentID",
     "VirtualWebhookPipelineID",
+    "VirtualWebhookPostID",
     "VirtualWebhookProfileID",
     "VirtualWebhookProjectID",
     "VirtualWebhookPropertyID",
@@ -4528,6 +4605,7 @@ _dynamic_imports: dict[str, str] = {
     "ListPaymentID": ".integrationsupport",
     "ListPayslipID": ".integrationsupport",
     "ListPipelineID": ".integrationsupport",
+    "ListPostID": ".integrationsupport",
     "ListProfileID": ".integrationsupport",
     "ListProjectID": ".integrationsupport",
     "ListPropertyID": ".integrationsupport",
@@ -4635,6 +4713,7 @@ _dynamic_imports: dict[str, str] = {
     "VirtualWebhookParentID": ".integrationsupport",
     "VirtualWebhookPaymentID": ".integrationsupport",
     "VirtualWebhookPipelineID": ".integrationsupport",
+    "VirtualWebhookPostID": ".integrationsupport",
     "VirtualWebhookProfileID": ".integrationsupport",
     "VirtualWebhookProjectID": ".integrationsupport",
     "VirtualWebhookPropertyID": ".integrationsupport",
@@ -4824,6 +4903,9 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsCampaignFrequencyCap": ".property_adscampaign_frequency_cap",
     "PropertyAdsCampaignFrequencyCapTypedDict": ".property_adscampaign_frequency_cap",
     "TimeUnit": ".property_adscampaign_frequency_cap",
+    "PropertyAdsCampaignKpi": ".property_adscampaign_kpi",
+    "PropertyAdsCampaignKpiType": ".property_adscampaign_kpi",
+    "PropertyAdsCampaignKpiTypedDict": ".property_adscampaign_kpi",
     "PropertyAdsCampaignTargeting": ".property_adscampaign_targeting",
     "PropertyAdsCampaignTargetingTypedDict": ".property_adscampaign_targeting",
     "PropertyAdsCampaignTargetingAudience": ".property_adscampaign_targeting_audience",
@@ -4859,8 +4941,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsGroupFrequencyCap": ".property_adsgroup_frequency_cap",
     "PropertyAdsGroupFrequencyCapTimeUnit": ".property_adsgroup_frequency_cap",
     "PropertyAdsGroupFrequencyCapTypedDict": ".property_adsgroup_frequency_cap",
-    "Period": ".property_adsgroup_pacing",
     "PropertyAdsGroupPacing": ".property_adsgroup_pacing",
+    "PropertyAdsGroupPacingPeriod": ".property_adsgroup_pacing",
     "PropertyAdsGroupPacingTypedDict": ".property_adsgroup_pacing",
     "PropertyAdsGroupTargeting": ".property_adsgroup_targeting",
     "PropertyAdsGroupTargetingTypedDict": ".property_adsgroup_targeting",
@@ -4918,6 +5000,9 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsCampaignFrequencyCap": ".property_adsreportmetrics_campaign_frequency_cap",
     "PropertyAdsReportMetricsCampaignFrequencyCapTimeUnit": ".property_adsreportmetrics_campaign_frequency_cap",
     "PropertyAdsReportMetricsCampaignFrequencyCapTypedDict": ".property_adsreportmetrics_campaign_frequency_cap",
+    "PropertyAdsReportMetricsCampaignKpi": ".property_adsreportmetrics_campaign_kpi",
+    "PropertyAdsReportMetricsCampaignKpiType": ".property_adsreportmetrics_campaign_kpi",
+    "PropertyAdsReportMetricsCampaignKpiTypedDict": ".property_adsreportmetrics_campaign_kpi",
     "PropertyAdsReportMetricsCampaignTargeting": ".property_adsreportmetrics_campaign_targeting",
     "PropertyAdsReportMetricsCampaignTargetingTypedDict": ".property_adsreportmetrics_campaign_targeting",
     "PropertyAdsReportMetricsCampaignTargetingAudience": ".property_adsreportmetrics_campaign_targeting_audience",
@@ -5216,6 +5301,17 @@ _dynamic_imports: dict[str, str] = {
     "PropertyShippingShipmentToAddressTypedDict": ".property_shippingshipment_to_address",
     "PropertyShippingTrackingEventLocationAddress": ".property_shippingtrackingevent_location_address",
     "PropertyShippingTrackingEventLocationAddressTypedDict": ".property_shippingtrackingevent_location_address",
+    "PropertySocialPostCallToAction": ".property_socialpost_call_to_action",
+    "PropertySocialPostCallToActionType": ".property_socialpost_call_to_action",
+    "PropertySocialPostCallToActionTypedDict": ".property_socialpost_call_to_action",
+    "PropertySocialPostMetrics": ".property_socialpost_metrics",
+    "PropertySocialPostMetricsTypedDict": ".property_socialpost_metrics",
+    "PropertySocialProfileAddress": ".property_socialprofile_address",
+    "PropertySocialProfileAddressTypedDict": ".property_socialprofile_address",
+    "PropertySocialProfileMetrics": ".property_socialprofile_metrics",
+    "PropertySocialProfileMetricsTypedDict": ".property_socialprofile_metrics",
+    "PropertySocialReviewReply": ".property_socialreview_reply",
+    "PropertySocialReviewReplyTypedDict": ".property_socialreview_reply",
     "PropertyStoragePermissionRoles": ".property_storagepermission_roles",
     "PropertyUcCallTelephone": ".property_uccall_telephone",
     "PropertyUcCallTelephoneType": ".property_uccall_telephone",
@@ -5309,6 +5405,21 @@ _dynamic_imports: dict[str, str] = {
     "SigningSignatoryTypedDict": ".signingsignatory",
     "SigningTemplate": ".signingtemplate",
     "SigningTemplateTypedDict": ".signingtemplate",
+    "Metric": ".socialinsight",
+    "Period": ".socialinsight",
+    "SocialInsight": ".socialinsight",
+    "SocialInsightTypedDict": ".socialinsight",
+    "SocialMedia": ".socialmedia",
+    "SocialMediaType": ".socialmedia",
+    "SocialMediaTypedDict": ".socialmedia",
+    "SocialPost": ".socialpost",
+    "SocialPostStatus": ".socialpost",
+    "SocialPostType": ".socialpost",
+    "SocialPostTypedDict": ".socialpost",
+    "SocialProfile": ".socialprofile",
+    "SocialProfileTypedDict": ".socialprofile",
+    "SocialReview": ".socialreview",
+    "SocialReviewTypedDict": ".socialreview",
     "StorageFile": ".storagefile",
     "StorageFileType": ".storagefile",
     "StorageFileTypedDict": ".storagefile",

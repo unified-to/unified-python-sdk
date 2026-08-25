@@ -90,6 +90,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.group import Group
     from unified_python_sdk.hris import Hris
     from unified_python_sdk.insertionorder import Insertionorder
+    from unified_python_sdk.insight import Insight
     from unified_python_sdk.instructor import Instructor
     from unified_python_sdk.integration import Integration
     from unified_python_sdk.interview import Interview
@@ -129,6 +130,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.person import Person
     from unified_python_sdk.picklist import Picklist
     from unified_python_sdk.pipeline import Pipeline
+    from unified_python_sdk.post import Post
     from unified_python_sdk.profile import Profile
     from unified_python_sdk.profitloss import Profitloss
     from unified_python_sdk.project import Project
@@ -161,6 +163,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.shipping import Shipping
     from unified_python_sdk.signatory import Signatory
     from unified_python_sdk.signing import Signing
+    from unified_python_sdk.social import Social
     from unified_python_sdk.source import Source
     from unified_python_sdk.space import Space
     from unified_python_sdk.storage import Storage
@@ -343,6 +346,9 @@ class UnifiedTo(BaseSDK):
     signing: "Signing"
     signatory: "Signatory"
     template: "Template"
+    social: "Social"
+    insight: "Insight"
+    post: "Post"
     storage: "Storage"
     file: "File"
     task: "Task"
@@ -522,6 +528,9 @@ class UnifiedTo(BaseSDK):
         "signing": ("unified_python_sdk.signing", "Signing"),
         "signatory": ("unified_python_sdk.signatory", "Signatory"),
         "template": ("unified_python_sdk.template", "Template"),
+        "social": ("unified_python_sdk.social", "Social"),
+        "insight": ("unified_python_sdk.insight", "Insight"),
+        "post": ("unified_python_sdk.post", "Post"),
         "storage": ("unified_python_sdk.storage", "Storage"),
         "file": ("unified_python_sdk.file", "File"),
         "task": ("unified_python_sdk.task", "Task"),

@@ -7,11 +7,15 @@
 * [create_commerce_review](#create_commerce_review) - Create a review
 * [get_commerce_review](#get_commerce_review) - Retrieve a review
 * [get_performance_review](#get_performance_review) - Retrieve a review
+* [get_social_review](#get_social_review) - Retrieve a review
 * [list_commerce_reviews](#list_commerce_reviews) - List all reviews
 * [list_performance_reviews](#list_performance_reviews) - List all reviews
+* [list_social_reviews](#list_social_reviews) - List all reviews
 * [patch_commerce_review](#patch_commerce_review) - Update a review
+* [patch_social_review](#patch_social_review) - Update a review
 * [remove_commerce_review](#remove_commerce_review) - Remove a review
 * [update_commerce_review](#update_commerce_review) - Update a review
+* [update_social_review](#update_social_review) - Update a review
 
 ## create_commerce_review
 
@@ -154,6 +158,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_social_review
+
+Retrieve a review
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getSocialReview" method="get" path="/social/{connection_id}/review/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.review.get_social_review(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_review is not None
+
+    # Handle response
+    print(res.social_review)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetSocialReviewRequest](../../models/operations/getsocialreviewrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.GetSocialReviewResponse](../../models/operations/getsocialreviewresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_commerce_reviews
 
 List all reviews
@@ -246,6 +297,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_social_reviews
+
+List all reviews
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listSocialReviews" method="get" path="/social/{connection_id}/review" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.review.list_social_reviews(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.social_reviews is not None
+
+    # Handle response
+    print(res.social_reviews)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListSocialReviewsRequest](../../models/operations/listsocialreviewsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.ListSocialReviewsResponse](../../models/operations/listsocialreviewsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_commerce_review
 
 Update a review
@@ -287,6 +384,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchCommerceReviewResponse](../../models/operations/patchcommercereviewresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_social_review
+
+Update a review
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchSocialReview" method="patch" path="/social/{connection_id}/review/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.review.patch_social_review(request={
+        "social_review": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_review is not None
+
+    # Handle response
+    print(res.social_review)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchSocialReviewRequest](../../models/operations/patchsocialreviewrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.PatchSocialReviewResponse](../../models/operations/patchsocialreviewresponse.md)**
 
 ### Errors
 
@@ -382,6 +527,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateCommerceReviewResponse](../../models/operations/updatecommercereviewresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_social_review
+
+Update a review
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateSocialReview" method="put" path="/social/{connection_id}/review/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.review.update_social_review(request={
+        "social_review": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_review is not None
+
+    # Handle response
+    print(res.social_review)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateSocialReviewRequest](../../models/operations/updatesocialreviewrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.UpdateSocialReviewResponse](../../models/operations/updatesocialreviewresponse.md)**
 
 ### Errors
 

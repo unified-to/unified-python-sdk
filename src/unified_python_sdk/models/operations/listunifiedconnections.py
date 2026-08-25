@@ -46,6 +46,7 @@ class Categories(str, Enum):
     DATASTORE = "datastore"
     CDP = "cdp"
     PERFORMANCE = "performance"
+    SOCIAL = "social"
 
 
 class ListUnifiedConnectionsRequestTypedDict(TypedDict):

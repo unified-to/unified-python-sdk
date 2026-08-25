@@ -18,6 +18,8 @@ class ListUnifiedWebhooksRequestTypedDict(TypedDict):
     env: NotRequired[str]
     integration_type: NotRequired[str]
     r"""Filter the results to just this integration"""
+    is_healthy: NotRequired[bool]
+    r"""Filter by health. Omit to return all."""
     limit: NotRequired[float]
     object: NotRequired[str]
     r"""Filter the results for webhooks for only this object"""
@@ -51,6 +53,12 @@ class ListUnifiedWebhooksRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Filter the results to just this integration"""
+
+    is_healthy: Annotated[
+        Optional[bool],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Filter by health. Omit to return all."""
 
     limit: Annotated[
         Optional[float],
@@ -92,6 +100,7 @@ class ListUnifiedWebhooksRequest(BaseModel):
                 "created_lte",
                 "env",
                 "integration_type",
+                "is_healthy",
                 "limit",
                 "object",
                 "offset",
