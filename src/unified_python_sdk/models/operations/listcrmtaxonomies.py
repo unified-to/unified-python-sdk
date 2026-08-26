@@ -6,7 +6,7 @@ import httpx
 from pydantic import model_serializer
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import crmpicklist as shared_crmpicklist
+from unified_python_sdk.models.shared import crmtaxonomy as shared_crmtaxonomy
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -15,7 +15,7 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListCrmPicklistsQueryParamFields(str, Enum):
+class ListCrmTaxonomiesQueryParamFields(str, Enum):
     ID = "id"
     NAME = "name"
     LABEL = "label"
@@ -23,10 +23,10 @@ class ListCrmPicklistsQueryParamFields(str, Enum):
     RAW = "raw"
 
 
-class ListCrmPicklistsRequestTypedDict(TypedDict):
+class ListCrmTaxonomiesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
-    fields: NotRequired[List[ListCrmPicklistsQueryParamFields]]
+    fields: NotRequired[List[ListCrmTaxonomiesQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
@@ -41,14 +41,14 @@ class ListCrmPicklistsRequestTypedDict(TypedDict):
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
-class ListCrmPicklistsRequest(BaseModel):
+class ListCrmTaxonomiesRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
 
     fields: Annotated[
-        Optional[List[ListCrmPicklistsQueryParamFields]],
+        Optional[List[ListCrmTaxonomiesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
@@ -125,18 +125,18 @@ class ListCrmPicklistsRequest(BaseModel):
         return m
 
 
-class ListCrmPicklistsResponseTypedDict(TypedDict):
+class ListCrmTaxonomiesResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    crm_picklists: NotRequired[List[shared_crmpicklist.CrmPicklistTypedDict]]
+    crm_taxonomies: NotRequired[List[shared_crmtaxonomy.CrmTaxonomyTypedDict]]
     r"""Successful"""
 
 
-class ListCrmPicklistsResponse(BaseModel):
+class ListCrmTaxonomiesResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -146,12 +146,12 @@ class ListCrmPicklistsResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    crm_picklists: Optional[List[shared_crmpicklist.CrmPicklist]] = None
+    crm_taxonomies: Optional[List[shared_crmtaxonomy.CrmTaxonomy]] = None
     r"""Successful"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["CrmPicklists"])
+        optional_fields = set(["CrmTaxonomies"])
         serialized = handler(self)
         m = {}
 

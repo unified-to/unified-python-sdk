@@ -10,19 +10,19 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
-class CrmPicklistType(str, Enum, metaclass=utils.OpenEnumMeta):
+class CrmTaxonomyType(str, Enum, metaclass=utils.OpenEnumMeta):
     INDUSTRY = "INDUSTRY"
 
 
-class CrmPicklistTypedDict(TypedDict):
+class CrmTaxonomyTypedDict(TypedDict):
     id: str
     label: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    type: NotRequired[CrmPicklistType]
+    type: NotRequired[CrmTaxonomyType]
 
 
-class CrmPicklist(BaseModel):
+class CrmTaxonomy(BaseModel):
     id: str
 
     label: Optional[str] = None
@@ -31,13 +31,13 @@ class CrmPicklist(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    type: Optional[CrmPicklistType] = None
+    type: Optional[CrmTaxonomyType] = None
 
     @field_serializer("type")
     def serialize_type(self, value):
         if isinstance(value, str):
             try:
-                return shared.CrmPicklistType(value)
+                return shared.CrmTaxonomyType(value)
             except ValueError:
                 return value
         return value

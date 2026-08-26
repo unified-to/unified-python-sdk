@@ -19,6 +19,7 @@ class HrisTaxonomyType(str, Enum, metaclass=utils.OpenEnumMeta):
     CERTIFICATION = "CERTIFICATION"
     ROLE = "ROLE"
     HOLIDAY = "HOLIDAY"
+    LEAVE = "LEAVE"
 
 
 class HrisTaxonomyTypedDict(TypedDict):

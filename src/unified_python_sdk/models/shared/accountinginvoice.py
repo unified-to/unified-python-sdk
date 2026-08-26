@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
+from .accountingextendednote import (
+    AccountingExtendedNote,
+    AccountingExtendedNoteTypedDict,
+)
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
 from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from .accountingpaymentreference import (
@@ -80,6 +84,7 @@ class AccountingInvoiceTypedDict(TypedDict):
     currency: NotRequired[str]
     discount_amount: NotRequired[float]
     due_at: NotRequired[datetime]
+    extended_notes: NotRequired[List[AccountingExtendedNoteTypedDict]]
     id: NotRequired[str]
     invoice_number: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
@@ -128,6 +133,8 @@ class AccountingInvoice(BaseModel):
     discount_amount: Optional[float] = None
 
     due_at: Optional[datetime] = None
+
+    extended_notes: Optional[List[AccountingExtendedNote]] = None
 
     id: Optional[str] = None
 
@@ -242,6 +249,7 @@ class AccountingInvoice(BaseModel):
                 "currency",
                 "discount_amount",
                 "due_at",
+                "extended_notes",
                 "id",
                 "invoice_number",
                 "lineitems",

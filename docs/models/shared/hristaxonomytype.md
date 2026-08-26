@@ -22,3 +22,4 @@ value = HrisTaxonomyType.SKILL
 | `CERTIFICATION` | CERTIFICATION   |
 | `ROLE`          | ROLE            |
 | `HOLIDAY`       | HOLIDAY         |
+| `LEAVE`         | LEAVE           |

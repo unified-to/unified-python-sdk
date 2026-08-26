@@ -110,6 +110,11 @@ if TYPE_CHECKING:
         AccountingExpenseStatus,
         AccountingExpenseTypedDict,
     )
+    from .accountingextendednote import (
+        AccountingExtendedNote,
+        AccountingExtendedNoteTypedDict,
+        Visibility,
+    )
     from .accountingfee import AccountingFee, AccountingFeeType, AccountingFeeTypedDict
     from .accountinginvoice import (
         AccountingInvoice,
@@ -619,10 +624,10 @@ if TYPE_CHECKING:
         CrmMetadataValue,
         CrmMetadataValueTypedDict,
     )
-    from .crmpicklist import CrmPicklist, CrmPicklistType, CrmPicklistTypedDict
     from .crmpipeline import CrmPipeline, CrmPipelineTypedDict
     from .crmreference import CrmReference, CrmReferenceTypedDict
     from .crmstage import CrmStage, CrmStageTypedDict
+    from .crmtaxonomy import CrmTaxonomy, CrmTaxonomyType, CrmTaxonomyTypedDict
     from .crmtelephone import CrmTelephone, CrmTelephoneType, CrmTelephoneTypedDict
     from .datastoredatabase import DatastoreDatabase, DatastoreDatabaseTypedDict
     from .datastorefield import (
@@ -1127,6 +1132,10 @@ if TYPE_CHECKING:
     from .property_accountingcontact_shipping_address import (
         PropertyAccountingContactShippingAddress,
         PropertyAccountingContactShippingAddressTypedDict,
+    )
+    from .property_accountingextendednote_user import (
+        PropertyAccountingExtendedNoteUser,
+        PropertyAccountingExtendedNoteUserTypedDict,
     )
     from .property_accountingorder_billing_address import (
         PropertyAccountingOrderBillingAddress,
@@ -2211,6 +2220,8 @@ __all__ = [
     "AccountingExpense",
     "AccountingExpenseStatus",
     "AccountingExpenseTypedDict",
+    "AccountingExtendedNote",
+    "AccountingExtendedNoteTypedDict",
     "AccountingFee",
     "AccountingFeeType",
     "AccountingFeeTypedDict",
@@ -2639,15 +2650,15 @@ __all__ = [
     "CrmMetadataTypedDict",
     "CrmMetadataValue",
     "CrmMetadataValueTypedDict",
-    "CrmPicklist",
-    "CrmPicklistType",
-    "CrmPicklistTypedDict",
     "CrmPipeline",
     "CrmPipelineTypedDict",
     "CrmReference",
     "CrmReferenceTypedDict",
     "CrmStage",
     "CrmStageTypedDict",
+    "CrmTaxonomy",
+    "CrmTaxonomyType",
+    "CrmTaxonomyTypedDict",
     "CrmTelephone",
     "CrmTelephoneType",
     "CrmTelephoneTypedDict",
@@ -3107,6 +3118,8 @@ __all__ = [
     "PropertyAccountingContactBillingAddressTypedDict",
     "PropertyAccountingContactShippingAddress",
     "PropertyAccountingContactShippingAddressTypedDict",
+    "PropertyAccountingExtendedNoteUser",
+    "PropertyAccountingExtendedNoteUserTypedDict",
     "PropertyAccountingOrderBillingAddress",
     "PropertyAccountingOrderBillingAddressTypedDict",
     "PropertyAccountingOrderShippingAddress",
@@ -3829,6 +3842,7 @@ __all__ = [
     "VirtualWebhookUserID",
     "VirtualWebhookUserMentionedID",
     "VirtualWebhookVisitorID",
+    "Visibility",
     "Webhook",
     "WebhookEvent",
     "WebhookObjectType",
@@ -3905,6 +3919,9 @@ _dynamic_imports: dict[str, str] = {
     "AccountingExpense": ".accountingexpense",
     "AccountingExpenseStatus": ".accountingexpense",
     "AccountingExpenseTypedDict": ".accountingexpense",
+    "AccountingExtendedNote": ".accountingextendednote",
+    "AccountingExtendedNoteTypedDict": ".accountingextendednote",
+    "Visibility": ".accountingextendednote",
     "AccountingFee": ".accountingfee",
     "AccountingFeeType": ".accountingfee",
     "AccountingFeeTypedDict": ".accountingfee",
@@ -4368,15 +4385,15 @@ _dynamic_imports: dict[str, str] = {
     "CrmMetadataTypedDict": ".crmmetadata",
     "CrmMetadataValue": ".crmmetadata",
     "CrmMetadataValueTypedDict": ".crmmetadata",
-    "CrmPicklist": ".crmpicklist",
-    "CrmPicklistType": ".crmpicklist",
-    "CrmPicklistTypedDict": ".crmpicklist",
     "CrmPipeline": ".crmpipeline",
     "CrmPipelineTypedDict": ".crmpipeline",
     "CrmReference": ".crmreference",
     "CrmReferenceTypedDict": ".crmreference",
     "CrmStage": ".crmstage",
     "CrmStageTypedDict": ".crmstage",
+    "CrmTaxonomy": ".crmtaxonomy",
+    "CrmTaxonomyType": ".crmtaxonomy",
+    "CrmTaxonomyTypedDict": ".crmtaxonomy",
     "CrmTelephone": ".crmtelephone",
     "CrmTelephoneType": ".crmtelephone",
     "CrmTelephoneTypedDict": ".crmtelephone",
@@ -4880,6 +4897,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAccountingContactBillingAddressTypedDict": ".property_accountingcontact_billing_address",
     "PropertyAccountingContactShippingAddress": ".property_accountingcontact_shipping_address",
     "PropertyAccountingContactShippingAddressTypedDict": ".property_accountingcontact_shipping_address",
+    "PropertyAccountingExtendedNoteUser": ".property_accountingextendednote_user",
+    "PropertyAccountingExtendedNoteUserTypedDict": ".property_accountingextendednote_user",
     "PropertyAccountingOrderBillingAddress": ".property_accountingorder_billing_address",
     "PropertyAccountingOrderBillingAddressTypedDict": ".property_accountingorder_billing_address",
     "PropertyAccountingOrderShippingAddress": ".property_accountingorder_shipping_address",

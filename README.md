@@ -959,8 +959,8 @@ asyncio.run(main())
 * [list_crm_deals](docs/sdks/crm/README.md#list_crm_deals) - List all deals
 * [list_crm_events](docs/sdks/crm/README.md#list_crm_events) - List all events
 * [list_crm_leads](docs/sdks/crm/README.md#list_crm_leads) - List all leads
-* [list_crm_picklists](docs/sdks/crm/README.md#list_crm_picklists) - List all picklists
 * [list_crm_pipelines](docs/sdks/crm/README.md#list_crm_pipelines) - List all pipelines
+* [list_crm_taxonomies](docs/sdks/crm/README.md#list_crm_taxonomies) - List all taxonomies
 * [patch_crm_company](docs/sdks/crm/README.md#patch_crm_company) - Update a company
 * [patch_crm_contact](docs/sdks/crm/README.md#patch_crm_contact) - Update a contact
 * [patch_crm_deal](docs/sdks/crm/README.md#patch_crm_deal) - Update a deal
@@ -1731,10 +1731,6 @@ asyncio.run(main())
 
 * [list_enrich_people](docs/sdks/person/README.md#list_enrich_people) - Retrieve enrichment information for a person
 
-### [Picklist](docs/sdks/picklist/README.md)
-
-* [list_crm_picklists](docs/sdks/picklist/README.md#list_crm_picklists) - List all picklists
-
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
 * [create_crm_pipeline](docs/sdks/pipeline/README.md#create_crm_pipeline) - Create a pipeline
@@ -2174,6 +2170,7 @@ asyncio.run(main())
 ### [Taxonomy](docs/sdks/taxonomy/README.md)
 
 * [get_hris_taxonomy](docs/sdks/taxonomy/README.md#get_hris_taxonomy) - Retrieve a taxonomy
+* [list_crm_taxonomies](docs/sdks/taxonomy/README.md#list_crm_taxonomies) - List all taxonomies
 * [list_hris_taxonomies](docs/sdks/taxonomy/README.md#list_hris_taxonomies) - List all taxonomies
 
 ### [Taxrate](docs/sdks/taxrate/README.md)

@@ -1,11 +1,11 @@
-# CrmPicklistType
+# CrmTaxonomyType
 
 ## Example Usage
 
 ```python
-from unified_python_sdk.models.shared import CrmPicklistType
+from unified_python_sdk.models.shared import CrmTaxonomyType
 
-value = CrmPicklistType.INDUSTRY
+value = CrmTaxonomyType.INDUSTRY
 
 # Open enum: unrecognized values are captured as UnrecognizedStr
 ```

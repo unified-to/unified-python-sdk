@@ -1,11 +1,11 @@
-# ListCrmPicklistsQueryParamFields
+# ListCrmTaxonomiesQueryParamFields
 
 ## Example Usage
 
 ```python
-from unified_python_sdk.models.operations import ListCrmPicklistsQueryParamFields
+from unified_python_sdk.models.operations import ListCrmTaxonomiesQueryParamFields
 
-value = ListCrmPicklistsQueryParamFields.ID
+value = ListCrmTaxonomiesQueryParamFields.ID
 ```
 
 

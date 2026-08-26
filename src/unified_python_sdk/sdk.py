@@ -128,7 +128,6 @@ if TYPE_CHECKING:
     from unified_python_sdk.payslip import Payslip
     from unified_python_sdk.performance import Performance
     from unified_python_sdk.person import Person
-    from unified_python_sdk.picklist import Picklist
     from unified_python_sdk.pipeline import Pipeline
     from unified_python_sdk.post import Post
     from unified_python_sdk.profile import Profile
@@ -278,8 +277,8 @@ class UnifiedTo(BaseSDK):
     crm: "Crm"
     deal: "Deal"
     lead: "Lead"
-    picklist: "Picklist"
     pipeline: "Pipeline"
+    taxonomy: "Taxonomy"
     datastore: "Datastore"
     database: "Database"
     query: "Query"
@@ -302,7 +301,6 @@ class UnifiedTo(BaseSDK):
     device: "Device"
     employee: "Employee"
     payslip: "Payslip"
-    taxonomy: "Taxonomy"
     timeoff: "Timeoff"
     timeshift: "Timeshift"
     kms: "Kms"
@@ -460,8 +458,8 @@ class UnifiedTo(BaseSDK):
         "crm": ("unified_python_sdk.crm", "Crm"),
         "deal": ("unified_python_sdk.deal", "Deal"),
         "lead": ("unified_python_sdk.lead", "Lead"),
-        "picklist": ("unified_python_sdk.picklist", "Picklist"),
         "pipeline": ("unified_python_sdk.pipeline", "Pipeline"),
+        "taxonomy": ("unified_python_sdk.taxonomy", "Taxonomy"),
         "datastore": ("unified_python_sdk.datastore", "Datastore"),
         "database": ("unified_python_sdk.database", "Database"),
         "query": ("unified_python_sdk.query", "Query"),
@@ -484,7 +482,6 @@ class UnifiedTo(BaseSDK):
         "device": ("unified_python_sdk.device", "Device"),
         "employee": ("unified_python_sdk.employee", "Employee"),
         "payslip": ("unified_python_sdk.payslip", "Payslip"),
-        "taxonomy": ("unified_python_sdk.taxonomy", "Taxonomy"),
         "timeoff": ("unified_python_sdk.timeoff", "Timeoff"),
         "timeshift": ("unified_python_sdk.timeshift", "Timeshift"),
         "kms": ("unified_python_sdk.kms", "Kms"),

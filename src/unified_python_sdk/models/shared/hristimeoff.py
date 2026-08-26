@@ -46,6 +46,7 @@ class HrisTimeoffTypedDict(TypedDict):
     end_at: NotRequired[datetime]
     id: NotRequired[str]
     is_paid: NotRequired[bool]
+    original_type: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reason: NotRequired[str]
     start_at: NotRequired[datetime]
@@ -76,6 +77,8 @@ class HrisTimeoff(BaseModel):
     id: Optional[str] = None
 
     is_paid: Optional[bool] = None
+
+    original_type: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -130,6 +133,7 @@ class HrisTimeoff(BaseModel):
                 "end_at",
                 "id",
                 "is_paid",
+                "original_type",
                 "raw",
                 "reason",
                 "start_at",
