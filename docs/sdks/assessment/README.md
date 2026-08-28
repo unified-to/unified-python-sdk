@@ -4,7 +4,9 @@
 
 ### Available Operations
 
+* [create_assessment_order](#create_assessment_order) - Create an order
 * [create_assessment_package](#create_assessment_package) - Create an assessment package
+* [get_assessment_order](#get_assessment_order) - Retrieve an order
 * [get_assessment_package](#get_assessment_package) - Get an assessment package
 * [list_assessment_packages](#list_assessment_packages) - List assessment packages
 * [patch_assessment_order](#patch_assessment_order) - Update an order
@@ -12,6 +14,56 @@
 * [remove_assessment_package](#remove_assessment_package) - Delete an assessment package
 * [update_assessment_order](#update_assessment_order) - Update an order
 * [update_assessment_package](#update_assessment_package) - Update an assessment package
+
+## create_assessment_order
+
+Create an order
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.assessment.create_assessment_order(request={
+        "assessment_order": {
+            "connection_id": "<id>",
+            "workspace_id": "<id>",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.assessment_order is not None
+
+    # Handle response
+    print(res.assessment_order)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.CreateAssessmentOrderRequest](../../models/operations/createassessmentorderrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.CreateAssessmentOrderResponse](../../models/operations/createassessmentorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_assessment_package
 
@@ -55,6 +107,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAssessmentPackageResponse](../../models/operations/createassessmentpackageresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_assessment_order
+
+Retrieve an order
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAssessmentOrder" method="get" path="/assessment/{connection_id}/order/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.assessment.get_assessment_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.assessment_order is not None
+
+    # Handle response
+    print(res.assessment_order)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GetAssessmentOrderRequest](../../models/operations/getassessmentorderrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.GetAssessmentOrderResponse](../../models/operations/getassessmentorderresponse.md)**
 
 ### Errors
 

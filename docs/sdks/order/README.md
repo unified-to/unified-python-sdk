@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_accounting_order](#create_accounting_order) - Create an order
+* [create_assessment_order](#create_assessment_order) - Create an order
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
+* [get_assessment_order](#get_assessment_order) - Retrieve an order
 * [list_accounting_orders](#list_accounting_orders) - List all orders
 * [patch_accounting_order](#patch_accounting_order) - Update an order
 * [patch_assessment_order](#patch_assessment_order) - Update an order
@@ -60,6 +62,56 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## create_assessment_order
+
+Create an order
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.order.create_assessment_order(request={
+        "assessment_order": {
+            "connection_id": "<id>",
+            "workspace_id": "<id>",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.assessment_order is not None
+
+    # Handle response
+    print(res.assessment_order)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.CreateAssessmentOrderRequest](../../models/operations/createassessmentorderrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.CreateAssessmentOrderResponse](../../models/operations/createassessmentorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_accounting_order
 
 Retrieve an order
@@ -100,6 +152,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAccountingOrderResponse](../../models/operations/getaccountingorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_assessment_order
+
+Retrieve an order
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAssessmentOrder" method="get" path="/assessment/{connection_id}/order/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.order.get_assessment_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.assessment_order is not None
+
+    # Handle response
+    print(res.assessment_order)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GetAssessmentOrderRequest](../../models/operations/getassessmentorderrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.GetAssessmentOrderResponse](../../models/operations/getassessmentorderresponse.md)**
 
 ### Errors
 

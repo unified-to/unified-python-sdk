@@ -447,7 +447,9 @@ asyncio.run(main())
 
 ### [Assessment](docs/sdks/assessment/README.md)
 
+* [create_assessment_order](docs/sdks/assessment/README.md#create_assessment_order) - Create an order
 * [create_assessment_package](docs/sdks/assessment/README.md#create_assessment_package) - Create an assessment package
+* [get_assessment_order](docs/sdks/assessment/README.md#get_assessment_order) - Retrieve an order
 * [get_assessment_package](docs/sdks/assessment/README.md#get_assessment_package) - Get an assessment package
 * [list_assessment_packages](docs/sdks/assessment/README.md#list_assessment_packages) - List assessment packages
 * [patch_assessment_order](docs/sdks/assessment/README.md#patch_assessment_order) - Update an order
@@ -1611,7 +1613,9 @@ asyncio.run(main())
 ### [Order](docs/sdks/order/README.md)
 
 * [create_accounting_order](docs/sdks/order/README.md#create_accounting_order) - Create an order
+* [create_assessment_order](docs/sdks/order/README.md#create_assessment_order) - Create an order
 * [get_accounting_order](docs/sdks/order/README.md#get_accounting_order) - Retrieve an order
+* [get_assessment_order](docs/sdks/order/README.md#get_assessment_order) - Retrieve an order
 * [list_accounting_orders](docs/sdks/order/README.md#list_accounting_orders) - List all orders
 * [patch_accounting_order](docs/sdks/order/README.md#patch_accounting_order) - Update an order
 * [patch_assessment_order](docs/sdks/order/README.md#patch_assessment_order) - Update an order
