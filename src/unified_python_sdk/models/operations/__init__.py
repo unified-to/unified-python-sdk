@@ -564,6 +564,13 @@ if TYPE_CHECKING:
         CreateHrisLocationResponse,
         CreateHrisLocationResponseTypedDict,
     )
+    from .createhristaxonomy import (
+        CreateHrisTaxonomyQueryParamFields,
+        CreateHrisTaxonomyRequest,
+        CreateHrisTaxonomyRequestTypedDict,
+        CreateHrisTaxonomyResponse,
+        CreateHrisTaxonomyResponseTypedDict,
+    )
     from .createhristimeoff import (
         CreateHrisTimeoffQueryParamFields,
         CreateHrisTimeoffRequest,
@@ -6224,6 +6231,11 @@ __all__ = [
     "CreateHrisLocationRequestTypedDict",
     "CreateHrisLocationResponse",
     "CreateHrisLocationResponseTypedDict",
+    "CreateHrisTaxonomyQueryParamFields",
+    "CreateHrisTaxonomyRequest",
+    "CreateHrisTaxonomyRequestTypedDict",
+    "CreateHrisTaxonomyResponse",
+    "CreateHrisTaxonomyResponseTypedDict",
     "CreateHrisTimeoffQueryParamFields",
     "CreateHrisTimeoffRequest",
     "CreateHrisTimeoffRequestTypedDict",
@@ -10331,6 +10343,11 @@ _dynamic_imports: dict[str, str] = {
     "CreateHrisLocationRequestTypedDict": ".createhrislocation",
     "CreateHrisLocationResponse": ".createhrislocation",
     "CreateHrisLocationResponseTypedDict": ".createhrislocation",
+    "CreateHrisTaxonomyQueryParamFields": ".createhristaxonomy",
+    "CreateHrisTaxonomyRequest": ".createhristaxonomy",
+    "CreateHrisTaxonomyRequestTypedDict": ".createhristaxonomy",
+    "CreateHrisTaxonomyResponse": ".createhristaxonomy",
+    "CreateHrisTaxonomyResponseTypedDict": ".createhristaxonomy",
     "CreateHrisTimeoffQueryParamFields": ".createhristimeoff",
     "CreateHrisTimeoffRequest": ".createhristimeoff",
     "CreateHrisTimeoffRequestTypedDict": ".createhristimeoff",

@@ -14,6 +14,7 @@
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_hris_location](#create_hris_location) - Create a location
+* [create_hris_taxonomy](#create_hris_taxonomy) - Create a taxonomy
 * [create_hris_timeoff](#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](#create_hris_timeshift) - Create a timeshift
 * [get_hris_attendance](#get_hris_attendance) - Retrieve an attendance
@@ -549,6 +550,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHrisLocationResponse](../../models/operations/createhrislocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_hris_taxonomy
+
+Create a taxonomy
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.create_hris_taxonomy(request={
+        "hris_taxonomy": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_taxonomy is not None
+
+    # Handle response
+    print(res.hris_taxonomy)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateHrisTaxonomyRequest](../../models/operations/createhristaxonomyrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.CreateHrisTaxonomyResponse](../../models/operations/createhristaxonomyresponse.md)**
 
 ### Errors
 

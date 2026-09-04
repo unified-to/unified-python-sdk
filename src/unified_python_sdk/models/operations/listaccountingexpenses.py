@@ -50,6 +50,8 @@ class ListAccountingExpensesQueryParamFields(str, Enum):
 class ListAccountingExpensesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    approver_user_id: NotRequired[str]
+    r"""The expense approver user/employee ID to filter by (reference to HrisEmployee)"""
     category_id: NotRequired[str]
     r"""The category ID to filter by (reference to AccountingCategory)"""
     contact_id: NotRequired[str]
@@ -85,6 +87,12 @@ class ListAccountingExpensesRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    approver_user_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The expense approver user/employee ID to filter by (reference to HrisEmployee)"""
 
     category_id: Annotated[
         Optional[str],
@@ -182,6 +190,7 @@ class ListAccountingExpensesRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "approver_user_id",
                 "category_id",
                 "contact_id",
                 "end_lt",
