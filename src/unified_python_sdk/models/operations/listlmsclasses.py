@@ -23,8 +23,6 @@ class ListLmsClassesQueryParamFields(str, Enum):
     DESCRIPTION = "description"
     MEDIA = "media"
     COURSE_ID = "course_id"
-    INSTRUCTOR_IDS = "instructor_ids"
-    STUDENT_IDS = "student_ids"
     LANGUAGES = "languages"
     INSTRUCTORS = "instructors"
     STUDENTS = "students"

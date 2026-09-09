@@ -20,18 +20,15 @@ class CrmDealTypedDict(TypedDict):
     contact_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    description: NotRequired[str]
     id: NotRequired[str]
     lost_reason: NotRequired[str]
     metadata: NotRequired[List[CrmMetadataTypedDict]]
     name: NotRequired[str]
-    pipeline: NotRequired[str]
-    pipeline_id: NotRequired[str]
     pipelines: NotRequired[List[CrmReferenceTypedDict]]
     probability: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
     source: NotRequired[str]
-    stage: NotRequired[str]
-    stage_id: NotRequired[str]
     stages: NotRequired[List[CrmReferenceTypedDict]]
     tags: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
@@ -56,6 +53,8 @@ class CrmDeal(BaseModel):
 
     currency: Optional[str] = None
 
+    description: Optional[str] = None
+
     id: Optional[str] = None
 
     lost_reason: Optional[str] = None
@@ -64,10 +63,6 @@ class CrmDeal(BaseModel):
 
     name: Optional[str] = None
 
-    pipeline: Optional[str] = None
-
-    pipeline_id: Optional[str] = None
-
     pipelines: Optional[List[CrmReference]] = None
 
     probability: Optional[float] = None
@@ -75,10 +70,6 @@ class CrmDeal(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     source: Optional[str] = None
-
-    stage: Optional[str] = None
-
-    stage_id: Optional[str] = None
 
     stages: Optional[List[CrmReference]] = None
 
@@ -101,18 +92,15 @@ class CrmDeal(BaseModel):
                 "contact_ids",
                 "created_at",
                 "currency",
+                "description",
                 "id",
                 "lost_reason",
                 "metadata",
                 "name",
-                "pipeline",
-                "pipeline_id",
                 "pipelines",
                 "probability",
                 "raw",
                 "source",
-                "stage",
-                "stage_id",
                 "stages",
                 "tags",
                 "updated_at",

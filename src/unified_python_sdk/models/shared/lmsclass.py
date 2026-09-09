@@ -15,15 +15,11 @@ class LmsClassTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     id: NotRequired[str]
-    instructor_ids: NotRequired[List[str]]
-    r"""@deprecated; use instructors"""
     instructors: NotRequired[List[LmsReferenceTypedDict]]
     languages: NotRequired[List[str]]
     media: NotRequired[List[LmsMediaTypedDict]]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    student_ids: NotRequired[List[str]]
-    r"""@deprecated; use students"""
     students: NotRequired[List[LmsReferenceTypedDict]]
     updated_at: NotRequired[datetime]
 
@@ -37,9 +33,6 @@ class LmsClass(BaseModel):
 
     id: Optional[str] = None
 
-    instructor_ids: Optional[List[str]] = None
-    r"""@deprecated; use instructors"""
-
     instructors: Optional[List[LmsReference]] = None
 
     languages: Optional[List[str]] = None
@@ -49,9 +42,6 @@ class LmsClass(BaseModel):
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
-
-    student_ids: Optional[List[str]] = None
-    r"""@deprecated; use students"""
 
     students: Optional[List[LmsReference]] = None
 
@@ -65,13 +55,11 @@ class LmsClass(BaseModel):
                 "created_at",
                 "description",
                 "id",
-                "instructor_ids",
                 "instructors",
                 "languages",
                 "media",
                 "name",
                 "raw",
-                "student_ids",
                 "students",
                 "updated_at",
             ]

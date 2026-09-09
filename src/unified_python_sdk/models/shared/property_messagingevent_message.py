@@ -22,9 +22,6 @@ class PropertyMessagingEventMessageTypedDict(TypedDict):
     author_member: NotRequired[PropertyMessagingEventMessageAuthorMemberTypedDict]
     r"""for email systems, this field represents the From value"""
     buttons: NotRequired[List[MessagingButtonTypedDict]]
-    channel_id: NotRequired[str]
-    channel_ids: NotRequired[List[str]]
-    r"""@deprecated; use channels instead"""
     channels: NotRequired[List[MessagingReferenceTypedDict]]
     r"""Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted."""
     created_at: NotRequired[datetime]
@@ -45,7 +42,6 @@ class PropertyMessagingEventMessageTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     reactions: NotRequired[List[MessagingReactionTypedDict]]
     reference: NotRequired[str]
-    root_message_id: NotRequired[str]
     subject: NotRequired[str]
     updated_at: NotRequired[datetime]
     web_url: NotRequired[str]
@@ -58,11 +54,6 @@ class PropertyMessagingEventMessage(BaseModel):
     r"""for email systems, this field represents the From value"""
 
     buttons: Optional[List[MessagingButton]] = None
-
-    channel_id: Optional[str] = None
-
-    channel_ids: Optional[List[str]] = None
-    r"""@deprecated; use channels instead"""
 
     channels: Optional[List[MessagingReference]] = None
     r"""Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted."""
@@ -100,8 +91,6 @@ class PropertyMessagingEventMessage(BaseModel):
 
     reference: Optional[str] = None
 
-    root_message_id: Optional[str] = None
-
     subject: Optional[str] = None
 
     updated_at: Optional[datetime] = None
@@ -115,8 +104,6 @@ class PropertyMessagingEventMessage(BaseModel):
                 "attachments",
                 "author_member",
                 "buttons",
-                "channel_id",
-                "channel_ids",
                 "channels",
                 "created_at",
                 "destination_members",
@@ -133,7 +120,6 @@ class PropertyMessagingEventMessage(BaseModel):
                 "raw",
                 "reactions",
                 "reference",
-                "root_message_id",
                 "subject",
                 "updated_at",
                 "web_url",

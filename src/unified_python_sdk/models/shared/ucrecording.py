@@ -20,9 +20,6 @@ class UcRecordingType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class UcRecordingTypedDict(TypedDict):
     call_id: NotRequired[str]
-    contact_id: NotRequired[str]
-    contact_name: NotRequired[str]
-    contact_phone: NotRequired[str]
     contacts: NotRequired[List[UcContactTypedDict]]
     created_at: NotRequired[datetime]
     end_at: NotRequired[datetime]
@@ -41,12 +38,6 @@ class UcRecordingTypedDict(TypedDict):
 
 class UcRecording(BaseModel):
     call_id: Optional[str] = None
-
-    contact_id: Optional[str] = None
-
-    contact_name: Optional[str] = None
-
-    contact_phone: Optional[str] = None
 
     contacts: Optional[List[UcContact]] = None
 
@@ -90,9 +81,6 @@ class UcRecording(BaseModel):
         optional_fields = set(
             [
                 "call_id",
-                "contact_id",
-                "contact_name",
-                "contact_phone",
                 "contacts",
                 "created_at",
                 "end_at",

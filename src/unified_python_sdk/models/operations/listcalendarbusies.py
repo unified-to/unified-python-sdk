@@ -28,7 +28,7 @@ class ListCalendarBusiesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     calendar_id: NotRequired[str]
-    r"""The calendar ID to filter by (reference to CalendarCalendar)"""
+    r"""The calendar ID to get availability for. Typically user's email or user ID. (reference to CalendarCalendar)"""
     end_lt: NotRequired[str]
     r"""The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[ListCalendarBusiesQueryParamFields]]
@@ -59,7 +59,7 @@ class ListCalendarBusiesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""The calendar ID to filter by (reference to CalendarCalendar)"""
+    r"""The calendar ID to get availability for. Typically user's email or user ID. (reference to CalendarCalendar)"""
 
     end_lt: Annotated[
         Optional[str],

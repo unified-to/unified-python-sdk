@@ -40,7 +40,6 @@ class ListCommerceItemsQueryParamFields(str, Enum):
     VARIANTS = "variants"
     TAGS = "tags"
     MEDIA = "media"
-    COLLECTION_IDS = "collection_ids"
     ACCOUNT_ID = "account_id"
     METADATA = "metadata"
     COLLECTIONS = "collections"

@@ -41,17 +41,13 @@ class AccountingAccountTypedDict(TypedDict):
     currency: NotRequired[str]
     customer_defined_code: NotRequired[str]
     description: NotRequired[str]
-    group: NotRequired[str]
     id: NotRequired[str]
     is_payable: NotRequired[bool]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    section: NotRequired[str]
     status: NotRequired[Status]
-    subgroup: NotRequired[str]
-    subsection: NotRequired[str]
     taxonomy: NotRequired[List[AccountingAccountTaxonomyTypedDict]]
     type: NotRequired[Type]
     updated_at: NotRequired[datetime]
@@ -70,8 +66,6 @@ class AccountingAccount(BaseModel):
 
     description: Optional[str] = None
 
-    group: Optional[str] = None
-
     id: Optional[str] = None
 
     is_payable: Optional[bool] = None
@@ -84,13 +78,7 @@ class AccountingAccount(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    section: Optional[str] = None
-
     status: Optional[Status] = None
-
-    subgroup: Optional[str] = None
-
-    subsection: Optional[str] = None
 
     taxonomy: Optional[List[AccountingAccountTaxonomy]] = None
 
@@ -125,17 +113,13 @@ class AccountingAccount(BaseModel):
                 "currency",
                 "customer_defined_code",
                 "description",
-                "group",
                 "id",
                 "is_payable",
                 "name",
                 "organization_id",
                 "parent_id",
                 "raw",
-                "section",
                 "status",
-                "subgroup",
-                "subsection",
                 "taxonomy",
                 "type",
                 "updated_at",

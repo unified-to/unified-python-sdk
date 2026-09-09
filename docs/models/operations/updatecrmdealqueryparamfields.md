@@ -21,10 +21,6 @@ value = UpdateCrmDealQueryParamFields.ID
 | `CURRENCY`    | currency      |
 | `CLOSED_AT`   | closed_at     |
 | `CLOSING_AT`  | closing_at    |
-| `STAGE`       | stage         |
-| `STAGE_ID`    | stage_id      |
-| `PIPELINE`    | pipeline      |
-| `PIPELINE_ID` | pipeline_id   |
 | `STAGES`      | stages        |
 | `PIPELINES`   | pipelines     |
 | `SOURCE`      | source        |
@@ -36,4 +32,5 @@ value = UpdateCrmDealQueryParamFields.ID
 | `CONTACT_IDS` | contact_ids   |
 | `COMPANY_IDS` | company_ids   |
 | `METADATA`    | metadata      |
+| `DESCRIPTION` | description   |
 | `RAW`         | raw           |

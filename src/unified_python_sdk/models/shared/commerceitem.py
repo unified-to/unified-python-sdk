@@ -25,8 +25,6 @@ class WeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CommerceItemTypedDict(TypedDict):
     account_id: NotRequired[str]
-    collection_ids: NotRequired[List[str]]
-    r"""@deprecated; use collections instead"""
     collections: NotRequired[List[CommerceReferenceTypedDict]]
     r"""points to Collection with id, name, and type fields"""
     created_at: NotRequired[datetime]
@@ -63,9 +61,6 @@ class CommerceItemTypedDict(TypedDict):
 
 class CommerceItem(BaseModel):
     account_id: Optional[str] = None
-
-    collection_ids: Optional[List[str]] = None
-    r"""@deprecated; use collections instead"""
 
     collections: Optional[List[CommerceReference]] = None
     r"""points to Collection with id, name, and type fields"""
@@ -143,7 +138,6 @@ class CommerceItem(BaseModel):
         optional_fields = set(
             [
                 "account_id",
-                "collection_ids",
                 "collections",
                 "created_at",
                 "description",

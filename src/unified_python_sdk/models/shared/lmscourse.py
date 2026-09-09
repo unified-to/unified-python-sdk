@@ -18,8 +18,6 @@ class LmsCourseTypedDict(TypedDict):
     description: NotRequired[str]
     duration_minutes: NotRequired[float]
     id: NotRequired[str]
-    instructor_ids: NotRequired[List[str]]
-    r"""@deprecated; use instructors"""
     instructors: NotRequired[List[LmsReferenceTypedDict]]
     is_active: NotRequired[bool]
     is_private: NotRequired[bool]
@@ -31,8 +29,6 @@ class LmsCourseTypedDict(TypedDict):
     published_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     skills: NotRequired[List[str]]
-    student_ids: NotRequired[List[str]]
-    r"""@deprecated; use students"""
     students: NotRequired[List[LmsReferenceTypedDict]]
     time_estimate_minutes: NotRequired[float]
     updated_at: NotRequired[datetime]
@@ -52,9 +48,6 @@ class LmsCourse(BaseModel):
     duration_minutes: Optional[float] = None
 
     id: Optional[str] = None
-
-    instructor_ids: Optional[List[str]] = None
-    r"""@deprecated; use instructors"""
 
     instructors: Optional[List[LmsReference]] = None
 
@@ -78,9 +71,6 @@ class LmsCourse(BaseModel):
 
     skills: Optional[List[str]] = None
 
-    student_ids: Optional[List[str]] = None
-    r"""@deprecated; use students"""
-
     students: Optional[List[LmsReference]] = None
 
     time_estimate_minutes: Optional[float] = None
@@ -98,7 +88,6 @@ class LmsCourse(BaseModel):
                 "description",
                 "duration_minutes",
                 "id",
-                "instructor_ids",
                 "instructors",
                 "is_active",
                 "is_private",
@@ -110,7 +99,6 @@ class LmsCourse(BaseModel):
                 "published_at",
                 "raw",
                 "skills",
-                "student_ids",
                 "students",
                 "time_estimate_minutes",
                 "updated_at",

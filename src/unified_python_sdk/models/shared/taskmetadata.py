@@ -90,10 +90,8 @@ class TaskMetadataTypedDict(TypedDict):
     extra_data: NotRequired[TaskMetadataExtraDataTypedDict]
     format_: NotRequired[TaskMetadataFormat]
     id: NotRequired[str]
-    key: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    type: NotRequired[str]
     value: NotRequired[TaskMetadataValueTypedDict]
 
 
@@ -106,13 +104,9 @@ class TaskMetadata(BaseModel):
 
     id: Optional[str] = None
 
-    key: Optional[str] = None
-
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
-
-    type: Optional[str] = None
 
     value: Optional[TaskMetadataValue] = None
 
@@ -128,7 +122,7 @@ class TaskMetadata(BaseModel):
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
-            ["extra_data", "format", "id", "key", "namespace", "slug", "type", "value"]
+            ["extra_data", "format", "id", "namespace", "slug", "value"]
         )
         serialized = handler(self)
         m = {}

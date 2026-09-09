@@ -25,8 +25,6 @@ class LmsContentTypedDict(TypedDict):
     duration_minutes: NotRequired[float]
     external_reference: NotRequired[str]
     id: NotRequired[str]
-    instructor_ids: NotRequired[List[str]]
-    r"""@deprecated; use instructors"""
     instructors: NotRequired[List[LmsReferenceTypedDict]]
     is_active: NotRequired[bool]
     languages: NotRequired[List[str]]
@@ -63,9 +61,6 @@ class LmsContent(BaseModel):
     external_reference: Optional[str] = None
 
     id: Optional[str] = None
-
-    instructor_ids: Optional[List[str]] = None
-    r"""@deprecated; use instructors"""
 
     instructors: Optional[List[LmsReference]] = None
 
@@ -111,7 +106,6 @@ class LmsContent(BaseModel):
                 "duration_minutes",
                 "external_reference",
                 "id",
-                "instructor_ids",
                 "instructors",
                 "is_active",
                 "languages",

@@ -177,17 +177,9 @@ if TYPE_CHECKING:
         AccountingProfitlossAccount,
         AccountingProfitlossAccountTypedDict,
     )
-    from .accountingprofitlosscategory import (
-        AccountingProfitlossCategory,
-        AccountingProfitlossCategoryTypedDict,
-    )
     from .accountingprofitlosssection import (
         AccountingProfitlossSection,
         AccountingProfitlossSectionTypedDict,
-    )
-    from .accountingprofitlosssubcategory import (
-        AccountingProfitlossSubcategory,
-        AccountingProfitlossSubcategoryTypedDict,
     )
     from .accountingproject import (
         AccountingProject,
@@ -2261,12 +2253,8 @@ __all__ = [
     "AccountingProfitloss",
     "AccountingProfitlossAccount",
     "AccountingProfitlossAccountTypedDict",
-    "AccountingProfitlossCategory",
-    "AccountingProfitlossCategoryTypedDict",
     "AccountingProfitlossSection",
     "AccountingProfitlossSectionTypedDict",
-    "AccountingProfitlossSubcategory",
-    "AccountingProfitlossSubcategoryTypedDict",
     "AccountingProfitlossTypedDict",
     "AccountingProject",
     "AccountingProjectStatus",
@@ -3974,12 +3962,8 @@ _dynamic_imports: dict[str, str] = {
     "AccountingProfitlossTypedDict": ".accountingprofitloss",
     "AccountingProfitlossAccount": ".accountingprofitlossaccount",
     "AccountingProfitlossAccountTypedDict": ".accountingprofitlossaccount",
-    "AccountingProfitlossCategory": ".accountingprofitlosscategory",
-    "AccountingProfitlossCategoryTypedDict": ".accountingprofitlosscategory",
     "AccountingProfitlossSection": ".accountingprofitlosssection",
     "AccountingProfitlossSectionTypedDict": ".accountingprofitlosssection",
-    "AccountingProfitlossSubcategory": ".accountingprofitlosssubcategory",
-    "AccountingProfitlossSubcategoryTypedDict": ".accountingprofitlosssubcategory",
     "AccountingProject": ".accountingproject",
     "AccountingProjectStatus": ".accountingproject",
     "AccountingProjectTypedDict": ".accountingproject",
