@@ -42,7 +42,6 @@ class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     ACCOUNTING_ORDER = "accounting_order"
     ACCOUNTING_SALESORDER = "accounting_salesorder"
     ACCOUNTING_PURCHASEORDER = "accounting_purchaseorder"
-    ACCOUNTING_REPORT = "accounting_report"
     ACCOUNTING_BALANCESHEET = "accounting_balancesheet"
     ACCOUNTING_PROFITLOSS = "accounting_profitloss"
     ACCOUNTING_TRIALBALANCE = "accounting_trialbalance"

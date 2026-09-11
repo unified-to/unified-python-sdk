@@ -44,7 +44,6 @@
 * [get_accounting_project](#get_accounting_project) - Retrieve a project
 * [get_accounting_purchaseorder](#get_accounting_purchaseorder) - Retrieve a purchaseorder
 * [get_accounting_quote](#get_accounting_quote) - Retrieve a quote
-* [get_accounting_report](#get_accounting_report) - Retrieve a report
 * [get_accounting_salesorder](#get_accounting_salesorder) - Retrieve a salesorder
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
@@ -71,7 +70,6 @@
 * [list_accounting_projects](#list_accounting_projects) - List all projects
 * [list_accounting_purchaseorders](#list_accounting_purchaseorders) - List all purchaseorders
 * [list_accounting_quotes](#list_accounting_quotes) - List all quotes
-* [list_accounting_reports](#list_accounting_reports) - List all reports
 * [list_accounting_salesorders](#list_accounting_salesorders) - List all salesorders
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
@@ -2015,53 +2013,6 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_accounting_report
-
-Retrieve a report
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.accounting.get_accounting_report(request={
-        "connection_id": "<id>",
-        "id": "<id>",
-    })
-
-    assert res.accounting_report is not None
-
-    # Handle response
-    print(res.accounting_report)
-
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetAccountingReportRequest](../../models/operations/getaccountingreportrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
-
-### Response
-
-**[operations.GetAccountingReportResponse](../../models/operations/getaccountingreportresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
 ## get_accounting_salesorder
 
 Retrieve a salesorder
@@ -3256,52 +3207,6 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAccountingQuotesResponse](../../models/operations/listaccountingquotesresponse.md)**
-
-### Errors
-
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## list_accounting_reports
-
-List all reports
-
-### Example Usage
-
-<!-- UsageSnippet language="python" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
-```python
-from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import shared
-
-
-with UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-) as unified_to:
-
-    res = unified_to.accounting.list_accounting_reports(request={
-        "connection_id": "<id>",
-    })
-
-    assert res.accounting_reports is not None
-
-    # Handle response
-    print(res.accounting_reports)
-
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.ListAccountingReportsRequest](../../models/operations/listaccountingreportsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
-
-### Response
-
-**[operations.ListAccountingReportsResponse](../../models/operations/listaccountingreportsresponse.md)**
 
 ### Errors
 

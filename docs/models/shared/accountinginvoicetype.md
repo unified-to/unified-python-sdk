@@ -5,7 +5,7 @@
 ```python
 from unified_python_sdk.models.shared import AccountingInvoiceType
 
-value = AccountingInvoiceType.BILL
+value = AccountingInvoiceType.INVOICE
 
 # Open enum: unrecognized values are captured as UnrecognizedStr
 ```
@@ -15,6 +15,5 @@ value = AccountingInvoiceType.BILL
 
 | Name         | Value        |
 | ------------ | ------------ |
-| `BILL`       | BILL         |
 | `INVOICE`    | INVOICE      |
 | `CREDITMEMO` | CREDITMEMO   |

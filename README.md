@@ -223,7 +223,6 @@ asyncio.run(main())
 * [get_accounting_project](docs/sdks/accounting/README.md#get_accounting_project) - Retrieve a project
 * [get_accounting_purchaseorder](docs/sdks/accounting/README.md#get_accounting_purchaseorder) - Retrieve a purchaseorder
 * [get_accounting_quote](docs/sdks/accounting/README.md#get_accounting_quote) - Retrieve a quote
-* [get_accounting_report](docs/sdks/accounting/README.md#get_accounting_report) - Retrieve a report
 * [get_accounting_salesorder](docs/sdks/accounting/README.md#get_accounting_salesorder) - Retrieve a salesorder
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
@@ -250,7 +249,6 @@ asyncio.run(main())
 * [list_accounting_projects](docs/sdks/accounting/README.md#list_accounting_projects) - List all projects
 * [list_accounting_purchaseorders](docs/sdks/accounting/README.md#list_accounting_purchaseorders) - List all purchaseorders
 * [list_accounting_quotes](docs/sdks/accounting/README.md#list_accounting_quotes) - List all quotes
-* [list_accounting_reports](docs/sdks/accounting/README.md#list_accounting_reports) - List all reports
 * [list_accounting_salesorders](docs/sdks/accounting/README.md#list_accounting_salesorders) - List all salesorders
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
@@ -1898,8 +1896,6 @@ asyncio.run(main())
 
 ### [Report](docs/sdks/report/README.md)
 
-* [get_accounting_report](docs/sdks/report/README.md#get_accounting_report) - Retrieve a report
-* [list_accounting_reports](docs/sdks/report/README.md#list_accounting_reports) - List all reports
 * [list_ads_reports](docs/sdks/report/README.md#list_ads_reports) - List all reports
 * [list_analytics_reports](docs/sdks/report/README.md#list_analytics_reports) - List all reports
 * [list_martech_reports](docs/sdks/report/README.md#list_martech_reports) - List all reports

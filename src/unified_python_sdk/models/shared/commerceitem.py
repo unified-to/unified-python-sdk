@@ -3,7 +3,6 @@
 from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
 from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
-from .commerceitemvariant import CommerceItemvariant, CommerceItemvariantTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from .commercereference import CommerceReference, CommerceReferenceTypedDict
 from datetime import datetime
@@ -52,8 +51,6 @@ class CommerceItemTypedDict(TypedDict):
     total_stock: NotRequired[float]
     type: NotRequired[str]
     updated_at: NotRequired[datetime]
-    variants: NotRequired[List[CommerceItemvariantTypedDict]]
-    r"""first variant is the default variant"""
     vendor_name: NotRequired[str]
     weight: NotRequired[float]
     weight_unit: NotRequired[WeightUnit]
@@ -115,9 +112,6 @@ class CommerceItem(BaseModel):
 
     updated_at: Optional[datetime] = None
 
-    variants: Optional[List[CommerceItemvariant]] = None
-    r"""first variant is the default variant"""
-
     vendor_name: Optional[str] = None
 
     weight: Optional[float] = None
@@ -164,7 +158,6 @@ class CommerceItem(BaseModel):
                 "total_stock",
                 "type",
                 "updated_at",
-                "variants",
                 "vendor_name",
                 "weight",
                 "weight_unit",

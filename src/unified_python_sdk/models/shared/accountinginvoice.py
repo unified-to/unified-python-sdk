@@ -69,7 +69,6 @@ class AccountingInvoiceTerm(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AccountingInvoiceType(str, Enum, metaclass=utils.OpenEnumMeta):
-    BILL = "BILL"
     INVOICE = "INVOICE"
     CREDITMEMO = "CREDITMEMO"
 

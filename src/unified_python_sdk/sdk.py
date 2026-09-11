@@ -219,7 +219,6 @@ class UnifiedTo(BaseSDK):
     project: "Project"
     purchaseorder: "Purchaseorder"
     quote: "Quote"
-    report: "Report"
     salesorder: "Salesorder"
     taxrate: "Taxrate"
     transaction: "Transaction"
@@ -233,6 +232,7 @@ class UnifiedTo(BaseSDK):
     group: "Group"
     insertionorder: "Insertionorder"
     promoted: "Promoted"
+    report: "Report"
     target: "Target"
     analytics: "Analytics"
     event: "Event"
@@ -397,7 +397,6 @@ class UnifiedTo(BaseSDK):
         "project": ("unified_python_sdk.project", "Project"),
         "purchaseorder": ("unified_python_sdk.purchaseorder", "Purchaseorder"),
         "quote": ("unified_python_sdk.quote", "Quote"),
-        "report": ("unified_python_sdk.report", "Report"),
         "salesorder": ("unified_python_sdk.salesorder", "Salesorder"),
         "taxrate": ("unified_python_sdk.taxrate", "Taxrate"),
         "transaction": ("unified_python_sdk.transaction", "Transaction"),
@@ -411,6 +410,7 @@ class UnifiedTo(BaseSDK):
         "group": ("unified_python_sdk.group", "Group"),
         "insertionorder": ("unified_python_sdk.insertionorder", "Insertionorder"),
         "promoted": ("unified_python_sdk.promoted", "Promoted"),
+        "report": ("unified_python_sdk.report", "Report"),
         "target": ("unified_python_sdk.target", "Target"),
         "analytics": ("unified_python_sdk.analytics", "Analytics"),
         "event": ("unified_python_sdk.event", "Event"),
