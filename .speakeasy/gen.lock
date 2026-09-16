@@ -1,25 +1,25 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 2603dd36aa034d8cef9a411c0f95cad1
+  docChecksum: d97af36e486283112b42dc840ba12587
   docVersion: "1.0"
-  speakeasyVersion: 1.796.4
-  generationVersion: 2.935.1
-  releaseVersion: 0.60.11
-  configChecksum: f83bda1bdd8d4e13d9a9f9ec956e8cf3
+  speakeasyVersion: 1.797.0
+  generationVersion: 2.937.18
+  releaseVersion: 0.60.12
+  configChecksum: 1bc72092078c6b9777a4bb4a491d753e
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: d3f1d215-81cf-41e3-93f9-094d94d4fbad
-  pristine_commit_hash: 125d142f6f8f9c9a648da3dfaf9e83404ab02f87
-  pristine_tree_hash: 1ea83c94c0ece08e06086574bdb869f93f5b33a1
+  generation_id: a326e68d-9343-4cdc-8779-7e4e73d0741e
+  pristine_commit_hash: 1f8948713b2b128b654e184543dc28b57e544935
+  pristine_tree_hash: bfe65e641f3aedeacc921c1e78277f2bdd080fff
 features:
   python:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.1.0
-    constsAndDefaults: 1.0.7
+    constsAndDefaults: 1.0.8
     core: 6.1.2
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
@@ -33,7 +33,7 @@ features:
     responseFormat: 1.1.0
     retries: 3.1.2
     sdkHooks: 1.3.0
-    unions: 3.1.9
+    unions: 3.1.10
     uploadStreams: 1.0.3
 trackedFiles:
   .gitattributes:
@@ -1598,8 +1598,8 @@ trackedFiles:
     pristine_git_object: c8653272df7b682444f50e827e446ee298c55a00
   docs/models/operations/createunifiedwebhookrequest.md:
     id: 7a6fd01316bc
-    last_write_checksum: sha1:417b34ca27acd0360f2c36441dd4f9bcf0efa289
-    pristine_git_object: 97d66af73564296d3cb8176e02b4a1b2b75b3ec1
+    last_write_checksum: sha1:c2994ca7dfb5b14948a6c5678ef1267d582bf45e
+    pristine_git_object: 1bcc39d03f72a35634116ebc145f78ea5be977e2
   docs/models/operations/createunifiedwebhookresponse.md:
     id: 5992161976ac
     last_write_checksum: sha1:439413525cd2c0153865b38ece3d86d8616039ed
@@ -14818,8 +14818,8 @@ trackedFiles:
     pristine_git_object: 83a48f3ba3537760118bbbd3fb83eb8f1b4c29ae
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:147bea61184fac488833fa6a43e9f514e945e96a
-    pristine_git_object: cc9fb702e82eab98d8d2edba7fe2f154b9fb2b30
+    last_write_checksum: sha1:5b776b47d1c051e435a4b8a0ec989259281837e2
+    pristine_git_object: 4660b0fc82ea8e7885362a0b5b6cf5bdc5b6bda4
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -14846,8 +14846,8 @@ trackedFiles:
     pristine_git_object: 961c89961fa14187bd7ac9b458fff9e98be1bd77
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:c5b077a88874646c6c1e233057e11ff341000d81
-    pristine_git_object: 5965f0f9b5c7597655a5b100038aa1485ac6f40c
+    last_write_checksum: sha1:c94a7c6311c77cc46c48d9e9954bdf1b93d703ab
+    pristine_git_object: f490d1749289e6609cc0f94a1e1a0c051020b2df
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:218064853bd5415a5c6728e6765a9c7d5e15b7b1
@@ -15810,8 +15810,8 @@ trackedFiles:
     pristine_git_object: 1ddce9e42082fcdf512158e4714bafa58227ae07
   src/unified_python_sdk/models/operations/createunifiedwebhook.py:
     id: 6f32e8c4e4d7
-    last_write_checksum: sha1:7af9e3e3f8c936db621733f42830995b51baa427
-    pristine_git_object: de10040980b42e1f7255dae8099addf830e93b32
+    last_write_checksum: sha1:567b0698127e3e4f060cb90eb4a1c27cb3384771
+    pristine_git_object: 247226e23028a9ab4632234599d36f960617737d
   src/unified_python_sdk/models/operations/createunifiedworkspacesecretsmanager.py:
     id: dabc14576b7f
     last_write_checksum: sha1:bfbed03b19824fd87340af8b866b3d6ad333044f
@@ -21114,8 +21114,8 @@ trackedFiles:
     pristine_git_object: b8eb889161a1b23ca9583fca966e28ac1aadf6b2
   src/unified_python_sdk/utils/__init__.py:
     id: 143f1037e996
-    last_write_checksum: sha1:53c9544397bbc534c45a228feac3cdb2e9017fe6
-    pristine_git_object: 7af3b82cf95edc2901bc85b2624c54f39b7f9724
+    last_write_checksum: sha1:370ec05f8793eddc69ee21a4df8fb1b08d11561d
+    pristine_git_object: 6d6c5c3f9973b392924f0ee369a6c6bb5407ea02
   src/unified_python_sdk/utils/annotations.py:
     id: 532ac27467c4
     last_write_checksum: sha1:a4824ad65f730303e4e1e3ec1febf87b4eb46dbc
@@ -21170,8 +21170,8 @@ trackedFiles:
     pristine_git_object: 42d8d78e9981eed7507670014d99588e27ab325a
   src/unified_python_sdk/utils/serializers.py:
     id: e4b955f57162
-    last_write_checksum: sha1:7485f1425b0661fd84836186570df90207eec6af
-    pristine_git_object: 1031ed930bad5ece220cf7416a56c29f40f0588b
+    last_write_checksum: sha1:2fb543339b424a0818b126e69695df5c91cd4d7b
+    pristine_git_object: 5e57d36e8883501df8f6293e4c76ac337c4987eb
   src/unified_python_sdk/utils/unmarshal_json_response.py:
     id: 8c3ec0721f24
     last_write_checksum: sha1:5baab724a499dd85f6e91bad2e0f14139194bac3
@@ -35323,7 +35323,6 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.item.patch_commerce_item()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n  *  `response.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n  *  `response.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n  *  `response.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.accounting.create_accounting_invoice()`: \n  *  `request.accounting_invoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.accounting.get_accounting_invoice()`:  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.accounting.list_accounting_invoices()`:  `response.[].type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.accounting.patch_accounting_invoice()`: \n  *  `request.accounting_invoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.accounting.update_accounting_invoice()`: \n  *  `request.accounting_invoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.invoice.create_accounting_invoice()`: \n  *  `request.accounting_invoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.invoice.get_accounting_invoice()`:  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.invoice.list_accounting_invoices()`:  `response.[].type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.invoice.patch_accounting_invoice()`: \n  *  `request.accounting_invoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.invoice.update_accounting_invoice()`: \n  *  `request.accounting_invoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified_to.commerce.create_commerce_item()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified_to.commerce.get_commerce_item()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified_to.commerce.list_commerce_items()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].variants` **Removed** (Breaking ⚠️)\n* `unified_to.commerce.patch_commerce_item()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified_to.commerce.update_commerce_item()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified_to.item.create_commerce_item()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.webhook.get_unified_webhook()`:  `response.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.item.list_commerce_items()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].variants` **Removed** (Breaking ⚠️)\n* `unified_to.item.update_commerce_item()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n  *  `response.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.unified.get_unified_connection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.unified.get_unified_webhook()`:  `response.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.unified.list_unified_connections()`:  `response.[].permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.item.get_commerce_item()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n  *  `response.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.connection.get_unified_connection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.connection.list_unified_connections()`:  `response.[].permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n  *  `response.object_type.enum(accounting_report)` **Removed** (Breaking ⚠️)\n* `unified_to.accounting.list_accounting_reports()`: **Removed** (Breaking ⚠️)\n* `unified_to.accounting.get_accounting_report()`: **Removed** (Breaking ⚠️)\n* `unified_to.report.list_accounting_reports()`: **Removed** (Breaking ⚠️)\n* `unified_to.report.get_accounting_report()`: **Removed** (Breaking ⚠️)\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

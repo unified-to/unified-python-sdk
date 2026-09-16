@@ -14,7 +14,7 @@ class CreateUnifiedWebhookRequestTypedDict(TypedDict):
     webhook: shared_webhook.WebhookTypedDict
     r"""A webhook is used to POST new/updated information to your server."""
     include_all: NotRequired[bool]
-    r"""When set, all of the existing data will sent back to your server."""
+    r"""When true, send existing/historic data. When false, no historic data is sent."""
 
 
 class CreateUnifiedWebhookRequest(BaseModel):
@@ -28,7 +28,7 @@ class CreateUnifiedWebhookRequest(BaseModel):
         Optional[bool],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""When set, all of the existing data will sent back to your server."""
+    r"""When true, send existing/historic data. When false, no historic data is sent."""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
