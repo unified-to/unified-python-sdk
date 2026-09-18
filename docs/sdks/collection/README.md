@@ -23,10 +23,11 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="python" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" example="commerce_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -37,7 +38,48 @@ with UnifiedTo(
 
     res = unified_to.collection.create_commerce_collection(request={
         "commerce_collection": {
-            "name": "<value>",
+            "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
+            "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
+            "id": "3419d282-dce6-4fc4-8eee-b840cf76fcb5",
+            "is_active": True,
+            "is_featured": False,
+            "is_visible": False,
+            "item_metadata": [],
+            "media": [
+                {
+                    "alt": "Defungo adopto thorax.",
+                    "height": 759.0,
+                    "id": "34fa97fe-0b0a-444b-924a-1a28a7e0f493",
+                    "metadata": [
+                        {
+                            "id": "61046c83-1200-4acd-9c42-71a30dffe121",
+                            "slug": "censura",
+                            "value": "toties",
+                        },
+                    ],
+                    "position": 80.0,
+                    "type": shared.CommerceItemMediaType.VIDEO,
+                    "url": "https://loremflickr.com/1319/1257?lock=7280448425732025",
+                    "width": 40.0,
+                },
+            ],
+            "metadata": [
+                {
+                    "id": "21f810ab-efd6-47a2-acc5-490bf09ba8a9",
+                    "slug": "aetas",
+                    "value": "consuasor",
+                },
+            ],
+            "name": "Small Marble Chips",
+            "public_description": "Generic Gloves designed with Cotton for miserable performance",
+            "public_name": "Small Marble Chips",
+            "tags": [
+                "ambulo",
+                "adeptio",
+                "contego",
+            ],
+            "type": shared.CommerceCollectionType.COLLECTION,
+            "updated_at": parse_datetime("2025-02-26T04:56:58.168Z"),
         },
         "connection_id": "<id>",
     })
@@ -72,10 +114,11 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="python" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" example="lms_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -85,7 +128,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.collection.create_lms_collection(request={
-        "lms_collection": {},
+        "lms_collection": {
+            "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
+            "description": "Ab.",
+            "id": "1ab00658-e2ea-4b35-a619-50f17b801210",
+            "is_active": True,
+            "media": [
+                {
+                    "content": "Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.",
+                    "description": "Aliquam tardus careo hic umbra.",
+                    "languages": [
+                        "gl",
+                    ],
+                    "name": "thymum",
+                    "thumbnail_url": "https://picsum.photos/seed/15O5EfV/2982/752",
+                    "type": shared.LmsMediaType.HEADSHOT,
+                    "url": "https://loremflickr.com/2679/70?lock=6078357625960554",
+                },
+            ],
+            "name": "ara",
+            "updated_at": parse_datetime("2026-06-28T08:00:28.382Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -305,10 +368,11 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -319,7 +383,48 @@ with UnifiedTo(
 
     res = unified_to.collection.patch_commerce_collection(request={
         "commerce_collection": {
-            "name": "<value>",
+            "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
+            "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
+            "id": "2bbe5ca1-390b-4202-b7d2-227d5f0a786c",
+            "is_active": True,
+            "is_featured": False,
+            "is_visible": False,
+            "item_metadata": [],
+            "media": [
+                {
+                    "alt": "Defungo adopto thorax.",
+                    "height": 759.0,
+                    "id": "99a914df-ecf0-4122-8bea-74a724992ff8",
+                    "metadata": [
+                        {
+                            "id": "2a043026-4837-4360-8a24-048b3832486d",
+                            "slug": "censura",
+                            "value": "toties",
+                        },
+                    ],
+                    "position": 80.0,
+                    "type": shared.CommerceItemMediaType.VIDEO,
+                    "url": "https://loremflickr.com/1319/1257?lock=7280448425732025",
+                    "width": 40.0,
+                },
+            ],
+            "metadata": [
+                {
+                    "id": "a2b67bc8-9e14-4cc1-a935-47870dff2357",
+                    "slug": "aetas",
+                    "value": "consuasor",
+                },
+            ],
+            "name": "Small Marble Chips",
+            "public_description": "Generic Gloves designed with Cotton for miserable performance",
+            "public_name": "Small Marble Chips",
+            "tags": [
+                "ambulo",
+                "adeptio",
+                "contego",
+            ],
+            "type": shared.CommerceCollectionType.COLLECTION,
+            "updated_at": parse_datetime("2025-02-26T04:56:58.183Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -355,10 +460,11 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -368,7 +474,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.collection.patch_lms_collection(request={
-        "lms_collection": {},
+        "lms_collection": {
+            "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
+            "description": "Ab.",
+            "id": "21b49871-9a20-4b45-bd53-284af2278280",
+            "is_active": True,
+            "media": [
+                {
+                    "content": "Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.",
+                    "description": "Aliquam tardus careo hic umbra.",
+                    "languages": [
+                        "gl",
+                    ],
+                    "name": "thymum",
+                    "thumbnail_url": "https://picsum.photos/seed/15O5EfV/2982/752",
+                    "type": shared.LmsMediaType.HEADSHOT,
+                    "url": "https://loremflickr.com/2679/70?lock=6078357625960554",
+                },
+            ],
+            "name": "ara",
+            "updated_at": parse_datetime("2026-06-28T08:00:28.390Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -497,10 +623,11 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -511,7 +638,48 @@ with UnifiedTo(
 
     res = unified_to.collection.update_commerce_collection(request={
         "commerce_collection": {
-            "name": "<value>",
+            "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
+            "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
+            "id": "2bbe5ca1-390b-4202-b7d2-227d5f0a786c",
+            "is_active": True,
+            "is_featured": False,
+            "is_visible": False,
+            "item_metadata": [],
+            "media": [
+                {
+                    "alt": "Defungo adopto thorax.",
+                    "height": 759.0,
+                    "id": "99a914df-ecf0-4122-8bea-74a724992ff8",
+                    "metadata": [
+                        {
+                            "id": "2a043026-4837-4360-8a24-048b3832486d",
+                            "slug": "censura",
+                            "value": "toties",
+                        },
+                    ],
+                    "position": 80.0,
+                    "type": shared.CommerceItemMediaType.VIDEO,
+                    "url": "https://loremflickr.com/1319/1257?lock=7280448425732025",
+                    "width": 40.0,
+                },
+            ],
+            "metadata": [
+                {
+                    "id": "a2b67bc8-9e14-4cc1-a935-47870dff2357",
+                    "slug": "aetas",
+                    "value": "consuasor",
+                },
+            ],
+            "name": "Small Marble Chips",
+            "public_description": "Generic Gloves designed with Cotton for miserable performance",
+            "public_name": "Small Marble Chips",
+            "tags": [
+                "ambulo",
+                "adeptio",
+                "contego",
+            ],
+            "type": shared.CommerceCollectionType.COLLECTION,
+            "updated_at": parse_datetime("2025-02-26T04:56:58.183Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -547,10 +715,11 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -560,7 +729,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.collection.update_lms_collection(request={
-        "lms_collection": {},
+        "lms_collection": {
+            "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
+            "description": "Ab.",
+            "id": "21b49871-9a20-4b45-bd53-284af2278280",
+            "is_active": True,
+            "media": [
+                {
+                    "content": "Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.",
+                    "description": "Aliquam tardus careo hic umbra.",
+                    "languages": [
+                        "gl",
+                    ],
+                    "name": "thymum",
+                    "thumbnail_url": "https://picsum.photos/seed/15O5EfV/2982/752",
+                    "type": shared.LmsMediaType.HEADSHOT,
+                    "url": "https://loremflickr.com/2679/70?lock=6078357625960554",
+                },
+            ],
+            "name": "ara",
+            "updated_at": parse_datetime("2026-06-28T08:00:28.390Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -3,6 +3,7 @@
 # Synchronous Example
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -12,7 +13,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -31,6 +56,7 @@ The same SDK client can also be used to make asynchronous requests by importing 
 import asyncio
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 async def main():
 
@@ -41,7 +67,31 @@ async def main():
     ) as unified_to:
 
         res = await unified_to.accounting.create_accounting_account_async(request={
-            "accounting_account": {},
+            "accounting_account": {
+                "balance": 12092.0,
+                "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+                "currency": "BOB",
+                "customer_defined_code": "quo",
+                "description": "Spoliatio comedo vilitas harum cupiditate.",
+                "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+                "is_payable": True,
+                "name": "Electronic Aluminum Tuna",
+                "status": shared.Status.ARCHIVED,
+                "taxonomy": [
+                    {
+                        "original_type": "vesper",
+                        "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                        "value": "iste",
+                    },
+                    {
+                        "original_type": "adamo",
+                        "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                        "value": "peccatus",
+                    },
+                ],
+                "type": shared.Type.BANK,
+                "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+            },
             "connection_id": "<id>",
         })
 

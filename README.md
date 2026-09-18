@@ -115,6 +115,7 @@ Generally, the SDK will work well with most IDEs out of the box. However, when u
 # Synchronous Example
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -124,7 +125,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -143,6 +168,7 @@ The same SDK client can also be used to make asynchronous requests by importing 
 import asyncio
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 async def main():
 
@@ -153,7 +179,31 @@ async def main():
     ) as unified_to:
 
         res = await unified_to.accounting.create_accounting_account_async(request={
-            "accounting_account": {},
+            "accounting_account": {
+                "balance": 12092.0,
+                "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+                "currency": "BOB",
+                "customer_defined_code": "quo",
+                "description": "Spoliatio comedo vilitas harum cupiditate.",
+                "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+                "is_payable": True,
+                "name": "Electronic Aluminum Tuna",
+                "status": shared.Status.ARCHIVED,
+                "taxonomy": [
+                    {
+                        "original_type": "vesper",
+                        "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                        "value": "iste",
+                    },
+                    {
+                        "original_type": "adamo",
+                        "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                        "value": "peccatus",
+                    },
+                ],
+                "type": shared.Type.BANK,
+                "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+            },
             "connection_id": "<id>",
         })
 
@@ -2427,7 +2477,7 @@ To change the default retry strategy for a single API call, simply provide a `Re
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_python_sdk.utils import BackoffStrategy, RetryConfig
+from unified_python_sdk.utils import BackoffStrategy, RetryConfig, parse_datetime
 
 
 with UnifiedTo(
@@ -2437,7 +2487,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     },
         RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
@@ -2453,7 +2527,7 @@ If you'd like to override the default retry strategy for all operations that sup
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_python_sdk.utils import BackoffStrategy, RetryConfig
+from unified_python_sdk.utils import BackoffStrategy, RetryConfig, parse_datetime
 
 
 with UnifiedTo(
@@ -2464,7 +2538,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -2493,6 +2591,7 @@ with UnifiedTo(
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import errors, shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2504,7 +2603,31 @@ with UnifiedTo(
     try:
 
         res = unified_to.accounting.create_accounting_account(request={
-            "accounting_account": {},
+            "accounting_account": {
+                "balance": 12092.0,
+                "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+                "currency": "BOB",
+                "customer_defined_code": "quo",
+                "description": "Spoliatio comedo vilitas harum cupiditate.",
+                "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+                "is_payable": True,
+                "name": "Electronic Aluminum Tuna",
+                "status": shared.Status.ARCHIVED,
+                "taxonomy": [
+                    {
+                        "original_type": "vesper",
+                        "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                        "value": "iste",
+                    },
+                    {
+                        "original_type": "adamo",
+                        "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                        "value": "peccatus",
+                    },
+                ],
+                "type": shared.Type.BANK,
+                "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+            },
             "connection_id": "<id>",
         })
 
@@ -2564,6 +2687,7 @@ You can override the default server globally by passing a server index to the `s
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2574,7 +2698,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -2591,6 +2739,7 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2601,7 +2750,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -2727,6 +2900,7 @@ You can set the security parameters through the `security` optional parameter wh
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2736,7 +2910,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     })
 

@@ -12,7 +12,7 @@ Create a query
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="python" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" example="datastore_query" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -25,7 +25,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.query.create_datastore_query(request={
-        "datastore_query": {},
+        "datastore_query": {
+            "query": {
+                "filter_": {
+                    "type": shared.PropertyDatastoreQueryQueryFilterType.OR,
+                },
+                "select": [
+                    "*",
+                ],
+                "sql": "",
+            },
+        },
         "connection_id": "<id>",
     })
 

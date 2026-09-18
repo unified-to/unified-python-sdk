@@ -15,7 +15,7 @@ Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="python" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" example="genai_embedding" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -28,7 +28,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.genai.create_genai_embedding(request={
-        "genai_embedding": {},
+        "genai_embedding": {
+            "content": [
+                {
+                    "text": "Utrimque temptatio pecco demulceo.",
+                },
+            ],
+            "dimension": 423.0,
+            "embeddings": "Est.",
+            "enconding_format": shared.EncondingFormat.FLOAT,
+            "id": "9435e70a-3100-423d-86bf-5b616cf6c2e8",
+            "max_tokens": 223.0,
+            "tokens_used": 836.0,
+            "type": "classification",
+        },
         "connection_id": "<id>",
     })
 
@@ -62,7 +75,7 @@ Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="python" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" example="genai_prompt" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -75,7 +88,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.genai.create_genai_prompt(request={
-        "genai_prompt": {},
+        "genai_prompt": {
+            "max_tokens": 0.4677782787475735,
+            "mcp_authorization_token": "f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4",
+            "mcp_deferred_tools": [],
+            "mcp_url": "https://unsung-dusk.info/",
+            "messages": [
+                {
+                    "content": "Aegre repudiandae verecundia facere statua.",
+                    "role": shared.Role.ASSISTANT,
+                },
+                {
+                    "content": "Speciosus xiphias soleo trepide crinis.",
+                    "role": shared.Role.SYSTEM,
+                },
+            ],
+            "responses": [
+                "Balbus vobis circumvenio una.",
+            ],
+            "temperature": 0.0,
+            "tokens_used": 975.0,
+        },
         "connection_id": "<id>",
     })
 

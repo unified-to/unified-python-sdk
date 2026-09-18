@@ -17,10 +17,11 @@ Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="python" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" example="shipping_shipment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipment.create_shipping_shipment(request={
-        "shipping_shipment": {},
+        "shipping_shipment": {
+            "carrier_name": "Bogisich, Franey and Koelpin",
+            "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
+            "id": "c1cbcd72-dc11-4fa0-a28b-06831de01b1c",
+            "rate_amount": 8.86546263936907,
+            "rate_currency": "USD",
+            "rate_estimated_days": 8.0,
+            "rate_service_name": "Fisher - Kilback",
+            "service_code": "F7U",
+            "shipped_at": parse_datetime("2025-08-24T18:19:39.641Z"),
+            "status": shared.ShippingShipmentStatus.PENDING,
+            "tracking_url": "https://shallow-secrecy.info/",
+            "updated_at": parse_datetime("2025-07-03T02:06:45.236Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +171,11 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +185,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipment.patch_shipping_shipment(request={
-        "shipping_shipment": {},
+        "shipping_shipment": {
+            "carrier_name": "Bogisich, Franey and Koelpin",
+            "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
+            "id": "76bfc6fc-b647-4048-8cd8-dbe130a58995",
+            "rate_amount": 8.86546263936907,
+            "rate_currency": "USD",
+            "rate_estimated_days": 8.0,
+            "rate_service_name": "Fisher - Kilback",
+            "service_code": "F7U",
+            "shipped_at": parse_datetime("2025-08-24T18:19:39.686Z"),
+            "status": shared.ShippingShipmentStatus.PENDING,
+            "tracking_url": "https://shallow-secrecy.info/",
+            "updated_at": parse_datetime("2025-07-03T02:06:45.279Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +280,11 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +294,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipment.update_shipping_shipment(request={
-        "shipping_shipment": {},
+        "shipping_shipment": {
+            "carrier_name": "Bogisich, Franey and Koelpin",
+            "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
+            "id": "76bfc6fc-b647-4048-8cd8-dbe130a58995",
+            "rate_amount": 8.86546263936907,
+            "rate_currency": "USD",
+            "rate_estimated_days": 8.0,
+            "rate_service_name": "Fisher - Kilback",
+            "service_code": "F7U",
+            "shipped_at": parse_datetime("2025-08-24T18:19:39.686Z"),
+            "status": shared.ShippingShipmentStatus.PENDING,
+            "tracking_url": "https://shallow-secrecy.info/",
+            "updated_at": parse_datetime("2025-07-03T02:06:45.279Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

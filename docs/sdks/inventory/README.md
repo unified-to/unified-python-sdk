@@ -17,10 +17,11 @@ Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="python" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" example="commerce_inventory" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.inventory.create_commerce_inventory(request={
-        "commerce_inventory": {},
+        "commerce_inventory": {
+            "available": 337.0,
+            "updated_at": parse_datetime("2025-10-24T19:36:02.385Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +161,11 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +175,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.inventory.patch_commerce_inventory(request={
-        "commerce_inventory": {},
+        "commerce_inventory": {
+            "available": 337.0,
+            "updated_at": parse_datetime("2025-10-24T19:36:02.388Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +260,11 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +274,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.inventory.update_commerce_inventory(request={
-        "commerce_inventory": {},
+        "commerce_inventory": {
+            "available": 337.0,
+            "updated_at": parse_datetime("2025-10-24T19:36:02.388Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

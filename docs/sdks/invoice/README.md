@@ -17,10 +17,11 @@ Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="python" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.invoice.create_accounting_invoice(request={
-        "accounting_invoice": {},
+        "accounting_invoice": {
+            "attachments": [
+                {
+                    "download_url": "https://glossy-markup.net/",
+                    "id": "6166f06c-cb77-42dd-b349-592c6cdfad5d",
+                    "mime_type": "benevolentia",
+                    "name": "vespillo",
+                },
+            ],
+            "balance_amount": -1.0,
+            "category_ids": [],
+            "created_at": parse_datetime("2022-11-07T14:17:29.587Z"),
+            "currency": "RWF",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
+            "extended_notes": [],
+            "id": "8ba2d961-496b-4dc9-bacb-595ccd9a3734",
+            "invoice_number": "vinco",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Auctus comburo clarus ubi.",
+            "paid_amount": 0.0,
+            "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
+            "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
+            "payments": [],
+            "posted_at": parse_datetime("2026-03-26T22:46:20.573Z"),
+            "reference": "adinventitias",
+            "send": True,
+            "status": shared.AccountingInvoiceStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.AccountingInvoiceTerm.NET_45,
+            "total_amount": 0.0,
+            "type": shared.AccountingInvoiceType.CREDITMEMO,
+            "updated_at": parse_datetime("2023-02-06T06:48:43.166Z"),
+            "url": "https://gifted-yarmulke.info/",
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +193,11 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +207,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.invoice.patch_accounting_invoice(request={
-        "accounting_invoice": {},
+        "accounting_invoice": {
+            "attachments": [
+                {
+                    "download_url": "https://glossy-markup.net/",
+                    "id": "c2fa60c7-8d72-4568-9854-fa432fadbf78",
+                    "mime_type": "benevolentia",
+                    "name": "vespillo",
+                },
+            ],
+            "balance_amount": -1.0,
+            "category_ids": [],
+            "created_at": parse_datetime("2022-11-07T14:17:29.587Z"),
+            "currency": "RWF",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
+            "extended_notes": [],
+            "id": "6f607a62-e620-4f17-87c7-372e8a20cfc8",
+            "invoice_number": "vinco",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Auctus comburo clarus ubi.",
+            "paid_amount": 0.0,
+            "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
+            "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
+            "payments": [],
+            "posted_at": parse_datetime("2026-03-26T22:46:20.613Z"),
+            "reference": "adinventitias",
+            "send": True,
+            "status": shared.AccountingInvoiceStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.AccountingInvoiceTerm.NET_45,
+            "total_amount": 0.0,
+            "type": shared.AccountingInvoiceType.CREDITMEMO,
+            "updated_at": parse_datetime("2023-02-06T06:48:43.169Z"),
+            "url": "https://gifted-yarmulke.info/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +324,11 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +338,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.invoice.update_accounting_invoice(request={
-        "accounting_invoice": {},
+        "accounting_invoice": {
+            "attachments": [
+                {
+                    "download_url": "https://glossy-markup.net/",
+                    "id": "c2fa60c7-8d72-4568-9854-fa432fadbf78",
+                    "mime_type": "benevolentia",
+                    "name": "vespillo",
+                },
+            ],
+            "balance_amount": -1.0,
+            "category_ids": [],
+            "created_at": parse_datetime("2022-11-07T14:17:29.587Z"),
+            "currency": "RWF",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
+            "extended_notes": [],
+            "id": "6f607a62-e620-4f17-87c7-372e8a20cfc8",
+            "invoice_number": "vinco",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Auctus comburo clarus ubi.",
+            "paid_amount": 0.0,
+            "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
+            "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
+            "payments": [],
+            "posted_at": parse_datetime("2026-03-26T22:46:20.613Z"),
+            "reference": "adinventitias",
+            "send": True,
+            "status": shared.AccountingInvoiceStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.AccountingInvoiceTerm.NET_45,
+            "total_amount": 0.0,
+            "type": shared.AccountingInvoiceType.CREDITMEMO,
+            "updated_at": parse_datetime("2023-02-06T06:48:43.169Z"),
+            "url": "https://gifted-yarmulke.info/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

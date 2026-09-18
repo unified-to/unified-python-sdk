@@ -31,10 +31,11 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -44,7 +45,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.create_ads_group(request={
-        "ads_group": {},
+        "ads_group": {
+            "bid_amount": 26.16030164062977,
+            "budget_amount": 5099.175239447504,
+            "budget_period": shared.AdsGroupBudgetPeriod.MONTHLY,
+            "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
+            "currency": "USD",
+            "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
+            "end_at": parse_datetime("2026-05-24T13:17:52.367Z"),
+            "id": "30d10ffd-082f-4cea-bf5f-adc7fc79b8af",
+            "language_locale": "fr-FR",
+            "name": "Stark - Baumbach",
+            "start_at": parse_datetime("2025-12-10T21:09:58.115Z"),
+            "status": shared.AdsGroupStatus.PROCESSING,
+            "targeting": {},
+            "updated_at": parse_datetime("2022-01-02T16:45:32.787Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -78,10 +94,11 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -91,7 +108,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.create_hris_group(request={
-        "hris_group": {},
+        "hris_group": {
+            "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
+            "description": "Absorbeo casso.",
+            "id": "75c0e738-bb94-4051-9c72-8e563c3e92ea",
+            "is_active": False,
+            "name": "Games",
+            "type": shared.HrisGroupType.BUSINESS_UNIT,
+            "updated_at": parse_datetime("2026-04-23T14:24:36.666Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -546,10 +571,11 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -559,7 +585,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.patch_ads_group(request={
-        "ads_group": {},
+        "ads_group": {
+            "bid_amount": 26.16030164062977,
+            "budget_amount": 5099.175239447504,
+            "budget_period": shared.AdsGroupBudgetPeriod.MONTHLY,
+            "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
+            "currency": "USD",
+            "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
+            "end_at": parse_datetime("2026-05-24T13:17:52.526Z"),
+            "id": "3d753590-4b9b-4ac5-b8cd-62429576a473",
+            "language_locale": "fr-FR",
+            "name": "Stark - Baumbach",
+            "start_at": parse_datetime("2025-12-10T21:09:58.263Z"),
+            "status": shared.AdsGroupStatus.PROCESSING,
+            "targeting": {},
+            "updated_at": parse_datetime("2022-01-02T16:45:32.842Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -594,10 +635,11 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -607,7 +649,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.patch_hris_group(request={
-        "hris_group": {},
+        "hris_group": {
+            "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
+            "description": "Absorbeo casso.",
+            "id": "8d454ca4-ebee-4004-9ee1-070a8a4f8f74",
+            "is_active": False,
+            "name": "Games",
+            "type": shared.HrisGroupType.BUSINESS_UNIT,
+            "updated_at": parse_datetime("2026-04-23T14:24:36.672Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -833,10 +883,11 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -846,7 +897,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.update_ads_group(request={
-        "ads_group": {},
+        "ads_group": {
+            "bid_amount": 26.16030164062977,
+            "budget_amount": 5099.175239447504,
+            "budget_period": shared.AdsGroupBudgetPeriod.MONTHLY,
+            "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
+            "currency": "USD",
+            "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
+            "end_at": parse_datetime("2026-05-24T13:17:52.526Z"),
+            "id": "3d753590-4b9b-4ac5-b8cd-62429576a473",
+            "language_locale": "fr-FR",
+            "name": "Stark - Baumbach",
+            "start_at": parse_datetime("2025-12-10T21:09:58.263Z"),
+            "status": shared.AdsGroupStatus.PROCESSING,
+            "targeting": {},
+            "updated_at": parse_datetime("2022-01-02T16:45:32.842Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -881,10 +947,11 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -894,7 +961,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.update_hris_group(request={
-        "hris_group": {},
+        "hris_group": {
+            "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
+            "description": "Absorbeo casso.",
+            "id": "8d454ca4-ebee-4004-9ee1-070a8a4f8f74",
+            "is_active": False,
+            "name": "Games",
+            "type": shared.HrisGroupType.BUSINESS_UNIT,
+            "updated_at": parse_datetime("2026-04-23T14:24:36.672Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -17,10 +17,11 @@ Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="python" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.creative.create_ads_creative(request={
-        "ads_creative": {},
+        "ads_creative": {
+            "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
+            "id": "c463cc88-8e1a-4b52-83cd-0ba93cdb00fd",
+            "labels": [
+                "coma",
+                "accedo",
+                "termes",
+            ],
+            "name": "Brekke, Bradtke and Robel",
+            "status": shared.AdsCreativeStatus.PAUSED,
+            "updated_at": parse_datetime("2021-06-21T01:01:18.433Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +169,11 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +183,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.creative.patch_ads_creative(request={
-        "ads_creative": {},
+        "ads_creative": {
+            "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
+            "id": "f202a073-a108-4edf-8ab7-59edfc36014e",
+            "labels": [
+                "coma",
+                "accedo",
+                "termes",
+            ],
+            "name": "Brekke, Bradtke and Robel",
+            "status": shared.AdsCreativeStatus.PAUSED,
+            "updated_at": parse_datetime("2021-06-21T01:01:18.437Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +276,11 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +290,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.creative.update_ads_creative(request={
-        "ads_creative": {},
+        "ads_creative": {
+            "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
+            "id": "f202a073-a108-4edf-8ab7-59edfc36014e",
+            "labels": [
+                "coma",
+                "accedo",
+                "termes",
+            ],
+            "name": "Brekke, Bradtke and Robel",
+            "status": shared.AdsCreativeStatus.PAUSED,
+            "updated_at": parse_datetime("2021-06-21T01:01:18.437Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

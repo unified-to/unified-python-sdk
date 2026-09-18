@@ -17,10 +17,11 @@ Create a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="python" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankfeedaccount.create_accounting_bankfeedaccount(request={
-        "accounting_bankfeedaccount": {},
+        "accounting_bankfeedaccount": {
+            "account_id": "baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1",
+            "account_number": "30369722",
+            "account_number_last4": "9722",
+            "account_type": shared.AccountType.LOAN,
+            "balance": 90358.0,
+            "bank_name": "Weissnat Inc",
+            "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "currency": "SSP",
+            "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "id": "88021d36-d2e1-4067-8071-424af1c54fed",
+            "name": "Corwin, Donnelly and Connelly Savings",
+            "routing_number": "667753156",
+            "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
+            "updated_at": parse_datetime("2024-04-11T12:56:36.249Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +173,11 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +187,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankfeedaccount.patch_accounting_bankfeedaccount(request={
-        "accounting_bankfeedaccount": {},
+        "accounting_bankfeedaccount": {
+            "account_id": "baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1",
+            "account_number": "30369722",
+            "account_number_last4": "9722",
+            "account_type": shared.AccountType.LOAN,
+            "balance": 90358.0,
+            "bank_name": "Weissnat Inc",
+            "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "currency": "SSP",
+            "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "id": "71af6e72-4ef0-4ca2-accd-2e4a5df1789b",
+            "name": "Corwin, Donnelly and Connelly Savings",
+            "routing_number": "667753156",
+            "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
+            "updated_at": parse_datetime("2024-04-11T12:56:36.252Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +284,11 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +298,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankfeedaccount.update_accounting_bankfeedaccount(request={
-        "accounting_bankfeedaccount": {},
+        "accounting_bankfeedaccount": {
+            "account_id": "baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1",
+            "account_number": "30369722",
+            "account_number_last4": "9722",
+            "account_type": shared.AccountType.LOAN,
+            "balance": 90358.0,
+            "bank_name": "Weissnat Inc",
+            "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "currency": "SSP",
+            "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "id": "71af6e72-4ef0-4ca2-accd-2e4a5df1789b",
+            "name": "Corwin, Donnelly and Connelly Savings",
+            "routing_number": "667753156",
+            "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
+            "updated_at": parse_datetime("2024-04-11T12:56:36.252Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

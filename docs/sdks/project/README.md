@@ -70,10 +70,11 @@ Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="python" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -83,7 +84,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.project.create_task_project(request={
-        "task_project": {},
+        "task_project": {
+            "created_at": parse_datetime("2023-06-23T16:39:40.446Z"),
+            "description": "Valetudo aggredior accommodo curiositas vox.",
+            "has_children": False,
+            "has_tasks": False,
+            "id": "45aee72e-5fee-4ccf-a039-368b6e4a67b1",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "465260a6-1709-4d5f-8a7b-3b6e372e50df",
+                    "namespace": "custom",
+                    "slug": "decens",
+                    "value": "uterque",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "04623d6c-540c-4941-9109-bbc1936072ef",
+                    "namespace": "custom",
+                    "slug": "benevolentia",
+                    "value": "pariatur",
+                },
+            ],
+            "name": "Garden",
+            "updated_at": parse_datetime("2023-10-08T14:52:26.140Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -351,10 +382,11 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -364,7 +396,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.project.patch_task_project(request={
-        "task_project": {},
+        "task_project": {
+            "created_at": parse_datetime("2023-06-23T16:39:40.446Z"),
+            "description": "Valetudo aggredior accommodo curiositas vox.",
+            "has_children": False,
+            "has_tasks": False,
+            "id": "90773dc6-3e85-438a-a2b9-7d34938be3fb",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "a1386e7a-c55a-4cd2-bc88-929adb865752",
+                    "namespace": "custom",
+                    "slug": "decens",
+                    "value": "uterque",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "5cdcc465-2080-411f-b343-355dd0b8cb3e",
+                    "namespace": "custom",
+                    "slug": "benevolentia",
+                    "value": "pariatur",
+                },
+            ],
+            "name": "Garden",
+            "updated_at": parse_datetime("2023-10-08T14:52:26.141Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -541,10 +603,11 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -554,7 +617,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.project.update_task_project(request={
-        "task_project": {},
+        "task_project": {
+            "created_at": parse_datetime("2023-06-23T16:39:40.446Z"),
+            "description": "Valetudo aggredior accommodo curiositas vox.",
+            "has_children": False,
+            "has_tasks": False,
+            "id": "90773dc6-3e85-438a-a2b9-7d34938be3fb",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "a1386e7a-c55a-4cd2-bc88-929adb865752",
+                    "namespace": "custom",
+                    "slug": "decens",
+                    "value": "uterque",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "5cdcc465-2080-411f-b343-355dd0b8cb3e",
+                    "namespace": "custom",
+                    "slug": "benevolentia",
+                    "value": "pariatur",
+                },
+            ],
+            "name": "Garden",
+            "updated_at": parse_datetime("2023-10-08T14:52:26.141Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

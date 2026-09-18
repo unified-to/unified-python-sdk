@@ -17,10 +17,11 @@ Create a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="python" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -31,7 +32,14 @@ with UnifiedTo(
 
     res = unified_to.repository.create_repo_repository(request={
         "repo_repository": {
-            "name": "<value>",
+            "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
+            "description": "Tribuo torqueo aetas ustulo illum.",
+            "id": "441972fc-9653-4a1e-9354-288bb23805bd",
+            "is_private": False,
+            "name": "suggero",
+            "owner": "Marcella Kuhic",
+            "updated_at": parse_datetime("2024-02-23T00:27:15.992Z"),
+            "web_url": "https://brown-phrase.info",
         },
         "connection_id": "<id>",
     })
@@ -159,10 +167,11 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -173,7 +182,14 @@ with UnifiedTo(
 
     res = unified_to.repository.patch_repo_repository(request={
         "repo_repository": {
-            "name": "<value>",
+            "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
+            "description": "Tribuo torqueo aetas ustulo illum.",
+            "id": "1b975a2e-8554-4381-bb01-f7ffd98de8bb",
+            "is_private": False,
+            "name": "suggero",
+            "owner": "Marcella Kuhic",
+            "updated_at": parse_datetime("2024-02-23T00:27:15.993Z"),
+            "web_url": "https://brown-phrase.info",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -256,10 +272,11 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -270,7 +287,14 @@ with UnifiedTo(
 
     res = unified_to.repository.update_repo_repository(request={
         "repo_repository": {
-            "name": "<value>",
+            "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
+            "description": "Tribuo torqueo aetas ustulo illum.",
+            "id": "1b975a2e-8554-4381-bb01-f7ffd98de8bb",
+            "is_private": False,
+            "name": "suggero",
+            "owner": "Marcella Kuhic",
+            "updated_at": parse_datetime("2024-02-23T00:27:15.993Z"),
+            "web_url": "https://brown-phrase.info",
         },
         "connection_id": "<id>",
         "id": "<id>",

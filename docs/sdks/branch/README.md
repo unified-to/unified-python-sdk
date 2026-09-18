@@ -17,10 +17,11 @@ Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="python" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -31,8 +32,11 @@ with UnifiedTo(
 
     res = unified_to.branch.create_repo_branch(request={
         "repo_branch": {
-            "name": "<value>",
+            "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
+            "id": "910a7ea7-c8c6-4b98-be91-5079d6b41a9c",
+            "name": "voluptas",
             "repo_id": "<id>",
+            "updated_at": parse_datetime("2020-01-03T14:15:01.616Z"),
         },
         "connection_id": "<id>",
     })
@@ -160,10 +164,11 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -174,8 +179,11 @@ with UnifiedTo(
 
     res = unified_to.branch.patch_repo_branch(request={
         "repo_branch": {
-            "name": "<value>",
+            "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
+            "id": "bcbd7332-7112-4169-93f5-f369b354498a",
+            "name": "voluptas",
             "repo_id": "<id>",
+            "updated_at": parse_datetime("2020-01-03T14:15:01.617Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -258,10 +266,11 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -272,8 +281,11 @@ with UnifiedTo(
 
     res = unified_to.branch.update_repo_branch(request={
         "repo_branch": {
-            "name": "<value>",
+            "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
+            "id": "bcbd7332-7112-4169-93f5-f369b354498a",
+            "name": "voluptas",
             "repo_id": "<id>",
+            "updated_at": parse_datetime("2020-01-03T14:15:01.617Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

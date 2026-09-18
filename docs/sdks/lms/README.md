@@ -53,10 +53,11 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="python" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -66,7 +67,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.create_lms_activity(request={
-        "lms_activity": {},
+        "lms_activity": {
+            "assigned_grade": "summopere",
+            "completed_at": parse_datetime("2025-04-12T21:07:59.666Z"),
+            "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
+            "duration_minutes": 55.0,
+            "id": "8164f3ea-523a-40a6-b339-ccb2ed97db46",
+            "is_completed": True,
+            "progress_percentage": 100.0,
+            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
+            "updated_at": parse_datetime("2022-01-23T21:44:46.408Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -100,10 +111,11 @@ Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="python" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -113,7 +125,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.create_lms_class(request={
-        "lms_class": {},
+        "lms_class": {
+            "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
+            "description": "Anser sperno decerno.",
+            "id": "d8129459-c4f9-456b-b7d0-772361f02d7e",
+            "instructors": [],
+            "languages": [
+                "in",
+            ],
+            "media": [
+                {
+                    "content": "Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.",
+                    "description": "Esse confido.",
+                    "languages": [
+                        "fa",
+                        "da",
+                    ],
+                    "name": "illo",
+                    "thumbnail_url": "https://loremflickr.com/199/1934?lock=4323325966476891",
+                    "type": shared.LmsMediaType.VIDEO,
+                    "url": "https://loremflickr.com/487/921?lock=5127962071241632",
+                },
+            ],
+            "name": "virtus",
+            "students": [],
+            "updated_at": parse_datetime("2025-07-07T21:36:07.725Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -147,10 +184,11 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="python" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" example="lms_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -160,7 +198,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.create_lms_collection(request={
-        "lms_collection": {},
+        "lms_collection": {
+            "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
+            "description": "Ab.",
+            "id": "1ab00658-e2ea-4b35-a619-50f17b801210",
+            "is_active": True,
+            "media": [
+                {
+                    "content": "Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.",
+                    "description": "Aliquam tardus careo hic umbra.",
+                    "languages": [
+                        "gl",
+                    ],
+                    "name": "thymum",
+                    "thumbnail_url": "https://picsum.photos/seed/15O5EfV/2982/752",
+                    "type": shared.LmsMediaType.HEADSHOT,
+                    "url": "https://loremflickr.com/2679/70?lock=6078357625960554",
+                },
+            ],
+            "name": "ara",
+            "updated_at": parse_datetime("2026-06-28T08:00:28.382Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -194,10 +252,11 @@ Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="python" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" example="lms_content" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -207,7 +266,96 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.create_lms_content(request={
-        "lms_content": {},
+        "lms_content": {
+            "categories": [
+                "territo",
+            ],
+            "created_at": parse_datetime("2020-10-22T22:30:50.963Z"),
+            "description": "Usque laboriosam ventosus adflicto.",
+            "difficulty": "Beginner",
+            "duration_minutes": 19.0,
+            "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
+            "id": "752eba73-40d0-4a58-bca3-4a1ef9b6e063",
+            "instructors": [
+                {
+                    "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
+                    "name": "Winston Ferry",
+                },
+            ],
+            "is_active": True,
+            "languages": [
+                "despecto",
+                "suppellex",
+            ],
+            "localizations": [
+                {
+                    "description": "Numquam.",
+                    "language": "es",
+                    "name": "validus",
+                },
+                {
+                    "description": "Callide.",
+                    "language": "fr",
+                    "name": "crux",
+                },
+            ],
+            "media": [
+                {
+                    "content": "Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.",
+                    "description": "Venia aeternus tandem spargo.",
+                    "languages": [
+                        "zu",
+                        "ba",
+                    ],
+                    "name": "subiungo",
+                    "thumbnail_url": "https://loremflickr.com/2056/3712?lock=5644845642923518",
+                    "type": shared.LmsMediaType.OTHER,
+                    "url": "https://loremflickr.com/2593/1553?lock=8591263400111785",
+                },
+                {
+                    "content": "Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.",
+                    "description": "Comedo valde caste combibo.",
+                    "languages": [
+                        "it",
+                        "hu",
+                    ],
+                    "name": "beneficium",
+                    "thumbnail_url": "https://picsum.photos/seed/pNFr1/2597/885",
+                    "type": shared.LmsMediaType.WEB,
+                    "url": "https://loremflickr.com/3597/239?lock=7142808124990633",
+                },
+                {
+                    "content": "Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.",
+                    "description": "Tunc barba decens.",
+                    "languages": [
+                        "bn",
+                        "yo",
+                    ],
+                    "name": "qui",
+                    "thumbnail_url": "https://loremflickr.com/1375/3377?lock=6601832177607674",
+                    "type": shared.LmsMediaType.IMAGE,
+                    "url": "https://loremflickr.com/3927/2086?lock=5199784913821481",
+                },
+            ],
+            "name": "ut",
+            "provider_name": "Berge LLC",
+            "published_at": parse_datetime("2023-11-08T11:32:09.080Z"),
+            "short_description": "Commemoro.",
+            "skills": [
+                "trucido",
+            ],
+            "sort_order": 3.0,
+            "subjects": [
+                {
+                    "name": "tibi",
+                    "rank": 1.0,
+                },
+            ],
+            "tags": [
+                "dens",
+            ],
+            "updated_at": parse_datetime("2022-09-23T11:13:24.667Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -241,10 +389,11 @@ Create a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="python" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" example="lms_course" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -254,7 +403,50 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.create_lms_course(request={
-        "lms_course": {},
+        "lms_course": {
+            "categories": [
+                "tergiversatio",
+                "tumultus",
+            ],
+            "created_at": parse_datetime("2022-10-06T09:58:53.559Z"),
+            "currency": "FJD",
+            "description": "Vinco alias aut capitulus.",
+            "duration_minutes": 148.0,
+            "id": "331d18e9-e8e6-4780-82b7-840b2cab5a6b",
+            "instructors": [],
+            "is_active": True,
+            "is_private": False,
+            "languages": [
+                "desparatus",
+                "earum",
+                "deripio",
+            ],
+            "media": [
+                {
+                    "content": "Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.",
+                    "description": "Adipiscor.",
+                    "languages": [
+                        "ms",
+                        "te",
+                    ],
+                    "name": "tandem",
+                    "thumbnail_url": "https://picsum.photos/seed/syTatRhK03/928/273",
+                    "type": shared.LmsMediaType.OTHER,
+                    "url": "https://picsum.photos/seed/fQAbsk/2472/1671",
+                },
+            ],
+            "name": "comptus",
+            "price_amount": 84.0,
+            "provider_name": "Homenick - Wunsch",
+            "published_at": parse_datetime("2023-12-30T03:35:03.902Z"),
+            "skills": [
+                "adiuvo",
+                "tam",
+            ],
+            "students": [],
+            "time_estimate_minutes": 100.0,
+            "updated_at": parse_datetime("2023-02-06T22:30:45.421Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -288,10 +480,11 @@ Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="python" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -301,7 +494,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.create_lms_instructor(request={
-        "lms_instructor": {},
+        "lms_instructor": {
+            "created_at": parse_datetime("2021-10-12T16:38:54.979Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Deangelo",
+            "id": "f8bbba27-b96d-4906-9cee-f5b6cf875466",
+            "image_url": "https://avatars.githubusercontent.com/u/20232618",
+            "last_name": "Ritchie",
+            "name": "Deangelo Ritchie",
+            "telephones": [
+                {
+                    "telephone": "(352) 551-7989",
+                    "type": shared.LmsTelephoneType.HOME,
+                },
+            ],
+            "title": "Product Solutions Engineer",
+            "updated_at": parse_datetime("2025-06-29T14:06:13.939Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -335,10 +547,11 @@ Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="python" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -348,7 +561,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.create_lms_student(request={
-        "lms_student": {},
+        "lms_student": {
+            "address": {
+                "address1": "94082 Kassandra Camp",
+                "address2": "Apt. 461",
+                "city": "New Ibrahimmouth",
+                "country_code": "US",
+                "postal_code": "52851",
+                "region": "Tennessee",
+                "region_code": "NV",
+            },
+            "created_at": parse_datetime("2020-03-23T06:59:29.777Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Marcella",
+            "id": "8bc0cb22-4e46-4da8-b2ef-49aa7508d4ce",
+            "image_url": "https://avatars.githubusercontent.com/u/36301374",
+            "last_name": "Murazik",
+            "name": "Marcella Murazik",
+            "telephones": [
+                {
+                    "telephone": "(482) 469-8067",
+                    "type": shared.LmsTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2022-06-19T13:55:47.489Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -1033,10 +1273,11 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1046,7 +1287,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.patch_lms_activity(request={
-        "lms_activity": {},
+        "lms_activity": {
+            "assigned_grade": "summopere",
+            "completed_at": parse_datetime("2025-04-12T21:07:59.668Z"),
+            "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
+            "duration_minutes": 55.0,
+            "id": "298664cf-609d-4c74-a5e3-42882c090d10",
+            "is_completed": True,
+            "progress_percentage": 100.0,
+            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
+            "updated_at": parse_datetime("2022-01-23T21:44:46.409Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1081,10 +1332,11 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1094,7 +1346,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.patch_lms_class(request={
-        "lms_class": {},
+        "lms_class": {
+            "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
+            "description": "Anser sperno decerno.",
+            "id": "5b6e90ee-13ec-49d8-a899-81a77863d9ef",
+            "instructors": [],
+            "languages": [
+                "in",
+            ],
+            "media": [
+                {
+                    "content": "Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.",
+                    "description": "Esse confido.",
+                    "languages": [
+                        "fa",
+                        "da",
+                    ],
+                    "name": "illo",
+                    "thumbnail_url": "https://loremflickr.com/199/1934?lock=4323325966476891",
+                    "type": shared.LmsMediaType.VIDEO,
+                    "url": "https://loremflickr.com/487/921?lock=5127962071241632",
+                },
+            ],
+            "name": "virtus",
+            "students": [],
+            "updated_at": parse_datetime("2025-07-07T21:36:07.739Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1129,10 +1406,11 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1142,7 +1420,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.patch_lms_collection(request={
-        "lms_collection": {},
+        "lms_collection": {
+            "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
+            "description": "Ab.",
+            "id": "21b49871-9a20-4b45-bd53-284af2278280",
+            "is_active": True,
+            "media": [
+                {
+                    "content": "Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.",
+                    "description": "Aliquam tardus careo hic umbra.",
+                    "languages": [
+                        "gl",
+                    ],
+                    "name": "thymum",
+                    "thumbnail_url": "https://picsum.photos/seed/15O5EfV/2982/752",
+                    "type": shared.LmsMediaType.HEADSHOT,
+                    "url": "https://loremflickr.com/2679/70?lock=6078357625960554",
+                },
+            ],
+            "name": "ara",
+            "updated_at": parse_datetime("2026-06-28T08:00:28.390Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1177,10 +1475,11 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1190,7 +1489,96 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.patch_lms_content(request={
-        "lms_content": {},
+        "lms_content": {
+            "categories": [
+                "territo",
+            ],
+            "created_at": parse_datetime("2020-10-22T22:30:50.963Z"),
+            "description": "Usque laboriosam ventosus adflicto.",
+            "difficulty": "Beginner",
+            "duration_minutes": 19.0,
+            "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
+            "id": "93ebc3a9-fd1d-4164-a395-aec8aec0abe4",
+            "instructors": [
+                {
+                    "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
+                    "name": "Winston Ferry",
+                },
+            ],
+            "is_active": True,
+            "languages": [
+                "despecto",
+                "suppellex",
+            ],
+            "localizations": [
+                {
+                    "description": "Numquam.",
+                    "language": "es",
+                    "name": "validus",
+                },
+                {
+                    "description": "Callide.",
+                    "language": "fr",
+                    "name": "crux",
+                },
+            ],
+            "media": [
+                {
+                    "content": "Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.",
+                    "description": "Venia aeternus tandem spargo.",
+                    "languages": [
+                        "zu",
+                        "ba",
+                    ],
+                    "name": "subiungo",
+                    "thumbnail_url": "https://loremflickr.com/2056/3712?lock=5644845642923518",
+                    "type": shared.LmsMediaType.OTHER,
+                    "url": "https://loremflickr.com/2593/1553?lock=8591263400111785",
+                },
+                {
+                    "content": "Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.",
+                    "description": "Comedo valde caste combibo.",
+                    "languages": [
+                        "it",
+                        "hu",
+                    ],
+                    "name": "beneficium",
+                    "thumbnail_url": "https://picsum.photos/seed/pNFr1/2597/885",
+                    "type": shared.LmsMediaType.WEB,
+                    "url": "https://loremflickr.com/3597/239?lock=7142808124990633",
+                },
+                {
+                    "content": "Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.",
+                    "description": "Tunc barba decens.",
+                    "languages": [
+                        "bn",
+                        "yo",
+                    ],
+                    "name": "qui",
+                    "thumbnail_url": "https://loremflickr.com/1375/3377?lock=6601832177607674",
+                    "type": shared.LmsMediaType.IMAGE,
+                    "url": "https://loremflickr.com/3927/2086?lock=5199784913821481",
+                },
+            ],
+            "name": "ut",
+            "provider_name": "Berge LLC",
+            "published_at": parse_datetime("2023-11-08T11:32:09.080Z"),
+            "short_description": "Commemoro.",
+            "skills": [
+                "trucido",
+            ],
+            "sort_order": 3.0,
+            "subjects": [
+                {
+                    "name": "tibi",
+                    "rank": 1.0,
+                },
+            ],
+            "tags": [
+                "dens",
+            ],
+            "updated_at": parse_datetime("2022-09-23T11:13:24.676Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1225,10 +1613,11 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1238,7 +1627,50 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.patch_lms_course(request={
-        "lms_course": {},
+        "lms_course": {
+            "categories": [
+                "tergiversatio",
+                "tumultus",
+            ],
+            "created_at": parse_datetime("2022-10-06T09:58:53.559Z"),
+            "currency": "FJD",
+            "description": "Vinco alias aut capitulus.",
+            "duration_minutes": 148.0,
+            "id": "a43a26d9-ca54-499a-9343-e34e82e552ee",
+            "instructors": [],
+            "is_active": True,
+            "is_private": False,
+            "languages": [
+                "desparatus",
+                "earum",
+                "deripio",
+            ],
+            "media": [
+                {
+                    "content": "Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.",
+                    "description": "Adipiscor.",
+                    "languages": [
+                        "ms",
+                        "te",
+                    ],
+                    "name": "tandem",
+                    "thumbnail_url": "https://picsum.photos/seed/syTatRhK03/928/273",
+                    "type": shared.LmsMediaType.OTHER,
+                    "url": "https://picsum.photos/seed/fQAbsk/2472/1671",
+                },
+            ],
+            "name": "comptus",
+            "price_amount": 84.0,
+            "provider_name": "Homenick - Wunsch",
+            "published_at": parse_datetime("2023-12-30T03:35:03.902Z"),
+            "skills": [
+                "adiuvo",
+                "tam",
+            ],
+            "students": [],
+            "time_estimate_minutes": 100.0,
+            "updated_at": parse_datetime("2023-02-06T22:30:45.422Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1273,10 +1705,11 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1286,7 +1719,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.patch_lms_instructor(request={
-        "lms_instructor": {},
+        "lms_instructor": {
+            "created_at": parse_datetime("2021-10-12T16:38:54.979Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Deangelo",
+            "id": "7f3e0677-de81-4291-9b61-baab002fad9f",
+            "image_url": "https://avatars.githubusercontent.com/u/20232618",
+            "last_name": "Ritchie",
+            "name": "Deangelo Ritchie",
+            "telephones": [
+                {
+                    "telephone": "(352) 551-7989",
+                    "type": shared.LmsTelephoneType.HOME,
+                },
+            ],
+            "title": "Product Solutions Engineer",
+            "updated_at": parse_datetime("2025-06-29T14:06:13.948Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1321,10 +1773,11 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1334,7 +1787,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.patch_lms_student(request={
-        "lms_student": {},
+        "lms_student": {
+            "address": {
+                "address1": "94082 Kassandra Camp",
+                "address2": "Apt. 461",
+                "city": "New Ibrahimmouth",
+                "country_code": "US",
+                "postal_code": "52851",
+                "region": "Tennessee",
+                "region_code": "NV",
+            },
+            "created_at": parse_datetime("2020-03-23T06:59:29.777Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Marcella",
+            "id": "8c067562-a326-4d81-a8ae-f087841b1a98",
+            "image_url": "https://avatars.githubusercontent.com/u/36301374",
+            "last_name": "Murazik",
+            "name": "Marcella Murazik",
+            "telephones": [
+                {
+                    "telephone": "(482) 469-8067",
+                    "type": shared.LmsTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2022-06-19T13:55:47.495Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1698,10 +2178,11 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1711,7 +2192,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.update_lms_activity(request={
-        "lms_activity": {},
+        "lms_activity": {
+            "assigned_grade": "summopere",
+            "completed_at": parse_datetime("2025-04-12T21:07:59.668Z"),
+            "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
+            "duration_minutes": 55.0,
+            "id": "298664cf-609d-4c74-a5e3-42882c090d10",
+            "is_completed": True,
+            "progress_percentage": 100.0,
+            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
+            "updated_at": parse_datetime("2022-01-23T21:44:46.409Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1746,10 +2237,11 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1759,7 +2251,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.update_lms_class(request={
-        "lms_class": {},
+        "lms_class": {
+            "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
+            "description": "Anser sperno decerno.",
+            "id": "5b6e90ee-13ec-49d8-a899-81a77863d9ef",
+            "instructors": [],
+            "languages": [
+                "in",
+            ],
+            "media": [
+                {
+                    "content": "Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.",
+                    "description": "Esse confido.",
+                    "languages": [
+                        "fa",
+                        "da",
+                    ],
+                    "name": "illo",
+                    "thumbnail_url": "https://loremflickr.com/199/1934?lock=4323325966476891",
+                    "type": shared.LmsMediaType.VIDEO,
+                    "url": "https://loremflickr.com/487/921?lock=5127962071241632",
+                },
+            ],
+            "name": "virtus",
+            "students": [],
+            "updated_at": parse_datetime("2025-07-07T21:36:07.739Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1794,10 +2311,11 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1807,7 +2325,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.update_lms_collection(request={
-        "lms_collection": {},
+        "lms_collection": {
+            "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
+            "description": "Ab.",
+            "id": "21b49871-9a20-4b45-bd53-284af2278280",
+            "is_active": True,
+            "media": [
+                {
+                    "content": "Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.",
+                    "description": "Aliquam tardus careo hic umbra.",
+                    "languages": [
+                        "gl",
+                    ],
+                    "name": "thymum",
+                    "thumbnail_url": "https://picsum.photos/seed/15O5EfV/2982/752",
+                    "type": shared.LmsMediaType.HEADSHOT,
+                    "url": "https://loremflickr.com/2679/70?lock=6078357625960554",
+                },
+            ],
+            "name": "ara",
+            "updated_at": parse_datetime("2026-06-28T08:00:28.390Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1842,10 +2380,11 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1855,7 +2394,96 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.update_lms_content(request={
-        "lms_content": {},
+        "lms_content": {
+            "categories": [
+                "territo",
+            ],
+            "created_at": parse_datetime("2020-10-22T22:30:50.963Z"),
+            "description": "Usque laboriosam ventosus adflicto.",
+            "difficulty": "Beginner",
+            "duration_minutes": 19.0,
+            "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
+            "id": "93ebc3a9-fd1d-4164-a395-aec8aec0abe4",
+            "instructors": [
+                {
+                    "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
+                    "name": "Winston Ferry",
+                },
+            ],
+            "is_active": True,
+            "languages": [
+                "despecto",
+                "suppellex",
+            ],
+            "localizations": [
+                {
+                    "description": "Numquam.",
+                    "language": "es",
+                    "name": "validus",
+                },
+                {
+                    "description": "Callide.",
+                    "language": "fr",
+                    "name": "crux",
+                },
+            ],
+            "media": [
+                {
+                    "content": "Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.",
+                    "description": "Venia aeternus tandem spargo.",
+                    "languages": [
+                        "zu",
+                        "ba",
+                    ],
+                    "name": "subiungo",
+                    "thumbnail_url": "https://loremflickr.com/2056/3712?lock=5644845642923518",
+                    "type": shared.LmsMediaType.OTHER,
+                    "url": "https://loremflickr.com/2593/1553?lock=8591263400111785",
+                },
+                {
+                    "content": "Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.",
+                    "description": "Comedo valde caste combibo.",
+                    "languages": [
+                        "it",
+                        "hu",
+                    ],
+                    "name": "beneficium",
+                    "thumbnail_url": "https://picsum.photos/seed/pNFr1/2597/885",
+                    "type": shared.LmsMediaType.WEB,
+                    "url": "https://loremflickr.com/3597/239?lock=7142808124990633",
+                },
+                {
+                    "content": "Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.",
+                    "description": "Tunc barba decens.",
+                    "languages": [
+                        "bn",
+                        "yo",
+                    ],
+                    "name": "qui",
+                    "thumbnail_url": "https://loremflickr.com/1375/3377?lock=6601832177607674",
+                    "type": shared.LmsMediaType.IMAGE,
+                    "url": "https://loremflickr.com/3927/2086?lock=5199784913821481",
+                },
+            ],
+            "name": "ut",
+            "provider_name": "Berge LLC",
+            "published_at": parse_datetime("2023-11-08T11:32:09.080Z"),
+            "short_description": "Commemoro.",
+            "skills": [
+                "trucido",
+            ],
+            "sort_order": 3.0,
+            "subjects": [
+                {
+                    "name": "tibi",
+                    "rank": 1.0,
+                },
+            ],
+            "tags": [
+                "dens",
+            ],
+            "updated_at": parse_datetime("2022-09-23T11:13:24.676Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1890,10 +2518,11 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1903,7 +2532,50 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.update_lms_course(request={
-        "lms_course": {},
+        "lms_course": {
+            "categories": [
+                "tergiversatio",
+                "tumultus",
+            ],
+            "created_at": parse_datetime("2022-10-06T09:58:53.559Z"),
+            "currency": "FJD",
+            "description": "Vinco alias aut capitulus.",
+            "duration_minutes": 148.0,
+            "id": "a43a26d9-ca54-499a-9343-e34e82e552ee",
+            "instructors": [],
+            "is_active": True,
+            "is_private": False,
+            "languages": [
+                "desparatus",
+                "earum",
+                "deripio",
+            ],
+            "media": [
+                {
+                    "content": "Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.",
+                    "description": "Adipiscor.",
+                    "languages": [
+                        "ms",
+                        "te",
+                    ],
+                    "name": "tandem",
+                    "thumbnail_url": "https://picsum.photos/seed/syTatRhK03/928/273",
+                    "type": shared.LmsMediaType.OTHER,
+                    "url": "https://picsum.photos/seed/fQAbsk/2472/1671",
+                },
+            ],
+            "name": "comptus",
+            "price_amount": 84.0,
+            "provider_name": "Homenick - Wunsch",
+            "published_at": parse_datetime("2023-12-30T03:35:03.902Z"),
+            "skills": [
+                "adiuvo",
+                "tam",
+            ],
+            "students": [],
+            "time_estimate_minutes": 100.0,
+            "updated_at": parse_datetime("2023-02-06T22:30:45.422Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1938,10 +2610,11 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1951,7 +2624,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.update_lms_instructor(request={
-        "lms_instructor": {},
+        "lms_instructor": {
+            "created_at": parse_datetime("2021-10-12T16:38:54.979Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Deangelo",
+            "id": "7f3e0677-de81-4291-9b61-baab002fad9f",
+            "image_url": "https://avatars.githubusercontent.com/u/20232618",
+            "last_name": "Ritchie",
+            "name": "Deangelo Ritchie",
+            "telephones": [
+                {
+                    "telephone": "(352) 551-7989",
+                    "type": shared.LmsTelephoneType.HOME,
+                },
+            ],
+            "title": "Product Solutions Engineer",
+            "updated_at": parse_datetime("2025-06-29T14:06:13.948Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1986,10 +2678,11 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1999,7 +2692,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lms.update_lms_student(request={
-        "lms_student": {},
+        "lms_student": {
+            "address": {
+                "address1": "94082 Kassandra Camp",
+                "address2": "Apt. 461",
+                "city": "New Ibrahimmouth",
+                "country_code": "US",
+                "postal_code": "52851",
+                "region": "Tennessee",
+                "region_code": "NV",
+            },
+            "created_at": parse_datetime("2020-03-23T06:59:29.777Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Marcella",
+            "id": "8c067562-a326-4d81-a8ae-f087841b1a98",
+            "image_url": "https://avatars.githubusercontent.com/u/36301374",
+            "last_name": "Murazik",
+            "name": "Marcella Murazik",
+            "telephones": [
+                {
+                    "telephone": "(482) 469-8067",
+                    "type": shared.LmsTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2022-06-19T13:55:47.495Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

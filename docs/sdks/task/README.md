@@ -31,10 +31,11 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -44,7 +45,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.create_task_comment(request={
-        "task_comment": {},
+        "task_comment": {
+            "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
+            "has_children": True,
+            "id": "8f75dd61-8488-4668-b620-ddba262fb3c8",
+            "text": "Colo ulciscor sublime tabernus.",
+            "updated_at": parse_datetime("2021-09-24T01:12:37.035Z"),
+            "user_name": "Santina Abbott",
+        },
         "connection_id": "<id>",
     })
 
@@ -78,10 +86,11 @@ Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="python" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -91,7 +100,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.create_task_project(request={
-        "task_project": {},
+        "task_project": {
+            "created_at": parse_datetime("2023-06-23T16:39:40.446Z"),
+            "description": "Valetudo aggredior accommodo curiositas vox.",
+            "has_children": False,
+            "has_tasks": False,
+            "id": "45aee72e-5fee-4ccf-a039-368b6e4a67b1",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "465260a6-1709-4d5f-8a7b-3b6e372e50df",
+                    "namespace": "custom",
+                    "slug": "decens",
+                    "value": "uterque",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "04623d6c-540c-4941-9109-bbc1936072ef",
+                    "namespace": "custom",
+                    "slug": "benevolentia",
+                    "value": "pariatur",
+                },
+            ],
+            "name": "Garden",
+            "updated_at": parse_datetime("2023-10-08T14:52:26.140Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -125,10 +164,11 @@ Create a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="python" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" example="task_task" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -138,7 +178,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.create_task_task(request={
-        "task_task": {},
+        "task_task": {
+            "attachment_ids": [],
+            "completed_at": parse_datetime("2022-03-24T11:50:57.839Z"),
+            "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
+            "due_at": parse_datetime("2026-04-23T08:40:37.798Z"),
+            "end_at": parse_datetime("2022-10-13T17:21:47.453Z"),
+            "has_children": True,
+            "id": "467d5d84-3e1c-45e3-8eb5-deb032295cc4",
+            "metadata": [],
+            "name": "Direct Markets Architect",
+            "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
+            "priority": "LOW",
+            "progress": 2.0,
+            "start_at": parse_datetime("2022-01-19T11:23:18.934Z"),
+            "status": shared.TaskTaskStatus.IN_PROGRESS,
+            "story_points": 0.0,
+            "tags": [
+                "concido",
+                "rerum",
+            ],
+            "time_spent": 957.0,
+            "time_spent_unit": "SECONDS",
+            "type": "tubineus",
+            "updated_at": parse_datetime("2019-07-13T10:49:06.255Z"),
+            "url": "https://dismal-silk.net/",
+        },
         "connection_id": "<id>",
     })
 
@@ -544,10 +609,11 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -557,7 +623,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.patch_task_comment(request={
-        "task_comment": {},
+        "task_comment": {
+            "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
+            "has_children": True,
+            "id": "bb64593e-fe9e-4f21-a5db-356051726f07",
+            "text": "Colo ulciscor sublime tabernus.",
+            "updated_at": parse_datetime("2021-09-24T01:12:37.037Z"),
+            "user_name": "Santina Abbott",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -592,10 +665,11 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -605,7 +679,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.patch_task_project(request={
-        "task_project": {},
+        "task_project": {
+            "created_at": parse_datetime("2023-06-23T16:39:40.446Z"),
+            "description": "Valetudo aggredior accommodo curiositas vox.",
+            "has_children": False,
+            "has_tasks": False,
+            "id": "90773dc6-3e85-438a-a2b9-7d34938be3fb",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "a1386e7a-c55a-4cd2-bc88-929adb865752",
+                    "namespace": "custom",
+                    "slug": "decens",
+                    "value": "uterque",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "5cdcc465-2080-411f-b343-355dd0b8cb3e",
+                    "namespace": "custom",
+                    "slug": "benevolentia",
+                    "value": "pariatur",
+                },
+            ],
+            "name": "Garden",
+            "updated_at": parse_datetime("2023-10-08T14:52:26.141Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -640,10 +744,11 @@ Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" example="task_task" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -653,7 +758,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.patch_task_task(request={
-        "task_task": {},
+        "task_task": {
+            "attachment_ids": [],
+            "completed_at": parse_datetime("2022-03-24T11:50:57.848Z"),
+            "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
+            "due_at": parse_datetime("2026-04-23T08:40:37.819Z"),
+            "end_at": parse_datetime("2022-10-13T17:21:47.463Z"),
+            "has_children": True,
+            "id": "8c24e8eb-d30a-4a76-a0ff-6fbc62917a92",
+            "metadata": [],
+            "name": "Direct Markets Architect",
+            "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
+            "priority": "LOW",
+            "progress": 2.0,
+            "start_at": parse_datetime("2022-01-19T11:23:18.942Z"),
+            "status": shared.TaskTaskStatus.IN_PROGRESS,
+            "story_points": 0.0,
+            "tags": [
+                "concido",
+                "rerum",
+            ],
+            "time_spent": 957.0,
+            "time_spent_unit": "SECONDS",
+            "type": "tubineus",
+            "updated_at": parse_datetime("2019-07-13T10:49:06.257Z"),
+            "url": "https://dismal-silk.net/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -829,10 +959,11 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -842,7 +973,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.update_task_comment(request={
-        "task_comment": {},
+        "task_comment": {
+            "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
+            "has_children": True,
+            "id": "bb64593e-fe9e-4f21-a5db-356051726f07",
+            "text": "Colo ulciscor sublime tabernus.",
+            "updated_at": parse_datetime("2021-09-24T01:12:37.037Z"),
+            "user_name": "Santina Abbott",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -877,10 +1015,11 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -890,7 +1029,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.update_task_project(request={
-        "task_project": {},
+        "task_project": {
+            "created_at": parse_datetime("2023-06-23T16:39:40.446Z"),
+            "description": "Valetudo aggredior accommodo curiositas vox.",
+            "has_children": False,
+            "has_tasks": False,
+            "id": "90773dc6-3e85-438a-a2b9-7d34938be3fb",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "a1386e7a-c55a-4cd2-bc88-929adb865752",
+                    "namespace": "custom",
+                    "slug": "decens",
+                    "value": "uterque",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.TaskMetadataFormat.TEXT,
+                    "id": "5cdcc465-2080-411f-b343-355dd0b8cb3e",
+                    "namespace": "custom",
+                    "slug": "benevolentia",
+                    "value": "pariatur",
+                },
+            ],
+            "name": "Garden",
+            "updated_at": parse_datetime("2023-10-08T14:52:26.141Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -925,10 +1094,11 @@ Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" example="task_task" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -938,7 +1108,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.update_task_task(request={
-        "task_task": {},
+        "task_task": {
+            "attachment_ids": [],
+            "completed_at": parse_datetime("2022-03-24T11:50:57.848Z"),
+            "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
+            "due_at": parse_datetime("2026-04-23T08:40:37.819Z"),
+            "end_at": parse_datetime("2022-10-13T17:21:47.463Z"),
+            "has_children": True,
+            "id": "8c24e8eb-d30a-4a76-a0ff-6fbc62917a92",
+            "metadata": [],
+            "name": "Direct Markets Architect",
+            "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
+            "priority": "LOW",
+            "progress": 2.0,
+            "start_at": parse_datetime("2022-01-19T11:23:18.942Z"),
+            "status": shared.TaskTaskStatus.IN_PROGRESS,
+            "story_points": 0.0,
+            "tags": [
+                "concido",
+                "rerum",
+            ],
+            "time_spent": 957.0,
+            "time_spent_unit": "SECONDS",
+            "type": "tubineus",
+            "updated_at": parse_datetime("2019-07-13T10:49:06.257Z"),
+            "url": "https://dismal-silk.net/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

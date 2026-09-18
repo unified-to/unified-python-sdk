@@ -17,10 +17,11 @@ Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="python" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -31,6 +32,20 @@ with UnifiedTo(
 
     res = unified_to.timeoff.create_hris_timeoff(request={
         "hris_timeoff": {
+            "approved_at": parse_datetime("2022-02-20T21:02:37.695Z"),
+            "comments": "Blandior ventus curiositas amplitudo.",
+            "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
+            "duration": 4.0,
+            "duration_type": shared.DurationType.DAY,
+            "end_at": parse_datetime("2024-12-07T13:50:55.449Z"),
+            "id": "efd938fb-bb4a-492d-b313-90f0578f3165",
+            "is_paid": True,
+            "original_type": "acerbitas ut",
+            "reason": "verto",
+            "start_at": parse_datetime("2023-08-23T06:56:44.757Z"),
+            "status": shared.HrisTimeoffStatus.DENIED,
+            "type": shared.HrisTimeoffType.IN_LIEU,
+            "updated_at": parse_datetime("2022-07-07T19:34:54.248Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -159,10 +174,11 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -173,6 +189,20 @@ with UnifiedTo(
 
     res = unified_to.timeoff.patch_hris_timeoff(request={
         "hris_timeoff": {
+            "approved_at": parse_datetime("2022-02-20T21:02:37.696Z"),
+            "comments": "Blandior ventus curiositas amplitudo.",
+            "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
+            "duration": 4.0,
+            "duration_type": shared.DurationType.DAY,
+            "end_at": parse_datetime("2024-12-07T13:50:55.454Z"),
+            "id": "c38c4f38-07e2-4fb7-b3aa-93df41a86943",
+            "is_paid": True,
+            "original_type": "acerbitas ut",
+            "reason": "verto",
+            "start_at": parse_datetime("2023-08-23T06:56:44.760Z"),
+            "status": shared.HrisTimeoffStatus.DENIED,
+            "type": shared.HrisTimeoffType.IN_LIEU,
+            "updated_at": parse_datetime("2022-07-07T19:34:54.250Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -256,10 +286,11 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -270,6 +301,20 @@ with UnifiedTo(
 
     res = unified_to.timeoff.update_hris_timeoff(request={
         "hris_timeoff": {
+            "approved_at": parse_datetime("2022-02-20T21:02:37.696Z"),
+            "comments": "Blandior ventus curiositas amplitudo.",
+            "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
+            "duration": 4.0,
+            "duration_type": shared.DurationType.DAY,
+            "end_at": parse_datetime("2024-12-07T13:50:55.454Z"),
+            "id": "c38c4f38-07e2-4fb7-b3aa-93df41a86943",
+            "is_paid": True,
+            "original_type": "acerbitas ut",
+            "reason": "verto",
+            "start_at": parse_datetime("2023-08-23T06:56:44.760Z"),
+            "status": shared.HrisTimeoffStatus.DENIED,
+            "type": shared.HrisTimeoffType.IN_LIEU,
+            "updated_at": parse_datetime("2022-07-07T19:34:54.250Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",

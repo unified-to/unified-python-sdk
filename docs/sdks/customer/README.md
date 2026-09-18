@@ -17,10 +17,11 @@ Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="python" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" example="ticketing_customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.customer.create_ticketing_customer(request={
-        "ticketing_customer": {},
+        "ticketing_customer": {
+            "created_at": parse_datetime("2021-03-15T12:33:14.875Z"),
+            "emails": [
+                {
+                    "email": "Christian_Windler@gmail.com",
+                    "type": shared.TicketingEmailType.HOME,
+                },
+            ],
+            "id": "7aaf843a-eb51-4f52-8529-70aa2d242803",
+            "name": "Christian Windler",
+            "tags": [
+                "casso",
+                "peccatus",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(532) 242-0482",
+                    "type": shared.TicketingTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(826) 283-7431",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(483) 314-6826",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2026-05-04T07:38:52.565Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +187,11 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +201,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.customer.patch_ticketing_customer(request={
-        "ticketing_customer": {},
+        "ticketing_customer": {
+            "created_at": parse_datetime("2021-03-15T12:33:14.875Z"),
+            "emails": [
+                {
+                    "email": "Christian_Windler@gmail.com",
+                    "type": shared.TicketingEmailType.HOME,
+                },
+            ],
+            "id": "81231dce-2c6b-48df-af99-3f67b7571c0d",
+            "name": "Christian Windler",
+            "tags": [
+                "casso",
+                "peccatus",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(532) 242-0482",
+                    "type": shared.TicketingTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(826) 283-7431",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(483) 314-6826",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2026-05-04T07:38:52.574Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +312,11 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +326,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.customer.update_ticketing_customer(request={
-        "ticketing_customer": {},
+        "ticketing_customer": {
+            "created_at": parse_datetime("2021-03-15T12:33:14.875Z"),
+            "emails": [
+                {
+                    "email": "Christian_Windler@gmail.com",
+                    "type": shared.TicketingEmailType.HOME,
+                },
+            ],
+            "id": "81231dce-2c6b-48df-af99-3f67b7571c0d",
+            "name": "Christian Windler",
+            "tags": [
+                "casso",
+                "peccatus",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(532) 242-0482",
+                    "type": shared.TicketingTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(826) 283-7431",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(483) 314-6826",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2026-05-04T07:38:52.574Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -17,10 +17,11 @@ Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="python" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,13 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.insertionorder.create_ads_insertionorder(request={
-        "ads_insertionorder": {},
+        "ads_insertionorder": {
+            "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
+            "id": "6e9538a8-c71d-4d5f-8ddd-5ffd1b58c243",
+            "name": "Kunde, Smith and Reinger",
+            "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
+            "updated_at": parse_datetime("2021-04-28T12:31:21.679Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +164,11 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +178,13 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.insertionorder.patch_ads_insertionorder(request={
-        "ads_insertionorder": {},
+        "ads_insertionorder": {
+            "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
+            "id": "02927d22-b29d-4410-b89d-84c6944e04b6",
+            "name": "Kunde, Smith and Reinger",
+            "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
+            "updated_at": parse_datetime("2021-04-28T12:31:21.679Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +266,11 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +280,13 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.insertionorder.update_ads_insertionorder(request={
-        "ads_insertionorder": {},
+        "ads_insertionorder": {
+            "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
+            "id": "02927d22-b29d-4410-b89d-84c6944e04b6",
+            "name": "Kunde, Smith and Reinger",
+            "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
+            "updated_at": parse_datetime("2021-04-28T12:31:21.679Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -23,10 +23,11 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -36,7 +37,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.category.create_accounting_category(request={
-        "accounting_category": {},
+        "accounting_category": {
+            "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
+            "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
+            "id": "3db0fe6a-c3a2-4267-8642-617480bed288",
+            "is_active": False,
+            "metadata": [],
+            "name": "Electronic Cotton Shoes",
+            "updated_at": parse_datetime("2025-08-20T06:35:08.868Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -70,10 +79,11 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" example="ticketing_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -83,7 +93,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.category.create_ticketing_category(request={
-        "ticketing_category": {},
+        "ticketing_category": {
+            "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
+            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
+            "id": "5ac2d511-1ea8-4ac2-9c12-e64f60d29e93",
+            "is_active": True,
+            "name": "amicitia",
+            "updated_at": parse_datetime("2025-12-15T15:10:31.164Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -303,10 +320,11 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -316,7 +334,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.category.patch_accounting_category(request={
-        "accounting_category": {},
+        "accounting_category": {
+            "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
+            "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
+            "id": "93277723-e046-44aa-a026-45d084b846ba",
+            "is_active": False,
+            "metadata": [],
+            "name": "Electronic Cotton Shoes",
+            "updated_at": parse_datetime("2025-08-20T06:35:08.879Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -351,10 +377,11 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -364,7 +391,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.category.patch_ticketing_category(request={
-        "ticketing_category": {},
+        "ticketing_category": {
+            "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
+            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
+            "id": "a4a3eb17-54d3-419a-aafa-5473e1d8a0f0",
+            "is_active": True,
+            "name": "amicitia",
+            "updated_at": parse_datetime("2025-12-15T15:10:31.172Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -493,10 +527,11 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -506,7 +541,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.category.update_accounting_category(request={
-        "accounting_category": {},
+        "accounting_category": {
+            "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
+            "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
+            "id": "93277723-e046-44aa-a026-45d084b846ba",
+            "is_active": False,
+            "metadata": [],
+            "name": "Electronic Cotton Shoes",
+            "updated_at": parse_datetime("2025-08-20T06:35:08.879Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -541,10 +584,11 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -554,7 +598,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.category.update_ticketing_category(request={
-        "ticketing_category": {},
+        "ticketing_category": {
+            "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
+            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
+            "id": "a4a3eb17-54d3-419a-aafa-5473e1d8a0f0",
+            "is_active": True,
+            "name": "amicitia",
+            "updated_at": parse_datetime("2025-12-15T15:10:31.172Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -17,10 +17,11 @@ Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="python" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.journal.create_accounting_journal(request={
-        "accounting_journal": {},
+        "accounting_journal": {
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
+            "currency": "FKP",
+            "description": "Calco constans adipisci.",
+            "id": "f509f941-ad29-4b9d-b184-a751b62a37d6",
+            "posted_at": parse_datetime("2023-10-19T01:51:30.395Z"),
+            "reference": "ullam",
+            "source": "crustulum",
+            "tax_amount": 78672.0,
+            "updated_at": parse_datetime("2022-01-01T11:08:39.568Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +170,11 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +184,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.journal.patch_accounting_journal(request={
-        "accounting_journal": {},
+        "accounting_journal": {
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
+            "currency": "FKP",
+            "description": "Calco constans adipisci.",
+            "id": "12490857-8ddf-4be5-abd0-47fc89cc49a2",
+            "posted_at": parse_datetime("2023-10-19T01:51:30.403Z"),
+            "reference": "ullam",
+            "source": "crustulum",
+            "tax_amount": 78672.0,
+            "updated_at": parse_datetime("2022-01-01T11:08:39.572Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +278,11 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +292,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.journal.update_accounting_journal(request={
-        "accounting_journal": {},
+        "accounting_journal": {
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
+            "currency": "FKP",
+            "description": "Calco constans adipisci.",
+            "id": "12490857-8ddf-4be5-abd0-47fc89cc49a2",
+            "posted_at": parse_datetime("2023-10-19T01:51:30.403Z"),
+            "reference": "ullam",
+            "source": "crustulum",
+            "tax_amount": 78672.0,
+            "updated_at": parse_datetime("2022-01-01T11:08:39.572Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

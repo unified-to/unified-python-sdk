@@ -17,10 +17,11 @@ Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="python" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.deduction.create_hris_deduction(request={
-        "hris_deduction": {},
+        "hris_deduction": {
+            "amount": 139655.0,
+            "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
+            "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
+            "end_at": parse_datetime("2026-05-22T22:51:41.898Z"),
+            "frequency": shared.HrisDeductionFrequency.MONTH,
+            "id": "80baec67-8dfd-44cb-a5e3-8faaaf906a97",
+            "is_active": False,
+            "notes": "Carmen desidero.",
+            "start_at": parse_datetime("2025-02-18T04:37:41.118Z"),
+            "type": shared.HrisDeductionType.FIXED,
+            "updated_at": parse_datetime("2024-03-01T23:41:41.373Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +170,11 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +184,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.deduction.patch_hris_deduction(request={
-        "hris_deduction": {},
+        "hris_deduction": {
+            "amount": 139655.0,
+            "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
+            "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
+            "end_at": parse_datetime("2026-05-22T22:51:41.904Z"),
+            "frequency": shared.HrisDeductionFrequency.MONTH,
+            "id": "2aec3d2c-839a-4dda-90d3-91870b50eae7",
+            "is_active": False,
+            "notes": "Carmen desidero.",
+            "start_at": parse_datetime("2025-02-18T04:37:41.123Z"),
+            "type": shared.HrisDeductionType.FIXED,
+            "updated_at": parse_datetime("2024-03-01T23:41:41.377Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +278,11 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +292,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.deduction.update_hris_deduction(request={
-        "hris_deduction": {},
+        "hris_deduction": {
+            "amount": 139655.0,
+            "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
+            "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
+            "end_at": parse_datetime("2026-05-22T22:51:41.904Z"),
+            "frequency": shared.HrisDeductionFrequency.MONTH,
+            "id": "2aec3d2c-839a-4dda-90d3-91870b50eae7",
+            "is_active": False,
+            "notes": "Carmen desidero.",
+            "start_at": parse_datetime("2025-02-18T04:37:41.123Z"),
+            "type": shared.HrisDeductionType.FIXED,
+            "updated_at": parse_datetime("2024-03-01T23:41:41.377Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

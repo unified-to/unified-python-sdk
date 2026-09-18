@@ -30,10 +30,11 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="python" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" example="martech_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -43,7 +44,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.create_martech_campaign(request={
-        "marketing_campaign": {},
+        "marketing_campaign": {
+            "created_at": parse_datetime("2023-08-01T22:29:12.121Z"),
+            "from_email": "Nick.Beahan@hotmail.com",
+            "from_name": "Javier Rempel",
+            "id": "dc45e3b6-f4a6-42ba-8e36-119d58a09bef",
+            "list_ids": [
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            ],
+            "name": "Consequatur atqui sustineo.",
+            "preview_text": "Bellicus tener cinis causa cavus toties.",
+            "reply_to_email": "Antwan.Abshire@hotmail.com",
+            "send_at": parse_datetime("2023-03-28T12:33:25.052Z"),
+            "status": shared.MarketingCampaignStatus.SENT,
+            "subject_line": "Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.",
+            "type": "plaintext",
+            "updated_at": parse_datetime("2023-12-17T22:11:31.702Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -77,10 +94,11 @@ Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="python" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" example="martech_list" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -90,7 +108,28 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.create_martech_list(request={
-        "marketing_list": {},
+        "marketing_list": {
+            "address": {
+                "address1": "922 Elmore Manor",
+                "address2": "Suite 925",
+                "city": "Deerfield Beach",
+                "country": "Bahrain",
+                "postal_code": "30765-6471",
+                "region": "FL",
+            },
+            "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
+            "description": "Currus.",
+            "id": "fc94207f-13b6-44e9-9b44-85fde76eb97b",
+            "is_active": True,
+            "language": "it",
+            "name": "Annette Nolan",
+            "sender_company": "Hickle - Homenick",
+            "sender_email": "Matt_Steuber@hotmail.com",
+            "sender_name": "Salvatore Roob",
+            "sender_phone": "896-328-1153 x4957",
+            "subject": "Tenetur thymum circumvenio triumphus celo.",
+            "updated_at": parse_datetime("2022-08-30T12:22:37.862Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -124,10 +163,11 @@ Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="python" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" example="martech_member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -137,7 +177,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.create_martech_member(request={
-        "marketing_member": {},
+        "marketing_member": {
+            "company": "Miller - Franecki",
+            "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
+            "emails": [
+                {
+                    "email": "Thalia.Abernathy61@gmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Maymie59@hotmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Coty27@hotmail.com",
+                    "type": shared.MarketingEmailType.WORK,
+                },
+            ],
+            "first_name": "Jude",
+            "id": "8944d36e-b636-4219-a282-142fb98fee97",
+            "last_name": "Leffler",
+            "name": "Jude Leffler",
+            "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
+            "tags": [
+                "vinco",
+                "ceno",
+            ],
+            "updated_at": parse_datetime("2025-06-15T05:06:13.082Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -496,10 +563,11 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -509,7 +577,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.patch_martech_campaign(request={
-        "marketing_campaign": {},
+        "marketing_campaign": {
+            "created_at": parse_datetime("2023-08-01T22:29:12.121Z"),
+            "from_email": "Nick.Beahan@hotmail.com",
+            "from_name": "Javier Rempel",
+            "id": "cbd04008-409d-46a4-b81c-914038b61fff",
+            "list_ids": [
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            ],
+            "name": "Consequatur atqui sustineo.",
+            "preview_text": "Bellicus tener cinis causa cavus toties.",
+            "reply_to_email": "Antwan.Abshire@hotmail.com",
+            "send_at": parse_datetime("2023-03-28T12:33:25.052Z"),
+            "status": shared.MarketingCampaignStatus.SENT,
+            "subject_line": "Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.",
+            "type": "plaintext",
+            "updated_at": parse_datetime("2023-12-17T22:11:31.702Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -544,10 +628,11 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -557,7 +642,28 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.patch_martech_list(request={
-        "marketing_list": {},
+        "marketing_list": {
+            "address": {
+                "address1": "922 Elmore Manor",
+                "address2": "Suite 925",
+                "city": "Deerfield Beach",
+                "country": "Bahrain",
+                "postal_code": "30765-6471",
+                "region": "FL",
+            },
+            "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
+            "description": "Currus.",
+            "id": "30d55553-d77e-4993-8c73-9a813399ad09",
+            "is_active": True,
+            "language": "it",
+            "name": "Annette Nolan",
+            "sender_company": "Hickle - Homenick",
+            "sender_email": "Matt_Steuber@hotmail.com",
+            "sender_name": "Salvatore Roob",
+            "sender_phone": "896-328-1153 x4957",
+            "subject": "Tenetur thymum circumvenio triumphus celo.",
+            "updated_at": parse_datetime("2022-08-30T12:22:37.867Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -592,10 +698,11 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -605,7 +712,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.patch_martech_member(request={
-        "marketing_member": {},
+        "marketing_member": {
+            "company": "Miller - Franecki",
+            "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
+            "emails": [
+                {
+                    "email": "Thalia.Abernathy61@gmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Maymie59@hotmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Coty27@hotmail.com",
+                    "type": shared.MarketingEmailType.WORK,
+                },
+            ],
+            "first_name": "Jude",
+            "id": "be5b1afb-7831-40f9-b3dd-7910b5c7b4a9",
+            "last_name": "Leffler",
+            "name": "Jude Leffler",
+            "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
+            "tags": [
+                "vinco",
+                "ceno",
+            ],
+            "updated_at": parse_datetime("2025-06-15T05:06:13.087Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -781,10 +915,11 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -794,7 +929,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.update_martech_campaign(request={
-        "marketing_campaign": {},
+        "marketing_campaign": {
+            "created_at": parse_datetime("2023-08-01T22:29:12.121Z"),
+            "from_email": "Nick.Beahan@hotmail.com",
+            "from_name": "Javier Rempel",
+            "id": "cbd04008-409d-46a4-b81c-914038b61fff",
+            "list_ids": [
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            ],
+            "name": "Consequatur atqui sustineo.",
+            "preview_text": "Bellicus tener cinis causa cavus toties.",
+            "reply_to_email": "Antwan.Abshire@hotmail.com",
+            "send_at": parse_datetime("2023-03-28T12:33:25.052Z"),
+            "status": shared.MarketingCampaignStatus.SENT,
+            "subject_line": "Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.",
+            "type": "plaintext",
+            "updated_at": parse_datetime("2023-12-17T22:11:31.702Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -829,10 +980,11 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -842,7 +994,28 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.update_martech_list(request={
-        "marketing_list": {},
+        "marketing_list": {
+            "address": {
+                "address1": "922 Elmore Manor",
+                "address2": "Suite 925",
+                "city": "Deerfield Beach",
+                "country": "Bahrain",
+                "postal_code": "30765-6471",
+                "region": "FL",
+            },
+            "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
+            "description": "Currus.",
+            "id": "30d55553-d77e-4993-8c73-9a813399ad09",
+            "is_active": True,
+            "language": "it",
+            "name": "Annette Nolan",
+            "sender_company": "Hickle - Homenick",
+            "sender_email": "Matt_Steuber@hotmail.com",
+            "sender_name": "Salvatore Roob",
+            "sender_phone": "896-328-1153 x4957",
+            "subject": "Tenetur thymum circumvenio triumphus celo.",
+            "updated_at": parse_datetime("2022-08-30T12:22:37.867Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -877,10 +1050,11 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -890,7 +1064,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.update_martech_member(request={
-        "marketing_member": {},
+        "marketing_member": {
+            "company": "Miller - Franecki",
+            "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
+            "emails": [
+                {
+                    "email": "Thalia.Abernathy61@gmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Maymie59@hotmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Coty27@hotmail.com",
+                    "type": shared.MarketingEmailType.WORK,
+                },
+            ],
+            "first_name": "Jude",
+            "id": "be5b1afb-7831-40f9-b3dd-7910b5c7b4a9",
+            "last_name": "Leffler",
+            "name": "Jude Leffler",
+            "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
+            "tags": [
+                "vinco",
+                "ceno",
+            ],
+            "updated_at": parse_datetime("2025-06-15T05:06:13.087Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

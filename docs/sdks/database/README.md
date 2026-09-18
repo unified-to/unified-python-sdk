@@ -17,10 +17,11 @@ Create a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="python" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" example="datastore_database" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.database.create_datastore_database(request={
-        "datastore_database": {},
+        "datastore_database": {
+            "created_at": parse_datetime("2019-03-05T14:31:00.223Z"),
+            "description": "Substantia tantillus coniuratio repellat coerceo amet vito vorago.",
+            "id": "47c27a48-1877-42f9-bc43-28d84d810b88",
+            "is_active": True,
+            "name": "Rau - O'Reilly",
+            "password": "iYLhYwOHm0NLDvI",
+            "region": "France",
+            "updated_at": parse_datetime("2023-06-12T03:10:27.170Z"),
+            "web_url": "https://optimal-signature.name",
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +168,11 @@ Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +182,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.database.patch_datastore_database(request={
-        "datastore_database": {},
+        "datastore_database": {
+            "created_at": parse_datetime("2019-03-05T14:31:00.223Z"),
+            "description": "Substantia tantillus coniuratio repellat coerceo amet vito vorago.",
+            "id": "4ca08192-ee21-463a-b433-6ac53b436e43",
+            "is_active": True,
+            "name": "Rau - O'Reilly",
+            "password": "iYLhYwOHm0NLDvI",
+            "region": "France",
+            "updated_at": parse_datetime("2023-06-12T03:10:27.173Z"),
+            "web_url": "https://optimal-signature.name",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +274,11 @@ Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +288,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.database.update_datastore_database(request={
-        "datastore_database": {},
+        "datastore_database": {
+            "created_at": parse_datetime("2019-03-05T14:31:00.223Z"),
+            "description": "Substantia tantillus coniuratio repellat coerceo amet vito vorago.",
+            "id": "4ca08192-ee21-463a-b433-6ac53b436e43",
+            "is_active": True,
+            "name": "Rau - O'Reilly",
+            "password": "iYLhYwOHm0NLDvI",
+            "region": "France",
+            "updated_at": parse_datetime("2023-06-12T03:10:27.173Z"),
+            "web_url": "https://optimal-signature.name",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

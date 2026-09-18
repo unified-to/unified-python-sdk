@@ -17,10 +17,11 @@ Create a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="python" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" example="commerce_saleschannel" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.saleschannel.create_commerce_saleschannel(request={
-        "commerce_saleschannel": {},
+        "commerce_saleschannel": {
+            "collections": [],
+            "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
+            "description": "Utroque denuncio solutio.",
+            "id": "8d954fc2-7ffa-454a-bbb5-8d5e317f9e69",
+            "is_active": False,
+            "slug": "amiculum-congregatio-suspendo",
+            "updated_at": parse_datetime("2025-01-06T17:43:36.088Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +166,11 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +180,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.saleschannel.patch_commerce_saleschannel(request={
-        "commerce_saleschannel": {},
+        "commerce_saleschannel": {
+            "collections": [],
+            "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
+            "description": "Utroque denuncio solutio.",
+            "id": "2baeb707-36c4-4b92-873c-13d3d2d01ffd",
+            "is_active": False,
+            "slug": "amiculum-congregatio-suspendo",
+            "updated_at": parse_datetime("2025-01-06T17:43:36.091Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +270,11 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +284,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.saleschannel.update_commerce_saleschannel(request={
-        "commerce_saleschannel": {},
+        "commerce_saleschannel": {
+            "collections": [],
+            "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
+            "description": "Utroque denuncio solutio.",
+            "id": "2baeb707-36c4-4b92-873c-13d3d2d01ffd",
+            "is_active": False,
+            "slug": "amiculum-congregatio-suspendo",
+            "updated_at": parse_datetime("2025-01-06T17:43:36.091Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

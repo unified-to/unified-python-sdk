@@ -17,10 +17,11 @@ Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="python" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" example="ats_scorecard" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,24 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.create_ats_scorecard(request={
-        "ats_scorecard": {},
+        "ats_scorecard": {
+            "comment": "Maiores enim.",
+            "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
+            "id": "c3766d54-1065-46a2-982d-4b25ae89fd81",
+            "questions": [
+                {
+                    "description": "Sulum textor eveniet facere vita.",
+                    "text": "Aliquam.",
+                },
+                {
+                    "answer": "Decretum.",
+                    "description": "Conatus cicuta doloremque statua bonus.",
+                    "text": "Pecto vulpes libero vomer comburo.",
+                },
+            ],
+            "recommendation": shared.Recommendation.STRONG_YES,
+            "updated_at": parse_datetime("2023-05-27T11:10:09.894Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +175,11 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +189,24 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.patch_ats_scorecard(request={
-        "ats_scorecard": {},
+        "ats_scorecard": {
+            "comment": "Maiores enim.",
+            "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
+            "id": "94a1a56d-57e5-4b2f-8e60-532dc14fd628",
+            "questions": [
+                {
+                    "description": "Sulum textor eveniet facere vita.",
+                    "text": "Aliquam.",
+                },
+                {
+                    "answer": "Decretum.",
+                    "description": "Conatus cicuta doloremque statua bonus.",
+                    "text": "Pecto vulpes libero vomer comburo.",
+                },
+            ],
+            "recommendation": shared.Recommendation.STRONG_YES,
+            "updated_at": parse_datetime("2023-05-27T11:10:09.897Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +288,11 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +302,24 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.update_ats_scorecard(request={
-        "ats_scorecard": {},
+        "ats_scorecard": {
+            "comment": "Maiores enim.",
+            "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
+            "id": "94a1a56d-57e5-4b2f-8e60-532dc14fd628",
+            "questions": [
+                {
+                    "description": "Sulum textor eveniet facere vita.",
+                    "text": "Aliquam.",
+                },
+                {
+                    "answer": "Decretum.",
+                    "description": "Conatus cicuta doloremque statua bonus.",
+                    "text": "Pecto vulpes libero vomer comburo.",
+                },
+            ],
+            "recommendation": shared.Recommendation.STRONG_YES,
+            "updated_at": parse_datetime("2023-05-27T11:10:09.897Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

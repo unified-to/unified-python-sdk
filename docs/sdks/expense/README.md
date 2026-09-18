@@ -17,10 +17,11 @@ Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="python" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,44 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.expense.create_accounting_expense(request={
-        "accounting_expense": {},
+        "accounting_expense": {
+            "approved_at": parse_datetime("2026-05-09T18:22:43.545Z"),
+            "attachments": [
+                {
+                    "download_url": "https://ripe-napkin.biz/",
+                    "id": "bd5cc77e-13cc-4bca-a782-8ff91143671d",
+                    "mime_type": "annus",
+                    "name": "cohibeo",
+                },
+            ],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
+            "currency": "SSP",
+            "external_number": "necessitatibus",
+            "id": "88076234-223e-4b3a-aca4-464f2e81b951",
+            "lineitems": [
+                {
+                    "id": "6ca0a920-8d40-4469-aa13-8159a794e842",
+                    "item_description": "Innovative Table featuring left technology and Rubber construction",
+                    "item_name": "Luxurious Cotton Pizza",
+                    "item_sku": "978-0-8324-6620-5",
+                    "notes": "Degusto conventus defendo valetudo.",
+                    "tax_amount": 2501.0,
+                    "total_amount": 168.0,
+                    "unit_amount": 3059.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Refined Steel Shoes",
+            "payment_method": "CASH",
+            "posted_at": parse_datetime("2021-06-04T05:03:49.243Z"),
+            "reimbursed_amount": 1833.0,
+            "status": shared.AccountingExpenseStatus.SUBMITTED,
+            "tax_amount": 2602.0,
+            "total_amount": 3580.0,
+            "updated_at": parse_datetime("2026-05-09T18:22:43.545Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +195,11 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +209,44 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.expense.patch_accounting_expense(request={
-        "accounting_expense": {},
+        "accounting_expense": {
+            "approved_at": parse_datetime("2026-05-09T18:22:43.593Z"),
+            "attachments": [
+                {
+                    "download_url": "https://ripe-napkin.biz/",
+                    "id": "a8e3f070-1872-415b-9119-ca0b34b31468",
+                    "mime_type": "annus",
+                    "name": "cohibeo",
+                },
+            ],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
+            "currency": "SSP",
+            "external_number": "necessitatibus",
+            "id": "ffc10913-4fbd-41ae-9963-7a351c4b602c",
+            "lineitems": [
+                {
+                    "id": "1903c335-9417-435e-9c88-755817c4e617",
+                    "item_description": "Innovative Table featuring left technology and Rubber construction",
+                    "item_name": "Luxurious Cotton Pizza",
+                    "item_sku": "978-0-8324-6620-5",
+                    "notes": "Degusto conventus defendo valetudo.",
+                    "tax_amount": 2501.0,
+                    "total_amount": 168.0,
+                    "unit_amount": 3059.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Refined Steel Shoes",
+            "payment_method": "CASH",
+            "posted_at": parse_datetime("2021-06-04T05:03:49.251Z"),
+            "reimbursed_amount": 1833.0,
+            "status": shared.AccountingExpenseStatus.SUBMITTED,
+            "tax_amount": 2602.0,
+            "total_amount": 3580.0,
+            "updated_at": parse_datetime("2026-05-09T18:22:43.593Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +328,11 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +342,44 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.expense.update_accounting_expense(request={
-        "accounting_expense": {},
+        "accounting_expense": {
+            "approved_at": parse_datetime("2026-05-09T18:22:43.593Z"),
+            "attachments": [
+                {
+                    "download_url": "https://ripe-napkin.biz/",
+                    "id": "a8e3f070-1872-415b-9119-ca0b34b31468",
+                    "mime_type": "annus",
+                    "name": "cohibeo",
+                },
+            ],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
+            "currency": "SSP",
+            "external_number": "necessitatibus",
+            "id": "ffc10913-4fbd-41ae-9963-7a351c4b602c",
+            "lineitems": [
+                {
+                    "id": "1903c335-9417-435e-9c88-755817c4e617",
+                    "item_description": "Innovative Table featuring left technology and Rubber construction",
+                    "item_name": "Luxurious Cotton Pizza",
+                    "item_sku": "978-0-8324-6620-5",
+                    "notes": "Degusto conventus defendo valetudo.",
+                    "tax_amount": 2501.0,
+                    "total_amount": 168.0,
+                    "unit_amount": 3059.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Refined Steel Shoes",
+            "payment_method": "CASH",
+            "posted_at": parse_datetime("2021-06-04T05:03:49.251Z"),
+            "reimbursed_amount": 1833.0,
+            "status": shared.AccountingExpenseStatus.SUBMITTED,
+            "tax_amount": 2602.0,
+            "total_amount": 3580.0,
+            "updated_at": parse_datetime("2026-05-09T18:22:43.593Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

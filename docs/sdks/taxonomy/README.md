@@ -15,10 +15,11 @@ Create a taxonomy
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+<!-- UsageSnippet language="python" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" example="hris_taxonomy" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -28,7 +29,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.taxonomy.create_hris_taxonomy(request={
-        "hris_taxonomy": {},
+        "hris_taxonomy": {
+            "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
+            "description": "Apto demonstro audacia adstringo cursim tristis solio careo.",
+            "domain": "Electronics",
+            "id": "ede085db-5709-4d53-a490-746f3de5be17",
+            "is_active": False,
+            "name": "International Functionality Architect",
+            "parent_id": "6524b2a7-6520-4e15-8c4e-1aa6793db837",
+            "role_ids": [
+                "2b1ef757-eb4c-4207-8af1-929afe49cd65",
+            ],
+            "subcategory": "Bamboo",
+            "type": shared.HrisTaxonomyType.KNOWLEDGE,
+            "updated_at": parse_datetime("2023-05-22T04:57:25.374Z"),
+            "url": "https://our-polarisation.name",
+        },
         "connection_id": "<id>",
     })
 

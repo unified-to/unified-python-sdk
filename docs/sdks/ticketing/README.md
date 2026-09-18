@@ -35,10 +35,11 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" example="ticketing_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -48,7 +49,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_category(request={
-        "ticketing_category": {},
+        "ticketing_category": {
+            "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
+            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
+            "id": "5ac2d511-1ea8-4ac2-9c12-e64f60d29e93",
+            "is_active": True,
+            "name": "amicitia",
+            "updated_at": parse_datetime("2025-12-15T15:10:31.164Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -82,10 +90,11 @@ Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="python" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" example="ticketing_customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -95,7 +104,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_customer(request={
-        "ticketing_customer": {},
+        "ticketing_customer": {
+            "created_at": parse_datetime("2021-03-15T12:33:14.875Z"),
+            "emails": [
+                {
+                    "email": "Christian_Windler@gmail.com",
+                    "type": shared.TicketingEmailType.HOME,
+                },
+            ],
+            "id": "7aaf843a-eb51-4f52-8529-70aa2d242803",
+            "name": "Christian Windler",
+            "tags": [
+                "casso",
+                "peccatus",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(532) 242-0482",
+                    "type": shared.TicketingTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(826) 283-7431",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(483) 314-6826",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2026-05-04T07:38:52.565Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -129,10 +167,11 @@ Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="python" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" example="ticketing_note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -142,7 +181,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_note(request={
-        "ticketing_note": {},
+        "ticketing_note": {
+            "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
+            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
+            "id": "0a4a5e64-48a5-4fd9-b0c9-24cc704840a6",
+            "updated_at": parse_datetime("2024-09-05T15:38:07.962Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -176,10 +220,11 @@ Create a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="python" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" example="ticketing_ticket" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -189,7 +234,29 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_ticket(request={
-        "ticketing_ticket": {},
+        "ticketing_ticket": {
+            "attachment_ids": [
+                "4b783299-a1bd-4aa8-b927-8ef63968bd27",
+                "1e29f1cb-e9a0-414f-a7b9-62a74aa6b95f",
+            ],
+            "category_id": "vilicus",
+            "created_at": parse_datetime("2021-06-25T19:19:31.279Z"),
+            "description": "Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.",
+            "due_at": parse_datetime("2025-07-20T03:56:57.584Z"),
+            "id": "ee500ada-985e-46ce-99ff-e1403b9b33dc",
+            "priority": "LOW",
+            "source": "atavus",
+            "source_ref": "3598fc4e-a2fd-4eea-a97f-367fe161591f",
+            "status": shared.TicketingTicketStatus.ACTIVE,
+            "subject": "Thymbra ratione minus arbitro tricesimus cetera validus.",
+            "tags": [
+                "tamen",
+                "vitae",
+                "torrens",
+            ],
+            "updated_at": parse_datetime("2023-05-28T07:25:19.149Z"),
+            "url": "https://yellowish-testimonial.biz",
+        },
         "connection_id": "<id>",
     })
 
@@ -595,10 +662,11 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -608,7 +676,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_category(request={
-        "ticketing_category": {},
+        "ticketing_category": {
+            "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
+            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
+            "id": "a4a3eb17-54d3-419a-aafa-5473e1d8a0f0",
+            "is_active": True,
+            "name": "amicitia",
+            "updated_at": parse_datetime("2025-12-15T15:10:31.172Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -643,10 +718,11 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -656,7 +732,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_customer(request={
-        "ticketing_customer": {},
+        "ticketing_customer": {
+            "created_at": parse_datetime("2021-03-15T12:33:14.875Z"),
+            "emails": [
+                {
+                    "email": "Christian_Windler@gmail.com",
+                    "type": shared.TicketingEmailType.HOME,
+                },
+            ],
+            "id": "81231dce-2c6b-48df-af99-3f67b7571c0d",
+            "name": "Christian Windler",
+            "tags": [
+                "casso",
+                "peccatus",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(532) 242-0482",
+                    "type": shared.TicketingTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(826) 283-7431",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(483) 314-6826",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2026-05-04T07:38:52.574Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -691,10 +796,11 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -704,7 +810,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_note(request={
-        "ticketing_note": {},
+        "ticketing_note": {
+            "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
+            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
+            "id": "cf1b0373-6e5a-409c-a90c-214e826c7259",
+            "updated_at": parse_datetime("2024-09-05T15:38:07.966Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -739,10 +850,11 @@ Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" example="ticketing_ticket" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -752,7 +864,29 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_ticket(request={
-        "ticketing_ticket": {},
+        "ticketing_ticket": {
+            "attachment_ids": [
+                "468214ca-392e-4132-bf6c-8ec3404068e3",
+                "e4f148af-512f-40c7-895f-4b9a804e181c",
+            ],
+            "category_id": "vilicus",
+            "created_at": parse_datetime("2021-06-25T19:19:31.279Z"),
+            "description": "Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.",
+            "due_at": parse_datetime("2025-07-20T03:56:57.591Z"),
+            "id": "b2013661-c6d4-406a-928f-474f32294ac7",
+            "priority": "LOW",
+            "source": "atavus",
+            "source_ref": "a653a581-d9bb-4ca6-868f-20015c9bf928",
+            "status": shared.TicketingTicketStatus.ACTIVE,
+            "subject": "Thymbra ratione minus arbitro tricesimus cetera validus.",
+            "tags": [
+                "tamen",
+                "vitae",
+                "torrens",
+            ],
+            "updated_at": parse_datetime("2023-05-28T07:25:19.152Z"),
+            "url": "https://yellowish-testimonial.biz",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -975,10 +1109,11 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -988,7 +1123,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_category(request={
-        "ticketing_category": {},
+        "ticketing_category": {
+            "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
+            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
+            "id": "a4a3eb17-54d3-419a-aafa-5473e1d8a0f0",
+            "is_active": True,
+            "name": "amicitia",
+            "updated_at": parse_datetime("2025-12-15T15:10:31.172Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1023,10 +1165,11 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1036,7 +1179,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_customer(request={
-        "ticketing_customer": {},
+        "ticketing_customer": {
+            "created_at": parse_datetime("2021-03-15T12:33:14.875Z"),
+            "emails": [
+                {
+                    "email": "Christian_Windler@gmail.com",
+                    "type": shared.TicketingEmailType.HOME,
+                },
+            ],
+            "id": "81231dce-2c6b-48df-af99-3f67b7571c0d",
+            "name": "Christian Windler",
+            "tags": [
+                "casso",
+                "peccatus",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(532) 242-0482",
+                    "type": shared.TicketingTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(826) 283-7431",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(483) 314-6826",
+                    "type": shared.TicketingTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2026-05-04T07:38:52.574Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1071,10 +1243,11 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1084,7 +1257,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_note(request={
-        "ticketing_note": {},
+        "ticketing_note": {
+            "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
+            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
+            "id": "cf1b0373-6e5a-409c-a90c-214e826c7259",
+            "updated_at": parse_datetime("2024-09-05T15:38:07.966Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1119,10 +1297,11 @@ Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" example="ticketing_ticket" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1132,7 +1311,29 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_ticket(request={
-        "ticketing_ticket": {},
+        "ticketing_ticket": {
+            "attachment_ids": [
+                "468214ca-392e-4132-bf6c-8ec3404068e3",
+                "e4f148af-512f-40c7-895f-4b9a804e181c",
+            ],
+            "category_id": "vilicus",
+            "created_at": parse_datetime("2021-06-25T19:19:31.279Z"),
+            "description": "Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.",
+            "due_at": parse_datetime("2025-07-20T03:56:57.591Z"),
+            "id": "b2013661-c6d4-406a-928f-474f32294ac7",
+            "priority": "LOW",
+            "source": "atavus",
+            "source_ref": "a653a581-d9bb-4ca6-868f-20015c9bf928",
+            "status": shared.TicketingTicketStatus.ACTIVE,
+            "subject": "Thymbra ratione minus arbitro tricesimus cetera validus.",
+            "tags": [
+                "tamen",
+                "vitae",
+                "torrens",
+            ],
+            "updated_at": parse_datetime("2023-05-28T07:25:19.152Z"),
+            "url": "https://yellowish-testimonial.biz",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

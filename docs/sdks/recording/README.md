@@ -19,10 +19,11 @@ Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="python" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -32,7 +33,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.recording.create_uc_recording(request={
-        "uc_recording": {},
+        "uc_recording": {
+            "contacts": [],
+            "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
+            "end_at": parse_datetime("2024-04-21T20:25:03.937Z"),
+            "expires_at": parse_datetime("2026-03-28T16:20:45.918Z"),
+            "id": "9bb37bb5-bcc7-496b-91d6-9ba3da4d46f3",
+            "media": [],
+            "start_at": parse_datetime("2023-04-22T20:25:19.456Z"),
+            "type": shared.UcRecordingType.INBOUND,
+            "updated_at": parse_datetime("2025-02-24T08:23:34.885Z"),
+            "user_name": "Melyna Larson",
+            "user_phone": "1-915-327-0429 x509",
+            "web_url": "https://spherical-comparison.org",
+        },
         "connection_id": "<id>",
     })
 
@@ -252,10 +266,11 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +280,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.recording.patch_uc_recording(request={
-        "uc_recording": {},
+        "uc_recording": {
+            "contacts": [],
+            "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
+            "end_at": parse_datetime("2024-04-21T20:25:03.945Z"),
+            "expires_at": parse_datetime("2026-03-28T16:20:45.935Z"),
+            "id": "70237347-36d8-4eca-9224-cee256883565",
+            "media": [],
+            "start_at": parse_datetime("2023-04-22T20:25:19.459Z"),
+            "type": shared.UcRecordingType.INBOUND,
+            "updated_at": parse_datetime("2025-02-24T08:23:34.897Z"),
+            "user_name": "Melyna Larson",
+            "user_phone": "1-915-327-0429 x509",
+            "web_url": "https://spherical-comparison.org",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -347,10 +375,11 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -360,7 +389,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.recording.update_uc_recording(request={
-        "uc_recording": {},
+        "uc_recording": {
+            "contacts": [],
+            "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
+            "end_at": parse_datetime("2024-04-21T20:25:03.945Z"),
+            "expires_at": parse_datetime("2026-03-28T16:20:45.935Z"),
+            "id": "70237347-36d8-4eca-9224-cee256883565",
+            "media": [],
+            "start_at": parse_datetime("2023-04-22T20:25:19.459Z"),
+            "type": shared.UcRecordingType.INBOUND,
+            "updated_at": parse_datetime("2025-02-24T08:23:34.897Z"),
+            "user_name": "Melyna Larson",
+            "user_phone": "1-915-327-0429 x509",
+            "web_url": "https://spherical-comparison.org",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

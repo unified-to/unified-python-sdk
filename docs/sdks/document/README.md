@@ -29,10 +29,11 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="python" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" example="ats_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -42,7 +43,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.create_ats_document(request={
-        "ats_document": {},
+        "ats_document": {
+            "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
+            "document_url": "https://vengeful-lashes.biz",
+            "filename": "bah_white_frantically.bz",
+            "id": "f5d325b1-f389-407f-80f3-b0e13640af83",
+            "type": shared.AtsDocumentType.RESUME,
+            "updated_at": parse_datetime("2022-11-28T22:09:20.368Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -76,10 +84,11 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="python" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -89,7 +98,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.create_hris_document(request={
-        "hris_document": {},
+        "hris_document": {
+            "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
+            "document_url": "https://sore-decision.biz/",
+            "filename": "ridge_forager.xsl",
+            "id": "9c44ea1a-df06-48eb-ae08-025996b09343",
+            "type": shared.HrisDocumentType.POLICY,
+            "updated_at": parse_datetime("2025-09-17T01:54:33.584Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -123,10 +139,11 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="python" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" example="signing_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -136,7 +153,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.create_signing_document(request={
-        "signing_document": {},
+        "signing_document": {
+            "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
+            "expires_at": parse_datetime("2026-12-16T10:16:00.523Z"),
+            "id": "612631b6-684b-49dc-96db-d38fa0359205",
+            "name": "nam audax absens",
+            "status": shared.SigningDocumentStatus.VOIDED,
+            "updated_at": parse_datetime("2025-08-07T18:10:54.132Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -449,10 +473,11 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -462,7 +487,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.patch_ats_document(request={
-        "ats_document": {},
+        "ats_document": {
+            "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
+            "document_url": "https://vengeful-lashes.biz",
+            "filename": "bah_white_frantically.bz",
+            "id": "7f66a233-f2f5-4130-bfe9-fb665c831d3a",
+            "type": shared.AtsDocumentType.RESUME,
+            "updated_at": parse_datetime("2022-11-28T22:09:20.370Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -497,10 +529,11 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -510,7 +543,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.patch_hris_document(request={
-        "hris_document": {},
+        "hris_document": {
+            "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
+            "document_url": "https://sore-decision.biz/",
+            "filename": "ridge_forager.xsl",
+            "id": "b42682b1-d9f4-4260-af8a-f6317dd1bd80",
+            "type": shared.HrisDocumentType.POLICY,
+            "updated_at": parse_datetime("2025-09-17T01:54:33.589Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -545,10 +585,11 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -558,7 +599,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.patch_signing_document(request={
-        "signing_document": {},
+        "signing_document": {
+            "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
+            "expires_at": parse_datetime("2026-12-16T10:16:00.529Z"),
+            "id": "810af0fb-6771-449e-ad43-7be6a36e4839",
+            "name": "nam audax absens",
+            "status": shared.SigningDocumentStatus.VOIDED,
+            "updated_at": parse_datetime("2025-08-07T18:10:54.137Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -734,10 +782,11 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -747,7 +796,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.update_ats_document(request={
-        "ats_document": {},
+        "ats_document": {
+            "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
+            "document_url": "https://vengeful-lashes.biz",
+            "filename": "bah_white_frantically.bz",
+            "id": "7f66a233-f2f5-4130-bfe9-fb665c831d3a",
+            "type": shared.AtsDocumentType.RESUME,
+            "updated_at": parse_datetime("2022-11-28T22:09:20.370Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -782,10 +838,11 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -795,7 +852,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.update_hris_document(request={
-        "hris_document": {},
+        "hris_document": {
+            "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
+            "document_url": "https://sore-decision.biz/",
+            "filename": "ridge_forager.xsl",
+            "id": "b42682b1-d9f4-4260-af8a-f6317dd1bd80",
+            "type": shared.HrisDocumentType.POLICY,
+            "updated_at": parse_datetime("2025-09-17T01:54:33.589Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -830,10 +894,11 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -843,7 +908,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.update_signing_document(request={
-        "signing_document": {},
+        "signing_document": {
+            "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
+            "expires_at": parse_datetime("2026-12-16T10:16:00.529Z"),
+            "id": "810af0fb-6771-449e-ad43-7be6a36e4839",
+            "name": "nam audax absens",
+            "status": shared.SigningDocumentStatus.VOIDED,
+            "updated_at": parse_datetime("2025-08-07T18:10:54.137Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

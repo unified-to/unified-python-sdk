@@ -17,10 +17,11 @@ Create a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="python" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" example="metadata_metadata" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -31,8 +32,19 @@ with UnifiedTo(
 
     res = unified_to.metadata.create_metadata_metadata(request={
         "metadata_metadata": {
-            "name": "<value>",
-            "object_type": "<value>",
+            "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
+            "format_": shared.MetadataMetadataFormat.PRICE,
+            "id": "16547ca9-d1ab-46fa-9627-86b8820ee7a6",
+            "is_required": False,
+            "name": "autem",
+            "object_type": "clubs_group",
+            "objects": {
+
+            },
+            "options": [],
+            "original_format": "advoco",
+            "slug": "arbustum",
+            "updated_at": parse_datetime("2025-02-26T08:00:01.873Z"),
         },
         "connection_id": "<id>",
     })
@@ -160,10 +172,11 @@ Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" example="metadata_metadata" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -174,8 +187,19 @@ with UnifiedTo(
 
     res = unified_to.metadata.patch_metadata_metadata(request={
         "metadata_metadata": {
-            "name": "<value>",
-            "object_type": "<value>",
+            "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
+            "format_": shared.MetadataMetadataFormat.PRICE,
+            "id": "4c2bb09f-de2e-4735-b7f5-3685e2a2b448",
+            "is_required": False,
+            "name": "autem",
+            "object_type": "clubs_group",
+            "objects": {
+
+            },
+            "options": [],
+            "original_format": "advoco",
+            "slug": "arbustum",
+            "updated_at": parse_datetime("2025-02-26T08:00:01.878Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -258,10 +282,11 @@ Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" example="metadata_metadata" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -272,8 +297,19 @@ with UnifiedTo(
 
     res = unified_to.metadata.update_metadata_metadata(request={
         "metadata_metadata": {
-            "name": "<value>",
-            "object_type": "<value>",
+            "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
+            "format_": shared.MetadataMetadataFormat.PRICE,
+            "id": "4c2bb09f-de2e-4735-b7f5-3685e2a2b448",
+            "is_required": False,
+            "name": "autem",
+            "object_type": "clubs_group",
+            "objects": {
+
+            },
+            "options": [],
+            "original_format": "advoco",
+            "slug": "arbustum",
+            "updated_at": parse_datetime("2025-02-26T08:00:01.878Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

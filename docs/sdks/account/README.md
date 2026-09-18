@@ -17,10 +17,11 @@ Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="python" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.account.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +182,11 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +196,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.account.patch_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "f8647ab4-1089-471e-82b9-db710d4b4cd1",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.645Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +302,11 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +316,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.account.update_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "f8647ab4-1089-471e-82b9-db710d4b4cd1",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.645Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

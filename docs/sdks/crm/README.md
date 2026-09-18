@@ -48,10 +48,11 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="python" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" example="crm_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -61,7 +62,83 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_company(request={
-        "crm_company": {},
+        "crm_company": {
+            "address": {
+                "address1": "7261 Salisbury Road",
+                "address2": "Apt. 778",
+                "city": "Harrisburg",
+                "country_code": "US",
+                "postal_code": "56293-3678",
+                "region": "Pennsylvania",
+                "region_code": "ID",
+            },
+            "created_at": parse_datetime("2020-05-11T18:26:32.925Z"),
+            "description": "Balbus crapula spiculum.",
+            "domains": [
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            ],
+            "emails": [
+                {
+                    "email": "Sandrine_Jacobi@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine_Jacobi@gmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine.Jacobi@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+            ],
+            "employees": 967.0,
+            "id": "c3d87ef6-a153-4be2-9146-799249ea7602",
+            "industry": "Infrastructure",
+            "is_active": True,
+            "link_urls": [
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "948c143e-6c56-4be0-a14d-eb68e77934a6",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "esse",
+                },
+            ],
+            "name": "Goodwin and Sons",
+            "tags": [
+                "quaerat",
+                "valeo",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(432) 849-2690",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(606) 871-2046",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(842) 258-9395",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+            ],
+            "timezone": "Europe/San_Marino",
+            "updated_at": parse_datetime("2025-02-06T12:33:02.290Z"),
+            "websites": [
+                "https://wise-possession.org",
+            ],
+        },
         "connection_id": "<id>",
     })
 
@@ -95,10 +172,11 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="python" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" example="crm_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -108,7 +186,71 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_contact(request={
-        "crm_contact": {},
+        "crm_contact": {
+            "address": {
+                "address1": "518 Brannon Burg",
+                "city": "East Helenebury",
+                "country_code": "US",
+                "postal_code": "92622-2406",
+                "region": "Vermont",
+                "region_code": "AZ",
+            },
+            "company": "Lowe - Jakubowski",
+            "created_at": parse_datetime("2021-01-02T00:41:38.885Z"),
+            "department": "systematic",
+            "emails": [
+                {
+                    "email": "Mohammad.Bartell45@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad.Bartell90@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad_Bartell@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+            ],
+            "first_name": "Mohammad",
+            "id": "956e8c73-33ab-4531-a448-4e88c8aefa51",
+            "image_url": "https://picsum.photos/seed/zmbPeg/2905/378",
+            "last_name": "Bartell",
+            "link_urls": [
+                "https://limited-parade.info",
+                "https://faint-papa.com/",
+                "https://windy-accountability.name",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "6d65426c-aac0-41b8-bcd3-c063e02e7f3e",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "autem",
+                },
+            ],
+            "name": "Mohammad Bartell",
+            "telephones": [
+                {
+                    "telephone": "(975) 986-1658",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+                {
+                    "telephone": "(489) 332-3509",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(205) 880-8886",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+            ],
+            "title": "National Tactics Analyst",
+            "updated_at": parse_datetime("2021-02-23T09:13:08.673Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -142,10 +284,11 @@ Create a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="python" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" example="crm_deal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -155,7 +298,52 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_deal(request={
-        "crm_deal": {},
+        "crm_deal": {
+            "amount": 98162.0,
+            "closed_at": parse_datetime("2024-03-03T13:46:38.983Z"),
+            "closing_at": parse_datetime("2025-08-09T21:46:10.537Z"),
+            "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
+            "currency": "IQD",
+            "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
+            "id": "e84c8ee3-2104-4a2d-95d7-bd6fd6647ddb",
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "4b27a79b-1dfb-4347-8a17-8bf73e5306f5",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "conatus",
+                },
+            ],
+            "name": "Frozen Silk Chicken",
+            "pipelines": [
+                {
+                    "id": "aae9e562-9f31-44fa-a60f-e8049c76ea51",
+                    "name": "trans",
+                },
+            ],
+            "probability": 65.0,
+            "source": "cubo",
+            "stages": [
+                {
+                    "id": "7e071a51-2a39-4669-b8bc-5ab9c2f2ba3f",
+                    "name": "tubineus",
+                },
+                {
+                    "id": "fb7e5354-97bb-46bf-9ac4-d4cfce5e3d37",
+                    "name": "adfectus",
+                },
+            ],
+            "tags": [
+                "causa",
+                "suus",
+            ],
+            "updated_at": parse_datetime("2024-09-29T03:11:23.510Z"),
+            "won_reason": "Usque libero soleo.",
+        },
         "connection_id": "<id>",
     })
 
@@ -189,10 +377,11 @@ Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="python" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" example="crm_event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -202,7 +391,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_event(request={
-        "crm_event": {},
+        "crm_event": {
+            "call": {
+                "description": "Arbitro aptus.",
+                "duration": 64.0,
+                "start_at": parse_datetime("2024-11-17T19:35:20.203Z"),
+            },
+            "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
+            "id": "1a27c602-d184-4ebe-8fef-49e460d83d29",
+            "type": shared.CrmEventType.CALL,
+            "updated_at": parse_datetime("2026-09-08T16:07:03.749Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -236,10 +435,11 @@ Create a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="python" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" example="crm_lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -249,7 +449,62 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_lead(request={
-        "crm_lead": {},
+        "crm_lead": {
+            "address": {
+                "address1": "528 Forest Road",
+                "address2": "Apt. 643",
+                "city": "Palm Springs",
+                "country_code": "US",
+                "postal_code": "55624-6499",
+                "region": "New Jersey",
+                "region_code": "LA",
+            },
+            "company_name": "Tillman - Wiegand",
+            "created_at": parse_datetime("2019-10-12T11:27:59.003Z"),
+            "emails": [
+                {
+                    "email": "Velda.Sporer16@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+                {
+                    "email": "Velda.Sporer@yahoo.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+            ],
+            "first_name": "Velda",
+            "id": "1f745f9b-4957-47fa-a75d-7eeb6ace9ec3",
+            "is_active": True,
+            "last_name": "Sporer",
+            "link_urls": [
+                "https://classic-sightseeing.com/",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "3fcf48e0-292d-4a61-9a86-57c5c47d25d5",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "sublime",
+                },
+            ],
+            "name": "Velda Sporer",
+            "source": "aetas",
+            "status": "vesco",
+            "telephones": [
+                {
+                    "telephone": "(955) 643-9849",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(621) 811-8800",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+            ],
+            "updated_at": parse_datetime("2020-05-15T02:08:41.200Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -283,10 +538,11 @@ Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="python" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" example="crm_pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -296,7 +552,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_pipeline(request={
-        "crm_pipeline": {},
+        "crm_pipeline": {
+            "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+            "deal_probability": 99.0,
+            "display_order": 8.0,
+            "id": "bee55908-6617-47b4-a130-51a7477bf893",
+            "is_active": True,
+            "name": "Small Steel Bacon",
+            "stages": [
+                {
+                    "active": False,
+                    "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+                    "deal_probability": 84.0,
+                    "display_order": 72.0,
+                    "id": "2ef85783-686a-46d9-b947-6f69229f667f",
+                    "is_closed": True,
+                    "name": "Veniam.",
+                    "updated_at": parse_datetime("2025-09-16T09:58:54.230Z"),
+                },
+            ],
+            "updated_at": parse_datetime("2025-10-07T15:03:40.498Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -934,10 +1210,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -947,7 +1224,83 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_company(request={
-        "crm_company": {},
+        "crm_company": {
+            "address": {
+                "address1": "7261 Salisbury Road",
+                "address2": "Apt. 778",
+                "city": "Harrisburg",
+                "country_code": "US",
+                "postal_code": "56293-3678",
+                "region": "Pennsylvania",
+                "region_code": "ID",
+            },
+            "created_at": parse_datetime("2020-05-11T18:26:32.925Z"),
+            "description": "Balbus crapula spiculum.",
+            "domains": [
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            ],
+            "emails": [
+                {
+                    "email": "Sandrine_Jacobi@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine_Jacobi@gmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine.Jacobi@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+            ],
+            "employees": 967.0,
+            "id": "8e971de5-5467-4203-a88e-3b58bfad2c21",
+            "industry": "Infrastructure",
+            "is_active": True,
+            "link_urls": [
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "7a08cf1c-5e31-4ef7-8e4b-eeb389beadc4",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "esse",
+                },
+            ],
+            "name": "Goodwin and Sons",
+            "tags": [
+                "quaerat",
+                "valeo",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(432) 849-2690",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(606) 871-2046",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(842) 258-9395",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+            ],
+            "timezone": "Europe/San_Marino",
+            "updated_at": parse_datetime("2025-02-06T12:33:02.306Z"),
+            "websites": [
+                "https://wise-possession.org",
+            ],
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -982,10 +1335,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -995,7 +1349,71 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_contact(request={
-        "crm_contact": {},
+        "crm_contact": {
+            "address": {
+                "address1": "518 Brannon Burg",
+                "city": "East Helenebury",
+                "country_code": "US",
+                "postal_code": "92622-2406",
+                "region": "Vermont",
+                "region_code": "AZ",
+            },
+            "company": "Lowe - Jakubowski",
+            "created_at": parse_datetime("2021-01-02T00:41:38.885Z"),
+            "department": "systematic",
+            "emails": [
+                {
+                    "email": "Mohammad.Bartell45@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad.Bartell90@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad_Bartell@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+            ],
+            "first_name": "Mohammad",
+            "id": "bc1f9041-39e8-4ec6-b5b3-f07e2fd9ceb3",
+            "image_url": "https://picsum.photos/seed/zmbPeg/2905/378",
+            "last_name": "Bartell",
+            "link_urls": [
+                "https://limited-parade.info",
+                "https://faint-papa.com/",
+                "https://windy-accountability.name",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "b29adf9d-8a6d-4c37-8e8d-d3d864615a84",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "autem",
+                },
+            ],
+            "name": "Mohammad Bartell",
+            "telephones": [
+                {
+                    "telephone": "(975) 986-1658",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+                {
+                    "telephone": "(489) 332-3509",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(205) 880-8886",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+            ],
+            "title": "National Tactics Analyst",
+            "updated_at": parse_datetime("2021-02-23T09:13:08.674Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1030,10 +1448,11 @@ Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1043,7 +1462,52 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_deal(request={
-        "crm_deal": {},
+        "crm_deal": {
+            "amount": 98162.0,
+            "closed_at": parse_datetime("2024-03-03T13:46:38.987Z"),
+            "closing_at": parse_datetime("2025-08-09T21:46:10.549Z"),
+            "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
+            "currency": "IQD",
+            "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
+            "id": "fb04e8ab-59e1-4150-9d9d-d57d07769e9b",
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "9e027946-73b5-474b-a27b-5b3e6f814f31",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "conatus",
+                },
+            ],
+            "name": "Frozen Silk Chicken",
+            "pipelines": [
+                {
+                    "id": "ce718ae4-3eee-4d6f-ae2b-9188d4c2504d",
+                    "name": "trans",
+                },
+            ],
+            "probability": 65.0,
+            "source": "cubo",
+            "stages": [
+                {
+                    "id": "e44c8418-cd6e-433a-8db1-300540f8066b",
+                    "name": "tubineus",
+                },
+                {
+                    "id": "0b3bf925-ba3b-433c-a9c9-69a6ea70d875",
+                    "name": "adfectus",
+                },
+            ],
+            "tags": [
+                "causa",
+                "suus",
+            ],
+            "updated_at": parse_datetime("2024-09-29T03:11:23.517Z"),
+            "won_reason": "Usque libero soleo.",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1078,10 +1542,11 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1091,7 +1556,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_event(request={
-        "crm_event": {},
+        "crm_event": {
+            "call": {
+                "description": "Arbitro aptus.",
+                "duration": 64.0,
+                "start_at": parse_datetime("2024-11-17T19:35:20.225Z"),
+            },
+            "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
+            "id": "b541c987-324e-42ff-a6dc-a7c378040c96",
+            "type": shared.CrmEventType.CALL,
+            "updated_at": parse_datetime("2026-09-08T16:07:03.780Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1126,10 +1601,11 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1139,7 +1615,62 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_lead(request={
-        "crm_lead": {},
+        "crm_lead": {
+            "address": {
+                "address1": "528 Forest Road",
+                "address2": "Apt. 643",
+                "city": "Palm Springs",
+                "country_code": "US",
+                "postal_code": "55624-6499",
+                "region": "New Jersey",
+                "region_code": "LA",
+            },
+            "company_name": "Tillman - Wiegand",
+            "created_at": parse_datetime("2019-10-12T11:27:59.003Z"),
+            "emails": [
+                {
+                    "email": "Velda.Sporer16@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+                {
+                    "email": "Velda.Sporer@yahoo.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+            ],
+            "first_name": "Velda",
+            "id": "69281a28-16bf-4876-bc6a-f051442edbfc",
+            "is_active": True,
+            "last_name": "Sporer",
+            "link_urls": [
+                "https://classic-sightseeing.com/",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "21b57846-8e49-459f-b6e4-bd3ad1a38f76",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "sublime",
+                },
+            ],
+            "name": "Velda Sporer",
+            "source": "aetas",
+            "status": "vesco",
+            "telephones": [
+                {
+                    "telephone": "(955) 643-9849",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(621) 811-8800",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+            ],
+            "updated_at": parse_datetime("2020-05-15T02:08:41.202Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1174,10 +1705,11 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1187,7 +1719,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_pipeline(request={
-        "crm_pipeline": {},
+        "crm_pipeline": {
+            "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+            "deal_probability": 99.0,
+            "display_order": 8.0,
+            "id": "3a3b12e3-59bd-41b2-9f81-a1befb36103a",
+            "is_active": True,
+            "name": "Small Steel Bacon",
+            "stages": [
+                {
+                    "active": False,
+                    "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+                    "deal_probability": 84.0,
+                    "display_order": 72.0,
+                    "id": "f4b82baf-d539-4647-80a7-0686e6f3bce5",
+                    "is_closed": True,
+                    "name": "Veniam.",
+                    "updated_at": parse_datetime("2025-09-16T09:58:54.235Z"),
+                },
+            ],
+            "updated_at": parse_datetime("2025-10-07T15:03:40.503Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1504,10 +2056,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1517,7 +2070,83 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_company(request={
-        "crm_company": {},
+        "crm_company": {
+            "address": {
+                "address1": "7261 Salisbury Road",
+                "address2": "Apt. 778",
+                "city": "Harrisburg",
+                "country_code": "US",
+                "postal_code": "56293-3678",
+                "region": "Pennsylvania",
+                "region_code": "ID",
+            },
+            "created_at": parse_datetime("2020-05-11T18:26:32.925Z"),
+            "description": "Balbus crapula spiculum.",
+            "domains": [
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            ],
+            "emails": [
+                {
+                    "email": "Sandrine_Jacobi@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine_Jacobi@gmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine.Jacobi@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+            ],
+            "employees": 967.0,
+            "id": "8e971de5-5467-4203-a88e-3b58bfad2c21",
+            "industry": "Infrastructure",
+            "is_active": True,
+            "link_urls": [
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "7a08cf1c-5e31-4ef7-8e4b-eeb389beadc4",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "esse",
+                },
+            ],
+            "name": "Goodwin and Sons",
+            "tags": [
+                "quaerat",
+                "valeo",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(432) 849-2690",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(606) 871-2046",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(842) 258-9395",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+            ],
+            "timezone": "Europe/San_Marino",
+            "updated_at": parse_datetime("2025-02-06T12:33:02.306Z"),
+            "websites": [
+                "https://wise-possession.org",
+            ],
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1552,10 +2181,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1565,7 +2195,71 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_contact(request={
-        "crm_contact": {},
+        "crm_contact": {
+            "address": {
+                "address1": "518 Brannon Burg",
+                "city": "East Helenebury",
+                "country_code": "US",
+                "postal_code": "92622-2406",
+                "region": "Vermont",
+                "region_code": "AZ",
+            },
+            "company": "Lowe - Jakubowski",
+            "created_at": parse_datetime("2021-01-02T00:41:38.885Z"),
+            "department": "systematic",
+            "emails": [
+                {
+                    "email": "Mohammad.Bartell45@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad.Bartell90@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad_Bartell@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+            ],
+            "first_name": "Mohammad",
+            "id": "bc1f9041-39e8-4ec6-b5b3-f07e2fd9ceb3",
+            "image_url": "https://picsum.photos/seed/zmbPeg/2905/378",
+            "last_name": "Bartell",
+            "link_urls": [
+                "https://limited-parade.info",
+                "https://faint-papa.com/",
+                "https://windy-accountability.name",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "b29adf9d-8a6d-4c37-8e8d-d3d864615a84",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "autem",
+                },
+            ],
+            "name": "Mohammad Bartell",
+            "telephones": [
+                {
+                    "telephone": "(975) 986-1658",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+                {
+                    "telephone": "(489) 332-3509",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(205) 880-8886",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+            ],
+            "title": "National Tactics Analyst",
+            "updated_at": parse_datetime("2021-02-23T09:13:08.674Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1600,10 +2294,11 @@ Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1613,7 +2308,52 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_deal(request={
-        "crm_deal": {},
+        "crm_deal": {
+            "amount": 98162.0,
+            "closed_at": parse_datetime("2024-03-03T13:46:38.987Z"),
+            "closing_at": parse_datetime("2025-08-09T21:46:10.549Z"),
+            "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
+            "currency": "IQD",
+            "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
+            "id": "fb04e8ab-59e1-4150-9d9d-d57d07769e9b",
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "9e027946-73b5-474b-a27b-5b3e6f814f31",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "conatus",
+                },
+            ],
+            "name": "Frozen Silk Chicken",
+            "pipelines": [
+                {
+                    "id": "ce718ae4-3eee-4d6f-ae2b-9188d4c2504d",
+                    "name": "trans",
+                },
+            ],
+            "probability": 65.0,
+            "source": "cubo",
+            "stages": [
+                {
+                    "id": "e44c8418-cd6e-433a-8db1-300540f8066b",
+                    "name": "tubineus",
+                },
+                {
+                    "id": "0b3bf925-ba3b-433c-a9c9-69a6ea70d875",
+                    "name": "adfectus",
+                },
+            ],
+            "tags": [
+                "causa",
+                "suus",
+            ],
+            "updated_at": parse_datetime("2024-09-29T03:11:23.517Z"),
+            "won_reason": "Usque libero soleo.",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1648,10 +2388,11 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1661,7 +2402,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_event(request={
-        "crm_event": {},
+        "crm_event": {
+            "call": {
+                "description": "Arbitro aptus.",
+                "duration": 64.0,
+                "start_at": parse_datetime("2024-11-17T19:35:20.225Z"),
+            },
+            "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
+            "id": "b541c987-324e-42ff-a6dc-a7c378040c96",
+            "type": shared.CrmEventType.CALL,
+            "updated_at": parse_datetime("2026-09-08T16:07:03.780Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1696,10 +2447,11 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1709,7 +2461,62 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_lead(request={
-        "crm_lead": {},
+        "crm_lead": {
+            "address": {
+                "address1": "528 Forest Road",
+                "address2": "Apt. 643",
+                "city": "Palm Springs",
+                "country_code": "US",
+                "postal_code": "55624-6499",
+                "region": "New Jersey",
+                "region_code": "LA",
+            },
+            "company_name": "Tillman - Wiegand",
+            "created_at": parse_datetime("2019-10-12T11:27:59.003Z"),
+            "emails": [
+                {
+                    "email": "Velda.Sporer16@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+                {
+                    "email": "Velda.Sporer@yahoo.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+            ],
+            "first_name": "Velda",
+            "id": "69281a28-16bf-4876-bc6a-f051442edbfc",
+            "is_active": True,
+            "last_name": "Sporer",
+            "link_urls": [
+                "https://classic-sightseeing.com/",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "21b57846-8e49-459f-b6e4-bd3ad1a38f76",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "sublime",
+                },
+            ],
+            "name": "Velda Sporer",
+            "source": "aetas",
+            "status": "vesco",
+            "telephones": [
+                {
+                    "telephone": "(955) 643-9849",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(621) 811-8800",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+            ],
+            "updated_at": parse_datetime("2020-05-15T02:08:41.202Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1744,10 +2551,11 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1757,7 +2565,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_pipeline(request={
-        "crm_pipeline": {},
+        "crm_pipeline": {
+            "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+            "deal_probability": 99.0,
+            "display_order": 8.0,
+            "id": "3a3b12e3-59bd-41b2-9f81-a1befb36103a",
+            "is_active": True,
+            "name": "Small Steel Bacon",
+            "stages": [
+                {
+                    "active": False,
+                    "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+                    "deal_probability": 84.0,
+                    "display_order": 72.0,
+                    "id": "f4b82baf-d539-4647-80a7-0686e6f3bce5",
+                    "is_closed": True,
+                    "name": "Veniam.",
+                    "updated_at": parse_datetime("2025-09-16T09:58:54.235Z"),
+                },
+            ],
+            "updated_at": parse_datetime("2025-10-07T15:03:40.503Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

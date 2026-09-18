@@ -17,10 +17,11 @@ Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="python" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" example="martech_list" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,28 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.list.create_martech_list(request={
-        "marketing_list": {},
+        "marketing_list": {
+            "address": {
+                "address1": "922 Elmore Manor",
+                "address2": "Suite 925",
+                "city": "Deerfield Beach",
+                "country": "Bahrain",
+                "postal_code": "30765-6471",
+                "region": "FL",
+            },
+            "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
+            "description": "Currus.",
+            "id": "fc94207f-13b6-44e9-9b44-85fde76eb97b",
+            "is_active": True,
+            "language": "it",
+            "name": "Annette Nolan",
+            "sender_company": "Hickle - Homenick",
+            "sender_email": "Matt_Steuber@hotmail.com",
+            "sender_name": "Salvatore Roob",
+            "sender_phone": "896-328-1153 x4957",
+            "subject": "Tenetur thymum circumvenio triumphus celo.",
+            "updated_at": parse_datetime("2022-08-30T12:22:37.862Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +179,11 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +193,28 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.list.patch_martech_list(request={
-        "marketing_list": {},
+        "marketing_list": {
+            "address": {
+                "address1": "922 Elmore Manor",
+                "address2": "Suite 925",
+                "city": "Deerfield Beach",
+                "country": "Bahrain",
+                "postal_code": "30765-6471",
+                "region": "FL",
+            },
+            "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
+            "description": "Currus.",
+            "id": "30d55553-d77e-4993-8c73-9a813399ad09",
+            "is_active": True,
+            "language": "it",
+            "name": "Annette Nolan",
+            "sender_company": "Hickle - Homenick",
+            "sender_email": "Matt_Steuber@hotmail.com",
+            "sender_name": "Salvatore Roob",
+            "sender_phone": "896-328-1153 x4957",
+            "subject": "Tenetur thymum circumvenio triumphus celo.",
+            "updated_at": parse_datetime("2022-08-30T12:22:37.867Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +296,11 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +310,28 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.list.update_martech_list(request={
-        "marketing_list": {},
+        "marketing_list": {
+            "address": {
+                "address1": "922 Elmore Manor",
+                "address2": "Suite 925",
+                "city": "Deerfield Beach",
+                "country": "Bahrain",
+                "postal_code": "30765-6471",
+                "region": "FL",
+            },
+            "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
+            "description": "Currus.",
+            "id": "30d55553-d77e-4993-8c73-9a813399ad09",
+            "is_active": True,
+            "language": "it",
+            "name": "Annette Nolan",
+            "sender_company": "Hickle - Homenick",
+            "sender_email": "Matt_Steuber@hotmail.com",
+            "sender_name": "Salvatore Roob",
+            "sender_phone": "896-328-1153 x4957",
+            "subject": "Tenetur thymum circumvenio triumphus celo.",
+            "updated_at": parse_datetime("2022-08-30T12:22:37.867Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

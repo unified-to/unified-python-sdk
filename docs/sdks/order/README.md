@@ -21,10 +21,11 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="python" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -34,7 +35,35 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.order.create_accounting_order(request={
-        "accounting_order": {},
+        "accounting_order": {
+            "billing_address": {
+                "address1": "802 Bechtelar Park",
+                "address2": "Apt. 436",
+                "city": "Daniellaville",
+                "country_code": "US",
+                "postal_code": "36947",
+                "region": "Wisconsin",
+                "region_code": "NY",
+            },
+            "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
+            "currency": "USD",
+            "id": "75670c85-d5fc-4880-bc55-8ed412c74b8f",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2022-04-05T00:14:19.079Z"),
+            "shipping_address": {
+                "address1": "9745 Betty Shore",
+                "city": "South Alainaland",
+                "country_code": "US",
+                "postal_code": "25274-7654",
+                "region": "New Hampshire",
+                "region_code": "LA",
+            },
+            "status": shared.AccountingOrderStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "type": shared.AccountingOrderType.PURCHASE,
+            "updated_at": parse_datetime("2021-06-17T22:40:34.509Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -68,10 +97,11 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+<!-- UsageSnippet language="python" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" example="assessment_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -83,6 +113,34 @@ with UnifiedTo(
     res = unified_to.order.create_assessment_order(request={
         "assessment_order": {
             "connection_id": "<id>",
+            "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
+            "id": "c1ac5b49-bcaf-455e-b5ae-fa53d6f69d7a",
+            "parameters": [],
+            "profile_addresses": [],
+            "profile_date_of_birth": "1989-07-22T16:18:37.650Z",
+            "profile_emails": [
+                "Cleta.Daugherty@gmail.com",
+            ],
+            "profile_first_name": "Amy",
+            "profile_gender": shared.ProfileGender.NON_BINARY,
+            "profile_last_name": "Kris-Windler",
+            "profile_name": "Amy Kris-Windler",
+            "profile_resume_url": "https://enchanted-cycle.biz/",
+            "profile_social_media_urls": [],
+            "profile_telephones": [
+                "(828) 263-1594 x5248",
+            ],
+            "reference": "ab",
+            "response_attributes": [],
+            "response_details": [],
+            "response_download_urls": [],
+            "response_max_score": 82.0,
+            "response_score": 92.0,
+            "response_status": shared.ResponseStatus.FAILED,
+            "response_url": "https://irresponsible-trench.info/",
+            "status": shared.AssessmentOrderStatus.REJECTED,
+            "target_url": "https://cautious-turret.info",
+            "updated_at": parse_datetime("2023-01-17T01:52:03.034Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -258,10 +316,11 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -271,7 +330,35 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.order.patch_accounting_order(request={
-        "accounting_order": {},
+        "accounting_order": {
+            "billing_address": {
+                "address1": "802 Bechtelar Park",
+                "address2": "Apt. 436",
+                "city": "Daniellaville",
+                "country_code": "US",
+                "postal_code": "36947",
+                "region": "Wisconsin",
+                "region_code": "NY",
+            },
+            "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
+            "currency": "USD",
+            "id": "cb5b9dd7-2eb0-44aa-ae76-2722a1975caf",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2022-04-05T00:14:19.088Z"),
+            "shipping_address": {
+                "address1": "9745 Betty Shore",
+                "city": "South Alainaland",
+                "country_code": "US",
+                "postal_code": "25274-7654",
+                "region": "New Hampshire",
+                "region_code": "LA",
+            },
+            "status": shared.AccountingOrderStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "type": shared.AccountingOrderType.PURCHASE,
+            "updated_at": parse_datetime("2021-06-17T22:40:34.512Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -306,10 +393,11 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -321,6 +409,34 @@ with UnifiedTo(
     res = unified_to.order.patch_assessment_order(request={
         "assessment_order": {
             "connection_id": "<id>",
+            "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
+            "id": "921ee5cd-cfd1-4512-b08a-56a192518abe",
+            "parameters": [],
+            "profile_addresses": [],
+            "profile_date_of_birth": "1989-07-22T16:18:37.650Z",
+            "profile_emails": [
+                "Cleta.Daugherty@gmail.com",
+            ],
+            "profile_first_name": "Amy",
+            "profile_gender": shared.ProfileGender.NON_BINARY,
+            "profile_last_name": "Kris-Windler",
+            "profile_name": "Amy Kris-Windler",
+            "profile_resume_url": "https://enchanted-cycle.biz/",
+            "profile_social_media_urls": [],
+            "profile_telephones": [
+                "(828) 263-1594 x5248",
+            ],
+            "reference": "ab",
+            "response_attributes": [],
+            "response_details": [],
+            "response_download_urls": [],
+            "response_max_score": 82.0,
+            "response_score": 92.0,
+            "response_status": shared.ResponseStatus.FAILED,
+            "response_url": "https://irresponsible-trench.info/",
+            "status": shared.AssessmentOrderStatus.REJECTED,
+            "target_url": "https://cautious-turret.info",
+            "updated_at": parse_datetime("2023-01-17T01:52:03.042Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -404,10 +520,11 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -417,7 +534,35 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.order.update_accounting_order(request={
-        "accounting_order": {},
+        "accounting_order": {
+            "billing_address": {
+                "address1": "802 Bechtelar Park",
+                "address2": "Apt. 436",
+                "city": "Daniellaville",
+                "country_code": "US",
+                "postal_code": "36947",
+                "region": "Wisconsin",
+                "region_code": "NY",
+            },
+            "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
+            "currency": "USD",
+            "id": "cb5b9dd7-2eb0-44aa-ae76-2722a1975caf",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2022-04-05T00:14:19.088Z"),
+            "shipping_address": {
+                "address1": "9745 Betty Shore",
+                "city": "South Alainaland",
+                "country_code": "US",
+                "postal_code": "25274-7654",
+                "region": "New Hampshire",
+                "region_code": "LA",
+            },
+            "status": shared.AccountingOrderStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "type": shared.AccountingOrderType.PURCHASE,
+            "updated_at": parse_datetime("2021-06-17T22:40:34.512Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -452,10 +597,11 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -467,6 +613,34 @@ with UnifiedTo(
     res = unified_to.order.update_assessment_order(request={
         "assessment_order": {
             "connection_id": "<id>",
+            "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
+            "id": "921ee5cd-cfd1-4512-b08a-56a192518abe",
+            "parameters": [],
+            "profile_addresses": [],
+            "profile_date_of_birth": "1989-07-22T16:18:37.650Z",
+            "profile_emails": [
+                "Cleta.Daugherty@gmail.com",
+            ],
+            "profile_first_name": "Amy",
+            "profile_gender": shared.ProfileGender.NON_BINARY,
+            "profile_last_name": "Kris-Windler",
+            "profile_name": "Amy Kris-Windler",
+            "profile_resume_url": "https://enchanted-cycle.biz/",
+            "profile_social_media_urls": [],
+            "profile_telephones": [
+                "(828) 263-1594 x5248",
+            ],
+            "reference": "ab",
+            "response_attributes": [],
+            "response_details": [],
+            "response_download_urls": [],
+            "response_max_score": 82.0,
+            "response_score": 92.0,
+            "response_status": shared.ResponseStatus.FAILED,
+            "response_url": "https://irresponsible-trench.info/",
+            "status": shared.AssessmentOrderStatus.REJECTED,
+            "target_url": "https://cautious-turret.info",
+            "updated_at": parse_datetime("2023-01-17T01:52:03.042Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",

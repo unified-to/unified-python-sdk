@@ -17,10 +17,11 @@ Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="python" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.creditmemo.create_accounting_creditmemo(request={
-        "accounting_creditmemo": {},
+        "accounting_creditmemo": {
+            "applications": [],
+            "attachments": [
+                {
+                    "download_url": "https://enlightened-chairperson.com/",
+                    "id": "a2e78277-a327-461a-bdfc-588c1e4cc0ce",
+                    "mime_type": "complectus",
+                    "name": "thesis",
+                },
+            ],
+            "created_at": parse_datetime("2023-09-20T01:47:01.571Z"),
+            "creditmemo_number": "ulterius",
+            "currency": "MKD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
+            "id": "d9d43cc4-e6f7-4ef3-8000-d90df9f449e5",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Dedecor amo adfero torqueo quas.",
+            "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "posted_at": parse_datetime("2025-11-15T11:02:17.288Z"),
+            "refund_amount": 0.0,
+            "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
+            "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
+            "send": False,
+            "status": shared.AccountingCreditmemoStatus.PAID,
+            "tax_amount": 0.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2024-11-15T13:32:18.737Z"),
+            "url": "https://lighthearted-bandwidth.net/",
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +188,11 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +202,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.creditmemo.patch_accounting_creditmemo(request={
-        "accounting_creditmemo": {},
+        "accounting_creditmemo": {
+            "applications": [],
+            "attachments": [
+                {
+                    "download_url": "https://enlightened-chairperson.com/",
+                    "id": "59c8a1c4-da42-4783-a812-64dcb296cd11",
+                    "mime_type": "complectus",
+                    "name": "thesis",
+                },
+            ],
+            "created_at": parse_datetime("2023-09-20T01:47:01.571Z"),
+            "creditmemo_number": "ulterius",
+            "currency": "MKD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
+            "id": "9d39b333-dc7c-4257-9d31-6224e3cf763f",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Dedecor amo adfero torqueo quas.",
+            "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "posted_at": parse_datetime("2025-11-15T11:02:17.323Z"),
+            "refund_amount": 0.0,
+            "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
+            "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
+            "send": False,
+            "status": shared.AccountingCreditmemoStatus.PAID,
+            "tax_amount": 0.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2024-11-15T13:32:18.756Z"),
+            "url": "https://lighthearted-bandwidth.net/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +314,11 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +328,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.creditmemo.update_accounting_creditmemo(request={
-        "accounting_creditmemo": {},
+        "accounting_creditmemo": {
+            "applications": [],
+            "attachments": [
+                {
+                    "download_url": "https://enlightened-chairperson.com/",
+                    "id": "59c8a1c4-da42-4783-a812-64dcb296cd11",
+                    "mime_type": "complectus",
+                    "name": "thesis",
+                },
+            ],
+            "created_at": parse_datetime("2023-09-20T01:47:01.571Z"),
+            "creditmemo_number": "ulterius",
+            "currency": "MKD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
+            "id": "9d39b333-dc7c-4257-9d31-6224e3cf763f",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Dedecor amo adfero torqueo quas.",
+            "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "posted_at": parse_datetime("2025-11-15T11:02:17.323Z"),
+            "refund_amount": 0.0,
+            "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
+            "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
+            "send": False,
+            "status": shared.AccountingCreditmemoStatus.PAID,
+            "tax_amount": 0.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2024-11-15T13:32:18.756Z"),
+            "url": "https://lighthearted-bandwidth.net/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

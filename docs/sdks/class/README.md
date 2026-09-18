@@ -17,10 +17,11 @@ Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="python" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.class_.create_lms_class(request={
-        "lms_class": {},
+        "lms_class": {
+            "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
+            "description": "Anser sperno decerno.",
+            "id": "d8129459-c4f9-456b-b7d0-772361f02d7e",
+            "instructors": [],
+            "languages": [
+                "in",
+            ],
+            "media": [
+                {
+                    "content": "Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.",
+                    "description": "Esse confido.",
+                    "languages": [
+                        "fa",
+                        "da",
+                    ],
+                    "name": "illo",
+                    "thumbnail_url": "https://loremflickr.com/199/1934?lock=4323325966476891",
+                    "type": shared.LmsMediaType.VIDEO,
+                    "url": "https://loremflickr.com/487/921?lock=5127962071241632",
+                },
+            ],
+            "name": "virtus",
+            "students": [],
+            "updated_at": parse_datetime("2025-07-07T21:36:07.725Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +183,11 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +197,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.class_.patch_lms_class(request={
-        "lms_class": {},
+        "lms_class": {
+            "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
+            "description": "Anser sperno decerno.",
+            "id": "5b6e90ee-13ec-49d8-a899-81a77863d9ef",
+            "instructors": [],
+            "languages": [
+                "in",
+            ],
+            "media": [
+                {
+                    "content": "Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.",
+                    "description": "Esse confido.",
+                    "languages": [
+                        "fa",
+                        "da",
+                    ],
+                    "name": "illo",
+                    "thumbnail_url": "https://loremflickr.com/199/1934?lock=4323325966476891",
+                    "type": shared.LmsMediaType.VIDEO,
+                    "url": "https://loremflickr.com/487/921?lock=5127962071241632",
+                },
+            ],
+            "name": "virtus",
+            "students": [],
+            "updated_at": parse_datetime("2025-07-07T21:36:07.739Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +304,11 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +318,32 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.class_.update_lms_class(request={
-        "lms_class": {},
+        "lms_class": {
+            "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
+            "description": "Anser sperno decerno.",
+            "id": "5b6e90ee-13ec-49d8-a899-81a77863d9ef",
+            "instructors": [],
+            "languages": [
+                "in",
+            ],
+            "media": [
+                {
+                    "content": "Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.",
+                    "description": "Esse confido.",
+                    "languages": [
+                        "fa",
+                        "da",
+                    ],
+                    "name": "illo",
+                    "thumbnail_url": "https://loremflickr.com/199/1934?lock=4323325966476891",
+                    "type": shared.LmsMediaType.VIDEO,
+                    "url": "https://loremflickr.com/487/921?lock=5127962071241632",
+                },
+            ],
+            "name": "virtus",
+            "students": [],
+            "updated_at": parse_datetime("2025-07-07T21:36:07.739Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

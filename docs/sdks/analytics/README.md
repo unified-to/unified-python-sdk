@@ -29,10 +29,11 @@ Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" -->
+<!-- UsageSnippet language="python" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" example="analytics_event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -42,7 +43,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.analytics.create_analytics_event(request={
-        "analytics_event": {},
+        "analytics_event": {
+            "created_at": parse_datetime("2023-06-21T03:13:22.954Z"),
+            "event_type": shared.EventType.SCREEN_VIEW,
+            "id": "4f8ee0cd-206a-47b6-9018-3ce971c41ee1",
+            "metadata": {
+                "key": {},
+            },
+            "name": "Xk707ttsb51v",
+            "updated_at": parse_datetime("2023-09-22T02:14:25.938Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -76,10 +86,11 @@ Create a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="python" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" example="analytics_property" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -89,7 +100,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.analytics.create_analytics_property(request={
-        "analytics_property": {},
+        "analytics_property": {
+            "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
+            "currency": "USD",
+            "id": "00a86f83-224b-45eb-bbd1-39a1c17049a3",
+            "name": "Daniel, Goldner and Dickinson",
+            "timezone": "UTC",
+            "updated_at": parse_datetime("2021-09-14T16:36:17.230Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -123,10 +141,11 @@ Create a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="python" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -136,7 +155,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.analytics.create_analytics_visitor(request={
-        "analytics_visitor": {},
+        "analytics_visitor": {
+            "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "email": "Dallas_Mitchell@yahoo.com",
+            "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "id": "c4f48c8f-56d2-4cc8-b3f0-9a83509307e5",
+            "last_seen_at": parse_datetime("2021-12-04T18:09:09.077Z"),
+            "metadata": {
+                "segment": {},
+            },
+            "name": "Desiree O'Hara",
+            "total_events": 3639.0,
+            "updated_at": parse_datetime("2025-06-03T08:27:48.122Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -588,10 +619,11 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -601,7 +633,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.analytics.patch_analytics_property(request={
-        "analytics_property": {},
+        "analytics_property": {
+            "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
+            "currency": "USD",
+            "id": "ef237fcd-37a7-47f3-ab39-e030cb387de2",
+            "name": "Daniel, Goldner and Dickinson",
+            "timezone": "UTC",
+            "updated_at": parse_datetime("2021-09-14T16:36:17.230Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -636,10 +675,11 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -649,7 +689,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.analytics.patch_analytics_visitor(request={
-        "analytics_visitor": {},
+        "analytics_visitor": {
+            "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "email": "Dallas_Mitchell@yahoo.com",
+            "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "id": "88e685e7-218d-418d-889f-1a6162b7ce74",
+            "last_seen_at": parse_datetime("2021-12-04T18:09:09.082Z"),
+            "metadata": {
+                "segment": {},
+            },
+            "name": "Desiree O'Hara",
+            "total_events": 3639.0,
+            "updated_at": parse_datetime("2025-06-03T08:27:48.137Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -778,10 +830,11 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -791,7 +844,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.analytics.update_analytics_property(request={
-        "analytics_property": {},
+        "analytics_property": {
+            "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
+            "currency": "USD",
+            "id": "ef237fcd-37a7-47f3-ab39-e030cb387de2",
+            "name": "Daniel, Goldner and Dickinson",
+            "timezone": "UTC",
+            "updated_at": parse_datetime("2021-09-14T16:36:17.230Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -826,10 +886,11 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -839,7 +900,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.analytics.update_analytics_visitor(request={
-        "analytics_visitor": {},
+        "analytics_visitor": {
+            "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "email": "Dallas_Mitchell@yahoo.com",
+            "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "id": "88e685e7-218d-418d-889f-1a6162b7ce74",
+            "last_seen_at": parse_datetime("2021-12-04T18:09:09.082Z"),
+            "metadata": {
+                "segment": {},
+            },
+            "name": "Desiree O'Hara",
+            "total_events": 3639.0,
+            "updated_at": parse_datetime("2025-06-03T08:27:48.137Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

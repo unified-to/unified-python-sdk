@@ -19,10 +19,11 @@ Create a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="python" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" example="forms_form" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -32,7 +33,72 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.forms.create_forms_form(request={
-        "forms_form": {},
+        "forms_form": {
+            "confirmation_message": "Cultura temeritas aptus celebrer volo pecus culpa annus aurum.",
+            "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+            "description": "Sodalitas cupiditas terebro conduco.",
+            "fields": [
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "id": "565f27cf-2cf7-4c30-ad97-4340d859b584",
+                    "is_active": True,
+                    "is_required": True,
+                    "max_length": 146.0,
+                    "name": "vulgivagus audio accendo",
+                    "order": 0.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2025-04-11T17:16:52.780Z"),
+                },
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "id": "82b263f9-2d16-4cdf-8e99-d05ba46ce817",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "alo crebro vado",
+                    "order": 1.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2024-08-23T07:09:51.273Z"),
+                },
+                {
+                    "choices": [
+                        "vallum",
+                        "vae",
+                        "nesciunt",
+                        "commodi",
+                        "appositus",
+                    ],
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "default_value": "cattus",
+                    "id": "d7c963e5-2d3d-4436-a57d-a6e337d9d170",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "casso tenus nesciunt",
+                    "order": 2.0,
+                    "type": shared.FormFieldType.MULTIPLE_SELECT,
+                    "updated_at": parse_datetime("2024-02-22T02:14:22.278Z"),
+                },
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "description": "Sequi antea delectatio.",
+                    "id": "e45efb8f-439b-40f6-8370-99c8ec66b065",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "comburo utique ipsa",
+                    "order": 3.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2024-11-14T23:43:02.792Z"),
+                },
+            ],
+            "has_multiple_submissions": False,
+            "has_progress_bar": False,
+            "has_shuffle_questions": True,
+            "id": "81c3ab46-46ce-4866-b77a-41608cd3c834",
+            "is_active": False,
+            "name": "voluptatibus omnis audax Form",
+            "published_url": "https://impartial-institute.org/",
+            "response_count": 423.0,
+            "updated_at": parse_datetime("2024-08-15T04:23:15.893Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -252,10 +318,11 @@ Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" example="forms_form" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +332,72 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.forms.patch_forms_form(request={
-        "forms_form": {},
+        "forms_form": {
+            "confirmation_message": "Cultura temeritas aptus celebrer volo pecus culpa annus aurum.",
+            "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+            "description": "Sodalitas cupiditas terebro conduco.",
+            "fields": [
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "id": "565f27cf-2cf7-4c30-ad97-4340d859b584",
+                    "is_active": True,
+                    "is_required": True,
+                    "max_length": 146.0,
+                    "name": "vulgivagus audio accendo",
+                    "order": 0.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2025-04-11T17:16:52.787Z"),
+                },
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "id": "82b263f9-2d16-4cdf-8e99-d05ba46ce817",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "alo crebro vado",
+                    "order": 1.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2024-08-23T07:09:51.276Z"),
+                },
+                {
+                    "choices": [
+                        "vallum",
+                        "vae",
+                        "nesciunt",
+                        "commodi",
+                        "appositus",
+                    ],
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "default_value": "cattus",
+                    "id": "d7c963e5-2d3d-4436-a57d-a6e337d9d170",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "casso tenus nesciunt",
+                    "order": 2.0,
+                    "type": shared.FormFieldType.MULTIPLE_SELECT,
+                    "updated_at": parse_datetime("2024-02-22T02:14:22.280Z"),
+                },
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "description": "Sequi antea delectatio.",
+                    "id": "e45efb8f-439b-40f6-8370-99c8ec66b065",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "comburo utique ipsa",
+                    "order": 3.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2024-11-14T23:43:02.796Z"),
+                },
+            ],
+            "has_multiple_submissions": False,
+            "has_progress_bar": False,
+            "has_shuffle_questions": True,
+            "id": "4b17cf22-6cbc-4929-a470-4e0c39b6dfd6",
+            "is_active": False,
+            "name": "voluptatibus omnis audax Form",
+            "published_url": "https://impartial-institute.org/",
+            "response_count": 423.0,
+            "updated_at": parse_datetime("2024-08-15T04:23:15.897Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -347,10 +479,11 @@ Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" example="forms_form" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -360,7 +493,72 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.forms.update_forms_form(request={
-        "forms_form": {},
+        "forms_form": {
+            "confirmation_message": "Cultura temeritas aptus celebrer volo pecus culpa annus aurum.",
+            "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+            "description": "Sodalitas cupiditas terebro conduco.",
+            "fields": [
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "id": "565f27cf-2cf7-4c30-ad97-4340d859b584",
+                    "is_active": True,
+                    "is_required": True,
+                    "max_length": 146.0,
+                    "name": "vulgivagus audio accendo",
+                    "order": 0.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2025-04-11T17:16:52.787Z"),
+                },
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "id": "82b263f9-2d16-4cdf-8e99-d05ba46ce817",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "alo crebro vado",
+                    "order": 1.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2024-08-23T07:09:51.276Z"),
+                },
+                {
+                    "choices": [
+                        "vallum",
+                        "vae",
+                        "nesciunt",
+                        "commodi",
+                        "appositus",
+                    ],
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "default_value": "cattus",
+                    "id": "d7c963e5-2d3d-4436-a57d-a6e337d9d170",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "casso tenus nesciunt",
+                    "order": 2.0,
+                    "type": shared.FormFieldType.MULTIPLE_SELECT,
+                    "updated_at": parse_datetime("2024-02-22T02:14:22.280Z"),
+                },
+                {
+                    "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
+                    "description": "Sequi antea delectatio.",
+                    "id": "e45efb8f-439b-40f6-8370-99c8ec66b065",
+                    "is_active": True,
+                    "is_required": False,
+                    "name": "comburo utique ipsa",
+                    "order": 3.0,
+                    "type": shared.FormFieldType.TEXTAREA,
+                    "updated_at": parse_datetime("2024-11-14T23:43:02.796Z"),
+                },
+            ],
+            "has_multiple_submissions": False,
+            "has_progress_bar": False,
+            "has_shuffle_questions": True,
+            "id": "4b17cf22-6cbc-4929-a470-4e0c39b6dfd6",
+            "is_active": False,
+            "name": "voluptatibus omnis audax Form",
+            "published_url": "https://impartial-institute.org/",
+            "response_count": 423.0,
+            "updated_at": parse_datetime("2024-08-15T04:23:15.897Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

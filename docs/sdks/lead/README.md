@@ -17,10 +17,11 @@ Create a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="python" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" example="crm_lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,62 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lead.create_crm_lead(request={
-        "crm_lead": {},
+        "crm_lead": {
+            "address": {
+                "address1": "528 Forest Road",
+                "address2": "Apt. 643",
+                "city": "Palm Springs",
+                "country_code": "US",
+                "postal_code": "55624-6499",
+                "region": "New Jersey",
+                "region_code": "LA",
+            },
+            "company_name": "Tillman - Wiegand",
+            "created_at": parse_datetime("2019-10-12T11:27:59.003Z"),
+            "emails": [
+                {
+                    "email": "Velda.Sporer16@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+                {
+                    "email": "Velda.Sporer@yahoo.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+            ],
+            "first_name": "Velda",
+            "id": "1f745f9b-4957-47fa-a75d-7eeb6ace9ec3",
+            "is_active": True,
+            "last_name": "Sporer",
+            "link_urls": [
+                "https://classic-sightseeing.com/",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "3fcf48e0-292d-4a61-9a86-57c5c47d25d5",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "sublime",
+                },
+            ],
+            "name": "Velda Sporer",
+            "source": "aetas",
+            "status": "vesco",
+            "telephones": [
+                {
+                    "telephone": "(955) 643-9849",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(621) 811-8800",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+            ],
+            "updated_at": parse_datetime("2020-05-15T02:08:41.200Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +213,11 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +227,62 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lead.patch_crm_lead(request={
-        "crm_lead": {},
+        "crm_lead": {
+            "address": {
+                "address1": "528 Forest Road",
+                "address2": "Apt. 643",
+                "city": "Palm Springs",
+                "country_code": "US",
+                "postal_code": "55624-6499",
+                "region": "New Jersey",
+                "region_code": "LA",
+            },
+            "company_name": "Tillman - Wiegand",
+            "created_at": parse_datetime("2019-10-12T11:27:59.003Z"),
+            "emails": [
+                {
+                    "email": "Velda.Sporer16@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+                {
+                    "email": "Velda.Sporer@yahoo.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+            ],
+            "first_name": "Velda",
+            "id": "69281a28-16bf-4876-bc6a-f051442edbfc",
+            "is_active": True,
+            "last_name": "Sporer",
+            "link_urls": [
+                "https://classic-sightseeing.com/",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "21b57846-8e49-459f-b6e4-bd3ad1a38f76",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "sublime",
+                },
+            ],
+            "name": "Velda Sporer",
+            "source": "aetas",
+            "status": "vesco",
+            "telephones": [
+                {
+                    "telephone": "(955) 643-9849",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(621) 811-8800",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+            ],
+            "updated_at": parse_datetime("2020-05-15T02:08:41.202Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +364,11 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +378,62 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lead.update_crm_lead(request={
-        "crm_lead": {},
+        "crm_lead": {
+            "address": {
+                "address1": "528 Forest Road",
+                "address2": "Apt. 643",
+                "city": "Palm Springs",
+                "country_code": "US",
+                "postal_code": "55624-6499",
+                "region": "New Jersey",
+                "region_code": "LA",
+            },
+            "company_name": "Tillman - Wiegand",
+            "created_at": parse_datetime("2019-10-12T11:27:59.003Z"),
+            "emails": [
+                {
+                    "email": "Velda.Sporer16@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+                {
+                    "email": "Velda.Sporer@yahoo.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+            ],
+            "first_name": "Velda",
+            "id": "69281a28-16bf-4876-bc6a-f051442edbfc",
+            "is_active": True,
+            "last_name": "Sporer",
+            "link_urls": [
+                "https://classic-sightseeing.com/",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "21b57846-8e49-459f-b6e4-bd3ad1a38f76",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "sublime",
+                },
+            ],
+            "name": "Velda Sporer",
+            "source": "aetas",
+            "status": "vesco",
+            "telephones": [
+                {
+                    "telephone": "(955) 643-9849",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(621) 811-8800",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+            ],
+            "updated_at": parse_datetime("2020-05-15T02:08:41.202Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

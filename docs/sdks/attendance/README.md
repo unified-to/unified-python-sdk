@@ -17,7 +17,7 @@ Create an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="python" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -32,9 +32,39 @@ with UnifiedTo(
 
     res = unified_to.attendance.create_hris_attendance(request={
         "hris_attendance": {
+            "address": {
+                "address1": "14108 Allie Flats",
+                "city": "Kearaborough",
+                "country_code": "US",
+                "postal_code": "23844-2344",
+                "region": "Tennessee",
+                "region_code": "CA",
+            },
+            "approved_at": parse_datetime("2021-08-13T10:36:02.582Z"),
+            "breaks": [
+                {
+                    "duration_minutes": 12.0,
+                    "end_at": parse_datetime("2023-10-22T16:22:21.274Z"),
+                    "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
+                    "is_paid": True,
+                    "name": "Lunch",
+                    "start_at": parse_datetime("2023-10-15T20:48:40.844Z"),
+                },
+            ],
+            "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
+            "currency": "UGX",
+            "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-07-01T14:10:09.942Z"),
-            "start_at": parse_datetime("2026-03-31T03:51:43.280Z"),
+            "end_at": parse_datetime("2024-04-06T03:55:51.518Z"),
+            "hourly_rate": 53.0,
+            "hours": 10.0,
+            "id": "6f3bbdc4-75ab-4b78-bdfb-8918d1b18b95",
+            "job_name": "Global Creative Supervisor",
+            "non_cash_tips_amount": 54.0,
+            "start_at": parse_datetime("2021-11-09T10:25:57.025Z"),
+            "status": shared.HrisAttendanceStatus.CLOSED,
+            "timezone": "America/Atikokan",
+            "updated_at": parse_datetime("2022-01-17T01:24:59.755Z"),
         },
         "connection_id": "<id>",
     })
@@ -162,7 +192,7 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -177,9 +207,39 @@ with UnifiedTo(
 
     res = unified_to.attendance.patch_hris_attendance(request={
         "hris_attendance": {
+            "address": {
+                "address1": "14108 Allie Flats",
+                "city": "Kearaborough",
+                "country_code": "US",
+                "postal_code": "23844-2344",
+                "region": "Tennessee",
+                "region_code": "CA",
+            },
+            "approved_at": parse_datetime("2021-08-13T10:36:02.582Z"),
+            "breaks": [
+                {
+                    "duration_minutes": 12.0,
+                    "end_at": parse_datetime("2023-10-22T16:22:21.282Z"),
+                    "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
+                    "is_paid": True,
+                    "name": "Lunch",
+                    "start_at": parse_datetime("2023-10-15T20:48:40.852Z"),
+                },
+            ],
+            "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
+            "currency": "UGX",
+            "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-09-28T22:23:28.906Z"),
-            "start_at": parse_datetime("2025-01-18T09:17:09.936Z"),
+            "end_at": parse_datetime("2024-04-06T03:55:51.527Z"),
+            "hourly_rate": 53.0,
+            "hours": 10.0,
+            "id": "cbcfba0c-c599-4187-8cc1-b796e089ae62",
+            "job_name": "Global Creative Supervisor",
+            "non_cash_tips_amount": 54.0,
+            "start_at": parse_datetime("2021-11-09T10:25:57.026Z"),
+            "status": shared.HrisAttendanceStatus.CLOSED,
+            "timezone": "America/Atikokan",
+            "updated_at": parse_datetime("2022-01-17T01:24:59.757Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -262,7 +322,7 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -277,9 +337,39 @@ with UnifiedTo(
 
     res = unified_to.attendance.update_hris_attendance(request={
         "hris_attendance": {
+            "address": {
+                "address1": "14108 Allie Flats",
+                "city": "Kearaborough",
+                "country_code": "US",
+                "postal_code": "23844-2344",
+                "region": "Tennessee",
+                "region_code": "CA",
+            },
+            "approved_at": parse_datetime("2021-08-13T10:36:02.582Z"),
+            "breaks": [
+                {
+                    "duration_minutes": 12.0,
+                    "end_at": parse_datetime("2023-10-22T16:22:21.282Z"),
+                    "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
+                    "is_paid": True,
+                    "name": "Lunch",
+                    "start_at": parse_datetime("2023-10-15T20:48:40.852Z"),
+                },
+            ],
+            "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
+            "currency": "UGX",
+            "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-07-06T19:51:15.352Z"),
-            "start_at": parse_datetime("2024-05-22T08:12:53.996Z"),
+            "end_at": parse_datetime("2024-04-06T03:55:51.527Z"),
+            "hourly_rate": 53.0,
+            "hours": 10.0,
+            "id": "cbcfba0c-c599-4187-8cc1-b796e089ae62",
+            "job_name": "Global Creative Supervisor",
+            "non_cash_tips_amount": 54.0,
+            "start_at": parse_datetime("2021-11-09T10:25:57.026Z"),
+            "status": shared.HrisAttendanceStatus.CLOSED,
+            "timezone": "America/Atikokan",
+            "updated_at": parse_datetime("2022-01-17T01:24:59.757Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

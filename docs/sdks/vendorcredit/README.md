@@ -17,10 +17,11 @@ Create a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="python" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.vendorcredit.create_accounting_vendorcredit(request={
-        "accounting_vendorcredit": {},
+        "accounting_vendorcredit": {
+            "applications": [],
+            "apply_amount": 1.0,
+            "balance_amount": 0.0,
+            "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
+            "currency": "KGS",
+            "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
+            "id": "b95b7aab-87cc-4c2d-b4d8-be2bc44abf20",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Conatus cruciamentum decor avaritia tantum.",
+            "posted_at": parse_datetime("2023-09-28T16:43:35.372Z"),
+            "status": shared.AccountingVendorcreditStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2023-11-26T14:35:38.362Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +173,11 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +187,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.vendorcredit.patch_accounting_vendorcredit(request={
-        "accounting_vendorcredit": {},
+        "accounting_vendorcredit": {
+            "applications": [],
+            "apply_amount": 1.0,
+            "balance_amount": 0.0,
+            "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
+            "currency": "KGS",
+            "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
+            "id": "1353821c-3fd0-42b1-9c7d-0aa07a3eebe2",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Conatus cruciamentum decor avaritia tantum.",
+            "posted_at": parse_datetime("2023-09-28T16:43:35.374Z"),
+            "status": shared.AccountingVendorcreditStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2023-11-26T14:35:38.366Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +284,11 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +298,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.vendorcredit.update_accounting_vendorcredit(request={
-        "accounting_vendorcredit": {},
+        "accounting_vendorcredit": {
+            "applications": [],
+            "apply_amount": 1.0,
+            "balance_amount": 0.0,
+            "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
+            "currency": "KGS",
+            "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
+            "id": "1353821c-3fd0-42b1-9c7d-0aa07a3eebe2",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Conatus cruciamentum decor avaritia tantum.",
+            "posted_at": parse_datetime("2023-09-28T16:43:35.374Z"),
+            "status": shared.AccountingVendorcreditStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2023-11-26T14:35:38.366Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

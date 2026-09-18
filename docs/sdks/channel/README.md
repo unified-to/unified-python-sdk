@@ -17,10 +17,11 @@ Create a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="python" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.channel.create_messaging_channel(request={
-        "messaging_channel": {},
+        "messaging_channel": {
+            "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
+            "description": "Dolores tutis.",
+            "has_subchannels": True,
+            "id": "fb1b5821-f6ca-4c41-8bd1-9f5079b8d3c5",
+            "is_active": False,
+            "is_private": True,
+            "members": [],
+            "name": "tego",
+            "updated_at": parse_datetime("2026-04-23T02:23:02.328Z"),
+            "web_url": "https://svelte-rule.name/",
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +169,11 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +183,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.channel.patch_messaging_channel(request={
-        "messaging_channel": {},
+        "messaging_channel": {
+            "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
+            "description": "Dolores tutis.",
+            "has_subchannels": True,
+            "id": "d1a2cea2-7d86-4148-9de6-63fe81d8eec0",
+            "is_active": False,
+            "is_private": True,
+            "members": [],
+            "name": "tego",
+            "updated_at": parse_datetime("2026-04-23T02:23:02.334Z"),
+            "web_url": "https://svelte-rule.name/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +276,11 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +290,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.channel.update_messaging_channel(request={
-        "messaging_channel": {},
+        "messaging_channel": {
+            "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
+            "description": "Dolores tutis.",
+            "has_subchannels": True,
+            "id": "d1a2cea2-7d86-4148-9de6-63fe81d8eec0",
+            "is_active": False,
+            "is_private": True,
+            "members": [],
+            "name": "tego",
+            "updated_at": parse_datetime("2026-04-23T02:23:02.334Z"),
+            "web_url": "https://svelte-rule.name/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -25,10 +25,11 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="python" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -38,7 +39,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.create_ads_organization(request={
-        "ads_organization": {},
+        "ads_organization": {
+            "account_number": "LQUJx8zQBW",
+            "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
+            "currency": "USD",
+            "id": "2dcef265-035e-4877-9dcb-52b425c0a389",
+            "managers": [
+                {
+                    "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
+                    "name": "Parker, Leannon and Gibson",
+                },
+            ],
+            "name": "Ankunding Inc",
+            "status": shared.AdsOrganizationStatus.PROCESSING,
+            "timezone": "Europe/Chisinau",
+            "updated_at": parse_datetime("2026-02-27T02:30:46.720Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -72,10 +88,11 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="python" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -85,7 +102,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.create_repo_organization(request={
-        "repo_organization": {},
+        "repo_organization": {
+            "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
+            "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
+            "description": "Trepide defendo supra testimonium ager.",
+            "id": "b2fae39f-83b2-4f92-9838-66f9f34dfae1",
+            "name": "Denesik - Lemke",
+            "updated_at": parse_datetime("2023-08-12T23:34:40.316Z"),
+            "web_url": "https://turbulent-overheard.biz",
+        },
         "connection_id": "<id>",
     })
 
@@ -398,10 +423,11 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -411,7 +437,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.patch_ads_organization(request={
-        "ads_organization": {},
+        "ads_organization": {
+            "account_number": "LQUJx8zQBW",
+            "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
+            "currency": "USD",
+            "id": "5ed729c1-13ee-41a9-9c74-48e8d280748c",
+            "managers": [
+                {
+                    "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
+                    "name": "Parker, Leannon and Gibson",
+                },
+            ],
+            "name": "Ankunding Inc",
+            "status": shared.AdsOrganizationStatus.PROCESSING,
+            "timezone": "Europe/Chisinau",
+            "updated_at": parse_datetime("2026-02-27T02:30:46.730Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -446,10 +487,11 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -459,7 +501,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.patch_repo_organization(request={
-        "repo_organization": {},
+        "repo_organization": {
+            "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
+            "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
+            "description": "Trepide defendo supra testimonium ager.",
+            "id": "51493ffd-a0c6-411e-b158-55b80104e6a6",
+            "name": "Denesik - Lemke",
+            "updated_at": parse_datetime("2023-08-12T23:34:40.317Z"),
+            "web_url": "https://turbulent-overheard.biz",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -588,10 +638,11 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -601,7 +652,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.update_ads_organization(request={
-        "ads_organization": {},
+        "ads_organization": {
+            "account_number": "LQUJx8zQBW",
+            "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
+            "currency": "USD",
+            "id": "5ed729c1-13ee-41a9-9c74-48e8d280748c",
+            "managers": [
+                {
+                    "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
+                    "name": "Parker, Leannon and Gibson",
+                },
+            ],
+            "name": "Ankunding Inc",
+            "status": shared.AdsOrganizationStatus.PROCESSING,
+            "timezone": "Europe/Chisinau",
+            "updated_at": parse_datetime("2026-02-27T02:30:46.730Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -636,10 +702,11 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -649,7 +716,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.update_repo_organization(request={
-        "repo_organization": {},
+        "repo_organization": {
+            "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
+            "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
+            "description": "Trepide defendo supra testimonium ager.",
+            "id": "51493ffd-a0c6-411e-b158-55b80104e6a6",
+            "name": "Denesik - Lemke",
+            "updated_at": parse_datetime("2023-08-12T23:34:40.317Z"),
+            "web_url": "https://turbulent-overheard.biz",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -29,10 +29,11 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -42,7 +43,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.create_kms_comment(request={
-        "kms_comment": {},
+        "kms_comment": {
+            "content": "Decimus tolero viriliter usque.",
+            "content_type": shared.ContentType.HTML,
+            "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
+            "id": "af2c4b2b-7330-482d-9b7a-0225f7113cde",
+            "type": shared.KmsCommentType.PAGE,
+            "updated_at": parse_datetime("2023-11-16T08:15:05.546Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -76,10 +84,11 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -89,7 +98,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.create_task_comment(request={
-        "task_comment": {},
+        "task_comment": {
+            "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
+            "has_children": True,
+            "id": "8f75dd61-8488-4668-b620-ddba262fb3c8",
+            "text": "Colo ulciscor sublime tabernus.",
+            "updated_at": parse_datetime("2021-09-24T01:12:37.035Z"),
+            "user_name": "Santina Abbott",
+        },
         "connection_id": "<id>",
     })
 
@@ -123,7 +139,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -136,7 +152,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.create_uc_comment(request={
-        "uc_comment": {},
+        "uc_comment": {
+            "content": "Vociferor vitiosus.",
+            "created_at": "2023-04-02T23:42:31.571Z",
+            "id": "0799f5c4-cd42-46d0-8ad5-f45577f33875",
+            "updated_at": "2024-02-01T19:29:01.666Z",
+        },
         "connection_id": "<id>",
     })
 
@@ -449,10 +470,11 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -462,7 +484,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.patch_kms_comment(request={
-        "kms_comment": {},
+        "kms_comment": {
+            "content": "Decimus tolero viriliter usque.",
+            "content_type": shared.ContentType.HTML,
+            "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
+            "id": "a97bbd39-6b81-4780-a0d8-1bd6952df736",
+            "type": shared.KmsCommentType.PAGE,
+            "updated_at": parse_datetime("2023-11-16T08:15:05.548Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -497,10 +526,11 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -510,7 +540,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.patch_task_comment(request={
-        "task_comment": {},
+        "task_comment": {
+            "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
+            "has_children": True,
+            "id": "bb64593e-fe9e-4f21-a5db-356051726f07",
+            "text": "Colo ulciscor sublime tabernus.",
+            "updated_at": parse_datetime("2021-09-24T01:12:37.037Z"),
+            "user_name": "Santina Abbott",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -545,7 +582,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -558,7 +595,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.patch_uc_comment(request={
-        "uc_comment": {},
+        "uc_comment": {
+            "content": "Vociferor vitiosus.",
+            "created_at": "2023-04-02T23:42:31.571Z",
+            "id": "8a4a0ba6-4264-407c-8765-0815731be5d8",
+            "updated_at": "2024-02-01T19:29:01.667Z",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -734,10 +776,11 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -747,7 +790,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.update_kms_comment(request={
-        "kms_comment": {},
+        "kms_comment": {
+            "content": "Decimus tolero viriliter usque.",
+            "content_type": shared.ContentType.HTML,
+            "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
+            "id": "a97bbd39-6b81-4780-a0d8-1bd6952df736",
+            "type": shared.KmsCommentType.PAGE,
+            "updated_at": parse_datetime("2023-11-16T08:15:05.548Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -782,10 +832,11 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -795,7 +846,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.update_task_comment(request={
-        "task_comment": {},
+        "task_comment": {
+            "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
+            "has_children": True,
+            "id": "bb64593e-fe9e-4f21-a5db-356051726f07",
+            "text": "Colo ulciscor sublime tabernus.",
+            "updated_at": parse_datetime("2021-09-24T01:12:37.037Z"),
+            "user_name": "Santina Abbott",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -830,7 +888,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -843,7 +901,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.update_uc_comment(request={
-        "uc_comment": {},
+        "uc_comment": {
+            "content": "Vociferor vitiosus.",
+            "created_at": "2023-04-02T23:42:31.571Z",
+            "id": "8a4a0ba6-4264-407c-8765-0815731be5d8",
+            "updated_at": "2024-02-01T19:29:01.667Z",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -17,10 +17,11 @@ Create a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="python" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" example="datastore_record" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -31,9 +32,13 @@ with UnifiedTo(
 
     res = unified_to.record.create_datastore_record(request={
         "datastore_record": {
+            "created_at": parse_datetime("2022-07-10T04:42:03.076Z"),
             "fields": {
 
             },
+            "id": "4ccc9507-44ff-4b15-9130-c2bd6684bee8",
+            "row_number": 33.0,
+            "updated_at": parse_datetime("2025-02-12T16:23:42.378Z"),
         },
         "connection_id": "<id>",
     })
@@ -161,10 +166,11 @@ Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -175,9 +181,13 @@ with UnifiedTo(
 
     res = unified_to.record.patch_datastore_record(request={
         "datastore_record": {
+            "created_at": parse_datetime("2022-07-10T04:42:03.076Z"),
             "fields": {
 
             },
+            "id": "850a90d3-404f-495a-b3ee-4b719f7bc5e0",
+            "row_number": 33.0,
+            "updated_at": parse_datetime("2025-02-12T16:23:42.383Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -260,10 +270,11 @@ Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -274,9 +285,13 @@ with UnifiedTo(
 
     res = unified_to.record.update_datastore_record(request={
         "datastore_record": {
+            "created_at": parse_datetime("2022-07-10T04:42:03.076Z"),
             "fields": {
 
             },
+            "id": "850a90d3-404f-495a-b3ee-4b719f7bc5e0",
+            "row_number": 33.0,
+            "updated_at": parse_datetime("2025-02-12T16:23:42.383Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

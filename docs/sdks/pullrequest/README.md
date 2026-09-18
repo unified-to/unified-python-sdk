@@ -17,10 +17,11 @@ Create a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="python" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pullrequest.create_repo_pullrequest(request={
-        "repo_pullrequest": {},
+        "repo_pullrequest": {
+            "closed_at": parse_datetime("2025-04-11T21:28:25.897Z"),
+            "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
+            "id": "832dda65-a597-414c-8aa9-f7a588518dab",
+            "labels": [
+                "adhuc",
+                "quaerat",
+            ],
+            "notes": "Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.",
+            "source_branch_id": "microchip-navigate",
+            "status": shared.RepoPullrequestStatus.REJECTED,
+            "target_branch_id": "feed-reboot",
+            "title": "Cunae aegrus averto texo advoco bibo amet asporto.",
+            "updated_at": parse_datetime("2024-12-30T23:42:33.219Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +172,11 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +186,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pullrequest.patch_repo_pullrequest(request={
-        "repo_pullrequest": {},
+        "repo_pullrequest": {
+            "closed_at": parse_datetime("2025-04-11T21:28:25.901Z"),
+            "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
+            "id": "fa18946b-87ab-4a8f-b26e-6f7468374b6e",
+            "labels": [
+                "adhuc",
+                "quaerat",
+            ],
+            "notes": "Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.",
+            "source_branch_id": "microchip-navigate",
+            "status": shared.RepoPullrequestStatus.REJECTED,
+            "target_branch_id": "feed-reboot",
+            "title": "Cunae aegrus averto texo advoco bibo amet asporto.",
+            "updated_at": parse_datetime("2024-12-30T23:42:33.222Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +282,11 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +296,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pullrequest.update_repo_pullrequest(request={
-        "repo_pullrequest": {},
+        "repo_pullrequest": {
+            "closed_at": parse_datetime("2025-04-11T21:28:25.901Z"),
+            "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
+            "id": "fa18946b-87ab-4a8f-b26e-6f7468374b6e",
+            "labels": [
+                "adhuc",
+                "quaerat",
+            ],
+            "notes": "Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.",
+            "source_branch_id": "microchip-navigate",
+            "status": shared.RepoPullrequestStatus.REJECTED,
+            "target_branch_id": "feed-reboot",
+            "title": "Cunae aegrus averto texo advoco bibo amet asporto.",
+            "updated_at": parse_datetime("2024-12-30T23:42:33.222Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

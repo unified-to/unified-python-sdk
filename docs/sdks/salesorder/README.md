@@ -17,10 +17,11 @@ Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="python" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,56 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.salesorder.create_accounting_salesorder(request={
-        "accounting_salesorder": {},
+        "accounting_salesorder": {
+            "billing_address": {
+                "address1": "26530 Stroman Rest",
+                "address2": "Suite 801",
+                "city": "Pocatello",
+                "country_code": "US",
+                "postal_code": "05015-8546",
+                "region": "Louisiana",
+                "region_code": "MO",
+            },
+            "category_ids": [],
+            "closed_at": parse_datetime("2023-08-16T21:47:16.752Z"),
+            "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
+            "currency": "ANG",
+            "discount_amount": 99.0,
+            "employee_user_id": "4a6b8990-c85a-499f-82d0-5011c3c95a0b",
+            "fees": [
+                {
+                    "amount": 519.0,
+                    "currency": "XCD",
+                    "type": shared.AccountingFeeType.PROMOTION,
+                },
+            ],
+            "fulfillment_type": shared.FulfillmentType.TAKEOUT,
+            "guest_count": 8.0,
+            "id": "8ab70945-b5d4-4f64-a9c3-bd5af04ec1cb",
+            "lineitems": [],
+            "metadata": [],
+            "order_number": "988187",
+            "payments": [],
+            "posted_at": parse_datetime("2026-01-11T02:10:29.889Z"),
+            "refunded_amount": 0.0,
+            "sales_channel": "Harvey, Collier and Weimann",
+            "service_charge_amount": 63.0,
+            "shipping_address": {
+                "address1": "9878 Bradley Mill",
+                "address2": "Apt. 215",
+                "city": "Port Matildestad",
+                "country_code": "US",
+                "postal_code": "07989-2148",
+                "region": "Arkansas",
+                "region_code": "AK",
+            },
+            "status": shared.AccountingSalesorderStatus.REFUNDED,
+            "subtotal_amount": 0.0,
+            "tax_amount": 63.0,
+            "tip_amount": 34.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-02-10T18:49:08.307Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +207,11 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +221,56 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.salesorder.patch_accounting_salesorder(request={
-        "accounting_salesorder": {},
+        "accounting_salesorder": {
+            "billing_address": {
+                "address1": "26530 Stroman Rest",
+                "address2": "Suite 801",
+                "city": "Pocatello",
+                "country_code": "US",
+                "postal_code": "05015-8546",
+                "region": "Louisiana",
+                "region_code": "MO",
+            },
+            "category_ids": [],
+            "closed_at": parse_datetime("2023-08-16T21:47:16.768Z"),
+            "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
+            "currency": "ANG",
+            "discount_amount": 99.0,
+            "employee_user_id": "4a6b8990-c85a-499f-82d0-5011c3c95a0b",
+            "fees": [
+                {
+                    "amount": 519.0,
+                    "currency": "XCD",
+                    "type": shared.AccountingFeeType.PROMOTION,
+                },
+            ],
+            "fulfillment_type": shared.FulfillmentType.TAKEOUT,
+            "guest_count": 8.0,
+            "id": "26cb0a60-aeeb-49dc-aa08-231bb0af605c",
+            "lineitems": [],
+            "metadata": [],
+            "order_number": "988187",
+            "payments": [],
+            "posted_at": parse_datetime("2026-01-11T02:10:29.930Z"),
+            "refunded_amount": 0.0,
+            "sales_channel": "Harvey, Collier and Weimann",
+            "service_charge_amount": 63.0,
+            "shipping_address": {
+                "address1": "9878 Bradley Mill",
+                "address2": "Apt. 215",
+                "city": "Port Matildestad",
+                "country_code": "US",
+                "postal_code": "07989-2148",
+                "region": "Arkansas",
+                "region_code": "AK",
+            },
+            "status": shared.AccountingSalesorderStatus.REFUNDED,
+            "subtotal_amount": 0.0,
+            "tax_amount": 63.0,
+            "tip_amount": 34.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-02-10T18:49:08.308Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +352,11 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +366,56 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.salesorder.update_accounting_salesorder(request={
-        "accounting_salesorder": {},
+        "accounting_salesorder": {
+            "billing_address": {
+                "address1": "26530 Stroman Rest",
+                "address2": "Suite 801",
+                "city": "Pocatello",
+                "country_code": "US",
+                "postal_code": "05015-8546",
+                "region": "Louisiana",
+                "region_code": "MO",
+            },
+            "category_ids": [],
+            "closed_at": parse_datetime("2023-08-16T21:47:16.768Z"),
+            "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
+            "currency": "ANG",
+            "discount_amount": 99.0,
+            "employee_user_id": "4a6b8990-c85a-499f-82d0-5011c3c95a0b",
+            "fees": [
+                {
+                    "amount": 519.0,
+                    "currency": "XCD",
+                    "type": shared.AccountingFeeType.PROMOTION,
+                },
+            ],
+            "fulfillment_type": shared.FulfillmentType.TAKEOUT,
+            "guest_count": 8.0,
+            "id": "26cb0a60-aeeb-49dc-aa08-231bb0af605c",
+            "lineitems": [],
+            "metadata": [],
+            "order_number": "988187",
+            "payments": [],
+            "posted_at": parse_datetime("2026-01-11T02:10:29.930Z"),
+            "refunded_amount": 0.0,
+            "sales_channel": "Harvey, Collier and Weimann",
+            "service_charge_amount": 63.0,
+            "shipping_address": {
+                "address1": "9878 Bradley Mill",
+                "address2": "Apt. 215",
+                "city": "Port Matildestad",
+                "country_code": "US",
+                "postal_code": "07989-2148",
+                "region": "Arkansas",
+                "region_code": "AK",
+            },
+            "status": shared.AccountingSalesorderStatus.REFUNDED,
+            "subtotal_amount": 0.0,
+            "tax_amount": 63.0,
+            "tip_amount": 34.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-02-10T18:49:08.308Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

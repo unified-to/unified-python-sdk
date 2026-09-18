@@ -25,10 +25,11 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="python" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" example="ats_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -38,7 +39,79 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.create_ats_activity(request={
-        "ats_activity": {},
+        "ats_activity": {
+            "bcc": [
+                {
+                    "email": "Mabel_Schuppe-Schowalter42@hotmail.com",
+                    "name": "Rochelle Franey-Bechtelar",
+                    "type": shared.AtsEmailType.HOME,
+                },
+            ],
+            "cc": [
+                {
+                    "email": "Sasha24@hotmail.com",
+                    "name": "Dr. Elbert Kuvalis",
+                    "type": shared.AtsEmailType.HOME,
+                },
+                {
+                    "email": "Rosetta_Donnelly@gmail.com",
+                    "name": "Ramon Daniel",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+                {
+                    "email": "Kathryne_Jast@yahoo.com",
+                    "name": "Christian Jacobson",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+                {
+                    "email": "Eldred95@yahoo.com",
+                    "name": "Edna Bogan",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+            ],
+            "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
+            "description": "Amplus.",
+            "from_": {
+                "email": "Norwood.Wiza47@yahoo.com",
+                "name": "Toby Grant",
+                "type": shared.PropertyAtsActivityFromType.OTHER,
+            },
+            "id": "acf1f007-dc5d-4246-8e38-14cc3dcebf62",
+            "is_private": False,
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "0c3cf076-e1ff-4693-b380-60374c282504",
+                    "namespace": "activity",
+                    "slug": "acer",
+                    "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "4c62f087-2fde-491d-8650-38b579851893",
+                    "namespace": "activity",
+                    "slug": "tremo",
+                    "value": "Amita delectus dicta temptatio utroque ex.",
+                },
+            ],
+            "sub_type": "TASK",
+            "title": "Senior Interactions Manager",
+            "to": [
+                {
+                    "email": "Sister91@hotmail.com",
+                    "name": "Eddie Nienow PhD",
+                    "type": shared.AtsEmailType.WORK,
+                },
+            ],
+            "type": shared.AtsActivityType.TASK,
+            "updated_at": parse_datetime("2026-03-06T13:33:13.014Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -72,10 +145,11 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="python" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -85,7 +159,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.create_lms_activity(request={
-        "lms_activity": {},
+        "lms_activity": {
+            "assigned_grade": "summopere",
+            "completed_at": parse_datetime("2025-04-12T21:07:59.666Z"),
+            "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
+            "duration_minutes": 55.0,
+            "id": "8164f3ea-523a-40a6-b339-ccb2ed97db46",
+            "is_completed": True,
+            "progress_percentage": 100.0,
+            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
+            "updated_at": parse_datetime("2022-01-23T21:44:46.408Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -398,10 +482,11 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -411,7 +496,79 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.patch_ats_activity(request={
-        "ats_activity": {},
+        "ats_activity": {
+            "bcc": [
+                {
+                    "email": "Mabel_Schuppe-Schowalter42@hotmail.com",
+                    "name": "Rochelle Franey-Bechtelar",
+                    "type": shared.AtsEmailType.HOME,
+                },
+            ],
+            "cc": [
+                {
+                    "email": "Sasha24@hotmail.com",
+                    "name": "Dr. Elbert Kuvalis",
+                    "type": shared.AtsEmailType.HOME,
+                },
+                {
+                    "email": "Rosetta_Donnelly@gmail.com",
+                    "name": "Ramon Daniel",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+                {
+                    "email": "Kathryne_Jast@yahoo.com",
+                    "name": "Christian Jacobson",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+                {
+                    "email": "Eldred95@yahoo.com",
+                    "name": "Edna Bogan",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+            ],
+            "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
+            "description": "Amplus.",
+            "from_": {
+                "email": "Norwood.Wiza47@yahoo.com",
+                "name": "Toby Grant",
+                "type": shared.PropertyAtsActivityFromType.OTHER,
+            },
+            "id": "09c0b7c8-cf09-47e6-81e4-b38db8539844",
+            "is_private": False,
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "fe4795f4-2563-4dfd-aee7-e96757e80130",
+                    "namespace": "activity",
+                    "slug": "acer",
+                    "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "8775bf75-34f3-422c-b017-9d59c4ee1a4f",
+                    "namespace": "activity",
+                    "slug": "tremo",
+                    "value": "Amita delectus dicta temptatio utroque ex.",
+                },
+            ],
+            "sub_type": "TASK",
+            "title": "Senior Interactions Manager",
+            "to": [
+                {
+                    "email": "Sister91@hotmail.com",
+                    "name": "Eddie Nienow PhD",
+                    "type": shared.AtsEmailType.WORK,
+                },
+            ],
+            "type": shared.AtsActivityType.TASK,
+            "updated_at": parse_datetime("2026-03-06T13:33:13.030Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -446,10 +603,11 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -459,7 +617,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.patch_lms_activity(request={
-        "lms_activity": {},
+        "lms_activity": {
+            "assigned_grade": "summopere",
+            "completed_at": parse_datetime("2025-04-12T21:07:59.668Z"),
+            "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
+            "duration_minutes": 55.0,
+            "id": "298664cf-609d-4c74-a5e3-42882c090d10",
+            "is_completed": True,
+            "progress_percentage": 100.0,
+            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
+            "updated_at": parse_datetime("2022-01-23T21:44:46.409Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -588,10 +756,11 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -601,7 +770,79 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.update_ats_activity(request={
-        "ats_activity": {},
+        "ats_activity": {
+            "bcc": [
+                {
+                    "email": "Mabel_Schuppe-Schowalter42@hotmail.com",
+                    "name": "Rochelle Franey-Bechtelar",
+                    "type": shared.AtsEmailType.HOME,
+                },
+            ],
+            "cc": [
+                {
+                    "email": "Sasha24@hotmail.com",
+                    "name": "Dr. Elbert Kuvalis",
+                    "type": shared.AtsEmailType.HOME,
+                },
+                {
+                    "email": "Rosetta_Donnelly@gmail.com",
+                    "name": "Ramon Daniel",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+                {
+                    "email": "Kathryne_Jast@yahoo.com",
+                    "name": "Christian Jacobson",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+                {
+                    "email": "Eldred95@yahoo.com",
+                    "name": "Edna Bogan",
+                    "type": shared.AtsEmailType.OTHER,
+                },
+            ],
+            "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
+            "description": "Amplus.",
+            "from_": {
+                "email": "Norwood.Wiza47@yahoo.com",
+                "name": "Toby Grant",
+                "type": shared.PropertyAtsActivityFromType.OTHER,
+            },
+            "id": "09c0b7c8-cf09-47e6-81e4-b38db8539844",
+            "is_private": False,
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "fe4795f4-2563-4dfd-aee7-e96757e80130",
+                    "namespace": "activity",
+                    "slug": "acer",
+                    "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
+                },
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "8775bf75-34f3-422c-b017-9d59c4ee1a4f",
+                    "namespace": "activity",
+                    "slug": "tremo",
+                    "value": "Amita delectus dicta temptatio utroque ex.",
+                },
+            ],
+            "sub_type": "TASK",
+            "title": "Senior Interactions Manager",
+            "to": [
+                {
+                    "email": "Sister91@hotmail.com",
+                    "name": "Eddie Nienow PhD",
+                    "type": shared.AtsEmailType.WORK,
+                },
+            ],
+            "type": shared.AtsActivityType.TASK,
+            "updated_at": parse_datetime("2026-03-06T13:33:13.030Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -636,10 +877,11 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -649,7 +891,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.update_lms_activity(request={
-        "lms_activity": {},
+        "lms_activity": {
+            "assigned_grade": "summopere",
+            "completed_at": parse_datetime("2025-04-12T21:07:59.668Z"),
+            "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
+            "duration_minutes": 55.0,
+            "id": "298664cf-609d-4c74-a5e3-42882c090d10",
+            "is_completed": True,
+            "progress_percentage": 100.0,
+            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
+            "updated_at": parse_datetime("2022-01-23T21:44:46.409Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

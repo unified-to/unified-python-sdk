@@ -14,10 +14,11 @@ Create an asset
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="python" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -27,7 +28,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.asset.create_ads_asset(request={
-        "ads_asset": {},
+        "ads_asset": {
+            "created_at": parse_datetime("2020-03-27T20:14:38.603Z"),
+            "height": 400.0,
+            "id": "cf04b48a-1f16-45f9-9d24-a576906153e1",
+            "mime_type": "IMAGE_PNG",
+            "name": "Lockman - DuBuque",
+            "type": shared.AdsAssetType.IMAGE,
+            "updated_at": parse_datetime("2022-03-15T04:24:55.196Z"),
+            "url": "https://informal-perfection.com/",
+            "width": 600.0,
+        },
         "connection_id": "<id>",
     })
 

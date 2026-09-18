@@ -17,10 +17,11 @@ Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="python" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.instructor.create_lms_instructor(request={
-        "lms_instructor": {},
+        "lms_instructor": {
+            "created_at": parse_datetime("2021-10-12T16:38:54.979Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Deangelo",
+            "id": "f8bbba27-b96d-4906-9cee-f5b6cf875466",
+            "image_url": "https://avatars.githubusercontent.com/u/20232618",
+            "last_name": "Ritchie",
+            "name": "Deangelo Ritchie",
+            "telephones": [
+                {
+                    "telephone": "(352) 551-7989",
+                    "type": shared.LmsTelephoneType.HOME,
+                },
+            ],
+            "title": "Product Solutions Engineer",
+            "updated_at": parse_datetime("2025-06-29T14:06:13.939Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +177,11 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +191,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.instructor.patch_lms_instructor(request={
-        "lms_instructor": {},
+        "lms_instructor": {
+            "created_at": parse_datetime("2021-10-12T16:38:54.979Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Deangelo",
+            "id": "7f3e0677-de81-4291-9b61-baab002fad9f",
+            "image_url": "https://avatars.githubusercontent.com/u/20232618",
+            "last_name": "Ritchie",
+            "name": "Deangelo Ritchie",
+            "telephones": [
+                {
+                    "telephone": "(352) 551-7989",
+                    "type": shared.LmsTelephoneType.HOME,
+                },
+            ],
+            "title": "Product Solutions Engineer",
+            "updated_at": parse_datetime("2025-06-29T14:06:13.948Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +292,11 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +306,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.instructor.update_lms_instructor(request={
-        "lms_instructor": {},
+        "lms_instructor": {
+            "created_at": parse_datetime("2021-10-12T16:38:54.979Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Deangelo",
+            "id": "7f3e0677-de81-4291-9b61-baab002fad9f",
+            "image_url": "https://avatars.githubusercontent.com/u/20232618",
+            "last_name": "Ritchie",
+            "name": "Deangelo Ritchie",
+            "telephones": [
+                {
+                    "telephone": "(352) 551-7989",
+                    "type": shared.LmsTelephoneType.HOME,
+                },
+            ],
+            "title": "Product Solutions Engineer",
+            "updated_at": parse_datetime("2025-06-29T14:06:13.948Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

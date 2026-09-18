@@ -17,10 +17,11 @@ Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="python" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.device.create_hris_device(request={
-        "hris_device": {},
+        "hris_device": {
+            "admin_user_ids": [],
+            "asset_tag": "dpho9OuFNG",
+            "created_at": parse_datetime("2019-04-04T17:11:40.322Z"),
+            "has_antivirus": False,
+            "has_firewall": True,
+            "has_hd_encrypted": True,
+            "has_password_manager": True,
+            "has_screenlock": True,
+            "id": "aa9bf3e8-ef2a-4460-9de0-f7f31a76743e",
+            "is_missing": False,
+            "manufacturer": "Sanford - Hamill",
+            "model": "Refined",
+            "name": "cross_contamination_if.rar",
+            "os": "monitor",
+            "os_version": "1.12.16",
+            "updated_at": parse_datetime("2023-05-21T00:56:05.168Z"),
+            "version": "2.20.17",
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +176,11 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +190,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.device.patch_hris_device(request={
-        "hris_device": {},
+        "hris_device": {
+            "admin_user_ids": [],
+            "asset_tag": "dpho9OuFNG",
+            "created_at": parse_datetime("2019-04-04T17:11:40.322Z"),
+            "has_antivirus": False,
+            "has_firewall": True,
+            "has_hd_encrypted": True,
+            "has_password_manager": True,
+            "has_screenlock": True,
+            "id": "6ad75d41-833e-41c9-af5a-7c98b7cac6f5",
+            "is_missing": False,
+            "manufacturer": "Sanford - Hamill",
+            "model": "Refined",
+            "name": "cross_contamination_if.rar",
+            "os": "monitor",
+            "os_version": "1.12.16",
+            "updated_at": parse_datetime("2023-05-21T00:56:05.174Z"),
+            "version": "2.20.17",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +290,11 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +304,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.device.update_hris_device(request={
-        "hris_device": {},
+        "hris_device": {
+            "admin_user_ids": [],
+            "asset_tag": "dpho9OuFNG",
+            "created_at": parse_datetime("2019-04-04T17:11:40.322Z"),
+            "has_antivirus": False,
+            "has_firewall": True,
+            "has_hd_encrypted": True,
+            "has_password_manager": True,
+            "has_screenlock": True,
+            "id": "6ad75d41-833e-41c9-af5a-7c98b7cac6f5",
+            "is_missing": False,
+            "manufacturer": "Sanford - Hamill",
+            "model": "Refined",
+            "name": "cross_contamination_if.rar",
+            "os": "monitor",
+            "os_version": "1.12.16",
+            "updated_at": parse_datetime("2023-05-21T00:56:05.174Z"),
+            "version": "2.20.17",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

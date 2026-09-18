@@ -23,10 +23,11 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="python" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -36,7 +37,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.campaign.create_ads_campaign(request={
-        "ads_campaign": {},
+        "ads_campaign": {
+            "budget_amount": 8743.179536121897,
+            "budget_period": shared.BudgetPeriod.MONTHLY,
+            "category": "CREDIT",
+            "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
+            "currency": "USD",
+            "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
+            "end_at": parse_datetime("2025-05-09T08:18:07.695Z"),
+            "id": "035b7305-00db-4ce3-b37c-91dd72083e2f",
+            "labels": [
+                "comedo",
+            ],
+            "name": "Emard Inc",
+            "start_at": parse_datetime("2022-07-20T04:51:20.139Z"),
+            "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
+            "targeting": {},
+            "total_spend_amount": 2349.8642875347286,
+            "updated_at": parse_datetime("2025-12-05T13:34:49.061Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -70,10 +89,11 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="python" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" example="martech_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -83,7 +103,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.campaign.create_martech_campaign(request={
-        "marketing_campaign": {},
+        "marketing_campaign": {
+            "created_at": parse_datetime("2023-08-01T22:29:12.121Z"),
+            "from_email": "Nick.Beahan@hotmail.com",
+            "from_name": "Javier Rempel",
+            "id": "dc45e3b6-f4a6-42ba-8e36-119d58a09bef",
+            "list_ids": [
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            ],
+            "name": "Consequatur atqui sustineo.",
+            "preview_text": "Bellicus tener cinis causa cavus toties.",
+            "reply_to_email": "Antwan.Abshire@hotmail.com",
+            "send_at": parse_datetime("2023-03-28T12:33:25.052Z"),
+            "status": shared.MarketingCampaignStatus.SENT,
+            "subject_line": "Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.",
+            "type": "plaintext",
+            "updated_at": parse_datetime("2023-12-17T22:11:31.702Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -303,10 +339,11 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -316,7 +353,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.campaign.patch_ads_campaign(request={
-        "ads_campaign": {},
+        "ads_campaign": {
+            "budget_amount": 8743.179536121897,
+            "budget_period": shared.BudgetPeriod.MONTHLY,
+            "category": "CREDIT",
+            "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
+            "currency": "USD",
+            "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
+            "end_at": parse_datetime("2025-05-09T08:18:07.796Z"),
+            "id": "12366083-0173-485b-8373-fcce77c38066",
+            "labels": [
+                "comedo",
+            ],
+            "name": "Emard Inc",
+            "start_at": parse_datetime("2022-07-20T04:51:20.144Z"),
+            "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
+            "targeting": {},
+            "total_spend_amount": 2349.8642875347286,
+            "updated_at": parse_datetime("2025-12-05T13:34:49.182Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -351,10 +406,11 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -364,7 +420,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.campaign.patch_martech_campaign(request={
-        "marketing_campaign": {},
+        "marketing_campaign": {
+            "created_at": parse_datetime("2023-08-01T22:29:12.121Z"),
+            "from_email": "Nick.Beahan@hotmail.com",
+            "from_name": "Javier Rempel",
+            "id": "cbd04008-409d-46a4-b81c-914038b61fff",
+            "list_ids": [
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            ],
+            "name": "Consequatur atqui sustineo.",
+            "preview_text": "Bellicus tener cinis causa cavus toties.",
+            "reply_to_email": "Antwan.Abshire@hotmail.com",
+            "send_at": parse_datetime("2023-03-28T12:33:25.052Z"),
+            "status": shared.MarketingCampaignStatus.SENT,
+            "subject_line": "Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.",
+            "type": "plaintext",
+            "updated_at": parse_datetime("2023-12-17T22:11:31.702Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -493,10 +565,11 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -506,7 +579,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.campaign.update_ads_campaign(request={
-        "ads_campaign": {},
+        "ads_campaign": {
+            "budget_amount": 8743.179536121897,
+            "budget_period": shared.BudgetPeriod.MONTHLY,
+            "category": "CREDIT",
+            "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
+            "currency": "USD",
+            "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
+            "end_at": parse_datetime("2025-05-09T08:18:07.796Z"),
+            "id": "12366083-0173-485b-8373-fcce77c38066",
+            "labels": [
+                "comedo",
+            ],
+            "name": "Emard Inc",
+            "start_at": parse_datetime("2022-07-20T04:51:20.144Z"),
+            "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
+            "targeting": {},
+            "total_spend_amount": 2349.8642875347286,
+            "updated_at": parse_datetime("2025-12-05T13:34:49.182Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -541,10 +632,11 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -554,7 +646,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.campaign.update_martech_campaign(request={
-        "marketing_campaign": {},
+        "marketing_campaign": {
+            "created_at": parse_datetime("2023-08-01T22:29:12.121Z"),
+            "from_email": "Nick.Beahan@hotmail.com",
+            "from_name": "Javier Rempel",
+            "id": "cbd04008-409d-46a4-b81c-914038b61fff",
+            "list_ids": [
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            ],
+            "name": "Consequatur atqui sustineo.",
+            "preview_text": "Bellicus tener cinis causa cavus toties.",
+            "reply_to_email": "Antwan.Abshire@hotmail.com",
+            "send_at": parse_datetime("2023-03-28T12:33:25.052Z"),
+            "status": shared.MarketingCampaignStatus.SENT,
+            "subject_line": "Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.",
+            "type": "plaintext",
+            "updated_at": parse_datetime("2023-12-17T22:11:31.702Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

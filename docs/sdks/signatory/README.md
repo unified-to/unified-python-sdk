@@ -17,10 +17,11 @@ Create a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="python" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" example="signing_signatory" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.signatory.create_signing_signatory(request={
-        "signing_signatory": {},
+        "signing_signatory": {
+            "created_at": parse_datetime("2022-04-16T19:25:01.966Z"),
+            "email": "Hardy.Wehner@gmail.com",
+            "id": "e11704e5-4a6b-49a1-8ff3-c2ef955024df",
+            "order": 5.0,
+            "role": shared.SigningSignatoryRole.SIGNER,
+            "status": shared.SigningSignatoryStatus.SIGNED,
+            "updated_at": parse_datetime("2026-08-10T19:02:39.218Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +166,11 @@ Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +180,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.signatory.patch_signing_signatory(request={
-        "signing_signatory": {},
+        "signing_signatory": {
+            "created_at": parse_datetime("2022-04-16T19:25:01.966Z"),
+            "email": "Hardy.Wehner@gmail.com",
+            "id": "2dddb61a-c2f1-41e5-a442-e8612fd5d810",
+            "order": 5.0,
+            "role": shared.SigningSignatoryRole.SIGNER,
+            "status": shared.SigningSignatoryStatus.SIGNED,
+            "updated_at": parse_datetime("2026-08-10T19:02:39.225Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +270,11 @@ Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +284,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.signatory.update_signing_signatory(request={
-        "signing_signatory": {},
+        "signing_signatory": {
+            "created_at": parse_datetime("2022-04-16T19:25:01.966Z"),
+            "email": "Hardy.Wehner@gmail.com",
+            "id": "2dddb61a-c2f1-41e5-a442-e8612fd5d810",
+            "order": 5.0,
+            "role": shared.SigningSignatoryRole.SIGNER,
+            "status": shared.SigningSignatoryStatus.SIGNED,
+            "updated_at": parse_datetime("2026-08-10T19:02:39.225Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

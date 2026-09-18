@@ -17,10 +17,11 @@ Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="python" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" example="ats_interview" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.interview.create_ats_interview(request={
-        "ats_interview": {},
+        "ats_interview": {
+            "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
+            "end_at": parse_datetime("2025-09-23T08:17:25.145Z"),
+            "external_event_xref": "1fc4a432-1e66-4f05-aeae-2d71e9763288",
+            "id": "f8c16ff1-c75f-442a-80c0-c1353415f3a5",
+            "location": "26596 Halle Trafficway",
+            "start_at": parse_datetime("2025-05-19T06:25:27.904Z"),
+            "status": shared.AtsInterviewStatus.SCHEDULED,
+            "updated_at": parse_datetime("2026-02-04T00:36:47.789Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +167,11 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +181,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.interview.patch_ats_interview(request={
-        "ats_interview": {},
+        "ats_interview": {
+            "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
+            "end_at": parse_datetime("2025-09-23T08:17:25.151Z"),
+            "external_event_xref": "6a22031c-0b28-4d56-ba42-1c31bf19c09f",
+            "id": "93efa9e8-7024-4008-b4ed-f951ce0c19c3",
+            "location": "26596 Halle Trafficway",
+            "start_at": parse_datetime("2025-05-19T06:25:27.909Z"),
+            "status": shared.AtsInterviewStatus.SCHEDULED,
+            "updated_at": parse_datetime("2026-02-04T00:36:47.796Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +272,11 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +286,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.interview.update_ats_interview(request={
-        "ats_interview": {},
+        "ats_interview": {
+            "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
+            "end_at": parse_datetime("2025-09-23T08:17:25.151Z"),
+            "external_event_xref": "6a22031c-0b28-4d56-ba42-1c31bf19c09f",
+            "id": "93efa9e8-7024-4008-b4ed-f951ce0c19c3",
+            "location": "26596 Halle Trafficway",
+            "start_at": parse_datetime("2025-05-19T06:25:27.909Z"),
+            "status": shared.AtsInterviewStatus.SCHEDULED,
+            "updated_at": parse_datetime("2026-02-04T00:36:47.796Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

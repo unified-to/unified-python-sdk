@@ -17,10 +17,11 @@ Create a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="python" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankfeedtransaction.create_accounting_bankfeedtransaction(request={
-        "accounting_bankfeedtransaction": {},
+        "accounting_bankfeedtransaction": {
+            "account_id": "b7dc4175-1368-4b89-a700-d621b6666648",
+            "amount": 60889.0,
+            "bank_category": "Games",
+            "bankfeedaccount_id": "34c1d05f-5b62-4bcd-9121-3be8b720941f",
+            "category_ids": [],
+            "contact_id": "1ef58ebe-f9c9-46f6-9d9c-2df2658503be",
+            "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
+            "currency": "SRD",
+            "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
+            "id": "d7e5f1b9-8fad-485f-85be-e2c6175122b6",
+            "is_pending": True,
+            "merchant_name": "Reichert, Erdman and Tillman",
+            "posted_at": parse_datetime("2025-03-23T18:33:52.190Z"),
+            "reference": "93642593",
+            "transaction_at": parse_datetime("2022-07-27T19:48:08.850Z"),
+            "type": shared.AccountingBankfeedtransactionType.CREDIT,
+            "updated_at": parse_datetime("2022-05-23T20:47:18.778Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +176,11 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +190,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankfeedtransaction.patch_accounting_bankfeedtransaction(request={
-        "accounting_bankfeedtransaction": {},
+        "accounting_bankfeedtransaction": {
+            "account_id": "b7dc4175-1368-4b89-a700-d621b6666648",
+            "amount": 60889.0,
+            "bank_category": "Games",
+            "bankfeedaccount_id": "34c1d05f-5b62-4bcd-9121-3be8b720941f",
+            "category_ids": [],
+            "contact_id": "1ef58ebe-f9c9-46f6-9d9c-2df2658503be",
+            "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
+            "currency": "SRD",
+            "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
+            "id": "0fc0602a-eb02-41c9-ae51-62d4f9d00e2a",
+            "is_pending": True,
+            "merchant_name": "Reichert, Erdman and Tillman",
+            "posted_at": parse_datetime("2025-03-23T18:33:52.195Z"),
+            "reference": "93642593",
+            "transaction_at": parse_datetime("2022-07-27T19:48:08.850Z"),
+            "type": shared.AccountingBankfeedtransactionType.CREDIT,
+            "updated_at": parse_datetime("2022-05-23T20:47:18.778Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +290,11 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +304,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankfeedtransaction.update_accounting_bankfeedtransaction(request={
-        "accounting_bankfeedtransaction": {},
+        "accounting_bankfeedtransaction": {
+            "account_id": "b7dc4175-1368-4b89-a700-d621b6666648",
+            "amount": 60889.0,
+            "bank_category": "Games",
+            "bankfeedaccount_id": "34c1d05f-5b62-4bcd-9121-3be8b720941f",
+            "category_ids": [],
+            "contact_id": "1ef58ebe-f9c9-46f6-9d9c-2df2658503be",
+            "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
+            "currency": "SRD",
+            "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
+            "id": "0fc0602a-eb02-41c9-ae51-62d4f9d00e2a",
+            "is_pending": True,
+            "merchant_name": "Reichert, Erdman and Tillman",
+            "posted_at": parse_datetime("2025-03-23T18:33:52.195Z"),
+            "reference": "93642593",
+            "transaction_at": parse_datetime("2022-07-27T19:48:08.850Z"),
+            "type": shared.AccountingBankfeedtransactionType.CREDIT,
+            "updated_at": parse_datetime("2022-05-23T20:47:18.778Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

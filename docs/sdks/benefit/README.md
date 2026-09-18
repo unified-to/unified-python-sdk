@@ -17,10 +17,11 @@ Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="python" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.benefit.create_hris_benefit(request={
-        "hris_benefit": {},
+        "hris_benefit": {
+            "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
+            "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
+            "currency": "JOD",
+            "description": "Vomito voluptas dolor sed.",
+            "employer_contribution_amount": 185006.0,
+            "employer_contribution_max_amount": 179093.0,
+            "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
+            "frequency": shared.HrisBenefitFrequency.HOUR,
+            "id": "316f6179-1072-40b5-ac95-647349da2fa6",
+            "is_active": False,
+            "name": "Frozen Wooden Ball",
+            "tax": shared.Tax.PRE_TAX,
+            "type": shared.HrisBenefitType.GARNISHMENT,
+            "updated_at": parse_datetime("2023-03-06T11:00:21.275Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +173,11 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +187,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.benefit.patch_hris_benefit(request={
-        "hris_benefit": {},
+        "hris_benefit": {
+            "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
+            "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
+            "currency": "JOD",
+            "description": "Vomito voluptas dolor sed.",
+            "employer_contribution_amount": 185006.0,
+            "employer_contribution_max_amount": 179093.0,
+            "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
+            "frequency": shared.HrisBenefitFrequency.HOUR,
+            "id": "20ebb126-9b3a-4c47-8f83-06f96f663e09",
+            "is_active": False,
+            "name": "Frozen Wooden Ball",
+            "tax": shared.Tax.PRE_TAX,
+            "type": shared.HrisBenefitType.GARNISHMENT,
+            "updated_at": parse_datetime("2023-03-06T11:00:21.279Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +284,11 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +298,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.benefit.update_hris_benefit(request={
-        "hris_benefit": {},
+        "hris_benefit": {
+            "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
+            "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
+            "currency": "JOD",
+            "description": "Vomito voluptas dolor sed.",
+            "employer_contribution_amount": 185006.0,
+            "employer_contribution_max_amount": 179093.0,
+            "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
+            "frequency": shared.HrisBenefitFrequency.HOUR,
+            "id": "20ebb126-9b3a-4c47-8f83-06f96f663e09",
+            "is_active": False,
+            "name": "Frozen Wooden Ball",
+            "tax": shared.Tax.PRE_TAX,
+            "type": shared.HrisBenefitType.GARNISHMENT,
+            "updated_at": parse_datetime("2023-03-06T11:00:21.279Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

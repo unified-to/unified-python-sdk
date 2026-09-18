@@ -28,10 +28,11 @@ Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="python" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -41,7 +42,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipping.create_shipping_label(request={
-        "shipping_label": {},
+        "shipping_label": {
+            "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
+            "id": "8a9fdac6-1d21-4676-94e6-f599db0abbff",
+            "is_voided": False,
+            "label_cost": 40.83653403213248,
+            "label_cost_currency": "USD",
+            "label_format": shared.LabelFormat.PNG,
+            "label_url": "https://optimal-meadow.net",
+            "service_code": "GIz",
+            "status": shared.ShippingLabelStatus.EXCEPTION,
+            "tracking_number": "zYv60FOIBUJ6",
+            "updated_at": parse_datetime("2024-04-16T18:20:19.960Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -75,10 +88,11 @@ Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="python" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -88,7 +102,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipping.create_shipping_rate(request={
-        "shipping_rate": {},
+        "shipping_rate": {
+            "currency": "USD",
+            "id": "fd4d5e96-852b-4873-8e6e-43312813cbda",
+            "rates": [
+                {
+                    "amount": 54.679719475097954,
+                    "base_amount": 76.45537888631225,
+                    "currency": "USD",
+                    "delivery_days": 8.0,
+                    "description": "Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.",
+                    "estimated_days": 10.0,
+                    "estimated_delivery_end_at": parse_datetime("2024-01-31T23:11:45.447Z"),
+                    "is_guaranteed": True,
+                    "is_negotiated_rate": True,
+                    "tax_amount": 2.2701712837442756,
+                    "title": "Turcotte Inc",
+                },
+            ],
+        },
         "connection_id": "<id>",
     })
 
@@ -122,10 +154,11 @@ Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="python" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" example="shipping_shipment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -135,7 +168,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipping.create_shipping_shipment(request={
-        "shipping_shipment": {},
+        "shipping_shipment": {
+            "carrier_name": "Bogisich, Franey and Koelpin",
+            "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
+            "id": "c1cbcd72-dc11-4fa0-a28b-06831de01b1c",
+            "rate_amount": 8.86546263936907,
+            "rate_currency": "USD",
+            "rate_estimated_days": 8.0,
+            "rate_service_name": "Fisher - Kilback",
+            "service_code": "F7U",
+            "shipped_at": parse_datetime("2025-08-24T18:19:39.641Z"),
+            "status": shared.ShippingShipmentStatus.PENDING,
+            "tracking_url": "https://shallow-secrecy.info/",
+            "updated_at": parse_datetime("2025-07-03T02:06:45.236Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -541,10 +587,11 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -554,7 +601,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipping.patch_shipping_label(request={
-        "shipping_label": {},
+        "shipping_label": {
+            "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
+            "id": "8f2aee4c-d719-4427-a982-e29285195abb",
+            "is_voided": False,
+            "label_cost": 40.83653403213248,
+            "label_cost_currency": "USD",
+            "label_format": shared.LabelFormat.PNG,
+            "label_url": "https://optimal-meadow.net",
+            "service_code": "GIz",
+            "status": shared.ShippingLabelStatus.EXCEPTION,
+            "tracking_number": "zYv60FOIBUJ6",
+            "updated_at": parse_datetime("2024-04-16T18:20:19.963Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -589,10 +648,11 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -602,7 +662,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipping.patch_shipping_shipment(request={
-        "shipping_shipment": {},
+        "shipping_shipment": {
+            "carrier_name": "Bogisich, Franey and Koelpin",
+            "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
+            "id": "76bfc6fc-b647-4048-8cd8-dbe130a58995",
+            "rate_amount": 8.86546263936907,
+            "rate_currency": "USD",
+            "rate_estimated_days": 8.0,
+            "rate_service_name": "Fisher - Kilback",
+            "service_code": "F7U",
+            "shipped_at": parse_datetime("2025-08-24T18:19:39.686Z"),
+            "status": shared.ShippingShipmentStatus.PENDING,
+            "tracking_url": "https://shallow-secrecy.info/",
+            "updated_at": parse_datetime("2025-07-03T02:06:45.279Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -731,10 +804,11 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -744,7 +818,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipping.update_shipping_label(request={
-        "shipping_label": {},
+        "shipping_label": {
+            "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
+            "id": "8f2aee4c-d719-4427-a982-e29285195abb",
+            "is_voided": False,
+            "label_cost": 40.83653403213248,
+            "label_cost_currency": "USD",
+            "label_format": shared.LabelFormat.PNG,
+            "label_url": "https://optimal-meadow.net",
+            "service_code": "GIz",
+            "status": shared.ShippingLabelStatus.EXCEPTION,
+            "tracking_number": "zYv60FOIBUJ6",
+            "updated_at": parse_datetime("2024-04-16T18:20:19.963Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -779,10 +865,11 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -792,7 +879,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.shipping.update_shipping_shipment(request={
-        "shipping_shipment": {},
+        "shipping_shipment": {
+            "carrier_name": "Bogisich, Franey and Koelpin",
+            "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
+            "id": "76bfc6fc-b647-4048-8cd8-dbe130a58995",
+            "rate_amount": 8.86546263936907,
+            "rate_currency": "USD",
+            "rate_estimated_days": 8.0,
+            "rate_service_name": "Fisher - Kilback",
+            "service_code": "F7U",
+            "shipped_at": parse_datetime("2025-08-24T18:19:39.686Z"),
+            "status": shared.ShippingShipmentStatus.PENDING,
+            "tracking_url": "https://shallow-secrecy.info/",
+            "updated_at": parse_datetime("2025-07-03T02:06:45.279Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

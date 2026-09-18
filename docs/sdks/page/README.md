@@ -17,10 +17,11 @@ Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="python" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -31,7 +32,16 @@ with UnifiedTo(
 
     res = unified_to.page.create_kms_page(request={
         "kms_page": {
-            "type": shared.KmsPageType.TEXT,
+            "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
+            "download_url": "https://agitated-validity.info",
+            "has_children": True,
+            "id": "428020b5-07f4-4b3b-bf4f-9dd1d68d49ea",
+            "is_active": True,
+            "metadata": [],
+            "title": "even minister extract",
+            "type": shared.KmsPageType.HTML,
+            "updated_at": parse_datetime("2025-09-10T18:25:11.303Z"),
+            "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",
     })
@@ -159,10 +169,11 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -173,7 +184,16 @@ with UnifiedTo(
 
     res = unified_to.page.patch_kms_page(request={
         "kms_page": {
-            "type": shared.KmsPageType.OTHER,
+            "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
+            "download_url": "https://agitated-validity.info",
+            "has_children": True,
+            "id": "26da09eb-a3d5-44be-928e-ae404415c517",
+            "is_active": True,
+            "metadata": [],
+            "title": "even minister extract",
+            "type": shared.KmsPageType.HTML,
+            "updated_at": parse_datetime("2025-09-10T18:25:11.325Z"),
+            "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -256,10 +276,11 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -270,7 +291,16 @@ with UnifiedTo(
 
     res = unified_to.page.update_kms_page(request={
         "kms_page": {
-            "type": shared.KmsPageType.OTHER,
+            "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
+            "download_url": "https://agitated-validity.info",
+            "has_children": True,
+            "id": "26da09eb-a3d5-44be-928e-ae404415c517",
+            "is_active": True,
+            "metadata": [],
+            "title": "even minister extract",
+            "type": shared.KmsPageType.HTML,
+            "updated_at": parse_datetime("2025-09-10T18:25:11.325Z"),
+            "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",
         "id": "<id>",

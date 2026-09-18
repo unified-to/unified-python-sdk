@@ -17,10 +17,11 @@ Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="python" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.create_accounting_transaction(request={
-        "accounting_transaction": {},
+        "accounting_transaction": {
+            "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "id": "8bad21b5-c9a3-4b30-99e9-f1c19b0faf34",
+            "lineitems": [
+                {
+                    "category_ids": [],
+                    "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
+                    "id": "882cb0c8-fff0-4acf-a65b-f11a7921f17e",
+                    "name": "Salad",
+                    "object_type": "delicate",
+                    "total_amount": 58531.0,
+                    "unit_amount": 536.0,
+                    "unit_quantity": 91.0,
+                },
+            ],
+            "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "tax_amount": 0.0,
+            "total_amount": 94452.0,
+            "updated_at": parse_datetime("2021-09-10T02:36:26.081Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +177,11 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +191,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.patch_accounting_transaction(request={
-        "accounting_transaction": {},
+        "accounting_transaction": {
+            "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "id": "b441cd13-8ef9-45e5-9902-9a2002d9a492",
+            "lineitems": [
+                {
+                    "category_ids": [],
+                    "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
+                    "id": "236bdaf2-3428-4b72-94e8-eefc15d6ff92",
+                    "name": "Salad",
+                    "object_type": "delicate",
+                    "total_amount": 58531.0,
+                    "unit_amount": 536.0,
+                    "unit_quantity": 91.0,
+                },
+            ],
+            "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "tax_amount": 0.0,
+            "total_amount": 94452.0,
+            "updated_at": parse_datetime("2021-09-10T02:36:26.085Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +292,11 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +306,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.update_accounting_transaction(request={
-        "accounting_transaction": {},
+        "accounting_transaction": {
+            "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "id": "b441cd13-8ef9-45e5-9902-9a2002d9a492",
+            "lineitems": [
+                {
+                    "category_ids": [],
+                    "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
+                    "id": "236bdaf2-3428-4b72-94e8-eefc15d6ff92",
+                    "name": "Salad",
+                    "object_type": "delicate",
+                    "total_amount": 58531.0,
+                    "unit_amount": 536.0,
+                    "unit_quantity": 91.0,
+                },
+            ],
+            "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "tax_amount": 0.0,
+            "total_amount": 94452.0,
+            "updated_at": parse_datetime("2021-09-10T02:36:26.085Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

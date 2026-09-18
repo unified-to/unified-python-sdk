@@ -17,10 +17,11 @@ Create a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="python" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" example="payment_subscription" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.subscription.create_payment_subscription(request={
-        "payment_subscription": {},
+        "payment_subscription": {
+            "created_at": parse_datetime("2023-05-08T10:11:03.414Z"),
+            "currency": "WST",
+            "current_period_end_at": parse_datetime("2023-06-03T04:20:29.157Z"),
+            "current_period_start_at": parse_datetime("2023-05-21T03:55:58.846Z"),
+            "day_of_month": 1.0,
+            "description": "Innovative Mouse featuring important technology and Bamboo construction",
+            "end_at": parse_datetime("2023-05-21T12:36:09.234Z"),
+            "id": "520dca25-7af1-4a90-b496-2b696361bc87",
+            "interval": 1.0,
+            "interval_unit": shared.IntervalUnit.MONTH,
+            "lineitems": [],
+            "start_at": parse_datetime("2023-05-29T06:04:51.030Z"),
+            "status": shared.PaymentSubscriptionStatus.ACTIVE,
+            "total_amount": 75616.0,
+            "updated_at": parse_datetime("2023-12-15T22:33:11.956Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +174,11 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +188,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.subscription.patch_payment_subscription(request={
-        "payment_subscription": {},
+        "payment_subscription": {
+            "created_at": parse_datetime("2023-05-08T10:11:03.414Z"),
+            "currency": "WST",
+            "current_period_end_at": parse_datetime("2023-06-03T04:20:29.157Z"),
+            "current_period_start_at": parse_datetime("2023-05-21T03:55:58.846Z"),
+            "day_of_month": 1.0,
+            "description": "Innovative Mouse featuring important technology and Bamboo construction",
+            "end_at": parse_datetime("2023-05-21T12:36:09.234Z"),
+            "id": "8bf216ec-d8c2-4d56-abaa-ebbcd300daea",
+            "interval": 1.0,
+            "interval_unit": shared.IntervalUnit.MONTH,
+            "lineitems": [],
+            "start_at": parse_datetime("2023-05-29T06:04:51.030Z"),
+            "status": shared.PaymentSubscriptionStatus.ACTIVE,
+            "total_amount": 75616.0,
+            "updated_at": parse_datetime("2023-12-15T22:33:11.960Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +286,11 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="python" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +300,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.subscription.update_payment_subscription(request={
-        "payment_subscription": {},
+        "payment_subscription": {
+            "created_at": parse_datetime("2023-05-08T10:11:03.414Z"),
+            "currency": "WST",
+            "current_period_end_at": parse_datetime("2023-06-03T04:20:29.157Z"),
+            "current_period_start_at": parse_datetime("2023-05-21T03:55:58.846Z"),
+            "day_of_month": 1.0,
+            "description": "Innovative Mouse featuring important technology and Bamboo construction",
+            "end_at": parse_datetime("2023-05-21T12:36:09.234Z"),
+            "id": "8bf216ec-d8c2-4d56-abaa-ebbcd300daea",
+            "interval": 1.0,
+            "interval_unit": shared.IntervalUnit.MONTH,
+            "lineitems": [],
+            "start_at": parse_datetime("2023-05-29T06:04:51.030Z"),
+            "status": shared.PaymentSubscriptionStatus.ACTIVE,
+            "total_amount": 75616.0,
+            "updated_at": parse_datetime("2023-12-15T22:33:11.960Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

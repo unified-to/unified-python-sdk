@@ -14,10 +14,11 @@ Create a feedback
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" -->
+<!-- UsageSnippet language="python" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" example="performance_feedback" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -28,6 +29,16 @@ with UnifiedTo(
 
     res = unified_to.feedback.create_performance_feedback(request={
         "performance_feedback": {
+            "created_at": parse_datetime("2023-04-11T16:21:53.862Z"),
+            "id": "de543a3e-c001-4b57-9822-ed7b68a7df1f",
+            "is_visible": True,
+            "message": "Tabernus corpus voluptate aestus.",
+            "tags": [
+                "well-to-do",
+                "hexagon",
+            ],
+            "type": shared.PerformanceFeedbackType.PRAISE,
+            "updated_at": parse_datetime("2025-08-12T15:37:22.961Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",

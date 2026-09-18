@@ -17,10 +17,11 @@ Create a goal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createPerformanceGoal" method="post" path="/performance/{connection_id}/goal" -->
+<!-- UsageSnippet language="python" operationID="createPerformanceGoal" method="post" path="/performance/{connection_id}/goal" example="performance_goal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,50 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.goal.create_performance_goal(request={
-        "performance_goal": {},
+        "performance_goal": {
+            "created_at": parse_datetime("2020-01-09T20:43:07.380Z"),
+            "description": "Suscipit suspendo vulnero vel facere valeo vallum degero.",
+            "due_at": parse_datetime("2026-06-27T20:57:12.826Z"),
+            "id": "12c799ff-3c28-4f25-93b1-ae89363fbd87",
+            "milestones": [
+                {
+                    "current_value": 10.0,
+                    "due_at": parse_datetime("2026-05-03T17:31:43.183Z"),
+                    "id": "ec90d3e3-23bd-4d9f-a5d7-e388979f90d9",
+                    "is_completed": True,
+                    "name": "Front-line asynchronous hub",
+                    "target_value": 32.0,
+                    "unit": "%",
+                    "weight": 7.0,
+                },
+                {
+                    "current_value": 0.0,
+                    "due_at": parse_datetime("2026-07-07T10:41:48.376Z"),
+                    "id": "09e04b09-7197-4fc4-9c32-077230408c26",
+                    "is_completed": True,
+                    "name": "Organized encompassing archive",
+                    "target_value": 32.0,
+                    "weight": 5.0,
+                },
+                {
+                    "current_value": 31.0,
+                    "description": "Nobis tremo debitis.",
+                    "due_at": parse_datetime("2026-09-07T13:23:34.094Z"),
+                    "id": "bbe63683-c1d0-4932-89ac-ef81e73ae6f1",
+                    "is_completed": True,
+                    "name": "Devolved directional middleware",
+                    "target_value": 32.0,
+                    "weight": 5.0,
+                },
+            ],
+            "name": "Proactive national protocol",
+            "progress": 3.0,
+            "start_at": parse_datetime("2025-06-26T10:32:23.244Z"),
+            "status": shared.PerformanceGoalStatus.CLOSED,
+            "type": shared.PerformanceGoalSchemasType.COMPANY,
+            "updated_at": parse_datetime("2022-08-31T00:53:29.356Z"),
+            "weight": 5.0,
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +201,11 @@ Update a goal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchPerformanceGoal" method="patch" path="/performance/{connection_id}/goal/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchPerformanceGoal" method="patch" path="/performance/{connection_id}/goal/{id}" example="performance_goal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +215,50 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.goal.patch_performance_goal(request={
-        "performance_goal": {},
+        "performance_goal": {
+            "created_at": parse_datetime("2020-01-09T20:43:07.380Z"),
+            "description": "Suscipit suspendo vulnero vel facere valeo vallum degero.",
+            "due_at": parse_datetime("2026-06-27T20:57:12.838Z"),
+            "id": "007b5e4d-6536-4e8f-8414-f93f0ad9bf22",
+            "milestones": [
+                {
+                    "current_value": 10.0,
+                    "due_at": parse_datetime("2026-05-03T17:31:43.194Z"),
+                    "id": "ec90d3e3-23bd-4d9f-a5d7-e388979f90d9",
+                    "is_completed": True,
+                    "name": "Front-line asynchronous hub",
+                    "target_value": 32.0,
+                    "unit": "%",
+                    "weight": 7.0,
+                },
+                {
+                    "current_value": 0.0,
+                    "due_at": parse_datetime("2026-07-07T10:41:48.387Z"),
+                    "id": "09e04b09-7197-4fc4-9c32-077230408c26",
+                    "is_completed": True,
+                    "name": "Organized encompassing archive",
+                    "target_value": 32.0,
+                    "weight": 5.0,
+                },
+                {
+                    "current_value": 31.0,
+                    "description": "Nobis tremo debitis.",
+                    "due_at": parse_datetime("2026-09-07T13:23:34.106Z"),
+                    "id": "bbe63683-c1d0-4932-89ac-ef81e73ae6f1",
+                    "is_completed": True,
+                    "name": "Devolved directional middleware",
+                    "target_value": 32.0,
+                    "weight": 5.0,
+                },
+            ],
+            "name": "Proactive national protocol",
+            "progress": 3.0,
+            "start_at": parse_datetime("2025-06-26T10:32:23.254Z"),
+            "status": shared.PerformanceGoalStatus.CLOSED,
+            "type": shared.PerformanceGoalSchemasType.COMPANY,
+            "updated_at": parse_datetime("2022-08-31T00:53:29.361Z"),
+            "weight": 5.0,
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +340,11 @@ Update a goal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updatePerformanceGoal" method="put" path="/performance/{connection_id}/goal/{id}" -->
+<!-- UsageSnippet language="python" operationID="updatePerformanceGoal" method="put" path="/performance/{connection_id}/goal/{id}" example="performance_goal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +354,50 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.goal.update_performance_goal(request={
-        "performance_goal": {},
+        "performance_goal": {
+            "created_at": parse_datetime("2020-01-09T20:43:07.380Z"),
+            "description": "Suscipit suspendo vulnero vel facere valeo vallum degero.",
+            "due_at": parse_datetime("2026-06-27T20:57:12.838Z"),
+            "id": "007b5e4d-6536-4e8f-8414-f93f0ad9bf22",
+            "milestones": [
+                {
+                    "current_value": 10.0,
+                    "due_at": parse_datetime("2026-05-03T17:31:43.194Z"),
+                    "id": "ec90d3e3-23bd-4d9f-a5d7-e388979f90d9",
+                    "is_completed": True,
+                    "name": "Front-line asynchronous hub",
+                    "target_value": 32.0,
+                    "unit": "%",
+                    "weight": 7.0,
+                },
+                {
+                    "current_value": 0.0,
+                    "due_at": parse_datetime("2026-07-07T10:41:48.387Z"),
+                    "id": "09e04b09-7197-4fc4-9c32-077230408c26",
+                    "is_completed": True,
+                    "name": "Organized encompassing archive",
+                    "target_value": 32.0,
+                    "weight": 5.0,
+                },
+                {
+                    "current_value": 31.0,
+                    "description": "Nobis tremo debitis.",
+                    "due_at": parse_datetime("2026-09-07T13:23:34.106Z"),
+                    "id": "bbe63683-c1d0-4932-89ac-ef81e73ae6f1",
+                    "is_completed": True,
+                    "name": "Devolved directional middleware",
+                    "target_value": 32.0,
+                    "weight": 5.0,
+                },
+            ],
+            "name": "Proactive national protocol",
+            "progress": 3.0,
+            "start_at": parse_datetime("2025-06-26T10:32:23.254Z"),
+            "status": shared.PerformanceGoalStatus.CLOSED,
+            "type": shared.PerformanceGoalSchemasType.COMPANY,
+            "updated_at": parse_datetime("2022-08-31T00:53:29.361Z"),
+            "weight": 5.0,
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

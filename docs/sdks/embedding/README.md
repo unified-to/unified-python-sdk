@@ -12,7 +12,7 @@ Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="python" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" example="genai_embedding" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -25,7 +25,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.embedding.create_genai_embedding(request={
-        "genai_embedding": {},
+        "genai_embedding": {
+            "content": [
+                {
+                    "text": "Utrimque temptatio pecco demulceo.",
+                },
+            ],
+            "dimension": 423.0,
+            "embeddings": "Est.",
+            "enconding_format": shared.EncondingFormat.FLOAT,
+            "id": "9435e70a-3100-423d-86bf-5b616cf6c2e8",
+            "max_tokens": 223.0,
+            "tokens_used": 836.0,
+            "type": "classification",
+        },
         "connection_id": "<id>",
     })
 

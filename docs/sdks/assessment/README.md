@@ -21,10 +21,11 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+<!-- UsageSnippet language="python" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" example="assessment_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -36,6 +37,34 @@ with UnifiedTo(
     res = unified_to.assessment.create_assessment_order(request={
         "assessment_order": {
             "connection_id": "<id>",
+            "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
+            "id": "c1ac5b49-bcaf-455e-b5ae-fa53d6f69d7a",
+            "parameters": [],
+            "profile_addresses": [],
+            "profile_date_of_birth": "1989-07-22T16:18:37.650Z",
+            "profile_emails": [
+                "Cleta.Daugherty@gmail.com",
+            ],
+            "profile_first_name": "Amy",
+            "profile_gender": shared.ProfileGender.NON_BINARY,
+            "profile_last_name": "Kris-Windler",
+            "profile_name": "Amy Kris-Windler",
+            "profile_resume_url": "https://enchanted-cycle.biz/",
+            "profile_social_media_urls": [],
+            "profile_telephones": [
+                "(828) 263-1594 x5248",
+            ],
+            "reference": "ab",
+            "response_attributes": [],
+            "response_details": [],
+            "response_download_urls": [],
+            "response_max_score": 82.0,
+            "response_score": 92.0,
+            "response_status": shared.ResponseStatus.FAILED,
+            "response_url": "https://irresponsible-trench.info/",
+            "status": shared.AssessmentOrderStatus.REJECTED,
+            "target_url": "https://cautious-turret.info",
+            "updated_at": parse_datetime("2023-01-17T01:52:03.034Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -71,10 +100,11 @@ Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="python" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" example="assessment_package" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -85,7 +115,28 @@ with UnifiedTo(
 
     res = unified_to.assessment.create_assessment_package(request={
         "assessment_package": {
-            "type": shared.AssessmentPackageType.REFERENCE_CHECK,
+            "aliases": [
+                "quia",
+            ],
+            "created_at": parse_datetime("2022-11-18T19:48:39.433Z"),
+            "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
+            "has_redirect_url": True,
+            "has_target_url": False,
+            "id": "0435d018-800a-4a76-893c-838a92db1440",
+            "info_url": "https://ugly-instance.biz/",
+            "integration_types": [
+                "viridis",
+            ],
+            "max_score": 22.0,
+            "name": "Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.",
+            "needs_ip_address": True,
+            "parameters": [],
+            "regions": [],
+            "tags": [
+                "clamo",
+            ],
+            "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
+            "updated_at": parse_datetime("2023-09-18T05:28:57.677Z"),
         },
         "connection_id": "<id>",
     })
@@ -260,10 +311,11 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -275,6 +327,34 @@ with UnifiedTo(
     res = unified_to.assessment.patch_assessment_order(request={
         "assessment_order": {
             "connection_id": "<id>",
+            "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
+            "id": "921ee5cd-cfd1-4512-b08a-56a192518abe",
+            "parameters": [],
+            "profile_addresses": [],
+            "profile_date_of_birth": "1989-07-22T16:18:37.650Z",
+            "profile_emails": [
+                "Cleta.Daugherty@gmail.com",
+            ],
+            "profile_first_name": "Amy",
+            "profile_gender": shared.ProfileGender.NON_BINARY,
+            "profile_last_name": "Kris-Windler",
+            "profile_name": "Amy Kris-Windler",
+            "profile_resume_url": "https://enchanted-cycle.biz/",
+            "profile_social_media_urls": [],
+            "profile_telephones": [
+                "(828) 263-1594 x5248",
+            ],
+            "reference": "ab",
+            "response_attributes": [],
+            "response_details": [],
+            "response_download_urls": [],
+            "response_max_score": 82.0,
+            "response_score": 92.0,
+            "response_status": shared.ResponseStatus.FAILED,
+            "response_url": "https://irresponsible-trench.info/",
+            "status": shared.AssessmentOrderStatus.REJECTED,
+            "target_url": "https://cautious-turret.info",
+            "updated_at": parse_datetime("2023-01-17T01:52:03.042Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -311,10 +391,11 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -325,7 +406,28 @@ with UnifiedTo(
 
     res = unified_to.assessment.patch_assessment_package(request={
         "assessment_package": {
-            "type": shared.AssessmentPackageType.BACKGROUND_CHECK,
+            "aliases": [
+                "quia",
+            ],
+            "created_at": parse_datetime("2022-11-18T19:48:39.433Z"),
+            "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
+            "has_redirect_url": True,
+            "has_target_url": False,
+            "id": "9acbc041-f170-4955-b857-58b1712b4b42",
+            "info_url": "https://ugly-instance.biz/",
+            "integration_types": [
+                "viridis",
+            ],
+            "max_score": 22.0,
+            "name": "Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.",
+            "needs_ip_address": True,
+            "parameters": [],
+            "regions": [],
+            "tags": [
+                "clamo",
+            ],
+            "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
+            "updated_at": parse_datetime("2023-09-18T05:28:57.680Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -408,10 +510,11 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -423,6 +526,34 @@ with UnifiedTo(
     res = unified_to.assessment.update_assessment_order(request={
         "assessment_order": {
             "connection_id": "<id>",
+            "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
+            "id": "921ee5cd-cfd1-4512-b08a-56a192518abe",
+            "parameters": [],
+            "profile_addresses": [],
+            "profile_date_of_birth": "1989-07-22T16:18:37.650Z",
+            "profile_emails": [
+                "Cleta.Daugherty@gmail.com",
+            ],
+            "profile_first_name": "Amy",
+            "profile_gender": shared.ProfileGender.NON_BINARY,
+            "profile_last_name": "Kris-Windler",
+            "profile_name": "Amy Kris-Windler",
+            "profile_resume_url": "https://enchanted-cycle.biz/",
+            "profile_social_media_urls": [],
+            "profile_telephones": [
+                "(828) 263-1594 x5248",
+            ],
+            "reference": "ab",
+            "response_attributes": [],
+            "response_details": [],
+            "response_download_urls": [],
+            "response_max_score": 82.0,
+            "response_score": 92.0,
+            "response_status": shared.ResponseStatus.FAILED,
+            "response_url": "https://irresponsible-trench.info/",
+            "status": shared.AssessmentOrderStatus.REJECTED,
+            "target_url": "https://cautious-turret.info",
+            "updated_at": parse_datetime("2023-01-17T01:52:03.042Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -459,10 +590,11 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -473,7 +605,28 @@ with UnifiedTo(
 
     res = unified_to.assessment.update_assessment_package(request={
         "assessment_package": {
-            "type": shared.AssessmentPackageType.OTHER,
+            "aliases": [
+                "quia",
+            ],
+            "created_at": parse_datetime("2022-11-18T19:48:39.433Z"),
+            "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
+            "has_redirect_url": True,
+            "has_target_url": False,
+            "id": "9acbc041-f170-4955-b857-58b1712b4b42",
+            "info_url": "https://ugly-instance.biz/",
+            "integration_types": [
+                "viridis",
+            ],
+            "max_score": 22.0,
+            "name": "Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.",
+            "needs_ip_address": True,
+            "parameters": [],
+            "regions": [],
+            "tags": [
+                "clamo",
+            ],
+            "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
+            "updated_at": parse_datetime("2023-09-18T05:28:57.680Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

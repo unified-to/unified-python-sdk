@@ -88,7 +88,7 @@ Create an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="python" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -103,9 +103,39 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_attendance(request={
         "hris_attendance": {
+            "address": {
+                "address1": "14108 Allie Flats",
+                "city": "Kearaborough",
+                "country_code": "US",
+                "postal_code": "23844-2344",
+                "region": "Tennessee",
+                "region_code": "CA",
+            },
+            "approved_at": parse_datetime("2021-08-13T10:36:02.582Z"),
+            "breaks": [
+                {
+                    "duration_minutes": 12.0,
+                    "end_at": parse_datetime("2023-10-22T16:22:21.274Z"),
+                    "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
+                    "is_paid": True,
+                    "name": "Lunch",
+                    "start_at": parse_datetime("2023-10-15T20:48:40.844Z"),
+                },
+            ],
+            "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
+            "currency": "UGX",
+            "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-07-01T14:10:09.942Z"),
-            "start_at": parse_datetime("2026-03-31T03:51:43.280Z"),
+            "end_at": parse_datetime("2024-04-06T03:55:51.518Z"),
+            "hourly_rate": 53.0,
+            "hours": 10.0,
+            "id": "6f3bbdc4-75ab-4b78-bdfb-8918d1b18b95",
+            "job_name": "Global Creative Supervisor",
+            "non_cash_tips_amount": 54.0,
+            "start_at": parse_datetime("2021-11-09T10:25:57.025Z"),
+            "status": shared.HrisAttendanceStatus.CLOSED,
+            "timezone": "America/Atikokan",
+            "updated_at": parse_datetime("2022-01-17T01:24:59.755Z"),
         },
         "connection_id": "<id>",
     })
@@ -140,10 +170,11 @@ Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="python" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -153,7 +184,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_bankaccount(request={
-        "hris_bankaccount": {},
+        "hris_bankaccount": {
+            "account_number": "****3777",
+            "account_number_last4": "3777",
+            "account_type": shared.HrisBankaccountAccountType.CHECKING,
+            "bank_name": "Huel Group",
+            "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
+            "id": "4e298ff9-1f66-4c1f-b1ec-5ee895cda7bf",
+            "is_primary": False,
+            "name": "Checking Account",
+            "routing_number": "448650724",
+            "updated_at": parse_datetime("2025-06-04T11:30:29.787Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -187,10 +229,11 @@ Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="python" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -200,7 +243,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_benefit(request={
-        "hris_benefit": {},
+        "hris_benefit": {
+            "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
+            "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
+            "currency": "JOD",
+            "description": "Vomito voluptas dolor sed.",
+            "employer_contribution_amount": 185006.0,
+            "employer_contribution_max_amount": 179093.0,
+            "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
+            "frequency": shared.HrisBenefitFrequency.HOUR,
+            "id": "316f6179-1072-40b5-ac95-647349da2fa6",
+            "is_active": False,
+            "name": "Frozen Wooden Ball",
+            "tax": shared.Tax.PRE_TAX,
+            "type": shared.HrisBenefitType.GARNISHMENT,
+            "updated_at": parse_datetime("2023-03-06T11:00:21.275Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -234,10 +292,11 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="python" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -247,7 +306,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_company(request={
-        "hris_company": {},
+        "hris_company": {
+            "address": {
+                "address1": "2549 Church Walk",
+                "city": "Lake Nettiebury",
+                "country_code": "US",
+                "postal_code": "32877-4898",
+                "region": "Idaho",
+                "region_code": "PA",
+            },
+            "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
+            "id": "a9419166-ed13-4cc3-9ca1-f086d2325ece",
+            "legal_name": "Schultz LLC",
+            "name": "Gottlieb Group",
+            "updated_at": parse_datetime("2026-09-05T21:10:56.918Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -281,10 +354,11 @@ Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="python" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -294,7 +368,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_deduction(request={
-        "hris_deduction": {},
+        "hris_deduction": {
+            "amount": 139655.0,
+            "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
+            "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
+            "end_at": parse_datetime("2026-05-22T22:51:41.898Z"),
+            "frequency": shared.HrisDeductionFrequency.MONTH,
+            "id": "80baec67-8dfd-44cb-a5e3-8faaaf906a97",
+            "is_active": False,
+            "notes": "Carmen desidero.",
+            "start_at": parse_datetime("2025-02-18T04:37:41.118Z"),
+            "type": shared.HrisDeductionType.FIXED,
+            "updated_at": parse_datetime("2024-03-01T23:41:41.373Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -328,10 +414,11 @@ Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="python" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -341,7 +428,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_device(request={
-        "hris_device": {},
+        "hris_device": {
+            "admin_user_ids": [],
+            "asset_tag": "dpho9OuFNG",
+            "created_at": parse_datetime("2019-04-04T17:11:40.322Z"),
+            "has_antivirus": False,
+            "has_firewall": True,
+            "has_hd_encrypted": True,
+            "has_password_manager": True,
+            "has_screenlock": True,
+            "id": "aa9bf3e8-ef2a-4460-9de0-f7f31a76743e",
+            "is_missing": False,
+            "manufacturer": "Sanford - Hamill",
+            "model": "Refined",
+            "name": "cross_contamination_if.rar",
+            "os": "monitor",
+            "os_version": "1.12.16",
+            "updated_at": parse_datetime("2023-05-21T00:56:05.168Z"),
+            "version": "2.20.17",
+        },
         "connection_id": "<id>",
     })
 
@@ -375,10 +480,11 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="python" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -388,7 +494,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_document(request={
-        "hris_document": {},
+        "hris_document": {
+            "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
+            "document_url": "https://sore-decision.biz/",
+            "filename": "ridge_forager.xsl",
+            "id": "9c44ea1a-df06-48eb-ae08-025996b09343",
+            "type": shared.HrisDocumentType.POLICY,
+            "updated_at": parse_datetime("2025-09-17T01:54:33.584Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -422,10 +535,11 @@ Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="python" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" example="hris_employee" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -435,7 +549,121 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_employee(request={
-        "hris_employee": {},
+        "hris_employee": {
+            "address": {
+                "address1": "52008 Lansdowne Road",
+                "address2": "Apt. 101",
+                "city": "Connellyberg",
+                "country_code": "US",
+                "postal_code": "18978",
+                "region": "South Dakota",
+                "region_code": "NM",
+            },
+            "bio": "sushi devotee, singer",
+            "compensation": [
+                {
+                    "amount": 69148.0,
+                    "currency": "CRC",
+                    "frequency": shared.HrisCompensationFrequency.QUARTER,
+                    "notes": "Tergeo laborum laboriosam tutis.",
+                    "type": shared.HrisCompensationType.EQUITY,
+                },
+            ],
+            "created_at": parse_datetime("2019-09-16T15:08:53.262Z"),
+            "currency": "IDR",
+            "date_of_birth": parse_datetime("2001-04-22"),
+            "emails": [
+                {
+                    "email": "Zetta_Prohaska67@hotmail.com",
+                    "type": shared.HrisEmailType.HOME,
+                },
+            ],
+            "employee_number": "YuOt169CGu",
+            "employment_status": shared.EmploymentStatus.ACTIVE,
+            "employment_type": shared.HrisEmployeeEmploymentType.VOLUNTEER,
+            "first_name": "Zetta",
+            "gender": shared.HrisEmployeeGender.INTERSEX,
+            "has_mfa": True,
+            "hired_at": parse_datetime("2023-05-10T16:14:24.235Z"),
+            "id": "0b47556b-dd67-4604-a3e7-3326e7ac2cc4",
+            "image_url": "https://loremflickr.com/3684/2116?lock=4686991638584456",
+            "language_locale": "es",
+            "last_name": "Prohaska",
+            "locations": [],
+            "marital_status": shared.MaritalStatus.MARRIED,
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.HrisMetadataFormat.TEXT,
+                    "id": "8ff023c4-b1c3-4575-904d-5a28abce4f7c",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "tenetur",
+                },
+            ],
+            "name": "Zetta Prohaska",
+            "pronouns": "she/her",
+            "relationships": [
+                {
+                    "emails": [
+                        {
+                            "email": "Deshaun.Sanford24@yahoo.com",
+                        },
+                        {
+                            "email": "Rebeca.Dibbert11@hotmail.com",
+                        },
+                        {
+                            "email": "Hester80@gmail.com",
+                        },
+                    ],
+                    "name": "Automotive",
+                    "type": shared.HrisEmployeerelationshipType.EMERGENCY,
+                },
+                {
+                    "emails": [
+                        {
+                            "email": "Benedict_Wisozk83@hotmail.com",
+                        },
+                        {
+                            "email": "Princess_Rath43@gmail.com",
+                        },
+                        {
+                            "email": "Elmira92@yahoo.com",
+                        },
+                    ],
+                    "name": "Music",
+                    "type": shared.HrisEmployeerelationshipType.FRIEND,
+                },
+                {
+                    "emails": [
+                        {
+                            "email": "Jane30@gmail.com",
+                        },
+                    ],
+                    "name": "Jewelry",
+                    "type": shared.HrisEmployeerelationshipType.SIBLING,
+                },
+            ],
+            "salutation": "Miss",
+            "ssn_sin": "yMRtj0Q3xO",
+            "storage_quota_allocated": 3674489.0,
+            "storage_quota_available": 7748057.0,
+            "storage_quota_used": 301727.0,
+            "telephones": [
+                {
+                    "telephone": "(409) 801-3705",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "termination_reason": "Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.",
+            "timeoff_days_total": 12.0,
+            "timeoff_days_used": 6.0,
+            "timezone": "Africa/Harare",
+            "title": "Investor Paradigm Liaison",
+            "updated_at": parse_datetime("2022-02-19T07:01:46.451Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -469,10 +697,11 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -482,7 +711,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_group(request={
-        "hris_group": {},
+        "hris_group": {
+            "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
+            "description": "Absorbeo casso.",
+            "id": "75c0e738-bb94-4051-9c72-8e563c3e92ea",
+            "is_active": False,
+            "name": "Games",
+            "type": shared.HrisGroupType.BUSINESS_UNIT,
+            "updated_at": parse_datetime("2026-04-23T14:24:36.666Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -516,10 +753,11 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -529,7 +767,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_location(request={
-        "hris_location": {},
+        "hris_location": {
+            "address": {
+                "address1": "2743 Connelly Summit",
+                "address2": "Apt. 350",
+                "city": "Titusville",
+                "country_code": "US",
+                "postal_code": "16154-1095",
+                "region": "Oregon",
+                "region_code": "AL",
+            },
+            "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
+            "currency": "MUR",
+            "description": "Acervus caries.",
+            "external_identifier": "f7f353fd-05db-464e-813d-53ebc1a79d24",
+            "id": "854e19af-cf20-4edc-8a76-c80b50974f65",
+            "is_active": True,
+            "is_hq": False,
+            "language_locale": "fr",
+            "name": "adhuc",
+            "telephones": [
+                {
+                    "telephone": "(710) 550-6997",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(208) 555-8542",
+                    "type": shared.HrisTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(712) 473-5482",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "timezone": "America/Guyana",
+            "updated_at": parse_datetime("2023-06-09T00:39:51.875Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -563,10 +836,11 @@ Create a taxonomy
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+<!-- UsageSnippet language="python" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" example="hris_taxonomy" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -576,7 +850,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_taxonomy(request={
-        "hris_taxonomy": {},
+        "hris_taxonomy": {
+            "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
+            "description": "Apto demonstro audacia adstringo cursim tristis solio careo.",
+            "domain": "Electronics",
+            "id": "ede085db-5709-4d53-a490-746f3de5be17",
+            "is_active": False,
+            "name": "International Functionality Architect",
+            "parent_id": "6524b2a7-6520-4e15-8c4e-1aa6793db837",
+            "role_ids": [
+                "2b1ef757-eb4c-4207-8af1-929afe49cd65",
+            ],
+            "subcategory": "Bamboo",
+            "type": shared.HrisTaxonomyType.KNOWLEDGE,
+            "updated_at": parse_datetime("2023-05-22T04:57:25.374Z"),
+            "url": "https://our-polarisation.name",
+        },
         "connection_id": "<id>",
     })
 
@@ -610,10 +899,11 @@ Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="python" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -624,6 +914,20 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeoff(request={
         "hris_timeoff": {
+            "approved_at": parse_datetime("2022-02-20T21:02:37.695Z"),
+            "comments": "Blandior ventus curiositas amplitudo.",
+            "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
+            "duration": 4.0,
+            "duration_type": shared.DurationType.DAY,
+            "end_at": parse_datetime("2024-12-07T13:50:55.449Z"),
+            "id": "efd938fb-bb4a-492d-b313-90f0578f3165",
+            "is_paid": True,
+            "original_type": "acerbitas ut",
+            "reason": "verto",
+            "start_at": parse_datetime("2023-08-23T06:56:44.757Z"),
+            "status": shared.HrisTimeoffStatus.DENIED,
+            "type": shared.HrisTimeoffType.IN_LIEU,
+            "updated_at": parse_datetime("2022-07-07T19:34:54.248Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -659,10 +963,11 @@ Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="python" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -673,7 +978,24 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeshift(request={
         "hris_timeshift": {
+            "approved_at": parse_datetime("2023-06-05T14:31:38.445Z"),
+            "compensation": [
+                {
+                    "amount": 76761.0,
+                    "currency": "JPY",
+                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "notes": "Annus adficio suasoria architecto aggero.",
+                    "type": shared.HrisCompensationType.OTHER,
+                },
+            ],
+            "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
+            "end_at": parse_datetime("2026-08-25T08:28:11.837Z"),
+            "hours": 8.0,
+            "id": "8091d49f-00cf-416b-a771-e6834ab7026d",
+            "is_approved": True,
+            "start_at": parse_datetime("2023-06-24T19:29:28.668Z"),
+            "updated_at": parse_datetime("2021-06-22T20:53:14.292Z"),
         },
         "connection_id": "<id>",
     })
@@ -2010,7 +2332,7 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2025,9 +2347,39 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_attendance(request={
         "hris_attendance": {
+            "address": {
+                "address1": "14108 Allie Flats",
+                "city": "Kearaborough",
+                "country_code": "US",
+                "postal_code": "23844-2344",
+                "region": "Tennessee",
+                "region_code": "CA",
+            },
+            "approved_at": parse_datetime("2021-08-13T10:36:02.582Z"),
+            "breaks": [
+                {
+                    "duration_minutes": 12.0,
+                    "end_at": parse_datetime("2023-10-22T16:22:21.282Z"),
+                    "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
+                    "is_paid": True,
+                    "name": "Lunch",
+                    "start_at": parse_datetime("2023-10-15T20:48:40.852Z"),
+                },
+            ],
+            "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
+            "currency": "UGX",
+            "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-09-28T22:23:28.906Z"),
-            "start_at": parse_datetime("2025-01-18T09:17:09.936Z"),
+            "end_at": parse_datetime("2024-04-06T03:55:51.527Z"),
+            "hourly_rate": 53.0,
+            "hours": 10.0,
+            "id": "cbcfba0c-c599-4187-8cc1-b796e089ae62",
+            "job_name": "Global Creative Supervisor",
+            "non_cash_tips_amount": 54.0,
+            "start_at": parse_datetime("2021-11-09T10:25:57.026Z"),
+            "status": shared.HrisAttendanceStatus.CLOSED,
+            "timezone": "America/Atikokan",
+            "updated_at": parse_datetime("2022-01-17T01:24:59.757Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2063,10 +2415,11 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2076,7 +2429,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_bankaccount(request={
-        "hris_bankaccount": {},
+        "hris_bankaccount": {
+            "account_number": "****3777",
+            "account_number_last4": "3777",
+            "account_type": shared.HrisBankaccountAccountType.CHECKING,
+            "bank_name": "Huel Group",
+            "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
+            "id": "6b53796b-c6e2-4608-939f-57d8d920c7b2",
+            "is_primary": False,
+            "name": "Checking Account",
+            "routing_number": "448650724",
+            "updated_at": parse_datetime("2025-06-04T11:30:29.792Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2111,10 +2475,11 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2124,7 +2489,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_benefit(request={
-        "hris_benefit": {},
+        "hris_benefit": {
+            "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
+            "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
+            "currency": "JOD",
+            "description": "Vomito voluptas dolor sed.",
+            "employer_contribution_amount": 185006.0,
+            "employer_contribution_max_amount": 179093.0,
+            "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
+            "frequency": shared.HrisBenefitFrequency.HOUR,
+            "id": "20ebb126-9b3a-4c47-8f83-06f96f663e09",
+            "is_active": False,
+            "name": "Frozen Wooden Ball",
+            "tax": shared.Tax.PRE_TAX,
+            "type": shared.HrisBenefitType.GARNISHMENT,
+            "updated_at": parse_datetime("2023-03-06T11:00:21.279Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2159,10 +2539,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2172,7 +2553,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_company(request={
-        "hris_company": {},
+        "hris_company": {
+            "address": {
+                "address1": "2549 Church Walk",
+                "city": "Lake Nettiebury",
+                "country_code": "US",
+                "postal_code": "32877-4898",
+                "region": "Idaho",
+                "region_code": "PA",
+            },
+            "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
+            "id": "6d8a376c-449b-4d6f-8921-ca1ab6158e9a",
+            "legal_name": "Schultz LLC",
+            "name": "Gottlieb Group",
+            "updated_at": parse_datetime("2026-09-05T21:10:56.930Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2207,10 +2602,11 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2220,7 +2616,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_deduction(request={
-        "hris_deduction": {},
+        "hris_deduction": {
+            "amount": 139655.0,
+            "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
+            "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
+            "end_at": parse_datetime("2026-05-22T22:51:41.904Z"),
+            "frequency": shared.HrisDeductionFrequency.MONTH,
+            "id": "2aec3d2c-839a-4dda-90d3-91870b50eae7",
+            "is_active": False,
+            "notes": "Carmen desidero.",
+            "start_at": parse_datetime("2025-02-18T04:37:41.123Z"),
+            "type": shared.HrisDeductionType.FIXED,
+            "updated_at": parse_datetime("2024-03-01T23:41:41.377Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2255,10 +2663,11 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2268,7 +2677,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_device(request={
-        "hris_device": {},
+        "hris_device": {
+            "admin_user_ids": [],
+            "asset_tag": "dpho9OuFNG",
+            "created_at": parse_datetime("2019-04-04T17:11:40.322Z"),
+            "has_antivirus": False,
+            "has_firewall": True,
+            "has_hd_encrypted": True,
+            "has_password_manager": True,
+            "has_screenlock": True,
+            "id": "6ad75d41-833e-41c9-af5a-7c98b7cac6f5",
+            "is_missing": False,
+            "manufacturer": "Sanford - Hamill",
+            "model": "Refined",
+            "name": "cross_contamination_if.rar",
+            "os": "monitor",
+            "os_version": "1.12.16",
+            "updated_at": parse_datetime("2023-05-21T00:56:05.174Z"),
+            "version": "2.20.17",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2303,10 +2730,11 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2316,7 +2744,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_document(request={
-        "hris_document": {},
+        "hris_document": {
+            "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
+            "document_url": "https://sore-decision.biz/",
+            "filename": "ridge_forager.xsl",
+            "id": "b42682b1-d9f4-4260-af8a-f6317dd1bd80",
+            "type": shared.HrisDocumentType.POLICY,
+            "updated_at": parse_datetime("2025-09-17T01:54:33.589Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2351,10 +2786,11 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2364,7 +2800,121 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_employee(request={
-        "hris_employee": {},
+        "hris_employee": {
+            "address": {
+                "address1": "52008 Lansdowne Road",
+                "address2": "Apt. 101",
+                "city": "Connellyberg",
+                "country_code": "US",
+                "postal_code": "18978",
+                "region": "South Dakota",
+                "region_code": "NM",
+            },
+            "bio": "sushi devotee, singer",
+            "compensation": [
+                {
+                    "amount": 69148.0,
+                    "currency": "CRC",
+                    "frequency": shared.HrisCompensationFrequency.QUARTER,
+                    "notes": "Tergeo laborum laboriosam tutis.",
+                    "type": shared.HrisCompensationType.EQUITY,
+                },
+            ],
+            "created_at": parse_datetime("2019-09-16T15:08:53.262Z"),
+            "currency": "IDR",
+            "date_of_birth": parse_datetime("2001-04-22"),
+            "emails": [
+                {
+                    "email": "Zetta_Prohaska67@hotmail.com",
+                    "type": shared.HrisEmailType.HOME,
+                },
+            ],
+            "employee_number": "YuOt169CGu",
+            "employment_status": shared.EmploymentStatus.ACTIVE,
+            "employment_type": shared.HrisEmployeeEmploymentType.VOLUNTEER,
+            "first_name": "Zetta",
+            "gender": shared.HrisEmployeeGender.INTERSEX,
+            "has_mfa": True,
+            "hired_at": parse_datetime("2023-05-10T16:14:24.268Z"),
+            "id": "5a45c156-b945-45a7-bdbb-7fcc013a456d",
+            "image_url": "https://loremflickr.com/3684/2116?lock=4686991638584456",
+            "language_locale": "es",
+            "last_name": "Prohaska",
+            "locations": [],
+            "marital_status": shared.MaritalStatus.MARRIED,
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.HrisMetadataFormat.TEXT,
+                    "id": "a06af6d2-ccab-4f6e-b714-1de7dc125067",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "tenetur",
+                },
+            ],
+            "name": "Zetta Prohaska",
+            "pronouns": "she/her",
+            "relationships": [
+                {
+                    "emails": [
+                        {
+                            "email": "Deshaun.Sanford24@yahoo.com",
+                        },
+                        {
+                            "email": "Rebeca.Dibbert11@hotmail.com",
+                        },
+                        {
+                            "email": "Hester80@gmail.com",
+                        },
+                    ],
+                    "name": "Automotive",
+                    "type": shared.HrisEmployeerelationshipType.EMERGENCY,
+                },
+                {
+                    "emails": [
+                        {
+                            "email": "Benedict_Wisozk83@hotmail.com",
+                        },
+                        {
+                            "email": "Princess_Rath43@gmail.com",
+                        },
+                        {
+                            "email": "Elmira92@yahoo.com",
+                        },
+                    ],
+                    "name": "Music",
+                    "type": shared.HrisEmployeerelationshipType.FRIEND,
+                },
+                {
+                    "emails": [
+                        {
+                            "email": "Jane30@gmail.com",
+                        },
+                    ],
+                    "name": "Jewelry",
+                    "type": shared.HrisEmployeerelationshipType.SIBLING,
+                },
+            ],
+            "salutation": "Miss",
+            "ssn_sin": "yMRtj0Q3xO",
+            "storage_quota_allocated": 3674489.0,
+            "storage_quota_available": 7748057.0,
+            "storage_quota_used": 301727.0,
+            "telephones": [
+                {
+                    "telephone": "(409) 801-3705",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "termination_reason": "Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.",
+            "timeoff_days_total": 12.0,
+            "timeoff_days_used": 6.0,
+            "timezone": "Africa/Harare",
+            "title": "Investor Paradigm Liaison",
+            "updated_at": parse_datetime("2022-02-19T07:01:46.473Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2399,10 +2949,11 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2412,7 +2963,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_group(request={
-        "hris_group": {},
+        "hris_group": {
+            "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
+            "description": "Absorbeo casso.",
+            "id": "8d454ca4-ebee-4004-9ee1-070a8a4f8f74",
+            "is_active": False,
+            "name": "Games",
+            "type": shared.HrisGroupType.BUSINESS_UNIT,
+            "updated_at": parse_datetime("2026-04-23T14:24:36.672Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2447,10 +3006,11 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2460,7 +3020,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_location(request={
-        "hris_location": {},
+        "hris_location": {
+            "address": {
+                "address1": "2743 Connelly Summit",
+                "address2": "Apt. 350",
+                "city": "Titusville",
+                "country_code": "US",
+                "postal_code": "16154-1095",
+                "region": "Oregon",
+                "region_code": "AL",
+            },
+            "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
+            "currency": "MUR",
+            "description": "Acervus caries.",
+            "external_identifier": "633d799f-e467-4730-a2c1-d0442c073b57",
+            "id": "d267ea88-128c-42f6-8cdf-1a9e361e0183",
+            "is_active": True,
+            "is_hq": False,
+            "language_locale": "fr",
+            "name": "adhuc",
+            "telephones": [
+                {
+                    "telephone": "(710) 550-6997",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(208) 555-8542",
+                    "type": shared.HrisTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(712) 473-5482",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "timezone": "America/Guyana",
+            "updated_at": parse_datetime("2023-06-09T00:39:51.880Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2495,10 +3090,11 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2509,6 +3105,20 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeoff(request={
         "hris_timeoff": {
+            "approved_at": parse_datetime("2022-02-20T21:02:37.696Z"),
+            "comments": "Blandior ventus curiositas amplitudo.",
+            "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
+            "duration": 4.0,
+            "duration_type": shared.DurationType.DAY,
+            "end_at": parse_datetime("2024-12-07T13:50:55.454Z"),
+            "id": "c38c4f38-07e2-4fb7-b3aa-93df41a86943",
+            "is_paid": True,
+            "original_type": "acerbitas ut",
+            "reason": "verto",
+            "start_at": parse_datetime("2023-08-23T06:56:44.760Z"),
+            "status": shared.HrisTimeoffStatus.DENIED,
+            "type": shared.HrisTimeoffType.IN_LIEU,
+            "updated_at": parse_datetime("2022-07-07T19:34:54.250Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -2545,10 +3155,11 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2559,7 +3170,24 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeshift(request={
         "hris_timeshift": {
+            "approved_at": parse_datetime("2023-06-05T14:31:38.450Z"),
+            "compensation": [
+                {
+                    "amount": 76761.0,
+                    "currency": "JPY",
+                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "notes": "Annus adficio suasoria architecto aggero.",
+                    "type": shared.HrisCompensationType.OTHER,
+                },
+            ],
+            "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
+            "end_at": parse_datetime("2026-08-25T08:28:11.847Z"),
+            "hours": 8.0,
+            "id": "7cccfab5-5f8c-4543-ba66-c6178393a826",
+            "is_approved": True,
+            "start_at": parse_datetime("2023-06-24T19:29:28.673Z"),
+            "updated_at": parse_datetime("2021-06-22T20:53:14.295Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3159,7 +3787,7 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3174,9 +3802,39 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_attendance(request={
         "hris_attendance": {
+            "address": {
+                "address1": "14108 Allie Flats",
+                "city": "Kearaborough",
+                "country_code": "US",
+                "postal_code": "23844-2344",
+                "region": "Tennessee",
+                "region_code": "CA",
+            },
+            "approved_at": parse_datetime("2021-08-13T10:36:02.582Z"),
+            "breaks": [
+                {
+                    "duration_minutes": 12.0,
+                    "end_at": parse_datetime("2023-10-22T16:22:21.282Z"),
+                    "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
+                    "is_paid": True,
+                    "name": "Lunch",
+                    "start_at": parse_datetime("2023-10-15T20:48:40.852Z"),
+                },
+            ],
+            "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
+            "currency": "UGX",
+            "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-07-06T19:51:15.352Z"),
-            "start_at": parse_datetime("2024-05-22T08:12:53.996Z"),
+            "end_at": parse_datetime("2024-04-06T03:55:51.527Z"),
+            "hourly_rate": 53.0,
+            "hours": 10.0,
+            "id": "cbcfba0c-c599-4187-8cc1-b796e089ae62",
+            "job_name": "Global Creative Supervisor",
+            "non_cash_tips_amount": 54.0,
+            "start_at": parse_datetime("2021-11-09T10:25:57.026Z"),
+            "status": shared.HrisAttendanceStatus.CLOSED,
+            "timezone": "America/Atikokan",
+            "updated_at": parse_datetime("2022-01-17T01:24:59.757Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3212,10 +3870,11 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3225,7 +3884,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_bankaccount(request={
-        "hris_bankaccount": {},
+        "hris_bankaccount": {
+            "account_number": "****3777",
+            "account_number_last4": "3777",
+            "account_type": shared.HrisBankaccountAccountType.CHECKING,
+            "bank_name": "Huel Group",
+            "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
+            "id": "6b53796b-c6e2-4608-939f-57d8d920c7b2",
+            "is_primary": False,
+            "name": "Checking Account",
+            "routing_number": "448650724",
+            "updated_at": parse_datetime("2025-06-04T11:30:29.792Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3260,10 +3930,11 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3273,7 +3944,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_benefit(request={
-        "hris_benefit": {},
+        "hris_benefit": {
+            "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
+            "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
+            "currency": "JOD",
+            "description": "Vomito voluptas dolor sed.",
+            "employer_contribution_amount": 185006.0,
+            "employer_contribution_max_amount": 179093.0,
+            "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
+            "frequency": shared.HrisBenefitFrequency.HOUR,
+            "id": "20ebb126-9b3a-4c47-8f83-06f96f663e09",
+            "is_active": False,
+            "name": "Frozen Wooden Ball",
+            "tax": shared.Tax.PRE_TAX,
+            "type": shared.HrisBenefitType.GARNISHMENT,
+            "updated_at": parse_datetime("2023-03-06T11:00:21.279Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3308,10 +3994,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3321,7 +4008,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_company(request={
-        "hris_company": {},
+        "hris_company": {
+            "address": {
+                "address1": "2549 Church Walk",
+                "city": "Lake Nettiebury",
+                "country_code": "US",
+                "postal_code": "32877-4898",
+                "region": "Idaho",
+                "region_code": "PA",
+            },
+            "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
+            "id": "6d8a376c-449b-4d6f-8921-ca1ab6158e9a",
+            "legal_name": "Schultz LLC",
+            "name": "Gottlieb Group",
+            "updated_at": parse_datetime("2026-09-05T21:10:56.930Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3356,10 +4057,11 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3369,7 +4071,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_deduction(request={
-        "hris_deduction": {},
+        "hris_deduction": {
+            "amount": 139655.0,
+            "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
+            "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
+            "end_at": parse_datetime("2026-05-22T22:51:41.904Z"),
+            "frequency": shared.HrisDeductionFrequency.MONTH,
+            "id": "2aec3d2c-839a-4dda-90d3-91870b50eae7",
+            "is_active": False,
+            "notes": "Carmen desidero.",
+            "start_at": parse_datetime("2025-02-18T04:37:41.123Z"),
+            "type": shared.HrisDeductionType.FIXED,
+            "updated_at": parse_datetime("2024-03-01T23:41:41.377Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3404,10 +4118,11 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3417,7 +4132,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_device(request={
-        "hris_device": {},
+        "hris_device": {
+            "admin_user_ids": [],
+            "asset_tag": "dpho9OuFNG",
+            "created_at": parse_datetime("2019-04-04T17:11:40.322Z"),
+            "has_antivirus": False,
+            "has_firewall": True,
+            "has_hd_encrypted": True,
+            "has_password_manager": True,
+            "has_screenlock": True,
+            "id": "6ad75d41-833e-41c9-af5a-7c98b7cac6f5",
+            "is_missing": False,
+            "manufacturer": "Sanford - Hamill",
+            "model": "Refined",
+            "name": "cross_contamination_if.rar",
+            "os": "monitor",
+            "os_version": "1.12.16",
+            "updated_at": parse_datetime("2023-05-21T00:56:05.174Z"),
+            "version": "2.20.17",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3452,10 +4185,11 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3465,7 +4199,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_document(request={
-        "hris_document": {},
+        "hris_document": {
+            "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
+            "document_url": "https://sore-decision.biz/",
+            "filename": "ridge_forager.xsl",
+            "id": "b42682b1-d9f4-4260-af8a-f6317dd1bd80",
+            "type": shared.HrisDocumentType.POLICY,
+            "updated_at": parse_datetime("2025-09-17T01:54:33.589Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3500,10 +4241,11 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3513,7 +4255,121 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_employee(request={
-        "hris_employee": {},
+        "hris_employee": {
+            "address": {
+                "address1": "52008 Lansdowne Road",
+                "address2": "Apt. 101",
+                "city": "Connellyberg",
+                "country_code": "US",
+                "postal_code": "18978",
+                "region": "South Dakota",
+                "region_code": "NM",
+            },
+            "bio": "sushi devotee, singer",
+            "compensation": [
+                {
+                    "amount": 69148.0,
+                    "currency": "CRC",
+                    "frequency": shared.HrisCompensationFrequency.QUARTER,
+                    "notes": "Tergeo laborum laboriosam tutis.",
+                    "type": shared.HrisCompensationType.EQUITY,
+                },
+            ],
+            "created_at": parse_datetime("2019-09-16T15:08:53.262Z"),
+            "currency": "IDR",
+            "date_of_birth": parse_datetime("2001-04-22"),
+            "emails": [
+                {
+                    "email": "Zetta_Prohaska67@hotmail.com",
+                    "type": shared.HrisEmailType.HOME,
+                },
+            ],
+            "employee_number": "YuOt169CGu",
+            "employment_status": shared.EmploymentStatus.ACTIVE,
+            "employment_type": shared.HrisEmployeeEmploymentType.VOLUNTEER,
+            "first_name": "Zetta",
+            "gender": shared.HrisEmployeeGender.INTERSEX,
+            "has_mfa": True,
+            "hired_at": parse_datetime("2023-05-10T16:14:24.268Z"),
+            "id": "5a45c156-b945-45a7-bdbb-7fcc013a456d",
+            "image_url": "https://loremflickr.com/3684/2116?lock=4686991638584456",
+            "language_locale": "es",
+            "last_name": "Prohaska",
+            "locations": [],
+            "marital_status": shared.MaritalStatus.MARRIED,
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.HrisMetadataFormat.TEXT,
+                    "id": "a06af6d2-ccab-4f6e-b714-1de7dc125067",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "tenetur",
+                },
+            ],
+            "name": "Zetta Prohaska",
+            "pronouns": "she/her",
+            "relationships": [
+                {
+                    "emails": [
+                        {
+                            "email": "Deshaun.Sanford24@yahoo.com",
+                        },
+                        {
+                            "email": "Rebeca.Dibbert11@hotmail.com",
+                        },
+                        {
+                            "email": "Hester80@gmail.com",
+                        },
+                    ],
+                    "name": "Automotive",
+                    "type": shared.HrisEmployeerelationshipType.EMERGENCY,
+                },
+                {
+                    "emails": [
+                        {
+                            "email": "Benedict_Wisozk83@hotmail.com",
+                        },
+                        {
+                            "email": "Princess_Rath43@gmail.com",
+                        },
+                        {
+                            "email": "Elmira92@yahoo.com",
+                        },
+                    ],
+                    "name": "Music",
+                    "type": shared.HrisEmployeerelationshipType.FRIEND,
+                },
+                {
+                    "emails": [
+                        {
+                            "email": "Jane30@gmail.com",
+                        },
+                    ],
+                    "name": "Jewelry",
+                    "type": shared.HrisEmployeerelationshipType.SIBLING,
+                },
+            ],
+            "salutation": "Miss",
+            "ssn_sin": "yMRtj0Q3xO",
+            "storage_quota_allocated": 3674489.0,
+            "storage_quota_available": 7748057.0,
+            "storage_quota_used": 301727.0,
+            "telephones": [
+                {
+                    "telephone": "(409) 801-3705",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "termination_reason": "Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.",
+            "timeoff_days_total": 12.0,
+            "timeoff_days_used": 6.0,
+            "timezone": "Africa/Harare",
+            "title": "Investor Paradigm Liaison",
+            "updated_at": parse_datetime("2022-02-19T07:01:46.473Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3548,10 +4404,11 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3561,7 +4418,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_group(request={
-        "hris_group": {},
+        "hris_group": {
+            "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
+            "description": "Absorbeo casso.",
+            "id": "8d454ca4-ebee-4004-9ee1-070a8a4f8f74",
+            "is_active": False,
+            "name": "Games",
+            "type": shared.HrisGroupType.BUSINESS_UNIT,
+            "updated_at": parse_datetime("2026-04-23T14:24:36.672Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3596,10 +4461,11 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3609,7 +4475,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_location(request={
-        "hris_location": {},
+        "hris_location": {
+            "address": {
+                "address1": "2743 Connelly Summit",
+                "address2": "Apt. 350",
+                "city": "Titusville",
+                "country_code": "US",
+                "postal_code": "16154-1095",
+                "region": "Oregon",
+                "region_code": "AL",
+            },
+            "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
+            "currency": "MUR",
+            "description": "Acervus caries.",
+            "external_identifier": "633d799f-e467-4730-a2c1-d0442c073b57",
+            "id": "d267ea88-128c-42f6-8cdf-1a9e361e0183",
+            "is_active": True,
+            "is_hq": False,
+            "language_locale": "fr",
+            "name": "adhuc",
+            "telephones": [
+                {
+                    "telephone": "(710) 550-6997",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(208) 555-8542",
+                    "type": shared.HrisTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(712) 473-5482",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "timezone": "America/Guyana",
+            "updated_at": parse_datetime("2023-06-09T00:39:51.880Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3644,10 +4545,11 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3658,6 +4560,20 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeoff(request={
         "hris_timeoff": {
+            "approved_at": parse_datetime("2022-02-20T21:02:37.696Z"),
+            "comments": "Blandior ventus curiositas amplitudo.",
+            "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
+            "duration": 4.0,
+            "duration_type": shared.DurationType.DAY,
+            "end_at": parse_datetime("2024-12-07T13:50:55.454Z"),
+            "id": "c38c4f38-07e2-4fb7-b3aa-93df41a86943",
+            "is_paid": True,
+            "original_type": "acerbitas ut",
+            "reason": "verto",
+            "start_at": parse_datetime("2023-08-23T06:56:44.760Z"),
+            "status": shared.HrisTimeoffStatus.DENIED,
+            "type": shared.HrisTimeoffType.IN_LIEU,
+            "updated_at": parse_datetime("2022-07-07T19:34:54.250Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -3694,10 +4610,11 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3708,7 +4625,24 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeshift(request={
         "hris_timeshift": {
+            "approved_at": parse_datetime("2023-06-05T14:31:38.450Z"),
+            "compensation": [
+                {
+                    "amount": 76761.0,
+                    "currency": "JPY",
+                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "notes": "Annus adficio suasoria architecto aggero.",
+                    "type": shared.HrisCompensationType.OTHER,
+                },
+            ],
+            "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
+            "end_at": parse_datetime("2026-08-25T08:28:11.847Z"),
+            "hours": 8.0,
+            "id": "7cccfab5-5f8c-4543-ba66-c6178393a826",
+            "is_approved": True,
+            "start_at": parse_datetime("2023-06-24T19:29:28.673Z"),
+            "updated_at": parse_datetime("2021-06-22T20:53:14.295Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

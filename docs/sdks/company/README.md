@@ -30,10 +30,11 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="python" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" example="ats_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -43,7 +44,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.create_ats_company(request={
-        "ats_company": {},
+        "ats_company": {
+            "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
+            "id": "78ced29d-f1a8-4c36-b440-5b1b3a3be5ab",
+            "name": "Gulgowski, Dibbert and Wilderman",
+            "phone": "1-602-210-4548",
+            "updated_at": parse_datetime("2020-09-24T19:30:08.481Z"),
+            "website_url": "https://somber-substitution.com/",
+        },
         "connection_id": "<id>",
     })
 
@@ -77,10 +85,11 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="python" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" example="crm_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -90,7 +99,83 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.create_crm_company(request={
-        "crm_company": {},
+        "crm_company": {
+            "address": {
+                "address1": "7261 Salisbury Road",
+                "address2": "Apt. 778",
+                "city": "Harrisburg",
+                "country_code": "US",
+                "postal_code": "56293-3678",
+                "region": "Pennsylvania",
+                "region_code": "ID",
+            },
+            "created_at": parse_datetime("2020-05-11T18:26:32.925Z"),
+            "description": "Balbus crapula spiculum.",
+            "domains": [
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            ],
+            "emails": [
+                {
+                    "email": "Sandrine_Jacobi@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine_Jacobi@gmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine.Jacobi@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+            ],
+            "employees": 967.0,
+            "id": "c3d87ef6-a153-4be2-9146-799249ea7602",
+            "industry": "Infrastructure",
+            "is_active": True,
+            "link_urls": [
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "948c143e-6c56-4be0-a14d-eb68e77934a6",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "esse",
+                },
+            ],
+            "name": "Goodwin and Sons",
+            "tags": [
+                "quaerat",
+                "valeo",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(432) 849-2690",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(606) 871-2046",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(842) 258-9395",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+            ],
+            "timezone": "Europe/San_Marino",
+            "updated_at": parse_datetime("2025-02-06T12:33:02.290Z"),
+            "websites": [
+                "https://wise-possession.org",
+            ],
+        },
         "connection_id": "<id>",
     })
 
@@ -124,10 +209,11 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="python" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -137,7 +223,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.create_hris_company(request={
-        "hris_company": {},
+        "hris_company": {
+            "address": {
+                "address1": "2549 Church Walk",
+                "city": "Lake Nettiebury",
+                "country_code": "US",
+                "postal_code": "32877-4898",
+                "region": "Idaho",
+                "region_code": "PA",
+            },
+            "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
+            "id": "a9419166-ed13-4cc3-9ca1-f086d2325ece",
+            "legal_name": "Schultz LLC",
+            "name": "Gottlieb Group",
+            "updated_at": parse_datetime("2026-09-05T21:10:56.918Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -496,10 +596,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -509,7 +610,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.patch_ats_company(request={
-        "ats_company": {},
+        "ats_company": {
+            "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
+            "id": "5e05144a-6f51-43b6-ac5c-236493b0ba10",
+            "name": "Gulgowski, Dibbert and Wilderman",
+            "phone": "1-602-210-4548",
+            "updated_at": parse_datetime("2020-09-24T19:30:08.483Z"),
+            "website_url": "https://somber-substitution.com/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -544,10 +652,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -557,7 +666,83 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.patch_crm_company(request={
-        "crm_company": {},
+        "crm_company": {
+            "address": {
+                "address1": "7261 Salisbury Road",
+                "address2": "Apt. 778",
+                "city": "Harrisburg",
+                "country_code": "US",
+                "postal_code": "56293-3678",
+                "region": "Pennsylvania",
+                "region_code": "ID",
+            },
+            "created_at": parse_datetime("2020-05-11T18:26:32.925Z"),
+            "description": "Balbus crapula spiculum.",
+            "domains": [
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            ],
+            "emails": [
+                {
+                    "email": "Sandrine_Jacobi@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine_Jacobi@gmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine.Jacobi@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+            ],
+            "employees": 967.0,
+            "id": "8e971de5-5467-4203-a88e-3b58bfad2c21",
+            "industry": "Infrastructure",
+            "is_active": True,
+            "link_urls": [
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "7a08cf1c-5e31-4ef7-8e4b-eeb389beadc4",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "esse",
+                },
+            ],
+            "name": "Goodwin and Sons",
+            "tags": [
+                "quaerat",
+                "valeo",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(432) 849-2690",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(606) 871-2046",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(842) 258-9395",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+            ],
+            "timezone": "Europe/San_Marino",
+            "updated_at": parse_datetime("2025-02-06T12:33:02.306Z"),
+            "websites": [
+                "https://wise-possession.org",
+            ],
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -592,10 +777,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -605,7 +791,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.patch_hris_company(request={
-        "hris_company": {},
+        "hris_company": {
+            "address": {
+                "address1": "2549 Church Walk",
+                "city": "Lake Nettiebury",
+                "country_code": "US",
+                "postal_code": "32877-4898",
+                "region": "Idaho",
+                "region_code": "PA",
+            },
+            "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
+            "id": "6d8a376c-449b-4d6f-8921-ca1ab6158e9a",
+            "legal_name": "Schultz LLC",
+            "name": "Gottlieb Group",
+            "updated_at": parse_datetime("2026-09-05T21:10:56.930Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -781,10 +981,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -794,7 +995,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.update_ats_company(request={
-        "ats_company": {},
+        "ats_company": {
+            "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
+            "id": "5e05144a-6f51-43b6-ac5c-236493b0ba10",
+            "name": "Gulgowski, Dibbert and Wilderman",
+            "phone": "1-602-210-4548",
+            "updated_at": parse_datetime("2020-09-24T19:30:08.483Z"),
+            "website_url": "https://somber-substitution.com/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -829,10 +1037,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -842,7 +1051,83 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.update_crm_company(request={
-        "crm_company": {},
+        "crm_company": {
+            "address": {
+                "address1": "7261 Salisbury Road",
+                "address2": "Apt. 778",
+                "city": "Harrisburg",
+                "country_code": "US",
+                "postal_code": "56293-3678",
+                "region": "Pennsylvania",
+                "region_code": "ID",
+            },
+            "created_at": parse_datetime("2020-05-11T18:26:32.925Z"),
+            "description": "Balbus crapula spiculum.",
+            "domains": [
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            ],
+            "emails": [
+                {
+                    "email": "Sandrine_Jacobi@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine_Jacobi@gmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+                {
+                    "email": "Sandrine.Jacobi@yahoo.com",
+                    "type": shared.CrmEmailType.OTHER,
+                },
+            ],
+            "employees": 967.0,
+            "id": "8e971de5-5467-4203-a88e-3b58bfad2c21",
+            "industry": "Infrastructure",
+            "is_active": True,
+            "link_urls": [
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "7a08cf1c-5e31-4ef7-8e4b-eeb389beadc4",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "esse",
+                },
+            ],
+            "name": "Goodwin and Sons",
+            "tags": [
+                "quaerat",
+                "valeo",
+            ],
+            "telephones": [
+                {
+                    "telephone": "(432) 849-2690",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+                {
+                    "telephone": "(606) 871-2046",
+                    "type": shared.CrmTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(842) 258-9395",
+                    "type": shared.CrmTelephoneType.MOBILE,
+                },
+            ],
+            "timezone": "Europe/San_Marino",
+            "updated_at": parse_datetime("2025-02-06T12:33:02.306Z"),
+            "websites": [
+                "https://wise-possession.org",
+            ],
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -877,10 +1162,11 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -890,7 +1176,21 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.update_hris_company(request={
-        "hris_company": {},
+        "hris_company": {
+            "address": {
+                "address1": "2549 Church Walk",
+                "city": "Lake Nettiebury",
+                "country_code": "US",
+                "postal_code": "32877-4898",
+                "region": "Idaho",
+                "region_code": "PA",
+            },
+            "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
+            "id": "6d8a376c-449b-4d6f-8921-ca1ab6158e9a",
+            "legal_name": "Schultz LLC",
+            "name": "Gottlieb Group",
+            "updated_at": parse_datetime("2026-09-05T21:10:56.930Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

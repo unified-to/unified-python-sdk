@@ -31,7 +31,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="python" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -44,7 +44,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.create_uc_comment(request={
-        "uc_comment": {},
+        "uc_comment": {
+            "content": "Vociferor vitiosus.",
+            "created_at": "2023-04-02T23:42:31.571Z",
+            "id": "0799f5c4-cd42-46d0-8ad5-f45577f33875",
+            "updated_at": "2024-02-01T19:29:01.666Z",
+        },
         "connection_id": "<id>",
     })
 
@@ -78,10 +83,11 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="python" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" example="uc_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -91,7 +97,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.create_uc_contact(request={
-        "uc_contact": {},
+        "uc_contact": {
+            "company": "Tillman Group",
+            "created_at": parse_datetime("2019-10-28T11:06:56.460Z"),
+            "emails": [
+                {
+                    "email": "Luther_Rogahn32@yahoo.com",
+                    "type": shared.UcEmailType.WORK,
+                },
+            ],
+            "first_name": "Luther",
+            "id": "7ffe79ab-179b-4292-be46-39b5ec7db1b0",
+            "last_name": "Rogahn",
+            "name": "Luther Rogahn",
+            "telephones": [
+                {
+                    "telephone": "(809) 992-1681",
+                    "type": shared.UcTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(868) 238-2746",
+                    "type": shared.UcTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(219) 736-0357",
+                    "type": shared.UcTelephoneType.MOBILE,
+                },
+            ],
+            "title": "Chief Optimization Executive",
+            "updated_at": parse_datetime("2023-11-18T22:29:57.338Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -125,10 +160,11 @@ Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="python" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -138,7 +174,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.create_uc_recording(request={
-        "uc_recording": {},
+        "uc_recording": {
+            "contacts": [],
+            "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
+            "end_at": parse_datetime("2024-04-21T20:25:03.937Z"),
+            "expires_at": parse_datetime("2026-03-28T16:20:45.918Z"),
+            "id": "9bb37bb5-bcc7-496b-91d6-9ba3da4d46f3",
+            "media": [],
+            "start_at": parse_datetime("2023-04-22T20:25:19.456Z"),
+            "type": shared.UcRecordingType.INBOUND,
+            "updated_at": parse_datetime("2025-02-24T08:23:34.885Z"),
+            "user_name": "Melyna Larson",
+            "user_phone": "1-915-327-0429 x509",
+            "web_url": "https://spherical-comparison.org",
+        },
         "connection_id": "<id>",
     })
 
@@ -544,7 +593,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -557,7 +606,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.patch_uc_comment(request={
-        "uc_comment": {},
+        "uc_comment": {
+            "content": "Vociferor vitiosus.",
+            "created_at": "2023-04-02T23:42:31.571Z",
+            "id": "8a4a0ba6-4264-407c-8765-0815731be5d8",
+            "updated_at": "2024-02-01T19:29:01.667Z",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -592,10 +646,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -605,7 +660,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.patch_uc_contact(request={
-        "uc_contact": {},
+        "uc_contact": {
+            "company": "Tillman Group",
+            "created_at": parse_datetime("2019-10-28T11:06:56.460Z"),
+            "emails": [
+                {
+                    "email": "Luther_Rogahn32@yahoo.com",
+                    "type": shared.UcEmailType.WORK,
+                },
+            ],
+            "first_name": "Luther",
+            "id": "8a9d8dfd-1a11-4da9-a537-8e7072a26094",
+            "last_name": "Rogahn",
+            "name": "Luther Rogahn",
+            "telephones": [
+                {
+                    "telephone": "(809) 992-1681",
+                    "type": shared.UcTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(868) 238-2746",
+                    "type": shared.UcTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(219) 736-0357",
+                    "type": shared.UcTelephoneType.MOBILE,
+                },
+            ],
+            "title": "Chief Optimization Executive",
+            "updated_at": parse_datetime("2023-11-18T22:29:57.342Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -640,10 +724,11 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -653,7 +738,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.patch_uc_recording(request={
-        "uc_recording": {},
+        "uc_recording": {
+            "contacts": [],
+            "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
+            "end_at": parse_datetime("2024-04-21T20:25:03.945Z"),
+            "expires_at": parse_datetime("2026-03-28T16:20:45.935Z"),
+            "id": "70237347-36d8-4eca-9224-cee256883565",
+            "media": [],
+            "start_at": parse_datetime("2023-04-22T20:25:19.459Z"),
+            "type": shared.UcRecordingType.INBOUND,
+            "updated_at": parse_datetime("2025-02-24T08:23:34.897Z"),
+            "user_name": "Melyna Larson",
+            "user_phone": "1-915-327-0429 x509",
+            "web_url": "https://spherical-comparison.org",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -829,7 +927,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -842,7 +940,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.update_uc_comment(request={
-        "uc_comment": {},
+        "uc_comment": {
+            "content": "Vociferor vitiosus.",
+            "created_at": "2023-04-02T23:42:31.571Z",
+            "id": "8a4a0ba6-4264-407c-8765-0815731be5d8",
+            "updated_at": "2024-02-01T19:29:01.667Z",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -877,10 +980,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -890,7 +994,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.update_uc_contact(request={
-        "uc_contact": {},
+        "uc_contact": {
+            "company": "Tillman Group",
+            "created_at": parse_datetime("2019-10-28T11:06:56.460Z"),
+            "emails": [
+                {
+                    "email": "Luther_Rogahn32@yahoo.com",
+                    "type": shared.UcEmailType.WORK,
+                },
+            ],
+            "first_name": "Luther",
+            "id": "8a9d8dfd-1a11-4da9-a537-8e7072a26094",
+            "last_name": "Rogahn",
+            "name": "Luther Rogahn",
+            "telephones": [
+                {
+                    "telephone": "(809) 992-1681",
+                    "type": shared.UcTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(868) 238-2746",
+                    "type": shared.UcTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(219) 736-0357",
+                    "type": shared.UcTelephoneType.MOBILE,
+                },
+            ],
+            "title": "Chief Optimization Executive",
+            "updated_at": parse_datetime("2023-11-18T22:29:57.342Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -925,10 +1058,11 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -938,7 +1072,20 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.update_uc_recording(request={
-        "uc_recording": {},
+        "uc_recording": {
+            "contacts": [],
+            "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
+            "end_at": parse_datetime("2024-04-21T20:25:03.945Z"),
+            "expires_at": parse_datetime("2026-03-28T16:20:45.935Z"),
+            "id": "70237347-36d8-4eca-9224-cee256883565",
+            "media": [],
+            "start_at": parse_datetime("2023-04-22T20:25:19.459Z"),
+            "type": shared.UcRecordingType.INBOUND,
+            "updated_at": parse_datetime("2025-02-24T08:23:34.897Z"),
+            "user_name": "Melyna Larson",
+            "user_phone": "1-915-327-0429 x509",
+            "web_url": "https://spherical-comparison.org",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

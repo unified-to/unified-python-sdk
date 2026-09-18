@@ -17,10 +17,11 @@ Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="python" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.student.create_lms_student(request={
-        "lms_student": {},
+        "lms_student": {
+            "address": {
+                "address1": "94082 Kassandra Camp",
+                "address2": "Apt. 461",
+                "city": "New Ibrahimmouth",
+                "country_code": "US",
+                "postal_code": "52851",
+                "region": "Tennessee",
+                "region_code": "NV",
+            },
+            "created_at": parse_datetime("2020-03-23T06:59:29.777Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Marcella",
+            "id": "8bc0cb22-4e46-4da8-b2ef-49aa7508d4ce",
+            "image_url": "https://avatars.githubusercontent.com/u/36301374",
+            "last_name": "Murazik",
+            "name": "Marcella Murazik",
+            "telephones": [
+                {
+                    "telephone": "(482) 469-8067",
+                    "type": shared.LmsTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2022-06-19T13:55:47.489Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +185,11 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +199,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.student.patch_lms_student(request={
-        "lms_student": {},
+        "lms_student": {
+            "address": {
+                "address1": "94082 Kassandra Camp",
+                "address2": "Apt. 461",
+                "city": "New Ibrahimmouth",
+                "country_code": "US",
+                "postal_code": "52851",
+                "region": "Tennessee",
+                "region_code": "NV",
+            },
+            "created_at": parse_datetime("2020-03-23T06:59:29.777Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Marcella",
+            "id": "8c067562-a326-4d81-a8ae-f087841b1a98",
+            "image_url": "https://avatars.githubusercontent.com/u/36301374",
+            "last_name": "Murazik",
+            "name": "Marcella Murazik",
+            "telephones": [
+                {
+                    "telephone": "(482) 469-8067",
+                    "type": shared.LmsTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2022-06-19T13:55:47.495Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +308,11 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +322,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.student.update_lms_student(request={
-        "lms_student": {},
+        "lms_student": {
+            "address": {
+                "address1": "94082 Kassandra Camp",
+                "address2": "Apt. 461",
+                "city": "New Ibrahimmouth",
+                "country_code": "US",
+                "postal_code": "52851",
+                "region": "Tennessee",
+                "region_code": "NV",
+            },
+            "created_at": parse_datetime("2020-03-23T06:59:29.777Z"),
+            "emails": [
+                {},
+                {},
+            ],
+            "first_name": "Marcella",
+            "id": "8c067562-a326-4d81-a8ae-f087841b1a98",
+            "image_url": "https://avatars.githubusercontent.com/u/36301374",
+            "last_name": "Murazik",
+            "name": "Marcella Murazik",
+            "telephones": [
+                {
+                    "telephone": "(482) 469-8067",
+                    "type": shared.LmsTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2022-06-19T13:55:47.495Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

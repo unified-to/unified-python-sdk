@@ -17,10 +17,11 @@ Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="python" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.taxrate.create_accounting_taxrate(request={
-        "accounting_taxrate": {},
+        "accounting_taxrate": {
+            "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
+            "description": "Nemo atrox tricesimus creator aranea.",
+            "id": "a06c3544-caf7-4a72-9a80-b178c81f1bd1",
+            "is_active": False,
+            "metadata": [],
+            "name": "cogo",
+            "rate": 1.0,
+            "updated_at": parse_datetime("2025-11-04T07:53:07.001Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +167,11 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +181,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.taxrate.patch_accounting_taxrate(request={
-        "accounting_taxrate": {},
+        "accounting_taxrate": {
+            "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
+            "description": "Nemo atrox tricesimus creator aranea.",
+            "id": "8fa77bc6-6812-4b82-8d10-5c03bf48971c",
+            "is_active": False,
+            "metadata": [],
+            "name": "cogo",
+            "rate": 1.0,
+            "updated_at": parse_datetime("2025-11-04T07:53:07.007Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +272,11 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +286,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.taxrate.update_accounting_taxrate(request={
-        "accounting_taxrate": {},
+        "accounting_taxrate": {
+            "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
+            "description": "Nemo atrox tricesimus creator aranea.",
+            "id": "8fa77bc6-6812-4b82-8d10-5c03bf48971c",
+            "is_active": False,
+            "metadata": [],
+            "name": "cogo",
+            "rate": 1.0,
+            "updated_at": parse_datetime("2025-11-04T07:53:07.007Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

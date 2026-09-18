@@ -17,10 +17,11 @@ Create a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="python" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.paymentterm.create_accounting_paymentterm(request={
-        "accounting_paymentterm": {},
+        "accounting_paymentterm": {
+            "category": shared.Category.STANDARD,
+            "created_at": parse_datetime("2021-08-22T22:42:42.265Z"),
+            "day_of_month_due": 4.0,
+            "description": "Cogito pecco eos cultura.",
+            "discount_day_of_month": 13.0,
+            "discount_days": 4.0,
+            "discount_percent": 5.0,
+            "due_days": 57.0,
+            "due_next_month_days": 9.0,
+            "id": "521c3b7f-1411-4cdd-b4d6-b720a17bedf2",
+            "is_active": False,
+            "metadata": [],
+            "name": "Net 30",
+            "type": shared.AccountingPaymenttermType.NET_15,
+            "updated_at": parse_datetime("2025-12-11T11:06:20.942Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +174,11 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +188,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.paymentterm.patch_accounting_paymentterm(request={
-        "accounting_paymentterm": {},
+        "accounting_paymentterm": {
+            "category": shared.Category.STANDARD,
+            "created_at": parse_datetime("2021-08-22T22:42:42.265Z"),
+            "day_of_month_due": 4.0,
+            "description": "Cogito pecco eos cultura.",
+            "discount_day_of_month": 13.0,
+            "discount_days": 4.0,
+            "discount_percent": 5.0,
+            "due_days": 57.0,
+            "due_next_month_days": 9.0,
+            "id": "e5fb978b-ad68-4c8c-a957-b79b40fb97eb",
+            "is_active": False,
+            "metadata": [],
+            "name": "Net 30",
+            "type": shared.AccountingPaymenttermType.NET_15,
+            "updated_at": parse_datetime("2025-12-11T11:06:20.951Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +286,11 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +300,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.paymentterm.update_accounting_paymentterm(request={
-        "accounting_paymentterm": {},
+        "accounting_paymentterm": {
+            "category": shared.Category.STANDARD,
+            "created_at": parse_datetime("2021-08-22T22:42:42.265Z"),
+            "day_of_month_due": 4.0,
+            "description": "Cogito pecco eos cultura.",
+            "discount_day_of_month": 13.0,
+            "discount_days": 4.0,
+            "discount_percent": 5.0,
+            "due_days": 57.0,
+            "due_next_month_days": 9.0,
+            "id": "e5fb978b-ad68-4c8c-a957-b79b40fb97eb",
+            "is_active": False,
+            "metadata": [],
+            "name": "Net 30",
+            "type": shared.AccountingPaymenttermType.NET_15,
+            "updated_at": parse_datetime("2025-12-11T11:06:20.951Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

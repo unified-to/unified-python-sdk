@@ -17,10 +17,11 @@ Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="python" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankaccount.create_hris_bankaccount(request={
-        "hris_bankaccount": {},
+        "hris_bankaccount": {
+            "account_number": "****3777",
+            "account_number_last4": "3777",
+            "account_type": shared.HrisBankaccountAccountType.CHECKING,
+            "bank_name": "Huel Group",
+            "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
+            "id": "4e298ff9-1f66-4c1f-b1ec-5ee895cda7bf",
+            "is_primary": False,
+            "name": "Checking Account",
+            "routing_number": "448650724",
+            "updated_at": parse_datetime("2025-06-04T11:30:29.787Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +169,11 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +183,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankaccount.patch_hris_bankaccount(request={
-        "hris_bankaccount": {},
+        "hris_bankaccount": {
+            "account_number": "****3777",
+            "account_number_last4": "3777",
+            "account_type": shared.HrisBankaccountAccountType.CHECKING,
+            "bank_name": "Huel Group",
+            "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
+            "id": "6b53796b-c6e2-4608-939f-57d8d920c7b2",
+            "is_primary": False,
+            "name": "Checking Account",
+            "routing_number": "448650724",
+            "updated_at": parse_datetime("2025-06-04T11:30:29.792Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +276,11 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +290,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.bankaccount.update_hris_bankaccount(request={
-        "hris_bankaccount": {},
+        "hris_bankaccount": {
+            "account_number": "****3777",
+            "account_number_last4": "3777",
+            "account_type": shared.HrisBankaccountAccountType.CHECKING,
+            "bank_name": "Huel Group",
+            "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
+            "id": "6b53796b-c6e2-4608-939f-57d8d920c7b2",
+            "is_primary": False,
+            "name": "Checking Account",
+            "routing_number": "448650724",
+            "updated_at": parse_datetime("2025-06-04T11:30:29.792Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

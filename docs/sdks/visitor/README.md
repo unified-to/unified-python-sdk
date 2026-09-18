@@ -17,10 +17,11 @@ Create a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="python" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.visitor.create_analytics_visitor(request={
-        "analytics_visitor": {},
+        "analytics_visitor": {
+            "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "email": "Dallas_Mitchell@yahoo.com",
+            "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "id": "c4f48c8f-56d2-4cc8-b3f0-9a83509307e5",
+            "last_seen_at": parse_datetime("2021-12-04T18:09:09.077Z"),
+            "metadata": {
+                "segment": {},
+            },
+            "name": "Desiree O'Hara",
+            "total_events": 3639.0,
+            "updated_at": parse_datetime("2025-06-03T08:27:48.122Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +170,11 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +184,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.visitor.patch_analytics_visitor(request={
-        "analytics_visitor": {},
+        "analytics_visitor": {
+            "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "email": "Dallas_Mitchell@yahoo.com",
+            "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "id": "88e685e7-218d-418d-889f-1a6162b7ce74",
+            "last_seen_at": parse_datetime("2021-12-04T18:09:09.082Z"),
+            "metadata": {
+                "segment": {},
+            },
+            "name": "Desiree O'Hara",
+            "total_events": 3639.0,
+            "updated_at": parse_datetime("2025-06-03T08:27:48.137Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +278,11 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +292,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.visitor.update_analytics_visitor(request={
-        "analytics_visitor": {},
+        "analytics_visitor": {
+            "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "email": "Dallas_Mitchell@yahoo.com",
+            "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
+            "id": "88e685e7-218d-418d-889f-1a6162b7ce74",
+            "last_seen_at": parse_datetime("2021-12-04T18:09:09.082Z"),
+            "metadata": {
+                "segment": {},
+            },
+            "name": "Desiree O'Hara",
+            "total_events": 3639.0,
+            "updated_at": parse_datetime("2025-06-03T08:27:48.137Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

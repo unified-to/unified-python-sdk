@@ -29,10 +29,11 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="python" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" example="accounting_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -42,7 +43,74 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.create_accounting_contact(request={
-        "accounting_contact": {},
+        "accounting_contact": {
+            "associated_contacts": [
+                {
+                    "id": "64db133c-a40e-49c2-987d-c6a778d0f2c6",
+                    "name": "Delores Reynolds",
+                },
+                {
+                    "id": "c0cf85e1-b3ee-485e-82e0-ce6565489f11",
+                    "name": "Delores Reynolds",
+                },
+            ],
+            "billing_address": {
+                "address1": "2633 Stoney Lane",
+                "address2": "Suite 176",
+                "city": "Ladariusboro",
+                "country_code": "US",
+                "postal_code": "70131-2908",
+                "region": "Illinois",
+                "region_code": "NV",
+            },
+            "company_name": "Marquardt Inc",
+            "created_at": parse_datetime("2021-08-15T14:56:50.258Z"),
+            "currency": "ISK",
+            "emails": [
+                {
+                    "email": "Delores.Reynolds10@hotmail.com",
+                    "type": shared.AccountingEmailType.HOME,
+                },
+            ],
+            "first_name": "Delores",
+            "id": "a4d150ef-8494-4a1a-adab-ecb1cb1d56f3",
+            "identification": "amicitia",
+            "is_active": True,
+            "is_customer": True,
+            "last_name": "Reynolds",
+            "name": "Delores Reynolds",
+            "payment_methods": [
+                {
+                    "default": True,
+                    "id": "1383e031-5a5c-4a2d-ac0b-14791ac3db58",
+                    "name": "Visa 1234",
+                    "type": shared.AccountingContactPaymentMethodType.CARD,
+                },
+            ],
+            "portal_url": "https://scented-t-shirt.info/",
+            "shipping_address": {
+                "address1": "786 Renner Stream",
+                "address2": "Apt. 555",
+                "city": "Roanoke",
+                "country_code": "US",
+                "postal_code": "80686-7556",
+                "region": "Vermont",
+                "region_code": "NE",
+            },
+            "tax_exemption": shared.TaxExemption.RESALE,
+            "tax_number": "amplexus",
+            "telephones": [
+                {
+                    "telephone": "(427) 701-7160",
+                    "type": shared.AccountingTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(540) 913-9171",
+                    "type": shared.AccountingTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2023-12-04T22:27:39.732Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -76,10 +144,11 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="python" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" example="crm_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -89,7 +158,71 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.create_crm_contact(request={
-        "crm_contact": {},
+        "crm_contact": {
+            "address": {
+                "address1": "518 Brannon Burg",
+                "city": "East Helenebury",
+                "country_code": "US",
+                "postal_code": "92622-2406",
+                "region": "Vermont",
+                "region_code": "AZ",
+            },
+            "company": "Lowe - Jakubowski",
+            "created_at": parse_datetime("2021-01-02T00:41:38.885Z"),
+            "department": "systematic",
+            "emails": [
+                {
+                    "email": "Mohammad.Bartell45@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad.Bartell90@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad_Bartell@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+            ],
+            "first_name": "Mohammad",
+            "id": "956e8c73-33ab-4531-a448-4e88c8aefa51",
+            "image_url": "https://picsum.photos/seed/zmbPeg/2905/378",
+            "last_name": "Bartell",
+            "link_urls": [
+                "https://limited-parade.info",
+                "https://faint-papa.com/",
+                "https://windy-accountability.name",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "6d65426c-aac0-41b8-bcd3-c063e02e7f3e",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "autem",
+                },
+            ],
+            "name": "Mohammad Bartell",
+            "telephones": [
+                {
+                    "telephone": "(975) 986-1658",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+                {
+                    "telephone": "(489) 332-3509",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(205) 880-8886",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+            ],
+            "title": "National Tactics Analyst",
+            "updated_at": parse_datetime("2021-02-23T09:13:08.673Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -123,10 +256,11 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="python" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" example="uc_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -136,7 +270,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.create_uc_contact(request={
-        "uc_contact": {},
+        "uc_contact": {
+            "company": "Tillman Group",
+            "created_at": parse_datetime("2019-10-28T11:06:56.460Z"),
+            "emails": [
+                {
+                    "email": "Luther_Rogahn32@yahoo.com",
+                    "type": shared.UcEmailType.WORK,
+                },
+            ],
+            "first_name": "Luther",
+            "id": "7ffe79ab-179b-4292-be46-39b5ec7db1b0",
+            "last_name": "Rogahn",
+            "name": "Luther Rogahn",
+            "telephones": [
+                {
+                    "telephone": "(809) 992-1681",
+                    "type": shared.UcTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(868) 238-2746",
+                    "type": shared.UcTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(219) 736-0357",
+                    "type": shared.UcTelephoneType.MOBILE,
+                },
+            ],
+            "title": "Chief Optimization Executive",
+            "updated_at": parse_datetime("2023-11-18T22:29:57.338Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -449,10 +612,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -462,7 +626,74 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.patch_accounting_contact(request={
-        "accounting_contact": {},
+        "accounting_contact": {
+            "associated_contacts": [
+                {
+                    "id": "b60d88e0-5a87-43aa-be6f-5f253940e7b7",
+                    "name": "Delores Reynolds",
+                },
+                {
+                    "id": "d430e725-2cc2-4061-802d-24851f584e94",
+                    "name": "Delores Reynolds",
+                },
+            ],
+            "billing_address": {
+                "address1": "2633 Stoney Lane",
+                "address2": "Suite 176",
+                "city": "Ladariusboro",
+                "country_code": "US",
+                "postal_code": "70131-2908",
+                "region": "Illinois",
+                "region_code": "NV",
+            },
+            "company_name": "Marquardt Inc",
+            "created_at": parse_datetime("2021-08-15T14:56:50.258Z"),
+            "currency": "ISK",
+            "emails": [
+                {
+                    "email": "Delores.Reynolds10@hotmail.com",
+                    "type": shared.AccountingEmailType.HOME,
+                },
+            ],
+            "first_name": "Delores",
+            "id": "4a7ec450-6956-4149-b102-9dfa8738e269",
+            "identification": "amicitia",
+            "is_active": True,
+            "is_customer": True,
+            "last_name": "Reynolds",
+            "name": "Delores Reynolds",
+            "payment_methods": [
+                {
+                    "default": True,
+                    "id": "0ea87d98-73a6-4440-83d2-2e0720c7955d",
+                    "name": "Visa 1234",
+                    "type": shared.AccountingContactPaymentMethodType.CARD,
+                },
+            ],
+            "portal_url": "https://scented-t-shirt.info/",
+            "shipping_address": {
+                "address1": "786 Renner Stream",
+                "address2": "Apt. 555",
+                "city": "Roanoke",
+                "country_code": "US",
+                "postal_code": "80686-7556",
+                "region": "Vermont",
+                "region_code": "NE",
+            },
+            "tax_exemption": shared.TaxExemption.RESALE,
+            "tax_number": "amplexus",
+            "telephones": [
+                {
+                    "telephone": "(427) 701-7160",
+                    "type": shared.AccountingTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(540) 913-9171",
+                    "type": shared.AccountingTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2023-12-04T22:27:39.748Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -497,10 +728,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -510,7 +742,71 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.patch_crm_contact(request={
-        "crm_contact": {},
+        "crm_contact": {
+            "address": {
+                "address1": "518 Brannon Burg",
+                "city": "East Helenebury",
+                "country_code": "US",
+                "postal_code": "92622-2406",
+                "region": "Vermont",
+                "region_code": "AZ",
+            },
+            "company": "Lowe - Jakubowski",
+            "created_at": parse_datetime("2021-01-02T00:41:38.885Z"),
+            "department": "systematic",
+            "emails": [
+                {
+                    "email": "Mohammad.Bartell45@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad.Bartell90@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad_Bartell@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+            ],
+            "first_name": "Mohammad",
+            "id": "bc1f9041-39e8-4ec6-b5b3-f07e2fd9ceb3",
+            "image_url": "https://picsum.photos/seed/zmbPeg/2905/378",
+            "last_name": "Bartell",
+            "link_urls": [
+                "https://limited-parade.info",
+                "https://faint-papa.com/",
+                "https://windy-accountability.name",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "b29adf9d-8a6d-4c37-8e8d-d3d864615a84",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "autem",
+                },
+            ],
+            "name": "Mohammad Bartell",
+            "telephones": [
+                {
+                    "telephone": "(975) 986-1658",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+                {
+                    "telephone": "(489) 332-3509",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(205) 880-8886",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+            ],
+            "title": "National Tactics Analyst",
+            "updated_at": parse_datetime("2021-02-23T09:13:08.674Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -545,10 +841,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -558,7 +855,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.patch_uc_contact(request={
-        "uc_contact": {},
+        "uc_contact": {
+            "company": "Tillman Group",
+            "created_at": parse_datetime("2019-10-28T11:06:56.460Z"),
+            "emails": [
+                {
+                    "email": "Luther_Rogahn32@yahoo.com",
+                    "type": shared.UcEmailType.WORK,
+                },
+            ],
+            "first_name": "Luther",
+            "id": "8a9d8dfd-1a11-4da9-a537-8e7072a26094",
+            "last_name": "Rogahn",
+            "name": "Luther Rogahn",
+            "telephones": [
+                {
+                    "telephone": "(809) 992-1681",
+                    "type": shared.UcTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(868) 238-2746",
+                    "type": shared.UcTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(219) 736-0357",
+                    "type": shared.UcTelephoneType.MOBILE,
+                },
+            ],
+            "title": "Chief Optimization Executive",
+            "updated_at": parse_datetime("2023-11-18T22:29:57.342Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -734,10 +1060,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -747,7 +1074,74 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.update_accounting_contact(request={
-        "accounting_contact": {},
+        "accounting_contact": {
+            "associated_contacts": [
+                {
+                    "id": "b60d88e0-5a87-43aa-be6f-5f253940e7b7",
+                    "name": "Delores Reynolds",
+                },
+                {
+                    "id": "d430e725-2cc2-4061-802d-24851f584e94",
+                    "name": "Delores Reynolds",
+                },
+            ],
+            "billing_address": {
+                "address1": "2633 Stoney Lane",
+                "address2": "Suite 176",
+                "city": "Ladariusboro",
+                "country_code": "US",
+                "postal_code": "70131-2908",
+                "region": "Illinois",
+                "region_code": "NV",
+            },
+            "company_name": "Marquardt Inc",
+            "created_at": parse_datetime("2021-08-15T14:56:50.258Z"),
+            "currency": "ISK",
+            "emails": [
+                {
+                    "email": "Delores.Reynolds10@hotmail.com",
+                    "type": shared.AccountingEmailType.HOME,
+                },
+            ],
+            "first_name": "Delores",
+            "id": "4a7ec450-6956-4149-b102-9dfa8738e269",
+            "identification": "amicitia",
+            "is_active": True,
+            "is_customer": True,
+            "last_name": "Reynolds",
+            "name": "Delores Reynolds",
+            "payment_methods": [
+                {
+                    "default": True,
+                    "id": "0ea87d98-73a6-4440-83d2-2e0720c7955d",
+                    "name": "Visa 1234",
+                    "type": shared.AccountingContactPaymentMethodType.CARD,
+                },
+            ],
+            "portal_url": "https://scented-t-shirt.info/",
+            "shipping_address": {
+                "address1": "786 Renner Stream",
+                "address2": "Apt. 555",
+                "city": "Roanoke",
+                "country_code": "US",
+                "postal_code": "80686-7556",
+                "region": "Vermont",
+                "region_code": "NE",
+            },
+            "tax_exemption": shared.TaxExemption.RESALE,
+            "tax_number": "amplexus",
+            "telephones": [
+                {
+                    "telephone": "(427) 701-7160",
+                    "type": shared.AccountingTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(540) 913-9171",
+                    "type": shared.AccountingTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2023-12-04T22:27:39.748Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -782,10 +1176,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -795,7 +1190,71 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.update_crm_contact(request={
-        "crm_contact": {},
+        "crm_contact": {
+            "address": {
+                "address1": "518 Brannon Burg",
+                "city": "East Helenebury",
+                "country_code": "US",
+                "postal_code": "92622-2406",
+                "region": "Vermont",
+                "region_code": "AZ",
+            },
+            "company": "Lowe - Jakubowski",
+            "created_at": parse_datetime("2021-01-02T00:41:38.885Z"),
+            "department": "systematic",
+            "emails": [
+                {
+                    "email": "Mohammad.Bartell45@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad.Bartell90@hotmail.com",
+                    "type": shared.CrmEmailType.HOME,
+                },
+                {
+                    "email": "Mohammad_Bartell@hotmail.com",
+                    "type": shared.CrmEmailType.WORK,
+                },
+            ],
+            "first_name": "Mohammad",
+            "id": "bc1f9041-39e8-4ec6-b5b3-f07e2fd9ceb3",
+            "image_url": "https://picsum.photos/seed/zmbPeg/2905/378",
+            "last_name": "Bartell",
+            "link_urls": [
+                "https://limited-parade.info",
+                "https://faint-papa.com/",
+                "https://windy-accountability.name",
+            ],
+            "metadata": [
+                {
+                    "extra_data": {
+                        "display_name": "Custom Property",
+                    },
+                    "format_": shared.CrmMetadataFormat.TEXT,
+                    "id": "b29adf9d-8a6d-4c37-8e8d-d3d864615a84",
+                    "namespace": "custom",
+                    "slug": "custom_property",
+                    "value": "autem",
+                },
+            ],
+            "name": "Mohammad Bartell",
+            "telephones": [
+                {
+                    "telephone": "(975) 986-1658",
+                    "type": shared.CrmTelephoneType.WORK,
+                },
+                {
+                    "telephone": "(489) 332-3509",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(205) 880-8886",
+                    "type": shared.CrmTelephoneType.HOME,
+                },
+            ],
+            "title": "National Tactics Analyst",
+            "updated_at": parse_datetime("2021-02-23T09:13:08.674Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -830,10 +1289,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -843,7 +1303,36 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.update_uc_contact(request={
-        "uc_contact": {},
+        "uc_contact": {
+            "company": "Tillman Group",
+            "created_at": parse_datetime("2019-10-28T11:06:56.460Z"),
+            "emails": [
+                {
+                    "email": "Luther_Rogahn32@yahoo.com",
+                    "type": shared.UcEmailType.WORK,
+                },
+            ],
+            "first_name": "Luther",
+            "id": "8a9d8dfd-1a11-4da9-a537-8e7072a26094",
+            "last_name": "Rogahn",
+            "name": "Luther Rogahn",
+            "telephones": [
+                {
+                    "telephone": "(809) 992-1681",
+                    "type": shared.UcTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(868) 238-2746",
+                    "type": shared.UcTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(219) 736-0357",
+                    "type": shared.UcTelephoneType.MOBILE,
+                },
+            ],
+            "title": "Chief Optimization Executive",
+            "updated_at": parse_datetime("2023-11-18T22:29:57.342Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

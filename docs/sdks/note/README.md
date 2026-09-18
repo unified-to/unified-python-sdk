@@ -17,10 +17,11 @@ Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="python" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" example="ticketing_note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.note.create_ticketing_note(request={
-        "ticketing_note": {},
+        "ticketing_note": {
+            "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
+            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
+            "id": "0a4a5e64-48a5-4fd9-b0c9-24cc704840a6",
+            "updated_at": parse_datetime("2024-09-05T15:38:07.962Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +163,11 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +177,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.note.patch_ticketing_note(request={
-        "ticketing_note": {},
+        "ticketing_note": {
+            "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
+            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
+            "id": "cf1b0373-6e5a-409c-a90c-214e826c7259",
+            "updated_at": parse_datetime("2024-09-05T15:38:07.966Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +264,11 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +278,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.note.update_ticketing_note(request={
-        "ticketing_note": {},
+        "ticketing_note": {
+            "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
+            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
+            "id": "cf1b0373-6e5a-409c-a90c-214e826c7259",
+            "updated_at": parse_datetime("2024-09-05T15:38:07.966Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

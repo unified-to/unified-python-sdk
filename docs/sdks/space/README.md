@@ -17,10 +17,11 @@ Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="python" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" example="kms_space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.space.create_kms_space(request={
-        "kms_space": {},
+        "kms_space": {
+            "created_at": parse_datetime("2022-10-31T00:56:54.246Z"),
+            "description": "Acer.",
+            "id": "3b86edf4-7fb7-4cc4-b75e-6c667e0740d5",
+            "is_active": False,
+            "name": "into nor afore",
+            "updated_at": parse_datetime("2025-12-03T15:51:21.481Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +165,11 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +179,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.space.patch_kms_space(request={
-        "kms_space": {},
+        "kms_space": {
+            "created_at": parse_datetime("2022-10-31T00:56:54.246Z"),
+            "description": "Acer.",
+            "id": "c68ac251-79ca-4c1f-ae45-80b4ebb07759",
+            "is_active": False,
+            "name": "into nor afore",
+            "updated_at": parse_datetime("2025-12-03T15:51:21.485Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +268,11 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +282,14 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.space.update_kms_space(request={
-        "kms_space": {},
+        "kms_space": {
+            "created_at": parse_datetime("2022-10-31T00:56:54.246Z"),
+            "description": "Acer.",
+            "id": "c68ac251-79ca-4c1f-ae45-80b4ebb07759",
+            "is_active": False,
+            "name": "into nor afore",
+            "updated_at": parse_datetime("2025-12-03T15:51:21.485Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -139,10 +139,11 @@ Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="python" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -152,7 +153,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "d0de0893-6cd3-4f44-9f1b-0d2d89c37c03",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.644Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -186,10 +211,11 @@ Create a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="python" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -199,7 +225,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_bankfeedaccount(request={
-        "accounting_bankfeedaccount": {},
+        "accounting_bankfeedaccount": {
+            "account_id": "baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1",
+            "account_number": "30369722",
+            "account_number_last4": "9722",
+            "account_type": shared.AccountType.LOAN,
+            "balance": 90358.0,
+            "bank_name": "Weissnat Inc",
+            "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "currency": "SSP",
+            "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "id": "88021d36-d2e1-4067-8071-424af1c54fed",
+            "name": "Corwin, Donnelly and Connelly Savings",
+            "routing_number": "667753156",
+            "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
+            "updated_at": parse_datetime("2024-04-11T12:56:36.249Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -233,10 +274,11 @@ Create a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="python" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -246,7 +288,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_bankfeedtransaction(request={
-        "accounting_bankfeedtransaction": {},
+        "accounting_bankfeedtransaction": {
+            "account_id": "b7dc4175-1368-4b89-a700-d621b6666648",
+            "amount": 60889.0,
+            "bank_category": "Games",
+            "bankfeedaccount_id": "34c1d05f-5b62-4bcd-9121-3be8b720941f",
+            "category_ids": [],
+            "contact_id": "1ef58ebe-f9c9-46f6-9d9c-2df2658503be",
+            "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
+            "currency": "SRD",
+            "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
+            "id": "d7e5f1b9-8fad-485f-85be-e2c6175122b6",
+            "is_pending": True,
+            "merchant_name": "Reichert, Erdman and Tillman",
+            "posted_at": parse_datetime("2025-03-23T18:33:52.190Z"),
+            "reference": "93642593",
+            "transaction_at": parse_datetime("2022-07-27T19:48:08.850Z"),
+            "type": shared.AccountingBankfeedtransactionType.CREDIT,
+            "updated_at": parse_datetime("2022-05-23T20:47:18.778Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -280,10 +340,11 @@ Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="python" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -293,7 +354,30 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_bill(request={
-        "accounting_bill": {},
+        "accounting_bill": {
+            "attachments": [],
+            "bill_number": "vitae",
+            "category_ids": [],
+            "created_at": parse_datetime("2019-08-08T23:03:14.104Z"),
+            "currency": "AUD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2019-08-11T20:52:55.321Z"),
+            "extended_notes": [],
+            "id": "1627318e-450f-4bd4-9eb4-a8962bccdcb6",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Tutamen cilicium infit.",
+            "payment_collection_method": shared.PaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "payments": [],
+            "posted_at": parse_datetime("2024-04-04T07:22:54.368Z"),
+            "send": True,
+            "status": shared.AccountingBillStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.Term.NET_10,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2025-01-29T00:57:24.292Z"),
+            "url": "https://coarse-interviewer.biz/",
+        },
         "connection_id": "<id>",
     })
 
@@ -327,10 +411,11 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="python" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -340,7 +425,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_category(request={
-        "accounting_category": {},
+        "accounting_category": {
+            "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
+            "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
+            "id": "3db0fe6a-c3a2-4267-8642-617480bed288",
+            "is_active": False,
+            "metadata": [],
+            "name": "Electronic Cotton Shoes",
+            "updated_at": parse_datetime("2025-08-20T06:35:08.868Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -374,10 +467,11 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="python" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" example="accounting_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -387,7 +481,74 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_contact(request={
-        "accounting_contact": {},
+        "accounting_contact": {
+            "associated_contacts": [
+                {
+                    "id": "64db133c-a40e-49c2-987d-c6a778d0f2c6",
+                    "name": "Delores Reynolds",
+                },
+                {
+                    "id": "c0cf85e1-b3ee-485e-82e0-ce6565489f11",
+                    "name": "Delores Reynolds",
+                },
+            ],
+            "billing_address": {
+                "address1": "2633 Stoney Lane",
+                "address2": "Suite 176",
+                "city": "Ladariusboro",
+                "country_code": "US",
+                "postal_code": "70131-2908",
+                "region": "Illinois",
+                "region_code": "NV",
+            },
+            "company_name": "Marquardt Inc",
+            "created_at": parse_datetime("2021-08-15T14:56:50.258Z"),
+            "currency": "ISK",
+            "emails": [
+                {
+                    "email": "Delores.Reynolds10@hotmail.com",
+                    "type": shared.AccountingEmailType.HOME,
+                },
+            ],
+            "first_name": "Delores",
+            "id": "a4d150ef-8494-4a1a-adab-ecb1cb1d56f3",
+            "identification": "amicitia",
+            "is_active": True,
+            "is_customer": True,
+            "last_name": "Reynolds",
+            "name": "Delores Reynolds",
+            "payment_methods": [
+                {
+                    "default": True,
+                    "id": "1383e031-5a5c-4a2d-ac0b-14791ac3db58",
+                    "name": "Visa 1234",
+                    "type": shared.AccountingContactPaymentMethodType.CARD,
+                },
+            ],
+            "portal_url": "https://scented-t-shirt.info/",
+            "shipping_address": {
+                "address1": "786 Renner Stream",
+                "address2": "Apt. 555",
+                "city": "Roanoke",
+                "country_code": "US",
+                "postal_code": "80686-7556",
+                "region": "Vermont",
+                "region_code": "NE",
+            },
+            "tax_exemption": shared.TaxExemption.RESALE,
+            "tax_number": "amplexus",
+            "telephones": [
+                {
+                    "telephone": "(427) 701-7160",
+                    "type": shared.AccountingTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(540) 913-9171",
+                    "type": shared.AccountingTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2023-12-04T22:27:39.732Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -421,10 +582,11 @@ Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="python" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -434,7 +596,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_creditmemo(request={
-        "accounting_creditmemo": {},
+        "accounting_creditmemo": {
+            "applications": [],
+            "attachments": [
+                {
+                    "download_url": "https://enlightened-chairperson.com/",
+                    "id": "a2e78277-a327-461a-bdfc-588c1e4cc0ce",
+                    "mime_type": "complectus",
+                    "name": "thesis",
+                },
+            ],
+            "created_at": parse_datetime("2023-09-20T01:47:01.571Z"),
+            "creditmemo_number": "ulterius",
+            "currency": "MKD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
+            "id": "d9d43cc4-e6f7-4ef3-8000-d90df9f449e5",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Dedecor amo adfero torqueo quas.",
+            "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "posted_at": parse_datetime("2025-11-15T11:02:17.288Z"),
+            "refund_amount": 0.0,
+            "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
+            "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
+            "send": False,
+            "status": shared.AccountingCreditmemoStatus.PAID,
+            "tax_amount": 0.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2024-11-15T13:32:18.737Z"),
+            "url": "https://lighthearted-bandwidth.net/",
+        },
         "connection_id": "<id>",
     })
 
@@ -468,10 +660,11 @@ Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="python" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -481,7 +674,44 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_expense(request={
-        "accounting_expense": {},
+        "accounting_expense": {
+            "approved_at": parse_datetime("2026-05-09T18:22:43.545Z"),
+            "attachments": [
+                {
+                    "download_url": "https://ripe-napkin.biz/",
+                    "id": "bd5cc77e-13cc-4bca-a782-8ff91143671d",
+                    "mime_type": "annus",
+                    "name": "cohibeo",
+                },
+            ],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
+            "currency": "SSP",
+            "external_number": "necessitatibus",
+            "id": "88076234-223e-4b3a-aca4-464f2e81b951",
+            "lineitems": [
+                {
+                    "id": "6ca0a920-8d40-4469-aa13-8159a794e842",
+                    "item_description": "Innovative Table featuring left technology and Rubber construction",
+                    "item_name": "Luxurious Cotton Pizza",
+                    "item_sku": "978-0-8324-6620-5",
+                    "notes": "Degusto conventus defendo valetudo.",
+                    "tax_amount": 2501.0,
+                    "total_amount": 168.0,
+                    "unit_amount": 3059.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Refined Steel Shoes",
+            "payment_method": "CASH",
+            "posted_at": parse_datetime("2021-06-04T05:03:49.243Z"),
+            "reimbursed_amount": 1833.0,
+            "status": shared.AccountingExpenseStatus.SUBMITTED,
+            "tax_amount": 2602.0,
+            "total_amount": 3580.0,
+            "updated_at": parse_datetime("2026-05-09T18:22:43.545Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -515,10 +745,11 @@ Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="python" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -528,7 +759,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_invoice(request={
-        "accounting_invoice": {},
+        "accounting_invoice": {
+            "attachments": [
+                {
+                    "download_url": "https://glossy-markup.net/",
+                    "id": "6166f06c-cb77-42dd-b349-592c6cdfad5d",
+                    "mime_type": "benevolentia",
+                    "name": "vespillo",
+                },
+            ],
+            "balance_amount": -1.0,
+            "category_ids": [],
+            "created_at": parse_datetime("2022-11-07T14:17:29.587Z"),
+            "currency": "RWF",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
+            "extended_notes": [],
+            "id": "8ba2d961-496b-4dc9-bacb-595ccd9a3734",
+            "invoice_number": "vinco",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Auctus comburo clarus ubi.",
+            "paid_amount": 0.0,
+            "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
+            "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
+            "payments": [],
+            "posted_at": parse_datetime("2026-03-26T22:46:20.573Z"),
+            "reference": "adinventitias",
+            "send": True,
+            "status": shared.AccountingInvoiceStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.AccountingInvoiceTerm.NET_45,
+            "total_amount": 0.0,
+            "type": shared.AccountingInvoiceType.CREDITMEMO,
+            "updated_at": parse_datetime("2023-02-06T06:48:43.166Z"),
+            "url": "https://gifted-yarmulke.info/",
+        },
         "connection_id": "<id>",
     })
 
@@ -562,10 +828,11 @@ Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="python" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -575,7 +842,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_journal(request={
-        "accounting_journal": {},
+        "accounting_journal": {
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
+            "currency": "FKP",
+            "description": "Calco constans adipisci.",
+            "id": "f509f941-ad29-4b9d-b184-a751b62a37d6",
+            "posted_at": parse_datetime("2023-10-19T01:51:30.395Z"),
+            "reference": "ullam",
+            "source": "crustulum",
+            "tax_amount": 78672.0,
+            "updated_at": parse_datetime("2022-01-01T11:08:39.568Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -609,10 +888,11 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="python" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -622,7 +902,35 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_order(request={
-        "accounting_order": {},
+        "accounting_order": {
+            "billing_address": {
+                "address1": "802 Bechtelar Park",
+                "address2": "Apt. 436",
+                "city": "Daniellaville",
+                "country_code": "US",
+                "postal_code": "36947",
+                "region": "Wisconsin",
+                "region_code": "NY",
+            },
+            "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
+            "currency": "USD",
+            "id": "75670c85-d5fc-4880-bc55-8ed412c74b8f",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2022-04-05T00:14:19.079Z"),
+            "shipping_address": {
+                "address1": "9745 Betty Shore",
+                "city": "South Alainaland",
+                "country_code": "US",
+                "postal_code": "25274-7654",
+                "region": "New Hampshire",
+                "region_code": "LA",
+            },
+            "status": shared.AccountingOrderStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "type": shared.AccountingOrderType.PURCHASE,
+            "updated_at": parse_datetime("2021-06-17T22:40:34.509Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -656,10 +964,11 @@ Create a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="python" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -669,7 +978,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_paymentterm(request={
-        "accounting_paymentterm": {},
+        "accounting_paymentterm": {
+            "category": shared.Category.STANDARD,
+            "created_at": parse_datetime("2021-08-22T22:42:42.265Z"),
+            "day_of_month_due": 4.0,
+            "description": "Cogito pecco eos cultura.",
+            "discount_day_of_month": 13.0,
+            "discount_days": 4.0,
+            "discount_percent": 5.0,
+            "due_days": 57.0,
+            "due_next_month_days": 9.0,
+            "id": "521c3b7f-1411-4cdd-b4d6-b720a17bedf2",
+            "is_active": False,
+            "metadata": [],
+            "name": "Net 30",
+            "type": shared.AccountingPaymenttermType.NET_15,
+            "updated_at": parse_datetime("2025-12-11T11:06:20.942Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -750,10 +1075,11 @@ Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="python" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -763,7 +1089,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_purchaseorder(request={
-        "accounting_purchaseorder": {},
+        "accounting_purchaseorder": {
+            "billing_address": {
+                "address1": "37214 Tanya Walks",
+                "city": "South Annabelleton",
+                "country_code": "US",
+                "postal_code": "30337",
+                "region": "Nevada",
+                "region_code": "MA",
+            },
+            "category_ids": [],
+            "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
+            "currency": "ZMW",
+            "id": "7ca20b57-36d7-416c-895f-ebd50bd69068",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2025-04-25T03:31:00.662Z"),
+            "shipping_address": {
+                "address1": "649 Maggio Overpass",
+                "city": "Lake Jaylan",
+                "country_code": "US",
+                "postal_code": "99211-6547",
+                "region": "North Carolina",
+                "region_code": "ID",
+            },
+            "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2021-02-26T03:18:45.818Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -844,10 +1197,11 @@ Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="python" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -857,7 +1211,56 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_salesorder(request={
-        "accounting_salesorder": {},
+        "accounting_salesorder": {
+            "billing_address": {
+                "address1": "26530 Stroman Rest",
+                "address2": "Suite 801",
+                "city": "Pocatello",
+                "country_code": "US",
+                "postal_code": "05015-8546",
+                "region": "Louisiana",
+                "region_code": "MO",
+            },
+            "category_ids": [],
+            "closed_at": parse_datetime("2023-08-16T21:47:16.752Z"),
+            "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
+            "currency": "ANG",
+            "discount_amount": 99.0,
+            "employee_user_id": "4a6b8990-c85a-499f-82d0-5011c3c95a0b",
+            "fees": [
+                {
+                    "amount": 519.0,
+                    "currency": "XCD",
+                    "type": shared.AccountingFeeType.PROMOTION,
+                },
+            ],
+            "fulfillment_type": shared.FulfillmentType.TAKEOUT,
+            "guest_count": 8.0,
+            "id": "8ab70945-b5d4-4f64-a9c3-bd5af04ec1cb",
+            "lineitems": [],
+            "metadata": [],
+            "order_number": "988187",
+            "payments": [],
+            "posted_at": parse_datetime("2026-01-11T02:10:29.889Z"),
+            "refunded_amount": 0.0,
+            "sales_channel": "Harvey, Collier and Weimann",
+            "service_charge_amount": 63.0,
+            "shipping_address": {
+                "address1": "9878 Bradley Mill",
+                "address2": "Apt. 215",
+                "city": "Port Matildestad",
+                "country_code": "US",
+                "postal_code": "07989-2148",
+                "region": "Arkansas",
+                "region_code": "AK",
+            },
+            "status": shared.AccountingSalesorderStatus.REFUNDED,
+            "subtotal_amount": 0.0,
+            "tax_amount": 63.0,
+            "tip_amount": 34.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-02-10T18:49:08.307Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -891,10 +1294,11 @@ Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="python" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -904,7 +1308,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_taxrate(request={
-        "accounting_taxrate": {},
+        "accounting_taxrate": {
+            "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
+            "description": "Nemo atrox tricesimus creator aranea.",
+            "id": "a06c3544-caf7-4a72-9a80-b178c81f1bd1",
+            "is_active": False,
+            "metadata": [],
+            "name": "cogo",
+            "rate": 1.0,
+            "updated_at": parse_datetime("2025-11-04T07:53:07.001Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -938,10 +1351,11 @@ Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="python" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -951,7 +1365,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_transaction(request={
-        "accounting_transaction": {},
+        "accounting_transaction": {
+            "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "id": "8bad21b5-c9a3-4b30-99e9-f1c19b0faf34",
+            "lineitems": [
+                {
+                    "category_ids": [],
+                    "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
+                    "id": "882cb0c8-fff0-4acf-a65b-f11a7921f17e",
+                    "name": "Salad",
+                    "object_type": "delicate",
+                    "total_amount": 58531.0,
+                    "unit_amount": 536.0,
+                    "unit_quantity": 91.0,
+                },
+            ],
+            "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "tax_amount": 0.0,
+            "total_amount": 94452.0,
+            "updated_at": parse_datetime("2021-09-10T02:36:26.081Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -985,10 +1418,11 @@ Create a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="python" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -998,7 +1432,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_vendorcredit(request={
-        "accounting_vendorcredit": {},
+        "accounting_vendorcredit": {
+            "applications": [],
+            "apply_amount": 1.0,
+            "balance_amount": 0.0,
+            "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
+            "currency": "KGS",
+            "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
+            "id": "b95b7aab-87cc-4c2d-b4d8-be2bc44abf20",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Conatus cruciamentum decor avaritia tantum.",
+            "posted_at": parse_datetime("2023-09-28T16:43:35.372Z"),
+            "status": shared.AccountingVendorcreditStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2023-11-26T14:35:38.362Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -3450,10 +3899,11 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3463,7 +3913,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "f8647ab4-1089-471e-82b9-db710d4b4cd1",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.645Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3498,10 +3972,11 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3511,7 +3986,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_bankfeedaccount(request={
-        "accounting_bankfeedaccount": {},
+        "accounting_bankfeedaccount": {
+            "account_id": "baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1",
+            "account_number": "30369722",
+            "account_number_last4": "9722",
+            "account_type": shared.AccountType.LOAN,
+            "balance": 90358.0,
+            "bank_name": "Weissnat Inc",
+            "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "currency": "SSP",
+            "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "id": "71af6e72-4ef0-4ca2-accd-2e4a5df1789b",
+            "name": "Corwin, Donnelly and Connelly Savings",
+            "routing_number": "667753156",
+            "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
+            "updated_at": parse_datetime("2024-04-11T12:56:36.252Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3546,10 +4036,11 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3559,7 +4050,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_bankfeedtransaction(request={
-        "accounting_bankfeedtransaction": {},
+        "accounting_bankfeedtransaction": {
+            "account_id": "b7dc4175-1368-4b89-a700-d621b6666648",
+            "amount": 60889.0,
+            "bank_category": "Games",
+            "bankfeedaccount_id": "34c1d05f-5b62-4bcd-9121-3be8b720941f",
+            "category_ids": [],
+            "contact_id": "1ef58ebe-f9c9-46f6-9d9c-2df2658503be",
+            "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
+            "currency": "SRD",
+            "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
+            "id": "0fc0602a-eb02-41c9-ae51-62d4f9d00e2a",
+            "is_pending": True,
+            "merchant_name": "Reichert, Erdman and Tillman",
+            "posted_at": parse_datetime("2025-03-23T18:33:52.195Z"),
+            "reference": "93642593",
+            "transaction_at": parse_datetime("2022-07-27T19:48:08.850Z"),
+            "type": shared.AccountingBankfeedtransactionType.CREDIT,
+            "updated_at": parse_datetime("2022-05-23T20:47:18.778Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3594,10 +4103,11 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3607,7 +4117,30 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_bill(request={
-        "accounting_bill": {},
+        "accounting_bill": {
+            "attachments": [],
+            "bill_number": "vitae",
+            "category_ids": [],
+            "created_at": parse_datetime("2019-08-08T23:03:14.104Z"),
+            "currency": "AUD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2019-08-11T20:52:55.321Z"),
+            "extended_notes": [],
+            "id": "3f483847-c69d-4f32-b681-5b73801236b0",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Tutamen cilicium infit.",
+            "payment_collection_method": shared.PaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "payments": [],
+            "posted_at": parse_datetime("2024-04-04T07:22:54.390Z"),
+            "send": True,
+            "status": shared.AccountingBillStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.Term.NET_10,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2025-01-29T00:57:24.319Z"),
+            "url": "https://coarse-interviewer.biz/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3642,10 +4175,11 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3655,7 +4189,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_category(request={
-        "accounting_category": {},
+        "accounting_category": {
+            "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
+            "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
+            "id": "93277723-e046-44aa-a026-45d084b846ba",
+            "is_active": False,
+            "metadata": [],
+            "name": "Electronic Cotton Shoes",
+            "updated_at": parse_datetime("2025-08-20T06:35:08.879Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3690,10 +4232,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3703,7 +4246,74 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_contact(request={
-        "accounting_contact": {},
+        "accounting_contact": {
+            "associated_contacts": [
+                {
+                    "id": "b60d88e0-5a87-43aa-be6f-5f253940e7b7",
+                    "name": "Delores Reynolds",
+                },
+                {
+                    "id": "d430e725-2cc2-4061-802d-24851f584e94",
+                    "name": "Delores Reynolds",
+                },
+            ],
+            "billing_address": {
+                "address1": "2633 Stoney Lane",
+                "address2": "Suite 176",
+                "city": "Ladariusboro",
+                "country_code": "US",
+                "postal_code": "70131-2908",
+                "region": "Illinois",
+                "region_code": "NV",
+            },
+            "company_name": "Marquardt Inc",
+            "created_at": parse_datetime("2021-08-15T14:56:50.258Z"),
+            "currency": "ISK",
+            "emails": [
+                {
+                    "email": "Delores.Reynolds10@hotmail.com",
+                    "type": shared.AccountingEmailType.HOME,
+                },
+            ],
+            "first_name": "Delores",
+            "id": "4a7ec450-6956-4149-b102-9dfa8738e269",
+            "identification": "amicitia",
+            "is_active": True,
+            "is_customer": True,
+            "last_name": "Reynolds",
+            "name": "Delores Reynolds",
+            "payment_methods": [
+                {
+                    "default": True,
+                    "id": "0ea87d98-73a6-4440-83d2-2e0720c7955d",
+                    "name": "Visa 1234",
+                    "type": shared.AccountingContactPaymentMethodType.CARD,
+                },
+            ],
+            "portal_url": "https://scented-t-shirt.info/",
+            "shipping_address": {
+                "address1": "786 Renner Stream",
+                "address2": "Apt. 555",
+                "city": "Roanoke",
+                "country_code": "US",
+                "postal_code": "80686-7556",
+                "region": "Vermont",
+                "region_code": "NE",
+            },
+            "tax_exemption": shared.TaxExemption.RESALE,
+            "tax_number": "amplexus",
+            "telephones": [
+                {
+                    "telephone": "(427) 701-7160",
+                    "type": shared.AccountingTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(540) 913-9171",
+                    "type": shared.AccountingTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2023-12-04T22:27:39.748Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3738,10 +4348,11 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3751,7 +4362,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_creditmemo(request={
-        "accounting_creditmemo": {},
+        "accounting_creditmemo": {
+            "applications": [],
+            "attachments": [
+                {
+                    "download_url": "https://enlightened-chairperson.com/",
+                    "id": "59c8a1c4-da42-4783-a812-64dcb296cd11",
+                    "mime_type": "complectus",
+                    "name": "thesis",
+                },
+            ],
+            "created_at": parse_datetime("2023-09-20T01:47:01.571Z"),
+            "creditmemo_number": "ulterius",
+            "currency": "MKD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
+            "id": "9d39b333-dc7c-4257-9d31-6224e3cf763f",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Dedecor amo adfero torqueo quas.",
+            "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "posted_at": parse_datetime("2025-11-15T11:02:17.323Z"),
+            "refund_amount": 0.0,
+            "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
+            "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
+            "send": False,
+            "status": shared.AccountingCreditmemoStatus.PAID,
+            "tax_amount": 0.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2024-11-15T13:32:18.756Z"),
+            "url": "https://lighthearted-bandwidth.net/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3786,10 +4427,11 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3799,7 +4441,44 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_expense(request={
-        "accounting_expense": {},
+        "accounting_expense": {
+            "approved_at": parse_datetime("2026-05-09T18:22:43.593Z"),
+            "attachments": [
+                {
+                    "download_url": "https://ripe-napkin.biz/",
+                    "id": "a8e3f070-1872-415b-9119-ca0b34b31468",
+                    "mime_type": "annus",
+                    "name": "cohibeo",
+                },
+            ],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
+            "currency": "SSP",
+            "external_number": "necessitatibus",
+            "id": "ffc10913-4fbd-41ae-9963-7a351c4b602c",
+            "lineitems": [
+                {
+                    "id": "1903c335-9417-435e-9c88-755817c4e617",
+                    "item_description": "Innovative Table featuring left technology and Rubber construction",
+                    "item_name": "Luxurious Cotton Pizza",
+                    "item_sku": "978-0-8324-6620-5",
+                    "notes": "Degusto conventus defendo valetudo.",
+                    "tax_amount": 2501.0,
+                    "total_amount": 168.0,
+                    "unit_amount": 3059.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Refined Steel Shoes",
+            "payment_method": "CASH",
+            "posted_at": parse_datetime("2021-06-04T05:03:49.251Z"),
+            "reimbursed_amount": 1833.0,
+            "status": shared.AccountingExpenseStatus.SUBMITTED,
+            "tax_amount": 2602.0,
+            "total_amount": 3580.0,
+            "updated_at": parse_datetime("2026-05-09T18:22:43.593Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3834,10 +4513,11 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3847,7 +4527,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_invoice(request={
-        "accounting_invoice": {},
+        "accounting_invoice": {
+            "attachments": [
+                {
+                    "download_url": "https://glossy-markup.net/",
+                    "id": "c2fa60c7-8d72-4568-9854-fa432fadbf78",
+                    "mime_type": "benevolentia",
+                    "name": "vespillo",
+                },
+            ],
+            "balance_amount": -1.0,
+            "category_ids": [],
+            "created_at": parse_datetime("2022-11-07T14:17:29.587Z"),
+            "currency": "RWF",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
+            "extended_notes": [],
+            "id": "6f607a62-e620-4f17-87c7-372e8a20cfc8",
+            "invoice_number": "vinco",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Auctus comburo clarus ubi.",
+            "paid_amount": 0.0,
+            "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
+            "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
+            "payments": [],
+            "posted_at": parse_datetime("2026-03-26T22:46:20.613Z"),
+            "reference": "adinventitias",
+            "send": True,
+            "status": shared.AccountingInvoiceStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.AccountingInvoiceTerm.NET_45,
+            "total_amount": 0.0,
+            "type": shared.AccountingInvoiceType.CREDITMEMO,
+            "updated_at": parse_datetime("2023-02-06T06:48:43.169Z"),
+            "url": "https://gifted-yarmulke.info/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3882,10 +4597,11 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3895,7 +4611,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_journal(request={
-        "accounting_journal": {},
+        "accounting_journal": {
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
+            "currency": "FKP",
+            "description": "Calco constans adipisci.",
+            "id": "12490857-8ddf-4be5-abd0-47fc89cc49a2",
+            "posted_at": parse_datetime("2023-10-19T01:51:30.403Z"),
+            "reference": "ullam",
+            "source": "crustulum",
+            "tax_amount": 78672.0,
+            "updated_at": parse_datetime("2022-01-01T11:08:39.572Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3930,10 +4658,11 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3943,7 +4672,35 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_order(request={
-        "accounting_order": {},
+        "accounting_order": {
+            "billing_address": {
+                "address1": "802 Bechtelar Park",
+                "address2": "Apt. 436",
+                "city": "Daniellaville",
+                "country_code": "US",
+                "postal_code": "36947",
+                "region": "Wisconsin",
+                "region_code": "NY",
+            },
+            "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
+            "currency": "USD",
+            "id": "cb5b9dd7-2eb0-44aa-ae76-2722a1975caf",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2022-04-05T00:14:19.088Z"),
+            "shipping_address": {
+                "address1": "9745 Betty Shore",
+                "city": "South Alainaland",
+                "country_code": "US",
+                "postal_code": "25274-7654",
+                "region": "New Hampshire",
+                "region_code": "LA",
+            },
+            "status": shared.AccountingOrderStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "type": shared.AccountingOrderType.PURCHASE,
+            "updated_at": parse_datetime("2021-06-17T22:40:34.512Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -3978,10 +4735,11 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -3991,7 +4749,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_paymentterm(request={
-        "accounting_paymentterm": {},
+        "accounting_paymentterm": {
+            "category": shared.Category.STANDARD,
+            "created_at": parse_datetime("2021-08-22T22:42:42.265Z"),
+            "day_of_month_due": 4.0,
+            "description": "Cogito pecco eos cultura.",
+            "discount_day_of_month": 13.0,
+            "discount_days": 4.0,
+            "discount_percent": 5.0,
+            "due_days": 57.0,
+            "due_next_month_days": 9.0,
+            "id": "e5fb978b-ad68-4c8c-a957-b79b40fb97eb",
+            "is_active": False,
+            "metadata": [],
+            "name": "Net 30",
+            "type": shared.AccountingPaymenttermType.NET_15,
+            "updated_at": parse_datetime("2025-12-11T11:06:20.951Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -4074,10 +4848,11 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -4087,7 +4862,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_purchaseorder(request={
-        "accounting_purchaseorder": {},
+        "accounting_purchaseorder": {
+            "billing_address": {
+                "address1": "37214 Tanya Walks",
+                "city": "South Annabelleton",
+                "country_code": "US",
+                "postal_code": "30337",
+                "region": "Nevada",
+                "region_code": "MA",
+            },
+            "category_ids": [],
+            "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
+            "currency": "ZMW",
+            "id": "ab47e1ac-633d-4704-847d-b63d10b40137",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2025-04-25T03:31:00.688Z"),
+            "shipping_address": {
+                "address1": "649 Maggio Overpass",
+                "city": "Lake Jaylan",
+                "country_code": "US",
+                "postal_code": "99211-6547",
+                "region": "North Carolina",
+                "region_code": "ID",
+            },
+            "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2021-02-26T03:18:45.820Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -4170,10 +4972,11 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -4183,7 +4986,56 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_salesorder(request={
-        "accounting_salesorder": {},
+        "accounting_salesorder": {
+            "billing_address": {
+                "address1": "26530 Stroman Rest",
+                "address2": "Suite 801",
+                "city": "Pocatello",
+                "country_code": "US",
+                "postal_code": "05015-8546",
+                "region": "Louisiana",
+                "region_code": "MO",
+            },
+            "category_ids": [],
+            "closed_at": parse_datetime("2023-08-16T21:47:16.768Z"),
+            "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
+            "currency": "ANG",
+            "discount_amount": 99.0,
+            "employee_user_id": "4a6b8990-c85a-499f-82d0-5011c3c95a0b",
+            "fees": [
+                {
+                    "amount": 519.0,
+                    "currency": "XCD",
+                    "type": shared.AccountingFeeType.PROMOTION,
+                },
+            ],
+            "fulfillment_type": shared.FulfillmentType.TAKEOUT,
+            "guest_count": 8.0,
+            "id": "26cb0a60-aeeb-49dc-aa08-231bb0af605c",
+            "lineitems": [],
+            "metadata": [],
+            "order_number": "988187",
+            "payments": [],
+            "posted_at": parse_datetime("2026-01-11T02:10:29.930Z"),
+            "refunded_amount": 0.0,
+            "sales_channel": "Harvey, Collier and Weimann",
+            "service_charge_amount": 63.0,
+            "shipping_address": {
+                "address1": "9878 Bradley Mill",
+                "address2": "Apt. 215",
+                "city": "Port Matildestad",
+                "country_code": "US",
+                "postal_code": "07989-2148",
+                "region": "Arkansas",
+                "region_code": "AK",
+            },
+            "status": shared.AccountingSalesorderStatus.REFUNDED,
+            "subtotal_amount": 0.0,
+            "tax_amount": 63.0,
+            "tip_amount": 34.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-02-10T18:49:08.308Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -4218,10 +5070,11 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -4231,7 +5084,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_taxrate(request={
-        "accounting_taxrate": {},
+        "accounting_taxrate": {
+            "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
+            "description": "Nemo atrox tricesimus creator aranea.",
+            "id": "8fa77bc6-6812-4b82-8d10-5c03bf48971c",
+            "is_active": False,
+            "metadata": [],
+            "name": "cogo",
+            "rate": 1.0,
+            "updated_at": parse_datetime("2025-11-04T07:53:07.007Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -4266,10 +5128,11 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -4279,7 +5142,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_transaction(request={
-        "accounting_transaction": {},
+        "accounting_transaction": {
+            "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "id": "b441cd13-8ef9-45e5-9902-9a2002d9a492",
+            "lineitems": [
+                {
+                    "category_ids": [],
+                    "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
+                    "id": "236bdaf2-3428-4b72-94e8-eefc15d6ff92",
+                    "name": "Salad",
+                    "object_type": "delicate",
+                    "total_amount": 58531.0,
+                    "unit_amount": 536.0,
+                    "unit_quantity": 91.0,
+                },
+            ],
+            "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "tax_amount": 0.0,
+            "total_amount": 94452.0,
+            "updated_at": parse_datetime("2021-09-10T02:36:26.085Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -4314,10 +5196,11 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -4327,7 +5210,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_vendorcredit(request={
-        "accounting_vendorcredit": {},
+        "accounting_vendorcredit": {
+            "applications": [],
+            "apply_amount": 1.0,
+            "balance_amount": 0.0,
+            "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
+            "currency": "KGS",
+            "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
+            "id": "1353821c-3fd0-42b1-9c7d-0aa07a3eebe2",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Conatus cruciamentum decor avaritia tantum.",
+            "posted_at": parse_datetime("2023-09-28T16:43:35.374Z"),
+            "status": shared.AccountingVendorcreditStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2023-11-26T14:35:38.366Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5255,10 +6153,11 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5268,7 +6167,31 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_account(request={
-        "accounting_account": {},
+        "accounting_account": {
+            "balance": 12092.0,
+            "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
+            "currency": "BOB",
+            "customer_defined_code": "quo",
+            "description": "Spoliatio comedo vilitas harum cupiditate.",
+            "id": "f8647ab4-1089-471e-82b9-db710d4b4cd1",
+            "is_payable": True,
+            "name": "Electronic Aluminum Tuna",
+            "status": shared.Status.ARCHIVED,
+            "taxonomy": [
+                {
+                    "original_type": "vesper",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "iste",
+                },
+                {
+                    "original_type": "adamo",
+                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
+                    "value": "peccatus",
+                },
+            ],
+            "type": shared.Type.BANK,
+            "updated_at": parse_datetime("2023-01-03T03:11:16.645Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5303,10 +6226,11 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5316,7 +6240,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_bankfeedaccount(request={
-        "accounting_bankfeedaccount": {},
+        "accounting_bankfeedaccount": {
+            "account_id": "baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1",
+            "account_number": "30369722",
+            "account_number_last4": "9722",
+            "account_type": shared.AccountType.LOAN,
+            "balance": 90358.0,
+            "bank_name": "Weissnat Inc",
+            "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "currency": "SSP",
+            "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
+            "id": "71af6e72-4ef0-4ca2-accd-2e4a5df1789b",
+            "name": "Corwin, Donnelly and Connelly Savings",
+            "routing_number": "667753156",
+            "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
+            "updated_at": parse_datetime("2024-04-11T12:56:36.252Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5351,10 +6290,11 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5364,7 +6304,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_bankfeedtransaction(request={
-        "accounting_bankfeedtransaction": {},
+        "accounting_bankfeedtransaction": {
+            "account_id": "b7dc4175-1368-4b89-a700-d621b6666648",
+            "amount": 60889.0,
+            "bank_category": "Games",
+            "bankfeedaccount_id": "34c1d05f-5b62-4bcd-9121-3be8b720941f",
+            "category_ids": [],
+            "contact_id": "1ef58ebe-f9c9-46f6-9d9c-2df2658503be",
+            "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
+            "currency": "SRD",
+            "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
+            "id": "0fc0602a-eb02-41c9-ae51-62d4f9d00e2a",
+            "is_pending": True,
+            "merchant_name": "Reichert, Erdman and Tillman",
+            "posted_at": parse_datetime("2025-03-23T18:33:52.195Z"),
+            "reference": "93642593",
+            "transaction_at": parse_datetime("2022-07-27T19:48:08.850Z"),
+            "type": shared.AccountingBankfeedtransactionType.CREDIT,
+            "updated_at": parse_datetime("2022-05-23T20:47:18.778Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5399,10 +6357,11 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5412,7 +6371,30 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_bill(request={
-        "accounting_bill": {},
+        "accounting_bill": {
+            "attachments": [],
+            "bill_number": "vitae",
+            "category_ids": [],
+            "created_at": parse_datetime("2019-08-08T23:03:14.104Z"),
+            "currency": "AUD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2019-08-11T20:52:55.321Z"),
+            "extended_notes": [],
+            "id": "3f483847-c69d-4f32-b681-5b73801236b0",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Tutamen cilicium infit.",
+            "payment_collection_method": shared.PaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "payments": [],
+            "posted_at": parse_datetime("2024-04-04T07:22:54.390Z"),
+            "send": True,
+            "status": shared.AccountingBillStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.Term.NET_10,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2025-01-29T00:57:24.319Z"),
+            "url": "https://coarse-interviewer.biz/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5447,10 +6429,11 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5460,7 +6443,15 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_category(request={
-        "accounting_category": {},
+        "accounting_category": {
+            "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
+            "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
+            "id": "93277723-e046-44aa-a026-45d084b846ba",
+            "is_active": False,
+            "metadata": [],
+            "name": "Electronic Cotton Shoes",
+            "updated_at": parse_datetime("2025-08-20T06:35:08.879Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5495,10 +6486,11 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5508,7 +6500,74 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_contact(request={
-        "accounting_contact": {},
+        "accounting_contact": {
+            "associated_contacts": [
+                {
+                    "id": "b60d88e0-5a87-43aa-be6f-5f253940e7b7",
+                    "name": "Delores Reynolds",
+                },
+                {
+                    "id": "d430e725-2cc2-4061-802d-24851f584e94",
+                    "name": "Delores Reynolds",
+                },
+            ],
+            "billing_address": {
+                "address1": "2633 Stoney Lane",
+                "address2": "Suite 176",
+                "city": "Ladariusboro",
+                "country_code": "US",
+                "postal_code": "70131-2908",
+                "region": "Illinois",
+                "region_code": "NV",
+            },
+            "company_name": "Marquardt Inc",
+            "created_at": parse_datetime("2021-08-15T14:56:50.258Z"),
+            "currency": "ISK",
+            "emails": [
+                {
+                    "email": "Delores.Reynolds10@hotmail.com",
+                    "type": shared.AccountingEmailType.HOME,
+                },
+            ],
+            "first_name": "Delores",
+            "id": "4a7ec450-6956-4149-b102-9dfa8738e269",
+            "identification": "amicitia",
+            "is_active": True,
+            "is_customer": True,
+            "last_name": "Reynolds",
+            "name": "Delores Reynolds",
+            "payment_methods": [
+                {
+                    "default": True,
+                    "id": "0ea87d98-73a6-4440-83d2-2e0720c7955d",
+                    "name": "Visa 1234",
+                    "type": shared.AccountingContactPaymentMethodType.CARD,
+                },
+            ],
+            "portal_url": "https://scented-t-shirt.info/",
+            "shipping_address": {
+                "address1": "786 Renner Stream",
+                "address2": "Apt. 555",
+                "city": "Roanoke",
+                "country_code": "US",
+                "postal_code": "80686-7556",
+                "region": "Vermont",
+                "region_code": "NE",
+            },
+            "tax_exemption": shared.TaxExemption.RESALE,
+            "tax_number": "amplexus",
+            "telephones": [
+                {
+                    "telephone": "(427) 701-7160",
+                    "type": shared.AccountingTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(540) 913-9171",
+                    "type": shared.AccountingTelephoneType.FAX,
+                },
+            ],
+            "updated_at": parse_datetime("2023-12-04T22:27:39.748Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5543,10 +6602,11 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5556,7 +6616,37 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_creditmemo(request={
-        "accounting_creditmemo": {},
+        "accounting_creditmemo": {
+            "applications": [],
+            "attachments": [
+                {
+                    "download_url": "https://enlightened-chairperson.com/",
+                    "id": "59c8a1c4-da42-4783-a812-64dcb296cd11",
+                    "mime_type": "complectus",
+                    "name": "thesis",
+                },
+            ],
+            "created_at": parse_datetime("2023-09-20T01:47:01.571Z"),
+            "creditmemo_number": "ulterius",
+            "currency": "MKD",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
+            "id": "9d39b333-dc7c-4257-9d31-6224e3cf763f",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Dedecor amo adfero torqueo quas.",
+            "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
+            "posted_at": parse_datetime("2025-11-15T11:02:17.323Z"),
+            "refund_amount": 0.0,
+            "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
+            "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
+            "send": False,
+            "status": shared.AccountingCreditmemoStatus.PAID,
+            "tax_amount": 0.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2024-11-15T13:32:18.756Z"),
+            "url": "https://lighthearted-bandwidth.net/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5591,10 +6681,11 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5604,7 +6695,44 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_expense(request={
-        "accounting_expense": {},
+        "accounting_expense": {
+            "approved_at": parse_datetime("2026-05-09T18:22:43.593Z"),
+            "attachments": [
+                {
+                    "download_url": "https://ripe-napkin.biz/",
+                    "id": "a8e3f070-1872-415b-9119-ca0b34b31468",
+                    "mime_type": "annus",
+                    "name": "cohibeo",
+                },
+            ],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
+            "currency": "SSP",
+            "external_number": "necessitatibus",
+            "id": "ffc10913-4fbd-41ae-9963-7a351c4b602c",
+            "lineitems": [
+                {
+                    "id": "1903c335-9417-435e-9c88-755817c4e617",
+                    "item_description": "Innovative Table featuring left technology and Rubber construction",
+                    "item_name": "Luxurious Cotton Pizza",
+                    "item_sku": "978-0-8324-6620-5",
+                    "notes": "Degusto conventus defendo valetudo.",
+                    "tax_amount": 2501.0,
+                    "total_amount": 168.0,
+                    "unit_amount": 3059.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Refined Steel Shoes",
+            "payment_method": "CASH",
+            "posted_at": parse_datetime("2021-06-04T05:03:49.251Z"),
+            "reimbursed_amount": 1833.0,
+            "status": shared.AccountingExpenseStatus.SUBMITTED,
+            "tax_amount": 2602.0,
+            "total_amount": 3580.0,
+            "updated_at": parse_datetime("2026-05-09T18:22:43.593Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5639,10 +6767,11 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5652,7 +6781,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_invoice(request={
-        "accounting_invoice": {},
+        "accounting_invoice": {
+            "attachments": [
+                {
+                    "download_url": "https://glossy-markup.net/",
+                    "id": "c2fa60c7-8d72-4568-9854-fa432fadbf78",
+                    "mime_type": "benevolentia",
+                    "name": "vespillo",
+                },
+            ],
+            "balance_amount": -1.0,
+            "category_ids": [],
+            "created_at": parse_datetime("2022-11-07T14:17:29.587Z"),
+            "currency": "RWF",
+            "discount_amount": 0.0,
+            "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
+            "extended_notes": [],
+            "id": "6f607a62-e620-4f17-87c7-372e8a20cfc8",
+            "invoice_number": "vinco",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Auctus comburo clarus ubi.",
+            "paid_amount": 0.0,
+            "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
+            "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
+            "payments": [],
+            "posted_at": parse_datetime("2026-03-26T22:46:20.613Z"),
+            "reference": "adinventitias",
+            "send": True,
+            "status": shared.AccountingInvoiceStatus.DELETED,
+            "tax_amount": 0.0,
+            "term": shared.AccountingInvoiceTerm.NET_45,
+            "total_amount": 0.0,
+            "type": shared.AccountingInvoiceType.CREDITMEMO,
+            "updated_at": parse_datetime("2023-02-06T06:48:43.169Z"),
+            "url": "https://gifted-yarmulke.info/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5687,10 +6851,11 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5700,7 +6865,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_journal(request={
-        "accounting_journal": {},
+        "accounting_journal": {
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
+            "currency": "FKP",
+            "description": "Calco constans adipisci.",
+            "id": "12490857-8ddf-4be5-abd0-47fc89cc49a2",
+            "posted_at": parse_datetime("2023-10-19T01:51:30.403Z"),
+            "reference": "ullam",
+            "source": "crustulum",
+            "tax_amount": 78672.0,
+            "updated_at": parse_datetime("2022-01-01T11:08:39.572Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5735,10 +6912,11 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5748,7 +6926,35 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_order(request={
-        "accounting_order": {},
+        "accounting_order": {
+            "billing_address": {
+                "address1": "802 Bechtelar Park",
+                "address2": "Apt. 436",
+                "city": "Daniellaville",
+                "country_code": "US",
+                "postal_code": "36947",
+                "region": "Wisconsin",
+                "region_code": "NY",
+            },
+            "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
+            "currency": "USD",
+            "id": "cb5b9dd7-2eb0-44aa-ae76-2722a1975caf",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2022-04-05T00:14:19.088Z"),
+            "shipping_address": {
+                "address1": "9745 Betty Shore",
+                "city": "South Alainaland",
+                "country_code": "US",
+                "postal_code": "25274-7654",
+                "region": "New Hampshire",
+                "region_code": "LA",
+            },
+            "status": shared.AccountingOrderStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "type": shared.AccountingOrderType.PURCHASE,
+            "updated_at": parse_datetime("2021-06-17T22:40:34.512Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5783,10 +6989,11 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5796,7 +7003,23 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_paymentterm(request={
-        "accounting_paymentterm": {},
+        "accounting_paymentterm": {
+            "category": shared.Category.STANDARD,
+            "created_at": parse_datetime("2021-08-22T22:42:42.265Z"),
+            "day_of_month_due": 4.0,
+            "description": "Cogito pecco eos cultura.",
+            "discount_day_of_month": 13.0,
+            "discount_days": 4.0,
+            "discount_percent": 5.0,
+            "due_days": 57.0,
+            "due_next_month_days": 9.0,
+            "id": "e5fb978b-ad68-4c8c-a957-b79b40fb97eb",
+            "is_active": False,
+            "metadata": [],
+            "name": "Net 30",
+            "type": shared.AccountingPaymenttermType.NET_15,
+            "updated_at": parse_datetime("2025-12-11T11:06:20.951Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5879,10 +7102,11 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5892,7 +7116,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_purchaseorder(request={
-        "accounting_purchaseorder": {},
+        "accounting_purchaseorder": {
+            "billing_address": {
+                "address1": "37214 Tanya Walks",
+                "city": "South Annabelleton",
+                "country_code": "US",
+                "postal_code": "30337",
+                "region": "Nevada",
+                "region_code": "MA",
+            },
+            "category_ids": [],
+            "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
+            "currency": "ZMW",
+            "id": "ab47e1ac-633d-4704-847d-b63d10b40137",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2025-04-25T03:31:00.688Z"),
+            "shipping_address": {
+                "address1": "649 Maggio Overpass",
+                "city": "Lake Jaylan",
+                "country_code": "US",
+                "postal_code": "99211-6547",
+                "region": "North Carolina",
+                "region_code": "ID",
+            },
+            "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2021-02-26T03:18:45.820Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -5975,10 +7226,11 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -5988,7 +7240,56 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_salesorder(request={
-        "accounting_salesorder": {},
+        "accounting_salesorder": {
+            "billing_address": {
+                "address1": "26530 Stroman Rest",
+                "address2": "Suite 801",
+                "city": "Pocatello",
+                "country_code": "US",
+                "postal_code": "05015-8546",
+                "region": "Louisiana",
+                "region_code": "MO",
+            },
+            "category_ids": [],
+            "closed_at": parse_datetime("2023-08-16T21:47:16.768Z"),
+            "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
+            "currency": "ANG",
+            "discount_amount": 99.0,
+            "employee_user_id": "4a6b8990-c85a-499f-82d0-5011c3c95a0b",
+            "fees": [
+                {
+                    "amount": 519.0,
+                    "currency": "XCD",
+                    "type": shared.AccountingFeeType.PROMOTION,
+                },
+            ],
+            "fulfillment_type": shared.FulfillmentType.TAKEOUT,
+            "guest_count": 8.0,
+            "id": "26cb0a60-aeeb-49dc-aa08-231bb0af605c",
+            "lineitems": [],
+            "metadata": [],
+            "order_number": "988187",
+            "payments": [],
+            "posted_at": parse_datetime("2026-01-11T02:10:29.930Z"),
+            "refunded_amount": 0.0,
+            "sales_channel": "Harvey, Collier and Weimann",
+            "service_charge_amount": 63.0,
+            "shipping_address": {
+                "address1": "9878 Bradley Mill",
+                "address2": "Apt. 215",
+                "city": "Port Matildestad",
+                "country_code": "US",
+                "postal_code": "07989-2148",
+                "region": "Arkansas",
+                "region_code": "AK",
+            },
+            "status": shared.AccountingSalesorderStatus.REFUNDED,
+            "subtotal_amount": 0.0,
+            "tax_amount": 63.0,
+            "tip_amount": 34.0,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-02-10T18:49:08.308Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -6023,10 +7324,11 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -6036,7 +7338,16 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_taxrate(request={
-        "accounting_taxrate": {},
+        "accounting_taxrate": {
+            "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
+            "description": "Nemo atrox tricesimus creator aranea.",
+            "id": "8fa77bc6-6812-4b82-8d10-5c03bf48971c",
+            "is_active": False,
+            "metadata": [],
+            "name": "cogo",
+            "rate": 1.0,
+            "updated_at": parse_datetime("2025-11-04T07:53:07.007Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -6071,10 +7382,11 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -6084,7 +7396,26 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_transaction(request={
-        "accounting_transaction": {},
+        "accounting_transaction": {
+            "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "id": "b441cd13-8ef9-45e5-9902-9a2002d9a492",
+            "lineitems": [
+                {
+                    "category_ids": [],
+                    "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
+                    "id": "236bdaf2-3428-4b72-94e8-eefc15d6ff92",
+                    "name": "Salad",
+                    "object_type": "delicate",
+                    "total_amount": 58531.0,
+                    "unit_amount": 536.0,
+                    "unit_quantity": 91.0,
+                },
+            ],
+            "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "tax_amount": 0.0,
+            "total_amount": 94452.0,
+            "updated_at": parse_datetime("2021-09-10T02:36:26.085Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -6119,10 +7450,11 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -6132,7 +7464,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_vendorcredit(request={
-        "accounting_vendorcredit": {},
+        "accounting_vendorcredit": {
+            "applications": [],
+            "apply_amount": 1.0,
+            "balance_amount": 0.0,
+            "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
+            "currency": "KGS",
+            "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
+            "id": "1353821c-3fd0-42b1-9c7d-0aa07a3eebe2",
+            "lineitems": [],
+            "metadata": [],
+            "notes": "Conatus cruciamentum decor avaritia tantum.",
+            "posted_at": parse_datetime("2023-09-28T16:43:35.374Z"),
+            "status": shared.AccountingVendorcreditStatus.SUBMITTED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2023-11-26T14:35:38.366Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

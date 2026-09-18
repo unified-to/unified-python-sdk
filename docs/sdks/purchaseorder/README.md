@@ -17,10 +17,11 @@ Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="python" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.purchaseorder.create_accounting_purchaseorder(request={
-        "accounting_purchaseorder": {},
+        "accounting_purchaseorder": {
+            "billing_address": {
+                "address1": "37214 Tanya Walks",
+                "city": "South Annabelleton",
+                "country_code": "US",
+                "postal_code": "30337",
+                "region": "Nevada",
+                "region_code": "MA",
+            },
+            "category_ids": [],
+            "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
+            "currency": "ZMW",
+            "id": "7ca20b57-36d7-416c-895f-ebd50bd69068",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2025-04-25T03:31:00.662Z"),
+            "shipping_address": {
+                "address1": "649 Maggio Overpass",
+                "city": "Lake Jaylan",
+                "country_code": "US",
+                "postal_code": "99211-6547",
+                "region": "North Carolina",
+                "region_code": "ID",
+            },
+            "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2021-02-26T03:18:45.818Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +185,11 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +199,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.purchaseorder.patch_accounting_purchaseorder(request={
-        "accounting_purchaseorder": {},
+        "accounting_purchaseorder": {
+            "billing_address": {
+                "address1": "37214 Tanya Walks",
+                "city": "South Annabelleton",
+                "country_code": "US",
+                "postal_code": "30337",
+                "region": "Nevada",
+                "region_code": "MA",
+            },
+            "category_ids": [],
+            "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
+            "currency": "ZMW",
+            "id": "ab47e1ac-633d-4704-847d-b63d10b40137",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2025-04-25T03:31:00.688Z"),
+            "shipping_address": {
+                "address1": "649 Maggio Overpass",
+                "city": "Lake Jaylan",
+                "country_code": "US",
+                "postal_code": "99211-6547",
+                "region": "North Carolina",
+                "region_code": "ID",
+            },
+            "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2021-02-26T03:18:45.820Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +308,11 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +322,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.purchaseorder.update_accounting_purchaseorder(request={
-        "accounting_purchaseorder": {},
+        "accounting_purchaseorder": {
+            "billing_address": {
+                "address1": "37214 Tanya Walks",
+                "city": "South Annabelleton",
+                "country_code": "US",
+                "postal_code": "30337",
+                "region": "Nevada",
+                "region_code": "MA",
+            },
+            "category_ids": [],
+            "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
+            "currency": "ZMW",
+            "id": "ab47e1ac-633d-4704-847d-b63d10b40137",
+            "lineitems": [],
+            "metadata": [],
+            "posted_at": parse_datetime("2025-04-25T03:31:00.688Z"),
+            "shipping_address": {
+                "address1": "649 Maggio Overpass",
+                "city": "Lake Jaylan",
+                "country_code": "US",
+                "postal_code": "99211-6547",
+                "region": "North Carolina",
+                "region_code": "ID",
+            },
+            "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2021-02-26T03:18:45.820Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

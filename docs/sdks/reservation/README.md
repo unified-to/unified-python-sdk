@@ -17,10 +17,11 @@ Create a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="python" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" example="commerce_reservation" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.reservation.create_commerce_reservation(request={
-        "commerce_reservation": {},
+        "commerce_reservation": {
+            "created_at": parse_datetime("2021-12-14T19:50:31.151Z"),
+            "end_at": parse_datetime("2022-01-01T22:00:17.868Z"),
+            "guest_email": "Sunny.Strosin77@yahoo.com",
+            "guest_name": "Annette Franecki",
+            "guest_phone": "(990) 317-6213",
+            "id": "48b4fec8-c826-47e4-b2cf-38a3b14a6d6c",
+            "item_name": "Practical Ceramic Shoes",
+            "notes": "Adsum textilis ipsum despecto.",
+            "size": 10.0,
+            "staff_name": "Vickie Fahey",
+            "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
+            "status": shared.CommerceReservationStatus.PENDING,
+            "updated_at": parse_datetime("2022-12-27T17:11:32.827Z"),
+            "url": "https://cluttered-pine.info/",
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +173,11 @@ Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +187,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.reservation.patch_commerce_reservation(request={
-        "commerce_reservation": {},
+        "commerce_reservation": {
+            "created_at": parse_datetime("2021-12-14T19:50:31.151Z"),
+            "end_at": parse_datetime("2022-01-01T22:00:17.868Z"),
+            "guest_email": "Sunny.Strosin77@yahoo.com",
+            "guest_name": "Annette Franecki",
+            "guest_phone": "(990) 317-6213",
+            "id": "86061eab-8816-4b57-87b6-a84bdd529f94",
+            "item_name": "Practical Ceramic Shoes",
+            "notes": "Adsum textilis ipsum despecto.",
+            "size": 10.0,
+            "staff_name": "Vickie Fahey",
+            "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
+            "status": shared.CommerceReservationStatus.PENDING,
+            "updated_at": parse_datetime("2022-12-27T17:11:32.829Z"),
+            "url": "https://cluttered-pine.info/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +284,11 @@ Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +298,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.reservation.update_commerce_reservation(request={
-        "commerce_reservation": {},
+        "commerce_reservation": {
+            "created_at": parse_datetime("2021-12-14T19:50:31.151Z"),
+            "end_at": parse_datetime("2022-01-01T22:00:17.868Z"),
+            "guest_email": "Sunny.Strosin77@yahoo.com",
+            "guest_name": "Annette Franecki",
+            "guest_phone": "(990) 317-6213",
+            "id": "86061eab-8816-4b57-87b6-a84bdd529f94",
+            "item_name": "Practical Ceramic Shoes",
+            "notes": "Adsum textilis ipsum despecto.",
+            "size": 10.0,
+            "staff_name": "Vickie Fahey",
+            "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
+            "status": shared.CommerceReservationStatus.PENDING,
+            "updated_at": parse_datetime("2022-12-27T17:11:32.829Z"),
+            "url": "https://cluttered-pine.info/",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

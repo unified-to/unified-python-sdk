@@ -25,10 +25,11 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" example="commerce_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -38,7 +39,61 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.create_commerce_location(request={
-        "commerce_location": {},
+        "commerce_location": {
+            "address": {
+                "address1": "29896 The Limes",
+                "city": "New Kenny",
+                "country_code": "US",
+                "postal_code": "14490-0609",
+                "region": "Virginia",
+                "region_code": "MS",
+            },
+            "categories": [],
+            "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
+            "currency": "XCD",
+            "description": "Adsidue audentia.",
+            "id": "91d66956-d6f9-4cbb-ab60-9661155b85d7",
+            "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
+            "is_active": False,
+            "language_locale": "vulgaris",
+            "latitude": 0.0,
+            "location_type": shared.LocationType.RESTAURANT,
+            "longitude": 0.0,
+            "media": [
+                {
+                    "alt": "Addo.",
+                    "height": 283.0,
+                    "id": "5132660e-2e6f-424d-aa7e-0a9b50c103f0",
+                    "metadata": [
+                        {
+                            "id": "77ae4026-f169-4563-b908-fc01a4fcd22a",
+                            "slug": "abutor",
+                            "value": "damno",
+                        },
+                    ],
+                    "position": 40.0,
+                    "type": shared.CommerceItemMediaType.IMAGE,
+                    "url": "https://picsum.photos/seed/QVh7ViTV/3964/1567",
+                    "width": 1.0,
+                },
+            ],
+            "name": "Olson - Mraz",
+            "price_level": "",
+            "rating": 0.0,
+            "review_count": 0.0,
+            "telephones": [
+                {
+                    "telephone": "(872) 522-3201",
+                    "type": shared.CommerceTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(236) 274-2445",
+                    "type": shared.CommerceTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2024-04-09T09:35:32.572Z"),
+            "web_url": "https://chilly-edge.info",
+        },
         "connection_id": "<id>",
     })
 
@@ -72,10 +127,11 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="python" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -85,7 +141,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.create_hris_location(request={
-        "hris_location": {},
+        "hris_location": {
+            "address": {
+                "address1": "2743 Connelly Summit",
+                "address2": "Apt. 350",
+                "city": "Titusville",
+                "country_code": "US",
+                "postal_code": "16154-1095",
+                "region": "Oregon",
+                "region_code": "AL",
+            },
+            "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
+            "currency": "MUR",
+            "description": "Acervus caries.",
+            "external_identifier": "f7f353fd-05db-464e-813d-53ebc1a79d24",
+            "id": "854e19af-cf20-4edc-8a76-c80b50974f65",
+            "is_active": True,
+            "is_hq": False,
+            "language_locale": "fr",
+            "name": "adhuc",
+            "telephones": [
+                {
+                    "telephone": "(710) 550-6997",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(208) 555-8542",
+                    "type": shared.HrisTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(712) 473-5482",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "timezone": "America/Guyana",
+            "updated_at": parse_datetime("2023-06-09T00:39:51.875Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -398,10 +489,11 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -411,7 +503,61 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.patch_commerce_location(request={
-        "commerce_location": {},
+        "commerce_location": {
+            "address": {
+                "address1": "29896 The Limes",
+                "city": "New Kenny",
+                "country_code": "US",
+                "postal_code": "14490-0609",
+                "region": "Virginia",
+                "region_code": "MS",
+            },
+            "categories": [],
+            "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
+            "currency": "XCD",
+            "description": "Adsidue audentia.",
+            "id": "6353175c-63a0-4c16-9970-194a80526550",
+            "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
+            "is_active": False,
+            "language_locale": "vulgaris",
+            "latitude": 0.0,
+            "location_type": shared.LocationType.RESTAURANT,
+            "longitude": 0.0,
+            "media": [
+                {
+                    "alt": "Addo.",
+                    "height": 283.0,
+                    "id": "0034a07c-d090-4d9a-af96-8a39943f2077",
+                    "metadata": [
+                        {
+                            "id": "49c850e4-ae1d-4f2f-a9e9-69f5b5a345e7",
+                            "slug": "abutor",
+                            "value": "damno",
+                        },
+                    ],
+                    "position": 40.0,
+                    "type": shared.CommerceItemMediaType.IMAGE,
+                    "url": "https://picsum.photos/seed/QVh7ViTV/3964/1567",
+                    "width": 1.0,
+                },
+            ],
+            "name": "Olson - Mraz",
+            "price_level": "",
+            "rating": 0.0,
+            "review_count": 0.0,
+            "telephones": [
+                {
+                    "telephone": "(872) 522-3201",
+                    "type": shared.CommerceTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(236) 274-2445",
+                    "type": shared.CommerceTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2024-04-09T09:35:32.582Z"),
+            "web_url": "https://chilly-edge.info",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -446,10 +592,11 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -459,7 +606,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.patch_hris_location(request={
-        "hris_location": {},
+        "hris_location": {
+            "address": {
+                "address1": "2743 Connelly Summit",
+                "address2": "Apt. 350",
+                "city": "Titusville",
+                "country_code": "US",
+                "postal_code": "16154-1095",
+                "region": "Oregon",
+                "region_code": "AL",
+            },
+            "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
+            "currency": "MUR",
+            "description": "Acervus caries.",
+            "external_identifier": "633d799f-e467-4730-a2c1-d0442c073b57",
+            "id": "d267ea88-128c-42f6-8cdf-1a9e361e0183",
+            "is_active": True,
+            "is_hq": False,
+            "language_locale": "fr",
+            "name": "adhuc",
+            "telephones": [
+                {
+                    "telephone": "(710) 550-6997",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(208) 555-8542",
+                    "type": shared.HrisTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(712) 473-5482",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "timezone": "America/Guyana",
+            "updated_at": parse_datetime("2023-06-09T00:39:51.880Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -588,10 +770,11 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -601,7 +784,61 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.update_commerce_location(request={
-        "commerce_location": {},
+        "commerce_location": {
+            "address": {
+                "address1": "29896 The Limes",
+                "city": "New Kenny",
+                "country_code": "US",
+                "postal_code": "14490-0609",
+                "region": "Virginia",
+                "region_code": "MS",
+            },
+            "categories": [],
+            "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
+            "currency": "XCD",
+            "description": "Adsidue audentia.",
+            "id": "6353175c-63a0-4c16-9970-194a80526550",
+            "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
+            "is_active": False,
+            "language_locale": "vulgaris",
+            "latitude": 0.0,
+            "location_type": shared.LocationType.RESTAURANT,
+            "longitude": 0.0,
+            "media": [
+                {
+                    "alt": "Addo.",
+                    "height": 283.0,
+                    "id": "0034a07c-d090-4d9a-af96-8a39943f2077",
+                    "metadata": [
+                        {
+                            "id": "49c850e4-ae1d-4f2f-a9e9-69f5b5a345e7",
+                            "slug": "abutor",
+                            "value": "damno",
+                        },
+                    ],
+                    "position": 40.0,
+                    "type": shared.CommerceItemMediaType.IMAGE,
+                    "url": "https://picsum.photos/seed/QVh7ViTV/3964/1567",
+                    "width": 1.0,
+                },
+            ],
+            "name": "Olson - Mraz",
+            "price_level": "",
+            "rating": 0.0,
+            "review_count": 0.0,
+            "telephones": [
+                {
+                    "telephone": "(872) 522-3201",
+                    "type": shared.CommerceTelephoneType.OTHER,
+                },
+                {
+                    "telephone": "(236) 274-2445",
+                    "type": shared.CommerceTelephoneType.MOBILE,
+                },
+            ],
+            "updated_at": parse_datetime("2024-04-09T09:35:32.582Z"),
+            "web_url": "https://chilly-edge.info",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -636,10 +873,11 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -649,7 +887,42 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.update_hris_location(request={
-        "hris_location": {},
+        "hris_location": {
+            "address": {
+                "address1": "2743 Connelly Summit",
+                "address2": "Apt. 350",
+                "city": "Titusville",
+                "country_code": "US",
+                "postal_code": "16154-1095",
+                "region": "Oregon",
+                "region_code": "AL",
+            },
+            "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
+            "currency": "MUR",
+            "description": "Acervus caries.",
+            "external_identifier": "633d799f-e467-4730-a2c1-d0442c073b57",
+            "id": "d267ea88-128c-42f6-8cdf-1a9e361e0183",
+            "is_active": True,
+            "is_hq": False,
+            "language_locale": "fr",
+            "name": "adhuc",
+            "telephones": [
+                {
+                    "telephone": "(710) 550-6997",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+                {
+                    "telephone": "(208) 555-8542",
+                    "type": shared.HrisTelephoneType.HOME,
+                },
+                {
+                    "telephone": "(712) 473-5482",
+                    "type": shared.HrisTelephoneType.FAX,
+                },
+            ],
+            "timezone": "America/Guyana",
+            "updated_at": parse_datetime("2023-06-09T00:39:51.880Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

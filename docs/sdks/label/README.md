@@ -17,10 +17,11 @@ Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="python" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.label.create_shipping_label(request={
-        "shipping_label": {},
+        "shipping_label": {
+            "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
+            "id": "8a9fdac6-1d21-4676-94e6-f599db0abbff",
+            "is_voided": False,
+            "label_cost": 40.83653403213248,
+            "label_cost_currency": "USD",
+            "label_format": shared.LabelFormat.PNG,
+            "label_url": "https://optimal-meadow.net",
+            "service_code": "GIz",
+            "status": shared.ShippingLabelStatus.EXCEPTION,
+            "tracking_number": "zYv60FOIBUJ6",
+            "updated_at": parse_datetime("2024-04-16T18:20:19.960Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +170,11 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +184,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.label.patch_shipping_label(request={
-        "shipping_label": {},
+        "shipping_label": {
+            "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
+            "id": "8f2aee4c-d719-4427-a982-e29285195abb",
+            "is_voided": False,
+            "label_cost": 40.83653403213248,
+            "label_cost_currency": "USD",
+            "label_format": shared.LabelFormat.PNG,
+            "label_url": "https://optimal-meadow.net",
+            "service_code": "GIz",
+            "status": shared.ShippingLabelStatus.EXCEPTION,
+            "tracking_number": "zYv60FOIBUJ6",
+            "updated_at": parse_datetime("2024-04-16T18:20:19.963Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +278,11 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +292,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.label.update_shipping_label(request={
-        "shipping_label": {},
+        "shipping_label": {
+            "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
+            "id": "8f2aee4c-d719-4427-a982-e29285195abb",
+            "is_voided": False,
+            "label_cost": 40.83653403213248,
+            "label_cost_currency": "USD",
+            "label_format": shared.LabelFormat.PNG,
+            "label_url": "https://optimal-meadow.net",
+            "service_code": "GIz",
+            "status": shared.ShippingLabelStatus.EXCEPTION,
+            "tracking_number": "zYv60FOIBUJ6",
+            "updated_at": parse_datetime("2024-04-16T18:20:19.963Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

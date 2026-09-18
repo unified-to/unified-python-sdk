@@ -12,10 +12,11 @@ Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="python" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -25,7 +26,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.rate.create_shipping_rate(request={
-        "shipping_rate": {},
+        "shipping_rate": {
+            "currency": "USD",
+            "id": "fd4d5e96-852b-4873-8e6e-43312813cbda",
+            "rates": [
+                {
+                    "amount": 54.679719475097954,
+                    "base_amount": 76.45537888631225,
+                    "currency": "USD",
+                    "delivery_days": 8.0,
+                    "description": "Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.",
+                    "estimated_days": 10.0,
+                    "estimated_delivery_end_at": parse_datetime("2024-01-31T23:11:45.447Z"),
+                    "is_guaranteed": True,
+                    "is_negotiated_rate": True,
+                    "tax_amount": 2.2701712837442756,
+                    "title": "Turcotte Inc",
+                },
+            ],
+        },
         "connection_id": "<id>",
     })
 

@@ -17,10 +17,11 @@ Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="python" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" example="ats_application" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,33 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.application.create_ats_application(request={
-        "ats_application": {},
+        "ats_application": {
+            "answers": [],
+            "applied_at": parse_datetime("2025-09-08T08:47:38.152Z"),
+            "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
+            "hired_at": parse_datetime("2026-04-14T14:33:00.903Z"),
+            "id": "f5c781be-7431-407c-8e74-374b5b0e8a9e",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "a1302a79-0341-40e6-b91a-daeb95584617",
+                    "namespace": "application",
+                    "slug": "despecto",
+                    "value": "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                },
+            ],
+            "offers": [],
+            "original_status": "vomica",
+            "original_substatus": "allatus",
+            "rejected_at": parse_datetime("2026-09-08T19:50:15.645Z"),
+            "rejected_reason": "Cometes amplitudo videlicet talio.",
+            "source": "credo",
+            "status": shared.AtsApplicationStatus.REVIEWING,
+            "updated_at": parse_datetime("2026-09-15T11:08:47.343Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +184,11 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +198,33 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.application.patch_ats_application(request={
-        "ats_application": {},
+        "ats_application": {
+            "answers": [],
+            "applied_at": parse_datetime("2025-09-08T08:47:38.167Z"),
+            "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
+            "hired_at": parse_datetime("2026-04-14T14:33:00.923Z"),
+            "id": "4bdbd24c-49ab-4e27-ac80-6a54129ab0c8",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "a1302a79-0341-40e6-b91a-daeb95584617",
+                    "namespace": "application",
+                    "slug": "despecto",
+                    "value": "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                },
+            ],
+            "offers": [],
+            "original_status": "vomica",
+            "original_substatus": "allatus",
+            "rejected_at": parse_datetime("2026-09-08T19:50:15.667Z"),
+            "rejected_reason": "Cometes amplitudo videlicet talio.",
+            "source": "credo",
+            "status": shared.AtsApplicationStatus.REVIEWING,
+            "updated_at": parse_datetime("2026-09-15T11:08:47.366Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +306,11 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +320,33 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.application.update_ats_application(request={
-        "ats_application": {},
+        "ats_application": {
+            "answers": [],
+            "applied_at": parse_datetime("2025-09-08T08:47:38.167Z"),
+            "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
+            "hired_at": parse_datetime("2026-04-14T14:33:00.923Z"),
+            "id": "4bdbd24c-49ab-4e27-ac80-6a54129ab0c8",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.AtsMetadataFormat.TEXT,
+                    "id": "a1302a79-0341-40e6-b91a-daeb95584617",
+                    "namespace": "application",
+                    "slug": "despecto",
+                    "value": "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                },
+            ],
+            "offers": [],
+            "original_status": "vomica",
+            "original_substatus": "allatus",
+            "rejected_at": parse_datetime("2026-09-08T19:50:15.667Z"),
+            "rejected_reason": "Cometes amplitudo videlicet talio.",
+            "source": "credo",
+            "status": shared.AtsApplicationStatus.REVIEWING,
+            "updated_at": parse_datetime("2026-09-15T11:08:47.366Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

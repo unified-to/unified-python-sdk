@@ -17,10 +17,11 @@ Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="python" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ad.create_ads_ad(request={
-        "ads_ad": {},
+        "ads_ad": {
+            "ad_copy": "Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.",
+            "ad_type": shared.AdType.SOCIAL,
+            "advertiser_name": "Robel, Nader and Rau",
+            "created_at": parse_datetime("2022-11-08T03:38:20.978Z"),
+            "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
+            "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
+            "final_url": "https://improbable-sanity.com",
+            "id": "8ac8beee-3041-4926-b113-1dff835ea640",
+            "name": "Hermiston Group",
+            "status": shared.AdsAdStatus.ARCHIVED,
+            "updated_at": parse_datetime("2024-06-05T02:38:02.005Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +170,11 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +184,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ad.patch_ads_ad(request={
-        "ads_ad": {},
+        "ads_ad": {
+            "ad_copy": "Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.",
+            "ad_type": shared.AdType.SOCIAL,
+            "advertiser_name": "Robel, Nader and Rau",
+            "created_at": parse_datetime("2022-11-08T03:38:20.978Z"),
+            "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
+            "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
+            "final_url": "https://improbable-sanity.com",
+            "id": "91eed89c-4e4f-4566-a55a-c1b3ac1bcb6c",
+            "name": "Hermiston Group",
+            "status": shared.AdsAdStatus.ARCHIVED,
+            "updated_at": parse_datetime("2024-06-05T02:38:02.012Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +278,11 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +292,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ad.update_ads_ad(request={
-        "ads_ad": {},
+        "ads_ad": {
+            "ad_copy": "Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.",
+            "ad_type": shared.AdType.SOCIAL,
+            "advertiser_name": "Robel, Nader and Rau",
+            "created_at": parse_datetime("2022-11-08T03:38:20.978Z"),
+            "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
+            "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
+            "final_url": "https://improbable-sanity.com",
+            "id": "91eed89c-4e4f-4566-a55a-c1b3ac1bcb6c",
+            "name": "Hermiston Group",
+            "status": shared.AdsAdStatus.ARCHIVED,
+            "updated_at": parse_datetime("2024-06-05T02:38:02.012Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

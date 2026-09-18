@@ -19,10 +19,11 @@ Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="python" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" example="martech_member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -32,7 +33,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.member.create_martech_member(request={
-        "marketing_member": {},
+        "marketing_member": {
+            "company": "Miller - Franecki",
+            "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
+            "emails": [
+                {
+                    "email": "Thalia.Abernathy61@gmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Maymie59@hotmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Coty27@hotmail.com",
+                    "type": shared.MarketingEmailType.WORK,
+                },
+            ],
+            "first_name": "Jude",
+            "id": "8944d36e-b636-4219-a282-142fb98fee97",
+            "last_name": "Leffler",
+            "name": "Jude Leffler",
+            "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
+            "tags": [
+                "vinco",
+                "ceno",
+            ],
+            "updated_at": parse_datetime("2025-06-15T05:06:13.082Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -252,10 +280,11 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +294,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.member.patch_martech_member(request={
-        "marketing_member": {},
+        "marketing_member": {
+            "company": "Miller - Franecki",
+            "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
+            "emails": [
+                {
+                    "email": "Thalia.Abernathy61@gmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Maymie59@hotmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Coty27@hotmail.com",
+                    "type": shared.MarketingEmailType.WORK,
+                },
+            ],
+            "first_name": "Jude",
+            "id": "be5b1afb-7831-40f9-b3dd-7910b5c7b4a9",
+            "last_name": "Leffler",
+            "name": "Jude Leffler",
+            "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
+            "tags": [
+                "vinco",
+                "ceno",
+            ],
+            "updated_at": parse_datetime("2025-06-15T05:06:13.087Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -347,10 +403,11 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -360,7 +417,34 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.member.update_martech_member(request={
-        "marketing_member": {},
+        "marketing_member": {
+            "company": "Miller - Franecki",
+            "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
+            "emails": [
+                {
+                    "email": "Thalia.Abernathy61@gmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Maymie59@hotmail.com",
+                    "type": shared.MarketingEmailType.HOME,
+                },
+                {
+                    "email": "Coty27@hotmail.com",
+                    "type": shared.MarketingEmailType.WORK,
+                },
+            ],
+            "first_name": "Jude",
+            "id": "be5b1afb-7831-40f9-b3dd-7910b5c7b4a9",
+            "last_name": "Leffler",
+            "name": "Jude Leffler",
+            "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
+            "tags": [
+                "vinco",
+                "ceno",
+            ],
+            "updated_at": parse_datetime("2025-06-15T05:06:13.087Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -55,10 +55,11 @@ Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="python" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -68,7 +69,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.create_ads_ad(request={
-        "ads_ad": {},
+        "ads_ad": {
+            "ad_copy": "Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.",
+            "ad_type": shared.AdType.SOCIAL,
+            "advertiser_name": "Robel, Nader and Rau",
+            "created_at": parse_datetime("2022-11-08T03:38:20.978Z"),
+            "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
+            "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
+            "final_url": "https://improbable-sanity.com",
+            "id": "8ac8beee-3041-4926-b113-1dff835ea640",
+            "name": "Hermiston Group",
+            "status": shared.AdsAdStatus.ARCHIVED,
+            "updated_at": parse_datetime("2024-06-05T02:38:02.005Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -102,10 +115,11 @@ Create an asset
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="python" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -115,7 +129,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.create_ads_asset(request={
-        "ads_asset": {},
+        "ads_asset": {
+            "created_at": parse_datetime("2020-03-27T20:14:38.603Z"),
+            "height": 400.0,
+            "id": "cf04b48a-1f16-45f9-9d24-a576906153e1",
+            "mime_type": "IMAGE_PNG",
+            "name": "Lockman - DuBuque",
+            "type": shared.AdsAssetType.IMAGE,
+            "updated_at": parse_datetime("2022-03-15T04:24:55.196Z"),
+            "url": "https://informal-perfection.com/",
+            "width": 600.0,
+        },
         "connection_id": "<id>",
     })
 
@@ -149,10 +173,11 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="python" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -162,7 +187,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.create_ads_campaign(request={
-        "ads_campaign": {},
+        "ads_campaign": {
+            "budget_amount": 8743.179536121897,
+            "budget_period": shared.BudgetPeriod.MONTHLY,
+            "category": "CREDIT",
+            "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
+            "currency": "USD",
+            "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
+            "end_at": parse_datetime("2025-05-09T08:18:07.695Z"),
+            "id": "035b7305-00db-4ce3-b37c-91dd72083e2f",
+            "labels": [
+                "comedo",
+            ],
+            "name": "Emard Inc",
+            "start_at": parse_datetime("2022-07-20T04:51:20.139Z"),
+            "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
+            "targeting": {},
+            "total_spend_amount": 2349.8642875347286,
+            "updated_at": parse_datetime("2025-12-05T13:34:49.061Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -196,10 +239,11 @@ Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="python" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -209,7 +253,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.create_ads_creative(request={
-        "ads_creative": {},
+        "ads_creative": {
+            "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
+            "id": "c463cc88-8e1a-4b52-83cd-0ba93cdb00fd",
+            "labels": [
+                "coma",
+                "accedo",
+                "termes",
+            ],
+            "name": "Brekke, Bradtke and Robel",
+            "status": shared.AdsCreativeStatus.PAUSED,
+            "updated_at": parse_datetime("2021-06-21T01:01:18.433Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -243,10 +298,11 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="python" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -256,7 +312,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.create_ads_group(request={
-        "ads_group": {},
+        "ads_group": {
+            "bid_amount": 26.16030164062977,
+            "budget_amount": 5099.175239447504,
+            "budget_period": shared.AdsGroupBudgetPeriod.MONTHLY,
+            "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
+            "currency": "USD",
+            "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
+            "end_at": parse_datetime("2026-05-24T13:17:52.367Z"),
+            "id": "30d10ffd-082f-4cea-bf5f-adc7fc79b8af",
+            "language_locale": "fr-FR",
+            "name": "Stark - Baumbach",
+            "start_at": parse_datetime("2025-12-10T21:09:58.115Z"),
+            "status": shared.AdsGroupStatus.PROCESSING,
+            "targeting": {},
+            "updated_at": parse_datetime("2022-01-02T16:45:32.787Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -290,10 +361,11 @@ Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="python" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -303,7 +375,13 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.create_ads_insertionorder(request={
-        "ads_insertionorder": {},
+        "ads_insertionorder": {
+            "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
+            "id": "6e9538a8-c71d-4d5f-8ddd-5ffd1b58c243",
+            "name": "Kunde, Smith and Reinger",
+            "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
+            "updated_at": parse_datetime("2021-04-28T12:31:21.679Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -337,10 +415,11 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="python" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -350,7 +429,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.create_ads_organization(request={
-        "ads_organization": {},
+        "ads_organization": {
+            "account_number": "LQUJx8zQBW",
+            "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
+            "currency": "USD",
+            "id": "2dcef265-035e-4877-9dcb-52b425c0a389",
+            "managers": [
+                {
+                    "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
+                    "name": "Parker, Leannon and Gibson",
+                },
+            ],
+            "name": "Ankunding Inc",
+            "status": shared.AdsOrganizationStatus.PROCESSING,
+            "timezone": "Europe/Chisinau",
+            "updated_at": parse_datetime("2026-02-27T02:30:46.720Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -1267,10 +1361,11 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1280,7 +1375,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.patch_ads_ad(request={
-        "ads_ad": {},
+        "ads_ad": {
+            "ad_copy": "Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.",
+            "ad_type": shared.AdType.SOCIAL,
+            "advertiser_name": "Robel, Nader and Rau",
+            "created_at": parse_datetime("2022-11-08T03:38:20.978Z"),
+            "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
+            "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
+            "final_url": "https://improbable-sanity.com",
+            "id": "91eed89c-4e4f-4566-a55a-c1b3ac1bcb6c",
+            "name": "Hermiston Group",
+            "status": shared.AdsAdStatus.ARCHIVED,
+            "updated_at": parse_datetime("2024-06-05T02:38:02.012Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1315,10 +1422,11 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1328,7 +1436,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.patch_ads_campaign(request={
-        "ads_campaign": {},
+        "ads_campaign": {
+            "budget_amount": 8743.179536121897,
+            "budget_period": shared.BudgetPeriod.MONTHLY,
+            "category": "CREDIT",
+            "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
+            "currency": "USD",
+            "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
+            "end_at": parse_datetime("2025-05-09T08:18:07.796Z"),
+            "id": "12366083-0173-485b-8373-fcce77c38066",
+            "labels": [
+                "comedo",
+            ],
+            "name": "Emard Inc",
+            "start_at": parse_datetime("2022-07-20T04:51:20.144Z"),
+            "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
+            "targeting": {},
+            "total_spend_amount": 2349.8642875347286,
+            "updated_at": parse_datetime("2025-12-05T13:34:49.182Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1363,10 +1489,11 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1376,7 +1503,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.patch_ads_creative(request={
-        "ads_creative": {},
+        "ads_creative": {
+            "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
+            "id": "f202a073-a108-4edf-8ab7-59edfc36014e",
+            "labels": [
+                "coma",
+                "accedo",
+                "termes",
+            ],
+            "name": "Brekke, Bradtke and Robel",
+            "status": shared.AdsCreativeStatus.PAUSED,
+            "updated_at": parse_datetime("2021-06-21T01:01:18.437Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1411,10 +1549,11 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1424,7 +1563,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.patch_ads_group(request={
-        "ads_group": {},
+        "ads_group": {
+            "bid_amount": 26.16030164062977,
+            "budget_amount": 5099.175239447504,
+            "budget_period": shared.AdsGroupBudgetPeriod.MONTHLY,
+            "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
+            "currency": "USD",
+            "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
+            "end_at": parse_datetime("2026-05-24T13:17:52.526Z"),
+            "id": "3d753590-4b9b-4ac5-b8cd-62429576a473",
+            "language_locale": "fr-FR",
+            "name": "Stark - Baumbach",
+            "start_at": parse_datetime("2025-12-10T21:09:58.263Z"),
+            "status": shared.AdsGroupStatus.PROCESSING,
+            "targeting": {},
+            "updated_at": parse_datetime("2022-01-02T16:45:32.842Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1459,10 +1613,11 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1472,7 +1627,13 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.patch_ads_insertionorder(request={
-        "ads_insertionorder": {},
+        "ads_insertionorder": {
+            "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
+            "id": "02927d22-b29d-4410-b89d-84c6944e04b6",
+            "name": "Kunde, Smith and Reinger",
+            "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
+            "updated_at": parse_datetime("2021-04-28T12:31:21.679Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1507,10 +1668,11 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1520,7 +1682,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.patch_ads_organization(request={
-        "ads_organization": {},
+        "ads_organization": {
+            "account_number": "LQUJx8zQBW",
+            "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
+            "currency": "USD",
+            "id": "5ed729c1-13ee-41a9-9c74-48e8d280748c",
+            "managers": [
+                {
+                    "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
+                    "name": "Parker, Leannon and Gibson",
+                },
+            ],
+            "name": "Ankunding Inc",
+            "status": shared.AdsOrganizationStatus.PROCESSING,
+            "timezone": "Europe/Chisinau",
+            "updated_at": parse_datetime("2026-02-27T02:30:46.730Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1837,10 +2014,11 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1850,7 +2028,19 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.update_ads_ad(request={
-        "ads_ad": {},
+        "ads_ad": {
+            "ad_copy": "Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.",
+            "ad_type": shared.AdType.SOCIAL,
+            "advertiser_name": "Robel, Nader and Rau",
+            "created_at": parse_datetime("2022-11-08T03:38:20.978Z"),
+            "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
+            "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
+            "final_url": "https://improbable-sanity.com",
+            "id": "91eed89c-4e4f-4566-a55a-c1b3ac1bcb6c",
+            "name": "Hermiston Group",
+            "status": shared.AdsAdStatus.ARCHIVED,
+            "updated_at": parse_datetime("2024-06-05T02:38:02.012Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1885,10 +2075,11 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1898,7 +2089,25 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.update_ads_campaign(request={
-        "ads_campaign": {},
+        "ads_campaign": {
+            "budget_amount": 8743.179536121897,
+            "budget_period": shared.BudgetPeriod.MONTHLY,
+            "category": "CREDIT",
+            "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
+            "currency": "USD",
+            "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
+            "end_at": parse_datetime("2025-05-09T08:18:07.796Z"),
+            "id": "12366083-0173-485b-8373-fcce77c38066",
+            "labels": [
+                "comedo",
+            ],
+            "name": "Emard Inc",
+            "start_at": parse_datetime("2022-07-20T04:51:20.144Z"),
+            "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
+            "targeting": {},
+            "total_spend_amount": 2349.8642875347286,
+            "updated_at": parse_datetime("2025-12-05T13:34:49.182Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1933,10 +2142,11 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1946,7 +2156,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.update_ads_creative(request={
-        "ads_creative": {},
+        "ads_creative": {
+            "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
+            "id": "f202a073-a108-4edf-8ab7-59edfc36014e",
+            "labels": [
+                "coma",
+                "accedo",
+                "termes",
+            ],
+            "name": "Brekke, Bradtke and Robel",
+            "status": shared.AdsCreativeStatus.PAUSED,
+            "updated_at": parse_datetime("2021-06-21T01:01:18.437Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1981,10 +2202,11 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -1994,7 +2216,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.update_ads_group(request={
-        "ads_group": {},
+        "ads_group": {
+            "bid_amount": 26.16030164062977,
+            "budget_amount": 5099.175239447504,
+            "budget_period": shared.AdsGroupBudgetPeriod.MONTHLY,
+            "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
+            "currency": "USD",
+            "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
+            "end_at": parse_datetime("2026-05-24T13:17:52.526Z"),
+            "id": "3d753590-4b9b-4ac5-b8cd-62429576a473",
+            "language_locale": "fr-FR",
+            "name": "Stark - Baumbach",
+            "start_at": parse_datetime("2025-12-10T21:09:58.263Z"),
+            "status": shared.AdsGroupStatus.PROCESSING,
+            "targeting": {},
+            "updated_at": parse_datetime("2022-01-02T16:45:32.842Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2029,10 +2266,11 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2042,7 +2280,13 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.update_ads_insertionorder(request={
-        "ads_insertionorder": {},
+        "ads_insertionorder": {
+            "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
+            "id": "02927d22-b29d-4410-b89d-84c6944e04b6",
+            "name": "Kunde, Smith and Reinger",
+            "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
+            "updated_at": parse_datetime("2021-04-28T12:31:21.679Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2077,10 +2321,11 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -2090,7 +2335,22 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ads.update_ads_organization(request={
-        "ads_organization": {},
+        "ads_organization": {
+            "account_number": "LQUJx8zQBW",
+            "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
+            "currency": "USD",
+            "id": "5ed729c1-13ee-41a9-9c74-48e8d280748c",
+            "managers": [
+                {
+                    "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
+                    "name": "Parker, Leannon and Gibson",
+                },
+            ],
+            "name": "Ankunding Inc",
+            "status": shared.AdsOrganizationStatus.PROCESSING,
+            "timezone": "Europe/Chisinau",
+            "updated_at": parse_datetime("2026-02-27T02:30:46.730Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

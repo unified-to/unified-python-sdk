@@ -17,10 +17,11 @@ Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="python" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" example="crm_pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -30,7 +31,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pipeline.create_crm_pipeline(request={
-        "crm_pipeline": {},
+        "crm_pipeline": {
+            "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+            "deal_probability": 99.0,
+            "display_order": 8.0,
+            "id": "bee55908-6617-47b4-a130-51a7477bf893",
+            "is_active": True,
+            "name": "Small Steel Bacon",
+            "stages": [
+                {
+                    "active": False,
+                    "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+                    "deal_probability": 84.0,
+                    "display_order": 72.0,
+                    "id": "2ef85783-686a-46d9-b947-6f69229f667f",
+                    "is_closed": True,
+                    "name": "Veniam.",
+                    "updated_at": parse_datetime("2025-09-16T09:58:54.230Z"),
+                },
+            ],
+            "updated_at": parse_datetime("2025-10-07T15:03:40.498Z"),
+        },
         "connection_id": "<id>",
     })
 
@@ -157,10 +178,11 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="python" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -170,7 +192,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pipeline.patch_crm_pipeline(request={
-        "crm_pipeline": {},
+        "crm_pipeline": {
+            "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+            "deal_probability": 99.0,
+            "display_order": 8.0,
+            "id": "3a3b12e3-59bd-41b2-9f81-a1befb36103a",
+            "is_active": True,
+            "name": "Small Steel Bacon",
+            "stages": [
+                {
+                    "active": False,
+                    "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+                    "deal_probability": 84.0,
+                    "display_order": 72.0,
+                    "id": "f4b82baf-d539-4647-80a7-0686e6f3bce5",
+                    "is_closed": True,
+                    "name": "Veniam.",
+                    "updated_at": parse_datetime("2025-09-16T09:58:54.235Z"),
+                },
+            ],
+            "updated_at": parse_datetime("2025-10-07T15:03:40.503Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,10 +294,11 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="python" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
 
 
 with UnifiedTo(
@@ -265,7 +308,27 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pipeline.update_crm_pipeline(request={
-        "crm_pipeline": {},
+        "crm_pipeline": {
+            "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+            "deal_probability": 99.0,
+            "display_order": 8.0,
+            "id": "3a3b12e3-59bd-41b2-9f81-a1befb36103a",
+            "is_active": True,
+            "name": "Small Steel Bacon",
+            "stages": [
+                {
+                    "active": False,
+                    "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
+                    "deal_probability": 84.0,
+                    "display_order": 72.0,
+                    "id": "f4b82baf-d539-4647-80a7-0686e6f3bce5",
+                    "is_closed": True,
+                    "name": "Veniam.",
+                    "updated_at": parse_datetime("2025-09-16T09:58:54.235Z"),
+                },
+            ],
+            "updated_at": parse_datetime("2025-10-07T15:03:40.503Z"),
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
