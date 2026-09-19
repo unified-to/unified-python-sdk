@@ -37,4 +37,7 @@ value = PatchAccountingContactQueryParamFields.ID
 | `ORGANIZATION_ID`     | organization_id       |
 | `PAYMENT_TERMS`       | payment_terms         |
 | `PAYMENTTERM_ID`      | paymentterm_id        |
+| `BALANCE_AMOUNT`      | balance_amount        |
+| `WEBSITE`             | website               |
+| `NOTES`               | notes                 |
 | `RAW`                 | raw                   |

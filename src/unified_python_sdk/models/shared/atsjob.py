@@ -71,6 +71,7 @@ class AtsJobTypedDict(TypedDict):
     remote: NotRequired[bool]
     skills: NotRequired[List[str]]
     status: NotRequired[AtsJobStatus]
+    summary: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
 
@@ -133,6 +134,8 @@ class AtsJob(BaseModel):
 
     status: Optional[AtsJobStatus] = None
 
+    summary: Optional[str] = None
+
     updated_at: Optional[datetime] = None
 
     user_id: Optional[str] = None
@@ -186,6 +189,7 @@ class AtsJob(BaseModel):
                 "remote",
                 "skills",
                 "status",
+                "summary",
                 "updated_at",
                 "user_id",
             ]

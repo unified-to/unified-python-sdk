@@ -123,6 +123,7 @@ class AdsGroupType(str, Enum, metaclass=utils.OpenEnumMeta):
     NATIVE = "NATIVE"
     CTV = "CTV"
     DOOH = "DOOH"
+    PERFORMANCE_MAX = "PERFORMANCE_MAX"
 
 
 class AdsGroupTypedDict(TypedDict):

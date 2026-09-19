@@ -41,4 +41,5 @@ value = PatchAtsJobQueryParamFields.ID
 | `METADATA`                 | metadata                   |
 | `USER_ID`                  | user_id                    |
 | `INDUSTRY`                 | industry                   |
+| `SUMMARY`                  | summary                    |
 | `RAW`                      | raw                        |

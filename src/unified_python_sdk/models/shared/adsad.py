@@ -29,6 +29,7 @@ class AdType(str, Enum, metaclass=utils.OpenEnumMeta):
     NATIVE = "NATIVE"
     CTV = "CTV"
     DOOH = "DOOH"
+    PERFORMANCE_MAX = "PERFORMANCE_MAX"
 
 
 class AdsAdStatus(str, Enum, metaclass=utils.OpenEnumMeta):

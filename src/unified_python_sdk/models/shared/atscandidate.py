@@ -55,6 +55,7 @@ class AtsCandidateTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     skills: NotRequired[List[str]]
     sources: NotRequired[List[str]]
+    summary: NotRequired[str]
     tags: NotRequired[List[str]]
     telephones: NotRequired[List[AtsTelephoneTypedDict]]
     title: NotRequired[str]
@@ -109,6 +110,8 @@ class AtsCandidate(BaseModel):
 
     sources: Optional[List[str]] = None
 
+    summary: Optional[str] = None
+
     tags: Optional[List[str]] = None
 
     telephones: Optional[List[AtsTelephone]] = None
@@ -158,6 +161,7 @@ class AtsCandidate(BaseModel):
                 "raw",
                 "skills",
                 "sources",
+                "summary",
                 "tags",
                 "telephones",
                 "title",

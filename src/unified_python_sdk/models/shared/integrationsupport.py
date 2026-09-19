@@ -176,6 +176,12 @@ class ListDealID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListDestinationID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListDimension(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -722,6 +728,12 @@ class NativeWebhookType(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class NativeWebhookUpdatedGte(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class NativeWebhookVisitorID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -891,6 +903,12 @@ class VirtualWebhookDatabaseID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookDealID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookEffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -1201,6 +1219,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_cycle_id: NotRequired[ListCycleID]
     list_database_id: NotRequired[ListDatabaseID]
     list_deal_id: NotRequired[ListDealID]
+    list_destination_id: NotRequired[ListDestinationID]
     list_dimension: NotRequired[ListDimension]
     list_document_id: NotRequired[ListDocumentID]
     list_effective_status: NotRequired[ListEffectiveStatus]
@@ -1293,6 +1312,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_task_id: NotRequired[NativeWebhookTaskID]
     native_webhook_template_id: NotRequired[NativeWebhookTemplateID]
     native_webhook_type: NotRequired[NativeWebhookType]
+    native_webhook_updated_gte: NotRequired[NativeWebhookUpdatedGte]
     native_webhook_visitor_id: NotRequired[NativeWebhookVisitorID]
     outbound_fields: NotRequired[Dict[str, str]]
     raw_objects: NotRequired[List[str]]
@@ -1326,6 +1346,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_cycle_id: NotRequired[VirtualWebhookCycleID]
     virtual_webhook_database_id: NotRequired[VirtualWebhookDatabaseID]
     virtual_webhook_deal_id: NotRequired[VirtualWebhookDealID]
+    virtual_webhook_effective_status: NotRequired[VirtualWebhookEffectiveStatus]
     virtual_webhook_end_lt: NotRequired[VirtualWebhookEndLt]
     virtual_webhook_event_id: NotRequired[VirtualWebhookEventID]
     virtual_webhook_expand: NotRequired[VirtualWebhookExpand]
@@ -1431,6 +1452,8 @@ class IntegrationSupport(BaseModel):
     list_database_id: Optional[ListDatabaseID] = None
 
     list_deal_id: Optional[ListDealID] = None
+
+    list_destination_id: Optional[ListDestinationID] = None
 
     list_dimension: Optional[ListDimension] = None
 
@@ -1616,6 +1639,8 @@ class IntegrationSupport(BaseModel):
 
     native_webhook_type: Optional[NativeWebhookType] = None
 
+    native_webhook_updated_gte: Optional[NativeWebhookUpdatedGte] = None
+
     native_webhook_visitor_id: Optional[NativeWebhookVisitorID] = None
 
     outbound_fields: Optional[Dict[str, str]] = None
@@ -1680,6 +1705,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_database_id: Optional[VirtualWebhookDatabaseID] = None
 
     virtual_webhook_deal_id: Optional[VirtualWebhookDealID] = None
+
+    virtual_webhook_effective_status: Optional[VirtualWebhookEffectiveStatus] = None
 
     virtual_webhook_end_lt: Optional[VirtualWebhookEndLt] = None
 
@@ -2014,6 +2041,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListDealID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_destination_id")
+    def serialize_list_destination_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListDestinationID(value)
             except ValueError:
                 return value
         return value
@@ -2837,6 +2873,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("native_webhook_updated_gte")
+    def serialize_native_webhook_updated_gte(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookUpdatedGte(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("native_webhook_visitor_id")
     def serialize_native_webhook_visitor_id(self, value):
         if isinstance(value, str):
@@ -3094,6 +3139,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookDealID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_effective_status")
+    def serialize_virtual_webhook_effective_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookEffectiveStatus(value)
             except ValueError:
                 return value
         return value
@@ -3544,6 +3598,7 @@ class IntegrationSupport(BaseModel):
                 "list_cycle_id",
                 "list_database_id",
                 "list_deal_id",
+                "list_destination_id",
                 "list_dimension",
                 "list_document_id",
                 "list_effective_status",
@@ -3636,6 +3691,7 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_task_id",
                 "native_webhook_template_id",
                 "native_webhook_type",
+                "native_webhook_updated_gte",
                 "native_webhook_visitor_id",
                 "outbound_fields",
                 "raw_objects",
@@ -3668,6 +3724,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_cycle_id",
                 "virtual_webhook_database_id",
                 "virtual_webhook_deal_id",
+                "virtual_webhook_effective_status",
                 "virtual_webhook_end_lt",
                 "virtual_webhook_event_id",
                 "virtual_webhook_expand",

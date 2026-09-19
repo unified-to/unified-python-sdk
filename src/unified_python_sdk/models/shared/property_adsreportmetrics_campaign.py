@@ -42,6 +42,7 @@ class PropertyAdsReportMetricsCampaignAdvertisingChannelType(
     NATIVE = "NATIVE"
     CTV = "CTV"
     DOOH = "DOOH"
+    PERFORMANCE_MAX = "PERFORMANCE_MAX"
 
 
 class PropertyAdsReportMetricsCampaignBudgetPeriod(

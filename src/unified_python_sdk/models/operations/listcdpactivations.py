@@ -34,6 +34,7 @@ class ListCdpActivationsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     destination_id: NotRequired[str]
+    r"""The destination ID to filter by"""
     fields: NotRequired[List[ListCdpActivationsQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
@@ -60,6 +61,7 @@ class ListCdpActivationsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The destination ID to filter by"""
 
     fields: Annotated[
         Optional[List[ListCdpActivationsQueryParamFields]],

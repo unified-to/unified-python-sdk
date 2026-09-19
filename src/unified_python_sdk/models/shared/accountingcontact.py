@@ -59,6 +59,7 @@ class TaxExemption(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingContactTypedDict(TypedDict):
     associated_contacts: NotRequired[List[AccountingAssociatedContactTypedDict]]
+    balance_amount: NotRequired[float]
     billing_address: NotRequired[PropertyAccountingContactBillingAddressTypedDict]
     company_name: NotRequired[str]
     created_at: NotRequired[datetime]
@@ -72,6 +73,7 @@ class AccountingContactTypedDict(TypedDict):
     is_supplier: NotRequired[bool]
     last_name: NotRequired[str]
     name: NotRequired[str]
+    notes: NotRequired[str]
     organization_id: NotRequired[str]
     payment_methods: NotRequired[List[AccountingContactPaymentMethodTypedDict]]
     payment_terms: NotRequired[AccountingContactPaymentTerms]
@@ -83,10 +85,13 @@ class AccountingContactTypedDict(TypedDict):
     tax_number: NotRequired[str]
     telephones: NotRequired[List[AccountingTelephoneTypedDict]]
     updated_at: NotRequired[datetime]
+    website: NotRequired[str]
 
 
 class AccountingContact(BaseModel):
     associated_contacts: Optional[List[AccountingAssociatedContact]] = None
+
+    balance_amount: Optional[float] = None
 
     billing_address: Optional[PropertyAccountingContactBillingAddress] = None
 
@@ -114,6 +119,8 @@ class AccountingContact(BaseModel):
 
     name: Optional[str] = None
 
+    notes: Optional[str] = None
+
     organization_id: Optional[str] = None
 
     payment_methods: Optional[List[AccountingContactPaymentMethod]] = None
@@ -135,6 +142,8 @@ class AccountingContact(BaseModel):
     telephones: Optional[List[AccountingTelephone]] = None
 
     updated_at: Optional[datetime] = None
+
+    website: Optional[str] = None
 
     @field_serializer("payment_terms")
     def serialize_payment_terms(self, value):
@@ -159,6 +168,7 @@ class AccountingContact(BaseModel):
         optional_fields = set(
             [
                 "associated_contacts",
+                "balance_amount",
                 "billing_address",
                 "company_name",
                 "created_at",
@@ -172,6 +182,7 @@ class AccountingContact(BaseModel):
                 "is_supplier",
                 "last_name",
                 "name",
+                "notes",
                 "organization_id",
                 "payment_methods",
                 "payment_terms",
@@ -183,6 +194,7 @@ class AccountingContact(BaseModel):
                 "tax_number",
                 "telephones",
                 "updated_at",
+                "website",
             ]
         )
         serialized = handler(self)

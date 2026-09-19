@@ -43,6 +43,7 @@ class ListAtsCandidatesQueryParamFields(str, Enum):
     SKILLS = "skills"
     JOB_IDS = "job_ids"
     METADATA = "metadata"
+    SUMMARY = "summary"
     RAW = "raw"
 
 
@@ -53,6 +54,8 @@ class ListAtsCandidatesRequestTypedDict(TypedDict):
     r"""The company ID to filter by (reference to AtsCompany)"""
     fields: NotRequired[List[ListAtsCandidatesQueryParamFields]]
     r"""Fields to return"""
+    job_id: NotRequired[str]
+    r"""The job ID to filter by"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -82,6 +85,12 @@ class ListAtsCandidatesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    job_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The job ID to filter by"""
 
     limit: Annotated[
         Optional[float],
@@ -127,6 +136,7 @@ class ListAtsCandidatesRequest(BaseModel):
             [
                 "company_id",
                 "fields",
+                "job_id",
                 "limit",
                 "offset",
                 "order",

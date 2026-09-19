@@ -48,6 +48,7 @@ class AtsApplicationTypedDict(TypedDict):
     rejected_reason: NotRequired[str]
     source: NotRequired[str]
     status: NotRequired[AtsApplicationStatus]
+    summary: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
 
@@ -85,6 +86,8 @@ class AtsApplication(BaseModel):
 
     status: Optional[AtsApplicationStatus] = None
 
+    summary: Optional[str] = None
+
     updated_at: Optional[datetime] = None
 
     user_id: Optional[str] = None
@@ -118,6 +121,7 @@ class AtsApplication(BaseModel):
                 "rejected_reason",
                 "source",
                 "status",
+                "summary",
                 "updated_at",
                 "user_id",
             ]
