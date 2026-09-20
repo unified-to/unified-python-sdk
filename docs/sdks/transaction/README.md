@@ -33,12 +33,12 @@ with UnifiedTo(
     res = unified_to.transaction.create_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "526a7f5e-dc74-4e09-8629-ab996345f9c8",
+            "id": "8f9b0d06-7a63-4f31-8b49-f198a780da28",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "f661010a-80e4-46bd-8743-9733f07f4866",
+                    "id": "5871c683-1027-4942-b61b-d24b323174b9",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -49,7 +49,7 @@ with UnifiedTo(
             "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
             "tax_amount": 0.0,
             "total_amount": 94452.0,
-            "updated_at": parse_datetime("2021-09-10T08:53:11.171Z"),
+            "updated_at": parse_datetime("2021-09-10T11:28:14.473Z"),
         },
         "connection_id": "<id>",
     })
@@ -193,12 +193,12 @@ with UnifiedTo(
     res = unified_to.transaction.patch_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "3cedf1af-33ac-469e-a3bf-264cc42f7a5b",
+            "id": "9e28a763-11e7-44f7-b1e4-a0fd4069ee4f",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "40e36247-1472-4fa5-998f-c09ac830f4e2",
+                    "id": "9a3ce522-d314-4436-950f-654be1d75a15",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -209,7 +209,7 @@ with UnifiedTo(
             "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
             "tax_amount": 0.0,
             "total_amount": 94452.0,
-            "updated_at": parse_datetime("2021-09-10T08:53:11.176Z"),
+            "updated_at": parse_datetime("2021-09-10T11:28:14.476Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -308,12 +308,12 @@ with UnifiedTo(
     res = unified_to.transaction.update_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "3cedf1af-33ac-469e-a3bf-264cc42f7a5b",
+            "id": "9e28a763-11e7-44f7-b1e4-a0fd4069ee4f",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "40e36247-1472-4fa5-998f-c09ac830f4e2",
+                    "id": "9a3ce522-d314-4436-950f-654be1d75a15",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -324,7 +324,7 @@ with UnifiedTo(
             "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
             "tax_amount": 0.0,
             "total_amount": 94452.0,
-            "updated_at": parse_datetime("2021-09-10T08:53:11.176Z"),
+            "updated_at": parse_datetime("2021-09-10T11:28:14.476Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

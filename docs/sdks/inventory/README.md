@@ -33,7 +33,7 @@ with UnifiedTo(
     res = unified_to.inventory.create_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "updated_at": parse_datetime("2025-10-25T13:37:31.830Z"),
+            "updated_at": parse_datetime("2025-10-25T21:02:36.973Z"),
         },
         "connection_id": "<id>",
     })
@@ -177,7 +177,7 @@ with UnifiedTo(
     res = unified_to.inventory.patch_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "updated_at": parse_datetime("2025-10-25T13:37:31.836Z"),
+            "updated_at": parse_datetime("2025-10-25T21:02:36.976Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -276,7 +276,7 @@ with UnifiedTo(
     res = unified_to.inventory.update_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "updated_at": parse_datetime("2025-10-25T13:37:31.836Z"),
+            "updated_at": parse_datetime("2025-10-25T21:02:36.976Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
