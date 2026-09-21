@@ -7,10 +7,20 @@ from .accountingjournallineitem import (
     AccountingJournalLineitemTypedDict,
 )
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class AccountingJournalStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    DRAFT = "DRAFT"
+    POSTED = "POSTED"
+    VOID = "VOID"
+    OTHER = "OTHER"
 
 
 class AccountingJournalTypedDict(TypedDict):
@@ -19,7 +29,9 @@ class AccountingJournalTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     description: NotRequired[str]
+    exchange_rate: NotRequired[float]
     id: NotRequired[str]
+    is_inclusive_of_tax: NotRequired[bool]
     lineitems: NotRequired[List[AccountingJournalLineitemTypedDict]]
     r"""new field name"""
     organization_id: NotRequired[str]
@@ -28,8 +40,10 @@ class AccountingJournalTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     source: NotRequired[str]
+    status: NotRequired[AccountingJournalStatus]
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
+    total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
 
 
@@ -44,7 +58,11 @@ class AccountingJournal(BaseModel):
 
     description: Optional[str] = None
 
+    exchange_rate: Optional[float] = None
+
     id: Optional[str] = None
+
+    is_inclusive_of_tax: Optional[bool] = None
 
     lineitems: Optional[List[AccountingJournalLineitem]] = None
     r"""new field name"""
@@ -61,11 +79,24 @@ class AccountingJournal(BaseModel):
 
     source: Optional[str] = None
 
+    status: Optional[AccountingJournalStatus] = None
+
     tax_amount: Optional[float] = None
 
     taxrate_id: Optional[str] = None
 
+    total_amount: Optional[float] = None
+
     updated_at: Optional[datetime] = None
+
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingJournalStatus(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -76,7 +107,9 @@ class AccountingJournal(BaseModel):
                 "created_at",
                 "currency",
                 "description",
+                "exchange_rate",
                 "id",
+                "is_inclusive_of_tax",
                 "lineitems",
                 "organization_id",
                 "posted_at",
@@ -84,8 +117,10 @@ class AccountingJournal(BaseModel):
                 "raw",
                 "reference",
                 "source",
+                "status",
                 "tax_amount",
                 "taxrate_id",
+                "total_amount",
                 "updated_at",
             ]
         )

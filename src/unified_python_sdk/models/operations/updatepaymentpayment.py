@@ -42,6 +42,10 @@ class UpdatePaymentPaymentQueryParamFields(str, Enum):
     DEVICE_ID = "device_id"
     CARD_BRAND = "card_brand"
     CARD_LAST4 = "card_last4"
+    PAID_AT = "paid_at"
+    EXCHANGE_RATE = "exchange_rate"
+    CATEGORY_IDS = "category_ids"
+    NET_AMOUNT = "net_amount"
     RAW = "raw"
 
 

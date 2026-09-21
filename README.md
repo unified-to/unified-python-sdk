@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "83739f72-9953-46a9-aedd-877d0667d16d",
+            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -148,7 +148,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T06:57:17.864Z"),
+            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
         },
         "connection_id": "<id>",
     })
@@ -185,7 +185,7 @@ async def main():
                 "currency": "BOB",
                 "customer_defined_code": "quo",
                 "description": "Spoliatio comedo vilitas harum cupiditate.",
-                "id": "83739f72-9953-46a9-aedd-877d0667d16d",
+                "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
                 "is_payable": True,
                 "name": "Electronic Aluminum Tuna",
                 "status": shared.Status.ARCHIVED,
@@ -202,7 +202,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.BANK,
-                "updated_at": parse_datetime("2023-01-03T06:57:17.864Z"),
+                "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
             },
             "connection_id": "<id>",
         })
@@ -453,6 +453,15 @@ asyncio.run(main())
 
 * [get_accounting_agedreceivable](docs/sdks/agedreceivable/README.md#get_accounting_agedreceivable) - Retrieve an agedreceivable
 * [list_accounting_agedreceivables](docs/sdks/agedreceivable/README.md#list_accounting_agedreceivables) - List all agedreceivables
+
+### [Agent](docs/sdks/agent/README.md)
+
+* [create_genai_agent](docs/sdks/agent/README.md#create_genai_agent) - Create an agent
+* [get_genai_agent](docs/sdks/agent/README.md#get_genai_agent) - Retrieve an agent
+* [list_genai_agents](docs/sdks/agent/README.md#list_genai_agents) - List all agents
+* [patch_genai_agent](docs/sdks/agent/README.md#patch_genai_agent) - Update an agent
+* [remove_genai_agent](docs/sdks/agent/README.md#remove_genai_agent) - Remove an agent
+* [update_genai_agent](docs/sdks/agent/README.md#update_genai_agent) - Update an agent
 
 ### [Analytics](docs/sdks/analytics/README.md)
 
@@ -1230,10 +1239,26 @@ asyncio.run(main())
 
 ### [Genai](docs/sdks/genai/README.md)
 
+* [create_genai_agent](docs/sdks/genai/README.md#create_genai_agent) - Create an agent
 * [create_genai_embedding](docs/sdks/genai/README.md#create_genai_embedding) - Create an embedding
+* [create_genai_organization](docs/sdks/genai/README.md#create_genai_organization) - Create an organization
 * [create_genai_prompt](docs/sdks/genai/README.md#create_genai_prompt) - Create a prompt
+* [create_genai_task](docs/sdks/genai/README.md#create_genai_task) - Create a task
+* [get_genai_agent](docs/sdks/genai/README.md#get_genai_agent) - Retrieve an agent
 * [get_genai_model](docs/sdks/genai/README.md#get_genai_model) - Retrieve a model
+* [get_genai_organization](docs/sdks/genai/README.md#get_genai_organization) - Retrieve an organization
+* [get_genai_task](docs/sdks/genai/README.md#get_genai_task) - Retrieve a task
+* [list_genai_agents](docs/sdks/genai/README.md#list_genai_agents) - List all agents
 * [list_genai_models](docs/sdks/genai/README.md#list_genai_models) - List all models
+* [list_genai_organizations](docs/sdks/genai/README.md#list_genai_organizations) - List all organizations
+* [list_genai_tasks](docs/sdks/genai/README.md#list_genai_tasks) - List all tasks
+* [patch_genai_agent](docs/sdks/genai/README.md#patch_genai_agent) - Update an agent
+* [patch_genai_organization](docs/sdks/genai/README.md#patch_genai_organization) - Update an organization
+* [remove_genai_agent](docs/sdks/genai/README.md#remove_genai_agent) - Remove an agent
+* [remove_genai_organization](docs/sdks/genai/README.md#remove_genai_organization) - Remove an organization
+* [remove_genai_task](docs/sdks/genai/README.md#remove_genai_task) - Remove a task
+* [update_genai_agent](docs/sdks/genai/README.md#update_genai_agent) - Update an agent
+* [update_genai_organization](docs/sdks/genai/README.md#update_genai_organization) - Update an organization
 
 ### [Goal](docs/sdks/goal/README.md)
 
@@ -1675,18 +1700,24 @@ asyncio.run(main())
 ### [Organization](docs/sdks/organization/README.md)
 
 * [create_ads_organization](docs/sdks/organization/README.md#create_ads_organization) - Create an organization
+* [create_genai_organization](docs/sdks/organization/README.md#create_genai_organization) - Create an organization
 * [create_repo_organization](docs/sdks/organization/README.md#create_repo_organization) - Create an organization
 * [get_accounting_organization](docs/sdks/organization/README.md#get_accounting_organization) - Retrieve an organization
 * [get_ads_organization](docs/sdks/organization/README.md#get_ads_organization) - Retrieve an organization
+* [get_genai_organization](docs/sdks/organization/README.md#get_genai_organization) - Retrieve an organization
 * [get_repo_organization](docs/sdks/organization/README.md#get_repo_organization) - Retrieve an organization
 * [list_accounting_organizations](docs/sdks/organization/README.md#list_accounting_organizations) - List all organizations
 * [list_ads_organizations](docs/sdks/organization/README.md#list_ads_organizations) - List all organizations
+* [list_genai_organizations](docs/sdks/organization/README.md#list_genai_organizations) - List all organizations
 * [list_repo_organizations](docs/sdks/organization/README.md#list_repo_organizations) - List all organizations
 * [patch_ads_organization](docs/sdks/organization/README.md#patch_ads_organization) - Update an organization
+* [patch_genai_organization](docs/sdks/organization/README.md#patch_genai_organization) - Update an organization
 * [patch_repo_organization](docs/sdks/organization/README.md#patch_repo_organization) - Update an organization
 * [remove_ads_organization](docs/sdks/organization/README.md#remove_ads_organization) - Remove an organization
+* [remove_genai_organization](docs/sdks/organization/README.md#remove_genai_organization) - Remove an organization
 * [remove_repo_organization](docs/sdks/organization/README.md#remove_repo_organization) - Remove an organization
 * [update_ads_organization](docs/sdks/organization/README.md#update_ads_organization) - Update an organization
+* [update_genai_organization](docs/sdks/organization/README.md#update_genai_organization) - Update an organization
 * [update_repo_organization](docs/sdks/organization/README.md#update_repo_organization) - Update an organization
 
 ### [Package](docs/sdks/package/README.md)
@@ -2197,13 +2228,16 @@ asyncio.run(main())
 
 ### [Task](docs/sdks/task/README.md)
 
+* [create_genai_task](docs/sdks/task/README.md#create_genai_task) - Create a task
 * [create_task_comment](docs/sdks/task/README.md#create_task_comment) - Create a comment
 * [create_task_project](docs/sdks/task/README.md#create_task_project) - Create a project
 * [create_task_task](docs/sdks/task/README.md#create_task_task) - Create a task
+* [get_genai_task](docs/sdks/task/README.md#get_genai_task) - Retrieve a task
 * [get_task_change](docs/sdks/task/README.md#get_task_change) - Retrieve a change
 * [get_task_comment](docs/sdks/task/README.md#get_task_comment) - Retrieve a comment
 * [get_task_project](docs/sdks/task/README.md#get_task_project) - Retrieve a project
 * [get_task_task](docs/sdks/task/README.md#get_task_task) - Retrieve a task
+* [list_genai_tasks](docs/sdks/task/README.md#list_genai_tasks) - List all tasks
 * [list_task_changes](docs/sdks/task/README.md#list_task_changes) - List all changes
 * [list_task_comments](docs/sdks/task/README.md#list_task_comments) - List all comments
 * [list_task_projects](docs/sdks/task/README.md#list_task_projects) - List all projects
@@ -2211,6 +2245,7 @@ asyncio.run(main())
 * [patch_task_comment](docs/sdks/task/README.md#patch_task_comment) - Update a comment
 * [patch_task_project](docs/sdks/task/README.md#patch_task_project) - Update a project
 * [patch_task_task](docs/sdks/task/README.md#patch_task_task) - Update a task
+* [remove_genai_task](docs/sdks/task/README.md#remove_genai_task) - Remove a task
 * [remove_task_comment](docs/sdks/task/README.md#remove_task_comment) - Remove a comment
 * [remove_task_project](docs/sdks/task/README.md#remove_task_project) - Remove a project
 * [remove_task_task](docs/sdks/task/README.md#remove_task_task) - Remove a task
@@ -2493,7 +2528,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "83739f72-9953-46a9-aedd-877d0667d16d",
+            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2510,7 +2545,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T06:57:17.864Z"),
+            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
         },
         "connection_id": "<id>",
     },
@@ -2544,7 +2579,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "83739f72-9953-46a9-aedd-877d0667d16d",
+            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2561,7 +2596,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T06:57:17.864Z"),
+            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
         },
         "connection_id": "<id>",
     })
@@ -2609,7 +2644,7 @@ with UnifiedTo(
                 "currency": "BOB",
                 "customer_defined_code": "quo",
                 "description": "Spoliatio comedo vilitas harum cupiditate.",
-                "id": "83739f72-9953-46a9-aedd-877d0667d16d",
+                "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
                 "is_payable": True,
                 "name": "Electronic Aluminum Tuna",
                 "status": shared.Status.ARCHIVED,
@@ -2626,7 +2661,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.BANK,
-                "updated_at": parse_datetime("2023-01-03T06:57:17.864Z"),
+                "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
             },
             "connection_id": "<id>",
         })
@@ -2704,7 +2739,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "83739f72-9953-46a9-aedd-877d0667d16d",
+            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2721,7 +2756,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T06:57:17.864Z"),
+            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
         },
         "connection_id": "<id>",
     })
@@ -2756,7 +2791,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "83739f72-9953-46a9-aedd-877d0667d16d",
+            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2773,7 +2808,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T06:57:17.864Z"),
+            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
         },
         "connection_id": "<id>",
     })
@@ -2916,7 +2951,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "83739f72-9953-46a9-aedd-877d0667d16d",
+            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2933,7 +2968,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T06:57:17.864Z"),
+            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
         },
         "connection_id": "<id>",
     })

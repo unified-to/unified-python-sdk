@@ -10,10 +10,20 @@ from .accountingtransactionlineitem import (
     AccountingTransactionLineItemTypedDict,
 )
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class AccountingTransactionStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    PENDING = "PENDING"
+    POSTED = "POSTED"
+    VOID = "VOID"
+    OTHER = "OTHER"
 
 
 class AccountingTransactionTypedDict(TypedDict):
@@ -23,6 +33,7 @@ class AccountingTransactionTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     customer_message: NotRequired[str]
+    exchange_rate: NotRequired[float]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingTransactionLineItemTypedDict]]
     memo: NotRequired[str]
@@ -33,9 +44,11 @@ class AccountingTransactionTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     split_account_id: NotRequired[str]
+    status: NotRequired[AccountingTransactionStatus]
     sub_total_amount: NotRequired[float]
     tax_amount: NotRequired[float]
     total_amount: NotRequired[float]
+    transaction_at: NotRequired[datetime]
     type: NotRequired[str]
     updated_at: NotRequired[datetime]
 
@@ -52,6 +65,8 @@ class AccountingTransaction(BaseModel):
     currency: Optional[str] = None
 
     customer_message: Optional[str] = None
+
+    exchange_rate: Optional[float] = None
 
     id: Optional[str] = None
 
@@ -73,15 +88,28 @@ class AccountingTransaction(BaseModel):
 
     split_account_id: Optional[str] = None
 
+    status: Optional[AccountingTransactionStatus] = None
+
     sub_total_amount: Optional[float] = None
 
     tax_amount: Optional[float] = None
 
     total_amount: Optional[float] = None
 
+    transaction_at: Optional[datetime] = None
+
     type: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingTransactionStatus(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -93,6 +121,7 @@ class AccountingTransaction(BaseModel):
                 "created_at",
                 "currency",
                 "customer_message",
+                "exchange_rate",
                 "id",
                 "lineitems",
                 "memo",
@@ -103,9 +132,11 @@ class AccountingTransaction(BaseModel):
                 "raw",
                 "reference",
                 "split_account_id",
+                "status",
                 "sub_total_amount",
                 "tax_amount",
                 "total_amount",
+                "transaction_at",
                 "type",
                 "updated_at",
             ]

@@ -125,7 +125,11 @@ if TYPE_CHECKING:
         AccountingInvoiceType,
         AccountingInvoiceTypedDict,
     )
-    from .accountingjournal import AccountingJournal, AccountingJournalTypedDict
+    from .accountingjournal import (
+        AccountingJournal,
+        AccountingJournalStatus,
+        AccountingJournalTypedDict,
+    )
     from .accountingjournallineitem import (
         AccountingJournalLineitem,
         AccountingJournalLineitemTypedDict,
@@ -206,7 +210,15 @@ if TYPE_CHECKING:
         AccountingSalesorderTypedDict,
         FulfillmentType,
     )
-    from .accountingtaxrate import AccountingTaxrate, AccountingTaxrateTypedDict
+    from .accountingtaxrate import (
+        AccountingTaxrate,
+        AccountingTaxrateType,
+        AccountingTaxrateTypedDict,
+    )
+    from .accountingtaxratecomponent import (
+        AccountingTaxrateComponent,
+        AccountingTaxrateComponentTypedDict,
+    )
     from .accountingtelephone import (
         AccountingTelephone,
         AccountingTelephoneType,
@@ -214,6 +226,7 @@ if TYPE_CHECKING:
     )
     from .accountingtransaction import (
         AccountingTransaction,
+        AccountingTransactionStatus,
         AccountingTransactionTypedDict,
     )
     from .accountingtransactioncontact import (
@@ -652,6 +665,7 @@ if TYPE_CHECKING:
     from .formfield import FormField, FormFieldType, FormFieldTypedDict
     from .formsform import FormsForm, FormsFormTypedDict
     from .formssubmission import FormsSubmission, FormsSubmissionTypedDict
+    from .genaiagent import GenaiAgent, GenaiAgentTypedDict
     from .genaicontent import GenaiContent, GenaiContentTypedDict, Role
     from .genaiembedding import EncondingFormat, GenaiEmbedding, GenaiEmbeddingTypedDict
     from .genaiembeddingcontent import (
@@ -659,7 +673,9 @@ if TYPE_CHECKING:
         GenaiEmbeddingContentTypedDict,
     )
     from .genaimodel import GenaiModel, GenaiModelTypedDict
+    from .genaiorganization import GenaiOrganization, GenaiOrganizationTypedDict
     from .genaiprompt import GenaiPrompt, GenaiPromptTypedDict
+    from .genaitask import GenaiTask, GenaiTaskStatus, GenaiTaskTypedDict
     from .hrisattendance import (
         HrisAttendance,
         HrisAttendanceStatus,
@@ -1066,10 +1082,17 @@ if TYPE_CHECKING:
         PaymentPayoutStatus,
         PaymentPayoutTypedDict,
     )
+    from .paymentpayoutlineitem import (
+        PaymentPayoutLineitem,
+        PaymentPayoutLineitemObjectType,
+        PaymentPayoutLineitemTypedDict,
+    )
     from .paymentrefund import (
         PaymentRefund,
         PaymentRefundStatus,
+        PaymentRefundTenderType,
         PaymentRefundTypedDict,
+        Reason,
     )
     from .paymentsubscription import (
         IntervalUnit,
@@ -2215,6 +2238,7 @@ __all__ = [
     "AccountingJournal",
     "AccountingJournalLineitem",
     "AccountingJournalLineitemTypedDict",
+    "AccountingJournalStatus",
     "AccountingJournalTypedDict",
     "AccountingLineitem",
     "AccountingLineitemTypedDict",
@@ -2258,6 +2282,9 @@ __all__ = [
     "AccountingSalesorderStatus",
     "AccountingSalesorderTypedDict",
     "AccountingTaxrate",
+    "AccountingTaxrateComponent",
+    "AccountingTaxrateComponentTypedDict",
+    "AccountingTaxrateType",
     "AccountingTaxrateTypedDict",
     "AccountingTelephone",
     "AccountingTelephoneType",
@@ -2267,6 +2294,7 @@ __all__ = [
     "AccountingTransactionContactTypedDict",
     "AccountingTransactionLineItem",
     "AccountingTransactionLineItemTypedDict",
+    "AccountingTransactionStatus",
     "AccountingTransactionTypedDict",
     "AccountingTrialbalance",
     "AccountingTrialbalanceSubItem",
@@ -2699,6 +2727,8 @@ __all__ = [
     "Frequency",
     "FromWebhook",
     "FulfillmentType",
+    "GenaiAgent",
+    "GenaiAgentTypedDict",
     "GenaiContent",
     "GenaiContentTypedDict",
     "GenaiEmbedding",
@@ -2707,8 +2737,13 @@ __all__ = [
     "GenaiEmbeddingTypedDict",
     "GenaiModel",
     "GenaiModelTypedDict",
+    "GenaiOrganization",
+    "GenaiOrganizationTypedDict",
     "GenaiPrompt",
     "GenaiPromptTypedDict",
+    "GenaiTask",
+    "GenaiTaskStatus",
+    "GenaiTaskTypedDict",
     "Gender",
     "Goal",
     "GroupType",
@@ -3051,10 +3086,14 @@ __all__ = [
     "PaymentPaymentType",
     "PaymentPaymentTypedDict",
     "PaymentPayout",
+    "PaymentPayoutLineitem",
+    "PaymentPayoutLineitemObjectType",
+    "PaymentPayoutLineitemTypedDict",
     "PaymentPayoutStatus",
     "PaymentPayoutTypedDict",
     "PaymentRefund",
     "PaymentRefundStatus",
+    "PaymentRefundTenderType",
     "PaymentRefundTypedDict",
     "PaymentSubscription",
     "PaymentSubscriptionStatus",
@@ -3512,6 +3551,7 @@ __all__ = [
     "PropertyUcCallTelephoneType",
     "PropertyUcCallTelephoneTypedDict",
     "RadiusUnit",
+    "Reason",
     "Recommendation",
     "RegistrationStatus",
     "RepoBranch",
@@ -3905,6 +3945,7 @@ _dynamic_imports: dict[str, str] = {
     "AccountingInvoiceType": ".accountinginvoice",
     "AccountingInvoiceTypedDict": ".accountinginvoice",
     "AccountingJournal": ".accountingjournal",
+    "AccountingJournalStatus": ".accountingjournal",
     "AccountingJournalTypedDict": ".accountingjournal",
     "AccountingJournalLineitem": ".accountingjournallineitem",
     "AccountingJournalLineitemTypedDict": ".accountingjournallineitem",
@@ -3963,11 +4004,15 @@ _dynamic_imports: dict[str, str] = {
     "AccountingSalesorderTypedDict": ".accountingsalesorder",
     "FulfillmentType": ".accountingsalesorder",
     "AccountingTaxrate": ".accountingtaxrate",
+    "AccountingTaxrateType": ".accountingtaxrate",
     "AccountingTaxrateTypedDict": ".accountingtaxrate",
+    "AccountingTaxrateComponent": ".accountingtaxratecomponent",
+    "AccountingTaxrateComponentTypedDict": ".accountingtaxratecomponent",
     "AccountingTelephone": ".accountingtelephone",
     "AccountingTelephoneType": ".accountingtelephone",
     "AccountingTelephoneTypedDict": ".accountingtelephone",
     "AccountingTransaction": ".accountingtransaction",
+    "AccountingTransactionStatus": ".accountingtransaction",
     "AccountingTransactionTypedDict": ".accountingtransaction",
     "AccountingTransactionContact": ".accountingtransactioncontact",
     "AccountingTransactionContactTypedDict": ".accountingtransactioncontact",
@@ -4404,6 +4449,8 @@ _dynamic_imports: dict[str, str] = {
     "FormsFormTypedDict": ".formsform",
     "FormsSubmission": ".formssubmission",
     "FormsSubmissionTypedDict": ".formssubmission",
+    "GenaiAgent": ".genaiagent",
+    "GenaiAgentTypedDict": ".genaiagent",
     "GenaiContent": ".genaicontent",
     "GenaiContentTypedDict": ".genaicontent",
     "Role": ".genaicontent",
@@ -4414,8 +4461,13 @@ _dynamic_imports: dict[str, str] = {
     "GenaiEmbeddingContentTypedDict": ".genaiembeddingcontent",
     "GenaiModel": ".genaimodel",
     "GenaiModelTypedDict": ".genaimodel",
+    "GenaiOrganization": ".genaiorganization",
+    "GenaiOrganizationTypedDict": ".genaiorganization",
     "GenaiPrompt": ".genaiprompt",
     "GenaiPromptTypedDict": ".genaiprompt",
+    "GenaiTask": ".genaitask",
+    "GenaiTaskStatus": ".genaitask",
+    "GenaiTaskTypedDict": ".genaitask",
     "HrisAttendance": ".hrisattendance",
     "HrisAttendanceStatus": ".hrisattendance",
     "HrisAttendanceTypedDict": ".hrisattendance",
@@ -4832,9 +4884,14 @@ _dynamic_imports: dict[str, str] = {
     "PaymentPayout": ".paymentpayout",
     "PaymentPayoutStatus": ".paymentpayout",
     "PaymentPayoutTypedDict": ".paymentpayout",
+    "PaymentPayoutLineitem": ".paymentpayoutlineitem",
+    "PaymentPayoutLineitemObjectType": ".paymentpayoutlineitem",
+    "PaymentPayoutLineitemTypedDict": ".paymentpayoutlineitem",
     "PaymentRefund": ".paymentrefund",
     "PaymentRefundStatus": ".paymentrefund",
+    "PaymentRefundTenderType": ".paymentrefund",
     "PaymentRefundTypedDict": ".paymentrefund",
+    "Reason": ".paymentrefund",
     "IntervalUnit": ".paymentsubscription",
     "PaymentSubscription": ".paymentsubscription",
     "PaymentSubscriptionStatus": ".paymentsubscription",

@@ -2,34 +2,65 @@
 
 from __future__ import annotations
 from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
+from .accountingtaxratecomponent import (
+    AccountingTaxrateComponent,
+    AccountingTaxrateComponentTypedDict,
+)
 from datetime import datetime
-from pydantic import model_serializer
+from enum import Enum
+from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class AccountingTaxrateType(str, Enum, metaclass=utils.OpenEnumMeta):
+    SALES = "SALES"
+    PURCHASE = "PURCHASE"
+    BOTH = "BOTH"
+    OTHER = "OTHER"
+
+
 class AccountingTaxrateTypedDict(TypedDict):
+    components: NotRequired[List[AccountingTaxrateComponentTypedDict]]
+    r"""Component parts of a compound or multi-component tax"""
+    country: NotRequired[str]
     created_at: NotRequired[datetime]
     description: NotRequired[str]
+    effective_rate: NotRequired[float]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    is_compound: NotRequired[bool]
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     rate: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
+    region: NotRequired[str]
+    total_rate: NotRequired[float]
+    type: NotRequired[AccountingTaxrateType]
     updated_at: NotRequired[datetime]
 
 
 class AccountingTaxrate(BaseModel):
+    components: Optional[List[AccountingTaxrateComponent]] = None
+    r"""Component parts of a compound or multi-component tax"""
+
+    country: Optional[str] = None
+
     created_at: Optional[datetime] = None
 
     description: Optional[str] = None
 
+    effective_rate: Optional[float] = None
+
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    is_compound: Optional[bool] = None
 
     metadata: Optional[List[AccountingMetadata]] = None
 
@@ -41,21 +72,43 @@ class AccountingTaxrate(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
+    region: Optional[str] = None
+
+    total_rate: Optional[float] = None
+
+    type: Optional[AccountingTaxrateType] = None
+
     updated_at: Optional[datetime] = None
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingTaxrateType(value)
+            except ValueError:
+                return value
+        return value
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "components",
+                "country",
                 "created_at",
                 "description",
+                "effective_rate",
                 "id",
                 "is_active",
+                "is_compound",
                 "metadata",
                 "name",
                 "organization_id",
                 "rate",
                 "raw",
+                "region",
+                "total_rate",
+                "type",
                 "updated_at",
             ]
         )

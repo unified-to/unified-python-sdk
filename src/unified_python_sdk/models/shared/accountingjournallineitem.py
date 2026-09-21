@@ -21,6 +21,7 @@ class AccountingJournalLineitemTypedDict(TypedDict):
     payment_id: NotRequired[str]
     project_id: NotRequired[str]
     tax_amount: NotRequired[float]
+    taxrate_id: NotRequired[str]
     total_amount: NotRequired[float]
 
 
@@ -51,6 +52,8 @@ class AccountingJournalLineitem(BaseModel):
 
     tax_amount: Optional[float] = None
 
+    taxrate_id: Optional[str] = None
+
     total_amount: Optional[float] = None
 
     @model_serializer(mode="wrap")
@@ -70,6 +73,7 @@ class AccountingJournalLineitem(BaseModel):
                 "payment_id",
                 "project_id",
                 "tax_amount",
+                "taxrate_id",
                 "total_amount",
             ]
         )

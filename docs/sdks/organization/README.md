@@ -5,18 +5,24 @@
 ### Available Operations
 
 * [create_ads_organization](#create_ads_organization) - Create an organization
+* [create_genai_organization](#create_genai_organization) - Create an organization
 * [create_repo_organization](#create_repo_organization) - Create an organization
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_ads_organization](#get_ads_organization) - Retrieve an organization
+* [get_genai_organization](#get_genai_organization) - Retrieve an organization
 * [get_repo_organization](#get_repo_organization) - Retrieve an organization
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_ads_organizations](#list_ads_organizations) - List all organizations
+* [list_genai_organizations](#list_genai_organizations) - List all organizations
 * [list_repo_organizations](#list_repo_organizations) - List all organizations
 * [patch_ads_organization](#patch_ads_organization) - Update an organization
+* [patch_genai_organization](#patch_genai_organization) - Update an organization
 * [patch_repo_organization](#patch_repo_organization) - Update an organization
 * [remove_ads_organization](#remove_ads_organization) - Remove an organization
+* [remove_genai_organization](#remove_genai_organization) - Remove an organization
 * [remove_repo_organization](#remove_repo_organization) - Remove an organization
 * [update_ads_organization](#update_ads_organization) - Update an organization
+* [update_genai_organization](#update_genai_organization) - Update an organization
 * [update_repo_organization](#update_repo_organization) - Update an organization
 
 ## create_ads_organization
@@ -43,7 +49,7 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "c21f2578-6a34-4670-b243-2d396178fb84",
+            "id": "7aa99529-0bf9-46b7-8885-0326ecbc4707",
             "managers": [
                 {
                     "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
@@ -53,7 +59,7 @@ with UnifiedTo(
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-02-28T07:14:20.654Z"),
+            "updated_at": parse_datetime("2026-03-01T15:36:04.753Z"),
         },
         "connection_id": "<id>",
     })
@@ -75,6 +81,61 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAdsOrganizationResponse](../../models/operations/createadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_genai_organization
+
+Create an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createGenaiOrganization" method="post" path="/genai/{connection_id}/organization" example="genai_organization" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.create_genai_organization(request={
+        "genai_organization": {
+            "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
+            "description": "Voluptates abeo subseco.",
+            "id": "c6b6737d-7782-41e3-a20e-674fb9c33d86",
+            "is_active": False,
+            "name": "officially about",
+            "updated_at": parse_datetime("2023-01-15T02:14:43.003Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.genai_organization is not None
+
+    # Handle response
+    print(res.genai_organization)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateGenaiOrganizationRequest](../../models/operations/creategenaiorganizationrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.CreateGenaiOrganizationResponse](../../models/operations/creategenaiorganizationresponse.md)**
 
 ### Errors
 
@@ -106,9 +167,9 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "848bb497-b731-4e29-b897-7b9b82bc33e7",
+            "id": "e5e80293-ffea-4c50-8f72-f34ace46e72d",
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-13T07:51:08.849Z"),
+            "updated_at": parse_datetime("2023-08-13T17:10:28.255Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",
@@ -225,6 +286,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAdsOrganizationResponse](../../models/operations/getadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_genai_organization
+
+Retrieve an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getGenaiOrganization" method="get" path="/genai/{connection_id}/organization/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.get_genai_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_organization is not None
+
+    # Handle response
+    print(res.genai_organization)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetGenaiOrganizationRequest](../../models/operations/getgenaiorganizationrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.GetGenaiOrganizationResponse](../../models/operations/getgenaiorganizationresponse.md)**
 
 ### Errors
 
@@ -371,6 +479,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_genai_organizations
+
+List all organizations
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listGenaiOrganizations" method="get" path="/genai/{connection_id}/organization" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.list_genai_organizations(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.genai_organizations is not None
+
+    # Handle response
+    print(res.genai_organizations)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListGenaiOrganizationsRequest](../../models/operations/listgenaiorganizationsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.ListGenaiOrganizationsResponse](../../models/operations/listgenaiorganizationsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_repo_organizations
 
 List all organizations
@@ -441,7 +595,7 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "f27f7a1e-55e1-4c73-a272-7696f720a705",
+            "id": "efbf089b-dc01-4dbe-bdc5-3d5f86e0b1c3",
             "managers": [
                 {
                     "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
@@ -451,7 +605,7 @@ with UnifiedTo(
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-02-28T07:14:20.664Z"),
+            "updated_at": parse_datetime("2026-03-01T15:36:04.765Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -474,6 +628,62 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchAdsOrganizationResponse](../../models/operations/patchadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_genai_organization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchGenaiOrganization" method="patch" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.patch_genai_organization(request={
+        "genai_organization": {
+            "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
+            "description": "Voluptates abeo subseco.",
+            "id": "e466e490-09c0-476e-9a38-d324960c1635",
+            "is_active": False,
+            "name": "officially about",
+            "updated_at": parse_datetime("2023-01-15T02:14:43.005Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_organization is not None
+
+    # Handle response
+    print(res.genai_organization)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchGenaiOrganizationRequest](../../models/operations/patchgenaiorganizationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.PatchGenaiOrganizationResponse](../../models/operations/patchgenaiorganizationresponse.md)**
 
 ### Errors
 
@@ -505,9 +715,9 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "ba6a9834-a347-4a9e-84eb-28ede12866bf",
+            "id": "2c0e48fb-7221-429b-aeed-0a403672f821",
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-13T07:51:08.851Z"),
+            "updated_at": parse_datetime("2023-08-13T17:10:28.257Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",
@@ -578,6 +788,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveAdsOrganizationResponse](../../models/operations/removeadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_genai_organization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeGenaiOrganization" method="delete" path="/genai/{connection_id}/organization/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.remove_genai_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveGenaiOrganizationRequest](../../models/operations/removegenaiorganizationrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.RemoveGenaiOrganizationResponse](../../models/operations/removegenaiorganizationresponse.md)**
 
 ### Errors
 
@@ -656,7 +913,7 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "f27f7a1e-55e1-4c73-a272-7696f720a705",
+            "id": "efbf089b-dc01-4dbe-bdc5-3d5f86e0b1c3",
             "managers": [
                 {
                     "id": "e4fd87df-9f8b-4fa0-a77b-b7d18669e350",
@@ -666,7 +923,7 @@ with UnifiedTo(
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-02-28T07:14:20.664Z"),
+            "updated_at": parse_datetime("2026-03-01T15:36:04.765Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -689,6 +946,62 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateAdsOrganizationResponse](../../models/operations/updateadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_genai_organization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateGenaiOrganization" method="put" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.organization.update_genai_organization(request={
+        "genai_organization": {
+            "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
+            "description": "Voluptates abeo subseco.",
+            "id": "e466e490-09c0-476e-9a38-d324960c1635",
+            "is_active": False,
+            "name": "officially about",
+            "updated_at": parse_datetime("2023-01-15T02:14:43.005Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_organization is not None
+
+    # Handle response
+    print(res.genai_organization)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateGenaiOrganizationRequest](../../models/operations/updategenaiorganizationrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.UpdateGenaiOrganizationResponse](../../models/operations/updategenaiorganizationresponse.md)**
 
 ### Errors
 
@@ -720,9 +1033,9 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "ba6a9834-a347-4a9e-84eb-28ede12866bf",
+            "id": "2c0e48fb-7221-429b-aeed-0a403672f821",
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-13T07:51:08.851Z"),
+            "updated_at": parse_datetime("2023-08-13T17:10:28.257Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",

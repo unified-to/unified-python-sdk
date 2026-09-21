@@ -24,6 +24,7 @@ class AccountingOrganizationType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingOrganizationTypedDict(TypedDict):
     address: NotRequired[PropertyAccountingOrganizationAddressTypedDict]
+    books_close_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     fiscal_year_end_month: NotRequired[float]
@@ -43,6 +44,8 @@ class AccountingOrganizationTypedDict(TypedDict):
 
 class AccountingOrganization(BaseModel):
     address: Optional[PropertyAccountingOrganizationAddress] = None
+
+    books_close_at: Optional[datetime] = None
 
     created_at: Optional[datetime] = None
 
@@ -88,6 +91,7 @@ class AccountingOrganization(BaseModel):
         optional_fields = set(
             [
                 "address",
+                "books_close_at",
                 "created_at",
                 "currency",
                 "fiscal_year_end_month",

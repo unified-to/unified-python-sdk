@@ -18,4 +18,5 @@
 | `payment_id`       | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `project_id`       | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `tax_amount`       | *Optional[float]*  | :heavy_minus_sign: | N/A                |
+| `taxrate_id`       | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `total_amount`     | *Optional[float]*  | :heavy_minus_sign: | N/A                |

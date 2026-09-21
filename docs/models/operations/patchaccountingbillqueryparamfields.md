@@ -47,4 +47,7 @@ value = PatchAccountingBillQueryParamFields.ID
 | `CATEGORY_IDS`              | category_ids                |
 | `PROJECT_ID`                | project_id                  |
 | `METADATA`                  | metadata                    |
+| `SUB_TOTAL_AMOUNT`          | sub_total_amount            |
+| `EXCHANGE_RATE`             | exchange_rate               |
+| `PURCHASEORDER_IDS`         | purchaseorder_ids           |
 | `RAW`                       | raw                         |

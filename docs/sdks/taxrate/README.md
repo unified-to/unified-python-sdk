@@ -32,14 +32,27 @@ with UnifiedTo(
 
     res = unified_to.taxrate.create_accounting_taxrate(request={
         "accounting_taxrate": {
+            "components": [
+                {
+                    "is_compound": False,
+                    "name": "cogo",
+                    "rate": 53.0,
+                },
+            ],
+            "country": "BY",
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
-            "description": "Nemo atrox tricesimus creator aranea.",
-            "id": "43c2bf3d-d15c-47d3-8c1e-a95fa2292c90",
+            "description": "Atrox tricesimus creator.",
+            "effective_rate": 53.0,
+            "id": "9d45b1ab-9993-41c7-9148-b552b5883179",
             "is_active": False,
+            "is_compound": True,
             "metadata": [],
-            "name": "cogo",
-            "rate": 1.0,
-            "updated_at": parse_datetime("2025-11-05T11:21:57.104Z"),
+            "name": "villa",
+            "rate": 53.0,
+            "region": "TX",
+            "total_rate": 53.0,
+            "type": shared.AccountingTaxrateType.OTHER,
+            "updated_at": parse_datetime("2022-04-13T08:15:29.223Z"),
         },
         "connection_id": "<id>",
     })
@@ -182,14 +195,27 @@ with UnifiedTo(
 
     res = unified_to.taxrate.patch_accounting_taxrate(request={
         "accounting_taxrate": {
+            "components": [
+                {
+                    "is_compound": False,
+                    "name": "cogo",
+                    "rate": 53.0,
+                },
+            ],
+            "country": "BY",
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
-            "description": "Nemo atrox tricesimus creator aranea.",
-            "id": "5075e7cd-2a41-428a-a905-c063177ef62e",
+            "description": "Atrox tricesimus creator.",
+            "effective_rate": 53.0,
+            "id": "6b146958-8711-4255-89a5-4e504a6d2a0f",
             "is_active": False,
+            "is_compound": True,
             "metadata": [],
-            "name": "cogo",
-            "rate": 1.0,
-            "updated_at": parse_datetime("2025-11-05T11:21:57.110Z"),
+            "name": "villa",
+            "rate": 53.0,
+            "region": "TX",
+            "total_rate": 53.0,
+            "type": shared.AccountingTaxrateType.OTHER,
+            "updated_at": parse_datetime("2022-04-13T08:15:29.226Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -287,14 +313,27 @@ with UnifiedTo(
 
     res = unified_to.taxrate.update_accounting_taxrate(request={
         "accounting_taxrate": {
+            "components": [
+                {
+                    "is_compound": False,
+                    "name": "cogo",
+                    "rate": 53.0,
+                },
+            ],
+            "country": "BY",
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
-            "description": "Nemo atrox tricesimus creator aranea.",
-            "id": "5075e7cd-2a41-428a-a905-c063177ef62e",
+            "description": "Atrox tricesimus creator.",
+            "effective_rate": 53.0,
+            "id": "6b146958-8711-4255-89a5-4e504a6d2a0f",
             "is_active": False,
+            "is_compound": True,
             "metadata": [],
-            "name": "cogo",
-            "rate": 1.0,
-            "updated_at": parse_datetime("2025-11-05T11:21:57.110Z"),
+            "name": "villa",
+            "rate": 53.0,
+            "region": "TX",
+            "total_rate": 53.0,
+            "type": shared.AccountingTaxrateType.OTHER,
+            "updated_at": parse_datetime("2022-04-13T08:15:29.226Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

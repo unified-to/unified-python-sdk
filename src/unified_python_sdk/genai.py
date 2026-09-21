@@ -10,6 +10,196 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Genai(BaseSDK):
+    def create_genai_agent(
+        self,
+        *,
+        request: Union[
+            operations.CreateGenaiAgentRequest,
+            operations.CreateGenaiAgentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreateGenaiAgentResponse:
+        r"""Create an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreateGenaiAgentRequest)
+        request = cast(operations.CreateGenaiAgentRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/genai/{connection_id}/agent",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_agent, False, False, "json", shared.GenaiAgent
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreateGenaiAgentResponse(
+                genai_agent=unmarshal_json_response(
+                    Optional[shared.GenaiAgent], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def create_genai_agent_async(
+        self,
+        *,
+        request: Union[
+            operations.CreateGenaiAgentRequest,
+            operations.CreateGenaiAgentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreateGenaiAgentResponse:
+        r"""Create an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreateGenaiAgentRequest)
+        request = cast(operations.CreateGenaiAgentRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/genai/{connection_id}/agent",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_agent, False, False, "json", shared.GenaiAgent
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreateGenaiAgentResponse(
+                genai_agent=unmarshal_json_response(
+                    Optional[shared.GenaiAgent], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
     def create_genai_embedding(
         self,
         *,
@@ -186,6 +376,208 @@ class Genai(BaseSDK):
             return operations.CreateGenaiEmbeddingResponse(
                 genai_embedding=unmarshal_json_response(
                     Optional[shared.GenaiEmbedding], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def create_genai_organization(
+        self,
+        *,
+        request: Union[
+            operations.CreateGenaiOrganizationRequest,
+            operations.CreateGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreateGenaiOrganizationResponse:
+        r"""Create an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.CreateGenaiOrganizationRequest
+            )
+        request = cast(operations.CreateGenaiOrganizationRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/genai/{connection_id}/organization",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_organization,
+                False,
+                False,
+                "json",
+                shared.GenaiOrganization,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreateGenaiOrganizationResponse(
+                genai_organization=unmarshal_json_response(
+                    Optional[shared.GenaiOrganization], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def create_genai_organization_async(
+        self,
+        *,
+        request: Union[
+            operations.CreateGenaiOrganizationRequest,
+            operations.CreateGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreateGenaiOrganizationResponse:
+        r"""Create an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.CreateGenaiOrganizationRequest
+            )
+        request = cast(operations.CreateGenaiOrganizationRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/genai/{connection_id}/organization",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_organization,
+                False,
+                False,
+                "json",
+                shared.GenaiOrganization,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreateGenaiOrganizationResponse(
+                genai_organization=unmarshal_json_response(
+                    Optional[shared.GenaiOrganization], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -390,6 +782,378 @@ class Genai(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    def create_genai_task(
+        self,
+        *,
+        request: Union[
+            operations.CreateGenaiTaskRequest,
+            operations.CreateGenaiTaskRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreateGenaiTaskResponse:
+        r"""Create a task
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreateGenaiTaskRequest)
+        request = cast(operations.CreateGenaiTaskRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/genai/{connection_id}/task",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_task, False, False, "json", shared.GenaiTask
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createGenaiTask",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "task"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreateGenaiTaskResponse(
+                genai_task=unmarshal_json_response(
+                    Optional[shared.GenaiTask], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def create_genai_task_async(
+        self,
+        *,
+        request: Union[
+            operations.CreateGenaiTaskRequest,
+            operations.CreateGenaiTaskRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreateGenaiTaskResponse:
+        r"""Create a task
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreateGenaiTaskRequest)
+        request = cast(operations.CreateGenaiTaskRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/genai/{connection_id}/task",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_task, False, False, "json", shared.GenaiTask
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createGenaiTask",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "task"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreateGenaiTaskResponse(
+                genai_task=unmarshal_json_response(
+                    Optional[shared.GenaiTask], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_genai_agent(
+        self,
+        *,
+        request: Union[
+            operations.GetGenaiAgentRequest, operations.GetGenaiAgentRequestTypedDict
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetGenaiAgentResponse:
+        r"""Retrieve an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetGenaiAgentRequest)
+        request = cast(operations.GetGenaiAgentRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/genai/{connection_id}/agent/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetGenaiAgentResponse(
+                genai_agent=unmarshal_json_response(
+                    Optional[shared.GenaiAgent], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_genai_agent_async(
+        self,
+        *,
+        request: Union[
+            operations.GetGenaiAgentRequest, operations.GetGenaiAgentRequestTypedDict
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetGenaiAgentResponse:
+        r"""Retrieve an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetGenaiAgentRequest)
+        request = cast(operations.GetGenaiAgentRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/genai/{connection_id}/agent/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetGenaiAgentResponse(
+                genai_agent=unmarshal_json_response(
+                    Optional[shared.GenaiAgent], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
     def get_genai_model(
         self,
         *,
@@ -558,6 +1322,556 @@ class Genai(BaseSDK):
             return operations.GetGenaiModelResponse(
                 genai_model=unmarshal_json_response(
                     Optional[shared.GenaiModel], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_genai_organization(
+        self,
+        *,
+        request: Union[
+            operations.GetGenaiOrganizationRequest,
+            operations.GetGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetGenaiOrganizationResponse:
+        r"""Retrieve an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetGenaiOrganizationRequest)
+        request = cast(operations.GetGenaiOrganizationRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/genai/{connection_id}/organization/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetGenaiOrganizationResponse(
+                genai_organization=unmarshal_json_response(
+                    Optional[shared.GenaiOrganization], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_genai_organization_async(
+        self,
+        *,
+        request: Union[
+            operations.GetGenaiOrganizationRequest,
+            operations.GetGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetGenaiOrganizationResponse:
+        r"""Retrieve an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetGenaiOrganizationRequest)
+        request = cast(operations.GetGenaiOrganizationRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/genai/{connection_id}/organization/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetGenaiOrganizationResponse(
+                genai_organization=unmarshal_json_response(
+                    Optional[shared.GenaiOrganization], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_genai_task(
+        self,
+        *,
+        request: Union[
+            operations.GetGenaiTaskRequest, operations.GetGenaiTaskRequestTypedDict
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetGenaiTaskResponse:
+        r"""Retrieve a task
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetGenaiTaskRequest)
+        request = cast(operations.GetGenaiTaskRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/genai/{connection_id}/task/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getGenaiTask",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "task"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetGenaiTaskResponse(
+                genai_task=unmarshal_json_response(
+                    Optional[shared.GenaiTask], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_genai_task_async(
+        self,
+        *,
+        request: Union[
+            operations.GetGenaiTaskRequest, operations.GetGenaiTaskRequestTypedDict
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetGenaiTaskResponse:
+        r"""Retrieve a task
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetGenaiTaskRequest)
+        request = cast(operations.GetGenaiTaskRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/genai/{connection_id}/task/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getGenaiTask",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "task"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetGenaiTaskResponse(
+                genai_task=unmarshal_json_response(
+                    Optional[shared.GenaiTask], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_genai_agents(
+        self,
+        *,
+        request: Union[
+            operations.ListGenaiAgentsRequest,
+            operations.ListGenaiAgentsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListGenaiAgentsResponse:
+        r"""List all agents
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListGenaiAgentsRequest)
+        request = cast(operations.ListGenaiAgentsRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/genai/{connection_id}/agent",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listGenaiAgents",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListGenaiAgentsResponse(
+                genai_agents=unmarshal_json_response(
+                    Optional[List[shared.GenaiAgent]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_genai_agents_async(
+        self,
+        *,
+        request: Union[
+            operations.ListGenaiAgentsRequest,
+            operations.ListGenaiAgentsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListGenaiAgentsResponse:
+        r"""List all agents
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListGenaiAgentsRequest)
+        request = cast(operations.ListGenaiAgentsRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/genai/{connection_id}/agent",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listGenaiAgents",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListGenaiAgentsResponse(
+                genai_agents=unmarshal_json_response(
+                    Optional[List[shared.GenaiAgent]], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -742,6 +2056,1738 @@ class Genai(BaseSDK):
             return operations.ListGenaiModelsResponse(
                 genai_models=unmarshal_json_response(
                     Optional[List[shared.GenaiModel]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_genai_organizations(
+        self,
+        *,
+        request: Union[
+            operations.ListGenaiOrganizationsRequest,
+            operations.ListGenaiOrganizationsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListGenaiOrganizationsResponse:
+        r"""List all organizations
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListGenaiOrganizationsRequest)
+        request = cast(operations.ListGenaiOrganizationsRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/genai/{connection_id}/organization",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listGenaiOrganizations",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListGenaiOrganizationsResponse(
+                genai_organizations=unmarshal_json_response(
+                    Optional[List[shared.GenaiOrganization]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_genai_organizations_async(
+        self,
+        *,
+        request: Union[
+            operations.ListGenaiOrganizationsRequest,
+            operations.ListGenaiOrganizationsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListGenaiOrganizationsResponse:
+        r"""List all organizations
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListGenaiOrganizationsRequest)
+        request = cast(operations.ListGenaiOrganizationsRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/genai/{connection_id}/organization",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listGenaiOrganizations",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListGenaiOrganizationsResponse(
+                genai_organizations=unmarshal_json_response(
+                    Optional[List[shared.GenaiOrganization]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_genai_tasks(
+        self,
+        *,
+        request: Union[
+            operations.ListGenaiTasksRequest, operations.ListGenaiTasksRequestTypedDict
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListGenaiTasksResponse:
+        r"""List all tasks
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListGenaiTasksRequest)
+        request = cast(operations.ListGenaiTasksRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/genai/{connection_id}/task",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listGenaiTasks",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "task"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListGenaiTasksResponse(
+                genai_tasks=unmarshal_json_response(
+                    Optional[List[shared.GenaiTask]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_genai_tasks_async(
+        self,
+        *,
+        request: Union[
+            operations.ListGenaiTasksRequest, operations.ListGenaiTasksRequestTypedDict
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListGenaiTasksResponse:
+        r"""List all tasks
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListGenaiTasksRequest)
+        request = cast(operations.ListGenaiTasksRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/genai/{connection_id}/task",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listGenaiTasks",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "task"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListGenaiTasksResponse(
+                genai_tasks=unmarshal_json_response(
+                    Optional[List[shared.GenaiTask]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def patch_genai_agent(
+        self,
+        *,
+        request: Union[
+            operations.PatchGenaiAgentRequest,
+            operations.PatchGenaiAgentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchGenaiAgentResponse:
+        r"""Update an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchGenaiAgentRequest)
+        request = cast(operations.PatchGenaiAgentRequest, request)
+
+        req = self._build_request(
+            method="PATCH",
+            path="/genai/{connection_id}/agent/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_agent, False, False, "json", shared.GenaiAgent
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchGenaiAgentResponse(
+                genai_agent=unmarshal_json_response(
+                    Optional[shared.GenaiAgent], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def patch_genai_agent_async(
+        self,
+        *,
+        request: Union[
+            operations.PatchGenaiAgentRequest,
+            operations.PatchGenaiAgentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchGenaiAgentResponse:
+        r"""Update an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchGenaiAgentRequest)
+        request = cast(operations.PatchGenaiAgentRequest, request)
+
+        req = self._build_request_async(
+            method="PATCH",
+            path="/genai/{connection_id}/agent/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_agent, False, False, "json", shared.GenaiAgent
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchGenaiAgentResponse(
+                genai_agent=unmarshal_json_response(
+                    Optional[shared.GenaiAgent], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def patch_genai_organization(
+        self,
+        *,
+        request: Union[
+            operations.PatchGenaiOrganizationRequest,
+            operations.PatchGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchGenaiOrganizationResponse:
+        r"""Update an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchGenaiOrganizationRequest)
+        request = cast(operations.PatchGenaiOrganizationRequest, request)
+
+        req = self._build_request(
+            method="PATCH",
+            path="/genai/{connection_id}/organization/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_organization,
+                False,
+                False,
+                "json",
+                shared.GenaiOrganization,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchGenaiOrganizationResponse(
+                genai_organization=unmarshal_json_response(
+                    Optional[shared.GenaiOrganization], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def patch_genai_organization_async(
+        self,
+        *,
+        request: Union[
+            operations.PatchGenaiOrganizationRequest,
+            operations.PatchGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchGenaiOrganizationResponse:
+        r"""Update an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchGenaiOrganizationRequest)
+        request = cast(operations.PatchGenaiOrganizationRequest, request)
+
+        req = self._build_request_async(
+            method="PATCH",
+            path="/genai/{connection_id}/organization/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_organization,
+                False,
+                False,
+                "json",
+                shared.GenaiOrganization,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchGenaiOrganizationResponse(
+                genai_organization=unmarshal_json_response(
+                    Optional[shared.GenaiOrganization], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def remove_genai_agent(
+        self,
+        *,
+        request: Union[
+            operations.RemoveGenaiAgentRequest,
+            operations.RemoveGenaiAgentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemoveGenaiAgentResponse:
+        r"""Remove an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.RemoveGenaiAgentRequest)
+        request = cast(operations.RemoveGenaiAgentRequest, request)
+
+        req = self._build_request(
+            method="DELETE",
+            path="/genai/{connection_id}/agent/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="removeGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemoveGenaiAgentResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemoveGenaiAgentResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def remove_genai_agent_async(
+        self,
+        *,
+        request: Union[
+            operations.RemoveGenaiAgentRequest,
+            operations.RemoveGenaiAgentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemoveGenaiAgentResponse:
+        r"""Remove an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.RemoveGenaiAgentRequest)
+        request = cast(operations.RemoveGenaiAgentRequest, request)
+
+        req = self._build_request_async(
+            method="DELETE",
+            path="/genai/{connection_id}/agent/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="removeGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemoveGenaiAgentResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemoveGenaiAgentResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def remove_genai_organization(
+        self,
+        *,
+        request: Union[
+            operations.RemoveGenaiOrganizationRequest,
+            operations.RemoveGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemoveGenaiOrganizationResponse:
+        r"""Remove an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.RemoveGenaiOrganizationRequest
+            )
+        request = cast(operations.RemoveGenaiOrganizationRequest, request)
+
+        req = self._build_request(
+            method="DELETE",
+            path="/genai/{connection_id}/organization/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="removeGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemoveGenaiOrganizationResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemoveGenaiOrganizationResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def remove_genai_organization_async(
+        self,
+        *,
+        request: Union[
+            operations.RemoveGenaiOrganizationRequest,
+            operations.RemoveGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemoveGenaiOrganizationResponse:
+        r"""Remove an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.RemoveGenaiOrganizationRequest
+            )
+        request = cast(operations.RemoveGenaiOrganizationRequest, request)
+
+        req = self._build_request_async(
+            method="DELETE",
+            path="/genai/{connection_id}/organization/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="removeGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemoveGenaiOrganizationResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemoveGenaiOrganizationResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def remove_genai_task(
+        self,
+        *,
+        request: Union[
+            operations.RemoveGenaiTaskRequest,
+            operations.RemoveGenaiTaskRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemoveGenaiTaskResponse:
+        r"""Remove a task
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.RemoveGenaiTaskRequest)
+        request = cast(operations.RemoveGenaiTaskRequest, request)
+
+        req = self._build_request(
+            method="DELETE",
+            path="/genai/{connection_id}/task/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="removeGenaiTask",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "task"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemoveGenaiTaskResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemoveGenaiTaskResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def remove_genai_task_async(
+        self,
+        *,
+        request: Union[
+            operations.RemoveGenaiTaskRequest,
+            operations.RemoveGenaiTaskRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemoveGenaiTaskResponse:
+        r"""Remove a task
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.RemoveGenaiTaskRequest)
+        request = cast(operations.RemoveGenaiTaskRequest, request)
+
+        req = self._build_request_async(
+            method="DELETE",
+            path="/genai/{connection_id}/task/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="removeGenaiTask",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "task"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemoveGenaiTaskResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemoveGenaiTaskResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def update_genai_agent(
+        self,
+        *,
+        request: Union[
+            operations.UpdateGenaiAgentRequest,
+            operations.UpdateGenaiAgentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdateGenaiAgentResponse:
+        r"""Update an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdateGenaiAgentRequest)
+        request = cast(operations.UpdateGenaiAgentRequest, request)
+
+        req = self._build_request(
+            method="PUT",
+            path="/genai/{connection_id}/agent/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_agent, False, False, "json", shared.GenaiAgent
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updateGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdateGenaiAgentResponse(
+                genai_agent=unmarshal_json_response(
+                    Optional[shared.GenaiAgent], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def update_genai_agent_async(
+        self,
+        *,
+        request: Union[
+            operations.UpdateGenaiAgentRequest,
+            operations.UpdateGenaiAgentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdateGenaiAgentResponse:
+        r"""Update an agent
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdateGenaiAgentRequest)
+        request = cast(operations.UpdateGenaiAgentRequest, request)
+
+        req = self._build_request_async(
+            method="PUT",
+            path="/genai/{connection_id}/agent/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_agent, False, False, "json", shared.GenaiAgent
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updateGenaiAgent",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "agent"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdateGenaiAgentResponse(
+                genai_agent=unmarshal_json_response(
+                    Optional[shared.GenaiAgent], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def update_genai_organization(
+        self,
+        *,
+        request: Union[
+            operations.UpdateGenaiOrganizationRequest,
+            operations.UpdateGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdateGenaiOrganizationResponse:
+        r"""Update an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.UpdateGenaiOrganizationRequest
+            )
+        request = cast(operations.UpdateGenaiOrganizationRequest, request)
+
+        req = self._build_request(
+            method="PUT",
+            path="/genai/{connection_id}/organization/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_organization,
+                False,
+                False,
+                "json",
+                shared.GenaiOrganization,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updateGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdateGenaiOrganizationResponse(
+                genai_organization=unmarshal_json_response(
+                    Optional[shared.GenaiOrganization], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def update_genai_organization_async(
+        self,
+        *,
+        request: Union[
+            operations.UpdateGenaiOrganizationRequest,
+            operations.UpdateGenaiOrganizationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdateGenaiOrganizationResponse:
+        r"""Update an organization
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.UpdateGenaiOrganizationRequest
+            )
+        request = cast(operations.UpdateGenaiOrganizationRequest, request)
+
+        req = self._build_request_async(
+            method="PUT",
+            path="/genai/{connection_id}/organization/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.genai_organization,
+                False,
+                False,
+                "json",
+                shared.GenaiOrganization,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updateGenaiOrganization",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["genai", "organization"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdateGenaiOrganizationResponse(
+                genai_organization=unmarshal_json_response(
+                    Optional[shared.GenaiOrganization], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

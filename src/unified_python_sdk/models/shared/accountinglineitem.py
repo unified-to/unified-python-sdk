@@ -16,8 +16,10 @@ class AccountingLineitemTypedDict(TypedDict):
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     discount_amount: NotRequired[float]
+    exchange_rate: NotRequired[float]
     fees: NotRequired[List[AccountingFeeTypedDict]]
     id: NotRequired[str]
+    is_billable: NotRequired[bool]
     item_description: NotRequired[str]
     item_id: NotRequired[str]
     item_name: NotRequired[str]
@@ -25,6 +27,7 @@ class AccountingLineitemTypedDict(TypedDict):
     item_variants: NotRequired[List[AccountingReferenceTypedDict]]
     locations: NotRequired[List[AccountingReferenceTypedDict]]
     notes: NotRequired[str]
+    project_id: NotRequired[str]
     refund_amount: NotRequired[float]
     refunded_at: NotRequired[datetime]
     tax_amount: NotRequired[float]
@@ -46,9 +49,13 @@ class AccountingLineitem(BaseModel):
 
     discount_amount: Optional[float] = None
 
+    exchange_rate: Optional[float] = None
+
     fees: Optional[List[AccountingFee]] = None
 
     id: Optional[str] = None
+
+    is_billable: Optional[bool] = None
 
     item_description: Optional[str] = None
 
@@ -63,6 +70,8 @@ class AccountingLineitem(BaseModel):
     locations: Optional[List[AccountingReference]] = None
 
     notes: Optional[str] = None
+
+    project_id: Optional[str] = None
 
     refund_amount: Optional[float] = None
 
@@ -89,8 +98,10 @@ class AccountingLineitem(BaseModel):
                 "contact_id",
                 "created_at",
                 "discount_amount",
+                "exchange_rate",
                 "fees",
                 "id",
+                "is_billable",
                 "item_description",
                 "item_id",
                 "item_name",
@@ -98,6 +109,7 @@ class AccountingLineitem(BaseModel):
                 "item_variants",
                 "locations",
                 "notes",
+                "project_id",
                 "refund_amount",
                 "refunded_at",
                 "tax_amount",

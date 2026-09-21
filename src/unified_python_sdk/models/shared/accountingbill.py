@@ -79,6 +79,7 @@ class AccountingBillTypedDict(TypedDict):
     currency: NotRequired[str]
     discount_amount: NotRequired[float]
     due_at: NotRequired[datetime]
+    exchange_rate: NotRequired[float]
     extended_notes: NotRequired[List[AccountingExtendedNoteTypedDict]]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
@@ -94,12 +95,15 @@ class AccountingBillTypedDict(TypedDict):
     paymentterm_id: NotRequired[str]
     posted_at: NotRequired[datetime]
     project_id: NotRequired[str]
+    purchaseorder_ids: NotRequired[List[str]]
+    r"""refs -> AccountingPurchaseorder; the purchase orders this bill was raised from"""
     raw: NotRequired[Dict[str, Any]]
     refund_amount: NotRequired[float]
     refund_reason: NotRequired[str]
     refunded_at: NotRequired[datetime]
     send: NotRequired[bool]
     status: NotRequired[AccountingBillStatus]
+    sub_total_amount: NotRequired[float]
     tax_amount: NotRequired[float]
     term: NotRequired[Term]
     total_amount: NotRequired[float]
@@ -127,6 +131,8 @@ class AccountingBill(BaseModel):
     discount_amount: Optional[float] = None
 
     due_at: Optional[datetime] = None
+
+    exchange_rate: Optional[float] = None
 
     extended_notes: Optional[List[AccountingExtendedNote]] = None
 
@@ -157,6 +163,9 @@ class AccountingBill(BaseModel):
 
     project_id: Optional[str] = None
 
+    purchaseorder_ids: Optional[List[str]] = None
+    r"""refs -> AccountingPurchaseorder; the purchase orders this bill was raised from"""
+
     raw: Optional[Dict[str, Any]] = None
 
     refund_amount: Optional[float] = None
@@ -168,6 +177,8 @@ class AccountingBill(BaseModel):
     send: Optional[bool] = None
 
     status: Optional[AccountingBillStatus] = None
+
+    sub_total_amount: Optional[float] = None
 
     tax_amount: Optional[float] = None
 
@@ -229,6 +240,7 @@ class AccountingBill(BaseModel):
                 "currency",
                 "discount_amount",
                 "due_at",
+                "exchange_rate",
                 "extended_notes",
                 "id",
                 "lineitems",
@@ -243,12 +255,14 @@ class AccountingBill(BaseModel):
                 "paymentterm_id",
                 "posted_at",
                 "project_id",
+                "purchaseorder_ids",
                 "raw",
                 "refund_amount",
                 "refund_reason",
                 "refunded_at",
                 "send",
                 "status",
+                "sub_total_amount",
                 "tax_amount",
                 "term",
                 "total_amount",

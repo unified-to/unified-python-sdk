@@ -33,6 +33,10 @@ class ListAccountingJournalsQueryParamFields(str, Enum):
     CATEGORY_IDS = "category_ids"
     PROJECT_ID = "project_id"
     ATTACHMENTS = "attachments"
+    TOTAL_AMOUNT = "total_amount"
+    EXCHANGE_RATE = "exchange_rate"
+    STATUS = "status"
+    IS_INCLUSIVE_OF_TAX = "is_inclusive_of_tax"
     RAW = "raw"
 
 

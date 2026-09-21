@@ -11,11 +11,31 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class Reason(str, Enum, metaclass=utils.OpenEnumMeta):
+    DUPLICATE = "DUPLICATE"
+    FRAUDULENT = "FRAUDULENT"
+    REQUESTED_BY_CUSTOMER = "REQUESTED_BY_CUSTOMER"
+    OTHER = "OTHER"
+
+
 class PaymentRefundStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     SUCCEEDED = "SUCCEEDED"
     PENDING = "PENDING"
     FAILED = "FAILED"
     CANCELED = "CANCELED"
+
+
+class PaymentRefundTenderType(str, Enum, metaclass=utils.OpenEnumMeta):
+    CARD = "CARD"
+    CASH = "CASH"
+    GIFT_CARD = "GIFT_CARD"
+    BANK_TRANSFER = "BANK_TRANSFER"
+    WALLET = "WALLET"
+    CHECK = "CHECK"
+    STORE_CREDIT = "STORE_CREDIT"
+    BUY_NOW_PAY_LATER = "BUY_NOW_PAY_LATER"
+    EXTERNAL = "EXTERNAL"
+    OTHER = "OTHER"
 
 
 class PaymentRefundTypedDict(TypedDict):
@@ -25,8 +45,11 @@ class PaymentRefundTypedDict(TypedDict):
     notes: NotRequired[str]
     payment_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    reason: NotRequired[Reason]
     reference: NotRequired[str]
+    refunded_at: NotRequired[datetime]
     status: NotRequired[PaymentRefundStatus]
+    tender_type: NotRequired[PaymentRefundTenderType]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
 
@@ -44,19 +67,43 @@ class PaymentRefund(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
+    reason: Optional[Reason] = None
+
     reference: Optional[str] = None
 
+    refunded_at: Optional[datetime] = None
+
     status: Optional[PaymentRefundStatus] = None
+
+    tender_type: Optional[PaymentRefundTenderType] = None
 
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("reason")
+    def serialize_reason(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.Reason(value)
+            except ValueError:
+                return value
+        return value
 
     @field_serializer("status")
     def serialize_status(self, value):
         if isinstance(value, str):
             try:
                 return shared.PaymentRefundStatus(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("tender_type")
+    def serialize_tender_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PaymentRefundTenderType(value)
             except ValueError:
                 return value
         return value
@@ -71,8 +118,11 @@ class PaymentRefund(BaseModel):
                 "notes",
                 "payment_id",
                 "raw",
+                "reason",
                 "reference",
+                "refunded_at",
                 "status",
+                "tender_type",
                 "total_amount",
                 "updated_at",
             ]

@@ -4,13 +4,16 @@
 
 ### Available Operations
 
+* [create_genai_task](#create_genai_task) - Create a task
 * [create_task_comment](#create_task_comment) - Create a comment
 * [create_task_project](#create_task_project) - Create a project
 * [create_task_task](#create_task_task) - Create a task
+* [get_genai_task](#get_genai_task) - Retrieve a task
 * [get_task_change](#get_task_change) - Retrieve a change
 * [get_task_comment](#get_task_comment) - Retrieve a comment
 * [get_task_project](#get_task_project) - Retrieve a project
 * [get_task_task](#get_task_task) - Retrieve a task
+* [list_genai_tasks](#list_genai_tasks) - List all tasks
 * [list_task_changes](#list_task_changes) - List all changes
 * [list_task_comments](#list_task_comments) - List all comments
 * [list_task_projects](#list_task_projects) - List all projects
@@ -18,12 +21,86 @@
 * [patch_task_comment](#patch_task_comment) - Update a comment
 * [patch_task_project](#patch_task_project) - Update a project
 * [patch_task_task](#patch_task_task) - Update a task
+* [remove_genai_task](#remove_genai_task) - Remove a task
 * [remove_task_comment](#remove_task_comment) - Remove a comment
 * [remove_task_project](#remove_task_project) - Remove a project
 * [remove_task_task](#remove_task_task) - Remove a task
 * [update_task_comment](#update_task_comment) - Update a comment
 * [update_task_project](#update_task_project) - Update a project
 * [update_task_task](#update_task_task) - Update a task
+
+## create_genai_task
+
+Create a task
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" example="genai_task" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.task.create_genai_task(request={
+        "genai_task": {
+            "completed_at": parse_datetime("2025-09-06T09:18:49.674Z"),
+            "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
+            "files_changed": 19.0,
+            "id": "586f6326-fe69-435c-8548-3150816342b0",
+            "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
+            "lines_added": 244.0,
+            "lines_deleted": 118.0,
+            "messages": [
+                {
+                    "content": "Stultus esse cursim stabilis tenetur amet contigo tristis.",
+                    "role": shared.Role.ASSISTANT,
+                },
+            ],
+            "name": "connect multi-byte port",
+            "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
+            "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
+            "source_branch_identifier": "main",
+            "started_at": parse_datetime("2024-05-03T10:13:29.849Z"),
+            "status": shared.GenaiTaskStatus.BLOCKED,
+            "summary": "Cur aeternus cogito vesper.",
+            "target_branch_identifier": "agent/joshingly-ignorance",
+            "tokens_used": 2165.0,
+            "updated_at": parse_datetime("2023-02-14T12:14:43.464Z"),
+            "web_url": "https://inexperienced-adrenalin.biz/",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.genai_task is not None
+
+    # Handle response
+    print(res.genai_task)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateGenaiTaskRequest](../../models/operations/creategenaitaskrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.CreateGenaiTaskResponse](../../models/operations/creategenaitaskresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_task_comment
 
@@ -48,9 +125,9 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "dd91651e-99c7-4898-be5e-217b704012ac",
+            "id": "0df5753a-ad90-4d22-bca0-59412dfde752",
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-09-24T10:05:30.314Z"),
+            "updated_at": parse_datetime("2021-09-24T20:05:50.704Z"),
             "user_name": "Santina Abbott",
         },
         "connection_id": "<id>",
@@ -105,14 +182,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "1812b40f-b8eb-4fa7-8e68-4c615664f0b3",
+            "id": "19df8b1d-5ab7-42af-b402-22c0efd2b9cc",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "1d5b3dea-f08a-41fb-be76-5267dc7f456a",
+                    "id": "69b253d6-578b-4ee7-a0c8-82f2a3568e17",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -122,14 +199,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "652359a0-c809-461d-8669-27885845e4a5",
+                    "id": "bac38dfa-2149-4334-b944-5ba4dff681d3",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-08T17:43:47.069Z"),
+            "updated_at": parse_datetime("2023-10-08T20:56:49.330Z"),
         },
         "connection_id": "<id>",
     })
@@ -180,18 +257,18 @@ with UnifiedTo(
     res = unified_to.task.create_task_task(request={
         "task_task": {
             "attachment_ids": [],
-            "completed_at": parse_datetime("2022-03-25T00:51:34.854Z"),
+            "completed_at": parse_datetime("2022-03-25T15:31:00.389Z"),
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2026-04-24T14:34:53.210Z"),
-            "end_at": parse_datetime("2022-10-14T08:40:35.013Z"),
+            "due_at": parse_datetime("2026-04-26T00:16:15.392Z"),
+            "end_at": parse_datetime("2022-10-15T01:55:40.491Z"),
             "has_children": True,
-            "id": "4af7da43-e710-49ed-9a66-871d725e4588",
+            "id": "8764a502-52ee-4c02-bded-d8e164ceba6e",
             "metadata": [],
             "name": "Direct Markets Architect",
             "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
             "priority": "LOW",
             "progress": 2.0,
-            "start_at": parse_datetime("2022-01-19T23:40:24.353Z"),
+            "start_at": parse_datetime("2022-01-20T13:30:47.721Z"),
             "status": shared.TaskTaskStatus.IN_PROGRESS,
             "story_points": 0.0,
             "tags": [
@@ -201,7 +278,7 @@ with UnifiedTo(
             "time_spent": 957.0,
             "time_spent_unit": "SECONDS",
             "type": "tubineus",
-            "updated_at": parse_datetime("2019-07-13T12:39:59.471Z"),
+            "updated_at": parse_datetime("2019-07-13T14:44:54.836Z"),
             "url": "https://dismal-silk.net/",
         },
         "connection_id": "<id>",
@@ -224,6 +301,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateTaskTaskResponse](../../models/operations/createtasktaskresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_genai_task
+
+Retrieve a task
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getGenaiTask" method="get" path="/genai/{connection_id}/task/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.task.get_genai_task(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_task is not None
+
+    # Handle response
+    print(res.genai_task)
+
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetGenaiTaskRequest](../../models/operations/getgenaitaskrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+
+### Response
+
+**[operations.GetGenaiTaskResponse](../../models/operations/getgenaitaskresponse.md)**
 
 ### Errors
 
@@ -412,6 +536,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetTaskTaskResponse](../../models/operations/gettasktaskresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_genai_tasks
+
+List all tasks
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listGenaiTasks" method="get" path="/genai/{connection_id}/task" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.task.list_genai_tasks(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.genai_tasks is not None
+
+    # Handle response
+    print(res.genai_tasks)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListGenaiTasksRequest](../../models/operations/listgenaitasksrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.ListGenaiTasksResponse](../../models/operations/listgenaitasksresponse.md)**
 
 ### Errors
 
@@ -626,9 +796,9 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "ce156dcf-89dc-474c-b3cd-93df5762f354",
+            "id": "381761fa-8766-492d-97d4-83c75cda22e0",
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-09-24T10:05:30.315Z"),
+            "updated_at": parse_datetime("2021-09-24T20:05:50.706Z"),
             "user_name": "Santina Abbott",
         },
         "connection_id": "<id>",
@@ -684,14 +854,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "c81cf2e7-d7ae-4cd5-96c6-010f301f25b6",
+            "id": "15f47efb-fcb7-4b67-81e2-a0d26a9da494",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "500001c1-e9e6-4bff-b28e-ff7e87e827ab",
+                    "id": "b5927698-96fc-4eac-bf28-dc286ccc3b89",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -701,14 +871,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "0d19d358-d37a-48e6-b3b2-0a48f98ccbdf",
+                    "id": "be30191d-043c-42e2-bb97-f5c110e47983",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-08T17:43:47.070Z"),
+            "updated_at": parse_datetime("2023-10-08T20:56:49.332Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -760,18 +930,18 @@ with UnifiedTo(
     res = unified_to.task.patch_task_task(request={
         "task_task": {
             "attachment_ids": [],
-            "completed_at": parse_datetime("2022-03-25T00:51:34.860Z"),
+            "completed_at": parse_datetime("2022-03-25T15:31:00.401Z"),
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2026-04-24T14:34:53.223Z"),
-            "end_at": parse_datetime("2022-10-14T08:40:35.020Z"),
+            "due_at": parse_datetime("2026-04-26T00:16:15.419Z"),
+            "end_at": parse_datetime("2022-10-15T01:55:40.505Z"),
             "has_children": True,
-            "id": "ce280840-19a5-4ddf-81f3-1c423a918c05",
+            "id": "a9e4eaee-df24-473b-ac7f-b4f1605269c2",
             "metadata": [],
             "name": "Direct Markets Architect",
             "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
             "priority": "LOW",
             "progress": 2.0,
-            "start_at": parse_datetime("2022-01-19T23:40:24.358Z"),
+            "start_at": parse_datetime("2022-01-20T13:30:47.733Z"),
             "status": shared.TaskTaskStatus.IN_PROGRESS,
             "story_points": 0.0,
             "tags": [
@@ -781,7 +951,7 @@ with UnifiedTo(
             "time_spent": 957.0,
             "time_spent_unit": "SECONDS",
             "type": "tubineus",
-            "updated_at": parse_datetime("2019-07-13T12:39:59.472Z"),
+            "updated_at": parse_datetime("2019-07-13T14:44:54.838Z"),
             "url": "https://dismal-silk.net/",
         },
         "connection_id": "<id>",
@@ -805,6 +975,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchTaskTaskResponse](../../models/operations/patchtasktaskresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_genai_task
+
+Remove a task
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeGenaiTask" method="delete" path="/genai/{connection_id}/task/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.task.remove_genai_task(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveGenaiTaskRequest](../../models/operations/removegenaitaskrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.RemoveGenaiTaskResponse](../../models/operations/removegenaitaskresponse.md)**
 
 ### Errors
 
@@ -976,9 +1193,9 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "ce156dcf-89dc-474c-b3cd-93df5762f354",
+            "id": "381761fa-8766-492d-97d4-83c75cda22e0",
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-09-24T10:05:30.315Z"),
+            "updated_at": parse_datetime("2021-09-24T20:05:50.706Z"),
             "user_name": "Santina Abbott",
         },
         "connection_id": "<id>",
@@ -1034,14 +1251,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "c81cf2e7-d7ae-4cd5-96c6-010f301f25b6",
+            "id": "15f47efb-fcb7-4b67-81e2-a0d26a9da494",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "500001c1-e9e6-4bff-b28e-ff7e87e827ab",
+                    "id": "b5927698-96fc-4eac-bf28-dc286ccc3b89",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -1051,14 +1268,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "0d19d358-d37a-48e6-b3b2-0a48f98ccbdf",
+                    "id": "be30191d-043c-42e2-bb97-f5c110e47983",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-08T17:43:47.070Z"),
+            "updated_at": parse_datetime("2023-10-08T20:56:49.332Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1110,18 +1327,18 @@ with UnifiedTo(
     res = unified_to.task.update_task_task(request={
         "task_task": {
             "attachment_ids": [],
-            "completed_at": parse_datetime("2022-03-25T00:51:34.860Z"),
+            "completed_at": parse_datetime("2022-03-25T15:31:00.401Z"),
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2026-04-24T14:34:53.223Z"),
-            "end_at": parse_datetime("2022-10-14T08:40:35.020Z"),
+            "due_at": parse_datetime("2026-04-26T00:16:15.419Z"),
+            "end_at": parse_datetime("2022-10-15T01:55:40.505Z"),
             "has_children": True,
-            "id": "ce280840-19a5-4ddf-81f3-1c423a918c05",
+            "id": "a9e4eaee-df24-473b-ac7f-b4f1605269c2",
             "metadata": [],
             "name": "Direct Markets Architect",
             "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
             "priority": "LOW",
             "progress": 2.0,
-            "start_at": parse_datetime("2022-01-19T23:40:24.358Z"),
+            "start_at": parse_datetime("2022-01-20T13:30:47.733Z"),
             "status": shared.TaskTaskStatus.IN_PROGRESS,
             "story_points": 0.0,
             "tags": [
@@ -1131,7 +1348,7 @@ with UnifiedTo(
             "time_spent": 957.0,
             "time_spent_unit": "SECONDS",
             "type": "tubineus",
-            "updated_at": parse_datetime("2019-07-13T12:39:59.472Z"),
+            "updated_at": parse_datetime("2019-07-13T14:44:54.838Z"),
             "url": "https://dismal-silk.net/",
         },
         "connection_id": "<id>",

@@ -49,4 +49,8 @@ value = GetAccountingInvoiceQueryParamFields.ID
 | `CATEGORY_IDS`              | category_ids                |
 | `PROJECT_ID`                | project_id                  |
 | `METADATA`                  | metadata                    |
+| `SUB_TOTAL_AMOUNT`          | sub_total_amount            |
+| `EXCHANGE_RATE`             | exchange_rate               |
+| `IS_INCLUSIVE_OF_TAX`       | is_inclusive_of_tax         |
+| `SALESORDER_IDS`            | salesorder_ids              |
 | `RAW`                       | raw                         |

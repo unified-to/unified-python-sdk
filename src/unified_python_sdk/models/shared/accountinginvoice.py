@@ -83,9 +83,11 @@ class AccountingInvoiceTypedDict(TypedDict):
     currency: NotRequired[str]
     discount_amount: NotRequired[float]
     due_at: NotRequired[datetime]
+    exchange_rate: NotRequired[float]
     extended_notes: NotRequired[List[AccountingExtendedNoteTypedDict]]
     id: NotRequired[str]
     invoice_number: NotRequired[str]
+    is_inclusive_of_tax: NotRequired[bool]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     notes: NotRequired[str]
@@ -104,8 +106,11 @@ class AccountingInvoiceTypedDict(TypedDict):
     refund_amount: NotRequired[float]
     refund_reason: NotRequired[str]
     refunded_at: NotRequired[datetime]
+    salesorder_ids: NotRequired[List[str]]
+    r"""refs -> AccountingSalesorder; the sales orders this invoice was raised from"""
     send: NotRequired[bool]
     status: NotRequired[AccountingInvoiceStatus]
+    sub_total_amount: NotRequired[float]
     tax_amount: NotRequired[float]
     term: NotRequired[AccountingInvoiceTerm]
     total_amount: NotRequired[float]
@@ -133,11 +138,15 @@ class AccountingInvoice(BaseModel):
 
     due_at: Optional[datetime] = None
 
+    exchange_rate: Optional[float] = None
+
     extended_notes: Optional[List[AccountingExtendedNote]] = None
 
     id: Optional[str] = None
 
     invoice_number: Optional[str] = None
+
+    is_inclusive_of_tax: Optional[bool] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
 
@@ -174,9 +183,14 @@ class AccountingInvoice(BaseModel):
 
     refunded_at: Optional[datetime] = None
 
+    salesorder_ids: Optional[List[str]] = None
+    r"""refs -> AccountingSalesorder; the sales orders this invoice was raised from"""
+
     send: Optional[bool] = None
 
     status: Optional[AccountingInvoiceStatus] = None
+
+    sub_total_amount: Optional[float] = None
 
     tax_amount: Optional[float] = None
 
@@ -248,9 +262,11 @@ class AccountingInvoice(BaseModel):
                 "currency",
                 "discount_amount",
                 "due_at",
+                "exchange_rate",
                 "extended_notes",
                 "id",
                 "invoice_number",
+                "is_inclusive_of_tax",
                 "lineitems",
                 "metadata",
                 "notes",
@@ -268,8 +284,10 @@ class AccountingInvoice(BaseModel):
                 "refund_amount",
                 "refund_reason",
                 "refunded_at",
+                "salesorder_ids",
                 "send",
                 "status",
+                "sub_total_amount",
                 "tax_amount",
                 "term",
                 "total_amount",

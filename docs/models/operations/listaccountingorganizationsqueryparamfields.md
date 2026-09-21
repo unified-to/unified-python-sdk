@@ -28,4 +28,5 @@ value = ListAccountingOrganizationsQueryParamFields.ID
 | `ORGANIZATION_CODE`     | organization_code       |
 | `TYPE`                  | type                    |
 | `IS_ELIMINATION`        | is_elimination          |
+| `BOOKS_CLOSE_AT`        | books_close_at          |
 | `RAW`                   | raw                     |

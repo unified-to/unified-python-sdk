@@ -34,17 +34,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "818ee7d5-aa86-4d22-96a2-b8756af18214",
+            "id": "a66e402b-9ccd-461c-9d94-1a40e872793e",
             "is_required": False,
             "name": "autem",
-            "object_type": "clubs_group",
+            "object_type": "signing_template",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-02-27T06:36:43.844Z"),
+            "updated_at": parse_datetime("2025-02-28T08:05:10.351Z"),
         },
         "connection_id": "<id>",
     })
@@ -189,17 +189,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "db41b7a8-4fab-46ec-87b0-174bfc15f3c9",
+            "id": "a0d83ad7-5bf9-4c3b-ae13-626991f33c1b",
             "is_required": False,
             "name": "autem",
-            "object_type": "clubs_group",
+            "object_type": "signing_template",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-02-27T06:36:43.854Z"),
+            "updated_at": parse_datetime("2025-02-28T08:05:10.358Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -299,17 +299,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "db41b7a8-4fab-46ec-87b0-174bfc15f3c9",
+            "id": "a0d83ad7-5bf9-4c3b-ae13-626991f33c1b",
             "is_required": False,
             "name": "autem",
-            "object_type": "clubs_group",
+            "object_type": "signing_template",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-02-27T06:36:43.854Z"),
+            "updated_at": parse_datetime("2025-02-28T08:05:10.358Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

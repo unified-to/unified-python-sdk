@@ -33,12 +33,13 @@ with UnifiedTo(
     res = unified_to.transaction.create_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "8f9b0d06-7a63-4f31-8b49-f198a780da28",
+            "exchange_rate": 0.5674,
+            "id": "17615f5e-0ebb-445a-b676-67eeac8b692b",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "5871c683-1027-4942-b61b-d24b323174b9",
+                    "id": "211e7819-c286-480e-bcae-2c7237cdef02",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -47,9 +48,11 @@ with UnifiedTo(
                 },
             ],
             "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "status": shared.AccountingTransactionStatus.VOID,
             "tax_amount": 0.0,
             "total_amount": 94452.0,
-            "updated_at": parse_datetime("2021-09-10T11:28:14.473Z"),
+            "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "updated_at": parse_datetime("2021-09-10T21:27:21.377Z"),
         },
         "connection_id": "<id>",
     })
@@ -193,12 +196,13 @@ with UnifiedTo(
     res = unified_to.transaction.patch_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "9e28a763-11e7-44f7-b1e4-a0fd4069ee4f",
+            "exchange_rate": 0.5674,
+            "id": "81bf7ef2-8ff2-4ddc-b703-024288cc4b75",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "9a3ce522-d314-4436-950f-654be1d75a15",
+                    "id": "5dceaa79-1e95-4cee-928e-c57d24727437",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -207,9 +211,11 @@ with UnifiedTo(
                 },
             ],
             "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "status": shared.AccountingTransactionStatus.VOID,
             "tax_amount": 0.0,
             "total_amount": 94452.0,
-            "updated_at": parse_datetime("2021-09-10T11:28:14.476Z"),
+            "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "updated_at": parse_datetime("2021-09-10T21:27:21.384Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -308,12 +314,13 @@ with UnifiedTo(
     res = unified_to.transaction.update_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "9e28a763-11e7-44f7-b1e4-a0fd4069ee4f",
+            "exchange_rate": 0.5674,
+            "id": "81bf7ef2-8ff2-4ddc-b703-024288cc4b75",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "9a3ce522-d314-4436-950f-654be1d75a15",
+                    "id": "5dceaa79-1e95-4cee-928e-c57d24727437",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -322,9 +329,11 @@ with UnifiedTo(
                 },
             ],
             "memo": "withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.",
+            "status": shared.AccountingTransactionStatus.VOID,
             "tax_amount": 0.0,
             "total_amount": 94452.0,
-            "updated_at": parse_datetime("2021-09-10T11:28:14.476Z"),
+            "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
+            "updated_at": parse_datetime("2021-09-10T21:27:21.384Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

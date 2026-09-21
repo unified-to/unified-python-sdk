@@ -14,6 +14,7 @@ class AccountingTransactionLineItemTypedDict(TypedDict):
     id: NotRequired[str]
     name: NotRequired[str]
     object_type: NotRequired[str]
+    taxrate_id: NotRequired[str]
     total_amount: NotRequired[float]
     unit_amount: NotRequired[float]
     unit_quantity: NotRequired[float]
@@ -32,6 +33,8 @@ class AccountingTransactionLineItem(BaseModel):
 
     object_type: Optional[str] = None
 
+    taxrate_id: Optional[str] = None
+
     total_amount: Optional[float] = None
 
     unit_amount: Optional[float] = None
@@ -48,6 +51,7 @@ class AccountingTransactionLineItem(BaseModel):
                 "id",
                 "name",
                 "object_type",
+                "taxrate_id",
                 "total_amount",
                 "unit_amount",
                 "unit_quantity",

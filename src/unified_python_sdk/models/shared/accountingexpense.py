@@ -35,6 +35,7 @@ class AccountingExpenseTypedDict(TypedDict):
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    exchange_rate: NotRequired[float]
     external_number: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
@@ -49,6 +50,7 @@ class AccountingExpenseTypedDict(TypedDict):
     reimbursed_at: NotRequired[datetime]
     status: NotRequired[AccountingExpenseStatus]
     tax_amount: NotRequired[float]
+    taxrate_id: NotRequired[str]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -74,6 +76,8 @@ class AccountingExpense(BaseModel):
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
+
+    exchange_rate: Optional[float] = None
 
     external_number: Optional[str] = None
 
@@ -102,6 +106,8 @@ class AccountingExpense(BaseModel):
     status: Optional[AccountingExpenseStatus] = None
 
     tax_amount: Optional[float] = None
+
+    taxrate_id: Optional[str] = None
 
     total_amount: Optional[float] = None
 
@@ -133,6 +139,7 @@ class AccountingExpense(BaseModel):
                 "contact_id",
                 "created_at",
                 "currency",
+                "exchange_rate",
                 "external_number",
                 "id",
                 "lineitems",
@@ -147,6 +154,7 @@ class AccountingExpense(BaseModel):
                 "reimbursed_at",
                 "status",
                 "tax_amount",
+                "taxrate_id",
                 "total_amount",
                 "updated_at",
                 "user_id",

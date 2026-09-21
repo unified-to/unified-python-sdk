@@ -24,6 +24,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.ads import Ads
     from unified_python_sdk.agedpayable import Agedpayable
     from unified_python_sdk.agedreceivable import Agedreceivable
+    from unified_python_sdk.agent import Agent
     from unified_python_sdk.analytics import Analytics
     from unified_python_sdk.apicall import Apicall
     from unified_python_sdk.application import Application
@@ -290,9 +291,11 @@ class UnifiedTo(BaseSDK):
     form: "Form"
     submission: "Submission"
     genai: "Genai"
+    agent: "Agent"
     embedding: "Embedding"
     model: "Model"
     prompt: "Prompt"
+    task: "Task"
     hris: "Hris"
     attendance: "Attendance"
     bankaccount: "Bankaccount"
@@ -349,7 +352,6 @@ class UnifiedTo(BaseSDK):
     post: "Post"
     storage: "Storage"
     file: "File"
-    task: "Task"
     change: "Change"
     ticketing: "Ticketing"
     customer: "Customer"
@@ -471,9 +473,11 @@ class UnifiedTo(BaseSDK):
         "form": ("unified_python_sdk.form", "Form"),
         "submission": ("unified_python_sdk.submission", "Submission"),
         "genai": ("unified_python_sdk.genai", "Genai"),
+        "agent": ("unified_python_sdk.agent", "Agent"),
         "embedding": ("unified_python_sdk.embedding", "Embedding"),
         "model": ("unified_python_sdk.model", "Model"),
         "prompt": ("unified_python_sdk.prompt", "Prompt"),
+        "task": ("unified_python_sdk.task", "Task"),
         "hris": ("unified_python_sdk.hris", "Hris"),
         "attendance": ("unified_python_sdk.attendance", "Attendance"),
         "bankaccount": ("unified_python_sdk.bankaccount", "Bankaccount"),
@@ -530,7 +534,6 @@ class UnifiedTo(BaseSDK):
         "post": ("unified_python_sdk.post", "Post"),
         "storage": ("unified_python_sdk.storage", "Storage"),
         "file": ("unified_python_sdk.file", "File"),
-        "task": ("unified_python_sdk.task", "Task"),
         "change": ("unified_python_sdk.change", "Change"),
         "ticketing": ("unified_python_sdk.ticketing", "Ticketing"),
         "customer": ("unified_python_sdk.customer", "Customer"),

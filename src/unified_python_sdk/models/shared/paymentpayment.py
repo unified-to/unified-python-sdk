@@ -45,17 +45,22 @@ class PaymentPaymentTypedDict(TypedDict):
     bill_id: NotRequired[str]
     card_brand: NotRequired[str]
     card_last4: NotRequired[str]
+    category_ids: NotRequired[List[str]]
+    r"""dimension refs -> AccountingCategory"""
     contact_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     device_id: NotRequired[str]
+    exchange_rate: NotRequired[float]
     fee_amount: NotRequired[float]
     id: NotRequired[str]
     invoice_id: NotRequired[str]
     link_id: NotRequired[str]
     location_id: NotRequired[str]
+    net_amount: NotRequired[float]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
+    paid_at: NotRequired[datetime]
     payment_method: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
@@ -80,6 +85,9 @@ class PaymentPayment(BaseModel):
 
     card_last4: Optional[str] = None
 
+    category_ids: Optional[List[str]] = None
+    r"""dimension refs -> AccountingCategory"""
+
     contact_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
@@ -87,6 +95,8 @@ class PaymentPayment(BaseModel):
     currency: Optional[str] = "USD"
 
     device_id: Optional[str] = None
+
+    exchange_rate: Optional[float] = None
 
     fee_amount: Optional[float] = None
 
@@ -98,9 +108,13 @@ class PaymentPayment(BaseModel):
 
     location_id: Optional[str] = None
 
+    net_amount: Optional[float] = None
+
     notes: Optional[str] = None
 
     organization_id: Optional[str] = None
+
+    paid_at: Optional[datetime] = None
 
     payment_method: Optional[str] = None
 
@@ -158,17 +172,21 @@ class PaymentPayment(BaseModel):
                 "bill_id",
                 "card_brand",
                 "card_last4",
+                "category_ids",
                 "contact_id",
                 "created_at",
                 "currency",
                 "device_id",
+                "exchange_rate",
                 "fee_amount",
                 "id",
                 "invoice_id",
                 "link_id",
                 "location_id",
+                "net_amount",
                 "notes",
                 "organization_id",
+                "paid_at",
                 "payment_method",
                 "raw",
                 "reference",
