@@ -9,52 +9,72 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingJournalLineitemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     credit_amount: NotRequired[float]
     debit_amount: NotRequired[float]
+    r"""will replace total_amount (absolute value)"""
     description: NotRequired[str]
     group_id: NotRequired[str]
+    r"""points to a HRIS Group (reference to HrisGroup)"""
     id: NotRequired[str]
     invoice_id: NotRequired[str]
+    r"""(reference to AccountingInvoice)"""
     organization_id: NotRequired[str]
+    r"""points to a AccountingOrganization"""
     payment_id: NotRequired[str]
+    r"""link to PaymentPayment (reference to PaymentPayment)"""
     project_id: NotRequired[str]
+    r"""(reference to TaskProject)"""
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
+    r"""ref -> AccountingTaxrate applied to the line"""
     total_amount: NotRequired[float]
+    r"""will be a positive value for a debit and negative for a credit"""
 
 
 class AccountingJournalLineitem(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     credit_amount: Optional[float] = None
 
     debit_amount: Optional[float] = None
+    r"""will replace total_amount (absolute value)"""
 
     description: Optional[str] = None
 
     group_id: Optional[str] = None
+    r"""points to a HRIS Group (reference to HrisGroup)"""
 
     id: Optional[str] = None
 
     invoice_id: Optional[str] = None
+    r"""(reference to AccountingInvoice)"""
 
     organization_id: Optional[str] = None
+    r"""points to a AccountingOrganization"""
 
     payment_id: Optional[str] = None
+    r"""link to PaymentPayment (reference to PaymentPayment)"""
 
     project_id: Optional[str] = None
+    r"""(reference to TaskProject)"""
 
     tax_amount: Optional[float] = None
 
     taxrate_id: Optional[str] = None
+    r"""ref -> AccountingTaxrate applied to the line"""
 
     total_amount: Optional[float] = None
+    r"""will be a positive value for a debit and negative for a credit"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

@@ -32,17 +32,27 @@ class AssessmentPackageTypedDict(TypedDict):
     aliases: NotRequired[List[str]]
     r"""Alternative namesidentifiers for this package"""
     connection_id: NotRequired[str]
+    r"""Connection ID that this package belongs to"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""Detailed description"""
     has_redirect_url: NotRequired[bool]
+    r"""Whether provider redirects user to complete assessment"""
     has_target_url: NotRequired[bool]
+    r"""Where provider redirects user after completion"""
     id: NotRequired[str]
+    r"""Unique identifier for the assessment package"""
     info_url: NotRequired[str]
+    r"""URL to find additional information about this package"""
     integration_types: NotRequired[List[str]]
     r"""Integration types that support this package"""
     max_score: NotRequired[float]
+    r"""Maximum possible score if this assessment returns a score"""
     name: NotRequired[str]
+    r"""Name of the assessment package"""
     needs_ip_address: NotRequired[bool]
+    r"""Whether IP address is required"""
     parameters: NotRequired[List[AssessmentParameterTypedDict]]
     r"""Questionsinputs needed for this assessment (aligned with verification)"""
     raw: NotRequired[Dict[str, Any]]
@@ -50,7 +60,9 @@ class AssessmentPackageTypedDict(TypedDict):
     tags: NotRequired[List[str]]
     r"""Category tags (e.g., \"Assessment\", \"Background Check\")"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     workspace_id: NotRequired[str]
+    r"""Workspace ID that this package belongs to (reference to KmsSpace)"""
 
 
 class AssessmentPackage(BaseModel):
@@ -62,27 +74,37 @@ class AssessmentPackage(BaseModel):
     r"""Alternative namesidentifiers for this package"""
 
     connection_id: Optional[str] = None
+    r"""Connection ID that this package belongs to"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""Detailed description"""
 
     has_redirect_url: Optional[bool] = None
+    r"""Whether provider redirects user to complete assessment"""
 
     has_target_url: Optional[bool] = None
+    r"""Where provider redirects user after completion"""
 
     id: Optional[str] = None
+    r"""Unique identifier for the assessment package"""
 
     info_url: Optional[str] = None
+    r"""URL to find additional information about this package"""
 
     integration_types: Optional[List[str]] = None
     r"""Integration types that support this package"""
 
     max_score: Optional[float] = None
+    r"""Maximum possible score if this assessment returns a score"""
 
     name: Optional[str] = None
+    r"""Name of the assessment package"""
 
     needs_ip_address: Optional[bool] = None
+    r"""Whether IP address is required"""
 
     parameters: Optional[List[AssessmentParameter]] = None
     r"""Questionsinputs needed for this assessment (aligned with verification)"""
@@ -95,8 +117,10 @@ class AssessmentPackage(BaseModel):
     r"""Category tags (e.g., \"Assessment\", \"Background Check\")"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     workspace_id: Optional[str] = None
+    r"""Workspace ID that this package belongs to (reference to KmsSpace)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

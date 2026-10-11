@@ -25,7 +25,9 @@ class AdsOrganizationStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AdsOrganizationTypedDict(TypedDict):
     account_number: NotRequired[str]
+    r"""Integration-specific account number distinct from id (Microsoft AccountNumber)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     id: NotRequired[str]
     managers: NotRequired[List[AdsManagerTypedDict]]
@@ -36,12 +38,15 @@ class AdsOrganizationTypedDict(TypedDict):
     status: NotRequired[AdsOrganizationStatus]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AdsOrganization(BaseModel):
     account_number: Optional[str] = None
+    r"""Integration-specific account number distinct from id (Microsoft AccountNumber)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
@@ -61,6 +66,7 @@ class AdsOrganization(BaseModel):
     timezone: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

@@ -18,6 +18,7 @@ class DatastoreRelationshipTypedDict(TypedDict):
     field: str
     name: str
     table_id: str
+    r"""target Database Table ID"""
     type: DatastoreRelationshipType
 
 
@@ -27,6 +28,7 @@ class DatastoreRelationship(BaseModel):
     name: str
 
     table_id: str
+    r"""target Database Table ID"""
 
     type: DatastoreRelationshipType
 

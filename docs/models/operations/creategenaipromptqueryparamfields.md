@@ -22,4 +22,7 @@ value = CreateGenaiPromptQueryParamFields.MODEL_ID
 | `MCP_URL`                 | mcp_url                   |
 | `MCP_DEFERRED_TOOLS`      | mcp_deferred_tools        |
 | `MCP_AUTHORIZATION_TOKEN` | mcp_authorization_token   |
+| `QUESTIONS`               | questions                 |
+| `ANSWERS`                 | answers                   |
+| `SKILL_IDS`               | skill_ids                 |
 | `RAW`                     | raw                       |

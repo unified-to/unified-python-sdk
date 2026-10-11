@@ -9,16 +9,22 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingTaxrateComponentTypedDict(TypedDict):
     is_compound: NotRequired[bool]
+    r"""True when this component is charged on top of the other components"""
     name: NotRequired[str]
+    r"""Name of the tax component, e.g. GST or PST"""
     rate: NotRequired[float]
+    r"""Rate of this component, in %"""
 
 
 class AccountingTaxrateComponent(BaseModel):
     is_compound: Optional[bool] = None
+    r"""True when this component is charged on top of the other components"""
 
     name: Optional[str] = None
+    r"""Name of the tax component, e.g. GST or PST"""
 
     rate: Optional[float] = None
+    r"""Rate of this component, in %"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

@@ -9,28 +9,42 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class ShippingShipmentLineitemTypedDict(TypedDict):
     id: NotRequired[str]
+    r"""Unique identifier for this fulfillment line"""
     item_id: NotRequired[str]
+    r"""Reference to the CommerceItem being fulfilled (reference to CommerceItem)"""
     item_name: NotRequired[str]
+    r"""Item name (for display)"""
     item_variant_id: NotRequired[str]
+    r"""Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)"""
     order_lineitem_id: NotRequired[str]
+    r"""The order line being fulfilled"""
     quantity: NotRequired[float]
+    r"""Units fulfilled on this line"""
     sku: NotRequired[str]
+    r"""Item SKU"""
 
 
 class ShippingShipmentLineitem(BaseModel):
     id: Optional[str] = None
+    r"""Unique identifier for this fulfillment line"""
 
     item_id: Optional[str] = None
+    r"""Reference to the CommerceItem being fulfilled (reference to CommerceItem)"""
 
     item_name: Optional[str] = None
+    r"""Item name (for display)"""
 
     item_variant_id: Optional[str] = None
+    r"""Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)"""
 
     order_lineitem_id: Optional[str] = None
+    r"""The order line being fulfilled"""
 
     quantity: Optional[float] = None
+    r"""Units fulfilled on this line"""
 
     sku: Optional[str] = None
+    r"""Item SKU"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

@@ -31,23 +31,32 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserTypedDict
 
     additional_managers: NotRequired[List[ScimManagerTypedDict]]
     birthday: NotRequired[datetime]
+    r"""1985-07-20"""
     cost_center: NotRequired[str]
+    r"""Identifies the name of a cost center."""
     currency: NotRequired[str]
+    r"""User currency"""
     department: NotRequired[str]
+    r"""Identifies the name of a department."""
     division: NotRequired[str]
+    r"""Identifies the name of a division."""
     employee_number: NotRequired[str]
     end_date: NotRequired[datetime]
+    r"""2022-02-25"""
     gender: NotRequired[
         PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender
     ]
     level: NotRequired[str]
     location: NotRequired[str]
+    r"""Berlin"""
     manager: NotRequired[
         PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerTypedDict
     ]
     r"""\"id\" attribute of another User."""
     organization: NotRequired[str]
+    r"""Identifies the name of an organization."""
     start_date: NotRequired[datetime]
+    r"""2011-03-25"""
 
 
 class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(BaseModel):
@@ -58,20 +67,26 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(BaseMode
     ] = None
 
     birthday: Optional[datetime] = None
+    r"""1985-07-20"""
 
     cost_center: Annotated[Optional[str], pydantic.Field(alias="costCenter")] = None
+    r"""Identifies the name of a cost center."""
 
     currency: Optional[str] = None
+    r"""User currency"""
 
     department: Optional[str] = None
+    r"""Identifies the name of a department."""
 
     division: Optional[str] = None
+    r"""Identifies the name of a division."""
 
     employee_number: Annotated[
         Optional[str], pydantic.Field(alias="employeeNumber")
     ] = None
 
     end_date: Annotated[Optional[datetime], pydantic.Field(alias="endDate")] = None
+    r"""2022-02-25"""
 
     gender: Optional[
         PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender
@@ -80,6 +95,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(BaseMode
     level: Optional[str] = None
 
     location: Optional[str] = None
+    r"""Berlin"""
 
     manager: Optional[
         PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
@@ -87,8 +103,10 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(BaseMode
     r"""\"id\" attribute of another User."""
 
     organization: Optional[str] = None
+    r"""Identifies the name of an organization."""
 
     start_date: Annotated[Optional[datetime], pydantic.Field(alias="startDate")] = None
+    r"""2011-03-25"""
 
     @field_serializer("gender")
     def serialize_gender(self, value):

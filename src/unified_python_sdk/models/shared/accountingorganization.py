@@ -16,6 +16,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingOrganizationType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Entity type within a consolidation hierarchy"""
+
     COMPANY = "COMPANY"
     SUBSIDIARY = "SUBSIDIARY"
     DIVISION = "DIVISION"
@@ -25,20 +27,29 @@ class AccountingOrganizationType(str, Enum, metaclass=utils.OpenEnumMeta):
 class AccountingOrganizationTypedDict(TypedDict):
     address: NotRequired[PropertyAccountingOrganizationAddressTypedDict]
     books_close_at: NotRequired[datetime]
+    r"""Company-wide books close / lock date; transactions on or before this date fall in a closed accounting period (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""Currency primarily used by the organization, in ISO 4217 format (e.g. U.S. dollars is USD)."""
     fiscal_year_end_month: NotRequired[float]
+    r"""Month of the year when the organization’s fiscal year ends (1 - 12, where January is 1)"""
     id: NotRequired[str]
     is_elimination: NotRequired[bool]
+    r"""True for consolidation/elimination entities"""
     legal_name: NotRequired[str]
     name: NotRequired[str]
     organization_code: NotRequired[str]
+    r"""Identifier for tracking and categorizing organizations for reporting or analysis purposes that is defined by the end-customer"""
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     tax_number: NotRequired[str]
+    r"""Organization's tax number.  For example, in the U.S., this is an Employer Identification Number (EIN)."""
     timezone: NotRequired[str]
     type: NotRequired[AccountingOrganizationType]
+    r"""Entity type within a consolidation hierarchy"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     website: NotRequired[str]
 
 
@@ -46,34 +57,43 @@ class AccountingOrganization(BaseModel):
     address: Optional[PropertyAccountingOrganizationAddress] = None
 
     books_close_at: Optional[datetime] = None
+    r"""Company-wide books close / lock date; transactions on or before this date fall in a closed accounting period (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""Currency primarily used by the organization, in ISO 4217 format (e.g. U.S. dollars is USD)."""
 
     fiscal_year_end_month: Optional[float] = None
+    r"""Month of the year when the organization’s fiscal year ends (1 - 12, where January is 1)"""
 
     id: Optional[str] = None
 
     is_elimination: Optional[bool] = None
+    r"""True for consolidation/elimination entities"""
 
     legal_name: Optional[str] = None
 
     name: Optional[str] = None
 
     organization_code: Optional[str] = None
+    r"""Identifier for tracking and categorizing organizations for reporting or analysis purposes that is defined by the end-customer"""
 
     parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
     tax_number: Optional[str] = None
+    r"""Organization's tax number.  For example, in the U.S., this is an Employer Identification Number (EIN)."""
 
     timezone: Optional[str] = None
 
     type: Optional[AccountingOrganizationType] = None
+    r"""Entity type within a consolidation hierarchy"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     website: Optional[str] = None
 

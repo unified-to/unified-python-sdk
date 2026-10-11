@@ -14,26 +14,35 @@ class UcContactTypedDict(TypedDict):
     r"""A contact represents a person that optionally is associated with a call"""
 
     company: NotRequired[str]
+    r"""The company/organization name  of the contact"""
     created_at: NotRequired[datetime]
+    r"""The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     emails: NotRequired[List[UcEmailTypedDict]]
     r"""An array of email addresses for this contact"""
     first_name: NotRequired[str]
     id: NotRequired[str]
+    r"""Unique identifier for this contact object"""
     last_name: NotRequired[str]
     name: NotRequired[str]
+    r"""The name of the contact"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this contact"""
     telephones: NotRequired[List[UcTelephoneTypedDict]]
     r"""An array of telephones for this contact"""
     title: NotRequired[str]
+    r"""The job title of the contact"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class UcContact(BaseModel):
     r"""A contact represents a person that optionally is associated with a call"""
 
     company: Optional[str] = None
+    r"""The company/organization name  of the contact"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     emails: Optional[List[UcEmail]] = None
     r"""An array of email addresses for this contact"""
@@ -41,19 +50,24 @@ class UcContact(BaseModel):
     first_name: Optional[str] = None
 
     id: Optional[str] = None
+    r"""Unique identifier for this contact object"""
 
     last_name: Optional[str] = None
 
     name: Optional[str] = None
+    r"""The name of the contact"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this contact"""
 
     telephones: Optional[List[UcTelephone]] = None
     r"""An array of telephones for this contact"""
 
     title: Optional[str] = None
+    r"""The job title of the contact"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

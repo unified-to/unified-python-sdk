@@ -76,12 +76,14 @@ if TYPE_CHECKING:
     from unified_python_sdk.destination import Destination
     from unified_python_sdk.device import Device
     from unified_python_sdk.document import Document
+    from unified_python_sdk.earning import Earning
     from unified_python_sdk.embedding import Embedding
     from unified_python_sdk.employee import Employee
     from unified_python_sdk.enrich import Enrich
     from unified_python_sdk.environment import Environment
     from unified_python_sdk.event import Event
     from unified_python_sdk.expense import Expense
+    from unified_python_sdk.expensereport import Expensereport
     from unified_python_sdk.feedback import Feedback
     from unified_python_sdk.file import File
     from unified_python_sdk.form import Form
@@ -123,9 +125,11 @@ if TYPE_CHECKING:
     from unified_python_sdk.package import Package
     from unified_python_sdk.page import Page
     from unified_python_sdk.passthrough import Passthrough
+    from unified_python_sdk.paycode import Paycode
     from unified_python_sdk.payment import Payment
     from unified_python_sdk.paymentterm import Paymentterm
     from unified_python_sdk.payout import Payout
+    from unified_python_sdk.payroll import Payroll
     from unified_python_sdk.payslip import Payslip
     from unified_python_sdk.performance import Performance
     from unified_python_sdk.person import Person
@@ -139,6 +143,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.property import Property
     from unified_python_sdk.pullrequest import Pullrequest
     from unified_python_sdk.purchaseorder import Purchaseorder
+    from unified_python_sdk.purchasereceipt import Purchasereceipt
     from unified_python_sdk.query import Query
     from unified_python_sdk.quote import Quote
     from unified_python_sdk.rate import Rate
@@ -153,9 +158,11 @@ if TYPE_CHECKING:
     from unified_python_sdk.review import Review
     from unified_python_sdk.saleschannel import Saleschannel
     from unified_python_sdk.salesorder import Salesorder
+    from unified_python_sdk.salesreceipt import Salesreceipt
     from unified_python_sdk.saml import Saml
     from unified_python_sdk.scim import Scim
     from unified_python_sdk.scorecard import Scorecard
+    from unified_python_sdk.scorecardtemplate import Scorecardtemplate
     from unified_python_sdk.secretsmanager import Secretsmanager
     from unified_python_sdk.segment import Segment
     from unified_python_sdk.session import Session
@@ -163,6 +170,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.shipping import Shipping
     from unified_python_sdk.signatory import Signatory
     from unified_python_sdk.signing import Signing
+    from unified_python_sdk.skill import Skill
     from unified_python_sdk.social import Social
     from unified_python_sdk.source import Source
     from unified_python_sdk.space import Space
@@ -211,6 +219,7 @@ class UnifiedTo(BaseSDK):
     contact: "Contact"
     creditmemo: "Creditmemo"
     expense: "Expense"
+    expensereport: "Expensereport"
     invoice: "Invoice"
     journal: "Journal"
     order: "Order"
@@ -219,8 +228,10 @@ class UnifiedTo(BaseSDK):
     profitloss: "Profitloss"
     project: "Project"
     purchaseorder: "Purchaseorder"
+    purchasereceipt: "Purchasereceipt"
     quote: "Quote"
     salesorder: "Salesorder"
+    salesreceipt: "Salesreceipt"
     taxrate: "Taxrate"
     transaction: "Transaction"
     trialbalance: "Trialbalance"
@@ -295,6 +306,7 @@ class UnifiedTo(BaseSDK):
     embedding: "Embedding"
     model: "Model"
     prompt: "Prompt"
+    skill: "Skill"
     task: "Task"
     hris: "Hris"
     attendance: "Attendance"
@@ -302,7 +314,10 @@ class UnifiedTo(BaseSDK):
     benefit: "Benefit"
     deduction: "Deduction"
     device: "Device"
+    earning: "Earning"
     employee: "Employee"
+    paycode: "Paycode"
+    payroll: "Payroll"
     payslip: "Payslip"
     timeoff: "Timeoff"
     timeshift: "Timeshift"
@@ -359,6 +374,7 @@ class UnifiedTo(BaseSDK):
     ticket: "Ticket"
     uc: "Uc"
     call: "Call"
+    scorecardtemplate: "Scorecardtemplate"
     unified: "Unified"
     apicall: "Apicall"
     connection: "Connection"
@@ -369,8 +385,8 @@ class UnifiedTo(BaseSDK):
     saml: "Saml"
     issue: "Issue"
     notification: "Notification"
-    webhook: "Webhook"
     secretsmanager: "Secretsmanager"
+    webhook: "Webhook"
     verification: "Verification"
     request: "Request"
     _sub_sdk_map = {
@@ -390,6 +406,7 @@ class UnifiedTo(BaseSDK):
         "contact": ("unified_python_sdk.contact", "Contact"),
         "creditmemo": ("unified_python_sdk.creditmemo", "Creditmemo"),
         "expense": ("unified_python_sdk.expense", "Expense"),
+        "expensereport": ("unified_python_sdk.expensereport", "Expensereport"),
         "invoice": ("unified_python_sdk.invoice", "Invoice"),
         "journal": ("unified_python_sdk.journal", "Journal"),
         "order": ("unified_python_sdk.order", "Order"),
@@ -398,8 +415,10 @@ class UnifiedTo(BaseSDK):
         "profitloss": ("unified_python_sdk.profitloss", "Profitloss"),
         "project": ("unified_python_sdk.project", "Project"),
         "purchaseorder": ("unified_python_sdk.purchaseorder", "Purchaseorder"),
+        "purchasereceipt": ("unified_python_sdk.purchasereceipt", "Purchasereceipt"),
         "quote": ("unified_python_sdk.quote", "Quote"),
         "salesorder": ("unified_python_sdk.salesorder", "Salesorder"),
+        "salesreceipt": ("unified_python_sdk.salesreceipt", "Salesreceipt"),
         "taxrate": ("unified_python_sdk.taxrate", "Taxrate"),
         "transaction": ("unified_python_sdk.transaction", "Transaction"),
         "trialbalance": ("unified_python_sdk.trialbalance", "Trialbalance"),
@@ -477,6 +496,7 @@ class UnifiedTo(BaseSDK):
         "embedding": ("unified_python_sdk.embedding", "Embedding"),
         "model": ("unified_python_sdk.model", "Model"),
         "prompt": ("unified_python_sdk.prompt", "Prompt"),
+        "skill": ("unified_python_sdk.skill", "Skill"),
         "task": ("unified_python_sdk.task", "Task"),
         "hris": ("unified_python_sdk.hris", "Hris"),
         "attendance": ("unified_python_sdk.attendance", "Attendance"),
@@ -484,7 +504,10 @@ class UnifiedTo(BaseSDK):
         "benefit": ("unified_python_sdk.benefit", "Benefit"),
         "deduction": ("unified_python_sdk.deduction", "Deduction"),
         "device": ("unified_python_sdk.device", "Device"),
+        "earning": ("unified_python_sdk.earning", "Earning"),
         "employee": ("unified_python_sdk.employee", "Employee"),
+        "paycode": ("unified_python_sdk.paycode", "Paycode"),
+        "payroll": ("unified_python_sdk.payroll", "Payroll"),
         "payslip": ("unified_python_sdk.payslip", "Payslip"),
         "timeoff": ("unified_python_sdk.timeoff", "Timeoff"),
         "timeshift": ("unified_python_sdk.timeshift", "Timeshift"),
@@ -541,6 +564,10 @@ class UnifiedTo(BaseSDK):
         "ticket": ("unified_python_sdk.ticket", "Ticket"),
         "uc": ("unified_python_sdk.uc", "Uc"),
         "call": ("unified_python_sdk.call", "Call"),
+        "scorecardtemplate": (
+            "unified_python_sdk.scorecardtemplate",
+            "Scorecardtemplate",
+        ),
         "unified": ("unified_python_sdk.unified", "Unified"),
         "apicall": ("unified_python_sdk.apicall", "Apicall"),
         "connection": ("unified_python_sdk.connection", "Connection"),
@@ -551,8 +578,8 @@ class UnifiedTo(BaseSDK):
         "saml": ("unified_python_sdk.saml", "Saml"),
         "issue": ("unified_python_sdk.issue", "Issue"),
         "notification": ("unified_python_sdk.notification", "Notification"),
-        "webhook": ("unified_python_sdk.webhook", "Webhook"),
         "secretsmanager": ("unified_python_sdk.secretsmanager", "Secretsmanager"),
+        "webhook": ("unified_python_sdk.webhook", "Webhook"),
         "verification": ("unified_python_sdk.verification", "Verification"),
         "request": ("unified_python_sdk.request", "Request"),
     }

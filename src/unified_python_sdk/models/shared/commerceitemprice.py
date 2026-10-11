@@ -10,6 +10,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class CommerceItemPriceTypedDict(TypedDict):
     price: float
     compare_at_price: NotRequired[float]
+    r"""The original price of the item before an adjustment or a sale."""
     currency: NotRequired[str]
 
 
@@ -17,6 +18,7 @@ class CommerceItemPrice(BaseModel):
     price: float
 
     compare_at_price: Optional[float] = None
+    r"""The original price of the item before an adjustment or a sale."""
 
     currency: Optional[str] = None
 

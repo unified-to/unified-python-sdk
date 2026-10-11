@@ -21,31 +21,41 @@ class PaymentPayoutStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PaymentPayoutTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""ref -> AccountingAccount; the destination account (reference to AccountingAccount)"""
     arrival_at: NotRequired[datetime]
+    r"""Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[str]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     fee_amount: NotRequired[float]
+    r"""Processor fee deducted from the payout"""
     id: NotRequired[str]
     lineitems: NotRequired[List[PaymentPayoutLineitemTypedDict]]
     r"""The transactions included in this payout"""
     net_amount: NotRequired[float]
+    r"""total_amount minus fee_amount"""
     notes: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[PaymentPayoutStatus]
     total_amount: NotRequired[float]
     updated_at: NotRequired[str]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PaymentPayout(BaseModel):
     account_id: Optional[str] = None
+    r"""ref -> AccountingAccount; the destination account (reference to AccountingAccount)"""
 
     arrival_at: Optional[datetime] = None
+    r"""Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[str] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     fee_amount: Optional[float] = None
+    r"""Processor fee deducted from the payout"""
 
     id: Optional[str] = None
 
@@ -53,6 +63,7 @@ class PaymentPayout(BaseModel):
     r"""The transactions included in this payout"""
 
     net_amount: Optional[float] = None
+    r"""total_amount minus fee_amount"""
 
     notes: Optional[str] = None
 
@@ -63,6 +74,7 @@ class PaymentPayout(BaseModel):
     total_amount: Optional[float] = None
 
     updated_at: Optional[str] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

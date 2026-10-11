@@ -11,6 +11,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class PropertyCrmEventFormTypedDict(TypedDict):
     archived_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     fields: NotRequired[List[CrmEventFormFieldTypedDict]]
     name: NotRequired[str]
     redirect_url: NotRequired[str]
@@ -18,6 +19,7 @@ class PropertyCrmEventFormTypedDict(TypedDict):
 
 class PropertyCrmEventForm(BaseModel):
     archived_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     fields: Optional[List[CrmEventFormField]] = None
 

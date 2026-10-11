@@ -12,11 +12,15 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ComputeMode(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""How the segment membership is computed (REALTIME or BATCH)"""
+
     REALTIME = "REALTIME"
     BATCH = "BATCH"
 
 
 class CdpSegmentType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The type of entity the segment targets (USERS, ACCOUNTS, LINKED)"""
+
     USERS = "USERS"
     ACCOUNTS = "ACCOUNTS"
     LINKED = "LINKED"
@@ -24,46 +28,72 @@ class CdpSegmentType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CdpSegmentTypedDict(TypedDict):
     compute_mode: NotRequired[ComputeMode]
+    r"""How the segment membership is computed (REALTIME or BATCH)"""
     created_at: NotRequired[datetime]
+    r"""The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     definition: NotRequired[str]
+    r"""The membership rule/query that defines the segment"""
     description: NotRequired[str]
+    r"""The description of the segment/audience"""
     id: NotRequired[str]
+    r"""Unique identifier for this segment object"""
     is_active: NotRequired[bool]
+    r"""Whether the segment is active/enabled"""
     name: NotRequired[str]
+    r"""The name of the segment/audience"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this segment"""
     size: NotRequired[float]
+    r"""The number of profiles currently in the segment"""
     slug: NotRequired[str]
+    r"""The data-plane handle/key used to identify segment membership in profiles and destinations"""
     source_id: NotRequired[str]
+    r"""The cdp_source this segment originated from; points to CdpSource"""
     type: NotRequired[CdpSegmentType]
+    r"""The type of entity the segment targets (USERS, ACCOUNTS, LINKED)"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CdpSegment(BaseModel):
     compute_mode: Optional[ComputeMode] = None
+    r"""How the segment membership is computed (REALTIME or BATCH)"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     definition: Optional[str] = None
+    r"""The membership rule/query that defines the segment"""
 
     description: Optional[str] = None
+    r"""The description of the segment/audience"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this segment object"""
 
     is_active: Optional[bool] = None
+    r"""Whether the segment is active/enabled"""
 
     name: Optional[str] = None
+    r"""The name of the segment/audience"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this segment"""
 
     size: Optional[float] = None
+    r"""The number of profiles currently in the segment"""
 
     slug: Optional[str] = None
+    r"""The data-plane handle/key used to identify segment membership in profiles and destinations"""
 
     source_id: Optional[str] = None
+    r"""The cdp_source this segment originated from; points to CdpSource"""
 
     type: Optional[CdpSegmentType] = None
+    r"""The type of entity the segment targets (USERS, ACCOUNTS, LINKED)"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("compute_mode")
     def serialize_compute_mode(self, value):

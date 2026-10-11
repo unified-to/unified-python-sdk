@@ -36,61 +36,79 @@ class HrisTimeoffType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class HrisTimeoffTypedDict(TypedDict):
     user_id: str
+    r"""employee ID (reference to HrisEmployee)"""
     approved_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     approver_user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     comments: NotRequired[str]
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     duration: NotRequired[float]
     duration_type: NotRequired[DurationType]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     is_paid: NotRequired[bool]
     original_type: NotRequired[str]
+    r"""integration leave-type label before normalization"""
     raw: NotRequired[Dict[str, Any]]
     reason: NotRequired[str]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[HrisTimeoffStatus]
     type: NotRequired[HrisTimeoffType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class HrisTimeoff(BaseModel):
     user_id: str
+    r"""employee ID (reference to HrisEmployee)"""
 
     approved_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     approver_user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     comments: Optional[str] = None
 
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     duration: Optional[float] = None
 
     duration_type: Optional[DurationType] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     is_paid: Optional[bool] = None
 
     original_type: Optional[str] = None
+    r"""integration leave-type label before normalization"""
 
     raw: Optional[Dict[str, Any]] = None
 
     reason: Optional[str] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[HrisTimeoffStatus] = None
 
     type: Optional[HrisTimeoffType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("duration_type")
     def serialize_duration_type(self, value):

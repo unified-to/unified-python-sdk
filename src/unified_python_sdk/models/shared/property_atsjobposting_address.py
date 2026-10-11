@@ -15,9 +15,12 @@ class PropertyAtsJobPostingAddressTypedDict(TypedDict):
     city: NotRequired[str]
     country: NotRequired[str]
     country_code: NotRequired[str]
+    r"""Country code for the country, in ISO 3166 A-2 format"""
     postal_code: NotRequired[str]
     region: NotRequired[str]
+    r"""Regional area of the employee's address.  For example, in the U.S., the region is the employee's state; in Canada, the region is the employee’s province."""
     region_code: NotRequired[str]
+    r"""Short form for the regional area of the employee's address.   For example, in the U.S., the region code is the two-letter abbreviation for the employee’s state; in Canada, the region is the two-letter abbreviation for the employee's province."""
 
 
 class PropertyAtsJobPostingAddress(BaseModel):
@@ -32,12 +35,15 @@ class PropertyAtsJobPostingAddress(BaseModel):
     country: Optional[str] = None
 
     country_code: Optional[str] = None
+    r"""Country code for the country, in ISO 3166 A-2 format"""
 
     postal_code: Optional[str] = None
 
     region: Optional[str] = None
+    r"""Regional area of the employee's address.  For example, in the U.S., the region is the employee's state; in Canada, the region is the employee’s province."""
 
     region_code: Optional[str] = None
+    r"""Short form for the regional area of the employee's address.   For example, in the U.S., the region code is the two-letter abbreviation for the employee’s state; in Canada, the region is the two-letter abbreviation for the employee's province."""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

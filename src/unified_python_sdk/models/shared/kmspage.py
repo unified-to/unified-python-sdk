@@ -22,6 +22,7 @@ class KmsPageType(str, Enum, metaclass=utils.OpenEnumMeta):
 class KmsPageTypedDict(TypedDict):
     type: KmsPageType
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     download_url: NotRequired[str]
     has_children: NotRequired[bool]
     id: NotRequired[str]
@@ -30,9 +31,12 @@ class KmsPageTypedDict(TypedDict):
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     space_id: NotRequired[str]
+    r"""(reference to KmsSpace)"""
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     web_url: NotRequired[str]
 
 
@@ -40,6 +44,7 @@ class KmsPage(BaseModel):
     type: KmsPageType
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     download_url: Optional[str] = None
 
@@ -56,12 +61,15 @@ class KmsPage(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     space_id: Optional[str] = None
+    r"""(reference to KmsSpace)"""
 
     title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     web_url: Optional[str] = None
 

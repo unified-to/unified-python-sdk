@@ -11,24 +11,30 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class RepoBranchTypedDict(TypedDict):
     name: str
     repo_id: str
+    r"""(reference to RepoRepository)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class RepoBranch(BaseModel):
     name: str
 
     repo_id: str
+    r"""(reference to RepoRepository)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

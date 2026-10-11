@@ -23,15 +23,20 @@ class AtsInterviewTypedDict(TypedDict):
     application_id: NotRequired[str]
     candidate_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     external_event_xref: NotRequired[str]
+    r"""the ID of the event in a calendar"""
     id: NotRequired[str]
     job_id: NotRequired[str]
     location: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[AtsInterviewStatus]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_ids: NotRequired[List[str]]
 
 
@@ -41,10 +46,13 @@ class AtsInterview(BaseModel):
     candidate_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     external_event_xref: Optional[str] = None
+    r"""the ID of the event in a calendar"""
 
     id: Optional[str] = None
 
@@ -55,10 +63,12 @@ class AtsInterview(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[AtsInterviewStatus] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_ids: Optional[List[str]] = None
 

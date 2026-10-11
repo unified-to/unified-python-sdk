@@ -49,6 +49,7 @@ class AdsAdTypedDict(TypedDict):
     advertiser_name: NotRequired[str]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creative_asset_url: NotRequired[str]
     creative_ids: NotRequired[List[str]]
     cta: NotRequired[str]
@@ -56,6 +57,7 @@ class AdsAdTypedDict(TypedDict):
     display_url: NotRequired[str]
     final_url: NotRequired[str]
     group_id: NotRequired[str]
+    r"""(reference to AdsGroup)"""
     headline: NotRequired[str]
     id: NotRequired[str]
     logo_creative_id: NotRequired[str]
@@ -67,6 +69,7 @@ class AdsAdTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[AdsAdStatus]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AdsAd(BaseModel):
@@ -79,6 +82,7 @@ class AdsAd(BaseModel):
     campaign_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creative_asset_url: Optional[str] = None
 
@@ -93,6 +97,7 @@ class AdsAd(BaseModel):
     final_url: Optional[str] = None
 
     group_id: Optional[str] = None
+    r"""(reference to AdsGroup)"""
 
     headline: Optional[str] = None
 
@@ -115,6 +120,7 @@ class AdsAd(BaseModel):
     status: Optional[AdsAdStatus] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("ad_type")
     def serialize_ad_type(self, value):

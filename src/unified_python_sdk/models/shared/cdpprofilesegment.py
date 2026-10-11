@@ -10,19 +10,27 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class CdpProfileSegmentTypedDict(TypedDict):
     expires_at: NotRequired[datetime]
+    r"""When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     joined_at: NotRequired[datetime]
+    r"""When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     name: NotRequired[str]
+    r"""The name of the segment/audience"""
     segment_id: NotRequired[str]
+    r"""The segment/audience this profile belongs to; points to CdpSegment"""
 
 
 class CdpProfileSegment(BaseModel):
     expires_at: Optional[datetime] = None
+    r"""When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     joined_at: Optional[datetime] = None
+    r"""When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     name: Optional[str] = None
+    r"""The name of the segment/audience"""
 
     segment_id: Optional[str] = None
+    r"""The segment/audience this profile belongs to; points to CdpSegment"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

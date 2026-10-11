@@ -19,27 +19,33 @@ class RepoPullrequestStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class RepoPullrequestTypedDict(TypedDict):
     closed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     commit_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     labels: NotRequired[List[str]]
     notes: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     repo_id: NotRequired[str]
+    r"""(reference to RepoRepository)"""
     source_branch_id: NotRequired[str]
     status: NotRequired[RepoPullrequestStatus]
     target_branch_id: NotRequired[str]
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_ids: NotRequired[List[str]]
 
 
 class RepoPullrequest(BaseModel):
     closed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     commit_ids: Optional[List[str]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -50,6 +56,7 @@ class RepoPullrequest(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     repo_id: Optional[str] = None
+    r"""(reference to RepoRepository)"""
 
     source_branch_id: Optional[str] = None
 
@@ -60,6 +67,7 @@ class RepoPullrequest(BaseModel):
     title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_ids: Optional[List[str]] = None
 

@@ -10,28 +10,38 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class CommerceAvailabilityTypedDict(TypedDict):
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     item_id: NotRequired[str]
+    r"""(reference to CommerceItem)"""
     location_id: NotRequired[str]
+    r"""(reference to CommerceLocation)"""
     raw: NotRequired[Dict[str, Any]]
     size: NotRequired[float]
     staff_user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CommerceAvailability(BaseModel):
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     item_id: Optional[str] = None
+    r"""(reference to CommerceItem)"""
 
     location_id: Optional[str] = None
+    r"""(reference to CommerceLocation)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     size: Optional[float] = None
 
     staff_user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

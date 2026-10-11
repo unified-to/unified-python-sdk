@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AnalyticsReportMetricsDimension(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""new vs returning"""
+
     DATE = "DATE"
     HOUR = "HOUR"
     DAY_OF_WEEK = "DAY_OF_WEEK"
@@ -34,6 +36,8 @@ class AnalyticsReportMetricsDimension(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AnalyticsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Traffic metrics"""
+
     USERS = "USERS"
     NEW_USERS = "NEW_USERS"
     SESSIONS = "SESSIONS"
@@ -71,17 +75,21 @@ class AnalyticsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AnalyticsReportMetricsTypedDict(TypedDict):
     dimension: NotRequired[AnalyticsReportMetricsDimension]
+    r"""new vs returning"""
     dimension_value: NotRequired[str]
     type: NotRequired[AnalyticsReportMetricsType]
+    r"""Traffic metrics"""
     value: NotRequired[float]
 
 
 class AnalyticsReportMetrics(BaseModel):
     dimension: Optional[AnalyticsReportMetricsDimension] = None
+    r"""new vs returning"""
 
     dimension_value: Optional[str] = None
 
     type: Optional[AnalyticsReportMetricsType] = None
+    r"""Traffic metrics"""
 
     value: Optional[float] = None
 

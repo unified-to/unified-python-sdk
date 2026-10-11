@@ -52,6 +52,7 @@ class AdsCreativeTypedDict(TypedDict):
     body: NotRequired[str]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creative_type: NotRequired[CreativeType]
     cta: NotRequired[str]
     data: NotRequired[str]
@@ -59,23 +60,30 @@ class AdsCreativeTypedDict(TypedDict):
     external_creative_reference: NotRequired[str]
     external_placement_reference: NotRequired[str]
     group_id: NotRequired[str]
+    r"""(reference to AdsGroup)"""
     height: NotRequired[float]
     hosting_source: NotRequired[HostingSource]
     id: NotRequired[str]
     item_id: NotRequired[str]
+    r"""references Commerce Item ID (reference to CommerceItem)"""
     labels: NotRequired[List[str]]
     link_url: NotRequired[str]
+    r"""Destination URL for creatives with links"""
     name: NotRequired[str]
     organization_id: NotRequired[str]
     path1: NotRequired[str]
+    r"""Display URL path 1 (Microsoft RSA Path1)"""
     path2: NotRequired[str]
+    r"""Display URL path 2 (Microsoft RSA Path2)"""
     promoted: NotRequired[List[AdsPromotedTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[AdsCreativeStatus]
     third_party_tag: NotRequired[str]
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url_tags: NotRequired[str]
+    r"""Appended URL tracking params (e.g. utm_source=..&utm_medium=..); Meta url_tags, Google tracking template"""
     vast_tag_url: NotRequired[str]
     width: NotRequired[float]
 
@@ -89,6 +97,7 @@ class AdsCreative(BaseModel):
     campaign_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creative_type: Optional[CreativeType] = None
 
@@ -103,6 +112,7 @@ class AdsCreative(BaseModel):
     external_placement_reference: Optional[str] = None
 
     group_id: Optional[str] = None
+    r"""(reference to AdsGroup)"""
 
     height: Optional[float] = None
 
@@ -111,18 +121,22 @@ class AdsCreative(BaseModel):
     id: Optional[str] = None
 
     item_id: Optional[str] = None
+    r"""references Commerce Item ID (reference to CommerceItem)"""
 
     labels: Optional[List[str]] = None
 
     link_url: Optional[str] = None
+    r"""Destination URL for creatives with links"""
 
     name: Optional[str] = None
 
     organization_id: Optional[str] = None
 
     path1: Optional[str] = None
+    r"""Display URL path 1 (Microsoft RSA Path1)"""
 
     path2: Optional[str] = None
+    r"""Display URL path 2 (Microsoft RSA Path2)"""
 
     promoted: Optional[List[AdsPromoted]] = None
 
@@ -135,8 +149,10 @@ class AdsCreative(BaseModel):
     title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url_tags: Optional[str] = None
+    r"""Appended URL tracking params (e.g. utm_source=..&utm_medium=..); Meta url_tags, Google tracking template"""
 
     vast_tag_url: Optional[str] = None
 

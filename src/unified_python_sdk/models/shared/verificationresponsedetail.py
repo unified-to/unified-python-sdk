@@ -12,6 +12,7 @@ class VerificationResponseDetailTypedDict(TypedDict):
     is_failed_reason: NotRequired[bool]
     is_private: NotRequired[bool]
     parameter_id: NotRequired[str]
+    r"""in reference to the parameter input"""
     text: NotRequired[str]
     title: NotRequired[str]
 
@@ -24,6 +25,7 @@ class VerificationResponseDetail(BaseModel):
     is_private: Optional[bool] = None
 
     parameter_id: Optional[str] = None
+    r"""in reference to the parameter input"""
 
     text: Optional[str] = None
 

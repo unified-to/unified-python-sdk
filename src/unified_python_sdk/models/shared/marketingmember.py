@@ -24,28 +24,36 @@ class MarketingMemberTypedDict(TypedDict):
     r"""A member represents a person"""
 
     company: NotRequired[str]
+    r"""The name of the company/organization the member belongs to"""
     created_at: NotRequired[datetime]
+    r"""The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     emails: NotRequired[List[MarketingEmailTypedDict]]
     r"""An array of email addresses for this member"""
     first_name: NotRequired[str]
     id: NotRequired[str]
+    r"""Unique identifier for this member object"""
     last_name: NotRequired[str]
     list_ids: NotRequired[List[str]]
     r"""An array of list IDs associated with this member"""
     name: NotRequired[str]
+    r"""The name of the member"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this member"""
     status: NotRequired[MarketingMemberStatus]
     tags: NotRequired[List[str]]
     r"""An array of tags associated with this member"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class MarketingMember(BaseModel):
     r"""A member represents a person"""
 
     company: Optional[str] = None
+    r"""The name of the company/organization the member belongs to"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     emails: Optional[List[MarketingEmail]] = None
     r"""An array of email addresses for this member"""
@@ -53,6 +61,7 @@ class MarketingMember(BaseModel):
     first_name: Optional[str] = None
 
     id: Optional[str] = None
+    r"""Unique identifier for this member object"""
 
     last_name: Optional[str] = None
 
@@ -60,8 +69,10 @@ class MarketingMember(BaseModel):
     r"""An array of list IDs associated with this member"""
 
     name: Optional[str] = None
+    r"""The name of the member"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this member"""
 
     status: Optional[MarketingMemberStatus] = None
 
@@ -69,6 +80,7 @@ class MarketingMember(BaseModel):
     r"""An array of tags associated with this member"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

@@ -28,70 +28,96 @@ class PaymentSubscriptionStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PaymentSubscriptionTypedDict(TypedDict):
     canceled_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     contact_id: NotRequired[str]
+    r"""a reference to an Accounting Contact (reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     current_period_end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     current_period_start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     day_of_month: NotRequired[float]
+    r"""The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only applies when the interval_unit is MONTH."""
     day_of_week: NotRequired[float]
+    r"""The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only applies when the interval_unit is WEEK."""
     description: NotRequired[str]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     interval: NotRequired[float]
+    r"""The number of intervals between charges within the interval_unit. Defaults to 1."""
     interval_unit: NotRequired[IntervalUnit]
     invoice_id: NotRequired[str]
+    r"""a reference to an Accounting Invoice (reference to AccountingInvoice)"""
     lineitems: NotRequired[List[PaymentLineitemTypedDict]]
     month: NotRequired[float]
+    r"""the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR."""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[PaymentSubscriptionStatus]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PaymentSubscription(BaseModel):
     canceled_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     contact_id: Optional[str] = None
+    r"""a reference to an Accounting Contact (reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     current_period_end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     current_period_start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     day_of_month: Optional[float] = None
+    r"""The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only applies when the interval_unit is MONTH."""
 
     day_of_week: Optional[float] = None
+    r"""The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only applies when the interval_unit is WEEK."""
 
     description: Optional[str] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     interval: Optional[float] = None
+    r"""The number of intervals between charges within the interval_unit. Defaults to 1."""
 
     interval_unit: Optional[IntervalUnit] = None
 
     invoice_id: Optional[str] = None
+    r"""a reference to an Accounting Invoice (reference to AccountingInvoice)"""
 
     lineitems: Optional[List[PaymentLineitem]] = None
 
     month: Optional[float] = None
+    r"""the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR."""
 
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[PaymentSubscriptionStatus] = None
 
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("interval_unit")
     def serialize_interval_unit(self, value):

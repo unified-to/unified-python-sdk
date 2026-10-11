@@ -14,25 +14,35 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class CalendarRecordingTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     event_id: NotRequired[str]
+    r"""(reference to CalendarEvent)"""
     expires_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     media: NotRequired[List[CalendarRecordingMediaTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
 
 
 class CalendarRecording(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     event_id: Optional[str] = None
+    r"""(reference to CalendarEvent)"""
 
     expires_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -41,8 +51,10 @@ class CalendarRecording(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
 

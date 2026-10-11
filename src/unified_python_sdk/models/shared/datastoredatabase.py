@@ -10,6 +10,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class DatastoreDatabaseTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
@@ -18,11 +19,13 @@ class DatastoreDatabaseTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     region: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
 
 
 class DatastoreDatabase(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -39,6 +42,7 @@ class DatastoreDatabase(BaseModel):
     region: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
 

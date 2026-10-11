@@ -18,6 +18,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingQuotePaymentTerms(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""unified payment terms enum, as on accounting_invoice / accounting_bill"""
+
     ON_RECEIPT = "ON_RECEIPT"
     NET_7 = "NET_7"
     NET_10 = "NET_10"
@@ -32,6 +34,8 @@ class AccountingQuotePaymentTerms(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AccountingQuoteStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""where EXPIRED is derived (expires_at < now), the source status is preserved in raw"""
+
     DRAFT = "DRAFT"
     SENT = "SENT"
     ACCEPTED = "ACCEPTED"
@@ -43,6 +47,8 @@ class AccountingQuoteStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class TaxMode(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)"""
+
     INCLUSIVE = "INCLUSIVE"
     EXCLUSIVE = "EXCLUSIVE"
     NONE = "NONE"
@@ -50,113 +56,157 @@ class TaxMode(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingQuoteTypedDict(TypedDict):
     accepted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     category_ids: NotRequired[List[str]]
     r"""tracking categories / classes (AccountingCategory dimensions)"""
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     contacts: NotRequired[List[AccountingTransactionContactTypedDict]]
     r"""denormalized parties, reusing the transaction contact shape"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     currency_rate: NotRequired[float]
+    r"""exchange rate to the organization's base currency"""
     customer_message: NotRequired[str]
+    r"""customer-visible message"""
     declined_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     discount_amount: NotRequired[float]
     expires_at: NotRequired[datetime]
+    r"""Xero ExpiryDate, QBO ExpirationDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     group_id: NotRequired[str]
+    r"""points to a HRIS Group (reference to HrisGroup)"""
     id: NotRequired[str]
     invoice_id: NotRequired[str]
+    r"""populated once the quote is converted to an invoice; left null when the source cannot supply it (reference to AccountingInvoice)"""
     issued_at: NotRequired[datetime]
+    r"""Xero Date, QBO TxnDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     memo: NotRequired[str]
+    r"""internal note, not customer-visible"""
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     organization_id: NotRequired[str]
     payment_terms: NotRequired[AccountingQuotePaymentTerms]
+    r"""unified payment terms enum, as on accounting_invoice / accounting_bill"""
     project_id: NotRequired[str]
+    r"""points to an AccountingProject (accounting costing project) (reference to TaskProject)"""
     quote_number: NotRequired[str]
+    r"""External identifier for this quote (Xero QuoteNumber, QBO DocNumber, NetSuite tranId)"""
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
+    r"""customer-side reference / PO number"""
     sent_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[AccountingQuoteStatus]
+    r"""where EXPIRED is derived (expires_at < now), the source status is preserved in raw"""
     sub_total_amount: NotRequired[float]
     summary: NotRequired[str]
+    r"""longer summary (Xero Summary, max 3000)"""
     tax_amount: NotRequired[float]
     tax_mode: NotRequired[TaxMode]
+    r"""INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)"""
     title: NotRequired[str]
+    r"""short title (Xero Title, max 100)"""
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""public online-quote link where exposed"""
 
 
 class AccountingQuote(BaseModel):
     accepted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     category_ids: Optional[List[str]] = None
     r"""tracking categories / classes (AccountingCategory dimensions)"""
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     contacts: Optional[List[AccountingTransactionContact]] = None
     r"""denormalized parties, reusing the transaction contact shape"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     currency_rate: Optional[float] = None
+    r"""exchange rate to the organization's base currency"""
 
     customer_message: Optional[str] = None
+    r"""customer-visible message"""
 
     declined_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     discount_amount: Optional[float] = None
 
     expires_at: Optional[datetime] = None
+    r"""Xero ExpiryDate, QBO ExpirationDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     group_id: Optional[str] = None
+    r"""points to a HRIS Group (reference to HrisGroup)"""
 
     id: Optional[str] = None
 
     invoice_id: Optional[str] = None
+    r"""populated once the quote is converted to an invoice; left null when the source cannot supply it (reference to AccountingInvoice)"""
 
     issued_at: Optional[datetime] = None
+    r"""Xero Date, QBO TxnDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     lineitems: Optional[List[AccountingLineitem]] = None
 
     memo: Optional[str] = None
+    r"""internal note, not customer-visible"""
 
     metadata: Optional[List[AccountingMetadata]] = None
 
     organization_id: Optional[str] = None
 
     payment_terms: Optional[AccountingQuotePaymentTerms] = None
+    r"""unified payment terms enum, as on accounting_invoice / accounting_bill"""
 
     project_id: Optional[str] = None
+    r"""points to an AccountingProject (accounting costing project) (reference to TaskProject)"""
 
     quote_number: Optional[str] = None
+    r"""External identifier for this quote (Xero QuoteNumber, QBO DocNumber, NetSuite tranId)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     reference: Optional[str] = None
+    r"""customer-side reference / PO number"""
 
     sent_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[AccountingQuoteStatus] = None
+    r"""where EXPIRED is derived (expires_at < now), the source status is preserved in raw"""
 
     sub_total_amount: Optional[float] = None
 
     summary: Optional[str] = None
+    r"""longer summary (Xero Summary, max 3000)"""
 
     tax_amount: Optional[float] = None
 
     tax_mode: Optional[TaxMode] = None
+    r"""INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)"""
 
     title: Optional[str] = None
+    r"""short title (Xero Title, max 100)"""
 
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""public online-quote link where exposed"""
 
     @field_serializer("payment_terms")
     def serialize_payment_terms(self, value):

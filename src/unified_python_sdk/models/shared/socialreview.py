@@ -14,48 +14,72 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class SocialReviewTypedDict(TypedDict):
     author_avatar_url: NotRequired[str]
+    r"""Profile image URL of the reviewer"""
     author_location: NotRequired[str]
+    r"""Free-text location of the reviewer"""
     author_name: NotRequired[str]
+    r"""Display name of the reviewer"""
     content: NotRequired[str]
+    r"""The review text"""
     created_at: NotRequired[datetime]
+    r"""When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""Unique identifier for the review"""
     profile_id: NotRequired[str]
+    r"""The social profile (page/handle/listing) being reviewed"""
     rating: NotRequired[float]
+    r"""Star rating, typically 1-5"""
     raw: NotRequired[Dict[str, Any]]
+    r"""Raw data from integration"""
     reply: NotRequired[PropertySocialReviewReplyTypedDict]
     r"""The business's reply to the review"""
     title: NotRequired[str]
+    r"""Optional review title/headline"""
     updated_at: NotRequired[datetime]
+    r"""When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""Public permalink to the review"""
 
 
 class SocialReview(BaseModel):
     author_avatar_url: Optional[str] = None
+    r"""Profile image URL of the reviewer"""
 
     author_location: Optional[str] = None
+    r"""Free-text location of the reviewer"""
 
     author_name: Optional[str] = None
+    r"""Display name of the reviewer"""
 
     content: Optional[str] = None
+    r"""The review text"""
 
     created_at: Optional[datetime] = None
+    r"""When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for the review"""
 
     profile_id: Optional[str] = None
+    r"""The social profile (page/handle/listing) being reviewed"""
 
     rating: Optional[float] = None
+    r"""Star rating, typically 1-5"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Raw data from integration"""
 
     reply: Optional[PropertySocialReviewReply] = None
     r"""The business's reply to the review"""
 
     title: Optional[str] = None
+    r"""Optional review title/headline"""
 
     updated_at: Optional[datetime] = None
+    r"""When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""Public permalink to the review"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

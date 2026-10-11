@@ -12,25 +12,35 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The type of object this credit was applied to"""
+
     INVOICE = "INVOICE"
     BILL = "BILL"
 
 
 class AccountingCreditApplicationTypedDict(TypedDict):
     amount: NotRequired[float]
+    r"""The amount of credit applied to this object"""
     applied_at: NotRequired[datetime]
+    r"""Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     object_id: NotRequired[str]
+    r"""The id of the object this credit was applied to"""
     object_type: NotRequired[ObjectType]
+    r"""The type of object this credit was applied to"""
 
 
 class AccountingCreditApplication(BaseModel):
     amount: Optional[float] = None
+    r"""The amount of credit applied to this object"""
 
     applied_at: Optional[datetime] = None
+    r"""Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     object_id: Optional[str] = None
+    r"""The id of the object this credit was applied to"""
 
     object_type: Optional[ObjectType] = None
+    r"""The type of object this credit was applied to"""
 
     @field_serializer("object_type")
     def serialize_object_type(self, value):

@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ClubsEventStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The event status"""
+
     SCHEDULED = "SCHEDULED"
     CANCELED = "CANCELED"
     TBD = "TBD"
@@ -19,6 +21,8 @@ class ClubsEventStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ClubsEventType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The event type"""
+
     GAME = "GAME"
     PRACTICE = "PRACTICE"
     OTHER = "OTHER"
@@ -28,84 +32,134 @@ class ClubsEventTypedDict(TypedDict):
     r"""(home-vs-away competitors with scores). Distinct from the fitness-oriented IClubsActivity."""
 
     away_score: NotRequired[float]
+    r"""The away team's score"""
     away_team_name: NotRequired[str]
+    r"""The away team's name (homeaway providers)"""
     created_at: NotRequired[datetime]
+    r"""The date that this event was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""A description or notes for the event"""
     duration_minutes: NotRequired[float]
+    r"""The scheduled duration, in minutes"""
     end_at: NotRequired[datetime]
+    r"""When the event ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     group_id: NotRequired[str]
+    r"""The group this event belongs to (reference to HrisGroup)"""
     home_score: NotRequired[float]
+    r"""The home team's score"""
     home_team_name: NotRequired[str]
+    r"""The home team's name (homeaway providers)"""
     id: NotRequired[str]
+    r"""Unique identifier for this event"""
     is_home: NotRequired[bool]
+    r"""Whether the connected groupteam is the home side"""
     location_id: NotRequired[str]
+    r"""The id of the location for this event (reference to ClubsLocation)"""
     location_name: NotRequired[str]
+    r"""The name of the location for this event"""
     name: NotRequired[str]
+    r"""The event name (or a \"Home vs Away\" matchup label)"""
     opponent_id: NotRequired[str]
+    r"""The id of the opposing team (single-opponent providers)"""
     opponent_name: NotRequired[str]
+    r"""The name of the opposing team"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this event"""
     score_against: NotRequired[float]
+    r"""The opponent's score (team-vs-opponent providers)"""
     score_for: NotRequired[float]
+    r"""The connected groupteam's score (team-vs-opponent providers)"""
     start_at: NotRequired[datetime]
+    r"""When the event starts (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[ClubsEventStatus]
+    r"""The event status"""
     timezone: NotRequired[str]
+    r"""The timezone of the event"""
     type: NotRequired[ClubsEventType]
+    r"""The event type"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this event was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""A URL to the event"""
 
 
 class ClubsEvent(BaseModel):
     r"""(home-vs-away competitors with scores). Distinct from the fitness-oriented IClubsActivity."""
 
     away_score: Optional[float] = None
+    r"""The away team's score"""
 
     away_team_name: Optional[str] = None
+    r"""The away team's name (homeaway providers)"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this event was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""A description or notes for the event"""
 
     duration_minutes: Optional[float] = None
+    r"""The scheduled duration, in minutes"""
 
     end_at: Optional[datetime] = None
+    r"""When the event ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     group_id: Optional[str] = None
+    r"""The group this event belongs to (reference to HrisGroup)"""
 
     home_score: Optional[float] = None
+    r"""The home team's score"""
 
     home_team_name: Optional[str] = None
+    r"""The home team's name (homeaway providers)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this event"""
 
     is_home: Optional[bool] = None
+    r"""Whether the connected groupteam is the home side"""
 
     location_id: Optional[str] = None
+    r"""The id of the location for this event (reference to ClubsLocation)"""
 
     location_name: Optional[str] = None
+    r"""The name of the location for this event"""
 
     name: Optional[str] = None
+    r"""The event name (or a \"Home vs Away\" matchup label)"""
 
     opponent_id: Optional[str] = None
+    r"""The id of the opposing team (single-opponent providers)"""
 
     opponent_name: Optional[str] = None
+    r"""The name of the opposing team"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this event"""
 
     score_against: Optional[float] = None
+    r"""The opponent's score (team-vs-opponent providers)"""
 
     score_for: Optional[float] = None
+    r"""The connected groupteam's score (team-vs-opponent providers)"""
 
     start_at: Optional[datetime] = None
+    r"""When the event starts (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[ClubsEventStatus] = None
+    r"""The event status"""
 
     timezone: Optional[str] = None
+    r"""The timezone of the event"""
 
     type: Optional[ClubsEventType] = None
+    r"""The event type"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this event was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""A URL to the event"""
 
     @field_serializer("status")
     def serialize_status(self, value):

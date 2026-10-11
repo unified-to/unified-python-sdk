@@ -60,6 +60,7 @@ class PropertyAdsInsertionorderBidStrategyTypedDict(TypedDict):
     ]
     raise_bid_for_deals: NotRequired[bool]
     target_roas: NotRequired[float]
+    r"""Target ROAS e.g. 2.5 = 250% (Google)"""
     youtube_and_partners_type: NotRequired[
         PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType
     ]
@@ -86,6 +87,7 @@ class PropertyAdsInsertionorderBidStrategy(BaseModel):
     raise_bid_for_deals: Optional[bool] = None
 
     target_roas: Optional[float] = None
+    r"""Target ROAS e.g. 2.5 = 250% (Google)"""
 
     youtube_and_partners_type: Optional[
         PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType

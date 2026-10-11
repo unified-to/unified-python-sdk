@@ -24,6 +24,7 @@ class ListHrisEmployeesQueryParamFields(str, Enum):
     LAST_NAME = "last_name"
     EMAILS = "emails"
     TITLE = "title"
+    JOB_ID = "job_id"
     MANAGER_ID = "manager_id"
     EMPLOYMENT_STATUS = "employment_status"
     GENDER = "gender"
@@ -57,6 +58,8 @@ class ListHrisEmployeesQueryParamFields(str, Enum):
     HAS_MFA = "has_mfa"
     TIMEOFF_DAYS_TOTAL = "timeoff_days_total"
     TIMEOFF_DAYS_USED = "timeoff_days_used"
+    FLSA_STATUS = "flsa_status"
+    PAY_FREQUENCY = "pay_frequency"
     RAW = "raw"
 
 
@@ -69,6 +72,8 @@ class ListHrisEmployeesRequestTypedDict(TypedDict):
     r"""Fields to return"""
     group_id: NotRequired[str]
     r"""The group ID to filter by (reference to HrisGroup)"""
+    job_id: NotRequired[str]
+    r"""The job ID to filter by"""
     limit: NotRequired[float]
     location_id: NotRequired[str]
     r"""The location ID to filter by (reference to HrisLocation)"""
@@ -106,6 +111,12 @@ class ListHrisEmployeesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""The group ID to filter by (reference to HrisGroup)"""
+
+    job_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The job ID to filter by"""
 
     limit: Annotated[
         Optional[float],
@@ -158,6 +169,7 @@ class ListHrisEmployeesRequest(BaseModel):
                 "company_id",
                 "fields",
                 "group_id",
+                "job_id",
                 "limit",
                 "location_id",
                 "offset",

@@ -12,18 +12,24 @@ class PropertyCrmEventCallTypedDict(TypedDict):
     r"""The call object, when type = call"""
 
     description: NotRequired[str]
+    r"""The event call's descriptionnotes"""
     duration: NotRequired[float]
+    r"""The event call's duration in minutes"""
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PropertyCrmEventCall(BaseModel):
     r"""The call object, when type = call"""
 
     description: Optional[str] = None
+    r"""The event call's descriptionnotes"""
 
     duration: Optional[float] = None
+    r"""The event call's duration in minutes"""
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

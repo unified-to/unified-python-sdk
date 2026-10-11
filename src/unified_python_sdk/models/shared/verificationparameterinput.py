@@ -11,6 +11,7 @@ class VerificationParameterInputTypedDict(TypedDict):
     id: NotRequired[str]
     inputs: NotRequired[List[str]]
     name: NotRequired[str]
+    r"""name of parameter"""
 
 
 class VerificationParameterInput(BaseModel):
@@ -19,6 +20,7 @@ class VerificationParameterInput(BaseModel):
     inputs: Optional[List[str]] = None
 
     name: Optional[str] = None
+    r"""name of parameter"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

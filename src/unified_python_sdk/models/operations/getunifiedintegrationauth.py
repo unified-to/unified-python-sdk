@@ -18,6 +18,8 @@ class GetUnifiedIntegrationAuthRequestTypedDict(TypedDict):
     r"""Type of the supported integration"""
     workspace_id: str
     r"""The ID of the workspace"""
+    connection_id: NotRequired[str]
+    r"""Existing connection ID to re-authorize in place instead of creating a duplicate. Requires reauth_token."""
     env: NotRequired[str]
     external_xref: NotRequired[str]
     r"""Your user identifier to associate with the new Integration"""
@@ -25,6 +27,8 @@ class GetUnifiedIntegrationAuthRequestTypedDict(TypedDict):
     r"""The URL where you want the user to be redirect to after an unsuccessful authentication. An \"error\" variable will be appended."""
     lang: NotRequired[str]
     r"""Language: en, fr, es, it, pt, zh, hi"""
+    reauth_token: NotRequired[str]
+    r"""Single-use token from \"Create a re-authorization token for a connection\" (POST /unified/connection/{id}/reauth); required with connection_id."""
     redirect: NotRequired[bool]
     region: NotRequired[str]
     r"""Optional region index (into the integration api.urls array) selected by the end-user. Set automatically by the auth widget when the workspace integration has prompt_region=true."""
@@ -48,6 +52,12 @@ class GetUnifiedIntegrationAuthRequest(BaseModel):
     ]
     r"""The ID of the workspace"""
 
+    connection_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Existing connection ID to re-authorize in place instead of creating a duplicate. Requires reauth_token."""
+
     env: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -70,6 +80,12 @@ class GetUnifiedIntegrationAuthRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Language: en, fr, es, it, pt, zh, hi"""
+
+    reauth_token: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Single-use token from \"Create a re-authorization token for a connection\" (POST /unified/connection/{id}/reauth); required with connection_id."""
 
     redirect: Annotated[
         Optional[bool],
@@ -109,10 +125,12 @@ class GetUnifiedIntegrationAuthRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "connection_id",
                 "env",
                 "external_xref",
                 "failure_redirect",
                 "lang",
+                "reauth_token",
                 "redirect",
                 "region",
                 "scopes",

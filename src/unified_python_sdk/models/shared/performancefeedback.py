@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PerformanceFeedbackType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""praise/recognition, constructive feedback, or a response to a feedback request"""
+
     PRAISE = "PRAISE"
     FEEDBACK = "FEEDBACK"
     REQUESTED = "REQUESTED"
@@ -20,28 +22,38 @@ class PerformanceFeedbackType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PerformanceFeedbackTypedDict(TypedDict):
     user_id: str
+    r"""the HR Employee that this feedback is about (reference to HrisEmployee)"""
     author_user_id: NotRequired[str]
+    r"""the HR Employee that gave this feedback (reference to HrisEmployee)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     is_visible: NotRequired[bool]
+    r"""true when publicly visible (e.g. praise wall); false when private or manager-only"""
     message: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     tags: NotRequired[List[str]]
     r"""badges or company values attached to this feedback"""
     type: NotRequired[PerformanceFeedbackType]
+    r"""praise/recognition, constructive feedback, or a response to a feedback request"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PerformanceFeedback(BaseModel):
     user_id: str
+    r"""the HR Employee that this feedback is about (reference to HrisEmployee)"""
 
     author_user_id: Optional[str] = None
+    r"""the HR Employee that gave this feedback (reference to HrisEmployee)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     is_visible: Optional[bool] = None
+    r"""true when publicly visible (e.g. praise wall); false when private or manager-only"""
 
     message: Optional[str] = None
 
@@ -51,8 +63,10 @@ class PerformanceFeedback(BaseModel):
     r"""badges or company values attached to this feedback"""
 
     type: Optional[PerformanceFeedbackType] = None
+    r"""praise/recognition, constructive feedback, or a response to a feedback request"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

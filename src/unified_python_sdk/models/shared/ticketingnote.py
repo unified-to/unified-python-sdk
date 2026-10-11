@@ -10,17 +10,21 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class TicketingNoteTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     customer_id: NotRequired[str]
     description: NotRequired[str]
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     ticket_id: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class TicketingNote(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     customer_id: Optional[str] = None
 
@@ -33,8 +37,10 @@ class TicketingNote(BaseModel):
     ticket_id: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

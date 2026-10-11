@@ -29,23 +29,30 @@ class CommerceReviewTypedDict(TypedDict):
     comments: NotRequired[List[CommerceReviewCommentTypedDict]]
     content: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     helpful_votes: NotRequired[float]
     id: NotRequired[str]
     is_featured: NotRequired[bool]
     is_public: NotRequired[bool]
     is_verified: NotRequired[bool]
     item_id: NotRequired[str]
+    r"""Reference to the product being reviewed (reference to CommerceItem)"""
     item_variant_id: NotRequired[str]
+    r"""Optional reference to specific variant if applicable (reference to CommerceCommerceItemvariant)"""
     location_id: NotRequired[str]
+    r"""(reference to CommerceLocation)"""
     media: NotRequired[List[CommerceItemMediaTypedDict]]
     r"""Photosvideos attached to the review"""
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
     rating: NotRequired[float]
+    r"""1-5 rating"""
     raw: NotRequired[Dict[str, Any]]
+    r"""Original review data from source platform"""
     status: NotRequired[CommerceReviewStatus]
     title: NotRequired[str]
     unhelpful_votes: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
     verified_purchase: NotRequired[bool]
 
@@ -64,6 +71,7 @@ class CommerceReview(BaseModel):
     content: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     helpful_votes: Optional[float] = None
 
@@ -76,10 +84,13 @@ class CommerceReview(BaseModel):
     is_verified: Optional[bool] = None
 
     item_id: Optional[str] = None
+    r"""Reference to the product being reviewed (reference to CommerceItem)"""
 
     item_variant_id: Optional[str] = None
+    r"""Optional reference to specific variant if applicable (reference to CommerceCommerceItemvariant)"""
 
     location_id: Optional[str] = None
+    r"""(reference to CommerceLocation)"""
 
     media: Optional[List[CommerceItemMedia]] = None
     r"""Photosvideos attached to the review"""
@@ -87,8 +98,10 @@ class CommerceReview(BaseModel):
     metadata: Optional[List[CommerceMetadata]] = None
 
     rating: Optional[float] = None
+    r"""1-5 rating"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Original review data from source platform"""
 
     status: Optional[CommerceReviewStatus] = None
 
@@ -97,6 +110,7 @@ class CommerceReview(BaseModel):
     unhelpful_votes: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
 

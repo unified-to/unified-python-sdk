@@ -34,38 +34,51 @@ class PerformanceGoalSchemasType(str, Enum, metaclass=utils.OpenEnumMeta):
 class PerformanceGoalTypedDict(TypedDict):
     company_id: NotRequired[str]
     completed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     cycle_id: NotRequired[str]
+    r"""pointer to the Performance Cycle object (goal cycle or timeframe)"""
     description: NotRequired[str]
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     milestones: NotRequired[List[PerformanceGoalMilestoneTypedDict]]
     r"""milestones or key results for this goal"""
     name: NotRequired[str]
     parent_id: NotRequired[str]
+    r"""id of the parent goal, for goal alignment / OKR trees"""
     progress: NotRequired[float]
+    r"""progress percentage from 0 to 100"""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[PerformanceGoalStatus]
     type: NotRequired[PerformanceGoalSchemasType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_ids: NotRequired[List[str]]
     r"""HR Employees that own or share this goal; the first element is the primary owner"""
     weight: NotRequired[float]
+    r"""the weight of this goal when the provider weighs goals in reviews"""
 
 
 class PerformanceGoal(BaseModel):
     company_id: Optional[str] = None
 
     completed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     cycle_id: Optional[str] = None
+    r"""pointer to the Performance Cycle object (goal cycle or timeframe)"""
 
     description: Optional[str] = None
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -75,23 +88,28 @@ class PerformanceGoal(BaseModel):
     name: Optional[str] = None
 
     parent_id: Optional[str] = None
+    r"""id of the parent goal, for goal alignment / OKR trees"""
 
     progress: Optional[float] = None
+    r"""progress percentage from 0 to 100"""
 
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[PerformanceGoalStatus] = None
 
     type: Optional[PerformanceGoalSchemasType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_ids: Optional[List[str]] = None
     r"""HR Employees that own or share this goal; the first element is the primary owner"""
 
     weight: Optional[float] = None
+    r"""the weight of this goal when the provider weighs goals in reviews"""
 
     @field_serializer("status")
     def serialize_status(self, value):

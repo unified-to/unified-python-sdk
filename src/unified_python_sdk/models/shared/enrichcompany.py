@@ -19,32 +19,57 @@ class EnrichCompanyTypedDict(TypedDict):
     address: NotRequired[PropertyEnrichCompanyAddressTypedDict]
     r"""The address of the company"""
     alexa_rank: NotRequired[float]
+    r"""The Alexa rank of the company"""
     created_at: NotRequired[datetime]
+    r"""The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     crunchbase_url: NotRequired[str]
+    r"""The Crunchbase URL of the company"""
     description: NotRequired[str]
+    r"""The description of the company"""
     domain: NotRequired[str]
+    r"""The webmail domain of the company"""
     employees: NotRequired[str]
+    r"""The number of employees at the company"""
     exchange: NotRequired[str]
+    r"""The public exchange of the company (eg. NASDAQ)"""
     facebook_url: NotRequired[str]
+    r"""The Facebook URL of the company"""
     id: NotRequired[str]
+    r"""Unique identifier for this company object"""
     industry: NotRequired[str]
+    r"""The industry of the company"""
     instagram_url: NotRequired[str]
+    r"""The Crunchbase URL of the company"""
     linkedin_url: NotRequired[str]
+    r"""The LinkedIn URL of the company"""
     logo_url: NotRequired[str]
+    r"""The URL of the logo of the company"""
     naics_code: NotRequired[float]
+    r"""The NAICS code of the company"""
     name: NotRequired[str]
+    r"""The name of the company"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this company"""
     revenue: NotRequired[str]
+    r"""The approximate revenue of the company"""
     sic_code: NotRequired[float]
+    r"""The SIC code of the company"""
     stock: NotRequired[str]
+    r"""The stock ticker of the company (eg. AMZN)"""
     telephones: NotRequired[List[EnrichTelephoneTypedDict]]
     r"""An array of telephones for this company"""
     twitter_handle: NotRequired[str]
+    r"""The twitter handle of the company"""
     twitter_url: NotRequired[str]
+    r"""The twitter URL of the company"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     year_founded: NotRequired[float]
+    r"""The year that the company was founded"""
     yelp_url: NotRequired[str]
+    r"""The Yelp URL of the company"""
     youtube_url: NotRequired[str]
+    r"""The Youtube URL of the company"""
 
 
 class EnrichCompany(BaseModel):
@@ -54,57 +79,82 @@ class EnrichCompany(BaseModel):
     r"""The address of the company"""
 
     alexa_rank: Optional[float] = None
+    r"""The Alexa rank of the company"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     crunchbase_url: Optional[str] = None
+    r"""The Crunchbase URL of the company"""
 
     description: Optional[str] = None
+    r"""The description of the company"""
 
     domain: Optional[str] = None
+    r"""The webmail domain of the company"""
 
     employees: Optional[str] = None
+    r"""The number of employees at the company"""
 
     exchange: Optional[str] = None
+    r"""The public exchange of the company (eg. NASDAQ)"""
 
     facebook_url: Optional[str] = None
+    r"""The Facebook URL of the company"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this company object"""
 
     industry: Optional[str] = None
+    r"""The industry of the company"""
 
     instagram_url: Optional[str] = None
+    r"""The Crunchbase URL of the company"""
 
     linkedin_url: Optional[str] = None
+    r"""The LinkedIn URL of the company"""
 
     logo_url: Optional[str] = None
+    r"""The URL of the logo of the company"""
 
     naics_code: Optional[float] = None
+    r"""The NAICS code of the company"""
 
     name: Optional[str] = None
+    r"""The name of the company"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this company"""
 
     revenue: Optional[str] = None
+    r"""The approximate revenue of the company"""
 
     sic_code: Optional[float] = None
+    r"""The SIC code of the company"""
 
     stock: Optional[str] = None
+    r"""The stock ticker of the company (eg. AMZN)"""
 
     telephones: Optional[List[EnrichTelephone]] = None
     r"""An array of telephones for this company"""
 
     twitter_handle: Optional[str] = None
+    r"""The twitter handle of the company"""
 
     twitter_url: Optional[str] = None
+    r"""The twitter URL of the company"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     year_founded: Optional[float] = None
+    r"""The year that the company was founded"""
 
     yelp_url: Optional[str] = None
+    r"""The Yelp URL of the company"""
 
     youtube_url: Optional[str] = None
+    r"""The Youtube URL of the company"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

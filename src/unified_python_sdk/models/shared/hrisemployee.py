@@ -44,6 +44,15 @@ class HrisEmployeeEmploymentType(str, Enum, metaclass=utils.OpenEnumMeta):
     OTHER = "OTHER"
 
 
+class FlsaStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""US Fair Labor Standards Act classification"""
+
+    EXEMPT = "EXEMPT"
+    NON_EXEMPT = "NON_EXEMPT"
+    SALARIED_NONEXEMPT = "SALARIED_NONEXEMPT"
+    OWNER = "OWNER"
+
+
 class HrisEmployeeGender(str, Enum, metaclass=utils.OpenEnumMeta):
     MALE = "MALE"
     FEMALE = "FEMALE"
@@ -57,27 +66,52 @@ class MaritalStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     SINGLE = "SINGLE"
 
 
+class PayFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""how often the employee is paid (eg. BIWEEKLY)"""
+
+    ONE_TIME = "ONE_TIME"
+    DAY = "DAY"
+    QUARTER = "QUARTER"
+    YEAR = "YEAR"
+    HOUR = "HOUR"
+    MONTH = "MONTH"
+    WEEK = "WEEK"
+    BIWEEKLY = "BIWEEKLY"
+    SEMIMONTHLY = "SEMIMONTHLY"
+
+
 class HrisEmployeeTypedDict(TypedDict):
     address: NotRequired[PropertyHrisEmployeeAddressTypedDict]
     bio: NotRequired[str]
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     compensation: NotRequired[List[HrisCompensationTypedDict]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     date_of_birth: NotRequired[datetime]
+    r"""YYYYMM/DD"""
     emails: NotRequired[List[HrisEmailTypedDict]]
     employee_number: NotRequired[str]
+    r"""the company's ID for this employee"""
     employee_roles: NotRequired[List[PropertyHrisEmployeeEmployeeRoles]]
     employment_status: NotRequired[EmploymentStatus]
     employment_type: NotRequired[HrisEmployeeEmploymentType]
     first_name: NotRequired[str]
+    flsa_status: NotRequired[FlsaStatus]
+    r"""US Fair Labor Standards Act classification"""
     gender: NotRequired[HrisEmployeeGender]
     groups: NotRequired[List[HrisGroupTypedDict]]
     r"""Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email."""
     has_mfa: NotRequired[bool]
+    r"""does the user/employee have multi-factor authentication enabled"""
     hired_at: NotRequired[datetime]
+    r"""The employee's start date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     image_url: NotRequired[str]
+    r"""This link expires after 1 hour."""
+    job_id: NotRequired[str]
+    r"""the hris_job (position) this employee holds; their primary job when they hold more than one"""
     language_locale: NotRequired[str]
     last_name: NotRequired[str]
     locations: NotRequired[List[HrisLocationTypedDict]]
@@ -85,23 +119,30 @@ class HrisEmployeeTypedDict(TypedDict):
     marital_status: NotRequired[MaritalStatus]
     metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
+    pay_frequency: NotRequired[PayFrequency]
+    r"""how often the employee is paid (eg. BIWEEKLY)"""
     pronouns: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     relationships: NotRequired[List[HrisEmployeerelationshipTypedDict]]
     r"""the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)"""
     salutation: NotRequired[str]
+    r"""Mr. Mrs. Ms."""
     ssn_sin: NotRequired[str]
     storage_quota_allocated: NotRequired[float]
     storage_quota_available: NotRequired[float]
     storage_quota_used: NotRequired[float]
     telephones: NotRequired[List[HrisTelephoneTypedDict]]
     terminated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     termination_reason: NotRequired[str]
     timeoff_days_total: NotRequired[float]
+    r"""Total time off allowance for the current leave period, in days (when reported by the provider)"""
     timeoff_days_used: NotRequired[float]
+    r"""Time off days used or booked in the current leave period (when reported by the provider)"""
     timezone: NotRequired[str]
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class HrisEmployee(BaseModel):
@@ -110,18 +151,22 @@ class HrisEmployee(BaseModel):
     bio: Optional[str] = None
 
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     compensation: Optional[List[HrisCompensation]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     date_of_birth: Optional[datetime] = None
+    r"""YYYYMM/DD"""
 
     emails: Optional[List[HrisEmail]] = None
 
     employee_number: Optional[str] = None
+    r"""the company's ID for this employee"""
 
     employee_roles: Optional[List[PropertyHrisEmployeeEmployeeRoles]] = None
 
@@ -131,18 +176,27 @@ class HrisEmployee(BaseModel):
 
     first_name: Optional[str] = None
 
+    flsa_status: Optional[FlsaStatus] = None
+    r"""US Fair Labor Standards Act classification"""
+
     gender: Optional[HrisEmployeeGender] = None
 
     groups: Optional[List[HrisGroup]] = None
     r"""Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email."""
 
     has_mfa: Optional[bool] = None
+    r"""does the user/employee have multi-factor authentication enabled"""
 
     hired_at: Optional[datetime] = None
+    r"""The employee's start date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     image_url: Optional[str] = None
+    r"""This link expires after 1 hour."""
+
+    job_id: Optional[str] = None
+    r"""the hris_job (position) this employee holds; their primary job when they hold more than one"""
 
     language_locale: Optional[str] = None
 
@@ -158,6 +212,9 @@ class HrisEmployee(BaseModel):
 
     name: Optional[str] = None
 
+    pay_frequency: Optional[PayFrequency] = None
+    r"""how often the employee is paid (eg. BIWEEKLY)"""
+
     pronouns: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
@@ -166,6 +223,7 @@ class HrisEmployee(BaseModel):
     r"""the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)"""
 
     salutation: Optional[str] = None
+    r"""Mr. Mrs. Ms."""
 
     ssn_sin: Optional[str] = None
 
@@ -178,18 +236,22 @@ class HrisEmployee(BaseModel):
     telephones: Optional[List[HrisTelephone]] = None
 
     terminated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     termination_reason: Optional[str] = None
 
     timeoff_days_total: Optional[float] = None
+    r"""Total time off allowance for the current leave period, in days (when reported by the provider)"""
 
     timeoff_days_used: Optional[float] = None
+    r"""Time off days used or booked in the current leave period (when reported by the provider)"""
 
     timezone: Optional[str] = None
 
     title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("employment_status")
     def serialize_employment_status(self, value):
@@ -205,6 +267,15 @@ class HrisEmployee(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.HrisEmployeeEmploymentType(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("flsa_status")
+    def serialize_flsa_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.FlsaStatus(value)
             except ValueError:
                 return value
         return value
@@ -227,6 +298,15 @@ class HrisEmployee(BaseModel):
                 return value
         return value
 
+    @field_serializer("pay_frequency")
+    def serialize_pay_frequency(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PayFrequency(value)
+            except ValueError:
+                return value
+        return value
+
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
@@ -244,12 +324,14 @@ class HrisEmployee(BaseModel):
                 "employment_status",
                 "employment_type",
                 "first_name",
+                "flsa_status",
                 "gender",
                 "groups",
                 "has_mfa",
                 "hired_at",
                 "id",
                 "image_url",
+                "job_id",
                 "language_locale",
                 "last_name",
                 "locations",
@@ -257,6 +339,7 @@ class HrisEmployee(BaseModel):
                 "marital_status",
                 "metadata",
                 "name",
+                "pay_frequency",
                 "pronouns",
                 "raw",
                 "relationships",

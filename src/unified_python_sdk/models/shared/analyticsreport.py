@@ -14,31 +14,41 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AnalyticsReportTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     metrics: NotRequired[List[AnalyticsReportMetricsTypedDict]]
     property_id: NotRequired[str]
+    r"""points to AnalyticsProperty"""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AnalyticsReport(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     metrics: Optional[List[AnalyticsReportMetrics]] = None
 
     property_id: Optional[str] = None
+    r"""points to AnalyticsProperty"""
 
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

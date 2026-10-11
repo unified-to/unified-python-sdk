@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class Category(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""STANDARD (days-based) or DATE_DRIVEN (month-based)"""
+
     STANDARD = "STANDARD"
     DATE_DRIVEN = "DATE_DRIVEN"
     OTHER = "OTHER"
@@ -34,42 +36,60 @@ class AccountingPaymenttermType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingPaymenttermTypedDict(TypedDict):
     category: NotRequired[Category]
+    r"""STANDARD (days-based) or DATE_DRIVEN (month-based)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     day_of_month_due: NotRequired[float]
+    r"""(date-driven) day of month payment is due (1–31)"""
     description: NotRequired[str]
     discount_day_of_month: NotRequired[float]
+    r"""(date-driven) pay before this day of month for the discount"""
     discount_days: NotRequired[float]
+    r"""(standard) days within which an early-pay discount applies"""
     discount_percent: NotRequired[float]
+    r"""(standard) early-pay discount rate"""
     due_days: NotRequired[float]
+    r"""(standard) days until payment is due"""
     due_next_month_days: NotRequired[float]
+    r"""(date-driven) if invoiced within N days of month-end, due next month"""
     id: NotRequired[str]
     is_active: NotRequired[bool]
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
+    r"""term label, e.g. \"Net 30\" """
     organization_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[AccountingPaymenttermType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingPaymentterm(BaseModel):
     category: Optional[Category] = None
+    r"""STANDARD (days-based) or DATE_DRIVEN (month-based)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     day_of_month_due: Optional[float] = None
+    r"""(date-driven) day of month payment is due (1–31)"""
 
     description: Optional[str] = None
 
     discount_day_of_month: Optional[float] = None
+    r"""(date-driven) pay before this day of month for the discount"""
 
     discount_days: Optional[float] = None
+    r"""(standard) days within which an early-pay discount applies"""
 
     discount_percent: Optional[float] = None
+    r"""(standard) early-pay discount rate"""
 
     due_days: Optional[float] = None
+    r"""(standard) days until payment is due"""
 
     due_next_month_days: Optional[float] = None
+    r"""(date-driven) if invoiced within N days of month-end, due next month"""
 
     id: Optional[str] = None
 
@@ -78,6 +98,7 @@ class AccountingPaymentterm(BaseModel):
     metadata: Optional[List[AccountingMetadata]] = None
 
     name: Optional[str] = None
+    r"""term label, e.g. \"Net 30\" """
 
     organization_id: Optional[str] = None
 
@@ -86,6 +107,7 @@ class AccountingPaymentterm(BaseModel):
     type: Optional[AccountingPaymenttermType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("category")
     def serialize_category(self, value):

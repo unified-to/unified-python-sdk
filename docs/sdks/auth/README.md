@@ -4,13 +4,13 @@
 
 ### Available Operations
 
-* [get_unified_integration_auth](#get_unified_integration_auth) - Authorize new connection
+* [get_unified_integration_auth](#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_integration_login](#get_unified_integration_login) - Sign in a user
 * [get_unified_integration_saml](#get_unified_integration_saml) - Sign in a user via SAML
 
 ## get_unified_integration_auth
 
-Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+Returns an authorization URL for the specified integration. After successful authorization, a new connection is created unless connection_id and reauth_token are provided, in which case the existing connection is updated in place.
 
 ### Example Usage
 

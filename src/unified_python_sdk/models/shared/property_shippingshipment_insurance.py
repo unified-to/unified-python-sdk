@@ -20,33 +20,43 @@ class PropertyShippingShipmentInsuranceTypedDict(TypedDict):
     r"""Insurance details"""
 
     coverage_amount: NotRequired[float]
+    r"""Coverage amount (may differ from insured_value)"""
     coverage_type: NotRequired[CoverageType]
     currency: NotRequired[str]
     insurance_cost: NotRequired[float]
+    r"""Cost of insurance"""
     insurance_cost_currency: NotRequired[str]
     insurance_provider: NotRequired[str]
+    r"""Insurance provider name"""
     insurance_provider_code: NotRequired[str]
+    r"""Provider code"""
     insured_value: NotRequired[float]
+    r"""Insured value"""
 
 
 class PropertyShippingShipmentInsurance(BaseModel):
     r"""Insurance details"""
 
     coverage_amount: Optional[float] = None
+    r"""Coverage amount (may differ from insured_value)"""
 
     coverage_type: Optional[CoverageType] = None
 
     currency: Optional[str] = None
 
     insurance_cost: Optional[float] = None
+    r"""Cost of insurance"""
 
     insurance_cost_currency: Optional[str] = None
 
     insurance_provider: Optional[str] = None
+    r"""Insurance provider name"""
 
     insurance_provider_code: Optional[str] = None
+    r"""Provider code"""
 
     insured_value: Optional[float] = None
+    r"""Insured value"""
 
     @field_serializer("coverage_type")
     def serialize_coverage_type(self, value):

@@ -18,6 +18,7 @@ class ScimUserGroupsType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class ScimUserGroupsTypedDict(TypedDict):
     value: str
+    r"""ID"""
     dollar_ref: NotRequired[str]
     display: NotRequired[str]
     type: NotRequired[ScimUserGroupsType]
@@ -25,6 +26,7 @@ class ScimUserGroupsTypedDict(TypedDict):
 
 class ScimUserGroups(BaseModel):
     value: str
+    r"""ID"""
 
     dollar_ref: Annotated[Optional[str], pydantic.Field(alias="$ref")] = None
 

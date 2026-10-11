@@ -1,0 +1,101 @@
+# Purchasereceipt
+
+## Overview
+
+### Available Operations
+
+* [get_accounting_purchasereceipt](#get_accounting_purchasereceipt) - Retrieve a purchasereceipt
+* [list_accounting_purchasereceipts](#list_accounting_purchasereceipts) - List all purchasereceipts
+
+## get_accounting_purchasereceipt
+
+Retrieve a purchasereceipt
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingPurchasereceipt" method="get" path="/accounting/{connection_id}/purchasereceipt/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.purchasereceipt.get_accounting_purchasereceipt(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_purchasereceipt is not None
+
+    # Handle response
+    print(res.accounting_purchasereceipt)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.GetAccountingPurchasereceiptRequest](../../models/operations/getaccountingpurchasereceiptrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `retries`                                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                 | :heavy_minus_sign:                                                                                               | Configuration to override the default retry behavior of the client.                                              |
+
+### Response
+
+**[operations.GetAccountingPurchasereceiptResponse](../../models/operations/getaccountingpurchasereceiptresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_accounting_purchasereceipts
+
+List all purchasereceipts
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingPurchasereceipts" method="get" path="/accounting/{connection_id}/purchasereceipt" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.purchasereceipt.list_accounting_purchasereceipts(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_purchasereceipts is not None
+
+    # Handle response
+    print(res.accounting_purchasereceipts)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.ListAccountingPurchasereceiptsRequest](../../models/operations/listaccountingpurchasereceiptsrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `retries`                                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                     | :heavy_minus_sign:                                                                                                   | Configuration to override the default retry behavior of the client.                                                  |
+
+### Response
+
+**[operations.ListAccountingPurchasereceiptsResponse](../../models/operations/listaccountingpurchasereceiptsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |

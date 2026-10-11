@@ -20,22 +20,32 @@ class TicketingTicketTypedDict(TypedDict):
     attachment_ids: NotRequired[List[str]]
     r"""Array of attachment IDs retrieved from StorageFile.Get endpoint"""
     category_id: NotRequired[str]
+    r"""(reference to AccountingCategory)"""
     closed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     customer_id: NotRequired[str]
     description: NotRequired[str]
+    r"""Full description of ticket issue"""
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     priority: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     source: NotRequired[str]
+    r"""Channel where ticket was originally submitted"""
     source_ref: NotRequired[str]
+    r"""Reference to source-specific object"""
     status: NotRequired[TicketingTicketStatus]
     subject: NotRequired[str]
+    r"""short description of the ticket"""
     tags: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class TicketingTicket(BaseModel):
@@ -43,16 +53,21 @@ class TicketingTicket(BaseModel):
     r"""Array of attachment IDs retrieved from StorageFile.Get endpoint"""
 
     category_id: Optional[str] = None
+    r"""(reference to AccountingCategory)"""
 
     closed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     customer_id: Optional[str] = None
 
     description: Optional[str] = None
+    r"""Full description of ticket issue"""
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -61,20 +76,25 @@ class TicketingTicket(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     source: Optional[str] = None
+    r"""Channel where ticket was originally submitted"""
 
     source_ref: Optional[str] = None
+    r"""Reference to source-specific object"""
 
     status: Optional[TicketingTicketStatus] = None
 
     subject: Optional[str] = None
+    r"""short description of the ticket"""
 
     tags: Optional[List[str]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

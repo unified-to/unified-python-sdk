@@ -21,6 +21,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AccountingCreditmemoPaymentCollectionMethod(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
+    r"""When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions."""
+
     SEND_INVOICE = "send_invoice"
     CHARGE_AUTOMATICALLY = "charge_automatically"
 
@@ -45,32 +47,44 @@ class AccountingCreditmemoTypedDict(TypedDict):
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     balance_amount: NotRequired[float]
     cancelled_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creditmemo_number: NotRequired[str]
+    r"""External identifier for this invoice"""
     currency: NotRequired[str]
     discount_amount: NotRequired[float]
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     invoice_id: NotRequired[str]
+    r"""(reference to AccountingInvoice)"""
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
     paid_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     payment_collection_method: NotRequired[AccountingCreditmemoPaymentCollectionMethod]
+    r"""When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions."""
     posted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     raw: NotRequired[Dict[str, Any]]
     refund_amount: NotRequired[float]
     refund_reason: NotRequired[str]
     refunded_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     send: NotRequired[bool]
     status: NotRequired[AccountingCreditmemoStatus]
     tax_amount: NotRequired[float]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""The public URL for the invoice to send to a customer to view or pay."""
 
 
 class AccountingCreditmemo(BaseModel):
@@ -84,22 +98,28 @@ class AccountingCreditmemo(BaseModel):
     balance_amount: Optional[float] = None
 
     cancelled_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creditmemo_number: Optional[str] = None
+    r"""External identifier for this invoice"""
 
     currency: Optional[str] = None
 
     discount_amount: Optional[float] = None
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     invoice_id: Optional[str] = None
+    r"""(reference to AccountingInvoice)"""
 
     lineitems: Optional[List[AccountingLineitem]] = None
 
@@ -112,12 +132,15 @@ class AccountingCreditmemo(BaseModel):
     paid_amount: Optional[float] = None
 
     paid_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     payment_collection_method: Optional[AccountingCreditmemoPaymentCollectionMethod] = (
         None
     )
+    r"""When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions."""
 
     posted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -126,6 +149,7 @@ class AccountingCreditmemo(BaseModel):
     refund_reason: Optional[str] = None
 
     refunded_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     send: Optional[bool] = None
 
@@ -136,8 +160,10 @@ class AccountingCreditmemo(BaseModel):
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""The public URL for the invoice to send to a customer to view or pay."""
 
     @field_serializer("payment_collection_method")
     def serialize_payment_collection_method(self, value):

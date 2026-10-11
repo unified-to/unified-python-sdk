@@ -16,13 +16,16 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class HrisLocationTypedDict(TypedDict):
     address: NotRequired[PropertyHrisLocationAddressTypedDict]
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     description: NotRequired[str]
     external_identifier: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     is_hq: NotRequired[bool]
+    r"""if this location is the headquarters of the company"""
     language_locale: NotRequired[str]
     name: NotRequired[str]
     parent_id: NotRequired[str]
@@ -30,14 +33,17 @@ class HrisLocationTypedDict(TypedDict):
     telephones: NotRequired[List[HrisTelephoneTypedDict]]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class HrisLocation(BaseModel):
     address: Optional[PropertyHrisLocationAddress] = None
 
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
@@ -50,6 +56,7 @@ class HrisLocation(BaseModel):
     is_active: Optional[bool] = None
 
     is_hq: Optional[bool] = None
+    r"""if this location is the headquarters of the company"""
 
     language_locale: Optional[str] = None
 
@@ -64,6 +71,7 @@ class HrisLocation(BaseModel):
     timezone: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

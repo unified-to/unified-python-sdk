@@ -10,18 +10,22 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AnalyticsPropertyTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     id: NotRequired[str]
     industry: NotRequired[str]
     name: NotRequired[str]
     parent_id: NotRequired[str]
+    r"""points to AnalyticsProperty"""
     raw: NotRequired[Dict[str, Any]]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AnalyticsProperty(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
@@ -32,12 +36,14 @@ class AnalyticsProperty(BaseModel):
     name: Optional[str] = None
 
     parent_id: Optional[str] = None
+    r"""points to AnalyticsProperty"""
 
     raw: Optional[Dict[str, Any]] = None
 
     timezone: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

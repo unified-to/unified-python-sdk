@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class HrisTaxonomyType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation"""
+
     SKILL = "SKILL"
     KNOWLEDGE = "KNOWLEDGE"
     COMPETENCE = "COMPETENCE"
@@ -26,20 +28,29 @@ class HrisTaxonomyTypedDict(TypedDict):
     alternative_names: NotRequired[List[str]]
     r"""synonyms / alternative labels"""
     category: NotRequired[str]
+    r"""2nd-level grouping"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     domain: NotRequired[str]
+    r"""1st-level grouping (broadest)"""
     id: NotRequired[str]
     is_active: NotRequired[bool]
     name: NotRequired[str]
+    r"""the preferred label of the skill/role"""
     parent_id: NotRequired[str]
+    r"""id of the parent taxonomy item, for providers exposing arbitrary-depth trees"""
     raw: NotRequired[Dict[str, Any]]
     role_ids: NotRequired[List[str]]
     r"""ids of hris_taxonomy items of type ROLE that this skill relates to"""
     subcategory: NotRequired[str]
+    r"""3rd-level grouping"""
     type: NotRequired[HrisTaxonomyType]
+    r"""the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""external reference URL for this item"""
 
 
 class HrisTaxonomy(BaseModel):
@@ -47,20 +58,25 @@ class HrisTaxonomy(BaseModel):
     r"""synonyms / alternative labels"""
 
     category: Optional[str] = None
+    r"""2nd-level grouping"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     domain: Optional[str] = None
+    r"""1st-level grouping (broadest)"""
 
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
 
     name: Optional[str] = None
+    r"""the preferred label of the skill/role"""
 
     parent_id: Optional[str] = None
+    r"""id of the parent taxonomy item, for providers exposing arbitrary-depth trees"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -68,12 +84,16 @@ class HrisTaxonomy(BaseModel):
     r"""ids of hris_taxonomy items of type ROLE that this skill relates to"""
 
     subcategory: Optional[str] = None
+    r"""3rd-level grouping"""
 
     type: Optional[HrisTaxonomyType] = None
+    r"""the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""external reference URL for this item"""
 
     @field_serializer("type")
     def serialize_type(self, value):

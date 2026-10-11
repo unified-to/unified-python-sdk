@@ -14,17 +14,25 @@ class PropertyShippingShipmentReturnAddressTypedDict(TypedDict):
     address2: NotRequired[str]
     city: NotRequired[str]
     company_name: NotRequired[str]
+    r"""Company name (for commercial addresses)"""
     country: NotRequired[str]
     country_code: NotRequired[str]
+    r"""ISO 2-digit country code"""
     delivery_instructions: NotRequired[str]
+    r"""Special delivery notes"""
     email: NotRequired[str]
+    r"""Email address (for delivery notifications)"""
     is_residential: NotRequired[bool]
+    r"""Alias for address_type === 'RESIDENTIAL'"""
     is_validated: NotRequired[bool]
+    r"""Whether address has been validated"""
     name: NotRequired[str]
+    r"""Recipientsender name"""
     postal_code: NotRequired[str]
     region: NotRequired[str]
     region_code: NotRequired[str]
     telephone: NotRequired[str]
+    r"""Phone number (required by FedEx, UPS, DHL)"""
 
 
 class PropertyShippingShipmentReturnAddress(BaseModel):
@@ -37,20 +45,27 @@ class PropertyShippingShipmentReturnAddress(BaseModel):
     city: Optional[str] = None
 
     company_name: Optional[str] = None
+    r"""Company name (for commercial addresses)"""
 
     country: Optional[str] = None
 
     country_code: Optional[str] = None
+    r"""ISO 2-digit country code"""
 
     delivery_instructions: Optional[str] = None
+    r"""Special delivery notes"""
 
     email: Optional[str] = None
+    r"""Email address (for delivery notifications)"""
 
     is_residential: Optional[bool] = None
+    r"""Alias for address_type === 'RESIDENTIAL'"""
 
     is_validated: Optional[bool] = None
+    r"""Whether address has been validated"""
 
     name: Optional[str] = None
+    r"""Recipientsender name"""
 
     postal_code: Optional[str] = None
 
@@ -59,6 +74,7 @@ class PropertyShippingShipmentReturnAddress(BaseModel):
     region_code: Optional[str] = None
 
     telephone: Optional[str] = None
+    r"""Phone number (required by FedEx, UPS, DHL)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

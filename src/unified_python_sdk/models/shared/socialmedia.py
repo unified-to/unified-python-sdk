@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class SocialMediaType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Type of media"""
+
     PHOTO = "PHOTO"
     VIDEO = "VIDEO"
     GIF = "GIF"
@@ -19,28 +21,42 @@ class SocialMediaType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class SocialMediaTypedDict(TypedDict):
     url: str
+    r"""URL of the media asset"""
     alt: NotRequired[str]
+    r"""Accessibility caption / alt text"""
     height: NotRequired[float]
+    r"""Media height in pixels"""
     id: NotRequired[str]
+    r"""Provider media id, when the media is individually addressable"""
     position: NotRequired[float]
+    r"""Ordering of the media within the post; 1 is the first"""
     type: NotRequired[SocialMediaType]
+    r"""Type of media"""
     width: NotRequired[float]
+    r"""Media width in pixels"""
 
 
 class SocialMedia(BaseModel):
     url: str
+    r"""URL of the media asset"""
 
     alt: Optional[str] = None
+    r"""Accessibility caption / alt text"""
 
     height: Optional[float] = None
+    r"""Media height in pixels"""
 
     id: Optional[str] = None
+    r"""Provider media id, when the media is individually addressable"""
 
     position: Optional[float] = None
+    r"""Ordering of the media within the post; 1 is the first"""
 
     type: Optional[SocialMediaType] = None
+    r"""Type of media"""
 
     width: Optional[float] = None
+    r"""Media width in pixels"""
 
     @field_serializer("type")
     def serialize_type(self, value):

@@ -10,16 +10,22 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingPaymentReferenceTypedDict(TypedDict):
     allocated_at: NotRequired[datetime]
+    r"""Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     amount: NotRequired[float]
+    r"""amount of the payment applied to this object"""
     payment_id: NotRequired[str]
+    r"""references a PaymentPayment that was applied to this object (reference to PaymentPayment)"""
 
 
 class AccountingPaymentReference(BaseModel):
     allocated_at: Optional[datetime] = None
+    r"""Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     amount: Optional[float] = None
+    r"""amount of the payment applied to this object"""
 
     payment_id: Optional[str] = None
+    r"""references a PaymentPayment that was applied to this object (reference to PaymentPayment)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

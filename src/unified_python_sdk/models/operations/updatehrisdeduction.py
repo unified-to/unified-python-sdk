@@ -31,6 +31,11 @@ class UpdateHrisDeductionQueryParamFields(str, Enum):
     END_AT = "end_at"
     IS_ACTIVE = "is_active"
     NOTES = "notes"
+    EMPLOYER_AMOUNT = "employer_amount"
+    EMPLOYER_TYPE = "employer_type"
+    MAX_AMOUNT = "max_amount"
+    PAYCODE_ID = "paycode_id"
+    GARNISHMENT_TYPE = "garnishment_type"
     RAW = "raw"
 
 

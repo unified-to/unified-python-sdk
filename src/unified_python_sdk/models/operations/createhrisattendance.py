@@ -44,6 +44,7 @@ class CreateHrisAttendanceQueryParamFields(str, Enum):
 
 class CreateHrisAttendanceRequestTypedDict(TypedDict):
     hris_attendance: shared_hrisattendance.HrisAttendanceTypedDict
+    r"""Also called timesheets"""
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[CreateHrisAttendanceQueryParamFields]]
@@ -57,6 +58,7 @@ class CreateHrisAttendanceRequest(BaseModel):
         shared_hrisattendance.HrisAttendance,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
+    r"""Also called timesheets"""
 
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))

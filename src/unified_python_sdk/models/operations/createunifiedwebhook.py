@@ -12,7 +12,7 @@ from unified_python_sdk.utils import FieldMetadata, QueryParamMetadata, RequestM
 
 class CreateUnifiedWebhookRequestTypedDict(TypedDict):
     webhook: shared_webhook.WebhookTypedDict
-    r"""A webhook is used to POST new/updated information to your server."""
+    r"""A webhook is used to POST new, updated, or deleted records to your server."""
     include_all: NotRequired[bool]
     r"""When true, send existing/historic data. When false, no historic data is sent."""
 
@@ -22,7 +22,7 @@ class CreateUnifiedWebhookRequest(BaseModel):
         shared_webhook.Webhook,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
-    r"""A webhook is used to POST new/updated information to your server."""
+    r"""A webhook is used to POST new, updated, or deleted records to your server."""
 
     include_all: Annotated[
         Optional[bool],

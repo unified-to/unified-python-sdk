@@ -12,7 +12,9 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class LmsClassTypedDict(TypedDict):
     course_id: NotRequired[str]
+    r"""(reference to Course)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     instructors: NotRequired[List[LmsReferenceTypedDict]]
@@ -22,12 +24,15 @@ class LmsClassTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     students: NotRequired[List[LmsReferenceTypedDict]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class LmsClass(BaseModel):
     course_id: Optional[str] = None
+    r"""(reference to Course)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -46,6 +51,7 @@ class LmsClass(BaseModel):
     students: Optional[List[LmsReference]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

@@ -20,6 +20,8 @@ class PerformanceCycleStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class PerformanceCycleType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""whether this is a review cycle or a goal cycle/timeframe"""
+
     REVIEW = "REVIEW"
     GOAL = "GOAL"
     OTHER = "OTHER"
@@ -27,26 +29,35 @@ class PerformanceCycleType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PerformanceCycleTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[PerformanceCycleStatus]
     type: NotRequired[PerformanceCycleType]
+    r"""whether this is a review cycle or a goal cycle/timeframe"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PerformanceCycle(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -55,12 +66,15 @@ class PerformanceCycle(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[PerformanceCycleStatus] = None
 
     type: Optional[PerformanceCycleType] = None
+    r"""whether this is a review cycle or a goal cycle/timeframe"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

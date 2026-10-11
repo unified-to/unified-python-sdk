@@ -20,6 +20,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingTransactionStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Posting state of the transaction"""
+
     PENDING = "PENDING"
     POSTED = "POSTED"
     VOID = "VOID"
@@ -28,12 +30,15 @@ class AccountingTransactionStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingTransactionTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     category_ids: NotRequired[List[str]]
     contacts: NotRequired[List[AccountingTransactionContactTypedDict]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     customer_message: NotRequired[str]
     exchange_rate: NotRequired[float]
+    r"""Exchange rate to the base/home currency at the transaction date"""
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingTransactionLineItemTypedDict]]
     memo: NotRequired[str]
@@ -41,32 +46,42 @@ class AccountingTransactionTypedDict(TypedDict):
     payment_method: NotRequired[str]
     payment_terms: NotRequired[str]
     project_id: NotRequired[str]
+    r"""(reference to TaskProject)"""
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     split_account_id: NotRequired[str]
     status: NotRequired[AccountingTransactionStatus]
+    r"""Posting state of the transaction"""
     sub_total_amount: NotRequired[float]
     tax_amount: NotRequired[float]
+    r"""negative for CREDIT, positive for DEBIT"""
     total_amount: NotRequired[float]
+    r"""negative for CREDIT, positive for DEBIT"""
     transaction_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     type: NotRequired[str]
+    r"""eg. CreditCardCharge, Check, Invoice, ReceivePayment, JournalEntry, Bill, CreditCardCredit, VendorCredit, Credit, BillPaymentCheck, BillPaymentCreditCard, Charge, Transfer, Deposit, BANK_DEPOSIT, BANK_TRANSFER, Statement, BillableCharge, TimeActivity, CashPurchase, SalesReceipt, CreditMemo, CreditRefund, Estimate, InventoryQuantityAdjustment, PurchaseOrder, GlobalTaxPayment, GlobalTaxAdjustment, Service Tax Refund, Service Tax Gross Adjustment, Service Tax Reversal, Service Tax Defer, Service Tax Partial Utilisation"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingTransaction(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     category_ids: Optional[List[str]] = None
 
     contacts: Optional[List[AccountingTransactionContact]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     customer_message: Optional[str] = None
 
     exchange_rate: Optional[float] = None
+    r"""Exchange rate to the base/home currency at the transaction date"""
 
     id: Optional[str] = None
 
@@ -81,6 +96,7 @@ class AccountingTransaction(BaseModel):
     payment_terms: Optional[str] = None
 
     project_id: Optional[str] = None
+    r"""(reference to TaskProject)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -89,18 +105,24 @@ class AccountingTransaction(BaseModel):
     split_account_id: Optional[str] = None
 
     status: Optional[AccountingTransactionStatus] = None
+    r"""Posting state of the transaction"""
 
     sub_total_amount: Optional[float] = None
 
     tax_amount: Optional[float] = None
+    r"""negative for CREDIT, positive for DEBIT"""
 
     total_amount: Optional[float] = None
+    r"""negative for CREDIT, positive for DEBIT"""
 
     transaction_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     type: Optional[str] = None
+    r"""eg. CreditCardCharge, Check, Invoice, ReceivePayment, JournalEntry, Bill, CreditCardCredit, VendorCredit, Credit, BillPaymentCheck, BillPaymentCreditCard, Charge, Transfer, Deposit, BANK_DEPOSIT, BANK_TRANSFER, Statement, BillableCharge, TimeActivity, CashPurchase, SalesReceipt, CreditMemo, CreditRefund, Estimate, InventoryQuantityAdjustment, PurchaseOrder, GlobalTaxPayment, GlobalTaxAdjustment, Service Tax Refund, Service Tax Gross Adjustment, Service Tax Reversal, Service Tax Defer, Service Tax Partial Utilisation"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

@@ -21,6 +21,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class SocialPostStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Publication status of the post"""
+
     DRAFT = "DRAFT"
     SCHEDULED = "SCHEDULED"
     PUBLISHED = "PUBLISHED"
@@ -31,6 +33,8 @@ class SocialPostStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class SocialPostType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The kind of post"""
+
     POST = "POST"
     REPLY = "REPLY"
     REPOST = "REPOST"
@@ -44,37 +48,54 @@ class SocialPostType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class SocialPostTypedDict(TypedDict):
     body: NotRequired[str]
+    r"""The main text content of the post"""
     call_to_action: NotRequired[PropertySocialPostCallToActionTypedDict]
     r"""Call-to-action button on the post"""
     created_at: NotRequired[datetime]
+    r"""When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""Unique identifier for the post"""
     language: NotRequired[str]
+    r"""Language code of the post content"""
     media: NotRequired[List[SocialMediaTypedDict]]
     r"""Media assets attached to the post"""
     metrics: NotRequired[PropertySocialPostMetricsTypedDict]
     r"""Engagement metrics for the post"""
     parent_post_id: NotRequired[str]
+    r"""The post this one replies to or references"""
     profile_id: NotRequired[str]
+    r"""The social profile (page/handle/listing) that owns this post"""
     raw: NotRequired[Dict[str, Any]]
+    r"""Raw data from integration"""
     scheduled_at: NotRequired[datetime]
+    r"""When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[SocialPostStatus]
+    r"""Publication status of the post"""
     title: NotRequired[str]
+    r"""Optional post title/headline"""
     type: NotRequired[SocialPostType]
+    r"""The kind of post"""
     updated_at: NotRequired[datetime]
+    r"""When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""Public permalink to the post"""
 
 
 class SocialPost(BaseModel):
     body: Optional[str] = None
+    r"""The main text content of the post"""
 
     call_to_action: Optional[PropertySocialPostCallToAction] = None
     r"""Call-to-action button on the post"""
 
     created_at: Optional[datetime] = None
+    r"""When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for the post"""
 
     language: Optional[str] = None
+    r"""Language code of the post content"""
 
     media: Optional[List[SocialMedia]] = None
     r"""Media assets attached to the post"""
@@ -83,22 +104,31 @@ class SocialPost(BaseModel):
     r"""Engagement metrics for the post"""
 
     parent_post_id: Optional[str] = None
+    r"""The post this one replies to or references"""
 
     profile_id: Optional[str] = None
+    r"""The social profile (page/handle/listing) that owns this post"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Raw data from integration"""
 
     scheduled_at: Optional[datetime] = None
+    r"""When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[SocialPostStatus] = None
+    r"""Publication status of the post"""
 
     title: Optional[str] = None
+    r"""Optional post title/headline"""
 
     type: Optional[SocialPostType] = None
+    r"""The kind of post"""
 
     updated_at: Optional[datetime] = None
+    r"""When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""Public permalink to the post"""
 
     @field_serializer("status")
     def serialize_status(self, value):

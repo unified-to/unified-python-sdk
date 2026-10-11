@@ -12,10 +12,13 @@ class EnrichPersonWorkHistoryTypedDict(TypedDict):
     title: str
     company_domain: NotRequired[str]
     company_id: NotRequired[str]
+    r"""(reference to EnrichCompany)"""
     company_name: NotRequired[str]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     location: NotRequired[str]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class EnrichPersonWorkHistory(BaseModel):
@@ -24,14 +27,17 @@ class EnrichPersonWorkHistory(BaseModel):
     company_domain: Optional[str] = None
 
     company_id: Optional[str] = None
+    r"""(reference to EnrichCompany)"""
 
     company_name: Optional[str] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     location: Optional[str] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

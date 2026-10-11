@@ -29,6 +29,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class BillingEvent(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)"""
+
     IMPRESSIONS = "IMPRESSIONS"
     LINK_CLICKS = "LINK_CLICKS"
     VIDEO_VIEWS = "VIDEO_VIEWS"
@@ -62,6 +64,8 @@ class AdsGroupBudgetUnit(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class CreativeSelection(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Creative rotation strategy (LinkedIn creativeSelection)"""
+
     OPTIMIZED = "OPTIMIZED"
     ROUND_ROBIN = "ROUND_ROBIN"
 
@@ -81,6 +85,8 @@ class AdsGroupEffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class OptimizationGoal(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)"""
+
     REACH = "REACH"
     IMPRESSIONS = "IMPRESSIONS"
     LINK_CLICKS = "LINK_CLICKS"
@@ -131,6 +137,7 @@ class AdsGroupTypedDict(TypedDict):
     bid_strategy: NotRequired[PropertyAdsGroupBidStrategyTypedDict]
     r"""YOUTUBE_AND_PARTNERS"""
     billing_event: NotRequired[BillingEvent]
+    r"""Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)"""
     budget_allocation_type: NotRequired[BudgetAllocationType]
     budget_amount: NotRequired[float]
     budget_max_amount: NotRequired[float]
@@ -138,28 +145,35 @@ class AdsGroupTypedDict(TypedDict):
     budget_unit: NotRequired[AdsGroupBudgetUnit]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creative_ids: NotRequired[List[str]]
     creative_selection: NotRequired[CreativeSelection]
+    r"""Creative rotation strategy (LinkedIn creativeSelection)"""
     currency: NotRequired[str]
     effective_status: NotRequired[AdsGroupEffectiveStatus]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     frequency_cap: NotRequired[PropertyAdsGroupFrequencyCapTypedDict]
     has_eu_political_ads: NotRequired[bool]
     id: NotRequired[str]
     insertionorder_id: NotRequired[str]
     language_locale: NotRequired[str]
+    r"""Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale"""
     name: NotRequired[str]
     optimization_goal: NotRequired[OptimizationGoal]
+    r"""Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)"""
     organization_id: NotRequired[str]
     pacing: NotRequired[PropertyAdsGroupPacingTypedDict]
     parent_id: NotRequired[str]
     promoted: NotRequired[List[AdsPromotedTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[AdsGroupStatus]
     targeting: NotRequired[PropertyAdsGroupTargetingTypedDict]
     type: NotRequired[AdsGroupType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AdsGroup(BaseModel):
@@ -169,6 +183,7 @@ class AdsGroup(BaseModel):
     r"""YOUTUBE_AND_PARTNERS"""
 
     billing_event: Optional[BillingEvent] = None
+    r"""Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)"""
 
     budget_allocation_type: Optional[BudgetAllocationType] = None
 
@@ -183,16 +198,19 @@ class AdsGroup(BaseModel):
     campaign_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creative_ids: Optional[List[str]] = None
 
     creative_selection: Optional[CreativeSelection] = None
+    r"""Creative rotation strategy (LinkedIn creativeSelection)"""
 
     currency: Optional[str] = None
 
     effective_status: Optional[AdsGroupEffectiveStatus] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     frequency_cap: Optional[PropertyAdsGroupFrequencyCap] = None
 
@@ -203,10 +221,12 @@ class AdsGroup(BaseModel):
     insertionorder_id: Optional[str] = None
 
     language_locale: Optional[str] = None
+    r"""Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale"""
 
     name: Optional[str] = None
 
     optimization_goal: Optional[OptimizationGoal] = None
+    r"""Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)"""
 
     organization_id: Optional[str] = None
 
@@ -219,6 +239,7 @@ class AdsGroup(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[AdsGroupStatus] = None
 
@@ -227,6 +248,7 @@ class AdsGroup(BaseModel):
     type: Optional[AdsGroupType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("billing_event")
     def serialize_billing_event(self, value):

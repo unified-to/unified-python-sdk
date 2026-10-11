@@ -13,6 +13,7 @@ class FormAnswerTypedDict(TypedDict):
     file_ids: NotRequired[List[str]]
     r"""references StorageFile ID"""
     value: NotRequired[str]
+    r"""Can be string, number, boolean, array, etc."""
 
 
 class FormAnswer(BaseModel):
@@ -24,6 +25,7 @@ class FormAnswer(BaseModel):
     r"""references StorageFile ID"""
 
     value: Optional[str] = None
+    r"""Can be string, number, boolean, array, etc."""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

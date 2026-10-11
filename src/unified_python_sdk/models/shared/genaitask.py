@@ -25,47 +25,68 @@ class GenaiTaskStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class GenaiTaskTypedDict(TypedDict):
     agent_id: NotRequired[str]
+    r"""id of the genai_agent (the reusable agent/preset configuration) that runs this task."""
     completed_at: NotRequired[datetime]
+    r"""When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     error: NotRequired[str]
+    r"""The failure description (when the status is FAILED)."""
     files_changed: NotRequired[float]
     id: NotRequired[str]
     instructions: NotRequired[str]
+    r"""The natural-language instructions given to the coding agent."""
     lines_added: NotRequired[float]
     lines_deleted: NotRequired[float]
     messages: NotRequired[List[GenaiContentTypedDict]]
     r"""The conversation between the user and the coding agent."""
     model_id: NotRequired[str]
     name: NotRequired[str]
+    r"""A short human-readable title for the coding agent task."""
     organization_id: NotRequired[str]
+    r"""id of the genai_organization (the organization or execution environment) that this task runs under."""
     pullrequest_url: NotRequired[str]
+    r"""The pull/merge request that the coding agent opened for its work."""
     raw: NotRequired[Dict[str, Any]]
     repo_url: NotRequired[str]
+    r"""The git repository that the coding agent works in."""
     source_branch_identifier: NotRequired[str]
+    r"""The name of the branch that the coding agent starts its work from."""
     started_at: NotRequired[datetime]
+    r"""When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[GenaiTaskStatus]
     summary: NotRequired[str]
+    r"""The coding agent's summary of the work that it performed."""
     target_branch_identifier: NotRequired[str]
+    r"""The name of the branch that the coding agent pushed its work to."""
     tokens_used: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     web_url: NotRequired[str]
+    r"""The provider's own web page for this task."""
 
 
 class GenaiTask(BaseModel):
     agent_id: Optional[str] = None
+    r"""id of the genai_agent (the reusable agent/preset configuration) that runs this task."""
 
     completed_at: Optional[datetime] = None
+    r"""When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     error: Optional[str] = None
+    r"""The failure description (when the status is FAILED)."""
 
     files_changed: Optional[float] = None
 
     id: Optional[str] = None
 
     instructions: Optional[str] = None
+    r"""The natural-language instructions given to the coding agent."""
 
     lines_added: Optional[float] = None
 
@@ -77,32 +98,43 @@ class GenaiTask(BaseModel):
     model_id: Optional[str] = None
 
     name: Optional[str] = None
+    r"""A short human-readable title for the coding agent task."""
 
     organization_id: Optional[str] = None
+    r"""id of the genai_organization (the organization or execution environment) that this task runs under."""
 
     pullrequest_url: Optional[str] = None
+    r"""The pull/merge request that the coding agent opened for its work."""
 
     raw: Optional[Dict[str, Any]] = None
 
     repo_url: Optional[str] = None
+    r"""The git repository that the coding agent works in."""
 
     source_branch_identifier: Optional[str] = None
+    r"""The name of the branch that the coding agent starts its work from."""
 
     started_at: Optional[datetime] = None
+    r"""When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[GenaiTaskStatus] = None
 
     summary: Optional[str] = None
+    r"""The coding agent's summary of the work that it performed."""
 
     target_branch_identifier: Optional[str] = None
+    r"""The name of the branch that the coding agent pushed its work to."""
 
     tokens_used: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     web_url: Optional[str] = None
+    r"""The provider's own web page for this task."""
 
     @field_serializer("status")
     def serialize_status(self, value):

@@ -21,9 +21,12 @@ class ScimAddressTypedDict(TypedDict):
     country: NotRequired[str]
     formatted: NotRequired[str]
     locality: NotRequired[str]
+    r"""city"""
     postal_code: NotRequired[str]
     region: NotRequired[str]
+    r"""stateprovince"""
     street_address: NotRequired[str]
+    r"""could be multi-line"""
     type: NotRequired[ScimAddressType]
 
 
@@ -33,14 +36,17 @@ class ScimAddress(BaseModel):
     formatted: Optional[str] = None
 
     locality: Optional[str] = None
+    r"""city"""
 
     postal_code: Annotated[Optional[str], pydantic.Field(alias="postalCode")] = None
 
     region: Optional[str] = None
+    r"""stateprovince"""
 
     street_address: Annotated[Optional[str], pydantic.Field(alias="streetAddress")] = (
         None
     )
+    r"""could be multi-line"""
 
     type: Optional[ScimAddressType] = None
 

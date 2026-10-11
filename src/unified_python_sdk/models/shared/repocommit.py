@@ -10,8 +10,11 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class RepoCommitTypedDict(TypedDict):
     repo_id: str
+    r"""(reference to RepoRepository)"""
     branch_id: NotRequired[str]
+    r"""(reference to RepoBranch)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     lines_added: NotRequired[float]
     lines_changed: NotRequired[float]
@@ -20,15 +23,20 @@ class RepoCommitTypedDict(TypedDict):
     pullrequest_ids: NotRequired[List[str]]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class RepoCommit(BaseModel):
     repo_id: str
+    r"""(reference to RepoRepository)"""
 
     branch_id: Optional[str] = None
+    r"""(reference to RepoBranch)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -45,8 +53,10 @@ class RepoCommit(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

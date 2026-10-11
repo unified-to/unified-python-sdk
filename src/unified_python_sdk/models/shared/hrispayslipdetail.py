@@ -28,29 +28,89 @@ class HrisPayslipDetailType(str, Enum, metaclass=utils.OpenEnumMeta):
     POSTTAX_BENEFIT = "POSTTAX_BENEFIT"
     POSTTAX_GARNISHMENT = "POSTTAX_GARNISHMENT"
     REIMBURSEMENT = "REIMBURSEMENT"
+    EARNING_REGULAR = "EARNING_REGULAR"
+    EARNING_DOUBLE_OVERTIME = "EARNING_DOUBLE_OVERTIME"
+    EARNING_PTO = "EARNING_PTO"
+    EARNING_SICK = "EARNING_SICK"
+    EARNING_HOLIDAY = "EARNING_HOLIDAY"
+    EARNING_SEVERANCE = "EARNING_SEVERANCE"
+    EARNING_REIMBURSEMENT = "EARNING_REIMBURSEMENT"
+    TAX_SOCIAL_SECURITY = "TAX_SOCIAL_SECURITY"
+    TAX_MEDICARE = "TAX_MEDICARE"
+    TAX_UNEMPLOYMENT = "TAX_UNEMPLOYMENT"
+    TAX_EMPLOYER = "TAX_EMPLOYER"
+    PRETAX_DEDUCTION_HSA = "PRETAX_DEDUCTION_HSA"
+    PRETAX_DEDUCTION_FSA = "PRETAX_DEDUCTION_FSA"
+    PRETAX_DEDUCTION_DEPENDENT_CARE = "PRETAX_DEDUCTION_DEPENDENT_CARE"
+    PRETAX_DEDUCTION_COMMUTER = "PRETAX_DEDUCTION_COMMUTER"
+    PRETAX_DEDUCTION_DENTAL = "PRETAX_DEDUCTION_DENTAL"
+    PRETAX_DEDUCTION_VISION = "PRETAX_DEDUCTION_VISION"
+    POSTTAX_DEDUCTION = "POSTTAX_DEDUCTION"
+    POSTTAX_RETIREMENT_ROTH = "POSTTAX_RETIREMENT_ROTH"
+    POSTTAX_LOAN_REPAYMENT = "POSTTAX_LOAN_REPAYMENT"
+    EMPLOYER_CONTRIBUTION = "EMPLOYER_CONTRIBUTION"
+    PENSION = "PENSION"
+    EARNING_CASH_IN_LIEU = "EARNING_CASH_IN_LIEU"
 
 
 class HrisPayslipDetailTypedDict(TypedDict):
     amount: float
+    benefit_id: NotRequired[str]
     company_amount: NotRequired[float]
+    deduction_id: NotRequired[str]
     description: NotRequired[str]
     employee_amount: NotRequired[float]
+    hours: NotRequired[float]
+    is_employer: NotRequired[bool]
+    r"""true when this line is paid by the employer (employer tax or contribution)"""
+    is_pre_tax: NotRequired[bool]
     name: NotRequired[str]
+    original_type: NotRequired[str]
+    r"""integration pay-code label before normalization"""
+    paycode_id: NotRequired[str]
+    r"""the hris_paycode for this line"""
+    rate_amount: NotRequired[float]
+    r"""pay rate for hourly/unit-based lines"""
     type: NotRequired[HrisPayslipDetailType]
+    ytd_amount: NotRequired[float]
+    r"""year-to-date amount for this line"""
 
 
 class HrisPayslipDetail(BaseModel):
     amount: float
 
+    benefit_id: Optional[str] = None
+
     company_amount: Optional[float] = None
+
+    deduction_id: Optional[str] = None
 
     description: Optional[str] = None
 
     employee_amount: Optional[float] = None
 
+    hours: Optional[float] = None
+
+    is_employer: Optional[bool] = None
+    r"""true when this line is paid by the employer (employer tax or contribution)"""
+
+    is_pre_tax: Optional[bool] = None
+
     name: Optional[str] = None
 
+    original_type: Optional[str] = None
+    r"""integration pay-code label before normalization"""
+
+    paycode_id: Optional[str] = None
+    r"""the hris_paycode for this line"""
+
+    rate_amount: Optional[float] = None
+    r"""pay rate for hourly/unit-based lines"""
+
     type: Optional[HrisPayslipDetailType] = None
+
+    ytd_amount: Optional[float] = None
+    r"""year-to-date amount for this line"""
 
     @field_serializer("type")
     def serialize_type(self, value):
@@ -64,7 +124,22 @@ class HrisPayslipDetail(BaseModel):
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
-            ["company_amount", "description", "employee_amount", "name", "type"]
+            [
+                "benefit_id",
+                "company_amount",
+                "deduction_id",
+                "description",
+                "employee_amount",
+                "hours",
+                "is_employer",
+                "is_pre_tax",
+                "name",
+                "original_type",
+                "paycode_id",
+                "rate_amount",
+                "type",
+                "ytd_amount",
+            ]
         )
         serialized = handler(self)
         m = {}

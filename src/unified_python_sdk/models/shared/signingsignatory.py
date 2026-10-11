@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class SigningSignatoryRole(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Role of the signatory"""
+
     SIGNER = "SIGNER"
     CC = "CC"
     APPROVER = "APPROVER"
@@ -20,6 +22,8 @@ class SigningSignatoryRole(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class SigningSignatoryStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Current status of this signatory"""
+
     PENDING = "PENDING"
     SENT = "SENT"
     DELIVERED = "DELIVERED"
@@ -30,43 +34,67 @@ class SigningSignatoryStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class SigningSignatoryTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     decline_reason: NotRequired[str]
+    r"""Reason for declining (if status is DECLINED)"""
     document_id: NotRequired[str]
+    r"""Parent signing document; points to SigningDocument"""
     email: NotRequired[str]
+    r"""Email address of the signatory"""
     id: NotRequired[str]
+    r"""Unique identifier for this signatory"""
     name: NotRequired[str]
+    r"""Full name of the signatory"""
     order: NotRequired[float]
+    r"""Signing order (1, 2, 3...)"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration"""
     role: NotRequired[SigningSignatoryRole]
+    r"""Role of the signatory"""
     signed_at: NotRequired[datetime]
+    r"""When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[SigningSignatoryStatus]
+    r"""Current status of this signatory"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class SigningSignatory(BaseModel):
     created_at: Optional[datetime] = None
+    r"""The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     decline_reason: Optional[str] = None
+    r"""Reason for declining (if status is DECLINED)"""
 
     document_id: Optional[str] = None
+    r"""Parent signing document; points to SigningDocument"""
 
     email: Optional[str] = None
+    r"""Email address of the signatory"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this signatory"""
 
     name: Optional[str] = None
+    r"""Full name of the signatory"""
 
     order: Optional[float] = None
+    r"""Signing order (1, 2, 3...)"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration"""
 
     role: Optional[SigningSignatoryRole] = None
+    r"""Role of the signatory"""
 
     signed_at: Optional[datetime] = None
+    r"""When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[SigningSignatoryStatus] = None
+    r"""Current status of this signatory"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("role")
     def serialize_role(self, value):

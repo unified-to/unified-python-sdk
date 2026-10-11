@@ -22,6 +22,7 @@ class CrmCompanyTypedDict(TypedDict):
     contact_ids: NotRequired[List[str]]
     r"""An array of contact IDs associated with this company"""
     created_at: NotRequired[datetime]
+    r"""The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     deal_ids: NotRequired[List[str]]
     r"""An array of deal IDs associated with this contact"""
     description: NotRequired[str]
@@ -29,18 +30,23 @@ class CrmCompanyTypedDict(TypedDict):
     emails: NotRequired[List[CrmEmailTypedDict]]
     employees: NotRequired[float]
     id: NotRequired[str]
+    r"""Unique identifier for this company object"""
     industry: NotRequired[str]
     is_active: NotRequired[bool]
     link_urls: NotRequired[List[str]]
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
     metadata: NotRequired[List[CrmMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The name of the company"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this company"""
     tags: NotRequired[List[str]]
     telephones: NotRequired[List[CrmTelephoneTypedDict]]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     websites: NotRequired[List[str]]
 
 
@@ -53,6 +59,7 @@ class CrmCompany(BaseModel):
     r"""An array of contact IDs associated with this company"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     deal_ids: Optional[List[str]] = None
     r"""An array of deal IDs associated with this contact"""
@@ -66,6 +73,7 @@ class CrmCompany(BaseModel):
     employees: Optional[float] = None
 
     id: Optional[str] = None
+    r"""Unique identifier for this company object"""
 
     industry: Optional[str] = None
 
@@ -77,8 +85,10 @@ class CrmCompany(BaseModel):
     metadata: Optional[List[CrmMetadata]] = None
 
     name: Optional[str] = None
+    r"""The name of the company"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this company"""
 
     tags: Optional[List[str]] = None
 
@@ -87,8 +97,10 @@ class CrmCompany(BaseModel):
     timezone: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     websites: Optional[List[str]] = None
 

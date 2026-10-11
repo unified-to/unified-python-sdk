@@ -33,15 +33,20 @@ class AccountingProjectTypedDict(TypedDict):
     billing_type: NotRequired[BillingType]
     category_ids: NotRequired[List[str]]
     code: NotRequired[str]
+    r"""provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)"""
     contact_id: NotRequired[str]
+    r"""the customer the project is for (reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     credit_note_amount: NotRequired[float]
     currency: NotRequired[str]
     deposit_amount: NotRequired[float]
     deposit_applied_amount: NotRequired[float]
     description: NotRequired[str]
     due_at: NotRequired[datetime]
+    r"""planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     ended_at: NotRequired[datetime]
+    r"""actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     estimate_amount: NotRequired[float]
     estimated_cost_amount: NotRequired[float]
     expense_amount: NotRequired[float]
@@ -51,18 +56,25 @@ class AccountingProjectTypedDict(TypedDict):
     is_billable: NotRequired[bool]
     location_id: NotRequired[str]
     manager_user_id: NotRequired[str]
+    r"""references a HRIS employee/user (reference to HrisEmployee)"""
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     minutes_logged: NotRequired[float]
+    r"""integer minutes, not hours"""
     minutes_to_be_invoiced: NotRequired[float]
+    r"""integer minutes, not hours"""
     name: NotRequired[str]
     organization_id: NotRequired[str]
     parent_id: NotRequired[str]
+    r"""parent project / sub-project hierarchy"""
     percent_complete: NotRequired[float]
+    r"""0-100"""
     raw: NotRequired[Dict[str, Any]]
     started_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[AccountingProjectStatus]
     to_be_invoiced_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingProject(BaseModel):
@@ -73,10 +85,13 @@ class AccountingProject(BaseModel):
     category_ids: Optional[List[str]] = None
 
     code: Optional[str] = None
+    r"""provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)"""
 
     contact_id: Optional[str] = None
+    r"""the customer the project is for (reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     credit_note_amount: Optional[float] = None
 
@@ -89,8 +104,10 @@ class AccountingProject(BaseModel):
     description: Optional[str] = None
 
     due_at: Optional[datetime] = None
+    r"""planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     ended_at: Optional[datetime] = None
+    r"""actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     estimate_amount: Optional[float] = None
 
@@ -109,30 +126,37 @@ class AccountingProject(BaseModel):
     location_id: Optional[str] = None
 
     manager_user_id: Optional[str] = None
+    r"""references a HRIS employee/user (reference to HrisEmployee)"""
 
     metadata: Optional[List[AccountingMetadata]] = None
 
     minutes_logged: Optional[float] = None
+    r"""integer minutes, not hours"""
 
     minutes_to_be_invoiced: Optional[float] = None
+    r"""integer minutes, not hours"""
 
     name: Optional[str] = None
 
     organization_id: Optional[str] = None
 
     parent_id: Optional[str] = None
+    r"""parent project / sub-project hierarchy"""
 
     percent_complete: Optional[float] = None
+    r"""0-100"""
 
     raw: Optional[Dict[str, Any]] = None
 
     started_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[AccountingProjectStatus] = None
 
     to_be_invoiced_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("billing_type")
     def serialize_billing_type(self, value):

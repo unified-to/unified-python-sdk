@@ -38,6 +38,7 @@ class FormFieldTypedDict(TypedDict):
     choices: NotRequired[List[str]]
     r"""For select/radio/checkbox fields"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     default_value: NotRequired[str]
     description: NotRequired[str]
     id: NotRequired[str]
@@ -50,6 +51,7 @@ class FormFieldTypedDict(TypedDict):
     order: NotRequired[float]
     pattern: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class FormField(BaseModel):
@@ -61,6 +63,7 @@ class FormField(BaseModel):
     r"""For select/radio/checkbox fields"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     default_value: Optional[str] = None
 
@@ -85,6 +88,7 @@ class FormField(BaseModel):
     pattern: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

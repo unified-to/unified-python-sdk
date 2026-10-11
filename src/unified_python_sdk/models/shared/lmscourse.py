@@ -14,7 +14,9 @@ class LmsCourseTypedDict(TypedDict):
     categories: NotRequired[List[str]]
     content_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""The currency code (ISO) of the course price"""
     description: NotRequired[str]
     duration_minutes: NotRequired[float]
     id: NotRequired[str]
@@ -25,13 +27,16 @@ class LmsCourseTypedDict(TypedDict):
     media: NotRequired[List[LmsMediaTypedDict]]
     name: NotRequired[str]
     price_amount: NotRequired[float]
+    r"""How much the course costs"""
     provider_name: NotRequired[str]
     published_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     raw: NotRequired[Dict[str, Any]]
     skills: NotRequired[List[str]]
     students: NotRequired[List[LmsReferenceTypedDict]]
     time_estimate_minutes: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class LmsCourse(BaseModel):
@@ -40,8 +45,10 @@ class LmsCourse(BaseModel):
     content_ids: Optional[List[str]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""The currency code (ISO) of the course price"""
 
     description: Optional[str] = None
 
@@ -62,10 +69,12 @@ class LmsCourse(BaseModel):
     name: Optional[str] = None
 
     price_amount: Optional[float] = None
+    r"""How much the course costs"""
 
     provider_name: Optional[str] = None
 
     published_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -76,6 +85,7 @@ class LmsCourse(BaseModel):
     time_estimate_minutes: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

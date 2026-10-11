@@ -12,11 +12,15 @@ class CommerceInventoryTypedDict(TypedDict):
     available: NotRequired[float]
     id: NotRequired[str]
     item_id: NotRequired[str]
+    r"""(reference to CommerceItem)"""
     item_option_id: NotRequired[str]
     item_variant_id: NotRequired[str]
+    r"""(reference to CommerceCommerceItemvariant)"""
     location_id: NotRequired[str]
+    r"""(reference to CommerceLocation)"""
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CommerceInventory(BaseModel):
@@ -25,16 +29,20 @@ class CommerceInventory(BaseModel):
     id: Optional[str] = None
 
     item_id: Optional[str] = None
+    r"""(reference to CommerceItem)"""
 
     item_option_id: Optional[str] = None
 
     item_variant_id: Optional[str] = None
+    r"""(reference to CommerceCommerceItemvariant)"""
 
     location_id: Optional[str] = None
+    r"""(reference to CommerceLocation)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

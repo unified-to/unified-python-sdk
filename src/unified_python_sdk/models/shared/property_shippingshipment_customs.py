@@ -41,19 +41,25 @@ class PropertyShippingShipmentCustomsTypedDict(TypedDict):
     r"""Customs information"""
 
     amount: NotRequired[float]
+    r"""Customs declared value"""
     contents_type: NotRequired[ContentsType]
     currency: NotRequired[str]
     description: NotRequired[str]
+    r"""Explanation of contents"""
     duties_paid_by: NotRequired[DutiesPaidBy]
     items: NotRequired[List[ShippingCustomsItemTypedDict]]
     r"""Customs items"""
     non_delivery_option: NotRequired[NonDeliveryOption]
     recipient_eori: NotRequired[str]
+    r"""Importer EORI number"""
     recipient_tax_number: NotRequired[str]
+    r"""Importer tax ID"""
     restrictions: NotRequired[List[str]]
     r"""Any restrictions"""
     shipper_eori: NotRequired[str]
+    r"""Exporter EORI number"""
     shipper_tax_number: NotRequired[str]
+    r"""Exporter tax ID"""
     taxes_paid_by: NotRequired[TaxesPaidBy]
 
 
@@ -61,12 +67,14 @@ class PropertyShippingShipmentCustoms(BaseModel):
     r"""Customs information"""
 
     amount: Optional[float] = None
+    r"""Customs declared value"""
 
     contents_type: Optional[ContentsType] = None
 
     currency: Optional[str] = None
 
     description: Optional[str] = None
+    r"""Explanation of contents"""
 
     duties_paid_by: Optional[DutiesPaidBy] = None
 
@@ -76,15 +84,19 @@ class PropertyShippingShipmentCustoms(BaseModel):
     non_delivery_option: Optional[NonDeliveryOption] = None
 
     recipient_eori: Optional[str] = None
+    r"""Importer EORI number"""
 
     recipient_tax_number: Optional[str] = None
+    r"""Importer tax ID"""
 
     restrictions: Optional[List[str]] = None
     r"""Any restrictions"""
 
     shipper_eori: Optional[str] = None
+    r"""Exporter EORI number"""
 
     shipper_tax_number: Optional[str] = None
+    r"""Exporter tax ID"""
 
     taxes_paid_by: Optional[TaxesPaidBy] = None
 

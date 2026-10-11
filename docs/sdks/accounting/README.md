@@ -12,6 +12,7 @@
 * [create_accounting_contact](#create_accounting_contact) - Create a contact
 * [create_accounting_creditmemo](#create_accounting_creditmemo) - Create a creditmemo
 * [create_accounting_expense](#create_accounting_expense) - Create an expense
+* [create_accounting_expensereport](#create_accounting_expensereport) - Create an expensereport
 * [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](#create_accounting_journal) - Create a journal
 * [create_accounting_order](#create_accounting_order) - Create an order
@@ -35,6 +36,7 @@
 * [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
 * [get_accounting_creditmemo](#get_accounting_creditmemo) - Retrieve a creditmemo
 * [get_accounting_expense](#get_accounting_expense) - Retrieve an expense
+* [get_accounting_expensereport](#get_accounting_expensereport) - Retrieve an expensereport
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
@@ -43,8 +45,10 @@
 * [get_accounting_profitloss](#get_accounting_profitloss) - Retrieve a profitloss
 * [get_accounting_project](#get_accounting_project) - Retrieve a project
 * [get_accounting_purchaseorder](#get_accounting_purchaseorder) - Retrieve a purchaseorder
+* [get_accounting_purchasereceipt](#get_accounting_purchasereceipt) - Retrieve a purchasereceipt
 * [get_accounting_quote](#get_accounting_quote) - Retrieve a quote
 * [get_accounting_salesorder](#get_accounting_salesorder) - Retrieve a salesorder
+* [get_accounting_salesreceipt](#get_accounting_salesreceipt) - Retrieve a salesreceipt
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
 * [get_accounting_trialbalance](#get_accounting_trialbalance) - Retrieve a trialbalance
@@ -60,6 +64,7 @@
 * [list_accounting_categories](#list_accounting_categories) - List all categories
 * [list_accounting_contacts](#list_accounting_contacts) - List all contacts
 * [list_accounting_creditmemoes](#list_accounting_creditmemoes) - List all creditmemoes
+* [list_accounting_expensereports](#list_accounting_expensereports) - List all expensereports
 * [list_accounting_expenses](#list_accounting_expenses) - List all expenses
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](#list_accounting_journals) - List all journals
@@ -69,8 +74,10 @@
 * [list_accounting_profitlosses](#list_accounting_profitlosses) - List all profitlosses
 * [list_accounting_projects](#list_accounting_projects) - List all projects
 * [list_accounting_purchaseorders](#list_accounting_purchaseorders) - List all purchaseorders
+* [list_accounting_purchasereceipts](#list_accounting_purchasereceipts) - List all purchasereceipts
 * [list_accounting_quotes](#list_accounting_quotes) - List all quotes
 * [list_accounting_salesorders](#list_accounting_salesorders) - List all salesorders
+* [list_accounting_salesreceipts](#list_accounting_salesreceipts) - List all salesreceipts
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
 * [list_accounting_trialbalances](#list_accounting_trialbalances) - List all trialbalances
@@ -83,6 +90,7 @@
 * [patch_accounting_contact](#patch_accounting_contact) - Update a contact
 * [patch_accounting_creditmemo](#patch_accounting_creditmemo) - Update a creditmemo
 * [patch_accounting_expense](#patch_accounting_expense) - Update an expense
+* [patch_accounting_expensereport](#patch_accounting_expensereport) - Update an expensereport
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](#patch_accounting_journal) - Update a journal
 * [patch_accounting_order](#patch_accounting_order) - Update an order
@@ -102,6 +110,7 @@
 * [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
 * [remove_accounting_creditmemo](#remove_accounting_creditmemo) - Remove a creditmemo
 * [remove_accounting_expense](#remove_accounting_expense) - Remove an expense
+* [remove_accounting_expensereport](#remove_accounting_expensereport) - Remove an expensereport
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](#remove_accounting_journal) - Remove a journal
 * [remove_accounting_order](#remove_accounting_order) - Remove an order
@@ -121,6 +130,7 @@
 * [update_accounting_contact](#update_accounting_contact) - Update a contact
 * [update_accounting_creditmemo](#update_accounting_creditmemo) - Update a creditmemo
 * [update_accounting_expense](#update_accounting_expense) - Update an expense
+* [update_accounting_expensereport](#update_accounting_expensereport) - Update an expensereport
 * [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](#update_accounting_journal) - Update a journal
 * [update_accounting_order](#update_accounting_order) - Update an order
@@ -159,7 +169,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -176,7 +186,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
         },
         "connection_id": "<id>",
     })
@@ -235,11 +245,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "SSP",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "218719f8-8226-4e63-9a83-e71deec58055",
+            "id": "c877b0c4-6618-42ea-bf2f-a8d647ee3099",
             "name": "Corwin, Donnelly and Connelly Savings",
             "routing_number": "667753156",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-12T13:57:09.405Z"),
+            "updated_at": parse_datetime("2024-04-20T02:35:59.939Z"),
         },
         "connection_id": "<id>",
     })
@@ -298,14 +308,14 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "SRD",
             "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
-            "id": "149a7dcd-1137-4fc6-9014-f73511481cb8",
+            "id": "19ed8f06-5331-414b-b1a0-1ee664683214",
             "is_pending": True,
             "merchant_name": "Reichert, Erdman and Tillman",
-            "posted_at": parse_datetime("2025-03-25T15:26:46.355Z"),
+            "posted_at": parse_datetime("2025-04-08T03:38:14.249Z"),
             "reference": "93642593",
-            "transaction_at": parse_datetime("2022-07-28T00:55:13.105Z"),
+            "transaction_at": parse_datetime("2022-07-29T13:53:15.798Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-23T23:14:36.067Z"),
+            "updated_at": parse_datetime("2022-05-24T16:58:29.868Z"),
         },
         "connection_id": "<id>",
     })
@@ -363,13 +373,13 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-08-11T20:52:55.321Z"),
             "extended_notes": [],
-            "id": "47aff446-04b3-478f-a547-1dfef16a2da3",
+            "id": "339a5fd3-7fbe-4871-95ba-b75769001fca",
             "lineitems": [],
             "metadata": [],
             "notes": "Tutamen cilicium infit.",
             "payment_collection_method": shared.PaymentCollectionMethod.CHARGE_AUTOMATICALLY,
             "payments": [],
-            "posted_at": parse_datetime("2024-04-06T03:20:50.873Z"),
+            "posted_at": parse_datetime("2024-04-19T08:55:21.037Z"),
             "purchaseorder_ids": [],
             "send": True,
             "status": shared.AccountingBillStatus.DELETED,
@@ -377,7 +387,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_10,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-01-31T04:40:21.326Z"),
+            "updated_at": parse_datetime("2025-02-15T18:13:43.875Z"),
             "url": "https://coarse-interviewer.biz/",
         },
         "connection_id": "<id>",
@@ -430,11 +440,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
-            "id": "bd82d66f-0901-40ed-81c3-24bc2c90b469",
+            "id": "2dfe35ff-f710-4187-961b-1e8ceb4536a4",
             "is_active": False,
             "metadata": [],
             "name": "Electronic Cotton Shoes",
-            "updated_at": parse_datetime("2025-08-22T03:49:23.607Z"),
+            "updated_at": parse_datetime("2025-09-04T18:35:02.003Z"),
         },
         "connection_id": "<id>",
     })
@@ -486,11 +496,11 @@ with UnifiedTo(
         "accounting_contact": {
             "associated_contacts": [
                 {
-                    "id": "9bebb770-590a-4626-9e91-a1e3f6a1a152",
+                    "id": "9b5c2f50-3514-43d7-aad0-d3ec98a9103d",
                     "name": "Delores Reynolds",
                 },
                 {
-                    "id": "98dc7b2b-a61a-4a86-a865-2c32e436115f",
+                    "id": "98c10c29-8cbf-45a2-b73d-3a24353fdd78",
                     "name": "Delores Reynolds",
                 },
             ],
@@ -513,7 +523,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "8ed22c78-3f9d-4b74-8667-42e4fe13d6d2",
+            "id": "a7c01682-7ccf-4b17-be2a-46f6b10e8e2f",
             "identification": "amicitia",
             "is_active": True,
             "is_customer": True,
@@ -523,7 +533,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "ebd23a6a-340a-4205-bc59-1ccf6a918747",
+                    "id": "ec710ebe-1e5a-45d5-b416-8cc245211f46",
                     "name": "Visa 1234",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -550,7 +560,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-06T04:50:42.426Z"),
+            "updated_at": parse_datetime("2023-12-15T08:19:00.768Z"),
             "website": "https://noxious-advertisement.org",
         },
         "connection_id": "<id>",
@@ -605,7 +615,7 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://enlightened-chairperson.com/",
-                    "id": "1db49fd3-7f25-4080-b187-04bcbc9f3bc1",
+                    "id": "ab0d27db-f5a6-47e6-a1cc-f141bc4061a3",
                     "mime_type": "complectus",
                     "name": "thesis",
                 },
@@ -615,12 +625,12 @@ with UnifiedTo(
             "currency": "MKD",
             "discount_amount": 0.0,
             "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
-            "id": "d04c0986-5cc3-4c55-a5b5-1caa37d81dd4",
+            "id": "3d014091-d624-4745-bc32-ac501fc4aee3",
             "lineitems": [],
             "metadata": [],
             "notes": "Dedecor amo adfero torqueo quas.",
             "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
-            "posted_at": parse_datetime("2025-11-17T11:22:22.052Z"),
+            "posted_at": parse_datetime("2025-12-02T00:30:20.953Z"),
             "refund_amount": 0.0,
             "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
             "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
@@ -628,7 +638,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2024-11-16T15:28:24.980Z"),
+            "updated_at": parse_datetime("2024-11-24T10:48:32.149Z"),
             "url": "https://lighthearted-bandwidth.net/",
         },
         "connection_id": "<id>",
@@ -679,11 +689,11 @@ with UnifiedTo(
 
     res = unified_to.accounting.create_accounting_expense(request={
         "accounting_expense": {
-            "approved_at": parse_datetime("2026-05-12T09:40:54.236Z"),
+            "approved_at": parse_datetime("2026-05-31T10:56:02.731Z"),
             "attachments": [
                 {
                     "download_url": "https://ripe-napkin.biz/",
-                    "id": "fef67b87-0957-42c3-adcf-43c0c46d6107",
+                    "id": "2d3e86aa-a965-4d39-95a0-62dbc6d206a8",
                     "mime_type": "annus",
                     "name": "cohibeo",
                 },
@@ -692,10 +702,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "SSP",
             "external_number": "necessitatibus",
-            "id": "ffa6e9c7-9193-4696-85f6-b19d35be2a3b",
+            "id": "f2122bc2-cfb5-4623-850e-6715ad47d337",
             "lineitems": [
                 {
-                    "id": "271f95a7-bbfc-403d-919c-785e59b3c427",
+                    "id": "75904edd-1d58-4000-90ed-90de804f6b9d",
                     "item_description": "Innovative Table featuring left technology and Rubber construction",
                     "item_name": "Luxurious Cotton Pizza",
                     "item_sku": "978-0-8324-6620-5",
@@ -709,12 +719,13 @@ with UnifiedTo(
             "metadata": [],
             "name": "Refined Steel Shoes",
             "payment_method": "CASH",
-            "posted_at": parse_datetime("2021-06-04T15:33:50.453Z"),
+            "posted_at": parse_datetime("2021-06-07T19:24:37.552Z"),
             "reimbursed_amount": 1833.0,
             "status": shared.AccountingExpenseStatus.SUBMITTED,
             "tax_amount": 2602.0,
             "total_amount": 3580.0,
-            "updated_at": parse_datetime("2026-05-12T09:40:54.236Z"),
+            "type": shared.AccountingExpenseType.USER,
+            "updated_at": parse_datetime("2026-05-31T10:56:02.731Z"),
         },
         "connection_id": "<id>",
     })
@@ -736,6 +747,94 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAccountingExpenseResponse](../../models/operations/createaccountingexpenseresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_accounting_expensereport
+
+Create an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createAccountingExpensereport" method="post" path="/accounting/{connection_id}/expensereport" example="accounting_expensereport" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.create_accounting_expensereport(request={
+        "accounting_expensereport": {
+            "approved_at": parse_datetime("2025-04-06T09:47:16.641Z"),
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
+            "currency": "BMD",
+            "external_number": "asporto",
+            "id": "610828f0-563e-4383-85a1-92a419086e50",
+            "lineitems": [
+                {
+                    "id": "3741c577-32e9-4539-8f4d-e1a873597a92",
+                    "item_description": "The Synchronised motivating software Car offers reliable performance and webbed design",
+                    "item_name": "Intelligent Gold Cheese",
+                    "item_sku": "978-0-6550-0228-4",
+                    "notes": "Utrimque quas vesica spes.",
+                    "tax_amount": 448.0,
+                    "total_amount": 10875.0,
+                    "unit_amount": 4092.0,
+                    "unit_quantity": 1.0,
+                },
+                {
+                    "id": "dad308a6-54ac-4e77-bde6-b56079cd696a",
+                    "item_description": "Ergonomic Bike made with Marble for all-day coordinated support",
+                    "item_name": "Practical Steel Pizza",
+                    "item_sku": "978-1-4129-9332-6",
+                    "notes": "Corrumpo.",
+                    "tax_amount": 875.0,
+                    "total_amount": 12363.0,
+                    "unit_amount": 6783.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Rustic Aluminum Car",
+            "posted_at": parse_datetime("2022-10-30T06:40:14.178Z"),
+            "reimbursed_amount": 6696.0,
+            "status": shared.AccountingExpensereportStatus.PAID,
+            "tax_amount": 983.0,
+            "total_amount": 13931.0,
+            "updated_at": parse_datetime("2025-04-06T09:47:16.641Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_expensereport is not None
+
+    # Handle response
+    print(res.accounting_expensereport)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.CreateAccountingExpensereportRequest](../../models/operations/createaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `retries`                                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                   | :heavy_minus_sign:                                                                                                 | Configuration to override the default retry behavior of the client.                                                |
+
+### Response
+
+**[operations.CreateAccountingExpensereportResponse](../../models/operations/createaccountingexpensereportresponse.md)**
 
 ### Errors
 
@@ -767,7 +866,7 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://glossy-markup.net/",
-                    "id": "a086fefd-c55c-4086-8542-9968b04e5561",
+                    "id": "cd662c39-8498-45de-a007-33fc7fe5eb3c",
                     "mime_type": "benevolentia",
                     "name": "vespillo",
                 },
@@ -779,7 +878,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
             "extended_notes": [],
-            "id": "a3e2a8ae-f055-408c-a0f6-ab0bb70b14f7",
+            "id": "6db4d48a-654d-4079-8546-7b90facdee42",
             "invoice_number": "vinco",
             "is_inclusive_of_tax": True,
             "lineitems": [],
@@ -789,7 +888,7 @@ with UnifiedTo(
             "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
             "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
             "payments": [],
-            "posted_at": parse_datetime("2026-03-29T09:35:22.722Z"),
+            "posted_at": parse_datetime("2026-04-16T02:26:28.611Z"),
             "reference": "adinventitias",
             "salesorder_ids": [],
             "send": True,
@@ -799,7 +898,7 @@ with UnifiedTo(
             "term": shared.AccountingInvoiceTerm.NET_45,
             "total_amount": 0.0,
             "type": shared.AccountingInvoiceType.CREDITMEMO,
-            "updated_at": parse_datetime("2023-02-06T11:07:47.339Z"),
+            "updated_at": parse_datetime("2023-02-07T18:19:06.744Z"),
             "url": "https://gifted-yarmulke.info/",
         },
         "connection_id": "<id>",
@@ -853,17 +952,18 @@ with UnifiedTo(
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
-            "currency": "FKP",
-            "description": "Calco constans adipisci.",
-            "id": "fa50e556-5eab-4cb7-afd1-a16ff072dcc4",
-            "is_inclusive_of_tax": True,
-            "posted_at": parse_datetime("2023-10-20T15:13:49.802Z"),
-            "reference": "ullam",
-            "source": "crustulum",
+            "currency": "RUB",
+            "description": "Solum commemoro conor nemo ultio.",
+            "exchange_rate": 1.0625,
+            "id": "95573ab0-2508-42ed-8504-0b6059c152c6",
+            "is_inclusive_of_tax": False,
+            "lineitems": [],
+            "posted_at": parse_datetime("2023-10-31T21:10:41.551Z"),
+            "reference": "82523039",
+            "source": "amplitudo",
             "status": shared.AccountingJournalStatus.VOID,
-            "tax_amount": 78672.0,
-            "total_amount": 74094.0,
-            "updated_at": parse_datetime("2022-01-02T06:10:58.511Z"),
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-01-07T23:42:12.421Z"),
         },
         "connection_id": "<id>",
     })
@@ -924,10 +1024,10 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "USD",
-            "id": "445e9028-1570-4f8f-9d13-775af36237a6",
+            "id": "53ea3cb4-8380-4b34-9781-59589848c165",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2022-04-05T16:02:41.218Z"),
+            "posted_at": parse_datetime("2022-04-10T10:12:59.145Z"),
             "shipping_address": {
                 "address1": "9745 Betty Shore",
                 "city": "South Alainaland",
@@ -939,7 +1039,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.SUBMITTED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.PURCHASE,
-            "updated_at": parse_datetime("2021-06-18T05:17:48.570Z"),
+            "updated_at": parse_datetime("2021-06-20T05:07:07.767Z"),
         },
         "connection_id": "<id>",
     })
@@ -998,12 +1098,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "6c9516f3-8973-4fc0-b9eb-6b8b42fe52f0",
+            "id": "9b4907b3-29b7-4f92-8a35-b89d9ae4d121",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2025-12-13T20:05:08.549Z"),
+            "updated_at": parse_datetime("2025-12-30T23:39:55.115Z"),
         },
         "connection_id": "<id>",
     })
@@ -1100,6 +1200,7 @@ with UnifiedTo(
 
     res = unified_to.accounting.create_accounting_purchaseorder(request={
         "accounting_purchaseorder": {
+            "attachments": [],
             "billing_address": {
                 "address1": "37214 Tanya Walks",
                 "city": "South Annabelleton",
@@ -1111,10 +1212,10 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "ZMW",
-            "id": "2c15629f-d92a-450f-9a90-c739019fa131",
+            "id": "5df0165d-2362-45a3-a731-a5c2c266b425",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-27T06:22:37.375Z"),
+            "posted_at": parse_datetime("2025-05-12T13:45:08.967Z"),
             "shipping_address": {
                 "address1": "649 Maggio Overpass",
                 "city": "Lake Jaylan",
@@ -1125,7 +1226,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-02-26T05:43:51.981Z"),
+            "updated_at": parse_datetime("2021-02-26T23:11:58.689Z"),
         },
         "connection_id": "<id>",
     })
@@ -1232,7 +1333,7 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-08-17T20:29:31.172Z"),
+            "closed_at": parse_datetime("2023-08-24T16:29:18.392Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "ANG",
             "discount_amount": 99.0,
@@ -1246,12 +1347,12 @@ with UnifiedTo(
             ],
             "fulfillment_type": shared.FulfillmentType.TAKEOUT,
             "guest_count": 8.0,
-            "id": "566ad961-babd-4344-bdd8-6636f2c1f2fa",
+            "id": "843100e4-79ef-4100-964b-71f23c4bc368",
             "lineitems": [],
             "metadata": [],
             "order_number": "988187",
             "payments": [],
-            "posted_at": parse_datetime("2026-01-13T11:28:48.101Z"),
+            "posted_at": parse_datetime("2026-01-30T17:24:29.322Z"),
             "refunded_amount": 0.0,
             "sales_channel": "Harvey, Collier and Weimann",
             "service_charge_amount": 63.0,
@@ -1269,7 +1370,7 @@ with UnifiedTo(
             "tax_amount": 63.0,
             "tip_amount": 34.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-02-10T19:46:08.025Z"),
+            "updated_at": parse_datetime("2022-02-11T02:37:49.468Z"),
         },
         "connection_id": "<id>",
     })
@@ -1330,7 +1431,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
             "description": "Atrox tricesimus creator.",
             "effective_rate": 53.0,
-            "id": "9d45b1ab-9993-41c7-9148-b552b5883179",
+            "id": "5133c370-8e58-4991-80af-a10937bf9444",
             "is_active": False,
             "is_compound": True,
             "metadata": [],
@@ -1339,7 +1440,7 @@ with UnifiedTo(
             "region": "TX",
             "total_rate": 53.0,
             "type": shared.AccountingTaxrateType.OTHER,
-            "updated_at": parse_datetime("2022-04-13T08:15:29.223Z"),
+            "updated_at": parse_datetime("2022-04-20T04:28:16.150Z"),
         },
         "connection_id": "<id>",
     })
@@ -1391,12 +1492,12 @@ with UnifiedTo(
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
             "exchange_rate": 0.5674,
-            "id": "17615f5e-0ebb-445a-b676-67eeac8b692b",
+            "id": "7de0c454-3db6-4811-afb0-45b3bb174f8d",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "211e7819-c286-480e-bcae-2c7237cdef02",
+                    "id": "562d87be-d72d-46fc-b369-1a30ad47cb35",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -1409,7 +1510,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 94452.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2021-09-10T21:27:21.377Z"),
+            "updated_at": parse_datetime("2021-09-16T13:36:17.078Z"),
         },
         "connection_id": "<id>",
     })
@@ -1465,14 +1566,14 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "currency": "KGS",
             "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
-            "id": "a277fafd-6a45-453a-a250-b99677d7a27d",
+            "id": "77980879-72c8-45e3-a9ff-6e76f0de3795",
             "lineitems": [],
             "metadata": [],
             "notes": "Conatus cruciamentum decor avaritia tantum.",
-            "posted_at": parse_datetime("2023-09-29T01:37:34.419Z"),
+            "posted_at": parse_datetime("2023-10-01T17:54:40.291Z"),
             "status": shared.AccountingVendorcreditStatus.SUBMITTED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-11-27T02:39:20.516Z"),
+            "updated_at": parse_datetime("2023-11-30T17:46:49.347Z"),
         },
         "connection_id": "<id>",
     })
@@ -2065,6 +2166,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_accounting_expensereport
+
+Retrieve an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingExpensereport" method="get" path="/accounting/{connection_id}/expensereport/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_expensereport(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_expensereport is not None
+
+    # Handle response
+    print(res.accounting_expensereport)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.GetAccountingExpensereportRequest](../../models/operations/getaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
+
+### Response
+
+**[operations.GetAccountingExpensereportResponse](../../models/operations/getaccountingexpensereportresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_accounting_invoice
 
 Retrieve an invoice
@@ -2441,6 +2589,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_accounting_purchasereceipt
+
+Retrieve a purchasereceipt
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingPurchasereceipt" method="get" path="/accounting/{connection_id}/purchasereceipt/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_purchasereceipt(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_purchasereceipt is not None
+
+    # Handle response
+    print(res.accounting_purchasereceipt)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.GetAccountingPurchasereceiptRequest](../../models/operations/getaccountingpurchasereceiptrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `retries`                                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                 | :heavy_minus_sign:                                                                                               | Configuration to override the default retry behavior of the client.                                              |
+
+### Response
+
+**[operations.GetAccountingPurchasereceiptResponse](../../models/operations/getaccountingpurchasereceiptresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_accounting_quote
 
 Retrieve a quote
@@ -2528,6 +2723,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAccountingSalesorderResponse](../../models/operations/getaccountingsalesorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_accounting_salesreceipt
+
+Retrieve a salesreceipt
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingSalesreceipt" method="get" path="/accounting/{connection_id}/salesreceipt/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_salesreceipt(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_salesreceipt is not None
+
+    # Handle response
+    print(res.accounting_salesreceipt)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.GetAccountingSalesreceiptRequest](../../models/operations/getaccountingsalesreceiptrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+
+### Response
+
+**[operations.GetAccountingSalesreceiptResponse](../../models/operations/getaccountingsalesreceiptresponse.md)**
 
 ### Errors
 
@@ -3229,6 +3471,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_accounting_expensereports
+
+List all expensereports
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingExpensereports" method="get" path="/accounting/{connection_id}/expensereport" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_expensereports(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_expensereports is not None
+
+    # Handle response
+    print(res.accounting_expensereports)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.ListAccountingExpensereportsRequest](../../models/operations/listaccountingexpensereportsrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `retries`                                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                 | :heavy_minus_sign:                                                                                               | Configuration to override the default retry behavior of the client.                                              |
+
+### Response
+
+**[operations.ListAccountingExpensereportsResponse](../../models/operations/listaccountingexpensereportsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_accounting_expenses
 
 List all expenses
@@ -3643,6 +3931,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_accounting_purchasereceipts
+
+List all purchasereceipts
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingPurchasereceipts" method="get" path="/accounting/{connection_id}/purchasereceipt" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_purchasereceipts(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_purchasereceipts is not None
+
+    # Handle response
+    print(res.accounting_purchasereceipts)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.ListAccountingPurchasereceiptsRequest](../../models/operations/listaccountingpurchasereceiptsrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `retries`                                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                     | :heavy_minus_sign:                                                                                                   | Configuration to override the default retry behavior of the client.                                                  |
+
+### Response
+
+**[operations.ListAccountingPurchasereceiptsResponse](../../models/operations/listaccountingpurchasereceiptsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_accounting_quotes
 
 List all quotes
@@ -3728,6 +4062,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAccountingSalesordersResponse](../../models/operations/listaccountingsalesordersresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_accounting_salesreceipts
+
+List all salesreceipts
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingSalesreceipts" method="get" path="/accounting/{connection_id}/salesreceipt" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_salesreceipts(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_salesreceipts is not None
+
+    # Handle response
+    print(res.accounting_salesreceipts)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.ListAccountingSalesreceiptsRequest](../../models/operations/listaccountingsalesreceiptsrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `retries`                                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                               | :heavy_minus_sign:                                                                                             | Configuration to override the default retry behavior of the client.                                            |
+
+### Response
+
+**[operations.ListAccountingSalesreceiptsResponse](../../models/operations/listaccountingsalesreceiptsresponse.md)**
 
 ### Errors
 
@@ -3945,7 +4325,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "d91a9733-3a17-4074-a1b1-aa422f50d958",
+            "id": "215d9175-23e0-4862-b499-51dd50e98635",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -3962,7 +4342,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.469Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.511Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4022,11 +4402,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "SSP",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "d019420d-033e-4e21-8a76-2104d7cbef79",
+            "id": "b8854a60-42a4-4705-beb0-212f3c9087a7",
             "name": "Corwin, Donnelly and Connelly Savings",
             "routing_number": "667753156",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-12T13:57:09.411Z"),
+            "updated_at": parse_datetime("2024-04-20T02:35:59.942Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4086,14 +4466,14 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "SRD",
             "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
-            "id": "a27d611c-a43a-436c-94bf-16e1266c55f2",
+            "id": "5fd4827b-da2b-4367-92eb-e65ee546deb0",
             "is_pending": True,
             "merchant_name": "Reichert, Erdman and Tillman",
-            "posted_at": parse_datetime("2025-03-25T15:26:46.365Z"),
+            "posted_at": parse_datetime("2025-04-08T03:38:14.255Z"),
             "reference": "93642593",
-            "transaction_at": parse_datetime("2022-07-28T00:55:13.106Z"),
+            "transaction_at": parse_datetime("2022-07-29T13:53:15.799Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-23T23:14:36.068Z"),
+            "updated_at": parse_datetime("2022-05-24T16:58:29.868Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4152,13 +4532,13 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-08-11T20:52:55.321Z"),
             "extended_notes": [],
-            "id": "f9268e84-980f-40e0-a64b-2c964ec54a34",
+            "id": "687c6fa9-67b0-43b9-b80f-ee40f2bcb790",
             "lineitems": [],
             "metadata": [],
             "notes": "Tutamen cilicium infit.",
             "payment_collection_method": shared.PaymentCollectionMethod.CHARGE_AUTOMATICALLY,
             "payments": [],
-            "posted_at": parse_datetime("2024-04-06T03:20:50.910Z"),
+            "posted_at": parse_datetime("2024-04-19T08:55:21.062Z"),
             "purchaseorder_ids": [],
             "send": True,
             "status": shared.AccountingBillStatus.DELETED,
@@ -4166,7 +4546,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_10,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-01-31T04:40:21.369Z"),
+            "updated_at": parse_datetime("2025-02-15T18:13:43.905Z"),
             "url": "https://coarse-interviewer.biz/",
         },
         "connection_id": "<id>",
@@ -4220,11 +4600,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
-            "id": "517496d1-823c-438e-b1e0-ca87622b0590",
+            "id": "2ae5d710-e676-4d0f-96b3-acab3b2d98cb",
             "is_active": False,
             "metadata": [],
             "name": "Electronic Cotton Shoes",
-            "updated_at": parse_datetime("2025-08-22T03:49:23.618Z"),
+            "updated_at": parse_datetime("2025-09-04T18:35:02.010Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4277,11 +4657,11 @@ with UnifiedTo(
         "accounting_contact": {
             "associated_contacts": [
                 {
-                    "id": "260f83a7-e7b8-4ae9-b0ce-be94b41a7b35",
+                    "id": "ab6100bc-c0cf-43fc-8ce0-eb6e166a84ba",
                     "name": "Delores Reynolds",
                 },
                 {
-                    "id": "870d6f8b-7ceb-4ba0-b3be-5fe402b0b281",
+                    "id": "a617cbfd-4d86-4769-a0c8-8bbe99244b53",
                     "name": "Delores Reynolds",
                 },
             ],
@@ -4304,7 +4684,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "4a153b39-b59a-47be-a636-304762d04879",
+            "id": "7b4c36f6-9ea3-4138-af0a-48fdb5c23c4f",
             "identification": "amicitia",
             "is_active": True,
             "is_customer": True,
@@ -4314,7 +4694,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "7483f4d4-8c30-45ce-837b-caf96891cfe5",
+                    "id": "aa7b1b9d-d1bb-4a82-8262-b46a99ffd007",
                     "name": "Visa 1234",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -4341,7 +4721,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-06T04:50:42.446Z"),
+            "updated_at": parse_datetime("2023-12-15T08:19:00.780Z"),
             "website": "https://noxious-advertisement.org",
         },
         "connection_id": "<id>",
@@ -4397,7 +4777,7 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://enlightened-chairperson.com/",
-                    "id": "1c286351-0ae3-4808-afca-05d66fa97fc4",
+                    "id": "bf83c250-cf36-4499-b9be-ca3763083bd4",
                     "mime_type": "complectus",
                     "name": "thesis",
                 },
@@ -4407,12 +4787,12 @@ with UnifiedTo(
             "currency": "MKD",
             "discount_amount": 0.0,
             "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
-            "id": "d40e3d9c-5b72-4e11-99da-b9debead5a6b",
+            "id": "98e3de9f-5a18-4005-840e-ee0ca5904187",
             "lineitems": [],
             "metadata": [],
             "notes": "Dedecor amo adfero torqueo quas.",
             "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
-            "posted_at": parse_datetime("2025-11-17T11:22:22.083Z"),
+            "posted_at": parse_datetime("2025-12-02T00:30:20.982Z"),
             "refund_amount": 0.0,
             "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
             "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
@@ -4420,7 +4800,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2024-11-16T15:28:24.996Z"),
+            "updated_at": parse_datetime("2024-11-24T10:48:32.165Z"),
             "url": "https://lighthearted-bandwidth.net/",
         },
         "connection_id": "<id>",
@@ -4472,11 +4852,11 @@ with UnifiedTo(
 
     res = unified_to.accounting.patch_accounting_expense(request={
         "accounting_expense": {
-            "approved_at": parse_datetime("2026-05-12T09:40:54.291Z"),
+            "approved_at": parse_datetime("2026-05-31T10:56:02.763Z"),
             "attachments": [
                 {
                     "download_url": "https://ripe-napkin.biz/",
-                    "id": "952638a5-c054-405a-9014-96aef0753c77",
+                    "id": "fc0f7439-3fa7-4e31-89cc-d5f4a93d3c88",
                     "mime_type": "annus",
                     "name": "cohibeo",
                 },
@@ -4485,10 +4865,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "SSP",
             "external_number": "necessitatibus",
-            "id": "fa30c86b-1dc7-447f-99a5-bb2137a4e4c2",
+            "id": "acbe7639-ea60-46a9-9bec-90ec8c83fa2b",
             "lineitems": [
                 {
-                    "id": "8b534c2b-fe41-4494-86df-02ef8117de50",
+                    "id": "65c7f906-1e52-4a2c-857f-498f4a43dfe7",
                     "item_description": "Innovative Table featuring left technology and Rubber construction",
                     "item_name": "Luxurious Cotton Pizza",
                     "item_sku": "978-0-8324-6620-5",
@@ -4502,12 +4882,13 @@ with UnifiedTo(
             "metadata": [],
             "name": "Refined Steel Shoes",
             "payment_method": "CASH",
-            "posted_at": parse_datetime("2021-06-04T15:33:50.462Z"),
+            "posted_at": parse_datetime("2021-06-07T19:24:37.557Z"),
             "reimbursed_amount": 1833.0,
             "status": shared.AccountingExpenseStatus.SUBMITTED,
             "tax_amount": 2602.0,
             "total_amount": 3580.0,
-            "updated_at": parse_datetime("2026-05-12T09:40:54.291Z"),
+            "type": shared.AccountingExpenseType.USER,
+            "updated_at": parse_datetime("2026-05-31T10:56:02.763Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4530,6 +4911,95 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchAccountingExpenseResponse](../../models/operations/patchaccountingexpenseresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_accounting_expensereport
+
+Update an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchAccountingExpensereport" method="patch" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.patch_accounting_expensereport(request={
+        "accounting_expensereport": {
+            "approved_at": parse_datetime("2025-04-06T09:47:16.665Z"),
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
+            "currency": "BMD",
+            "external_number": "asporto",
+            "id": "c3336adf-1600-4299-808c-84e8d2cf73d1",
+            "lineitems": [
+                {
+                    "id": "e92cbd00-bb45-4fb9-bcde-8b1876e273c0",
+                    "item_description": "The Synchronised motivating software Car offers reliable performance and webbed design",
+                    "item_name": "Intelligent Gold Cheese",
+                    "item_sku": "978-0-6550-0228-4",
+                    "notes": "Utrimque quas vesica spes.",
+                    "tax_amount": 448.0,
+                    "total_amount": 10875.0,
+                    "unit_amount": 4092.0,
+                    "unit_quantity": 1.0,
+                },
+                {
+                    "id": "5c54139d-c7f6-4e33-925e-e8732bf9ebae",
+                    "item_description": "Ergonomic Bike made with Marble for all-day coordinated support",
+                    "item_name": "Practical Steel Pizza",
+                    "item_sku": "978-1-4129-9332-6",
+                    "notes": "Corrumpo.",
+                    "tax_amount": 875.0,
+                    "total_amount": 12363.0,
+                    "unit_amount": 6783.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Rustic Aluminum Car",
+            "posted_at": parse_datetime("2022-10-30T06:40:14.190Z"),
+            "reimbursed_amount": 6696.0,
+            "status": shared.AccountingExpensereportStatus.PAID,
+            "tax_amount": 983.0,
+            "total_amount": 13931.0,
+            "updated_at": parse_datetime("2025-04-06T09:47:16.665Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_expensereport is not None
+
+    # Handle response
+    print(res.accounting_expensereport)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.PatchAccountingExpensereportRequest](../../models/operations/patchaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `retries`                                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                 | :heavy_minus_sign:                                                                                               | Configuration to override the default retry behavior of the client.                                              |
+
+### Response
+
+**[operations.PatchAccountingExpensereportResponse](../../models/operations/patchaccountingexpensereportresponse.md)**
 
 ### Errors
 
@@ -4561,7 +5031,7 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://glossy-markup.net/",
-                    "id": "42f96d4c-bad4-4392-8233-a33df24a8c6c",
+                    "id": "e7117d57-065f-4896-8906-6eba679f146a",
                     "mime_type": "benevolentia",
                     "name": "vespillo",
                 },
@@ -4573,7 +5043,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
             "extended_notes": [],
-            "id": "06ca1e6c-52aa-4fe5-8ec5-54e9da3aa325",
+            "id": "49add81c-73bd-4ba3-a86a-07b6154932c0",
             "invoice_number": "vinco",
             "is_inclusive_of_tax": True,
             "lineitems": [],
@@ -4583,7 +5053,7 @@ with UnifiedTo(
             "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
             "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
             "payments": [],
-            "posted_at": parse_datetime("2026-03-29T09:35:22.780Z"),
+            "posted_at": parse_datetime("2026-04-16T02:26:28.645Z"),
             "reference": "adinventitias",
             "salesorder_ids": [],
             "send": True,
@@ -4593,7 +5063,7 @@ with UnifiedTo(
             "term": shared.AccountingInvoiceTerm.NET_45,
             "total_amount": 0.0,
             "type": shared.AccountingInvoiceType.CREDITMEMO,
-            "updated_at": parse_datetime("2023-02-06T11:07:47.343Z"),
+            "updated_at": parse_datetime("2023-02-07T18:19:06.746Z"),
             "url": "https://gifted-yarmulke.info/",
         },
         "connection_id": "<id>",
@@ -4648,17 +5118,18 @@ with UnifiedTo(
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
-            "currency": "FKP",
-            "description": "Calco constans adipisci.",
-            "id": "f7779d43-9388-4634-8682-5de7127545a9",
-            "is_inclusive_of_tax": True,
-            "posted_at": parse_datetime("2023-10-20T15:13:49.817Z"),
-            "reference": "ullam",
-            "source": "crustulum",
+            "currency": "RUB",
+            "description": "Solum commemoro conor nemo ultio.",
+            "exchange_rate": 1.0625,
+            "id": "c1e00979-6ffe-46b9-b7ca-6815812ac842",
+            "is_inclusive_of_tax": False,
+            "lineitems": [],
+            "posted_at": parse_datetime("2023-10-31T21:10:41.563Z"),
+            "reference": "82523039",
+            "source": "amplitudo",
             "status": shared.AccountingJournalStatus.VOID,
-            "tax_amount": 78672.0,
-            "total_amount": 74094.0,
-            "updated_at": parse_datetime("2022-01-02T06:10:58.518Z"),
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-01-07T23:42:12.427Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4720,10 +5191,10 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "USD",
-            "id": "bdf36a05-6b7f-4eef-9179-63e8d329f593",
+            "id": "da1e6c6b-5808-4374-a576-0aa875b701a9",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2022-04-05T16:02:41.231Z"),
+            "posted_at": parse_datetime("2022-04-10T10:12:59.153Z"),
             "shipping_address": {
                 "address1": "9745 Betty Shore",
                 "city": "South Alainaland",
@@ -4735,7 +5206,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.SUBMITTED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.PURCHASE,
-            "updated_at": parse_datetime("2021-06-18T05:17:48.576Z"),
+            "updated_at": parse_datetime("2021-06-20T05:07:07.770Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4795,12 +5266,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "708643f5-baec-4dfc-8c39-cc2303907aa2",
+            "id": "99702f5c-8b2f-4d48-91ba-826a43bbe0b7",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2025-12-13T20:05:08.559Z"),
+            "updated_at": parse_datetime("2025-12-30T23:39:55.125Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4899,6 +5370,7 @@ with UnifiedTo(
 
     res = unified_to.accounting.patch_accounting_purchaseorder(request={
         "accounting_purchaseorder": {
+            "attachments": [],
             "billing_address": {
                 "address1": "37214 Tanya Walks",
                 "city": "South Annabelleton",
@@ -4910,10 +5382,10 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "ZMW",
-            "id": "ccae6f41-dac0-491f-9987-35fe17107580",
+            "id": "0ef164ae-3d7d-43eb-b5a6-fba3cbcbd136",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-27T06:22:37.417Z"),
+            "posted_at": parse_datetime("2025-05-12T13:45:08.992Z"),
             "shipping_address": {
                 "address1": "649 Maggio Overpass",
                 "city": "Lake Jaylan",
@@ -4924,7 +5396,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-02-26T05:43:51.983Z"),
+            "updated_at": parse_datetime("2021-02-26T23:11:58.691Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5033,7 +5505,7 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-08-17T20:29:31.196Z"),
+            "closed_at": parse_datetime("2023-08-24T16:29:18.407Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "ANG",
             "discount_amount": 99.0,
@@ -5047,12 +5519,12 @@ with UnifiedTo(
             ],
             "fulfillment_type": shared.FulfillmentType.TAKEOUT,
             "guest_count": 8.0,
-            "id": "06b6c05e-10dc-4e23-9cd8-d13c368864b3",
+            "id": "5558e453-d0ab-4386-989b-ddeefe517d68",
             "lineitems": [],
             "metadata": [],
             "order_number": "988187",
             "payments": [],
-            "posted_at": parse_datetime("2026-01-13T11:28:48.163Z"),
+            "posted_at": parse_datetime("2026-01-30T17:24:29.360Z"),
             "refunded_amount": 0.0,
             "sales_channel": "Harvey, Collier and Weimann",
             "service_charge_amount": 63.0,
@@ -5070,7 +5542,7 @@ with UnifiedTo(
             "tax_amount": 63.0,
             "tip_amount": 34.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-02-10T19:46:08.026Z"),
+            "updated_at": parse_datetime("2022-02-11T02:37:49.468Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5132,7 +5604,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
             "description": "Atrox tricesimus creator.",
             "effective_rate": 53.0,
-            "id": "6b146958-8711-4255-89a5-4e504a6d2a0f",
+            "id": "2e3bcadc-8c35-4f8d-afdc-3083ef7be848",
             "is_active": False,
             "is_compound": True,
             "metadata": [],
@@ -5141,7 +5613,7 @@ with UnifiedTo(
             "region": "TX",
             "total_rate": 53.0,
             "type": shared.AccountingTaxrateType.OTHER,
-            "updated_at": parse_datetime("2022-04-13T08:15:29.226Z"),
+            "updated_at": parse_datetime("2022-04-20T04:28:16.155Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5194,12 +5666,12 @@ with UnifiedTo(
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
             "exchange_rate": 0.5674,
-            "id": "81bf7ef2-8ff2-4ddc-b703-024288cc4b75",
+            "id": "a54266f5-37f6-4957-849c-d6006068b45e",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "5dceaa79-1e95-4cee-928e-c57d24727437",
+                    "id": "1bfb935d-3996-4971-befd-4c3ff7ca22ea",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -5212,7 +5684,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 94452.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2021-09-10T21:27:21.384Z"),
+            "updated_at": parse_datetime("2021-09-16T13:36:17.083Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5269,14 +5741,14 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "currency": "KGS",
             "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
-            "id": "b6f8e422-65bf-48c8-ad52-a5537ca85940",
+            "id": "b8ec19a9-c8ef-4a8b-bb14-c4a360838fd9",
             "lineitems": [],
             "metadata": [],
             "notes": "Conatus cruciamentum decor avaritia tantum.",
-            "posted_at": parse_datetime("2023-09-29T01:37:34.425Z"),
+            "posted_at": parse_datetime("2023-10-01T17:54:40.294Z"),
             "status": shared.AccountingVendorcreditStatus.SUBMITTED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-11-27T02:39:20.523Z"),
+            "updated_at": parse_datetime("2023-11-30T17:46:49.352Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5675,6 +6147,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveAccountingExpenseResponse](../../models/operations/removeaccountingexpenseresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_accounting_expensereport
+
+Remove an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeAccountingExpensereport" method="delete" path="/accounting/{connection_id}/expensereport/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.remove_accounting_expensereport(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.RemoveAccountingExpensereportRequest](../../models/operations/removeaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `retries`                                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                   | :heavy_minus_sign:                                                                                                 | Configuration to override the default retry behavior of the client.                                                |
+
+### Response
+
+**[operations.RemoveAccountingExpensereportResponse](../../models/operations/removeaccountingexpensereportresponse.md)**
 
 ### Errors
 
@@ -6225,7 +6744,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "d91a9733-3a17-4074-a1b1-aa422f50d958",
+            "id": "215d9175-23e0-4862-b499-51dd50e98635",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -6242,7 +6761,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.469Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.511Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -6302,11 +6821,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "SSP",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "d019420d-033e-4e21-8a76-2104d7cbef79",
+            "id": "b8854a60-42a4-4705-beb0-212f3c9087a7",
             "name": "Corwin, Donnelly and Connelly Savings",
             "routing_number": "667753156",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-12T13:57:09.411Z"),
+            "updated_at": parse_datetime("2024-04-20T02:35:59.942Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -6366,14 +6885,14 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "SRD",
             "description": "payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.",
-            "id": "a27d611c-a43a-436c-94bf-16e1266c55f2",
+            "id": "5fd4827b-da2b-4367-92eb-e65ee546deb0",
             "is_pending": True,
             "merchant_name": "Reichert, Erdman and Tillman",
-            "posted_at": parse_datetime("2025-03-25T15:26:46.365Z"),
+            "posted_at": parse_datetime("2025-04-08T03:38:14.255Z"),
             "reference": "93642593",
-            "transaction_at": parse_datetime("2022-07-28T00:55:13.106Z"),
+            "transaction_at": parse_datetime("2022-07-29T13:53:15.799Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-23T23:14:36.068Z"),
+            "updated_at": parse_datetime("2022-05-24T16:58:29.868Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -6432,13 +6951,13 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-08-11T20:52:55.321Z"),
             "extended_notes": [],
-            "id": "f9268e84-980f-40e0-a64b-2c964ec54a34",
+            "id": "687c6fa9-67b0-43b9-b80f-ee40f2bcb790",
             "lineitems": [],
             "metadata": [],
             "notes": "Tutamen cilicium infit.",
             "payment_collection_method": shared.PaymentCollectionMethod.CHARGE_AUTOMATICALLY,
             "payments": [],
-            "posted_at": parse_datetime("2024-04-06T03:20:50.910Z"),
+            "posted_at": parse_datetime("2024-04-19T08:55:21.062Z"),
             "purchaseorder_ids": [],
             "send": True,
             "status": shared.AccountingBillStatus.DELETED,
@@ -6446,7 +6965,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_10,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-01-31T04:40:21.369Z"),
+            "updated_at": parse_datetime("2025-02-15T18:13:43.905Z"),
             "url": "https://coarse-interviewer.biz/",
         },
         "connection_id": "<id>",
@@ -6500,11 +7019,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Discover the koala-like agility of our Chair, perfect for imaginary users",
-            "id": "517496d1-823c-438e-b1e0-ca87622b0590",
+            "id": "2ae5d710-e676-4d0f-96b3-acab3b2d98cb",
             "is_active": False,
             "metadata": [],
             "name": "Electronic Cotton Shoes",
-            "updated_at": parse_datetime("2025-08-22T03:49:23.618Z"),
+            "updated_at": parse_datetime("2025-09-04T18:35:02.010Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -6557,11 +7076,11 @@ with UnifiedTo(
         "accounting_contact": {
             "associated_contacts": [
                 {
-                    "id": "260f83a7-e7b8-4ae9-b0ce-be94b41a7b35",
+                    "id": "ab6100bc-c0cf-43fc-8ce0-eb6e166a84ba",
                     "name": "Delores Reynolds",
                 },
                 {
-                    "id": "870d6f8b-7ceb-4ba0-b3be-5fe402b0b281",
+                    "id": "a617cbfd-4d86-4769-a0c8-8bbe99244b53",
                     "name": "Delores Reynolds",
                 },
             ],
@@ -6584,7 +7103,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "4a153b39-b59a-47be-a636-304762d04879",
+            "id": "7b4c36f6-9ea3-4138-af0a-48fdb5c23c4f",
             "identification": "amicitia",
             "is_active": True,
             "is_customer": True,
@@ -6594,7 +7113,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "7483f4d4-8c30-45ce-837b-caf96891cfe5",
+                    "id": "aa7b1b9d-d1bb-4a82-8262-b46a99ffd007",
                     "name": "Visa 1234",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -6621,7 +7140,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-06T04:50:42.446Z"),
+            "updated_at": parse_datetime("2023-12-15T08:19:00.780Z"),
             "website": "https://noxious-advertisement.org",
         },
         "connection_id": "<id>",
@@ -6677,7 +7196,7 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://enlightened-chairperson.com/",
-                    "id": "1c286351-0ae3-4808-afca-05d66fa97fc4",
+                    "id": "bf83c250-cf36-4499-b9be-ca3763083bd4",
                     "mime_type": "complectus",
                     "name": "thesis",
                 },
@@ -6687,12 +7206,12 @@ with UnifiedTo(
             "currency": "MKD",
             "discount_amount": 0.0,
             "due_at": parse_datetime("2023-10-18T04:35:00.543Z"),
-            "id": "d40e3d9c-5b72-4e11-99da-b9debead5a6b",
+            "id": "98e3de9f-5a18-4005-840e-ee0ca5904187",
             "lineitems": [],
             "metadata": [],
             "notes": "Dedecor amo adfero torqueo quas.",
             "payment_collection_method": shared.AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY,
-            "posted_at": parse_datetime("2025-11-17T11:22:22.083Z"),
+            "posted_at": parse_datetime("2025-12-02T00:30:20.982Z"),
             "refund_amount": 0.0,
             "refund_reason": "Virgo inflammatio quibusdam aestivus magnam.",
             "refunded_at": parse_datetime("2023-10-23T00:35:36.814Z"),
@@ -6700,7 +7219,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2024-11-16T15:28:24.996Z"),
+            "updated_at": parse_datetime("2024-11-24T10:48:32.165Z"),
             "url": "https://lighthearted-bandwidth.net/",
         },
         "connection_id": "<id>",
@@ -6752,11 +7271,11 @@ with UnifiedTo(
 
     res = unified_to.accounting.update_accounting_expense(request={
         "accounting_expense": {
-            "approved_at": parse_datetime("2026-05-12T09:40:54.291Z"),
+            "approved_at": parse_datetime("2026-05-31T10:56:02.763Z"),
             "attachments": [
                 {
                     "download_url": "https://ripe-napkin.biz/",
-                    "id": "952638a5-c054-405a-9014-96aef0753c77",
+                    "id": "fc0f7439-3fa7-4e31-89cc-d5f4a93d3c88",
                     "mime_type": "annus",
                     "name": "cohibeo",
                 },
@@ -6765,10 +7284,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "SSP",
             "external_number": "necessitatibus",
-            "id": "fa30c86b-1dc7-447f-99a5-bb2137a4e4c2",
+            "id": "acbe7639-ea60-46a9-9bec-90ec8c83fa2b",
             "lineitems": [
                 {
-                    "id": "8b534c2b-fe41-4494-86df-02ef8117de50",
+                    "id": "65c7f906-1e52-4a2c-857f-498f4a43dfe7",
                     "item_description": "Innovative Table featuring left technology and Rubber construction",
                     "item_name": "Luxurious Cotton Pizza",
                     "item_sku": "978-0-8324-6620-5",
@@ -6782,12 +7301,13 @@ with UnifiedTo(
             "metadata": [],
             "name": "Refined Steel Shoes",
             "payment_method": "CASH",
-            "posted_at": parse_datetime("2021-06-04T15:33:50.462Z"),
+            "posted_at": parse_datetime("2021-06-07T19:24:37.557Z"),
             "reimbursed_amount": 1833.0,
             "status": shared.AccountingExpenseStatus.SUBMITTED,
             "tax_amount": 2602.0,
             "total_amount": 3580.0,
-            "updated_at": parse_datetime("2026-05-12T09:40:54.291Z"),
+            "type": shared.AccountingExpenseType.USER,
+            "updated_at": parse_datetime("2026-05-31T10:56:02.763Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -6810,6 +7330,95 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateAccountingExpenseResponse](../../models/operations/updateaccountingexpenseresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_accounting_expensereport
+
+Update an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateAccountingExpensereport" method="put" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.update_accounting_expensereport(request={
+        "accounting_expensereport": {
+            "approved_at": parse_datetime("2025-04-06T09:47:16.665Z"),
+            "attachments": [],
+            "category_ids": [],
+            "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
+            "currency": "BMD",
+            "external_number": "asporto",
+            "id": "c3336adf-1600-4299-808c-84e8d2cf73d1",
+            "lineitems": [
+                {
+                    "id": "e92cbd00-bb45-4fb9-bcde-8b1876e273c0",
+                    "item_description": "The Synchronised motivating software Car offers reliable performance and webbed design",
+                    "item_name": "Intelligent Gold Cheese",
+                    "item_sku": "978-0-6550-0228-4",
+                    "notes": "Utrimque quas vesica spes.",
+                    "tax_amount": 448.0,
+                    "total_amount": 10875.0,
+                    "unit_amount": 4092.0,
+                    "unit_quantity": 1.0,
+                },
+                {
+                    "id": "5c54139d-c7f6-4e33-925e-e8732bf9ebae",
+                    "item_description": "Ergonomic Bike made with Marble for all-day coordinated support",
+                    "item_name": "Practical Steel Pizza",
+                    "item_sku": "978-1-4129-9332-6",
+                    "notes": "Corrumpo.",
+                    "tax_amount": 875.0,
+                    "total_amount": 12363.0,
+                    "unit_amount": 6783.0,
+                    "unit_quantity": 1.0,
+                },
+            ],
+            "metadata": [],
+            "name": "Rustic Aluminum Car",
+            "posted_at": parse_datetime("2022-10-30T06:40:14.190Z"),
+            "reimbursed_amount": 6696.0,
+            "status": shared.AccountingExpensereportStatus.PAID,
+            "tax_amount": 983.0,
+            "total_amount": 13931.0,
+            "updated_at": parse_datetime("2025-04-06T09:47:16.665Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_expensereport is not None
+
+    # Handle response
+    print(res.accounting_expensereport)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.UpdateAccountingExpensereportRequest](../../models/operations/updateaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `retries`                                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                   | :heavy_minus_sign:                                                                                                 | Configuration to override the default retry behavior of the client.                                                |
+
+### Response
+
+**[operations.UpdateAccountingExpensereportResponse](../../models/operations/updateaccountingexpensereportresponse.md)**
 
 ### Errors
 
@@ -6841,7 +7450,7 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://glossy-markup.net/",
-                    "id": "42f96d4c-bad4-4392-8233-a33df24a8c6c",
+                    "id": "e7117d57-065f-4896-8906-6eba679f146a",
                     "mime_type": "benevolentia",
                     "name": "vespillo",
                 },
@@ -6853,7 +7462,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2022-11-27T21:25:37.363Z"),
             "extended_notes": [],
-            "id": "06ca1e6c-52aa-4fe5-8ec5-54e9da3aa325",
+            "id": "49add81c-73bd-4ba3-a86a-07b6154932c0",
             "invoice_number": "vinco",
             "is_inclusive_of_tax": True,
             "lineitems": [],
@@ -6863,7 +7472,7 @@ with UnifiedTo(
             "paid_at": parse_datetime("2022-11-25T15:00:28.871Z"),
             "payment_collection_method": shared.AccountingInvoicePaymentCollectionMethod.SEND_INVOICE,
             "payments": [],
-            "posted_at": parse_datetime("2026-03-29T09:35:22.780Z"),
+            "posted_at": parse_datetime("2026-04-16T02:26:28.645Z"),
             "reference": "adinventitias",
             "salesorder_ids": [],
             "send": True,
@@ -6873,7 +7482,7 @@ with UnifiedTo(
             "term": shared.AccountingInvoiceTerm.NET_45,
             "total_amount": 0.0,
             "type": shared.AccountingInvoiceType.CREDITMEMO,
-            "updated_at": parse_datetime("2023-02-06T11:07:47.343Z"),
+            "updated_at": parse_datetime("2023-02-07T18:19:06.746Z"),
             "url": "https://gifted-yarmulke.info/",
         },
         "connection_id": "<id>",
@@ -6928,17 +7537,18 @@ with UnifiedTo(
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
-            "currency": "FKP",
-            "description": "Calco constans adipisci.",
-            "id": "f7779d43-9388-4634-8682-5de7127545a9",
-            "is_inclusive_of_tax": True,
-            "posted_at": parse_datetime("2023-10-20T15:13:49.817Z"),
-            "reference": "ullam",
-            "source": "crustulum",
+            "currency": "RUB",
+            "description": "Solum commemoro conor nemo ultio.",
+            "exchange_rate": 1.0625,
+            "id": "c1e00979-6ffe-46b9-b7ca-6815812ac842",
+            "is_inclusive_of_tax": False,
+            "lineitems": [],
+            "posted_at": parse_datetime("2023-10-31T21:10:41.563Z"),
+            "reference": "82523039",
+            "source": "amplitudo",
             "status": shared.AccountingJournalStatus.VOID,
-            "tax_amount": 78672.0,
-            "total_amount": 74094.0,
-            "updated_at": parse_datetime("2022-01-02T06:10:58.518Z"),
+            "total_amount": 0.0,
+            "updated_at": parse_datetime("2022-01-07T23:42:12.427Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7000,10 +7610,10 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "USD",
-            "id": "bdf36a05-6b7f-4eef-9179-63e8d329f593",
+            "id": "da1e6c6b-5808-4374-a576-0aa875b701a9",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2022-04-05T16:02:41.231Z"),
+            "posted_at": parse_datetime("2022-04-10T10:12:59.153Z"),
             "shipping_address": {
                 "address1": "9745 Betty Shore",
                 "city": "South Alainaland",
@@ -7015,7 +7625,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.SUBMITTED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.PURCHASE,
-            "updated_at": parse_datetime("2021-06-18T05:17:48.576Z"),
+            "updated_at": parse_datetime("2021-06-20T05:07:07.770Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7075,12 +7685,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "708643f5-baec-4dfc-8c39-cc2303907aa2",
+            "id": "99702f5c-8b2f-4d48-91ba-826a43bbe0b7",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2025-12-13T20:05:08.559Z"),
+            "updated_at": parse_datetime("2025-12-30T23:39:55.125Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7179,6 +7789,7 @@ with UnifiedTo(
 
     res = unified_to.accounting.update_accounting_purchaseorder(request={
         "accounting_purchaseorder": {
+            "attachments": [],
             "billing_address": {
                 "address1": "37214 Tanya Walks",
                 "city": "South Annabelleton",
@@ -7190,10 +7801,10 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "ZMW",
-            "id": "ccae6f41-dac0-491f-9987-35fe17107580",
+            "id": "0ef164ae-3d7d-43eb-b5a6-fba3cbcbd136",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-27T06:22:37.417Z"),
+            "posted_at": parse_datetime("2025-05-12T13:45:08.992Z"),
             "shipping_address": {
                 "address1": "649 Maggio Overpass",
                 "city": "Lake Jaylan",
@@ -7204,7 +7815,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-02-26T05:43:51.983Z"),
+            "updated_at": parse_datetime("2021-02-26T23:11:58.691Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7313,7 +7924,7 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-08-17T20:29:31.196Z"),
+            "closed_at": parse_datetime("2023-08-24T16:29:18.407Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "ANG",
             "discount_amount": 99.0,
@@ -7327,12 +7938,12 @@ with UnifiedTo(
             ],
             "fulfillment_type": shared.FulfillmentType.TAKEOUT,
             "guest_count": 8.0,
-            "id": "06b6c05e-10dc-4e23-9cd8-d13c368864b3",
+            "id": "5558e453-d0ab-4386-989b-ddeefe517d68",
             "lineitems": [],
             "metadata": [],
             "order_number": "988187",
             "payments": [],
-            "posted_at": parse_datetime("2026-01-13T11:28:48.163Z"),
+            "posted_at": parse_datetime("2026-01-30T17:24:29.360Z"),
             "refunded_amount": 0.0,
             "sales_channel": "Harvey, Collier and Weimann",
             "service_charge_amount": 63.0,
@@ -7350,7 +7961,7 @@ with UnifiedTo(
             "tax_amount": 63.0,
             "tip_amount": 34.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-02-10T19:46:08.026Z"),
+            "updated_at": parse_datetime("2022-02-11T02:37:49.468Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7412,7 +8023,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
             "description": "Atrox tricesimus creator.",
             "effective_rate": 53.0,
-            "id": "6b146958-8711-4255-89a5-4e504a6d2a0f",
+            "id": "2e3bcadc-8c35-4f8d-afdc-3083ef7be848",
             "is_active": False,
             "is_compound": True,
             "metadata": [],
@@ -7421,7 +8032,7 @@ with UnifiedTo(
             "region": "TX",
             "total_rate": 53.0,
             "type": shared.AccountingTaxrateType.OTHER,
-            "updated_at": parse_datetime("2022-04-13T08:15:29.226Z"),
+            "updated_at": parse_datetime("2022-04-20T04:28:16.155Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7474,12 +8085,12 @@ with UnifiedTo(
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
             "exchange_rate": 0.5674,
-            "id": "81bf7ef2-8ff2-4ddc-b703-024288cc4b75",
+            "id": "a54266f5-37f6-4957-849c-d6006068b45e",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "5dceaa79-1e95-4cee-928e-c57d24727437",
+                    "id": "1bfb935d-3996-4971-befd-4c3ff7ca22ea",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -7492,7 +8103,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 94452.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2021-09-10T21:27:21.384Z"),
+            "updated_at": parse_datetime("2021-09-16T13:36:17.083Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7549,14 +8160,14 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "currency": "KGS",
             "due_at": parse_datetime("2023-05-06T20:38:46.775Z"),
-            "id": "b6f8e422-65bf-48c8-ad52-a5537ca85940",
+            "id": "b8ec19a9-c8ef-4a8b-bb14-c4a360838fd9",
             "lineitems": [],
             "metadata": [],
             "notes": "Conatus cruciamentum decor avaritia tantum.",
-            "posted_at": parse_datetime("2023-09-29T01:37:34.425Z"),
+            "posted_at": parse_datetime("2023-10-01T17:54:40.294Z"),
             "status": shared.AccountingVendorcreditStatus.SUBMITTED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-11-27T02:39:20.523Z"),
+            "updated_at": parse_datetime("2023-11-30T17:46:49.352Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

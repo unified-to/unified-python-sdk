@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ClubsMemberMembershipStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The member's membership status"""
+
     MEMBER = "MEMBER"
     PENDING = "PENDING"
     NONE = "NONE"
@@ -21,42 +23,64 @@ class ClubsMemberTypedDict(TypedDict):
     r"""`lastname` is only a single initial. We do not synthesize an id, so `id` is typically absent."""
 
     created_at: NotRequired[datetime]
+    r"""The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     first_name: NotRequired[str]
+    r"""The member's first name"""
     group_id: NotRequired[str]
+    r"""The group this member belongs to (reference to HrisGroup)"""
     id: NotRequired[str]
+    r"""Unique identifier for this member (not provided by Strava)"""
     is_admin: NotRequired[bool]
+    r"""Whether the member is an admin of the group"""
     is_owner: NotRequired[bool]
+    r"""Whether the member is the owner of the group"""
     last_name: NotRequired[str]
+    r"""The member's last name (a single initial for Strava)"""
     membership_status: NotRequired[ClubsMemberMembershipStatus]
+    r"""The member's membership status"""
     name: NotRequired[str]
+    r"""The full name of the member (first name + last initial for Strava)"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this member"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class ClubsMember(BaseModel):
     r"""`lastname` is only a single initial. We do not synthesize an id, so `id` is typically absent."""
 
     created_at: Optional[datetime] = None
+    r"""The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     first_name: Optional[str] = None
+    r"""The member's first name"""
 
     group_id: Optional[str] = None
+    r"""The group this member belongs to (reference to HrisGroup)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this member (not provided by Strava)"""
 
     is_admin: Optional[bool] = None
+    r"""Whether the member is an admin of the group"""
 
     is_owner: Optional[bool] = None
+    r"""Whether the member is the owner of the group"""
 
     last_name: Optional[str] = None
+    r"""The member's last name (a single initial for Strava)"""
 
     membership_status: Optional[ClubsMemberMembershipStatus] = None
+    r"""The member's membership status"""
 
     name: Optional[str] = None
+    r"""The full name of the member (first name + last initial for Strava)"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this member"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("membership_status")
     def serialize_membership_status(self, value):

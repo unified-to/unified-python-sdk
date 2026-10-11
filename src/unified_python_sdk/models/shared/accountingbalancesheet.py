@@ -15,8 +15,10 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AccountingBalancesheetTypedDict(TypedDict):
     assets: NotRequired[List[AccountingBalancesheetItemTypedDict]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     equity: NotRequired[List[AccountingBalancesheetItemTypedDict]]
     id: NotRequired[str]
     liabilities: NotRequired[List[AccountingBalancesheetItemTypedDict]]
@@ -24,17 +26,21 @@ class AccountingBalancesheetTypedDict(TypedDict):
     net_assets_amount: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingBalancesheet(BaseModel):
     assets: Optional[List[AccountingBalancesheetItem]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     equity: Optional[List[AccountingBalancesheetItem]] = None
 
@@ -49,8 +55,10 @@ class AccountingBalancesheet(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

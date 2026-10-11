@@ -14,6 +14,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class PropertyHrisPayslipDeductionCoverageLevel(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
+    r"""Level selected by employee (e.g. \"FAMILY\", \"EMPLOYEE_ONLY\", or other)"""
+
     EMPLOYEE_ONLY = "EMPLOYEE_ONLY"
     EMPLOYEE_SPOUSE = "EMPLOYEE_SPOUSE"
     EMPLOYEE_CHILD = "EMPLOYEE_CHILD"
@@ -23,7 +25,14 @@ class PropertyHrisPayslipDeductionCoverageLevel(
     OTHER = "OTHER"
 
 
+class PropertyHrisPayslipDeductionEmployerType(str, Enum, metaclass=utils.OpenEnumMeta):
+    PERCENTAGE = "PERCENTAGE"
+    FIXED = "FIXED"
+
+
 class PropertyHrisPayslipDeductionFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)"""
+
     ONE_TIME = "ONE_TIME"
     DAY = "DAY"
     QUARTER = "QUARTER"
@@ -31,6 +40,21 @@ class PropertyHrisPayslipDeductionFrequency(str, Enum, metaclass=utils.OpenEnumM
     HOUR = "HOUR"
     MONTH = "MONTH"
     WEEK = "WEEK"
+    BIWEEKLY = "BIWEEKLY"
+    SEMIMONTHLY = "SEMIMONTHLY"
+
+
+class PropertyHrisPayslipDeductionGarnishmentType(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
+    r"""set when this deduction is a court-ordered garnishment"""
+
+    CHILD_SUPPORT = "CHILD_SUPPORT"
+    TAX_LEVY = "TAX_LEVY"
+    STUDENT_LOAN = "STUDENT_LOAN"
+    CREDITOR = "CREDITOR"
+    BANKRUPTCY = "BANKRUPTCY"
+    OTHER = "OTHER"
 
 
 class PropertyHrisPayslipDeductionType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -42,54 +66,95 @@ class PropertyHrisPayslipDeductionTypedDict(TypedDict):
     r"""The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
 
     amount: NotRequired[float]
+    r"""percentage or absolute amount (employee's portion)"""
     benefit_id: NotRequired[str]
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     coverage_level: NotRequired[PropertyHrisPayslipDeductionCoverageLevel]
+    r"""Level selected by employee (e.g. \"FAMILY\", \"EMPLOYEE_ONLY\", or other)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    employer_amount: NotRequired[float]
+    r"""percentage or absolute amount (employer's portion/match)"""
+    employer_type: NotRequired[PropertyHrisPayslipDeductionEmployerType]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     frequency: NotRequired[PropertyHrisPayslipDeductionFrequency]
+    r"""Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)"""
+    garnishment_type: NotRequired[PropertyHrisPayslipDeductionGarnishmentType]
+    r"""set when this deduction is a court-ordered garnishment"""
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    max_amount: NotRequired[float]
+    r"""annual maximum employee amount (always money)"""
     notes: NotRequired[str]
+    paycode_id: NotRequired[str]
+    r"""the hris_paycode (deduction code) this deduction uses"""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     type: NotRequired[PropertyHrisPayslipDeductionType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""employee ID (reference to HrisEmployee)"""
 
 
 class PropertyHrisPayslipDeduction(BaseModel):
     r"""The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
 
     amount: Optional[float] = None
+    r"""percentage or absolute amount (employee's portion)"""
 
     benefit_id: Optional[str] = None
 
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     coverage_level: Optional[PropertyHrisPayslipDeductionCoverageLevel] = None
+    r"""Level selected by employee (e.g. \"FAMILY\", \"EMPLOYEE_ONLY\", or other)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
+    employer_amount: Optional[float] = None
+    r"""percentage or absolute amount (employer's portion/match)"""
+
+    employer_type: Optional[PropertyHrisPayslipDeductionEmployerType] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     frequency: Optional[PropertyHrisPayslipDeductionFrequency] = None
+    r"""Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)"""
+
+    garnishment_type: Optional[PropertyHrisPayslipDeductionGarnishmentType] = None
+    r"""set when this deduction is a court-ordered garnishment"""
 
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
 
+    max_amount: Optional[float] = None
+    r"""annual maximum employee amount (always money)"""
+
     notes: Optional[str] = None
+
+    paycode_id: Optional[str] = None
+    r"""the hris_paycode (deduction code) this deduction uses"""
 
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     type: Optional[PropertyHrisPayslipDeductionType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""employee ID (reference to HrisEmployee)"""
 
     @field_serializer("coverage_level")
     def serialize_coverage_level(self, value):
@@ -100,11 +165,29 @@ class PropertyHrisPayslipDeduction(BaseModel):
                 return value
         return value
 
+    @field_serializer("employer_type")
+    def serialize_employer_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyHrisPayslipDeductionEmployerType(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("frequency")
     def serialize_frequency(self, value):
         if isinstance(value, str):
             try:
                 return shared.PropertyHrisPayslipDeductionFrequency(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("garnishment_type")
+    def serialize_garnishment_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyHrisPayslipDeductionGarnishmentType(value)
             except ValueError:
                 return value
         return value
@@ -127,11 +210,16 @@ class PropertyHrisPayslipDeduction(BaseModel):
                 "company_id",
                 "coverage_level",
                 "created_at",
+                "employer_amount",
+                "employer_type",
                 "end_at",
                 "frequency",
+                "garnishment_type",
                 "id",
                 "is_active",
+                "max_amount",
                 "notes",
+                "paycode_id",
                 "raw",
                 "start_at",
                 "type",

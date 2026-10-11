@@ -16,6 +16,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AtsCompanyTypedDict(TypedDict):
     address: NotRequired[PropertyAtsCompanyAddressTypedDict]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     name: NotRequired[str]
@@ -24,6 +25,7 @@ class AtsCompanyTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     recruiter_ids: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     website_url: NotRequired[str]
 
 
@@ -31,6 +33,7 @@ class AtsCompany(BaseModel):
     address: Optional[PropertyAtsCompanyAddress] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -47,6 +50,7 @@ class AtsCompany(BaseModel):
     recruiter_ids: Optional[List[str]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     website_url: Optional[str] = None
 

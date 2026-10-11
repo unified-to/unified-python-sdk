@@ -11,6 +11,20 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class HrisGroupPayFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""pay cycle when type is PAY_GROUP"""
+
+    ONE_TIME = "ONE_TIME"
+    DAY = "DAY"
+    QUARTER = "QUARTER"
+    YEAR = "YEAR"
+    HOUR = "HOUR"
+    MONTH = "MONTH"
+    WEEK = "WEEK"
+    BIWEEKLY = "BIWEEKLY"
+    SEMIMONTHLY = "SEMIMONTHLY"
+
+
 class HrisGroupType(str, Enum, metaclass=utils.OpenEnumMeta):
     TEAM = "TEAM"
     GROUP = "GROUP"
@@ -19,27 +33,37 @@ class HrisGroupType(str, Enum, metaclass=utils.OpenEnumMeta):
     BUSINESS_UNIT = "BUSINESS_UNIT"
     BRANCH = "BRANCH"
     SUB_DEPARTMENT = "SUB_DEPARTMENT"
+    PAY_GROUP = "PAY_GROUP"
 
 
 class HrisGroupTypedDict(TypedDict):
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     manager_ids: NotRequired[List[str]]
     name: NotRequired[str]
+    next_paid_at: NotRequired[datetime]
+    r"""next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     parent_id: NotRequired[str]
+    pay_frequency: NotRequired[HrisGroupPayFrequency]
+    r"""pay cycle when type is PAY_GROUP"""
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[HrisGroupType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_ids: NotRequired[List[str]]
 
 
 class HrisGroup(BaseModel):
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -51,15 +75,31 @@ class HrisGroup(BaseModel):
 
     name: Optional[str] = None
 
+    next_paid_at: Optional[datetime] = None
+    r"""next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     parent_id: Optional[str] = None
+
+    pay_frequency: Optional[HrisGroupPayFrequency] = None
+    r"""pay cycle when type is PAY_GROUP"""
 
     raw: Optional[Dict[str, Any]] = None
 
     type: Optional[HrisGroupType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_ids: Optional[List[str]] = None
+
+    @field_serializer("pay_frequency")
+    def serialize_pay_frequency(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.HrisGroupPayFrequency(value)
+            except ValueError:
+                return value
+        return value
 
     @field_serializer("type")
     def serialize_type(self, value):
@@ -81,7 +121,9 @@ class HrisGroup(BaseModel):
                 "is_active",
                 "manager_ids",
                 "name",
+                "next_paid_at",
                 "parent_id",
+                "pay_frequency",
                 "raw",
                 "type",
                 "updated_at",

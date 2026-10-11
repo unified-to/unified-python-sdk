@@ -36,8 +36,12 @@ class ListAtsInterviewsRequestTypedDict(TypedDict):
     r"""ID of the connection"""
     application_id: NotRequired[str]
     r"""The application ID to filter by"""
+    candidate_id: NotRequired[str]
+    r"""The candidate ID to filter by"""
     fields: NotRequired[List[ListAtsInterviewsQueryParamFields]]
     r"""Fields to return"""
+    job_id: NotRequired[str]
+    r"""The job ID to filter by"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -62,11 +66,23 @@ class ListAtsInterviewsRequest(BaseModel):
     ] = None
     r"""The application ID to filter by"""
 
+    candidate_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The candidate ID to filter by"""
+
     fields: Annotated[
         Optional[List[ListAtsInterviewsQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    job_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The job ID to filter by"""
 
     limit: Annotated[
         Optional[float],
@@ -111,7 +127,9 @@ class ListAtsInterviewsRequest(BaseModel):
         optional_fields = set(
             [
                 "application_id",
+                "candidate_id",
                 "fields",
+                "job_id",
                 "limit",
                 "offset",
                 "order",

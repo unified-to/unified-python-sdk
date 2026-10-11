@@ -22,12 +22,16 @@ class DbType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class WebhookEvent(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The event to subscribe to. \"deleted\" is supported on native webhooks, and on virtual webhooks where the integration supports it. Check the integration's Feature Support tab."""
+
     UPDATED = "updated"
     CREATED = "created"
     DELETED = "deleted"
 
 
 class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The object to return (eg. CRM \"contact\")"""
+
     ACCOUNTING_ACCOUNT = "accounting_account"
     ACCOUNTING_TRANSACTION = "accounting_transaction"
     ACCOUNTING_JOURNAL = "accounting_journal"
@@ -41,12 +45,15 @@ class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     ACCOUNTING_ORGANIZATION = "accounting_organization"
     ACCOUNTING_ORDER = "accounting_order"
     ACCOUNTING_SALESORDER = "accounting_salesorder"
+    ACCOUNTING_SALESRECEIPT = "accounting_salesreceipt"
     ACCOUNTING_PURCHASEORDER = "accounting_purchaseorder"
     ACCOUNTING_BALANCESHEET = "accounting_balancesheet"
     ACCOUNTING_PROFITLOSS = "accounting_profitloss"
     ACCOUNTING_TRIALBALANCE = "accounting_trialbalance"
     ACCOUNTING_CATEGORY = "accounting_category"
     ACCOUNTING_EXPENSE = "accounting_expense"
+    ACCOUNTING_EXPENSEREPORT = "accounting_expensereport"
+    ACCOUNTING_PURCHASERECEIPT = "accounting_purchasereceipt"
     ACCOUNTING_CASHFLOW = "accounting_cashflow"
     ACCOUNTING_QUOTE = "accounting_quote"
     ACCOUNTING_AGEDRECEIVABLE = "accounting_agedreceivable"
@@ -102,6 +109,10 @@ class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     HRIS_BANKACCOUNT = "hris_bankaccount"
     HRIS_DOCUMENT = "hris_document"
     HRIS_TAXONOMY = "hris_taxonomy"
+    HRIS_JOB = "hris_job"
+    HRIS_PAYROLL = "hris_payroll"
+    HRIS_PAYCODE = "hris_paycode"
+    HRIS_EARNING = "hris_earning"
     MARTECH_LIST = "martech_list"
     MARTECH_MEMBER = "martech_member"
     MARTECH_CAMPAIGN = "martech_campaign"
@@ -115,6 +126,8 @@ class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     UC_CALL = "uc_call"
     UC_COMMENT = "uc_comment"
     UC_RECORDING = "uc_recording"
+    UC_SCORECARD = "uc_scorecard"
+    UC_SCORECARDTEMPLATE = "uc_scorecardtemplate"
     ENRICH_PERSON = "enrich_person"
     ENRICH_COMPANY = "enrich_company"
     STORAGE_FILE = "storage_file"
@@ -124,6 +137,7 @@ class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     GENAI_TASK = "genai_task"
     GENAI_AGENT = "genai_agent"
     GENAI_ORGANIZATION = "genai_organization"
+    GENAI_SKILL = "genai_skill"
     MESSAGING_MESSAGE = "messaging_message"
     MESSAGING_CHANNEL = "messaging_channel"
     MESSAGING_EVENT = "messaging_event"
@@ -206,18 +220,24 @@ class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class WebhookType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""\"native\" registers with the integration, which sends events as they happen. \"virtual\" checks for changes on \"interval\". Optional on create; if omitted, Unified.to picks a supported type for the object. Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on update are ignored without an error. Delete and recreate the webhook to change type."""
+
     VIRTUAL = "virtual"
     NATIVE = "native"
 
 
 class WebhookTypedDict(TypedDict):
-    r"""A webhook is used to POST new/updated information to your server."""
+    r"""A webhook is used to POST new, updated, or deleted records to your server."""
 
     connection_id: str
     event: WebhookEvent
+    r"""The event to subscribe to. \"deleted\" is supported on native webhooks, and on virtual webhooks where the integration supports it. Check the integration's Feature Support tab."""
     object_type: WebhookObjectType
+    r"""The object to return (eg. CRM \"contact\")"""
     checked_at: NotRequired[datetime]
+    r"""Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook implementation, so don't use this field to tell whether a webhook is still running. Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     db_name_prefix: NotRequired[str]
     db_schema: NotRequired[str]
     db_type: NotRequired[DbType]
@@ -225,33 +245,44 @@ class WebhookTypedDict(TypedDict):
     environment: NotRequired[str]
     fields: NotRequired[str]
     filters: NotRequired[Dict[str, str]]
+    r"""Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's Feature Support tab for which filters apply. Filters the integration doesn't support are accepted but have no effect. Some integrations require a filter; if it's missing, create returns an error naming the integration and the filter."""
     hook_url: NotRequired[str]
+    r"""The URL of the webhook"""
     id: NotRequired[str]
     integration_type: NotRequired[str]
     interval: NotRequired[float]
+    r"""Virtual webhooks only. How often (in minutes) Unified.to checks for new or updated records. Minimum 1 on paid plans, 60 on free. Ignored for native webhooks."""
     is_beta: NotRequired[bool]
     is_healthy: NotRequired[bool]
+    r"""Read-only. True while the webhook can operate or recover; a transient failure may still be retrying. False after retries are exhausted or a non-retryable failure such as broken connection auth. Cannot be reset; recreate the webhook."""
     is_paused: NotRequired[bool]
     page_max_limit: NotRequired[float]
     runs: NotRequired[List[str]]
-    r"""An array of the most revent virtual webhook runs"""
+    r"""An array of the most recent virtual webhook runs"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     webhook_type: NotRequired[WebhookType]
+    r"""\"native\" registers with the integration, which sends events as they happen. \"virtual\" checks for changes on \"interval\". Optional on create; if omitted, Unified.to picks a supported type for the object. Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on update are ignored without an error. Delete and recreate the webhook to change type."""
     workspace_id: NotRequired[str]
+    r"""(reference to KmsSpace)"""
 
 
 class Webhook(BaseModel):
-    r"""A webhook is used to POST new/updated information to your server."""
+    r"""A webhook is used to POST new, updated, or deleted records to your server."""
 
     connection_id: str
 
     event: WebhookEvent
+    r"""The event to subscribe to. \"deleted\" is supported on native webhooks, and on virtual webhooks where the integration supports it. Check the integration's Feature Support tab."""
 
     object_type: WebhookObjectType
+    r"""The object to return (eg. CRM \"contact\")"""
 
     checked_at: Optional[datetime] = None
+    r"""Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook implementation, so don't use this field to tell whether a webhook is still running. Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     db_name_prefix: Optional[str] = None
 
@@ -266,31 +297,38 @@ class Webhook(BaseModel):
     fields: Optional[str] = None
 
     filters: Optional[Dict[str, str]] = None
+    r"""Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's Feature Support tab for which filters apply. Filters the integration doesn't support are accepted but have no effect. Some integrations require a filter; if it's missing, create returns an error naming the integration and the filter."""
 
     hook_url: Optional[str] = None
+    r"""The URL of the webhook"""
 
     id: Optional[str] = None
 
     integration_type: Optional[str] = None
 
     interval: Optional[float] = None
+    r"""Virtual webhooks only. How often (in minutes) Unified.to checks for new or updated records. Minimum 1 on paid plans, 60 on free. Ignored for native webhooks."""
 
     is_beta: Optional[bool] = None
 
     is_healthy: Optional[bool] = None
+    r"""Read-only. True while the webhook can operate or recover; a transient failure may still be retrying. False after retries are exhausted or a non-retryable failure such as broken connection auth. Cannot be reset; recreate the webhook."""
 
     is_paused: Optional[bool] = None
 
     page_max_limit: Optional[float] = None
 
     runs: Optional[List[str]] = None
-    r"""An array of the most revent virtual webhook runs"""
+    r"""An array of the most recent virtual webhook runs"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     webhook_type: Optional[WebhookType] = None
+    r"""\"native\" registers with the integration, which sends events as they happen. \"virtual\" checks for changes on \"interval\". Optional on create; if omitted, Unified.to picks a supported type for the object. Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on update are ignored without an error. Delete and recreate the webhook to change type."""
 
     workspace_id: Optional[str] = None
+    r"""(reference to KmsSpace)"""
 
     @field_serializer("db_type")
     def serialize_db_type(self, value):

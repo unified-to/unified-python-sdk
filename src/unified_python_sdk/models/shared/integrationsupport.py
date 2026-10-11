@@ -32,6 +32,12 @@ class ListAdID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListAgentID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -195,6 +201,12 @@ class ListDocumentID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListEffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListEmail(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -1191,10 +1203,13 @@ class VirtualWebhookVisitorID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class IntegrationSupportTypedDict(TypedDict):
+    raw_objects: List[str]
+    r"""objects that we map from in the integration"""
     from_webhook: NotRequired[FromWebhook]
     inbound_fields: NotRequired[Dict[str, str]]
     list_account_id: NotRequired[ListAccountID]
     list_ad_id: NotRequired[ListAdID]
+    list_agent_id: NotRequired[ListAgentID]
     list_application_id: NotRequired[ListApplicationID]
     list_approver_user_id: NotRequired[ListApproverUserID]
     list_assigned_user_id: NotRequired[ListAssignedUserID]
@@ -1223,6 +1238,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_dimension: NotRequired[ListDimension]
     list_document_id: NotRequired[ListDocumentID]
     list_effective_status: NotRequired[ListEffectiveStatus]
+    list_email: NotRequired[ListEmail]
     list_end_lt: NotRequired[ListEndLt]
     list_event_id: NotRequired[ListEventID]
     list_expand: NotRequired[ListExpand]
@@ -1315,8 +1331,6 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_updated_gte: NotRequired[NativeWebhookUpdatedGte]
     native_webhook_visitor_id: NotRequired[NativeWebhookVisitorID]
     outbound_fields: NotRequired[Dict[str, str]]
-    raw_objects: NotRequired[List[str]]
-    r"""objects that we map from in the integration"""
     search_domain: NotRequired[SearchDomain]
     search_email: NotRequired[SearchEmail]
     search_linkedinurl: NotRequired[SearchLinkedinurl]
@@ -1397,6 +1411,9 @@ class IntegrationSupportTypedDict(TypedDict):
 
 
 class IntegrationSupport(BaseModel):
+    raw_objects: List[str]
+    r"""objects that we map from in the integration"""
+
     from_webhook: Optional[FromWebhook] = None
 
     inbound_fields: Optional[Dict[str, str]] = None
@@ -1404,6 +1421,8 @@ class IntegrationSupport(BaseModel):
     list_account_id: Optional[ListAccountID] = None
 
     list_ad_id: Optional[ListAdID] = None
+
+    list_agent_id: Optional[ListAgentID] = None
 
     list_application_id: Optional[ListApplicationID] = None
 
@@ -1460,6 +1479,8 @@ class IntegrationSupport(BaseModel):
     list_document_id: Optional[ListDocumentID] = None
 
     list_effective_status: Optional[ListEffectiveStatus] = None
+
+    list_email: Optional[ListEmail] = None
 
     list_end_lt: Optional[ListEndLt] = None
 
@@ -1645,9 +1666,6 @@ class IntegrationSupport(BaseModel):
 
     outbound_fields: Optional[Dict[str, str]] = None
 
-    raw_objects: Optional[List[str]] = None
-    r"""objects that we map from in the integration"""
-
     search_domain: Optional[SearchDomain] = None
 
     search_email: Optional[SearchEmail] = None
@@ -1825,6 +1843,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListAdID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_agent_id")
+    def serialize_list_agent_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListAgentID(value)
             except ValueError:
                 return value
         return value
@@ -2077,6 +2104,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListEffectiveStatus(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_email")
+    def serialize_list_email(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListEmail(value)
             except ValueError:
                 return value
         return value
@@ -3574,6 +3610,7 @@ class IntegrationSupport(BaseModel):
                 "inbound_fields",
                 "list_account_id",
                 "list_ad_id",
+                "list_agent_id",
                 "list_application_id",
                 "list_approver_user_id",
                 "list_assigned_user_id",
@@ -3602,6 +3639,7 @@ class IntegrationSupport(BaseModel):
                 "list_dimension",
                 "list_document_id",
                 "list_effective_status",
+                "list_email",
                 "list_end_lt",
                 "list_event_id",
                 "list_expand",
@@ -3694,7 +3732,6 @@ class IntegrationSupport(BaseModel):
                 "native_webhook_updated_gte",
                 "native_webhook_visitor_id",
                 "outbound_fields",
-                "raw_objects",
                 "search_domain",
                 "search_email",
                 "search_linkedinurl",

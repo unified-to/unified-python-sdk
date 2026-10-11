@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class Reason(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Why the refund was issued"""
+
     DUPLICATE = "DUPLICATE"
     FRAUDULENT = "FRAUDULENT"
     REQUESTED_BY_CUSTOMER = "REQUESTED_BY_CUSTOMER"
@@ -26,6 +28,8 @@ class PaymentRefundStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class PaymentRefundTenderType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type"""
+
     CARD = "CARD"
     CASH = "CASH"
     GIFT_CARD = "GIFT_CARD"
@@ -40,22 +44,29 @@ class PaymentRefundTenderType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PaymentRefundTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     id: NotRequired[str]
     notes: NotRequired[str]
     payment_id: NotRequired[str]
+    r"""(reference to PaymentPayment)"""
     raw: NotRequired[Dict[str, Any]]
     reason: NotRequired[Reason]
+    r"""Why the refund was issued"""
     reference: NotRequired[str]
     refunded_at: NotRequired[datetime]
+    r"""Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[PaymentRefundStatus]
     tender_type: NotRequired[PaymentRefundTenderType]
+    r"""Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type"""
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PaymentRefund(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
@@ -64,22 +75,27 @@ class PaymentRefund(BaseModel):
     notes: Optional[str] = None
 
     payment_id: Optional[str] = None
+    r"""(reference to PaymentPayment)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     reason: Optional[Reason] = None
+    r"""Why the refund was issued"""
 
     reference: Optional[str] = None
 
     refunded_at: Optional[datetime] = None
+    r"""Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[PaymentRefundStatus] = None
 
     tender_type: Optional[PaymentRefundTenderType] = None
+    r"""Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type"""
 
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("reason")
     def serialize_reason(self, value):

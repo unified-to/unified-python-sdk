@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER"""
+
     CHECKING = "CHECKING"
     SAVINGS = "SAVINGS"
     CREDIT_CARD = "CREDIT_CARD"
@@ -20,61 +22,93 @@ class AccountType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AccountingBankfeedaccountStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""feed state: ACTIVE, INACTIVE"""
+
     ACTIVE = "ACTIVE"
     INACTIVE = "INACTIVE"
 
 
 class AccountingBankfeedaccountTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""ref -> AccountingAccount: the target GL account the feed posts into (reference to AccountingAccount)"""
     account_number: NotRequired[str]
+    r"""full account number where available"""
     account_number_last4: NotRequired[str]
+    r"""last-4 when the full number isn't returned"""
     account_type: NotRequired[AccountType]
+    r"""CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER"""
     balance: NotRequired[float]
+    r"""current balance of the source account"""
     bank_name: NotRequired[str]
+    r"""bank / institution name"""
     created_at: NotRequired[datetime]
+    r"""creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""ISO 4217 currency of the account"""
     feed_start_at: NotRequired[datetime]
+    r"""date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     name: NotRequired[str]
+    r"""account nickname / source name"""
     organization_id: NotRequired[str]
+    r"""ref -> accounting Organization this record belongs to"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The original data from the integration's API"""
     routing_number: NotRequired[str]
+    r"""bank routing number"""
     status: NotRequired[AccountingBankfeedaccountStatus]
+    r"""feed state: ACTIVE, INACTIVE"""
     updated_at: NotRequired[datetime]
+    r"""last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingBankfeedaccount(BaseModel):
     account_id: Optional[str] = None
+    r"""ref -> AccountingAccount: the target GL account the feed posts into (reference to AccountingAccount)"""
 
     account_number: Optional[str] = None
+    r"""full account number where available"""
 
     account_number_last4: Optional[str] = None
+    r"""last-4 when the full number isn't returned"""
 
     account_type: Optional[AccountType] = None
+    r"""CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER"""
 
     balance: Optional[float] = None
+    r"""current balance of the source account"""
 
     bank_name: Optional[str] = None
+    r"""bank / institution name"""
 
     created_at: Optional[datetime] = None
+    r"""creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""ISO 4217 currency of the account"""
 
     feed_start_at: Optional[datetime] = None
+    r"""date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     name: Optional[str] = None
+    r"""account nickname / source name"""
 
     organization_id: Optional[str] = None
+    r"""ref -> accounting Organization this record belongs to"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The original data from the integration's API"""
 
     routing_number: Optional[str] = None
+    r"""bank routing number"""
 
     status: Optional[AccountingBankfeedaccountStatus] = None
+    r"""feed state: ACTIVE, INACTIVE"""
 
     updated_at: Optional[datetime] = None
+    r"""last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("account_type")
     def serialize_account_type(self, value):

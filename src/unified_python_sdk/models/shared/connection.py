@@ -20,22 +20,34 @@ class ConnectionTypedDict(TypedDict):
     categories: List[PropertyConnectionCategories]
     r"""The Integration categories that this connection supports"""
     integration_type: str
+    r"""The integration type"""
     permissions: List[PropertyConnectionPermissions]
     auth: NotRequired[PropertyConnectionAuthTypedDict]
     r"""An authentication object that represents a specific authorized user's connection to an integration."""
     created_at: NotRequired[datetime]
+    r"""The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     environment: NotRequired[str]
     external_xref: NotRequired[str]
+    r"""customer's user ID"""
     id: NotRequired[str]
+    r"""Unique identifier for this integration object"""
     integration_name: NotRequired[str]
     is_paused: NotRequired[bool]
+    r"""Whether this integration has exceed the monthly limit of the plan"""
     last_healthy_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     last_unhealthy_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     last_unhealthy_code: NotRequired[str]
+    r"""The HTTP status code that caused the last unhealthy status"""
     secretsmanager_id: NotRequired[str]
+    r"""the ID of the SecretsManager object"""
     secretsmanager_key: NotRequired[str]
+    r"""the key/path/name of the secret within the vault"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     workspace_id: NotRequired[str]
+    r"""(reference to KmsSpace)"""
 
 
 class Connection(BaseModel):
@@ -45,6 +57,7 @@ class Connection(BaseModel):
     r"""The Integration categories that this connection supports"""
 
     integration_type: str
+    r"""The integration type"""
 
     permissions: List[PropertyConnectionPermissions]
 
@@ -52,30 +65,41 @@ class Connection(BaseModel):
     r"""An authentication object that represents a specific authorized user's connection to an integration."""
 
     created_at: Optional[datetime] = None
+    r"""The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     environment: Optional[str] = "Production"
 
     external_xref: Optional[str] = None
+    r"""customer's user ID"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this integration object"""
 
     integration_name: Optional[str] = None
 
     is_paused: Optional[bool] = None
+    r"""Whether this integration has exceed the monthly limit of the plan"""
 
     last_healthy_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     last_unhealthy_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     last_unhealthy_code: Optional[str] = None
+    r"""The HTTP status code that caused the last unhealthy status"""
 
     secretsmanager_id: Optional[str] = None
+    r"""the ID of the SecretsManager object"""
 
     secretsmanager_key: Optional[str] = None
+    r"""the key/path/name of the secret within the vault"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     workspace_id: Optional[str] = None
+    r"""(reference to KmsSpace)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

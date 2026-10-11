@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AdsPromotedType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Promoted entity types for ads_promoted list endpoint"""
+
     PAGE_ID = "PAGE_ID"
     APP_ID = "APP_ID"
     STORE_URL = "STORE_URL"
@@ -33,6 +35,7 @@ class AdsPromotedTypedDict(TypedDict):
 
     id: str
     type: AdsPromotedType
+    r"""Promoted entity types for ads_promoted list endpoint"""
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
 
@@ -43,6 +46,7 @@ class AdsPromoted(BaseModel):
     id: str
 
     type: AdsPromotedType
+    r"""Promoted entity types for ads_promoted list endpoint"""
 
     name: Optional[str] = None
 

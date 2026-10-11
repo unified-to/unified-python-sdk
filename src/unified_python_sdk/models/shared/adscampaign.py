@@ -57,6 +57,8 @@ class BudgetUnit(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class EffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status"""
+
     UNSPECIFIED = "UNSPECIFIED"
     SERVING = "SERVING"
     LIMITED = "LIMITED"
@@ -98,11 +100,16 @@ class AdsCampaignTypedDict(TypedDict):
     budget_period: NotRequired[BudgetPeriod]
     budget_unit: NotRequired[BudgetUnit]
     campaign_budget_identifier: NotRequired[str]
+    r"""Resource name for existing/shared budget (Google)"""
     category: NotRequired[str]
+    r"""Housing, employment, credit, NONE (Meta)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     effective_status: NotRequired[EffectiveStatus]
+    r"""read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     frequency_cap: NotRequired[PropertyAdsCampaignFrequencyCapTypedDict]
     goal: NotRequired[Goal]
     has_eu_political_ads: NotRequired[bool]
@@ -114,10 +121,12 @@ class AdsCampaignTypedDict(TypedDict):
     planned_spend_amount: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[AdsCampaignStatus]
     targeting: NotRequired[PropertyAdsCampaignTargetingTypedDict]
     total_spend_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AdsCampaign(BaseModel):
@@ -130,16 +139,21 @@ class AdsCampaign(BaseModel):
     budget_unit: Optional[BudgetUnit] = None
 
     campaign_budget_identifier: Optional[str] = None
+    r"""Resource name for existing/shared budget (Google)"""
 
     category: Optional[str] = None
+    r"""Housing, employment, credit, NONE (Meta)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     effective_status: Optional[EffectiveStatus] = None
+    r"""read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     frequency_cap: Optional[PropertyAdsCampaignFrequencyCap] = None
 
@@ -162,6 +176,7 @@ class AdsCampaign(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[AdsCampaignStatus] = None
 
@@ -170,6 +185,7 @@ class AdsCampaign(BaseModel):
     total_spend_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("advertising_channel_type")
     def serialize_advertising_channel_type(self, value):

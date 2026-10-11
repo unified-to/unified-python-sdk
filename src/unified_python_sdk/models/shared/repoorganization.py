@@ -11,11 +11,13 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class RepoOrganizationTypedDict(TypedDict):
     avatar_url: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_ids: NotRequired[List[str]]
     r"""id values of the users/employees associated with this organization"""
     web_url: NotRequired[str]
@@ -25,6 +27,7 @@ class RepoOrganization(BaseModel):
     avatar_url: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -35,6 +38,7 @@ class RepoOrganization(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_ids: Optional[List[str]] = None
     r"""id values of the users/employees associated with this organization"""

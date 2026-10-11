@@ -12,6 +12,7 @@ class AssessmentResponseDetailTypedDict(TypedDict):
     is_failed_reason: NotRequired[bool]
     is_private: NotRequired[bool]
     parameter_id: NotRequired[str]
+    r"""In reference to the parameter input"""
     text: NotRequired[str]
     title: NotRequired[str]
 
@@ -24,6 +25,7 @@ class AssessmentResponseDetail(BaseModel):
     is_private: Optional[bool] = None
 
     parameter_id: Optional[str] = None
+    r"""In reference to the parameter input"""
 
     text: Optional[str] = None
 

@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class MarketingCampaignStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Campaign status"""
+
     DRAFT = "DRAFT"
     SCHEDULED = "SCHEDULED"
     SENDING = "SENDING"
@@ -24,51 +26,77 @@ class MarketingCampaignStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class MarketingCampaignTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     from_email: NotRequired[str]
+    r"""Sender email address"""
     from_name: NotRequired[str]
+    r"""Sender name"""
     id: NotRequired[str]
+    r"""Unique identifier for the campaign"""
     list_ids: NotRequired[List[str]]
     r"""Associated listaudience IDs"""
     name: NotRequired[str]
+    r"""Campaign nametitle"""
     preview_text: NotRequired[str]
+    r"""Email preview text"""
     raw: NotRequired[Dict[str, Any]]
+    r"""Raw data from integration"""
     reply_to_email: NotRequired[str]
+    r"""Reply-to email address"""
     send_at: NotRequired[datetime]
+    r"""Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[MarketingCampaignStatus]
+    r"""Campaign status"""
     subject_line: NotRequired[str]
+    r"""Email subject line"""
     type: NotRequired[str]
+    r"""Campaign type (e.g., regular, automation, ab_test)"""
     updated_at: NotRequired[datetime]
+    r"""When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class MarketingCampaign(BaseModel):
     created_at: Optional[datetime] = None
+    r"""When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     from_email: Optional[str] = None
+    r"""Sender email address"""
 
     from_name: Optional[str] = None
+    r"""Sender name"""
 
     id: Optional[str] = None
+    r"""Unique identifier for the campaign"""
 
     list_ids: Optional[List[str]] = None
     r"""Associated listaudience IDs"""
 
     name: Optional[str] = None
+    r"""Campaign nametitle"""
 
     preview_text: Optional[str] = None
+    r"""Email preview text"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Raw data from integration"""
 
     reply_to_email: Optional[str] = None
+    r"""Reply-to email address"""
 
     send_at: Optional[datetime] = None
+    r"""Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[MarketingCampaignStatus] = None
+    r"""Campaign status"""
 
     subject_line: Optional[str] = None
+    r"""Email subject line"""
 
     type: Optional[str] = None
+    r"""Campaign type (e.g., regular, automation, ab_test)"""
 
     updated_at: Optional[datetime] = None
+    r"""When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

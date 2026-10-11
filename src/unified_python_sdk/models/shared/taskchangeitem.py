@@ -10,12 +10,14 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class TaskChangeItemTypedDict(TypedDict):
     field: str
+    r"""unified field in ITaskTask"""
     from_: NotRequired[str]
     to: NotRequired[str]
 
 
 class TaskChangeItem(BaseModel):
     field: str
+    r"""unified field in ITaskTask"""
 
     from_: Annotated[Optional[str], pydantic.Field(alias="from")] = None
 

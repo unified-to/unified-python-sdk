@@ -12,20 +12,26 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class DatastoreRecordTypedDict(TypedDict):
     fields: Dict[str, DatastoreFieldValueTypedDict]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     database_id: NotRequired[str]
+    r"""source Database ID"""
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     row_number: NotRequired[float]
     table_id: NotRequired[str]
+    r"""source Database Table ID"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class DatastoreRecord(BaseModel):
     fields: Dict[str, DatastoreFieldValue]
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     database_id: Optional[str] = None
+    r"""source Database ID"""
 
     id: Optional[str] = None
 
@@ -34,8 +40,10 @@ class DatastoreRecord(BaseModel):
     row_number: Optional[float] = None
 
     table_id: Optional[str] = None
+    r"""source Database Table ID"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

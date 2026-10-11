@@ -39,6 +39,8 @@ CdpMetadataExtraData = TypeAliasType(
 
 
 class CdpMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The data type of the attribute value"""
+
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -70,21 +72,27 @@ CdpMetadataValueTypedDict = TypeAliasType(
     "CdpMetadataValueTypedDict",
     Union[Dict[str, Any], str, float, bool, List[CdpMetadataSchemas5TypedDict]],
 )
+r"""The attribute/trait value"""
 
 
 CdpMetadataValue = TypeAliasType(
     "CdpMetadataValue",
     Union[Dict[str, Any], str, float, bool, List[CdpMetadataSchemas5]],
 )
+r"""The attribute/trait value"""
 
 
 class CdpMetadataTypedDict(TypedDict):
     extra_data: NotRequired[CdpMetadataExtraDataTypedDict]
     format_: NotRequired[CdpMetadataFormat]
+    r"""The data type of the attribute value"""
     id: NotRequired[str]
     namespace: NotRequired[str]
+    r"""The scope or origin of the attribute (eg. computed, event, visitor)"""
     slug: NotRequired[str]
+    r"""The attribute/trait key (eg. lifetime_value)"""
     value: NotRequired[CdpMetadataValueTypedDict]
+    r"""The attribute/trait value"""
 
 
 class CdpMetadata(BaseModel):
@@ -93,14 +101,18 @@ class CdpMetadata(BaseModel):
     format_: Annotated[Optional[CdpMetadataFormat], pydantic.Field(alias="format")] = (
         None
     )
+    r"""The data type of the attribute value"""
 
     id: Optional[str] = None
 
     namespace: Optional[str] = None
+    r"""The scope or origin of the attribute (eg. computed, event, visitor)"""
 
     slug: Optional[str] = None
+    r"""The attribute/trait key (eg. lifetime_value)"""
 
     value: Optional[CdpMetadataValue] = None
+    r"""The attribute/trait value"""
 
     @field_serializer("format_")
     def serialize_format_(self, value):

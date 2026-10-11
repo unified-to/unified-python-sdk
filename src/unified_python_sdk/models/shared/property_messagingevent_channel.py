@@ -11,6 +11,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class PropertyMessagingEventChannelTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     has_subchannels: NotRequired[bool]
     id: NotRequired[str]
@@ -21,11 +22,13 @@ class PropertyMessagingEventChannelTypedDict(TypedDict):
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
 
 
 class PropertyMessagingEventChannel(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -46,6 +49,7 @@ class PropertyMessagingEventChannel(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
 

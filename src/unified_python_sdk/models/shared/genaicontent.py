@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -18,11 +18,16 @@ class Role(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class GenaiContentTypedDict(TypedDict):
     content: str
+    images: NotRequired[List[str]]
+    r"""Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...). Only for models with has_vision."""
     role: NotRequired[Role]
 
 
 class GenaiContent(BaseModel):
     content: str
+
+    images: Optional[List[str]] = None
+    r"""Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...). Only for models with has_vision."""
 
     role: Optional[Role] = None
 
@@ -37,7 +42,7 @@ class GenaiContent(BaseModel):
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
-        optional_fields = set(["role"])
+        optional_fields = set(["images", "role"])
         serialized = handler(self)
         m = {}
 

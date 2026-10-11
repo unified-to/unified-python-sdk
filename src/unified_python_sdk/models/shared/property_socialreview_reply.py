@@ -12,18 +12,24 @@ class PropertySocialReviewReplyTypedDict(TypedDict):
     r"""The business's reply to the review"""
 
     content: NotRequired[str]
+    r"""The reply text from the business"""
     created_at: NotRequired[datetime]
+    r"""When the reply was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""When the reply was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PropertySocialReviewReply(BaseModel):
     r"""The business's reply to the review"""
 
     content: Optional[str] = None
+    r"""The reply text from the business"""
 
     created_at: Optional[datetime] = None
+    r"""When the reply was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""When the reply was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

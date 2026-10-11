@@ -11,8 +11,10 @@
 * [create_hris_deduction](#create_hris_deduction) - Create a deduction
 * [create_hris_device](#create_hris_device) - Create a device
 * [create_hris_document](#create_hris_document) - Create a document
+* [create_hris_earning](#create_hris_earning) - Create an earning
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
+* [create_hris_job](#create_hris_job) - Create a job
 * [create_hris_location](#create_hris_location) - Create a location
 * [create_hris_taxonomy](#create_hris_taxonomy) - Create a taxonomy
 * [create_hris_timeoff](#create_hris_timeoff) - Create a timeoff
@@ -24,9 +26,13 @@
 * [get_hris_deduction](#get_hris_deduction) - Retrieve a deduction
 * [get_hris_device](#get_hris_device) - Retrieve a device
 * [get_hris_document](#get_hris_document) - Retrieve a document
+* [get_hris_earning](#get_hris_earning) - Retrieve an earning
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
+* [get_hris_job](#get_hris_job) - Retrieve a job
 * [get_hris_location](#get_hris_location) - Retrieve a location
+* [get_hris_paycode](#get_hris_paycode) - Retrieve a paycode
+* [get_hris_payroll](#get_hris_payroll) - Retrieve a payroll
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_taxonomy](#get_hris_taxonomy) - Retrieve a taxonomy
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
@@ -38,9 +44,13 @@
 * [list_hris_deductions](#list_hris_deductions) - List all deductions
 * [list_hris_devices](#list_hris_devices) - List all devices
 * [list_hris_documents](#list_hris_documents) - List all documents
+* [list_hris_earnings](#list_hris_earnings) - List all earnings
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
+* [list_hris_jobs](#list_hris_jobs) - List all jobs
 * [list_hris_locations](#list_hris_locations) - List all locations
+* [list_hris_paycodes](#list_hris_paycodes) - List all paycodes
+* [list_hris_payrolls](#list_hris_payrolls) - List all payrolls
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_taxonomies](#list_hris_taxonomies) - List all taxonomies
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
@@ -52,8 +62,10 @@
 * [patch_hris_deduction](#patch_hris_deduction) - Update a deduction
 * [patch_hris_device](#patch_hris_device) - Update a device
 * [patch_hris_document](#patch_hris_document) - Update a document
+* [patch_hris_earning](#patch_hris_earning) - Update an earning
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
+* [patch_hris_job](#patch_hris_job) - Update a job
 * [patch_hris_location](#patch_hris_location) - Update a location
 * [patch_hris_timeoff](#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](#patch_hris_timeshift) - Update a timeshift
@@ -64,8 +76,10 @@
 * [remove_hris_deduction](#remove_hris_deduction) - Remove a deduction
 * [remove_hris_device](#remove_hris_device) - Remove a device
 * [remove_hris_document](#remove_hris_document) - Remove a document
+* [remove_hris_earning](#remove_hris_earning) - Remove an earning
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
 * [remove_hris_group](#remove_hris_group) - Remove a group
+* [remove_hris_job](#remove_hris_job) - Remove a job
 * [remove_hris_location](#remove_hris_location) - Remove a location
 * [remove_hris_timeoff](#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](#remove_hris_timeshift) - Remove a timeshift
@@ -76,8 +90,10 @@
 * [update_hris_deduction](#update_hris_deduction) - Update a deduction
 * [update_hris_device](#update_hris_device) - Update a device
 * [update_hris_document](#update_hris_document) - Update a document
+* [update_hris_earning](#update_hris_earning) - Update an earning
 * [update_hris_employee](#update_hris_employee) - Update an employee
 * [update_hris_group](#update_hris_group) - Update a group
+* [update_hris_job](#update_hris_job) - Update a job
 * [update_hris_location](#update_hris_location) - Update a location
 * [update_hris_timeoff](#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](#update_hris_timeshift) - Update a timeshift
@@ -111,31 +127,31 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-08-13T10:41:42.336Z"),
+            "approved_at": parse_datetime("2021-08-13T11:22:36.465Z"),
             "breaks": [
                 {
                     "duration_minutes": 12.0,
-                    "end_at": parse_datetime("2023-10-23T21:17:35.680Z"),
+                    "end_at": parse_datetime("2023-11-01T14:11:40.384Z"),
                     "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
                     "is_paid": True,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-10-17T01:29:11.478Z"),
+                    "start_at": parse_datetime("2023-10-25T16:36:52.479Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "UGX",
             "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-04-07T14:50:55.145Z"),
+            "end_at": parse_datetime("2024-04-18T03:04:04.268Z"),
             "hourly_rate": 53.0,
             "hours": 10.0,
-            "id": "4dc42a25-5423-40c7-8e9f-7a6ee2825a9d",
+            "id": "ce06123a-9946-4628-84b3-11a573803cb5",
             "job_name": "Global Creative Supervisor",
             "non_cash_tips_amount": 54.0,
-            "start_at": parse_datetime("2021-11-09T13:41:47.651Z"),
+            "start_at": parse_datetime("2021-11-10T13:16:25.399Z"),
             "status": shared.HrisAttendanceStatus.CLOSED,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-17T07:09:09.539Z"),
+            "updated_at": parse_datetime("2022-01-19T00:35:08.159Z"),
         },
         "connection_id": "<id>",
     })
@@ -189,12 +205,17 @@ with UnifiedTo(
             "account_number_last4": "3777",
             "account_type": shared.HrisBankaccountAccountType.CHECKING,
             "bank_name": "Huel Group",
+            "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
-            "id": "c82c9187-bf76-4b65-bf02-79054582a285",
+            "currency": "USD",
+            "id": "67c815ed-2f66-4e7d-a729-cc896bb10458",
             "is_primary": False,
             "name": "Checking Account",
+            "priority": 3.0,
             "routing_number": "448650724",
-            "updated_at": parse_datetime("2025-06-06T18:00:27.146Z"),
+            "split_amount": 23.0,
+            "split_type": shared.SplitType.FIXED,
+            "updated_at": parse_datetime("2025-06-23T03:40:10.104Z"),
         },
         "connection_id": "<id>",
     })
@@ -251,13 +272,13 @@ with UnifiedTo(
             "employer_contribution_amount": 185006.0,
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
-            "frequency": shared.HrisBenefitFrequency.HOUR,
-            "id": "b395db38-c261-454e-9bfe-9466e617f2ee",
+            "frequency": shared.HrisBenefitFrequency.MONTH,
+            "id": "cb5f5b63-51cf-4c0b-b45c-af9a157b02d7",
             "is_active": False,
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
-            "type": shared.HrisBenefitType.GARNISHMENT,
-            "updated_at": parse_datetime("2023-03-07T16:17:00.575Z"),
+            "type": shared.HrisBenefitType.OTHER,
+            "updated_at": parse_datetime("2023-03-16T11:45:46.342Z"),
         },
         "connection_id": "<id>",
     })
@@ -316,10 +337,10 @@ with UnifiedTo(
                 "region_code": "PA",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "06e7e4d7-17be-4700-8e1d-0a3f524df53c",
+            "id": "258d7f93-f76d-4295-97a8-21e15265d0aa",
             "legal_name": "Schultz LLC",
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-09-08T15:55:10.653Z"),
+            "updated_at": parse_datetime("2026-09-28T17:58:44.575Z"),
         },
         "connection_id": "<id>",
     })
@@ -372,14 +393,17 @@ with UnifiedTo(
             "amount": 139655.0,
             "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
             "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
-            "end_at": parse_datetime("2026-05-25T14:43:59.509Z"),
-            "frequency": shared.HrisDeductionFrequency.MONTH,
-            "id": "c829711a-715d-455b-bb4d-00ee88c2deb9",
+            "employer_amount": 22611.0,
+            "employer_type": shared.EmployerType.FIXED,
+            "end_at": parse_datetime("2026-06-13T20:05:36.854Z"),
+            "frequency": shared.HrisDeductionFrequency.BIWEEKLY,
+            "garnishment_type": shared.GarnishmentType.OTHER,
+            "id": "fac4b834-71a1-4778-83f4-0eb27f981968",
             "is_active": False,
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-02-20T07:45:12.827Z"),
+            "start_at": parse_datetime("2025-03-07T17:02:44.736Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-03T17:00:24.883Z"),
+            "updated_at": parse_datetime("2024-03-16T03:24:52.301Z"),
         },
         "connection_id": "<id>",
     })
@@ -437,14 +461,14 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": True,
-            "id": "e592d58c-449d-47c3-b4f2-cc9f41866826",
+            "id": "270f1911-555b-49ef-9302-beab4f089d58",
             "is_missing": False,
             "manufacturer": "Sanford - Hamill",
             "model": "Refined",
             "name": "cross_contamination_if.rar",
             "os": "monitor",
             "os_version": "1.12.16",
-            "updated_at": parse_datetime("2023-05-22T14:06:09.513Z"),
+            "updated_at": parse_datetime("2023-06-02T18:34:32.261Z"),
             "version": "2.20.17",
         },
         "connection_id": "<id>",
@@ -498,9 +522,9 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "c36ce7b1-e96d-4546-8310-2b1cd2427e9f",
+            "id": "12c78552-ce05-4818-bf51-abfde44efa8f",
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-09-19T03:46:30.170Z"),
+            "updated_at": parse_datetime("2025-10-04T03:58:03.573Z"),
         },
         "connection_id": "<id>",
     })
@@ -522,6 +546,64 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHrisDocumentResponse](../../models/operations/createhrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_hris_earning
+
+Create an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHrisEarning" method="post" path="/hris/{connection_id}/earning" example="hris_earning" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.create_hris_earning(request={
+        "hris_earning": {
+            "amount": 4026.0,
+            "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
+            "currency": "PKR",
+            "frequency": shared.HrisEarningFrequency.BIWEEKLY,
+            "id": "0e597460-d93d-4c94-a4f5-8b113a9e47db",
+            "notes": "Truculenter vinum beatae.",
+            "start_at": parse_datetime("2022-07-20T23:26:45.466Z"),
+            "status": shared.HrisEarningStatus.PROCESSED,
+            "updated_at": parse_datetime("2020-02-07T12:25:00.115Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_earning is not None
+
+    # Handle response
+    print(res.hris_earning)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateHrisEarningRequest](../../models/operations/createhrisearningrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.CreateHrisEarningResponse](../../models/operations/createhrisearningresponse.md)**
 
 ### Errors
 
@@ -562,11 +644,11 @@ with UnifiedTo(
             "bio": "sushi devotee, singer",
             "compensation": [
                 {
-                    "amount": 69148.0,
+                    "amount": 60136.0,
                     "currency": "CRC",
                     "frequency": shared.HrisCompensationFrequency.QUARTER,
                     "notes": "Tergeo laborum laboriosam tutis.",
-                    "type": shared.HrisCompensationType.EQUITY,
+                    "type": shared.HrisCompensationType.STOCK_OPTIONS,
                 },
             ],
             "created_at": parse_datetime("2019-09-16T15:08:53.262Z"),
@@ -582,10 +664,11 @@ with UnifiedTo(
             "employment_status": shared.EmploymentStatus.ACTIVE,
             "employment_type": shared.HrisEmployeeEmploymentType.VOLUNTEER,
             "first_name": "Zetta",
+            "flsa_status": shared.FlsaStatus.SALARIED_NONEXEMPT,
             "gender": shared.HrisEmployeeGender.INTERSEX,
-            "has_mfa": True,
-            "hired_at": parse_datetime("2023-05-12T03:12:11.486Z"),
-            "id": "38a79fa8-80b1-4659-b0a6-327121c773f1",
+            "has_mfa": False,
+            "hired_at": parse_datetime("2023-05-22T15:45:02.980Z"),
+            "id": "3c57c9db-2490-435f-890b-c3b4065605fd",
             "image_url": "https://loremflickr.com/3684/2116?lock=4686991638584456",
             "language_locale": "es",
             "last_name": "Prohaska",
@@ -597,13 +680,14 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "f5bf964b-886a-4dd4-bc29-e4151986a960",
+                    "id": "a18f53be-9e33-4567-8afb-ffd8e3af4904",
                     "namespace": "custom",
                     "slug": "custom_property",
-                    "value": "tenetur",
+                    "value": "appono",
                 },
             ],
             "name": "Zetta Prohaska",
+            "pay_frequency": shared.PayFrequency.BIWEEKLY,
             "pronouns": "she/her",
             "relationships": [
                 {
@@ -619,38 +703,35 @@ with UnifiedTo(
                         },
                     ],
                     "name": "Automotive",
-                    "type": shared.HrisEmployeerelationshipType.EMERGENCY,
+                    "type": shared.HrisEmployeerelationshipType.FRIEND,
                 },
                 {
                     "emails": [
                         {
                             "email": "Benedict_Wisozk83@hotmail.com",
                         },
-                        {
-                            "email": "Princess_Rath43@gmail.com",
-                        },
-                        {
-                            "email": "Elmira92@yahoo.com",
-                        },
                     ],
                     "name": "Music",
-                    "type": shared.HrisEmployeerelationshipType.FRIEND,
+                    "type": shared.HrisEmployeerelationshipType.SIBLING,
                 },
                 {
                     "emails": [
                         {
-                            "email": "Jane30@gmail.com",
+                            "email": "Margot11@yahoo.com",
+                        },
+                        {
+                            "email": "Jaden_Miller@gmail.com",
                         },
                     ],
-                    "name": "Jewelry",
-                    "type": shared.HrisEmployeerelationshipType.SIBLING,
+                    "name": "Electronics",
+                    "type": shared.HrisEmployeerelationshipType.OTHER,
                 },
             ],
             "salutation": "Miss",
             "ssn_sin": "yMRtj0Q3xO",
-            "storage_quota_allocated": 3674489.0,
-            "storage_quota_available": 7748057.0,
-            "storage_quota_used": 301727.0,
+            "storage_quota_allocated": 7748057.0,
+            "storage_quota_available": 1590710.0,
+            "storage_quota_used": 730343.0,
             "telephones": [
                 {
                     "telephone": "(409) 801-3705",
@@ -662,7 +743,7 @@ with UnifiedTo(
             "timeoff_days_used": 6.0,
             "timezone": "Africa/Harare",
             "title": "Investor Paradigm Liaison",
-            "updated_at": parse_datetime("2022-02-20T06:18:08.630Z"),
+            "updated_at": parse_datetime("2022-02-27T06:24:28.834Z"),
         },
         "connection_id": "<id>",
     })
@@ -714,11 +795,11 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "5536364b-d302-4a73-96c0-7b59633aa9a4",
+            "id": "bb4d513f-e586-4c20-af9c-baa7aef5ab56",
             "is_active": False,
             "name": "Games",
-            "type": shared.HrisGroupType.BUSINESS_UNIT,
-            "updated_at": parse_datetime("2026-04-26T00:08:53.897Z"),
+            "type": shared.HrisGroupType.BRANCH,
+            "updated_at": parse_datetime("2026-05-13T09:12:19.460Z"),
         },
         "connection_id": "<id>",
     })
@@ -740,6 +821,63 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHrisGroupResponse](../../models/operations/createhrisgroupresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_hris_job
+
+Create a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.create_hris_job(request={
+        "hris_job": {
+            "code": "P-05547",
+            "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
+            "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
+            "employment_type": shared.HrisJobEmploymentType.FREELANCE,
+            "id": "bb0fb822-230a-43a5-8b1b-4fd55b9ec014",
+            "is_active": False,
+            "name": "Internal Integration Specialist",
+            "updated_at": parse_datetime("2023-01-26T10:47:07.073Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_job is not None
+
+    # Handle response
+    print(res.hris_job)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.CreateHrisJobRequest](../../models/operations/createhrisjobrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.CreateHrisJobResponse](../../models/operations/createhrisjobresponse.md)**
 
 ### Errors
 
@@ -780,8 +918,8 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MUR",
             "description": "Acervus caries.",
-            "external_identifier": "a4b2700b-1f32-461e-bdb2-b452e0c5c022",
-            "id": "babcc944-d428-43aa-902f-1d0ca3e00057",
+            "external_identifier": "a95fb085-1de2-4952-a92c-4b2d394ad136",
+            "id": "71d77c71-c403-4af9-b84d-9873ee590086",
             "is_active": True,
             "is_hq": False,
             "language_locale": "fr",
@@ -801,7 +939,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "America/Guyana",
-            "updated_at": parse_datetime("2023-06-10T01:13:57.534Z"),
+            "updated_at": parse_datetime("2023-06-17T10:41:43.024Z"),
         },
         "connection_id": "<id>",
     })
@@ -863,7 +1001,7 @@ with UnifiedTo(
             ],
             "subcategory": "Bamboo",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-05-22T19:24:30.042Z"),
+            "updated_at": parse_datetime("2023-05-27T03:47:37.296Z"),
             "url": "https://our-polarisation.name",
         },
         "connection_id": "<id>",
@@ -914,20 +1052,20 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-21T02:08:20.330Z"),
+            "approved_at": parse_datetime("2022-02-22T14:56:33.852Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-09T08:52:11.281Z"),
-            "id": "3766cf5c-9dcb-4419-9212-a74a979cf1ee",
+            "end_at": parse_datetime("2024-12-22T07:37:18.843Z"),
+            "id": "c0b7b9cf-126e-4e53-a9dc-78008dee9690",
             "is_paid": True,
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-08-24T08:25:05.389Z"),
+            "start_at": parse_datetime("2023-09-01T00:24:42.402Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-08T05:45:54.437Z"),
+            "updated_at": parse_datetime("2022-07-11T07:19:20.309Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -978,24 +1116,24 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-07T03:05:14.680Z"),
+            "approved_at": parse_datetime("2023-06-18T03:10:12.113Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "JPY",
-                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "frequency": shared.HrisCompensationFrequency.WEEK,
                     "notes": "Annus adficio suasoria architecto aggero.",
-                    "type": shared.HrisCompensationType.OTHER,
+                    "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-08-28T03:01:07.094Z"),
+            "end_at": parse_datetime("2026-09-17T03:42:59.907Z"),
             "hours": 8.0,
-            "id": "9f128688-46cc-481b-a41e-503d0c962370",
+            "id": "dfcf1802-ce5f-4727-89b0-f6b60d8029a2",
             "is_approved": True,
-            "start_at": parse_datetime("2023-06-26T08:32:27.006Z"),
-            "updated_at": parse_datetime("2021-06-23T15:17:01.677Z"),
+            "start_at": parse_datetime("2023-07-07T12:09:32.558Z"),
+            "updated_at": parse_datetime("2021-06-29T04:09:58.867Z"),
         },
         "connection_id": "<id>",
     })
@@ -1353,6 +1491,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_hris_earning
+
+Retrieve an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisEarning" method="get" path="/hris/{connection_id}/earning/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.get_hris_earning(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_earning is not None
+
+    # Handle response
+    print(res.hris_earning)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetHrisEarningRequest](../../models/operations/gethrisearningrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetHrisEarningResponse](../../models/operations/gethrisearningresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_hris_employee
 
 Retrieve an employee
@@ -1447,6 +1632,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_hris_job
+
+Retrieve a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisJob" method="get" path="/hris/{connection_id}/job/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.get_hris_job(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_job is not None
+
+    # Handle response
+    print(res.hris_job)
+
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [operations.GetHrisJobRequest](../../models/operations/gethrisjobrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `retries`                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)             | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
+
+### Response
+
+**[operations.GetHrisJobResponse](../../models/operations/gethrisjobresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_hris_location
 
 Retrieve a location
@@ -1487,6 +1719,100 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHrisLocationResponse](../../models/operations/gethrislocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_hris_paycode
+
+Retrieve a paycode
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisPaycode" method="get" path="/hris/{connection_id}/paycode/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.get_hris_paycode(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_paycode is not None
+
+    # Handle response
+    print(res.hris_paycode)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetHrisPaycodeRequest](../../models/operations/gethrispaycoderequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetHrisPaycodeResponse](../../models/operations/gethrispaycoderesponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_hris_payroll
+
+Retrieve a payroll
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisPayroll" method="get" path="/hris/{connection_id}/payroll/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.get_hris_payroll(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_payroll is not None
+
+    # Handle response
+    print(res.hris_payroll)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetHrisPayrollRequest](../../models/operations/gethrispayrollrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetHrisPayrollResponse](../../models/operations/gethrispayrollresponse.md)**
 
 ### Errors
 
@@ -2004,6 +2330,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_hris_earnings
+
+List all earnings
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisEarnings" method="get" path="/hris/{connection_id}/earning" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.list_hris_earnings(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_earnings is not None
+
+    # Handle response
+    print(res.hris_earnings)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListHrisEarningsRequest](../../models/operations/listhrisearningsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.ListHrisEarningsResponse](../../models/operations/listhrisearningsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_hris_employees
 
 List all employees
@@ -2096,6 +2468,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_hris_jobs
+
+List all jobs
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisJobs" method="get" path="/hris/{connection_id}/job" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.list_hris_jobs(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_jobs is not None
+
+    # Handle response
+    print(res.hris_jobs)
+
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.ListHrisJobsRequest](../../models/operations/listhrisjobsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+
+### Response
+
+**[operations.ListHrisJobsResponse](../../models/operations/listhrisjobsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_hris_locations
 
 List all locations
@@ -2135,6 +2553,98 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListHrisLocationsResponse](../../models/operations/listhrislocationsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_hris_paycodes
+
+List all paycodes
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisPaycodes" method="get" path="/hris/{connection_id}/paycode" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.list_hris_paycodes(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_paycodes is not None
+
+    # Handle response
+    print(res.hris_paycodes)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListHrisPaycodesRequest](../../models/operations/listhrispaycodesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.ListHrisPaycodesResponse](../../models/operations/listhrispaycodesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_hris_payrolls
+
+List all payrolls
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisPayrolls" method="get" path="/hris/{connection_id}/payroll" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.list_hris_payrolls(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_payrolls is not None
+
+    # Handle response
+    print(res.hris_payrolls)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListHrisPayrollsRequest](../../models/operations/listhrispayrollsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.ListHrisPayrollsResponse](../../models/operations/listhrispayrollsresponse.md)**
 
 ### Errors
 
@@ -2355,31 +2865,31 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-08-13T10:41:42.336Z"),
+            "approved_at": parse_datetime("2021-08-13T11:22:36.465Z"),
             "breaks": [
                 {
                     "duration_minutes": 12.0,
-                    "end_at": parse_datetime("2023-10-23T21:17:35.691Z"),
+                    "end_at": parse_datetime("2023-11-01T14:11:40.391Z"),
                     "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
                     "is_paid": True,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-10-17T01:29:11.489Z"),
+                    "start_at": parse_datetime("2023-10-25T16:36:52.486Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "UGX",
             "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-04-07T14:50:55.159Z"),
+            "end_at": parse_datetime("2024-04-18T03:04:04.277Z"),
             "hourly_rate": 53.0,
             "hours": 10.0,
-            "id": "6a4550f7-d438-4b96-af25-c8104c25caf9",
+            "id": "ca6855f6-b061-4c6c-a056-abf324fefe3d",
             "job_name": "Global Creative Supervisor",
             "non_cash_tips_amount": 54.0,
-            "start_at": parse_datetime("2021-11-09T13:41:47.653Z"),
+            "start_at": parse_datetime("2021-11-10T13:16:25.400Z"),
             "status": shared.HrisAttendanceStatus.CLOSED,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-17T07:09:09.542Z"),
+            "updated_at": parse_datetime("2022-01-19T00:35:08.160Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2434,12 +2944,17 @@ with UnifiedTo(
             "account_number_last4": "3777",
             "account_type": shared.HrisBankaccountAccountType.CHECKING,
             "bank_name": "Huel Group",
+            "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
-            "id": "6005b494-a4b0-4602-8c37-94e7048e00e8",
+            "currency": "USD",
+            "id": "bcd4408c-762d-4625-8f76-1344e852bade",
             "is_primary": False,
             "name": "Checking Account",
+            "priority": 3.0,
             "routing_number": "448650724",
-            "updated_at": parse_datetime("2025-06-06T18:00:27.158Z"),
+            "split_amount": 23.0,
+            "split_type": shared.SplitType.FIXED,
+            "updated_at": parse_datetime("2025-06-23T03:40:10.111Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2497,13 +3012,13 @@ with UnifiedTo(
             "employer_contribution_amount": 185006.0,
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
-            "frequency": shared.HrisBenefitFrequency.HOUR,
-            "id": "03fe3c3a-0a32-4f47-af0e-f9e4092754de",
+            "frequency": shared.HrisBenefitFrequency.MONTH,
+            "id": "137a01e2-1551-4c4d-bb8f-022698b5d187",
             "is_active": False,
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
-            "type": shared.HrisBenefitType.GARNISHMENT,
-            "updated_at": parse_datetime("2023-03-07T16:17:00.582Z"),
+            "type": shared.HrisBenefitType.OTHER,
+            "updated_at": parse_datetime("2023-03-16T11:45:46.348Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2563,10 +3078,10 @@ with UnifiedTo(
                 "region_code": "PA",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "85a95ea9-94dd-4928-a69f-aaef5373741a",
+            "id": "b2a1b766-0ef1-4bb8-a60d-b7b34587b7f6",
             "legal_name": "Schultz LLC",
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-09-08T15:55:10.670Z"),
+            "updated_at": parse_datetime("2026-09-28T17:58:44.583Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2620,14 +3135,17 @@ with UnifiedTo(
             "amount": 139655.0,
             "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
             "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
-            "end_at": parse_datetime("2026-05-25T14:43:59.520Z"),
-            "frequency": shared.HrisDeductionFrequency.MONTH,
-            "id": "a126ff04-6413-411e-932d-9a25af613ff0",
+            "employer_amount": 22611.0,
+            "employer_type": shared.EmployerType.FIXED,
+            "end_at": parse_datetime("2026-06-13T20:05:36.869Z"),
+            "frequency": shared.HrisDeductionFrequency.BIWEEKLY,
+            "garnishment_type": shared.GarnishmentType.OTHER,
+            "id": "6598ef77-e61d-41d8-aba3-8868627cf0e6",
             "is_active": False,
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-02-20T07:45:12.836Z"),
+            "start_at": parse_datetime("2025-03-07T17:02:44.747Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-03T17:00:24.891Z"),
+            "updated_at": parse_datetime("2024-03-16T03:24:52.310Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2686,14 +3204,14 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": True,
-            "id": "52148932-32c0-49fe-bd1f-9a5c66b73d70",
+            "id": "2733098a-ab40-459a-854b-b1bb6d2fb2f6",
             "is_missing": False,
             "manufacturer": "Sanford - Hamill",
             "model": "Refined",
             "name": "cross_contamination_if.rar",
             "os": "monitor",
             "os_version": "1.12.16",
-            "updated_at": parse_datetime("2023-05-22T14:06:09.520Z"),
+            "updated_at": parse_datetime("2023-06-02T18:34:32.265Z"),
             "version": "2.20.17",
         },
         "connection_id": "<id>",
@@ -2748,9 +3266,9 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "23391a53-5d85-4874-b27c-6cc01144df3c",
+            "id": "2183db2b-38b6-41f4-b6a2-4f5318b5fb14",
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-09-19T03:46:30.178Z"),
+            "updated_at": parse_datetime("2025-10-04T03:58:03.579Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2773,6 +3291,65 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchHrisDocumentResponse](../../models/operations/patchhrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_hris_earning
+
+Update an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchHrisEarning" method="patch" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.patch_hris_earning(request={
+        "hris_earning": {
+            "amount": 4026.0,
+            "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
+            "currency": "PKR",
+            "frequency": shared.HrisEarningFrequency.BIWEEKLY,
+            "id": "e984a056-9298-45ea-9ffa-6479de095a1c",
+            "notes": "Truculenter vinum beatae.",
+            "start_at": parse_datetime("2022-07-20T23:26:45.470Z"),
+            "status": shared.HrisEarningStatus.PROCESSED,
+            "updated_at": parse_datetime("2020-02-07T12:25:00.116Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_earning is not None
+
+    # Handle response
+    print(res.hris_earning)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchHrisEarningRequest](../../models/operations/patchhrisearningrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.PatchHrisEarningResponse](../../models/operations/patchhrisearningresponse.md)**
 
 ### Errors
 
@@ -2813,11 +3390,11 @@ with UnifiedTo(
             "bio": "sushi devotee, singer",
             "compensation": [
                 {
-                    "amount": 69148.0,
+                    "amount": 60136.0,
                     "currency": "CRC",
                     "frequency": shared.HrisCompensationFrequency.QUARTER,
                     "notes": "Tergeo laborum laboriosam tutis.",
-                    "type": shared.HrisCompensationType.EQUITY,
+                    "type": shared.HrisCompensationType.STOCK_OPTIONS,
                 },
             ],
             "created_at": parse_datetime("2019-09-16T15:08:53.262Z"),
@@ -2833,10 +3410,11 @@ with UnifiedTo(
             "employment_status": shared.EmploymentStatus.ACTIVE,
             "employment_type": shared.HrisEmployeeEmploymentType.VOLUNTEER,
             "first_name": "Zetta",
+            "flsa_status": shared.FlsaStatus.SALARIED_NONEXEMPT,
             "gender": shared.HrisEmployeeGender.INTERSEX,
-            "has_mfa": True,
-            "hired_at": parse_datetime("2023-05-12T03:12:11.541Z"),
-            "id": "58337faa-4e32-4102-b7c8-c1d452691dbf",
+            "has_mfa": False,
+            "hired_at": parse_datetime("2023-05-22T15:45:03.018Z"),
+            "id": "81c8b367-c709-49bf-83aa-4fe7d6faf9cc",
             "image_url": "https://loremflickr.com/3684/2116?lock=4686991638584456",
             "language_locale": "es",
             "last_name": "Prohaska",
@@ -2848,13 +3426,14 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "dc9e304c-74a8-4e11-aa99-780c6ad1af40",
+                    "id": "24010608-6f76-45ac-925c-ab53fb3c734c",
                     "namespace": "custom",
                     "slug": "custom_property",
-                    "value": "tenetur",
+                    "value": "appono",
                 },
             ],
             "name": "Zetta Prohaska",
+            "pay_frequency": shared.PayFrequency.BIWEEKLY,
             "pronouns": "she/her",
             "relationships": [
                 {
@@ -2870,38 +3449,35 @@ with UnifiedTo(
                         },
                     ],
                     "name": "Automotive",
-                    "type": shared.HrisEmployeerelationshipType.EMERGENCY,
+                    "type": shared.HrisEmployeerelationshipType.FRIEND,
                 },
                 {
                     "emails": [
                         {
                             "email": "Benedict_Wisozk83@hotmail.com",
                         },
-                        {
-                            "email": "Princess_Rath43@gmail.com",
-                        },
-                        {
-                            "email": "Elmira92@yahoo.com",
-                        },
                     ],
                     "name": "Music",
-                    "type": shared.HrisEmployeerelationshipType.FRIEND,
+                    "type": shared.HrisEmployeerelationshipType.SIBLING,
                 },
                 {
                     "emails": [
                         {
-                            "email": "Jane30@gmail.com",
+                            "email": "Margot11@yahoo.com",
+                        },
+                        {
+                            "email": "Jaden_Miller@gmail.com",
                         },
                     ],
-                    "name": "Jewelry",
-                    "type": shared.HrisEmployeerelationshipType.SIBLING,
+                    "name": "Electronics",
+                    "type": shared.HrisEmployeerelationshipType.OTHER,
                 },
             ],
             "salutation": "Miss",
             "ssn_sin": "yMRtj0Q3xO",
-            "storage_quota_allocated": 3674489.0,
-            "storage_quota_available": 7748057.0,
-            "storage_quota_used": 301727.0,
+            "storage_quota_allocated": 7748057.0,
+            "storage_quota_available": 1590710.0,
+            "storage_quota_used": 730343.0,
             "telephones": [
                 {
                     "telephone": "(409) 801-3705",
@@ -2913,7 +3489,7 @@ with UnifiedTo(
             "timeoff_days_used": 6.0,
             "timezone": "Africa/Harare",
             "title": "Investor Paradigm Liaison",
-            "updated_at": parse_datetime("2022-02-20T06:18:08.666Z"),
+            "updated_at": parse_datetime("2022-02-27T06:24:28.860Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2966,11 +3542,11 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "3d2f3a6f-a93f-4944-9979-441dfe433fe9",
+            "id": "3e529d95-c8c0-4aaf-977f-4dfe1aa0158c",
             "is_active": False,
             "name": "Games",
-            "type": shared.HrisGroupType.BUSINESS_UNIT,
-            "updated_at": parse_datetime("2026-04-26T00:08:53.907Z"),
+            "type": shared.HrisGroupType.BRANCH,
+            "updated_at": parse_datetime("2026-05-13T09:12:19.468Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2993,6 +3569,64 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchHrisGroupResponse](../../models/operations/patchhrisgroupresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_hris_job
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.patch_hris_job(request={
+        "hris_job": {
+            "code": "P-05547",
+            "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
+            "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
+            "employment_type": shared.HrisJobEmploymentType.FREELANCE,
+            "id": "69c74d53-aa9f-46fc-b7ae-68d6296eff97",
+            "is_active": False,
+            "name": "Internal Integration Specialist",
+            "updated_at": parse_datetime("2023-01-26T10:47:07.112Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_job is not None
+
+    # Handle response
+    print(res.hris_job)
+
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.PatchHrisJobRequest](../../models/operations/patchhrisjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+
+### Response
+
+**[operations.PatchHrisJobResponse](../../models/operations/patchhrisjobresponse.md)**
 
 ### Errors
 
@@ -3033,8 +3667,8 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MUR",
             "description": "Acervus caries.",
-            "external_identifier": "996e7b27-7913-4e41-b567-67ebb6db77ef",
-            "id": "8aada89e-1868-4e4d-9fcc-6e895a06d15d",
+            "external_identifier": "019aebc6-abcb-41bd-842e-f9315e842363",
+            "id": "bf9eb454-3fd7-45f7-8a51-2b1635dfe888",
             "is_active": True,
             "is_hq": False,
             "language_locale": "fr",
@@ -3054,7 +3688,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "America/Guyana",
-            "updated_at": parse_datetime("2023-06-10T01:13:57.540Z"),
+            "updated_at": parse_datetime("2023-06-17T10:41:43.030Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3105,20 +3739,20 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-21T02:08:20.331Z"),
+            "approved_at": parse_datetime("2022-02-22T14:56:33.852Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-09T08:52:11.290Z"),
-            "id": "1b90647f-5bb3-4551-b5f1-77cbcbbc655e",
+            "end_at": parse_datetime("2024-12-22T07:37:18.849Z"),
+            "id": "03bc149e-7269-4d92-91c1-5735550edffe",
             "is_paid": True,
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-08-24T08:25:05.395Z"),
+            "start_at": parse_datetime("2023-09-01T00:24:42.405Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-08T05:45:54.439Z"),
+            "updated_at": parse_datetime("2022-07-11T07:19:20.311Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -3170,24 +3804,24 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-07T03:05:14.688Z"),
+            "approved_at": parse_datetime("2023-06-18T03:10:12.122Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "JPY",
-                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "frequency": shared.HrisCompensationFrequency.WEEK,
                     "notes": "Annus adficio suasoria architecto aggero.",
-                    "type": shared.HrisCompensationType.OTHER,
+                    "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-08-28T03:01:07.109Z"),
+            "end_at": parse_datetime("2026-09-17T03:42:59.924Z"),
             "hours": 8.0,
-            "id": "2492c6df-e2c6-450f-af6d-7db5a8f448c0",
+            "id": "66a39c02-f126-4c60-921c-1874dc4ce92d",
             "is_approved": True,
-            "start_at": parse_datetime("2023-06-26T08:32:27.015Z"),
-            "updated_at": parse_datetime("2021-06-23T15:17:01.681Z"),
+            "start_at": parse_datetime("2023-07-07T12:09:32.567Z"),
+            "updated_at": parse_datetime("2021-06-29T04:09:58.872Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3546,6 +4180,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_hris_earning
+
+Remove an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisEarning" method="delete" path="/hris/{connection_id}/earning/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.remove_hris_earning(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveHrisEarningRequest](../../models/operations/removehrisearningrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.RemoveHrisEarningResponse](../../models/operations/removehrisearningresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_hris_employee
 
 Remove an employee
@@ -3633,6 +4314,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveHrisGroupResponse](../../models/operations/removehrisgroupresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_hris_job
+
+Remove a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisJob" method="delete" path="/hris/{connection_id}/job/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.remove_hris_job(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.RemoveHrisJobRequest](../../models/operations/removehrisjobrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.RemoveHrisJobResponse](../../models/operations/removehrisjobresponse.md)**
 
 ### Errors
 
@@ -3810,31 +4538,31 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-08-13T10:41:42.336Z"),
+            "approved_at": parse_datetime("2021-08-13T11:22:36.465Z"),
             "breaks": [
                 {
                     "duration_minutes": 12.0,
-                    "end_at": parse_datetime("2023-10-23T21:17:35.691Z"),
+                    "end_at": parse_datetime("2023-11-01T14:11:40.391Z"),
                     "id": "d60a1001-5a8a-4991-8c21-f4da6036cc87",
                     "is_paid": True,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-10-17T01:29:11.489Z"),
+                    "start_at": parse_datetime("2023-10-25T16:36:52.486Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "UGX",
             "declared_tips_amount": 161.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-04-07T14:50:55.159Z"),
+            "end_at": parse_datetime("2024-04-18T03:04:04.277Z"),
             "hourly_rate": 53.0,
             "hours": 10.0,
-            "id": "6a4550f7-d438-4b96-af25-c8104c25caf9",
+            "id": "ca6855f6-b061-4c6c-a056-abf324fefe3d",
             "job_name": "Global Creative Supervisor",
             "non_cash_tips_amount": 54.0,
-            "start_at": parse_datetime("2021-11-09T13:41:47.653Z"),
+            "start_at": parse_datetime("2021-11-10T13:16:25.400Z"),
             "status": shared.HrisAttendanceStatus.CLOSED,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-17T07:09:09.542Z"),
+            "updated_at": parse_datetime("2022-01-19T00:35:08.160Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3889,12 +4617,17 @@ with UnifiedTo(
             "account_number_last4": "3777",
             "account_type": shared.HrisBankaccountAccountType.CHECKING,
             "bank_name": "Huel Group",
+            "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
-            "id": "6005b494-a4b0-4602-8c37-94e7048e00e8",
+            "currency": "USD",
+            "id": "bcd4408c-762d-4625-8f76-1344e852bade",
             "is_primary": False,
             "name": "Checking Account",
+            "priority": 3.0,
             "routing_number": "448650724",
-            "updated_at": parse_datetime("2025-06-06T18:00:27.158Z"),
+            "split_amount": 23.0,
+            "split_type": shared.SplitType.FIXED,
+            "updated_at": parse_datetime("2025-06-23T03:40:10.111Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3952,13 +4685,13 @@ with UnifiedTo(
             "employer_contribution_amount": 185006.0,
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
-            "frequency": shared.HrisBenefitFrequency.HOUR,
-            "id": "03fe3c3a-0a32-4f47-af0e-f9e4092754de",
+            "frequency": shared.HrisBenefitFrequency.MONTH,
+            "id": "137a01e2-1551-4c4d-bb8f-022698b5d187",
             "is_active": False,
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
-            "type": shared.HrisBenefitType.GARNISHMENT,
-            "updated_at": parse_datetime("2023-03-07T16:17:00.582Z"),
+            "type": shared.HrisBenefitType.OTHER,
+            "updated_at": parse_datetime("2023-03-16T11:45:46.348Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4018,10 +4751,10 @@ with UnifiedTo(
                 "region_code": "PA",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "85a95ea9-94dd-4928-a69f-aaef5373741a",
+            "id": "b2a1b766-0ef1-4bb8-a60d-b7b34587b7f6",
             "legal_name": "Schultz LLC",
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-09-08T15:55:10.670Z"),
+            "updated_at": parse_datetime("2026-09-28T17:58:44.583Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4075,14 +4808,17 @@ with UnifiedTo(
             "amount": 139655.0,
             "coverage_level": shared.HrisDeductionCoverageLevel.EMPLOYEE_ONLY,
             "created_at": parse_datetime("2020-02-05T01:46:31.384Z"),
-            "end_at": parse_datetime("2026-05-25T14:43:59.520Z"),
-            "frequency": shared.HrisDeductionFrequency.MONTH,
-            "id": "a126ff04-6413-411e-932d-9a25af613ff0",
+            "employer_amount": 22611.0,
+            "employer_type": shared.EmployerType.FIXED,
+            "end_at": parse_datetime("2026-06-13T20:05:36.869Z"),
+            "frequency": shared.HrisDeductionFrequency.BIWEEKLY,
+            "garnishment_type": shared.GarnishmentType.OTHER,
+            "id": "6598ef77-e61d-41d8-aba3-8868627cf0e6",
             "is_active": False,
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-02-20T07:45:12.836Z"),
+            "start_at": parse_datetime("2025-03-07T17:02:44.747Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-03T17:00:24.891Z"),
+            "updated_at": parse_datetime("2024-03-16T03:24:52.310Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4141,14 +4877,14 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": True,
-            "id": "52148932-32c0-49fe-bd1f-9a5c66b73d70",
+            "id": "2733098a-ab40-459a-854b-b1bb6d2fb2f6",
             "is_missing": False,
             "manufacturer": "Sanford - Hamill",
             "model": "Refined",
             "name": "cross_contamination_if.rar",
             "os": "monitor",
             "os_version": "1.12.16",
-            "updated_at": parse_datetime("2023-05-22T14:06:09.520Z"),
+            "updated_at": parse_datetime("2023-06-02T18:34:32.265Z"),
             "version": "2.20.17",
         },
         "connection_id": "<id>",
@@ -4203,9 +4939,9 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "23391a53-5d85-4874-b27c-6cc01144df3c",
+            "id": "2183db2b-38b6-41f4-b6a2-4f5318b5fb14",
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-09-19T03:46:30.178Z"),
+            "updated_at": parse_datetime("2025-10-04T03:58:03.579Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4228,6 +4964,65 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateHrisDocumentResponse](../../models/operations/updatehrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_hris_earning
+
+Update an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateHrisEarning" method="put" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.update_hris_earning(request={
+        "hris_earning": {
+            "amount": 4026.0,
+            "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
+            "currency": "PKR",
+            "frequency": shared.HrisEarningFrequency.BIWEEKLY,
+            "id": "e984a056-9298-45ea-9ffa-6479de095a1c",
+            "notes": "Truculenter vinum beatae.",
+            "start_at": parse_datetime("2022-07-20T23:26:45.470Z"),
+            "status": shared.HrisEarningStatus.PROCESSED,
+            "updated_at": parse_datetime("2020-02-07T12:25:00.116Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_earning is not None
+
+    # Handle response
+    print(res.hris_earning)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateHrisEarningRequest](../../models/operations/updatehrisearningrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.UpdateHrisEarningResponse](../../models/operations/updatehrisearningresponse.md)**
 
 ### Errors
 
@@ -4268,11 +5063,11 @@ with UnifiedTo(
             "bio": "sushi devotee, singer",
             "compensation": [
                 {
-                    "amount": 69148.0,
+                    "amount": 60136.0,
                     "currency": "CRC",
                     "frequency": shared.HrisCompensationFrequency.QUARTER,
                     "notes": "Tergeo laborum laboriosam tutis.",
-                    "type": shared.HrisCompensationType.EQUITY,
+                    "type": shared.HrisCompensationType.STOCK_OPTIONS,
                 },
             ],
             "created_at": parse_datetime("2019-09-16T15:08:53.262Z"),
@@ -4288,10 +5083,11 @@ with UnifiedTo(
             "employment_status": shared.EmploymentStatus.ACTIVE,
             "employment_type": shared.HrisEmployeeEmploymentType.VOLUNTEER,
             "first_name": "Zetta",
+            "flsa_status": shared.FlsaStatus.SALARIED_NONEXEMPT,
             "gender": shared.HrisEmployeeGender.INTERSEX,
-            "has_mfa": True,
-            "hired_at": parse_datetime("2023-05-12T03:12:11.541Z"),
-            "id": "58337faa-4e32-4102-b7c8-c1d452691dbf",
+            "has_mfa": False,
+            "hired_at": parse_datetime("2023-05-22T15:45:03.018Z"),
+            "id": "81c8b367-c709-49bf-83aa-4fe7d6faf9cc",
             "image_url": "https://loremflickr.com/3684/2116?lock=4686991638584456",
             "language_locale": "es",
             "last_name": "Prohaska",
@@ -4303,13 +5099,14 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "dc9e304c-74a8-4e11-aa99-780c6ad1af40",
+                    "id": "24010608-6f76-45ac-925c-ab53fb3c734c",
                     "namespace": "custom",
                     "slug": "custom_property",
-                    "value": "tenetur",
+                    "value": "appono",
                 },
             ],
             "name": "Zetta Prohaska",
+            "pay_frequency": shared.PayFrequency.BIWEEKLY,
             "pronouns": "she/her",
             "relationships": [
                 {
@@ -4325,38 +5122,35 @@ with UnifiedTo(
                         },
                     ],
                     "name": "Automotive",
-                    "type": shared.HrisEmployeerelationshipType.EMERGENCY,
+                    "type": shared.HrisEmployeerelationshipType.FRIEND,
                 },
                 {
                     "emails": [
                         {
                             "email": "Benedict_Wisozk83@hotmail.com",
                         },
-                        {
-                            "email": "Princess_Rath43@gmail.com",
-                        },
-                        {
-                            "email": "Elmira92@yahoo.com",
-                        },
                     ],
                     "name": "Music",
-                    "type": shared.HrisEmployeerelationshipType.FRIEND,
+                    "type": shared.HrisEmployeerelationshipType.SIBLING,
                 },
                 {
                     "emails": [
                         {
-                            "email": "Jane30@gmail.com",
+                            "email": "Margot11@yahoo.com",
+                        },
+                        {
+                            "email": "Jaden_Miller@gmail.com",
                         },
                     ],
-                    "name": "Jewelry",
-                    "type": shared.HrisEmployeerelationshipType.SIBLING,
+                    "name": "Electronics",
+                    "type": shared.HrisEmployeerelationshipType.OTHER,
                 },
             ],
             "salutation": "Miss",
             "ssn_sin": "yMRtj0Q3xO",
-            "storage_quota_allocated": 3674489.0,
-            "storage_quota_available": 7748057.0,
-            "storage_quota_used": 301727.0,
+            "storage_quota_allocated": 7748057.0,
+            "storage_quota_available": 1590710.0,
+            "storage_quota_used": 730343.0,
             "telephones": [
                 {
                     "telephone": "(409) 801-3705",
@@ -4368,7 +5162,7 @@ with UnifiedTo(
             "timeoff_days_used": 6.0,
             "timezone": "Africa/Harare",
             "title": "Investor Paradigm Liaison",
-            "updated_at": parse_datetime("2022-02-20T06:18:08.666Z"),
+            "updated_at": parse_datetime("2022-02-27T06:24:28.860Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4421,11 +5215,11 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "3d2f3a6f-a93f-4944-9979-441dfe433fe9",
+            "id": "3e529d95-c8c0-4aaf-977f-4dfe1aa0158c",
             "is_active": False,
             "name": "Games",
-            "type": shared.HrisGroupType.BUSINESS_UNIT,
-            "updated_at": parse_datetime("2026-04-26T00:08:53.907Z"),
+            "type": shared.HrisGroupType.BRANCH,
+            "updated_at": parse_datetime("2026-05-13T09:12:19.468Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4448,6 +5242,64 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateHrisGroupResponse](../../models/operations/updatehrisgroupresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_hris_job
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.update_hris_job(request={
+        "hris_job": {
+            "code": "P-05547",
+            "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
+            "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
+            "employment_type": shared.HrisJobEmploymentType.FREELANCE,
+            "id": "69c74d53-aa9f-46fc-b7ae-68d6296eff97",
+            "is_active": False,
+            "name": "Internal Integration Specialist",
+            "updated_at": parse_datetime("2023-01-26T10:47:07.112Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_job is not None
+
+    # Handle response
+    print(res.hris_job)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.UpdateHrisJobRequest](../../models/operations/updatehrisjobrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.UpdateHrisJobResponse](../../models/operations/updatehrisjobresponse.md)**
 
 ### Errors
 
@@ -4488,8 +5340,8 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MUR",
             "description": "Acervus caries.",
-            "external_identifier": "996e7b27-7913-4e41-b567-67ebb6db77ef",
-            "id": "8aada89e-1868-4e4d-9fcc-6e895a06d15d",
+            "external_identifier": "019aebc6-abcb-41bd-842e-f9315e842363",
+            "id": "bf9eb454-3fd7-45f7-8a51-2b1635dfe888",
             "is_active": True,
             "is_hq": False,
             "language_locale": "fr",
@@ -4509,7 +5361,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "America/Guyana",
-            "updated_at": parse_datetime("2023-06-10T01:13:57.540Z"),
+            "updated_at": parse_datetime("2023-06-17T10:41:43.030Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4560,20 +5412,20 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-21T02:08:20.331Z"),
+            "approved_at": parse_datetime("2022-02-22T14:56:33.852Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-09T08:52:11.290Z"),
-            "id": "1b90647f-5bb3-4551-b5f1-77cbcbbc655e",
+            "end_at": parse_datetime("2024-12-22T07:37:18.849Z"),
+            "id": "03bc149e-7269-4d92-91c1-5735550edffe",
             "is_paid": True,
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-08-24T08:25:05.395Z"),
+            "start_at": parse_datetime("2023-09-01T00:24:42.405Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-08T05:45:54.439Z"),
+            "updated_at": parse_datetime("2022-07-11T07:19:20.311Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -4625,24 +5477,24 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-07T03:05:14.688Z"),
+            "approved_at": parse_datetime("2023-06-18T03:10:12.122Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "JPY",
-                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "frequency": shared.HrisCompensationFrequency.WEEK,
                     "notes": "Annus adficio suasoria architecto aggero.",
-                    "type": shared.HrisCompensationType.OTHER,
+                    "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-08-28T03:01:07.109Z"),
+            "end_at": parse_datetime("2026-09-17T03:42:59.924Z"),
             "hours": 8.0,
-            "id": "2492c6df-e2c6-450f-af6d-7db5a8f448c0",
+            "id": "66a39c02-f126-4c60-921c-1874dc4ce92d",
             "is_approved": True,
-            "start_at": parse_datetime("2023-06-26T08:32:27.015Z"),
-            "updated_at": parse_datetime("2021-06-23T15:17:01.681Z"),
+            "start_at": parse_datetime("2023-07-07T12:09:32.567Z"),
+            "updated_at": parse_datetime("2021-06-29T04:09:58.872Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -14,6 +14,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CdpEventType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The unified structural category of the event"""
+
     TRACK = "TRACK"
     PAGE = "PAGE"
     SCREEN = "SCREEN"
@@ -24,24 +26,35 @@ class CdpEventType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CdpEventTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""Unique identifier for this event object"""
     identifiers: NotRequired[List[CdpIdentifierTypedDict]]
     r"""The identifiers that link this event to a profile"""
     metadata: NotRequired[List[CdpMetadataTypedDict]]
     r"""The event payload/properties"""
     name: NotRequired[str]
+    r"""The specific event name (eg. \"Product Purchased\")"""
     occurred_at: NotRequired[datetime]
+    r"""When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     profile_id: NotRequired[str]
+    r"""The profile this event is associated with; points to CdpProfile"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this event"""
     source: NotRequired[str]
+    r"""The source that produced this event"""
     source_id: NotRequired[str]
+    r"""The cdp_source this event originated from; points to CdpSource"""
     type: NotRequired[CdpEventType]
+    r"""The unified structural category of the event"""
 
 
 class CdpEvent(BaseModel):
     created_at: Optional[datetime] = None
+    r"""The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this event object"""
 
     identifiers: Optional[List[CdpIdentifier]] = None
     r"""The identifiers that link this event to a profile"""
@@ -50,18 +63,25 @@ class CdpEvent(BaseModel):
     r"""The event payload/properties"""
 
     name: Optional[str] = None
+    r"""The specific event name (eg. \"Product Purchased\")"""
 
     occurred_at: Optional[datetime] = None
+    r"""When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     profile_id: Optional[str] = None
+    r"""The profile this event is associated with; points to CdpProfile"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this event"""
 
     source: Optional[str] = None
+    r"""The source that produced this event"""
 
     source_id: Optional[str] = None
+    r"""The cdp_source this event originated from; points to CdpSource"""
 
     type: Optional[CdpEventType] = None
+    r"""The unified structural category of the event"""
 
     @field_serializer("type")
     def serialize_type(self, value):

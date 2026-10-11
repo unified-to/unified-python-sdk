@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -148,7 +148,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
         },
         "connection_id": "<id>",
     })
@@ -185,7 +185,7 @@ async def main():
                 "currency": "BOB",
                 "customer_defined_code": "quo",
                 "description": "Spoliatio comedo vilitas harum cupiditate.",
-                "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+                "id": "56991dac-50de-4353-86e2-c684b15fcb69",
                 "is_payable": True,
                 "name": "Electronic Aluminum Tuna",
                 "status": shared.Status.ARCHIVED,
@@ -202,7 +202,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.BANK,
-                "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+                "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
             },
             "connection_id": "<id>",
         })
@@ -241,6 +241,7 @@ asyncio.run(main())
 * [create_accounting_contact](docs/sdks/accounting/README.md#create_accounting_contact) - Create a contact
 * [create_accounting_creditmemo](docs/sdks/accounting/README.md#create_accounting_creditmemo) - Create a creditmemo
 * [create_accounting_expense](docs/sdks/accounting/README.md#create_accounting_expense) - Create an expense
+* [create_accounting_expensereport](docs/sdks/accounting/README.md#create_accounting_expensereport) - Create an expensereport
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](docs/sdks/accounting/README.md#create_accounting_journal) - Create a journal
 * [create_accounting_order](docs/sdks/accounting/README.md#create_accounting_order) - Create an order
@@ -264,6 +265,7 @@ asyncio.run(main())
 * [get_accounting_contact](docs/sdks/accounting/README.md#get_accounting_contact) - Retrieve a contact
 * [get_accounting_creditmemo](docs/sdks/accounting/README.md#get_accounting_creditmemo) - Retrieve a creditmemo
 * [get_accounting_expense](docs/sdks/accounting/README.md#get_accounting_expense) - Retrieve an expense
+* [get_accounting_expensereport](docs/sdks/accounting/README.md#get_accounting_expensereport) - Retrieve an expensereport
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](docs/sdks/accounting/README.md#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](docs/sdks/accounting/README.md#get_accounting_order) - Retrieve an order
@@ -272,8 +274,10 @@ asyncio.run(main())
 * [get_accounting_profitloss](docs/sdks/accounting/README.md#get_accounting_profitloss) - Retrieve a profitloss
 * [get_accounting_project](docs/sdks/accounting/README.md#get_accounting_project) - Retrieve a project
 * [get_accounting_purchaseorder](docs/sdks/accounting/README.md#get_accounting_purchaseorder) - Retrieve a purchaseorder
+* [get_accounting_purchasereceipt](docs/sdks/accounting/README.md#get_accounting_purchasereceipt) - Retrieve a purchasereceipt
 * [get_accounting_quote](docs/sdks/accounting/README.md#get_accounting_quote) - Retrieve a quote
 * [get_accounting_salesorder](docs/sdks/accounting/README.md#get_accounting_salesorder) - Retrieve a salesorder
+* [get_accounting_salesreceipt](docs/sdks/accounting/README.md#get_accounting_salesreceipt) - Retrieve a salesreceipt
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
 * [get_accounting_trialbalance](docs/sdks/accounting/README.md#get_accounting_trialbalance) - Retrieve a trialbalance
@@ -289,6 +293,7 @@ asyncio.run(main())
 * [list_accounting_categories](docs/sdks/accounting/README.md#list_accounting_categories) - List all categories
 * [list_accounting_contacts](docs/sdks/accounting/README.md#list_accounting_contacts) - List all contacts
 * [list_accounting_creditmemoes](docs/sdks/accounting/README.md#list_accounting_creditmemoes) - List all creditmemoes
+* [list_accounting_expensereports](docs/sdks/accounting/README.md#list_accounting_expensereports) - List all expensereports
 * [list_accounting_expenses](docs/sdks/accounting/README.md#list_accounting_expenses) - List all expenses
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](docs/sdks/accounting/README.md#list_accounting_journals) - List all journals
@@ -298,8 +303,10 @@ asyncio.run(main())
 * [list_accounting_profitlosses](docs/sdks/accounting/README.md#list_accounting_profitlosses) - List all profitlosses
 * [list_accounting_projects](docs/sdks/accounting/README.md#list_accounting_projects) - List all projects
 * [list_accounting_purchaseorders](docs/sdks/accounting/README.md#list_accounting_purchaseorders) - List all purchaseorders
+* [list_accounting_purchasereceipts](docs/sdks/accounting/README.md#list_accounting_purchasereceipts) - List all purchasereceipts
 * [list_accounting_quotes](docs/sdks/accounting/README.md#list_accounting_quotes) - List all quotes
 * [list_accounting_salesorders](docs/sdks/accounting/README.md#list_accounting_salesorders) - List all salesorders
+* [list_accounting_salesreceipts](docs/sdks/accounting/README.md#list_accounting_salesreceipts) - List all salesreceipts
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
 * [list_accounting_trialbalances](docs/sdks/accounting/README.md#list_accounting_trialbalances) - List all trialbalances
@@ -312,6 +319,7 @@ asyncio.run(main())
 * [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
 * [patch_accounting_creditmemo](docs/sdks/accounting/README.md#patch_accounting_creditmemo) - Update a creditmemo
 * [patch_accounting_expense](docs/sdks/accounting/README.md#patch_accounting_expense) - Update an expense
+* [patch_accounting_expensereport](docs/sdks/accounting/README.md#patch_accounting_expensereport) - Update an expensereport
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](docs/sdks/accounting/README.md#patch_accounting_journal) - Update a journal
 * [patch_accounting_order](docs/sdks/accounting/README.md#patch_accounting_order) - Update an order
@@ -331,6 +339,7 @@ asyncio.run(main())
 * [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
 * [remove_accounting_creditmemo](docs/sdks/accounting/README.md#remove_accounting_creditmemo) - Remove a creditmemo
 * [remove_accounting_expense](docs/sdks/accounting/README.md#remove_accounting_expense) - Remove an expense
+* [remove_accounting_expensereport](docs/sdks/accounting/README.md#remove_accounting_expensereport) - Remove an expensereport
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](docs/sdks/accounting/README.md#remove_accounting_journal) - Remove a journal
 * [remove_accounting_order](docs/sdks/accounting/README.md#remove_accounting_order) - Remove an order
@@ -350,6 +359,7 @@ asyncio.run(main())
 * [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
 * [update_accounting_creditmemo](docs/sdks/accounting/README.md#update_accounting_creditmemo) - Update a creditmemo
 * [update_accounting_expense](docs/sdks/accounting/README.md#update_accounting_expense) - Update an expense
+* [update_accounting_expensereport](docs/sdks/accounting/README.md#update_accounting_expensereport) - Update an expensereport
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](docs/sdks/accounting/README.md#update_accounting_journal) - Update a journal
 * [update_accounting_order](docs/sdks/accounting/README.md#update_accounting_order) - Update an order
@@ -500,6 +510,7 @@ asyncio.run(main())
 
 ### [Applicationstatus](docs/sdks/applicationstatus/README.md)
 
+* [get_ats_applicationstatus](docs/sdks/applicationstatus/README.md#get_ats_applicationstatus) - Retrieve an applicationstatus
 * [list_ats_applicationstatuses](docs/sdks/applicationstatus/README.md#list_ats_applicationstatuses) - List all applicationstatuses
 
 ### [Assessment](docs/sdks/assessment/README.md)
@@ -533,6 +544,7 @@ asyncio.run(main())
 * [create_ats_scorecard](docs/sdks/ats/README.md#create_ats_scorecard) - Create a scorecard
 * [get_ats_activity](docs/sdks/ats/README.md#get_ats_activity) - Retrieve an activity
 * [get_ats_application](docs/sdks/ats/README.md#get_ats_application) - Retrieve an application
+* [get_ats_applicationstatus](docs/sdks/ats/README.md#get_ats_applicationstatus) - Retrieve an applicationstatus
 * [get_ats_candidate](docs/sdks/ats/README.md#get_ats_candidate) - Retrieve a candidate
 * [get_ats_company](docs/sdks/ats/README.md#get_ats_company) - Retrieve a company
 * [get_ats_document](docs/sdks/ats/README.md#get_ats_document) - Retrieve a document
@@ -584,7 +596,7 @@ asyncio.run(main())
 
 ### [Auth](docs/sdks/auth/README.md)
 
-* [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Authorize new connection
+* [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
 * [get_unified_integration_saml](docs/sdks/auth/README.md#get_unified_integration_saml) - Sign in a user via SAML
 
@@ -936,6 +948,7 @@ asyncio.run(main())
 ### [Connection](docs/sdks/connection/README.md)
 
 * [create_unified_connection](docs/sdks/connection/README.md#create_unified_connection) - Create connection
+* [create_unified_connection_reauth](docs/sdks/connection/README.md#create_unified_connection_reauth) - Create a re-authorization token for a connection
 * [get_unified_connection](docs/sdks/connection/README.md#get_unified_connection) - Retrieve connection
 * [list_unified_connections](docs/sdks/connection/README.md#list_unified_connections) - List all connections
 * [patch_unified_connection](docs/sdks/connection/README.md#patch_unified_connection) - Update connection
@@ -1141,6 +1154,15 @@ asyncio.run(main())
 * [update_hris_document](docs/sdks/document/README.md#update_hris_document) - Update a document
 * [update_signing_document](docs/sdks/document/README.md#update_signing_document) - Update a document
 
+### [Earning](docs/sdks/earning/README.md)
+
+* [create_hris_earning](docs/sdks/earning/README.md#create_hris_earning) - Create an earning
+* [get_hris_earning](docs/sdks/earning/README.md#get_hris_earning) - Retrieve an earning
+* [list_hris_earnings](docs/sdks/earning/README.md#list_hris_earnings) - List all earnings
+* [patch_hris_earning](docs/sdks/earning/README.md#patch_hris_earning) - Update an earning
+* [remove_hris_earning](docs/sdks/earning/README.md#remove_hris_earning) - Remove an earning
+* [update_hris_earning](docs/sdks/earning/README.md#update_hris_earning) - Update an earning
+
 ### [Embedding](docs/sdks/embedding/README.md)
 
 * [create_genai_embedding](docs/sdks/embedding/README.md#create_genai_embedding) - Create an embedding
@@ -1202,6 +1224,15 @@ asyncio.run(main())
 * [remove_accounting_expense](docs/sdks/expense/README.md#remove_accounting_expense) - Remove an expense
 * [update_accounting_expense](docs/sdks/expense/README.md#update_accounting_expense) - Update an expense
 
+### [Expensereport](docs/sdks/expensereport/README.md)
+
+* [create_accounting_expensereport](docs/sdks/expensereport/README.md#create_accounting_expensereport) - Create an expensereport
+* [get_accounting_expensereport](docs/sdks/expensereport/README.md#get_accounting_expensereport) - Retrieve an expensereport
+* [list_accounting_expensereports](docs/sdks/expensereport/README.md#list_accounting_expensereports) - List all expensereports
+* [patch_accounting_expensereport](docs/sdks/expensereport/README.md#patch_accounting_expensereport) - Update an expensereport
+* [remove_accounting_expensereport](docs/sdks/expensereport/README.md#remove_accounting_expensereport) - Remove an expensereport
+* [update_accounting_expensereport](docs/sdks/expensereport/README.md#update_accounting_expensereport) - Update an expensereport
+
 ### [Feedback](docs/sdks/feedback/README.md)
 
 * [create_performance_feedback](docs/sdks/feedback/README.md#create_performance_feedback) - Create a feedback
@@ -1247,18 +1278,23 @@ asyncio.run(main())
 * [get_genai_agent](docs/sdks/genai/README.md#get_genai_agent) - Retrieve an agent
 * [get_genai_model](docs/sdks/genai/README.md#get_genai_model) - Retrieve a model
 * [get_genai_organization](docs/sdks/genai/README.md#get_genai_organization) - Retrieve an organization
+* [get_genai_skill](docs/sdks/genai/README.md#get_genai_skill) - Retrieve a skill
 * [get_genai_task](docs/sdks/genai/README.md#get_genai_task) - Retrieve a task
 * [list_genai_agents](docs/sdks/genai/README.md#list_genai_agents) - List all agents
 * [list_genai_models](docs/sdks/genai/README.md#list_genai_models) - List all models
 * [list_genai_organizations](docs/sdks/genai/README.md#list_genai_organizations) - List all organizations
+* [list_genai_skills](docs/sdks/genai/README.md#list_genai_skills) - List all skills
 * [list_genai_tasks](docs/sdks/genai/README.md#list_genai_tasks) - List all tasks
 * [patch_genai_agent](docs/sdks/genai/README.md#patch_genai_agent) - Update an agent
 * [patch_genai_organization](docs/sdks/genai/README.md#patch_genai_organization) - Update an organization
+* [patch_genai_task](docs/sdks/genai/README.md#patch_genai_task) - Update a task
 * [remove_genai_agent](docs/sdks/genai/README.md#remove_genai_agent) - Remove an agent
 * [remove_genai_organization](docs/sdks/genai/README.md#remove_genai_organization) - Remove an organization
+* [remove_genai_skill](docs/sdks/genai/README.md#remove_genai_skill) - Remove a skill
 * [remove_genai_task](docs/sdks/genai/README.md#remove_genai_task) - Remove a task
 * [update_genai_agent](docs/sdks/genai/README.md#update_genai_agent) - Update an agent
 * [update_genai_organization](docs/sdks/genai/README.md#update_genai_organization) - Update an organization
+* [update_genai_task](docs/sdks/genai/README.md#update_genai_task) - Update a task
 
 ### [Goal](docs/sdks/goal/README.md)
 
@@ -1301,8 +1337,10 @@ asyncio.run(main())
 * [create_hris_deduction](docs/sdks/hris/README.md#create_hris_deduction) - Create a deduction
 * [create_hris_device](docs/sdks/hris/README.md#create_hris_device) - Create a device
 * [create_hris_document](docs/sdks/hris/README.md#create_hris_document) - Create a document
+* [create_hris_earning](docs/sdks/hris/README.md#create_hris_earning) - Create an earning
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
+* [create_hris_job](docs/sdks/hris/README.md#create_hris_job) - Create a job
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
 * [create_hris_taxonomy](docs/sdks/hris/README.md#create_hris_taxonomy) - Create a taxonomy
 * [create_hris_timeoff](docs/sdks/hris/README.md#create_hris_timeoff) - Create a timeoff
@@ -1314,9 +1352,13 @@ asyncio.run(main())
 * [get_hris_deduction](docs/sdks/hris/README.md#get_hris_deduction) - Retrieve a deduction
 * [get_hris_device](docs/sdks/hris/README.md#get_hris_device) - Retrieve a device
 * [get_hris_document](docs/sdks/hris/README.md#get_hris_document) - Retrieve a document
+* [get_hris_earning](docs/sdks/hris/README.md#get_hris_earning) - Retrieve an earning
 * [get_hris_employee](docs/sdks/hris/README.md#get_hris_employee) - Retrieve an employee
 * [get_hris_group](docs/sdks/hris/README.md#get_hris_group) - Retrieve a group
+* [get_hris_job](docs/sdks/hris/README.md#get_hris_job) - Retrieve a job
 * [get_hris_location](docs/sdks/hris/README.md#get_hris_location) - Retrieve a location
+* [get_hris_paycode](docs/sdks/hris/README.md#get_hris_paycode) - Retrieve a paycode
+* [get_hris_payroll](docs/sdks/hris/README.md#get_hris_payroll) - Retrieve a payroll
 * [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
 * [get_hris_taxonomy](docs/sdks/hris/README.md#get_hris_taxonomy) - Retrieve a taxonomy
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
@@ -1328,9 +1370,13 @@ asyncio.run(main())
 * [list_hris_deductions](docs/sdks/hris/README.md#list_hris_deductions) - List all deductions
 * [list_hris_devices](docs/sdks/hris/README.md#list_hris_devices) - List all devices
 * [list_hris_documents](docs/sdks/hris/README.md#list_hris_documents) - List all documents
+* [list_hris_earnings](docs/sdks/hris/README.md#list_hris_earnings) - List all earnings
 * [list_hris_employees](docs/sdks/hris/README.md#list_hris_employees) - List all employees
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
+* [list_hris_jobs](docs/sdks/hris/README.md#list_hris_jobs) - List all jobs
 * [list_hris_locations](docs/sdks/hris/README.md#list_hris_locations) - List all locations
+* [list_hris_paycodes](docs/sdks/hris/README.md#list_hris_paycodes) - List all paycodes
+* [list_hris_payrolls](docs/sdks/hris/README.md#list_hris_payrolls) - List all payrolls
 * [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
 * [list_hris_taxonomies](docs/sdks/hris/README.md#list_hris_taxonomies) - List all taxonomies
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
@@ -1342,8 +1388,10 @@ asyncio.run(main())
 * [patch_hris_deduction](docs/sdks/hris/README.md#patch_hris_deduction) - Update a deduction
 * [patch_hris_device](docs/sdks/hris/README.md#patch_hris_device) - Update a device
 * [patch_hris_document](docs/sdks/hris/README.md#patch_hris_document) - Update a document
+* [patch_hris_earning](docs/sdks/hris/README.md#patch_hris_earning) - Update an earning
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
+* [patch_hris_job](docs/sdks/hris/README.md#patch_hris_job) - Update a job
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
 * [patch_hris_timeoff](docs/sdks/hris/README.md#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](docs/sdks/hris/README.md#patch_hris_timeshift) - Update a timeshift
@@ -1354,8 +1402,10 @@ asyncio.run(main())
 * [remove_hris_deduction](docs/sdks/hris/README.md#remove_hris_deduction) - Remove a deduction
 * [remove_hris_device](docs/sdks/hris/README.md#remove_hris_device) - Remove a device
 * [remove_hris_document](docs/sdks/hris/README.md#remove_hris_document) - Remove a document
+* [remove_hris_earning](docs/sdks/hris/README.md#remove_hris_earning) - Remove an earning
 * [remove_hris_employee](docs/sdks/hris/README.md#remove_hris_employee) - Remove an employee
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
+* [remove_hris_job](docs/sdks/hris/README.md#remove_hris_job) - Remove a job
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
 * [remove_hris_timeoff](docs/sdks/hris/README.md#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](docs/sdks/hris/README.md#remove_hris_timeshift) - Remove a timeshift
@@ -1366,8 +1416,10 @@ asyncio.run(main())
 * [update_hris_deduction](docs/sdks/hris/README.md#update_hris_deduction) - Update a deduction
 * [update_hris_device](docs/sdks/hris/README.md#update_hris_device) - Update a device
 * [update_hris_document](docs/sdks/hris/README.md#update_hris_document) - Update a document
+* [update_hris_earning](docs/sdks/hris/README.md#update_hris_earning) - Update an earning
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
+* [update_hris_job](docs/sdks/hris/README.md#update_hris_job) - Update a job
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
 * [update_hris_timeoff](docs/sdks/hris/README.md#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](docs/sdks/hris/README.md#update_hris_timeshift) - Update a timeshift
@@ -1397,7 +1449,7 @@ asyncio.run(main())
 
 ### [Integration](docs/sdks/integration/README.md)
 
-* [get_unified_integration_auth](docs/sdks/integration/README.md#get_unified_integration_auth) - Authorize new connection
+* [get_unified_integration_auth](docs/sdks/integration/README.md#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [list_unified_integration_workspaces](docs/sdks/integration/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](docs/sdks/integration/README.md#list_unified_integrations) - Returns all integrations
 
@@ -1454,11 +1506,17 @@ asyncio.run(main())
 ### [Job](docs/sdks/job/README.md)
 
 * [create_ats_job](docs/sdks/job/README.md#create_ats_job) - Create a job
+* [create_hris_job](docs/sdks/job/README.md#create_hris_job) - Create a job
 * [get_ats_job](docs/sdks/job/README.md#get_ats_job) - Retrieve a job
+* [get_hris_job](docs/sdks/job/README.md#get_hris_job) - Retrieve a job
 * [list_ats_jobs](docs/sdks/job/README.md#list_ats_jobs) - List all jobs
+* [list_hris_jobs](docs/sdks/job/README.md#list_hris_jobs) - List all jobs
 * [patch_ats_job](docs/sdks/job/README.md#patch_ats_job) - Update a job
+* [patch_hris_job](docs/sdks/job/README.md#patch_hris_job) - Update a job
 * [remove_ats_job](docs/sdks/job/README.md#remove_ats_job) - Remove a job
+* [remove_hris_job](docs/sdks/job/README.md#remove_hris_job) - Remove a job
 * [update_ats_job](docs/sdks/job/README.md#update_ats_job) - Update a job
+* [update_hris_job](docs/sdks/job/README.md#update_hris_job) - Update a job
 
 ### [Journal](docs/sdks/journal/README.md)
 
@@ -1751,6 +1809,11 @@ asyncio.run(main())
 * [update_passthrough_json](docs/sdks/passthrough/README.md#update_passthrough_json) - Passthrough PUT
 * [update_passthrough_raw](docs/sdks/passthrough/README.md#update_passthrough_raw) - Passthrough PUT
 
+### [Paycode](docs/sdks/paycode/README.md)
+
+* [get_hris_paycode](docs/sdks/paycode/README.md#get_hris_paycode) - Retrieve a paycode
+* [list_hris_paycodes](docs/sdks/paycode/README.md#list_hris_paycodes) - List all paycodes
+
 ### [Payment](docs/sdks/payment/README.md)
 
 * [create_payment_link](docs/sdks/payment/README.md#create_payment_link) - Create a link
@@ -1789,6 +1852,11 @@ asyncio.run(main())
 
 * [get_payment_payout](docs/sdks/payout/README.md#get_payment_payout) - Retrieve a payout
 * [list_payment_payouts](docs/sdks/payout/README.md#list_payment_payouts) - List all payouts
+
+### [Payroll](docs/sdks/payroll/README.md)
+
+* [get_hris_payroll](docs/sdks/payroll/README.md#get_hris_payroll) - Retrieve a payroll
+* [list_hris_payrolls](docs/sdks/payroll/README.md#list_hris_payrolls) - List all payrolls
 
 ### [Payslip](docs/sdks/payslip/README.md)
 
@@ -1899,6 +1967,11 @@ asyncio.run(main())
 * [patch_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#patch_accounting_purchaseorder) - Update a purchaseorder
 * [remove_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#remove_accounting_purchaseorder) - Remove a purchaseorder
 * [update_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#update_accounting_purchaseorder) - Update a purchaseorder
+
+### [Purchasereceipt](docs/sdks/purchasereceipt/README.md)
+
+* [get_accounting_purchasereceipt](docs/sdks/purchasereceipt/README.md#get_accounting_purchasereceipt) - Retrieve a purchasereceipt
+* [list_accounting_purchasereceipts](docs/sdks/purchasereceipt/README.md#list_accounting_purchasereceipts) - List all purchasereceipts
 
 ### [Query](docs/sdks/query/README.md)
 
@@ -2041,6 +2114,11 @@ asyncio.run(main())
 * [remove_accounting_salesorder](docs/sdks/salesorder/README.md#remove_accounting_salesorder) - Remove a salesorder
 * [update_accounting_salesorder](docs/sdks/salesorder/README.md#update_accounting_salesorder) - Update a salesorder
 
+### [Salesreceipt](docs/sdks/salesreceipt/README.md)
+
+* [get_accounting_salesreceipt](docs/sdks/salesreceipt/README.md#get_accounting_salesreceipt) - Retrieve a salesreceipt
+* [list_accounting_salesreceipts](docs/sdks/salesreceipt/README.md#list_accounting_salesreceipts) - List all salesreceipts
+
 ### [Saml](docs/sdks/saml/README.md)
 
 * [get_unified_integration_saml](docs/sdks/saml/README.md#get_unified_integration_saml) - Sign in a user via SAML
@@ -2064,17 +2142,26 @@ asyncio.run(main())
 
 * [create_ats_scorecard](docs/sdks/scorecard/README.md#create_ats_scorecard) - Create a scorecard
 * [get_ats_scorecard](docs/sdks/scorecard/README.md#get_ats_scorecard) - Retrieve a scorecard
+* [get_uc_scorecard](docs/sdks/scorecard/README.md#get_uc_scorecard) - Retrieve a scorecard
 * [list_ats_scorecards](docs/sdks/scorecard/README.md#list_ats_scorecards) - List all scorecards
+* [list_uc_scorecards](docs/sdks/scorecard/README.md#list_uc_scorecards) - List all scorecards
 * [patch_ats_scorecard](docs/sdks/scorecard/README.md#patch_ats_scorecard) - Update a scorecard
 * [remove_ats_scorecard](docs/sdks/scorecard/README.md#remove_ats_scorecard) - Remove a scorecard
 * [update_ats_scorecard](docs/sdks/scorecard/README.md#update_ats_scorecard) - Update a scorecard
 
+### [Scorecardtemplate](docs/sdks/scorecardtemplate/README.md)
+
+* [get_uc_scorecardtemplate](docs/sdks/scorecardtemplate/README.md#get_uc_scorecardtemplate) - Retrieve a scorecardtemplate
+* [list_uc_scorecardtemplates](docs/sdks/scorecardtemplate/README.md#list_uc_scorecardtemplates) - List all scorecardtemplates
+
 ### [Secretsmanager](docs/sdks/secretsmanager/README.md)
 
-* [create_unified_workspace_secretsmanager](docs/sdks/secretsmanager/README.md#create_unified_workspace_secretsmanager) - Create secrets manager
-* [get_unified_workspace_secretsmanager](docs/sdks/secretsmanager/README.md#get_unified_workspace_secretsmanager) - Retrieve secrets manager
-* [list_unified_workspace_secretsmanagers](docs/sdks/secretsmanager/README.md#list_unified_workspace_secretsmanagers) - List secrets managers
-* [remove_unified_workspace_secretsmanager](docs/sdks/secretsmanager/README.md#remove_unified_workspace_secretsmanager) - Remove secrets manager
+* [create_unified_secretsmanager](docs/sdks/secretsmanager/README.md#create_unified_secretsmanager) - Create secrets manager
+* [get_unified_secretsmanager](docs/sdks/secretsmanager/README.md#get_unified_secretsmanager) - Retrieve secrets manager
+* [list_unified_secretsmanager_instructions](docs/sdks/secretsmanager/README.md#list_unified_secretsmanager_instructions) - List secrets manager setup instructions
+* [list_unified_secretsmanager_secrets](docs/sdks/secretsmanager/README.md#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
+* [list_unified_secretsmanagers](docs/sdks/secretsmanager/README.md#list_unified_secretsmanagers) - List secrets managers
+* [remove_unified_secretsmanager](docs/sdks/secretsmanager/README.md#remove_unified_secretsmanager) - Remove secrets manager
 
 ### [Segment](docs/sdks/segment/README.md)
 
@@ -2144,6 +2231,12 @@ asyncio.run(main())
 * [remove_signing_signatory](docs/sdks/signing/README.md#remove_signing_signatory) - Remove a signatory
 * [update_signing_document](docs/sdks/signing/README.md#update_signing_document) - Update a document
 * [update_signing_signatory](docs/sdks/signing/README.md#update_signing_signatory) - Update a signatory
+
+### [Skill](docs/sdks/skill/README.md)
+
+* [get_genai_skill](docs/sdks/skill/README.md#get_genai_skill) - Retrieve a skill
+* [list_genai_skills](docs/sdks/skill/README.md#list_genai_skills) - List all skills
+* [remove_genai_skill](docs/sdks/skill/README.md#remove_genai_skill) - Remove a skill
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2242,6 +2335,7 @@ asyncio.run(main())
 * [list_task_comments](docs/sdks/task/README.md#list_task_comments) - List all comments
 * [list_task_projects](docs/sdks/task/README.md#list_task_projects) - List all projects
 * [list_task_tasks](docs/sdks/task/README.md#list_task_tasks) - List all tasks
+* [patch_genai_task](docs/sdks/task/README.md#patch_genai_task) - Update a task
 * [patch_task_comment](docs/sdks/task/README.md#patch_task_comment) - Update a comment
 * [patch_task_project](docs/sdks/task/README.md#patch_task_project) - Update a project
 * [patch_task_task](docs/sdks/task/README.md#patch_task_task) - Update a task
@@ -2249,6 +2343,7 @@ asyncio.run(main())
 * [remove_task_comment](docs/sdks/task/README.md#remove_task_comment) - Remove a comment
 * [remove_task_project](docs/sdks/task/README.md#remove_task_project) - Remove a project
 * [remove_task_task](docs/sdks/task/README.md#remove_task_task) - Remove a task
+* [update_genai_task](docs/sdks/task/README.md#update_genai_task) - Update a task
 * [update_task_comment](docs/sdks/task/README.md#update_task_comment) - Update a comment
 * [update_task_project](docs/sdks/task/README.md#update_task_project) - Update a project
 * [update_task_task](docs/sdks/task/README.md#update_task_task) - Update a task
@@ -2356,10 +2451,14 @@ asyncio.run(main())
 * [get_uc_comment](docs/sdks/uc/README.md#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](docs/sdks/uc/README.md#get_uc_contact) - Retrieve a contact
 * [get_uc_recording](docs/sdks/uc/README.md#get_uc_recording) - Retrieve a recording
+* [get_uc_scorecard](docs/sdks/uc/README.md#get_uc_scorecard) - Retrieve a scorecard
+* [get_uc_scorecardtemplate](docs/sdks/uc/README.md#get_uc_scorecardtemplate) - Retrieve a scorecardtemplate
 * [list_uc_calls](docs/sdks/uc/README.md#list_uc_calls) - List all calls
 * [list_uc_comments](docs/sdks/uc/README.md#list_uc_comments) - List all comments
 * [list_uc_contacts](docs/sdks/uc/README.md#list_uc_contacts) - List all contacts
 * [list_uc_recordings](docs/sdks/uc/README.md#list_uc_recordings) - List all recordings
+* [list_uc_scorecards](docs/sdks/uc/README.md#list_uc_scorecards) - List all scorecards
+* [list_uc_scorecardtemplates](docs/sdks/uc/README.md#list_uc_scorecardtemplates) - List all scorecardtemplates
 * [patch_uc_comment](docs/sdks/uc/README.md#patch_uc_comment) - Update a comment
 * [patch_uc_contact](docs/sdks/uc/README.md#patch_uc_contact) - Update a contact
 * [patch_uc_recording](docs/sdks/uc/README.md#patch_uc_recording) - Update a recording
@@ -2373,15 +2472,16 @@ asyncio.run(main())
 ### [Unified](docs/sdks/unified/README.md)
 
 * [create_unified_connection](docs/sdks/unified/README.md#create_unified_connection) - Create connection
+* [create_unified_connection_reauth](docs/sdks/unified/README.md#create_unified_connection_reauth) - Create a re-authorization token for a connection
 * [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment) - Create new environments
+* [create_unified_secretsmanager](docs/sdks/unified/README.md#create_unified_secretsmanager) - Create secrets manager
 * [create_unified_webhook](docs/sdks/unified/README.md#create_unified_webhook) - Create webhook subscription
-* [create_unified_workspace_secretsmanager](docs/sdks/unified/README.md#create_unified_workspace_secretsmanager) - Create secrets manager
 * [get_unified_apicall](docs/sdks/unified/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
-* [get_unified_integration_auth](docs/sdks/unified/README.md#get_unified_integration_auth) - Authorize new connection
+* [get_unified_integration_auth](docs/sdks/unified/README.md#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_issue](docs/sdks/unified/README.md#get_unified_issue) - Retrieve support issue
+* [get_unified_secretsmanager](docs/sdks/unified/README.md#get_unified_secretsmanager) - Retrieve secrets manager
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
-* [get_unified_workspace_secretsmanager](docs/sdks/unified/README.md#get_unified_workspace_secretsmanager) - Retrieve secrets manager
 * [list_unified_apicalls](docs/sdks/unified/README.md#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](docs/sdks/unified/README.md#list_unified_connections) - List all connections
 * [list_unified_environments](docs/sdks/unified/README.md#list_unified_environments) - Returns all environments
@@ -2389,15 +2489,17 @@ asyncio.run(main())
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
 * [list_unified_notifications](docs/sdks/unified/README.md#list_unified_notifications) - List event notifications
+* [list_unified_secretsmanager_instructions](docs/sdks/unified/README.md#list_unified_secretsmanager_instructions) - List secrets manager setup instructions
+* [list_unified_secretsmanager_secrets](docs/sdks/unified/README.md#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
+* [list_unified_secretsmanagers](docs/sdks/unified/README.md#list_unified_secretsmanagers) - List secrets managers
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
-* [list_unified_workspace_secretsmanagers](docs/sdks/unified/README.md#list_unified_workspace_secretsmanagers) - List secrets managers
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
+* [remove_unified_secretsmanager](docs/sdks/unified/README.md#remove_unified_secretsmanager) - Remove secrets manager
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
-* [remove_unified_workspace_secretsmanager](docs/sdks/unified/README.md#remove_unified_workspace_secretsmanager) - Remove secrets manager
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
@@ -2528,7 +2630,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2545,7 +2647,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
         },
         "connection_id": "<id>",
     },
@@ -2579,7 +2681,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2596,7 +2698,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
         },
         "connection_id": "<id>",
     })
@@ -2644,7 +2746,7 @@ with UnifiedTo(
                 "currency": "BOB",
                 "customer_defined_code": "quo",
                 "description": "Spoliatio comedo vilitas harum cupiditate.",
-                "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+                "id": "56991dac-50de-4353-86e2-c684b15fcb69",
                 "is_payable": True,
                 "name": "Electronic Aluminum Tuna",
                 "status": shared.Status.ARCHIVED,
@@ -2661,7 +2763,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.BANK,
-                "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+                "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
             },
             "connection_id": "<id>",
         })
@@ -2739,7 +2841,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2756,7 +2858,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
         },
         "connection_id": "<id>",
     })
@@ -2791,7 +2893,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2808,7 +2910,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
         },
         "connection_id": "<id>",
     })
@@ -2951,7 +3053,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "fe4277ef-5da1-4ca9-9359-50f8d62f8e9f",
+            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2968,7 +3070,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-03T11:11:55.467Z"),
+            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
         },
         "connection_id": "<id>",
     })

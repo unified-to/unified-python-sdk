@@ -10,6 +10,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class CalendarAttachmentTypedDict(TypedDict):
     download_url: NotRequired[str]
     id: NotRequired[str]
+    r"""ID for the storage_fileget endpoint"""
     mime_type: NotRequired[str]
     name: NotRequired[str]
 
@@ -18,6 +19,7 @@ class CalendarAttachment(BaseModel):
     download_url: Optional[str] = None
 
     id: Optional[str] = None
+    r"""ID for the storage_fileget endpoint"""
 
     mime_type: Optional[str] = None
 

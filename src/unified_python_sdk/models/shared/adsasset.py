@@ -21,30 +21,38 @@ class AdsAssetType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AdsAssetTypedDict(TypedDict):
     content: NotRequired[str]
+    r"""inbound create-only: base64-encoded image/media bytes to upload"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     file_size: NotRequired[float]
     height: NotRequired[float]
     id: NotRequired[str]
+    r"""provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id, DV360 mediaId)"""
     mime_type: NotRequired[str]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[AdsAssetType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not supplied"""
     width: NotRequired[float]
 
 
 class AdsAsset(BaseModel):
     content: Optional[str] = None
+    r"""inbound create-only: base64-encoded image/media bytes to upload"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     file_size: Optional[float] = None
 
     height: Optional[float] = None
 
     id: Optional[str] = None
+    r"""provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id, DV360 mediaId)"""
 
     mime_type: Optional[str] = None
 
@@ -57,8 +65,10 @@ class AdsAsset(BaseModel):
     type: Optional[AdsAssetType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not supplied"""
 
     width: Optional[float] = None
 

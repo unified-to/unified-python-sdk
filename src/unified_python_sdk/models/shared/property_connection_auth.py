@@ -25,11 +25,13 @@ class PropertyConnectionAuthTypedDict(TypedDict):
     expires_in: NotRequired[float]
     expiry_date: NotRequired[datetime]
     key: NotRequired[str]
+    r"""the private KEY X.509 certificate in Base64 ASCII format"""
     meta: NotRequired[Dict[str, Any]]
     name: NotRequired[str]
     other_auth_info: NotRequired[List[str]]
     r"""When integration.auth_type = \"other\", this field contains the authentication credentials in the same order as token_names"""
     pem: NotRequired[str]
+    r"""the PEM X.509 certificate in Base64 ASCII format"""
     refresh_token: NotRequired[str]
     refresh_token_expires_date: NotRequired[datetime]
     refresh_token_expires_in: NotRequired[float]
@@ -38,6 +40,7 @@ class PropertyConnectionAuthTypedDict(TypedDict):
     token: NotRequired[str]
     token_url: NotRequired[str]
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class PropertyConnectionAuth(BaseModel):
@@ -70,6 +73,7 @@ class PropertyConnectionAuth(BaseModel):
     expiry_date: Optional[datetime] = None
 
     key: Optional[str] = None
+    r"""the private KEY X.509 certificate in Base64 ASCII format"""
 
     meta: Optional[Dict[str, Any]] = None
 
@@ -79,6 +83,7 @@ class PropertyConnectionAuth(BaseModel):
     r"""When integration.auth_type = \"other\", this field contains the authentication credentials in the same order as token_names"""
 
     pem: Optional[str] = None
+    r"""the PEM X.509 certificate in Base64 ASCII format"""
 
     refresh_token: Optional[str] = None
 
@@ -95,6 +100,7 @@ class PropertyConnectionAuth(BaseModel):
     token_url: Optional[str] = None
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

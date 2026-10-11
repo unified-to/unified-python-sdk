@@ -40,6 +40,7 @@ class AnalyticsEventTypedDict(TypedDict):
     country: NotRequired[str]
     country_code: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     device: NotRequired[str]
     event_type: NotRequired[EventType]
@@ -51,10 +52,13 @@ class AnalyticsEventTypedDict(TypedDict):
     page_title: NotRequired[str]
     page_url: NotRequired[str]
     property_id: NotRequired[str]
+    r"""points to AnalyticsProperty"""
     raw: NotRequired[Dict[str, Any]]
     region: NotRequired[str]
     session_id: NotRequired[str]
+    r"""points to AnalyticsSession"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     utm_campaign: NotRequired[str]
     utm_content: NotRequired[str]
     utm_medium: NotRequired[str]
@@ -62,6 +66,7 @@ class AnalyticsEventTypedDict(TypedDict):
     utm_term: NotRequired[str]
     value: NotRequired[float]
     visitor_id: NotRequired[str]
+    r"""points to AnalyticsVisitor"""
 
 
 class AnalyticsEvent(BaseModel):
@@ -74,6 +79,7 @@ class AnalyticsEvent(BaseModel):
     country_code: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
@@ -96,14 +102,17 @@ class AnalyticsEvent(BaseModel):
     page_url: Optional[str] = None
 
     property_id: Optional[str] = None
+    r"""points to AnalyticsProperty"""
 
     raw: Optional[Dict[str, Any]] = None
 
     region: Optional[str] = None
 
     session_id: Optional[str] = None
+    r"""points to AnalyticsSession"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     utm_campaign: Optional[str] = None
 
@@ -118,6 +127,7 @@ class AnalyticsEvent(BaseModel):
     value: Optional[float] = None
 
     visitor_id: Optional[str] = None
+    r"""points to AnalyticsVisitor"""
 
     @field_serializer("event_type")
     def serialize_event_type(self, value):

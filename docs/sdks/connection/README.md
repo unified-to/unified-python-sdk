@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [create_unified_connection](#create_unified_connection) - Create connection
+* [create_unified_connection_reauth](#create_unified_connection_reauth) - Create a re-authorization token for a connection
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
 * [list_unified_connections](#list_unified_connections) - List all connections
 * [patch_unified_connection](#patch_unified_connection) - Update connection
@@ -13,7 +14,7 @@
 
 ## create_unified_connection
 
-Used only to import existing customer credentials; use "Authorize new connection" instead
+Used only to import existing customer credentials. To connect a new account, use the "Authorize or re-authorize a connection" auth URL instead. To change credentials on an existing connection, use "Update connection".
 
 ### Example Usage
 
@@ -54,6 +55,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateUnifiedConnectionResponse](../../models/operations/createunifiedconnectionresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_unified_connection_reauth
+
+Returns a short-lived, single-use token that lets your end-user re-authorize this existing connection in place via the "Authorize or re-authorize a connection" URL with connection_id and reauth_token.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createUnifiedConnectionReauth" method="post" path="/unified/connection/{id}/reauth" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.connection.create_unified_connection_reauth(request={
+        "id": "<id>",
+    })
+
+    assert res.connection_reauth is not None
+
+    # Handle response
+    print(res.connection_reauth)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.CreateUnifiedConnectionReauthRequest](../../models/operations/createunifiedconnectionreauthrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `retries`                                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                                   | :heavy_minus_sign:                                                                                                 | Configuration to override the default retry behavior of the client.                                                |
+
+### Response
+
+**[operations.CreateUnifiedConnectionReauthResponse](../../models/operations/createunifiedconnectionreauthresponse.md)**
 
 ### Errors
 

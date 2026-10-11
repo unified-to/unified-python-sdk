@@ -10,31 +10,47 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class SigningTemplateTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""The date that this template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creator_id: NotRequired[str]
+    r"""User who created the template"""
     description: NotRequired[str]
+    r"""Template description"""
     id: NotRequired[str]
+    r"""Unique identifier for this template"""
     is_active: NotRequired[bool]
+    r"""Whether the template is active/available"""
     name: NotRequired[str]
+    r"""Template name"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class SigningTemplate(BaseModel):
     created_at: Optional[datetime] = None
+    r"""The date that this template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creator_id: Optional[str] = None
+    r"""User who created the template"""
 
     description: Optional[str] = None
+    r"""Template description"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this template"""
 
     is_active: Optional[bool] = None
+    r"""Whether the template is active/available"""
 
     name: Optional[str] = None
+    r"""Template name"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

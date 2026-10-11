@@ -7,4 +7,4 @@
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `id`               | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `inputs`           | List[*str*]        | :heavy_minus_sign: | N/A                |
-| `name`             | *Optional[str]*    | :heavy_minus_sign: | N/A                |
+| `name`             | *Optional[str]*    | :heavy_minus_sign: | name of parameter  |

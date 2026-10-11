@@ -4,13 +4,13 @@
 
 ### Available Operations
 
-* [get_unified_integration_auth](#get_unified_integration_auth) - Authorize new connection
+* [get_unified_integration_auth](#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
 
 ## get_unified_integration_auth
 
-Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+Returns an authorization URL for the specified integration. After successful authorization, a new connection is created unless connection_id and reauth_token are provided, in which case the existing connection is updated in place.
 
 ### Example Usage
 

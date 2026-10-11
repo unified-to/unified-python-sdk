@@ -30,6 +30,7 @@ value = UpdateCrmLeadQueryParamFields.ID
 | `TELEPHONES`      | telephones        |
 | `SOURCE`          | source            |
 | `STATUS`          | status            |
+| `TITLE`           | title             |
 | `LINK_URLS`       | link_urls         |
 | `METADATA`        | metadata          |
 | `RAW`             | raw               |

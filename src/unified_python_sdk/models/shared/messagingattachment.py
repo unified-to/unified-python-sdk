@@ -9,6 +9,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class MessagingAttachmentTypedDict(TypedDict):
     content_identifier: NotRequired[str]
+    r"""the inline attachment's content_id"""
     content_type: NotRequired[str]
     download_url: NotRequired[str]
     filename: NotRequired[str]
@@ -18,6 +19,7 @@ class MessagingAttachmentTypedDict(TypedDict):
 
 class MessagingAttachment(BaseModel):
     content_identifier: Optional[str] = None
+    r"""the inline attachment's content_id"""
 
     content_type: Optional[str] = None
 

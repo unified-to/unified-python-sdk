@@ -47,7 +47,9 @@ class MessagingEventTypedDict(TypedDict):
     button: NotRequired[PropertyMessagingEventButtonTypedDict]
     channel: NotRequired[PropertyMessagingEventChannelTypedDict]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""not used"""
     is_replacing_original: NotRequired[bool]
     message: NotRequired[PropertyMessagingEventMessageTypedDict]
     raw: NotRequired[Dict[str, Any]]
@@ -61,8 +63,10 @@ class MessagingEvent(BaseModel):
     channel: Optional[PropertyMessagingEventChannel] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""not used"""
 
     is_replacing_original: Optional[bool] = None
 

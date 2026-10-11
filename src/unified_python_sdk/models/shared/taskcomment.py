@@ -10,19 +10,24 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class TaskCommentTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     has_children: NotRequired[bool]
     id: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     task_id: NotRequired[str]
+    r"""(reference to TaskTask)"""
     text: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     user_name: NotRequired[str]
 
 
 class TaskComment(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     has_children: Optional[bool] = None
 
@@ -33,12 +38,15 @@ class TaskComment(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     task_id: Optional[str] = None
+    r"""(reference to TaskTask)"""
 
     text: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     user_name: Optional[str] = None
 

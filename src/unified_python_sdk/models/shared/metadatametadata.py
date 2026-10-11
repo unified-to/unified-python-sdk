@@ -31,7 +31,9 @@ class MetadataMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
 class MetadataMetadataTypedDict(TypedDict):
     name: str
     object_type: str
+    r"""This is the unified object type that this metadata is associated with. eg. crm_contact or coomerce_item"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     format_: NotRequired[MetadataMetadataFormat]
     id: NotRequired[str]
     is_required: NotRequired[bool]
@@ -41,14 +43,17 @@ class MetadataMetadataTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     slug: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class MetadataMetadata(BaseModel):
     name: str
 
     object_type: str
+    r"""This is the unified object type that this metadata is associated with. eg. crm_contact or coomerce_item"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     format_: Annotated[
         Optional[MetadataMetadataFormat], pydantic.Field(alias="format")
@@ -69,6 +74,7 @@ class MetadataMetadata(BaseModel):
     slug: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("format_")
     def serialize_format_(self, value):

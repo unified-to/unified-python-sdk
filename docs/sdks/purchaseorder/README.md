@@ -32,6 +32,7 @@ with UnifiedTo(
 
     res = unified_to.purchaseorder.create_accounting_purchaseorder(request={
         "accounting_purchaseorder": {
+            "attachments": [],
             "billing_address": {
                 "address1": "37214 Tanya Walks",
                 "city": "South Annabelleton",
@@ -43,10 +44,10 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "ZMW",
-            "id": "2c15629f-d92a-450f-9a90-c739019fa131",
+            "id": "5df0165d-2362-45a3-a731-a5c2c266b425",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-27T06:22:37.375Z"),
+            "posted_at": parse_datetime("2025-05-12T13:45:08.967Z"),
             "shipping_address": {
                 "address1": "649 Maggio Overpass",
                 "city": "Lake Jaylan",
@@ -57,7 +58,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-02-26T05:43:51.981Z"),
+            "updated_at": parse_datetime("2021-02-26T23:11:58.689Z"),
         },
         "connection_id": "<id>",
     })
@@ -200,6 +201,7 @@ with UnifiedTo(
 
     res = unified_to.purchaseorder.patch_accounting_purchaseorder(request={
         "accounting_purchaseorder": {
+            "attachments": [],
             "billing_address": {
                 "address1": "37214 Tanya Walks",
                 "city": "South Annabelleton",
@@ -211,10 +213,10 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "ZMW",
-            "id": "ccae6f41-dac0-491f-9987-35fe17107580",
+            "id": "0ef164ae-3d7d-43eb-b5a6-fba3cbcbd136",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-27T06:22:37.417Z"),
+            "posted_at": parse_datetime("2025-05-12T13:45:08.992Z"),
             "shipping_address": {
                 "address1": "649 Maggio Overpass",
                 "city": "Lake Jaylan",
@@ -225,7 +227,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-02-26T05:43:51.983Z"),
+            "updated_at": parse_datetime("2021-02-26T23:11:58.691Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -323,6 +325,7 @@ with UnifiedTo(
 
     res = unified_to.purchaseorder.update_accounting_purchaseorder(request={
         "accounting_purchaseorder": {
+            "attachments": [],
             "billing_address": {
                 "address1": "37214 Tanya Walks",
                 "city": "South Annabelleton",
@@ -334,10 +337,10 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "ZMW",
-            "id": "ccae6f41-dac0-491f-9987-35fe17107580",
+            "id": "0ef164ae-3d7d-43eb-b5a6-fba3cbcbd136",
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-27T06:22:37.417Z"),
+            "posted_at": parse_datetime("2025-05-12T13:45:08.992Z"),
             "shipping_address": {
                 "address1": "649 Maggio Overpass",
                 "city": "Lake Jaylan",
@@ -348,7 +351,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.PARTIALLY_REFUNDED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-02-26T05:43:51.983Z"),
+            "updated_at": parse_datetime("2021-02-26T23:11:58.691Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -22,6 +22,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class EnrichPersonGender(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The gender of the person"""
+
     MALE = "MALE"
     FEMALE = "FEMALE"
 
@@ -32,31 +34,51 @@ class EnrichPersonTypedDict(TypedDict):
     address: NotRequired[PropertyEnrichPersonAddressTypedDict]
     r"""The address of the person"""
     bio: NotRequired[str]
+    r"""The biography description of the person"""
     birthdate: NotRequired[str]
+    r"""The birth date of the person"""
     company: NotRequired[str]
+    r"""The companyorganization name  of the person"""
     company_domain: NotRequired[str]
+    r"""The company's domain"""
     created_at: NotRequired[datetime]
+    r"""The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     emails: NotRequired[List[EnrichEmailTypedDict]]
     r"""An array of email addresses for this person"""
     facebook_url: NotRequired[str]
+    r"""The Facebook URL of the person"""
     first_name: NotRequired[str]
     gender: NotRequired[EnrichPersonGender]
+    r"""The gender of the person"""
     github_url: NotRequired[str]
+    r"""The GitHub URL of the person"""
     github_username: NotRequired[str]
+    r"""The GitHub username of the person"""
     id: NotRequired[str]
+    r"""Unique identifier for this person object"""
     image_url: NotRequired[str]
+    r"""The image URL of the person"""
     last_name: NotRequired[str]
     linkedin_url: NotRequired[str]
+    r"""The LinkedIn URL of the person"""
     name: NotRequired[str]
+    r"""The name of the person"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this person"""
     telephones: NotRequired[List[EnrichTelephoneTypedDict]]
     r"""An array of telephones for this person"""
     timezone: NotRequired[str]
+    r"""The timezone code of the person"""
     title: NotRequired[str]
+    r"""The job title of the person"""
     twitter_handle: NotRequired[str]
+    r"""The twitter handle of the person"""
     twitter_url: NotRequired[str]
+    r"""The twitter URL of the person"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     utc_offset: NotRequired[float]
+    r"""The timezone's hourly offset from UTC of the person"""
     work_histories: NotRequired[List[EnrichPersonWorkHistoryTypedDict]]
 
 
@@ -67,54 +89,74 @@ class EnrichPerson(BaseModel):
     r"""The address of the person"""
 
     bio: Optional[str] = None
+    r"""The biography description of the person"""
 
     birthdate: Optional[str] = None
+    r"""The birth date of the person"""
 
     company: Optional[str] = None
+    r"""The companyorganization name  of the person"""
 
     company_domain: Optional[str] = None
+    r"""The company's domain"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     emails: Optional[List[EnrichEmail]] = None
     r"""An array of email addresses for this person"""
 
     facebook_url: Optional[str] = None
+    r"""The Facebook URL of the person"""
 
     first_name: Optional[str] = None
 
     gender: Optional[EnrichPersonGender] = None
+    r"""The gender of the person"""
 
     github_url: Optional[str] = None
+    r"""The GitHub URL of the person"""
 
     github_username: Optional[str] = None
+    r"""The GitHub username of the person"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this person object"""
 
     image_url: Optional[str] = None
+    r"""The image URL of the person"""
 
     last_name: Optional[str] = None
 
     linkedin_url: Optional[str] = None
+    r"""The LinkedIn URL of the person"""
 
     name: Optional[str] = None
+    r"""The name of the person"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this person"""
 
     telephones: Optional[List[EnrichTelephone]] = None
     r"""An array of telephones for this person"""
 
     timezone: Optional[str] = None
+    r"""The timezone code of the person"""
 
     title: Optional[str] = None
+    r"""The job title of the person"""
 
     twitter_handle: Optional[str] = None
+    r"""The twitter handle of the person"""
 
     twitter_url: Optional[str] = None
+    r"""The twitter URL of the person"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     utc_offset: Optional[float] = None
+    r"""The timezone's hourly offset from UTC of the person"""
 
     work_histories: Optional[List[EnrichPersonWorkHistory]] = None
 

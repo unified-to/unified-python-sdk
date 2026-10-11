@@ -11,21 +11,27 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class UcRecordingMediaTypedDict(TypedDict):
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     language: NotRequired[str]
+    r"""two digit ISO code"""
     recording_download_url: NotRequired[str]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     transcript_download_url: NotRequired[str]
     transcripts: NotRequired[List[UcRecordingTranscriptTypedDict]]
 
 
 class UcRecordingMedia(BaseModel):
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     language: Optional[str] = None
+    r"""two digit ISO code"""
 
     recording_download_url: Optional[str] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     transcript_download_url: Optional[str] = None
 

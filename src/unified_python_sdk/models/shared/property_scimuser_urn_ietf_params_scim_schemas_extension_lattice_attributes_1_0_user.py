@@ -42,41 +42,52 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserTy
     TypedDict
 ):
     job_level: NotRequired[str]
+    r"""'M3',"""
     people_manager_reviews: NotRequired[str]
+    r"""'People Manager',"""
     remote_work_location: NotRequired[str]
+    r"""'Ontario',"""
     salary_information: NotRequired[str]
+    r"""'130000',"""
     sub_departments: NotRequired[str]
     birth_date: NotRequired[datetime]
+    r"""\"1987-10-06\","""
     ethnicity: NotRequired[Ethnicity]
     gender: NotRequired[
         PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender
     ]
     sexual_orientation: NotRequired[SexualOrientation]
     start_date: NotRequired[datetime]
+    r"""\"2022-03-08\","""
 
 
 class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User(
     BaseModel
 ):
     job_level: Annotated[Optional[str], pydantic.Field(alias="Job Level")] = None
+    r"""'M3',"""
 
     people_manager_reviews: Annotated[
         Optional[str], pydantic.Field(alias="People Manager (Reviews)")
     ] = None
+    r"""'People Manager',"""
 
     remote_work_location: Annotated[
         Optional[str], pydantic.Field(alias="Remote Work - Location")
     ] = None
+    r"""'Ontario',"""
 
     salary_information: Annotated[
         Optional[str], pydantic.Field(alias="Salary Information")
     ] = None
+    r"""'130000',"""
 
     sub_departments: Annotated[
         Optional[str], pydantic.Field(alias="Sub Departments")
     ] = None
 
     birth_date: Annotated[Optional[datetime], pydantic.Field(alias="birthDate")] = None
+    r"""\"1987-10-06\","""
 
     ethnicity: Optional[Ethnicity] = None
 
@@ -89,6 +100,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User(
     ] = None
 
     start_date: Annotated[Optional[datetime], pydantic.Field(alias="startDate")] = None
+    r"""\"2022-03-08\","""
 
     @field_serializer("ethnicity")
     def serialize_ethnicity(self, value):

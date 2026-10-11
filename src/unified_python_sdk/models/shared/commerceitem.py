@@ -24,11 +24,14 @@ class WeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CommerceItemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""Reference to Accounting Account (reference to AccountingAccount)"""
     collections: NotRequired[List[CommerceReferenceTypedDict]]
     r"""points to Collection with id, name, and type fields"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     duration: NotRequired[float]
+    r"""minutes"""
     global_code: NotRequired[str]
     id: NotRequired[str]
     inventory_id: NotRequired[str]
@@ -37,6 +40,7 @@ class CommerceItemTypedDict(TypedDict):
     is_taxable: NotRequired[bool]
     is_visible: NotRequired[bool]
     location_id: NotRequired[str]
+    r"""(reference to CommerceLocation)"""
     media: NotRequired[List[CommerceItemMediaTypedDict]]
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
     name: NotRequired[str]
@@ -48,9 +52,12 @@ class CommerceItemTypedDict(TypedDict):
     slug: NotRequired[str]
     tags: NotRequired[List[str]]
     taxrate_id: NotRequired[str]
+    r"""references AccountingTaxrate"""
     total_stock: NotRequired[float]
     type: NotRequired[str]
+    r"""product, service, digital-download, ..."""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     vendor_name: NotRequired[str]
     weight: NotRequired[float]
     weight_unit: NotRequired[WeightUnit]
@@ -58,15 +65,18 @@ class CommerceItemTypedDict(TypedDict):
 
 class CommerceItem(BaseModel):
     account_id: Optional[str] = None
+    r"""Reference to Accounting Account (reference to AccountingAccount)"""
 
     collections: Optional[List[CommerceReference]] = None
     r"""points to Collection with id, name, and type fields"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     duration: Optional[float] = None
+    r"""minutes"""
 
     global_code: Optional[str] = None
 
@@ -83,6 +93,7 @@ class CommerceItem(BaseModel):
     is_visible: Optional[bool] = None
 
     location_id: Optional[str] = None
+    r"""(reference to CommerceLocation)"""
 
     media: Optional[List[CommerceItemMedia]] = None
 
@@ -105,12 +116,15 @@ class CommerceItem(BaseModel):
     tags: Optional[List[str]] = None
 
     taxrate_id: Optional[str] = None
+    r"""references AccountingTaxrate"""
 
     total_stock: Optional[float] = None
 
     type: Optional[str] = None
+    r"""product, service, digital-download, ..."""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     vendor_name: Optional[str] = None
 

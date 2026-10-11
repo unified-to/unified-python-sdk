@@ -28,6 +28,7 @@ class AssessmentParameterTypedDict(TypedDict):
     options: NotRequired[List[str]]
     r"""Options for MULTIPLE_CHOICE and MULTIPLE_SELECT"""
     public_question: NotRequired[str]
+    r"""Question to ask the candidateuser"""
     type: NotRequired[AssessmentParameterType]
     valid_regions: NotRequired[List[str]]
     r"""Regions where this parameter is valid ({country}-{state} or {country})"""
@@ -47,6 +48,7 @@ class AssessmentParameter(BaseModel):
     r"""Options for MULTIPLE_CHOICE and MULTIPLE_SELECT"""
 
     public_question: Optional[str] = None
+    r"""Question to ask the candidateuser"""
 
     type: Optional[AssessmentParameterType] = None
 

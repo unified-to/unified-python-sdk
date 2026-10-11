@@ -46,6 +46,7 @@ class ListAccountingExpensesQueryParamFields(str, Enum):
     METADATA = "metadata"
     TAXRATE_ID = "taxrate_id"
     EXCHANGE_RATE = "exchange_rate"
+    TYPE = "type"
     RAW = "raw"
 
 
@@ -77,7 +78,7 @@ class ListAccountingExpensesRequestTypedDict(TypedDict):
     start_gte: NotRequired[str]
     r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[str]
-    r"""The status to filter by"""
+    type: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
@@ -174,7 +175,11 @@ class ListAccountingExpensesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""The status to filter by"""
+
+    type: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     updated_gte: Annotated[
         Optional[str],
@@ -207,6 +212,7 @@ class ListAccountingExpensesRequest(BaseModel):
                 "sort",
                 "start_gte",
                 "status",
+                "type",
                 "updated_gte",
                 "user_id",
             ]

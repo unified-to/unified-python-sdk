@@ -20,23 +20,39 @@ class SocialProfileTypedDict(TypedDict):
     address: NotRequired[PropertySocialProfileAddressTypedDict]
     r"""Structured postal address"""
     avatar_url: NotRequired[str]
+    r"""Profile image URL"""
     category: NotRequired[str]
+    r"""Primary category of the profile"""
     created_at: NotRequired[datetime]
+    r"""When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""Bio or description of the profile"""
     id: NotRequired[str]
+    r"""Unique identifier for the profile"""
     is_private: NotRequired[bool]
+    r"""Whether the profile is private/protected"""
     is_verified: NotRequired[bool]
+    r"""Whether the profile is verified"""
     location: NotRequired[str]
+    r"""Free-text location/locale string"""
     metrics: NotRequired[PropertySocialProfileMetricsTypedDict]
     r"""Audience metrics for the profile"""
     name: NotRequired[str]
+    r"""Display name of the profile"""
     parent_id: NotRequired[str]
+    r"""Parent profile id when profiles are nested (e.g. account → location)"""
     phone: NotRequired[str]
+    r"""Contact phone number"""
     raw: NotRequired[Dict[str, Any]]
+    r"""Raw data from integration"""
     updated_at: NotRequired[datetime]
+    r"""When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""Public URL of the profile"""
     username: NotRequired[str]
+    r"""Handle/username/store code"""
     website_url: NotRequired[str]
+    r"""External website linked from the profile"""
 
 
 class SocialProfile(BaseModel):
@@ -44,39 +60,55 @@ class SocialProfile(BaseModel):
     r"""Structured postal address"""
 
     avatar_url: Optional[str] = None
+    r"""Profile image URL"""
 
     category: Optional[str] = None
+    r"""Primary category of the profile"""
 
     created_at: Optional[datetime] = None
+    r"""When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""Bio or description of the profile"""
 
     id: Optional[str] = None
+    r"""Unique identifier for the profile"""
 
     is_private: Optional[bool] = None
+    r"""Whether the profile is private/protected"""
 
     is_verified: Optional[bool] = None
+    r"""Whether the profile is verified"""
 
     location: Optional[str] = None
+    r"""Free-text location/locale string"""
 
     metrics: Optional[PropertySocialProfileMetrics] = None
     r"""Audience metrics for the profile"""
 
     name: Optional[str] = None
+    r"""Display name of the profile"""
 
     parent_id: Optional[str] = None
+    r"""Parent profile id when profiles are nested (e.g. account → location)"""
 
     phone: Optional[str] = None
+    r"""Contact phone number"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Raw data from integration"""
 
     updated_at: Optional[datetime] = None
+    r"""When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""Public URL of the profile"""
 
     username: Optional[str] = None
+    r"""Handle/username/store code"""
 
     website_url: Optional[str] = None
+    r"""External website linked from the profile"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

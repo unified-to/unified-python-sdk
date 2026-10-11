@@ -13,9 +13,12 @@ class AssessmentAddressTypedDict(TypedDict):
     city: NotRequired[str]
     country: NotRequired[str]
     country_code: NotRequired[str]
+    r"""Country code in ISO 3166 A-2 format"""
     postal_code: NotRequired[str]
     region: NotRequired[str]
+    r"""Regional area (e.g., state in the U.S., province in Canada)"""
     region_code: NotRequired[str]
+    r"""Short form for regional area (e.g., two-letter stateprovince abbreviation)"""
 
 
 class AssessmentAddress(BaseModel):
@@ -28,12 +31,15 @@ class AssessmentAddress(BaseModel):
     country: Optional[str] = None
 
     country_code: Optional[str] = None
+    r"""Country code in ISO 3166 A-2 format"""
 
     postal_code: Optional[str] = None
 
     region: Optional[str] = None
+    r"""Regional area (e.g., state in the U.S., province in Canada)"""
 
     region_code: Optional[str] = None
+    r"""Short form for regional area (e.g., two-letter stateprovince abbreviation)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

@@ -47,23 +47,34 @@ class AssessmentOrderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AssessmentOrderTypedDict(TypedDict):
     connection_id: str
+    r"""Connection ID that this order belongs to"""
     workspace_id: str
+    r"""Workspace ID that this order belongs to (reference to KmsSpace)"""
     application_id: NotRequired[str]
+    r"""ATS application ID"""
     candidate_id: NotRequired[str]
+    r"""ATS candidate ID"""
     company_id: NotRequired[str]
+    r"""ATS company ID (reference to AtsCompany)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     employee_id: NotRequired[str]
+    r"""ATS employee ID"""
     id: NotRequired[str]
     job_id: NotRequired[str]
+    r"""ATS job ID"""
     package_id: NotRequired[str]
+    r"""Assessment package ID"""
     parameters: NotRequired[List[AssessmentParameterInputTypedDict]]
     r"""Filled-in answers to the package's parameter questions"""
     profile_addresses: NotRequired[List[AssessmentAddressTypedDict]]
     profile_date_of_birth: NotRequired[str]
+    r"""YYYY-MM-DD"""
     profile_emails: NotRequired[List[str]]
     profile_first_name: NotRequired[str]
     profile_gender: NotRequired[ProfileGender]
     profile_ip_address: NotRequired[str]
+    r"""XXX.XXX.XXX.XXX"""
     profile_last_name: NotRequired[str]
     profile_name: NotRequired[str]
     profile_national_identifier: NotRequired[str]
@@ -72,46 +83,66 @@ class AssessmentOrderTypedDict(TypedDict):
     profile_telephones: NotRequired[List[str]]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
+    r"""ATS-specific reference ID"""
     response_attributes: NotRequired[List[AssessmentAttributeTypedDict]]
     r"""Additional result attributes"""
     response_completed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     response_details: NotRequired[List[AssessmentResponseDetailTypedDict]]
     response_download_urls: NotRequired[List[str]]
     r"""Report download URLs"""
     response_expires_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     response_issued_at: NotRequired[datetime]
+    r"""Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     response_max_score: NotRequired[float]
+    r"""Maximum possible score"""
     response_redirect_url: NotRequired[str]
+    r"""URL to redirect the user to complete assessment"""
     response_score: NotRequired[float]
+    r"""Assessment score (e.g., 0-100)"""
     response_source: NotRequired[str]
     response_status: NotRequired[ResponseStatus]
     response_url: NotRequired[str]
+    r"""URL to view detailed results"""
     status: NotRequired[AssessmentOrderStatus]
     target_url: NotRequired[str]
+    r"""URL to redirect user to after assessment"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     webhook_id: NotRequired[str]
+    r"""Webhook ID that this order belongs to"""
 
 
 class AssessmentOrder(BaseModel):
     connection_id: str
+    r"""Connection ID that this order belongs to"""
 
     workspace_id: str
+    r"""Workspace ID that this order belongs to (reference to KmsSpace)"""
 
     application_id: Optional[str] = None
+    r"""ATS application ID"""
 
     candidate_id: Optional[str] = None
+    r"""ATS candidate ID"""
 
     company_id: Optional[str] = None
+    r"""ATS company ID (reference to AtsCompany)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     employee_id: Optional[str] = None
+    r"""ATS employee ID"""
 
     id: Optional[str] = None
 
     job_id: Optional[str] = None
+    r"""ATS job ID"""
 
     package_id: Optional[str] = None
+    r"""Assessment package ID"""
 
     parameters: Optional[List[AssessmentParameterInput]] = None
     r"""Filled-in answers to the package's parameter questions"""
@@ -119,6 +150,7 @@ class AssessmentOrder(BaseModel):
     profile_addresses: Optional[List[AssessmentAddress]] = None
 
     profile_date_of_birth: Optional[str] = None
+    r"""YYYY-MM-DD"""
 
     profile_emails: Optional[List[str]] = None
 
@@ -127,6 +159,7 @@ class AssessmentOrder(BaseModel):
     profile_gender: Optional[ProfileGender] = None
 
     profile_ip_address: Optional[str] = None
+    r"""XXX.XXX.XXX.XXX"""
 
     profile_last_name: Optional[str] = None
 
@@ -143,11 +176,13 @@ class AssessmentOrder(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     reference: Optional[str] = None
+    r"""ATS-specific reference ID"""
 
     response_attributes: Optional[List[AssessmentAttribute]] = None
     r"""Additional result attributes"""
 
     response_completed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     response_details: Optional[List[AssessmentResponseDetail]] = None
 
@@ -155,28 +190,37 @@ class AssessmentOrder(BaseModel):
     r"""Report download URLs"""
 
     response_expires_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     response_issued_at: Optional[datetime] = None
+    r"""Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     response_max_score: Optional[float] = None
+    r"""Maximum possible score"""
 
     response_redirect_url: Optional[str] = None
+    r"""URL to redirect the user to complete assessment"""
 
     response_score: Optional[float] = None
+    r"""Assessment score (e.g., 0-100)"""
 
     response_source: Optional[str] = None
 
     response_status: Optional[ResponseStatus] = None
 
     response_url: Optional[str] = None
+    r"""URL to view detailed results"""
 
     status: Optional[AssessmentOrderStatus] = None
 
     target_url: Optional[str] = None
+    r"""URL to redirect user to after assessment"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     webhook_id: Optional[str] = None
+    r"""Webhook ID that this order belongs to"""
 
     @field_serializer("profile_gender")
     def serialize_profile_gender(self, value):

@@ -21,29 +21,38 @@ class CommerceReservationStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CommerceReservationTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     guest_email: NotRequired[str]
     guest_name: NotRequired[str]
     guest_phone: NotRequired[str]
     id: NotRequired[str]
     item_id: NotRequired[str]
+    r"""(reference to CommerceItem)"""
     item_name: NotRequired[str]
     location_id: NotRequired[str]
+    r"""(reference to CommerceLocation)"""
     notes: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     size: NotRequired[float]
     staff_name: NotRequired[str]
     staff_user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[CommerceReservationStatus]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
 
 
 class CommerceReservation(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     guest_email: Optional[str] = None
 
@@ -54,10 +63,12 @@ class CommerceReservation(BaseModel):
     id: Optional[str] = None
 
     item_id: Optional[str] = None
+    r"""(reference to CommerceItem)"""
 
     item_name: Optional[str] = None
 
     location_id: Optional[str] = None
+    r"""(reference to CommerceLocation)"""
 
     notes: Optional[str] = None
 
@@ -68,12 +79,15 @@ class CommerceReservation(BaseModel):
     staff_name: Optional[str] = None
 
     staff_user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[CommerceReservationStatus] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
 

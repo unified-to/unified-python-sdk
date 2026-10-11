@@ -16,11 +16,16 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class CalendarRecordingMediaTypedDict(TypedDict):
     attendees: NotRequired[List[CalendarAttendeeTypedDict]]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     language: NotRequired[str]
+    r"""two digit ISO code"""
     recording_download_url: NotRequired[str]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     summary: NotRequired[str]
+    r"""provider AI-generated meeting summary"""
     summary_download_url: NotRequired[str]
+    r"""download/export link for a provider AI summary document (e.g. Google Meet smart notes)"""
     transcript_download_url: NotRequired[str]
     transcripts: NotRequired[List[CalendarRecordingTranscriptTypedDict]]
 
@@ -29,16 +34,21 @@ class CalendarRecordingMedia(BaseModel):
     attendees: Optional[List[CalendarAttendee]] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     language: Optional[str] = None
+    r"""two digit ISO code"""
 
     recording_download_url: Optional[str] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     summary: Optional[str] = None
+    r"""provider AI-generated meeting summary"""
 
     summary_download_url: Optional[str] = None
+    r"""download/export link for a provider AI summary document (e.g. Google Meet smart notes)"""
 
     transcript_download_url: Optional[str] = None
 

@@ -10,34 +10,52 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class ShippingCarrierTypedDict(TypedDict):
     code: NotRequired[str]
+    r"""Carrier code (e.g., \"usps\", \"fedex\", \"ups\")"""
     created_at: NotRequired[datetime]
+    r"""The date that this carrier object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""Unique identifier for this carrier object"""
     is_active: NotRequired[bool]
+    r"""Whether the carrier is currently active"""
     logo_url: NotRequired[str]
+    r"""Carrier logo URL"""
     name: NotRequired[str]
+    r"""The name of the carrier"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this carrier"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this carrier object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     website_url: NotRequired[str]
+    r"""Carrier website"""
 
 
 class ShippingCarrier(BaseModel):
     code: Optional[str] = None
+    r"""Carrier code (e.g., \"usps\", \"fedex\", \"ups\")"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this carrier object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this carrier object"""
 
     is_active: Optional[bool] = None
+    r"""Whether the carrier is currently active"""
 
     logo_url: Optional[str] = None
+    r"""Carrier logo URL"""
 
     name: Optional[str] = None
+    r"""The name of the carrier"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this carrier"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this carrier object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     website_url: Optional[str] = None
+    r"""Carrier website"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

@@ -41,8 +41,12 @@ class ListHrisDevicesQueryParamFields(str, Enum):
 class ListHrisDevicesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    email: NotRequired[str]
+    r"""The email address to filter by"""
     fields: NotRequired[List[ListHrisDevicesQueryParamFields]]
     r"""Fields to return"""
+    group_id: NotRequired[str]
+    r"""The group ID to filter by (reference to HrisGroup)"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -63,11 +67,23 @@ class ListHrisDevicesRequest(BaseModel):
     ]
     r"""ID of the connection"""
 
+    email: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The email address to filter by"""
+
     fields: Annotated[
         Optional[List[ListHrisDevicesQueryParamFields]],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Fields to return"""
+
+    group_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The group ID to filter by (reference to HrisGroup)"""
 
     limit: Annotated[
         Optional[float],
@@ -117,7 +133,9 @@ class ListHrisDevicesRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "email",
                 "fields",
+                "group_id",
                 "limit",
                 "offset",
                 "order",

@@ -11,24 +11,30 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class HrisAttendanceBreakTypedDict(TypedDict):
     duration_minutes: NotRequired[float]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     is_paid: NotRequired[bool]
     name: NotRequired[str]
+    r"""break type label, e.g. \"Lunch\" """
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class HrisAttendanceBreak(BaseModel):
     duration_minutes: Optional[float] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     is_paid: Optional[bool] = None
 
     name: Optional[str] = None
+    r"""break type label, e.g. \"Lunch\" """
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

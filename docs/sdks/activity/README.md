@@ -76,7 +76,7 @@ with UnifiedTo(
                 "name": "Toby Grant",
                 "type": shared.PropertyAtsActivityFromType.OTHER,
             },
-            "id": "15544126-1e1e-454c-9436-9cd590c4d504",
+            "id": "6be4b122-76fb-4cad-84d5-335d82ccd2ed",
             "is_private": False,
             "metadata": [
                 {
@@ -84,7 +84,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "a5637b20-ea42-4450-a966-3f78ca393813",
+                    "id": "7954f594-97a3-4e21-8800-5d0be0b77840",
                     "namespace": "activity",
                     "slug": "acer",
                     "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
@@ -94,7 +94,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "a057a51a-cf0a-4fc9-88cc-68814aea63b2",
+                    "id": "9d7a338d-2cd7-4f69-9e18-04b15da8c838",
                     "namespace": "activity",
                     "slug": "tremo",
                     "value": "Amita delectus dicta temptatio utroque ex.",
@@ -110,7 +110,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-03-08T23:58:21.586Z"),
+            "updated_at": parse_datetime("2026-03-26T13:56:55.214Z"),
         },
         "connection_id": "<id>",
     })
@@ -161,14 +161,14 @@ with UnifiedTo(
     res = unified_to.activity.create_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2025-04-14T05:06:52.329Z"),
+            "completed_at": parse_datetime("2025-04-23T20:07:20.202Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "b47f36c5-ca15-424f-a44f-2f5ac37470d9",
+            "id": "c74a1c6c-6830-4491-b2e3-58dd58a94c5a",
             "is_completed": True,
             "progress_percentage": 100.0,
             "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
-            "updated_at": parse_datetime("2022-01-24T12:09:13.333Z"),
+            "updated_at": parse_datetime("2022-01-28T20:13:19.234Z"),
         },
         "connection_id": "<id>",
     })
@@ -533,7 +533,7 @@ with UnifiedTo(
                 "name": "Toby Grant",
                 "type": shared.PropertyAtsActivityFromType.OTHER,
             },
-            "id": "c8d54b59-1442-4eff-b309-aea61f6abc47",
+            "id": "e636b4b1-e83d-4f0f-acf2-47f3c66decae",
             "is_private": False,
             "metadata": [
                 {
@@ -541,7 +541,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "a6413e6c-d303-43d1-bfbc-b97b9d28e832",
+                    "id": "ae84be1e-6cf7-4196-9c09-889abd2e3fdc",
                     "namespace": "activity",
                     "slug": "acer",
                     "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
@@ -551,7 +551,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "2fd4d43b-0068-43f9-92bf-b78dbee0f9c0",
+                    "id": "7b63204a-0b7e-4486-817b-e8b1e5c85692",
                     "namespace": "activity",
                     "slug": "tremo",
                     "value": "Amita delectus dicta temptatio utroque ex.",
@@ -567,7 +567,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-03-08T23:58:21.609Z"),
+            "updated_at": parse_datetime("2026-03-26T13:56:55.244Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -619,14 +619,14 @@ with UnifiedTo(
     res = unified_to.activity.patch_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2025-04-14T05:06:52.334Z"),
+            "completed_at": parse_datetime("2025-04-23T20:07:20.207Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "774daa7a-da0f-412c-ba30-3355325d6932",
+            "id": "380c2529-7209-45ee-93ee-cb22fa3b39e8",
             "is_completed": True,
             "progress_percentage": 100.0,
             "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
-            "updated_at": parse_datetime("2022-01-24T12:09:13.335Z"),
+            "updated_at": parse_datetime("2022-01-28T20:13:19.237Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -807,7 +807,7 @@ with UnifiedTo(
                 "name": "Toby Grant",
                 "type": shared.PropertyAtsActivityFromType.OTHER,
             },
-            "id": "c8d54b59-1442-4eff-b309-aea61f6abc47",
+            "id": "e636b4b1-e83d-4f0f-acf2-47f3c66decae",
             "is_private": False,
             "metadata": [
                 {
@@ -815,7 +815,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "a6413e6c-d303-43d1-bfbc-b97b9d28e832",
+                    "id": "ae84be1e-6cf7-4196-9c09-889abd2e3fdc",
                     "namespace": "activity",
                     "slug": "acer",
                     "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
@@ -825,7 +825,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "2fd4d43b-0068-43f9-92bf-b78dbee0f9c0",
+                    "id": "7b63204a-0b7e-4486-817b-e8b1e5c85692",
                     "namespace": "activity",
                     "slug": "tremo",
                     "value": "Amita delectus dicta temptatio utroque ex.",
@@ -841,7 +841,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-03-08T23:58:21.609Z"),
+            "updated_at": parse_datetime("2026-03-26T13:56:55.244Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -893,14 +893,14 @@ with UnifiedTo(
     res = unified_to.activity.update_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2025-04-14T05:06:52.334Z"),
+            "completed_at": parse_datetime("2025-04-23T20:07:20.207Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "774daa7a-da0f-412c-ba30-3355325d6932",
+            "id": "380c2529-7209-45ee-93ee-cb22fa3b39e8",
             "is_completed": True,
             "progress_percentage": 100.0,
             "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
-            "updated_at": parse_datetime("2022-01-24T12:09:13.335Z"),
+            "updated_at": parse_datetime("2022-01-28T20:13:19.237Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

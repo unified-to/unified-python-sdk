@@ -10,8 +10,10 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class CalendarLinkTypedDict(TypedDict):
     url: str
     created_at: NotRequired[str]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     duration: NotRequired[float]
+    r"""minutes"""
     id: NotRequired[str]
     is_active: NotRequired[bool]
     name: NotRequired[str]
@@ -19,16 +21,19 @@ class CalendarLinkTypedDict(TypedDict):
     price_currency: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[str]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CalendarLink(BaseModel):
     url: str
 
     created_at: Optional[str] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     duration: Optional[float] = None
+    r"""minutes"""
 
     id: Optional[str] = None
 
@@ -43,6 +48,7 @@ class CalendarLink(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[str] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

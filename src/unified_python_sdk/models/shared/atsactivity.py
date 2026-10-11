@@ -30,7 +30,9 @@ class AtsActivityTypedDict(TypedDict):
     candidate_id: NotRequired[str]
     cc: NotRequired[List[AtsEmailTypedDict]]
     company_id: NotRequired[str]
+    r"""(reference to AtsCompany)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     document_ids: NotRequired[List[str]]
     r"""IDs for AtsDocument.get"""
@@ -46,6 +48,7 @@ class AtsActivityTypedDict(TypedDict):
     to: NotRequired[List[AtsEmailTypedDict]]
     type: NotRequired[AtsActivityType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_ids: NotRequired[List[str]]
     r"""id values of the recruiters associated with the activity."""
 
@@ -60,8 +63,10 @@ class AtsActivity(BaseModel):
     cc: Optional[List[AtsEmail]] = None
 
     company_id: Optional[str] = None
+    r"""(reference to AtsCompany)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -93,6 +98,7 @@ class AtsActivity(BaseModel):
     type: Optional[AtsActivityType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_ids: Optional[List[str]] = None
     r"""id values of the recruiters associated with the activity."""

@@ -13,6 +13,7 @@ class FormsFormTypedDict(TypedDict):
     confirmation_message: NotRequired[str]
     confirmation_redirect_url: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     fields: NotRequired[List[FormFieldTypedDict]]
     has_multiple_submissions: NotRequired[bool]
@@ -25,6 +26,7 @@ class FormsFormTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     response_count: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class FormsForm(BaseModel):
@@ -33,6 +35,7 @@ class FormsForm(BaseModel):
     confirmation_redirect_url: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -57,6 +60,7 @@ class FormsForm(BaseModel):
     response_count: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

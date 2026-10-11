@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class LabelFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Format of the label (PDF, PNG, ZPL, EPL2)"""
+
     PDF = "PDF"
     PNG = "PNG"
     ZPL = "ZPL"
@@ -23,6 +25,8 @@ class LabelFormat(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ShippingLabelStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Status of the label"""
+
     PENDING = "PENDING"
     PROCESSING = "PROCESSING"
     IN_TRANSIT = "IN_TRANSIT"
@@ -41,49 +45,75 @@ class ShippingLabelStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class ShippingLabelTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""Unique identifier for this label object"""
     is_voided: NotRequired[bool]
+    r"""Whether label has been voided"""
     label_cost: NotRequired[float]
+    r"""Cost to purchase label"""
     label_cost_currency: NotRequired[str]
     label_format: NotRequired[LabelFormat]
+    r"""Format of the label (PDF, PNG, ZPL, EPL2)"""
     label_url: NotRequired[str]
+    r"""URL to download the label"""
     rate_id: NotRequired[str]
+    r"""Rate used for this label; points to ShippingRate"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this label"""
     service_code: NotRequired[str]
+    r"""Service code used"""
     shipment_id: NotRequired[str]
+    r"""Reference to the shipment"""
     status: NotRequired[ShippingLabelStatus]
+    r"""Status of the label"""
     tracking_number: NotRequired[str]
+    r"""Tracking number for the shipment"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class ShippingLabel(BaseModel):
     created_at: Optional[datetime] = None
+    r"""The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this label object"""
 
     is_voided: Optional[bool] = None
+    r"""Whether label has been voided"""
 
     label_cost: Optional[float] = None
+    r"""Cost to purchase label"""
 
     label_cost_currency: Optional[str] = None
 
     label_format: Optional[LabelFormat] = None
+    r"""Format of the label (PDF, PNG, ZPL, EPL2)"""
 
     label_url: Optional[str] = None
+    r"""URL to download the label"""
 
     rate_id: Optional[str] = None
+    r"""Rate used for this label; points to ShippingRate"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this label"""
 
     service_code: Optional[str] = None
+    r"""Service code used"""
 
     shipment_id: Optional[str] = None
+    r"""Reference to the shipment"""
 
     status: Optional[ShippingLabelStatus] = None
+    r"""Status of the label"""
 
     tracking_number: Optional[str] = None
+    r"""Tracking number for the shipment"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("label_format")
     def serialize_label_format(self, value):

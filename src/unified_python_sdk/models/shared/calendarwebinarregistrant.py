@@ -22,6 +22,7 @@ class CalendarWebinarRegistrantTypedDict(TypedDict):
     email: NotRequired[str]
     name: NotRequired[str]
     registered_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     registration_reference: NotRequired[str]
     registration_status: NotRequired[RegistrationStatus]
 
@@ -32,6 +33,7 @@ class CalendarWebinarRegistrant(BaseModel):
     name: Optional[str] = None
 
     registered_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     registration_reference: Optional[str] = None
 

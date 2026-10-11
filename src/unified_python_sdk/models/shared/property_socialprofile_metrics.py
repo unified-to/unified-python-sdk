@@ -11,18 +11,24 @@ class PropertySocialProfileMetricsTypedDict(TypedDict):
     r"""Audience metrics for the profile"""
 
     follower_count: NotRequired[float]
+    r"""Number of followers"""
     following_count: NotRequired[float]
+    r"""Number of accounts this profile follows"""
     post_count: NotRequired[float]
+    r"""Total number of posts published by this profile"""
 
 
 class PropertySocialProfileMetrics(BaseModel):
     r"""Audience metrics for the profile"""
 
     follower_count: Optional[float] = None
+    r"""Number of followers"""
 
     following_count: Optional[float] = None
+    r"""Number of accounts this profile follows"""
 
     post_count: Optional[float] = None
+    r"""Total number of posts published by this profile"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

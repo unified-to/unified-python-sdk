@@ -12,7 +12,7 @@ from unified_python_sdk.utils import FieldMetadata, PathParamMetadata, RequestMe
 
 class UpdateUnifiedWebhookRequestTypedDict(TypedDict):
     webhook: shared_webhook.WebhookTypedDict
-    r"""A webhook is used to POST new/updated information to your server."""
+    r"""A webhook is used to POST new, updated, or deleted records to your server."""
     id: str
     r"""ID of the Webhook"""
 
@@ -22,7 +22,7 @@ class UpdateUnifiedWebhookRequest(BaseModel):
         shared_webhook.Webhook,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
-    r"""A webhook is used to POST new/updated information to your server."""
+    r"""A webhook is used to POST new, updated, or deleted records to your server."""
 
     id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))

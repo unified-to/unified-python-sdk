@@ -31,6 +31,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class PropertyAdsReportMetricsGroupBillingEvent(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
+    r"""Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)"""
+
     IMPRESSIONS = "IMPRESSIONS"
     LINK_CLICKS = "LINK_CLICKS"
     VIDEO_VIEWS = "VIDEO_VIEWS"
@@ -70,6 +72,8 @@ class PropertyAdsReportMetricsGroupBudgetUnit(str, Enum, metaclass=utils.OpenEnu
 class PropertyAdsReportMetricsGroupCreativeSelection(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
+    r"""Creative rotation strategy (LinkedIn creativeSelection)"""
+
     OPTIMIZED = "OPTIMIZED"
     ROUND_ROBIN = "ROUND_ROBIN"
 
@@ -93,6 +97,8 @@ class PropertyAdsReportMetricsGroupEffectiveStatus(
 class PropertyAdsReportMetricsGroupOptimizationGoal(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
+    r"""Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)"""
+
     REACH = "REACH"
     IMPRESSIONS = "IMPRESSIONS"
     LINK_CLICKS = "LINK_CLICKS"
@@ -143,6 +149,7 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     bid_strategy: NotRequired[PropertyAdsReportMetricsGroupBidStrategyTypedDict]
     r"""YOUTUBE_AND_PARTNERS"""
     billing_event: NotRequired[PropertyAdsReportMetricsGroupBillingEvent]
+    r"""Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)"""
     budget_allocation_type: NotRequired[
         PropertyAdsReportMetricsGroupBudgetAllocationType
     ]
@@ -152,28 +159,35 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     budget_unit: NotRequired[PropertyAdsReportMetricsGroupBudgetUnit]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creative_ids: NotRequired[List[str]]
     creative_selection: NotRequired[PropertyAdsReportMetricsGroupCreativeSelection]
+    r"""Creative rotation strategy (LinkedIn creativeSelection)"""
     currency: NotRequired[str]
     effective_status: NotRequired[PropertyAdsReportMetricsGroupEffectiveStatus]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     frequency_cap: NotRequired[PropertyAdsReportMetricsGroupFrequencyCapTypedDict]
     has_eu_political_ads: NotRequired[bool]
     id: NotRequired[str]
     insertionorder_id: NotRequired[str]
     language_locale: NotRequired[str]
+    r"""Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale"""
     name: NotRequired[str]
     optimization_goal: NotRequired[PropertyAdsReportMetricsGroupOptimizationGoal]
+    r"""Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)"""
     organization_id: NotRequired[str]
     pacing: NotRequired[PropertyAdsReportMetricsGroupPacingTypedDict]
     parent_id: NotRequired[str]
     promoted: NotRequired[List[AdsPromotedTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[PropertyAdsReportMetricsGroupStatus]
     targeting: NotRequired[PropertyAdsReportMetricsGroupTargetingTypedDict]
     type: NotRequired[PropertyAdsReportMetricsGroupType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PropertyAdsReportMetricsGroup(BaseModel):
@@ -183,6 +197,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     r"""YOUTUBE_AND_PARTNERS"""
 
     billing_event: Optional[PropertyAdsReportMetricsGroupBillingEvent] = None
+    r"""Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)"""
 
     budget_allocation_type: Optional[
         PropertyAdsReportMetricsGroupBudgetAllocationType
@@ -199,16 +214,19 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     campaign_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creative_ids: Optional[List[str]] = None
 
     creative_selection: Optional[PropertyAdsReportMetricsGroupCreativeSelection] = None
+    r"""Creative rotation strategy (LinkedIn creativeSelection)"""
 
     currency: Optional[str] = None
 
     effective_status: Optional[PropertyAdsReportMetricsGroupEffectiveStatus] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     frequency_cap: Optional[PropertyAdsReportMetricsGroupFrequencyCap] = None
 
@@ -219,10 +237,12 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     insertionorder_id: Optional[str] = None
 
     language_locale: Optional[str] = None
+    r"""Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale"""
 
     name: Optional[str] = None
 
     optimization_goal: Optional[PropertyAdsReportMetricsGroupOptimizationGoal] = None
+    r"""Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)"""
 
     organization_id: Optional[str] = None
 
@@ -235,6 +255,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[PropertyAdsReportMetricsGroupStatus] = None
 
@@ -243,6 +264,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     type: Optional[PropertyAdsReportMetricsGroupType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("billing_event")
     def serialize_billing_event(self, value):

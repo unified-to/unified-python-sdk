@@ -31,6 +31,16 @@ class GetHrisPayslipQueryParamFields(str, Enum):
     NET_AMOUNT = "net_amount"
     DETAILS = "details"
     DEDUCTION = "deduction"
+    PAYROLL_ID = "payroll_id"
+    GROUP_ID = "group_id"
+    TYPE = "type"
+    HOURS = "hours"
+    EMPLOYEE_TAX_AMOUNT = "employee_tax_amount"
+    EMPLOYER_TAX_AMOUNT = "employer_tax_amount"
+    DEDUCTION_AMOUNT = "deduction_amount"
+    EMPLOYER_CONTRIBUTION_AMOUNT = "employer_contribution_amount"
+    GROSS_YTD_AMOUNT = "gross_ytd_amount"
+    NET_YTD_AMOUNT = "net_ytd_amount"
     RAW = "raw"
 
 

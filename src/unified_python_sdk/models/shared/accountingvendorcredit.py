@@ -32,29 +32,36 @@ class AccountingVendorcreditStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingVendorcreditTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     applications: NotRequired[List[AccountingCreditApplicationTypedDict]]
     r"""What this vendor credit was applied to (invoices/bills). Writable inline on create/update."""
     apply_amount: NotRequired[float]
     balance_amount: NotRequired[float]
     bill_id: NotRequired[str]
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
     posted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[AccountingVendorcreditStatus]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingVendorcredit(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     applications: Optional[List[AccountingCreditApplication]] = None
     r"""What this vendor credit was applied to (invoices/bills). Writable inline on create/update."""
@@ -66,12 +73,15 @@ class AccountingVendorcredit(BaseModel):
     bill_id: Optional[str] = None
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -84,6 +94,7 @@ class AccountingVendorcredit(BaseModel):
     organization_id: Optional[str] = None
 
     posted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -92,6 +103,7 @@ class AccountingVendorcredit(BaseModel):
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

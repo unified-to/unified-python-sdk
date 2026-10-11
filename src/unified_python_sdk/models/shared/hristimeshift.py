@@ -11,38 +11,55 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class HrisTimeshiftTypedDict(TypedDict):
     employee_user_id: str
+    r"""(reference to HrisEmployee)"""
     approved_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     approver_user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     compensation: NotRequired[List[HrisCompensationTypedDict]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     group_id: NotRequired[str]
+    r"""department, team, etc. (reference to HrisGroup)"""
     hours: NotRequired[float]
     id: NotRequired[str]
     is_approved: NotRequired[bool]
     location_id: NotRequired[str]
+    r"""(reference to HrisLocation)"""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class HrisTimeshift(BaseModel):
     employee_user_id: str
+    r"""(reference to HrisEmployee)"""
 
     approved_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     approver_user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     compensation: Optional[List[HrisCompensation]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     group_id: Optional[str] = None
+    r"""department, team, etc. (reference to HrisGroup)"""
 
     hours: Optional[float] = None
 
@@ -51,12 +68,15 @@ class HrisTimeshift(BaseModel):
     is_approved: Optional[bool] = None
 
     location_id: Optional[str] = None
+    r"""(reference to HrisLocation)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

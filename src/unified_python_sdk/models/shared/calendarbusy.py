@@ -10,7 +10,9 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class CalendarBusyTypedDict(TypedDict):
     end_at: datetime
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     start_at: datetime
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -19,8 +21,10 @@ class CalendarBusyTypedDict(TypedDict):
 
 class CalendarBusy(BaseModel):
     end_at: datetime
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     start_at: datetime
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 

@@ -18,6 +18,8 @@ class HrisCompensationFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
     HOUR = "HOUR"
     MONTH = "MONTH"
     WEEK = "WEEK"
+    BIWEEKLY = "BIWEEKLY"
+    SEMIMONTHLY = "SEMIMONTHLY"
 
 
 class HrisCompensationType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -26,6 +28,8 @@ class HrisCompensationType(str, Enum, metaclass=utils.OpenEnumMeta):
     STOCK_OPTIONS = "STOCK_OPTIONS"
     EQUITY = "EQUITY"
     OTHER = "OTHER"
+    HOURLY = "HOURLY"
+    COMMISSION = "COMMISSION"
 
 
 class HrisCompensationTypedDict(TypedDict):
@@ -33,6 +37,7 @@ class HrisCompensationTypedDict(TypedDict):
     currency: NotRequired[str]
     frequency: NotRequired[HrisCompensationFrequency]
     group_id: NotRequired[str]
+    r"""(reference to HrisGroup)"""
     notes: NotRequired[str]
     type: NotRequired[HrisCompensationType]
 
@@ -45,6 +50,7 @@ class HrisCompensation(BaseModel):
     frequency: Optional[HrisCompensationFrequency] = None
 
     group_id: Optional[str] = None
+    r"""(reference to HrisGroup)"""
 
     notes: Optional[str] = None
 

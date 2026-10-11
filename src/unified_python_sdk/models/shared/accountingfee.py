@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingFeeType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Unified fee category"""
+
     TAX = "TAX"
     DISCOUNT = "DISCOUNT"
     PROMOTION = "PROMOTION"
@@ -26,18 +28,24 @@ class AccountingFeeType(str, Enum, metaclass=utils.OpenEnumMeta):
 class AccountingFeeTypedDict(TypedDict):
     amount: float
     type: AccountingFeeType
+    r"""Unified fee category"""
     currency: NotRequired[str]
+    r"""ISO 4217 currency code, e.g. USD"""
     original_type: NotRequired[str]
+    r"""The provider's original fee label, e.g. \"VAT\" or a shipping carrier name"""
 
 
 class AccountingFee(BaseModel):
     amount: float
 
     type: AccountingFeeType
+    r"""Unified fee category"""
 
     currency: Optional[str] = None
+    r"""ISO 4217 currency code, e.g. USD"""
 
     original_type: Optional[str] = None
+    r"""The provider's original fee label, e.g. \"VAT\" or a shipping carrier name"""
 
     @field_serializer("type")
     def serialize_type(self, value):

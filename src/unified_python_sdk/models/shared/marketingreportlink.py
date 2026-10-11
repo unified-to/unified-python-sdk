@@ -10,25 +10,37 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class MarketingReportLinkTypedDict(TypedDict):
     click_percentage: NotRequired[float]
+    r"""Percentage of total clicks"""
     last_click_at: NotRequired[datetime]
+    r"""Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     total_clicks: NotRequired[float]
+    r"""Total clicks on this link"""
     unique_click_percentage: NotRequired[float]
+    r"""Percentage of unique clicks"""
     unique_clicks: NotRequired[float]
+    r"""Unique clicks on this link"""
     url: NotRequired[str]
+    r"""The URL"""
 
 
 class MarketingReportLink(BaseModel):
     click_percentage: Optional[float] = None
+    r"""Percentage of total clicks"""
 
     last_click_at: Optional[datetime] = None
+    r"""Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     total_clicks: Optional[float] = None
+    r"""Total clicks on this link"""
 
     unique_click_percentage: Optional[float] = None
+    r"""Percentage of unique clicks"""
 
     unique_clicks: Optional[float] = None
+    r"""Unique clicks on this link"""
 
     url: Optional[str] = None
+    r"""The URL"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

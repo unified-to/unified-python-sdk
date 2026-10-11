@@ -16,6 +16,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class GroupType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The group type"""
+
     CASUAL_CLUB = "CASUAL_CLUB"
     RACING_TEAM = "RACING_TEAM"
     SHOP = "SHOP"
@@ -24,12 +26,16 @@ class GroupType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class MembershipStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The authenticated user's membership status"""
+
     MEMBER = "MEMBER"
     PENDING = "PENDING"
     NONE = "NONE"
 
 
 class SportType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The primary sport of the group"""
+
     RUNNING = "RUNNING"
     CYCLING = "CYCLING"
     SWIMMING = "SWIMMING"
@@ -47,25 +53,45 @@ class ClubsGroupTypedDict(TypedDict):
     address: NotRequired[PropertyClubsGroupAddressTypedDict]
     r"""The group's address"""
     cover_image_url: NotRequired[str]
+    r"""URL to the group's cover photo"""
     created_at: NotRequired[datetime]
+    r"""The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""The group's description"""
     following_count: NotRequired[float]
+    r"""The number of athletes the group follows"""
     group_type: NotRequired[GroupType]
+    r"""The group type"""
     id: NotRequired[str]
+    r"""Unique identifier for this group"""
     is_admin: NotRequired[bool]
+    r"""Whether the authenticated user is an admin of the group"""
     is_featured: NotRequired[bool]
+    r"""Whether the group is featured"""
     is_owner: NotRequired[bool]
+    r"""Whether the authenticated user is the owner of the group"""
     is_private: NotRequired[bool]
+    r"""Whether the group is private"""
     is_verified: NotRequired[bool]
+    r"""Whether the group is verified"""
     member_count: NotRequired[float]
+    r"""The number of members in the group"""
     membership_status: NotRequired[MembershipStatus]
+    r"""The authenticated user's membership status"""
     name: NotRequired[str]
+    r"""The group's name"""
     post_count: NotRequired[float]
+    r"""The number of posts in the group"""
     profile_image_url: NotRequired[str]
+    r"""URL to the group's profile picture"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this group"""
     sport_type: NotRequired[SportType]
+    r"""The primary sport of the group"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""The group's vanity URL"""
 
 
 class ClubsGroup(BaseModel):
@@ -78,44 +104,64 @@ class ClubsGroup(BaseModel):
     r"""The group's address"""
 
     cover_image_url: Optional[str] = None
+    r"""URL to the group's cover photo"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""The group's description"""
 
     following_count: Optional[float] = None
+    r"""The number of athletes the group follows"""
 
     group_type: Optional[GroupType] = None
+    r"""The group type"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this group"""
 
     is_admin: Optional[bool] = None
+    r"""Whether the authenticated user is an admin of the group"""
 
     is_featured: Optional[bool] = None
+    r"""Whether the group is featured"""
 
     is_owner: Optional[bool] = None
+    r"""Whether the authenticated user is the owner of the group"""
 
     is_private: Optional[bool] = None
+    r"""Whether the group is private"""
 
     is_verified: Optional[bool] = None
+    r"""Whether the group is verified"""
 
     member_count: Optional[float] = None
+    r"""The number of members in the group"""
 
     membership_status: Optional[MembershipStatus] = None
+    r"""The authenticated user's membership status"""
 
     name: Optional[str] = None
+    r"""The group's name"""
 
     post_count: Optional[float] = None
+    r"""The number of posts in the group"""
 
     profile_image_url: Optional[str] = None
+    r"""URL to the group's profile picture"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this group"""
 
     sport_type: Optional[SportType] = None
+    r"""The primary sport of the group"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""The group's vanity URL"""
 
     @field_serializer("group_type")
     def serialize_group_type(self, value):

@@ -12,6 +12,7 @@ class PropertyMessagingReactionMemberTypedDict(TypedDict):
     image_url: NotRequired[str]
     name: NotRequired[str]
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class PropertyMessagingReactionMember(BaseModel):
@@ -22,6 +23,7 @@ class PropertyMessagingReactionMember(BaseModel):
     name: Optional[str] = None
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

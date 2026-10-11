@@ -12,54 +12,70 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingLineitemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     discount_amount: NotRequired[float]
     exchange_rate: NotRequired[float]
+    r"""The exchange rate applied to this line, for multi-currency documents"""
     fees: NotRequired[List[AccountingFeeTypedDict]]
     id: NotRequired[str]
     is_billable: NotRequired[bool]
+    r"""True when the line is rebillable to a customer"""
     item_description: NotRequired[str]
     item_id: NotRequired[str]
+    r"""(reference to CommerceItem)"""
     item_name: NotRequired[str]
     item_sku: NotRequired[str]
     item_variants: NotRequired[List[AccountingReferenceTypedDict]]
     locations: NotRequired[List[AccountingReferenceTypedDict]]
     notes: NotRequired[str]
     project_id: NotRequired[str]
+    r"""ref -> AccountingProject; the project this line is coded to (reference to TaskProject)"""
     refund_amount: NotRequired[float]
     refunded_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
     total_amount: NotRequired[float]
+    r"""unit_quantity * unit_amount + tax_amount"""
     unit_amount: NotRequired[float]
     unit_quantity: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingLineitem(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     discount_amount: Optional[float] = None
 
     exchange_rate: Optional[float] = None
+    r"""The exchange rate applied to this line, for multi-currency documents"""
 
     fees: Optional[List[AccountingFee]] = None
 
     id: Optional[str] = None
 
     is_billable: Optional[bool] = None
+    r"""True when the line is rebillable to a customer"""
 
     item_description: Optional[str] = None
 
     item_id: Optional[str] = None
+    r"""(reference to CommerceItem)"""
 
     item_name: Optional[str] = None
 
@@ -72,22 +88,26 @@ class AccountingLineitem(BaseModel):
     notes: Optional[str] = None
 
     project_id: Optional[str] = None
+    r"""ref -> AccountingProject; the project this line is coded to (reference to TaskProject)"""
 
     refund_amount: Optional[float] = None
 
     refunded_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     tax_amount: Optional[float] = None
 
     taxrate_id: Optional[str] = None
 
     total_amount: Optional[float] = None
+    r"""unit_quantity * unit_amount + tax_amount"""
 
     unit_amount: Optional[float] = None
 
     unit_quantity: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

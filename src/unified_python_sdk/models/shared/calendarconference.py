@@ -10,11 +10,13 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class CalendarConferenceTypedDict(TypedDict):
     conference_identifier: NotRequired[str]
     country_code: NotRequired[str]
+    r"""ISO 2-digit country code"""
     host_access_code: NotRequired[str]
     label: NotRequired[str]
     notes: NotRequired[str]
     participant_access_code: NotRequired[str]
     region_code: NotRequired[str]
+    r"""ISO 2-digit region code"""
     telephone: NotRequired[str]
     url: NotRequired[str]
 
@@ -23,6 +25,7 @@ class CalendarConference(BaseModel):
     conference_identifier: Optional[str] = None
 
     country_code: Optional[str] = None
+    r"""ISO 2-digit country code"""
 
     host_access_code: Optional[str] = None
 
@@ -33,6 +36,7 @@ class CalendarConference(BaseModel):
     participant_access_code: Optional[str] = None
 
     region_code: Optional[str] = None
+    r"""ISO 2-digit region code"""
 
     telephone: Optional[str] = None
 

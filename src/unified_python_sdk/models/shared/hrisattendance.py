@@ -23,77 +23,111 @@ class HrisAttendanceStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class HrisAttendanceTypedDict(TypedDict):
+    r"""Also called timesheets"""
+
     employee_user_id: str
+    r"""(reference to HrisEmployee)"""
     end_at: datetime
+    r"""clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     start_at: datetime
+    r"""clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     address: NotRequired[PropertyHrisAttendanceAddressTypedDict]
     approved_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     approver_user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     breaks: NotRequired[List[HrisAttendanceBreakTypedDict]]
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""pairs with hourly_rate and tip amounts"""
     declared_tips_amount: NotRequired[float]
+    r"""cash tips declared by the employee for this attendance record"""
     group_id: NotRequired[str]
+    r"""department, team, etc. (reference to HrisGroup)"""
     hourly_rate: NotRequired[float]
     hours: NotRequired[float]
+    r"""worked hours"""
     id: NotRequired[str]
     job_name: NotRequired[str]
     location_id: NotRequired[str]
+    r"""(reference to HrisLocation)"""
     non_cash_tips_amount: NotRequired[float]
+    r"""card/non-cash tips attributed to this attendance record"""
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[HrisAttendanceStatus]
     timeshift_id: NotRequired[str]
+    r"""the scheduled hris_timeshift this attendance record fulfils"""
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class HrisAttendance(BaseModel):
+    r"""Also called timesheets"""
+
     employee_user_id: str
+    r"""(reference to HrisEmployee)"""
 
     end_at: datetime
+    r"""clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     start_at: datetime
+    r"""clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     address: Optional[PropertyHrisAttendanceAddress] = None
 
     approved_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     approver_user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     breaks: Optional[List[HrisAttendanceBreak]] = None
 
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""pairs with hourly_rate and tip amounts"""
 
     declared_tips_amount: Optional[float] = None
+    r"""cash tips declared by the employee for this attendance record"""
 
     group_id: Optional[str] = None
+    r"""department, team, etc. (reference to HrisGroup)"""
 
     hourly_rate: Optional[float] = None
 
     hours: Optional[float] = None
+    r"""worked hours"""
 
     id: Optional[str] = None
 
     job_name: Optional[str] = None
 
     location_id: Optional[str] = None
+    r"""(reference to HrisLocation)"""
 
     non_cash_tips_amount: Optional[float] = None
+    r"""card/non-cash tips attributed to this attendance record"""
 
     raw: Optional[Dict[str, Any]] = None
 
     status: Optional[HrisAttendanceStatus] = None
 
     timeshift_id: Optional[str] = None
+    r"""the scheduled hris_timeshift this attendance record fulfils"""
 
     timezone: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

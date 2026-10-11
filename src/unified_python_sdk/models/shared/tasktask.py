@@ -23,10 +23,15 @@ class TaskTaskTypedDict(TypedDict):
     attachment_ids: NotRequired[List[str]]
     r"""Array of attachment IDs retrieved from StorageFile.Get endpoint"""
     completed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creator_user_id: NotRequired[str]
+    r"""The user who created this task (reference to HrisEmployee)"""
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     follower_user_ids: NotRequired[List[str]]
     group_ids: NotRequired[List[str]]
     has_children: NotRequired[bool]
@@ -37,16 +42,21 @@ class TaskTaskTypedDict(TypedDict):
     parent_id: NotRequired[str]
     priority: NotRequired[str]
     progress: NotRequired[float]
+    r"""0-100"""
     project_id: NotRequired[str]
+    r"""(reference to TaskProject)"""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[TaskTaskStatus]
     story_points: NotRequired[float]
     tags: NotRequired[List[str]]
     time_spent: NotRequired[float]
     time_spent_unit: NotRequired[str]
     type: NotRequired[str]
+    r"""The task/issue type name (e.g. Jira issue type)."""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
 
 
@@ -57,14 +67,19 @@ class TaskTask(BaseModel):
     r"""Array of attachment IDs retrieved from StorageFile.Get endpoint"""
 
     completed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creator_user_id: Optional[str] = None
+    r"""The user who created this task (reference to HrisEmployee)"""
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     follower_user_ids: Optional[List[str]] = None
 
@@ -85,12 +100,15 @@ class TaskTask(BaseModel):
     priority: Optional[str] = None
 
     progress: Optional[float] = None
+    r"""0-100"""
 
     project_id: Optional[str] = None
+    r"""(reference to TaskProject)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[TaskTaskStatus] = None
 
@@ -103,8 +121,10 @@ class TaskTask(BaseModel):
     time_spent_unit: Optional[str] = None
 
     type: Optional[str] = None
+    r"""The task/issue type name (e.g. Jira issue type)."""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
 

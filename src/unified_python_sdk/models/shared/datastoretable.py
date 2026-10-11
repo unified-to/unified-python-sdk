@@ -12,7 +12,9 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class DatastoreTableTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     database_id: NotRequired[str]
+    r"""source Database ID"""
     description: NotRequired[str]
     fields: NotRequired[List[DatastoreFieldTypedDict]]
     id: NotRequired[str]
@@ -21,13 +23,16 @@ class DatastoreTableTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     relationships: NotRequired[List[DatastoreRelationshipTypedDict]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
 
 
 class DatastoreTable(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     database_id: Optional[str] = None
+    r"""source Database ID"""
 
     description: Optional[str] = None
 
@@ -44,6 +49,7 @@ class DatastoreTable(BaseModel):
     relationships: Optional[List[DatastoreRelationship]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
 

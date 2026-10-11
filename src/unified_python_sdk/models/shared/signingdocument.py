@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class SigningDocumentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Current status of the signing document"""
+
     DRAFT = "DRAFT"
     SENT = "SENT"
     DELIVERED = "DELIVERED"
@@ -24,46 +26,72 @@ class SigningDocumentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class SigningDocumentTypedDict(TypedDict):
     completed_at: NotRequired[datetime]
+    r"""When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creator_id: NotRequired[str]
+    r"""User who created the signing document"""
     description: NotRequired[str]
+    r"""Message to signers"""
     download_url: NotRequired[str]
+    r"""URL to download the signed document"""
     expires_at: NotRequired[datetime]
+    r"""Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""Unique identifier for this signing document"""
     name: NotRequired[str]
+    r"""Document/envelope title"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration"""
     sent_at: NotRequired[datetime]
+    r"""When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[SigningDocumentStatus]
+    r"""Current status of the signing document"""
     template_id: NotRequired[str]
+    r"""If created from a template; points to SigningTemplate"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class SigningDocument(BaseModel):
     completed_at: Optional[datetime] = None
+    r"""When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creator_id: Optional[str] = None
+    r"""User who created the signing document"""
 
     description: Optional[str] = None
+    r"""Message to signers"""
 
     download_url: Optional[str] = None
+    r"""URL to download the signed document"""
 
     expires_at: Optional[datetime] = None
+    r"""Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this signing document"""
 
     name: Optional[str] = None
+    r"""Document/envelope title"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration"""
 
     sent_at: Optional[datetime] = None
+    r"""When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[SigningDocumentStatus] = None
+    r"""Current status of the signing document"""
 
     template_id: Optional[str] = None
+    r"""If created from a template; points to SigningTemplate"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

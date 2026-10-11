@@ -9,8 +9,11 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingCashflowItemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""If attributable to a specific GL account (reference to AccountingAccount)"""
     amount: NotRequired[float]
+    r"""Positive = inflow, Negative = outflow"""
     name: NotRequired[str]
+    r"""e.g. \"Net Income\", \"Depreciation\", \"Equipment\" """
     sub_items: NotRequired[List[AccountingCashflowItemTypedDict]]
     transaction_ids: NotRequired[List[str]]
     r"""Optional linkage to transactions"""
@@ -18,10 +21,13 @@ class AccountingCashflowItemTypedDict(TypedDict):
 
 class AccountingCashflowItem(BaseModel):
     account_id: Optional[str] = None
+    r"""If attributable to a specific GL account (reference to AccountingAccount)"""
 
     amount: Optional[float] = None
+    r"""Positive = inflow, Negative = outflow"""
 
     name: Optional[str] = None
+    r"""e.g. \"Net Income\", \"Depreciation\", \"Equipment\" """
 
     sub_items: Optional[List[AccountingCashflowItem]] = None
 

@@ -20,22 +20,27 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class ShippingRateTypedDict(TypedDict):
     carrier_id: NotRequired[str]
+    r"""Reference to the carrier"""
     currency: NotRequired[str]
     from_address: NotRequired[PropertyShippingRateFromAddressTypedDict]
     r"""Origin address"""
     id: NotRequired[str]
+    r"""Unique identifier for this rate object"""
     packages: NotRequired[List[ShippingPackageTypedDict]]
     r"""Multiple packages (alternative to package)"""
     rates: NotRequired[List[ShippingRateRateTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     ship_by_at: NotRequired[datetime]
+    r"""Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     shipment_id: NotRequired[str]
+    r"""Reference to the shipping object (if rate is for existing shipment)"""
     to_address: NotRequired[PropertyShippingRateToAddressTypedDict]
     r"""Destination address"""
 
 
 class ShippingRate(BaseModel):
     carrier_id: Optional[str] = None
+    r"""Reference to the carrier"""
 
     currency: Optional[str] = None
 
@@ -43,6 +48,7 @@ class ShippingRate(BaseModel):
     r"""Origin address"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this rate object"""
 
     packages: Optional[List[ShippingPackage]] = None
     r"""Multiple packages (alternative to package)"""
@@ -52,8 +58,10 @@ class ShippingRate(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     ship_by_at: Optional[datetime] = None
+    r"""Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     shipment_id: Optional[str] = None
+    r"""Reference to the shipping object (if rate is for existing shipment)"""
 
     to_address: Optional[PropertyShippingRateToAddress] = None
     r"""Destination address"""

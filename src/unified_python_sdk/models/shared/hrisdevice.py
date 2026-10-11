@@ -12,6 +12,7 @@ class HrisDeviceTypedDict(TypedDict):
     admin_user_ids: NotRequired[List[str]]
     asset_tag: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     has_antivirus: NotRequired[bool]
     has_firewall: NotRequired[bool]
     has_hd_encrypted: NotRequired[bool]
@@ -20,16 +21,22 @@ class HrisDeviceTypedDict(TypedDict):
     id: NotRequired[str]
     is_missing: NotRequired[bool]
     location_id: NotRequired[str]
+    r"""pointer to HR Location object (reference to HrisLocation)"""
     manufacturer: NotRequired[str]
+    r"""device manufacturer"""
     model: NotRequired[str]
+    r"""device model"""
     name: NotRequired[str]
     os: NotRequired[str]
+    r"""operating system name"""
     os_version: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_ids: NotRequired[List[str]]
     r"""users who have this device"""
     version: NotRequired[str]
+    r"""device version"""
 
 
 class HrisDevice(BaseModel):
@@ -38,6 +45,7 @@ class HrisDevice(BaseModel):
     asset_tag: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     has_antivirus: Optional[bool] = None
 
@@ -54,25 +62,31 @@ class HrisDevice(BaseModel):
     is_missing: Optional[bool] = None
 
     location_id: Optional[str] = None
+    r"""pointer to HR Location object (reference to HrisLocation)"""
 
     manufacturer: Optional[str] = None
+    r"""device manufacturer"""
 
     model: Optional[str] = None
+    r"""device model"""
 
     name: Optional[str] = None
 
     os: Optional[str] = None
+    r"""operating system name"""
 
     os_version: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_ids: Optional[List[str]] = None
     r"""users who have this device"""
 
     version: Optional[str] = None
+    r"""device version"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

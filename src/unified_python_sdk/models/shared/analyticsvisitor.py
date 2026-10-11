@@ -29,21 +29,26 @@ class AnalyticsVisitorTypedDict(TypedDict):
     country: NotRequired[str]
     country_code: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     email: NotRequired[str]
     first_seen_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     gender: NotRequired[Gender]
     id: NotRequired[str]
     language: NotRequired[str]
     last_seen_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     metadata: NotRequired[Dict[str, PropertyAnalyticsVisitorMetadataTypedDict]]
     name: NotRequired[str]
     property_id: NotRequired[str]
+    r"""points to AnalyticsProperty"""
     raw: NotRequired[Dict[str, Any]]
     timezone: NotRequired[str]
     total_events: NotRequired[float]
     total_page_views: NotRequired[float]
     total_sessions: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AnalyticsVisitor(BaseModel):
@@ -56,10 +61,12 @@ class AnalyticsVisitor(BaseModel):
     country_code: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     email: Optional[str] = None
 
     first_seen_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     gender: Optional[Gender] = None
 
@@ -68,12 +75,14 @@ class AnalyticsVisitor(BaseModel):
     language: Optional[str] = None
 
     last_seen_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     metadata: Optional[Dict[str, PropertyAnalyticsVisitorMetadata]] = None
 
     name: Optional[str] = None
 
     property_id: Optional[str] = None
+    r"""points to AnalyticsProperty"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -86,6 +95,7 @@ class AnalyticsVisitor(BaseModel):
     total_sessions: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("gender")
     def serialize_gender(self, value):

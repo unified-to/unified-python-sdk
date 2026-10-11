@@ -33,19 +33,19 @@ with UnifiedTo(
     res = unified_to.deal.create_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-04T03:42:33.293Z"),
-            "closing_at": parse_datetime("2025-08-11T17:45:27.374Z"),
+            "closed_at": parse_datetime("2024-03-08T08:20:31.024Z"),
+            "closing_at": parse_datetime("2025-08-24T23:29:40.318Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "IQD",
             "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
-            "id": "e77492f0-b53c-4d4d-b3ef-85d2d39be486",
+            "id": "205a38cf-b0f6-40bc-8544-ff04eb9ffb55",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "e1c225b7-8757-4f46-8c4d-ee1d832af116",
+                    "id": "6ad25ffe-54aa-4a31-8517-928d9609dc6a",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -54,7 +54,7 @@ with UnifiedTo(
             "name": "Frozen Silk Chicken",
             "pipelines": [
                 {
-                    "id": "8922651b-a8c6-4754-a2fc-da9720b7ce19",
+                    "id": "d3e980ee-1e17-407e-84e8-c7c8ad0d9116",
                     "name": "trans",
                 },
             ],
@@ -62,11 +62,11 @@ with UnifiedTo(
             "source": "cubo",
             "stages": [
                 {
-                    "id": "0c4358bb-e675-499a-9912-7251e4ede38c",
+                    "id": "addc2637-1d57-4ab0-ad07-605e424b73e3",
                     "name": "tubineus",
                 },
                 {
-                    "id": "ef1f5757-5d28-46e5-bbbc-0efde5730f83",
+                    "id": "ad929775-18d4-45a7-9a5e-eb5ef618480f",
                     "name": "adfectus",
                 },
             ],
@@ -74,7 +74,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-09-30T05:08:02.851Z"),
+            "updated_at": parse_datetime("2024-10-08T00:32:10.775Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -219,19 +219,19 @@ with UnifiedTo(
     res = unified_to.deal.patch_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-04T03:42:33.297Z"),
-            "closing_at": parse_datetime("2025-08-11T17:45:27.385Z"),
+            "closed_at": parse_datetime("2024-03-08T08:20:31.029Z"),
+            "closing_at": parse_datetime("2025-08-24T23:29:40.333Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "IQD",
             "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
-            "id": "a6dd5bf7-ba96-4e40-a0a0-9e3d65c59226",
+            "id": "f41f5d60-f6ea-4fb2-b3c4-61e997f3dd66",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "464a8175-f552-4506-9788-c870b7a0cb49",
+                    "id": "8ddf385b-1f76-4701-975a-619fadafa352",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -240,7 +240,7 @@ with UnifiedTo(
             "name": "Frozen Silk Chicken",
             "pipelines": [
                 {
-                    "id": "ffafefa5-2e31-4297-94a4-77985a194477",
+                    "id": "d0e9f42b-f335-4181-a2af-d309419b2203",
                     "name": "trans",
                 },
             ],
@@ -248,11 +248,11 @@ with UnifiedTo(
             "source": "cubo",
             "stages": [
                 {
-                    "id": "e574073c-430c-424c-a2ef-cad6abbbe0a4",
+                    "id": "7456e13a-38f3-4500-93f0-94810912aba0",
                     "name": "tubineus",
                 },
                 {
-                    "id": "e0b01341-4d13-4d8b-9014-191221d8348c",
+                    "id": "1aad3541-dac5-4cea-ac3f-039d90d807ce",
                     "name": "adfectus",
                 },
             ],
@@ -260,7 +260,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-09-30T05:08:02.858Z"),
+            "updated_at": parse_datetime("2024-10-08T00:32:10.784Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -360,19 +360,19 @@ with UnifiedTo(
     res = unified_to.deal.update_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-04T03:42:33.297Z"),
-            "closing_at": parse_datetime("2025-08-11T17:45:27.385Z"),
+            "closed_at": parse_datetime("2024-03-08T08:20:31.029Z"),
+            "closing_at": parse_datetime("2025-08-24T23:29:40.333Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "IQD",
             "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
-            "id": "a6dd5bf7-ba96-4e40-a0a0-9e3d65c59226",
+            "id": "f41f5d60-f6ea-4fb2-b3c4-61e997f3dd66",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "464a8175-f552-4506-9788-c870b7a0cb49",
+                    "id": "8ddf385b-1f76-4701-975a-619fadafa352",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -381,7 +381,7 @@ with UnifiedTo(
             "name": "Frozen Silk Chicken",
             "pipelines": [
                 {
-                    "id": "ffafefa5-2e31-4297-94a4-77985a194477",
+                    "id": "d0e9f42b-f335-4181-a2af-d309419b2203",
                     "name": "trans",
                 },
             ],
@@ -389,11 +389,11 @@ with UnifiedTo(
             "source": "cubo",
             "stages": [
                 {
-                    "id": "e574073c-430c-424c-a2ef-cad6abbbe0a4",
+                    "id": "7456e13a-38f3-4500-93f0-94810912aba0",
                     "name": "tubineus",
                 },
                 {
-                    "id": "e0b01341-4d13-4d8b-9014-191221d8348c",
+                    "id": "1aad3541-dac5-4cea-ac3f-039d90d807ce",
                     "name": "adfectus",
                 },
             ],
@@ -401,7 +401,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-09-30T05:08:02.858Z"),
+            "updated_at": parse_datetime("2024-10-08T00:32:10.784Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",

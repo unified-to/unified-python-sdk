@@ -28,4 +28,5 @@ value = GetAccountingPurchaseorderQueryParamFields.ID
 | `ORGANIZATION_ID`  | organization_id    |
 | `CATEGORY_IDS`     | category_ids       |
 | `METADATA`         | metadata           |
+| `ATTACHMENTS`      | attachments        |
 | `RAW`              | raw                |

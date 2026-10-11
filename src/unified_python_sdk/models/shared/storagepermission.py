@@ -11,21 +11,25 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class StoragePermissionTypedDict(TypedDict):
     roles: List[PropertyStoragePermissionRoles]
     group_id: NotRequired[str]
+    r"""(reference to HrisGroup)"""
     is_hidden: NotRequired[bool]
     is_public: NotRequired[bool]
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class StoragePermission(BaseModel):
     roles: List[PropertyStoragePermissionRoles]
 
     group_id: Optional[str] = None
+    r"""(reference to HrisGroup)"""
 
     is_hidden: Optional[bool] = None
 
     is_public: Optional[bool] = None
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

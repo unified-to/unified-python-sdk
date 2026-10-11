@@ -11,16 +11,21 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class TaskChangeTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     items: NotRequired[List[TaskChangeItemTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     task_id: NotRequired[str]
+    r"""(reference to TaskTask)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class TaskChange(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -29,10 +34,13 @@ class TaskChange(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     task_id: Optional[str] = None
+    r"""(reference to TaskTask)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

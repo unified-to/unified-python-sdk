@@ -11,29 +11,36 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class TaskProjectTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     group_ids: NotRequired[List[str]]
     has_children: NotRequired[bool]
+    r"""If this project has children folders / lists"""
     has_tasks: NotRequired[bool]
+    r"""If you can use this project ID to list tasks. Default is true."""
     id: NotRequired[str]
     metadata: NotRequired[List[TaskMetadataTypedDict]]
     name: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_ids: NotRequired[List[str]]
 
 
 class TaskProject(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     group_ids: Optional[List[str]] = None
 
     has_children: Optional[bool] = None
+    r"""If this project has children folders / lists"""
 
     has_tasks: Optional[bool] = None
+    r"""If you can use this project ID to list tasks. Default is true."""
 
     id: Optional[str] = None
 
@@ -46,6 +53,7 @@ class TaskProject(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_ids: Optional[List[str]] = None
 

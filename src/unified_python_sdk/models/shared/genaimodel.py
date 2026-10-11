@@ -9,9 +9,15 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class GenaiModelTypedDict(TypedDict):
     description: NotRequired[str]
+    has_questions: NotRequired[bool]
+    r"""Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the typed questions of a prompt with answers instead of generating text responses."""
     has_temperature: NotRequired[bool]
+    r"""Controls randomness of responses. A lower temperature leads to more predictable outputs while a higher temperature results in more varies and sometimes more creative outputs. 0-1"""
+    has_vision: NotRequired[bool]
+    r"""Whether the model accepts images as input (see the images on each prompt message)."""
     id: NotRequired[str]
     max_tokens: NotRequired[float]
+    r"""The maximum number of tokens that the model can process in a single response. This limits ensures computational efficiency and resource management."""
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     web_url: NotRequired[str]
@@ -20,11 +26,19 @@ class GenaiModelTypedDict(TypedDict):
 class GenaiModel(BaseModel):
     description: Optional[str] = None
 
+    has_questions: Optional[bool] = None
+    r"""Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the typed questions of a prompt with answers instead of generating text responses."""
+
     has_temperature: Optional[bool] = None
+    r"""Controls randomness of responses. A lower temperature leads to more predictable outputs while a higher temperature results in more varies and sometimes more creative outputs. 0-1"""
+
+    has_vision: Optional[bool] = None
+    r"""Whether the model accepts images as input (see the images on each prompt message)."""
 
     id: Optional[str] = None
 
     max_tokens: Optional[float] = None
+    r"""The maximum number of tokens that the model can process in a single response. This limits ensures computational efficiency and resource management."""
 
     name: Optional[str] = None
 
@@ -37,7 +51,9 @@ class GenaiModel(BaseModel):
         optional_fields = set(
             [
                 "description",
+                "has_questions",
                 "has_temperature",
+                "has_vision",
                 "id",
                 "max_tokens",
                 "name",

@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CdpIdentifierType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)"""
+
     EMAIL = "EMAIL"
     USER_ID = "USER_ID"
     ANONYMOUS_ID = "ANONYMOUS_ID"
@@ -23,22 +25,32 @@ class CdpIdentifierType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CdpIdentifierTypedDict(TypedDict):
     value: str
+    r"""The identifier value that resolves to the profile"""
     encoding: NotRequired[str]
+    r"""The encoding of the identifier value (eg. raw, sha256)"""
     is_primary: NotRequired[bool]
+    r"""Whether this is the primary identifier for the profile"""
     source: NotRequired[str]
+    r"""The source that provided this identifier"""
     type: NotRequired[CdpIdentifierType]
+    r"""The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)"""
 
 
 class CdpIdentifier(BaseModel):
     value: str
+    r"""The identifier value that resolves to the profile"""
 
     encoding: Optional[str] = None
+    r"""The encoding of the identifier value (eg. raw, sha256)"""
 
     is_primary: Optional[bool] = None
+    r"""Whether this is the primary identifier for the profile"""
 
     source: Optional[str] = None
+    r"""The source that provided this identifier"""
 
     type: Optional[CdpIdentifierType] = None
+    r"""The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

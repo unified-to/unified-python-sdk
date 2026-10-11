@@ -23,6 +23,7 @@ class CommerceItemMediaTypedDict(TypedDict):
     id: NotRequired[str]
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
     position: NotRequired[float]
+    r"""1 is the first"""
     type: NotRequired[CommerceItemMediaType]
     width: NotRequired[float]
 
@@ -39,6 +40,7 @@ class CommerceItemMedia(BaseModel):
     metadata: Optional[List[CommerceMetadata]] = None
 
     position: Optional[float] = None
+    r"""1 is the first"""
 
     type: Optional[CommerceItemMediaType] = None
 

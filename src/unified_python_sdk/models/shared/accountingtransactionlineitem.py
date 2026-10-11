@@ -9,19 +9,23 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingTransactionLineItemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     category_ids: NotRequired[List[str]]
     description: NotRequired[str]
     id: NotRequired[str]
     name: NotRequired[str]
     object_type: NotRequired[str]
     taxrate_id: NotRequired[str]
+    r"""ref -> AccountingTaxrate applied to the line"""
     total_amount: NotRequired[float]
+    r"""will be a positive value for a debit and negative for a credit"""
     unit_amount: NotRequired[float]
     unit_quantity: NotRequired[float]
 
 
 class AccountingTransactionLineItem(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     category_ids: Optional[List[str]] = None
 
@@ -34,8 +38,10 @@ class AccountingTransactionLineItem(BaseModel):
     object_type: Optional[str] = None
 
     taxrate_id: Optional[str] = None
+    r"""ref -> AccountingTaxrate applied to the line"""
 
     total_amount: Optional[float] = None
+    r"""will be a positive value for a debit and negative for a credit"""
 
     unit_amount: Optional[float] = None
 

@@ -9,19 +9,27 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class ShippingRateSurchargeTypedDict(TypedDict):
     amount: NotRequired[float]
+    r"""Surcharge amount"""
     code: NotRequired[str]
+    r"""Surcharge type (e.g., \"RESIDENTIAL\", \"FUEL\", \"SIGNATURE\")"""
     description: NotRequired[str]
+    r"""Description of surcharge"""
     name: NotRequired[str]
+    r"""Human-readable name"""
 
 
 class ShippingRateSurcharge(BaseModel):
     amount: Optional[float] = None
+    r"""Surcharge amount"""
 
     code: Optional[str] = None
+    r"""Surcharge type (e.g., \"RESIDENTIAL\", \"FUEL\", \"SIGNATURE\")"""
 
     description: Optional[str] = None
+    r"""Description of surcharge"""
 
     name: Optional[str] = None
+    r"""Human-readable name"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CdpActivationStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The current status of the activation"""
+
     ACTIVE = "ACTIVE"
     PAUSED = "PAUSED"
     ERROR = "ERROR"
@@ -20,43 +22,67 @@ class CdpActivationStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CdpActivationTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     destination_id: NotRequired[str]
+    r"""The cdp_destination the data is sent to; points to CdpDestination"""
     id: NotRequired[str]
+    r"""Unique identifier for this activation object"""
     is_enabled: NotRequired[bool]
+    r"""Whether the activation is active/enabled"""
     last_run_at: NotRequired[datetime]
+    r"""When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     name: NotRequired[str]
+    r"""The name of the activation/sync job"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this activation"""
     schedule: NotRequired[str]
+    r"""The activation schedule or mode (eg. cron, interval, realtime, batch)"""
     segment_id: NotRequired[str]
+    r"""The cdp_segment being activated; points to CdpSegment"""
     source_id: NotRequired[str]
+    r"""The cdp_source the data originates from; points to CdpSource"""
     status: NotRequired[CdpActivationStatus]
+    r"""The current status of the activation"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CdpActivation(BaseModel):
     created_at: Optional[datetime] = None
+    r"""The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     destination_id: Optional[str] = None
+    r"""The cdp_destination the data is sent to; points to CdpDestination"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this activation object"""
 
     is_enabled: Optional[bool] = None
+    r"""Whether the activation is active/enabled"""
 
     last_run_at: Optional[datetime] = None
+    r"""When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     name: Optional[str] = None
+    r"""The name of the activation/sync job"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this activation"""
 
     schedule: Optional[str] = None
+    r"""The activation schedule or mode (eg. cron, interval, realtime, batch)"""
 
     segment_id: Optional[str] = None
+    r"""The cdp_segment being activated; points to CdpSegment"""
 
     source_id: Optional[str] = None
+    r"""The cdp_source the data originates from; points to CdpSource"""
 
     status: Optional[CdpActivationStatus] = None
+    r"""The current status of the activation"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

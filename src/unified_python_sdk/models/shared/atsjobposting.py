@@ -16,13 +16,18 @@ class AtsJobPostingTypedDict(TypedDict):
     address: NotRequired[PropertyAtsJobPostingAddressTypedDict]
     r"""job-post-specific address"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""job-post-specific description"""
     id: NotRequired[str]
     is_active: NotRequired[bool]
     location: NotRequired[str]
+    r"""job-post-specific location"""
     name: NotRequired[str]
+    r"""job-post-specific name"""
     posting_url: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AtsJobPosting(BaseModel):
@@ -30,20 +35,25 @@ class AtsJobPosting(BaseModel):
     r"""job-post-specific address"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""job-post-specific description"""
 
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
 
     location: Optional[str] = None
+    r"""job-post-specific location"""
 
     name: Optional[str] = None
+    r"""job-post-specific name"""
 
     posting_url: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

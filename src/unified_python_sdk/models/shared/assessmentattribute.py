@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AssessmentAttributeStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""For SUB_RESULT type"""
+
     OPEN = "OPEN"
     IN_PROGRESS = "IN_PROGRESS"
     COMPLETED = "COMPLETED"
@@ -28,10 +30,13 @@ class AssessmentAttributeTypedDict(TypedDict):
     label: str
     type: AssessmentAttributeType
     reference: NotRequired[str]
+    r"""For SUB_RESULT type"""
     score_max: NotRequired[float]
     score_value: NotRequired[float]
     status: NotRequired[AssessmentAttributeStatus]
+    r"""For SUB_RESULT type"""
     value: NotRequired[str]
+    r"""For TEXT and NUMBER types"""
 
 
 class AssessmentAttribute(BaseModel):
@@ -40,14 +45,17 @@ class AssessmentAttribute(BaseModel):
     type: AssessmentAttributeType
 
     reference: Optional[str] = None
+    r"""For SUB_RESULT type"""
 
     score_max: Optional[float] = None
 
     score_value: Optional[float] = None
 
     status: Optional[AssessmentAttributeStatus] = None
+    r"""For SUB_RESULT type"""
 
     value: Optional[str] = None
+    r"""For TEXT and NUMBER types"""
 
     @field_serializer("status")
     def serialize_status(self, value):

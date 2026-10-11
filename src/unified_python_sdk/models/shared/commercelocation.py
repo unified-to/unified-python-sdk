@@ -29,6 +29,7 @@ class CommerceLocationTypedDict(TypedDict):
     address: NotRequired[PropertyCommerceLocationAddressTypedDict]
     categories: NotRequired[List[str]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     description: NotRequired[str]
     id: NotRequired[str]
@@ -47,6 +48,7 @@ class CommerceLocationTypedDict(TypedDict):
     review_count: NotRequired[float]
     telephones: NotRequired[List[CommerceTelephoneTypedDict]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
 
 
@@ -56,6 +58,7 @@ class CommerceLocation(BaseModel):
     categories: Optional[List[str]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
@@ -92,6 +95,7 @@ class CommerceLocation(BaseModel):
     telephones: Optional[List[CommerceTelephone]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
 

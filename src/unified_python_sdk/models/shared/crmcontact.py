@@ -20,9 +20,11 @@ class CrmContactTypedDict(TypedDict):
 
     address: NotRequired[PropertyCrmContactAddressTypedDict]
     company: NotRequired[str]
+    r"""The companyorganization name  of the contact"""
     company_ids: NotRequired[List[str]]
     r"""An array of company IDs associated with this contact"""
     created_at: NotRequired[datetime]
+    r"""The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     deal_ids: NotRequired[List[str]]
     r"""An array of deal IDs associated with this contact"""
     department: NotRequired[str]
@@ -30,18 +32,24 @@ class CrmContactTypedDict(TypedDict):
     r"""An array of email addresses for this contact"""
     first_name: NotRequired[str]
     id: NotRequired[str]
+    r"""Unique identifier for this contact object"""
     image_url: NotRequired[str]
     last_name: NotRequired[str]
     link_urls: NotRequired[List[str]]
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
     metadata: NotRequired[List[CrmMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The name of the contact"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this contact"""
     telephones: NotRequired[List[CrmTelephoneTypedDict]]
     r"""An array of telephones for this contact"""
     title: NotRequired[str]
+    r"""The job title of the contact"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class CrmContact(BaseModel):
@@ -50,11 +58,13 @@ class CrmContact(BaseModel):
     address: Optional[PropertyCrmContactAddress] = None
 
     company: Optional[str] = None
+    r"""The companyorganization name  of the contact"""
 
     company_ids: Optional[List[str]] = None
     r"""An array of company IDs associated with this contact"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     deal_ids: Optional[List[str]] = None
     r"""An array of deal IDs associated with this contact"""
@@ -67,6 +77,7 @@ class CrmContact(BaseModel):
     first_name: Optional[str] = None
 
     id: Optional[str] = None
+    r"""Unique identifier for this contact object"""
 
     image_url: Optional[str] = None
 
@@ -78,17 +89,22 @@ class CrmContact(BaseModel):
     metadata: Optional[List[CrmMetadata]] = None
 
     name: Optional[str] = None
+    r"""The name of the contact"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this contact"""
 
     telephones: Optional[List[CrmTelephone]] = None
     r"""An array of telephones for this contact"""
 
     title: Optional[str] = None
+    r"""The job title of the contact"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

@@ -15,6 +15,7 @@ class PropertyClubsGroupAddressTypedDict(TypedDict):
     city: NotRequired[str]
     country: NotRequired[str]
     country_code: NotRequired[str]
+    r"""ISO 2-digit country code"""
     postal_code: NotRequired[str]
     region: NotRequired[str]
     region_code: NotRequired[str]
@@ -32,6 +33,7 @@ class PropertyClubsGroupAddress(BaseModel):
     country: Optional[str] = None
 
     country_code: Optional[str] = None
+    r"""ISO 2-digit country code"""
 
     postal_code: Optional[str] = None
 

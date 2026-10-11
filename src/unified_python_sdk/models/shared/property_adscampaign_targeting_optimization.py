@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class Mode(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Google: bid_only falsetrue"""
+
     TARGETING = "TARGETING"
     OBSERVATION = "OBSERVATION"
 
@@ -21,6 +23,7 @@ class PropertyAdsCampaignTargetingOptimizationTypedDict(TypedDict):
     advantage_audience: NotRequired[bool]
     advantage_placements: NotRequired[bool]
     mode: NotRequired[Mode]
+    r"""Google: bid_only falsetrue"""
     targeting_optimization_expansion_all: NotRequired[bool]
 
 
@@ -32,6 +35,7 @@ class PropertyAdsCampaignTargetingOptimization(BaseModel):
     advantage_placements: Optional[bool] = None
 
     mode: Optional[Mode] = None
+    r"""Google: bid_only falsetrue"""
 
     targeting_optimization_expansion_all: Optional[bool] = None
 

@@ -27,6 +27,8 @@ class EmployerContributionType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class HrisBenefitFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Frequency that costs accrue for this benefit. For insurance/benefits, usually \"MONTHLY\". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc)."""
+
     ONE_TIME = "ONE_TIME"
     DAY = "DAY"
     QUARTER = "QUARTER"
@@ -34,9 +36,13 @@ class HrisBenefitFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
     HOUR = "HOUR"
     MONTH = "MONTH"
     WEEK = "WEEK"
+    BIWEEKLY = "BIWEEKLY"
+    SEMIMONTHLY = "SEMIMONTHLY"
 
 
 class Tax(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Tax describes the tax treatment of the benefit"""
+
     PRE_TAX = "PRE_TAX"
     POST_TAX = "POST_TAX"
     TAXABLE = "TAXABLE"
@@ -61,63 +67,85 @@ class HrisBenefitType(str, Enum, metaclass=utils.OpenEnumMeta):
     LOAN_REPAYMENT = "LOAN_REPAYMENT"
     CHARITABLE_CONTRIBUTION = "CHARITABLE_CONTRIBUTION"
     OTHER = "OTHER"
+    RETIREMENT_ROTH = "RETIREMENT_ROTH"
+    COMMUTER = "COMMUTER"
+    DEPENDENT_CARE = "DEPENDENT_CARE"
+    PENSION = "PENSION"
 
 
 class HrisBenefitTypedDict(TypedDict):
     r"""Company-wide benefit plans available to employees."""
 
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     coverage_level: NotRequired[CoverageLevel]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     description: NotRequired[str]
+    r"""e.g. \"Company 401(k) retirement plan\" """
     employer_contribution_amount: NotRequired[float]
+    r"""percentage or money"""
     employer_contribution_max_amount: NotRequired[float]
+    r"""always money"""
     employer_contribution_type: NotRequired[EmployerContributionType]
     frequency: NotRequired[HrisBenefitFrequency]
+    r"""Frequency that costs accrue for this benefit. For insurance/benefits, usually \"MONTHLY\". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc)."""
     id: NotRequired[str]
     is_active: NotRequired[bool]
     name: NotRequired[str]
+    r"""e.g. \"401(k) Plan\" """
     raw: NotRequired[Dict[str, Any]]
     tax: NotRequired[Tax]
+    r"""Tax describes the tax treatment of the benefit"""
     type: NotRequired[HrisBenefitType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class HrisBenefit(BaseModel):
     r"""Company-wide benefit plans available to employees."""
 
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     coverage_level: Optional[CoverageLevel] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     description: Optional[str] = None
+    r"""e.g. \"Company 401(k) retirement plan\" """
 
     employer_contribution_amount: Optional[float] = None
+    r"""percentage or money"""
 
     employer_contribution_max_amount: Optional[float] = None
+    r"""always money"""
 
     employer_contribution_type: Optional[EmployerContributionType] = None
 
     frequency: Optional[HrisBenefitFrequency] = None
+    r"""Frequency that costs accrue for this benefit. For insurance/benefits, usually \"MONTHLY\". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc)."""
 
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
 
     name: Optional[str] = None
+    r"""e.g. \"401(k) Plan\" """
 
     raw: Optional[Dict[str, Any]] = None
 
     tax: Optional[Tax] = None
+    r"""Tax describes the tax treatment of the benefit"""
 
     type: Optional[HrisBenefitType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("coverage_level")
     def serialize_coverage_level(self, value):

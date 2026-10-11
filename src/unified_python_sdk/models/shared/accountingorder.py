@@ -45,33 +45,41 @@ class AccountingOrderTypedDict(TypedDict):
     r"""@deprecated; use AccountingSalesorder or AccountingPurchaseorder"""
 
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     billing_address: NotRequired[PropertyAccountingOrderBillingAddressTypedDict]
     contact_id: NotRequired[str]
+    r"""Customer, Supplier (reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     organization_id: NotRequired[str]
     posted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     raw: NotRequired[Dict[str, Any]]
     shipping_address: NotRequired[PropertyAccountingOrderShippingAddressTypedDict]
     status: NotRequired[AccountingOrderStatus]
     total_amount: NotRequired[float]
     type: NotRequired[AccountingOrderType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingOrder(BaseModel):
     r"""@deprecated; use AccountingSalesorder or AccountingPurchaseorder"""
 
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     billing_address: Optional[PropertyAccountingOrderBillingAddress] = None
 
     contact_id: Optional[str] = None
+    r"""Customer, Supplier (reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
@@ -84,6 +92,7 @@ class AccountingOrder(BaseModel):
     organization_id: Optional[str] = None
 
     posted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -96,6 +105,7 @@ class AccountingOrder(BaseModel):
     type: Optional[AccountingOrderType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

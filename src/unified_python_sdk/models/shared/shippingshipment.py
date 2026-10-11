@@ -37,6 +37,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ReturnType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Type of return"""
+
     CUSTOMER = "CUSTOMER"
     VENDOR = "VENDOR"
     WARRANTY = "WARRANTY"
@@ -45,6 +47,8 @@ class ReturnType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ShippingShipmentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Current status of the shipment"""
+
     PENDING = "PENDING"
     PROCESSING = "PROCESSING"
     IN_TRANSIT = "IN_TRANSIT"
@@ -63,61 +67,96 @@ class ShippingShipmentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class ShippingShipmentTypedDict(TypedDict):
     carrier_id: NotRequired[str]
+    r"""Reference to the carrier"""
     carrier_name: NotRequired[str]
+    r"""Human-readable carrier/provider name when there is no carrier record to reference (e.g. commerce-platform fulfillments)"""
     created_at: NotRequired[datetime]
+    r"""The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     customs: NotRequired[PropertyShippingShipmentCustomsTypedDict]
     r"""Customs information"""
     from_address: NotRequired[PropertyShippingShipmentFromAddressTypedDict]
     r"""Origin address"""
     id: NotRequired[str]
+    r"""Unique identifier for this shipment object"""
     insurance: NotRequired[PropertyShippingShipmentInsuranceTypedDict]
     r"""Insurance details"""
     is_adult_signature_required: NotRequired[bool]
+    r"""Adult signature required"""
     is_international: NotRequired[bool]
+    r"""Whether shipment is international"""
     is_rate_guaranteed: NotRequired[bool]
+    r"""Whether delivery is guaranteed (from rate)"""
     is_return: NotRequired[bool]
+    r"""Whether this is a return shipment"""
     is_signature_required: NotRequired[bool]
+    r"""Signature required on delivery"""
     label_id: NotRequired[str]
+    r"""Optional reference to the shipping label"""
     lineitems: NotRequired[List[ShippingShipmentLineitemTypedDict]]
     r"""Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments"""
     order_id: NotRequired[str]
+    r"""Reference to commerce_order or accounting_order"""
     organization_id: NotRequired[str]
+    r"""ref -> accounting Organization this shipment belongs to (multi-company ERPs)"""
     original_shipment_id: NotRequired[str]
+    r"""Reference to original shipment if return; points to ShippingShipment"""
     packages: NotRequired[List[ShippingPackageTypedDict]]
     r"""Array of packages in this shipment"""
     rate_amount: NotRequired[float]
+    r"""The rate amount used (may differ from shipping_cost due to adjustments)"""
     rate_currency: NotRequired[str]
+    r"""Currency for rate_amount"""
     rate_estimated_days: NotRequired[float]
+    r"""Estimated delivery days from the rate"""
     rate_estimated_delivery_at: NotRequired[datetime]
+    r"""Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     rate_id: NotRequired[str]
+    r"""Optional reference to the selected rate (for traceability)"""
     rate_service_name: NotRequired[str]
+    r"""Service name from the rate (e.g., \"Priority Mail\")"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this shipment"""
     reference_number: NotRequired[str]
+    r"""Customer reference number"""
     return_address: NotRequired[PropertyShippingShipmentReturnAddressTypedDict]
     r"""Return address (may differ from from_address)"""
     return_authorization_number: NotRequired[str]
+    r"""RMA number if return shipment"""
     return_reason: NotRequired[str]
+    r"""Reason for return"""
     return_type: NotRequired[ReturnType]
+    r"""Type of return"""
     service_code: NotRequired[str]
+    r"""Code for the shipping service used"""
     shipped_at: NotRequired[datetime]
+    r"""When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     special_instructions: NotRequired[List[str]]
     r"""Array of special instructions"""
     status: NotRequired[ShippingShipmentStatus]
+    r"""Current status of the shipment"""
     to_address: NotRequired[PropertyShippingShipmentToAddressTypedDict]
     r"""Destination address"""
     tracking_id: NotRequired[str]
+    r"""Optional reference to the tracking information"""
     tracking_url: NotRequired[str]
+    r"""Carrier tracking URL for this shipment"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     warehouse_location_id: NotRequired[str]
+    r"""Origin warehouselocation ID; points to CommerceLocation"""
     warehouse_location_name: NotRequired[str]
+    r"""Origin warehouse location name"""
 
 
 class ShippingShipment(BaseModel):
     carrier_id: Optional[str] = None
+    r"""Reference to the carrier"""
 
     carrier_name: Optional[str] = None
+    r"""Human-readable carrier/provider name when there is no carrier record to reference (e.g. commerce-platform fulfillments)"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     customs: Optional[PropertyShippingShipmentCustoms] = None
     r"""Customs information"""
@@ -126,80 +165,109 @@ class ShippingShipment(BaseModel):
     r"""Origin address"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this shipment object"""
 
     insurance: Optional[PropertyShippingShipmentInsurance] = None
     r"""Insurance details"""
 
     is_adult_signature_required: Optional[bool] = None
+    r"""Adult signature required"""
 
     is_international: Optional[bool] = None
+    r"""Whether shipment is international"""
 
     is_rate_guaranteed: Optional[bool] = None
+    r"""Whether delivery is guaranteed (from rate)"""
 
     is_return: Optional[bool] = None
+    r"""Whether this is a return shipment"""
 
     is_signature_required: Optional[bool] = None
+    r"""Signature required on delivery"""
 
     label_id: Optional[str] = None
+    r"""Optional reference to the shipping label"""
 
     lineitems: Optional[List[ShippingShipmentLineitem]] = None
     r"""Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments"""
 
     order_id: Optional[str] = None
+    r"""Reference to commerce_order or accounting_order"""
 
     organization_id: Optional[str] = None
+    r"""ref -> accounting Organization this shipment belongs to (multi-company ERPs)"""
 
     original_shipment_id: Optional[str] = None
+    r"""Reference to original shipment if return; points to ShippingShipment"""
 
     packages: Optional[List[ShippingPackage]] = None
     r"""Array of packages in this shipment"""
 
     rate_amount: Optional[float] = None
+    r"""The rate amount used (may differ from shipping_cost due to adjustments)"""
 
     rate_currency: Optional[str] = None
+    r"""Currency for rate_amount"""
 
     rate_estimated_days: Optional[float] = None
+    r"""Estimated delivery days from the rate"""
 
     rate_estimated_delivery_at: Optional[datetime] = None
+    r"""Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     rate_id: Optional[str] = None
+    r"""Optional reference to the selected rate (for traceability)"""
 
     rate_service_name: Optional[str] = None
+    r"""Service name from the rate (e.g., \"Priority Mail\")"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this shipment"""
 
     reference_number: Optional[str] = None
+    r"""Customer reference number"""
 
     return_address: Optional[PropertyShippingShipmentReturnAddress] = None
     r"""Return address (may differ from from_address)"""
 
     return_authorization_number: Optional[str] = None
+    r"""RMA number if return shipment"""
 
     return_reason: Optional[str] = None
+    r"""Reason for return"""
 
     return_type: Optional[ReturnType] = None
+    r"""Type of return"""
 
     service_code: Optional[str] = None
+    r"""Code for the shipping service used"""
 
     shipped_at: Optional[datetime] = None
+    r"""When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     special_instructions: Optional[List[str]] = None
     r"""Array of special instructions"""
 
     status: Optional[ShippingShipmentStatus] = None
+    r"""Current status of the shipment"""
 
     to_address: Optional[PropertyShippingShipmentToAddress] = None
     r"""Destination address"""
 
     tracking_id: Optional[str] = None
+    r"""Optional reference to the tracking information"""
 
     tracking_url: Optional[str] = None
+    r"""Carrier tracking URL for this shipment"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     warehouse_location_id: Optional[str] = None
+    r"""Origin warehouselocation ID; points to CommerceLocation"""
 
     warehouse_location_name: Optional[str] = None
+    r"""Origin warehouse location name"""
 
     @field_serializer("return_type")
     def serialize_return_type(self, value):

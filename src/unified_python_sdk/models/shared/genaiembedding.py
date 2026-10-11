@@ -23,7 +23,9 @@ class EncondingFormat(str, Enum, metaclass=utils.OpenEnumMeta):
 class GenaiEmbeddingTypedDict(TypedDict):
     content: NotRequired[List[GenaiEmbeddingContentTypedDict]]
     dimension: NotRequired[float]
+    r"""256, 512, 1024, and 1536"""
     embeddings: NotRequired[str]
+    r"""JSON string based off of the format"""
     enconding_format: NotRequired[EncondingFormat]
     id: NotRequired[str]
     max_tokens: NotRequired[float]
@@ -31,14 +33,17 @@ class GenaiEmbeddingTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     tokens_used: NotRequired[float]
     type: NotRequired[str]
+    r"""'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';"""
 
 
 class GenaiEmbedding(BaseModel):
     content: Optional[List[GenaiEmbeddingContent]] = None
 
     dimension: Optional[float] = None
+    r"""256, 512, 1024, and 1536"""
 
     embeddings: Optional[str] = None
+    r"""JSON string based off of the format"""
 
     enconding_format: Optional[EncondingFormat] = None
 
@@ -53,6 +58,7 @@ class GenaiEmbedding(BaseModel):
     tokens_used: Optional[float] = None
 
     type: Optional[str] = None
+    r"""'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';"""
 
     @field_serializer("enconding_format")
     def serialize_enconding_format(self, value):

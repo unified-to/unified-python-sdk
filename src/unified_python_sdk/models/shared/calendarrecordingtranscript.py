@@ -16,8 +16,11 @@ class CalendarRecordingTranscriptTypedDict(TypedDict):
     text: str
     attendee: NotRequired[PropertyCalendarRecordingTranscriptAttendeeTypedDict]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     language: NotRequired[str]
+    r"""two digit ISO code"""
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CalendarRecordingTranscript(BaseModel):
@@ -26,10 +29,13 @@ class CalendarRecordingTranscript(BaseModel):
     attendee: Optional[PropertyCalendarRecordingTranscriptAttendee] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     language: Optional[str] = None
+    r"""two digit ISO code"""
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

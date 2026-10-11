@@ -13,24 +13,38 @@ class ShippingRateRateTypedDict(TypedDict):
     title: str
     amount: NotRequired[float]
     base_amount: NotRequired[float]
+    r"""Base shipping rate"""
     currency: NotRequired[str]
     delivery_days: NotRequired[float]
+    r"""Delivery days (integer)"""
     delivery_terms: NotRequired[str]
+    r"""Delivery duration terms (e.g., \"3-5 business days\")"""
     description: NotRequired[str]
     discount_amount: NotRequired[float]
+    r"""Applied discount"""
     estimated_days: NotRequired[float]
+    r"""Estimated delivery time in days"""
     estimated_delivery_end_at: NotRequired[datetime]
+    r"""Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     estimated_delivery_start_at: NotRequired[datetime]
+    r"""Time window (e.g., \"10:00 AM - 2:00 PM\") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     is_active: NotRequired[bool]
+    r"""Whether rate is currently available"""
     is_guaranteed: NotRequired[bool]
+    r"""Whether delivery is guaranteed"""
     is_negotiated_rate: NotRequired[bool]
+    r"""Whether this is a negotiated rate"""
     is_trackable: NotRequired[bool]
+    r"""Whether shipment is trackable"""
     package_type: NotRequired[str]
+    r"""Package type (e.g., \"package\", \"envelope\", \"flat\")"""
     rate_source: NotRequired[str]
+    r"""Source of rate (e.g., \"carrier\", \"negotiated\", \"account\")"""
     surcharges: NotRequired[List[ShippingRateSurchargeTypedDict]]
     r"""Additional charges"""
     tax_amount: NotRequired[float]
     transit_hours: NotRequired[float]
+    r"""Transit time in hours"""
 
 
 class ShippingRateRate(BaseModel):
@@ -39,34 +53,47 @@ class ShippingRateRate(BaseModel):
     amount: Optional[float] = None
 
     base_amount: Optional[float] = None
+    r"""Base shipping rate"""
 
     currency: Optional[str] = None
 
     delivery_days: Optional[float] = None
+    r"""Delivery days (integer)"""
 
     delivery_terms: Optional[str] = None
+    r"""Delivery duration terms (e.g., \"3-5 business days\")"""
 
     description: Optional[str] = None
 
     discount_amount: Optional[float] = None
+    r"""Applied discount"""
 
     estimated_days: Optional[float] = None
+    r"""Estimated delivery time in days"""
 
     estimated_delivery_end_at: Optional[datetime] = None
+    r"""Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     estimated_delivery_start_at: Optional[datetime] = None
+    r"""Time window (e.g., \"10:00 AM - 2:00 PM\") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     is_active: Optional[bool] = None
+    r"""Whether rate is currently available"""
 
     is_guaranteed: Optional[bool] = None
+    r"""Whether delivery is guaranteed"""
 
     is_negotiated_rate: Optional[bool] = None
+    r"""Whether this is a negotiated rate"""
 
     is_trackable: Optional[bool] = None
+    r"""Whether shipment is trackable"""
 
     package_type: Optional[str] = None
+    r"""Package type (e.g., \"package\", \"envelope\", \"flat\")"""
 
     rate_source: Optional[str] = None
+    r"""Source of rate (e.g., \"carrier\", \"negotiated\", \"account\")"""
 
     surcharges: Optional[List[ShippingRateSurcharge]] = None
     r"""Additional charges"""
@@ -74,6 +101,7 @@ class ShippingRateRate(BaseModel):
     tax_amount: Optional[float] = None
 
     transit_hours: Optional[float] = None
+    r"""Transit time in hours"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

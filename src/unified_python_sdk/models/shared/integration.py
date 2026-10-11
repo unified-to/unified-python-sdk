@@ -130,35 +130,50 @@ class IntegrationTypedDict(TypedDict):
     categories: List[PropertyIntegrationCategories]
     r"""The categories of support solutions that this integration has"""
     name: str
+    r"""The integration's name"""
     type: str
+    r"""Identifier for this integration"""
     active_healthy_connections: NotRequired[float]
     api: NotRequired[APITypedDict]
     api_docs_url: NotRequired[str]
+    r"""The URL of the integration's API documentation"""
     beta: NotRequired[bool]
+    r"""This integration is new and is still considered \"beta\" """
     color: NotRequired[str]
+    r"""button background color for AUTH"""
     created_at: NotRequired[str]
+    r"""Date that this integration was supported (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     fa_icon: NotRequired[str]
+    r"""font-awesome icon"""
     featured: NotRequired[bool]
     in_progress: NotRequired[bool]
+    r"""If this integration is not yet available as it is currently being built by unified.to"""
     is_active: NotRequired[bool]
+    r"""Is this integration active in this workspace"""
     is_hidden: NotRequired[bool]
     logo_url: NotRequired[str]
+    r"""The URL of the integration's logo"""
     partnership: NotRequired[PartnershipTypedDict]
     popularity: NotRequired[float]
     rate_limit_description: NotRequired[str]
     requires_cname: NotRequired[bool]
+    r"""OAuth requires a custom API domain (CNAME) for provider verification"""
     saml: NotRequired[SamlTypedDict]
     sandbox: NotRequired[SandboxTypedDict]
     support: NotRequired[Dict[str, IntegrationSupportTypedDict]]
     tested_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     text_color: NotRequired[str]
+    r"""text color for AUTH"""
     token_instructions: NotRequired[List[str]]
     r"""instructions for the user on how to find the token/key"""
     token_names: NotRequired[List[str]]
     r"""if auth_types = 'token'"""
     updated_at: NotRequired[str]
+    r"""YYYY-MM-DD (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
+    r"""URL for the software vendor"""
 
 
 class Integration(BaseModel):
@@ -168,34 +183,44 @@ class Integration(BaseModel):
     r"""The categories of support solutions that this integration has"""
 
     name: str
+    r"""The integration's name"""
 
     type: str
+    r"""Identifier for this integration"""
 
     active_healthy_connections: Optional[float] = None
 
     api: Optional[API] = None
 
     api_docs_url: Optional[str] = None
+    r"""The URL of the integration's API documentation"""
 
     beta: Optional[bool] = None
+    r"""This integration is new and is still considered \"beta\" """
 
     color: Optional[str] = None
+    r"""button background color for AUTH"""
 
     created_at: Optional[str] = None
+    r"""Date that this integration was supported (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     fa_icon: Optional[str] = None
+    r"""font-awesome icon"""
 
     featured: Optional[bool] = None
 
     in_progress: Optional[bool] = None
+    r"""If this integration is not yet available as it is currently being built by unified.to"""
 
     is_active: Optional[bool] = None
+    r"""Is this integration active in this workspace"""
 
     is_hidden: Optional[bool] = None
 
     logo_url: Optional[str] = None
+    r"""The URL of the integration's logo"""
 
     partnership: Optional[Partnership] = None
 
@@ -204,6 +229,7 @@ class Integration(BaseModel):
     rate_limit_description: Optional[str] = None
 
     requires_cname: Optional[bool] = None
+    r"""OAuth requires a custom API domain (CNAME) for provider verification"""
 
     saml: Optional[Saml] = None
 
@@ -212,8 +238,10 @@ class Integration(BaseModel):
     support: Optional[Dict[str, IntegrationSupport]] = None
 
     tested_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     text_color: Optional[str] = None
+    r"""text color for AUTH"""
 
     token_instructions: Optional[List[str]] = None
     r"""instructions for the user on how to find the token/key"""
@@ -222,8 +250,10 @@ class Integration(BaseModel):
     r"""if auth_types = 'token'"""
 
     updated_at: Optional[str] = None
+    r"""YYYY-MM-DD (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
+    r"""URL for the software vendor"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

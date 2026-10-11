@@ -31,6 +31,7 @@ class AtsStatusTypedDict(TypedDict):
     description: NotRequired[str]
     id: NotRequired[str]
     job_id: NotRequired[str]
+    r"""The ID of the job this status/stage belongs to, when the provider scopes statuses per job."""
     original_status: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     status: NotRequired[AtsStatusStatus]
@@ -42,6 +43,7 @@ class AtsStatus(BaseModel):
     id: Optional[str] = None
 
     job_id: Optional[str] = None
+    r"""The ID of the job this status/stage belongs to, when the provider scopes statuses per job."""
 
     original_status: Optional[str] = None
 

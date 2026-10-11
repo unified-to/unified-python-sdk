@@ -24,6 +24,7 @@ class AtsScorecardTypedDict(TypedDict):
     candidate_id: NotRequired[str]
     comment: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     interview_id: NotRequired[str]
     interviewer_id: NotRequired[str]
@@ -32,6 +33,7 @@ class AtsScorecardTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     recommendation: NotRequired[Recommendation]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AtsScorecard(BaseModel):
@@ -42,6 +44,7 @@ class AtsScorecard(BaseModel):
     comment: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -58,6 +61,7 @@ class AtsScorecard(BaseModel):
     recommendation: Optional[Recommendation] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("recommendation")
     def serialize_recommendation(self, value):

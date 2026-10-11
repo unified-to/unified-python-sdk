@@ -9,12 +9,14 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingTrialbalanceSubItemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     account_name: NotRequired[str]
     amount: NotRequired[float]
 
 
 class AccountingTrialbalanceSubItem(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     account_name: Optional[str] = None
 

@@ -67,6 +67,7 @@ class ScimUserTypedDict(TypedDict):
     ]
     user_name: NotRequired[str]
     user_type: NotRequired[str]
+    r"""'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager', 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']"""
     x509_certificates: NotRequired[List[ScimRoleTypedDict]]
 
 
@@ -145,6 +146,7 @@ class ScimUser(BaseModel):
     user_name: Annotated[Optional[str], pydantic.Field(alias="userName")] = None
 
     user_type: Annotated[Optional[str], pydantic.Field(alias="userType")] = None
+    r"""'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager', 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']"""
 
     x509_certificates: Annotated[
         Optional[List[ScimRole]], pydantic.Field(alias="x509Certificates")

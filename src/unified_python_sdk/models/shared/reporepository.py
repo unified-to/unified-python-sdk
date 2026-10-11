@@ -11,13 +11,16 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class RepoRepositoryTypedDict(TypedDict):
     name: str
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     is_private: NotRequired[bool]
     org_id: NotRequired[str]
+    r"""(reference to RepoOrganization)"""
     owner: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
 
 
@@ -25,6 +28,7 @@ class RepoRepository(BaseModel):
     name: str
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -33,12 +37,14 @@ class RepoRepository(BaseModel):
     is_private: Optional[bool] = None
 
     org_id: Optional[str] = None
+    r"""(reference to RepoOrganization)"""
 
     owner: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
 

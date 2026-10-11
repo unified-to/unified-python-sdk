@@ -43,9 +43,12 @@ class AtsJobStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 class AtsJobTypedDict(TypedDict):
     addresses: NotRequired[List[AtsAddressTypedDict]]
     closed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     company_id: NotRequired[str]
+    r"""id value of the company associated with the job in the ATS (reference to AtsCompany)"""
     compensation: NotRequired[List[AtsCompensationTypedDict]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     employment_type: NotRequired[EmploymentType]
     groups: NotRequired[List[AtsGroupTypedDict]]
@@ -55,11 +58,13 @@ class AtsJobTypedDict(TypedDict):
     id: NotRequired[str]
     industry: NotRequired[str]
     language_locale: NotRequired[str]
+    r"""Preferred language for the job, in ISO 639-1 format (e.g., U.S. English is en-us)"""
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     minimum_degree: NotRequired[str]
     minimum_experience_years: NotRequired[float]
     name: NotRequired[str]
     number_of_openings: NotRequired[float]
+    r"""Number of openings for the job"""
     openings: NotRequired[List[AtsJobOpeningTypedDict]]
     postings: NotRequired[List[AtsJobPostingTypedDict]]
     r"""Public job postings"""
@@ -72,20 +77,26 @@ class AtsJobTypedDict(TypedDict):
     skills: NotRequired[List[str]]
     status: NotRequired[AtsJobStatus]
     summary: NotRequired[str]
+    r"""Short job blurb (distinct from full description when both exist)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)"""
 
 
 class AtsJob(BaseModel):
     addresses: Optional[List[AtsAddress]] = None
 
     closed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     company_id: Optional[str] = None
+    r"""id value of the company associated with the job in the ATS (reference to AtsCompany)"""
 
     compensation: Optional[List[AtsCompensation]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -103,6 +114,7 @@ class AtsJob(BaseModel):
     industry: Optional[str] = None
 
     language_locale: Optional[str] = None
+    r"""Preferred language for the job, in ISO 639-1 format (e.g., U.S. English is en-us)"""
 
     metadata: Optional[List[AtsMetadata]] = None
 
@@ -113,6 +125,7 @@ class AtsJob(BaseModel):
     name: Optional[str] = None
 
     number_of_openings: Optional[float] = None
+    r"""Number of openings for the job"""
 
     openings: Optional[List[AtsJobOpening]] = None
 
@@ -135,10 +148,13 @@ class AtsJob(BaseModel):
     status: Optional[AtsJobStatus] = None
 
     summary: Optional[str] = None
+    r"""Short job blurb (distinct from full description when both exist)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)"""
 
     @field_serializer("employment_type")
     def serialize_employment_type(self, value):

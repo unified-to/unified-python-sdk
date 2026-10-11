@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class Metric(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The metric being reported"""
+
     FOLLOWERS = "FOLLOWERS"
     FOLLOWING = "FOLLOWING"
     POSTS = "POSTS"
@@ -30,6 +32,8 @@ class Metric(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class Period(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The aggregation period of the value"""
+
     DAY = "DAY"
     WEEK = "WEEK"
     MONTH = "MONTH"
@@ -40,34 +44,52 @@ class Period(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class SocialInsightTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     date_: NotRequired[datetime]
+    r"""The day/timestamp of the data point"""
     id: NotRequired[str]
+    r"""Unique identifier for the insight data point"""
     metric: NotRequired[Metric]
+    r"""The metric being reported"""
     period: NotRequired[Period]
+    r"""The aggregation period of the value"""
     post_id: NotRequired[str]
+    r"""Optional: the post these stats belong to"""
     profile_id: NotRequired[str]
+    r"""The social profile these stats belong to"""
     raw: NotRequired[Dict[str, Any]]
+    r"""Raw data from integration"""
     value: NotRequired[float]
+    r"""The metric value"""
 
 
 class SocialInsight(BaseModel):
     created_at: Optional[datetime] = None
+    r"""When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     date_: Annotated[Optional[datetime], pydantic.Field(alias="date")] = None
+    r"""The day/timestamp of the data point"""
 
     id: Optional[str] = None
+    r"""Unique identifier for the insight data point"""
 
     metric: Optional[Metric] = None
+    r"""The metric being reported"""
 
     period: Optional[Period] = None
+    r"""The aggregation period of the value"""
 
     post_id: Optional[str] = None
+    r"""Optional: the post these stats belong to"""
 
     profile_id: Optional[str] = None
+    r"""The social profile these stats belong to"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Raw data from integration"""
 
     value: Optional[float] = None
+    r"""The metric value"""
 
     @field_serializer("metric")
     def serialize_metric(self, value):

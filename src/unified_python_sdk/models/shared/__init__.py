@@ -108,7 +108,13 @@ if TYPE_CHECKING:
     from .accountingexpense import (
         AccountingExpense,
         AccountingExpenseStatus,
+        AccountingExpenseType,
         AccountingExpenseTypedDict,
+    )
+    from .accountingexpensereport import (
+        AccountingExpensereport,
+        AccountingExpensereportStatus,
+        AccountingExpensereportTypedDict,
     )
     from .accountingextendednote import (
         AccountingExtendedNote,
@@ -196,6 +202,15 @@ if TYPE_CHECKING:
         AccountingPurchaseorderStatus,
         AccountingPurchaseorderTypedDict,
     )
+    from .accountingpurchasereceipt import (
+        AccountingPurchasereceipt,
+        AccountingPurchasereceiptStatus,
+        AccountingPurchasereceiptTypedDict,
+    )
+    from .accountingpurchasereceiptlineitem import (
+        AccountingPurchasereceiptLineitem,
+        AccountingPurchasereceiptLineitemTypedDict,
+    )
     from .accountingquote import (
         AccountingQuote,
         AccountingQuotePaymentTerms,
@@ -209,6 +224,11 @@ if TYPE_CHECKING:
         AccountingSalesorderStatus,
         AccountingSalesorderTypedDict,
         FulfillmentType,
+    )
+    from .accountingsalesreceipt import (
+        AccountingSalesreceipt,
+        AccountingSalesreceiptStatus,
+        AccountingSalesreceiptTypedDict,
     )
     from .accountingtaxrate import (
         AccountingTaxrate,
@@ -595,6 +615,7 @@ if TYPE_CHECKING:
         CommerceTelephoneTypedDict,
     )
     from .connection import Connection, ConnectionTypedDict
+    from .connectionreauth import ConnectionReauth, ConnectionReauthTypedDict
     from .crmcompany import CrmCompany, CrmCompanyTypedDict
     from .crmcontact import CrmContact, CrmContactTypedDict
     from .crmdeal import CrmDeal, CrmDealTypedDict
@@ -666,6 +687,11 @@ if TYPE_CHECKING:
     from .formsform import FormsForm, FormsFormTypedDict
     from .formssubmission import FormsSubmission, FormsSubmissionTypedDict
     from .genaiagent import GenaiAgent, GenaiAgentTypedDict
+    from .genaianswer import GenaiAnswer, GenaiAnswerType, GenaiAnswerTypedDict
+    from .genaianswerprobability import (
+        GenaiAnswerProbability,
+        GenaiAnswerProbabilityTypedDict,
+    )
     from .genaicontent import GenaiContent, GenaiContentTypedDict, Role
     from .genaiembedding import EncondingFormat, GenaiEmbedding, GenaiEmbeddingTypedDict
     from .genaiembeddingcontent import (
@@ -675,6 +701,8 @@ if TYPE_CHECKING:
     from .genaimodel import GenaiModel, GenaiModelTypedDict
     from .genaiorganization import GenaiOrganization, GenaiOrganizationTypedDict
     from .genaiprompt import GenaiPrompt, GenaiPromptTypedDict
+    from .genaiquestion import GenaiQuestion, GenaiQuestionType, GenaiQuestionTypedDict
+    from .genaiskill import GenaiSkill, GenaiSkillTypedDict
     from .genaitask import GenaiTask, GenaiTaskStatus, GenaiTaskTypedDict
     from .hrisattendance import (
         HrisAttendance,
@@ -686,6 +714,7 @@ if TYPE_CHECKING:
         HrisBankaccount,
         HrisBankaccountAccountType,
         HrisBankaccountTypedDict,
+        SplitType,
     )
     from .hrisbenefit import (
         CoverageLevel,
@@ -704,6 +733,8 @@ if TYPE_CHECKING:
         HrisCompensationTypedDict,
     )
     from .hrisdeduction import (
+        EmployerType,
+        GarnishmentType,
         HrisDeduction,
         HrisDeductionCoverageLevel,
         HrisDeductionFrequency,
@@ -712,21 +743,35 @@ if TYPE_CHECKING:
     )
     from .hrisdevice import HrisDevice, HrisDeviceTypedDict
     from .hrisdocument import HrisDocument, HrisDocumentType, HrisDocumentTypedDict
+    from .hrisearning import (
+        HrisEarning,
+        HrisEarningFrequency,
+        HrisEarningStatus,
+        HrisEarningTypedDict,
+    )
     from .hrisemail import HrisEmail, HrisEmailType, HrisEmailTypedDict
     from .hrisemployee import (
         EmploymentStatus,
+        FlsaStatus,
         HrisEmployee,
         HrisEmployeeEmploymentType,
         HrisEmployeeGender,
         HrisEmployeeTypedDict,
         MaritalStatus,
+        PayFrequency,
     )
     from .hrisemployeerelationship import (
         HrisEmployeerelationship,
         HrisEmployeerelationshipType,
         HrisEmployeerelationshipTypedDict,
     )
-    from .hrisgroup import HrisGroup, HrisGroupType, HrisGroupTypedDict
+    from .hrisgroup import (
+        HrisGroup,
+        HrisGroupPayFrequency,
+        HrisGroupType,
+        HrisGroupTypedDict,
+    )
+    from .hrisjob import HrisJob, HrisJobEmploymentType, HrisJobTypedDict
     from .hrislocation import HrisLocation, HrisLocationTypedDict
     from .hrismetadata import (
         HrisMetadata,
@@ -745,7 +790,24 @@ if TYPE_CHECKING:
         HrisMetadataValue,
         HrisMetadataValueTypedDict,
     )
-    from .hrispayslip import HrisPayslip, HrisPayslipTypedDict, PaymentType
+    from .hrispaycode import (
+        DetailType,
+        HrisPaycode,
+        HrisPaycodeType,
+        HrisPaycodeTypedDict,
+    )
+    from .hrispayroll import (
+        HrisPayroll,
+        HrisPayrollStatus,
+        HrisPayrollType,
+        HrisPayrollTypedDict,
+    )
+    from .hrispayslip import (
+        HrisPayslip,
+        HrisPayslipType,
+        HrisPayslipTypedDict,
+        PaymentType,
+    )
     from .hrispayslipdetail import (
         HrisPayslipDetail,
         HrisPayslipDetailType,
@@ -795,6 +857,7 @@ if TYPE_CHECKING:
         IntegrationSupportTypedDict,
         ListAccountID,
         ListAdID,
+        ListAgentID,
         ListApplicationID,
         ListApproverUserID,
         ListAssignedUserID,
@@ -823,6 +886,7 @@ if TYPE_CHECKING:
         ListDimension,
         ListDocumentID,
         ListEffectiveStatus,
+        ListEmail,
         ListEndLt,
         ListEventID,
         ListExpand,
@@ -1179,6 +1243,14 @@ if TYPE_CHECKING:
     from .property_accountingsalesorder_shipping_address import (
         PropertyAccountingSalesorderShippingAddress,
         PropertyAccountingSalesorderShippingAddressTypedDict,
+    )
+    from .property_accountingsalesreceipt_billing_address import (
+        PropertyAccountingSalesreceiptBillingAddress,
+        PropertyAccountingSalesreceiptBillingAddressTypedDict,
+    )
+    from .property_accountingsalesreceipt_shipping_address import (
+        PropertyAccountingSalesreceiptShippingAddress,
+        PropertyAccountingSalesreceiptShippingAddressTypedDict,
     )
     from .property_adscampaign_frequency_cap import (
         PropertyAdsCampaignFrequencyCap,
@@ -1790,7 +1862,9 @@ if TYPE_CHECKING:
     from .property_hrispayslip_deduction import (
         PropertyHrisPayslipDeduction,
         PropertyHrisPayslipDeductionCoverageLevel,
+        PropertyHrisPayslipDeductionEmployerType,
         PropertyHrisPayslipDeductionFrequency,
+        PropertyHrisPayslipDeductionGarnishmentType,
         PropertyHrisPayslipDeductionType,
         PropertyHrisPayslipDeductionTypedDict,
     )
@@ -1985,6 +2059,15 @@ if TYPE_CHECKING:
         SecretsManagerType,
         SecretsManagerTypedDict,
     )
+    from .secretsmanagerinstructions import (
+        SecretsManagerInstructions,
+        SecretsManagerInstructionsType,
+        SecretsManagerInstructionsTypedDict,
+    )
+    from .secretsmanagersecret import (
+        SecretsManagerSecret,
+        SecretsManagerSecretTypedDict,
+    )
     from .security import Security, SecurityTypedDict
     from .shippingcarrier import ShippingCarrier, ShippingCarrierTypedDict
     from .shippingcustomsitem import (
@@ -2123,6 +2206,14 @@ if TYPE_CHECKING:
         UcRecordingTranscript,
         UcRecordingTranscriptTypedDict,
     )
+    from .ucscorecard import UcScorecard, UcScorecardTypedDict
+    from .ucscorecardquestion import UcScorecardQuestion, UcScorecardQuestionTypedDict
+    from .ucscorecardtemplate import UcScorecardtemplate, UcScorecardtemplateTypedDict
+    from .ucscorecardtemplatequestion import (
+        UcScorecardtemplateQuestion,
+        UcScorecardtemplateQuestionType,
+        UcScorecardtemplateQuestionTypedDict,
+    )
     from .uctelephone import UcTelephone, UcTelephoneType, UcTelephoneTypedDict
     from .verificationaddress import VerificationAddress, VerificationAddressTypedDict
     from .verificationpackage import (
@@ -2222,7 +2313,11 @@ __all__ = [
     "AccountingEmailTypedDict",
     "AccountingExpense",
     "AccountingExpenseStatus",
+    "AccountingExpenseType",
     "AccountingExpenseTypedDict",
+    "AccountingExpensereport",
+    "AccountingExpensereportStatus",
+    "AccountingExpensereportTypedDict",
     "AccountingExtendedNote",
     "AccountingExtendedNoteTypedDict",
     "AccountingFee",
@@ -2272,6 +2367,11 @@ __all__ = [
     "AccountingPurchaseorder",
     "AccountingPurchaseorderStatus",
     "AccountingPurchaseorderTypedDict",
+    "AccountingPurchasereceipt",
+    "AccountingPurchasereceiptLineitem",
+    "AccountingPurchasereceiptLineitemTypedDict",
+    "AccountingPurchasereceiptStatus",
+    "AccountingPurchasereceiptTypedDict",
     "AccountingQuote",
     "AccountingQuotePaymentTerms",
     "AccountingQuoteStatus",
@@ -2281,6 +2381,9 @@ __all__ = [
     "AccountingSalesorder",
     "AccountingSalesorderStatus",
     "AccountingSalesorderTypedDict",
+    "AccountingSalesreceipt",
+    "AccountingSalesreceiptStatus",
+    "AccountingSalesreceiptTypedDict",
     "AccountingTaxrate",
     "AccountingTaxrateComponent",
     "AccountingTaxrateComponentTypedDict",
@@ -2610,6 +2713,8 @@ __all__ = [
     "CommerceTelephoneTypedDict",
     "ComputeMode",
     "Connection",
+    "ConnectionReauth",
+    "ConnectionReauthTypedDict",
     "ConnectionTypedDict",
     "ContentType",
     "ContentsType",
@@ -2685,12 +2790,14 @@ __all__ = [
     "DatastoreTableTypedDict",
     "DayOfWeek",
     "DbType",
+    "DetailType",
     "Dimension",
     "Direction",
     "DurationType",
     "DutiesPaidBy",
     "EffectiveStatus",
     "EmployerContributionType",
+    "EmployerType",
     "EmploymentStatus",
     "EmploymentType",
     "EncondingFormat",
@@ -2714,6 +2821,7 @@ __all__ = [
     "ExtraDataTypedDict",
     "Five",
     "FiveTypedDict",
+    "FlsaStatus",
     "FormAnswer",
     "FormAnswerTypedDict",
     "FormField",
@@ -2727,8 +2835,14 @@ __all__ = [
     "Frequency",
     "FromWebhook",
     "FulfillmentType",
+    "GarnishmentType",
     "GenaiAgent",
     "GenaiAgentTypedDict",
+    "GenaiAnswer",
+    "GenaiAnswerProbability",
+    "GenaiAnswerProbabilityTypedDict",
+    "GenaiAnswerType",
+    "GenaiAnswerTypedDict",
     "GenaiContent",
     "GenaiContentTypedDict",
     "GenaiEmbedding",
@@ -2741,6 +2855,11 @@ __all__ = [
     "GenaiOrganizationTypedDict",
     "GenaiPrompt",
     "GenaiPromptTypedDict",
+    "GenaiQuestion",
+    "GenaiQuestionType",
+    "GenaiQuestionTypedDict",
+    "GenaiSkill",
+    "GenaiSkillTypedDict",
     "GenaiTask",
     "GenaiTaskStatus",
     "GenaiTaskTypedDict",
@@ -2776,6 +2895,10 @@ __all__ = [
     "HrisDocument",
     "HrisDocumentType",
     "HrisDocumentTypedDict",
+    "HrisEarning",
+    "HrisEarningFrequency",
+    "HrisEarningStatus",
+    "HrisEarningTypedDict",
     "HrisEmail",
     "HrisEmailType",
     "HrisEmailTypedDict",
@@ -2787,8 +2910,12 @@ __all__ = [
     "HrisEmployeerelationshipType",
     "HrisEmployeerelationshipTypedDict",
     "HrisGroup",
+    "HrisGroupPayFrequency",
     "HrisGroupType",
     "HrisGroupTypedDict",
+    "HrisJob",
+    "HrisJobEmploymentType",
+    "HrisJobTypedDict",
     "HrisLocation",
     "HrisLocationTypedDict",
     "HrisMetadata",
@@ -2806,10 +2933,18 @@ __all__ = [
     "HrisMetadataTypedDict",
     "HrisMetadataValue",
     "HrisMetadataValueTypedDict",
+    "HrisPaycode",
+    "HrisPaycodeType",
+    "HrisPaycodeTypedDict",
+    "HrisPayroll",
+    "HrisPayrollStatus",
+    "HrisPayrollType",
+    "HrisPayrollTypedDict",
     "HrisPayslip",
     "HrisPayslipDetail",
     "HrisPayslipDetailType",
     "HrisPayslipDetailTypedDict",
+    "HrisPayslipType",
     "HrisPayslipTypedDict",
     "HrisTaxonomy",
     "HrisTaxonomyType",
@@ -2873,6 +3008,7 @@ __all__ = [
     "LabelFormat",
     "ListAccountID",
     "ListAdID",
+    "ListAgentID",
     "ListApplicationID",
     "ListApproverUserID",
     "ListAssignedUserID",
@@ -2901,6 +3037,7 @@ __all__ = [
     "ListDimension",
     "ListDocumentID",
     "ListEffectiveStatus",
+    "ListEmail",
     "ListEndLt",
     "ListEventID",
     "ListExpand",
@@ -3073,6 +3210,7 @@ __all__ = [
     "Origin",
     "Partnership",
     "PartnershipTypedDict",
+    "PayFrequency",
     "PaymentAllocation",
     "PaymentAllocationObjectType",
     "PaymentAllocationTypedDict",
@@ -3149,6 +3287,10 @@ __all__ = [
     "PropertyAccountingSalesorderBillingAddressTypedDict",
     "PropertyAccountingSalesorderShippingAddress",
     "PropertyAccountingSalesorderShippingAddressTypedDict",
+    "PropertyAccountingSalesreceiptBillingAddress",
+    "PropertyAccountingSalesreceiptBillingAddressTypedDict",
+    "PropertyAccountingSalesreceiptShippingAddress",
+    "PropertyAccountingSalesreceiptShippingAddressTypedDict",
     "PropertyAdsCampaignFrequencyCap",
     "PropertyAdsCampaignFrequencyCapTypedDict",
     "PropertyAdsCampaignKpi",
@@ -3471,7 +3613,9 @@ __all__ = [
     "PropertyHrisLocationAddressTypedDict",
     "PropertyHrisPayslipDeduction",
     "PropertyHrisPayslipDeductionCoverageLevel",
+    "PropertyHrisPayslipDeductionEmployerType",
     "PropertyHrisPayslipDeductionFrequency",
+    "PropertyHrisPayslipDeductionGarnishmentType",
     "PropertyHrisPayslipDeductionType",
     "PropertyHrisPayslipDeductionTypedDict",
     "PropertyIntegrationCategories",
@@ -3611,6 +3755,11 @@ __all__ = [
     "SearchName",
     "SearchTwitter",
     "SecretsManager",
+    "SecretsManagerInstructions",
+    "SecretsManagerInstructionsType",
+    "SecretsManagerInstructionsTypedDict",
+    "SecretsManagerSecret",
+    "SecretsManagerSecretTypedDict",
     "SecretsManagerType",
     "SecretsManagerTypedDict",
     "Security",
@@ -3669,6 +3818,7 @@ __all__ = [
     "SocialReview",
     "SocialReviewTypedDict",
     "SortOrder",
+    "SplitType",
     "SportType",
     "Status",
     "StorageFile",
@@ -3761,6 +3911,15 @@ __all__ = [
     "UcRecordingTranscriptTypedDict",
     "UcRecordingType",
     "UcRecordingTypedDict",
+    "UcScorecard",
+    "UcScorecardQuestion",
+    "UcScorecardQuestionTypedDict",
+    "UcScorecardTypedDict",
+    "UcScorecardtemplate",
+    "UcScorecardtemplateQuestion",
+    "UcScorecardtemplateQuestionType",
+    "UcScorecardtemplateQuestionTypedDict",
+    "UcScorecardtemplateTypedDict",
     "UcTelephone",
     "UcTelephoneType",
     "UcTelephoneTypedDict",
@@ -3930,7 +4089,11 @@ _dynamic_imports: dict[str, str] = {
     "AccountingEmailTypedDict": ".accountingemail",
     "AccountingExpense": ".accountingexpense",
     "AccountingExpenseStatus": ".accountingexpense",
+    "AccountingExpenseType": ".accountingexpense",
     "AccountingExpenseTypedDict": ".accountingexpense",
+    "AccountingExpensereport": ".accountingexpensereport",
+    "AccountingExpensereportStatus": ".accountingexpensereport",
+    "AccountingExpensereportTypedDict": ".accountingexpensereport",
     "AccountingExtendedNote": ".accountingextendednote",
     "AccountingExtendedNoteTypedDict": ".accountingextendednote",
     "Visibility": ".accountingextendednote",
@@ -3992,6 +4155,11 @@ _dynamic_imports: dict[str, str] = {
     "AccountingPurchaseorder": ".accountingpurchaseorder",
     "AccountingPurchaseorderStatus": ".accountingpurchaseorder",
     "AccountingPurchaseorderTypedDict": ".accountingpurchaseorder",
+    "AccountingPurchasereceipt": ".accountingpurchasereceipt",
+    "AccountingPurchasereceiptStatus": ".accountingpurchasereceipt",
+    "AccountingPurchasereceiptTypedDict": ".accountingpurchasereceipt",
+    "AccountingPurchasereceiptLineitem": ".accountingpurchasereceiptlineitem",
+    "AccountingPurchasereceiptLineitemTypedDict": ".accountingpurchasereceiptlineitem",
     "AccountingQuote": ".accountingquote",
     "AccountingQuotePaymentTerms": ".accountingquote",
     "AccountingQuoteStatus": ".accountingquote",
@@ -4003,6 +4171,9 @@ _dynamic_imports: dict[str, str] = {
     "AccountingSalesorderStatus": ".accountingsalesorder",
     "AccountingSalesorderTypedDict": ".accountingsalesorder",
     "FulfillmentType": ".accountingsalesorder",
+    "AccountingSalesreceipt": ".accountingsalesreceipt",
+    "AccountingSalesreceiptStatus": ".accountingsalesreceipt",
+    "AccountingSalesreceiptTypedDict": ".accountingsalesreceipt",
     "AccountingTaxrate": ".accountingtaxrate",
     "AccountingTaxrateType": ".accountingtaxrate",
     "AccountingTaxrateTypedDict": ".accountingtaxrate",
@@ -4361,6 +4532,8 @@ _dynamic_imports: dict[str, str] = {
     "CommerceTelephoneTypedDict": ".commercetelephone",
     "Connection": ".connection",
     "ConnectionTypedDict": ".connection",
+    "ConnectionReauth": ".connectionreauth",
+    "ConnectionReauthTypedDict": ".connectionreauth",
     "CrmCompany": ".crmcompany",
     "CrmCompanyTypedDict": ".crmcompany",
     "CrmContact": ".crmcontact",
@@ -4451,6 +4624,11 @@ _dynamic_imports: dict[str, str] = {
     "FormsSubmissionTypedDict": ".formssubmission",
     "GenaiAgent": ".genaiagent",
     "GenaiAgentTypedDict": ".genaiagent",
+    "GenaiAnswer": ".genaianswer",
+    "GenaiAnswerType": ".genaianswer",
+    "GenaiAnswerTypedDict": ".genaianswer",
+    "GenaiAnswerProbability": ".genaianswerprobability",
+    "GenaiAnswerProbabilityTypedDict": ".genaianswerprobability",
     "GenaiContent": ".genaicontent",
     "GenaiContentTypedDict": ".genaicontent",
     "Role": ".genaicontent",
@@ -4465,6 +4643,11 @@ _dynamic_imports: dict[str, str] = {
     "GenaiOrganizationTypedDict": ".genaiorganization",
     "GenaiPrompt": ".genaiprompt",
     "GenaiPromptTypedDict": ".genaiprompt",
+    "GenaiQuestion": ".genaiquestion",
+    "GenaiQuestionType": ".genaiquestion",
+    "GenaiQuestionTypedDict": ".genaiquestion",
+    "GenaiSkill": ".genaiskill",
+    "GenaiSkillTypedDict": ".genaiskill",
     "GenaiTask": ".genaitask",
     "GenaiTaskStatus": ".genaitask",
     "GenaiTaskTypedDict": ".genaitask",
@@ -4476,6 +4659,7 @@ _dynamic_imports: dict[str, str] = {
     "HrisBankaccount": ".hrisbankaccount",
     "HrisBankaccountAccountType": ".hrisbankaccount",
     "HrisBankaccountTypedDict": ".hrisbankaccount",
+    "SplitType": ".hrisbankaccount",
     "CoverageLevel": ".hrisbenefit",
     "EmployerContributionType": ".hrisbenefit",
     "HrisBenefit": ".hrisbenefit",
@@ -4489,6 +4673,8 @@ _dynamic_imports: dict[str, str] = {
     "HrisCompensationFrequency": ".hriscompensation",
     "HrisCompensationType": ".hriscompensation",
     "HrisCompensationTypedDict": ".hriscompensation",
+    "EmployerType": ".hrisdeduction",
+    "GarnishmentType": ".hrisdeduction",
     "HrisDeduction": ".hrisdeduction",
     "HrisDeductionCoverageLevel": ".hrisdeduction",
     "HrisDeductionFrequency": ".hrisdeduction",
@@ -4499,21 +4685,31 @@ _dynamic_imports: dict[str, str] = {
     "HrisDocument": ".hrisdocument",
     "HrisDocumentType": ".hrisdocument",
     "HrisDocumentTypedDict": ".hrisdocument",
+    "HrisEarning": ".hrisearning",
+    "HrisEarningFrequency": ".hrisearning",
+    "HrisEarningStatus": ".hrisearning",
+    "HrisEarningTypedDict": ".hrisearning",
     "HrisEmail": ".hrisemail",
     "HrisEmailType": ".hrisemail",
     "HrisEmailTypedDict": ".hrisemail",
     "EmploymentStatus": ".hrisemployee",
+    "FlsaStatus": ".hrisemployee",
     "HrisEmployee": ".hrisemployee",
     "HrisEmployeeEmploymentType": ".hrisemployee",
     "HrisEmployeeGender": ".hrisemployee",
     "HrisEmployeeTypedDict": ".hrisemployee",
     "MaritalStatus": ".hrisemployee",
+    "PayFrequency": ".hrisemployee",
     "HrisEmployeerelationship": ".hrisemployeerelationship",
     "HrisEmployeerelationshipType": ".hrisemployeerelationship",
     "HrisEmployeerelationshipTypedDict": ".hrisemployeerelationship",
     "HrisGroup": ".hrisgroup",
+    "HrisGroupPayFrequency": ".hrisgroup",
     "HrisGroupType": ".hrisgroup",
     "HrisGroupTypedDict": ".hrisgroup",
+    "HrisJob": ".hrisjob",
+    "HrisJobEmploymentType": ".hrisjob",
+    "HrisJobTypedDict": ".hrisjob",
     "HrisLocation": ".hrislocation",
     "HrisLocationTypedDict": ".hrislocation",
     "HrisMetadata": ".hrismetadata",
@@ -4531,7 +4727,16 @@ _dynamic_imports: dict[str, str] = {
     "HrisMetadataTypedDict": ".hrismetadata",
     "HrisMetadataValue": ".hrismetadata",
     "HrisMetadataValueTypedDict": ".hrismetadata",
+    "DetailType": ".hrispaycode",
+    "HrisPaycode": ".hrispaycode",
+    "HrisPaycodeType": ".hrispaycode",
+    "HrisPaycodeTypedDict": ".hrispaycode",
+    "HrisPayroll": ".hrispayroll",
+    "HrisPayrollStatus": ".hrispayroll",
+    "HrisPayrollType": ".hrispayroll",
+    "HrisPayrollTypedDict": ".hrispayroll",
     "HrisPayslip": ".hrispayslip",
+    "HrisPayslipType": ".hrispayslip",
     "HrisPayslipTypedDict": ".hrispayslip",
     "PaymentType": ".hrispayslip",
     "HrisPayslipDetail": ".hrispayslipdetail",
@@ -4581,6 +4786,7 @@ _dynamic_imports: dict[str, str] = {
     "IntegrationSupportTypedDict": ".integrationsupport",
     "ListAccountID": ".integrationsupport",
     "ListAdID": ".integrationsupport",
+    "ListAgentID": ".integrationsupport",
     "ListApplicationID": ".integrationsupport",
     "ListApproverUserID": ".integrationsupport",
     "ListAssignedUserID": ".integrationsupport",
@@ -4609,6 +4815,7 @@ _dynamic_imports: dict[str, str] = {
     "ListDimension": ".integrationsupport",
     "ListDocumentID": ".integrationsupport",
     "ListEffectiveStatus": ".integrationsupport",
+    "ListEmail": ".integrationsupport",
     "ListEndLt": ".integrationsupport",
     "ListEventID": ".integrationsupport",
     "ListExpand": ".integrationsupport",
@@ -4940,6 +5147,10 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAccountingSalesorderBillingAddressTypedDict": ".property_accountingsalesorder_billing_address",
     "PropertyAccountingSalesorderShippingAddress": ".property_accountingsalesorder_shipping_address",
     "PropertyAccountingSalesorderShippingAddressTypedDict": ".property_accountingsalesorder_shipping_address",
+    "PropertyAccountingSalesreceiptBillingAddress": ".property_accountingsalesreceipt_billing_address",
+    "PropertyAccountingSalesreceiptBillingAddressTypedDict": ".property_accountingsalesreceipt_billing_address",
+    "PropertyAccountingSalesreceiptShippingAddress": ".property_accountingsalesreceipt_shipping_address",
+    "PropertyAccountingSalesreceiptShippingAddressTypedDict": ".property_accountingsalesreceipt_shipping_address",
     "PropertyAdsCampaignFrequencyCap": ".property_adscampaign_frequency_cap",
     "PropertyAdsCampaignFrequencyCapTypedDict": ".property_adscampaign_frequency_cap",
     "TimeUnit": ".property_adscampaign_frequency_cap",
@@ -5269,7 +5480,9 @@ _dynamic_imports: dict[str, str] = {
     "PropertyHrisLocationAddressTypedDict": ".property_hrislocation_address",
     "PropertyHrisPayslipDeduction": ".property_hrispayslip_deduction",
     "PropertyHrisPayslipDeductionCoverageLevel": ".property_hrispayslip_deduction",
+    "PropertyHrisPayslipDeductionEmployerType": ".property_hrispayslip_deduction",
     "PropertyHrisPayslipDeductionFrequency": ".property_hrispayslip_deduction",
+    "PropertyHrisPayslipDeductionGarnishmentType": ".property_hrispayslip_deduction",
     "PropertyHrisPayslipDeductionType": ".property_hrispayslip_deduction",
     "PropertyHrisPayslipDeductionTypedDict": ".property_hrispayslip_deduction",
     "PropertyIntegrationCategories": ".property_integration_categories",
@@ -5403,6 +5616,11 @@ _dynamic_imports: dict[str, str] = {
     "SecretsManager": ".secretsmanager",
     "SecretsManagerType": ".secretsmanager",
     "SecretsManagerTypedDict": ".secretsmanager",
+    "SecretsManagerInstructions": ".secretsmanagerinstructions",
+    "SecretsManagerInstructionsType": ".secretsmanagerinstructions",
+    "SecretsManagerInstructionsTypedDict": ".secretsmanagerinstructions",
+    "SecretsManagerSecret": ".secretsmanagersecret",
+    "SecretsManagerSecretTypedDict": ".secretsmanagersecret",
     "Security": ".security",
     "SecurityTypedDict": ".security",
     "ShippingCarrier": ".shippingcarrier",
@@ -5542,6 +5760,15 @@ _dynamic_imports: dict[str, str] = {
     "UcRecordingMediaTypedDict": ".ucrecordingmedia",
     "UcRecordingTranscript": ".ucrecordingtranscript",
     "UcRecordingTranscriptTypedDict": ".ucrecordingtranscript",
+    "UcScorecard": ".ucscorecard",
+    "UcScorecardTypedDict": ".ucscorecard",
+    "UcScorecardQuestion": ".ucscorecardquestion",
+    "UcScorecardQuestionTypedDict": ".ucscorecardquestion",
+    "UcScorecardtemplate": ".ucscorecardtemplate",
+    "UcScorecardtemplateTypedDict": ".ucscorecardtemplate",
+    "UcScorecardtemplateQuestion": ".ucscorecardtemplatequestion",
+    "UcScorecardtemplateQuestionType": ".ucscorecardtemplatequestion",
+    "UcScorecardtemplateQuestionTypedDict": ".ucscorecardtemplatequestion",
     "UcTelephone": ".uctelephone",
     "UcTelephoneType": ".uctelephone",
     "UcTelephoneTypedDict": ".uctelephone",

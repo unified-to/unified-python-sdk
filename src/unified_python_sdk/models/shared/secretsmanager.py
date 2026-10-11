@@ -31,11 +31,14 @@ class SecretsManagerTypedDict(TypedDict):
     name: str
     type: SecretsManagerType
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     dcs: NotRequired[List[str]]
     r"""data-regions"""
     id: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     workspace_id: NotRequired[str]
+    r"""(reference to KmsSpace)"""
 
 
 class SecretsManager(BaseModel):
@@ -47,6 +50,7 @@ class SecretsManager(BaseModel):
     type: SecretsManagerType
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     dcs: Optional[List[str]] = None
     r"""data-regions"""
@@ -54,8 +58,10 @@ class SecretsManager(BaseModel):
     id: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     workspace_id: Optional[str] = None
+    r"""(reference to KmsSpace)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

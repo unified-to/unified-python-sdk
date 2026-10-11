@@ -11,10 +11,14 @@
 * [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](#get_uc_contact) - Retrieve a contact
 * [get_uc_recording](#get_uc_recording) - Retrieve a recording
+* [get_uc_scorecard](#get_uc_scorecard) - Retrieve a scorecard
+* [get_uc_scorecardtemplate](#get_uc_scorecardtemplate) - Retrieve a scorecardtemplate
 * [list_uc_calls](#list_uc_calls) - List all calls
 * [list_uc_comments](#list_uc_comments) - List all comments
 * [list_uc_contacts](#list_uc_contacts) - List all contacts
 * [list_uc_recordings](#list_uc_recordings) - List all recordings
+* [list_uc_scorecards](#list_uc_scorecards) - List all scorecards
+* [list_uc_scorecardtemplates](#list_uc_scorecardtemplates) - List all scorecardtemplates
 * [patch_uc_comment](#patch_uc_comment) - Update a comment
 * [patch_uc_contact](#patch_uc_contact) - Update a contact
 * [patch_uc_recording](#patch_uc_recording) - Update a recording
@@ -47,8 +51,8 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "d421c4ff-cae4-4a9f-82dc-4b463f68c6e2",
-            "updated_at": "2024-02-02T11:40:40.170Z",
+            "id": "b55bcbeb-d0d3-4f88-bf42-c9984245742e",
+            "updated_at": "2024-02-07T08:39:05.491Z",
         },
         "connection_id": "<id>",
     })
@@ -107,7 +111,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "a07b6979-089e-4649-be28-728229ad5c33",
+            "id": "71892722-5d88-40d7-bf99-7d405cd261d5",
             "last_name": "Rogahn",
             "name": "Luther Rogahn",
             "telephones": [
@@ -125,7 +129,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-11-20T14:03:27.338Z"),
+            "updated_at": parse_datetime("2023-12-02T11:47:51.993Z"),
         },
         "connection_id": "<id>",
     })
@@ -176,34 +180,35 @@ with UnifiedTo(
     res = unified_to.uc.create_uc_recording(request={
         "uc_recording": {
             "contacts": [],
+            "conversation_identifier": "e92e4042-a800-41d5-9411-07742151d49f",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-04-22T23:09:58.257Z"),
-            "expires_at": parse_datetime("2026-03-31T03:31:56.772Z"),
-            "id": "8b9b82d0-2e7d-4849-acf6-98a4606897db",
+            "end_at": parse_datetime("2024-05-01T00:22:37.256Z"),
+            "expires_at": parse_datetime("2026-04-17T23:03:03.151Z"),
+            "id": "e92e4042-a800-41d5-9411-07742151d49f",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-03-21T10:55:57.895Z"),
+                    "end_at": parse_datetime("2024-03-29T01:22:20.176Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-04-18T10:32:22.668Z"),
+                    "start_at": parse_datetime("2026-05-06T12:07:07.207Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-01-30T03:04:30.679Z"),
-                            "start_at": parse_datetime("2024-05-20T15:35:59.030Z"),
+                            "end_at": parse_datetime("2026-02-16T02:42:27.963Z"),
+                            "start_at": parse_datetime("2024-05-29T01:58:59.623Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-09-27T06:32:59.084Z"),
-                            "start_at": parse_datetime("2026-07-05T06:34:34.659Z"),
+                            "end_at": parse_datetime("2024-10-07T11:52:50.369Z"),
+                            "start_at": parse_datetime("2026-07-24T09:56:38.505Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
-            "start_at": parse_datetime("2023-04-23T06:23:46.157Z"),
+            "start_at": parse_datetime("2023-04-26T06:26:29.625Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-02-26T01:19:09.006Z"),
+            "updated_at": parse_datetime("2025-03-10T08:56:21.806Z"),
             "user_name": "Melyna Larson",
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
@@ -423,6 +428,100 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_uc_scorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getUcScorecard" method="get" path="/uc/{connection_id}/scorecard/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.get_uc_scorecard(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.uc_scorecard is not None
+
+    # Handle response
+    print(res.uc_scorecard)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetUcScorecardRequest](../../models/operations/getucscorecardrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetUcScorecardResponse](../../models/operations/getucscorecardresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_uc_scorecardtemplate
+
+Retrieve a scorecardtemplate
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getUcScorecardtemplate" method="get" path="/uc/{connection_id}/scorecardtemplate/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.get_uc_scorecardtemplate(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.uc_scorecardtemplate is not None
+
+    # Handle response
+    print(res.uc_scorecardtemplate)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetUcScorecardtemplateRequest](../../models/operations/getucscorecardtemplaterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.GetUcScorecardtemplateResponse](../../models/operations/getucscorecardtemplateresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_uc_calls
 
 List all calls
@@ -607,6 +706,98 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_uc_scorecards
+
+List all scorecards
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listUcScorecards" method="get" path="/uc/{connection_id}/scorecard" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.list_uc_scorecards(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.uc_scorecards is not None
+
+    # Handle response
+    print(res.uc_scorecards)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListUcScorecardsRequest](../../models/operations/listucscorecardsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.ListUcScorecardsResponse](../../models/operations/listucscorecardsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_uc_scorecardtemplates
+
+List all scorecardtemplates
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listUcScorecardtemplates" method="get" path="/uc/{connection_id}/scorecardtemplate" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.list_uc_scorecardtemplates(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.uc_scorecardtemplates is not None
+
+    # Handle response
+    print(res.uc_scorecardtemplates)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.ListUcScorecardtemplatesRequest](../../models/operations/listucscorecardtemplatesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.ListUcScorecardtemplatesResponse](../../models/operations/listucscorecardtemplatesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_uc_comment
 
 Update a comment
@@ -629,8 +820,8 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "a5ef67a9-9f23-4951-b5e0-dcbf92747aa9",
-            "updated_at": "2024-02-02T11:40:40.172Z",
+            "id": "263c6302-731a-4748-9738-16c1097238e1",
+            "updated_at": "2024-02-07T08:39:05.493Z",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -690,7 +881,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "c2fb5726-94f5-4b43-94a5-49c7d7dd7be8",
+            "id": "5c181c14-a751-42f2-89eb-22b7f876a2a5",
             "last_name": "Rogahn",
             "name": "Luther Rogahn",
             "telephones": [
@@ -708,7 +899,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-11-20T14:03:27.344Z"),
+            "updated_at": parse_datetime("2023-12-02T11:47:52.001Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -760,34 +951,35 @@ with UnifiedTo(
     res = unified_to.uc.patch_uc_recording(request={
         "uc_recording": {
             "contacts": [],
+            "conversation_identifier": "7e7003c4-a24f-41d1-acca-86a24b27fc9d",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-04-22T23:09:58.269Z"),
-            "expires_at": parse_datetime("2026-03-31T03:31:56.797Z"),
-            "id": "76e6eeb7-e7fc-4942-a26e-c387b757090d",
+            "end_at": parse_datetime("2024-05-01T00:22:37.266Z"),
+            "expires_at": parse_datetime("2026-04-17T23:03:03.175Z"),
+            "id": "7e7003c4-a24f-41d1-acca-86a24b27fc9d",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-03-21T10:55:57.906Z"),
+                    "end_at": parse_datetime("2024-03-29T01:22:20.186Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-04-18T10:32:22.694Z"),
+                    "start_at": parse_datetime("2026-05-06T12:07:07.232Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-01-30T03:04:30.702Z"),
-                            "start_at": parse_datetime("2024-05-20T15:35:59.042Z"),
+                            "end_at": parse_datetime("2026-02-16T02:42:27.986Z"),
+                            "start_at": parse_datetime("2024-05-29T01:58:59.635Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-09-27T06:32:59.098Z"),
-                            "start_at": parse_datetime("2026-07-05T06:34:34.685Z"),
+                            "end_at": parse_datetime("2024-10-07T11:52:50.383Z"),
+                            "start_at": parse_datetime("2026-07-24T09:56:38.529Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
-            "start_at": parse_datetime("2023-04-23T06:23:46.161Z"),
+            "start_at": parse_datetime("2023-04-26T06:26:29.629Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-02-26T01:19:09.024Z"),
+            "updated_at": parse_datetime("2025-03-10T08:56:21.823Z"),
             "user_name": "Melyna Larson",
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
@@ -983,8 +1175,8 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "a5ef67a9-9f23-4951-b5e0-dcbf92747aa9",
-            "updated_at": "2024-02-02T11:40:40.172Z",
+            "id": "263c6302-731a-4748-9738-16c1097238e1",
+            "updated_at": "2024-02-07T08:39:05.493Z",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1044,7 +1236,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "c2fb5726-94f5-4b43-94a5-49c7d7dd7be8",
+            "id": "5c181c14-a751-42f2-89eb-22b7f876a2a5",
             "last_name": "Rogahn",
             "name": "Luther Rogahn",
             "telephones": [
@@ -1062,7 +1254,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-11-20T14:03:27.344Z"),
+            "updated_at": parse_datetime("2023-12-02T11:47:52.001Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1114,34 +1306,35 @@ with UnifiedTo(
     res = unified_to.uc.update_uc_recording(request={
         "uc_recording": {
             "contacts": [],
+            "conversation_identifier": "7e7003c4-a24f-41d1-acca-86a24b27fc9d",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-04-22T23:09:58.269Z"),
-            "expires_at": parse_datetime("2026-03-31T03:31:56.797Z"),
-            "id": "76e6eeb7-e7fc-4942-a26e-c387b757090d",
+            "end_at": parse_datetime("2024-05-01T00:22:37.266Z"),
+            "expires_at": parse_datetime("2026-04-17T23:03:03.175Z"),
+            "id": "7e7003c4-a24f-41d1-acca-86a24b27fc9d",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-03-21T10:55:57.906Z"),
+                    "end_at": parse_datetime("2024-03-29T01:22:20.186Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-04-18T10:32:22.694Z"),
+                    "start_at": parse_datetime("2026-05-06T12:07:07.232Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-01-30T03:04:30.702Z"),
-                            "start_at": parse_datetime("2024-05-20T15:35:59.042Z"),
+                            "end_at": parse_datetime("2026-02-16T02:42:27.986Z"),
+                            "start_at": parse_datetime("2024-05-29T01:58:59.635Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-09-27T06:32:59.098Z"),
-                            "start_at": parse_datetime("2026-07-05T06:34:34.685Z"),
+                            "end_at": parse_datetime("2024-10-07T11:52:50.383Z"),
+                            "start_at": parse_datetime("2026-07-24T09:56:38.529Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
-            "start_at": parse_datetime("2023-04-23T06:23:46.161Z"),
+            "start_at": parse_datetime("2023-04-26T06:26:29.629Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-02-26T01:19:09.024Z"),
+            "updated_at": parse_datetime("2025-03-10T08:56:21.823Z"),
             "user_name": "Melyna Larson",
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",

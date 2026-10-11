@@ -16,54 +16,120 @@ class HrisBankaccountAccountType(str, Enum, metaclass=utils.OpenEnumMeta):
     SAVINGS = "SAVINGS"
 
 
+class SplitType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""how net pay is split into this account when an employee has several accounts"""
+
+    PERCENTAGE = "PERCENTAGE"
+    FIXED = "FIXED"
+    REMAINDER = "REMAINDER"
+
+
 class HrisBankaccountTypedDict(TypedDict):
     account_number: NotRequired[str]
     account_number_last4: NotRequired[str]
+    r"""when full number not returned"""
     account_type: NotRequired[HrisBankaccountAccountType]
     bank_name: NotRequired[str]
+    bic: NotRequired[str]
+    r"""BIC / SWIFT code"""
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
+    country_code: NotRequired[str]
+    r"""ISO 2-digit country code of the bank account"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    currency: NotRequired[str]
+    iban: NotRequired[str]
+    r"""International Bank Account Number (non-US accounts)"""
     id: NotRequired[str]
     is_primary: NotRequired[bool]
+    r"""primary for direct deposit"""
     name: NotRequired[str]
+    r"""account nickname (e.g. \"BoA Checking\")"""
+    priority: NotRequired[float]
+    r"""order in which split accounts are funded (1 = first)"""
     raw: NotRequired[Dict[str, Any]]
     routing_number: NotRequired[str]
+    r"""9-digit US routing number"""
+    split_amount: NotRequired[float]
+    r"""percentage (when split_type is PERCENTAGE) or money (when FIXED)"""
+    split_type: NotRequired[SplitType]
+    r"""how net pay is split into this account when an employee has several accounts"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""employee ID (required for listcreate) (reference to HrisEmployee)"""
 
 
 class HrisBankaccount(BaseModel):
     account_number: Optional[str] = None
 
     account_number_last4: Optional[str] = None
+    r"""when full number not returned"""
 
     account_type: Optional[HrisBankaccountAccountType] = None
 
     bank_name: Optional[str] = None
 
+    bic: Optional[str] = None
+    r"""BIC / SWIFT code"""
+
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
+
+    country_code: Optional[str] = None
+    r"""ISO 2-digit country code of the bank account"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
+    currency: Optional[str] = None
+
+    iban: Optional[str] = None
+    r"""International Bank Account Number (non-US accounts)"""
 
     id: Optional[str] = None
 
     is_primary: Optional[bool] = None
+    r"""primary for direct deposit"""
 
     name: Optional[str] = None
+    r"""account nickname (e.g. \"BoA Checking\")"""
+
+    priority: Optional[float] = None
+    r"""order in which split accounts are funded (1 = first)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     routing_number: Optional[str] = None
+    r"""9-digit US routing number"""
+
+    split_amount: Optional[float] = None
+    r"""percentage (when split_type is PERCENTAGE) or money (when FIXED)"""
+
+    split_type: Optional[SplitType] = None
+    r"""how net pay is split into this account when an employee has several accounts"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""employee ID (required for listcreate) (reference to HrisEmployee)"""
 
     @field_serializer("account_type")
     def serialize_account_type(self, value):
         if isinstance(value, str):
             try:
                 return shared.HrisBankaccountAccountType(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("split_type")
+    def serialize_split_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.SplitType(value)
             except ValueError:
                 return value
         return value
@@ -76,13 +142,20 @@ class HrisBankaccount(BaseModel):
                 "account_number_last4",
                 "account_type",
                 "bank_name",
+                "bic",
                 "company_id",
+                "country_code",
                 "created_at",
+                "currency",
+                "iban",
                 "id",
                 "is_primary",
                 "name",
+                "priority",
                 "raw",
                 "routing_number",
+                "split_amount",
+                "split_type",
                 "updated_at",
                 "user_id",
             ]

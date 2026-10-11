@@ -30,7 +30,9 @@ class CommerceItemvariantWeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CommerceItemvariantTypedDict(TypedDict):
     available_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     height: NotRequired[float]
     id: NotRequired[str]
@@ -52,9 +54,11 @@ class CommerceItemvariantTypedDict(TypedDict):
     requires_shipping: NotRequired[bool]
     size_unit: NotRequired[SizeUnit]
     sku: NotRequired[str]
+    r"""barcode, UPC, isbn, etc"""
     tags: NotRequired[List[str]]
     total_stock: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     weight: NotRequired[float]
     weight_unit: NotRequired[CommerceItemvariantWeightUnit]
     width: NotRequired[float]
@@ -62,8 +66,10 @@ class CommerceItemvariantTypedDict(TypedDict):
 
 class CommerceItemvariant(BaseModel):
     available_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -105,12 +111,14 @@ class CommerceItemvariant(BaseModel):
     size_unit: Optional[SizeUnit] = None
 
     sku: Optional[str] = None
+    r"""barcode, UPC, isbn, etc"""
 
     tags: Optional[List[str]] = None
 
     total_stock: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     weight: Optional[float] = None
 

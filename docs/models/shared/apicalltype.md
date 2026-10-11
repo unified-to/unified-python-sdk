@@ -1,5 +1,7 @@
 # APICallType
 
+The type of API Call being logged
+
 ## Example Usage
 
 ```python

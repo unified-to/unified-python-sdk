@@ -18,20 +18,26 @@ class AtsJobOpeningStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AtsJobOpeningTypedDict(TypedDict):
     application_id: NotRequired[str]
+    r"""points to an application"""
     close_reason: NotRequired[str]
     closed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     opened_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[AtsJobOpeningStatus]
 
 
 class AtsJobOpening(BaseModel):
     application_id: Optional[str] = None
+    r"""points to an application"""
 
     close_reason: Optional[str] = None
 
     closed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     opened_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[AtsJobOpeningStatus] = None
 

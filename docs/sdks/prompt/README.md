@@ -26,6 +26,25 @@ with UnifiedTo(
 
     res = unified_to.prompt.create_genai_prompt(request={
         "genai_prompt": {
+            "answers": [
+                {
+                    "confidence": 0.5384309098590165,
+                    "id": "TeZpueFB",
+                    "probabilities": [
+                        {
+                            "option": "veniam",
+                            "probability": 0.05683182482607663,
+                        },
+                        {
+                            "option": "comes",
+                            "probability": 0.1404057613108307,
+                        },
+                    ],
+                    "score": 0.05974147981032729,
+                    "type": shared.GenaiAnswerType.CHOICE,
+                    "value": "summisse",
+                },
+            ],
             "max_tokens": 0.4677782787475735,
             "mcp_authorization_token": "f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4",
             "mcp_deferred_tools": [],
@@ -33,11 +52,45 @@ with UnifiedTo(
             "messages": [
                 {
                     "content": "Aegre repudiandae verecundia facere statua.",
+                    "images": [],
                     "role": shared.Role.ASSISTANT,
                 },
                 {
                     "content": "Speciosus xiphias soleo trepide crinis.",
+                    "images": [],
                     "role": shared.Role.SYSTEM,
+                },
+            ],
+            "questions": [
+                {
+                    "id": "KtvbYiEq",
+                    "instructions": "Admiratio cura contabesco subvenio venustas architecto vacuus summopere.",
+                    "options": [
+                        "vulnero",
+                        "quasi",
+                        "tolero",
+                    ],
+                    "type": shared.GenaiQuestionType.BOOLEAN,
+                },
+                {
+                    "id": "oV6IURtv",
+                    "instructions": "Celer deleniti ventus ipsam tendo odit.",
+                    "options": [
+                        "nulla",
+                        "aspicio",
+                        "tero",
+                    ],
+                    "type": shared.GenaiQuestionType.CHOICE,
+                },
+                {
+                    "id": "60dBZk2K",
+                    "instructions": "Decretum vesica amet repudiandae.",
+                    "options": [
+                        "ducimus",
+                        "civis",
+                        "alter",
+                    ],
+                    "type": shared.GenaiQuestionType.BOOLEAN,
                 },
             ],
             "responses": [

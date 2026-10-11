@@ -54,27 +54,36 @@ class AccountingSalesorderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingSalesorderTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     billing_address: NotRequired[PropertyAccountingSalesorderBillingAddressTypedDict]
     category_ids: NotRequired[List[str]]
     closed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     contact_id: NotRequired[str]
+    r"""Customer, Supplier (reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     device_id: NotRequired[str]
+    r"""POS register/terminal/device (HRIS Device)"""
     discount_amount: NotRequired[float]
     employee_user_id: NotRequired[str]
+    r"""selling/serving HR employee (server, cashier) (reference to HrisEmployee)"""
     fees: NotRequired[List[AccountingFeeTypedDict]]
     fulfillment_type: NotRequired[FulfillmentType]
     guest_count: NotRequired[float]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     location_id: NotRequired[str]
+    r"""store/site; reference to a commerce_location or hris_location"""
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     order_number: NotRequired[str]
+    r"""human-facing receipt/ticket/check number, distinct from id"""
     organization_id: NotRequired[str]
     payments: NotRequired[List[AccountingPaymentReferenceTypedDict]]
     r"""read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order"""
     posted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     raw: NotRequired[Dict[str, Any]]
     refunded_amount: NotRequired[float]
     sales_channel: NotRequired[str]
@@ -82,33 +91,42 @@ class AccountingSalesorderTypedDict(TypedDict):
     shipping_address: NotRequired[PropertyAccountingSalesorderShippingAddressTypedDict]
     status: NotRequired[AccountingSalesorderStatus]
     subscription_id: NotRequired[str]
+    r"""payment_subscription that generated this order, if recurring"""
     subtotal_amount: NotRequired[float]
+    r"""pre-tax, pre-tip amount"""
     tax_amount: NotRequired[float]
     tip_amount: NotRequired[float]
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingSalesorder(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     billing_address: Optional[PropertyAccountingSalesorderBillingAddress] = None
 
     category_ids: Optional[List[str]] = None
 
     closed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     contact_id: Optional[str] = None
+    r"""Customer, Supplier (reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     device_id: Optional[str] = None
+    r"""POS register/terminal/device (HRIS Device)"""
 
     discount_amount: Optional[float] = None
 
     employee_user_id: Optional[str] = None
+    r"""selling/serving HR employee (server, cashier) (reference to HrisEmployee)"""
 
     fees: Optional[List[AccountingFee]] = None
 
@@ -121,10 +139,12 @@ class AccountingSalesorder(BaseModel):
     lineitems: Optional[List[AccountingLineitem]] = None
 
     location_id: Optional[str] = None
+    r"""store/site; reference to a commerce_location or hris_location"""
 
     metadata: Optional[List[AccountingMetadata]] = None
 
     order_number: Optional[str] = None
+    r"""human-facing receipt/ticket/check number, distinct from id"""
 
     organization_id: Optional[str] = None
 
@@ -132,6 +152,7 @@ class AccountingSalesorder(BaseModel):
     r"""read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order"""
 
     posted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -146,8 +167,10 @@ class AccountingSalesorder(BaseModel):
     status: Optional[AccountingSalesorderStatus] = None
 
     subscription_id: Optional[str] = None
+    r"""payment_subscription that generated this order, if recurring"""
 
     subtotal_amount: Optional[float] = None
+    r"""pre-tax, pre-tip amount"""
 
     tax_amount: Optional[float] = None
 
@@ -156,6 +179,7 @@ class AccountingSalesorder(BaseModel):
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("fulfillment_type")
     def serialize_fulfillment_type(self, value):

@@ -28,6 +28,7 @@ class VerificationParameterTypedDict(TypedDict):
     options: NotRequired[List[str]]
     r"""options for MULTIPLE_CHOICE and MULTIPLE_SELECT"""
     public_question: NotRequired[str]
+    r"""question to ask the human"""
     type: NotRequired[VerificationParameterType]
     valid_regions: NotRequired[List[str]]
     r"""{country}-{stateprovince/territory} or just {country} 2-digit ISO codes"""
@@ -47,6 +48,7 @@ class VerificationParameter(BaseModel):
     r"""options for MULTIPLE_CHOICE and MULTIPLE_SELECT"""
 
     public_question: Optional[str] = None
+    r"""question to ask the human"""
 
     type: Optional[VerificationParameterType] = None
 

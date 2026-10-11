@@ -16,9 +16,13 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class ScimGroupTypedDict(TypedDict):
     display_name: str
+    r"""The group's display name"""
     external_id: NotRequired[str]
+    r"""A groups id in an external system"""
     group_type: NotRequired[str]
+    r"""Organization [NOT STANDARD]"""
     id: NotRequired[str]
+    r"""The group's unique id"""
     members: NotRequired[List[ScimGroupMemberTypedDict]]
     r"""An array of members"""
     meta: NotRequired[PropertyScimGroupMetaTypedDict]
@@ -28,12 +32,16 @@ class ScimGroupTypedDict(TypedDict):
 
 class ScimGroup(BaseModel):
     display_name: Annotated[str, pydantic.Field(alias="displayName")]
+    r"""The group's display name"""
 
     external_id: Annotated[Optional[str], pydantic.Field(alias="externalId")] = None
+    r"""A groups id in an external system"""
 
     group_type: Annotated[Optional[str], pydantic.Field(alias="groupType")] = None
+    r"""Organization [NOT STANDARD]"""
 
     id: Optional[str] = None
+    r"""The group's unique id"""
 
     members: Optional[List[ScimGroupMember]] = None
     r"""An array of members"""

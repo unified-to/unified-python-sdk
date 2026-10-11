@@ -11,27 +11,39 @@ class PropertySocialPostMetricsTypedDict(TypedDict):
     r"""Engagement metrics for the post"""
 
     bookmark_count: NotRequired[float]
+    r"""Number of bookmarks/saves"""
     comment_count: NotRequired[float]
+    r"""Number of comments/replies"""
     like_count: NotRequired[float]
+    r"""Number of likes/reactions"""
     quote_count: NotRequired[float]
+    r"""Number of quotes"""
     share_count: NotRequired[float]
+    r"""Number of shares/reposts"""
     view_count: NotRequired[float]
+    r"""Number of views/impressions"""
 
 
 class PropertySocialPostMetrics(BaseModel):
     r"""Engagement metrics for the post"""
 
     bookmark_count: Optional[float] = None
+    r"""Number of bookmarks/saves"""
 
     comment_count: Optional[float] = None
+    r"""Number of comments/replies"""
 
     like_count: Optional[float] = None
+    r"""Number of likes/reactions"""
 
     quote_count: Optional[float] = None
+    r"""Number of quotes"""
 
     share_count: Optional[float] = None
+    r"""Number of shares/reposts"""
 
     view_count: Optional[float] = None
+    r"""Number of views/impressions"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

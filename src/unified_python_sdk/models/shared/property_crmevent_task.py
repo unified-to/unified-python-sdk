@@ -18,6 +18,8 @@ class Priority(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class PropertyCrmEventTaskStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The event task's status"""
+
     COMPLETED = "COMPLETED"
     NOT_STARTED = "NOT_STARTED"
     WORK_IN_PROGRESS = "WORK_IN_PROGRESS"
@@ -28,24 +30,32 @@ class PropertyCrmEventTaskTypedDict(TypedDict):
     r"""The task object, when type = task"""
 
     description: NotRequired[str]
+    r"""The event task's descriptionnote"""
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     name: NotRequired[str]
+    r"""The event task's nametitle/subject"""
     priority: NotRequired[Priority]
     status: NotRequired[PropertyCrmEventTaskStatus]
+    r"""The event task's status"""
 
 
 class PropertyCrmEventTask(BaseModel):
     r"""The task object, when type = task"""
 
     description: Optional[str] = None
+    r"""The event task's descriptionnote"""
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     name: Optional[str] = None
+    r"""The event task's nametitle/subject"""
 
     priority: Optional[Priority] = None
 
     status: Optional[PropertyCrmEventTaskStatus] = None
+    r"""The event task's status"""
 
     @field_serializer("priority")
     def serialize_priority(self, value):

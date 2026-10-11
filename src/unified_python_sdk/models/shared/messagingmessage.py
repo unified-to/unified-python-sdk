@@ -23,8 +23,9 @@ class MessagingMessageTypedDict(TypedDict):
     r"""for email systems, this field represents the From value"""
     buttons: NotRequired[List[MessagingButtonTypedDict]]
     channels: NotRequired[List[MessagingReferenceTypedDict]]
-    r"""Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted."""
+    r"""Represents all channels to which the message is sent. Identifies the channels where the message is posted.  To send to the \"Draft\" channel/folder, use a channel ID \"DRAFT\"."""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     destination_members: NotRequired[List[MessagingMemberTypedDict]]
     r"""for email systems, this field represents the To value"""
     has_children: NotRequired[bool]
@@ -38,12 +39,16 @@ class MessagingMessageTypedDict(TypedDict):
     message_html: NotRequired[str]
     message_markdown: NotRequired[str]
     message_thread_identifier: NotRequired[str]
+    r"""the opaque identifier for the first message in a thread"""
     parent_id: NotRequired[str]
+    r"""Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies."""
     raw: NotRequired[Dict[str, Any]]
     reactions: NotRequired[List[MessagingReactionTypedDict]]
     reference: NotRequired[str]
+    r"""eg. RFC822 MessageID"""
     subject: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
 
 
@@ -56,9 +61,10 @@ class MessagingMessage(BaseModel):
     buttons: Optional[List[MessagingButton]] = None
 
     channels: Optional[List[MessagingReference]] = None
-    r"""Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted."""
+    r"""Represents all channels to which the message is sent. Identifies the channels where the message is posted.  To send to the \"Draft\" channel/folder, use a channel ID \"DRAFT\"."""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     destination_members: Optional[List[MessagingMember]] = None
     r"""for email systems, this field represents the To value"""
@@ -82,18 +88,22 @@ class MessagingMessage(BaseModel):
     message_markdown: Optional[str] = None
 
     message_thread_identifier: Optional[str] = None
+    r"""the opaque identifier for the first message in a thread"""
 
     parent_id: Optional[str] = None
+    r"""Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies."""
 
     raw: Optional[Dict[str, Any]] = None
 
     reactions: Optional[List[MessagingReaction]] = None
 
     reference: Optional[str] = None
+    r"""eg. RFC822 MessageID"""
 
     subject: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
 

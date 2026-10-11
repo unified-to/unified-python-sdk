@@ -41,4 +41,5 @@ value = GetAccountingExpenseQueryParamFields.ID
 | `METADATA`          | metadata            |
 | `TAXRATE_ID`        | taxrate_id          |
 | `EXCHANGE_RATE`     | exchange_rate       |
+| `TYPE`              | type                |
 | `RAW`               | raw                 |

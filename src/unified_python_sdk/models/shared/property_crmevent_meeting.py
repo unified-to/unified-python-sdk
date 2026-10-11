@@ -12,21 +12,29 @@ class PropertyCrmEventMeetingTypedDict(TypedDict):
     r"""The meeting object, when type = meeting"""
 
     description: NotRequired[str]
+    r"""The event meeting's agendadescription"""
     end_at: NotRequired[datetime]
+    r"""The event meeting's end datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     start_at: NotRequired[datetime]
+    r"""The event meeting's start datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     title: NotRequired[str]
+    r"""The event meeting's topicsubject"""
 
 
 class PropertyCrmEventMeeting(BaseModel):
     r"""The meeting object, when type = meeting"""
 
     description: Optional[str] = None
+    r"""The event meeting's agendadescription"""
 
     end_at: Optional[datetime] = None
+    r"""The event meeting's end datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     start_at: Optional[datetime] = None
+    r"""The event meeting's start datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     title: Optional[str] = None
+    r"""The event meeting's topicsubject"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

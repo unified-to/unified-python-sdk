@@ -16,39 +16,56 @@ class AccountingCashflowTypedDict(TypedDict):
     r"""Sections"""
 
     cash_beginning_amount: NotRequired[float]
+    r"""Cash at beginning of period"""
     cash_ending_amount: NotRequired[float]
+    r"""Cash at end of period"""
     category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""ISO 4217, e.g. \"USD\" """
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     financing_sections: NotRequired[List[AccountingCashflowSectionTypedDict]]
     id: NotRequired[str]
     investing_sections: NotRequired[List[AccountingCashflowSectionTypedDict]]
     name: NotRequired[str]
+    r"""e.g. \"Cash Flow Statement Q1 2020\" """
     net_change_in_cash_amount: NotRequired[float]
+    r"""Usually ending - beginning"""
     operating_sections: NotRequired[List[AccountingCashflowSectionTypedDict]]
     raw: NotRequired[Dict[str, Any]]
+    r"""Original data from the integration"""
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingCashflow(BaseModel):
     r"""Sections"""
 
     cash_beginning_amount: Optional[float] = None
+    r"""Cash at beginning of period"""
 
     cash_ending_amount: Optional[float] = None
+    r"""Cash at end of period"""
 
     category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""ISO 4217, e.g. \"USD\" """
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     financing_sections: Optional[List[AccountingCashflowSection]] = None
 
@@ -57,16 +74,21 @@ class AccountingCashflow(BaseModel):
     investing_sections: Optional[List[AccountingCashflowSection]] = None
 
     name: Optional[str] = None
+    r"""e.g. \"Cash Flow Statement Q1 2020\" """
 
     net_change_in_cash_amount: Optional[float] = None
+    r"""Usually ending - beginning"""
 
     operating_sections: Optional[List[AccountingCashflowSection]] = None
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Original data from the integration"""
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

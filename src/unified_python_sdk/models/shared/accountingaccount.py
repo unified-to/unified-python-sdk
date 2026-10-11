@@ -16,11 +16,15 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class Status(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Account status, such as ACTIVE or ARCHIVED"""
+
     ACTIVE = "ACTIVE"
     ARCHIVED = "ARCHIVED"
 
 
 class Type(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Account type, such as BANK. EQUITY, ASSET, ..."""
+
     ACCOUNTS_PAYABLE = "ACCOUNTS_PAYABLE"
     ACCOUNTS_RECEIVABLE = "ACCOUNTS_RECEIVABLE"
     BANK = "BANK"
@@ -37,54 +41,80 @@ class AccountingAccountTypedDict(TypedDict):
     r"""Chart of accounts"""
 
     balance: NotRequired[float]
+    r"""Balance of the account."""
     created_at: NotRequired[datetime]
+    r"""Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)"""
     customer_defined_code: NotRequired[str]
+    r"""Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined by the end-customer"""
     description: NotRequired[str]
+    r"""Account description"""
     id: NotRequired[str]
+    r"""Identifier used by the SaaS application to uniquely identify the Account"""
     is_payable: NotRequired[bool]
+    r"""True if the account is an “accounts payable” account"""
     name: NotRequired[str]
+    r"""Account name"""
     organization_id: NotRequired[str]
     parent_id: NotRequired[str]
+    r"""The parent account ID for this account"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The original data from the integration's API"""
     status: NotRequired[Status]
+    r"""Account status, such as ACTIVE or ARCHIVED"""
     taxonomy: NotRequired[List[AccountingAccountTaxonomyTypedDict]]
     type: NotRequired[Type]
+    r"""Account type, such as BANK. EQUITY, ASSET, ..."""
     updated_at: NotRequired[datetime]
+    r"""Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingAccount(BaseModel):
     r"""Chart of accounts"""
 
     balance: Optional[float] = None
+    r"""Balance of the account."""
 
     created_at: Optional[datetime] = None
+    r"""Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)"""
 
     customer_defined_code: Optional[str] = None
+    r"""Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined by the end-customer"""
 
     description: Optional[str] = None
+    r"""Account description"""
 
     id: Optional[str] = None
+    r"""Identifier used by the SaaS application to uniquely identify the Account"""
 
     is_payable: Optional[bool] = None
+    r"""True if the account is an “accounts payable” account"""
 
     name: Optional[str] = None
+    r"""Account name"""
 
     organization_id: Optional[str] = None
 
     parent_id: Optional[str] = None
+    r"""The parent account ID for this account"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The original data from the integration's API"""
 
     status: Optional[Status] = None
+    r"""Account status, such as ACTIVE or ARCHIVED"""
 
     taxonomy: Optional[List[AccountingAccountTaxonomy]] = None
 
     type: Optional[Type] = None
+    r"""Account type, such as BANK. EQUITY, ASSET, ..."""
 
     updated_at: Optional[datetime] = None
+    r"""Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

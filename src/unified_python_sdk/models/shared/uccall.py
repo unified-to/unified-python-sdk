@@ -24,41 +24,60 @@ class UcCallType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class UcCallTypedDict(TypedDict):
     contact_id: NotRequired[str]
+    r"""The contact ID for call (reference to UcContact)"""
     contacts: NotRequired[List[UcContactTypedDict]]
+    conversation_identifier: NotRequired[str]
+    r"""opaque identifier shared across legs of one interaction"""
     created_at: NotRequired[datetime]
+    r"""The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""Unique identifier for this call object"""
     is_private: NotRequired[bool]
     metadata: NotRequired[List[UcMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this call"""
     start_at: NotRequired[datetime]
+    r"""The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     telephone: NotRequired[PropertyUcCallTelephoneTypedDict]
     r"""The telephone number called"""
     type: NotRequired[UcCallType]
     updated_at: NotRequired[datetime]
+    r"""The last date that this call object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     user_name: NotRequired[str]
     user_phone: NotRequired[str]
 
 
 class UcCall(BaseModel):
     contact_id: Optional[str] = None
+    r"""The contact ID for call (reference to UcContact)"""
 
     contacts: Optional[List[UcContact]] = None
 
+    conversation_identifier: Optional[str] = None
+    r"""opaque identifier shared across legs of one interaction"""
+
     created_at: Optional[datetime] = None
+    r"""The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this call object"""
 
     is_private: Optional[bool] = None
 
     metadata: Optional[List[UcMetadata]] = None
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this call"""
 
     start_at: Optional[datetime] = None
+    r"""The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     telephone: Optional[PropertyUcCallTelephone] = None
     r"""The telephone number called"""
@@ -66,8 +85,10 @@ class UcCall(BaseModel):
     type: Optional[UcCallType] = None
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this call object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     user_name: Optional[str] = None
 
@@ -88,6 +109,7 @@ class UcCall(BaseModel):
             [
                 "contact_id",
                 "contacts",
+                "conversation_identifier",
                 "created_at",
                 "end_at",
                 "id",

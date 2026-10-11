@@ -11,10 +11,13 @@ class UcCommentTypedDict(TypedDict):
     call_id: NotRequired[str]
     content: NotRequired[str]
     created_at: NotRequired[str]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[str]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""reference to HrisEmployee (reference to HrisEmployee)"""
 
 
 class UcComment(BaseModel):
@@ -23,14 +26,17 @@ class UcComment(BaseModel):
     content: Optional[str] = None
 
     created_at: Optional[str] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[str] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""reference to HrisEmployee (reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

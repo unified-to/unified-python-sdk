@@ -46,6 +46,8 @@ class ListGenaiTasksQueryParamFields(str, Enum):
 class ListGenaiTasksRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    agent_id: NotRequired[str]
+    r"""The agent ID to filter by"""
     fields: NotRequired[List[ListGenaiTasksQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
@@ -66,6 +68,12 @@ class ListGenaiTasksRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    agent_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The agent ID to filter by"""
 
     fields: Annotated[
         Optional[List[ListGenaiTasksQueryParamFields]],
@@ -120,6 +128,7 @@ class ListGenaiTasksRequest(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "agent_id",
                 "fields",
                 "limit",
                 "offset",

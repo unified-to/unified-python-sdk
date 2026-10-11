@@ -19,32 +19,46 @@ class ShippingCustomsItemWeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class ShippingCustomsItemTypedDict(TypedDict):
     amount: NotRequired[float]
+    r"""Value per unit"""
     country_of_origin: NotRequired[str]
+    r"""Country of origin (ISO code)"""
     currency: NotRequired[str]
     description: NotRequired[str]
+    r"""Item description"""
     harmonized_tariff_code: NotRequired[str]
+    r"""HS code"""
     quantity: NotRequired[float]
+    r"""Quantity"""
     sku: NotRequired[str]
+    r"""SKU"""
     weight: NotRequired[float]
+    r"""Weight per unit"""
     weight_unit: NotRequired[ShippingCustomsItemWeightUnit]
 
 
 class ShippingCustomsItem(BaseModel):
     amount: Optional[float] = None
+    r"""Value per unit"""
 
     country_of_origin: Optional[str] = None
+    r"""Country of origin (ISO code)"""
 
     currency: Optional[str] = None
 
     description: Optional[str] = None
+    r"""Item description"""
 
     harmonized_tariff_code: Optional[str] = None
+    r"""HS code"""
 
     quantity: Optional[float] = None
+    r"""Quantity"""
 
     sku: Optional[str] = None
+    r"""SKU"""
 
     weight: Optional[float] = None
+    r"""Weight per unit"""
 
     weight_unit: Optional[ShippingCustomsItemWeightUnit] = None
 

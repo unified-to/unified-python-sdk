@@ -31,6 +31,7 @@ class ListUcCallsQueryParamFields(str, Enum):
     TYPE = "type"
     METADATA = "metadata"
     RAW = "raw"
+    CONVERSATION_IDENTIFIER = "conversation_identifier"
 
 
 class ListUcCallsRequestTypedDict(TypedDict):

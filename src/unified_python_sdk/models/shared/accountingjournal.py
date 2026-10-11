@@ -17,6 +17,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingJournalStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Posting state of the journal entry"""
+
     DRAFT = "DRAFT"
     POSTED = "POSTED"
     VOID = "VOID"
@@ -27,24 +29,32 @@ class AccountingJournalTypedDict(TypedDict):
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     category_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     description: NotRequired[str]
     exchange_rate: NotRequired[float]
+    r"""Exchange rate to the base/home currency at the posting date"""
     id: NotRequired[str]
     is_inclusive_of_tax: NotRequired[bool]
+    r"""True when the line amounts already include tax"""
     lineitems: NotRequired[List[AccountingJournalLineitemTypedDict]]
     r"""new field name"""
     organization_id: NotRequired[str]
     posted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     project_id: NotRequired[str]
+    r"""(reference to TaskProject)"""
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     source: NotRequired[str]
     status: NotRequired[AccountingJournalStatus]
+    r"""Posting state of the journal entry"""
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
     total_amount: NotRequired[float]
+    r"""Total of the debit lines; equals the total of the credit lines"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingJournal(BaseModel):
@@ -53,16 +63,19 @@ class AccountingJournal(BaseModel):
     category_ids: Optional[List[str]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     description: Optional[str] = None
 
     exchange_rate: Optional[float] = None
+    r"""Exchange rate to the base/home currency at the posting date"""
 
     id: Optional[str] = None
 
     is_inclusive_of_tax: Optional[bool] = None
+    r"""True when the line amounts already include tax"""
 
     lineitems: Optional[List[AccountingJournalLineitem]] = None
     r"""new field name"""
@@ -70,8 +83,10 @@ class AccountingJournal(BaseModel):
     organization_id: Optional[str] = None
 
     posted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     project_id: Optional[str] = None
+    r"""(reference to TaskProject)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -80,14 +95,17 @@ class AccountingJournal(BaseModel):
     source: Optional[str] = None
 
     status: Optional[AccountingJournalStatus] = None
+    r"""Posting state of the journal entry"""
 
     tax_amount: Optional[float] = None
 
     taxrate_id: Optional[str] = None
 
     total_amount: Optional[float] = None
+    r"""Total of the debit lines; equals the total of the credit lines"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

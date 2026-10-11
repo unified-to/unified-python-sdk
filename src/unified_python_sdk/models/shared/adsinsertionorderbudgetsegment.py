@@ -12,7 +12,9 @@ class AdsInsertionorderBudgetSegmentTypedDict(TypedDict):
     budget_amount: NotRequired[float]
     description: NotRequired[str]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AdsInsertionorderBudgetSegment(BaseModel):
@@ -21,8 +23,10 @@ class AdsInsertionorderBudgetSegment(BaseModel):
     description: Optional[str] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

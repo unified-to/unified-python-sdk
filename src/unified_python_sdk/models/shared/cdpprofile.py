@@ -20,6 +20,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CdpProfileGender(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The gender of the profile"""
+
     MALE = "MALE"
     FEMALE = "FEMALE"
     INTERSEX = "INTERSEX"
@@ -31,28 +33,43 @@ class CdpProfileTypedDict(TypedDict):
     address: NotRequired[PropertyCdpProfileAddressTypedDict]
     r"""The address of the profile"""
     birthdate: NotRequired[str]
+    r"""The birth date of the profile"""
     company: NotRequired[str]
+    r"""The company/organization name of the profile"""
     consent: NotRequired[List[CdpConsentTypedDict]]
     r"""The consent/privacy preferences of the profile"""
     created_at: NotRequired[datetime]
+    r"""The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     email: NotRequired[str]
+    r"""The primary email address of the profile"""
     first_name: NotRequired[str]
+    r"""The first name of the profile"""
     gender: NotRequired[CdpProfileGender]
+    r"""The gender of the profile"""
     id: NotRequired[str]
+    r"""Unique identifier for this profile object"""
     identifiers: NotRequired[List[CdpIdentifierTypedDict]]
     r"""The typed identifiers stitched to this profile"""
     is_anonymous: NotRequired[bool]
+    r"""Whether the profile is anonymous (no known identity)"""
     last_name: NotRequired[str]
+    r"""The last name of the profile"""
     metadata: NotRequired[List[CdpMetadataTypedDict]]
     r"""The traits/attributes of the profile"""
     name: NotRequired[str]
+    r"""The full name of the profile"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this profile"""
     segments: NotRequired[List[CdpProfileSegmentTypedDict]]
     r"""The segments/audiences this profile currently belongs to"""
     source_id: NotRequired[str]
+    r"""The cdp_source this profile originated from; points to CdpSource"""
     telephone: NotRequired[str]
+    r"""The primary telephone number of the profile"""
     title: NotRequired[str]
+    r"""The job title of the profile"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CdpProfile(BaseModel):
@@ -60,46 +77,61 @@ class CdpProfile(BaseModel):
     r"""The address of the profile"""
 
     birthdate: Optional[str] = None
+    r"""The birth date of the profile"""
 
     company: Optional[str] = None
+    r"""The company/organization name of the profile"""
 
     consent: Optional[List[CdpConsent]] = None
     r"""The consent/privacy preferences of the profile"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     email: Optional[str] = None
+    r"""The primary email address of the profile"""
 
     first_name: Optional[str] = None
+    r"""The first name of the profile"""
 
     gender: Optional[CdpProfileGender] = None
+    r"""The gender of the profile"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this profile object"""
 
     identifiers: Optional[List[CdpIdentifier]] = None
     r"""The typed identifiers stitched to this profile"""
 
     is_anonymous: Optional[bool] = None
+    r"""Whether the profile is anonymous (no known identity)"""
 
     last_name: Optional[str] = None
+    r"""The last name of the profile"""
 
     metadata: Optional[List[CdpMetadata]] = None
     r"""The traits/attributes of the profile"""
 
     name: Optional[str] = None
+    r"""The full name of the profile"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this profile"""
 
     segments: Optional[List[CdpProfileSegment]] = None
     r"""The segments/audiences this profile currently belongs to"""
 
     source_id: Optional[str] = None
+    r"""The cdp_source this profile originated from; points to CdpSource"""
 
     telephone: Optional[str] = None
+    r"""The primary telephone number of the profile"""
 
     title: Optional[str] = None
+    r"""The job title of the profile"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("gender")
     def serialize_gender(self, value):

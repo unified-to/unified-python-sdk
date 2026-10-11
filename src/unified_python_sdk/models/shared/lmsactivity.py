@@ -11,29 +11,38 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class LmsActivityTypedDict(TypedDict):
     assigned_grade: NotRequired[str]
     completed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     content_id: NotRequired[str]
     course_id: NotRequired[str]
+    r"""For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     duration_minutes: NotRequired[float]
     id: NotRequired[str]
     is_completed: NotRequired[bool]
     progress_percentage: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
     started_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     student_id: NotRequired[str]
+    r"""(reference to LmsStudent)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class LmsActivity(BaseModel):
     assigned_grade: Optional[str] = None
 
     completed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     content_id: Optional[str] = None
 
     course_id: Optional[str] = None
+    r"""For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     duration_minutes: Optional[float] = None
 
@@ -46,10 +55,13 @@ class LmsActivity(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     started_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     student_id: Optional[str] = None
+    r"""(reference to LmsStudent)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

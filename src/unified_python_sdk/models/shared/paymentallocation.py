@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PaymentAllocationObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The type of object this payment was applied to"""
+
     INVOICE = "INVOICE"
     BILL = "BILL"
     CREDITMEMO = "CREDITMEMO"
@@ -22,25 +24,37 @@ class PaymentAllocationObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PaymentAllocationTypedDict(TypedDict):
     allocated_at: NotRequired[datetime]
+    r"""Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     amount: NotRequired[float]
+    r"""The amount of the payment applied to this object"""
     currency: NotRequired[str]
+    r"""ISO 4217 currency code of the applied amount"""
     exchange_rate: NotRequired[float]
+    r"""The exchange rate at the time the payment was applied, for multi-currency"""
     object_id: NotRequired[str]
+    r"""The id of the object this payment was applied to"""
     object_type: NotRequired[PaymentAllocationObjectType]
+    r"""The type of object this payment was applied to"""
 
 
 class PaymentAllocation(BaseModel):
     allocated_at: Optional[datetime] = None
+    r"""Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     amount: Optional[float] = None
+    r"""The amount of the payment applied to this object"""
 
     currency: Optional[str] = None
+    r"""ISO 4217 currency code of the applied amount"""
 
     exchange_rate: Optional[float] = None
+    r"""The exchange rate at the time the payment was applied, for multi-currency"""
 
     object_id: Optional[str] = None
+    r"""The id of the object this payment was applied to"""
 
     object_type: Optional[PaymentAllocationObjectType] = None
+    r"""The type of object this payment was applied to"""
 
     @field_serializer("object_type")
     def serialize_object_type(self, value):

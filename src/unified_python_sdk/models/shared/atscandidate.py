@@ -35,8 +35,11 @@ class Origin(str, Enum, metaclass=utils.OpenEnumMeta):
 class AtsCandidateTypedDict(TypedDict):
     address: NotRequired[PropertyAtsCandidateAddressTypedDict]
     company_id: NotRequired[str]
+    r"""(reference to AtsCompany)"""
     company_name: NotRequired[str]
+    r"""Name of company where candidate currently works"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     date_of_birth: NotRequired[datetime]
     education: NotRequired[List[AtsCandidateEducationTypedDict]]
     emails: NotRequired[List[AtsEmailTypedDict]]
@@ -56,11 +59,15 @@ class AtsCandidateTypedDict(TypedDict):
     skills: NotRequired[List[str]]
     sources: NotRequired[List[str]]
     summary: NotRequired[str]
+    r"""Personal / professional bio"""
     tags: NotRequired[List[str]]
     telephones: NotRequired[List[AtsTelephoneTypedDict]]
     title: NotRequired[str]
+    r"""Candidate’s current job title"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""Employee ID that owns the relationship for this candidate (reference to HrisEmployee)"""
     user_ids: NotRequired[List[str]]
     r"""references hris employees"""
     web_url: NotRequired[str]
@@ -70,10 +77,13 @@ class AtsCandidate(BaseModel):
     address: Optional[PropertyAtsCandidateAddress] = None
 
     company_id: Optional[str] = None
+    r"""(reference to AtsCompany)"""
 
     company_name: Optional[str] = None
+    r"""Name of company where candidate currently works"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     date_of_birth: Optional[datetime] = None
 
@@ -111,16 +121,20 @@ class AtsCandidate(BaseModel):
     sources: Optional[List[str]] = None
 
     summary: Optional[str] = None
+    r"""Personal / professional bio"""
 
     tags: Optional[List[str]] = None
 
     telephones: Optional[List[AtsTelephone]] = None
 
     title: Optional[str] = None
+    r"""Candidate’s current job title"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""Employee ID that owns the relationship for this candidate (reference to HrisEmployee)"""
 
     user_ids: Optional[List[str]] = None
     r"""references hris employees"""

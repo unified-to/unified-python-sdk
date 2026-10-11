@@ -14,23 +14,35 @@ class AnalyticsSessionTypedDict(TypedDict):
     city: NotRequired[str]
     country: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     device: NotRequired[str]
     duration_seconds: NotRequired[float]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     events_count: NotRequired[float]
+    r"""Session attributes"""
     exit_page: NotRequired[str]
+    r"""Session attributes"""
     id: NotRequired[str]
     is_bounce: NotRequired[bool]
+    r"""Engagement"""
     is_conversion: NotRequired[bool]
+    r"""Engagement"""
     landing_page: NotRequired[str]
+    r"""Session attributes"""
     medium: NotRequired[str]
     os: NotRequired[str]
     page_views: NotRequired[float]
+    r"""Session attributes"""
     property_id: NotRequired[str]
+    r"""points to AnalyticsProperty"""
     raw: NotRequired[Dict[str, Any]]
     source: NotRequired[str]
+    r"""Acquisition"""
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     visitor_id: NotRequired[str]
 
 
@@ -44,40 +56,52 @@ class AnalyticsSession(BaseModel):
     country: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     device: Optional[str] = None
 
     duration_seconds: Optional[float] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     events_count: Optional[float] = None
+    r"""Session attributes"""
 
     exit_page: Optional[str] = None
+    r"""Session attributes"""
 
     id: Optional[str] = None
 
     is_bounce: Optional[bool] = None
+    r"""Engagement"""
 
     is_conversion: Optional[bool] = None
+    r"""Engagement"""
 
     landing_page: Optional[str] = None
+    r"""Session attributes"""
 
     medium: Optional[str] = None
 
     os: Optional[str] = None
 
     page_views: Optional[float] = None
+    r"""Session attributes"""
 
     property_id: Optional[str] = None
+    r"""points to AnalyticsProperty"""
 
     raw: Optional[Dict[str, Any]] = None
 
     source: Optional[str] = None
+    r"""Acquisition"""
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     visitor_id: Optional[str] = None
 

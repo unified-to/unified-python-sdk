@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class HrisDeductionCoverageLevel(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Level selected by employee (e.g. \"FAMILY\", \"EMPLOYEE_ONLY\", or other)"""
+
     EMPLOYEE_ONLY = "EMPLOYEE_ONLY"
     EMPLOYEE_SPOUSE = "EMPLOYEE_SPOUSE"
     EMPLOYEE_CHILD = "EMPLOYEE_CHILD"
@@ -21,7 +23,14 @@ class HrisDeductionCoverageLevel(str, Enum, metaclass=utils.OpenEnumMeta):
     OTHER = "OTHER"
 
 
+class EmployerType(str, Enum, metaclass=utils.OpenEnumMeta):
+    PERCENTAGE = "PERCENTAGE"
+    FIXED = "FIXED"
+
+
 class HrisDeductionFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)"""
+
     ONE_TIME = "ONE_TIME"
     DAY = "DAY"
     QUARTER = "QUARTER"
@@ -29,6 +38,19 @@ class HrisDeductionFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
     HOUR = "HOUR"
     MONTH = "MONTH"
     WEEK = "WEEK"
+    BIWEEKLY = "BIWEEKLY"
+    SEMIMONTHLY = "SEMIMONTHLY"
+
+
+class GarnishmentType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""set when this deduction is a court-ordered garnishment"""
+
+    CHILD_SUPPORT = "CHILD_SUPPORT"
+    TAX_LEVY = "TAX_LEVY"
+    STUDENT_LOAN = "STUDENT_LOAN"
+    CREDITOR = "CREDITOR"
+    BANKRUPTCY = "BANKRUPTCY"
+    OTHER = "OTHER"
 
 
 class HrisDeductionType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -40,54 +62,95 @@ class HrisDeductionTypedDict(TypedDict):
     r"""Employee-specific deduction/benefit enrolment."""
 
     amount: NotRequired[float]
+    r"""percentage or absolute amount (employee's portion)"""
     benefit_id: NotRequired[str]
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     coverage_level: NotRequired[HrisDeductionCoverageLevel]
+    r"""Level selected by employee (e.g. \"FAMILY\", \"EMPLOYEE_ONLY\", or other)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    employer_amount: NotRequired[float]
+    r"""percentage or absolute amount (employer's portion/match)"""
+    employer_type: NotRequired[EmployerType]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     frequency: NotRequired[HrisDeductionFrequency]
+    r"""Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)"""
+    garnishment_type: NotRequired[GarnishmentType]
+    r"""set when this deduction is a court-ordered garnishment"""
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    max_amount: NotRequired[float]
+    r"""annual maximum employee amount (always money)"""
     notes: NotRequired[str]
+    paycode_id: NotRequired[str]
+    r"""the hris_paycode (deduction code) this deduction uses"""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     type: NotRequired[HrisDeductionType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""employee ID (reference to HrisEmployee)"""
 
 
 class HrisDeduction(BaseModel):
     r"""Employee-specific deduction/benefit enrolment."""
 
     amount: Optional[float] = None
+    r"""percentage or absolute amount (employee's portion)"""
 
     benefit_id: Optional[str] = None
 
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     coverage_level: Optional[HrisDeductionCoverageLevel] = None
+    r"""Level selected by employee (e.g. \"FAMILY\", \"EMPLOYEE_ONLY\", or other)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
+    employer_amount: Optional[float] = None
+    r"""percentage or absolute amount (employer's portion/match)"""
+
+    employer_type: Optional[EmployerType] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     frequency: Optional[HrisDeductionFrequency] = None
+    r"""Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)"""
+
+    garnishment_type: Optional[GarnishmentType] = None
+    r"""set when this deduction is a court-ordered garnishment"""
 
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
 
+    max_amount: Optional[float] = None
+    r"""annual maximum employee amount (always money)"""
+
     notes: Optional[str] = None
+
+    paycode_id: Optional[str] = None
+    r"""the hris_paycode (deduction code) this deduction uses"""
 
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     type: Optional[HrisDeductionType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""employee ID (reference to HrisEmployee)"""
 
     @field_serializer("coverage_level")
     def serialize_coverage_level(self, value):
@@ -98,11 +161,29 @@ class HrisDeduction(BaseModel):
                 return value
         return value
 
+    @field_serializer("employer_type")
+    def serialize_employer_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.EmployerType(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("frequency")
     def serialize_frequency(self, value):
         if isinstance(value, str):
             try:
                 return shared.HrisDeductionFrequency(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("garnishment_type")
+    def serialize_garnishment_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.GarnishmentType(value)
             except ValueError:
                 return value
         return value
@@ -125,11 +206,16 @@ class HrisDeduction(BaseModel):
                 "company_id",
                 "coverage_level",
                 "created_at",
+                "employer_amount",
+                "employer_type",
                 "end_at",
                 "frequency",
+                "garnishment_type",
                 "id",
                 "is_active",
+                "max_amount",
                 "notes",
+                "paycode_id",
                 "raw",
                 "start_at",
                 "type",

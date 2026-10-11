@@ -44,6 +44,7 @@ class PatchHrisAttendanceQueryParamFields(str, Enum):
 
 class PatchHrisAttendanceRequestTypedDict(TypedDict):
     hris_attendance: shared_hrisattendance.HrisAttendanceTypedDict
+    r"""Also called timesheets"""
     connection_id: str
     r"""ID of the connection"""
     id: str
@@ -59,6 +60,7 @@ class PatchHrisAttendanceRequest(BaseModel):
         shared_hrisattendance.HrisAttendance,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
+    r"""Also called timesheets"""
 
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))

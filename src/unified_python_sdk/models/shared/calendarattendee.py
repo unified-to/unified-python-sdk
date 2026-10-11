@@ -23,6 +23,7 @@ class CalendarAttendeeTypedDict(TypedDict):
     required: NotRequired[bool]
     status: NotRequired[CalendarAttendeeStatus]
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class CalendarAttendee(BaseModel):
@@ -37,6 +38,7 @@ class CalendarAttendee(BaseModel):
     status: Optional[CalendarAttendeeStatus] = None
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

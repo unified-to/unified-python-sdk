@@ -21,16 +21,24 @@ class UcRecordingType(str, Enum, metaclass=utils.OpenEnumMeta):
 class UcRecordingTypedDict(TypedDict):
     call_id: NotRequired[str]
     contacts: NotRequired[List[UcContactTypedDict]]
+    conversation_identifier: NotRequired[str]
+    r"""opaque identifier shared across legs of one interaction"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     expires_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     media: NotRequired[List[UcRecordingMediaTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     type: NotRequired[UcRecordingType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""reference to HrisEmployee (reference to HrisEmployee)"""
     user_name: NotRequired[str]
     user_phone: NotRequired[str]
     web_url: NotRequired[str]
@@ -41,11 +49,17 @@ class UcRecording(BaseModel):
 
     contacts: Optional[List[UcContact]] = None
 
+    conversation_identifier: Optional[str] = None
+    r"""opaque identifier shared across legs of one interaction"""
+
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     expires_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -54,12 +68,15 @@ class UcRecording(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     type: Optional[UcRecordingType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""reference to HrisEmployee (reference to HrisEmployee)"""
 
     user_name: Optional[str] = None
 
@@ -82,6 +99,7 @@ class UcRecording(BaseModel):
             [
                 "call_id",
                 "contacts",
+                "conversation_identifier",
                 "created_at",
                 "end_at",
                 "expires_at",

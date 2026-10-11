@@ -11,6 +11,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class CrmPipelineTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     deal_probability: NotRequired[float]
     display_order: NotRequired[float]
     id: NotRequired[str]
@@ -19,10 +20,12 @@ class CrmPipelineTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     stages: NotRequired[List[CrmStageTypedDict]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CrmPipeline(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     deal_probability: Optional[float] = None
 
@@ -39,6 +42,7 @@ class CrmPipeline(BaseModel):
     stages: Optional[List[CrmStage]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

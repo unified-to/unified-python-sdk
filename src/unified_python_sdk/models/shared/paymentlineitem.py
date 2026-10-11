@@ -10,28 +10,36 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class PaymentLineitemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     discount_amount: NotRequired[float]
     id: NotRequired[str]
     item_description: NotRequired[str]
     item_id: NotRequired[str]
+    r"""(reference to CommerceItem)"""
     item_name: NotRequired[str]
     item_sku: NotRequired[str]
     notes: NotRequired[str]
     refund_amount: NotRequired[float]
+    r"""new field"""
     refunded_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
     total_amount: NotRequired[float]
     unit_amount: NotRequired[float]
     unit_quantity: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PaymentLineitem(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     discount_amount: Optional[float] = None
 
@@ -40,6 +48,7 @@ class PaymentLineitem(BaseModel):
     item_description: Optional[str] = None
 
     item_id: Optional[str] = None
+    r"""(reference to CommerceItem)"""
 
     item_name: Optional[str] = None
 
@@ -48,8 +57,10 @@ class PaymentLineitem(BaseModel):
     notes: Optional[str] = None
 
     refund_amount: Optional[float] = None
+    r"""new field"""
 
     refunded_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     tax_amount: Optional[float] = None
 
@@ -62,6 +73,7 @@ class PaymentLineitem(BaseModel):
     unit_quantity: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

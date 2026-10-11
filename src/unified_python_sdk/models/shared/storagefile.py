@@ -20,9 +20,12 @@ class StorageFileType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class StorageFileTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     data: NotRequired[str]
+    r"""base64 encoded file contents used to create/update only"""
     description: NotRequired[str]
     download_url: NotRequired[str]
+    r"""This link expires after 1 hour. When you need to retrieve the contents of a file, call the \"Retrieve a file\" endpoint again to get a new download_url."""
     hash: NotRequired[str]
     id: NotRequired[str]
     mime_type: NotRequired[str]
@@ -36,19 +39,24 @@ class StorageFileTypedDict(TypedDict):
     r"""labels"""
     type: NotRequired[StorageFileType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     version: NotRequired[str]
     web_url: NotRequired[str]
 
 
 class StorageFile(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     data: Optional[str] = None
+    r"""base64 encoded file contents used to create/update only"""
 
     description: Optional[str] = None
 
     download_url: Optional[str] = None
+    r"""This link expires after 1 hour. When you need to retrieve the contents of a file, call the \"Retrieve a file\" endpoint again to get a new download_url."""
 
     hash: Optional[str] = None
 
@@ -74,8 +82,10 @@ class StorageFile(BaseModel):
     type: Optional[StorageFileType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     version: Optional[str] = None
 

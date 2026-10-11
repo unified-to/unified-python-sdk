@@ -60,14 +60,17 @@ class TaxExemption(str, Enum, metaclass=utils.OpenEnumMeta):
 class AccountingContactTypedDict(TypedDict):
     associated_contacts: NotRequired[List[AccountingAssociatedContactTypedDict]]
     balance_amount: NotRequired[float]
+    r"""Outstanding AR/AP balance for this contact"""
     billing_address: NotRequired[PropertyAccountingContactBillingAddressTypedDict]
     company_name: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     emails: NotRequired[List[AccountingEmailTypedDict]]
     first_name: NotRequired[str]
     id: NotRequired[str]
     identification: NotRequired[str]
+    r"""contact account numbers such as registration, A membership or identification reference to help to identify and search customers"""
     is_active: NotRequired[bool]
     is_customer: NotRequired[bool]
     is_supplier: NotRequired[bool]
@@ -79,12 +82,15 @@ class AccountingContactTypedDict(TypedDict):
     payment_terms: NotRequired[AccountingContactPaymentTerms]
     paymentterm_id: NotRequired[str]
     portal_url: NotRequired[str]
+    r"""URL for the contact’s portal"""
     raw: NotRequired[Dict[str, Any]]
     shipping_address: NotRequired[PropertyAccountingContactShippingAddressTypedDict]
     tax_exemption: NotRequired[TaxExemption]
     tax_number: NotRequired[str]
+    r"""The ID/number of the customer's tax number.  This is also known as the ABN (Australia), GST Number (New Zealand), VAT Number (UK) or Tax ID Number (US and global)."""
     telephones: NotRequired[List[AccountingTelephoneTypedDict]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     website: NotRequired[str]
 
 
@@ -92,12 +98,14 @@ class AccountingContact(BaseModel):
     associated_contacts: Optional[List[AccountingAssociatedContact]] = None
 
     balance_amount: Optional[float] = None
+    r"""Outstanding AR/AP balance for this contact"""
 
     billing_address: Optional[PropertyAccountingContactBillingAddress] = None
 
     company_name: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = "USD"
 
@@ -108,6 +116,7 @@ class AccountingContact(BaseModel):
     id: Optional[str] = None
 
     identification: Optional[str] = None
+    r"""contact account numbers such as registration, A membership or identification reference to help to identify and search customers"""
 
     is_active: Optional[bool] = None
 
@@ -130,6 +139,7 @@ class AccountingContact(BaseModel):
     paymentterm_id: Optional[str] = None
 
     portal_url: Optional[str] = None
+    r"""URL for the contact’s portal"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -138,10 +148,12 @@ class AccountingContact(BaseModel):
     tax_exemption: Optional[TaxExemption] = None
 
     tax_number: Optional[str] = None
+    r"""The ID/number of the customer's tax number.  This is also known as the ABN (Australia), GST Number (New Zealand), VAT Number (UK) or Tax ID Number (US and global)."""
 
     telephones: Optional[List[AccountingTelephone]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     website: Optional[str] = None
 

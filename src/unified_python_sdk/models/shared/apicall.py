@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class APICallType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The type of API Call being logged"""
+
     LOGIN = "login"
     WEBHOOK = "webhook"
     INBOUND = "inbound"
@@ -20,59 +22,80 @@ class APICallType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class APICallTypedDict(TypedDict):
     integration_type: str
+    r"""The integration type"""
     method: str
     name: str
+    r"""The called name of the API method"""
     path: str
+    r"""The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})"""
     status: str
+    r"""The resulting HTTP status code (200)"""
     type: APICallType
+    r"""The type of API Call being logged"""
     connection_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""The date that this object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     endapi_response_time: NotRequired[float]
     environment: NotRequired[str]
     error: NotRequired[str]
+    r"""The error description (if status code is >= 400)"""
     external_xref: NotRequired[str]
+    r"""your customer's user ID"""
     id: NotRequired[str]
+    r"""Unique identifier for this API call"""
     ip_address: NotRequired[str]
     is_billable: NotRequired[bool]
     size: NotRequired[float]
+    r"""The size of the response"""
     unified_response_time: NotRequired[float]
     user_agent: NotRequired[str]
     webhook_id: NotRequired[str]
     workspace_id: NotRequired[str]
+    r"""(reference to KmsSpace)"""
 
 
 class APICall(BaseModel):
     integration_type: str
+    r"""The integration type"""
 
     method: str
 
     name: str
+    r"""The called name of the API method"""
 
     path: str
+    r"""The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})"""
 
     status: str
+    r"""The resulting HTTP status code (200)"""
 
     type: APICallType
+    r"""The type of API Call being logged"""
 
     connection_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""The date that this object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     endapi_response_time: Optional[float] = None
 
     environment: Optional[str] = "Production"
 
     error: Optional[str] = None
+    r"""The error description (if status code is >= 400)"""
 
     external_xref: Optional[str] = None
+    r"""your customer's user ID"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this API call"""
 
     ip_address: Optional[str] = None
 
     is_billable: Optional[bool] = None
 
     size: Optional[float] = None
+    r"""The size of the response"""
 
     unified_response_time: Optional[float] = None
 
@@ -81,6 +104,7 @@ class APICall(BaseModel):
     webhook_id: Optional[str] = None
 
     workspace_id: Optional[str] = None
+    r"""(reference to KmsSpace)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

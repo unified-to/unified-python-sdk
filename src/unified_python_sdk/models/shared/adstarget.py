@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AdsTargetType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale, adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)"""
+
     INTEREST = "INTEREST"
     BEHAVIOR = "BEHAVIOR"
     LOCALE = "LOCALE"
@@ -37,6 +39,7 @@ class AdsTargetTypedDict(TypedDict):
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[AdsTargetType]
+    r"""Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale, adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)"""
 
 
 class AdsTarget(BaseModel):
@@ -57,6 +60,7 @@ class AdsTarget(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     type: Optional[AdsTargetType] = None
+    r"""Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale, adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

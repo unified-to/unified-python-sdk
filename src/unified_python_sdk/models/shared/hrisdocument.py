@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class HrisDocumentType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""unified, normalized document type (OTHER when unmappable)"""
+
     CONTRACT = "CONTRACT"
     OFFER_LETTER = "OFFER_LETTER"
     POLICY = "POLICY"
@@ -30,25 +32,36 @@ class HrisDocumentType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class HrisDocumentTypedDict(TypedDict):
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     document_data: NotRequired[str]
+    r"""base64 encoded file contents for create/update"""
     document_url: NotRequired[str]
+    r"""download link, expires after 1 hour"""
     filename: NotRequired[str]
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[HrisDocumentType]
+    r"""unified, normalized document type (OTHER when unmappable)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""pointer to the HR Employee object that owns this document (reference to HrisEmployee)"""
 
 
 class HrisDocument(BaseModel):
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     document_data: Optional[str] = None
+    r"""base64 encoded file contents for create/update"""
 
     document_url: Optional[str] = None
+    r"""download link, expires after 1 hour"""
 
     filename: Optional[str] = None
 
@@ -57,10 +70,13 @@ class HrisDocument(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     type: Optional[HrisDocumentType] = None
+    r"""unified, normalized document type (OTHER when unmappable)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""pointer to the HR Employee object that owns this document (reference to HrisEmployee)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

@@ -28,6 +28,8 @@ class PatchHrisGroupQueryParamFields(str, Enum):
     MANAGER_IDS = "manager_ids"
     IS_ACTIVE = "is_active"
     COMPANY_ID = "company_id"
+    PAY_FREQUENCY = "pay_frequency"
+    NEXT_PAID_AT = "next_paid_at"
     RAW = "raw"
 
 

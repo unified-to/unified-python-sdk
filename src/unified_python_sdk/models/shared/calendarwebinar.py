@@ -36,10 +36,13 @@ class CalendarWebinarStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CalendarWebinarTypedDict(TypedDict):
     calendar_id: NotRequired[str]
+    r"""(reference to CalendarCalendar)"""
     capacity: NotRequired[float]
     conference: NotRequired[List[CalendarConferenceTypedDict]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     has_polls: NotRequired[bool]
     has_qa: NotRequired[bool]
     has_recording: NotRequired[bool]
@@ -64,23 +67,29 @@ class CalendarWebinarTypedDict(TypedDict):
     require_last_name: NotRequired[bool]
     require_phone: NotRequired[bool]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[CalendarWebinarStatus]
     subject: NotRequired[str]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     web_url: NotRequired[str]
+    r"""information"""
 
 
 class CalendarWebinar(BaseModel):
     calendar_id: Optional[str] = None
+    r"""(reference to CalendarCalendar)"""
 
     capacity: Optional[float] = None
 
     conference: Optional[List[CalendarConference]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     has_polls: Optional[bool] = None
 
@@ -129,6 +138,7 @@ class CalendarWebinar(BaseModel):
     require_phone: Optional[bool] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[CalendarWebinarStatus] = None
 
@@ -137,8 +147,10 @@ class CalendarWebinar(BaseModel):
     timezone: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     web_url: Optional[str] = None
+    r"""information"""
 
     @field_serializer("status")
     def serialize_status(self, value):

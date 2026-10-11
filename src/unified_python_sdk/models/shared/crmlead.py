@@ -18,10 +18,14 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class CrmLeadTypedDict(TypedDict):
     address: NotRequired[PropertyCrmLeadAddressTypedDict]
     company_id: NotRequired[str]
+    r"""(reference to CrmCompany)"""
     company_name: NotRequired[str]
     contact_id: NotRequired[str]
+    r"""(reference to CrmContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creator_user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     emails: NotRequired[List[CrmEmailTypedDict]]
     first_name: NotRequired[str]
     id: NotRequired[str]
@@ -34,22 +38,30 @@ class CrmLeadTypedDict(TypedDict):
     source: NotRequired[str]
     status: NotRequired[str]
     telephones: NotRequired[List[CrmTelephoneTypedDict]]
+    title: NotRequired[str]
+    r"""The job title of the lead"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class CrmLead(BaseModel):
     address: Optional[PropertyCrmLeadAddress] = None
 
     company_id: Optional[str] = None
+    r"""(reference to CrmCompany)"""
 
     company_name: Optional[str] = None
 
     contact_id: Optional[str] = None
+    r"""(reference to CrmContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creator_user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     emails: Optional[List[CrmEmail]] = None
 
@@ -75,9 +87,14 @@ class CrmLead(BaseModel):
 
     telephones: Optional[List[CrmTelephone]] = None
 
+    title: Optional[str] = None
+    r"""The job title of the lead"""
+
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
@@ -101,6 +118,7 @@ class CrmLead(BaseModel):
                 "source",
                 "status",
                 "telephones",
+                "title",
                 "updated_at",
                 "user_id",
             ]

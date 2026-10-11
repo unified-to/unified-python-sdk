@@ -9,14 +9,18 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AtsScorecardQuestionTypedDict(TypedDict):
     text: str
+    r"""The question to ask the interviewer"""
     answer: NotRequired[str]
+    r"""Candidate’s answer to the question"""
     description: NotRequired[str]
 
 
 class AtsScorecardQuestion(BaseModel):
     text: str
+    r"""The question to ask the interviewer"""
 
     answer: Optional[str] = None
+    r"""Candidate’s answer to the question"""
 
     description: Optional[str] = None
 

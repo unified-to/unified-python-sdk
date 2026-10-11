@@ -10,7 +10,9 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AssessmentPackageRegionTypedDict(TypedDict):
     cost_amount: NotRequired[float]
     currency: NotRequired[str]
+    r"""ISO 4217 format"""
     processing_time: NotRequired[float]
+    r"""Processing time in milliseconds"""
     regions: NotRequired[List[str]]
     r"""Countryregion codes where this package is available ({country}-{state} or {country})"""
 
@@ -19,8 +21,10 @@ class AssessmentPackageRegion(BaseModel):
     cost_amount: Optional[float] = None
 
     currency: Optional[str] = None
+    r"""ISO 4217 format"""
 
     processing_time: Optional[float] = None
+    r"""Processing time in milliseconds"""
 
     regions: Optional[List[str]] = None
     r"""Countryregion codes where this package is available ({country}-{state} or {country})"""

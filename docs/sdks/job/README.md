@@ -5,11 +5,17 @@
 ### Available Operations
 
 * [create_ats_job](#create_ats_job) - Create a job
+* [create_hris_job](#create_hris_job) - Create a job
 * [get_ats_job](#get_ats_job) - Retrieve a job
+* [get_hris_job](#get_hris_job) - Retrieve a job
 * [list_ats_jobs](#list_ats_jobs) - List all jobs
+* [list_hris_jobs](#list_hris_jobs) - List all jobs
 * [patch_ats_job](#patch_ats_job) - Update a job
+* [patch_hris_job](#patch_hris_job) - Update a job
 * [remove_ats_job](#remove_ats_job) - Remove a job
+* [remove_hris_job](#remove_hris_job) - Remove a job
 * [update_ats_job](#update_ats_job) - Update a job
+* [update_hris_job](#update_hris_job) - Update a job
 
 ## create_ats_job
 
@@ -63,12 +69,12 @@ with UnifiedTo(
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [
                 {
-                    "id": "fd9852e3-9035-4f42-beb3-bbf4e4022122",
-                    "name": "Eloise Mueller PhD",
+                    "id": "eb3bbf4e-4022-4122-9d44-39fd5b501e80",
+                    "name": "Troy Greenholt",
                 },
             ],
-            "id": "a4e564ca-17df-4b25-9e7c-4e8bd4b8c91e",
-            "industry": "Gorgeous Plastic Computer",
+            "id": "c62a2ee8-e727-4fef-a1fc-471e16433bac",
+            "industry": "Modern Granite Gloves",
             "language_locale": "en",
             "metadata": [
                 {
@@ -76,10 +82,10 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "0922852e-0bdd-4572-8490-0c07e2162c8d",
+                    "id": "aa99fcf0-f085-47e7-ab94-cb696220e875",
                     "namespace": "custom",
                     "slug": "custom_property",
-                    "value": "acceptus",
+                    "value": "vomica",
                 },
             ],
             "minimum_degree": "Bachelor",
@@ -89,28 +95,28 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-05-12T00:39:03.827Z"),
+                    "opened_at": parse_datetime("2026-05-30T00:05:48.189Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
             "postings": [
                 {
                     "address": {
-                        "address1": "8460 Nils Trace",
-                        "city": "West Mervinburgh",
+                        "address1": "51372 Kshlerin Creek",
+                        "city": "Logancester",
                         "country_code": "US",
-                        "postal_code": "14162",
-                        "region": "Maine",
+                        "postal_code": "85013-9865",
+                        "region": "Vermont",
                         "region_code": "MO",
                     },
-                    "created_at": parse_datetime("2026-07-04T18:58:56.779Z"),
-                    "description": "Deduco cultellus alii terebro depono thesaurus.",
-                    "id": "f6101769-deb3-4721-978c-d205638870ee",
+                    "created_at": parse_datetime("2026-07-23T16:18:04.067Z"),
+                    "description": "Provident turbo cunabula spoliatio agnitio.",
+                    "id": "372178cd-2056-4388-870e-e7c199761c7c",
                     "is_active": False,
-                    "location": "6788 Oxford Road",
-                    "name": "Forward Security Orchestrator",
-                    "posting_url": "https://ajar-metabolite.net/",
-                    "updated_at": parse_datetime("2026-07-30T10:45:53.530Z"),
+                    "location": "2925 Connie Green",
+                    "name": "Lead Intranet Developer",
+                    "posting_url": "https://smart-summer.name/",
+                    "updated_at": parse_datetime("2026-08-18T18:31:19.157Z"),
                 },
             ],
             "public_job_urls": [
@@ -121,6 +127,8 @@ with UnifiedTo(
                 {
                     "description": "Trepide provident taceo rem.",
                     "id": "289f27c0-311c-41e5-ad9d-cbe2097332c2",
+                    "max_length": 387.0,
+                    "min_length": 1.0,
                     "options": [
                         "censura",
                         "tum",
@@ -131,34 +139,38 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "b3a0b53b-38f3-4e8d-84b9-f413a900d79b",
+                    "id": "3a0b53b3-8f3e-48d4-ab9f-413a900d79b0",
+                    "max_length": 430.0,
+                    "min_length": 1.0,
                     "options": [
-                        "odit",
+                        "aetas",
                     ],
-                    "prompt": "Similique absque temeritas celebrer enim.",
-                    "question": "Vinitor sodalitas desino sollers viduo volo.",
+                    "prompt": "Contra damno desolo suadeo utrimque cresco.",
+                    "question": "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
                     "required": False,
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "description": "Abstergo possimus quibusdam deinde amoveo.",
-                    "id": "568be61d-060e-4d8c-a8ab-8a17cb25edf3",
+                    "description": "Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.",
+                    "id": "060ed8c8-ab8a-417c-8b25-edf38cb19b1c",
+                    "max_length": 381.0,
+                    "min_length": 1.0,
                     "options": [
-                        "vallum",
+                        "utroque",
                     ],
-                    "prompt": "Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.",
-                    "question": "Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.",
+                    "prompt": "Vir crepusculum ait adeptio ait defendo cotidie porro uterque.",
+                    "question": "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
                     "required": False,
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
             ],
             "skills": [
-                "amiculum",
-                "crux",
+                "coaegresco",
+                "appello",
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
-            "summary": "Amicitia vergo hic.",
-            "updated_at": parse_datetime("2026-02-03T00:33:37.747Z"),
+            "summary": "Iste sto communis.",
+            "updated_at": parse_datetime("2026-02-19T08:08:04.953Z"),
         },
         "connection_id": "<id>",
     })
@@ -180,6 +192,63 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAtsJobResponse](../../models/operations/createatsjobresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_hris_job
+
+Create a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.job.create_hris_job(request={
+        "hris_job": {
+            "code": "P-05547",
+            "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
+            "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
+            "employment_type": shared.HrisJobEmploymentType.FREELANCE,
+            "id": "bb0fb822-230a-43a5-8b1b-4fd55b9ec014",
+            "is_active": False,
+            "name": "Internal Integration Specialist",
+            "updated_at": parse_datetime("2023-01-26T10:47:07.073Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_job is not None
+
+    # Handle response
+    print(res.hris_job)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.CreateHrisJobRequest](../../models/operations/createhrisjobrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.CreateHrisJobResponse](../../models/operations/createhrisjobresponse.md)**
 
 ### Errors
 
@@ -234,6 +303,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_hris_job
+
+Retrieve a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisJob" method="get" path="/hris/{connection_id}/job/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.job.get_hris_job(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_job is not None
+
+    # Handle response
+    print(res.hris_job)
+
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [operations.GetHrisJobRequest](../../models/operations/gethrisjobrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `retries`                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)             | :heavy_minus_sign:                                                           | Configuration to override the default retry behavior of the client.          |
+
+### Response
+
+**[operations.GetHrisJobResponse](../../models/operations/gethrisjobresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_ats_jobs
 
 List all jobs
@@ -273,6 +389,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAtsJobsResponse](../../models/operations/listatsjobsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_hris_jobs
+
+List all jobs
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisJobs" method="get" path="/hris/{connection_id}/job" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.job.list_hris_jobs(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_jobs is not None
+
+    # Handle response
+    print(res.hris_jobs)
+
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.ListHrisJobsRequest](../../models/operations/listhrisjobsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+
+### Response
+
+**[operations.ListHrisJobsResponse](../../models/operations/listhrisjobsresponse.md)**
 
 ### Errors
 
@@ -332,12 +494,12 @@ with UnifiedTo(
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [
                 {
-                    "id": "fd9852e3-9035-4f42-beb3-bbf4e4022122",
-                    "name": "Eloise Mueller PhD",
+                    "id": "eb3bbf4e-4022-4122-9d44-39fd5b501e80",
+                    "name": "Troy Greenholt",
                 },
             ],
-            "id": "78c9bfcb-beac-4ae7-adf1-cb11fb046603",
-            "industry": "Gorgeous Plastic Computer",
+            "id": "a7fa9c17-0a1d-4992-a384-01d53b722701",
+            "industry": "Modern Granite Gloves",
             "language_locale": "en",
             "metadata": [
                 {
@@ -345,10 +507,10 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "d7b24ca2-56c7-478f-96e3-9af999ae067d",
+                    "id": "7ff0b09c-050a-46d1-b304-b6c98db5254b",
                     "namespace": "custom",
                     "slug": "custom_property",
-                    "value": "acceptus",
+                    "value": "vomica",
                 },
             ],
             "minimum_degree": "Bachelor",
@@ -358,28 +520,28 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-05-12T00:39:03.877Z"),
+                    "opened_at": parse_datetime("2026-05-30T00:05:48.254Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
             "postings": [
                 {
                     "address": {
-                        "address1": "8460 Nils Trace",
-                        "city": "West Mervinburgh",
+                        "address1": "51372 Kshlerin Creek",
+                        "city": "Logancester",
                         "country_code": "US",
-                        "postal_code": "14162",
-                        "region": "Maine",
+                        "postal_code": "85013-9865",
+                        "region": "Vermont",
                         "region_code": "MO",
                     },
-                    "created_at": parse_datetime("2026-07-04T18:58:56.831Z"),
-                    "description": "Deduco cultellus alii terebro depono thesaurus.",
-                    "id": "f6101769-deb3-4721-978c-d205638870ee",
+                    "created_at": parse_datetime("2026-07-23T16:18:04.137Z"),
+                    "description": "Provident turbo cunabula spoliatio agnitio.",
+                    "id": "372178cd-2056-4388-870e-e7c199761c7c",
                     "is_active": False,
-                    "location": "6788 Oxford Road",
-                    "name": "Forward Security Orchestrator",
-                    "posting_url": "https://ajar-metabolite.net/",
-                    "updated_at": parse_datetime("2026-07-30T10:45:53.584Z"),
+                    "location": "2925 Connie Green",
+                    "name": "Lead Intranet Developer",
+                    "posting_url": "https://smart-summer.name/",
+                    "updated_at": parse_datetime("2026-08-18T18:31:19.229Z"),
                 },
             ],
             "public_job_urls": [
@@ -390,6 +552,8 @@ with UnifiedTo(
                 {
                     "description": "Trepide provident taceo rem.",
                     "id": "289f27c0-311c-41e5-ad9d-cbe2097332c2",
+                    "max_length": 387.0,
+                    "min_length": 1.0,
                     "options": [
                         "censura",
                         "tum",
@@ -400,34 +564,38 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "b3a0b53b-38f3-4e8d-84b9-f413a900d79b",
+                    "id": "3a0b53b3-8f3e-48d4-ab9f-413a900d79b0",
+                    "max_length": 430.0,
+                    "min_length": 1.0,
                     "options": [
-                        "odit",
+                        "aetas",
                     ],
-                    "prompt": "Similique absque temeritas celebrer enim.",
-                    "question": "Vinitor sodalitas desino sollers viduo volo.",
+                    "prompt": "Contra damno desolo suadeo utrimque cresco.",
+                    "question": "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
                     "required": False,
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "description": "Abstergo possimus quibusdam deinde amoveo.",
-                    "id": "568be61d-060e-4d8c-a8ab-8a17cb25edf3",
+                    "description": "Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.",
+                    "id": "060ed8c8-ab8a-417c-8b25-edf38cb19b1c",
+                    "max_length": 381.0,
+                    "min_length": 1.0,
                     "options": [
-                        "vallum",
+                        "utroque",
                     ],
-                    "prompt": "Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.",
-                    "question": "Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.",
+                    "prompt": "Vir crepusculum ait adeptio ait defendo cotidie porro uterque.",
+                    "question": "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
                     "required": False,
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
             ],
             "skills": [
-                "amiculum",
-                "crux",
+                "coaegresco",
+                "appello",
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
-            "summary": "Amicitia vergo hic.",
-            "updated_at": parse_datetime("2026-02-03T00:33:37.792Z"),
+            "summary": "Iste sto communis.",
+            "updated_at": parse_datetime("2026-02-19T08:08:05.013Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -450,6 +618,64 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchAtsJobResponse](../../models/operations/patchatsjobresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_hris_job
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.job.patch_hris_job(request={
+        "hris_job": {
+            "code": "P-05547",
+            "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
+            "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
+            "employment_type": shared.HrisJobEmploymentType.FREELANCE,
+            "id": "69c74d53-aa9f-46fc-b7ae-68d6296eff97",
+            "is_active": False,
+            "name": "Internal Integration Specialist",
+            "updated_at": parse_datetime("2023-01-26T10:47:07.112Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_job is not None
+
+    # Handle response
+    print(res.hris_job)
+
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.PatchHrisJobRequest](../../models/operations/patchhrisjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+
+### Response
+
+**[operations.PatchHrisJobResponse](../../models/operations/patchhrisjobresponse.md)**
 
 ### Errors
 
@@ -497,6 +723,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveAtsJobResponse](../../models/operations/removeatsjobresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_hris_job
+
+Remove a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisJob" method="delete" path="/hris/{connection_id}/job/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.job.remove_hris_job(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.RemoveHrisJobRequest](../../models/operations/removehrisjobrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.RemoveHrisJobResponse](../../models/operations/removehrisjobresponse.md)**
 
 ### Errors
 
@@ -556,12 +829,12 @@ with UnifiedTo(
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [
                 {
-                    "id": "fd9852e3-9035-4f42-beb3-bbf4e4022122",
-                    "name": "Eloise Mueller PhD",
+                    "id": "eb3bbf4e-4022-4122-9d44-39fd5b501e80",
+                    "name": "Troy Greenholt",
                 },
             ],
-            "id": "78c9bfcb-beac-4ae7-adf1-cb11fb046603",
-            "industry": "Gorgeous Plastic Computer",
+            "id": "a7fa9c17-0a1d-4992-a384-01d53b722701",
+            "industry": "Modern Granite Gloves",
             "language_locale": "en",
             "metadata": [
                 {
@@ -569,10 +842,10 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "d7b24ca2-56c7-478f-96e3-9af999ae067d",
+                    "id": "7ff0b09c-050a-46d1-b304-b6c98db5254b",
                     "namespace": "custom",
                     "slug": "custom_property",
-                    "value": "acceptus",
+                    "value": "vomica",
                 },
             ],
             "minimum_degree": "Bachelor",
@@ -582,28 +855,28 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-05-12T00:39:03.877Z"),
+                    "opened_at": parse_datetime("2026-05-30T00:05:48.254Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
             "postings": [
                 {
                     "address": {
-                        "address1": "8460 Nils Trace",
-                        "city": "West Mervinburgh",
+                        "address1": "51372 Kshlerin Creek",
+                        "city": "Logancester",
                         "country_code": "US",
-                        "postal_code": "14162",
-                        "region": "Maine",
+                        "postal_code": "85013-9865",
+                        "region": "Vermont",
                         "region_code": "MO",
                     },
-                    "created_at": parse_datetime("2026-07-04T18:58:56.831Z"),
-                    "description": "Deduco cultellus alii terebro depono thesaurus.",
-                    "id": "f6101769-deb3-4721-978c-d205638870ee",
+                    "created_at": parse_datetime("2026-07-23T16:18:04.137Z"),
+                    "description": "Provident turbo cunabula spoliatio agnitio.",
+                    "id": "372178cd-2056-4388-870e-e7c199761c7c",
                     "is_active": False,
-                    "location": "6788 Oxford Road",
-                    "name": "Forward Security Orchestrator",
-                    "posting_url": "https://ajar-metabolite.net/",
-                    "updated_at": parse_datetime("2026-07-30T10:45:53.584Z"),
+                    "location": "2925 Connie Green",
+                    "name": "Lead Intranet Developer",
+                    "posting_url": "https://smart-summer.name/",
+                    "updated_at": parse_datetime("2026-08-18T18:31:19.229Z"),
                 },
             ],
             "public_job_urls": [
@@ -614,6 +887,8 @@ with UnifiedTo(
                 {
                     "description": "Trepide provident taceo rem.",
                     "id": "289f27c0-311c-41e5-ad9d-cbe2097332c2",
+                    "max_length": 387.0,
+                    "min_length": 1.0,
                     "options": [
                         "censura",
                         "tum",
@@ -624,34 +899,38 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "b3a0b53b-38f3-4e8d-84b9-f413a900d79b",
+                    "id": "3a0b53b3-8f3e-48d4-ab9f-413a900d79b0",
+                    "max_length": 430.0,
+                    "min_length": 1.0,
                     "options": [
-                        "odit",
+                        "aetas",
                     ],
-                    "prompt": "Similique absque temeritas celebrer enim.",
-                    "question": "Vinitor sodalitas desino sollers viduo volo.",
+                    "prompt": "Contra damno desolo suadeo utrimque cresco.",
+                    "question": "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
                     "required": False,
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "description": "Abstergo possimus quibusdam deinde amoveo.",
-                    "id": "568be61d-060e-4d8c-a8ab-8a17cb25edf3",
+                    "description": "Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.",
+                    "id": "060ed8c8-ab8a-417c-8b25-edf38cb19b1c",
+                    "max_length": 381.0,
+                    "min_length": 1.0,
                     "options": [
-                        "vallum",
+                        "utroque",
                     ],
-                    "prompt": "Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.",
-                    "question": "Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.",
+                    "prompt": "Vir crepusculum ait adeptio ait defendo cotidie porro uterque.",
+                    "question": "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
                     "required": False,
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
             ],
             "skills": [
-                "amiculum",
-                "crux",
+                "coaegresco",
+                "appello",
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
-            "summary": "Amicitia vergo hic.",
-            "updated_at": parse_datetime("2026-02-03T00:33:37.792Z"),
+            "summary": "Iste sto communis.",
+            "updated_at": parse_datetime("2026-02-19T08:08:05.013Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -674,6 +953,64 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateAtsJobResponse](../../models/operations/updateatsjobresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_hris_job
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.job.update_hris_job(request={
+        "hris_job": {
+            "code": "P-05547",
+            "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
+            "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
+            "employment_type": shared.HrisJobEmploymentType.FREELANCE,
+            "id": "69c74d53-aa9f-46fc-b7ae-68d6296eff97",
+            "is_active": False,
+            "name": "Internal Integration Specialist",
+            "updated_at": parse_datetime("2023-01-26T10:47:07.112Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_job is not None
+
+    # Handle response
+    print(res.hris_job)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.UpdateHrisJobRequest](../../models/operations/updatehrisjobrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.UpdateHrisJobResponse](../../models/operations/updatehrisjobresponse.md)**
 
 ### Errors
 

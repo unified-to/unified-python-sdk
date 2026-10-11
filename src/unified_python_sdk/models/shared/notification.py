@@ -39,17 +39,24 @@ class NotificationTypedDict(TypedDict):
 
     connection_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""Longer description of this notification"""
     event: NotRequired[Event]
     id: NotRequired[str]
+    r"""Unique identifier for this notification object"""
     integration_name: NotRequired[str]
     integration_type: NotRequired[str]
     sent_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     user_name: NotRequired[str]
     webhook_id: NotRequired[str]
     workspace_id: NotRequired[str]
+    r"""(reference to KmsSpace)"""
     workspace_name: NotRequired[str]
 
 
@@ -59,28 +66,35 @@ class Notification(BaseModel):
     connection_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""Longer description of this notification"""
 
     event: Optional[Event] = None
 
     id: Optional[str] = None
+    r"""Unique identifier for this notification object"""
 
     integration_name: Optional[str] = None
 
     integration_type: Optional[str] = None
 
     sent_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     user_name: Optional[str] = None
 
     webhook_id: Optional[str] = None
 
     workspace_id: Optional[str] = None
+    r"""(reference to KmsSpace)"""
 
     workspace_name: Optional[str] = None
 

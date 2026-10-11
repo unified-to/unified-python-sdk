@@ -22,65 +22,145 @@ class PaymentType(str, Enum, metaclass=utils.OpenEnumMeta):
     CASH = "CASH"
 
 
+class HrisPayslipType(str, Enum, metaclass=utils.OpenEnumMeta):
+    REGULAR = "REGULAR"
+    OFF_CYCLE = "OFF_CYCLE"
+    BONUS = "BONUS"
+    CORRECTION = "CORRECTION"
+    TERMINATION = "TERMINATION"
+    CONTRACTOR = "CONTRACTOR"
+
+
 class HrisPayslipTypedDict(TypedDict):
     company_id: NotRequired[str]
+    r"""(reference to HrisCompany)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     deduction: NotRequired[PropertyHrisPayslipDeductionTypedDict]
     r"""The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
+    deduction_amount: NotRequired[float]
+    r"""total employee deductions (pre and post-tax)"""
     details: NotRequired[List[HrisPayslipDetailTypedDict]]
+    employee_tax_amount: NotRequired[float]
+    r"""total taxes withheld from the employee"""
+    employer_contribution_amount: NotRequired[float]
+    r"""total employer benefit contributions"""
+    employer_tax_amount: NotRequired[float]
+    r"""total employer-paid taxes"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     gross_amount: NotRequired[float]
+    gross_ytd_amount: NotRequired[float]
+    r"""year-to-date gross pay as of this payslip"""
+    group_id: NotRequired[str]
+    r"""the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)"""
+    hours: NotRequired[float]
+    r"""total hours paid on this payslip"""
     id: NotRequired[str]
     net_amount: NotRequired[float]
+    net_ytd_amount: NotRequired[float]
+    r"""year-to-date net pay as of this payslip"""
     paid_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     payment_reference: NotRequired[str]
     payment_type: NotRequired[PaymentType]
+    payroll_id: NotRequired[str]
+    r"""the hris_payroll (pay run) this payslip belongs to"""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    type: NotRequired[HrisPayslipType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""the employee (reference to HrisEmployee)"""
 
 
 class HrisPayslip(BaseModel):
     company_id: Optional[str] = None
+    r"""(reference to HrisCompany)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     deduction: Optional[PropertyHrisPayslipDeduction] = None
     r"""The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
 
+    deduction_amount: Optional[float] = None
+    r"""total employee deductions (pre and post-tax)"""
+
     details: Optional[List[HrisPayslipDetail]] = None
 
+    employee_tax_amount: Optional[float] = None
+    r"""total taxes withheld from the employee"""
+
+    employer_contribution_amount: Optional[float] = None
+    r"""total employer benefit contributions"""
+
+    employer_tax_amount: Optional[float] = None
+    r"""total employer-paid taxes"""
+
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     gross_amount: Optional[float] = None
+
+    gross_ytd_amount: Optional[float] = None
+    r"""year-to-date gross pay as of this payslip"""
+
+    group_id: Optional[str] = None
+    r"""the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)"""
+
+    hours: Optional[float] = None
+    r"""total hours paid on this payslip"""
 
     id: Optional[str] = None
 
     net_amount: Optional[float] = None
 
+    net_ytd_amount: Optional[float] = None
+    r"""year-to-date net pay as of this payslip"""
+
     paid_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     payment_reference: Optional[str] = None
 
     payment_type: Optional[PaymentType] = None
 
+    payroll_id: Optional[str] = None
+    r"""the hris_payroll (pay run) this payslip belongs to"""
+
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
+    type: Optional[HrisPayslipType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""the employee (reference to HrisEmployee)"""
 
     @field_serializer("payment_type")
     def serialize_payment_type(self, value):
         if isinstance(value, str):
             try:
                 return shared.PaymentType(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.HrisPayslipType(value)
             except ValueError:
                 return value
         return value
@@ -93,16 +173,26 @@ class HrisPayslip(BaseModel):
                 "created_at",
                 "currency",
                 "deduction",
+                "deduction_amount",
                 "details",
+                "employee_tax_amount",
+                "employer_contribution_amount",
+                "employer_tax_amount",
                 "end_at",
                 "gross_amount",
+                "gross_ytd_amount",
+                "group_id",
+                "hours",
                 "id",
                 "net_amount",
+                "net_ytd_amount",
                 "paid_at",
                 "payment_reference",
                 "payment_type",
+                "payroll_id",
                 "raw",
                 "start_at",
+                "type",
                 "updated_at",
                 "user_id",
             ]

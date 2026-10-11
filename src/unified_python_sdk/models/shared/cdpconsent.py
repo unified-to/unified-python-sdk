@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CdpConsentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The consent status for this purpose"""
+
     GRANTED = "GRANTED"
     DENIED = "DENIED"
     PENDING = "PENDING"
@@ -19,16 +21,22 @@ class CdpConsentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CdpConsentTypedDict(TypedDict):
     purpose: NotRequired[str]
+    r"""The consent purpose or objective (eg. marketing, analytics)"""
     status: NotRequired[CdpConsentStatus]
+    r"""The consent status for this purpose"""
     updated_at: NotRequired[datetime]
+    r"""When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CdpConsent(BaseModel):
     purpose: Optional[str] = None
+    r"""The consent purpose or objective (eg. marketing, analytics)"""
 
     status: Optional[CdpConsentStatus] = None
+    r"""The consent status for this purpose"""
 
     updated_at: Optional[datetime] = None
+    r"""When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

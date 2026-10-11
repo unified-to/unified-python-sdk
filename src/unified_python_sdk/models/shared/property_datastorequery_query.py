@@ -36,6 +36,7 @@ class PropertyDatastoreQueryQueryTypedDict(TypedDict):
     sort_fields: NotRequired[List[str]]
     sort_order: NotRequired[SortOrder]
     sql: NotRequired[str]
+    r"""Raw SQL – when set, executed directly (table_id optional)"""
 
 
 class PropertyDatastoreQueryQuery(BaseModel):
@@ -60,6 +61,7 @@ class PropertyDatastoreQueryQuery(BaseModel):
     sort_order: Optional[SortOrder] = None
 
     sql: Optional[str] = None
+    r"""Raw SQL – when set, executed directly (table_id optional)"""
 
     @field_serializer("sort_order")
     def serialize_sort_order(self, value):

@@ -12,33 +12,47 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class Operation(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""ONLY USED ON UPDATES"""
+
     ADD = "add"
     DELETE = "delete"
 
 
 class ScimGroupMemberType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""NOT STANDARD"""
+
     USER = "User"
     GROUP = "Group"
 
 
 class ScimGroupMemberTypedDict(TypedDict):
     value: str
+    r"""ID of user"""
     dollar_ref: NotRequired[str]
+    r"""url to user"""
     display: NotRequired[str]
+    r"""user name"""
     operation: NotRequired[Operation]
+    r"""ONLY USED ON UPDATES"""
     type: NotRequired[ScimGroupMemberType]
+    r"""NOT STANDARD"""
 
 
 class ScimGroupMember(BaseModel):
     value: str
+    r"""ID of user"""
 
     dollar_ref: Annotated[Optional[str], pydantic.Field(alias="$ref")] = None
+    r"""url to user"""
 
     display: Optional[str] = None
+    r"""user name"""
 
     operation: Optional[Operation] = None
+    r"""ONLY USED ON UPDATES"""
 
     type: Optional[ScimGroupMemberType] = None
+    r"""NOT STANDARD"""
 
     @field_serializer("operation")
     def serialize_operation(self, value):

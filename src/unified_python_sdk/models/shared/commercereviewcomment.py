@@ -26,15 +26,18 @@ class CommerceReviewCommentTypedDict(TypedDict):
     author_name: NotRequired[str]
     content: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     helpful_votes: NotRequired[float]
     id: NotRequired[str]
     is_public: NotRequired[bool]
     is_verified: NotRequired[bool]
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
+    r"""Original review data from source platform"""
     status: NotRequired[CommerceReviewCommentStatus]
     unhelpful_votes: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CommerceReviewComment(BaseModel):
@@ -49,6 +52,7 @@ class CommerceReviewComment(BaseModel):
     content: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     helpful_votes: Optional[float] = None
 
@@ -61,12 +65,14 @@ class CommerceReviewComment(BaseModel):
     metadata: Optional[List[CommerceMetadata]] = None
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Original review data from source platform"""
 
     status: Optional[CommerceReviewCommentStatus] = None
 
     unhelpful_votes: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

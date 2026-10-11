@@ -23,6 +23,7 @@ class LmsMediaType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class LmsMediaTypedDict(TypedDict):
     content: NotRequired[str]
+    r"""Inline text/HTML/markdown content (use when url is empty or for embedded content)"""
     description: NotRequired[str]
     languages: NotRequired[List[str]]
     r"""ISO 2-digit language codes"""
@@ -34,6 +35,7 @@ class LmsMediaTypedDict(TypedDict):
 
 class LmsMedia(BaseModel):
     content: Optional[str] = None
+    r"""Inline text/HTML/markdown content (use when url is empty or for embedded content)"""
 
     description: Optional[str] = None
 

@@ -24,18 +24,31 @@ class AccountingExpenseStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     PAID = "PAID"
 
 
+class AccountingExpenseType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""USER = employee spend; COMPANY = books/purchase expense"""
+
+    USER = "USER"
+    COMPANY = "COMPANY"
+
+
 class AccountingExpenseTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     approved_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     approver_user_id: NotRequired[str]
+    r"""references HR employee/user (reference to HrisEmployee)"""
     approver_users: NotRequired[List[AccountingReferenceTypedDict]]
     r"""expense approver(s); id is HR employee/user when resolved"""
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     exchange_rate: NotRequired[float]
+    r"""Exchange rate to the base/home currency at the expense date"""
     external_number: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
@@ -44,25 +57,36 @@ class AccountingExpenseTypedDict(TypedDict):
     organization_id: NotRequired[str]
     payment_method: NotRequired[str]
     posted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     project_id: NotRequired[str]
+    r"""(reference to TaskProject)"""
     raw: NotRequired[Dict[str, Any]]
     reimbursed_amount: NotRequired[float]
     reimbursed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[AccountingExpenseStatus]
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
+    r"""ref -> AccountingTaxrate applied to the expense"""
     total_amount: NotRequired[float]
+    type: NotRequired[AccountingExpenseType]
+    r"""USER = employee spend; COMPANY = books/purchase expense"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""references a HR employee/user (reference to HrisEmployee)"""
     users: NotRequired[List[AccountingReferenceTypedDict]]
 
 
 class AccountingExpense(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     approved_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     approver_user_id: Optional[str] = None
+    r"""references HR employee/user (reference to HrisEmployee)"""
 
     approver_users: Optional[List[AccountingReference]] = None
     r"""expense approver(s); id is HR employee/user when resolved"""
@@ -72,12 +96,15 @@ class AccountingExpense(BaseModel):
     category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     exchange_rate: Optional[float] = None
+    r"""Exchange rate to the base/home currency at the expense date"""
 
     external_number: Optional[str] = None
 
@@ -94,26 +121,35 @@ class AccountingExpense(BaseModel):
     payment_method: Optional[str] = None
 
     posted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     project_id: Optional[str] = None
+    r"""(reference to TaskProject)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     reimbursed_amount: Optional[float] = None
 
     reimbursed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[AccountingExpenseStatus] = None
 
     tax_amount: Optional[float] = None
 
     taxrate_id: Optional[str] = None
+    r"""ref -> AccountingTaxrate applied to the expense"""
 
     total_amount: Optional[float] = None
 
+    type: Optional[AccountingExpenseType] = None
+    r"""USER = employee spend; COMPANY = books/purchase expense"""
+
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""references a HR employee/user (reference to HrisEmployee)"""
 
     users: Optional[List[AccountingReference]] = None
 
@@ -122,6 +158,15 @@ class AccountingExpense(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.AccountingExpenseStatus(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingExpenseType(value)
             except ValueError:
                 return value
         return value
@@ -156,6 +201,7 @@ class AccountingExpense(BaseModel):
                 "tax_amount",
                 "taxrate_id",
                 "total_amount",
+                "type",
                 "updated_at",
                 "user_id",
                 "users",

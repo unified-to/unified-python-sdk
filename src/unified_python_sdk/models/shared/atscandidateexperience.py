@@ -11,7 +11,9 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AtsCandidateExperienceTypedDict(TypedDict):
     company_name: NotRequired[str]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     title: NotRequired[str]
 
 
@@ -19,8 +21,10 @@ class AtsCandidateExperience(BaseModel):
     company_name: Optional[str] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     title: Optional[str] = None
 

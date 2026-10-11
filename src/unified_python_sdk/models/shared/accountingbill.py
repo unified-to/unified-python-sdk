@@ -23,6 +23,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PaymentCollectionMethod(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions."""
+
     SEND_INVOICE = "send_invoice"
     CHARGE_AUTOMATICALLY = "charge_automatically"
 
@@ -55,6 +57,8 @@ class AccountingBillStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class Term(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""@deprecated use payment_terms instead"""
+
     ON_RECEIPT = "ON_RECEIPT"
     NET_7 = "NET_7"
     NET_10 = "NET_10"
@@ -72,14 +76,20 @@ class AccountingBillTypedDict(TypedDict):
     attachments: NotRequired[List[AccountingAttachmentTypedDict]]
     balance_amount: NotRequired[float]
     bill_number: NotRequired[str]
+    r"""External identifier for this invoice"""
     cancelled_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     category_ids: NotRequired[List[str]]
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     discount_amount: NotRequired[float]
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     exchange_rate: NotRequired[float]
+    r"""Exchange rate to the base/home currency at the document date"""
     extended_notes: NotRequired[List[AccountingExtendedNoteTypedDict]]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
@@ -88,27 +98,36 @@ class AccountingBillTypedDict(TypedDict):
     organization_id: NotRequired[str]
     paid_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     payment_collection_method: NotRequired[PaymentCollectionMethod]
+    r"""When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions."""
     payment_terms: NotRequired[PaymentTerms]
     payments: NotRequired[List[AccountingPaymentReferenceTypedDict]]
     r"""read-only reciprocal of PaymentPayment.allocations; payments applied to this invoice"""
     paymentterm_id: NotRequired[str]
     posted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     project_id: NotRequired[str]
+    r"""(reference to TaskProject)"""
     purchaseorder_ids: NotRequired[List[str]]
     r"""refs -> AccountingPurchaseorder; the purchase orders this bill was raised from"""
     raw: NotRequired[Dict[str, Any]]
     refund_amount: NotRequired[float]
     refund_reason: NotRequired[str]
     refunded_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     send: NotRequired[bool]
     status: NotRequired[AccountingBillStatus]
     sub_total_amount: NotRequired[float]
+    r"""Total before tax"""
     tax_amount: NotRequired[float]
     term: NotRequired[Term]
+    r"""@deprecated use payment_terms instead"""
     total_amount: NotRequired[float]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""The public URL for the invoice to send to a customer to view or pay."""
 
 
 class AccountingBill(BaseModel):
@@ -117,22 +136,28 @@ class AccountingBill(BaseModel):
     balance_amount: Optional[float] = None
 
     bill_number: Optional[str] = None
+    r"""External identifier for this invoice"""
 
     cancelled_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     category_ids: Optional[List[str]] = None
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     discount_amount: Optional[float] = None
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     exchange_rate: Optional[float] = None
+    r"""Exchange rate to the base/home currency at the document date"""
 
     extended_notes: Optional[List[AccountingExtendedNote]] = None
 
@@ -149,8 +174,10 @@ class AccountingBill(BaseModel):
     paid_amount: Optional[float] = None
 
     paid_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     payment_collection_method: Optional[PaymentCollectionMethod] = None
+    r"""When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions."""
 
     payment_terms: Optional[PaymentTerms] = None
 
@@ -160,8 +187,10 @@ class AccountingBill(BaseModel):
     paymentterm_id: Optional[str] = None
 
     posted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     project_id: Optional[str] = None
+    r"""(reference to TaskProject)"""
 
     purchaseorder_ids: Optional[List[str]] = None
     r"""refs -> AccountingPurchaseorder; the purchase orders this bill was raised from"""
@@ -173,22 +202,27 @@ class AccountingBill(BaseModel):
     refund_reason: Optional[str] = None
 
     refunded_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     send: Optional[bool] = None
 
     status: Optional[AccountingBillStatus] = None
 
     sub_total_amount: Optional[float] = None
+    r"""Total before tax"""
 
     tax_amount: Optional[float] = None
 
     term: Optional[Term] = None
+    r"""@deprecated use payment_terms instead"""
 
     total_amount: Optional[float] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""The public URL for the invoice to send to a customer to view or pay."""
 
     @field_serializer("payment_collection_method")
     def serialize_payment_collection_method(self, value):

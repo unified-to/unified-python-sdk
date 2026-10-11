@@ -5,7 +5,7 @@ The note object, when type = note
 
 ## Fields
 
-| Field              | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `description`      | *Optional[str]*    | :heavy_minus_sign: | N/A                |
-| `title`            | *Optional[str]*    | :heavy_minus_sign: | N/A                |
+| Field                        | Type                         | Required                     | Description                  |
+| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+| `description`                | *Optional[str]*              | :heavy_minus_sign:           | The event note's description |
+| `title`                      | *Optional[str]*              | :heavy_minus_sign:           | N/A                          |

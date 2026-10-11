@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PaymentPayoutLineitemObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""What this payout line settles"""
+
     PAYMENT = "PAYMENT"
     REFUND = "REFUND"
     FEE = "FEE"
@@ -21,25 +23,37 @@ class PaymentPayoutLineitemObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PaymentPayoutLineitemTypedDict(TypedDict):
     amount: NotRequired[float]
+    r"""Gross amount of this line"""
     currency: NotRequired[str]
+    r"""ISO 4217 currency code of the line amount"""
     fee_amount: NotRequired[float]
+    r"""Processor fee attributed to this line"""
     net_amount: NotRequired[float]
+    r"""amount minus fee_amount"""
     object_id: NotRequired[str]
+    r"""id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines"""
     object_type: NotRequired[PaymentPayoutLineitemObjectType]
+    r"""What this payout line settles"""
 
 
 class PaymentPayoutLineitem(BaseModel):
     amount: Optional[float] = None
+    r"""Gross amount of this line"""
 
     currency: Optional[str] = None
+    r"""ISO 4217 currency code of the line amount"""
 
     fee_amount: Optional[float] = None
+    r"""Processor fee attributed to this line"""
 
     net_amount: Optional[float] = None
+    r"""amount minus fee_amount"""
 
     object_id: Optional[str] = None
+    r"""id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines"""
 
     object_type: Optional[PaymentPayoutLineitemObjectType] = None
+    r"""What this payout line settles"""
 
     @field_serializer("object_type")
     def serialize_object_type(self, value):

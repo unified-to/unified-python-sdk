@@ -25,6 +25,7 @@ class PropertyCalendarRecordingTranscriptAttendeeTypedDict(TypedDict):
     required: NotRequired[bool]
     status: NotRequired[PropertyCalendarRecordingTranscriptAttendeeStatus]
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class PropertyCalendarRecordingTranscriptAttendee(BaseModel):
@@ -39,6 +40,7 @@ class PropertyCalendarRecordingTranscriptAttendee(BaseModel):
     status: Optional[PropertyCalendarRecordingTranscriptAttendeeStatus] = None
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

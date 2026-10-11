@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingCategoryType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The kind of dimension"""
+
     CLASS = "CLASS"
     DEPARTMENT = "DEPARTMENT"
     LOCATION = "LOCATION"
@@ -25,7 +27,9 @@ class AccountingCategoryType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AccountingCategoryTypedDict(TypedDict):
     code: NotRequired[str]
+    r"""platform-side tracking code"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
@@ -35,13 +39,17 @@ class AccountingCategoryTypedDict(TypedDict):
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[AccountingCategoryType]
+    r"""The kind of dimension"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingCategory(BaseModel):
     code: Optional[str] = None
+    r"""platform-side tracking code"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -60,8 +68,10 @@ class AccountingCategory(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     type: Optional[AccountingCategoryType] = None
+    r"""The kind of dimension"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

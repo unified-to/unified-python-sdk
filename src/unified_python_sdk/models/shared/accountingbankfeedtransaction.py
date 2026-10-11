@@ -12,72 +12,108 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingBankfeedtransactionType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""direction: DEBIT, CREDIT"""
+
     DEBIT = "DEBIT"
     CREDIT = "CREDIT"
 
 
 class AccountingBankfeedtransactionTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""GL account once categorized (reference to AccountingAccount)"""
     amount: NotRequired[float]
+    r"""transaction amount (positive; direction from type)"""
     bank_category: NotRequired[str]
+    r"""the bank's own category label"""
     bankfeedaccount_id: NotRequired[str]
+    r"""ref -> BankfeedAccount this transaction belongs to"""
     category_ids: NotRequired[List[str]]
     r"""dimension refs -> AccountingCategory (class/department/location)"""
     contact_id: NotRequired[str]
+    r"""matched vendor/customer once reconciled (reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""ISO 4217"""
     description: NotRequired[str]
+    r"""bank memo / statement text"""
     id: NotRequired[str]
     is_pending: NotRequired[bool]
+    r"""true if not yet cleared"""
     merchant_name: NotRequired[str]
+    r"""counterparty as reported by the bank"""
     organization_id: NotRequired[str]
+    r"""ref -> accounting Organization this record belongs to"""
     posted_at: NotRequired[datetime]
+    r"""when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The original data from the integration's API"""
     reference: NotRequired[str]
+    r"""bank reference or check number"""
     transaction_at: NotRequired[datetime]
+    r"""when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     type: NotRequired[AccountingBankfeedtransactionType]
+    r"""direction: DEBIT, CREDIT"""
     updated_at: NotRequired[datetime]
+    r"""last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingBankfeedtransaction(BaseModel):
     account_id: Optional[str] = None
+    r"""GL account once categorized (reference to AccountingAccount)"""
 
     amount: Optional[float] = None
+    r"""transaction amount (positive; direction from type)"""
 
     bank_category: Optional[str] = None
+    r"""the bank's own category label"""
 
     bankfeedaccount_id: Optional[str] = None
+    r"""ref -> BankfeedAccount this transaction belongs to"""
 
     category_ids: Optional[List[str]] = None
     r"""dimension refs -> AccountingCategory (class/department/location)"""
 
     contact_id: Optional[str] = None
+    r"""matched vendor/customer once reconciled (reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""ISO 4217"""
 
     description: Optional[str] = None
+    r"""bank memo / statement text"""
 
     id: Optional[str] = None
 
     is_pending: Optional[bool] = None
+    r"""true if not yet cleared"""
 
     merchant_name: Optional[str] = None
+    r"""counterparty as reported by the bank"""
 
     organization_id: Optional[str] = None
+    r"""ref -> accounting Organization this record belongs to"""
 
     posted_at: Optional[datetime] = None
+    r"""when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The original data from the integration's API"""
 
     reference: Optional[str] = None
+    r"""bank reference or check number"""
 
     transaction_at: Optional[datetime] = None
+    r"""when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     type: Optional[AccountingBankfeedtransactionType] = None
+    r"""direction: DEBIT, CREDIT"""
 
     updated_at: Optional[datetime] = None
+    r"""last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

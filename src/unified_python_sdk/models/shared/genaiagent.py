@@ -10,34 +10,42 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class GenaiAgentTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     instructions: NotRequired[str]
+    r"""The system prompt or stored procedure that the agent follows."""
     is_active: NotRequired[bool]
     model_id: NotRequired[str]
+    r"""The model that the agent runs on."""
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class GenaiAgent(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     id: Optional[str] = None
 
     instructions: Optional[str] = None
+    r"""The system prompt or stored procedure that the agent follows."""
 
     is_active: Optional[bool] = None
 
     model_id: Optional[str] = None
+    r"""The model that the agent runs on."""
 
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

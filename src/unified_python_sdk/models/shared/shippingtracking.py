@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ShippingTrackingStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Current status of the shipment"""
+
     PENDING = "PENDING"
     PROCESSING = "PROCESSING"
     IN_TRANSIT = "IN_TRANSIT"
@@ -31,51 +33,77 @@ class ShippingTrackingStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class ShippingTrackingTypedDict(TypedDict):
     actual_delivery_at: NotRequired[datetime]
+    r"""Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     carrier_id: NotRequired[str]
+    r"""Reference to the carrier"""
     carrier_status_code: NotRequired[str]
+    r"""Carrier's status code"""
     carrier_status_description: NotRequired[str]
+    r"""Carrier's status description"""
     created_at: NotRequired[datetime]
+    r"""The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     estimated_delivery: NotRequired[datetime]
+    r"""Estimated delivery date"""
     events: NotRequired[List[ShippingTrackingEventTypedDict]]
     r"""Array of tracking events"""
     id: NotRequired[str]
+    r"""Unique identifier for this tracking object"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this tracking"""
     shipment_id: NotRequired[str]
+    r"""Reference to the shipment"""
     status: NotRequired[ShippingTrackingStatus]
+    r"""Current status of the shipment"""
     status_description: NotRequired[str]
+    r"""Human-readable status"""
     tracking_number: NotRequired[str]
+    r"""Tracking number for the shipment"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class ShippingTracking(BaseModel):
     actual_delivery_at: Optional[datetime] = None
+    r"""Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     carrier_id: Optional[str] = None
+    r"""Reference to the carrier"""
 
     carrier_status_code: Optional[str] = None
+    r"""Carrier's status code"""
 
     carrier_status_description: Optional[str] = None
+    r"""Carrier's status description"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     estimated_delivery: Optional[datetime] = None
+    r"""Estimated delivery date"""
 
     events: Optional[List[ShippingTrackingEvent]] = None
     r"""Array of tracking events"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this tracking object"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this tracking"""
 
     shipment_id: Optional[str] = None
+    r"""Reference to the shipment"""
 
     status: Optional[ShippingTrackingStatus] = None
+    r"""Current status of the shipment"""
 
     status_description: Optional[str] = None
+    r"""Human-readable status"""
 
     tracking_number: Optional[str] = None
+    r"""Tracking number for the shipment"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

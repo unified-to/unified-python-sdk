@@ -24,15 +24,20 @@ class AtsDocumentTypedDict(TypedDict):
     application_id: NotRequired[str]
     candidate_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     document_data: NotRequired[str]
+    r"""base64 encoded file contents used for create/update actions. Use this field to send an attachment e.g. a resume, a profile, or other text content"""
     document_url: NotRequired[str]
+    r"""This link expires after 1 hour."""
     filename: NotRequired[str]
     id: NotRequired[str]
     job_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[AtsDocumentType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class AtsDocument(BaseModel):
@@ -41,10 +46,13 @@ class AtsDocument(BaseModel):
     candidate_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     document_data: Optional[str] = None
+    r"""base64 encoded file contents used for create/update actions. Use this field to send an attachment e.g. a resume, a profile, or other text content"""
 
     document_url: Optional[str] = None
+    r"""This link expires after 1 hour."""
 
     filename: Optional[str] = None
 
@@ -57,8 +65,10 @@ class AtsDocument(BaseModel):
     type: Optional[AtsDocumentType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

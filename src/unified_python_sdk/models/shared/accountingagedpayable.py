@@ -11,27 +11,39 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingAgedpayableTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""ISO 4217"""
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""synthetic, one row per currency / date window"""
     organization_id: NotRequired[str]
     periods: NotRequired[List[AccountingAgedPeriodTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     total_amount: NotRequired[float]
     total_current_amount: NotRequired[float]
+    r"""open balances not yet past due; distinct from the first past-due period"""
     total_overdue_amount: NotRequired[float]
+    r"""sum of open balances across all past-due periods"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingAgedpayable(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""ISO 4217"""
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""synthetic, one row per currency / date window"""
 
     organization_id: Optional[str] = None
 
@@ -40,14 +52,18 @@ class AccountingAgedpayable(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     total_amount: Optional[float] = None
 
     total_current_amount: Optional[float] = None
+    r"""open balances not yet past due; distinct from the first past-due period"""
 
     total_overdue_amount: Optional[float] = None
+    r"""sum of open balances across all past-due periods"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

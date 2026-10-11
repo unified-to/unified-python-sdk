@@ -25,14 +25,19 @@ class IssueTypedDict(TypedDict):
     ticket_ref: str
     title: str
     workspace_id: str
+    r"""(reference to KmsSpace)"""
     created_at: NotRequired[str]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     customer_note: NotRequired[str]
     id: NotRequired[str]
     importance: NotRequired[float]
+    r"""1-5, 1 is lowest"""
     resolution_time: NotRequired[float]
     size: NotRequired[float]
+    r"""1-5, 1 is lowest"""
     type: NotRequired[List[str]]
     updated_at: NotRequired[str]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
 
 
@@ -44,22 +49,27 @@ class Issue(BaseModel):
     title: str
 
     workspace_id: str
+    r"""(reference to KmsSpace)"""
 
     created_at: Optional[str] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     customer_note: Optional[str] = None
 
     id: Optional[str] = None
 
     importance: Optional[float] = None
+    r"""1-5, 1 is lowest"""
 
     resolution_time: Optional[float] = None
 
     size: Optional[float] = None
+    r"""1-5, 1 is lowest"""
 
     type: Optional[List[str]] = None
 
     updated_at: Optional[str] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
 

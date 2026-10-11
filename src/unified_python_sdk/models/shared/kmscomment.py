@@ -27,13 +27,17 @@ class KmsCommentTypedDict(TypedDict):
     content: NotRequired[str]
     content_type: NotRequired[ContentType]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     page_id: NotRequired[str]
+    r"""(reference to KmsPage)"""
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[KmsCommentType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class KmsComment(BaseModel):
@@ -42,10 +46,12 @@ class KmsComment(BaseModel):
     content_type: Optional[ContentType] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
     page_id: Optional[str] = None
+    r"""(reference to KmsPage)"""
 
     parent_id: Optional[str] = None
 
@@ -54,8 +60,10 @@ class KmsComment(BaseModel):
     type: Optional[KmsCommentType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @field_serializer("content_type")
     def serialize_content_type(self, value):

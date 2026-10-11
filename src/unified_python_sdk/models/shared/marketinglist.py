@@ -17,21 +17,29 @@ class MarketingListTypedDict(TypedDict):
 
     address: NotRequired[PropertyMarketingListAddressTypedDict]
     created_at: NotRequired[datetime]
+    r"""Date that this list was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""Identifier for this list"""
     is_active: NotRequired[bool]
     language: NotRequired[str]
     name: NotRequired[str]
+    r"""The list's name"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this list"""
     sender_company: NotRequired[str]
     sender_email: NotRequired[str]
     sender_name: NotRequired[str]
     sender_phone: NotRequired[str]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     subject: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""The user who created this list (reference to HrisEmployee)"""
 
 
 class MarketingList(BaseModel):
@@ -40,20 +48,25 @@ class MarketingList(BaseModel):
     address: Optional[PropertyMarketingListAddress] = None
 
     created_at: Optional[datetime] = None
+    r"""Date that this list was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""Identifier for this list"""
 
     is_active: Optional[bool] = None
 
     language: Optional[str] = None
 
     name: Optional[str] = None
+    r"""The list's name"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this list"""
 
     sender_company: Optional[str] = None
 
@@ -64,12 +77,15 @@ class MarketingList(BaseModel):
     sender_phone: Optional[str] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     subject: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""The user who created this list (reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

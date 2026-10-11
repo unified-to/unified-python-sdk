@@ -11,11 +11,15 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ShippingPackageSizeUnit(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Unit for dimensions (cm, inch)"""
+
     CM = "cm"
     INCH = "inch"
 
 
 class ShippingPackageWeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Unit for weight (g, kg, oz, lb)"""
+
     G = "g"
     KG = "kg"
     OZ = "oz"
@@ -24,40 +28,62 @@ class ShippingPackageWeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class ShippingPackageTypedDict(TypedDict):
     currency: NotRequired[str]
+    r"""ISO 4217 currency code"""
     description: NotRequired[str]
+    r"""Description of the package contents"""
     height: NotRequired[float]
+    r"""Height of the package"""
     insured_amount: NotRequired[float]
+    r"""Insured value for this package"""
     length: NotRequired[float]
+    r"""Length of the package"""
     size_unit: NotRequired[ShippingPackageSizeUnit]
+    r"""Unit for dimensions (cm, inch)"""
     tracking_number: NotRequired[str]
+    r"""Package-level tracking (for multi-package shipments)"""
     value: NotRequired[float]
+    r"""Declared value of the package"""
     weight: NotRequired[float]
+    r"""Weight of the package"""
     weight_unit: NotRequired[ShippingPackageWeightUnit]
+    r"""Unit for weight (g, kg, oz, lb)"""
     width: NotRequired[float]
+    r"""Width of the package"""
 
 
 class ShippingPackage(BaseModel):
     currency: Optional[str] = None
+    r"""ISO 4217 currency code"""
 
     description: Optional[str] = None
+    r"""Description of the package contents"""
 
     height: Optional[float] = None
+    r"""Height of the package"""
 
     insured_amount: Optional[float] = None
+    r"""Insured value for this package"""
 
     length: Optional[float] = None
+    r"""Length of the package"""
 
     size_unit: Optional[ShippingPackageSizeUnit] = None
+    r"""Unit for dimensions (cm, inch)"""
 
     tracking_number: Optional[str] = None
+    r"""Package-level tracking (for multi-package shipments)"""
 
     value: Optional[float] = None
+    r"""Declared value of the package"""
 
     weight: Optional[float] = None
+    r"""Weight of the package"""
 
     weight_unit: Optional[ShippingPackageWeightUnit] = None
+    r"""Unit for weight (g, kg, oz, lb)"""
 
     width: Optional[float] = None
+    r"""Width of the package"""
 
     @field_serializer("size_unit")
     def serialize_size_unit(self, value):

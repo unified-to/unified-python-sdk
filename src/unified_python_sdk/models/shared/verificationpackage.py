@@ -26,19 +26,27 @@ class VerificationPackageType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class VerificationPackageTypedDict(TypedDict):
     name: str
+    r"""Name of the verification type"""
     type: VerificationPackageType
     aliases: NotRequired[List[str]]
     average_processing_times: NotRequired[List[VerificationTimeTypedDict]]
     r"""average processing time in minutes"""
     cost_amount: NotRequired[float]
+    r"""Cost-related information"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     description: NotRequired[str]
+    r"""Detailed description"""
     has_redirect_url: NotRequired[bool]
     has_target_url: NotRequired[bool]
+    r"""where the provider will redirect the user to after the verification"""
     id: NotRequired[str]
+    r"""Unique identifier for the verification type"""
     info_url: NotRequired[str]
+    r"""where to find additional information"""
     max_score: NotRequired[float]
+    r"""if this verification returns a score, what is the maximum?"""
     needs_ip_address: NotRequired[bool]
     parameters: NotRequired[List[VerificationParameterTypedDict]]
     r"""Questions that need to be answered for this verification"""
@@ -46,12 +54,14 @@ class VerificationPackageTypedDict(TypedDict):
     tags: NotRequired[List[str]]
     r"""Category (Verification, Validation, Background Check)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     valid_regions: NotRequired[List[str]]
     r"""{country}-{state/province/territory} or just {country} 2-digit ISO codes"""
 
 
 class VerificationPackage(BaseModel):
     name: str
+    r"""Name of the verification type"""
 
     type: VerificationPackageType
 
@@ -61,22 +71,29 @@ class VerificationPackage(BaseModel):
     r"""average processing time in minutes"""
 
     cost_amount: Optional[float] = None
+    r"""Cost-related information"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     description: Optional[str] = None
+    r"""Detailed description"""
 
     has_redirect_url: Optional[bool] = None
 
     has_target_url: Optional[bool] = None
+    r"""where the provider will redirect the user to after the verification"""
 
     id: Optional[str] = None
+    r"""Unique identifier for the verification type"""
 
     info_url: Optional[str] = None
+    r"""where to find additional information"""
 
     max_score: Optional[float] = None
+    r"""if this verification returns a score, what is the maximum?"""
 
     needs_ip_address: Optional[bool] = None
 
@@ -89,6 +106,7 @@ class VerificationPackage(BaseModel):
     r"""Category (Verification, Validation, Background Check)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     valid_regions: Optional[List[str]] = None
     r"""{country}-{state/province/territory} or just {country} 2-digit ISO codes"""

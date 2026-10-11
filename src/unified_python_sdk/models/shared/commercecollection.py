@@ -24,6 +24,7 @@ class CommerceCollectionTypedDict(TypedDict):
 
     name: str
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
@@ -39,6 +40,7 @@ class CommerceCollectionTypedDict(TypedDict):
     tags: NotRequired[List[str]]
     type: NotRequired[CommerceCollectionType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CommerceCollection(BaseModel):
@@ -47,6 +49,7 @@ class CommerceCollection(BaseModel):
     name: str
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -77,6 +80,7 @@ class CommerceCollection(BaseModel):
     type: Optional[CommerceCollectionType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

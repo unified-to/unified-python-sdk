@@ -9,6 +9,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class ScimRoleTypedDict(TypedDict):
     value: str
+    r"""value of the role"""
     display: NotRequired[str]
     primary: NotRequired[bool]
     type: NotRequired[str]
@@ -16,6 +17,7 @@ class ScimRoleTypedDict(TypedDict):
 
 class ScimRole(BaseModel):
     value: str
+    r"""value of the role"""
 
     display: Optional[str] = None
 

@@ -12,7 +12,9 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class PaymentLinkTypedDict(TypedDict):
     amount: NotRequired[float]
     contact_id: NotRequired[str]
+    r"""ID of the AccountingContact (reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     description: NotRequired[str]
     id: NotRequired[str]
@@ -20,18 +22,23 @@ class PaymentLinkTypedDict(TypedDict):
     is_chargeable_now: NotRequired[bool]
     lineitems: NotRequired[List[PaymentLineitemTypedDict]]
     payment_id: NotRequired[str]
+    r"""(reference to PaymentPayment)"""
     raw: NotRequired[Dict[str, Any]]
     success_url: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""the payment link"""
 
 
 class PaymentLink(BaseModel):
     amount: Optional[float] = None
 
     contact_id: Optional[str] = None
+    r"""ID of the AccountingContact (reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
@@ -46,14 +53,17 @@ class PaymentLink(BaseModel):
     lineitems: Optional[List[PaymentLineitem]] = None
 
     payment_id: Optional[str] = None
+    r"""(reference to PaymentPayment)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     success_url: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""the payment link"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

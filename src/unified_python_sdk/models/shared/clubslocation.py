@@ -17,15 +17,25 @@ class ClubsLocationTypedDict(TypedDict):
 
     address: NotRequired[PropertyClubsLocationAddressTypedDict]
     created_at: NotRequired[datetime]
+    r"""The date that this location was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     group_id: NotRequired[str]
+    r"""The group this location is associated with (reference to HrisGroup)"""
     id: NotRequired[str]
+    r"""Unique identifier for this location"""
     latitude: NotRequired[float]
+    r"""The latitude"""
     longitude: NotRequired[float]
+    r"""The longitude"""
     name: NotRequired[str]
+    r"""The location name"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this location"""
     telephone: NotRequired[str]
+    r"""A contact phone number for the location"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this location was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     url: NotRequired[str]
+    r"""A URL for the location"""
 
 
 class ClubsLocation(BaseModel):
@@ -34,24 +44,34 @@ class ClubsLocation(BaseModel):
     address: Optional[PropertyClubsLocationAddress] = None
 
     created_at: Optional[datetime] = None
+    r"""The date that this location was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     group_id: Optional[str] = None
+    r"""The group this location is associated with (reference to HrisGroup)"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this location"""
 
     latitude: Optional[float] = None
+    r"""The latitude"""
 
     longitude: Optional[float] = None
+    r"""The longitude"""
 
     name: Optional[str] = None
+    r"""The location name"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this location"""
 
     telephone: Optional[str] = None
+    r"""A contact phone number for the location"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this location was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     url: Optional[str] = None
+    r"""A URL for the location"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

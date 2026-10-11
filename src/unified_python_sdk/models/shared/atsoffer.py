@@ -21,42 +21,58 @@ class AtsOfferStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class AtsOfferTypedDict(TypedDict):
     accepted_at: NotRequired[datetime]
+    r"""date the offer was accepted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     compensation: NotRequired[List[AtsCompensationTypedDict]]
     r"""compensation details for the offer"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creator_user_id: NotRequired[str]
+    r"""user id of the recruiter who created the offer (reference to HrisEmployee)"""
     employee_user_id: NotRequired[str]
+    r"""newly hired employee id (reference to HrisEmployee)"""
     id: NotRequired[str]
     rejected_at: NotRequired[datetime]
+    r"""date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     sent_at: NotRequired[datetime]
+    r"""date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     start_at: NotRequired[datetime]
+    r"""date the employee starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[AtsOfferStatus]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AtsOffer(BaseModel):
     accepted_at: Optional[datetime] = None
+    r"""date the offer was accepted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     compensation: Optional[List[AtsCompensation]] = None
     r"""compensation details for the offer"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     creator_user_id: Optional[str] = None
+    r"""user id of the recruiter who created the offer (reference to HrisEmployee)"""
 
     employee_user_id: Optional[str] = None
+    r"""newly hired employee id (reference to HrisEmployee)"""
 
     id: Optional[str] = None
 
     rejected_at: Optional[datetime] = None
+    r"""date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     sent_at: Optional[datetime] = None
+    r"""date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     start_at: Optional[datetime] = None
+    r"""date the employee starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[AtsOfferStatus] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

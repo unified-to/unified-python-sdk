@@ -18,6 +18,7 @@
 * [list_task_comments](#list_task_comments) - List all comments
 * [list_task_projects](#list_task_projects) - List all projects
 * [list_task_tasks](#list_task_tasks) - List all tasks
+* [patch_genai_task](#patch_genai_task) - Update a task
 * [patch_task_comment](#patch_task_comment) - Update a comment
 * [patch_task_project](#patch_task_project) - Update a project
 * [patch_task_task](#patch_task_task) - Update a task
@@ -25,6 +26,7 @@
 * [remove_task_comment](#remove_task_comment) - Remove a comment
 * [remove_task_project](#remove_task_project) - Remove a project
 * [remove_task_task](#remove_task_task) - Remove a task
+* [update_genai_task](#update_genai_task) - Update a task
 * [update_task_comment](#update_task_comment) - Update a comment
 * [update_task_project](#update_task_project) - Update a project
 * [update_task_task](#update_task_task) - Update a task
@@ -50,16 +52,17 @@ with UnifiedTo(
 
     res = unified_to.task.create_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-09-06T09:18:49.674Z"),
+            "completed_at": parse_datetime("2025-09-23T01:00:16.745Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "586f6326-fe69-435c-8548-3150816342b0",
+            "id": "29e10421-e909-4556-95f3-15cbb6f8aadd",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
             "messages": [
                 {
                     "content": "Stultus esse cursim stabilis tenetur amet contigo tristis.",
+                    "images": [],
                     "role": shared.Role.ASSISTANT,
                 },
             ],
@@ -67,12 +70,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-03T10:13:29.849Z"),
+            "started_at": parse_datetime("2024-05-15T11:27:28.422Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-14T12:14:43.464Z"),
+            "updated_at": parse_datetime("2023-02-22T09:36:18.031Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -125,9 +128,9 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "0df5753a-ad90-4d22-bca0-59412dfde752",
+            "id": "a081c477-07b4-4423-bedd-f33e41b3771f",
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-09-24T20:05:50.704Z"),
+            "updated_at": parse_datetime("2021-09-30T12:31:24.347Z"),
             "user_name": "Santina Abbott",
         },
         "connection_id": "<id>",
@@ -182,14 +185,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "19df8b1d-5ab7-42af-b402-22c0efd2b9cc",
+            "id": "d5c0ef94-a1b0-4a8c-a4c9-d8a70f692263",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "69b253d6-578b-4ee7-a0c8-82f2a3568e17",
+                    "id": "f691b070-82a0-4959-ad65-8c92a54e8e4f",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -199,14 +202,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "bac38dfa-2149-4334-b944-5ba4dff681d3",
+                    "id": "20516573-393f-4f42-bb48-e515524e25cc",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-08T20:56:49.330Z"),
+            "updated_at": parse_datetime("2023-10-10T16:48:52.107Z"),
         },
         "connection_id": "<id>",
     })
@@ -257,18 +260,18 @@ with UnifiedTo(
     res = unified_to.task.create_task_task(request={
         "task_task": {
             "attachment_ids": [],
-            "completed_at": parse_datetime("2022-03-25T15:31:00.389Z"),
+            "completed_at": parse_datetime("2022-04-02T23:21:52.176Z"),
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2026-04-26T00:16:15.392Z"),
-            "end_at": parse_datetime("2022-10-15T01:55:40.491Z"),
+            "due_at": parse_datetime("2026-05-15T03:37:23.500Z"),
+            "end_at": parse_datetime("2022-10-24T21:09:01.287Z"),
             "has_children": True,
-            "id": "8764a502-52ee-4c02-bded-d8e164ceba6e",
+            "id": "aa83f646-6689-48c2-89a4-426722e49ec4",
             "metadata": [],
             "name": "Direct Markets Architect",
             "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
             "priority": "LOW",
             "progress": 2.0,
-            "start_at": parse_datetime("2022-01-20T13:30:47.721Z"),
+            "start_at": parse_datetime("2022-01-28T10:13:03.421Z"),
             "status": shared.TaskTaskStatus.IN_PROGRESS,
             "story_points": 0.0,
             "tags": [
@@ -278,7 +281,7 @@ with UnifiedTo(
             "time_spent": 957.0,
             "time_spent_unit": "SECONDS",
             "type": "tubineus",
-            "updated_at": parse_datetime("2019-07-13T14:44:54.836Z"),
+            "updated_at": parse_datetime("2019-07-14T19:08:13.238Z"),
             "url": "https://dismal-silk.net/",
         },
         "connection_id": "<id>",
@@ -773,6 +776,81 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_genai_task
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.task.patch_genai_task(request={
+        "genai_task": {
+            "completed_at": parse_datetime("2025-09-23T01:00:16.763Z"),
+            "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
+            "files_changed": 19.0,
+            "id": "90014b59-c502-4956-b3c4-7c91f99182b8",
+            "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
+            "lines_added": 244.0,
+            "lines_deleted": 118.0,
+            "messages": [
+                {
+                    "content": "Stultus esse cursim stabilis tenetur amet contigo tristis.",
+                    "images": [],
+                    "role": shared.Role.ASSISTANT,
+                },
+            ],
+            "name": "connect multi-byte port",
+            "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
+            "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
+            "source_branch_identifier": "main",
+            "started_at": parse_datetime("2024-05-15T11:27:28.435Z"),
+            "status": shared.GenaiTaskStatus.BLOCKED,
+            "summary": "Cur aeternus cogito vesper.",
+            "target_branch_identifier": "agent/joshingly-ignorance",
+            "tokens_used": 2165.0,
+            "updated_at": parse_datetime("2023-02-22T09:36:18.040Z"),
+            "web_url": "https://inexperienced-adrenalin.biz/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_task is not None
+
+    # Handle response
+    print(res.genai_task)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchGenaiTaskRequest](../../models/operations/patchgenaitaskrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.PatchGenaiTaskResponse](../../models/operations/patchgenaitaskresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_task_comment
 
 Update a comment
@@ -796,9 +874,9 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "381761fa-8766-492d-97d4-83c75cda22e0",
+            "id": "4e0836c0-32b6-44d9-97e4-e09919ed7d2b",
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-09-24T20:05:50.706Z"),
+            "updated_at": parse_datetime("2021-09-30T12:31:24.348Z"),
             "user_name": "Santina Abbott",
         },
         "connection_id": "<id>",
@@ -854,14 +932,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "15f47efb-fcb7-4b67-81e2-a0d26a9da494",
+            "id": "694a3d15-b260-40ed-aaeb-ae1408c288c7",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "b5927698-96fc-4eac-bf28-dc286ccc3b89",
+                    "id": "4777e1fc-238e-438e-9aae-b289edea5a89",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -871,14 +949,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "be30191d-043c-42e2-bb97-f5c110e47983",
+                    "id": "8ebedd03-9d83-4a4d-ae84-2c88820ee464",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-08T20:56:49.332Z"),
+            "updated_at": parse_datetime("2023-10-10T16:48:52.109Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -930,18 +1008,18 @@ with UnifiedTo(
     res = unified_to.task.patch_task_task(request={
         "task_task": {
             "attachment_ids": [],
-            "completed_at": parse_datetime("2022-03-25T15:31:00.401Z"),
+            "completed_at": parse_datetime("2022-04-02T23:21:52.181Z"),
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2026-04-26T00:16:15.419Z"),
-            "end_at": parse_datetime("2022-10-15T01:55:40.505Z"),
+            "due_at": parse_datetime("2026-05-15T03:37:23.513Z"),
+            "end_at": parse_datetime("2022-10-24T21:09:01.294Z"),
             "has_children": True,
-            "id": "a9e4eaee-df24-473b-ac7f-b4f1605269c2",
+            "id": "a2bbddc7-36ec-4547-84d1-69a24fce4916",
             "metadata": [],
             "name": "Direct Markets Architect",
             "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
             "priority": "LOW",
             "progress": 2.0,
-            "start_at": parse_datetime("2022-01-20T13:30:47.733Z"),
+            "start_at": parse_datetime("2022-01-28T10:13:03.427Z"),
             "status": shared.TaskTaskStatus.IN_PROGRESS,
             "story_points": 0.0,
             "tags": [
@@ -951,7 +1029,7 @@ with UnifiedTo(
             "time_spent": 957.0,
             "time_spent_unit": "SECONDS",
             "type": "tubineus",
-            "updated_at": parse_datetime("2019-07-13T14:44:54.838Z"),
+            "updated_at": parse_datetime("2019-07-14T19:08:13.239Z"),
             "url": "https://dismal-silk.net/",
         },
         "connection_id": "<id>",
@@ -1170,6 +1248,81 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## update_genai_task
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.task.update_genai_task(request={
+        "genai_task": {
+            "completed_at": parse_datetime("2025-09-23T01:00:16.763Z"),
+            "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
+            "files_changed": 19.0,
+            "id": "90014b59-c502-4956-b3c4-7c91f99182b8",
+            "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
+            "lines_added": 244.0,
+            "lines_deleted": 118.0,
+            "messages": [
+                {
+                    "content": "Stultus esse cursim stabilis tenetur amet contigo tristis.",
+                    "images": [],
+                    "role": shared.Role.ASSISTANT,
+                },
+            ],
+            "name": "connect multi-byte port",
+            "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
+            "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
+            "source_branch_identifier": "main",
+            "started_at": parse_datetime("2024-05-15T11:27:28.435Z"),
+            "status": shared.GenaiTaskStatus.BLOCKED,
+            "summary": "Cur aeternus cogito vesper.",
+            "target_branch_identifier": "agent/joshingly-ignorance",
+            "tokens_used": 2165.0,
+            "updated_at": parse_datetime("2023-02-22T09:36:18.040Z"),
+            "web_url": "https://inexperienced-adrenalin.biz/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_task is not None
+
+    # Handle response
+    print(res.genai_task)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateGenaiTaskRequest](../../models/operations/updategenaitaskrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.UpdateGenaiTaskResponse](../../models/operations/updategenaitaskresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## update_task_comment
 
 Update a comment
@@ -1193,9 +1346,9 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "381761fa-8766-492d-97d4-83c75cda22e0",
+            "id": "4e0836c0-32b6-44d9-97e4-e09919ed7d2b",
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-09-24T20:05:50.706Z"),
+            "updated_at": parse_datetime("2021-09-30T12:31:24.348Z"),
             "user_name": "Santina Abbott",
         },
         "connection_id": "<id>",
@@ -1251,14 +1404,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "15f47efb-fcb7-4b67-81e2-a0d26a9da494",
+            "id": "694a3d15-b260-40ed-aaeb-ae1408c288c7",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "b5927698-96fc-4eac-bf28-dc286ccc3b89",
+                    "id": "4777e1fc-238e-438e-9aae-b289edea5a89",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -1268,14 +1421,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "be30191d-043c-42e2-bb97-f5c110e47983",
+                    "id": "8ebedd03-9d83-4a4d-ae84-2c88820ee464",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-08T20:56:49.332Z"),
+            "updated_at": parse_datetime("2023-10-10T16:48:52.109Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1327,18 +1480,18 @@ with UnifiedTo(
     res = unified_to.task.update_task_task(request={
         "task_task": {
             "attachment_ids": [],
-            "completed_at": parse_datetime("2022-03-25T15:31:00.401Z"),
+            "completed_at": parse_datetime("2022-04-02T23:21:52.181Z"),
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2026-04-26T00:16:15.419Z"),
-            "end_at": parse_datetime("2022-10-15T01:55:40.505Z"),
+            "due_at": parse_datetime("2026-05-15T03:37:23.513Z"),
+            "end_at": parse_datetime("2022-10-24T21:09:01.294Z"),
             "has_children": True,
-            "id": "a9e4eaee-df24-473b-ac7f-b4f1605269c2",
+            "id": "a2bbddc7-36ec-4547-84d1-69a24fce4916",
             "metadata": [],
             "name": "Direct Markets Architect",
             "notes": "Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.",
             "priority": "LOW",
             "progress": 2.0,
-            "start_at": parse_datetime("2022-01-20T13:30:47.733Z"),
+            "start_at": parse_datetime("2022-01-28T10:13:03.427Z"),
             "status": shared.TaskTaskStatus.IN_PROGRESS,
             "story_points": 0.0,
             "tags": [
@@ -1348,7 +1501,7 @@ with UnifiedTo(
             "time_spent": 957.0,
             "time_spent_unit": "SECONDS",
             "type": "tubineus",
-            "updated_at": parse_datetime("2019-07-13T14:44:54.838Z"),
+            "updated_at": parse_datetime("2019-07-14T19:08:13.239Z"),
             "url": "https://dismal-silk.net/",
         },
         "connection_id": "<id>",

@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class PropertyAdsReportMetricsCampaignTargetingOptimizationMode(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
+    r"""Google: bid_only falsetrue"""
+
     TARGETING = "TARGETING"
     OBSERVATION = "OBSERVATION"
 
@@ -23,6 +25,7 @@ class PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict(TypedDict):
     advantage_audience: NotRequired[bool]
     advantage_placements: NotRequired[bool]
     mode: NotRequired[PropertyAdsReportMetricsCampaignTargetingOptimizationMode]
+    r"""Google: bid_only falsetrue"""
     targeting_optimization_expansion_all: NotRequired[bool]
 
 
@@ -34,6 +37,7 @@ class PropertyAdsReportMetricsCampaignTargetingOptimization(BaseModel):
     advantage_placements: Optional[bool] = None
 
     mode: Optional[PropertyAdsReportMetricsCampaignTargetingOptimizationMode] = None
+    r"""Google: bid_only falsetrue"""
 
     targeting_optimization_expansion_all: Optional[bool] = None
 

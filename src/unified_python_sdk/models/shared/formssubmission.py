@@ -13,11 +13,13 @@ class FormsSubmissionTypedDict(TypedDict):
     answers: List[FormAnswerTypedDict]
     form_id: str
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     respondent_email: NotRequired[str]
     respondent_name: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class FormsSubmission(BaseModel):
@@ -26,6 +28,7 @@ class FormsSubmission(BaseModel):
     form_id: str
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -36,6 +39,7 @@ class FormsSubmission(BaseModel):
     respondent_name: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

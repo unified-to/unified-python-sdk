@@ -10,12 +10,14 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class LmsSubjectTypedDict(TypedDict):
     name: NotRequired[str]
     rank: NotRequired[float]
+    r"""Depth of this subject in the provider's topic hierarchy (0 = top level)"""
 
 
 class LmsSubject(BaseModel):
     name: Optional[str] = None
 
     rank: Optional[float] = None
+    r"""Depth of this subject in the provider's topic hierarchy (0 = top level)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

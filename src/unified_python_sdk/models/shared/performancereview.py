@@ -35,61 +35,87 @@ class PerformanceReviewType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PerformanceReviewTypedDict(TypedDict):
     user_id: str
+    r"""the HR Employee being reviewed (reference to HrisEmployee)"""
     comment: NotRequired[str]
+    r"""the overall/summary comment of this review"""
     completed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     cycle_id: NotRequired[str]
+    r"""pointer to the Performance Cycle object"""
     id: NotRequired[str]
     is_acknowledged: NotRequired[bool]
+    r"""whether the reviewee acknowledged this review"""
     questions: NotRequired[List[PerformanceReviewQuestionTypedDict]]
     rating: NotRequired[float]
+    r"""the overall rating/score of this review"""
     rating_description: NotRequired[str]
+    r"""label of the rating on the provider's scale (e.g. \"Exceeds expectations\")"""
     rating_maximum: NotRequired[float]
+    r"""the maximum possible rating/score on the provider's scale"""
     raw: NotRequired[Dict[str, Any]]
     reviewer_user_id: NotRequired[str]
+    r"""the HR Employee that wrote this review (reference to HrisEmployee)"""
     status: NotRequired[PerformanceReviewStatus]
     submitted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     template_identifier: NotRequired[str]
+    r"""id of the review template/form this review is based on"""
     type: NotRequired[PerformanceReviewType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PerformanceReview(BaseModel):
     user_id: str
+    r"""the HR Employee being reviewed (reference to HrisEmployee)"""
 
     comment: Optional[str] = None
+    r"""the overall/summary comment of this review"""
 
     completed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     cycle_id: Optional[str] = None
+    r"""pointer to the Performance Cycle object"""
 
     id: Optional[str] = None
 
     is_acknowledged: Optional[bool] = None
+    r"""whether the reviewee acknowledged this review"""
 
     questions: Optional[List[PerformanceReviewQuestion]] = None
 
     rating: Optional[float] = None
+    r"""the overall rating/score of this review"""
 
     rating_description: Optional[str] = None
+    r"""label of the rating on the provider's scale (e.g. \"Exceeds expectations\")"""
 
     rating_maximum: Optional[float] = None
+    r"""the maximum possible rating/score on the provider's scale"""
 
     raw: Optional[Dict[str, Any]] = None
 
     reviewer_user_id: Optional[str] = None
+    r"""the HR Employee that wrote this review (reference to HrisEmployee)"""
 
     status: Optional[PerformanceReviewStatus] = None
 
     submitted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     template_identifier: Optional[str] = None
+    r"""id of the review template/form this review is based on"""
 
     type: Optional[PerformanceReviewType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

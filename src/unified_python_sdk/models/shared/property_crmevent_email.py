@@ -13,10 +13,13 @@ class PropertyCrmEventEmailTypedDict(TypedDict):
 
     attachment_file_ids: NotRequired[List[str]]
     body: NotRequired[str]
+    r"""The event email's body"""
     cc: NotRequired[List[str]]
     r"""The event email's cc name & email (name <test@test.com>)"""
     from_: NotRequired[str]
+    r"""The event email's from name & email address (name <test@test.com>)"""
     subject: NotRequired[str]
+    r"""The event email's subject"""
     to: NotRequired[List[str]]
     r"""The event email's \"to\" name & email (name <test@test.com>)"""
 
@@ -27,13 +30,16 @@ class PropertyCrmEventEmail(BaseModel):
     attachment_file_ids: Optional[List[str]] = None
 
     body: Optional[str] = None
+    r"""The event email's body"""
 
     cc: Optional[List[str]] = None
     r"""The event email's cc name & email (name <test@test.com>)"""
 
     from_: Annotated[Optional[str], pydantic.Field(alias="from")] = None
+    r"""The event email's from name & email address (name <test@test.com>)"""
 
     subject: Optional[str] = None
+    r"""The event email's subject"""
 
     to: Optional[List[str]] = None
     r"""The event email's \"to\" name & email (name <test@test.com>)"""

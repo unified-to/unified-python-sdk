@@ -10,6 +10,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AssessmentParameterInputTypedDict(TypedDict):
     inputs: NotRequired[List[str]]
     name: NotRequired[str]
+    r"""Name of parameter"""
     parameter_id: NotRequired[str]
 
 
@@ -17,6 +18,7 @@ class AssessmentParameterInput(BaseModel):
     inputs: Optional[List[str]] = None
 
     name: Optional[str] = None
+    r"""Name of parameter"""
 
     parameter_id: Optional[str] = None
 

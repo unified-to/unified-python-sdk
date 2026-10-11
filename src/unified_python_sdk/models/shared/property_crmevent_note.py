@@ -11,6 +11,7 @@ class PropertyCrmEventNoteTypedDict(TypedDict):
     r"""The note object, when type = note"""
 
     description: NotRequired[str]
+    r"""The event note's description"""
     title: NotRequired[str]
 
 
@@ -18,6 +19,7 @@ class PropertyCrmEventNote(BaseModel):
     r"""The note object, when type = note"""
 
     description: Optional[str] = None
+    r"""The event note's description"""
 
     title: Optional[str] = None
 

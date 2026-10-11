@@ -11,93 +11,147 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class MarketingReportTypedDict(TypedDict):
     abuse_reports: NotRequired[float]
+    r"""Number of abuse reports"""
     campaign_id: NotRequired[str]
+    r"""Associated campaign ID"""
     click_rate: NotRequired[float]
+    r"""Click rate (decimal)"""
     clicks_total: NotRequired[float]
+    r"""Total clicks"""
     emails_sent: NotRequired[float]
+    r"""Total emails sent"""
     end_at: NotRequired[datetime]
+    r"""End time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     forwards_count: NotRequired[float]
+    r"""Forward count"""
     forwards_opens: NotRequired[float]
+    r"""Forwards opened"""
     hard_bounces: NotRequired[float]
+    r"""Hard bounce count"""
     human_open_rate: NotRequired[float]
+    r"""Open rate (decimal) excluding automated/bot/proxy opens"""
     human_opens_total: NotRequired[float]
+    r"""Total opens excluding automated/bot/proxy (e.g. Apple Mail Privacy Protection) opens"""
     human_unique_opens: NotRequired[float]
+    r"""Unique opens excluding automated/bot/proxy opens"""
     id: NotRequired[str]
+    r"""Unique identifier for the campaign report"""
     last_click_at: NotRequired[datetime]
+    r"""Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     last_open_at: NotRequired[datetime]
+    r"""Last open timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     links: NotRequired[List[MarketingReportLinkTypedDict]]
     r"""URL-specific click data"""
     list_id: NotRequired[str]
+    r"""Associated list ID"""
     open_rate: NotRequired[float]
+    r"""Open rate (decimal)"""
     opens_total: NotRequired[float]
+    r"""Total opens"""
     raw: NotRequired[Dict[str, Any]]
+    r"""Raw data from integration"""
     sent_at: NotRequired[datetime]
+    r"""Send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     soft_bounces: NotRequired[float]
+    r"""Soft bounce count"""
     start_at: NotRequired[datetime]
+    r"""Start time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     syntax_errors: NotRequired[float]
+    r"""Syntax error count"""
     unique_clicks: NotRequired[float]
+    r"""Unique clicks"""
     unique_opens: NotRequired[float]
+    r"""Unique opens"""
     unique_subscriber_clicks: NotRequired[float]
+    r"""Unique subscriber clicks"""
     unsubscribed: NotRequired[float]
+    r"""Number of unsubscribes"""
 
 
 class MarketingReport(BaseModel):
     abuse_reports: Optional[float] = None
+    r"""Number of abuse reports"""
 
     campaign_id: Optional[str] = None
+    r"""Associated campaign ID"""
 
     click_rate: Optional[float] = None
+    r"""Click rate (decimal)"""
 
     clicks_total: Optional[float] = None
+    r"""Total clicks"""
 
     emails_sent: Optional[float] = None
+    r"""Total emails sent"""
 
     end_at: Optional[datetime] = None
+    r"""End time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     forwards_count: Optional[float] = None
+    r"""Forward count"""
 
     forwards_opens: Optional[float] = None
+    r"""Forwards opened"""
 
     hard_bounces: Optional[float] = None
+    r"""Hard bounce count"""
 
     human_open_rate: Optional[float] = None
+    r"""Open rate (decimal) excluding automated/bot/proxy opens"""
 
     human_opens_total: Optional[float] = None
+    r"""Total opens excluding automated/bot/proxy (e.g. Apple Mail Privacy Protection) opens"""
 
     human_unique_opens: Optional[float] = None
+    r"""Unique opens excluding automated/bot/proxy opens"""
 
     id: Optional[str] = None
+    r"""Unique identifier for the campaign report"""
 
     last_click_at: Optional[datetime] = None
+    r"""Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     last_open_at: Optional[datetime] = None
+    r"""Last open timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     links: Optional[List[MarketingReportLink]] = None
     r"""URL-specific click data"""
 
     list_id: Optional[str] = None
+    r"""Associated list ID"""
 
     open_rate: Optional[float] = None
+    r"""Open rate (decimal)"""
 
     opens_total: Optional[float] = None
+    r"""Total opens"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""Raw data from integration"""
 
     sent_at: Optional[datetime] = None
+    r"""Send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     soft_bounces: Optional[float] = None
+    r"""Soft bounce count"""
 
     start_at: Optional[datetime] = None
+    r"""Start time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     syntax_errors: Optional[float] = None
+    r"""Syntax error count"""
 
     unique_clicks: Optional[float] = None
+    r"""Unique clicks"""
 
     unique_opens: Optional[float] = None
+    r"""Unique opens"""
 
     unique_subscriber_clicks: Optional[float] = None
+    r"""Unique subscriber clicks"""
 
     unsubscribed: Optional[float] = None
+    r"""Number of unsubscribes"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

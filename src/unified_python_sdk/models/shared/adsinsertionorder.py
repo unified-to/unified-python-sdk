@@ -55,6 +55,7 @@ class AdsInsertionorderTypedDict(TypedDict):
     budget_unit: NotRequired[AdsInsertionorderBudgetUnit]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     frequency_cap: NotRequired[PropertyAdsInsertionorderFrequencyCapTypedDict]
     id: NotRequired[str]
     kpi: NotRequired[PropertyAdsInsertionorderKpiTypedDict]
@@ -63,8 +64,10 @@ class AdsInsertionorderTypedDict(TypedDict):
     pacing: NotRequired[PropertyAdsInsertionorderPacingTypedDict]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
+    r"""client's reference ID for the insertion order"""
     status: NotRequired[AdsInsertionorderStatus]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AdsInsertionorder(BaseModel):
@@ -78,6 +81,7 @@ class AdsInsertionorder(BaseModel):
     campaign_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     frequency_cap: Optional[PropertyAdsInsertionorderFrequencyCap] = None
 
@@ -94,10 +98,12 @@ class AdsInsertionorder(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     reference: Optional[str] = None
+    r"""client's reference ID for the insertion order"""
 
     status: Optional[AdsInsertionorderStatus] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("budget_unit")
     def serialize_budget_unit(self, value):

@@ -16,6 +16,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ShippingTrackingEventStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Status at the time of this event"""
+
     PENDING = "PENDING"
     PROCESSING = "PROCESSING"
     IN_TRANSIT = "IN_TRANSIT"
@@ -34,37 +36,55 @@ class ShippingTrackingEventStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class ShippingTrackingEventTypedDict(TypedDict):
     carrier_status_code: NotRequired[str]
+    r"""Carrier's status code at this event"""
     created_at: NotRequired[datetime]
+    r"""The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""Description of the tracking event"""
     event_code: NotRequired[str]
+    r"""Carrier-specific event code"""
     location_address: NotRequired[PropertyShippingTrackingEventLocationAddressTypedDict]
     location_id: NotRequired[str]
+    r"""Location ID; points to CommerceLocation (reference to ShippingLocation)"""
     location_name: NotRequired[str]
+    r"""Location name"""
     notes: NotRequired[str]
+    r"""Additional notes"""
     signed_by: NotRequired[str]
+    r"""Who signed for delivery"""
     status: NotRequired[ShippingTrackingEventStatus]
+    r"""Status at the time of this event"""
 
 
 class ShippingTrackingEvent(BaseModel):
     carrier_status_code: Optional[str] = None
+    r"""Carrier's status code at this event"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""Description of the tracking event"""
 
     event_code: Optional[str] = None
+    r"""Carrier-specific event code"""
 
     location_address: Optional[PropertyShippingTrackingEventLocationAddress] = None
 
     location_id: Optional[str] = None
+    r"""Location ID; points to CommerceLocation (reference to ShippingLocation)"""
 
     location_name: Optional[str] = None
+    r"""Location name"""
 
     notes: Optional[str] = None
+    r"""Additional notes"""
 
     signed_by: Optional[str] = None
+    r"""Who signed for delivery"""
 
     status: Optional[ShippingTrackingEventStatus] = None
+    r"""Status at the time of this event"""
 
     @field_serializer("status")
     def serialize_status(self, value):

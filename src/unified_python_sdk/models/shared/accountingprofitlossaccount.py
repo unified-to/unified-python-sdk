@@ -9,6 +9,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingProfitlossAccountTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     account_name: NotRequired[str]
     total_amount: NotRequired[float]
     transaction_ids: NotRequired[List[str]]
@@ -16,6 +17,7 @@ class AccountingProfitlossAccountTypedDict(TypedDict):
 
 class AccountingProfitlossAccount(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     account_name: Optional[str] = None
 

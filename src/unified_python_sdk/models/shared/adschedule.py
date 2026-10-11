@@ -23,24 +23,34 @@ class DayOfWeek(str, Enum, metaclass=utils.OpenEnumMeta):
 class AdScheduleTypedDict(TypedDict):
     day_of_week: DayOfWeek
     end_hour: float
+    r"""0-24 (24 = end of day)"""
     start_hour: float
+    r"""0-23"""
     bid_modifier: NotRequired[float]
+    r"""0.1-10.0"""
     end_minute: NotRequired[float]
+    r"""0, 15, 30, 45"""
     start_minute: NotRequired[float]
+    r"""0, 15, 30, 45"""
 
 
 class AdSchedule(BaseModel):
     day_of_week: DayOfWeek
 
     end_hour: float
+    r"""0-24 (24 = end of day)"""
 
     start_hour: float
+    r"""0-23"""
 
     bid_modifier: Optional[float] = None
+    r"""0.1-10.0"""
 
     end_minute: Optional[float] = None
+    r"""0, 15, 30, 45"""
 
     start_minute: Optional[float] = None
+    r"""0, 15, 30, 45"""
 
     @field_serializer("day_of_week")
     def serialize_day_of_week(self, value):

@@ -34,35 +34,47 @@ class AtsApplicationStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 class AtsApplicationTypedDict(TypedDict):
     answers: NotRequired[List[AtsApplicationAnswerTypedDict]]
     applied_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     candidate_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     hired_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     job_id: NotRequired[str]
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     offers: NotRequired[List[AtsOfferTypedDict]]
     original_status: NotRequired[str]
+    r"""The integration's original status.  Mostly used to have your customers chose the application status/stage so that your software can trigger an event."""
     original_substatus: NotRequired[str]
+    r"""The provider's secondary/sub status, when distinct from original_status (e.g. UKG Ready hiring_stage)"""
     raw: NotRequired[Dict[str, Any]]
     rejected_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     rejected_reason: NotRequired[str]
     source: NotRequired[str]
     status: NotRequired[AtsApplicationStatus]
     summary: NotRequired[str]
+    r"""Application personal summary (e.g. Pinpoint Personal Summary)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""HR user/employee ID (reference to HrisEmployee)"""
 
 
 class AtsApplication(BaseModel):
     answers: Optional[List[AtsApplicationAnswer]] = None
 
     applied_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     candidate_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     hired_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -73,12 +85,15 @@ class AtsApplication(BaseModel):
     offers: Optional[List[AtsOffer]] = None
 
     original_status: Optional[str] = None
+    r"""The integration's original status.  Mostly used to have your customers chose the application status/stage so that your software can trigger an event."""
 
     original_substatus: Optional[str] = None
+    r"""The provider's secondary/sub status, when distinct from original_status (e.g. UKG Ready hiring_stage)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     rejected_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     rejected_reason: Optional[str] = None
 
@@ -87,10 +102,13 @@ class AtsApplication(BaseModel):
     status: Optional[AtsApplicationStatus] = None
 
     summary: Optional[str] = None
+    r"""Application personal summary (e.g. Pinpoint Personal Summary)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""HR user/employee ID (reference to HrisEmployee)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

@@ -23,6 +23,7 @@ class PropertyCalendarEventOrganizerTypedDict(TypedDict):
     required: NotRequired[bool]
     status: NotRequired[PropertyCalendarEventOrganizerStatus]
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class PropertyCalendarEventOrganizer(BaseModel):
@@ -37,6 +38,7 @@ class PropertyCalendarEventOrganizer(BaseModel):
     status: Optional[PropertyCalendarEventOrganizerStatus] = None
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

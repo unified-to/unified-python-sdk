@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CdpSourceDirection(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""SOURCE, or BIDIRECTIONAL for import+export connectors"""
+
     SOURCE = "SOURCE"
     DESTINATION = "DESTINATION"
     BIDIRECTIONAL = "BIDIRECTIONAL"
@@ -19,34 +21,52 @@ class CdpSourceDirection(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CdpSourceTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""The date that this source object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     direction: NotRequired[CdpSourceDirection]
+    r"""SOURCE, or BIDIRECTIONAL for import+export connectors"""
     id: NotRequired[str]
+    r"""Unique identifier for this source object"""
     is_enabled: NotRequired[bool]
+    r"""Whether the source is active/enabled"""
     name: NotRequired[str]
+    r"""The name of the inbound data source"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this source"""
     slug: NotRequired[str]
+    r"""A stable handle/key for the source"""
     type: NotRequired[str]
+    r"""The connector/source type (eg. the provider's connector slug or plugin id)"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this source object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CdpSource(BaseModel):
     created_at: Optional[datetime] = None
+    r"""The date that this source object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     direction: Optional[CdpSourceDirection] = None
+    r"""SOURCE, or BIDIRECTIONAL for import+export connectors"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this source object"""
 
     is_enabled: Optional[bool] = None
+    r"""Whether the source is active/enabled"""
 
     name: Optional[str] = None
+    r"""The name of the inbound data source"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this source"""
 
     slug: Optional[str] = None
+    r"""A stable handle/key for the source"""
 
     type: Optional[str] = None
+    r"""The connector/source type (eg. the provider's connector slug or plugin id)"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this source object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("direction")
     def serialize_direction(self, value):

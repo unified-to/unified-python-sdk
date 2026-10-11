@@ -11,16 +11,19 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AtsCandidateEducationTypedDict(TypedDict):
     degree: NotRequired[str]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     field_of_study: NotRequired[str]
     institution: NotRequired[str]
     level: NotRequired[str]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AtsCandidateEducation(BaseModel):
     degree: Optional[str] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     field_of_study: Optional[str] = None
 
@@ -29,6 +32,7 @@ class AtsCandidateEducation(BaseModel):
     level: Optional[str] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

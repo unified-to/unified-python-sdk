@@ -15,17 +15,20 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class HrisCompanyTypedDict(TypedDict):
     address: NotRequired[PropertyHrisCompanyAddressTypedDict]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     legal_name: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class HrisCompany(BaseModel):
     address: Optional[PropertyHrisCompanyAddress] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -36,6 +39,7 @@ class HrisCompany(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

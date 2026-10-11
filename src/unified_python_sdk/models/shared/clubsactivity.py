@@ -12,6 +12,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class ClubsActivityType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The activity type"""
+
     RUNNING = "RUNNING"
     CYCLING = "CYCLING"
     SWIMMING = "SWIMMING"
@@ -25,138 +27,224 @@ class ClubsActivityTypedDict(TypedDict):
     r"""ClubActivity (getClubActivitiesById, NO id) and the full DetailedActivity (getActivityById)."""
 
     achievement_count: NotRequired[float]
+    r"""The number of achievements gained during this activity"""
     athlete_count: NotRequired[float]
+    r"""The number of athletes that took part in this activity"""
     athlete_id: NotRequired[str]
+    r"""The id of the athlete who performed the activity (DetailedActivity only)"""
     athlete_name: NotRequired[str]
+    r"""The full name of the athlete"""
     average_cadence: NotRequired[float]
+    r"""The activity's average cadence"""
     average_heartrate: NotRequired[float]
+    r"""The activity's average heart rate, in beats per minute"""
     average_speed: NotRequired[float]
+    r"""The activity's average speed, in meters per second"""
     average_watts: NotRequired[float]
+    r"""The activity's average power output, in watts"""
     calories: NotRequired[float]
+    r"""The number of kilocalories consumed during this activity"""
     comment_count: NotRequired[float]
+    r"""The number of comments for this activity"""
     created_at: NotRequired[datetime]
+    r"""The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""The description of the activity (DetailedActivity only)"""
     distance: NotRequired[float]
+    r"""The activity's distance, in meters"""
     elapsed_time: NotRequired[float]
+    r"""The activity's elapsed time, in seconds"""
     elevation_high: NotRequired[float]
+    r"""The activity's highest elevation, in meters (DetailedActivity only)"""
     elevation_low: NotRequired[float]
+    r"""The activity's lowest elevation, in meters (DetailedActivity only)"""
     group_id: NotRequired[str]
+    r"""The group this activity was listed under (reference to HrisGroup)"""
     has_heartrate: NotRequired[bool]
+    r"""Whether the activity has heart rate data"""
     id: NotRequired[str]
+    r"""Unique identifier for this activity (not provided by ClubActivity)"""
     is_commute: NotRequired[bool]
+    r"""Whether this activity is a commute"""
     is_manual: NotRequired[bool]
+    r"""Whether this activity was created manually"""
     is_private: NotRequired[bool]
+    r"""Whether this activity is private"""
     is_trainer: NotRequired[bool]
+    r"""Whether this activity was recorded on a training machine"""
     kilojoules: NotRequired[float]
+    r"""The total work done, in kilojoules"""
     kudos_count: NotRequired[float]
+    r"""The number of kudos given for this activity"""
     map_polyline: NotRequired[str]
+    r"""The detailed polyline of the activity's map"""
     map_summary_polyline: NotRequired[str]
+    r"""The summary polyline of the activity's map"""
     max_heartrate: NotRequired[float]
+    r"""The activity's max heart rate, in beats per minute"""
     max_speed: NotRequired[float]
+    r"""The activity's max speed, in meters per second"""
     max_watts: NotRequired[float]
+    r"""The activity's max power output, in watts"""
     moving_time: NotRequired[float]
+    r"""The activity's moving time, in seconds"""
     name: NotRequired[str]
+    r"""The name of the activity"""
     photo_count: NotRequired[float]
+    r"""The number of Instagram photos for this activity"""
     pr_count: NotRequired[float]
+    r"""The number of personal records set during this activity"""
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this activity"""
     start_at: NotRequired[datetime]
+    r"""When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     suffer_score: NotRequired[float]
+    r"""The activity's relative effort score"""
     timezone: NotRequired[str]
+    r"""The timezone of the activity"""
     total_elevation_gain: NotRequired[float]
+    r"""The activity's total elevation gain, in meters"""
     type: NotRequired[ClubsActivityType]
+    r"""The activity type"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     weighted_average_watts: NotRequired[float]
+    r"""The activity's weighted average power output, in watts"""
     workout_type: NotRequired[float]
+    r"""The activity's workout type"""
 
 
 class ClubsActivity(BaseModel):
     r"""ClubActivity (getClubActivitiesById, NO id) and the full DetailedActivity (getActivityById)."""
 
     achievement_count: Optional[float] = None
+    r"""The number of achievements gained during this activity"""
 
     athlete_count: Optional[float] = None
+    r"""The number of athletes that took part in this activity"""
 
     athlete_id: Optional[str] = None
+    r"""The id of the athlete who performed the activity (DetailedActivity only)"""
 
     athlete_name: Optional[str] = None
+    r"""The full name of the athlete"""
 
     average_cadence: Optional[float] = None
+    r"""The activity's average cadence"""
 
     average_heartrate: Optional[float] = None
+    r"""The activity's average heart rate, in beats per minute"""
 
     average_speed: Optional[float] = None
+    r"""The activity's average speed, in meters per second"""
 
     average_watts: Optional[float] = None
+    r"""The activity's average power output, in watts"""
 
     calories: Optional[float] = None
+    r"""The number of kilocalories consumed during this activity"""
 
     comment_count: Optional[float] = None
+    r"""The number of comments for this activity"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""The description of the activity (DetailedActivity only)"""
 
     distance: Optional[float] = None
+    r"""The activity's distance, in meters"""
 
     elapsed_time: Optional[float] = None
+    r"""The activity's elapsed time, in seconds"""
 
     elevation_high: Optional[float] = None
+    r"""The activity's highest elevation, in meters (DetailedActivity only)"""
 
     elevation_low: Optional[float] = None
+    r"""The activity's lowest elevation, in meters (DetailedActivity only)"""
 
     group_id: Optional[str] = None
+    r"""The group this activity was listed under (reference to HrisGroup)"""
 
     has_heartrate: Optional[bool] = None
+    r"""Whether the activity has heart rate data"""
 
     id: Optional[str] = None
+    r"""Unique identifier for this activity (not provided by ClubActivity)"""
 
     is_commute: Optional[bool] = None
+    r"""Whether this activity is a commute"""
 
     is_manual: Optional[bool] = None
+    r"""Whether this activity was created manually"""
 
     is_private: Optional[bool] = None
+    r"""Whether this activity is private"""
 
     is_trainer: Optional[bool] = None
+    r"""Whether this activity was recorded on a training machine"""
 
     kilojoules: Optional[float] = None
+    r"""The total work done, in kilojoules"""
 
     kudos_count: Optional[float] = None
+    r"""The number of kudos given for this activity"""
 
     map_polyline: Optional[str] = None
+    r"""The detailed polyline of the activity's map"""
 
     map_summary_polyline: Optional[str] = None
+    r"""The summary polyline of the activity's map"""
 
     max_heartrate: Optional[float] = None
+    r"""The activity's max heart rate, in beats per minute"""
 
     max_speed: Optional[float] = None
+    r"""The activity's max speed, in meters per second"""
 
     max_watts: Optional[float] = None
+    r"""The activity's max power output, in watts"""
 
     moving_time: Optional[float] = None
+    r"""The activity's moving time, in seconds"""
 
     name: Optional[str] = None
+    r"""The name of the activity"""
 
     photo_count: Optional[float] = None
+    r"""The number of Instagram photos for this activity"""
 
     pr_count: Optional[float] = None
+    r"""The number of personal records set during this activity"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this activity"""
 
     start_at: Optional[datetime] = None
+    r"""When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     suffer_score: Optional[float] = None
+    r"""The activity's relative effort score"""
 
     timezone: Optional[str] = None
+    r"""The timezone of the activity"""
 
     total_elevation_gain: Optional[float] = None
+    r"""The activity's total elevation gain, in meters"""
 
     type: Optional[ClubsActivityType] = None
+    r"""The activity type"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     weighted_average_watts: Optional[float] = None
+    r"""The activity's weighted average power output, in watts"""
 
     workout_type: Optional[float] = None
+    r"""The activity's workout type"""
 
     @field_serializer("type")
     def serialize_type(self, value):

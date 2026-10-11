@@ -22,6 +22,8 @@ class CalendarEventRecurrenceFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class WeekStart(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""week start day, defaults to undefined (no week start day)"""
+
     SU = "SU"
     MO = "MO"
     TU = "TU"
@@ -33,13 +35,16 @@ class WeekStart(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class CalendarEventRecurrenceTypedDict(TypedDict):
     count: NotRequired[float]
+    r"""how many occurrences, defaults to undefined (no limit)"""
     end_at: NotRequired[datetime]
+    r"""until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     excluded_dates: NotRequired[List[str]]
     r"""dates to exclude from the recurrence, defaults to undefined (no exclusions)"""
     frequency: NotRequired[CalendarEventRecurrenceFrequency]
     included_dates: NotRequired[List[str]]
     r"""dates to include in the recurrence, defaults to undefined (no inclusions)"""
     interval: NotRequired[float]
+    r"""how many \"units\" between occurrences, defaults to 1"""
     on_days: NotRequired[List[PropertyCalendarEventRecurrenceOnDays]]
     r"""days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY"""
     on_month_days: NotRequired[List[float]]
@@ -51,13 +56,17 @@ class CalendarEventRecurrenceTypedDict(TypedDict):
     on_year_days: NotRequired[List[float]]
     r"""days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY"""
     timezone: NotRequired[str]
+    r"""timezone, defaults to undefined (no timezone)"""
     week_start: NotRequired[WeekStart]
+    r"""week start day, defaults to undefined (no week start day)"""
 
 
 class CalendarEventRecurrence(BaseModel):
     count: Optional[float] = None
+    r"""how many occurrences, defaults to undefined (no limit)"""
 
     end_at: Optional[datetime] = None
+    r"""until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     excluded_dates: Optional[List[str]] = None
     r"""dates to exclude from the recurrence, defaults to undefined (no exclusions)"""
@@ -68,6 +77,7 @@ class CalendarEventRecurrence(BaseModel):
     r"""dates to include in the recurrence, defaults to undefined (no inclusions)"""
 
     interval: Optional[float] = None
+    r"""how many \"units\" between occurrences, defaults to 1"""
 
     on_days: Optional[List[PropertyCalendarEventRecurrenceOnDays]] = None
     r"""days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY"""
@@ -85,8 +95,10 @@ class CalendarEventRecurrence(BaseModel):
     r"""days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY"""
 
     timezone: Optional[str] = None
+    r"""timezone, defaults to undefined (no timezone)"""
 
     week_start: Optional[WeekStart] = None
+    r"""week start day, defaults to undefined (no week start day)"""
 
     @field_serializer("frequency")
     def serialize_frequency(self, value):

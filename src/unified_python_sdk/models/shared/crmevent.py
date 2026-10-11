@@ -32,6 +32,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class CrmEventType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The type of event"""
+
     NOTE = "NOTE"
     EMAIL = "EMAIL"
     TASK = "TASK"
@@ -52,12 +54,14 @@ class CrmEventTypedDict(TypedDict):
     contact_ids: NotRequired[List[str]]
     r"""An array of contact IDs associated with this event"""
     created_at: NotRequired[datetime]
+    r"""The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     deal_ids: NotRequired[List[str]]
     r"""An array of deal IDs associated with this event"""
     email: NotRequired[PropertyCrmEventEmailTypedDict]
     r"""The email object, when type = email"""
     form: NotRequired[PropertyCrmEventFormTypedDict]
     id: NotRequired[str]
+    r"""Unique identifier for this event object"""
     lead_ids: NotRequired[List[str]]
     marketing_email: NotRequired[PropertyCrmEventMarketingEmailTypedDict]
     meeting: NotRequired[PropertyCrmEventMeetingTypedDict]
@@ -66,11 +70,15 @@ class CrmEventTypedDict(TypedDict):
     r"""The note object, when type = note"""
     page_view: NotRequired[PropertyCrmEventPageViewTypedDict]
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this event."""
     task: NotRequired[PropertyCrmEventTaskTypedDict]
     r"""The task object, when type = task"""
     type: NotRequired[CrmEventType]
+    r"""The type of event"""
     updated_at: NotRequired[datetime]
+    r"""The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class CrmEvent(BaseModel):
@@ -86,6 +94,7 @@ class CrmEvent(BaseModel):
     r"""An array of contact IDs associated with this event"""
 
     created_at: Optional[datetime] = None
+    r"""The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     deal_ids: Optional[List[str]] = None
     r"""An array of deal IDs associated with this event"""
@@ -96,6 +105,7 @@ class CrmEvent(BaseModel):
     form: Optional[PropertyCrmEventForm] = None
 
     id: Optional[str] = None
+    r"""Unique identifier for this event object"""
 
     lead_ids: Optional[List[str]] = None
 
@@ -110,15 +120,19 @@ class CrmEvent(BaseModel):
     page_view: Optional[PropertyCrmEventPageView] = None
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this event."""
 
     task: Optional[PropertyCrmEventTask] = None
     r"""The task object, when type = task"""
 
     type: Optional[CrmEventType] = None
+    r"""The type of event"""
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

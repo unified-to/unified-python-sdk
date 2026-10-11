@@ -20,24 +20,32 @@ class ScimManagerTypedDict(TypedDict):
     r"""\"id\" attribute of another User."""
 
     dollar_ref: NotRequired[str]
+    r"""The URI of the SCIM resource representing the User's manager.  RECOMMENDED."""
     display_name: NotRequired[str]
+    r"""The displayName of the user's manager.  This attribute is OPTIONAL, and mutability is \"readOnly\"."""
     manager_id: NotRequired[str]
+    r"""alias for value?"""
     type: NotRequired[ScimManagerType]
     value: NotRequired[str]
+    r"""The \"id\" of the SCIM resource representing the user's manager.  RECOMMENDED."""
 
 
 class ScimManager(BaseModel):
     r"""\"id\" attribute of another User."""
 
     dollar_ref: Annotated[Optional[str], pydantic.Field(alias="$ref")] = None
+    r"""The URI of the SCIM resource representing the User's manager.  RECOMMENDED."""
 
     display_name: Annotated[Optional[str], pydantic.Field(alias="displayName")] = None
+    r"""The displayName of the user's manager.  This attribute is OPTIONAL, and mutability is \"readOnly\"."""
 
     manager_id: Annotated[Optional[str], pydantic.Field(alias="managerId")] = None
+    r"""alias for value?"""
 
     type: Optional[ScimManagerType] = None
 
     value: Optional[str] = None
+    r"""The \"id\" of the SCIM resource representing the user's manager.  RECOMMENDED."""
 
     @field_serializer("type")
     def serialize_type(self, value):

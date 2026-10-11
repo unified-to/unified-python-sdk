@@ -91,6 +91,7 @@ class AtsMetadataTypedDict(TypedDict):
     id: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
+    r"""Actual textual value of the slug"""
     value: NotRequired[AtsMetadataValueTypedDict]
 
 
@@ -106,6 +107,7 @@ class AtsMetadata(BaseModel):
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
+    r"""Actual textual value of the slug"""
 
     value: Optional[AtsMetadataValue] = None
 

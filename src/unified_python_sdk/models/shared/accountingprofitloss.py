@@ -17,8 +17,10 @@ class AccountingProfitlossTypedDict(TypedDict):
     cost_of_goods_sold_sections: NotRequired[List[AccountingProfitlossSectionTypedDict]]
     cost_of_goods_sold_total_amount: NotRequired[float]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     expenses_sections: NotRequired[List[AccountingProfitlossSectionTypedDict]]
     expenses_total_amount: NotRequired[float]
     id: NotRequired[str]
@@ -28,7 +30,9 @@ class AccountingProfitlossTypedDict(TypedDict):
     net_income_amount: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingProfitloss(BaseModel):
@@ -39,10 +43,12 @@ class AccountingProfitloss(BaseModel):
     cost_of_goods_sold_total_amount: Optional[float] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     expenses_sections: Optional[List[AccountingProfitlossSection]] = None
 
@@ -61,8 +67,10 @@ class AccountingProfitloss(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

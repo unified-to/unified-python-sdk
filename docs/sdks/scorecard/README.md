@@ -6,7 +6,9 @@
 
 * [create_ats_scorecard](#create_ats_scorecard) - Create a scorecard
 * [get_ats_scorecard](#get_ats_scorecard) - Retrieve a scorecard
+* [get_uc_scorecard](#get_uc_scorecard) - Retrieve a scorecard
 * [list_ats_scorecards](#list_ats_scorecards) - List all scorecards
+* [list_uc_scorecards](#list_uc_scorecards) - List all scorecards
 * [patch_ats_scorecard](#patch_ats_scorecard) - Update a scorecard
 * [remove_ats_scorecard](#remove_ats_scorecard) - Remove a scorecard
 * [update_ats_scorecard](#update_ats_scorecard) - Update a scorecard
@@ -34,7 +36,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "091c9532-8ab4-4902-a520-acd54c4e76d1",
+            "id": "4344b5a0-af68-48c7-a37f-bdeb26e3d8cc",
             "questions": [
                 {
                     "description": "Sulum textor eveniet facere vita.",
@@ -47,7 +49,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-05-28T05:41:35.701Z"),
+            "updated_at": parse_datetime("2023-06-02T19:29:44.467Z"),
         },
         "connection_id": "<id>",
     })
@@ -123,6 +125,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_uc_scorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getUcScorecard" method="get" path="/uc/{connection_id}/scorecard/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.scorecard.get_uc_scorecard(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.uc_scorecard is not None
+
+    # Handle response
+    print(res.uc_scorecard)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetUcScorecardRequest](../../models/operations/getucscorecardrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetUcScorecardResponse](../../models/operations/getucscorecardresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_ats_scorecards
 
 List all scorecards
@@ -169,6 +218,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_uc_scorecards
+
+List all scorecards
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listUcScorecards" method="get" path="/uc/{connection_id}/scorecard" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.scorecard.list_uc_scorecards(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.uc_scorecards is not None
+
+    # Handle response
+    print(res.uc_scorecards)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListUcScorecardsRequest](../../models/operations/listucscorecardsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.ListUcScorecardsResponse](../../models/operations/listucscorecardsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_ats_scorecard
 
 Update a scorecard
@@ -192,7 +287,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "ad5a2091-694e-47c1-b863-8de6e0265017",
+            "id": "fc84d8e1-71a6-4d6c-a683-7da40edb6c5e",
             "questions": [
                 {
                     "description": "Sulum textor eveniet facere vita.",
@@ -205,7 +300,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-05-28T05:41:35.703Z"),
+            "updated_at": parse_datetime("2023-06-02T19:29:44.470Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -305,7 +400,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "ad5a2091-694e-47c1-b863-8de6e0265017",
+            "id": "fc84d8e1-71a6-4d6c-a683-7da40edb6c5e",
             "questions": [
                 {
                     "description": "Sulum textor eveniet facere vita.",
@@ -318,7 +413,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-05-28T05:41:35.703Z"),
+            "updated_at": parse_datetime("2023-06-02T19:29:44.470Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

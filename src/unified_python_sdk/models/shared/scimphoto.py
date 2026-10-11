@@ -20,6 +20,7 @@ class ScimPhotoTypedDict(TypedDict):
     primary: NotRequired[bool]
     type: NotRequired[ScimPhotoType]
     value: NotRequired[str]
+    r"""URL"""
 
 
 class ScimPhoto(BaseModel):
@@ -30,6 +31,7 @@ class ScimPhoto(BaseModel):
     type: Optional[ScimPhotoType] = None
 
     value: Optional[str] = None
+    r"""URL"""
 
     @field_serializer("type")
     def serialize_type(self, value):

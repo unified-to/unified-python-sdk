@@ -17,6 +17,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AccountingTaxrateType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Whether the rate applies to sales, purchases, or both"""
+
     SALES = "SALES"
     PURCHASE = "PURCHASE"
     BOTH = "BOTH"
@@ -27,21 +29,30 @@ class AccountingTaxrateTypedDict(TypedDict):
     components: NotRequired[List[AccountingTaxrateComponentTypedDict]]
     r"""Component parts of a compound or multi-component tax"""
     country: NotRequired[str]
+    r"""Jurisdiction country"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     effective_rate: NotRequired[float]
+    r"""Net effective rate in %, where it differs from the nominal rate"""
     id: NotRequired[str]
     is_active: NotRequired[bool]
     is_compound: NotRequired[bool]
+    r"""True when the rate stacks on top of other taxes"""
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     rate: NotRequired[float]
+    r"""%"""
     raw: NotRequired[Dict[str, Any]]
     region: NotRequired[str]
+    r"""Jurisdiction state / province"""
     total_rate: NotRequired[float]
+    r"""Sum of all components, in %"""
     type: NotRequired[AccountingTaxrateType]
+    r"""Whether the rate applies to sales, purchases, or both"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class AccountingTaxrate(BaseModel):
@@ -49,18 +60,22 @@ class AccountingTaxrate(BaseModel):
     r"""Component parts of a compound or multi-component tax"""
 
     country: Optional[str] = None
+    r"""Jurisdiction country"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     effective_rate: Optional[float] = None
+    r"""Net effective rate in %, where it differs from the nominal rate"""
 
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
 
     is_compound: Optional[bool] = None
+    r"""True when the rate stacks on top of other taxes"""
 
     metadata: Optional[List[AccountingMetadata]] = None
 
@@ -69,16 +84,21 @@ class AccountingTaxrate(BaseModel):
     organization_id: Optional[str] = None
 
     rate: Optional[float] = None
+    r"""%"""
 
     raw: Optional[Dict[str, Any]] = None
 
     region: Optional[str] = None
+    r"""Jurisdiction state / province"""
 
     total_rate: Optional[float] = None
+    r"""Sum of all components, in %"""
 
     type: Optional[AccountingTaxrateType] = None
+    r"""Whether the rate applies to sales, purchases, or both"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

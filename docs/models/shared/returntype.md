@@ -1,5 +1,7 @@
 # ReturnType
 
+Type of return
+
 ## Example Usage
 
 ```python

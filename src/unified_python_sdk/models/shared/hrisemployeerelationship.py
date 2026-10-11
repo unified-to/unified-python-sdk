@@ -31,12 +31,14 @@ class HrisEmployeerelationshipTypedDict(TypedDict):
     address: NotRequired[PropertyHrisEmployeerelationshipAddressTypedDict]
     emails: NotRequired[List[HrisEmailTypedDict]]
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     first_name: NotRequired[str]
     is_beneficiary: NotRequired[bool]
     is_dependent: NotRequired[bool]
     last_name: NotRequired[str]
     name: NotRequired[str]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     telephones: NotRequired[List[HrisTelephoneTypedDict]]
     type: NotRequired[HrisEmployeerelationshipType]
 
@@ -47,6 +49,7 @@ class HrisEmployeerelationship(BaseModel):
     emails: Optional[List[HrisEmail]] = None
 
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     first_name: Optional[str] = None
 
@@ -59,6 +62,7 @@ class HrisEmployeerelationship(BaseModel):
     name: Optional[str] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     telephones: Optional[List[HrisTelephone]] = None
 

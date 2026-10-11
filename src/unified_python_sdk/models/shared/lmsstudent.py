@@ -17,6 +17,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class LmsStudentTypedDict(TypedDict):
     address: NotRequired[PropertyLmsStudentAddressTypedDict]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     emails: NotRequired[List[LmsEmailTypedDict]]
     first_name: NotRequired[str]
     id: NotRequired[str]
@@ -26,12 +27,14 @@ class LmsStudentTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     telephones: NotRequired[List[LmsTelephoneTypedDict]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class LmsStudent(BaseModel):
     address: Optional[PropertyLmsStudentAddress] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     emails: Optional[List[LmsEmail]] = None
 
@@ -50,6 +53,7 @@ class LmsStudent(BaseModel):
     telephones: Optional[List[LmsTelephone]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

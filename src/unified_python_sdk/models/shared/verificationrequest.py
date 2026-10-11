@@ -29,6 +29,8 @@ class VerificationRequestProfileGender(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VerificationRequestResponseStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO"""
+
     COMPLETED = "COMPLETED"
     FAILED = "FAILED"
     PASSED = "PASSED"
@@ -37,37 +39,50 @@ class VerificationRequestResponseStatus(str, Enum, metaclass=utils.OpenEnumMeta)
 
 class VerificationRequestTypedDict(TypedDict):
     candidate_id: NotRequired[str]
+    r"""points to ATS Candidate"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     package_id: NotRequired[str]
     parameters: NotRequired[List[VerificationParameterInputTypedDict]]
     profile_addresses: NotRequired[List[VerificationAddressTypedDict]]
     profile_date_of_birth: NotRequired[str]
+    r"""YYYY-MM-DD"""
     profile_emails: NotRequired[List[str]]
     profile_gender: NotRequired[VerificationRequestProfileGender]
     profile_ip_address: NotRequired[str]
+    r"""XXX.XXX.XXX.XXX"""
     profile_name: NotRequired[str]
     profile_national_identifier: NotRequired[str]
     profile_telephones: NotRequired[List[str]]
     raw: NotRequired[Dict[str, Any]]
     response_completed_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     response_details: NotRequired[List[VerificationResponseDetailTypedDict]]
     response_download_urls: NotRequired[List[str]]
     r"""report download"""
     response_expires_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     response_issued_at: NotRequired[datetime]
+    r"""datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     response_redirect_url: NotRequired[str]
+    r"""Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user consent and information. This allows them to properly handle disclosures required by regulations like FCRA. Employment and Education Verification need users to confirm previous employers and schools."""
     response_score: NotRequired[float]
+    r"""Identity verification services provide confidence scores (e.g., 0-100), Credit checks return specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g., 1-999)"""
     response_source: NotRequired[str]
     response_status: NotRequired[VerificationRequestResponseStatus]
+    r"""Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO"""
     target_url: NotRequired[str]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class VerificationRequest(BaseModel):
     candidate_id: Optional[str] = None
+    r"""points to ATS Candidate"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -78,12 +93,14 @@ class VerificationRequest(BaseModel):
     profile_addresses: Optional[List[VerificationAddress]] = None
 
     profile_date_of_birth: Optional[str] = None
+    r"""YYYY-MM-DD"""
 
     profile_emails: Optional[List[str]] = None
 
     profile_gender: Optional[VerificationRequestProfileGender] = None
 
     profile_ip_address: Optional[str] = None
+    r"""XXX.XXX.XXX.XXX"""
 
     profile_name: Optional[str] = None
 
@@ -94,6 +111,7 @@ class VerificationRequest(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     response_completed_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     response_details: Optional[List[VerificationResponseDetail]] = None
 
@@ -101,20 +119,26 @@ class VerificationRequest(BaseModel):
     r"""report download"""
 
     response_expires_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     response_issued_at: Optional[datetime] = None
+    r"""datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     response_redirect_url: Optional[str] = None
+    r"""Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user consent and information. This allows them to properly handle disclosures required by regulations like FCRA. Employment and Education Verification need users to confirm previous employers and schools."""
 
     response_score: Optional[float] = None
+    r"""Identity verification services provide confidence scores (e.g., 0-100), Credit checks return specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g., 1-999)"""
 
     response_source: Optional[str] = None
 
     response_status: Optional[VerificationRequestResponseStatus] = None
+    r"""Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO"""
 
     target_url: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("profile_gender")
     def serialize_profile_gender(self, value):

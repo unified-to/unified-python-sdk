@@ -20,7 +20,9 @@ class AccountingAgedRowTypedDict(TypedDict):
     balance_amount: NotRequired[float]
     contact: NotRequired[PropertyAccountingAgedRowContactTypedDict]
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     posted_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     total_amount: NotRequired[float]
     transaction: NotRequired[PropertyAccountingAgedRowTransactionTypedDict]
 
@@ -31,8 +33,10 @@ class AccountingAgedRow(BaseModel):
     contact: Optional[PropertyAccountingAgedRowContact] = None
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     posted_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     total_amount: Optional[float] = None
 

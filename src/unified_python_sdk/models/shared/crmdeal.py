@@ -14,25 +14,36 @@ class CrmDealTypedDict(TypedDict):
     r"""A deal represents an opportunity with companies and/or contacts"""
 
     amount: NotRequired[float]
+    r"""The potential amount that deal could be worth"""
     closed_at: NotRequired[datetime]
+    r"""The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     closing_at: NotRequired[datetime]
+    r"""expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     company_ids: NotRequired[List[str]]
     contact_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
+    r"""The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""The currency for the deal amount (3 letter ISO code; eg. USD)"""
     description: NotRequired[str]
     id: NotRequired[str]
+    r"""Unique identifier for this deal object"""
     lost_reason: NotRequired[str]
     metadata: NotRequired[List[CrmMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The name of this deal"""
     pipelines: NotRequired[List[CrmReferenceTypedDict]]
     probability: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
+    r"""The raw data returned by the integration for this deal"""
     source: NotRequired[str]
+    r"""The source for this deal"""
     stages: NotRequired[List[CrmReferenceTypedDict]]
     tags: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
+    r"""The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
     won_reason: NotRequired[str]
 
 
@@ -40,44 +51,55 @@ class CrmDeal(BaseModel):
     r"""A deal represents an opportunity with companies and/or contacts"""
 
     amount: Optional[float] = None
+    r"""The potential amount that deal could be worth"""
 
     closed_at: Optional[datetime] = None
+    r"""The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     closing_at: Optional[datetime] = None
+    r"""expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     company_ids: Optional[List[str]] = None
 
     contact_ids: Optional[List[str]] = None
 
     created_at: Optional[datetime] = None
+    r"""The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""The currency for the deal amount (3 letter ISO code; eg. USD)"""
 
     description: Optional[str] = None
 
     id: Optional[str] = None
+    r"""Unique identifier for this deal object"""
 
     lost_reason: Optional[str] = None
 
     metadata: Optional[List[CrmMetadata]] = None
 
     name: Optional[str] = None
+    r"""The name of this deal"""
 
     pipelines: Optional[List[CrmReference]] = None
 
     probability: Optional[float] = None
 
     raw: Optional[Dict[str, Any]] = None
+    r"""The raw data returned by the integration for this deal"""
 
     source: Optional[str] = None
+    r"""The source for this deal"""
 
     stages: Optional[List[CrmReference]] = None
 
     tags: Optional[List[str]] = None
 
     updated_at: Optional[datetime] = None
+    r"""The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     won_reason: Optional[str] = None
 

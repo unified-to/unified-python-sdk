@@ -21,6 +21,8 @@ class PaymentPaymentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class TenderType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""normalized tender category; the provider's original label stays in payment_method"""
+
     CARD = "CARD"
     CASH = "CASH"
     GIFT_CARD = "GIFT_CARD"
@@ -40,46 +42,63 @@ class PaymentPaymentType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PaymentPaymentTypedDict(TypedDict):
     account_id: NotRequired[str]
+    r"""(reference to AccountingAccount)"""
     allocations: NotRequired[List[PaymentAllocationTypedDict]]
     r"""What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate invoice/bill payment endpoints."""
     bill_id: NotRequired[str]
+    r"""references AccountingBill"""
     card_brand: NotRequired[str]
     card_last4: NotRequired[str]
     category_ids: NotRequired[List[str]]
     r"""dimension refs -> AccountingCategory"""
     contact_id: NotRequired[str]
+    r"""(reference to AccountingContact)"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     device_id: NotRequired[str]
+    r"""POS terminal/register/device (hr device)"""
     exchange_rate: NotRequired[float]
+    r"""Exchange rate to the base/home currency at the payment date"""
     fee_amount: NotRequired[float]
+    r"""processing/processor fee"""
     id: NotRequired[str]
     invoice_id: NotRequired[str]
+    r"""(reference to AccountingInvoice)"""
     link_id: NotRequired[str]
     location_id: NotRequired[str]
+    r"""store/site where the payment was taken (commerce_location)"""
     net_amount: NotRequired[float]
+    r"""total_amount minus fee_amount"""
     notes: NotRequired[str]
     organization_id: NotRequired[str]
+    r"""reference to an AccountingOrganization"""
     paid_at: NotRequired[datetime]
+    r"""Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     payment_method: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     salesorder_id: NotRequired[str]
+    r"""reference to an AccountingSalesorder, e.g. the POS order this payment settled"""
     status: NotRequired[PaymentPaymentStatus]
     tender_type: NotRequired[TenderType]
+    r"""normalized tender category; the provider's original label stays in payment_method"""
     tip_amount: NotRequired[float]
     total_amount: NotRequired[float]
     type: NotRequired[PaymentPaymentType]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class PaymentPayment(BaseModel):
     account_id: Optional[str] = None
+    r"""(reference to AccountingAccount)"""
 
     allocations: Optional[List[PaymentAllocation]] = None
     r"""What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate invoice/bill payment endpoints."""
 
     bill_id: Optional[str] = None
+    r"""references AccountingBill"""
 
     card_brand: Optional[str] = None
 
@@ -89,32 +108,42 @@ class PaymentPayment(BaseModel):
     r"""dimension refs -> AccountingCategory"""
 
     contact_id: Optional[str] = None
+    r"""(reference to AccountingContact)"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = "USD"
 
     device_id: Optional[str] = None
+    r"""POS terminal/register/device (hr device)"""
 
     exchange_rate: Optional[float] = None
+    r"""Exchange rate to the base/home currency at the payment date"""
 
     fee_amount: Optional[float] = None
+    r"""processing/processor fee"""
 
     id: Optional[str] = None
 
     invoice_id: Optional[str] = None
+    r"""(reference to AccountingInvoice)"""
 
     link_id: Optional[str] = None
 
     location_id: Optional[str] = None
+    r"""store/site where the payment was taken (commerce_location)"""
 
     net_amount: Optional[float] = None
+    r"""total_amount minus fee_amount"""
 
     notes: Optional[str] = None
 
     organization_id: Optional[str] = None
+    r"""reference to an AccountingOrganization"""
 
     paid_at: Optional[datetime] = None
+    r"""Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     payment_method: Optional[str] = None
 
@@ -123,10 +152,12 @@ class PaymentPayment(BaseModel):
     reference: Optional[str] = None
 
     salesorder_id: Optional[str] = None
+    r"""reference to an AccountingSalesorder, e.g. the POS order this payment settled"""
 
     status: Optional[PaymentPaymentStatus] = None
 
     tender_type: Optional[TenderType] = None
+    r"""normalized tender category; the provider's original label stays in payment_method"""
 
     tip_amount: Optional[float] = None
 
@@ -135,6 +166,7 @@ class PaymentPayment(BaseModel):
     type: Optional[PaymentPaymentType] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("status")
     def serialize_status(self, value):

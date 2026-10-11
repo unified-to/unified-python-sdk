@@ -14,15 +14,19 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 class AccountingCashflowSectionTypedDict(TypedDict):
     items: NotRequired[List[AccountingCashflowItemTypedDict]]
     section_name: NotRequired[str]
+    r"""e.g. \"Operating Activities\" """
     total_amount: NotRequired[float]
+    r"""Net cash providedused by this section"""
 
 
 class AccountingCashflowSection(BaseModel):
     items: Optional[List[AccountingCashflowItem]] = None
 
     section_name: Optional[str] = None
+    r"""e.g. \"Operating Activities\" """
 
     total_amount: Optional[float] = None
+    r"""Net cash providedused by this section"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

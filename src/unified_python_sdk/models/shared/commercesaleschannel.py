@@ -13,12 +13,15 @@ class CommerceSaleschannelTypedDict(TypedDict):
     collections: NotRequired[List[CommerceReferenceTypedDict]]
     r"""points to a CommerceCollection"""
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     raw: NotRequired[Dict[str, Any]]
     slug: NotRequired[str]
+    r"""maps to code (name)  a stable identifier per channel"""
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class CommerceSaleschannel(BaseModel):
@@ -26,6 +29,7 @@ class CommerceSaleschannel(BaseModel):
     r"""points to a CommerceCollection"""
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -36,8 +40,10 @@ class CommerceSaleschannel(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     slug: Optional[str] = None
+    r"""maps to code (name)  a stable identifier per channel"""
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

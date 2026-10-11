@@ -11,18 +11,22 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class AccountingAgedPeriodTypedDict(TypedDict):
     end_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     name: NotRequired[str]
     start_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     sub_items: NotRequired[List[AccountingAgedRowTypedDict]]
     total_amount: NotRequired[float]
 
 
 class AccountingAgedPeriod(BaseModel):
     end_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     name: Optional[str] = None
 
     start_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     sub_items: Optional[List[AccountingAgedRow]] = None
 

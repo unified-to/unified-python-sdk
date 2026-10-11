@@ -22,9 +22,9 @@ class Integration(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUnifiedIntegrationAuthResponse:
-        r"""Authorize new connection
+        r"""Authorize or re-authorize a connection
 
-        Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+        Returns an authorization URL for the specified integration. After successful authorization, a new connection is created unless connection_id and reauth_token are provided, in which case the existing connection is updated in place.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -116,9 +116,9 @@ class Integration(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUnifiedIntegrationAuthResponse:
-        r"""Authorize new connection
+        r"""Authorize or re-authorize a connection
 
-        Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+        Returns an authorization URL for the specified integration. After successful authorization, a new connection is created unless connection_id and reauth_token are provided, in which case the existing connection is updated in place.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

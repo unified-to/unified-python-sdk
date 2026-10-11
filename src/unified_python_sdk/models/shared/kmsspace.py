@@ -10,19 +10,24 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class KmsSpaceTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     name: NotRequired[str]
     parent_id: NotRequired[str]
     parent_page_id: NotRequired[str]
+    r"""(reference to KmsPage)"""
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
+    r"""(reference to HrisEmployee)"""
 
 
 class KmsSpace(BaseModel):
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
@@ -35,12 +40,15 @@ class KmsSpace(BaseModel):
     parent_id: Optional[str] = None
 
     parent_page_id: Optional[str] = None
+    r"""(reference to KmsPage)"""
 
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
+    r"""(reference to HrisEmployee)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

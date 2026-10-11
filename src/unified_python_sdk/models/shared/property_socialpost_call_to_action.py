@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class PropertySocialPostCallToActionType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The call-to-action button type"""
+
     BOOK = "BOOK"
     ORDER = "ORDER"
     SHOP = "SHOP"
@@ -24,15 +26,19 @@ class PropertySocialPostCallToActionTypedDict(TypedDict):
     r"""Call-to-action button on the post"""
 
     type: NotRequired[PropertySocialPostCallToActionType]
+    r"""The call-to-action button type"""
     url: NotRequired[str]
+    r"""The URL the call-to-action points to"""
 
 
 class PropertySocialPostCallToAction(BaseModel):
     r"""Call-to-action button on the post"""
 
     type: Optional[PropertySocialPostCallToActionType] = None
+    r"""The call-to-action button type"""
 
     url: Optional[str] = None
+    r"""The URL the call-to-action points to"""
 
     @field_serializer("type")
     def serialize_type(self, value):

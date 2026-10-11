@@ -13,10 +13,12 @@ class PerformanceGoalMilestoneTypedDict(TypedDict):
     current_value: NotRequired[float]
     description: NotRequired[str]
     due_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     is_completed: NotRequired[bool]
     target_value: NotRequired[float]
     unit: NotRequired[str]
+    r"""unit of the target/current values (e.g. %, USD, count)"""
     weight: NotRequired[float]
 
 
@@ -28,6 +30,7 @@ class PerformanceGoalMilestone(BaseModel):
     description: Optional[str] = None
 
     due_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
 
@@ -36,6 +39,7 @@ class PerformanceGoalMilestone(BaseModel):
     target_value: Optional[float] = None
 
     unit: Optional[str] = None
+    r"""unit of the target/current values (e.g. %, USD, count)"""
 
     weight: Optional[float] = None
 

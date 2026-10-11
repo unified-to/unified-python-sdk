@@ -32,24 +32,24 @@ with UnifiedTo(
 
     res = unified_to.timeshift.create_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-07T03:05:14.680Z"),
+            "approved_at": parse_datetime("2023-06-18T03:10:12.113Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "JPY",
-                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "frequency": shared.HrisCompensationFrequency.WEEK,
                     "notes": "Annus adficio suasoria architecto aggero.",
-                    "type": shared.HrisCompensationType.OTHER,
+                    "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-08-28T03:01:07.094Z"),
+            "end_at": parse_datetime("2026-09-17T03:42:59.907Z"),
             "hours": 8.0,
-            "id": "9f128688-46cc-481b-a41e-503d0c962370",
+            "id": "dfcf1802-ce5f-4727-89b0-f6b60d8029a2",
             "is_approved": True,
-            "start_at": parse_datetime("2023-06-26T08:32:27.006Z"),
-            "updated_at": parse_datetime("2021-06-23T15:17:01.677Z"),
+            "start_at": parse_datetime("2023-07-07T12:09:32.558Z"),
+            "updated_at": parse_datetime("2021-06-29T04:09:58.867Z"),
         },
         "connection_id": "<id>",
     })
@@ -192,24 +192,24 @@ with UnifiedTo(
 
     res = unified_to.timeshift.patch_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-07T03:05:14.688Z"),
+            "approved_at": parse_datetime("2023-06-18T03:10:12.122Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "JPY",
-                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "frequency": shared.HrisCompensationFrequency.WEEK,
                     "notes": "Annus adficio suasoria architecto aggero.",
-                    "type": shared.HrisCompensationType.OTHER,
+                    "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-08-28T03:01:07.109Z"),
+            "end_at": parse_datetime("2026-09-17T03:42:59.924Z"),
             "hours": 8.0,
-            "id": "2492c6df-e2c6-450f-af6d-7db5a8f448c0",
+            "id": "66a39c02-f126-4c60-921c-1874dc4ce92d",
             "is_approved": True,
-            "start_at": parse_datetime("2023-06-26T08:32:27.015Z"),
-            "updated_at": parse_datetime("2021-06-23T15:17:01.681Z"),
+            "start_at": parse_datetime("2023-07-07T12:09:32.567Z"),
+            "updated_at": parse_datetime("2021-06-29T04:09:58.872Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -307,24 +307,24 @@ with UnifiedTo(
 
     res = unified_to.timeshift.update_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-07T03:05:14.688Z"),
+            "approved_at": parse_datetime("2023-06-18T03:10:12.122Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "JPY",
-                    "frequency": shared.HrisCompensationFrequency.HOUR,
+                    "frequency": shared.HrisCompensationFrequency.WEEK,
                     "notes": "Annus adficio suasoria architecto aggero.",
-                    "type": shared.HrisCompensationType.OTHER,
+                    "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-08-28T03:01:07.109Z"),
+            "end_at": parse_datetime("2026-09-17T03:42:59.924Z"),
             "hours": 8.0,
-            "id": "2492c6df-e2c6-450f-af6d-7db5a8f448c0",
+            "id": "66a39c02-f126-4c60-921c-1874dc4ce92d",
             "is_approved": True,
-            "start_at": parse_datetime("2023-06-26T08:32:27.015Z"),
-            "updated_at": parse_datetime("2021-06-23T15:17:01.681Z"),
+            "start_at": parse_datetime("2023-07-07T12:09:32.567Z"),
+            "updated_at": parse_datetime("2021-06-29T04:09:58.872Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

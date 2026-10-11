@@ -20,8 +20,10 @@ class LmsContentTypedDict(TypedDict):
     collection_ids: NotRequired[List[str]]
     course_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     difficulty: NotRequired[str]
+    r"""Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)"""
     duration_minutes: NotRequired[float]
     external_reference: NotRequired[str]
     id: NotRequired[str]
@@ -33,6 +35,7 @@ class LmsContentTypedDict(TypedDict):
     name: NotRequired[str]
     provider_name: NotRequired[str]
     published_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     raw: NotRequired[Dict[str, Any]]
     short_description: NotRequired[str]
     skills: NotRequired[List[str]]
@@ -41,6 +44,7 @@ class LmsContentTypedDict(TypedDict):
     r"""Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)"""
     tags: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class LmsContent(BaseModel):
@@ -51,10 +55,12 @@ class LmsContent(BaseModel):
     course_ids: Optional[List[str]] = None
 
     created_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
 
     difficulty: Optional[str] = None
+    r"""Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)"""
 
     duration_minutes: Optional[float] = None
 
@@ -77,6 +83,7 @@ class LmsContent(BaseModel):
     provider_name: Optional[str] = None
 
     published_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -92,6 +99,7 @@ class LmsContent(BaseModel):
     tags: Optional[List[str]] = None
 
     updated_at: Optional[datetime] = None
+    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

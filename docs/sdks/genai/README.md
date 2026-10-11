@@ -12,18 +12,23 @@
 * [get_genai_agent](#get_genai_agent) - Retrieve an agent
 * [get_genai_model](#get_genai_model) - Retrieve a model
 * [get_genai_organization](#get_genai_organization) - Retrieve an organization
+* [get_genai_skill](#get_genai_skill) - Retrieve a skill
 * [get_genai_task](#get_genai_task) - Retrieve a task
 * [list_genai_agents](#list_genai_agents) - List all agents
 * [list_genai_models](#list_genai_models) - List all models
 * [list_genai_organizations](#list_genai_organizations) - List all organizations
+* [list_genai_skills](#list_genai_skills) - List all skills
 * [list_genai_tasks](#list_genai_tasks) - List all tasks
 * [patch_genai_agent](#patch_genai_agent) - Update an agent
 * [patch_genai_organization](#patch_genai_organization) - Update an organization
+* [patch_genai_task](#patch_genai_task) - Update a task
 * [remove_genai_agent](#remove_genai_agent) - Remove an agent
 * [remove_genai_organization](#remove_genai_organization) - Remove an organization
+* [remove_genai_skill](#remove_genai_skill) - Remove a skill
 * [remove_genai_task](#remove_genai_task) - Remove a task
 * [update_genai_agent](#update_genai_agent) - Update an agent
 * [update_genai_organization](#update_genai_organization) - Update an organization
+* [update_genai_task](#update_genai_task) - Update a task
 
 ## create_genai_agent
 
@@ -48,11 +53,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "c104d9fa-c7f7-473a-9190-eb8d7db8fccd",
+            "id": "08bfc443-c346-47a1-8912-e15df508d4aa",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-09-20T11:48:23.168Z"),
+            "updated_at": parse_datetime("2025-10-07T04:35:20.472Z"),
         },
         "connection_id": "<id>",
     })
@@ -109,7 +114,7 @@ with UnifiedTo(
             "dimension": 423.0,
             "embeddings": "Est.",
             "enconding_format": shared.EncondingFormat.FLOAT,
-            "id": "62bbaf9c-5d32-4a2e-88ba-812b77de9ed1",
+            "id": "e2c08e06-56c1-48bf-af2b-b24b11985b27",
             "max_tokens": 223.0,
             "tokens_used": 836.0,
             "type": "classification",
@@ -164,10 +169,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "c6b6737d-7782-41e3-a20e-674fb9c33d86",
+            "id": "e3f4425c-aaf8-41db-832a-aa3bf1eba493",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-15T02:14:43.003Z"),
+            "updated_at": parse_datetime("2023-01-22T16:30:20.583Z"),
         },
         "connection_id": "<id>",
     })
@@ -216,6 +221,25 @@ with UnifiedTo(
 
     res = unified_to.genai.create_genai_prompt(request={
         "genai_prompt": {
+            "answers": [
+                {
+                    "confidence": 0.5384309098590165,
+                    "id": "TeZpueFB",
+                    "probabilities": [
+                        {
+                            "option": "veniam",
+                            "probability": 0.05683182482607663,
+                        },
+                        {
+                            "option": "comes",
+                            "probability": 0.1404057613108307,
+                        },
+                    ],
+                    "score": 0.05974147981032729,
+                    "type": shared.GenaiAnswerType.CHOICE,
+                    "value": "summisse",
+                },
+            ],
             "max_tokens": 0.4677782787475735,
             "mcp_authorization_token": "f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4",
             "mcp_deferred_tools": [],
@@ -223,11 +247,45 @@ with UnifiedTo(
             "messages": [
                 {
                     "content": "Aegre repudiandae verecundia facere statua.",
+                    "images": [],
                     "role": shared.Role.ASSISTANT,
                 },
                 {
                     "content": "Speciosus xiphias soleo trepide crinis.",
+                    "images": [],
                     "role": shared.Role.SYSTEM,
+                },
+            ],
+            "questions": [
+                {
+                    "id": "KtvbYiEq",
+                    "instructions": "Admiratio cura contabesco subvenio venustas architecto vacuus summopere.",
+                    "options": [
+                        "vulnero",
+                        "quasi",
+                        "tolero",
+                    ],
+                    "type": shared.GenaiQuestionType.BOOLEAN,
+                },
+                {
+                    "id": "oV6IURtv",
+                    "instructions": "Celer deleniti ventus ipsam tendo odit.",
+                    "options": [
+                        "nulla",
+                        "aspicio",
+                        "tero",
+                    ],
+                    "type": shared.GenaiQuestionType.CHOICE,
+                },
+                {
+                    "id": "60dBZk2K",
+                    "instructions": "Decretum vesica amet repudiandae.",
+                    "options": [
+                        "ducimus",
+                        "civis",
+                        "alter",
+                    ],
+                    "type": shared.GenaiQuestionType.BOOLEAN,
                 },
             ],
             "responses": [
@@ -284,16 +342,17 @@ with UnifiedTo(
 
     res = unified_to.genai.create_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-09-06T09:18:49.674Z"),
+            "completed_at": parse_datetime("2025-09-23T01:00:16.745Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "586f6326-fe69-435c-8548-3150816342b0",
+            "id": "29e10421-e909-4556-95f3-15cbb6f8aadd",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
             "messages": [
                 {
                     "content": "Stultus esse cursim stabilis tenetur amet contigo tristis.",
+                    "images": [],
                     "role": shared.Role.ASSISTANT,
                 },
             ],
@@ -301,12 +360,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-03T10:13:29.849Z"),
+            "started_at": parse_datetime("2024-05-15T11:27:28.422Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-14T12:14:43.464Z"),
+            "updated_at": parse_datetime("2023-02-22T09:36:18.031Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -470,6 +529,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetGenaiOrganizationResponse](../../models/operations/getgenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_genai_skill
+
+Retrieve a skill
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getGenaiSkill" method="get" path="/genai/{connection_id}/skill/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.get_genai_skill(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_skill is not None
+
+    # Handle response
+    print(res.genai_skill)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetGenaiSkillRequest](../../models/operations/getgenaiskillrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.GetGenaiSkillResponse](../../models/operations/getgenaiskillresponse.md)**
 
 ### Errors
 
@@ -662,6 +768,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_genai_skills
+
+List all skills
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listGenaiSkills" method="get" path="/genai/{connection_id}/skill" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.list_genai_skills(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.genai_skills is not None
+
+    # Handle response
+    print(res.genai_skills)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListGenaiSkillsRequest](../../models/operations/listgenaiskillsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.ListGenaiSkillsResponse](../../models/operations/listgenaiskillsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_genai_tasks
 
 List all tasks
@@ -731,11 +883,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "1c8b2286-947d-4e72-ab18-0b3a5b1e863d",
+            "id": "425ae9f5-6097-4f84-915f-0fca94c2bd50",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-09-20T11:48:23.176Z"),
+            "updated_at": parse_datetime("2025-10-07T04:35:20.482Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -788,10 +940,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "e466e490-09c0-476e-9a38-d324960c1635",
+            "id": "ee8ee20d-4053-4fc4-88ef-3e62ddf8e96a",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-15T02:14:43.005Z"),
+            "updated_at": parse_datetime("2023-01-22T16:30:20.585Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -814,6 +966,81 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchGenaiOrganizationResponse](../../models/operations/patchgenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_genai_task
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.patch_genai_task(request={
+        "genai_task": {
+            "completed_at": parse_datetime("2025-09-23T01:00:16.763Z"),
+            "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
+            "files_changed": 19.0,
+            "id": "90014b59-c502-4956-b3c4-7c91f99182b8",
+            "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
+            "lines_added": 244.0,
+            "lines_deleted": 118.0,
+            "messages": [
+                {
+                    "content": "Stultus esse cursim stabilis tenetur amet contigo tristis.",
+                    "images": [],
+                    "role": shared.Role.ASSISTANT,
+                },
+            ],
+            "name": "connect multi-byte port",
+            "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
+            "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
+            "source_branch_identifier": "main",
+            "started_at": parse_datetime("2024-05-15T11:27:28.435Z"),
+            "status": shared.GenaiTaskStatus.BLOCKED,
+            "summary": "Cur aeternus cogito vesper.",
+            "target_branch_identifier": "agent/joshingly-ignorance",
+            "tokens_used": 2165.0,
+            "updated_at": parse_datetime("2023-02-22T09:36:18.040Z"),
+            "web_url": "https://inexperienced-adrenalin.biz/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_task is not None
+
+    # Handle response
+    print(res.genai_task)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchGenaiTaskRequest](../../models/operations/patchgenaitaskrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.PatchGenaiTaskResponse](../../models/operations/patchgenaitaskresponse.md)**
 
 ### Errors
 
@@ -915,6 +1142,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_genai_skill
+
+Remove a skill
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeGenaiSkill" method="delete" path="/genai/{connection_id}/skill/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.remove_genai_skill(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.RemoveGenaiSkillRequest](../../models/operations/removegenaiskillrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.RemoveGenaiSkillResponse](../../models/operations/removegenaiskillresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_genai_task
 
 Remove a task
@@ -985,11 +1259,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "1c8b2286-947d-4e72-ab18-0b3a5b1e863d",
+            "id": "425ae9f5-6097-4f84-915f-0fca94c2bd50",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-09-20T11:48:23.176Z"),
+            "updated_at": parse_datetime("2025-10-07T04:35:20.482Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1042,10 +1316,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "e466e490-09c0-476e-9a38-d324960c1635",
+            "id": "ee8ee20d-4053-4fc4-88ef-3e62ddf8e96a",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-15T02:14:43.005Z"),
+            "updated_at": parse_datetime("2023-01-22T16:30:20.585Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1068,6 +1342,81 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateGenaiOrganizationResponse](../../models/operations/updategenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_genai_task
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.update_genai_task(request={
+        "genai_task": {
+            "completed_at": parse_datetime("2025-09-23T01:00:16.763Z"),
+            "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
+            "files_changed": 19.0,
+            "id": "90014b59-c502-4956-b3c4-7c91f99182b8",
+            "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
+            "lines_added": 244.0,
+            "lines_deleted": 118.0,
+            "messages": [
+                {
+                    "content": "Stultus esse cursim stabilis tenetur amet contigo tristis.",
+                    "images": [],
+                    "role": shared.Role.ASSISTANT,
+                },
+            ],
+            "name": "connect multi-byte port",
+            "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
+            "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
+            "source_branch_identifier": "main",
+            "started_at": parse_datetime("2024-05-15T11:27:28.435Z"),
+            "status": shared.GenaiTaskStatus.BLOCKED,
+            "summary": "Cur aeternus cogito vesper.",
+            "target_branch_identifier": "agent/joshingly-ignorance",
+            "tokens_used": 2165.0,
+            "updated_at": parse_datetime("2023-02-22T09:36:18.040Z"),
+            "web_url": "https://inexperienced-adrenalin.biz/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_task is not None
+
+    # Handle response
+    print(res.genai_task)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateGenaiTaskRequest](../../models/operations/updategenaitaskrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.UpdateGenaiTaskResponse](../../models/operations/updategenaitaskresponse.md)**
 
 ### Errors
 
