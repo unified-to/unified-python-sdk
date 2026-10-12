@@ -1,0 +1,10 @@
+# HealthcareIdentifier
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `system`                                                                                     | *Optional[str]*                                                                              | :heavy_minus_sign:                                                                           | The namespace/system URI that issued the identifier                                          |
+| `type`                                                                                       | [Optional[shared.HealthcareIdentifierType]](../../models/shared/healthcareidentifiertype.md) | :heavy_minus_sign:                                                                           | The kind of identifier                                                                       |
+| `value`                                                                                      | *str*                                                                                        | :heavy_check_mark:                                                                           | The identifier value                                                                         |

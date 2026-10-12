@@ -36,7 +36,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance",
             "height": 52.0,
-            "id": "5c490591-d2a1-470c-a016-2a6bc92b5377",
+            "id": "97298d3f-f688-41d8-a794-7d17faabf6f2",
             "is_active": False,
             "is_featured": False,
             "is_visible": False,
@@ -45,10 +45,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 394.0,
-                    "id": "adbef15f-8a7d-4e18-9ef1-afe5f9510c49",
+                    "id": "7d7fb8ac-fb11-46d7-98f3-56029c0bbe20",
                     "metadata": [
                         {
-                            "id": "1ccc71f9-b4b2-4a6b-a857-a85c5ebacefa",
+                            "id": "c174f277-34b4-463b-9032-e3b9a0f227b0",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -61,10 +61,10 @@ with UnifiedTo(
                 {
                     "alt": "Civitas acies substantia tergo.",
                     "height": 351.0,
-                    "id": "c4f98acb-c50f-45a8-abab-3ea6a74d9a59",
+                    "id": "1a9d4c25-48fe-43c8-b2dc-4dd1734cb282",
                     "metadata": [
                         {
-                            "id": "d3334b35-1a0e-44c0-a048-8e40794de17c",
+                            "id": "2e417cca-e939-4b4c-940a-ece1ada726d6",
                             "slug": "libero",
                             "value": "capitulus",
                         },
@@ -81,7 +81,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "06ff2d54-be89-434e-a272-0cb2cfa18c70",
+                    "id": "61fb1766-e8b4-44ba-8e52-0b788abd2b5b",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "nihil",
@@ -90,7 +90,7 @@ with UnifiedTo(
             "name": "Keyboard",
             "options": [
                 {
-                    "id": "f889225a-cbca-42ae-b96c-aa0e18aabed0",
+                    "id": "74cc2efd-e3fb-408c-9544-592b3482c2ff",
                     "name": "Steel",
                     "position": 97.0,
                     "values": [
@@ -126,7 +126,7 @@ with UnifiedTo(
                 "custodia",
             ],
             "total_stock": 929.0,
-            "updated_at": parse_datetime("2025-06-09T21:37:46.891Z"),
+            "updated_at": parse_datetime("2025-06-10T12:46:12.315Z"),
             "weight": 61.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 26.0,
@@ -276,7 +276,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance",
             "height": 52.0,
-            "id": "1e16a20d-5b27-4741-9336-be01a198bdf4",
+            "id": "bb3362fa-d811-4d00-b38a-b06e7898627d",
             "is_active": False,
             "is_featured": False,
             "is_visible": False,
@@ -285,10 +285,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 394.0,
-                    "id": "63a8cf91-9c6f-44cf-8407-0d091259559d",
+                    "id": "d455d6d2-b3db-40fd-8787-608122164b23",
                     "metadata": [
                         {
-                            "id": "4d748301-86bc-4b80-a72a-df88546c9736",
+                            "id": "78009afc-a817-4e81-bb5b-8c29a4dc514b",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -301,10 +301,10 @@ with UnifiedTo(
                 {
                     "alt": "Civitas acies substantia tergo.",
                     "height": 351.0,
-                    "id": "a7773b2c-5552-4ffe-b159-ae2a43fd49ca",
+                    "id": "ac64f26a-084c-4058-8896-0610323e72f8",
                     "metadata": [
                         {
-                            "id": "60134ea9-6179-4a4a-b2d3-9d1de0c36de0",
+                            "id": "8cc5e9e5-d8cb-4069-adaf-25be33ed9b2c",
                             "slug": "libero",
                             "value": "capitulus",
                         },
@@ -321,7 +321,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "8a751d96-7b45-4f96-b698-b05f80be5677",
+                    "id": "c3d7734a-6929-494a-bb29-f00b29e6d150",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "nihil",
@@ -330,7 +330,7 @@ with UnifiedTo(
             "name": "Keyboard",
             "options": [
                 {
-                    "id": "2909b676-0d4a-4229-bc9a-1fa00cffb292",
+                    "id": "455d6079-0512-4428-9041-d44d502a3708",
                     "name": "Steel",
                     "position": 97.0,
                     "values": [
@@ -366,7 +366,7 @@ with UnifiedTo(
                 "custodia",
             ],
             "total_stock": 929.0,
-            "updated_at": parse_datetime("2025-06-09T21:37:46.912Z"),
+            "updated_at": parse_datetime("2025-06-10T12:46:12.343Z"),
             "weight": 61.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 26.0,
@@ -471,7 +471,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance",
             "height": 52.0,
-            "id": "1e16a20d-5b27-4741-9336-be01a198bdf4",
+            "id": "bb3362fa-d811-4d00-b38a-b06e7898627d",
             "is_active": False,
             "is_featured": False,
             "is_visible": False,
@@ -480,10 +480,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 394.0,
-                    "id": "63a8cf91-9c6f-44cf-8407-0d091259559d",
+                    "id": "d455d6d2-b3db-40fd-8787-608122164b23",
                     "metadata": [
                         {
-                            "id": "4d748301-86bc-4b80-a72a-df88546c9736",
+                            "id": "78009afc-a817-4e81-bb5b-8c29a4dc514b",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -496,10 +496,10 @@ with UnifiedTo(
                 {
                     "alt": "Civitas acies substantia tergo.",
                     "height": 351.0,
-                    "id": "a7773b2c-5552-4ffe-b159-ae2a43fd49ca",
+                    "id": "ac64f26a-084c-4058-8896-0610323e72f8",
                     "metadata": [
                         {
-                            "id": "60134ea9-6179-4a4a-b2d3-9d1de0c36de0",
+                            "id": "8cc5e9e5-d8cb-4069-adaf-25be33ed9b2c",
                             "slug": "libero",
                             "value": "capitulus",
                         },
@@ -516,7 +516,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "8a751d96-7b45-4f96-b698-b05f80be5677",
+                    "id": "c3d7734a-6929-494a-bb29-f00b29e6d150",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "nihil",
@@ -525,7 +525,7 @@ with UnifiedTo(
             "name": "Keyboard",
             "options": [
                 {
-                    "id": "2909b676-0d4a-4229-bc9a-1fa00cffb292",
+                    "id": "455d6079-0512-4428-9041-d44d502a3708",
                     "name": "Steel",
                     "position": 97.0,
                     "values": [
@@ -561,7 +561,7 @@ with UnifiedTo(
                 "custodia",
             ],
             "total_stock": 929.0,
-            "updated_at": parse_datetime("2025-06-09T21:37:46.912Z"),
+            "updated_at": parse_datetime("2025-06-10T12:46:12.343Z"),
             "weight": 61.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 26.0,

@@ -43,6 +43,8 @@ class CalendarEventTypedDict(TypedDict):
     is_free: NotRequired[bool]
     is_private: NotRequired[bool]
     location: NotRequired[str]
+    matter_id: NotRequired[str]
+    r"""pointer to Legal Matter"""
     notes: NotRequired[str]
     organizer: NotRequired[PropertyCalendarEventOrganizerTypedDict]
     raw: NotRequired[Dict[str, Any]]
@@ -87,6 +89,9 @@ class CalendarEvent(BaseModel):
     is_private: Optional[bool] = None
 
     location: Optional[str] = None
+
+    matter_id: Optional[str] = None
+    r"""pointer to Legal Matter"""
 
     notes: Optional[str] = None
 
@@ -140,6 +145,7 @@ class CalendarEvent(BaseModel):
                 "is_free",
                 "is_private",
                 "location",
+                "matter_id",
                 "notes",
                 "organizer",
                 "raw",

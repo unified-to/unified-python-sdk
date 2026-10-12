@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
+            "id": "b096adb6-85c6-43bd-8b65-9908676ad8f8",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -148,7 +148,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
+            "updated_at": parse_datetime("2023-01-05T23:34:54.694Z"),
         },
         "connection_id": "<id>",
     })
@@ -185,7 +185,7 @@ async def main():
                 "currency": "BOB",
                 "customer_defined_code": "quo",
                 "description": "Spoliatio comedo vilitas harum cupiditate.",
-                "id": "56991dac-50de-4353-86e2-c684b15fcb69",
+                "id": "b096adb6-85c6-43bd-8b65-9908676ad8f8",
                 "is_payable": True,
                 "name": "Electronic Aluminum Tuna",
                 "status": shared.Status.ARCHIVED,
@@ -202,7 +202,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.BANK,
-                "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
+                "updated_at": parse_datetime("2023-01-05T23:34:54.694Z"),
             },
             "connection_id": "<id>",
         })
@@ -473,6 +473,11 @@ asyncio.run(main())
 * [remove_genai_agent](docs/sdks/agent/README.md#remove_genai_agent) - Remove an agent
 * [update_genai_agent](docs/sdks/agent/README.md#update_genai_agent) - Update an agent
 
+### [Allergy](docs/sdks/allergy/README.md)
+
+* [get_healthcare_allergy](docs/sdks/allergy/README.md#get_healthcare_allergy) - Retrieve an allergy
+* [list_healthcare_allergies](docs/sdks/allergy/README.md#list_healthcare_allergies) - List all allergies
+
 ### [Analytics](docs/sdks/analytics/README.md)
 
 * [create_analytics_event](docs/sdks/analytics/README.md#create_analytics_event) - Create an event
@@ -512,6 +517,15 @@ asyncio.run(main())
 
 * [get_ats_applicationstatus](docs/sdks/applicationstatus/README.md#get_ats_applicationstatus) - Retrieve an applicationstatus
 * [list_ats_applicationstatuses](docs/sdks/applicationstatus/README.md#list_ats_applicationstatuses) - List all applicationstatuses
+
+### [Appointment](docs/sdks/appointment/README.md)
+
+* [create_healthcare_appointment](docs/sdks/appointment/README.md#create_healthcare_appointment) - Create an appointment
+* [get_healthcare_appointment](docs/sdks/appointment/README.md#get_healthcare_appointment) - Retrieve an appointment
+* [list_healthcare_appointments](docs/sdks/appointment/README.md#list_healthcare_appointments) - List all appointments
+* [patch_healthcare_appointment](docs/sdks/appointment/README.md#patch_healthcare_appointment) - Update an appointment
+* [remove_healthcare_appointment](docs/sdks/appointment/README.md#remove_healthcare_appointment) - Remove an appointment
+* [update_healthcare_appointment](docs/sdks/appointment/README.md#update_healthcare_appointment) - Update an appointment
 
 ### [Assessment](docs/sdks/assessment/README.md)
 
@@ -945,6 +959,71 @@ asyncio.run(main())
 * [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
 * [update_hris_company](docs/sdks/company/README.md#update_hris_company) - Update a company
 
+### [Compute](docs/sdks/compute/README.md)
+
+* [create_compute_deployment](docs/sdks/compute/README.md#create_compute_deployment) - Create a deployment
+* [create_compute_domain](docs/sdks/compute/README.md#create_compute_domain) - Create a domain
+* [create_compute_envvar](docs/sdks/compute/README.md#create_compute_envvar) - Create an envvar
+* [create_compute_instance](docs/sdks/compute/README.md#create_compute_instance) - Create an instance
+* [create_compute_key](docs/sdks/compute/README.md#create_compute_key) - Create a key
+* [create_compute_service](docs/sdks/compute/README.md#create_compute_service) - Create a service
+* [create_compute_snapshot](docs/sdks/compute/README.md#create_compute_snapshot) - Create a snapshot
+* [create_compute_template](docs/sdks/compute/README.md#create_compute_template) - Create a template
+* [create_compute_volume](docs/sdks/compute/README.md#create_compute_volume) - Create a volume
+* [get_compute_deployment](docs/sdks/compute/README.md#get_compute_deployment) - Retrieve a deployment
+* [get_compute_domain](docs/sdks/compute/README.md#get_compute_domain) - Retrieve a domain
+* [get_compute_envvar](docs/sdks/compute/README.md#get_compute_envvar) - Retrieve an envvar
+* [get_compute_gputype](docs/sdks/compute/README.md#get_compute_gputype) - Retrieve a gputype
+* [get_compute_instance](docs/sdks/compute/README.md#get_compute_instance) - Retrieve an instance
+* [get_compute_key](docs/sdks/compute/README.md#get_compute_key) - Retrieve a key
+* [get_compute_region](docs/sdks/compute/README.md#get_compute_region) - Retrieve a region
+* [get_compute_service](docs/sdks/compute/README.md#get_compute_service) - Retrieve a service
+* [get_compute_snapshot](docs/sdks/compute/README.md#get_compute_snapshot) - Retrieve a snapshot
+* [get_compute_template](docs/sdks/compute/README.md#get_compute_template) - Retrieve a template
+* [get_compute_volume](docs/sdks/compute/README.md#get_compute_volume) - Retrieve a volume
+* [list_compute_deployments](docs/sdks/compute/README.md#list_compute_deployments) - List all deployments
+* [list_compute_domains](docs/sdks/compute/README.md#list_compute_domains) - List all domains
+* [list_compute_envvars](docs/sdks/compute/README.md#list_compute_envvars) - List all envvars
+* [list_compute_gputypes](docs/sdks/compute/README.md#list_compute_gputypes) - List all gputypes
+* [list_compute_instances](docs/sdks/compute/README.md#list_compute_instances) - List all instances
+* [list_compute_keys](docs/sdks/compute/README.md#list_compute_keys) - List all keys
+* [list_compute_regions](docs/sdks/compute/README.md#list_compute_regions) - List all regions
+* [list_compute_services](docs/sdks/compute/README.md#list_compute_services) - List all services
+* [list_compute_snapshots](docs/sdks/compute/README.md#list_compute_snapshots) - List all snapshots
+* [list_compute_templates](docs/sdks/compute/README.md#list_compute_templates) - List all templates
+* [list_compute_usages](docs/sdks/compute/README.md#list_compute_usages) - List all usages
+* [list_compute_volumes](docs/sdks/compute/README.md#list_compute_volumes) - List all volumes
+* [patch_compute_deployment](docs/sdks/compute/README.md#patch_compute_deployment) - Update a deployment
+* [patch_compute_domain](docs/sdks/compute/README.md#patch_compute_domain) - Update a domain
+* [patch_compute_envvar](docs/sdks/compute/README.md#patch_compute_envvar) - Update an envvar
+* [patch_compute_instance](docs/sdks/compute/README.md#patch_compute_instance) - Update an instance
+* [patch_compute_key](docs/sdks/compute/README.md#patch_compute_key) - Update a key
+* [patch_compute_service](docs/sdks/compute/README.md#patch_compute_service) - Update a service
+* [patch_compute_template](docs/sdks/compute/README.md#patch_compute_template) - Update a template
+* [patch_compute_volume](docs/sdks/compute/README.md#patch_compute_volume) - Update a volume
+* [remove_compute_deployment](docs/sdks/compute/README.md#remove_compute_deployment) - Remove a deployment
+* [remove_compute_domain](docs/sdks/compute/README.md#remove_compute_domain) - Remove a domain
+* [remove_compute_envvar](docs/sdks/compute/README.md#remove_compute_envvar) - Remove an envvar
+* [remove_compute_instance](docs/sdks/compute/README.md#remove_compute_instance) - Remove an instance
+* [remove_compute_key](docs/sdks/compute/README.md#remove_compute_key) - Remove a key
+* [remove_compute_service](docs/sdks/compute/README.md#remove_compute_service) - Remove a service
+* [remove_compute_snapshot](docs/sdks/compute/README.md#remove_compute_snapshot) - Remove a snapshot
+* [remove_compute_template](docs/sdks/compute/README.md#remove_compute_template) - Remove a template
+* [remove_compute_volume](docs/sdks/compute/README.md#remove_compute_volume) - Remove a volume
+* [update_compute_deployment](docs/sdks/compute/README.md#update_compute_deployment) - Update a deployment
+* [update_compute_domain](docs/sdks/compute/README.md#update_compute_domain) - Update a domain
+* [update_compute_envvar](docs/sdks/compute/README.md#update_compute_envvar) - Update an envvar
+* [update_compute_instance](docs/sdks/compute/README.md#update_compute_instance) - Update an instance
+* [update_compute_key](docs/sdks/compute/README.md#update_compute_key) - Update a key
+* [update_compute_service](docs/sdks/compute/README.md#update_compute_service) - Update a service
+* [update_compute_template](docs/sdks/compute/README.md#update_compute_template) - Update a template
+* [update_compute_volume](docs/sdks/compute/README.md#update_compute_volume) - Update a volume
+
+### [Condition](docs/sdks/condition/README.md)
+
+* [get_healthcare_condition](docs/sdks/condition/README.md#get_healthcare_condition) - Retrieve a condition
+* [list_healthcare_conditions](docs/sdks/condition/README.md#list_healthcare_conditions) - List all conditions
+
 ### [Connection](docs/sdks/connection/README.md)
 
 * [create_unified_connection](docs/sdks/connection/README.md#create_unified_connection) - Create connection
@@ -1115,6 +1194,15 @@ asyncio.run(main())
 * [remove_hris_deduction](docs/sdks/deduction/README.md#remove_hris_deduction) - Remove a deduction
 * [update_hris_deduction](docs/sdks/deduction/README.md#update_hris_deduction) - Update a deduction
 
+### [Deployment](docs/sdks/deployment/README.md)
+
+* [create_compute_deployment](docs/sdks/deployment/README.md#create_compute_deployment) - Create a deployment
+* [get_compute_deployment](docs/sdks/deployment/README.md#get_compute_deployment) - Retrieve a deployment
+* [list_compute_deployments](docs/sdks/deployment/README.md#list_compute_deployments) - List all deployments
+* [patch_compute_deployment](docs/sdks/deployment/README.md#patch_compute_deployment) - Update a deployment
+* [remove_compute_deployment](docs/sdks/deployment/README.md#remove_compute_deployment) - Remove a deployment
+* [update_compute_deployment](docs/sdks/deployment/README.md#update_compute_deployment) - Update a deployment
+
 ### [Destination](docs/sdks/destination/README.md)
 
 * [create_cdp_destination](docs/sdks/destination/README.md#create_cdp_destination) - Create a destination
@@ -1154,6 +1242,15 @@ asyncio.run(main())
 * [update_hris_document](docs/sdks/document/README.md#update_hris_document) - Update a document
 * [update_signing_document](docs/sdks/document/README.md#update_signing_document) - Update a document
 
+### [Domain](docs/sdks/domain/README.md)
+
+* [create_compute_domain](docs/sdks/domain/README.md#create_compute_domain) - Create a domain
+* [get_compute_domain](docs/sdks/domain/README.md#get_compute_domain) - Retrieve a domain
+* [list_compute_domains](docs/sdks/domain/README.md#list_compute_domains) - List all domains
+* [patch_compute_domain](docs/sdks/domain/README.md#patch_compute_domain) - Update a domain
+* [remove_compute_domain](docs/sdks/domain/README.md#remove_compute_domain) - Remove a domain
+* [update_compute_domain](docs/sdks/domain/README.md#update_compute_domain) - Update a domain
+
 ### [Earning](docs/sdks/earning/README.md)
 
 * [create_hris_earning](docs/sdks/earning/README.md#create_hris_earning) - Create an earning
@@ -1176,6 +1273,11 @@ asyncio.run(main())
 * [remove_hris_employee](docs/sdks/employee/README.md#remove_hris_employee) - Remove an employee
 * [update_hris_employee](docs/sdks/employee/README.md#update_hris_employee) - Update an employee
 
+### [Encounter](docs/sdks/encounter/README.md)
+
+* [get_healthcare_encounter](docs/sdks/encounter/README.md#get_healthcare_encounter) - Retrieve an encounter
+* [list_healthcare_encounters](docs/sdks/encounter/README.md#list_healthcare_encounters) - List all encounters
+
 ### [Enrich](docs/sdks/enrich/README.md)
 
 * [list_enrich_companies](docs/sdks/enrich/README.md#list_enrich_companies) - Retrieve enrichment information for a company
@@ -1186,6 +1288,15 @@ asyncio.run(main())
 * [create_unified_environment](docs/sdks/environment/README.md#create_unified_environment) - Create new environments
 * [list_unified_environments](docs/sdks/environment/README.md#list_unified_environments) - Returns all environments
 * [remove_unified_environment](docs/sdks/environment/README.md#remove_unified_environment) - Remove an environment
+
+### [Envvar](docs/sdks/envvar/README.md)
+
+* [create_compute_envvar](docs/sdks/envvar/README.md#create_compute_envvar) - Create an envvar
+* [get_compute_envvar](docs/sdks/envvar/README.md#get_compute_envvar) - Retrieve an envvar
+* [list_compute_envvars](docs/sdks/envvar/README.md#list_compute_envvars) - List all envvars
+* [patch_compute_envvar](docs/sdks/envvar/README.md#patch_compute_envvar) - Update an envvar
+* [remove_compute_envvar](docs/sdks/envvar/README.md#remove_compute_envvar) - Remove an envvar
+* [update_compute_envvar](docs/sdks/envvar/README.md#update_compute_envvar) - Update an envvar
 
 ### [Event](docs/sdks/event/README.md)
 
@@ -1218,11 +1329,17 @@ asyncio.run(main())
 ### [Expense](docs/sdks/expense/README.md)
 
 * [create_accounting_expense](docs/sdks/expense/README.md#create_accounting_expense) - Create an expense
+* [create_legal_expense](docs/sdks/expense/README.md#create_legal_expense) - Create an expense
 * [get_accounting_expense](docs/sdks/expense/README.md#get_accounting_expense) - Retrieve an expense
+* [get_legal_expense](docs/sdks/expense/README.md#get_legal_expense) - Retrieve an expense
 * [list_accounting_expenses](docs/sdks/expense/README.md#list_accounting_expenses) - List all expenses
+* [list_legal_expenses](docs/sdks/expense/README.md#list_legal_expenses) - List all expenses
 * [patch_accounting_expense](docs/sdks/expense/README.md#patch_accounting_expense) - Update an expense
+* [patch_legal_expense](docs/sdks/expense/README.md#patch_legal_expense) - Update an expense
 * [remove_accounting_expense](docs/sdks/expense/README.md#remove_accounting_expense) - Remove an expense
+* [remove_legal_expense](docs/sdks/expense/README.md#remove_legal_expense) - Remove an expense
 * [update_accounting_expense](docs/sdks/expense/README.md#update_accounting_expense) - Update an expense
+* [update_legal_expense](docs/sdks/expense/README.md#update_legal_expense) - Update an expense
 
 ### [Expensereport](docs/sdks/expensereport/README.md)
 
@@ -1305,6 +1422,11 @@ asyncio.run(main())
 * [remove_performance_goal](docs/sdks/goal/README.md#remove_performance_goal) - Remove a goal
 * [update_performance_goal](docs/sdks/goal/README.md#update_performance_goal) - Update a goal
 
+### [Gputype](docs/sdks/gputype/README.md)
+
+* [get_compute_gputype](docs/sdks/gputype/README.md#get_compute_gputype) - Retrieve a gputype
+* [list_compute_gputypes](docs/sdks/gputype/README.md#list_compute_gputypes) - List all gputypes
+
 ### [Group](docs/sdks/group/README.md)
 
 * [create_ads_group](docs/sdks/group/README.md#create_ads_group) - Create a group
@@ -1327,6 +1449,39 @@ asyncio.run(main())
 * [update_ads_group](docs/sdks/group/README.md#update_ads_group) - Update a group
 * [update_hris_group](docs/sdks/group/README.md#update_hris_group) - Update a group
 * [update_scim_groups](docs/sdks/group/README.md#update_scim_groups) - Update group
+
+### [Healthcare](docs/sdks/healthcare/README.md)
+
+* [create_healthcare_appointment](docs/sdks/healthcare/README.md#create_healthcare_appointment) - Create an appointment
+* [create_healthcare_observation](docs/sdks/healthcare/README.md#create_healthcare_observation) - Create an observation
+* [create_healthcare_patient](docs/sdks/healthcare/README.md#create_healthcare_patient) - Create a patient
+* [get_healthcare_allergy](docs/sdks/healthcare/README.md#get_healthcare_allergy) - Retrieve an allergy
+* [get_healthcare_appointment](docs/sdks/healthcare/README.md#get_healthcare_appointment) - Retrieve an appointment
+* [get_healthcare_condition](docs/sdks/healthcare/README.md#get_healthcare_condition) - Retrieve a condition
+* [get_healthcare_encounter](docs/sdks/healthcare/README.md#get_healthcare_encounter) - Retrieve an encounter
+* [get_healthcare_immunization](docs/sdks/healthcare/README.md#get_healthcare_immunization) - Retrieve an immunization
+* [get_healthcare_location](docs/sdks/healthcare/README.md#get_healthcare_location) - Retrieve a location
+* [get_healthcare_medication](docs/sdks/healthcare/README.md#get_healthcare_medication) - Retrieve a medication
+* [get_healthcare_observation](docs/sdks/healthcare/README.md#get_healthcare_observation) - Retrieve an observation
+* [get_healthcare_patient](docs/sdks/healthcare/README.md#get_healthcare_patient) - Retrieve a patient
+* [get_healthcare_practitioner](docs/sdks/healthcare/README.md#get_healthcare_practitioner) - Retrieve a practitioner
+* [get_healthcare_slot](docs/sdks/healthcare/README.md#get_healthcare_slot) - Retrieve a slot
+* [list_healthcare_allergies](docs/sdks/healthcare/README.md#list_healthcare_allergies) - List all allergies
+* [list_healthcare_appointments](docs/sdks/healthcare/README.md#list_healthcare_appointments) - List all appointments
+* [list_healthcare_conditions](docs/sdks/healthcare/README.md#list_healthcare_conditions) - List all conditions
+* [list_healthcare_encounters](docs/sdks/healthcare/README.md#list_healthcare_encounters) - List all encounters
+* [list_healthcare_immunizations](docs/sdks/healthcare/README.md#list_healthcare_immunizations) - List all immunizations
+* [list_healthcare_locations](docs/sdks/healthcare/README.md#list_healthcare_locations) - List all locations
+* [list_healthcare_medications](docs/sdks/healthcare/README.md#list_healthcare_medications) - List all medications
+* [list_healthcare_observations](docs/sdks/healthcare/README.md#list_healthcare_observations) - List all observations
+* [list_healthcare_patients](docs/sdks/healthcare/README.md#list_healthcare_patients) - List all patients
+* [list_healthcare_practitioners](docs/sdks/healthcare/README.md#list_healthcare_practitioners) - List all practitioners
+* [list_healthcare_slots](docs/sdks/healthcare/README.md#list_healthcare_slots) - List all slots
+* [patch_healthcare_appointment](docs/sdks/healthcare/README.md#patch_healthcare_appointment) - Update an appointment
+* [patch_healthcare_patient](docs/sdks/healthcare/README.md#patch_healthcare_patient) - Update a patient
+* [remove_healthcare_appointment](docs/sdks/healthcare/README.md#remove_healthcare_appointment) - Remove an appointment
+* [update_healthcare_appointment](docs/sdks/healthcare/README.md#update_healthcare_appointment) - Update an appointment
+* [update_healthcare_patient](docs/sdks/healthcare/README.md#update_healthcare_patient) - Update a patient
 
 ### [Hris](docs/sdks/hris/README.md)
 
@@ -1424,6 +1579,11 @@ asyncio.run(main())
 * [update_hris_timeoff](docs/sdks/hris/README.md#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](docs/sdks/hris/README.md#update_hris_timeshift) - Update a timeshift
 
+### [Immunization](docs/sdks/immunization/README.md)
+
+* [get_healthcare_immunization](docs/sdks/immunization/README.md#get_healthcare_immunization) - Retrieve an immunization
+* [list_healthcare_immunizations](docs/sdks/immunization/README.md#list_healthcare_immunizations) - List all immunizations
+
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
 
 * [create_ads_insertionorder](docs/sdks/insertionorder/README.md#create_ads_insertionorder) - Create an insertionorder
@@ -1437,6 +1597,15 @@ asyncio.run(main())
 
 * [get_social_insight](docs/sdks/insight/README.md#get_social_insight) - Retrieve an insight
 * [list_social_insights](docs/sdks/insight/README.md#list_social_insights) - List all insights
+
+### [Instance](docs/sdks/instance/README.md)
+
+* [create_compute_instance](docs/sdks/instance/README.md#create_compute_instance) - Create an instance
+* [get_compute_instance](docs/sdks/instance/README.md#get_compute_instance) - Retrieve an instance
+* [list_compute_instances](docs/sdks/instance/README.md#list_compute_instances) - List all instances
+* [patch_compute_instance](docs/sdks/instance/README.md#patch_compute_instance) - Update an instance
+* [remove_compute_instance](docs/sdks/instance/README.md#remove_compute_instance) - Remove an instance
+* [update_compute_instance](docs/sdks/instance/README.md#update_compute_instance) - Update an instance
 
 ### [Instructor](docs/sdks/instructor/README.md)
 
@@ -1527,6 +1696,15 @@ asyncio.run(main())
 * [remove_accounting_journal](docs/sdks/journal/README.md#remove_accounting_journal) - Remove a journal
 * [update_accounting_journal](docs/sdks/journal/README.md#update_accounting_journal) - Update a journal
 
+### [Key](docs/sdks/key/README.md)
+
+* [create_compute_key](docs/sdks/key/README.md#create_compute_key) - Create a key
+* [get_compute_key](docs/sdks/key/README.md#get_compute_key) - Retrieve a key
+* [list_compute_keys](docs/sdks/key/README.md#list_compute_keys) - List all keys
+* [patch_compute_key](docs/sdks/key/README.md#patch_compute_key) - Update a key
+* [remove_compute_key](docs/sdks/key/README.md#remove_compute_key) - Remove a key
+* [update_compute_key](docs/sdks/key/README.md#update_compute_key) - Update a key
+
 ### [Kms](docs/sdks/kms/README.md)
 
 * [create_kms_comment](docs/sdks/kms/README.md#create_kms_comment) - Create a comment
@@ -1565,6 +1743,33 @@ asyncio.run(main())
 * [patch_crm_lead](docs/sdks/lead/README.md#patch_crm_lead) - Update a lead
 * [remove_crm_lead](docs/sdks/lead/README.md#remove_crm_lead) - Remove a lead
 * [update_crm_lead](docs/sdks/lead/README.md#update_crm_lead) - Update a lead
+
+### [Legal](docs/sdks/legal/README.md)
+
+* [create_legal_expense](docs/sdks/legal/README.md#create_legal_expense) - Create an expense
+* [create_legal_matter](docs/sdks/legal/README.md#create_legal_matter) - Create a matter
+* [create_legal_practicearea](docs/sdks/legal/README.md#create_legal_practicearea) - Create a practicearea
+* [create_legal_timeentry](docs/sdks/legal/README.md#create_legal_timeentry) - Create a timeentry
+* [get_legal_expense](docs/sdks/legal/README.md#get_legal_expense) - Retrieve an expense
+* [get_legal_matter](docs/sdks/legal/README.md#get_legal_matter) - Retrieve a matter
+* [get_legal_practicearea](docs/sdks/legal/README.md#get_legal_practicearea) - Retrieve a practicearea
+* [get_legal_timeentry](docs/sdks/legal/README.md#get_legal_timeentry) - Retrieve a timeentry
+* [list_legal_expenses](docs/sdks/legal/README.md#list_legal_expenses) - List all expenses
+* [list_legal_matters](docs/sdks/legal/README.md#list_legal_matters) - List all matters
+* [list_legal_practiceareas](docs/sdks/legal/README.md#list_legal_practiceareas) - List all practiceareas
+* [list_legal_timeentries](docs/sdks/legal/README.md#list_legal_timeentries) - List all timeentries
+* [patch_legal_expense](docs/sdks/legal/README.md#patch_legal_expense) - Update an expense
+* [patch_legal_matter](docs/sdks/legal/README.md#patch_legal_matter) - Update a matter
+* [patch_legal_practicearea](docs/sdks/legal/README.md#patch_legal_practicearea) - Update a practicearea
+* [patch_legal_timeentry](docs/sdks/legal/README.md#patch_legal_timeentry) - Update a timeentry
+* [remove_legal_expense](docs/sdks/legal/README.md#remove_legal_expense) - Remove an expense
+* [remove_legal_matter](docs/sdks/legal/README.md#remove_legal_matter) - Remove a matter
+* [remove_legal_practicearea](docs/sdks/legal/README.md#remove_legal_practicearea) - Remove a practicearea
+* [remove_legal_timeentry](docs/sdks/legal/README.md#remove_legal_timeentry) - Remove a timeentry
+* [update_legal_expense](docs/sdks/legal/README.md#update_legal_expense) - Update an expense
+* [update_legal_matter](docs/sdks/legal/README.md#update_legal_matter) - Update a matter
+* [update_legal_practicearea](docs/sdks/legal/README.md#update_legal_practicearea) - Update a practicearea
+* [update_legal_timeentry](docs/sdks/legal/README.md#update_legal_timeentry) - Update a timeentry
 
 ### [Link](docs/sdks/link/README.md)
 
@@ -1641,9 +1846,11 @@ asyncio.run(main())
 * [create_hris_location](docs/sdks/location/README.md#create_hris_location) - Create a location
 * [get_clubs_location](docs/sdks/location/README.md#get_clubs_location) - Retrieve a location
 * [get_commerce_location](docs/sdks/location/README.md#get_commerce_location) - Retrieve a location
+* [get_healthcare_location](docs/sdks/location/README.md#get_healthcare_location) - Retrieve a location
 * [get_hris_location](docs/sdks/location/README.md#get_hris_location) - Retrieve a location
 * [list_clubs_locations](docs/sdks/location/README.md#list_clubs_locations) - List all locations
 * [list_commerce_locations](docs/sdks/location/README.md#list_commerce_locations) - List all locations
+* [list_healthcare_locations](docs/sdks/location/README.md#list_healthcare_locations) - List all locations
 * [list_hris_locations](docs/sdks/location/README.md#list_hris_locations) - List all locations
 * [patch_commerce_location](docs/sdks/location/README.md#patch_commerce_location) - Update a location
 * [patch_hris_location](docs/sdks/location/README.md#patch_hris_location) - Update a location
@@ -1677,6 +1884,20 @@ asyncio.run(main())
 * [update_martech_campaign](docs/sdks/martech/README.md#update_martech_campaign) - Update a campaign
 * [update_martech_list](docs/sdks/martech/README.md#update_martech_list) - Update a list
 * [update_martech_member](docs/sdks/martech/README.md#update_martech_member) - Update a member
+
+### [Matter](docs/sdks/matter/README.md)
+
+* [create_legal_matter](docs/sdks/matter/README.md#create_legal_matter) - Create a matter
+* [get_legal_matter](docs/sdks/matter/README.md#get_legal_matter) - Retrieve a matter
+* [list_legal_matters](docs/sdks/matter/README.md#list_legal_matters) - List all matters
+* [patch_legal_matter](docs/sdks/matter/README.md#patch_legal_matter) - Update a matter
+* [remove_legal_matter](docs/sdks/matter/README.md#remove_legal_matter) - Remove a matter
+* [update_legal_matter](docs/sdks/matter/README.md#update_legal_matter) - Update a matter
+
+### [Medication](docs/sdks/medication/README.md)
+
+* [get_healthcare_medication](docs/sdks/medication/README.md#get_healthcare_medication) - Retrieve a medication
+* [list_healthcare_medications](docs/sdks/medication/README.md#list_healthcare_medications) - List all medications
 
 ### [Member](docs/sdks/member/README.md)
 
@@ -1741,6 +1962,12 @@ asyncio.run(main())
 ### [Notification](docs/sdks/notification/README.md)
 
 * [list_unified_notifications](docs/sdks/notification/README.md#list_unified_notifications) - List event notifications
+
+### [Observation](docs/sdks/observation/README.md)
+
+* [create_healthcare_observation](docs/sdks/observation/README.md#create_healthcare_observation) - Create an observation
+* [get_healthcare_observation](docs/sdks/observation/README.md#get_healthcare_observation) - Retrieve an observation
+* [list_healthcare_observations](docs/sdks/observation/README.md#list_healthcare_observations) - List all observations
 
 ### [Order](docs/sdks/order/README.md)
 
@@ -1808,6 +2035,14 @@ asyncio.run(main())
 * [remove_passthrough](docs/sdks/passthrough/README.md#remove_passthrough) - Passthrough DELETE
 * [update_passthrough_json](docs/sdks/passthrough/README.md#update_passthrough_json) - Passthrough PUT
 * [update_passthrough_raw](docs/sdks/passthrough/README.md#update_passthrough_raw) - Passthrough PUT
+
+### [Patient](docs/sdks/patient/README.md)
+
+* [create_healthcare_patient](docs/sdks/patient/README.md#create_healthcare_patient) - Create a patient
+* [get_healthcare_patient](docs/sdks/patient/README.md#get_healthcare_patient) - Retrieve a patient
+* [list_healthcare_patients](docs/sdks/patient/README.md#list_healthcare_patients) - List all patients
+* [patch_healthcare_patient](docs/sdks/patient/README.md#patch_healthcare_patient) - Update a patient
+* [update_healthcare_patient](docs/sdks/patient/README.md#update_healthcare_patient) - Update a patient
 
 ### [Paycode](docs/sdks/paycode/README.md)
 
@@ -1900,6 +2135,20 @@ asyncio.run(main())
 * [patch_social_post](docs/sdks/post/README.md#patch_social_post) - Update a post
 * [remove_social_post](docs/sdks/post/README.md#remove_social_post) - Remove a post
 * [update_social_post](docs/sdks/post/README.md#update_social_post) - Update a post
+
+### [Practicearea](docs/sdks/practicearea/README.md)
+
+* [create_legal_practicearea](docs/sdks/practicearea/README.md#create_legal_practicearea) - Create a practicearea
+* [get_legal_practicearea](docs/sdks/practicearea/README.md#get_legal_practicearea) - Retrieve a practicearea
+* [list_legal_practiceareas](docs/sdks/practicearea/README.md#list_legal_practiceareas) - List all practiceareas
+* [patch_legal_practicearea](docs/sdks/practicearea/README.md#patch_legal_practicearea) - Update a practicearea
+* [remove_legal_practicearea](docs/sdks/practicearea/README.md#remove_legal_practicearea) - Remove a practicearea
+* [update_legal_practicearea](docs/sdks/practicearea/README.md#update_legal_practicearea) - Update a practicearea
+
+### [Practitioner](docs/sdks/practitioner/README.md)
+
+* [get_healthcare_practitioner](docs/sdks/practitioner/README.md#get_healthcare_practitioner) - Retrieve a practitioner
+* [list_healthcare_practitioners](docs/sdks/practitioner/README.md#list_healthcare_practitioners) - List all practitioners
 
 ### [Profile](docs/sdks/profile/README.md)
 
@@ -2014,6 +2263,11 @@ asyncio.run(main())
 
 * [get_payment_refund](docs/sdks/refund/README.md#get_payment_refund) - Retrieve a refund
 * [list_payment_refunds](docs/sdks/refund/README.md#list_payment_refunds) - List all refunds
+
+### [Region](docs/sdks/region/README.md)
+
+* [get_compute_region](docs/sdks/region/README.md#get_compute_region) - Retrieve a region
+* [list_compute_regions](docs/sdks/region/README.md#list_compute_regions) - List all regions
 
 ### [Repo](docs/sdks/repo/README.md)
 
@@ -2172,6 +2426,15 @@ asyncio.run(main())
 * [remove_cdp_segment](docs/sdks/segment/README.md#remove_cdp_segment) - Remove a segment
 * [update_cdp_segment](docs/sdks/segment/README.md#update_cdp_segment) - Update a segment
 
+### [Service](docs/sdks/service/README.md)
+
+* [create_compute_service](docs/sdks/service/README.md#create_compute_service) - Create a service
+* [get_compute_service](docs/sdks/service/README.md#get_compute_service) - Retrieve a service
+* [list_compute_services](docs/sdks/service/README.md#list_compute_services) - List all services
+* [patch_compute_service](docs/sdks/service/README.md#patch_compute_service) - Update a service
+* [remove_compute_service](docs/sdks/service/README.md#remove_compute_service) - Remove a service
+* [update_compute_service](docs/sdks/service/README.md#update_compute_service) - Update a service
+
 ### [Session](docs/sdks/session/README.md)
 
 * [get_analytics_session](docs/sdks/session/README.md#get_analytics_session) - Retrieve a session
@@ -2237,6 +2500,18 @@ asyncio.run(main())
 * [get_genai_skill](docs/sdks/skill/README.md#get_genai_skill) - Retrieve a skill
 * [list_genai_skills](docs/sdks/skill/README.md#list_genai_skills) - List all skills
 * [remove_genai_skill](docs/sdks/skill/README.md#remove_genai_skill) - Remove a skill
+
+### [Slot](docs/sdks/slot/README.md)
+
+* [get_healthcare_slot](docs/sdks/slot/README.md#get_healthcare_slot) - Retrieve a slot
+* [list_healthcare_slots](docs/sdks/slot/README.md#list_healthcare_slots) - List all slots
+
+### [Snapshot](docs/sdks/snapshot/README.md)
+
+* [create_compute_snapshot](docs/sdks/snapshot/README.md#create_compute_snapshot) - Create a snapshot
+* [get_compute_snapshot](docs/sdks/snapshot/README.md#get_compute_snapshot) - Retrieve a snapshot
+* [list_compute_snapshots](docs/sdks/snapshot/README.md#list_compute_snapshots) - List all snapshots
+* [remove_compute_snapshot](docs/sdks/snapshot/README.md#remove_compute_snapshot) - Remove a snapshot
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2366,8 +2641,14 @@ asyncio.run(main())
 
 ### [Template](docs/sdks/template/README.md)
 
+* [create_compute_template](docs/sdks/template/README.md#create_compute_template) - Create a template
+* [get_compute_template](docs/sdks/template/README.md#get_compute_template) - Retrieve a template
 * [get_signing_template](docs/sdks/template/README.md#get_signing_template) - Retrieve a template
+* [list_compute_templates](docs/sdks/template/README.md#list_compute_templates) - List all templates
 * [list_signing_templates](docs/sdks/template/README.md#list_signing_templates) - List all templates
+* [patch_compute_template](docs/sdks/template/README.md#patch_compute_template) - Update a template
+* [remove_compute_template](docs/sdks/template/README.md#remove_compute_template) - Remove a template
+* [update_compute_template](docs/sdks/template/README.md#update_compute_template) - Update a template
 
 ### [Ticket](docs/sdks/ticket/README.md)
 
@@ -2404,6 +2685,15 @@ asyncio.run(main())
 * [update_ticketing_customer](docs/sdks/ticketing/README.md#update_ticketing_customer) - Update a customer
 * [update_ticketing_note](docs/sdks/ticketing/README.md#update_ticketing_note) - Update a note
 * [update_ticketing_ticket](docs/sdks/ticketing/README.md#update_ticketing_ticket) - Update a ticket
+
+### [Timeentry](docs/sdks/timeentry/README.md)
+
+* [create_legal_timeentry](docs/sdks/timeentry/README.md#create_legal_timeentry) - Create a timeentry
+* [get_legal_timeentry](docs/sdks/timeentry/README.md#get_legal_timeentry) - Retrieve a timeentry
+* [list_legal_timeentries](docs/sdks/timeentry/README.md#list_legal_timeentries) - List all timeentries
+* [patch_legal_timeentry](docs/sdks/timeentry/README.md#patch_legal_timeentry) - Update a timeentry
+* [remove_legal_timeentry](docs/sdks/timeentry/README.md#remove_legal_timeentry) - Remove a timeentry
+* [update_legal_timeentry](docs/sdks/timeentry/README.md#update_legal_timeentry) - Update a timeentry
 
 ### [Timeoff](docs/sdks/timeoff/README.md)
 
@@ -2504,6 +2794,10 @@ asyncio.run(main())
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
 
+### [Usage](docs/sdks/usage/README.md)
+
+* [list_compute_usages](docs/sdks/usage/README.md#list_compute_usages) - List all usages
+
 ### [User](docs/sdks/user/README.md)
 
 * [create_scim_users](docs/sdks/user/README.md#create_scim_users) - Create user
@@ -2541,6 +2835,15 @@ asyncio.run(main())
 * [patch_analytics_visitor](docs/sdks/visitor/README.md#patch_analytics_visitor) - Update a visitor
 * [remove_analytics_visitor](docs/sdks/visitor/README.md#remove_analytics_visitor) - Remove a visitor
 * [update_analytics_visitor](docs/sdks/visitor/README.md#update_analytics_visitor) - Update a visitor
+
+### [Volume](docs/sdks/volume/README.md)
+
+* [create_compute_volume](docs/sdks/volume/README.md#create_compute_volume) - Create a volume
+* [get_compute_volume](docs/sdks/volume/README.md#get_compute_volume) - Retrieve a volume
+* [list_compute_volumes](docs/sdks/volume/README.md#list_compute_volumes) - List all volumes
+* [patch_compute_volume](docs/sdks/volume/README.md#patch_compute_volume) - Update a volume
+* [remove_compute_volume](docs/sdks/volume/README.md#remove_compute_volume) - Remove a volume
+* [update_compute_volume](docs/sdks/volume/README.md#update_compute_volume) - Update a volume
 
 ### [Webhook](docs/sdks/webhook/README.md)
 
@@ -2630,7 +2933,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
+            "id": "b096adb6-85c6-43bd-8b65-9908676ad8f8",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2647,7 +2950,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
+            "updated_at": parse_datetime("2023-01-05T23:34:54.694Z"),
         },
         "connection_id": "<id>",
     },
@@ -2681,7 +2984,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
+            "id": "b096adb6-85c6-43bd-8b65-9908676ad8f8",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2698,7 +3001,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
+            "updated_at": parse_datetime("2023-01-05T23:34:54.694Z"),
         },
         "connection_id": "<id>",
     })
@@ -2746,7 +3049,7 @@ with UnifiedTo(
                 "currency": "BOB",
                 "customer_defined_code": "quo",
                 "description": "Spoliatio comedo vilitas harum cupiditate.",
-                "id": "56991dac-50de-4353-86e2-c684b15fcb69",
+                "id": "b096adb6-85c6-43bd-8b65-9908676ad8f8",
                 "is_payable": True,
                 "name": "Electronic Aluminum Tuna",
                 "status": shared.Status.ARCHIVED,
@@ -2763,7 +3066,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.BANK,
-                "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
+                "updated_at": parse_datetime("2023-01-05T23:34:54.694Z"),
             },
             "connection_id": "<id>",
         })
@@ -2841,7 +3144,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
+            "id": "b096adb6-85c6-43bd-8b65-9908676ad8f8",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2858,7 +3161,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
+            "updated_at": parse_datetime("2023-01-05T23:34:54.694Z"),
         },
         "connection_id": "<id>",
     })
@@ -2893,7 +3196,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
+            "id": "b096adb6-85c6-43bd-8b65-9908676ad8f8",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -2910,7 +3213,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
+            "updated_at": parse_datetime("2023-01-05T23:34:54.694Z"),
         },
         "connection_id": "<id>",
     })
@@ -3053,7 +3356,7 @@ with UnifiedTo(
             "currency": "BOB",
             "customer_defined_code": "quo",
             "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "56991dac-50de-4353-86e2-c684b15fcb69",
+            "id": "b096adb6-85c6-43bd-8b65-9908676ad8f8",
             "is_payable": True,
             "name": "Electronic Aluminum Tuna",
             "status": shared.Status.ARCHIVED,
@@ -3070,7 +3373,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-05T21:03:45.510Z"),
+            "updated_at": parse_datetime("2023-01-05T23:34:54.694Z"),
         },
         "connection_id": "<id>",
     })

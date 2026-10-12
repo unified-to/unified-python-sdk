@@ -5,6 +5,158 @@ from .property_integrationsupport_webhook_events import (
     PropertyIntegrationSupportWebhookEvents,
     PropertyIntegrationSupportWebhookEventsTypedDict,
 )
+from .virtual_webhook_channel_id import (
+    FromWebhook,
+    ListAccountID,
+    ListAdID,
+    ListAgentID,
+    ListApplicationID,
+    ListApproverUserID,
+    ListAssignedUserID,
+    ListBankfeedaccountID,
+    ListBenefitID,
+    ListBillID,
+    ListBranchID,
+    ListCalendarID,
+    ListCallID,
+    ListCampaignID,
+    ListCandidateID,
+    ListCarrierID,
+    ListCategoryID,
+    ListChannelID,
+    ListClassID,
+    ListCollectionID,
+    ListCompanyID,
+    ListContactID,
+    ListContentID,
+    ListCourseID,
+    ListCustomerID,
+    ListCycleID,
+    ListDatabaseID,
+    ListDealID,
+    ListDestinationID,
+    ListDimension,
+    ListDocumentID,
+    ListEffectiveStatus,
+    ListEmail,
+    ListEndLt,
+    ListEventID,
+    ListExpand,
+    ListFormID,
+    ListFulltext,
+    ListGoal,
+    ListGroupID,
+    ListInstanceID,
+    ListInstructorID,
+    ListInterviewID,
+    ListInvoiceID,
+    ListIoID,
+    ListItemID,
+    ListItemVariantID,
+    ListJobID,
+    ListLabelID,
+    ListLeadID,
+    ListLimit,
+    ListLinkID,
+    ListListID,
+    ListLocationID,
+    ListMatterID,
+    ListMedium,
+    ListMemberID,
+    ListOffset,
+    ListOrder,
+    ListOrderID,
+    ListOrgID,
+    ListPackageID,
+    ListPageID,
+    ListParentID,
+    ListPatientID,
+    ListPaymentID,
+    ListPayslipID,
+    ListPipelineID,
+    ListPostID,
+    ListPracticeareaID,
+    ListPractitionerID,
+    ListProfileID,
+    ListProjectID,
+    ListPropertyID,
+    ListQuery,
+    ListRawFields,
+    ListReference,
+    ListRegionID,
+    ListRepoID,
+    ListRoleID,
+    ListRootID,
+    ListSaleschannelID,
+    ListSegmentID,
+    ListServiceID,
+    ListSessionID,
+    ListShipmentID,
+    ListSize,
+    ListSortByCreatedAt,
+    ListSortByName,
+    ListSortByUpdatedAt,
+    ListSource,
+    ListSpaceID,
+    ListStartGte,
+    ListStatus,
+    ListStudentID,
+    ListTableID,
+    ListTaskID,
+    ListTeacherID,
+    ListTemplateID,
+    ListTicketID,
+    ListType,
+    ListUpdatedGte,
+    ListUserID,
+    ListUserMentionedID,
+    ListVisitorID,
+    NativeWebhookCalendarID,
+    NativeWebhookCarrierID,
+    NativeWebhookChannelID,
+    NativeWebhookCompanyID,
+    NativeWebhookCourseID,
+    NativeWebhookDatabaseID,
+    NativeWebhookEventID,
+    NativeWebhookFormID,
+    NativeWebhookIoID,
+    NativeWebhookLabelID,
+    NativeWebhookListID,
+    NativeWebhookMemberID,
+    NativeWebhookOrderID,
+    NativeWebhookParentID,
+    NativeWebhookProjectID,
+    NativeWebhookPropertyID,
+    NativeWebhookSessionID,
+    NativeWebhookShipmentID,
+    NativeWebhookStudentID,
+    NativeWebhookTableID,
+    NativeWebhookTaskID,
+    NativeWebhookTemplateID,
+    NativeWebhookType,
+    NativeWebhookUpdatedGte,
+    NativeWebhookVisitorID,
+    SearchDomain,
+    SearchEmail,
+    SearchLinkedinurl,
+    SearchName,
+    SearchTwitter,
+    VirtualWebhookAccountID,
+    VirtualWebhookAdID,
+    VirtualWebhookApplicationID,
+    VirtualWebhookApproverUserID,
+    VirtualWebhookAssignedUserID,
+    VirtualWebhookBankfeedaccountID,
+    VirtualWebhookBenefitID,
+    VirtualWebhookBillID,
+    VirtualWebhookBranchID,
+    VirtualWebhookCalendarID,
+    VirtualWebhookCallID,
+    VirtualWebhookCampaignID,
+    VirtualWebhookCandidateID,
+    VirtualWebhookCarrierID,
+    VirtualWebhookChannelID,
+)
 from enum import Enum
 from pydantic import field_serializer, model_serializer
 from typing import Dict, List, Optional
@@ -12,864 +164,6 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
-
-
-class FromWebhook(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListAccountID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListAdID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListAgentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListApproverUserID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListAssignedUserID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListBankfeedaccountID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListBenefitID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListBillID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCallID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCampaignID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCandidateID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCategoryID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListChannelID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListClassID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCollectionID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCompanyID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListContactID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListContentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCourseID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCustomerID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListCycleID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListDatabaseID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListDealID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListDestinationID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListDimension(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListDocumentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListEffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListEmail(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListEndLt(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListEventID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListExpand(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListFormID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListFulltext(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListGoal(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListGroupID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListInstructorID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListInterviewID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListInvoiceID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListIoID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListItemID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListItemVariantID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListJobID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListLabelID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListLeadID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListLimit(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListLinkID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListListID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListLocationID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListMedium(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListMemberID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListOffset(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListOrder(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListOrderID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListOrgID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListPackageID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListPageID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListParentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListPaymentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListPayslipID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListPipelineID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListPostID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListProfileID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListProjectID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListPropertyID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListQuery(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListRawFields(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListReference(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListRoleID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListRootID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSaleschannelID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSegmentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSessionID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListShipmentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSize(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSortByCreatedAt(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSortByName(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSortByUpdatedAt(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSource(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListSpaceID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListStartGte(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListStatus(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListStudentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListTableID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListTaskID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListTeacherID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListTemplateID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListTicketID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListType(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListUpdatedGte(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListUserID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListUserMentionedID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListVisitorID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookChannelID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookCompanyID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookCourseID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookDatabaseID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookEventID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookFormID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookIoID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookLabelID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookListID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookMemberID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookOrderID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookParentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookProjectID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookPropertyID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookSessionID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookShipmentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookStudentID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookTableID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookTaskID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookTemplateID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookType(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookUpdatedGte(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class NativeWebhookVisitorID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class SearchDomain(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class SearchEmail(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class SearchLinkedinurl(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class SearchName(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class SearchTwitter(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookAccountID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookAdID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookApproverUserID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookAssignedUserID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookBankfeedaccountID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookBenefitID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookBillID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCallID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCampaignID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCandidateID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookChannelID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
 
 
 class VirtualWebhookCollectionID(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -1028,6 +322,12 @@ class VirtualWebhookLocationID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookMatterID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookMemberID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1058,6 +358,12 @@ class VirtualWebhookParentID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookPatientID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookPaymentID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -1071,6 +377,18 @@ class VirtualWebhookPipelineID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookPostID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookPracticeareaID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookPractitionerID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -1246,6 +564,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_fulltext: NotRequired[ListFulltext]
     list_goal: NotRequired[ListGoal]
     list_group_id: NotRequired[ListGroupID]
+    list_instance_id: NotRequired[ListInstanceID]
     list_instructor_id: NotRequired[ListInstructorID]
     list_interview_id: NotRequired[ListInterviewID]
     list_invoice_id: NotRequired[ListInvoiceID]
@@ -1259,6 +578,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_link_id: NotRequired[ListLinkID]
     list_list_id: NotRequired[ListListID]
     list_location_id: NotRequired[ListLocationID]
+    list_matter_id: NotRequired[ListMatterID]
     list_medium: NotRequired[ListMedium]
     list_member_id: NotRequired[ListMemberID]
     list_offset: NotRequired[ListOffset]
@@ -1268,21 +588,26 @@ class IntegrationSupportTypedDict(TypedDict):
     list_package_id: NotRequired[ListPackageID]
     list_page_id: NotRequired[ListPageID]
     list_parent_id: NotRequired[ListParentID]
+    list_patient_id: NotRequired[ListPatientID]
     list_payment_id: NotRequired[ListPaymentID]
     list_payslip_id: NotRequired[ListPayslipID]
     list_pipeline_id: NotRequired[ListPipelineID]
     list_post_id: NotRequired[ListPostID]
+    list_practicearea_id: NotRequired[ListPracticeareaID]
+    list_practitioner_id: NotRequired[ListPractitionerID]
     list_profile_id: NotRequired[ListProfileID]
     list_project_id: NotRequired[ListProjectID]
     list_property_id: NotRequired[ListPropertyID]
     list_query: NotRequired[ListQuery]
     list_raw_fields: NotRequired[ListRawFields]
     list_reference: NotRequired[ListReference]
+    list_region_id: NotRequired[ListRegionID]
     list_repo_id: NotRequired[ListRepoID]
     list_role_id: NotRequired[ListRoleID]
     list_root_id: NotRequired[ListRootID]
     list_saleschannel_id: NotRequired[ListSaleschannelID]
     list_segment_id: NotRequired[ListSegmentID]
+    list_service_id: NotRequired[ListServiceID]
     list_session_id: NotRequired[ListSessionID]
     list_shipment_id: NotRequired[ListShipmentID]
     list_size: NotRequired[ListSize]
@@ -1378,14 +703,18 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_link_id: NotRequired[VirtualWebhookLinkID]
     virtual_webhook_list_id: NotRequired[VirtualWebhookListID]
     virtual_webhook_location_id: NotRequired[VirtualWebhookLocationID]
+    virtual_webhook_matter_id: NotRequired[VirtualWebhookMatterID]
     virtual_webhook_member_id: NotRequired[VirtualWebhookMemberID]
     virtual_webhook_order_id: NotRequired[VirtualWebhookOrderID]
     virtual_webhook_org_id: NotRequired[VirtualWebhookOrgID]
     virtual_webhook_page_id: NotRequired[VirtualWebhookPageID]
     virtual_webhook_parent_id: NotRequired[VirtualWebhookParentID]
+    virtual_webhook_patient_id: NotRequired[VirtualWebhookPatientID]
     virtual_webhook_payment_id: NotRequired[VirtualWebhookPaymentID]
     virtual_webhook_pipeline_id: NotRequired[VirtualWebhookPipelineID]
     virtual_webhook_post_id: NotRequired[VirtualWebhookPostID]
+    virtual_webhook_practicearea_id: NotRequired[VirtualWebhookPracticeareaID]
+    virtual_webhook_practitioner_id: NotRequired[VirtualWebhookPractitionerID]
     virtual_webhook_profile_id: NotRequired[VirtualWebhookProfileID]
     virtual_webhook_project_id: NotRequired[VirtualWebhookProjectID]
     virtual_webhook_property_id: NotRequired[VirtualWebhookPropertyID]
@@ -1496,6 +825,8 @@ class IntegrationSupport(BaseModel):
 
     list_group_id: Optional[ListGroupID] = None
 
+    list_instance_id: Optional[ListInstanceID] = None
+
     list_instructor_id: Optional[ListInstructorID] = None
 
     list_interview_id: Optional[ListInterviewID] = None
@@ -1522,6 +853,8 @@ class IntegrationSupport(BaseModel):
 
     list_location_id: Optional[ListLocationID] = None
 
+    list_matter_id: Optional[ListMatterID] = None
+
     list_medium: Optional[ListMedium] = None
 
     list_member_id: Optional[ListMemberID] = None
@@ -1540,6 +873,8 @@ class IntegrationSupport(BaseModel):
 
     list_parent_id: Optional[ListParentID] = None
 
+    list_patient_id: Optional[ListPatientID] = None
+
     list_payment_id: Optional[ListPaymentID] = None
 
     list_payslip_id: Optional[ListPayslipID] = None
@@ -1547,6 +882,10 @@ class IntegrationSupport(BaseModel):
     list_pipeline_id: Optional[ListPipelineID] = None
 
     list_post_id: Optional[ListPostID] = None
+
+    list_practicearea_id: Optional[ListPracticeareaID] = None
+
+    list_practitioner_id: Optional[ListPractitionerID] = None
 
     list_profile_id: Optional[ListProfileID] = None
 
@@ -1560,6 +899,8 @@ class IntegrationSupport(BaseModel):
 
     list_reference: Optional[ListReference] = None
 
+    list_region_id: Optional[ListRegionID] = None
+
     list_repo_id: Optional[ListRepoID] = None
 
     list_role_id: Optional[ListRoleID] = None
@@ -1569,6 +910,8 @@ class IntegrationSupport(BaseModel):
     list_saleschannel_id: Optional[ListSaleschannelID] = None
 
     list_segment_id: Optional[ListSegmentID] = None
+
+    list_service_id: Optional[ListServiceID] = None
 
     list_session_id: Optional[ListSessionID] = None
 
@@ -1760,6 +1103,8 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_location_id: Optional[VirtualWebhookLocationID] = None
 
+    virtual_webhook_matter_id: Optional[VirtualWebhookMatterID] = None
+
     virtual_webhook_member_id: Optional[VirtualWebhookMemberID] = None
 
     virtual_webhook_order_id: Optional[VirtualWebhookOrderID] = None
@@ -1770,11 +1115,17 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_parent_id: Optional[VirtualWebhookParentID] = None
 
+    virtual_webhook_patient_id: Optional[VirtualWebhookPatientID] = None
+
     virtual_webhook_payment_id: Optional[VirtualWebhookPaymentID] = None
 
     virtual_webhook_pipeline_id: Optional[VirtualWebhookPipelineID] = None
 
     virtual_webhook_post_id: Optional[VirtualWebhookPostID] = None
+
+    virtual_webhook_practicearea_id: Optional[VirtualWebhookPracticeareaID] = None
+
+    virtual_webhook_practitioner_id: Optional[VirtualWebhookPractitionerID] = None
 
     virtual_webhook_profile_id: Optional[VirtualWebhookProfileID] = None
 
@@ -2180,6 +1531,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_instance_id")
+    def serialize_list_instance_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListInstanceID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_instructor_id")
     def serialize_list_instructor_id(self, value):
         if isinstance(value, str):
@@ -2297,6 +1657,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_matter_id")
+    def serialize_list_matter_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListMatterID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_medium")
     def serialize_list_medium(self, value):
         if isinstance(value, str):
@@ -2378,6 +1747,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_patient_id")
+    def serialize_list_patient_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListPatientID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_payment_id")
     def serialize_list_payment_id(self, value):
         if isinstance(value, str):
@@ -2410,6 +1788,24 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListPostID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_practicearea_id")
+    def serialize_list_practicearea_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListPracticeareaID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_practitioner_id")
+    def serialize_list_practitioner_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListPractitionerID(value)
             except ValueError:
                 return value
         return value
@@ -2468,6 +1864,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_region_id")
+    def serialize_list_region_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListRegionID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_repo_id")
     def serialize_list_repo_id(self, value):
         if isinstance(value, str):
@@ -2509,6 +1914,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListSegmentID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_service_id")
+    def serialize_list_service_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListServiceID(value)
             except ValueError:
                 return value
         return value
@@ -3341,6 +2755,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_matter_id")
+    def serialize_virtual_webhook_matter_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookMatterID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_member_id")
     def serialize_virtual_webhook_member_id(self, value):
         if isinstance(value, str):
@@ -3386,6 +2809,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_patient_id")
+    def serialize_virtual_webhook_patient_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookPatientID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_payment_id")
     def serialize_virtual_webhook_payment_id(self, value):
         if isinstance(value, str):
@@ -3409,6 +2841,24 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookPostID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_practicearea_id")
+    def serialize_virtual_webhook_practicearea_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookPracticeareaID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_practitioner_id")
+    def serialize_virtual_webhook_practitioner_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookPractitionerID(value)
             except ValueError:
                 return value
         return value
@@ -3647,6 +3097,7 @@ class IntegrationSupport(BaseModel):
                 "list_fulltext",
                 "list_goal",
                 "list_group_id",
+                "list_instance_id",
                 "list_instructor_id",
                 "list_interview_id",
                 "list_invoice_id",
@@ -3660,6 +3111,7 @@ class IntegrationSupport(BaseModel):
                 "list_link_id",
                 "list_list_id",
                 "list_location_id",
+                "list_matter_id",
                 "list_medium",
                 "list_member_id",
                 "list_offset",
@@ -3669,21 +3121,26 @@ class IntegrationSupport(BaseModel):
                 "list_package_id",
                 "list_page_id",
                 "list_parent_id",
+                "list_patient_id",
                 "list_payment_id",
                 "list_payslip_id",
                 "list_pipeline_id",
                 "list_post_id",
+                "list_practicearea_id",
+                "list_practitioner_id",
                 "list_profile_id",
                 "list_project_id",
                 "list_property_id",
                 "list_query",
                 "list_raw_fields",
                 "list_reference",
+                "list_region_id",
                 "list_repo_id",
                 "list_role_id",
                 "list_root_id",
                 "list_saleschannel_id",
                 "list_segment_id",
+                "list_service_id",
                 "list_session_id",
                 "list_shipment_id",
                 "list_size",
@@ -3779,14 +3236,18 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_link_id",
                 "virtual_webhook_list_id",
                 "virtual_webhook_location_id",
+                "virtual_webhook_matter_id",
                 "virtual_webhook_member_id",
                 "virtual_webhook_order_id",
                 "virtual_webhook_org_id",
                 "virtual_webhook_page_id",
                 "virtual_webhook_parent_id",
+                "virtual_webhook_patient_id",
                 "virtual_webhook_payment_id",
                 "virtual_webhook_pipeline_id",
                 "virtual_webhook_post_id",
+                "virtual_webhook_practicearea_id",
+                "virtual_webhook_practitioner_id",
                 "virtual_webhook_profile_id",
                 "virtual_webhook_project_id",
                 "virtual_webhook_property_id",

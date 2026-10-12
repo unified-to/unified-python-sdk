@@ -41,3 +41,6 @@ class PropertyIntegrationCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     CDP = "cdp"
     PERFORMANCE = "performance"
     SOCIAL = "social"
+    LEGAL = "legal"
+    COMPUTE = "compute"
+    HEALTHCARE = "healthcare"

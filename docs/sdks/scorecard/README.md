@@ -36,7 +36,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "4344b5a0-af68-48c7-a37f-bdeb26e3d8cc",
+            "id": "497f109c-e2a6-48ef-ab01-2b35e952c507",
             "questions": [
                 {
                     "description": "Sulum textor eveniet facere vita.",
@@ -49,7 +49,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-02T19:29:44.467Z"),
+            "updated_at": parse_datetime("2023-06-03T01:19:15.687Z"),
         },
         "connection_id": "<id>",
     })
@@ -287,7 +287,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "fc84d8e1-71a6-4d6c-a683-7da40edb6c5e",
+            "id": "3ce84d87-0984-4eed-9589-5bf91af0797f",
             "questions": [
                 {
                     "description": "Sulum textor eveniet facere vita.",
@@ -300,7 +300,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-02T19:29:44.470Z"),
+            "updated_at": parse_datetime("2023-06-03T01:19:15.690Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -400,7 +400,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "fc84d8e1-71a6-4d6c-a683-7da40edb6c5e",
+            "id": "3ce84d87-0984-4eed-9589-5bf91af0797f",
             "questions": [
                 {
                     "description": "Sulum textor eveniet facere vita.",
@@ -413,7 +413,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-02T19:29:44.470Z"),
+            "updated_at": parse_datetime("2023-06-03T01:19:15.690Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

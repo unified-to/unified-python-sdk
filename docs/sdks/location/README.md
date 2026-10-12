@@ -8,9 +8,11 @@
 * [create_hris_location](#create_hris_location) - Create a location
 * [get_clubs_location](#get_clubs_location) - Retrieve a location
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
+* [get_healthcare_location](#get_healthcare_location) - Retrieve a location
 * [get_hris_location](#get_hris_location) - Retrieve a location
 * [list_clubs_locations](#list_clubs_locations) - List all locations
 * [list_commerce_locations](#list_commerce_locations) - List all locations
+* [list_healthcare_locations](#list_healthcare_locations) - List all locations
 * [list_hris_locations](#list_hris_locations) - List all locations
 * [patch_commerce_location](#patch_commerce_location) - Update a location
 * [patch_hris_location](#patch_hris_location) - Update a location
@@ -52,7 +54,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "3d7eb4c9-224d-4192-909a-ffee9511a2d6",
+            "id": "7ac92ab4-ae41-4514-96d1-478c8c218613",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -63,10 +65,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "81a94236-8cdf-4d10-b3f3-892e5a415dd9",
+                    "id": "eb8db84d-c9b5-4ebd-ac27-a79341a5b150",
                     "metadata": [
                         {
-                            "id": "369a99a4-0314-496e-b8fb-b6dd2cc284e0",
+                            "id": "08495af3-76ce-408d-858d-95e28e72981e",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -91,7 +93,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-17T07:27:52.972Z"),
+            "updated_at": parse_datetime("2024-04-17T14:43:33.537Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -154,8 +156,8 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MUR",
             "description": "Acervus caries.",
-            "external_identifier": "a95fb085-1de2-4952-a92c-4b2d394ad136",
-            "id": "71d77c71-c403-4af9-b84d-9873ee590086",
+            "external_identifier": "54889f3b-64bd-4c03-87a4-3046c3f40499",
+            "id": "d23bc217-59a3-4e73-a3a3-155cbeeb1978",
             "is_active": True,
             "is_hq": False,
             "language_locale": "fr",
@@ -175,7 +177,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "America/Guyana",
-            "updated_at": parse_datetime("2023-06-17T10:41:43.024Z"),
+            "updated_at": parse_datetime("2023-06-17T18:25:17.217Z"),
         },
         "connection_id": "<id>",
     })
@@ -291,6 +293,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetCommerceLocationResponse](../../models/operations/getcommercelocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_healthcare_location
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHealthcareLocation" method="get" path="/healthcare/{connection_id}/location/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.get_healthcare_location(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.healthcare_location is not None
+
+    # Handle response
+    print(res.healthcare_location)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetHealthcareLocationRequest](../../models/operations/gethealthcarelocationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.GetHealthcareLocationResponse](../../models/operations/gethealthcarelocationresponse.md)**
 
 ### Errors
 
@@ -437,6 +486,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_healthcare_locations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHealthcareLocations" method="get" path="/healthcare/{connection_id}/location" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.list_healthcare_locations(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_locations is not None
+
+    # Handle response
+    print(res.healthcare_locations)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListHealthcareLocationsRequest](../../models/operations/listhealthcarelocationsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.ListHealthcareLocationsResponse](../../models/operations/listhealthcarelocationsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_hris_locations
 
 List all locations
@@ -516,7 +611,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "807edb13-f876-457a-98dd-258282cc6997",
+            "id": "602a4d92-5d65-4016-978b-8b03bed67fd9",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -527,10 +622,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "4c1f73b2-fee9-4130-a73e-8e0f227a6cf0",
+                    "id": "05e11113-6be6-45df-8796-c425ccecdcfc",
                     "metadata": [
                         {
-                            "id": "0a9a7714-e2ce-49e5-9936-149141d0e05f",
+                            "id": "5c08a4a3-7827-44f7-b4a6-7d08143fe585",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -555,7 +650,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-17T07:27:52.982Z"),
+            "updated_at": parse_datetime("2024-04-17T14:43:33.549Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -619,8 +714,8 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MUR",
             "description": "Acervus caries.",
-            "external_identifier": "019aebc6-abcb-41bd-842e-f9315e842363",
-            "id": "bf9eb454-3fd7-45f7-8a51-2b1635dfe888",
+            "external_identifier": "0e9dcba4-0ad5-4c38-8a0a-74cdda1b2bbc",
+            "id": "d71ba7b1-de46-43ab-a5c9-6f86497eaac1",
             "is_active": True,
             "is_hq": False,
             "language_locale": "fr",
@@ -640,7 +735,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "America/Guyana",
-            "updated_at": parse_datetime("2023-06-17T10:41:43.030Z"),
+            "updated_at": parse_datetime("2023-06-17T18:25:17.222Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -797,7 +892,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "807edb13-f876-457a-98dd-258282cc6997",
+            "id": "602a4d92-5d65-4016-978b-8b03bed67fd9",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -808,10 +903,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "4c1f73b2-fee9-4130-a73e-8e0f227a6cf0",
+                    "id": "05e11113-6be6-45df-8796-c425ccecdcfc",
                     "metadata": [
                         {
-                            "id": "0a9a7714-e2ce-49e5-9936-149141d0e05f",
+                            "id": "5c08a4a3-7827-44f7-b4a6-7d08143fe585",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -836,7 +931,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-17T07:27:52.982Z"),
+            "updated_at": parse_datetime("2024-04-17T14:43:33.549Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -900,8 +995,8 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MUR",
             "description": "Acervus caries.",
-            "external_identifier": "019aebc6-abcb-41bd-842e-f9315e842363",
-            "id": "bf9eb454-3fd7-45f7-8a51-2b1635dfe888",
+            "external_identifier": "0e9dcba4-0ad5-4c38-8a0a-74cdda1b2bbc",
+            "id": "d71ba7b1-de46-43ab-a5c9-6f86497eaac1",
             "is_active": True,
             "is_hq": False,
             "language_locale": "fr",
@@ -921,7 +1016,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "America/Guyana",
-            "updated_at": parse_datetime("2023-06-17T10:41:43.030Z"),
+            "updated_at": parse_datetime("2023-06-17T18:25:17.222Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

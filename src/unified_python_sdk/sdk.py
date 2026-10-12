@@ -25,10 +25,12 @@ if TYPE_CHECKING:
     from unified_python_sdk.agedpayable import Agedpayable
     from unified_python_sdk.agedreceivable import Agedreceivable
     from unified_python_sdk.agent import Agent
+    from unified_python_sdk.allergy import Allergy
     from unified_python_sdk.analytics import Analytics
     from unified_python_sdk.apicall import Apicall
     from unified_python_sdk.application import Application
     from unified_python_sdk.applicationstatus import Applicationstatus
+    from unified_python_sdk.appointment import Appointment
     from unified_python_sdk.assessment import Assessment
     from unified_python_sdk.asset import Asset
     from unified_python_sdk.ats import Ats
@@ -60,6 +62,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.commerce import Commerce
     from unified_python_sdk.commit import Commit
     from unified_python_sdk.company import Company
+    from unified_python_sdk.compute import Compute
+    from unified_python_sdk.condition import Condition
     from unified_python_sdk.connection import Connection
     from unified_python_sdk.contact import Contact
     from unified_python_sdk.content import Content
@@ -73,14 +77,18 @@ if TYPE_CHECKING:
     from unified_python_sdk.datastore import Datastore
     from unified_python_sdk.deal import Deal
     from unified_python_sdk.deduction import Deduction
+    from unified_python_sdk.deployment import Deployment
     from unified_python_sdk.destination import Destination
     from unified_python_sdk.device import Device
     from unified_python_sdk.document import Document
+    from unified_python_sdk.domain import Domain
     from unified_python_sdk.earning import Earning
     from unified_python_sdk.embedding import Embedding
     from unified_python_sdk.employee import Employee
+    from unified_python_sdk.encounter import Encounter
     from unified_python_sdk.enrich import Enrich
     from unified_python_sdk.environment import Environment
+    from unified_python_sdk.envvar import Envvar
     from unified_python_sdk.event import Event
     from unified_python_sdk.expense import Expense
     from unified_python_sdk.expensereport import Expensereport
@@ -90,10 +98,14 @@ if TYPE_CHECKING:
     from unified_python_sdk.forms import Forms
     from unified_python_sdk.genai import Genai
     from unified_python_sdk.goal import Goal
+    from unified_python_sdk.gputype import Gputype
     from unified_python_sdk.group import Group
+    from unified_python_sdk.healthcare import Healthcare
     from unified_python_sdk.hris import Hris
+    from unified_python_sdk.immunization import Immunization
     from unified_python_sdk.insertionorder import Insertionorder
     from unified_python_sdk.insight import Insight
+    from unified_python_sdk.instance import Instance
     from unified_python_sdk.instructor import Instructor
     from unified_python_sdk.integration import Integration
     from unified_python_sdk.interview import Interview
@@ -104,15 +116,19 @@ if TYPE_CHECKING:
     from unified_python_sdk.itemvariant import Itemvariant
     from unified_python_sdk.job import Job
     from unified_python_sdk.journal import Journal
+    from unified_python_sdk.key import Key
     from unified_python_sdk.kms import Kms
     from unified_python_sdk.label import Label
     from unified_python_sdk.lead import Lead
+    from unified_python_sdk.legal import Legal
     from unified_python_sdk.link import Link
     from unified_python_sdk.list import ListT
     from unified_python_sdk.lms import Lms
     from unified_python_sdk.location import Location
     from unified_python_sdk.login import Login
     from unified_python_sdk.martech import Martech
+    from unified_python_sdk.matter import Matter
+    from unified_python_sdk.medication import Medication
     from unified_python_sdk.member import Member
     from unified_python_sdk.message import Message
     from unified_python_sdk.messaging import Messaging
@@ -120,11 +136,13 @@ if TYPE_CHECKING:
     from unified_python_sdk.model import Model
     from unified_python_sdk.note import Note
     from unified_python_sdk.notification import Notification
+    from unified_python_sdk.observation import Observation
     from unified_python_sdk.order import Order
     from unified_python_sdk.organization import Organization
     from unified_python_sdk.package import Package
     from unified_python_sdk.page import Page
     from unified_python_sdk.passthrough import Passthrough
+    from unified_python_sdk.patient import Patient
     from unified_python_sdk.paycode import Paycode
     from unified_python_sdk.payment import Payment
     from unified_python_sdk.paymentterm import Paymentterm
@@ -135,6 +153,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.person import Person
     from unified_python_sdk.pipeline import Pipeline
     from unified_python_sdk.post import Post
+    from unified_python_sdk.practicearea import Practicearea
+    from unified_python_sdk.practitioner import Practitioner
     from unified_python_sdk.profile import Profile
     from unified_python_sdk.profitloss import Profitloss
     from unified_python_sdk.project import Project
@@ -150,6 +170,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.record import Record
     from unified_python_sdk.recording import Recording
     from unified_python_sdk.refund import Refund
+    from unified_python_sdk.region import Region
     from unified_python_sdk.repo import Repo
     from unified_python_sdk.report import Report
     from unified_python_sdk.repository import Repository
@@ -165,12 +186,15 @@ if TYPE_CHECKING:
     from unified_python_sdk.scorecardtemplate import Scorecardtemplate
     from unified_python_sdk.secretsmanager import Secretsmanager
     from unified_python_sdk.segment import Segment
+    from unified_python_sdk.service import Service
     from unified_python_sdk.session import Session
     from unified_python_sdk.shipment import Shipment
     from unified_python_sdk.shipping import Shipping
     from unified_python_sdk.signatory import Signatory
     from unified_python_sdk.signing import Signing
     from unified_python_sdk.skill import Skill
+    from unified_python_sdk.slot import Slot
+    from unified_python_sdk.snapshot import Snapshot
     from unified_python_sdk.social import Social
     from unified_python_sdk.source import Source
     from unified_python_sdk.space import Space
@@ -186,6 +210,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.template import Template
     from unified_python_sdk.ticket import Ticket
     from unified_python_sdk.ticketing import Ticketing
+    from unified_python_sdk.timeentry import Timeentry
     from unified_python_sdk.timeoff import Timeoff
     from unified_python_sdk.timeshift import Timeshift
     from unified_python_sdk.tracking import Tracking
@@ -193,10 +218,12 @@ if TYPE_CHECKING:
     from unified_python_sdk.trialbalance import Trialbalance
     from unified_python_sdk.uc import Uc
     from unified_python_sdk.unified import Unified
+    from unified_python_sdk.usage import Usage
     from unified_python_sdk.user import User
     from unified_python_sdk.vendorcredit import Vendorcredit
     from unified_python_sdk.verification import Verification
     from unified_python_sdk.visitor import Visitor
+    from unified_python_sdk.volume import Volume
     from unified_python_sdk.webhook import Webhook
     from unified_python_sdk.webinar import Webinar
 
@@ -286,6 +313,19 @@ class UnifiedTo(BaseSDK):
     reservation: "Reservation"
     review: "Review"
     saleschannel: "Saleschannel"
+    compute: "Compute"
+    deployment: "Deployment"
+    domain: "Domain"
+    envvar: "Envvar"
+    gputype: "Gputype"
+    instance: "Instance"
+    key: "Key"
+    region: "Region"
+    service: "Service"
+    snapshot: "Snapshot"
+    template: "Template"
+    usage: "Usage"
+    volume: "Volume"
     crm: "Crm"
     deal: "Deal"
     lead: "Lead"
@@ -308,6 +348,17 @@ class UnifiedTo(BaseSDK):
     prompt: "Prompt"
     skill: "Skill"
     task: "Task"
+    healthcare: "Healthcare"
+    allergy: "Allergy"
+    appointment: "Appointment"
+    condition: "Condition"
+    encounter: "Encounter"
+    immunization: "Immunization"
+    medication: "Medication"
+    observation: "Observation"
+    patient: "Patient"
+    practitioner: "Practitioner"
+    slot: "Slot"
     hris: "Hris"
     attendance: "Attendance"
     bankaccount: "Bankaccount"
@@ -325,6 +376,10 @@ class UnifiedTo(BaseSDK):
     comment: "Comment"
     page: "Page"
     space: "Space"
+    legal: "Legal"
+    matter: "Matter"
+    practicearea: "Practicearea"
+    timeentry: "Timeentry"
     lms: "Lms"
     class_: "Class"
     content: "Content"
@@ -361,7 +416,6 @@ class UnifiedTo(BaseSDK):
     tracking: "Tracking"
     signing: "Signing"
     signatory: "Signatory"
-    template: "Template"
     social: "Social"
     insight: "Insight"
     post: "Post"
@@ -476,6 +530,19 @@ class UnifiedTo(BaseSDK):
         "reservation": ("unified_python_sdk.reservation", "Reservation"),
         "review": ("unified_python_sdk.review", "Review"),
         "saleschannel": ("unified_python_sdk.saleschannel", "Saleschannel"),
+        "compute": ("unified_python_sdk.compute", "Compute"),
+        "deployment": ("unified_python_sdk.deployment", "Deployment"),
+        "domain": ("unified_python_sdk.domain", "Domain"),
+        "envvar": ("unified_python_sdk.envvar", "Envvar"),
+        "gputype": ("unified_python_sdk.gputype", "Gputype"),
+        "instance": ("unified_python_sdk.instance", "Instance"),
+        "key": ("unified_python_sdk.key", "Key"),
+        "region": ("unified_python_sdk.region", "Region"),
+        "service": ("unified_python_sdk.service", "Service"),
+        "snapshot": ("unified_python_sdk.snapshot", "Snapshot"),
+        "template": ("unified_python_sdk.template", "Template"),
+        "usage": ("unified_python_sdk.usage", "Usage"),
+        "volume": ("unified_python_sdk.volume", "Volume"),
         "crm": ("unified_python_sdk.crm", "Crm"),
         "deal": ("unified_python_sdk.deal", "Deal"),
         "lead": ("unified_python_sdk.lead", "Lead"),
@@ -498,6 +565,17 @@ class UnifiedTo(BaseSDK):
         "prompt": ("unified_python_sdk.prompt", "Prompt"),
         "skill": ("unified_python_sdk.skill", "Skill"),
         "task": ("unified_python_sdk.task", "Task"),
+        "healthcare": ("unified_python_sdk.healthcare", "Healthcare"),
+        "allergy": ("unified_python_sdk.allergy", "Allergy"),
+        "appointment": ("unified_python_sdk.appointment", "Appointment"),
+        "condition": ("unified_python_sdk.condition", "Condition"),
+        "encounter": ("unified_python_sdk.encounter", "Encounter"),
+        "immunization": ("unified_python_sdk.immunization", "Immunization"),
+        "medication": ("unified_python_sdk.medication", "Medication"),
+        "observation": ("unified_python_sdk.observation", "Observation"),
+        "patient": ("unified_python_sdk.patient", "Patient"),
+        "practitioner": ("unified_python_sdk.practitioner", "Practitioner"),
+        "slot": ("unified_python_sdk.slot", "Slot"),
         "hris": ("unified_python_sdk.hris", "Hris"),
         "attendance": ("unified_python_sdk.attendance", "Attendance"),
         "bankaccount": ("unified_python_sdk.bankaccount", "Bankaccount"),
@@ -515,6 +593,10 @@ class UnifiedTo(BaseSDK):
         "comment": ("unified_python_sdk.comment", "Comment"),
         "page": ("unified_python_sdk.page", "Page"),
         "space": ("unified_python_sdk.space", "Space"),
+        "legal": ("unified_python_sdk.legal", "Legal"),
+        "matter": ("unified_python_sdk.matter", "Matter"),
+        "practicearea": ("unified_python_sdk.practicearea", "Practicearea"),
+        "timeentry": ("unified_python_sdk.timeentry", "Timeentry"),
         "lms": ("unified_python_sdk.lms", "Lms"),
         "class_": ("unified_python_sdk.class_", "Class"),
         "content": ("unified_python_sdk.content", "Content"),
@@ -551,7 +633,6 @@ class UnifiedTo(BaseSDK):
         "tracking": ("unified_python_sdk.tracking", "Tracking"),
         "signing": ("unified_python_sdk.signing", "Signing"),
         "signatory": ("unified_python_sdk.signatory", "Signatory"),
-        "template": ("unified_python_sdk.template", "Template"),
         "social": ("unified_python_sdk.social", "Social"),
         "insight": ("unified_python_sdk.insight", "Insight"),
         "post": ("unified_python_sdk.post", "Post"),

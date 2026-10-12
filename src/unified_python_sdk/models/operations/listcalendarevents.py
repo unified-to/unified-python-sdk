@@ -39,6 +39,7 @@ class ListCalendarEventsQueryParamFields(str, Enum):
     CONFERENCE = "conference"
     ATTACHMENTS = "attachments"
     SEND_NOTIFICATIONS = "send_notifications"
+    MATTER_ID = "matter_id"
     RAW = "raw"
 
 
@@ -54,6 +55,8 @@ class ListCalendarEventsRequestTypedDict(TypedDict):
     fields: NotRequired[List[ListCalendarEventsQueryParamFields]]
     r"""Fields to return"""
     limit: NotRequired[float]
+    matter_id: NotRequired[str]
+    r"""The matter ID to filter by"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
@@ -101,6 +104,12 @@ class ListCalendarEventsRequest(BaseModel):
         Optional[float],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    matter_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The matter ID to filter by"""
 
     offset: Annotated[
         Optional[float],
@@ -150,6 +159,7 @@ class ListCalendarEventsRequest(BaseModel):
                 "expand",
                 "fields",
                 "limit",
+                "matter_id",
                 "offset",
                 "order",
                 "query",

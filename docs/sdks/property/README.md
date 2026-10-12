@@ -34,10 +34,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "8f089256-907d-4ed9-9d48-7a624e3edf9a",
+            "id": "7c567c35-beef-4537-a132-371ab569acfc",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T19:16:38.651Z"),
+            "updated_at": parse_datetime("2021-09-14T19:22:46.602Z"),
         },
         "connection_id": "<id>",
     })
@@ -182,10 +182,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "23e184c1-b6b6-4bd7-9236-4f2c242cb7fc",
+            "id": "b5900f66-f99b-4cbc-9905-ea3a032c4b70",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T19:16:38.651Z"),
+            "updated_at": parse_datetime("2021-09-14T19:22:46.602Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -285,10 +285,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "23e184c1-b6b6-4bd7-9236-4f2c242cb7fc",
+            "id": "b5900f66-f99b-4cbc-9905-ea3a032c4b70",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T19:16:38.651Z"),
+            "updated_at": parse_datetime("2021-09-14T19:22:46.602Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

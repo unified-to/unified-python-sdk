@@ -48,3 +48,6 @@ value = ListUnifiedIntegrationsQueryParamCategories.PASSTHROUGH
 | `CDP`          | cdp            |
 | `PERFORMANCE`  | performance    |
 | `SOCIAL`       | social         |
+| `LEGAL`        | legal          |
+| `COMPUTE`      | compute        |
+| `HEALTHCARE`   | healthcare     |

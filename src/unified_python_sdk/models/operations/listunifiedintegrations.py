@@ -47,6 +47,9 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     CDP = "cdp"
     PERFORMANCE = "performance"
     SOCIAL = "social"
+    LEGAL = "legal"
+    COMPUTE = "compute"
+    HEALTHCARE = "healthcare"
 
 
 class ListUnifiedIntegrationsRequestTypedDict(TypedDict):

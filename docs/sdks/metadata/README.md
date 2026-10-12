@@ -34,17 +34,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "b078b6fb-501d-4281-b691-b487a1c21202",
+            "id": "ad32137a-731c-47ec-8af1-88712bf239ea",
             "is_required": False,
             "name": "autem",
-            "object_type": "signing_signatory",
+            "object_type": "social_review",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-14T19:25:09.649Z"),
+            "updated_at": parse_datetime("2025-03-15T10:32:28.664Z"),
         },
         "connection_id": "<id>",
     })
@@ -189,17 +189,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "48604f71-85f3-43ca-bd45-4db4aa30471d",
+            "id": "57052826-7a6a-4cfe-9666-c98b59fcb271",
             "is_required": False,
             "name": "autem",
-            "object_type": "signing_signatory",
+            "object_type": "social_review",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-14T19:25:09.654Z"),
+            "updated_at": parse_datetime("2025-03-15T10:32:28.669Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -299,17 +299,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "48604f71-85f3-43ca-bd45-4db4aa30471d",
+            "id": "57052826-7a6a-4cfe-9666-c98b59fcb271",
             "is_required": False,
             "name": "autem",
-            "object_type": "signing_signatory",
+            "object_type": "social_review",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-14T19:25:09.654Z"),
+            "updated_at": parse_datetime("2025-03-15T10:32:28.669Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
