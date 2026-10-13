@@ -53,6 +53,7 @@ class HealthcareAllergyTypedDict(TypedDict):
     id: NotRequired[str]
     r"""Unique identifier for the allergy/intolerance"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     name: NotRequired[str]
     r"""Human-readable name of the substance"""
     notes: NotRequired[str]
@@ -94,6 +95,7 @@ class HealthcareAllergy(BaseModel):
     r"""Unique identifier for the allergy/intolerance"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     name: Optional[str] = None
     r"""Human-readable name of the substance"""

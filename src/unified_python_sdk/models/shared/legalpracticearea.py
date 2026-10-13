@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class LegalPracticeareaType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""the normalized practice area type"""
+
     ADMINISTRATIVE = "ADMINISTRATIVE"
     ADMIRALTY_AND_MARITIME = "ADMIRALTY_AND_MARITIME"
     ANTI_TRUST_AND_COMPETITION = "ANTI_TRUST_AND_COMPETITION"
@@ -75,40 +77,52 @@ class LegalPracticeareaType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class LegalPracticeareaTypedDict(TypedDict):
     code: NotRequired[str]
+    r"""the practice area code"""
     created_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    r"""unique identifier for the practice area"""
     is_active: NotRequired[bool]
+    r"""whether the practice area is active"""
     metadata: NotRequired[List[LegalMetadataTypedDict]]
     r"""custom field values"""
     name: NotRequired[str]
+    r"""the practice area name"""
     raw: NotRequired[Dict[str, Any]]
+    r"""raw data from the integration"""
     type: NotRequired[LegalPracticeareaType]
+    r"""the normalized practice area type"""
     updated_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class LegalPracticearea(BaseModel):
     code: Optional[str] = None
+    r"""the practice area code"""
 
     created_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+    r"""unique identifier for the practice area"""
 
     is_active: Optional[bool] = None
+    r"""whether the practice area is active"""
 
     metadata: Optional[List[LegalMetadata]] = None
     r"""custom field values"""
 
     name: Optional[str] = None
+    r"""the practice area name"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""raw data from the integration"""
 
     type: Optional[LegalPracticeareaType] = None
+    r"""the normalized practice area type"""
 
     updated_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

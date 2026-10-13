@@ -54,6 +54,7 @@ class HealthcareEncounterTypedDict(TypedDict):
     location_id: NotRequired[str]
     r"""Where the encounter took place"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     patient_id: NotRequired[str]
     r"""The patient seen in the encounter"""
     practitioner_ids: NotRequired[List[str]]
@@ -92,6 +93,7 @@ class HealthcareEncounter(BaseModel):
     r"""Where the encounter took place"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     patient_id: Optional[str] = None
     r"""The patient seen in the encounter"""

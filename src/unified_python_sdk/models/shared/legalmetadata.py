@@ -33,15 +33,19 @@ LegalMetadataExtraDataTypedDict = TypeAliasType(
     "LegalMetadataExtraDataTypedDict",
     Union[Dict[str, Any], str, float, bool, List[LegalMetadata5TypedDict]],
 )
+r"""additional data about the custom field"""
 
 
 LegalMetadataExtraData = TypeAliasType(
     "LegalMetadataExtraData",
     Union[Dict[str, Any], str, float, bool, List[LegalMetadata5]],
 )
+r"""additional data about the custom field"""
 
 
 class LegalMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""the data type of the value"""
+
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -80,37 +84,51 @@ LegalMetadataValueTypedDict = TypeAliasType(
     "LegalMetadataValueTypedDict",
     Union[Dict[str, Any], str, float, bool, List[LegalMetadataSchemas5TypedDict]],
 )
+r"""the custom field value"""
 
 
 LegalMetadataValue = TypeAliasType(
     "LegalMetadataValue",
     Union[Dict[str, Any], str, float, bool, List[LegalMetadataSchemas5]],
 )
+r"""the custom field value"""
 
 
 class LegalMetadataTypedDict(TypedDict):
     extra_data: NotRequired[LegalMetadataExtraDataTypedDict]
+    r"""additional data about the custom field"""
     format_: NotRequired[LegalMetadataFormat]
+    r"""the data type of the value"""
     id: NotRequired[str]
+    r"""the custom field identifier"""
     namespace: NotRequired[str]
+    r"""the scope or origin of the custom field"""
     slug: NotRequired[str]
+    r"""the custom field key"""
     value: NotRequired[LegalMetadataValueTypedDict]
+    r"""the custom field value"""
 
 
 class LegalMetadata(BaseModel):
     extra_data: Optional[LegalMetadataExtraData] = None
+    r"""additional data about the custom field"""
 
     format_: Annotated[
         Optional[LegalMetadataFormat], pydantic.Field(alias="format")
     ] = None
+    r"""the data type of the value"""
 
     id: Optional[str] = None
+    r"""the custom field identifier"""
 
     namespace: Optional[str] = None
+    r"""the scope or origin of the custom field"""
 
     slug: Optional[str] = None
+    r"""the custom field key"""
 
     value: Optional[LegalMetadataValue] = None
+    r"""the custom field value"""
 
     @field_serializer("format_")
     def serialize_format_(self, value):

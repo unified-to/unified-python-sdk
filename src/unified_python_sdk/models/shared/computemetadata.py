@@ -33,12 +33,14 @@ ComputeMetadataExtraDataTypedDict = TypeAliasType(
     "ComputeMetadataExtraDataTypedDict",
     Union[Dict[str, Any], str, float, bool, List[ComputeMetadata5TypedDict]],
 )
+r"""Additional data about the value"""
 
 
 ComputeMetadataExtraData = TypeAliasType(
     "ComputeMetadataExtraData",
     Union[Dict[str, Any], str, float, bool, List[ComputeMetadata5]],
 )
+r"""Additional data about the value"""
 
 
 class ComputeMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -87,9 +89,11 @@ r"""The label, tag or metadata value"""
 
 class ComputeMetadataTypedDict(TypedDict):
     extra_data: NotRequired[ComputeMetadataExtraDataTypedDict]
+    r"""Additional data about the value"""
     format_: NotRequired[ComputeMetadataFormat]
     r"""The data type of the value"""
     id: NotRequired[str]
+    r"""The label, tag or metadata identifier"""
     namespace: NotRequired[str]
     r"""The origin of the value (eg. labels, tags, metadata)"""
     slug: NotRequired[str]
@@ -100,6 +104,7 @@ class ComputeMetadataTypedDict(TypedDict):
 
 class ComputeMetadata(BaseModel):
     extra_data: Optional[ComputeMetadataExtraData] = None
+    r"""Additional data about the value"""
 
     format_: Annotated[
         Optional[ComputeMetadataFormat], pydantic.Field(alias="format")
@@ -107,6 +112,7 @@ class ComputeMetadata(BaseModel):
     r"""The data type of the value"""
 
     id: Optional[str] = None
+    r"""The label, tag or metadata identifier"""
 
     namespace: Optional[str] = None
     r"""The origin of the value (eg. labels, tags, metadata)"""

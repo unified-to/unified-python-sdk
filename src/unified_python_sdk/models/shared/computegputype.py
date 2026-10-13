@@ -75,7 +75,7 @@ class ComputeGputypeTypedDict(TypedDict):
     cpu_count: NotRequired[float]
     r"""vCPUs included in one unit of this type"""
     created_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     disk_mb: NotRequired[float]
     r"""Local disk in MiB"""
     gpu_count: NotRequired[float]
@@ -99,7 +99,7 @@ class ComputeGputypeTypedDict(TypedDict):
     sku: NotRequired[str]
     r"""The vendor's own SKU or type name"""
     updated_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class ComputeGputype(BaseModel):
@@ -113,7 +113,7 @@ class ComputeGputype(BaseModel):
     r"""vCPUs included in one unit of this type"""
 
     created_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     disk_mb: Optional[float] = None
     r"""Local disk in MiB"""
@@ -149,7 +149,7 @@ class ComputeGputype(BaseModel):
     r"""The vendor's own SKU or type name"""
 
     updated_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @field_serializer("architecture")
     def serialize_architecture(self, value):

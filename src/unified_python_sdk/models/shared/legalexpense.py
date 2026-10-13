@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class LegalExpenseType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""hard cost, soft cost or other"""
+
     HARD_COST = "HARD_COST"
     SOFT_COST = "SOFT_COST"
     OTHER = "OTHER"
@@ -22,18 +24,23 @@ class LegalExpenseTypedDict(TypedDict):
     category: NotRequired[str]
     r"""the vendor's expense category name"""
     created_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""ISO 4217 currency code"""
     description: NotRequired[str]
+    r"""free-text description of the expense"""
     expense_code: NotRequired[str]
     r"""UTBMS/LEDES expense code"""
     id: NotRequired[str]
+    r"""unique identifier for the expense"""
     incurred_at: NotRequired[datetime]
     r"""date the expense was incurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     invoice_id: NotRequired[str]
     r"""pointer to the Accounting Invoice this expense was billed on (reference to AccountingInvoice)"""
     is_billable: NotRequired[bool]
+    r"""whether the expense is billable"""
     is_billed: NotRequired[bool]
+    r"""whether the expense has been billed"""
     matter_id: NotRequired[str]
     r"""pointer to the Legal Matter this expense is recorded against"""
     metadata: NotRequired[List[LegalMetadataTypedDict]]
@@ -41,11 +48,15 @@ class LegalExpenseTypedDict(TypedDict):
     price_amount: NotRequired[float]
     r"""unit price"""
     quantity: NotRequired[float]
+    r"""number of units"""
     raw: NotRequired[Dict[str, Any]]
+    r"""raw data from the integration"""
     total_amount: NotRequired[float]
+    r"""total amount of the expense"""
     type: NotRequired[LegalExpenseType]
+    r"""hard cost, soft cost or other"""
     updated_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
     r"""HR Employee who incurred or recorded the expense (reference to HrisEmployee)"""
 
@@ -55,16 +66,19 @@ class LegalExpense(BaseModel):
     r"""the vendor's expense category name"""
 
     created_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""ISO 4217 currency code"""
 
     description: Optional[str] = None
+    r"""free-text description of the expense"""
 
     expense_code: Optional[str] = None
     r"""UTBMS/LEDES expense code"""
 
     id: Optional[str] = None
+    r"""unique identifier for the expense"""
 
     incurred_at: Optional[datetime] = None
     r"""date the expense was incurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -73,8 +87,10 @@ class LegalExpense(BaseModel):
     r"""pointer to the Accounting Invoice this expense was billed on (reference to AccountingInvoice)"""
 
     is_billable: Optional[bool] = None
+    r"""whether the expense is billable"""
 
     is_billed: Optional[bool] = None
+    r"""whether the expense has been billed"""
 
     matter_id: Optional[str] = None
     r"""pointer to the Legal Matter this expense is recorded against"""
@@ -86,15 +102,19 @@ class LegalExpense(BaseModel):
     r"""unit price"""
 
     quantity: Optional[float] = None
+    r"""number of units"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""raw data from the integration"""
 
     total_amount: Optional[float] = None
+    r"""total amount of the expense"""
 
     type: Optional[LegalExpenseType] = None
+    r"""hard cost, soft cost or other"""
 
     updated_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
     r"""HR Employee who incurred or recorded the expense (reference to HrisEmployee)"""

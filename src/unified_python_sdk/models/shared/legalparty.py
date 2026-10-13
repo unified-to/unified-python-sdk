@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class LegalPartyRole(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""the party role on the matter"""
+
     CLIENT = "CLIENT"
     OPPOSING_PARTY = "OPPOSING_PARTY"
     OPPOSING_COUNSEL = "OPPOSING_COUNSEL"
@@ -30,6 +32,7 @@ class LegalPartyTypedDict(TypedDict):
     description: NotRequired[str]
     r"""the vendor's free-text relationship description"""
     role: NotRequired[LegalPartyRole]
+    r"""the party role on the matter"""
 
 
 class LegalParty(BaseModel):
@@ -43,6 +46,7 @@ class LegalParty(BaseModel):
     r"""the vendor's free-text relationship description"""
 
     role: Optional[LegalPartyRole] = None
+    r"""the party role on the matter"""
 
     @field_serializer("role")
     def serialize_role(self, value):

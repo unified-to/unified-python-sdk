@@ -78,6 +78,7 @@ class HealthcareObservationTypedDict(TypedDict):
     issued_at: NotRequired[datetime]
     r"""When the result was released (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     name: NotRequired[str]
     r"""Human-readable name of what was observed"""
     notes: NotRequired[str]
@@ -129,6 +130,7 @@ class HealthcareObservation(BaseModel):
     r"""When the result was released (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     name: Optional[str] = None
     r"""Human-readable name of what was observed"""

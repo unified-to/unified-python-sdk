@@ -40,6 +40,7 @@ class HealthcareImmunizationTypedDict(TypedDict):
     lot_number: NotRequired[str]
     r"""Vaccine lot number"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     name: NotRequired[str]
     r"""Human-readable name of the vaccine"""
     notes: NotRequired[str]
@@ -82,6 +83,7 @@ class HealthcareImmunization(BaseModel):
     r"""Vaccine lot number"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     name: Optional[str] = None
     r"""Human-readable name of the vaccine"""

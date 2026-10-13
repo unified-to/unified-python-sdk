@@ -36,6 +36,7 @@ class HealthcareSlotTypedDict(TypedDict):
     location_id: NotRequired[str]
     r"""Where the slot takes place"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     notes: NotRequired[str]
     r"""Free-text notes about the slot"""
     practitioner_id: NotRequired[str]
@@ -69,6 +70,7 @@ class HealthcareSlot(BaseModel):
     r"""Where the slot takes place"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     notes: Optional[str] = None
     r"""Free-text notes about the slot"""

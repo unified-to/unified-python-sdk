@@ -34,15 +34,19 @@ HealthcareMetadataExtraDataTypedDict = TypeAliasType(
     "HealthcareMetadataExtraDataTypedDict",
     Union[Dict[str, Any], str, float, bool, List[HealthcareMetadata5TypedDict]],
 )
+r"""Additional data about the custom field"""
 
 
 HealthcareMetadataExtraData = TypeAliasType(
     "HealthcareMetadataExtraData",
     Union[Dict[str, Any], str, float, bool, List[HealthcareMetadata5]],
 )
+r"""Additional data about the custom field"""
 
 
 class HealthcareMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The data type of the value"""
+
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -74,37 +78,51 @@ HealthcareMetadataValueTypedDict = TypeAliasType(
     "HealthcareMetadataValueTypedDict",
     Union[Dict[str, Any], str, float, bool, List[HealthcareMetadataSchemas5TypedDict]],
 )
+r"""The custom field value"""
 
 
 HealthcareMetadataValue = TypeAliasType(
     "HealthcareMetadataValue",
     Union[Dict[str, Any], str, float, bool, List[HealthcareMetadataSchemas5]],
 )
+r"""The custom field value"""
 
 
 class HealthcareMetadataTypedDict(TypedDict):
     extra_data: NotRequired[HealthcareMetadataExtraDataTypedDict]
+    r"""Additional data about the custom field"""
     format_: NotRequired[HealthcareMetadataFormat]
+    r"""The data type of the value"""
     id: NotRequired[str]
+    r"""Identifier of the custom field"""
     namespace: NotRequired[str]
+    r"""The scope or origin of the custom field"""
     slug: NotRequired[str]
+    r"""The custom field key"""
     value: NotRequired[HealthcareMetadataValueTypedDict]
+    r"""The custom field value"""
 
 
 class HealthcareMetadata(BaseModel):
     extra_data: Optional[HealthcareMetadataExtraData] = None
+    r"""Additional data about the custom field"""
 
     format_: Annotated[
         Optional[HealthcareMetadataFormat], pydantic.Field(alias="format")
     ] = None
+    r"""The data type of the value"""
 
     id: Optional[str] = None
+    r"""Identifier of the custom field"""
 
     namespace: Optional[str] = None
+    r"""The scope or origin of the custom field"""
 
     slug: Optional[str] = None
+    r"""The custom field key"""
 
     value: Optional[HealthcareMetadataValue] = None
+    r"""The custom field value"""
 
     @field_serializer("format_")
     def serialize_format_(self, value):

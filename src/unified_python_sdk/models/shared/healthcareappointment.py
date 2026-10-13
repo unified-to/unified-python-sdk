@@ -43,6 +43,7 @@ class HealthcareAppointmentTypedDict(TypedDict):
     location_id: NotRequired[str]
     r"""Where the appointment takes place"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     notes: NotRequired[str]
     r"""Free-text notes or comments"""
     patient_id: NotRequired[str]
@@ -85,6 +86,7 @@ class HealthcareAppointment(BaseModel):
     r"""Where the appointment takes place"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     notes: Optional[str] = None
     r"""Free-text notes or comments"""

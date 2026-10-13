@@ -28,7 +28,7 @@ with UnifiedTo(
     res = unified_to.rate.create_shipping_rate(request={
         "shipping_rate": {
             "currency": "USD",
-            "id": "3a9b8ee5-ec07-4d58-8bc2-59ad6868ee89",
+            "id": "025c5b76-817f-4d9f-b5b4-ad273ec513cd",
             "rates": [
                 {
                     "amount": 54.679719475097954,
@@ -37,7 +37,7 @@ with UnifiedTo(
                     "delivery_days": 8.0,
                     "description": "Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.",
                     "estimated_days": 10.0,
-                    "estimated_delivery_end_at": parse_datetime("2024-02-12T09:33:22.380Z"),
+                    "estimated_delivery_end_at": parse_datetime("2024-02-12T18:35:30.127Z"),
                     "is_guaranteed": True,
                     "is_negotiated_rate": True,
                     "tax_amount": 2.2701712837442756,

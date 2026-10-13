@@ -56,6 +56,7 @@ class HealthcarePatientTypedDict(TypedDict):
     last_name: NotRequired[str]
     r"""Family name of the patient"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     name: NotRequired[str]
     r"""Full name of the patient"""
     practitioner_ids: NotRequired[List[str]]
@@ -109,6 +110,7 @@ class HealthcarePatient(BaseModel):
     r"""Family name of the patient"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     name: Optional[str] = None
     r"""Full name of the patient"""

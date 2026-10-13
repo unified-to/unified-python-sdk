@@ -55,6 +55,7 @@ class HealthcarePractitionerTypedDict(TypedDict):
     location_ids: NotRequired[List[str]]
     r"""Locations where the practitioner provides care"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     name: NotRequired[str]
     r"""Full name of the practitioner"""
     qualifications: NotRequired[List[HealthcareCodeTypedDict]]
@@ -109,6 +110,7 @@ class HealthcarePractitioner(BaseModel):
     r"""Locations where the practitioner provides care"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     name: Optional[str] = None
     r"""Full name of the practitioner"""

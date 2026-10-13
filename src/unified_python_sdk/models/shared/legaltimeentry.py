@@ -15,14 +15,19 @@ class LegalTimeentryTypedDict(TypedDict):
     billable_minutes: NotRequired[float]
     r"""billable duration after rounding, in minutes"""
     created_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""ISO 4217 currency code"""
     description: NotRequired[str]
+    r"""description of the work performed"""
     id: NotRequired[str]
+    r"""unique identifier for the time entry"""
     invoice_id: NotRequired[str]
     r"""pointer to the Accounting Invoice this time was billed on (reference to AccountingInvoice)"""
     is_billable: NotRequired[bool]
+    r"""whether the time entry is billable"""
     is_billed: NotRequired[bool]
+    r"""whether the time entry has been billed"""
     matter_id: NotRequired[str]
     r"""pointer to the Legal Matter this time is recorded against"""
     metadata: NotRequired[List[LegalMetadataTypedDict]]
@@ -32,11 +37,13 @@ class LegalTimeentryTypedDict(TypedDict):
     rate_amount: NotRequired[float]
     r"""hourly rate, or the flat amount for flat-rate entries"""
     raw: NotRequired[Dict[str, Any]]
+    r"""raw data from the integration"""
     task_code: NotRequired[str]
     r"""UTBMS/LEDES task code"""
     total_amount: NotRequired[float]
+    r"""total amount of the time entry"""
     updated_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
     r"""HR Employee who is the timekeeper (reference to HrisEmployee)"""
     worked_at: NotRequired[datetime]
@@ -51,20 +58,25 @@ class LegalTimeentry(BaseModel):
     r"""billable duration after rounding, in minutes"""
 
     created_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""ISO 4217 currency code"""
 
     description: Optional[str] = None
+    r"""description of the work performed"""
 
     id: Optional[str] = None
+    r"""unique identifier for the time entry"""
 
     invoice_id: Optional[str] = None
     r"""pointer to the Accounting Invoice this time was billed on (reference to AccountingInvoice)"""
 
     is_billable: Optional[bool] = None
+    r"""whether the time entry is billable"""
 
     is_billed: Optional[bool] = None
+    r"""whether the time entry has been billed"""
 
     matter_id: Optional[str] = None
     r"""pointer to the Legal Matter this time is recorded against"""
@@ -79,14 +91,16 @@ class LegalTimeentry(BaseModel):
     r"""hourly rate, or the flat amount for flat-rate entries"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""raw data from the integration"""
 
     task_code: Optional[str] = None
     r"""UTBMS/LEDES task code"""
 
     total_amount: Optional[float] = None
+    r"""total amount of the time entry"""
 
     updated_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
     r"""HR Employee who is the timekeeper (reference to HrisEmployee)"""

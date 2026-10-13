@@ -36,6 +36,7 @@ class HealthcareLocationTypedDict(TypedDict):
     longitude: NotRequired[float]
     r"""Longitude of the location"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     name: NotRequired[str]
     r"""Name of the location"""
     organization_name: NotRequired[str]
@@ -79,6 +80,7 @@ class HealthcareLocation(BaseModel):
     r"""Longitude of the location"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     name: Optional[str] = None
     r"""Name of the location"""

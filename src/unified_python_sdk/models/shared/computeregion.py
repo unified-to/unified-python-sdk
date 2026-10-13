@@ -13,7 +13,7 @@ class ComputeRegionTypedDict(TypedDict):
     country: NotRequired[str]
     r"""Country code"""
     created_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the region was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     gpu_models: NotRequired[List[PropertyComputeRegionGpuModels]]
     r"""GPU models offered in this region"""
     id: NotRequired[str]
@@ -25,7 +25,7 @@ class ComputeRegionTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     r"""Raw data from integration"""
     updated_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class ComputeRegion(BaseModel):
@@ -33,7 +33,7 @@ class ComputeRegion(BaseModel):
     r"""Country code"""
 
     created_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the region was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     gpu_models: Optional[List[PropertyComputeRegionGpuModels]] = None
     r"""GPU models offered in this region"""
@@ -51,7 +51,7 @@ class ComputeRegion(BaseModel):
     r"""Raw data from integration"""
 
     updated_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

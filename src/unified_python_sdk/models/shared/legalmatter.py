@@ -14,6 +14,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class BillingMethod(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""how the matter is billed"""
+
     HOURLY = "HOURLY"
     FLAT_FEE = "FLAT_FEE"
     CONTINGENCY = "CONTINGENCY"
@@ -21,6 +23,8 @@ class BillingMethod(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class LegalMatterStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""the matter status"""
+
     PENDING = "PENDING"
     OPEN = "OPEN"
     CLOSED = "CLOSED"
@@ -29,43 +33,51 @@ class LegalMatterStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class LegalMatterTypedDict(TypedDict):
     billing_method: NotRequired[BillingMethod]
+    r"""how the matter is billed"""
     client_reference: NotRequired[str]
     r"""the client's own reference number for this matter"""
     closed_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     company_ids: NotRequired[List[str]]
     r"""CRM Companies that are clients on this matter"""
     contact_ids: NotRequired[List[str]]
     r"""CRM Contacts that are clients on this matter"""
     created_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
+    r"""ISO 4217 currency code"""
     description: NotRequired[str]
+    r"""free-text description of the matter"""
     id: NotRequired[str]
+    r"""unique identifier for the matter"""
     is_billable: NotRequired[bool]
+    r"""whether the matter is billable"""
     metadata: NotRequired[List[LegalMetadataTypedDict]]
     r"""custom field values"""
     name: NotRequired[str]
+    r"""the matter name"""
     number: NotRequired[str]
     r"""the firm's display/matter number"""
     opened_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     originating_user_id: NotRequired[str]
     r"""HR Employee who is the originating attorney (reference to HrisEmployee)"""
     parties: NotRequired[List[LegalPartyTypedDict]]
     r"""all people and organizations related to this matter, with their role"""
     pending_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     practicearea_id: NotRequired[str]
     r"""pointer to the Legal Practicearea object"""
     raw: NotRequired[Dict[str, Any]]
+    r"""raw data from the integration"""
     stage: NotRequired[str]
     r"""the matter stage name"""
     status: NotRequired[LegalMatterStatus]
+    r"""the matter status"""
     statute_of_limitations_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     updated_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
     r"""HR Employee who is the responsible attorney (reference to HrisEmployee)"""
     user_ids: NotRequired[List[str]]
@@ -74,12 +86,13 @@ class LegalMatterTypedDict(TypedDict):
 
 class LegalMatter(BaseModel):
     billing_method: Optional[BillingMethod] = None
+    r"""how the matter is billed"""
 
     client_reference: Optional[str] = None
     r"""the client's own reference number for this matter"""
 
     closed_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     company_ids: Optional[List[str]] = None
     r"""CRM Companies that are clients on this matter"""
@@ -88,26 +101,31 @@ class LegalMatter(BaseModel):
     r"""CRM Contacts that are clients on this matter"""
 
     created_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     currency: Optional[str] = None
+    r"""ISO 4217 currency code"""
 
     description: Optional[str] = None
+    r"""free-text description of the matter"""
 
     id: Optional[str] = None
+    r"""unique identifier for the matter"""
 
     is_billable: Optional[bool] = None
+    r"""whether the matter is billable"""
 
     metadata: Optional[List[LegalMetadata]] = None
     r"""custom field values"""
 
     name: Optional[str] = None
+    r"""the matter name"""
 
     number: Optional[str] = None
     r"""the firm's display/matter number"""
 
     opened_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     originating_user_id: Optional[str] = None
     r"""HR Employee who is the originating attorney (reference to HrisEmployee)"""
@@ -116,23 +134,25 @@ class LegalMatter(BaseModel):
     r"""all people and organizations related to this matter, with their role"""
 
     pending_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     practicearea_id: Optional[str] = None
     r"""pointer to the Legal Practicearea object"""
 
     raw: Optional[Dict[str, Any]] = None
+    r"""raw data from the integration"""
 
     stage: Optional[str] = None
     r"""the matter stage name"""
 
     status: Optional[LegalMatterStatus] = None
+    r"""the matter status"""
 
     statute_of_limitations_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     updated_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
     r"""HR Employee who is the responsible attorney (reference to HrisEmployee)"""

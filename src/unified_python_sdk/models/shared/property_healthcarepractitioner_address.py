@@ -11,27 +11,39 @@ class PropertyHealthcarePractitionerAddressTypedDict(TypedDict):
     r"""Work address of the practitioner"""
 
     address1: NotRequired[str]
+    r"""First line of the street address"""
     address2: NotRequired[str]
+    r"""Second line of the street address"""
     city: NotRequired[str]
+    r"""City or locality"""
     country: NotRequired[str]
+    r"""Country"""
     postal_code: NotRequired[str]
+    r"""Postal or ZIP code"""
     region: NotRequired[str]
+    r"""Regional area (e.g., state in the U.S., province in Canada)"""
 
 
 class PropertyHealthcarePractitionerAddress(BaseModel):
     r"""Work address of the practitioner"""
 
     address1: Optional[str] = None
+    r"""First line of the street address"""
 
     address2: Optional[str] = None
+    r"""Second line of the street address"""
 
     city: Optional[str] = None
+    r"""City or locality"""
 
     country: Optional[str] = None
+    r"""Country"""
 
     postal_code: Optional[str] = None
+    r"""Postal or ZIP code"""
 
     region: Optional[str] = None
+    r"""Regional area (e.g., state in the U.S., province in Canada)"""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

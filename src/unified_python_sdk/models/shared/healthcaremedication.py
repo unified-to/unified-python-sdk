@@ -43,6 +43,7 @@ class HealthcareMedicationTypedDict(TypedDict):
     id: NotRequired[str]
     r"""Unique identifier for the medication order/prescription"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
+    r"""Custom field values"""
     name: NotRequired[str]
     r"""Human-readable name of the medication"""
     notes: NotRequired[str]
@@ -86,6 +87,7 @@ class HealthcareMedication(BaseModel):
     r"""Unique identifier for the medication order/prescription"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
+    r"""Custom field values"""
 
     name: Optional[str] = None
     r"""Human-readable name of the medication"""

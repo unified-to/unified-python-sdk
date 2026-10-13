@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class HealthcareTelephoneType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The kind of telephone number (work, home, mobile, fax or other)"""
+
     WORK = "WORK"
     HOME = "HOME"
     MOBILE = "MOBILE"
@@ -20,13 +22,17 @@ class HealthcareTelephoneType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class HealthcareTelephoneTypedDict(TypedDict):
     telephone: str
+    r"""The telephone number"""
     type: NotRequired[HealthcareTelephoneType]
+    r"""The kind of telephone number (work, home, mobile, fax or other)"""
 
 
 class HealthcareTelephone(BaseModel):
     telephone: str
+    r"""The telephone number"""
 
     type: Optional[HealthcareTelephoneType] = None
+    r"""The kind of telephone number (work, home, mobile, fax or other)"""
 
     @field_serializer("type")
     def serialize_type(self, value):

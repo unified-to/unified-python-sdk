@@ -5,11 +5,11 @@ Work address of the practitioner
 
 ## Fields
 
-| Field              | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `address1`         | *Optional[str]*    | :heavy_minus_sign: | N/A                |
-| `address2`         | *Optional[str]*    | :heavy_minus_sign: | N/A                |
-| `city`             | *Optional[str]*    | :heavy_minus_sign: | N/A                |
-| `country`          | *Optional[str]*    | :heavy_minus_sign: | N/A                |
-| `postal_code`      | *Optional[str]*    | :heavy_minus_sign: | N/A                |
-| `region`           | *Optional[str]*    | :heavy_minus_sign: | N/A                |
+| Field                                                       | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `address1`                                                  | *Optional[str]*                                             | :heavy_minus_sign:                                          | First line of the street address                            |
+| `address2`                                                  | *Optional[str]*                                             | :heavy_minus_sign:                                          | Second line of the street address                           |
+| `city`                                                      | *Optional[str]*                                             | :heavy_minus_sign:                                          | City or locality                                            |
+| `country`                                                   | *Optional[str]*                                             | :heavy_minus_sign:                                          | Country                                                     |
+| `postal_code`                                               | *Optional[str]*                                             | :heavy_minus_sign:                                          | Postal or ZIP code                                          |
+| `region`                                                    | *Optional[str]*                                             | :heavy_minus_sign:                                          | Regional area (e.g., state in the U.S., province in Canada) |

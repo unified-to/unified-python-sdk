@@ -11,6 +11,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class HealthcareEmailType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The kind of email address (work, home or other)"""
+
     WORK = "WORK"
     HOME = "HOME"
     OTHER = "OTHER"
@@ -18,13 +20,17 @@ class HealthcareEmailType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class HealthcareEmailTypedDict(TypedDict):
     email: str
+    r"""The email address"""
     type: NotRequired[HealthcareEmailType]
+    r"""The kind of email address (work, home or other)"""
 
 
 class HealthcareEmail(BaseModel):
     email: str
+    r"""The email address"""
 
     type: Optional[HealthcareEmailType] = None
+    r"""The kind of email address (work, home or other)"""
 
     @field_serializer("type")
     def serialize_type(self, value):
