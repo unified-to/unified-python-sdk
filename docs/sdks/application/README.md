@@ -33,10 +33,10 @@ with UnifiedTo(
     res = unified_to.application.create_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-24T09:00:41.589Z"),
+            "applied_at": parse_datetime("2025-09-25T03:44:46.372Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-05T15:55:48.067Z"),
-            "id": "53f7ac68-67e1-493d-bdc0-c8955533728b",
+            "hired_at": parse_datetime("2026-05-06T16:34:21.408Z"),
+            "id": "4b47d428-668c-429d-8cce-acda1ad208ac",
             "metadata": [
                 {
                     "extra_data": {
@@ -52,12 +52,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-03T06:57:03.774Z"),
+            "rejected_at": parse_datetime("2026-10-04T11:34:44.467Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.",
-            "updated_at": parse_datetime("2026-10-10T01:56:42.205Z"),
+            "updated_at": parse_datetime("2026-10-11T06:45:09.791Z"),
         },
         "connection_id": "<id>",
     })
@@ -201,10 +201,10 @@ with UnifiedTo(
     res = unified_to.application.patch_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-24T09:00:41.611Z"),
+            "applied_at": parse_datetime("2025-09-25T03:44:46.393Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-05T15:55:48.096Z"),
-            "id": "d0c036ff-bbfd-4fec-bd5b-3f88bce71ba7",
+            "hired_at": parse_datetime("2026-05-06T16:34:21.435Z"),
+            "id": "3d5897a0-0788-49b5-a752-b595007f1619",
             "metadata": [
                 {
                     "extra_data": {
@@ -220,12 +220,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-03T06:57:03.808Z"),
+            "rejected_at": parse_datetime("2026-10-04T11:34:44.498Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.",
-            "updated_at": parse_datetime("2026-10-10T01:56:42.239Z"),
+            "updated_at": parse_datetime("2026-10-11T06:45:09.822Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -324,10 +324,10 @@ with UnifiedTo(
     res = unified_to.application.update_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-24T09:00:41.611Z"),
+            "applied_at": parse_datetime("2025-09-25T03:44:46.393Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-05T15:55:48.096Z"),
-            "id": "d0c036ff-bbfd-4fec-bd5b-3f88bce71ba7",
+            "hired_at": parse_datetime("2026-05-06T16:34:21.435Z"),
+            "id": "3d5897a0-0788-49b5-a752-b595007f1619",
             "metadata": [
                 {
                     "extra_data": {
@@ -343,12 +343,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-03T06:57:03.808Z"),
+            "rejected_at": parse_datetime("2026-10-04T11:34:44.498Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.",
-            "updated_at": parse_datetime("2026-10-10T01:56:42.239Z"),
+            "updated_at": parse_datetime("2026-10-11T06:45:09.822Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

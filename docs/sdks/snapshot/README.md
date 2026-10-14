@@ -31,13 +31,13 @@ with UnifiedTo(
     res = unified_to.snapshot.create_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "331140ed-5b9f-416a-a280-e2bb153c7979",
+            "id": "a607f618-699a-433f-baac-f154cfbf3c93",
             "metadata": [],
             "name": "snap-alius",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-03-23T11:32:50.968Z"),
+            "updated_at": parse_datetime("2026-03-24T13:14:28.755Z"),
         },
         "connection_id": "<id>",
     })

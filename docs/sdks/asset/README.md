@@ -31,11 +31,11 @@ with UnifiedTo(
         "ads_asset": {
             "created_at": parse_datetime("2020-03-27T20:14:38.603Z"),
             "height": 400.0,
-            "id": "526880f7-8fd7-461e-8b21-4b2cd211da6b",
+            "id": "3225a596-de6d-42f7-8316-e2dbd26b9300",
             "mime_type": "IMAGE_PNG",
             "name": "Lockman - DuBuque",
             "type": shared.AdsAssetType.IMAGE,
-            "updated_at": parse_datetime("2022-03-22T16:01:37.842Z"),
+            "updated_at": parse_datetime("2022-03-23T00:47:06.130Z"),
             "url": "https://informal-perfection.com/",
             "width": 600.0,
         },

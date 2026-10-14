@@ -38,11 +38,11 @@ with UnifiedTo(
 
     res = unified_to.expense.create_accounting_expense(request={
         "accounting_expense": {
-            "approved_at": parse_datetime("2026-06-02T00:38:25.492Z"),
+            "approved_at": parse_datetime("2026-06-03T03:51:40.838Z"),
             "attachments": [
                 {
                     "download_url": "https://ripe-napkin.biz/",
-                    "id": "de4fabcb-6f0c-40e2-bd42-7774668aac8e",
+                    "id": "51777b32-446a-4925-b2ac-4996fad19dc9",
                     "mime_type": "annus",
                     "name": "cohibeo",
                 },
@@ -51,10 +51,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "SSP",
             "external_number": "necessitatibus",
-            "id": "c6d559fa-bdc7-40b0-889b-fdc9117fd614",
+            "id": "fcf74eb5-9ea2-45cd-983b-6c9abb6fbe01",
             "lineitems": [
                 {
-                    "id": "900602a6-551a-48cd-b5cc-76694a572722",
+                    "id": "f39af1b6-9a5a-48aa-8b5e-80cc6c0689a8",
                     "item_description": "Innovative Table featuring left technology and Rubber construction",
                     "item_name": "Luxurious Cotton Pizza",
                     "item_sku": "978-0-8324-6620-5",
@@ -68,13 +68,13 @@ with UnifiedTo(
             "metadata": [],
             "name": "Refined Steel Shoes",
             "payment_method": "CASH",
-            "posted_at": parse_datetime("2021-06-08T01:39:53.788Z"),
+            "posted_at": parse_datetime("2021-06-08T06:10:48.698Z"),
             "reimbursed_amount": 1833.0,
             "status": shared.AccountingExpenseStatus.SUBMITTED,
             "tax_amount": 2602.0,
             "total_amount": 3580.0,
             "type": shared.AccountingExpenseType.USER,
-            "updated_at": parse_datetime("2026-06-02T00:38:25.492Z"),
+            "updated_at": parse_datetime("2026-06-03T03:51:40.838Z"),
         },
         "connection_id": "<id>",
     })
@@ -128,7 +128,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "e72be28d-3b0b-434b-8fe4-2e4d14c8ba70",
+            "id": "07cb6949-0848-4732-977d-dd660f6d9e7c",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -136,7 +136,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-26T05:23:14.764Z"),
+            "updated_at": parse_datetime("2024-03-26T21:51:04.074Z"),
         },
         "connection_id": "<id>",
     })
@@ -372,11 +372,11 @@ with UnifiedTo(
 
     res = unified_to.expense.patch_accounting_expense(request={
         "accounting_expense": {
-            "approved_at": parse_datetime("2026-06-02T00:38:25.534Z"),
+            "approved_at": parse_datetime("2026-06-03T03:51:40.880Z"),
             "attachments": [
                 {
                     "download_url": "https://ripe-napkin.biz/",
-                    "id": "817ed4c2-b414-44ab-94e4-4497d9674bd7",
+                    "id": "342c80a9-949e-4b3b-9145-d259c985c6cb",
                     "mime_type": "annus",
                     "name": "cohibeo",
                 },
@@ -385,10 +385,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "SSP",
             "external_number": "necessitatibus",
-            "id": "b48b3106-6ec8-439f-bf38-f19da51021d4",
+            "id": "df68d4df-993d-43a4-b60b-f257edf44272",
             "lineitems": [
                 {
-                    "id": "627a19ea-09a8-43d7-8625-f47ad3d0585b",
+                    "id": "5df7f6a5-3389-4e02-b6fe-e505cb61091d",
                     "item_description": "Innovative Table featuring left technology and Rubber construction",
                     "item_name": "Luxurious Cotton Pizza",
                     "item_sku": "978-0-8324-6620-5",
@@ -402,13 +402,13 @@ with UnifiedTo(
             "metadata": [],
             "name": "Refined Steel Shoes",
             "payment_method": "CASH",
-            "posted_at": parse_datetime("2021-06-08T01:39:53.795Z"),
+            "posted_at": parse_datetime("2021-06-08T06:10:48.705Z"),
             "reimbursed_amount": 1833.0,
             "status": shared.AccountingExpenseStatus.SUBMITTED,
             "tax_amount": 2602.0,
             "total_amount": 3580.0,
             "type": shared.AccountingExpenseType.USER,
-            "updated_at": parse_datetime("2026-06-02T00:38:25.534Z"),
+            "updated_at": parse_datetime("2026-06-03T03:51:40.880Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -463,7 +463,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "f28679b7-851f-4dbb-a37a-eeea305e0478",
+            "id": "fd81914e-a5be-4257-9fb6-0337a346239c",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -471,7 +471,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-26T05:23:14.775Z"),
+            "updated_at": parse_datetime("2024-03-26T21:51:04.081Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -616,11 +616,11 @@ with UnifiedTo(
 
     res = unified_to.expense.update_accounting_expense(request={
         "accounting_expense": {
-            "approved_at": parse_datetime("2026-06-02T00:38:25.534Z"),
+            "approved_at": parse_datetime("2026-06-03T03:51:40.880Z"),
             "attachments": [
                 {
                     "download_url": "https://ripe-napkin.biz/",
-                    "id": "817ed4c2-b414-44ab-94e4-4497d9674bd7",
+                    "id": "342c80a9-949e-4b3b-9145-d259c985c6cb",
                     "mime_type": "annus",
                     "name": "cohibeo",
                 },
@@ -629,10 +629,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "SSP",
             "external_number": "necessitatibus",
-            "id": "b48b3106-6ec8-439f-bf38-f19da51021d4",
+            "id": "df68d4df-993d-43a4-b60b-f257edf44272",
             "lineitems": [
                 {
-                    "id": "627a19ea-09a8-43d7-8625-f47ad3d0585b",
+                    "id": "5df7f6a5-3389-4e02-b6fe-e505cb61091d",
                     "item_description": "Innovative Table featuring left technology and Rubber construction",
                     "item_name": "Luxurious Cotton Pizza",
                     "item_sku": "978-0-8324-6620-5",
@@ -646,13 +646,13 @@ with UnifiedTo(
             "metadata": [],
             "name": "Refined Steel Shoes",
             "payment_method": "CASH",
-            "posted_at": parse_datetime("2021-06-08T01:39:53.795Z"),
+            "posted_at": parse_datetime("2021-06-08T06:10:48.705Z"),
             "reimbursed_amount": 1833.0,
             "status": shared.AccountingExpenseStatus.SUBMITTED,
             "tax_amount": 2602.0,
             "total_amount": 3580.0,
             "type": shared.AccountingExpenseType.USER,
-            "updated_at": parse_datetime("2026-06-02T00:38:25.534Z"),
+            "updated_at": parse_datetime("2026-06-03T03:51:40.880Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -707,7 +707,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "f28679b7-851f-4dbb-a37a-eeea305e0478",
+            "id": "fd81914e-a5be-4257-9fb6-0337a346239c",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -715,7 +715,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-26T05:23:14.775Z"),
+            "updated_at": parse_datetime("2024-03-26T21:51:04.081Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

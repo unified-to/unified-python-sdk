@@ -32,16 +32,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.create_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2025-04-07T16:17:01.067Z"),
+            "approved_at": parse_datetime("2025-04-08T14:17:56.562Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "BMD",
             "external_number": "asporto",
-            "id": "20645595-de23-40b3-9f78-c232fd8a2e9e",
+            "id": "f4551530-294a-45c3-bcf3-8ac5d9cfe1f5",
             "lineitems": [
                 {
-                    "id": "fe2310cc-6b1c-46d9-8094-05250c72b0ee",
+                    "id": "ef024226-2cab-43cb-8321-92f69bb0c325",
                     "item_description": "The Synchronised motivating software Car offers reliable performance and webbed design",
                     "item_name": "Intelligent Gold Cheese",
                     "item_sku": "978-0-6550-0228-4",
@@ -52,7 +52,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "adae7052-d840-4944-9393-5f0b42beeaef",
+                    "id": "a387e30b-5922-4a35-9ac1-aa0547c66192",
                     "item_description": "Ergonomic Bike made with Marble for all-day coordinated support",
                     "item_name": "Practical Steel Pizza",
                     "item_sku": "978-1-4129-9332-6",
@@ -65,12 +65,12 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "Rustic Aluminum Car",
-            "posted_at": parse_datetime("2022-10-30T21:52:33.515Z"),
+            "posted_at": parse_datetime("2022-10-31T08:51:10.898Z"),
             "reimbursed_amount": 6696.0,
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 983.0,
             "total_amount": 13931.0,
-            "updated_at": parse_datetime("2025-04-07T16:17:01.067Z"),
+            "updated_at": parse_datetime("2025-04-08T14:17:56.562Z"),
         },
         "connection_id": "<id>",
     })
@@ -213,16 +213,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.patch_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2025-04-07T16:17:01.100Z"),
+            "approved_at": parse_datetime("2025-04-08T14:17:56.587Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "BMD",
             "external_number": "asporto",
-            "id": "40aac9fa-8475-47f0-8896-f91aa7626d33",
+            "id": "aa77e25e-455e-4d93-ac21-3807fd9e8568",
             "lineitems": [
                 {
-                    "id": "0f56ba59-2d7d-44cf-9d2c-0d081eee980f",
+                    "id": "bf0949fd-f92d-4524-8ac0-3756355d5c6f",
                     "item_description": "The Synchronised motivating software Car offers reliable performance and webbed design",
                     "item_name": "Intelligent Gold Cheese",
                     "item_sku": "978-0-6550-0228-4",
@@ -233,7 +233,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "294a2cdf-5df3-44c4-bf4d-da78b3900029",
+                    "id": "5baf512b-8bf1-4c0c-90f6-58060c68a2b5",
                     "item_description": "Ergonomic Bike made with Marble for all-day coordinated support",
                     "item_name": "Practical Steel Pizza",
                     "item_sku": "978-1-4129-9332-6",
@@ -246,12 +246,12 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "Rustic Aluminum Car",
-            "posted_at": parse_datetime("2022-10-30T21:52:33.531Z"),
+            "posted_at": parse_datetime("2022-10-31T08:51:10.911Z"),
             "reimbursed_amount": 6696.0,
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 983.0,
             "total_amount": 13931.0,
-            "updated_at": parse_datetime("2025-04-07T16:17:01.100Z"),
+            "updated_at": parse_datetime("2025-04-08T14:17:56.587Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -349,16 +349,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.update_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2025-04-07T16:17:01.100Z"),
+            "approved_at": parse_datetime("2025-04-08T14:17:56.587Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "BMD",
             "external_number": "asporto",
-            "id": "40aac9fa-8475-47f0-8896-f91aa7626d33",
+            "id": "aa77e25e-455e-4d93-ac21-3807fd9e8568",
             "lineitems": [
                 {
-                    "id": "0f56ba59-2d7d-44cf-9d2c-0d081eee980f",
+                    "id": "bf0949fd-f92d-4524-8ac0-3756355d5c6f",
                     "item_description": "The Synchronised motivating software Car offers reliable performance and webbed design",
                     "item_name": "Intelligent Gold Cheese",
                     "item_sku": "978-0-6550-0228-4",
@@ -369,7 +369,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "294a2cdf-5df3-44c4-bf4d-da78b3900029",
+                    "id": "5baf512b-8bf1-4c0c-90f6-58060c68a2b5",
                     "item_description": "Ergonomic Bike made with Marble for all-day coordinated support",
                     "item_name": "Practical Steel Pizza",
                     "item_sku": "978-1-4129-9332-6",
@@ -382,12 +382,12 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "Rustic Aluminum Car",
-            "posted_at": parse_datetime("2022-10-30T21:52:33.531Z"),
+            "posted_at": parse_datetime("2022-10-31T08:51:10.911Z"),
             "reimbursed_amount": 6696.0,
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 983.0,
             "total_amount": 13931.0,
-            "updated_at": parse_datetime("2025-04-07T16:17:01.100Z"),
+            "updated_at": parse_datetime("2025-04-08T14:17:56.587Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
