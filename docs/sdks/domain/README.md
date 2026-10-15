@@ -33,11 +33,11 @@ with UnifiedTo(
     res = unified_to.domain.create_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "11b04179-5956-4a35-aa13-cff7b2675541",
+            "id": "c2b300dd-295a-4f16-84e8-fb15b0fadf8e",
             "is_primary": False,
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-10-30T13:30:48.748Z"),
+            "updated_at": parse_datetime("2023-10-31T02:45:26.848Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,11 +181,11 @@ with UnifiedTo(
     res = unified_to.domain.patch_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "9e8a87a1-c2ad-442d-9216-cb4be886b152",
+            "id": "c4a5ef22-804d-451e-95f0-17cb5613e3eb",
             "is_primary": False,
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-10-30T13:30:48.752Z"),
+            "updated_at": parse_datetime("2023-10-31T02:45:26.852Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -284,11 +284,11 @@ with UnifiedTo(
     res = unified_to.domain.update_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "9e8a87a1-c2ad-442d-9216-cb4be886b152",
+            "id": "c4a5ef22-804d-451e-95f0-17cb5613e3eb",
             "is_primary": False,
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-10-30T13:30:48.752Z"),
+            "updated_at": parse_datetime("2023-10-31T02:45:26.852Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

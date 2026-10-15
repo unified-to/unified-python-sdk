@@ -34,12 +34,12 @@ with UnifiedTo(
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
             "exchange_rate": 0.5674,
-            "id": "f2edd48a-1282-4926-920d-44b0ff14e89f",
+            "id": "749ab55a-8cd5-4743-815f-ef9397e90602",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "f58f78a4-d974-4f40-b27b-35b8ab8e86e5",
+                    "id": "07fc5092-a8c4-43cd-9e93-70ebca438249",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -52,7 +52,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 94452.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2021-09-17T08:56:13.533Z"),
+            "updated_at": parse_datetime("2021-09-17T15:26:41.797Z"),
         },
         "connection_id": "<id>",
     })
@@ -197,12 +197,12 @@ with UnifiedTo(
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
             "exchange_rate": 0.5674,
-            "id": "f1eab3b8-f50a-42e7-b3f6-0ba92d4e7982",
+            "id": "7f1d85ca-3159-423b-b0f4-ee8bd60b7009",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "154a7889-68f2-4f05-9304-50df411cb4b8",
+                    "id": "2bfb5539-c6bd-47f0-a940-337e59c4eaae",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -215,7 +215,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 94452.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2021-09-17T08:56:13.538Z"),
+            "updated_at": parse_datetime("2021-09-17T15:26:41.805Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -315,12 +315,12 @@ with UnifiedTo(
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
             "exchange_rate": 0.5674,
-            "id": "f1eab3b8-f50a-42e7-b3f6-0ba92d4e7982",
+            "id": "7f1d85ca-3159-423b-b0f4-ee8bd60b7009",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Nikolas Table is the latest in a series of downright products from Beier and Sons",
-                    "id": "154a7889-68f2-4f05-9304-50df411cb4b8",
+                    "id": "2bfb5539-c6bd-47f0-a940-337e59c4eaae",
                     "name": "Salad",
                     "object_type": "delicate",
                     "total_amount": 58531.0,
@@ -333,7 +333,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 94452.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2021-09-17T08:56:13.538Z"),
+            "updated_at": parse_datetime("2021-09-17T15:26:41.805Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

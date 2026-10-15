@@ -33,7 +33,7 @@ with UnifiedTo(
     res = unified_to.label.create_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "8327b279-ce35-4fdd-8741-7687d52aae0d",
+            "id": "051ddb93-9c4f-486c-a9b6-d2774f959fa2",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
@@ -42,7 +42,7 @@ with UnifiedTo(
             "service_code": "GIz",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "zYv60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-26T06:57:03.397Z"),
+            "updated_at": parse_datetime("2024-04-26T15:29:06.731Z"),
         },
         "connection_id": "<id>",
     })
@@ -186,7 +186,7 @@ with UnifiedTo(
     res = unified_to.label.patch_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "7d90ac88-663b-4238-ac3b-e1c98cb15b71",
+            "id": "d2f5942d-ef6e-4fa6-a8de-9a4af34e6e78",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
@@ -195,7 +195,7 @@ with UnifiedTo(
             "service_code": "GIz",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "zYv60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-26T06:57:03.401Z"),
+            "updated_at": parse_datetime("2024-04-26T15:29:06.735Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -294,7 +294,7 @@ with UnifiedTo(
     res = unified_to.label.update_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "7d90ac88-663b-4238-ac3b-e1c98cb15b71",
+            "id": "d2f5942d-ef6e-4fa6-a8de-9a4af34e6e78",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
@@ -303,7 +303,7 @@ with UnifiedTo(
             "service_code": "GIz",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "zYv60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-26T06:57:03.401Z"),
+            "updated_at": parse_datetime("2024-04-26T15:29:06.735Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
