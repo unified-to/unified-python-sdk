@@ -32,7 +32,7 @@ with UnifiedTo(
 
     res = unified_to.timeshift.create_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-20T05:17:28.517Z"),
+            "approved_at": parse_datetime("2023-06-20T18:45:51.279Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -44,12 +44,12 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-20T22:57:00.375Z"),
+            "end_at": parse_datetime("2026-09-21T23:28:27.825Z"),
             "hours": 8.0,
-            "id": "4e0065b0-73ca-4d0c-a7da-9b755fd9f338",
+            "id": "d5ca2028-7913-406d-8cc0-ffde54ea49e3",
             "is_approved": True,
-            "start_at": parse_datetime("2023-07-09T14:57:04.678Z"),
-            "updated_at": parse_datetime("2021-06-30T05:23:11.854Z"),
+            "start_at": parse_datetime("2023-07-10T04:36:16.805Z"),
+            "updated_at": parse_datetime("2021-06-30T12:09:57.743Z"),
         },
         "connection_id": "<id>",
     })
@@ -192,7 +192,7 @@ with UnifiedTo(
 
     res = unified_to.timeshift.patch_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-20T05:17:28.528Z"),
+            "approved_at": parse_datetime("2023-06-20T18:45:51.285Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -204,12 +204,12 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-20T22:57:00.395Z"),
+            "end_at": parse_datetime("2026-09-21T23:28:27.836Z"),
             "hours": 8.0,
-            "id": "f2a8e4d6-c4ee-492d-8179-62138229de8e",
+            "id": "8d91fdc4-c1a4-4fb1-987c-464fe5c6d204",
             "is_approved": True,
-            "start_at": parse_datetime("2023-07-09T14:57:04.690Z"),
-            "updated_at": parse_datetime("2021-06-30T05:23:11.860Z"),
+            "start_at": parse_datetime("2023-07-10T04:36:16.811Z"),
+            "updated_at": parse_datetime("2021-06-30T12:09:57.746Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -307,7 +307,7 @@ with UnifiedTo(
 
     res = unified_to.timeshift.update_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2023-06-20T05:17:28.528Z"),
+            "approved_at": parse_datetime("2023-06-20T18:45:51.285Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -319,12 +319,12 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-20T22:57:00.395Z"),
+            "end_at": parse_datetime("2026-09-21T23:28:27.836Z"),
             "hours": 8.0,
-            "id": "f2a8e4d6-c4ee-492d-8179-62138229de8e",
+            "id": "8d91fdc4-c1a4-4fb1-987c-464fe5c6d204",
             "is_approved": True,
-            "start_at": parse_datetime("2023-07-09T14:57:04.690Z"),
-            "updated_at": parse_datetime("2021-06-30T05:23:11.860Z"),
+            "start_at": parse_datetime("2023-07-10T04:36:16.811Z"),
+            "updated_at": parse_datetime("2021-06-30T12:09:57.746Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

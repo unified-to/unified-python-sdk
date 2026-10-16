@@ -40,7 +40,7 @@ with UnifiedTo(
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
             "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
-            "id": "c15c417c-0bed-484d-84c5-dce4d02d8575",
+            "id": "a1bdb6cf-ee74-42d9-97f4-2b4648696c89",
             "instructors": [
                 {
                     "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
@@ -119,7 +119,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-02T04:33:07.372Z"),
+            "updated_at": parse_datetime("2022-10-02T12:35:32.748Z"),
         },
         "connection_id": "<id>",
     })
@@ -270,7 +270,7 @@ with UnifiedTo(
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
             "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
-            "id": "4b85b62b-fa52-423c-9d6c-49d837856817",
+            "id": "3f1ea3ff-daf2-48ef-b6cd-948259e2d579",
             "instructors": [
                 {
                     "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
@@ -349,7 +349,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-02T04:33:07.380Z"),
+            "updated_at": parse_datetime("2022-10-02T12:35:32.760Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -455,7 +455,7 @@ with UnifiedTo(
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
             "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
-            "id": "4b85b62b-fa52-423c-9d6c-49d837856817",
+            "id": "3f1ea3ff-daf2-48ef-b6cd-948259e2d579",
             "instructors": [
                 {
                     "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
@@ -534,7 +534,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-02T04:33:07.380Z"),
+            "updated_at": parse_datetime("2022-10-02T12:35:32.760Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
