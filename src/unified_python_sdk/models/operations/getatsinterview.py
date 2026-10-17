@@ -27,6 +27,7 @@ class GetAtsInterviewQueryParamFields(str, Enum):
     START_AT = "start_at"
     END_AT = "end_at"
     LOCATION = "location"
+    MEETING_URL = "meeting_url"
     EXTERNAL_EVENT_XREF = "external_event_xref"
     RAW = "raw"
 

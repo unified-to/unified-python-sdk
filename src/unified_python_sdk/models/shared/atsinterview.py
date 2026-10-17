@@ -31,6 +31,8 @@ class AtsInterviewTypedDict(TypedDict):
     id: NotRequired[str]
     job_id: NotRequired[str]
     location: NotRequired[str]
+    meeting_url: NotRequired[str]
+    r"""the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)"""
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -59,6 +61,9 @@ class AtsInterview(BaseModel):
     job_id: Optional[str] = None
 
     location: Optional[str] = None
+
+    meeting_url: Optional[str] = None
+    r"""the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)"""
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -93,6 +98,7 @@ class AtsInterview(BaseModel):
                 "id",
                 "job_id",
                 "location",
+                "meeting_url",
                 "raw",
                 "start_at",
                 "status",

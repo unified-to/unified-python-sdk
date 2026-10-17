@@ -34,7 +34,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "87a503f0-2c76-47bc-9e00-e3a1fc882104",
+            "id": "5c87a51c-c35f-446a-b61e-aaf5d8eefb32",
             "instructors": [],
             "languages": [
                 "in",
@@ -55,7 +55,7 @@ with UnifiedTo(
             ],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-07-30T16:50:16.493Z"),
+            "updated_at": parse_datetime("2025-07-31T14:59:03.627Z"),
         },
         "connection_id": "<id>",
     })
@@ -200,7 +200,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "ee2d1a4e-b04a-4c67-964c-9e7e18f05236",
+            "id": "13a59526-e2b2-4c90-aae3-8767cfa4a7c9",
             "instructors": [],
             "languages": [
                 "in",
@@ -221,7 +221,7 @@ with UnifiedTo(
             ],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-07-30T16:50:16.514Z"),
+            "updated_at": parse_datetime("2025-07-31T14:59:03.635Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -321,7 +321,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "ee2d1a4e-b04a-4c67-964c-9e7e18f05236",
+            "id": "13a59526-e2b2-4c90-aae3-8767cfa4a7c9",
             "instructors": [],
             "languages": [
                 "in",
@@ -342,7 +342,7 @@ with UnifiedTo(
             ],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-07-30T16:50:16.514Z"),
+            "updated_at": parse_datetime("2025-07-31T14:59:03.635Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
