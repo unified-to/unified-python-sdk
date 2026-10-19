@@ -33,7 +33,7 @@ with UnifiedTo(
     res = unified_to.creative.create_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "56418583-7f92-4594-a533-710f03eaf1c8",
+            "id": "1c827665-daf0-4b6b-bd57-438db3564fb3",
             "labels": [
                 "coma",
                 "accedo",
@@ -41,7 +41,7 @@ with UnifiedTo(
             ],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T03:21:22.928Z"),
+            "updated_at": parse_datetime("2021-06-27T06:51:45.683Z"),
         },
         "connection_id": "<id>",
     })
@@ -185,7 +185,7 @@ with UnifiedTo(
     res = unified_to.creative.patch_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "40294218-660b-4278-aba2-ca884d4200a5",
+            "id": "692113a1-0c21-47e5-83bb-3a07b09109a8",
             "labels": [
                 "coma",
                 "accedo",
@@ -193,7 +193,7 @@ with UnifiedTo(
             ],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T03:21:22.932Z"),
+            "updated_at": parse_datetime("2021-06-27T06:51:45.686Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -292,7 +292,7 @@ with UnifiedTo(
     res = unified_to.creative.update_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "40294218-660b-4278-aba2-ca884d4200a5",
+            "id": "692113a1-0c21-47e5-83bb-3a07b09109a8",
             "labels": [
                 "coma",
                 "accedo",
@@ -300,7 +300,7 @@ with UnifiedTo(
             ],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T03:21:22.932Z"),
+            "updated_at": parse_datetime("2021-06-27T06:51:45.686Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

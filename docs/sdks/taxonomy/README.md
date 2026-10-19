@@ -42,7 +42,7 @@ with UnifiedTo(
             ],
             "subcategory": "Bamboo",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-05-28T15:37:49.874Z"),
+            "updated_at": parse_datetime("2023-05-28T19:20:12.117Z"),
             "url": "https://our-polarisation.name",
         },
         "connection_id": "<id>",

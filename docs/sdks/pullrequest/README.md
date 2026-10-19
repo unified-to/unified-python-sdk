@@ -32,9 +32,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.create_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-04-29T18:07:49.890Z"),
+            "closed_at": parse_datetime("2025-04-30T04:24:05.428Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "e188b911-1c7e-4a21-a421-634834ca2271",
+            "id": "ae59a544-b4b7-4e6e-bce1-7ad20ffbaf07",
             "labels": [
                 "adhuc",
                 "quaerat",
@@ -44,7 +44,7 @@ with UnifiedTo(
             "status": shared.RepoPullrequestStatus.REJECTED,
             "target_branch_id": "feed-reboot",
             "title": "Cunae aegrus averto texo advoco bibo amet asporto.",
-            "updated_at": parse_datetime("2025-01-15T11:57:49.779Z"),
+            "updated_at": parse_datetime("2025-01-15T20:53:00.126Z"),
         },
         "connection_id": "<id>",
     })
@@ -187,9 +187,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.patch_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-04-29T18:07:49.894Z"),
+            "closed_at": parse_datetime("2025-04-30T04:24:05.434Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "86396c26-7b11-4da3-a70a-09a287c1dcf4",
+            "id": "c387220a-a377-4dd3-8630-115fc0efd889",
             "labels": [
                 "adhuc",
                 "quaerat",
@@ -199,7 +199,7 @@ with UnifiedTo(
             "status": shared.RepoPullrequestStatus.REJECTED,
             "target_branch_id": "feed-reboot",
             "title": "Cunae aegrus averto texo advoco bibo amet asporto.",
-            "updated_at": parse_datetime("2025-01-15T11:57:49.783Z"),
+            "updated_at": parse_datetime("2025-01-15T20:53:00.131Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -297,9 +297,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.update_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-04-29T18:07:49.894Z"),
+            "closed_at": parse_datetime("2025-04-30T04:24:05.434Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "86396c26-7b11-4da3-a70a-09a287c1dcf4",
+            "id": "c387220a-a377-4dd3-8630-115fc0efd889",
             "labels": [
                 "adhuc",
                 "quaerat",
@@ -309,7 +309,7 @@ with UnifiedTo(
             "status": shared.RepoPullrequestStatus.REJECTED,
             "target_branch_id": "feed-reboot",
             "title": "Cunae aegrus averto texo advoco bibo amet asporto.",
-            "updated_at": parse_datetime("2025-01-15T11:57:49.783Z"),
+            "updated_at": parse_datetime("2025-01-15T20:53:00.131Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
